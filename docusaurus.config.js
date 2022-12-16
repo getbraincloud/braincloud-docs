@@ -92,7 +92,7 @@ const config = {
       },
       announcementBar: {
         id: 'announcementBar-2', // Increment on change
-        content: `⭐️ Announcement bar goes here, subscript on <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/@Getbraincloud">YouTube</a>`,
+        content: `⭐️ Announcement bar goes here, subscript brainCloud service on <a target="_blank" rel="noopener noreferrer" href="https://portal.braincloudservers.com/login#/development">brainCloud portal</a>`,
       },
       navbar: {
         title: 'brainCloud Docs',
