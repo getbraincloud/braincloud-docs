@@ -115,17 +115,12 @@ const config = {
             label: 'API',
           },
           { to: '/blog', label: 'Blog', position: 'left' },
-          // {
-          //   href: 'https://github.com/JasonZhLiang/bc-docs',
-          //   label: 'GitHub',
-          //   position: 'right',
-          // },
           {
             type: 'docsVersionDropdown',
             position: 'right',
           },
           {
-            href: 'https://github.com/JasonZhLiang/bc-docs',
+            href: 'https://github.com/getbraincloud',
             position: 'right',
             className: 'header-github-link',
             'aria-label': 'GitHub repository',
