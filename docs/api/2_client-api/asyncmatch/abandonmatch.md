@@ -4,7 +4,20 @@
 import BrowserWindow from '@site/src/components/BrowserWindow';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import PartialServop from '@site/docs/api/_partial/_servop.md';
 ```
+## Overview
+
+Marks the given match as abandoned and sets the matchState to EXPIRED.
+
+<PartialServop service_name="asyncMatch" operation_name="ABANDON" />
+
+:::tip
+
+Only a match whose current status is NOT_STARTED, PENDING or EXPIRED can be abandoned (status set to EXPIRED)
+:::
+
+## Usage
 
 ```mdx-code-block
 <BrowserWindow>
@@ -43,7 +56,7 @@ const char *matchId = "matchId";
 <TabItem value="objectivec" label="Objective-C">
 ```
 
-```objectivec
+```objectivec showLineNumbers
 NSString *ownerId = @"internalPlayerId";
 NSString *matchId = @"matchId";
 BCCompletionBlock successBlock;      // define callback
@@ -142,27 +155,8 @@ if (postResult.status == 200) {
 ```
 </details>
 
-
-Marks the given match as abandoned and sets the matchState to EXPIRED.
-
-<%= partial(:"partials/servop", :locals => { :service_name => "asyncMatch", :operation_name => "ABANDON" }) %>
-#### Method Parameters
+## Method Parameters
 Parameter | Description
 --------- | -----------
 ownerId | Match owner identifier
 matchId | Match identifier
-
-:::warning
-
-Only a match whose current status is NOT_STARTED, PENDING or EXPIRED can be abandoned (status set to EXPIRED)
-:::
-
-<details><summary>Open to view Data Dictionary</summary>
-
-|Feature|Format|Type|Description|
-|---|---|---|---|
-|**Id**|*integer*|Nominal|Identifier for each property.|
-|**PID**|*integer*|Nominal|Parcel identification number - can be usedwith city web site for parcel review.|
-|**MS SubClass**|*integer*|Nominal|Identifies the type of dwellinginvolved in the sale. Type is coded, please refer to full datadocumentation|
-|**MS Zoning**|*string*|Nominal|Identifies the general zoningclassification of the sale.|
-</details>
