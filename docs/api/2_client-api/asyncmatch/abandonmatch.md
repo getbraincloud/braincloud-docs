@@ -1,11 +1,5 @@
 # AbandonMatch
 
-```mdx-code-block
-import BrowserWindow from '@site/src/components/BrowserWindow';
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import PartialServop from '@site/docs/api/_partial/_servop.md';
-```
 ## Overview
 
 Marks the given match as abandoned and sets the matchState to EXPIRED.
