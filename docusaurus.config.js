@@ -12,7 +12,14 @@ let options = {
   replacements: {
     PRODUCT: 'brainCloud',
     COPYRIGHT: `Copyright ${new Date().getFullYear()} bitHeads, Inc`,
-    'data.branding.codePrefix %>': '_bc'
+    'data.branding.codePrefix %>': '_bc',
+    'data.branding.codeWrapper %>': 'BrainCloudWrapper',
+    'data.branding.codeClient %>': 'BrainCloudClient',
+    'data.branding.serverUrl %>': 'https://api.braincloudservers.com/dispatcherv2',
+    'data.branding.productName %>': 'brainCloud',
+    'data.branding.productNameCaptial %>': 'BrainCloud',
+    'data.branding.productNameRTT %>': 'brainCloud RTT',
+    'data.branding.companyName %>': 'bitHeads',
   },
   prefix: '<%= ',
 }

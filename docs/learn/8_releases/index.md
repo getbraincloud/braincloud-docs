@@ -7,6 +7,6 @@ brainCloud is rapidly evolving to meet the needs of our development community. S
 Details on the most recent updates:
 
 
-import DocCardList from '@theme/DocCardList';
+
 
 <DocCardList />

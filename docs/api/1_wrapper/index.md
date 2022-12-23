@@ -110,6 +110,6 @@ Parameter | Description
 wrapperName | Distincts saved wrapper data. Use when using more than one instance of <%= data.branding.productName %>
 
 
-import DocCardList from '@theme/DocCardList';
+
 
 <DocCardList />

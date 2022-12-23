@@ -6,7 +6,7 @@ slug: /
 # Introduction
 
 
-![bc tech stack](../../img/learn-img/BC_TechStack_05-768x576.png)
+![bc tech stack](@site/docs/img/learn-img/BC_TechStack_05-768x576.png)
 
 ## What is brainCloud?
 
@@ -101,6 +101,6 @@ By default, GitHub Pages runs published files through [Jekyll](https://jekyllrb.
 
 :::
 
-import DocCardList from '@theme/DocCardList';
+
 
 <DocCardList />

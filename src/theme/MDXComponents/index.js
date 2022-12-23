@@ -14,6 +14,7 @@ import BrowserWindow from '@site/src/components/BrowserWindow';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import PartialServop from '@site/docs/api/_partial/_servop.md';
+import DocCardList from '@theme/DocCardList';
 const MDXComponents = {
   head: MDXHead,
   code: MDXCode,
@@ -34,5 +35,6 @@ const MDXComponents = {
   Tabs: Tabs,
   TabItem: TabItem,
   PartialServop: PartialServop,
+  DocCardList: DocCardList,
 };
 export default MDXComponents;

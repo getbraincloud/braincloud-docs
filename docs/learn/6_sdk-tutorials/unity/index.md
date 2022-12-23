@@ -7,6 +7,6 @@ As part of our Unity package we include:
 
 
 
-import DocCardList from '@theme/DocCardList';
+
 
 <DocCardList />

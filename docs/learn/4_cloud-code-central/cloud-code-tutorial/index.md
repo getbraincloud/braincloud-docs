@@ -15,6 +15,6 @@ Background – General overview of how Cloud Code works
 - Tutorial 5 – External Web Services
 - Tutorial 6 – S2S Scripts
 
-import DocCardList from '@theme/DocCardList';
+
 
 <DocCardList />

@@ -23,6 +23,6 @@ The API documentation is organized by topic:
 - Products and Payments  
 
 
-import DocCardList from '@theme/DocCardList';
+
 
 <DocCardList />
