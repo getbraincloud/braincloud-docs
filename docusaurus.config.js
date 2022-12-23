@@ -32,7 +32,7 @@ const config = {
   // baseUrl: '/braincloud-apiref/', // for github page must attach a repository name after url
   url: 'https://brainclouddocs.netlify.app',
   baseUrl: '/', // for netlify
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
 
