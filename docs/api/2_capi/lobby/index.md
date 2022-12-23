@@ -428,7 +428,7 @@ When looking for a lobby.
 ### `ranged-percent`
 
 Ranges provided are interpreted as percentages to be applied to the user's rating for matchmaking.
-`
+```
 {
    "rating" : 1200,
    "algo":{  
@@ -445,7 +445,7 @@ Ranges provided are interpreted as percentages to be applied to the user's ratin
 ### `ranged-absolute`
 
 Ranges provided are interpreted as absolute values to add/subtract from the user's rating when calculating the range for matchmaking
-`
+```
 { 
    "rating" : 76, 
    "algo":{  

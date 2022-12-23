@@ -2,13 +2,6 @@
 ## Overview
 Reads a subset of global statistics.
 
-
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-statistics | A collection containing the statistics to read
-
 <PartialServop service_name="globalGameStatistics" operation_name="READ_SUBSET" / >
 
 ## Usage
@@ -152,6 +145,6 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-category | The global statistics category
+statistics | A collection containing the statistics to read
 
 

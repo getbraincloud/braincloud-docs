@@ -2,11 +2,6 @@
 ## Overview
 Set the ping interval.
 
-### Method Parameters
-Parameter | Description
---------- | -----------
-interval | Seconds inbetween pings.
-
 <PartialServop service_name="globalGameStatistics" operation_name="READ_SUBSET" / >
 
 ## Usage
@@ -93,7 +88,6 @@ float interval = 10;
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-connectionType | The connection type. INVALID, WEBSOCKET, TCP, UDP, MAX
-options | Options sent in the connection
+interval | Seconds inbetween pings.
 
 

@@ -2,13 +2,6 @@
 ## Overview
 Creates a new product with the specifed values.
 
-
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-productJson | The product details.
-
 <PartialServop service_name="productManagement" operation_name="SYS_CREATE_PRODUCT" / >
 
 ## Usage
@@ -177,7 +170,6 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-storeId | The store type - "itunes", "googlePlay", "amazon", "facebook" or "windows"
-receiptData | A JSON object with data in the format for the specified store
+productJson | The product details.
 
 

@@ -13,7 +13,7 @@ The outer "data" portion of the field name is implied, and should not be include
 
 `fieldsJson` example:
 
-`
+```
 {
   "age": 30,
   "homeAddress": {
@@ -26,7 +26,7 @@ The outer "data" portion of the field name is implied, and should not be include
   },
   "workAddress.phone": "555-555-5555"
 }
-`
+```
 
 For the above example: 
 

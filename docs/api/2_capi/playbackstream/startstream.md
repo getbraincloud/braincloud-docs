@@ -2,13 +2,6 @@
 ## Overview
 Starts a stream.
 
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-targetPlayerId | The player to start a stream with
-includeSharedData | Whether to include shared data in the stream
-
 <PartialServop service_name="playbackStream" operation_name="START_STREAM" / >
 
 ## Usage
@@ -167,6 +160,7 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-playbackStreamId | Identifies the stream to read
+targetPlayerId | The player to start a stream with
+includeSharedData | Whether to include shared data in the stream
 
 

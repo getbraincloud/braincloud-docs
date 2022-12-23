@@ -1,12 +1,6 @@
-# JoinGroup [joingroup]
+# JoinGroup
 ## Overview
 Join an invited user to the group.
-
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-groupId | ID of the group
 
 <PartialServop service_name="group" operation_name="JOIN_MEMBER_TO_GROUP" / >
 
@@ -141,7 +135,6 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-where | Mongo style query string. 
-maxReturn | Count of groups to randomly select 
+groupId | ID of the group
 
 

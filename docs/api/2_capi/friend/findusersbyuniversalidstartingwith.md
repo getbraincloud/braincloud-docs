@@ -2,13 +2,6 @@
 ## Overview
 Retrieves profile information for users whose universal ID starts with search text. Optional parameter: maxResults
 
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-searchText | The substring to search for. Minimum length of 3 characters.
-maxResults | Maximum number of results to return. If there are more the message.
-
 <PartialServop service_name="friend" operation_name="FIND_USERS_BY_UNIVERSAL_ID_STARTING_WITH" / >
 
 ## Usage
@@ -171,6 +164,6 @@ if (postResult.status == 200) {
 Parameter | Description
 --------- | -----------
 searchText | The substring to search for. Minimum length of 3 characters.
-maxResults | Maximum number of results to return.
+maxResults | Maximum number of results to return. If there are more the message.
 
 

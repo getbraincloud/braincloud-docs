@@ -1,4 +1,4 @@
-# LeaveGroup [leavegroup]
+# LeaveGroup
 ## Overview
 Leave as member of a group.
 

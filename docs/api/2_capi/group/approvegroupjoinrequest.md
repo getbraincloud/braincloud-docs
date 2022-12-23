@@ -1,4 +1,4 @@
-# ApproveGroupJoinRequest [approvegroupjoinrequest]
+# ApproveGroupJoinRequest
 ## Overview
 Approve an outstanding request to join the group. Optional parameters: jsonAttributes.
 
@@ -17,16 +17,6 @@ Approve an outstanding request to join the group. Optional parameters: jsonAttri
    ...
 }
 ```
-
-
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-groupId | ID of the group
-profileId | Profile ID of the member being added
-role | Role of the member being added
-jsonAttributes | Attributes of the member being added
 
 <PartialServop service_name="group" operation_name="APPROVE_GROUP_JOIN_REQUEST" / >
 

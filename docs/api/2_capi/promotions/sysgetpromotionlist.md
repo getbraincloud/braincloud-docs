@@ -2,13 +2,6 @@
 ## Overview
 Returns the list of configured promotions (without full details).
 
-
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-type | SCHEDULED or AUTOMATED to filter specific type, or empty string to return all promotions.
-
 <PartialServop service_name="promotions" operation_name="SYS_GET_PROMOTION_LIST" / >
 
 ## Usage
@@ -136,6 +129,6 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-playbackStreamId | The playback stream id returned in the start match
+type | SCHEDULED or AUTOMATED to filter specific type, or empty string to return all promotions.
 
 

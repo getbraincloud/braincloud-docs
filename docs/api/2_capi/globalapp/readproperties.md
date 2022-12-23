@@ -135,6 +135,6 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-base64EncReceiptData | The iTunes receipt **`payload`** string
+receipt | Receipt XML
 
 

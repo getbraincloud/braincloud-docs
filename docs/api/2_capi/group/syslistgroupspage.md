@@ -2,12 +2,6 @@
 ## Overview
 Retrieve a page of group summary information based on the specified context, bypassing ownership/ACL checks.
 
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-context | The JSON context for the page request
-
 <PartialServop service_name="group" operation_name="SYS_LIST_GROUPS_PAGE" / >
 
 ## Usage
@@ -152,7 +146,6 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-where | A mongo style query string.
-maxReturn | The max count of groups to randomly select.
+context | The JSON context for the page request
 
 

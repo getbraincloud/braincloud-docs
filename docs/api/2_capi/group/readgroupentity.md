@@ -1,13 +1,6 @@
-# ReadGroupEntity [readgroupentity]
+# ReadGroupEntity
 ## Overview
 Read an entity in the group.
-
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-groupId | ID of the group
-entityId | ID of the entity
 
 <PartialServop service_name="group" operation_name="READ_GROUP_ENTITY" / >
 
@@ -169,7 +162,7 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-context | The context string returned from the server from a previous call to ReadGroupEntitiesPage or ReadGroupEntitiesPageByOffset
-pageOffset | The positive or negative page offset to fetch. Uses the last page retrieved using the context string to determine a starting point.
+groupId | ID of the group
+entityId | ID of the entity
 
 

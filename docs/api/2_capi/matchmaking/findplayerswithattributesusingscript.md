@@ -10,17 +10,6 @@ Additional information of filters can be found under [Matchmaking Filters](/api/
 
 This call is cloud-code only.
 
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-rangeDelta | How close an opponents rating must be to yours
-numMatches | The maximum number of matches to return
-jsonAttributes | Attributes match criteria
-playerRating | Player rating override
-scriptName | Name of filter script
-jsonExtraParms | Parameters to be passed to the filter
-
 <PartialServop service_name="matchMaking" operation_name="FIND_PLAYERS_USING_SCRIPT" / >
 
 ## Usage
@@ -155,6 +144,8 @@ Parameter | Description
 rangeDelta | How close an opponents rating must be to yours
 numMatches | The maximum number of matches to return
 jsonAttributes | Attributes match criteria
+playerRating | Player rating override
+scriptName | Name of filter script
 jsonExtraParms | Parameters to be passed to the filter
 
 

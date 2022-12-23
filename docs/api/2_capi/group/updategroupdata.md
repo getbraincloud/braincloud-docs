@@ -1,4 +1,4 @@
-# UpdateGroupData [updategroupdata]
+# UpdateGroupData
 ## Overview
 Update a group's data.
 

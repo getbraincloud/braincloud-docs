@@ -2,12 +2,6 @@
 ## Overview
 Verify Microsoft Receipt. On success, the player will be awarded the associated currencies.
 
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-receipt | Receipt XML
-
 <PartialServop service_name="product" operation_name="VERIFY_MICROSOFT_RECEIPT" / >
 
 ## Usage
@@ -127,6 +121,6 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-base64EncReceiptData | The iTunes receipt **`payload`** string
+receipt | Receipt XML
 
 

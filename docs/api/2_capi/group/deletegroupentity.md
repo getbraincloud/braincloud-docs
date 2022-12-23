@@ -1,14 +1,6 @@
-# DeleteGroupEntity [deletegroupentity]
+# DeleteGroupEntity
 ## Overview
 Delete an entity in the group.
-
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-groupId | ID of the group
-entityId | ID of the entity.
-version | The current version of the group entity (for concurrency checking).
 
 <PartialServop service_name="group" operation_name="DELETE_GROUP_ENTITY" / >
 
@@ -163,13 +155,8 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-name | A name for the group. 
-groupType | The type of group. 
-isOpenGroup | true if group is open; false if closed. 
-acl | The group's access control list. A null ACL implies default. 
-ownerAttributes | Attributes for the group owner (current user.) 
-defaultMemberAttributes | Default attributes for group members. 
-data | Custom application data. 
-summaryData | Public summary data for the group that is viewable even by non-members. 
+groupId | ID of the group
+entityId | ID of the entity.
+version | The current version of the group entity (for concurrency checking).
 
 

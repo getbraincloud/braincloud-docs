@@ -4,13 +4,6 @@ Retrieves the external ID for the specified user profile ID on the specified soc
 
 Does not require the calling user to be a friend of the other user.
 
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-profileId | Profile (user) ID.
-authenticationType | Associated authentication type. Full list of types can be found [here](/api/appendix/authtypes).
-
 <PartialServop service_name="friend" operation_name="GET_EXTERNAL_ID_FOR_PROFILE_ID" / >
 
 ## Usage
@@ -158,7 +151,7 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-where | Mongo style query string
-maxResults | Maximum number of results to return.
+profileId | Profile (user) ID.
+authenticationType | Associated authentication type. Full list of types can be found [here](/api/appendix/authtypes).
 
 

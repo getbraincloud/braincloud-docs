@@ -2,13 +2,6 @@
 ## Overview
 Partial increment of group data field items. Partial set of items incremented as specified. Bypasses ownership/ACL checks.
 
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-groupId | ID of the group
-jsonData | Partial data map with incremental values
-
 <PartialServop service_name="group" operation_name="SYS_INCREMENT_GROUP_DATA" / >
 
 ## Usage
@@ -125,7 +118,7 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-where | A mongo style query string.
-maxReturn | The max count of groups to randomly select.
+groupId | ID of the group
+jsonData | Partial data map with incremental values
 
 

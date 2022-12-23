@@ -1,13 +1,6 @@
-# RemoveGroupMember [removegroupmember]
+# RemoveGroupMember
 ## Overview
 Remove a member from the group.
-
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-groupId | ID of the group
-profileId | Profile ID of the user being removed
 
 <PartialServop service_name="group" operation_name="REMOVE_GROUP_MEMBER" / >
 
@@ -155,5 +148,6 @@ if (postResult.status == 200) {
 Parameter | Description
 --------- | -----------
 groupId | ID of the group
+profileId | Profile ID of the user being removed
 
 

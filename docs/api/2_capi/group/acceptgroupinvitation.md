@@ -1,4 +1,4 @@
-# AcceptGroupInvitation [acceptgroupinvitation]
+# AcceptGroupInvitation
 ## Overview
 Accept an invitation to become a member of the group.
 
@@ -21,12 +21,6 @@ data" : {
   ...
 }
 ```
-
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-groupId | ID of the group
 
 <PartialServop service_name="group" operation_name="ACCEPT_GROUP_INVITATION" / >
 
@@ -164,12 +158,6 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-entityId | The id of the entity to update
-version | The version of the entity to update. Use -1 to indicate the newest version
-jsonEntityData | The entity's data object
-#### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40344 | ENTITY_VERSION_MISMATCH | The version passed in does not match the version of the entity on the server
+groupId | ID of the group
 
 

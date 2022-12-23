@@ -2,13 +2,6 @@
 ## Overview
 Retrieve the full product meta-data for the specified product.
 
-
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-itemId | The item id being requested.
-
 <PartialServop service_name="productManagement" operation_name="SYS_READ_PRODUCT" / >
 
 ## Usage
@@ -164,7 +157,6 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-storeId | The store type - "itunes", "googlePlay", "amazon", "facebook" or "windows"
-receiptData | A JSON object with data in the format for the specified store
+itemId | The item id being requested.
 
 

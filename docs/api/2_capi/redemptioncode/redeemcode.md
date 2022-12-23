@@ -2,24 +2,6 @@
 ## Overview
 Redeem a code.
 
-
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-scanCode | The code to redeem
-codeType | The type of code
-jsonCustomRedemptionInfo | Optional - A JSON string containing custom redemption data
-### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40395 | REDEMPTION_CODE_NOT_FOUND | The specified code was not found
-40398 | REDEMPTION_CODE_NOT_ACTIVE | The specified code is not active
-40399 | REDEMPTION_CODE_TYPE_NOT_FOUND | The specified code type was not found
-40401 | REDEMPTION_CODE_REDEEMED | The code has already been redeemed
-40402 | REDEMPTION_CODE_REDEEMED_BY_SELF | The code has already been redeemed by the calling user
-40403 | REDEMPTION_CODE_REDEEMED_BY_OTHER | The code has already been redeemed by another user
-
 <PartialServop service_name="redemptionCode" operation_name="REDEEM_CODE" / >
 
 ## Usage
@@ -189,10 +171,17 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-scanCode | The scan code being redeemed. Required.
-redemptionCodeId | The redemption code id of the redemption code being processed. Required.
-codeType | The type of the scan code. Optional.
-attempt | The applicable attempt number associated with the redemption attempt being processed. Required.
-asyncResponse | Required asynchronous response info, as JSON object, indicating status via success and complete flags, along with applicable, but optional, customRedemptionInfo (JSON object) and/or errorCode (Integer) and errorMsg (String).  Note: A timeout exception is thrown if the max asynchronous processing time (configured for the associated redemption code type) has been exceeded and processing is still in progress (complete: false).
+scanCode | The code to redeem
+codeType | The type of code
+jsonCustomRedemptionInfo | Optional - A JSON string containing custom redemption data
+#### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40395 | REDEMPTION_CODE_NOT_FOUND | The specified code was not found
+40398 | REDEMPTION_CODE_NOT_ACTIVE | The specified code is not active
+40399 | REDEMPTION_CODE_TYPE_NOT_FOUND | The specified code type was not found
+40401 | REDEMPTION_CODE_REDEEMED | The code has already been redeemed
+40402 | REDEMPTION_CODE_REDEEMED_BY_SELF | The code has already been redeemed by the calling user
+40403 | REDEMPTION_CODE_REDEEMED_BY_OTHER | The code has already been redeemed by another user
 
 

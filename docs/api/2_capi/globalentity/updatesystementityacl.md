@@ -4,19 +4,6 @@ Updates an existing *System Entity's* ACL on the server, regardless of the entit
 
 This method is affected by versioning. See the [versioning documentation](/api/appendix/version) for more information.
 
-
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-entityId | The id of the entity to update
-version | The version of the entity to update. Use -1 to indicate the newest version
-jsonEntityAcl | The entity's [Access Control List](/api/appendix/acl) as json.
-### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40344 | ENTITY_VERSION_MISMATCH | The version passed in does not match the version of the entity on the server
-
 <PartialServop service_name="globalEntity" operation_name="UPDATE_ACL" / >
 
 ## Usage
@@ -226,7 +213,7 @@ Parameter | Description
 --------- | -----------
 entityId | The id of the entity to update
 version | The version of the entity to update. Use -1 to indicate the newest version
-jsonEntityData | The entity's data object
+jsonEntityAcl | The entity's [Access Control List](/api/appendix/acl) as json.
 #### Status Codes
 Code | Name | Description
 ---- | ---- | -----------

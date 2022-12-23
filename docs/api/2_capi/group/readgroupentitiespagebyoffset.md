@@ -1,4 +1,4 @@
-# ReadGroupEntitiesPageByOffset [readgroupentitiespagebyoffset]
+# ReadGroupEntitiesPageByOffset
 ## Overview
 Retrieve a page of group entity information based on the encoded context and specified page offset.
 

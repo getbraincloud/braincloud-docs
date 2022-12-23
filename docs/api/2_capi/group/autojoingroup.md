@@ -1,4 +1,4 @@
-# AutoJoinGroup [autojoingroup]
+# AutoJoinGroup
 ## Overview
 Automatically join an open group (isOpenGroup) that matches the search criteria and has space available.
 

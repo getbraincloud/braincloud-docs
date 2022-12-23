@@ -1,4 +1,4 @@
-# AddGroupMember [addgroupmember]
+# AddGroupMember
 ## Overview
 Add a member to the group. Optional parameters: jsonAttributes.
 

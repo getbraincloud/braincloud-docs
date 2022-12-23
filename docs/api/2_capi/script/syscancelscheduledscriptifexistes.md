@@ -2,12 +2,6 @@
 ## Overview
 Cancels a previously scheduled script, if it exists and is still in Scheduled state.
 
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-jobId | The id of the job to cancel.
-
 <PartialServop service_name="script" operation_name="SYS_CANCEL_SCHEDULED_SCRIPT_IF_EXISTS" / >
 
 ## Usage
@@ -113,8 +107,6 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-scriptName | The name of the script with its path to be run.
-scriptData | Data to be sent to the script in JSON format.
-startDateInUTC | The start date. (date in millis UTC)
+jobId | The id of the job to cancel.
 
 

@@ -1,4 +1,4 @@
-# ListGroupsPage [listgroupspage]
+# ListGroupsPage
 ## Overview
 ```json-doc
 {
@@ -28,12 +28,6 @@
 ```
 
 Retrieve a page of group summary information based on the specified context.
-
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-context | The JSON context for the page request
 
 <PartialServop service_name="group" operation_name="LIST_GROUPS_PAGE" / >
 
@@ -218,6 +212,6 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-groupId | ID of the group
+context | The JSON context for the page request
 
 

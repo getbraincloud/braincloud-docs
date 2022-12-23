@@ -2,15 +2,6 @@
 ## Overview
 Sets the default (i.e. active) price for the given product item.
 
-
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-itemId | The product item identifier.
-version | The product configuration version. The version being validated. Pass -1 to bypass version checking.
-priceId | The priceId being set as the default. Pass -1 to make a product item not-for-sale.
-
 <PartialServop service_name="productManagement" operation_name="SYS_SET_DEFAULT_PRODUCT_PRICE" / >
 
 ## Usage
@@ -240,7 +231,8 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-storeId | The store type - "itunes", "googlePlay", "amazon", "facebook" or "windows"
-receiptData | A JSON object with data in the format for the specified store
+itemId | The product item identifier.
+version | The product configuration version. The version being validated. Pass -1 to bypass version checking.
+priceId | The priceId being set as the default. Pass -1 to make a product item not-for-sale.
 
 

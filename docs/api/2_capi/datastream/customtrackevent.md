@@ -2,13 +2,6 @@
 ## Overview
 Creates custom data stream track event
 
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-eventName | The name of the event
-eventProperties | The properties of the event
-
 <PartialServop service_name="dataStream" operation_name="CUSTOM_TRACK_EVENT" / >
 
 ## Usage

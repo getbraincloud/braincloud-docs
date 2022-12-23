@@ -1,4 +1,4 @@
-# CreateGroup [creategroup]
+# CreateGroup
 ## Overview
 Create a group.
 
@@ -7,19 +7,6 @@ The group ACL contains two elements defining access to the groups data for non-m
 - None = 0,
 - ReadOnly = 1
 - ReadWrite = 2
-
-
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-name | Name of the group
-groupType | Name of the type of group
-isOpenGroup | true if group is open; false if closed
-acl | The group's access control list. A null ACL implies default
-jsonOwnerAttributes | Attributes for the group owner (current user)
-jsonDefaultMemberAttributes | Default attributes for group members
-jsonData | Custom application data
 
 <PartialServop service_name="group" operation_name="CREATE_GROUP" / >
 
@@ -244,8 +231,12 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-groupTypes | The list of group types to draw candidates from
-autoJoinStrategy | Selection strategy to employ when there are multiple matches
-where | Query parameters (optional)
+name | Name of the group
+groupType | Name of the type of group
+isOpenGroup | true if group is open; false if closed
+acl | The group's access control list. A null ACL implies default
+jsonOwnerAttributes | Attributes for the group owner (current user)
+jsonDefaultMemberAttributes | Default attributes for group members
+jsonData | Custom application data
 
 

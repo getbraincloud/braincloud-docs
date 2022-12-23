@@ -2,14 +2,7 @@
 ## Overview
 Updates the UniversalId of the current profile. *Note - works for non-login versions of UniversalId as well.*
 
-Call will fail if the new UniversalId is already in use, or if the profile does not have a UniversalId. 
-
-
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-externalId | The new universal id to update to
+Call will fail if the new UniversalId is already in use, or if the profile does not have a UniversalId.
 
 <PartialServop service_name="identity" operation_name="UPDATE_UNIVERSAL_LOGIN" / >
 
@@ -143,10 +136,6 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-oldEmailAddress | Old email address
-profileId | The profileId of the applicable user
-oldEmailAddress | The user's old email address
-newEmailAddress | The user's new email address
-updateContactEmail | Whether to also update contact email in user's profile
+externalId | The new universal id to update to
 
 

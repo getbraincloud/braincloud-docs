@@ -135,6 +135,6 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-statistics | The data to be passed to method
+statistics | The stats data to be passed to the method
 
 

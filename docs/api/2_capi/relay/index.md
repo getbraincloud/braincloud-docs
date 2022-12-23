@@ -71,7 +71,8 @@ Channel is irrelevant for unreliable packets. Ordering is still relevant in that
 
 For anyone implementing the protocol, here are the internally defined constants that will be useful:
 
-`static const auto MAX_RESEND_INTERVAL = 500ms;
+```
+static const auto MAX_RESEND_INTERVAL = 500ms;
 static const auto CHANNEL_HIGH_PRIORITY_1      = 0;
 static const auto CHANNEL_HIGH_PRIORITY_2      = 1;
 static const auto CHANNEL_NORMAL_PRIORITY      = 2;
@@ -91,11 +92,13 @@ static const uint8_t RS2CL_RSMG         = 0;
 static const uint8_t RS2CL_DISCONNECT   = 1; // CL2RS_DISCONNECT
 static const uint8_t RS2CL_RELAY        = 2; // CL2RS_RELAY
 static const uint8_t RS2CL_ACK          = 3; // CL2RS_ACK
-static const uint8_t RS2CL_PONG         = 4; // CL2RS_PING`
+static const uint8_t RS2CL_PONG         = 4; // CL2RS_PING
+```
 
 And channel resends the intervals:
 
-`static const Duration RELIABLE_RESEND_INTERVALS[] = {
+```
+static const Duration RELIABLE_RESEND_INTERVALS[] = {
     50ms, 50ms, // High priority 1 and 2
     150ms,      // Normal priority
     500ms       // Low priority
@@ -103,7 +106,8 @@ And channel resends the intervals:
 static const auto RELIABLE_CHANNEL_HIGH_PRIORITY_1      = 0;
 static const auto RELIABLE_CHANNEL_HIGH_PRIORITY_2      = 1;
 static const auto RELIABLE_CHANNEL_NORMAL_PRIORITY      = 2;
-static const auto RELIABLE_CHANNEL_LOW_PRIORITY         = 3;`
+static const auto RELIABLE_CHANNEL_LOW_PRIORITY         = 3;
+```
 
 ### Resend Interval Rate
 

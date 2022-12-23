@@ -1,4 +1,4 @@
-# CreateGroupEntity [creategroupentity]
+# CreateGroupEntity
 ## Overview
 Create an entity in the group. Optional parameters: entityType, acl and jsonData
 

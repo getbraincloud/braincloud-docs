@@ -2,13 +2,6 @@
 ## Overview
 Using the array of file details sent, returns the current details of any of those files as well as an indication as to whether the file has changed via the "updated" flag.
 
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-category | Category of files on server to compare against
-fileDetails | An array of file details
-
 <PartialServop service_name="s3Handling" operation_name="GET_UPDATED_FILES" / >
 
 ## Usage
@@ -219,6 +212,7 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-category | Category of files to retrieve
+category | Category of files on server to compare against
+fileDetails | An array of file details
 
 

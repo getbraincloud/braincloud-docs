@@ -2,12 +2,6 @@
 ## Overview
 Retrieve information about the group, bypassing ownership/ACL checks.
 
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-groupId | ID of the group
-
 <PartialServop service_name="group" operation_name="SYS_READ_GROUP" / >
 
 ## Usage
@@ -134,7 +128,6 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-context | The context string returned from the server from a previous call to ListGroupsPage or ListGroupsPageByOffset
-pageOffset | The positive or negative page offset to fetch. Uses the last page retrieved using the context string to determine a starting point.
+groupId | ID of the group
 
 

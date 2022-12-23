@@ -129,6 +129,6 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-userName | The name of the user
+pictureUrl | URL to apply
 
 

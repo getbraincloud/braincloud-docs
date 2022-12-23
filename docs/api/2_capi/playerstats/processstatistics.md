@@ -5,7 +5,7 @@ Apply a set of operations to the specified statistics. User (player) Statistics 
 The operations available are much richer than the standard *increment* operation available via `IncrementUserStats()`.
 
 For example:
-`
+```
 {
     "INNING": "INC#1",              // Increment by one
     "INNINGSREM": "DEC#1",          // Decrement by one
@@ -16,7 +16,7 @@ For example:
     "ESTIMATE": "MIN#5",            // Set to the specified value if smaller
     "GAME" : "5"                    // Missing stat grammar will treat the operation as an increment
 }
-`
+```
 
 The above example would:
 
@@ -30,14 +30,6 @@ The above example would:
 * Increment `GAME` by `5`
 
 For the full statistics grammar see the [statistics grammar section](/api/appendix/statisticsgrammar).
-
-
-
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-statistics | The stats data to be passed to the method
 
 <PartialServop service_name="playerStatistics" operation_name="PROCESS_STATISTICS" / >
 
@@ -200,6 +192,6 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-statistics | The data to be passed to method
+statistics | The stats data to be passed to the method
 
 

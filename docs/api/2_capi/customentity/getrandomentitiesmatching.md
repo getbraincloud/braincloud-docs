@@ -2,15 +2,6 @@
 ## Overview
 Gets a list of up to maxReturn randomly selected custom entities from the server based on the entity type and where condition.
 
-
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-entityType | The type of custom entity being retrieved. 
-whereJson | The where clause, as JSON object.
-maxReturn | The maximum number of entities to return.
-
 <PartialServop service_name="customEntity" operation_name="GET_RANDOM_ENTITIES_MATCHING" / >
 
 ## Usage
@@ -217,7 +208,7 @@ if (postResult.status == 200) {
 Parameter | Description
 --------- | -----------
 entityType | The type of custom entity being retrieved. 
-context | The context string returned from the server from a previous call to GetPage or GetPageOffset. 
-pageOffset | The positive or negative page offset to fetch. Uses the last page retrieved using the context string to determine a starting point. 
+whereJson | The where clause, as JSON object.
+maxReturn | The maximum number of entities to return.
 
 

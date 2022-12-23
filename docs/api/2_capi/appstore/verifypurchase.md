@@ -12,48 +12,48 @@ Used to verify a purchase receipt for Apple AppStore, Google Play, Facebook or W
 Use `"itunes"` as the `storeId`.
 
 iTunes `receiptData` format:
-`
+```
 {
     "receipt": "ENCODED-RECEIPT-DATA"
 }
-`
+```
 
 ### Google Play Store
 
 Use `"googlePlay"` as the `storeId`.
 
 Google Play `receiptData` format:
-`
+```
 {    
     "productId" : "gems_pack_small",
     "orderId" : "GPA.0000-1111-2222-33333",
     "token" : "ENCODED_TOKEN_STRING",
     "developerPayload" : "STRING_ENCODED_JSON"
 }
-`
+```
 
 ### Facebook
 
 Use `"facebook"` as the `storeId`.
 
 Facebook `receiptData` format:
-`
+```
 {
     "signedRequest": "string-of-signedRequest"
 }
-`
+```
 
 ### Amazon Store
 
 Use `"amazon"` as the `storeId`.
 
 Amazon `receiptData` format:
-`
+```
 {
     "receiptId": "a-receipt-id",
     "userId": "a-user-id"
 }
-`
+```
 
 ### Response fields
 

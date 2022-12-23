@@ -2,13 +2,6 @@
 ## Overview
 Similar to <code>[LeaveTournament](/api/capi/tournament/leavetournament)</code>, but for a division instance. The player's score will be removed, and the instance will no longer appear in the player's division list.
 
-
-### Method Parameters
-### Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | Id of the division leaderboard the user is in.
-
 <PartialServop service_name="tournament" operation_name="LEAVE_DIVISION_INSTANCE" / >
 
 ## Usage
@@ -142,10 +135,9 @@ if (postResult.status == 200) {
 </details>
 
 ## Method Parameters
+#### Method Parameters
 Parameter | Description
 --------- | -----------
-leaderboardId | The leaderboard for the tournament
-tournamentCode | Tournament to join
-initialScore | Initial score for the user
+leaderboardId | Id of the division leaderboard the user is in.
 
 

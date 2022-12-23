@@ -1,19 +1,10 @@
-# SysInitializePresence [sysinitializepresence]
+# SysInitializePresence
 ## Overview
 :::tip
 This method is available in Cloud Code scripts only.
 :::
 
 Creates or updates the presence of `profileId`. `visible` is optional (defaults to true). `activity` is optional. `expirySecs` is optional (defaults to <%= data.branding.productName %> property `presPxExpirySecs`). If `activity` is included, the same restrictions apply as those outlined in <code>[UpdateActivity](/api/capi/presence/updateactivity)</code>.
-
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-profileId | Target profile ID.
-visible | Should user appear in presence? True by default.
-activity | Presence activity record json.
-expirySecs | Time before this activity record expires.
 
 <PartialServop service_name="presence" operation_name="SYS_INITIALIZE_PRESENCE" / >
 
@@ -121,7 +112,9 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-profileIds | Array of target profile IDs.
-bidirectional | Should those profiles be mutually registered to listen to the current profile?
+profileId | Target profile ID.
+visible | Should user appear in presence? True by default.
+activity | Presence activity record json.
+expirySecs | Time before this activity record expires.
 
 

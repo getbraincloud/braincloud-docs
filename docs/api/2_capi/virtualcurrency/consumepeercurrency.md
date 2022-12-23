@@ -2,16 +2,6 @@
 ## Overview
 Consumes currency in a peer.
 
-
-
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-vcId | Type of currency (Ex. ticket, tokens)
-vcAmount | Currency amount to be consumed
-peer | Name of the peer
-
 <PartialServop service_name="virtualCurrency" operation_name="CONSUME_PEER_VC" / >
 
 ## Usage
@@ -133,7 +123,8 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-vcId | The currency type to consume. 
-vcAmount | The amount of currency to consume. 
+vcId | Type of currency (Ex. ticket, tokens)
+vcAmount | Currency amount to be consumed
+peer | Name of the peer
 
 

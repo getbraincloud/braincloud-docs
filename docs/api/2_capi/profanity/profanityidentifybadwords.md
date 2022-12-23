@@ -2,24 +2,6 @@
 ## Overview
 Checks supplied text for profanity and returns a list of bad words.
 
-
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-text | The text to check
-languages | Optional comma delimited list of two character language codes
-flagEmail | Optional processing of email addresses
-flagPhone | Optional processing of phone numbers
-flagUrls | Optional processing of urls
-### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40421 | WEBPURIFY_NOT_CONFIGURED | WebPurify not configured
-40422 | WEBPURIFY_EXCEPTION | General exception occurred
-40423 | WEBPURIFY_FAILURE | WebPurify returned an error (Http status != 200)
-40424 | WEBPURIFY_NOT_ENABLED | WebPurify not enabled
-
 <PartialServop service_name="profanity" operation_name="PROFANITY_IDENTIFY_BAD_WORDS" / >
 
 ## Usage

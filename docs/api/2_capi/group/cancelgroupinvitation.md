@@ -1,13 +1,6 @@
-# CancelGroupInvitation [cancelgroupinvitation]
+# CancelGroupInvitation
 ## Overview
 Cancel an outstanding invitation to the group.
-
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-groupId | ID of the group
-profileId | Profile ID of user whos invitation is being deleted.
 
 <PartialServop service_name="group" operation_name="CANCEL_GROUP_INVITATION" / >
 
@@ -154,8 +147,7 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-groupTypes | The list of group types to draw candidates from
-autoJoinStrategy | Selection strategy to employ when there are multiple matches
-where | Query parameters (optional)
+groupId | ID of the group
+profileId | Profile ID of user whos invitation is being deleted.
 
 

@@ -1,12 +1,6 @@
-# ListGroupsWithMember [listgroupswithmember]
+# ListGroupsWithMember
 ## Overview
 Retrieve group summary information about the groups in which the specified user is a member.
-
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-profileId | ID of the user to search for
 
 <PartialServop service_name="group" operation_name="LIST_GROUPS_WITH_MEMBER" / >
 
@@ -158,7 +152,6 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-context | The context string returned from the server from a previous call to ListGroupsPage or ListGroupsPageByOffset
-pageOffset | The positive or negative page offset to fetch. Uses the last page retrieved using the context string to determine a starting point.
+profileId | ID of the user to search for
 
 

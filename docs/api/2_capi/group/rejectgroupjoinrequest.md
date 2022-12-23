@@ -1,13 +1,6 @@
-# RejectGroupJoinRequest [rejectgroupjoinrequest]
+# RejectGroupJoinRequest
 ## Overview
 Reject a request to join the group.
-
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-groupId | ID of the group
-profileId | Profile ID of the user being rejected
 
 <PartialServop service_name="group" operation_name="REJECT_GROUP_JOIN_REQUEST" / >
 
@@ -155,5 +148,6 @@ if (postResult.status == 200) {
 Parameter | Description
 --------- | -----------
 groupId | ID of the group
+profileId | Profile ID of the user being rejected
 
 

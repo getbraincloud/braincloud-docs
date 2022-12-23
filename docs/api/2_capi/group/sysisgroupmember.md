@@ -2,13 +2,6 @@
 ## Overview
 Verifies if user is a group member and returns information about group member, bypassing ownership/ACL checks.
 
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-groupId | The id of the group.
-profileId | The profile id of the user to be checked.
-
 <PartialServop service_name="group" operation_name="SYS_IS_GROUP_MEMBER" / >
 
 ## Usage
@@ -115,7 +108,7 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-where | A mongo style query string.
-maxReturn | The max count of groups to randomly select.
+groupId | The id of the group.
+profileId | The profile id of the user to be checked.
 
 

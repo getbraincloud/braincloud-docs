@@ -2,16 +2,6 @@
 ## Overview
 Send a packet to peer(s).
 
-### Method Parameters
-Parameter | Description
---------- | -----------
-data | Byte array for the data to send
-size | Size of data in bytes
-toNetId | The net id to send to, TO_ALL_PLAYERS to relay to all
-reliable | Send this reliably or not
-ordered | Received this ordered or not
-channel | One of: (CHANNEL_HIGH_PRIORITY_1, CHANNEL_HIGH_PRIORITY_2, CHANNEL_NORMAL_PRIORITY, CHANNEL_LOW_PRIORITY)
-
 <PartialServop service_name="globalGameStatistics" operation_name="READ_SUBSET" / >
 
 ## Usage
@@ -102,7 +92,11 @@ RSDataCallback rsDataCallback = (response) =>
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-connectionType | The connection type. INVALID, WEBSOCKET, TCP, UDP, MAX
-options | Options sent in the connection
+data | Byte array for the data to send
+size | Size of data in bytes
+toNetId | The net id to send to, TO_ALL_PLAYERS to relay to all
+reliable | Send this reliably or not
+ordered | Received this ordered or not
+channel | One of: (CHANNEL_HIGH_PRIORITY_1, CHANNEL_HIGH_PRIORITY_2, CHANNEL_NORMAL_PRIORITY, CHANNEL_LOW_PRIORITY)
 
 

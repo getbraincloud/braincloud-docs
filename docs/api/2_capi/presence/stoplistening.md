@@ -1,4 +1,4 @@
-# StopListening [stoplistening]
+# StopListening
 ## Overview
 Stops the caller from receiving RTT presence updates. Does not affect the broadcasting of *their* presence updates to other listeners. Note that *Real-time Tech(RTT) updates* must be enabled in order for this API call to work (see Messaging > Presence in the portal).
 
@@ -130,7 +130,6 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-profileIds | Array of target profile IDs.
-bidirectional | Should those profiles be mutually registered to listen to the current profile?
+visible | Should user appear in presence? True by default.
 
 

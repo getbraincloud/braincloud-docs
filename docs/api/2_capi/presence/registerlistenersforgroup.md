@@ -1,13 +1,6 @@
-# RegisterListenersForGroup [registerlistenersforgroup]
+# RegisterListenersForGroup
 ## Overview
 Registers the caller for RTT presence updates from the members of the given `groupId`. Caller must be a member of said group. If `bidirectional` is set to true, then also registers the targeted users for presence updates from the caller.
-
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-groupId | Target group ID.
-bidirectional | Should those profiles be mutually registered to listen to the current profile?
 
 <PartialServop service_name="presence" operation_name="REGISTER_LISTENERS_FOR_GROUP" / >
 
@@ -172,7 +165,7 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-platform | Presence for friends of the caller on the specified platform. Use "all" or omit for all platforms. 
+groupId | Target group ID.
 bidirectional | Should those profiles be mutually registered to listen to the current profile?
 
 

@@ -2,15 +2,6 @@
 ## Overview
 Schedules a script to run at given UTC time.
 
-
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-scriptName | The name of the script with its path to be run.
-scriptData | Data to be sent to the script in JSON format.
-startDateInUTC | The start date. (date in millis UTC)
-
 <PartialServop service_name="script" operation_name="SCHEDULE_CLOUD_SCRIPT" / >
 
 ## Usage
@@ -163,7 +154,8 @@ var startDateInUTC = 1437579786000;
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-scriptName | The name of the script with its path to be run
-scriptData | Data to be sent to the script in JSON format
+scriptName | The name of the script with its path to be run.
+scriptData | Data to be sent to the script in JSON format.
+startDateInUTC | The start date. (date in millis UTC)
 
 

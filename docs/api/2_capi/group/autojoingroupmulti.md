@@ -1,4 +1,4 @@
-# AutoJoinGroupMulti [autojoingroupmulti]
+# AutoJoinGroupMulti
 ## Overview
 Find and join an open group in the pool of groups in multiple group types provided as input arguments.
 

@@ -2,13 +2,6 @@
 ## Overview
 Sets the user's experience to an absolute value. Note that this is simply a set and will not reward the player if their level changes as a result.
 
-
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-xpValue | The amount to set the the user's experience to
-
 <PartialServop service_name="playerStatistics" operation_name="SET_XPPOINTS" / >
 
 ## Usage
@@ -146,6 +139,6 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-userStats | A collection containing the statistics to read
+xpValue | The amount to set the the user's experience to
 
 

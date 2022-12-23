@@ -52,14 +52,14 @@ Recommended behavior of the client is to pop up a dialog inviting the user to up
 <%= data.branding.productName %> allows you to easily control whether your app is *enabled* or *disabled* via the [Core App Info | Advanced Settings](https://portal.braincloudservers.com/admin/dashboard#/development/core-settings-advanced-settings) page of the portal.
 
 If for some reason you *do* decide to disable your app, you are able to configure a custom JSON object to be returned to apps that attempt to login. This JSON is set via the **[Edit Disabled Reason]** button on that same portal page.
-`
+```
 {
     "message": "Apologies - we will be right back!"
 }
-`
+```
 
 Once disabled, your provided JSON-data will be returned within an element called `disabledReason` within the error response. For example:
-`
+```
 {
     "reason_code": 40330,
     "status": 403,
@@ -69,13 +69,13 @@ Once disabled, your provided JSON-data will be returned within an element called
     },
     "severity": "ERROR"
 }
-`
+```
 
 ### System Disabled ###
 
 If for some reason your app is *System Disabled* by <%= data.branding.productName %> operations, your app will receive a `disabledReason` with two elements: `sysDisabled: true` and `message`.
 
-`
+```
 {
     "reason_code": 40330,
     "status": 403,
@@ -86,7 +86,7 @@ If for some reason your app is *System Disabled* by <%= data.branding.productNam
     },
     "severity": "ERROR"
 }
-`
+```
 
 
 ### API Summary

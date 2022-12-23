@@ -1,13 +1,6 @@
-# GetPresenceOfFriends [getpresenceoffriends]
+# GetPresenceOfFriends
 ## Overview
 Gets the presence data for the given `platform`. Can be one of "all", "<%= data.branding.productName %>", or "facebook". Will not include offline profiles unless `includeOffline` is set to true.
-
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-platform | Gets a list of Presence entries for the specified platform or "all" for all platforms. 
-includeOffline | Should offline users be included in the response?
 
 <PartialServop service_name="presence" operation_name="GET_PRESENCE_OF_FRIENDS" / >
 
@@ -173,10 +166,7 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-integrationId | The blockchain integration id. Currently only 'default' is supported.
-redemptionCodeId | The internal id for the redemption code being redeemed.
-attempt | The redemption attempt number.
-codeType | The type of redemption code being redeemed.
-mintDataJson | JSON object containing blockchain provider specific data for minting NFTs.
+platform | Gets a list of Presence entries for the specified platform or "all" for all platforms. 
+includeOffline | Should offline users be included in the response?
 
 

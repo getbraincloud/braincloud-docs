@@ -130,6 +130,6 @@ if (postResult.status == 200) {
 Parameter | Description
 --------- | -----------
 vcId | The currency type to retrieve or null if all currency types are being requested.
-levelName | Name of the parent level.
+peer | Name of the peer
 
 

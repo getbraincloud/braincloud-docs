@@ -1,4 +1,4 @@
-# ReadGroupMembers [readgroupmembers]
+# ReadGroupMembers
 ## Overview
 Read the members of the group.
 

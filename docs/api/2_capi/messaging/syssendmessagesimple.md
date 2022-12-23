@@ -2,15 +2,6 @@
 ## Overview
 Sends a simple string-based message on behalf of the system (i.e. app) to the specified users.
 
-
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-toProfileIds | The array of recipients  
-test | Simple text message.
-fromJson | Who the message is from. Should contain at least "name" field, and potential "pic" field as well.
-
 <PartialServop service_name="messaging" operation_name="SYS_SEND_MESSAGE_SIMPLE" / >
 
 ## Usage
@@ -139,7 +130,7 @@ if (postResult.status == 200) {
 Parameter | Description
 --------- | -----------
 toProfileIds | The array of recipients  
-contentJson | The json content object to send in the message  
+test | Simple text message.
 fromJson | Who the message is from. Should contain at least "name" field, and potential "pic" field as well.  
 
 

@@ -1,13 +1,6 @@
-# GetPresenceOfGroup [getpresenceofgroup]
+# GetPresenceOfGroup
 ## Overview
 Gets the presence data for the given `groupId`. Will not include offline profiles unless `includeOffline` is set to true.
-
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-groupId | Gets a list of Presence for the members of the specified group. The caller must be a member of the given group. 
-includeOffline | Should offline users be included in the response?
 
 <PartialServop service_name="presence" operation_name="GET_PRESENCE_OF_GROUP" / >
 
@@ -172,10 +165,7 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-integrationId | The blockchain integration id. Currently only 'default' is supported.
-redemptionCodeId | The internal id for the redemption code being redeemed.
-attempt | The redemption attempt number.
-codeType | The type of redemption code being redeemed.
-mintDataJson | JSON object containing blockchain provider specific data for minting NFTs.
+groupId | Gets a list of Presence for the members of the specified group. The caller must be a member of the given group. 
+includeOffline | Should offline users be included in the response?
 
 

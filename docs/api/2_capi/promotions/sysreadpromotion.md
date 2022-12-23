@@ -2,13 +2,6 @@
 ## Overview
 Returns the full configuration data of the specified promotion.
 
-
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-promotionId | ID uniquely identifying the promotion to read.
-
 <PartialServop service_name="promotions" operation_name="SYS_READ_PROMOTION" / >
 
 ## Usage
@@ -140,6 +133,6 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-playbackStreamId | The playback stream id returned in the start match
+promotionId | ID uniquely identifying the promotion to read.
 
 

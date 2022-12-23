@@ -2,12 +2,6 @@
 ## Overview
 Returns an array of the notification templates defined - with the text for the specified language.
 
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-defaultLanguageCode | The language code (lowercase) to be used for returning the default message text.
-
 <PartialServop service_name="pushNotification" operation_name="SYS_GET_NOTIFICATION_TEMPLATES" / >
 
 ## Usage
@@ -126,7 +120,6 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-toProfileId | The profileId of the user to receive the notification.
-message | The content of the message.
+defaultLanguageCode | The language code (lowercase) to be used for returning the default message text.
 
 

@@ -2,12 +2,6 @@
 ## Overview
 Unlinks the current user and the specified users as <%= data.branding.productName %> friends.
 
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-profileIds | Collection of profile IDs.
-
 <PartialServop service_name="friend" operation_name="REMOVE_FRIENDS" / >
 
 ## Usage
@@ -149,6 +143,6 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-friendId | Profile Id of friend who owns entity.
+profileIds | Collection of profile IDs.
 
 

@@ -1,14 +1,6 @@
-# IncrementGroupEntityData [incrementgroupentitydata]
+# IncrementGroupEntityData
 ## Overview
 Increment elements for a group entity's data field.
-
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-groupId | ID of the group
-entityId | ID of the entity.
-jsonData | Partial data map with incremental values.
 
 <PartialServop service_name="group" operation_name="INCREMENT_GROUP_ENTITY_DATA" / >
 
@@ -184,7 +176,8 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-where | Mongo style query string. 
-maxReturn | Count of groups to randomly select 
+groupId | ID of the group
+entityId | ID of the entity.
+jsonData | Partial data map with incremental values.
 
 

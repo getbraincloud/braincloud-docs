@@ -1,12 +1,6 @@
-# SetVisibility [setvisibility]
+# SetVisibility
 ## Overview
 Update the presence data `visible` field for the caller. An RTT event will be sent to any registered listeners of the caller with their updated presence info.
-
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-visible | Should user appear in presence? True by default.
 
 <PartialServop service_name="presence" operation_name="SET_VISIBILITY" / >
 
@@ -146,7 +140,6 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-profileIds | Array of target profile IDs.
-bidirectional | Should those profiles be mutually registered to listen to the current profile?
+visible | Should user appear in presence? True by default.
 
 

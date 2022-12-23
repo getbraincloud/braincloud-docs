@@ -2,13 +2,6 @@
 ## Overview
 Returns the list of products (summary details only) for the specified category (optional).
 
-
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-category | Optional. The product item category to filter on. Leave blank or null to retrieve all products.
-
 <PartialServop service_name="productManagement" operation_name="SYS_GET_PRODUCT_LIST" / >
 
 ## Usage
@@ -125,7 +118,6 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-storeId | The store type - "itunes", "googlePlay", "amazon", "facebook" or "windows"
-receiptData | A JSON object with data in the format for the specified store
+category | Optional. The product item category to filter on. Leave blank or null to retrieve all products.
 
 

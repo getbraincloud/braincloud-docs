@@ -4,12 +4,6 @@ Retrieves profile information for the partial Universal ID matches of the specif
 
 Does not require the calling user to be a friend of the retrieved users.
 
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-searchText | The universalId to search for
-
 <PartialServop service_name="friend" operation_name="FIND_PLAYER_BY_EXACT_UNIVERSAL_ID" / >
 
 ## Usage
@@ -152,8 +146,6 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-friendPlatform | Friend platform to query. Valid values are "Facebook", "Steam", and "PlaystationNetwork"
-mode | "ADD" to add friends only, "SYNC" to delete any previously saved friends that are not in the externalIds list
-externalIds | The list of platform-specific external IDs of the friends to add
+searchText | The universalId to search for
 
 

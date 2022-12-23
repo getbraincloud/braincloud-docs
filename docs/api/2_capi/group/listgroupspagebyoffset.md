@@ -1,4 +1,4 @@
-# ListGroupsPageByOffset [listgroupspagebyoffset]
+# ListGroupsPageByOffset
 ## Overview
 Retrieve a page of group summary information based on the encoded context and specified page offset.
 

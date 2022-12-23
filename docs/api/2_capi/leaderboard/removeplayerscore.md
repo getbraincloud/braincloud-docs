@@ -2,14 +2,6 @@
 ## Overview
 Removes a player's score from the leaderboard.
 
-
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | The leaderboard to post to.
-versionId | The version of the leaderboard. Use -1 to specify the currently active leaderboard version.
-
 <PartialServop service_name="leaderboard" operation_name="REMOVE_PLAYER_SCORE" / >
 
 ## Usage
@@ -156,8 +148,7 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-leaderboardId | The id of the leaderboard.
-groupId | The id of the group. 
+leaderboardId | The leaderboard to post to.
 versionId | The version of the leaderboard. Use -1 to specify the currently active leaderboard version.
 
 

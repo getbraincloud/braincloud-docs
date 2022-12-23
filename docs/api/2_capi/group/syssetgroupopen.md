@@ -2,13 +2,6 @@
 ## Overview
 Set whether a group is open (true) or closed (false), bypassing ownership/ACL checks.
 
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-groupId | ID of the group
-isOpenGroup | true if group is open; false if closed
-
 <PartialServop service_name="group" operation_name="SYS_SET_GROUP_OPEN" / >
 
 ## Usage
@@ -111,7 +104,7 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-groupId | The id of the group.
-profileId | The profile id of the user being removed from the group.
+groupId | ID of the group
+isOpenGroup | true if group is open; false if closed
 
 

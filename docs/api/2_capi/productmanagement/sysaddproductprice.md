@@ -2,15 +2,6 @@
 ## Overview
 Adds a new price to the given product item.
 
-
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-itemId | The product item identifier.
-version | The product configuration version. 
-priceJson | The price details as JSON map.
-
 <PartialServop service_name="productManagement" operation_name="SYS_ADD_PRODUCT_PRICE" / >
 
 ## Usage
@@ -236,7 +227,8 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-storeId | The store type - "itunes", "googlePlay", "amazon", "facebook" or "windows"
-receiptData | A JSON object with data in the format for the specified store
+itemId | The product item identifier.
+version | The product configuration version. 
+priceJson | The price details as JSON map.
 
 

@@ -2,15 +2,6 @@
 ## Overview
 Updates an existing product with the specifed values. Pass -1 as the version to bypass version checking.
 
-
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-itemId | The product item identifier.
-version | The product configuration version.
-productJson | The product details to update. Note: If itemId is included in the productJson, it is ignored. The itemId provided as a direct parameter takes priority.
-
 <PartialServop service_name="productManagement" operation_name="SYS_UPDATE_PRODUCT" / >
 
 ## Usage
@@ -146,7 +137,8 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-storeId | The store type - "itunes", "googlePlay", "amazon", "facebook" or "windows"
-receiptData | A JSON object with data in the format for the specified store
+itemId | The product item identifier.
+version | The product configuration version.
+productJson | The product details to update. Note: If itemId is included in the productJson, it is ignored. The itemId provided as a direct parameter takes priority.
 
 

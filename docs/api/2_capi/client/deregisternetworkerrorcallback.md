@@ -87,8 +87,7 @@ Deregisters the network error callback.
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-toProfileId | The id of the player who is being sent the event
-eventType | The user-defined type of the event.
+evId | The event ID
 eventData | The user-defined data for this event encoded in JSON.
 
 

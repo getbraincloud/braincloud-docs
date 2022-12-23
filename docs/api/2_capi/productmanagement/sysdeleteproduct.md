@@ -2,14 +2,6 @@
 ## Overview
 Delete the product item.
 
-
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-itemId | The item id being deleted.
-version | The version being validated. Pass -1 to bypass version checking.
-
 <PartialServop service_name="productManagement" operation_name="SYS_DELETE_PRODUCT" / >
 
 ## Usage
@@ -112,7 +104,7 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-storeId | The store type - "itunes", "googlePlay", "amazon", "facebook" or "windows"
-receiptData | A JSON object with data in the format for the specified store
+itemId | The item id being deleted.
+version | The version being validated. Pass -1 to bypass version checking.
 
 

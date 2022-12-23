@@ -4,13 +4,6 @@ Triggers multiple events server side that will increase the users statistics. Th
 
 This mechanism supersedes the [<code>PlayerStatisticsService</code>](/api/capi/playerstats) API methods, since PlayerStatisticsService API method only update the raw statistics without triggering the rewards.
 
-
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-jsonData | An array of JSON objects representing Event Names and Multipliers.  ex. `[ { "eventName": "event1", "eventMultiplier": 1 } ]`
-
 <PartialServop service_name="playerStatisticsEvent" operation_name="TRIGGER_MULTIPLE" / >
 
 ## Usage
@@ -184,7 +177,6 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-eventName | The name of the event configured through the <%= data.branding.productName %> portal
-multiplier | The multiplier to apply to the event
+jsonData | An array of JSON objects representing Event Names and Multipliers.  ex. `[ { "eventName": "event1", "eventMultiplier": 1 } ]`
 
 

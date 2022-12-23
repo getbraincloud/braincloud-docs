@@ -32,7 +32,7 @@ RTTCallback rttCallback = response =>
 };
 <%= data.branding.codePrefix %>.RegisterRTTChatCallback(rttCallback);
 
-<%=  partial(:"partials/docExample", :locals => {
+<%= partial(:"partials/docExample", :locals => {
   :stepNum => "3",
   :stepName => "NowCall",
   :apiCall => "ChannelConnect"

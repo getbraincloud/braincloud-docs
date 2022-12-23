@@ -2,13 +2,6 @@
 ## Overview
 Set a group's access conditions, bypassing ownership/ACL checks.
 
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-groupId | ID of the group
-acl | The group's access control list. A null ACL implies default
-
 <PartialServop service_name="group" operation_name="SYS_UPDATE_GROUP_ACL" / >
 
 ## Usage
@@ -117,7 +110,7 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-groupId | The id of the group.
-profileId | The profile id of the user being removed from the group.
+groupId | ID of the group
+acl | The group's access control list. A null ACL implies default
 
 

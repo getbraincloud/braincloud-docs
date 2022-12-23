@@ -1,4 +1,4 @@
-# RejectGroupInvitation [rejectgroupinvitation]
+# RejectGroupInvitation
 ## Overview
 Reject an invitation to become a member of the group.
 

@@ -1,13 +1,6 @@
-# UpdateGroupAcl [updategroupacl]
+# UpdateGroupAcl
 ## Overview
 Set a group's access conditions.
-
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-groupId | ID of the group
-acl | The group's access control list. A null ACL implies default
 
 <PartialServop service_name="group" operation_name="UPDATE_GROUP_ACL" / >
 
@@ -117,8 +110,7 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-groupId | ID of the group 
-version | Version to verify 
-summaryData | Public summary data for the group that is viewable even by non-members 
+groupId | ID of the group
+acl | The group's access control list. A null ACL implies default
 
 

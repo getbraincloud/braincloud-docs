@@ -2,14 +2,6 @@
 ## Overview
 Deletes the specified promotion from the server.
 
-
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-promotionId | ID uniquely identifying the promotion to update. Note: If promotionId is included in the promotionJson, it is ignored. The promotionId provided as a direct parameter takes priority.
-version | Version of the promotion to update. Can bypass version check by passing in -1.
-
 <PartialServop service_name="promotions" operation_name="SYS_DELETE_PROMOTION" / >
 
 ## Usage
@@ -112,6 +104,7 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-playbackStreamId | The playback stream id returned in the start match
+promotionId | ID uniquely identifying the promotion to update. Note: If promotionId is included in the promotionJson, it is ignored. The promotionId provided as a direct parameter takes priority.
+version | Version of the promotion to update. Can bypass version check by passing in -1.
 
 

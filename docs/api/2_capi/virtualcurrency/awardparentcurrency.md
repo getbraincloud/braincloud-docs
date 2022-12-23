@@ -2,15 +2,6 @@
 ## Overview
 Award parent user the passed-in amount of currency. Returns an object representing the new currency values.
 
-
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-vcId | The currency type to award.
-vcAmount | The amount of currency to award.
-levelName | Name of the parent level.
-
 <PartialServop service_name="virtualCurrency" operation_name="AWARD_PARENT_VC" / >
 
 ## Usage
@@ -131,7 +122,8 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-vcId | The currency type to award. 
-vcAmount | The amount of currency to award. 
+vcId | The currency type to award.
+vcAmount | The amount of currency to award.
+levelName | Name of the parent level.
 
 

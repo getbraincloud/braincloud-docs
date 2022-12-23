@@ -1,4 +1,4 @@
-# GetMyGroups [getmygroups]
+# GetMyGroups
 ## Overview
 Retrieve group information about the groups in which the current user is a member.
 
@@ -145,13 +145,8 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-name | A name for the group. 
-groupType | The type of group. 
-isOpenGroup | true if group is open; false if closed. 
-acl | The group's access control list. A null ACL implies default. 
-ownerAttributes | Attributes for the group owner (current user.) 
-defaultMemberAttributes | Default attributes for group members. 
-data | Custom application data. 
-summaryData | Public summary data for the group that is viewable even by non-members. 
+groupId | ID of the group
+entityId | ID of the entity.
+version | The current version of the group entity (for concurrency checking).
 
 

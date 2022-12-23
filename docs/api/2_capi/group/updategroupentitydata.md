@@ -1,4 +1,4 @@
-# UpdateGroupEntityData [updategroupentitydata]
+# UpdateGroupEntityData
 ## Overview
 Update the data for a group entity . Optional parameters: jsonData (will clear data if not provided)
 

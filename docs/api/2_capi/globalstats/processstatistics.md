@@ -5,7 +5,7 @@ Apply statistics grammar to a partial set of statistics. Global statistics are d
 The operations available are much richer than the standard *increment* operation available via `IncrementGlobalStats()`.
 
 For example:
-`
+```
 {
     "INNING": "INC#1",              // Increment by one
     "INNINGSREM": "DEC#1",          // Decrement by one
@@ -16,7 +16,7 @@ For example:
     "ESTIMATE": "MIN#5",            // Set to the specified value if smaller
     "GAME" : "5"                    // Missing stat grammar will treat the operation as an increment
 }
-`
+```
 
 The above example would:
 

@@ -2,14 +2,6 @@
 ## Overview
 Gets the peer currency for the given currency type **or** all currency types if null passed in.
 
-
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-vcId | The currency type to retrieve or null if all currency types are being requested.
-peer | Name of the peer
-
 <PartialServop service_name="virtualCurrency" operation_name="GET_PARENT_VC" / >
 
 ## Usage
@@ -164,6 +156,6 @@ if (postResult.status == 200) {
 Parameter | Description
 --------- | -----------
 vcId | The currency type to retrieve or null if all currency types are being requested.
-levelName | Name of the parent level.
+peer | Name of the peer
 
 

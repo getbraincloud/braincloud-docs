@@ -1,4 +1,4 @@
-# RegisterListenersForFriends [registerlistenersforfriends]
+# RegisterListenersForFriends
 ## Overview
 Registers the caller for RTT presence updates from friends on the given `platform`. Can be one of "all", "<%= data.branding.productName %>", or "facebook". If `bidirectional` is set to true, then also registers the targeted users for presence updates from the caller.
 

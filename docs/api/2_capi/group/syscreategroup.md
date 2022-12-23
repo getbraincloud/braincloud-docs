@@ -8,21 +8,6 @@ The group ACL contains two elements defining access to the groups data for non-m
 - ReadOnly = 1
 - ReadWrite = 2
 
-
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-name | Name of the group
-groupType | Name of the type of group
-isOpenGroup | true if group is open; false if closed
-acl | The group's access control list. A null ACL implies default
-ownerId | Profile ID of user to be owner of group
-ownerAttributes | Attributes for the group owner (current user)
-defaultMemberAttributes | Default attributes for group members
-jsonData | Custom application data
-summaryData | Public summary data for the group that is viewable even by non-members. Optional.
-
 <PartialServop service_name="group" operation_name="SYS_CREATE_GROUP" / >
 
 ## Usage
@@ -171,7 +156,14 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-groupId | ID of the group 
-groupType | Group Type 
+name | Name of the group
+groupType | Name of the type of group
+isOpenGroup | true if group is open; false if closed
+acl | The group's access control list. A null ACL implies default
+ownerId | Profile ID of user to be owner of group
+ownerAttributes | Attributes for the group owner (current user)
+defaultMemberAttributes | Default attributes for group members
+jsonData | Custom application data
+summaryData | Public summary data for the group that is viewable even by non-members. Optional.
 
 

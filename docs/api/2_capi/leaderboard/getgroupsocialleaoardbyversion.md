@@ -1,14 +1,6 @@
-# GetGroupSocialLeaderboardByVersion [getgroupsocialleaderboardbyversion]
+# GetGroupSocialLeaderboardByVersion
 ## Overview
 Retrieve the social leaderboard by version, for a group.
-
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | The ID of the leaderboard
-groupId | The ID of the group
-version | Leaderboard version to get
 
 <PartialServop service_name="leaderboard" operation_name="GET_GROUP_SOCIAL_LEADERBOARD_BY_VERSION" / >
 
@@ -191,5 +183,6 @@ Parameter | Description
 --------- | -----------
 leaderboardId | The ID of the leaderboard
 groupId | The ID of the group
+version | Leaderboard version to get
 
 

@@ -2,13 +2,6 @@
 ## Overview
 Starts a match.
 
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-otherPlayerId | The player to start a match with
-rangeDelta | The player rating range delta required for the match to start. If otherPlayerId has too high or low of a rating compared to the current player and range delta, a MATCH_RANGE_ERROR (40334) will be returned
-
 <PartialServop service_name="onewayMatch" operation_name="START_MATCH" / >
 
 ## Usage
@@ -167,6 +160,7 @@ if (postResult.status == 200) {
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-playbackStreamId | The playback stream id returned in the start match
+otherPlayerId | The player to start a match with
+rangeDelta | The player rating range delta required for the match to start. If otherPlayerId has too high or low of a rating compared to the current player and range delta, a MATCH_RANGE_ERROR (40334) will be returned
 
 
