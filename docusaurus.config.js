@@ -28,10 +28,10 @@ let options = {
 const config = {
   title: 'brainCloud docs',
   tagline: 'BaaS',
-  url: 'https://getbraincloud.github.io',
-  baseUrl: '/braincloud-apiref/', // for github page must attach a repository name after url
-  // url: 'https://brainclouddocs.netlify.app',
-  // baseUrl: '/', // for netlify
+  // url: 'https://getbraincloud.github.io',
+  // baseUrl: '/braincloud-apiref/', // for github page must attach a repository name after url
+  url: 'https://brainclouddocs.netlify.app',
+  baseUrl: '/', // for netlify
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',

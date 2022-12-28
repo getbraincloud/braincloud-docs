@@ -16,7 +16,7 @@ You configure <em>Lobby Types</em> in the portal under <strong>Design | Multipla
 
 ### Key concepts
 
-![Online Multiplayer Process](@site/docs/img/api-img/online_multiplayer_process.png)
+![Online Multiplayer Process](@site/docs/img/api-img/online_multiplayer_process_1.png)
 
 *Lobbies* are used to gather up users prior to launching shared experiences via *Room Servers*. Users can be added to teams, indicate their ready status, and adjust personal and room settings before the experience starts.
 
