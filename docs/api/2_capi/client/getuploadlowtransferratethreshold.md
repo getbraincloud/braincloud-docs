@@ -2,8 +2,6 @@
 ## Overview
 Returns the low transfer rate threshold in bytes/sec.
 
-<PartialServop service_name="" operation_name="" / >
-
 ## Usage
 
 ```mdx-code-block
@@ -75,11 +73,4 @@ int bytesPerSecThreshold = [<%= data.branding.codePrefix %> getUploadLowTransfer
 </Tabs>
 </BrowserWindow>
 ```
-
-<details>
-<summary>JSON Response</summary>
-
-
-</details>
-
 

@@ -1,6 +1,6 @@
-# RegisterRTTPresenceCallback
+# GetCxIdForNetId
 ## Overview
-Registers a callback for RTT Presence updates.
+Returns the netId associated with a connection Id.
 
 ## Usage
 
@@ -11,11 +11,7 @@ Registers a callback for RTT Presence updates.
 ```
 
 ```csharp
-RTTCallback rttCallback = response =>
-{
-   Debug.Log(response);
-};
-<%= data.branding.codePrefix %>.RTTService.RegisterRTTPresenceCallback(rttCallback);
+<%= data.branding.codePrefix %>.RelayService.GetCxIdForNetId();
 ```
 
 ```mdx-code-block
@@ -24,7 +20,7 @@ RTTCallback rttCallback = response =>
 ```
 
 ```cpp
-<%= data.branding.codePrefix %>.RTTService.registerRTTPresenceCallback(rttCallback);
+<%= data.branding.codePrefix %>->getRelayService()->getCxIdForNetId();
 ```
 
 ```mdx-code-block
@@ -33,7 +29,6 @@ RTTCallback rttCallback = response =>
 ```
 
 ```objectivec
-Coming soon!
 ```
 
 ```mdx-code-block
@@ -42,7 +37,6 @@ Coming soon!
 ```
 
 ```java
-<%= data.branding.codePrefix %>.RTTService.registerRTTPresenceCallback(rttCallback);
 ```
 
 ```mdx-code-block
@@ -51,7 +45,6 @@ Coming soon!
 ```
 
 ```javascript
-<%= data.branding.codePrefix %>.rttService.registerRTTPresenceCallback(rttCallback);
 ```
 
 ```mdx-code-block
@@ -68,7 +61,7 @@ Coming soon!
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
+```r
 // N/A
 ```
 
@@ -77,10 +70,4 @@ Coming soon!
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-rttCallback | The RTT Chat callback handler.
-
 

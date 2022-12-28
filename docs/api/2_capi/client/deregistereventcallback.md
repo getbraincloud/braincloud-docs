@@ -2,8 +2,6 @@
 ## Overview
 Deregisters the event callback.
 
-<PartialServop service_name="" operation_name="" / >
-
 ## Usage
 
 ```mdx-code-block
@@ -75,11 +73,4 @@ Deregisters the event callback.
 </Tabs>
 </BrowserWindow>
 ```
-
-<details>
-<summary>JSON Response</summary>
-
-
-</details>
-
 

@@ -78,8 +78,8 @@ _The Milestone Management APIs are available from cloud-code only._
 * [SysReadMilestone](/api/capi/gamification/sysreadmilestone)
 * [SysUpdateMilestone](/api/capi/gamification/sysupdatemilestone)
 
-* [SysGetMilestonePage](/api/api/gamification/sysgetmilestonepage)
-* [SysGetMilestonePageOffset](/api/api/gamification/sysgetmilestonepageoffset)
+* [SysGetMilestonePage](/api/capi/gamification/sysgetmilestonepage)
+* [SysGetMilestonePageOffset](/api/capi/gamification/sysgetmilestonepageoffset)
 
 ### Quests
 
@@ -106,8 +106,8 @@ _The Quest Management APIs are available from cloud-code only._
 * [SysReorderQuestTasks](/api/capi/gamification/sysreorderquesttasks)
 * [SysUpdateQuestTask](/api/capi/gamification/sysupdatequesttask)
 
-* [SysGetQuestPage](/api/api/gamification/sysgetquestpage)
-* [SysGetQuestPageOffset](/api/api/gamification/sysgetquestpageoffset)
+* [SysGetQuestPage](/api/capi/gamification/sysgetquestpage)
+* [SysGetQuestPageOffset](/api/capi/gamification/sysgetquestpageoffset)
 
 
 ### Resetting Milestone/Quest Status (useful when debugging)

@@ -10,8 +10,6 @@ By default this is set to 50 bytes/sec.
 This timeout method does not work on Unity mobile platforms.
 :::
 
-<PartialServop service_name="" operation_name="" / >
-
 ## Usage
 
 ```mdx-code-block
@@ -86,12 +84,6 @@ int minTransferRate = 1500;
 </Tabs>
 </BrowserWindow>
 ```
-
-<details>
-<summary>JSON Response</summary>
-
-
-</details>
 
 ## Method Parameters
 Parameter | Description

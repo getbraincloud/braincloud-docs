@@ -2,7 +2,7 @@
 ## Overview
 
 
-<%# TODO Write Desc %>
+
 ### API Summary
 
 #### Group
@@ -26,7 +26,7 @@
 * [SysReadGroupMembers](/api/capi/group/sysreadgroupmembers) - read all members in the group
 * [SysRemoveGroupMember](/api/capi/group/sysremovegroupmember) - Remove a member from the group, bypassing group ownership/ACL checks.
 * [SysSetGroupOpen](/api/capi/group/syssetgroupopen) - Set whether a group is open (true) or closed (false)
-* [SysUpdataGroupAcl](/api/capi/group/sysupdatagroupacl) - update a group's access conditions
+* [SysUpdateGroupAcl](/api/capi/group/sysupdategroupacl) - update a group's access conditions
 * [SysUpdateGroupData](/api/capi/group/sysupdategroupdata) - update a group's data
 * [SysUpdateGroupEntityAcl](/api/capi/group/sysupdategroupentityacl) - Update the acl settings for a group entity, bypassing ownership/ACL checks.
 * [SysUpdateGroupEntityData](/api/capi/group/sysupdategroupentitydata) - update the data for a group entity

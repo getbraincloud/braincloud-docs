@@ -7,7 +7,7 @@
 The MatchMaking Service is used for locating players to play against when using our Async or One-Way multiplayer features.
 
 :::tip"
-A player must be enabled via the <a href="/api/capi/matchmaking/enablematchmaking">EnableMatchMaking</a> method call in order to participate in a match. This is so that you may exclude players from matchmaking while they are in an introductory tutorial for your game.
+A player must be enabled via the <a href="#capi-matchmaking-enablematchmaking">EnableMatchMaking</a> method call in order to participate in a match. This is so that you may exclude players from matchmaking while they are in an introductory tutorial for your game.
 :::
 
 To use the matchMaking service matchMaking must be enabled from your app on the

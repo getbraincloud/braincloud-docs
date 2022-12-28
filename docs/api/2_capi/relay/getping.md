@@ -2,8 +2,6 @@
 ## Overview
 Get the current ping for our user. Note: Pings are not distributed among other members. Your game will have to bundle it inside a packet and distribute to other peers.
 
-<PartialServop service_name="" operation_name="" / >
-
 ## Usage
 
 ```mdx-code-block
@@ -75,11 +73,4 @@ Get the current ping for our user. Note: Pings are not distributed among other m
 </Tabs>
 </BrowserWindow>
 ```
-
-<details>
-<summary>JSON Response</summary>
-
-
-</details>
-
 

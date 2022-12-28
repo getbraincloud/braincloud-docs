@@ -13,7 +13,6 @@ Functions that are necessary to use the brianCloud library.
 
 * [Initialize](/api/capi/client/initialize)
 * [InitializeIdentity](/api/capi/client/initializeidentity)
-* [GetInstance](/api/capi/client/getinstance)
 * [RunCallbacks](/api/capi/client/runcallbacks)
 * [Update](/api/capi/client/update)
 

@@ -2,8 +2,6 @@
 ## Overview
 Returns the list of packet timeouts.
 
-<PartialServop service_name="" operation_name="" / >
-
 ## Usage
 
 ```mdx-code-block
@@ -75,11 +73,4 @@ ArrayList<Integer> timeouts = <%= data.branding.codePrefix %>.getPacketTimeouts(
 </Tabs>
 </BrowserWindow>
 ```
-
-<details>
-<summary>JSON Response</summary>
-
-
-</details>
-
 

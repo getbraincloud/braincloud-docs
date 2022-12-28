@@ -4,8 +4,6 @@ Generates a GUID for use as an anonymous installation ID for <%= data.branding.p
 
 The generated ID is used in conjunction with [<code>InitializeIdentity</code>](/api/capi/client/initializeidentity) in the <%= data.branding.codeClient %>.
 
-<PartialServop service_name="" operation_name="" / >
-
 ## Usage
 
 ```mdx-code-block
@@ -77,11 +75,4 @@ var anonId = <%= data.branding.codePrefix %>.authentication.generateAnonymousId(
 </Tabs>
 </BrowserWindow>
 ```
-
-<details>
-<summary>JSON Response</summary>
-
-
-</details>
-
 

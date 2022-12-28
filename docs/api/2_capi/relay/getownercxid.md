@@ -2,8 +2,6 @@
 ## Overview
 Get the lobby's owner Connection Id.
 
-<PartialServop service_name="" operation_name="" / >
-
 ## Usage
 
 ```mdx-code-block
@@ -75,11 +73,4 @@ Get the lobby's owner Connection Id.
 </Tabs>
 </BrowserWindow>
 ```
-
-<details>
-<summary>JSON Response</summary>
-
-
-</details>
-
 

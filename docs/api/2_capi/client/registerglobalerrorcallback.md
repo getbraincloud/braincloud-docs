@@ -4,8 +4,6 @@ Registers the Global Error callbacks.
 
 Useful for tracking and logging all errors.
 
-<PartialServop service_name="" operation_name="" / >
-
 ## Usage
 
 ```mdx-code-block

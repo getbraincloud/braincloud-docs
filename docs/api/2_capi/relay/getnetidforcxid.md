@@ -2,8 +2,6 @@
 ## Overview
 Returns the netId associated with a connection Id.
 
-<PartialServop service_name="" operation_name="" / >
-
 ## Usage
 
 ```mdx-code-block
@@ -31,7 +29,6 @@ Returns the netId associated with a connection Id.
 ```
 
 ```cpp
-<%= data.branding.codePrefix %>->getRelayService()->getNetIdForCxId();
 ```
 
 ```mdx-code-block
@@ -40,7 +37,6 @@ Returns the netId associated with a connection Id.
 ```
 
 ```cpp
-<%= data.branding.codePrefix %>->getRelayService()->getNetIdForCxId();
 ```
 
 ```mdx-code-block
@@ -49,7 +45,6 @@ Returns the netId associated with a connection Id.
 ```
 
 ```cpp
-<%= data.branding.codePrefix %>->getRelayService()->getNetIdForCxId();
 ```
 
 ```mdx-code-block
@@ -75,11 +70,4 @@ Returns the netId associated with a connection Id.
 </Tabs>
 </BrowserWindow>
 ```
-
-<details>
-<summary>JSON Response</summary>
-
-
-</details>
-
 

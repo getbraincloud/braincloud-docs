@@ -2,8 +2,6 @@
 ## Overview
 Enables console logging of outgoing/incoming packets and other informational logs from the client.
 
-<PartialServop service_name="" operation_name="" / >
-
 ## Usage
 
 ```mdx-code-block
@@ -75,12 +73,6 @@ Enables console logging of outgoing/incoming packets and other informational log
 </Tabs>
 </BrowserWindow>
 ```
-
-<details>
-<summary>JSON Response</summary>
-
-
-</details>
 
 ## Method Parameters
 Parameter | Description

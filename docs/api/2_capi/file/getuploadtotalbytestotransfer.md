@@ -2,8 +2,6 @@
 ## Overview
 Returns the total number of bytes that will be uploaded or -1 if upload not found.
 
-<PartialServop service_name="" operation_name="" / >
-
 ## Usage
 
 ```mdx-code-block
@@ -82,12 +80,6 @@ public void cancelUpload(String uploadId)
 </Tabs>
 </BrowserWindow>
 ```
-
-<details>
-<summary>JSON Response</summary>
-
-
-</details>
 
 ## Method Parameters
 Parameter | Description

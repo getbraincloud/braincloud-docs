@@ -2,8 +2,6 @@
 ## Overview
 Run callbacks, to be called once per frame from your main thread
 
-<PartialServop service_name="" operation_name="" / >
-
 ## Usage
 
 ```mdx-code-block
@@ -75,11 +73,4 @@ Run callbacks, to be called once per frame from your main thread
 </Tabs>
 </BrowserWindow>
 ```
-
-<details>
-<summary>JSON Response</summary>
-
-
-</details>
-
 

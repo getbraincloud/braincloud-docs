@@ -2,8 +2,6 @@
 ## Overview
 Register callback for RelayServer system messages.
 
-<PartialServop service_name="" operation_name="" / >
-
 ## Usage
 
 ```mdx-code-block
@@ -80,11 +78,4 @@ RSDataCallback rsDataCallback = (response) =>
 </Tabs>
 </BrowserWindow>
 ```
-
-<details>
-<summary>JSON Response</summary>
-
-
-</details>
-
 

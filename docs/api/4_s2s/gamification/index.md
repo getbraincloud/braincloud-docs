@@ -25,8 +25,8 @@ _The Milestone Management APIs are available from cloud-code only._
 * [SysDeleteMilestone](/api/capi/gamification/sysdeletemilestone)
 * [SysReadMilestone](/api/capi/gamification/sysreadmilestone)
 * [SysUpdateMilestone](/api/capi/gamification/sysupdatemilestone)
-* [SysGetMilestonePage](/api/api/gamification/sysgetmilestonepage)
-* [SysGetMilestonePageOffset](/api/api/gamification/sysgetmilestonepageoffset)
+* [SysGetMilestonePage](/api/capi/gamification/sysgetmilestonepage)
+* [SysGetMilestonePageOffset](/api/capi/gamification/sysgetmilestonepageoffset)
 
 ### Quest Management
 
@@ -40,8 +40,8 @@ _The Quest Management APIs are available from cloud-code only._
 * [SysDeleteQuestTask](/api/capi/gamification/sysdeletequesttask)
 * [SysReorderQuestTasks](/api/capi/gamification/sysreorderquesttasks)
 * [SysUpdateQuestTask](/api/capi/gamification/sysupdatequesttask)
-* [SysGetQuestPage](/api/api/gamification/sysgetquestpage)
-* [SysGetQuestPageOffset](/api/api/gamification/sysgetquestpageoffset)
+* [SysGetQuestPage](/api/capi/gamification/sysgetquestpage)
+* [SysGetQuestPageOffset](/api/capi/gamification/sysgetquestpageoffset)
 
 :::tip
 All the client APIs that the names beigin with <strong>"Sys"</strong> <em>are</em> also available to S2S. 

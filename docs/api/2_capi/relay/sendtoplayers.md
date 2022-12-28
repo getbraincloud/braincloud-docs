@@ -2,8 +2,6 @@
 ## Overview
 Send a packet to any players by using a mask.
 
-<PartialServop service_name="" operation_name="" / >
-
 ## Usage
 
 ```mdx-code-block
@@ -80,12 +78,6 @@ RSDataCallback rsDataCallback = (response) =>
 </Tabs>
 </BrowserWindow>
 ```
-
-<details>
-<summary>JSON Response</summary>
-
-
-</details>
 
 ## Method Parameters
 Parameter | Description

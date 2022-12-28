@@ -2,8 +2,6 @@
 ## Overview
 Deregister callback for RelayServer system messages.
 
-<PartialServop service_name="" operation_name="" / >
-
 ## Usage
 
 ```mdx-code-block
@@ -75,11 +73,4 @@ Deregister callback for RelayServer system messages.
 </Tabs>
 </BrowserWindow>
 ```
-
-<details>
-<summary>JSON Response</summary>
-
-
-</details>
-
 

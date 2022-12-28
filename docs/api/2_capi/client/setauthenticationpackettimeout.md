@@ -5,8 +5,6 @@ wait to receive a reply to an authentication API call.
 
 By default this timeout is set to 15 seconds.
 
-<PartialServop service_name="" operation_name="" / >
-
 ## Usage
 
 ```mdx-code-block
@@ -82,12 +80,6 @@ int timeoutInSeconds = 30;
 </Tabs>
 </BrowserWindow>
 ```
-
-<details>
-<summary>JSON Response</summary>
-
-
-</details>
 
 ## Method Parameters
 Parameter | Description

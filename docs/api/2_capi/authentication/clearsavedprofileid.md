@@ -2,8 +2,6 @@
 ## Overview
 Used to clear the saved profile ID - to use in cases when the user is attempting to switch to a different game profile.
 
-<PartialServop service_name="" operation_name="" / >
-
 ## Usage
 
 ```mdx-code-block
@@ -75,11 +73,4 @@ public void clearSavedProfileId();
 </Tabs>
 </BrowserWindow>
 ```
-
-<details>
-<summary>JSON Response</summary>
-
-
-</details>
-
 

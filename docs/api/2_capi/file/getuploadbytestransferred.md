@@ -6,8 +6,6 @@ Returns the number of bytes uploaded or -1 if upload not found.
 This will always return the total bytes to transfer on Unity mobile platforms.
 :::
 
-<PartialServop service_name="" operation_name="" / >
-
 ## Usage
 
 ```mdx-code-block
@@ -86,12 +84,6 @@ public void deleteUserFiles(String cloudPath, Boolean recurse, IServerCallback c
 </Tabs>
 </BrowserWindow>
 ```
-
-<details>
-<summary>JSON Response</summary>
-
-
-</details>
 
 ## Method Parameters
 Parameter | Description

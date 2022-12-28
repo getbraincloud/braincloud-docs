@@ -6,13 +6,13 @@
 <%= data.branding.productName %> allows developers to write custom code (in JavaScript) that resides
 on <%= data.branding.productName %>'s servers. These scripts can be triggered by:
 
-* Apps - via the [Client API](/api/cc/ccscripts/invokeclientapi)
-* Other Scripts - via [Cloud Code](/api/cc/ccscripts/otherscripts)
-* Special Features - like [Matchmaking](/api/cc/ccscripts/filters)
-* Private Servers - via the [S2S API](/api/cc/ccscripts/s2sscripts)
-* Public Services - via [WebHooks](/api/cc/ccscripts/webhooks)
-* Other API calls - via the [API Hook](/api/cc/ccscripts/apihooks) mechanism
-* Time-based - via <%= data.branding.productName %>'s [Scheduling Service](/api/cc/ccscripts/scheduledscripts)
+* Apps - via the [Client API](/api/cc/writingscript#invoking-via-client-api-invokeclientapi)
+* Other Scripts - via [Cloud Code](/api/cc/writingscript#calling-other-scripts-otherscripts)
+* Special Features - like [Matchmaking](/api/cc/writingscript#matchmaking-filters)
+* Private Servers - via the [S2S API](/api/cc/writingscript#s2s-scripts)
+* Public Services - via [WebHooks](/api/cc/writingscript#webhooks)
+* Other API calls - via the [API Hook](/api/cc/writingscript#api-hooks) mechanism
+* Time-based - via <%= data.branding.productName %>'s [Scheduling Service](/api/cc/writingscript#scheduled-scripts)
 
 Cloud Code scripts can be created, edited, and tested from the [Edit Scripts page](https://portal.braincloudservers.com/admin/dashboard#/development/serverscripts-edit)
 of the <%= data.branding.productName %> portal.
@@ -560,7 +560,7 @@ data | Replacement results of the call if returning 200
 
 
 
-## Matchmaking Filters [filters]
+## Matchmaking Filters
 
 
 > Example matchmaking filter parameters.

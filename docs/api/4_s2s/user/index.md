@@ -32,8 +32,8 @@ The **User** service, introduced in 4.3, can be used to iterate through the user
 * [SysSendPasswordResetEmailAdvancedWithExpiry](/api/capi/user/syssendpasswordresetemailadvancedwithexpiry) - Reset the password associated with the users email login _using a custom email template_
 * [SysSendPasswordResetUniversalId](/api/capi/user/syssendpasswordresetuniversalid) - Reset users password
 * [SysSendPasswordResetUniversalIdAdvanced](/api/capi/user/syssendpasswordresetuniversalidadvanced) - Reset users password using templates
-* [SysSendPasswordResetUniversalIdWithExpiry](/api/capi/user/syssendpasswordresetuniversalddwithexpiry) - Reset the password associated with the users universalId login
-* [SysSendPasswordResetUniversalIdAdvancedWithExpiry](/api/capi/user/syssendpasswordresetuniversalddadvancedwithexpiry) - Reset the password associated with the users universalId login _using a custom email template_
+* [SysSendPasswordResetUniversalIdWithExpiry](/api/capi/user/syssendpasswordresetuniversalidwithexpiry) - Reset the password associated with the users universalId login
+* [SysSendPasswordResetUniversalIdAdvancedWithExpiry](/api/capi/user/syssendpasswordresetuniversalidadvancedwithexpiry) - Reset the password associated with the users universalId login _using a custom email template_
 * [SysSetPasswordUniversalId](/api/capi/user/syssetpassworduniversalid) - Set the password associated with the universal id of the given profile.
 
 :::tip

@@ -2,8 +2,6 @@
 ## Overview
 Enables sending Gzip compressed packets of requests from client side. Which can significantely decrease response time for requests with large body content.
 
-<PartialServop service_name="" operation_name="" / >
-
 ## Usage
 
 ```mdx-code-block
@@ -75,12 +73,6 @@ Enables sending Gzip compressed packets of requests from client side. Which can 
 </Tabs>
 </BrowserWindow>
 ```
-
-<details>
-<summary>JSON Response</summary>
-
-
-</details>
 
 ## Method Parameters
 Parameter | Description

@@ -2,8 +2,6 @@
 ## Overview
 Returns the low transfer rate timeout in seconds.
 
-<PartialServop service_name="" operation_name="" / >
-
 ## Usage
 
 ```mdx-code-block
@@ -75,11 +73,4 @@ int timeout = [<%= data.branding.codePrefix %> getUploadLowTransferRateTimeout];
 </Tabs>
 </BrowserWindow>
 ```
-
-<details>
-<summary>JSON Response</summary>
-
-
-</details>
-
 

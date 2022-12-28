@@ -2,8 +2,6 @@
 ## Overview
 Registers the file upload callbacks.
 
-<PartialServop service_name="" operation_name="" / >
-
 ## Usage
 
 ```mdx-code-block

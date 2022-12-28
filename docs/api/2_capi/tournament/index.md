@@ -77,7 +77,7 @@ The following API calls are specific to *Divisions*:
 * [LeaveDivisionInstance](/api/capi/tournament/leavedivisioninstance) - leave a division instance. Call instead of `LeaveTournament()`.
 * [GetMyDivisions](/api/capi/tournament/getmydivisions) - retrieves a list of the division instances that player is/has recently participated in
 
-[PostTournamentScore](/api/capi/tournament/posttournamentscore), [ViewCurrentReward](/api/capi/tournament/viewcurrentreward), [ViewReward](/api/capi/tournament/viewreward), and [ClaimTournamentReward](/api/capi/tournament/claimtournamentreward) all work as expected for divisions.
+[PostTournamentScoreUTC](/api/capi/tournament/posttournamentscoreutc), [ViewCurrentReward](/api/capi/tournament/viewcurrentreward), [ViewReward](/api/capi/tournament/viewreward), and [ClaimTournamentReward](/api/capi/tournament/claimtournamentreward) all work as expected for divisions.
 
 
 ### System calls

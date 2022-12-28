@@ -45,7 +45,7 @@ By Other Identity:
 * [GetProfileInfoForCredential](/api/capi/friend/getprofileinfoforcredential) - Retrieves profile information for the specified user.
 * [GetProfileInfoForCredentialIfExists](/api/capi/friend/getprofileinfoforcredentialifexists) - Retrieves profile information for the specified user. Silently fails
 * [GetProfileInfoForExternalAuthId](/api/capi/friend/getprofileinfoforexternalauthid) - Retrieves profile information for the specified user.
-* [GetProfileInfoForExternalAuthIdIfExists](/api/capi/friend/getprofileinfoforexternalauthidifexsits) - Retrieves profile information for the specified user. Silently fails
+* [GetProfileInfoForExternalAuthIdIfExists](/api/capi/friend/getprofileinfoforexternalauthidifexists) - Retrieves profile information for the specified user. Silently fails
 
 Misc:
 

@@ -18,8 +18,6 @@ This effectively freezes all communication with <%= data.branding.productName %>
 ResetCommunication() will also clear the message cache.
 :::
 
-<PartialServop service_name="" operation_name="" / >
-
 ## Usage
 
 ```mdx-code-block
@@ -91,12 +89,6 @@ ResetCommunication() will also clear the message cache.
 </Tabs>
 </BrowserWindow>
 ```
-
-<details>
-<summary>JSON Response</summary>
-
-
-</details>
 
 ## Method Parameters
 Parameter | Description

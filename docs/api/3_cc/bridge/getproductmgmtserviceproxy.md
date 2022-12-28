@@ -2,7 +2,7 @@
 ## Overview
 Retrieves a ProductMgmtService proxy object.
 
-Documentation for the service methods can be found [here](/api/capi/productmgmt).
+Documentation for the service methods can be found [here](/api/capi/productmanagement).
 
 ## Usage
 

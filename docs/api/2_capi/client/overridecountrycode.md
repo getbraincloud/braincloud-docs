@@ -8,8 +8,6 @@ These methods should be called before authenticating so that they are sent to th
 Because of a Unity limitation country code cannot be detected automatically on any platforms other than iOS and Android.
 :::
 
-<PartialServop service_name="" operation_name="" / >
-
 ## Usage
 
 ```mdx-code-block
@@ -88,12 +86,6 @@ var countryCode = "CA";
 </Tabs>
 </BrowserWindow>
 ```
-
-<details>
-<summary>JSON Response</summary>
-
-
-</details>
 
 ## Method Parameters
 Parameter | Description

@@ -2,8 +2,6 @@
 ## Overview
 Returns the app id of the client app.
 
-<PartialServop service_name="" operation_name="" / >
-
 ## Usage
 
 ```mdx-code-block
@@ -75,11 +73,4 @@ var appId = <%= data.branding.codePrefix %>.getAppId();
 </Tabs>
 </BrowserWindow>
 ```
-
-<details>
-<summary>JSON Response</summary>
-
-
-</details>
-
 

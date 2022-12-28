@@ -2,8 +2,6 @@
 ## Overview
 Attempts to resend any cached messages. If no messages are in the cache, this method does nothing.
 
-<PartialServop service_name="" operation_name="" / >
-
 ## Usage
 
 ```mdx-code-block
@@ -75,11 +73,4 @@ Attempts to resend any cached messages. If no messages are in the cache, this me
 </Tabs>
 </BrowserWindow>
 ```
-
-<details>
-<summary>JSON Response</summary>
-
-
-</details>
-
 

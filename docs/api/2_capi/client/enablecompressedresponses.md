@@ -2,8 +2,6 @@
 ## Overview
 Enables receiving compressed packets of responses.
 
-<PartialServop service_name="" operation_name="" / >
-
 ## Usage
 
 ```mdx-code-block
@@ -75,12 +73,6 @@ Enables receiving compressed packets of responses.
 </Tabs>
 </BrowserWindow>
 ```
-
-<details>
-<summary>JSON Response</summary>
-
-
-</details>
 
 ## Method Parameters
 Parameter | Description

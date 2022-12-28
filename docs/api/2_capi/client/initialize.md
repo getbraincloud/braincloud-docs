@@ -18,8 +18,6 @@ This method initializes the <%= data.branding.productName %> client SDK.  The in
 Initialize must be called before you can call any <%= data.branding.productName %> APIs.
 :::
 
-<PartialServop service_name="" operation_name="" / >
-
 ## Usage
 
 ```mdx-code-block
@@ -120,12 +118,6 @@ var appId = "123456";
 </Tabs>
 </BrowserWindow>
 ```
-
-<details>
-<summary>JSON Response</summary>
-
-
-</details>
 
 ## Method Parameters
 Parameter | Description

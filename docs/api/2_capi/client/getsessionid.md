@@ -2,8 +2,6 @@
 ## Overview
 Returns the session id if a connection with <%= data.branding.productName %> has been established.
 
-<PartialServop service_name="" operation_name="" / >
-
 ## Usage
 
 ```mdx-code-block
@@ -75,11 +73,4 @@ var sessionId = <%= data.branding.codePrefix %>.getSessionId();
 </Tabs>
 </BrowserWindow>
 ```
-
-<details>
-<summary>JSON Response</summary>
-
-
-</details>
-
 

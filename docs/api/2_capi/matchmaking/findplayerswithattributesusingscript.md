@@ -6,7 +6,7 @@ to findPlayersUsingFilter.
 
 Similarly passing null for player rating will use the players current rating.
 
-Additional information of filters can be found under [Matchmaking Filters](/api/capi/matchmaking/matchmakingfilters).
+Additional information of filters can be found under [Matchmaking Filters](/api/capi/matchmaking/#matchmaking-filters).
 
 This call is cloud-code only.
 

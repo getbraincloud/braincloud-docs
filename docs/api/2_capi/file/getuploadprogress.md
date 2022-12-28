@@ -6,8 +6,6 @@ Returns the progress of the given upload from 0.0 to 1.0 or -1 if upload not fou
 This will always return 1 on Unity mobile platforms.
 :::
 
-<PartialServop service_name="" operation_name="" / >
-
 ## Usage
 
 ```mdx-code-block
@@ -85,12 +83,6 @@ public double getUploadProgress(String uploadId)
 </Tabs>
 </BrowserWindow>
 ```
-
-<details>
-<summary>JSON Response</summary>
-
-
-</details>
 
 ## Method Parameters
 Parameter | Description

@@ -76,10 +76,3 @@ Coming soon!
 </BrowserWindow>
 ```
 
-<details>
-<summary>JSON Response</summary>
-
-
-</details>
-
-

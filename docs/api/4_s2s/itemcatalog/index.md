@@ -13,11 +13,9 @@
 * [SysGetCatalogItemDefinition](/api/s2s/itemcatalog/sysgetcatalogitemdefinition) - Reads an existing item definition from the server, with full language fields mappings.
 
 #### Create
-* [SysAddCatalogItemDefinition](/api/s2s/itemcatalog/sysaddcatalogitemdefinition) - Create a new catalog item on the server.
 * [SysAddCatalogItem](/api/s2s/itemcatalog/sysaddcatalogitem) - Create a new catalog item on the server.
 
 #### Edit
-* [SysEditCatalogItemDefinition](/api/s2s/itemcatalog/syseditcatalogitemdefinition) - Update a catalog item on the server.
 * [SysEditCatalogItem](/api/s2s/itemcatalog/syseditcatalogitem) - Update a catalog item on the server.
 
 #### Life Cycle

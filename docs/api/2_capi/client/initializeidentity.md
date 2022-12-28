@@ -9,8 +9,6 @@ Note that calling this is the same as calling [<code>Initialize</code>](/api/cap
 InitializeIdentity must be called before you can authenticate a user anonymously.
 :::
 
-<PartialServop service_name="" operation_name="" / >
-
 ## Usage
 
 ```mdx-code-block
@@ -82,12 +80,6 @@ InitializeIdentity must be called before you can authenticate a user anonymously
 </Tabs>
 </BrowserWindow>
 ```
-
-<details>
-<summary>JSON Response</summary>
-
-
-</details>
 
 ## Method Parameters
 Parameter | Description

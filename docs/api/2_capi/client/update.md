@@ -4,8 +4,6 @@ Update method needs to be called regularly in order to process incoming and outg
 
 See RunCallbacks function for other platforms.
 
-<PartialServop service_name="" operation_name="" / >
-
 ## Usage
 
 ```mdx-code-block
@@ -77,11 +75,4 @@ See RunCallbacks function for other platforms.
 </Tabs>
 </BrowserWindow>
 ```
-
-<details>
-<summary>JSON Response</summary>
-
-
-</details>
-
 

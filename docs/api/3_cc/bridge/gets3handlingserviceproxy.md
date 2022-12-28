@@ -2,7 +2,7 @@
 ## Overview
 Retrieves a S3HandlingService proxy object.
 
-Documentation for the service methods can be found [here](/api/capi/s3).
+Documentation for the service methods can be found [here](/api/capi/s3handling).
 
 ## Usage
 

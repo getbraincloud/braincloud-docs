@@ -2,8 +2,6 @@
 ## Overview
 Sets a reward handler for any API call results that return rewards.
 
-<PartialServop service_name="" operation_name="" / >
-
 ## Usage
 
 ```mdx-code-block

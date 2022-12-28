@@ -30,7 +30,7 @@ Its important to note that the usage of these services changes depending on whet
 If there is no client session context when the script is executed (i.e. if script is executed via s2s, scheduled cloud code, etc), the bridge `get*ServiceProxy()` methods must be provided with a client session directly.
 
 
-In these specific cases a client session may be retrieved using the <code>[GetSessionForProfile](/api/cc/bridge/getsessionforprofiley)</code> method, and passed in to the appropriate `get*ServiceProxy()` methods.
+In these specific cases a client session may be retrieved using the <code>[GetSessionForProfile](/api/cc/bridge/getsessionforprofile)</code> method, and passed in to the appropriate `get*ServiceProxy()` methods.
 
 ### Helper Methods
 
@@ -60,7 +60,7 @@ App configuration:
 Information about the current user:
 
 * [GetProfileId](/api/cc/bridge/getprofileid) - return the profileId of the user associated with the current session
-* [GetName](/api/#cc/bridge/getname) - retrieves the name property of the user associated with the current session
+* [GetName](/api/cc/bridge/getname) - retrieves the name property of the user associated with the current session
 * [GetEmail](/api/cc/bridge/getemail) - returns the contact email address of the user associated with the current session (*note - may not be the same as their email login*)
 
 Retrieving a session for another user:
@@ -101,7 +101,7 @@ Proxy methods retrieve the service proxies. Pass in a session as a parameter if 
 
 * [GetAppStoreServiceProxy](/api/cc/bridge/getappstoreserviceproxy)
 * [GetAsyncMatchServiceProxy](/api/cc/bridge/getasyncmatchserviceproxy)
-* [GetBlockchainServiceProxy](/api/cc/bridge/getblickchainserviceproxy) 
+* [GetBlockchainServiceProxy](/api/cc/bridge/getblockchainserviceproxy) 
 * [GetCustomEntityServiceProxy](/api/cc/bridge/getcustomentityserviceproxy)
 * [GetDataStreamServiceProxy](/api/cc/bridge/getdatastreamserviceproxy)
 * [GetEntityServiceProxy](/api/cc/bridge/getentityserviceproxy) - retrieves the proxy for *user* entities
@@ -111,9 +111,7 @@ Proxy methods retrieve the service proxies. Pass in a session as a parameter if 
 * [GetGamificationServiceProxy](/api/cc/bridge/getgamificationserviceproxy)
 * [GetGlobalAppServiceProxy](/api/cc/bridge/getglobalappserviceproxy)
 * [GetGlobalEntityServiceProxy](/api/cc/bridge/getglobalentityserviceproxy)
-* [GetGlobalFileServiceProxy](/api/cc/bridge/getglobalfileserviceproxy)
 * [GetGlobalFileV3ServiceProxy](/api/cc/bridge/getglobalfilev3serviceproxy)
-* [GetGlobalPropertyServiceProxy](/api/cc/bridge/getglobalpropertyserviceproxy)
 * [GetGlobalStatisticsServiceProxy](/api/cc/bridge/getGlobalStatisticsServiceProxy)
 * [GetGroupServiceProxy](/api/cc/bridge/getgroupserviceproxy)
 * [GetHttpClientServiceProxy](/api/cc/bridge/gethttpclientserviceproxy)

@@ -2,8 +2,6 @@
 ## Overview
 Register callback for relay messages coming from peers.
 
-<PartialServop service_name="" operation_name="" / >
-
 ## Usage
 
 ```mdx-code-block
@@ -89,11 +87,4 @@ static void relayCallback(byte[] data)
 </Tabs>
 </BrowserWindow>
 ```
-
-<details>
-<summary>JSON Response</summary>
-
-
-</details>
-
 

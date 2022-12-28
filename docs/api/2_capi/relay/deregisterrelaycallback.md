@@ -2,8 +2,6 @@
 ## Overview
 Deregisters callback for relay messages coming from peers.
 
-<PartialServop service_name="" operation_name="" / >
-
 ## Usage
 
 ```mdx-code-block
@@ -75,11 +73,4 @@ Deregisters callback for relay messages coming from peers.
 </Tabs>
 </BrowserWindow>
 ```
-
-<details>
-<summary>JSON Response</summary>
-
-
-</details>
-
 

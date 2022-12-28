@@ -2,8 +2,6 @@
 ## Overview
 Returns whether the <%= data.branding.codeClient %> has been initialized using the Initialize() method.
 
-<PartialServop service_name="" operation_name="" / >
-
 ## Usage
 
 ```mdx-code-block
@@ -75,11 +73,4 @@ var isInitialized = <%= data.branding.codePrefix %>.isInitialized();
 </Tabs>
 </BrowserWindow>
 ```
-
-<details>
-<summary>JSON Response</summary>
-
-
-</details>
-
 

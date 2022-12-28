@@ -7,8 +7,6 @@ behavior.
 This flag is only intended for backward compatibility and is NOT recommended to be enabled otherwise.
 :::
 
-<PartialServop service_name="" operation_name="" / >
-
 ## Usage
 
 ```mdx-code-block
@@ -80,12 +78,6 @@ This flag is only intended for backward compatibility and is NOT recommended to 
 </Tabs>
 </BrowserWindow>
 ```
-
-<details>
-<summary>JSON Response</summary>
-
-
-</details>
 
 ## Method Parameters
 Parameter | Description

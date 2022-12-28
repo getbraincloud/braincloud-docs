@@ -85,7 +85,7 @@ To create a group you must first configure a Group Type on the [Group Types page
 * [ReadGroupEntitiesPageByOffset](/api/capi/group/readgroupentitiespagebyoffset) - get next/prev page
 * [ReadGroupEntity](/api/capi/group/readgroupentity) - reads the specified entity
 * [UpdateGroupEntityData](/api/capi/group/updategroupentitydata) - updates the specified entity
-* [UpdateGroupEntityAcl](/api/capi/group/updategroupentityccl) - Update the acl settings for a group entity, enforcing ownership.
+* [UpdateGroupEntityAcl](/api/capi/group/updategroupentityacl) - Update the acl settings for a group entity, enforcing ownership.
 
 
 ### System calls
@@ -110,7 +110,7 @@ To create a group you must first configure a Group Type on the [Group Types page
 * [SysReadGroupMembers](/api/capi/group/sysreadgroupmembers) - read all members in the group
 * [SysRemoveGroupMember](/api/capi/group/sysremovegroupmember) - Remove a member from the group, bypassing group ownership/ACL checks.
 * [SysSetGroupOpen](/api/capi/group/syssetgroupopen) - Set whether a group is open (true) or closed (false)
-* [SysUpdataGroupAcl](/api/capi/group/sysupdatagroupacl) - update a group's access conditions
+* [SysUpdateGroupAcl](/api/capi/group/sysupdategroupacl) - update a group's access conditions
 * [SysUpdateGroupData](/api/capi/group/sysupdategroupdata) - update a group's data
 * [SysUpdateGroupEntityData](/api/capi/group/sysupdategroupentitydata) - update the data for a group entity
 * [SysUpdateGroupMember](/api/capi/group/sysupdategroupmember) - update a member of the group

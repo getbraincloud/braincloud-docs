@@ -132,12 +132,6 @@ if (postResult.status == 200) {
 </BrowserWindow>
 ```
 
-<details>
-<summary>JSON Response</summary>
-
-
-</details>
-
 ## Method Parameters
 Parameter | Description
 --------- | -----------

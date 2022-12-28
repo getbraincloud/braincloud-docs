@@ -1,8 +1,6 @@
-# DeregisterBlockchainCallback
+# RegisterBlockchainCallback
 ## Overview
-Deregisters the blockchain callback.
-
-<PartialServop service_name="" operation_name="" / >
+Registers a callback for RTT blockchain updates.
 
 ## Usage
 
@@ -13,7 +11,11 @@ Deregisters the blockchain callback.
 ```
 
 ```csharp
-<%= data.branding.codePrefix %>.RTTService.DeregisterBlockchainCallback();
+RTTCallback rttCallback = response =>
+{
+   Debug.Log(response);
+};
+<%= data.branding.codePrefix %>.RTTService.RegisterBlockchainCallback(rttCallback);
 ```
 
 ```mdx-code-block
@@ -22,7 +24,7 @@ Deregisters the blockchain callback.
 ```
 
 ```cpp
-<%= data.branding.codePrefix %>.RTTService.deregisterBlockchainCallback();
+<%= data.branding.codePrefix %>.RTTService.registerBlockchainCallback(rttCallback);
 ```
 
 ```mdx-code-block
@@ -40,7 +42,7 @@ Coming soon!
 ```
 
 ```java
-<%= data.branding.codePrefix %>.RTTService.deregisterBlockchainCallback();
+<%= data.branding.codePrefix %>.RTTService.registerBlockchainCallback(rttCallback);
 ```
 
 ```mdx-code-block
@@ -49,7 +51,7 @@ Coming soon!
 ```
 
 ```javascript
-<%= data.branding.codePrefix %>.rttService.deregisterBlockchainCallback();
+<%= data.branding.codePrefix %>.rttService.registerBlockchainCallback(rttCallback);
 ```
 
 ```mdx-code-block
@@ -76,10 +78,9 @@ Coming soon!
 </BrowserWindow>
 ```
 
-<details>
-<summary>JSON Response</summary>
-
-
-</details>
+## Method Parameters
+Parameter | Description
+--------- | -----------
+rttCallback | The RTT blockchain callback handler.
 
 

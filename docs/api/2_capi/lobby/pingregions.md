@@ -3,8 +3,6 @@
 Retrieves associated PingData averages to be used with all associated WithPingData APIs.
 Call anytime after GetRegionsForLobbies before proceeding.
 
-<PartialServop service_name="" operation_name="" / >
-
 ## Usage
 
 ```mdx-code-block
@@ -139,11 +137,4 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 </Tabs>
 </BrowserWindow>
 ```
-
-<details>
-<summary>JSON Response</summary>
-
-
-</details>
-
 

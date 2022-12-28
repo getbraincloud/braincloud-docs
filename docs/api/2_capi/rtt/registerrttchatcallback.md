@@ -2,8 +2,6 @@
 ## Overview
 Registers a callback for RTT Chat Channel updates.
 
-<PartialServop service_name="" operation_name="" / >
-
 ## Usage
 
 ```mdx-code-block
@@ -79,12 +77,6 @@ Coming soon!
 </Tabs>
 </BrowserWindow>
 ```
-
-<details>
-<summary>JSON Response</summary>
-
-
-</details>
 
 ## Method Parameters
 Parameter | Description

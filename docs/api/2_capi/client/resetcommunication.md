@@ -2,8 +2,6 @@
 ## Overview
 Clears any pending messages from communication library and clears all session information.
 
-<PartialServop service_name="" operation_name="" / >
-
 ## Usage
 
 ```mdx-code-block
@@ -75,11 +73,4 @@ Clears any pending messages from communication library and clears all session in
 </Tabs>
 </BrowserWindow>
 ```
-
-<details>
-<summary>JSON Response</summary>
-
-
-</details>
-
 

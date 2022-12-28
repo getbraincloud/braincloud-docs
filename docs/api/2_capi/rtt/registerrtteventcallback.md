@@ -20,8 +20,6 @@ Registers a real-time (RTT) callback for Events. Allows the standard [<code>Send
 }
 ```
 
-<PartialServop service_name="" operation_name="" / >
-
 ## Usage
 
 ```mdx-code-block
@@ -97,12 +95,6 @@ Coming soon!
 </Tabs>
 </BrowserWindow>
 ```
-
-<details>
-<summary>JSON Response</summary>
-
-
-</details>
 
 ## Method Parameters
 Parameter | Description

@@ -2,8 +2,6 @@
 ## Overview
 Returns whether or not we have a successful connection with the relay server.
 
-<PartialServop service_name="" operation_name="" / >
-
 ## Usage
 
 ```mdx-code-block
@@ -75,11 +73,4 @@ Returns whether or not we have a successful connection with the relay server.
 </Tabs>
 </BrowserWindow>
 ```
-
-<details>
-<summary>JSON Response</summary>
-
-
-</details>
-
 

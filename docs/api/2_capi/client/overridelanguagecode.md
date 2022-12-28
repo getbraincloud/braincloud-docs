@@ -6,8 +6,6 @@ These methods should be called before authenticating so that they are sent to th
 
 Will override any auto detected language.
 
-<PartialServop service_name="" operation_name="" / >
-
 ## Usage
 
 ```mdx-code-block
@@ -86,12 +84,6 @@ var languageCode = "en";
 </Tabs>
 </BrowserWindow>
 ```
-
-<details>
-<summary>JSON Response</summary>
-
-
-</details>
 
 ## Method Parameters
 Parameter | Description

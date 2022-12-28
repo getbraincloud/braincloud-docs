@@ -4,8 +4,6 @@ Returns true if the user is authenticated.
 
 If a session has timed out or if the server returns a session invalidation error, this flag will reset back to false.
 
-<PartialServop service_name="" operation_name="" / >
-
 ## Usage
 
 ```mdx-code-block
@@ -77,11 +75,4 @@ var isAuthenticated = <%= data.branding.codePrefix %>.isAuthenticated();
 </Tabs>
 </BrowserWindow>
 ```
-
-<details>
-<summary>JSON Response</summary>
-
-
-</details>
-
 
