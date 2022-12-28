@@ -2,7 +2,7 @@
 ## Overview
 Start off a connection, based off connection type to <%= data.branding.productName %>'s Relay Servers.  Connect options come in from "ROOM_ASSIGNED" lobby callback
 
-<PartialServop service_name="globalGameStatistics" operation_name="READ_SUBSET" / >
+<PartialServop service_name="" operation_name="" / >
 
 ## Usage
 
@@ -91,15 +91,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 <details>
 <summary>JSON Response</summary>
 
-```cfscript
-var statistics = [ "ESTIMATE", "POINTS" ];
-var globalStatisticsProxy = bridge.getGlobalStatisticsServiceProxy();
 
-var postResult = globalStatisticsProxy.readGlobalStatsSubset(statistics);
-if (postResult.status == 200) {
-    // Success!
-}
-```
 </details>
 
 ## Method Parameters

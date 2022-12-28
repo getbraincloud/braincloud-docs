@@ -2,7 +2,7 @@
 ## Overview
 Enables console logging of outgoing/incoming packets and other informational logs from the client.
 
-<PartialServop service_name="event" operation_name="UPDATE_EVENT_DATA" / >
+<PartialServop service_name="" operation_name="" / >
 
 ## Usage
 
@@ -79,9 +79,7 @@ Enables console logging of outgoing/incoming packets and other informational log
 <details>
 <summary>JSON Response</summary>
 
-```javascript
-<%= data.branding.codePrefix %>.enableCompressedResponses(true);
-```
+
 </details>
 
 ## Method Parameters

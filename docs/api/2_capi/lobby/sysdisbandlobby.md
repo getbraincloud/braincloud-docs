@@ -95,16 +95,7 @@ if (postResult.status == 200) {
 <details>
 <summary>JSON Response</summary>
 
-```r
-{
-	"service": "lobby",
-	"operation": "SWITCH_TEAM",
-	"data": {
-		"lobbyId": "55555:4v4:19",
-		"toTeamCode": "blue"
-	}
-}
-```
+
 </details>
 
 ## Method Parameters

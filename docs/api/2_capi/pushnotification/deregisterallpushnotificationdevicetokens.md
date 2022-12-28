@@ -126,9 +126,4 @@ if (postResult.status == 200) {
 ```
 </details>
 
-## Method Parameters
-Parameter | Description
---------- | -----------
-pictureUrl | URL to apply
-
 

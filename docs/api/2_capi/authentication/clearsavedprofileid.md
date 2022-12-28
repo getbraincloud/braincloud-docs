@@ -2,7 +2,7 @@
 ## Overview
 Used to clear the saved profile ID - to use in cases when the user is attempting to switch to a different game profile.
 
-<PartialServop service_name="authenticationV2" operation_name="AUTHENTICATE" / >
+<PartialServop service_name="" operation_name="" / >
 
 ## Usage
 
@@ -79,24 +79,7 @@ public void clearSavedProfileId();
 <details>
 <summary>JSON Response</summary>
 
-```javascript
-var userId = "UserId";
-var password = "password";
-var forceCreate = true;
 
-<%= data.branding.codePrefix %>.authentication.authenticateUniversal(userId, password, forceCreate, result =>
-{
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
-});
-```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-userId | The user's ID.
-password | The password of the user.
-forceCreate | If set to true, create a new profile if userId not found. If set to false and anonymous ID does not exist on the server, return an error.
 
 

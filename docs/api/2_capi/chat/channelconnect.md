@@ -21,10 +21,7 @@ Code | Name | Description
 ```
 
 ```csharp
-<%= partial(:"partials/docExample", :locals => {
-  :stepNum => "1",
-  :stepName => "EnableRTT"
-}) %>
+
 //Step 2:   Register a chat callback
 RTTCallback rttCallback = response =>
 {
@@ -32,11 +29,7 @@ RTTCallback rttCallback = response =>
 };
 <%= data.branding.codePrefix %>.RegisterRTTChatCallback(rttCallback);
 
-<%= partial(:"partials/docExample", :locals => {
-  :stepNum => "3",
-  :stepName => "NowCall",
-  :apiCall => "ChannelConnect"
-}) %>
+
 
 string channelId = "22817:gl:CHAT_TRADE"; // APP_ID:CHANNEL_TYPE:CHANNEL_ID
 int maxReturn = 25;

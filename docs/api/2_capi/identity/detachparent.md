@@ -128,10 +128,4 @@ if (postResult.status == 200) {
 ```
 </details>
 
-## Method Parameters
-Parameter | Description
---------- | -----------
-userId | The Oculus id of the user
-continueAnon | Proceed even if the profile will revert to anonymous?
-
 

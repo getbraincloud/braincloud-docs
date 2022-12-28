@@ -20,7 +20,7 @@ Registers a real-time (RTT) callback for Events. Allows the standard [<code>Send
 }
 ```
 
-<PartialServop service_name="rttRegistration" operation_name="GET_CONNECTION_STATUS" / >
+<PartialServop service_name="" operation_name="" / >
 
 ## Usage
 
@@ -101,9 +101,7 @@ Coming soon!
 <details>
 <summary>JSON Response</summary>
 
-```cfscript
-// N/A
-```
+
 </details>
 
 ## Method Parameters

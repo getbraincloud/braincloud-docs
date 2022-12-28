@@ -324,11 +324,13 @@ These APIs can result in the following events being sent to lobby members.
 
 An example of using the returned `reason code` of DISBANDED:
 
-`if (result.data.reason.code != this.bc.reasonCodes.RTT_ROOM_READY)
- {
+```
+if (result.data.reason.code != this.bc.reasonCodes.RTT_ROOM_READY)
+{
     // Disbanded for any other reason than ROOM_READY, means we failed to launch the game.
     this.onGameScreenClose()
- }`
+}
+```
 
 
 ### Common Event Structures
@@ -339,7 +341,8 @@ The following structures are common to multiple event types:
 
 The configured meta-data for the lobby type:
 
-`{
+```
+{
     lobbyTypeDef: {
         "roomConfig": null,
         "lobbyTypeId": "unranked",
@@ -368,13 +371,15 @@ The configured meta-data for the lobby type:
         },
         "desc": "Unranked match"
     }
-}`
+}
+```
 
 ### `members`
 
 The list of members in the lobby, and their status:
 
-`{
+```
+{
     "members": [
         {
             "profileId": "f6fa3e0e-6aac-497a-84e1-c8db6f545c12",
@@ -397,13 +402,15 @@ The list of members in the lobby, and their status:
             "cxId": "22819:1dab1250-facb-419a-80cf-3d2de4e91e0b:bkr44a0ssbd0q3ae3r2i2refjh"
         }
     ]
-}`
+}
+```
 
 ### `settings`
 
 The developer-defined, dynamic settings for this lobby instance:
 
-`{
+```
+{
     "settings": {
         "gameTime": 300,
         "isPlaying": 0,
@@ -415,7 +422,8 @@ The developer-defined, dynamic settings for this lobby instance:
         "minLevel": 0,
         "maxLevel": 50
     }
-}`
+}
+```
 
 *The json above is just an example - it can be whatever the developer decides.*
 
@@ -428,6 +436,7 @@ When looking for a lobby.
 ### `ranged-percent`
 
 Ranges provided are interpreted as percentages to be applied to the user's rating for matchmaking.
+
 ```
 {
    "rating" : 1200,
@@ -440,11 +449,13 @@ Ranges provided are interpreted as percentages to be applied to the user's ratin
          80
       ]
    }
-}`
+}
+```
 
 ### `ranged-absolute`
 
 Ranges provided are interpreted as absolute values to add/subtract from the user's rating when calculating the range for matchmaking
+
 ```
 { 
    "rating" : 76, 
@@ -457,7 +468,8 @@ Ranges provided are interpreted as absolute values to add/subtract from the user
          10
       ]
    }
-}`
+}
+```
 
 ### `alignment`
 

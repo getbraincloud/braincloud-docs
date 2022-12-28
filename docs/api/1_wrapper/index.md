@@ -1,15 +1,6 @@
 # BrainCloudWrapper
+## Overview
 
-The <%= data.branding.codeWrapper %> class provides an easier way for developers to handle user authentication when they are getting started with the authentication system. This includes persisting authentication data between application runs.
-
-By using the wrapper authentication methods, the anonymous and profile IDs will be automatically persisted upon successful authentication. When authenticating, any stored anonymous/profile IDs will be sent to the server. This strategy is useful when using Anonymous authentication.
-
-
-```mdx-code-block
-import BrowserWindow from '@site/src/components/BrowserWindow';
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-```
 
 ```mdx-code-block
 <BrowserWindow>
@@ -43,6 +34,7 @@ public class BCConfig : MonoBehaviour {
 	}
 }
 
+
 // C#
 <%= data.branding.codePrefix %> = new <%= data.branding.codeWrapper %>("_mainWrapper");
 ```
@@ -73,7 +65,6 @@ public class BCConfig : MonoBehaviour {
 ```java
 <%= data.branding.codePrefix %> = new <%= data.branding.codeWrapper %>("_mainWrapper");
 ```
-```
 
 ```mdx-code-block
 </TabItem>
@@ -90,26 +81,17 @@ public class BCConfig : MonoBehaviour {
 </BrowserWindow>
 ```
 
+The <%= data.branding.codeWrapper %> class provides an easier way for developers to handle user authentication when they are getting started with the authentication system. This includes persisting authentication data between application runs.
 
+By using the wrapper authentication methods, the anonymous and profile IDs will be automatically persisted upon successful authentication. When authenticating, any stored anonymous/profile IDs will be sent to the server. This strategy is useful when using Anonymous authentication.
 
+*Note - you should [initialize the wrapper](/api/wrapper/initialize) before using it. It will in turn initialize the <%= data.branding.productName %> client for you* - **don't do both!**
 
-
-
-
-
-
-
-
-
-
-*Note - you should [initialize the wrapper](#wrapper-initialize) before using it. It will in turn initialize the <%= data.branding.productName %> client for you* - **don't do both!**
-
-#### Method Parameters
+### Method Parameters
 Parameter | Description
 --------- | -----------
 wrapperName | Distincts saved wrapper data. Use when using more than one instance of <%= data.branding.productName %>
-
-
+    
 
 
 <DocCardList />

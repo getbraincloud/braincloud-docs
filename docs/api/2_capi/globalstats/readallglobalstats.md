@@ -133,9 +133,4 @@ if (postResult.status == 200) {
 ```
 </details>
 
-## Method Parameters
-Parameter | Description
---------- | -----------
-statistics | A collection containing the statistics to process
-
 

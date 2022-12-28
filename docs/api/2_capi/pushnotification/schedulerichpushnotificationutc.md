@@ -161,21 +161,7 @@ if (postResult.status == 200) {
 <details>
 <summary>JSON Response</summary>
 
-```r
-{
-	"service": "pushNotification",
-	"operation": "SCHEDULE_RICH_NOTIFICATION",
-	"data": {
-		"profileId": "kjhkjhgfkjshgkjh",
-		"notificationTemplateId": 1,
-		"substitutions": {
-			"0": "value0",
-			"1": "value1"
-		},
-		"startDateUTC": "[[#ts+60000]]"
-	}
-}
-```
+
 </details>
 
 ## Method Parameters

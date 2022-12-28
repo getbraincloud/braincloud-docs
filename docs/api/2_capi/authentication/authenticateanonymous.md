@@ -79,7 +79,7 @@ Make sure you've initialized the <%= data.branding.productName %> library before
 :::
 
 :::tip
-You can set the profile and anonymous IDs directly using <a href="#capi-client-initializeidentity"><%= data.branding.codeClient %>.InitializeIdentity()</a> or <a href="#capi-client-initializeidentity"><%= data.branding.codeClient %>.AuthenticationService.InitializeIdentity()</a>
+You can set the profile and anonymous IDs directly using <a href="/api/capi/client/initializeidentity"><%= data.branding.codeClient %>.InitializeIdentity()</a> or <a href="/api/capi/client/initializeidentity"><%= data.branding.codeClient %>.AuthenticationService.InitializeIdentity()</a>
 :::
 
 <PartialServop service_name="authenticationV2" operation_name="AUTHENTICATE" / >

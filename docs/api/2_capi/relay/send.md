@@ -2,7 +2,7 @@
 ## Overview
 Send a packet to peer(s).
 
-<PartialServop service_name="globalGameStatistics" operation_name="READ_SUBSET" / >
+<PartialServop service_name="" operation_name="" / >
 
 ## Usage
 
@@ -84,9 +84,7 @@ RSDataCallback rsDataCallback = (response) =>
 <details>
 <summary>JSON Response</summary>
 
-```cfscript
-// N/A
-```
+
 </details>
 
 ## Method Parameters

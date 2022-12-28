@@ -6,7 +6,7 @@ Returns the number of bytes uploaded or -1 if upload not found.
 This will always return the total bytes to transfer on Unity mobile platforms.
 :::
 
-<PartialServop service_name="file" operation_name="GET_CDN_URL" / >
+<PartialServop service_name="" operation_name="" / >
 
 ## Usage
 
@@ -90,16 +90,7 @@ public void deleteUserFiles(String cloudPath, Boolean recurse, IServerCallback c
 <details>
 <summary>JSON Response</summary>
 
-```r
-{
-	"service": "file",
-	"operation": "GET_CDN_URL",
-	"data": {
-		"cloudPath": "dir1/dir2",
-		"cloudFilename": "filename"
-	}
-}
-```
+
 </details>
 
 ## Method Parameters

@@ -2,7 +2,7 @@
 ## Overview
 Deregisters the event callback.
 
-<PartialServop service_name="event" operation_name="UPDATE_EVENT_DATA" / >
+<PartialServop service_name="" operation_name="" / >
 
 ## Usage
 
@@ -79,24 +79,7 @@ Deregisters the event callback.
 <details>
 <summary>JSON Response</summary>
 
-```r
-{
-	"service": "event",
-	"operation": "UPDATE_EVENT_DATA",
-	"data": {
-		"evId": "hexString",
-		"eventData": {
-			"someMapAttribute": "someValue"
-		}
-	}
-}
-```
-</details>
 
-## Method Parameters
-Parameter | Description
---------- | -----------
-evId | The event ID
-eventData | The user-defined data for this event encoded in JSON.
+</details>
 
 

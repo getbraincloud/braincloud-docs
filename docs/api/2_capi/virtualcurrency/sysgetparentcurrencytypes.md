@@ -107,9 +107,4 @@ if (postResult.status == 200) {
 ```
 </details>
 
-## Method Parameters
-Parameter | Description
---------- | -----------
-peerCode | Name of the peer
-
 

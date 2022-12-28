@@ -160,19 +160,7 @@ if (postResult.status == 200) {
 <details>
 <summary>JSON Response</summary>
 
-```r
-{
-	"service": "leaderboard",
-	"operation": "GET_GLOBAL_LEADERBOARD_VIEW",
-	"data": {
-		"leaderboardId": "default",
-		"sort": "HIGH_TO_LOW",
-		"beforeCount": 3,
-		"afterCount": 4,
-		"versionId": -1
-	}
-}
-```
+
 </details>
 
 ## Method Parameters

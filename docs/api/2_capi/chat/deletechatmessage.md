@@ -23,16 +23,7 @@ Code | Name | Description
 ```
 
 ```csharp
-<%= partial(:"partials/docExample", :locals => {
-  :stepNum => "1",
-  :stepName => "InitAuthW"
-}) + "
-//Step 2:\tHave a msgId from a chat message to delete
-" + partial(:"partials/docExample", :locals => {
-  :stepNum => "3",
-  :stepName => "NowCall",
-  :apiCall => "DeleteChatMessage"
-}) %>
+
 
 string channelId = "22817:gl:CHAT_TRADE"; // APP_ID:CHANNEL_TYPE:CHANNEL_ID
 string msgId = "784130333859899";

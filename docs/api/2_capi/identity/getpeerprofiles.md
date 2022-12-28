@@ -130,10 +130,4 @@ if (postResult.status == 200) {
 ```
 </details>
 
-## Method Parameters
-Parameter | Description
---------- | -----------
-authenticationType | Type of authentication.
-externalAuthName | The name of the external authentication mechanism (optional, used for custom authentication types)
-
 

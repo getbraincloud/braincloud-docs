@@ -2,7 +2,7 @@
 ## Overview
 Returns the list of packet timeouts.
 
-<PartialServop service_name="event" operation_name="UPDATE_EVENT_DATA" / >
+<PartialServop service_name="" operation_name="" / >
 
 ## Usage
 
@@ -79,14 +79,7 @@ ArrayList<Integer> timeouts = <%= data.branding.codePrefix %>.getPacketTimeouts(
 <details>
 <summary>JSON Response</summary>
 
-```javascript
-// N/A
-```
-</details>
 
-## Method Parameters
-Parameter | Description
---------- | -----------
-sendApiErrorCallbacks | If set to true API error callbacks will be called for every cached message with statusCode CLIENT_NETWORK_ERROR and reasonCode CLIENT_NETWORK_ERROR_TIMEOUT.
+</details>
 
 

@@ -188,23 +188,7 @@ if (postResult.status == 200) {
 <details>
 <summary>JSON Response</summary>
 
-```r
-{
-	"service": "lobby",
-	"operation": "CREATE_LOBBY",
-	"data": {
-		"lobbyType": "4v4",
-		"rating": 76,
-		"otherUserCxIds": [
-			"55555:aaa-bbb-ccc-ddd:asdfjkl"
-		],
-		"settings": {},
-		"isReady": false,
-		"extraJson": {},
-		"teamCode": "blue"
-	}
-}
-```
+
 </details>
 
 ## Method Parameters

@@ -135,9 +135,4 @@ if (postResult.status == 200) {
 ```
 </details>
 
-## Method Parameters
-Parameter | Description
---------- | -----------
-divSetId | Division set id
-
 

@@ -18,7 +18,7 @@ This method initializes the <%= data.branding.productName %> client SDK.  The in
 Initialize must be called before you can call any <%= data.branding.productName %> APIs.
 :::
 
-<PartialServop service_name="event" operation_name="UPDATE_EVENT_DATA" / >
+<PartialServop service_name="" operation_name="" / >
 
 ## Usage
 
@@ -124,9 +124,7 @@ var appId = "123456";
 <details>
 <summary>JSON Response</summary>
 
-```javascript
-// N/A
-```
+
 </details>
 
 ## Method Parameters

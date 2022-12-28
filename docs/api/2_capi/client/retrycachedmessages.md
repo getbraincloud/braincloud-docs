@@ -2,7 +2,7 @@
 ## Overview
 Attempts to resend any cached messages. If no messages are in the cache, this method does nothing.
 
-<PartialServop service_name="event" operation_name="UPDATE_EVENT_DATA" / >
+<PartialServop service_name="" operation_name="" / >
 
 ## Usage
 
@@ -79,14 +79,7 @@ Attempts to resend any cached messages. If no messages are in the cache, this me
 <details>
 <summary>JSON Response</summary>
 
-```javascript
-<%= data.branding.codePrefix %>.resetCommunication();
-```
-</details>
 
-## Method Parameters
-Parameter | Description
---------- | -----------
-rewardCallback | The reward callback handler.
+</details>
 
 

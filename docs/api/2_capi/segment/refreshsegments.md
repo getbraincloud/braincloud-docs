@@ -98,12 +98,4 @@ if (postResult.status == 200) {
 ```
 </details>
 
-## Method Parameters
-Parameter | Description
---------- | -----------
-ownerId | Match owner identifier
-matchId | Match identifier
-version | Game state version to ensure turns are submitted once and in order
-jsonSummary | JSON string provided by the caller that other players will see as a summary of the game when listing their games
-
 

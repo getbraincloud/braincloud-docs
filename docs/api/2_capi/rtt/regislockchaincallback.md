@@ -2,7 +2,7 @@
 ## Overview
 Registers a callback for RTT blockchain updates.
 
-<PartialServop service_name="rttRegistration" operation_name="GET_CONNECTION_STATUS" / >
+<PartialServop service_name="" operation_name="" / >
 
 ## Usage
 
@@ -83,9 +83,7 @@ Coming soon!
 <details>
 <summary>JSON Response</summary>
 
-```javascript
-<%= data.branding.codePrefix %>.rttService.isRTTEnabled();
-```
+
 </details>
 
 ## Method Parameters

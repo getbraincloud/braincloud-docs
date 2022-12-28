@@ -169,16 +169,7 @@ if (postResult.status == 200) {
 <details>
 <summary>JSON Response</summary>
 
-```r
-{
-	"service": "pushNotification",
-	"operation": "REGISTER",
-	"data": {
-		"deviceType": "IOS",
-		"deviceToken": "12345"
-	}
-}
-```
+
 </details>
 
 ## Method Parameters

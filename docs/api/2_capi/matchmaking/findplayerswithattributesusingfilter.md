@@ -161,15 +161,7 @@ if (postResult.status == 200) {
 <details>
 <summary>JSON Response</summary>
 
-```r
-{
-  "rangeDelta": 10,
-  "numMatches": 1,
-  "attributes": {
-    "key": "value"
-  }
-}
-```
+
 </details>
 
 ## Method Parameters

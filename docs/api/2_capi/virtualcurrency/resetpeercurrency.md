@@ -91,15 +91,7 @@ if (postResult.status == 200) {
 <details>
 <summary>JSON Response</summary>
 
-```cfscript
-var levelName = "master";
-var virtualCurrencyProxy = bridge.getVirtualCurrencyServiceProxy();
 
-var postResult = virtualCurrencyProxy.resetParentCurrency(levelName);
-if (postResult.status == 200) {
-    // Success!
-}
-```
 </details>
 
 ## Method Parameters

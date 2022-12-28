@@ -132,9 +132,4 @@ if (postResult.status == 200) {
 ```
 </details>
 
-## Method Parameters
-Parameter | Description
---------- | -----------
-statistics | The stats data to be passed to the method
-
 

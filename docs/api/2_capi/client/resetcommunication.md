@@ -2,7 +2,7 @@
 ## Overview
 Clears any pending messages from communication library and clears all session information.
 
-<PartialServop service_name="event" operation_name="UPDATE_EVENT_DATA" / >
+<PartialServop service_name="" operation_name="" / >
 
 ## Usage
 
@@ -79,14 +79,7 @@ Clears any pending messages from communication library and clears all session in
 <details>
 <summary>JSON Response</summary>
 
-```javascript
-<%= data.branding.codePrefix %>.registerRewardCallback(rewardCallback);
-```
-</details>
 
-## Method Parameters
-Parameter | Description
---------- | -----------
-rewardCallback | The reward callback handler.
+</details>
 
 

@@ -146,9 +146,4 @@ if (postResult.status == 200) {
 ```
 </details>
 
-## Method Parameters
-Parameter | Description
---------- | -----------
-includeMetaData | Whether to return meta data as well
-
 

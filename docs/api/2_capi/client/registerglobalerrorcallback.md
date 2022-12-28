@@ -4,7 +4,7 @@ Registers the Global Error callbacks.
 
 Useful for tracking and logging all errors.
 
-<PartialServop service_name="event" operation_name="UPDATE_EVENT_DATA" / >
+<PartialServop service_name="" operation_name="" / >
 
 ## Usage
 

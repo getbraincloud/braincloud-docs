@@ -79,18 +79,7 @@ Coming soon!
 <details>
 <summary>JSON Response</summary>
 
-```cfscript
-// N/A
-```
-</details>
 
-## Method Parameters
-Parameter | Description
---------- | -----------
-cloudPath | The desired cloud path of the file
-cloudFilename | The desired cloud fileName of the file
-shareable | True if the file is shareable
-replaceIfExists | Whether to replace file if it exists
-encodedText | The converted file data from memory in string format
+</details>
 
 

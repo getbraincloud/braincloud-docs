@@ -91,13 +91,7 @@ if (postResult.status == 200) {
 <details>
 <summary>JSON Response</summary>
 
-```r
-{
-	"service": "customEntity",
-	"operation": "SYS_LIST_COLLECTIONS",
-	"data": {}
-}
-```
+
 </details>
 
 ## Method Parameters

@@ -4,7 +4,7 @@ Update method needs to be called regularly in order to process incoming and outg
 
 See RunCallbacks function for other platforms.
 
-<PartialServop service_name="event" operation_name="UPDATE_EVENT_DATA" / >
+<PartialServop service_name="" operation_name="" / >
 
 ## Usage
 
@@ -81,14 +81,7 @@ See RunCallbacks function for other platforms.
 <details>
 <summary>JSON Response</summary>
 
-```javascript
-// N/A
-```
-</details>
 
-## Method Parameters
-Parameter | Description
---------- | -----------
-timeoutSecs | The timeout in seconds
+</details>
 
 

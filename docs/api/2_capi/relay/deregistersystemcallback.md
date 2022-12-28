@@ -2,7 +2,7 @@
 ## Overview
 Deregister callback for RelayServer system messages.
 
-<PartialServop service_name="globalGameStatistics" operation_name="READ_SUBSET" / >
+<PartialServop service_name="" operation_name="" / >
 
 ## Usage
 
@@ -79,15 +79,7 @@ Deregister callback for RelayServer system messages.
 <details>
 <summary>JSON Response</summary>
 
-```cfscript
-// N/A
-```
-</details>
 
-## Method Parameters
-Parameter | Description
---------- | -----------
-connectionType | The connection type. INVALID, WEBSOCKET, TCP, UDP, MAX
-options | Options sent in the connection
+</details>
 
 

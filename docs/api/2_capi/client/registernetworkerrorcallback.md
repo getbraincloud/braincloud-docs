@@ -2,7 +2,7 @@
 ## Overview
 Registers a callback that is invoked for network errors. Note this is only called if EnableNetworkErrorMessageCaching has been set to true.
 
-<PartialServop service_name="event" operation_name="UPDATE_EVENT_DATA" / >
+<PartialServop service_name="" operation_name="" / >
 
 ## Usage
 
@@ -81,9 +81,7 @@ networkErrorBlock = ^() {  };
 <details>
 <summary>JSON Response</summary>
 
-```javascript
-<%= data.branding.codePrefix %>.setErrorCallback(errorCallback);
-```
+
 </details>
 
 ## Method Parameters

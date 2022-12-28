@@ -130,9 +130,4 @@ if (postResult.status == 200) {
 ```
 </details>
 
-## Method Parameters
-Parameter | Description
---------- | -----------
-minutes | Number of minutes to increment the shield on for.
-
 

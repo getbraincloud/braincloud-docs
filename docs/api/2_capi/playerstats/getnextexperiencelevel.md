@@ -149,10 +149,4 @@ if (postResult.status == 200) {
 ```
 </details>
 
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | The leaderboard for the tournament
-versionId | Version of the tournament, use -1 for the latest version
-
 

@@ -131,9 +131,4 @@ if (postResult.status == 200) {
 ```
 </details>
 
-## Method Parameters
-Parameter | Description
---------- | -----------
-includeSummaryData | Whether to return the summary friend data along with this call
-
 

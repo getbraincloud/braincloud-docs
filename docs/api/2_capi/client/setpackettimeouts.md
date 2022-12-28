@@ -4,7 +4,7 @@ Sets the packet timeouts using a list of integers that represent timeout values 
 
 The number of entries in this array determines how many packet retries will occur. By default, the packet timeout array is {15, 20, 35, 50}
 
-<PartialServop service_name="event" operation_name="UPDATE_EVENT_DATA" / >
+<PartialServop service_name="" operation_name="" / >
 
 ## Usage
 
@@ -91,9 +91,7 @@ ArrayList<Integer> packetTimeouts = new ArrayList<Integer>(
 <details>
 <summary>JSON Response</summary>
 
-```javascript
-// N/A
-```
+
 </details>
 
 ## Method Parameters

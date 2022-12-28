@@ -4,7 +4,7 @@ Gets the authentication packet timeout which is tracked separately from all othe
 
 By default this timeout is set to 15 seconds.
 
-<PartialServop service_name="event" operation_name="UPDATE_EVENT_DATA" / >
+<PartialServop service_name="" operation_name="" / >
 
 ## Usage
 
@@ -81,14 +81,7 @@ int timeout = <%= data.branding.codePrefix %>.getAuthenticationPacketTimeout();
 <details>
 <summary>JSON Response</summary>
 
-```javascript
-var appVersion = <%= data.branding.codePrefix %>.getAppVersion();
-```
-</details>
 
-## Method Parameters
-Parameter | Description
---------- | -----------
-sendApiErrorCallbacks | If set to true API error callbacks will be called for every cached message with statusCode CLIENT_NETWORK_ERROR and reasonCode CLIENT_NETWORK_ERROR_TIMEOUT.
+</details>
 
 

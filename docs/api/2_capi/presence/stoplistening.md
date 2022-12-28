@@ -127,9 +127,4 @@ if (postResult.status == 200) {
 ```
 </details>
 
-## Method Parameters
-Parameter | Description
---------- | -----------
-visible | Should user appear in presence? True by default.
-
 

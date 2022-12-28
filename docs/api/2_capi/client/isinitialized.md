@@ -2,7 +2,7 @@
 ## Overview
 Returns whether the <%= data.branding.codeClient %> has been initialized using the Initialize() method.
 
-<PartialServop service_name="event" operation_name="UPDATE_EVENT_DATA" / >
+<PartialServop service_name="" operation_name="" / >
 
 ## Usage
 
@@ -79,15 +79,7 @@ var isInitialized = <%= data.branding.codePrefix %>.isInitialized();
 <details>
 <summary>JSON Response</summary>
 
-```javascript
-var isAuthenticated = <%= data.branding.codePrefix %>.isAuthenticated();
-```
-</details>
 
-## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | The profile id of the user
-anonymousId | The anonymous id of the user
+</details>
 
 

@@ -21,15 +21,7 @@ Code | Name | Description
 ```
 
 ```csharp
-<%= partial(:"partials/docExample", :locals => {
-  :stepNum => "1",
-  :stepName => "InitAuthW"
-}) + "
-" + partial(:"partials/docExample", :locals => {
-  :stepNum => "2",
-  :stepName => "NowCall",
-  :apiCall => "GetRecentChatMessages"
-}) %>
+
 
 string channelId = "22817:gl:CHAT_TRADE"; // APP_ID:CHANNEL_TYPE:CHANNEL_ID
 int maxReturn = 25;

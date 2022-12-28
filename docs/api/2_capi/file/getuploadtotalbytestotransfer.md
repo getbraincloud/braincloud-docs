@@ -2,7 +2,7 @@
 ## Overview
 Returns the total number of bytes that will be uploaded or -1 if upload not found.
 
-<PartialServop service_name="file" operation_name="GET_CDN_URL" / >
+<PartialServop service_name="" operation_name="" / >
 
 ## Usage
 
@@ -86,9 +86,7 @@ public void cancelUpload(String uploadId)
 <details>
 <summary>JSON Response</summary>
 
-```cfscript
-// N/A
-```
+
 </details>
 
 ## Method Parameters

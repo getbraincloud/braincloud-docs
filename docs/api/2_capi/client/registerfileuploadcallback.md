@@ -2,7 +2,7 @@
 ## Overview
 Registers the file upload callbacks.
 
-<PartialServop service_name="event" operation_name="UPDATE_EVENT_DATA" / >
+<PartialServop service_name="" operation_name="" / >
 
 ## Usage
 

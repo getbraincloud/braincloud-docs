@@ -105,16 +105,7 @@ if (postResult.status == 200) {
 <details>
 <summary>JSON Response</summary>
 
-```r
-{
-	"service": "customEntity",
-	"operation": "SYS_CREATE_COLLECTION",
-	"data": {
-		"entityType": "athletes",
-		"collectionOptsJson": {}
-	}
-}
-```
+
 </details>
 
 ## Method Parameters

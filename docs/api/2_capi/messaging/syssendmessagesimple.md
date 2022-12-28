@@ -104,26 +104,7 @@ if (postResult.status == 200) {
 <details>
 <summary>JSON Response</summary>
 
-```r
-{
-	"service": "messaging",
-	"operation": "SYS_SEND_MESSAGE",
-	"data": {
-		"toProfileIds": [
-			"profileId1",
-			"profileId2"
-		],
-		"contentJson": {
-			"subject": "Upcoming features!",
-			"text": "Chat and messaging features are here!"
-		},
-		"fromJson": {
-			"id": null,
-			"name": "App Administrator"
-		}
-	}
-}
-```
+
 </details>
 
 ## Method Parameters

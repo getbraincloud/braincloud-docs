@@ -8,7 +8,7 @@ These methods should be called before authenticating so that they are sent to th
 Because of a Unity limitation country code cannot be detected automatically on any platforms other than iOS and Android.
 :::
 
-<PartialServop service_name="event" operation_name="UPDATE_EVENT_DATA" / >
+<PartialServop service_name="" operation_name="" / >
 
 ## Usage
 
@@ -92,9 +92,7 @@ var countryCode = "CA";
 <details>
 <summary>JSON Response</summary>
 
-```javascript
-var isInitialized = <%= data.branding.codePrefix %>.isInitialized();
-```
+
 </details>
 
 ## Method Parameters

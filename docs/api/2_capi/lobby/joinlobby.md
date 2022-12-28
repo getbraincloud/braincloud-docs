@@ -162,18 +162,7 @@ if (postResult.status == 200) {
 <details>
 <summary>JSON Response</summary>
 
-```r
-{
-	"service": "lobby",
-	"operation": "GET_REGIONS_FOR_LOBBIES",
-	"data": {
-		"lobbyTypes": [
-			"2v2",
-			"4v4"
-		]
-	}
-}
-```
+
 </details>
 
 ## Method Parameters

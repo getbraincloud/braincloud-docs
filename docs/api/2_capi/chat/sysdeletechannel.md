@@ -91,16 +91,7 @@ if (postResult.status == 200) {
 <details>
 <summary>JSON Response</summary>
 
-```r
-{
-	"service": "chat",
-	"operation": "SYS_CREATE_CHANNEL",
-	"data": {
-		"channelType": "dy",
-		"channelSubId": "myChatRoom"
-	}
-}
-```
+
 </details>
 
 ## Method Parameters

@@ -126,9 +126,7 @@ if (postResult.status == 200) {
 <details>
 <summary>JSON Response</summary>
 
-```cfscript
-Coming soon!
-```
+
 </details>
 
 ## Method Parameters

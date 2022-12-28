@@ -135,19 +135,7 @@ if (postResult.status == 200) {
 <details>
 <summary>JSON Response</summary>
 
-```r
-{
-	"service": "userItems",
-	"operation": "GIVE_USER_ITEM_TO",
-	"data": {
-		"profileId": "a-user-profileId",
-		"itemId": "aaa-bbb-ccc-ddd",
-		"version": 1,
-		"quantity": 1,
-		"immediate": true
-	}
-}
-```
+
 </details>
 
 ## Method Parameters

@@ -8,7 +8,7 @@ By default this is set to 120 seconds. Setting this value to 0 will turn off the
 This timeout method does not work on Unity mobile platforms.
 :::
 
-<PartialServop service_name="event" operation_name="UPDATE_EVENT_DATA" / >
+<PartialServop service_name="" operation_name="" / >
 
 ## Usage
 
@@ -88,9 +88,7 @@ int timeoutSecs = 60;
 <details>
 <summary>JSON Response</summary>
 
-```javascript
-// N/A
-```
+
 </details>
 
 ## Method Parameters

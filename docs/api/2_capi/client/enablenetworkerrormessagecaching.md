@@ -18,7 +18,7 @@ This effectively freezes all communication with <%= data.branding.productName %>
 ResetCommunication() will also clear the message cache.
 :::
 
-<PartialServop service_name="event" operation_name="UPDATE_EVENT_DATA" / >
+<PartialServop service_name="" operation_name="" / >
 
 ## Usage
 
@@ -95,9 +95,7 @@ ResetCommunication() will also clear the message cache.
 <details>
 <summary>JSON Response</summary>
 
-```javascript
-<%= data.branding.codePrefix %>.enableLogging(true);
-```
+
 </details>
 
 ## Method Parameters

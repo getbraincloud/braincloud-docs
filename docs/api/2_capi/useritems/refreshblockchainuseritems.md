@@ -118,22 +118,7 @@ if (postResult.status == 200) {
 <details>
 <summary>JSON Response</summary>
 
-```r
-{
-	"service": "userItems",
-	"operation": "RECEIVE_USER_ITEM_FROM",
-	"data": {
-		"profileId": "a-user-profileId",
-		"itemId": "aaa-bbb-ccc-ddd"
-	}
-}
-```
-</details>
 
-## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | The profile ID of the user who is giving the item. 
-itemId | The ID uniquely identifying the user item to be transferred. 
+</details>
 
 

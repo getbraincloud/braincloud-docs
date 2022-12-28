@@ -2,7 +2,7 @@
 ## Overview
 Enables receiving compressed packets of responses.
 
-<PartialServop service_name="event" operation_name="UPDATE_EVENT_DATA" / >
+<PartialServop service_name="" operation_name="" / >
 
 ## Usage
 
@@ -79,9 +79,7 @@ Enables receiving compressed packets of responses.
 <details>
 <summary>JSON Response</summary>
 
-```javascript
-<%= data.branding.codePrefix %>.enableCompressedRequests(true);
-```
+
 </details>
 
 ## Method Parameters

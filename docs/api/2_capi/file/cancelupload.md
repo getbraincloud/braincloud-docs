@@ -2,7 +2,7 @@
 ## Overview
 Method cancels an upload. If a File Upload Callback has been registered with the <%= data.branding.codeClient %> class, the fileUploadFailed callback method will be called once the upload has been canceled.
 
-<PartialServop service_name="chat" operation_name="UPDATE_CHAT_MESSAGE" / >
+<PartialServop service_name="" operation_name="" / >
 
 ## Usage
 
@@ -85,23 +85,7 @@ NSString * myUploadId = @"1234-1234-1234-1234"; //From UploadFile return data
 <details>
 <summary>JSON Response</summary>
 
-```r
-{
-	"service": "chat",
-	"operation": "UPDATE_CHAT_MESSAGE",
-	"data": {
-		"channelId": "55555:gl:bcDev",
-		"msgId": "123456789",
-		"version": 1,
-		"content": {
-			"text": "New plain text message",
-			"custom": {
-				"somethingNew": "amazing"
-			}
-		}
-	}
-}
-```
+
 </details>
 
 ## Method Parameters

@@ -5,7 +5,7 @@ You will need to call this method before authenticating anonymously.
 
 Note that calling this is the same as calling [<code>InitializeIdentity</code>](/api/capi/client/initializeidentity) in the <%= data.branding.codeClient %>.
 
-<PartialServop service_name="authenticationV2" operation_name="AUTHENTICATE" / >
+<PartialServop service_name="" operation_name="" / >
 
 ## Usage
 
@@ -90,9 +90,7 @@ String anonymousID = "anonId";
 <details>
 <summary>JSON Response</summary>
 
-```cfscript
-// N/A
-```
+
 </details>
 
 ## Method Parameters

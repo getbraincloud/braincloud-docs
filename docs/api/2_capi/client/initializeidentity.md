@@ -9,7 +9,7 @@ Note that calling this is the same as calling [<code>Initialize</code>](/api/cap
 InitializeIdentity must be called before you can authenticate a user anonymously.
 :::
 
-<PartialServop service_name="event" operation_name="UPDATE_EVENT_DATA" / >
+<PartialServop service_name="" operation_name="" / >
 
 ## Usage
 
@@ -86,12 +86,7 @@ InitializeIdentity must be called before you can authenticate a user anonymously
 <details>
 <summary>JSON Response</summary>
 
-```javascript
-var secret = "1234-1234-1234-1234";
-var appId = "123456";
 
-<%= data.branding.codePrefix %>.initialize(appId, secret, "1.0.0");
-```
 </details>
 
 ## Method Parameters

@@ -2,7 +2,7 @@
 ## Overview
 Returns true if RTT is enabled.
 
-<PartialServop service_name="rttRegistration" operation_name="GET_CONNECTION_STATUS" / >
+<PartialServop service_name="" operation_name="" / >
 
 ## Usage
 
@@ -79,14 +79,7 @@ Coming soon!
 <details>
 <summary>JSON Response</summary>
 
-```cfscript
-// N/A
-```
-</details>
 
-## Method Parameters
-Parameter | Description
---------- | -----------
-connectionType | Type of RTT connections being established. Examples: WebSocket, TCP.
+</details>
 
 

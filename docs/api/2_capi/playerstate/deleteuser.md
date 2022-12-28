@@ -125,9 +125,4 @@ if (postResult.status == 200) {
 ```
 </details>
 
-## Method Parameters
-Parameter | Description
---------- | -----------
-statusName | Name of the status.
-
 

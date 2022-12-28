@@ -2,7 +2,7 @@
 ## Overview
 Set the ping interval.
 
-<PartialServop service_name="globalGameStatistics" operation_name="READ_SUBSET" / >
+<PartialServop service_name="" operation_name="" / >
 
 ## Usage
 
@@ -80,9 +80,7 @@ float interval = 10;
 <details>
 <summary>JSON Response</summary>
 
-```cfscript
-// N/A
-```
+
 </details>
 
 ## Method Parameters

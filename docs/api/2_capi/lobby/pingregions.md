@@ -3,7 +3,7 @@
 Retrieves associated PingData averages to be used with all associated WithPingData APIs.
 Call anytime after GetRegionsForLobbies before proceeding.
 
-<PartialServop service_name="lobby" operation_name="LEAVE_LOBBY" / >
+<PartialServop service_name="" operation_name="" / >
 
 ## Usage
 
@@ -143,20 +143,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 <details>
 <summary>JSON Response</summary>
 
-```r
-{
-	"service": "lobby",
-	"operation": "LEAVE_LOBBY",
-	"data": {
-		"lobbyId": "55555:4v4:19"
-	}
-}
-```
-</details>
 
-## Method Parameters
-Parameter | Description
---------- | -----------
-lobbyId | Id of chosen lobby.
+</details>
 
 

@@ -22,15 +22,7 @@ Code | Name | Description
 ```
 
 ```csharp
-<%= partial(:"partials/docExample", :locals => {
-  :stepNum => "1",
-  :stepName => "InitAuthW"
-}) + "
-" + partial(:"partials/docExample", :locals => {
-  :stepNum => "2",
-  :stepName => "NowCall",
-  :apiCall => "GetChannelId"
-}) %>
+
 
 string channelType = "gl";
 string channelSubId = "CHAT_TRADE";

@@ -6,7 +6,7 @@ Returns the progress of the given upload from 0.0 to 1.0 or -1 if upload not fou
 This will always return 1 on Unity mobile platforms.
 :::
 
-<PartialServop service_name="file" operation_name="GET_CDN_URL" / >
+<PartialServop service_name="" operation_name="" / >
 
 ## Usage
 
@@ -89,9 +89,7 @@ public double getUploadProgress(String uploadId)
 <details>
 <summary>JSON Response</summary>
 
-```cfscript
-// N/A
-```
+
 </details>
 
 ## Method Parameters

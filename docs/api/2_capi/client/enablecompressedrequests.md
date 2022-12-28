@@ -2,7 +2,7 @@
 ## Overview
 Enables sending Gzip compressed packets of requests from client side. Which can significantely decrease response time for requests with large body content.
 
-<PartialServop service_name="event" operation_name="UPDATE_EVENT_DATA" / >
+<PartialServop service_name="" operation_name="" / >
 
 ## Usage
 
@@ -79,9 +79,7 @@ Enables sending Gzip compressed packets of requests from client side. Which can 
 <details>
 <summary>JSON Response</summary>
 
-```javascript
-<%= data.branding.codePrefix %>.deregisterRewardCallback();
-```
+
 </details>
 
 ## Method Parameters

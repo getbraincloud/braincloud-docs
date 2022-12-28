@@ -79,14 +79,7 @@ Coming soon!
 <details>
 <summary>JSON Response</summary>
 
-```cfscript
-// N/A
-```
-</details>
 
-## Method Parameters
-Parameter | Description
---------- | -----------
-connectionType | Type of RTT connections being established. Examples: WebSocket, TCP.
+</details>
 
 

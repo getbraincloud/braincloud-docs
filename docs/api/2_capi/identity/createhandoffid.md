@@ -95,12 +95,4 @@ if (postResult.status == 200) {
 ```
 </details>
 
-## Method Parameters
-Parameter | Description
---------- | -----------
-oldEmailAddress | Old email address
-password | Password
-newEmailAddress | New email address
-updateContactEmail | Whether to update contact email in profile
-
 

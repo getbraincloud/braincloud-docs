@@ -120,9 +120,4 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 ```
 </details>
 
-## Method Parameters
-Parameter | Description
---------- | -----------
-statusName | Name of the status to retrieve. Retrieve all if empty string.
-
 

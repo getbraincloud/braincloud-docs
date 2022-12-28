@@ -95,15 +95,7 @@ if (postResult.status == 200) {
 <details>
 <summary>JSON Response</summary>
 
-```r
-{
-	"service": "lobby",
-	"operation": "SYS_ROOM_STOPPED",
-	"data": {
-		"lobbyId": "55555:4v4:19"
-	}
-}
-```
+
 </details>
 
 ## Method Parameters

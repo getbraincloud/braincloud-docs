@@ -5,7 +5,7 @@ wait to receive a reply to an authentication API call.
 
 By default this timeout is set to 15 seconds.
 
-<PartialServop service_name="event" operation_name="UPDATE_EVENT_DATA" / >
+<PartialServop service_name="" operation_name="" / >
 
 ## Usage
 
@@ -86,9 +86,7 @@ int timeoutInSeconds = 30;
 <details>
 <summary>JSON Response</summary>
 
-```javascript
-// N/A
-```
+
 </details>
 
 ## Method Parameters

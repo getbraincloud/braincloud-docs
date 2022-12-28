@@ -2,7 +2,7 @@
 ## Overview
 Run callbacks, to be called once per frame from your main thread
 
-<PartialServop service_name="event" operation_name="UPDATE_EVENT_DATA" / >
+<PartialServop service_name="" operation_name="" / >
 
 ## Usage
 
@@ -79,14 +79,7 @@ Run callbacks, to be called once per frame from your main thread
 <details>
 <summary>JSON Response</summary>
 
-```javascript
-// N/A
-```
-</details>
 
-## Method Parameters
-Parameter | Description
---------- | -----------
-rewardCallback | The reward callback handler.
+</details>
 
 

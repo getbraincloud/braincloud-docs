@@ -149,9 +149,4 @@ if (postResult.status == 200) {
 ```
 </details>
 
-## Method Parameters
-Parameter | Description
---------- | -----------
-dateMillis | createdAt cut-off time whereby older events will be deleted
-
 

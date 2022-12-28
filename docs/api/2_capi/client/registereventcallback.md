@@ -6,7 +6,7 @@ This method is now deprecated. For real-time events, you should use the RTT API 
 
 Sets a callback handler for any out of band event messages that come from <%= data.branding.productName %>.
 
-<PartialServop service_name="event" operation_name="UPDATE_EVENT_DATA" / >
+<PartialServop service_name="" operation_name="" / >
 
 ## Usage
 

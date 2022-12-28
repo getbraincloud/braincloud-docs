@@ -99,19 +99,7 @@ if (postResult.status == 200) {
 <details>
 <summary>JSON Response</summary>
 
-```r
-{
-  "service": "customEntity",
-  "operation": "SYS_DROP_INDEX",
-  "data":
-  {
-    "entityType": "athletes",
-    "indexKeysJson": {
-      "data.penalties": 1
-    }
-  }
-}
-```
+
 </details>
 
 ## Method Parameters

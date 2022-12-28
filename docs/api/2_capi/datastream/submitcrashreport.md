@@ -191,19 +191,7 @@ if (postResult.status == 200) {
 <details>
 <summary>JSON Response</summary>
 
-```r
-{
-	"service": "dataStream",
-	"operation": "CUSTOM_TRACK_EVENT",
-	"data": {
-		"eventName": "customEvent",
-		"eventProperties": {
-			"key1": "value",
-			"key2": "value"
-		}
-	}
-}
-```
+
 </details>
 
 ## Method Parameters

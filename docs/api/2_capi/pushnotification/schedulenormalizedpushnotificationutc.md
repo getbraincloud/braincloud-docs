@@ -169,24 +169,7 @@ if (postResult.status == 200) {
 <details>
 <summary>JSON Response</summary>
 
-```r
-{
-	"service": "pushNotification",
-	"operation": "SCHEDULE_NORMALIZED_NOTIFICATION",
-	"data": {
-		"profileId": "kjhkjhgfkjshgkjh",
-		"alertContent": {
-			"body": "content of message",
-			"title": "message title"
-		},
-		"customData": {
-			"field1": "value1",
-			"field2": "value2"
-		},
-		"startDateUTC": "[[#ts+60000]]"
-	}
-}
-```
+
 </details>
 
 ## Method Parameters

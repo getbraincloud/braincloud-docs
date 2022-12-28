@@ -2,7 +2,7 @@
 ## Overview
 Sets a reward handler for any API call results that return rewards.
 
-<PartialServop service_name="event" operation_name="UPDATE_EVENT_DATA" / >
+<PartialServop service_name="" operation_name="" / >
 
 ## Usage
 

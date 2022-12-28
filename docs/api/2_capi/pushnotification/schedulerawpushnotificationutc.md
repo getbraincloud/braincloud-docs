@@ -223,40 +223,7 @@ if (postResult.status == 200) {
 <details>
 <summary>JSON Response</summary>
 
-```r
-{
-	"service": "pushNotification",
-	"operation": "SCHEDULE_RAW_NOTIFICATION",
-	"data": {
-		"profileId": "kjhkjhgfkjshgkjh",
-		"fcmContent": {
-			"notification": {
-				"body": "content of message",
-				"title": "message title"
-			},
-			"data": {
-				"customfield1": "customValue1",
-				"customfield2": "customValue2"
-			},
-			"priority": "normal"
-		},
-		"iosContent": {
-			"aps": {
-				"alert": {
-					"body": "content of message",
-					"title": "message title"
-				},
-				"badge": 0,
-				"sound": "gggg"
-			}
-		},
-		"facebookContent": {
-			"template": "content of message"
-		},
-		"minutesFromNow": 1
-	}
-}
-```
+
 </details>
 
 ## Method Parameters

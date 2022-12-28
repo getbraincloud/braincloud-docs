@@ -132,9 +132,4 @@ if (postResult.status == 200) {
 ```
 </details>
 
-## Method Parameters
-Parameter | Description
---------- | -----------
-attributeNames | Array of attribute names.
-
 

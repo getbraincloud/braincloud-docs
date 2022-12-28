@@ -131,9 +131,4 @@ if (postResult.status == 200) {
 ```
 </details>
 
-## Method Parameters
-Parameter | Description
---------- | -----------
-jobId | The id of the job to cancel.
-
 

@@ -2,7 +2,7 @@
 ## Overview
 Sets the packet timeouts back to default.
 
-<PartialServop service_name="event" operation_name="UPDATE_EVENT_DATA" / >
+<PartialServop service_name="" operation_name="" / >
 
 ## Usage
 
@@ -79,14 +79,7 @@ Sets the packet timeouts back to default.
 <details>
 <summary>JSON Response</summary>
 
-```javascript
-<%= data.branding.codePrefix %>.brainCloudManager._packetTimeouts = [15,20,35,50];
-```
-</details>
 
-## Method Parameters
-Parameter | Description
---------- | -----------
-intervalInSeconds | The time between heartbeats in milliseconds
+</details>
 
 

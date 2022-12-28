@@ -4,7 +4,7 @@ Returns true if the user is authenticated.
 
 If a session has timed out or if the server returns a session invalidation error, this flag will reset back to false.
 
-<PartialServop service_name="event" operation_name="UPDATE_EVENT_DATA" / >
+<PartialServop service_name="" operation_name="" / >
 
 ## Usage
 
@@ -81,15 +81,7 @@ var isAuthenticated = <%= data.branding.codePrefix %>.isAuthenticated();
 <details>
 <summary>JSON Response</summary>
 
-```javascript
-<%= data.branding.codePrefix %>.insertEndOfMessageBundleMarker();
-```
-</details>
 
-## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | The profile id of the user
-anonymousId | The anonymous id of the user
+</details>
 
 

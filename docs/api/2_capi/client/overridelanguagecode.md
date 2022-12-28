@@ -6,7 +6,7 @@ These methods should be called before authenticating so that they are sent to th
 
 Will override any auto detected language.
 
-<PartialServop service_name="event" operation_name="UPDATE_EVENT_DATA" / >
+<PartialServop service_name="" operation_name="" / >
 
 ## Usage
 
@@ -90,10 +90,7 @@ var languageCode = "en";
 <details>
 <summary>JSON Response</summary>
 
-```javascript
-var countryCode = "CA";
-<%= data.branding.codePrefix %>.overrideCountryCode(countryCode);
-```
+
 </details>
 
 ## Method Parameters

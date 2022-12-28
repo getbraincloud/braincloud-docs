@@ -13,15 +13,7 @@ Sends a text-only member chat message on behalf of the user. *This method provid
 ```
 
 ```csharp
-<%= partial(:"partials/docExample", :locals => {
-  :stepNum => "1",
-  :stepName => "InitAuthW"
-}) + "
-" + partial(:"partials/docExample", :locals => {
-  :stepNum => "2",
-  :stepName => "NowCall",
-  :apiCall => "PostChatMessageSimple"
-}) %>
+
 
 string channelId = "22817:gl:CHAT_GROUPFINDER"; // APP_ID:CHANNEL_TYPE:CHANNEL_ID
 string chatMessage = "Hey, I am looking for new and experienced users to join our group.";

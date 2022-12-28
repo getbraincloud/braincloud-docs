@@ -2,7 +2,7 @@
 ## Overview
 Flushes the cached messages to resume API call processing. This will dump all of the cached messages in the queue.
 
-<PartialServop service_name="event" operation_name="UPDATE_EVENT_DATA" / >
+<PartialServop service_name="" operation_name="" / >
 
 ## Usage
 
@@ -79,9 +79,7 @@ Flushes the cached messages to resume API call processing. This will dump all of
 <details>
 <summary>JSON Response</summary>
 
-```javascript
-// N/A
-```
+
 </details>
 
 ## Method Parameters

@@ -13,15 +13,7 @@ Retrieves a chat message object from history. If the message cannot be found, th
 ```
 
 ```csharp
-<%= partial(:"partials/docExample", :locals => {
-  :stepNum => "1",
-  :stepName => "InitAuthW"
-}) + "
-" + partial(:"partials/docExample", :locals => {
-  :stepNum => "2",
-  :stepName => "NowCall",
-  :apiCall => "GetChatMessage"
-}) %>
+
 
 string channelId = "22817:gl:CHAT_GROUPFINDER"; // APP_ID:CHANNEL_TYPE:CHANNEL_ID
 string msgId = "783820066133040";

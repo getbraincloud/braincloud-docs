@@ -161,40 +161,7 @@ if (postResult.status == 200) {
 <details>
 <summary>JSON Response</summary>
 
-```cfscript
-var profileId = "kjhkjhgfkjshgkjh";
-var fcmContent = {
-    "notification": {
-        "body": "content of message",
-        "title": "message title"
-    },
-    "data": {
-        "customfield1": "customValue1",
-        "customfield2": "customValue2"
-    },
-    "priority": "normal"
-};
-var iosContent = {
-    "aps": {
-        "alert": {
-            "body": "content of message",
-            "title": "message title"
-        },
-        "badge": 0,
-        "sound": "gggg"
-    }
-};
-var facebookContent = {
-    "template": "content of message"
-};
-var startTime = 1437579786000;
-var pushNotificationProxy = bridge.getPushNotificationServiceProxy();
 
-var postResult = pushNotificationProxy.scheduleRawPushNotificationUTC(profileId, fcmContent, iosContent, facebookContent, startTime);
-if (postResult.status == 200) {
-    // Success!
-}
-```
 </details>
 
 ## Method Parameters

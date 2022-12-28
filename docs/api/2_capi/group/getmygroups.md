@@ -142,11 +142,4 @@ if (postResult.status == 200) {
 ```
 </details>
 
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | ID of the group
-entityId | ID of the entity.
-version | The current version of the group entity (for concurrency checking).
-
 

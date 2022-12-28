@@ -103,19 +103,7 @@ if (postResult.status == 200) {
 <details>
 <summary>JSON Response</summary>
 
-```r
-{
-	"service": "leaderboard",
-	"operation": "POST_SCORE",
-	"data": {
-		"leaderboardId": "default",
-		"score": 10,
-		"data": {
-			"nickname": "batman"
-		}
-	}
-}
-```
+
 </details>
 
 ## Method Parameters

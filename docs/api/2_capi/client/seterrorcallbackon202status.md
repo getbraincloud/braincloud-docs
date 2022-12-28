@@ -6,7 +6,7 @@ Sets whether the error callback is triggered when a 202 status is received from 
 This flag is only intended for backward compatibility and is NOT recommended to be disabled otherwise.
 :::
 
-<PartialServop service_name="event" operation_name="UPDATE_EVENT_DATA" / >
+<PartialServop service_name="" operation_name="" / >
 
 ## Usage
 
@@ -83,9 +83,7 @@ This flag is only intended for backward compatibility and is NOT recommended to 
 <details>
 <summary>JSON Response</summary>
 
-```javascript
-// N/A
-```
+
 </details>
 
 ## Method Parameters
