@@ -44,6 +44,19 @@ const config = {
     locales: ['en'],
   },
 
+  plugins: [
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        id: 'release',
+        routeBasePath: 'release',
+        path: './release',
+        blogSidebarTitle: 'All posts',
+        blogSidebarCount: 'ALL',
+      },
+    ],
+  ],
+
   presets: [
     [
       'classic',
@@ -74,6 +87,8 @@ const config = {
             type: 'all',
             copyright: `Copyright © ${new Date().getFullYear()} bitHeads, Inc.`,
           },
+          blogSidebarTitle: 'All posts',
+          blogSidebarCount: 'ALL',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -99,7 +114,7 @@ const config = {
       },
       announcementBar: {
         id: 'announcementBar-2', // Increment on change
-        content: `⭐️ Announcement bar goes here, subscript brainCloud service on <a target="_blank" rel="noopener noreferrer" href="https://portal.braincloudservers.com/login#/development">brainCloud portal</a>`,
+        content: `⭐️ Subscript brainCloud service on <a target="_blank" rel="noopener noreferrer" href="https://portal.braincloudservers.com/login#/development">brainCloud portal</a>`,
       },
       navbar: {
         title: 'brainCloud Docs',
@@ -122,6 +137,7 @@ const config = {
             label: 'API',
           },
           { to: '/blog', label: 'Blog', position: 'left' },
+          { to: '/release', label: 'Release', position: 'left' },
           {
             type: 'docsVersionDropdown',
             position: 'right',

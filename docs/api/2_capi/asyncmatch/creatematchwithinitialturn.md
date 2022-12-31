@@ -11,14 +11,16 @@ Opponent IDs is a JSON array containing objects with a Platform and player ID. P
 
 An example of this string would be:
 
-`[{
+```
+[{
   "platform":"BC",
   "id": "some-braincloud-profile"
 },
 {
   "platform":"FB",
   "id": "some-facebook-id"
-}]`
+}]
+```
 
 <PartialServop service_name="asyncMatch" operation_name="CREATE" / >
 
