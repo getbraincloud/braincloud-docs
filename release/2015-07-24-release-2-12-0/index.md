@@ -13,8 +13,8 @@ Release 2.12.0 has gone public! There are some tasty goodies in this one - plea
 
 Highlights of this release include:
 
-- **Scheduled Cloud Code** \- you can now schedule cloud code scripts to run at a specific time. This tool is very powerful and gives you the ability to defer task execution as benefits your game/app.  See [this page](https://getbraincloud.com/apidocs/cloud-code-central/handy-cloud-code-scripts/scriptscheduler-script/) for more information on how to use this great new feature.
-- **Paged Global Entity Fetches** \- it is now possible to retrieve more than 100 Global Entities. We've created a new paging system that allows you to navigate a larger set of Global Entities. The paging APIs use a sophisticated query syntax which gives you search and ordering flexibility. The query syntax is described [here](/apidocs/apiref/?cpp#appendix-genericpagedqueries) and the API itself can be found [here](/apidocs/apiref/?cpp#capi-globalentity-getpage).
+- **Scheduled Cloud Code** \- you can now schedule cloud code scripts to run at a specific time. This tool is very powerful and gives you the ability to defer task execution as benefits your game/app.  See [this page](/learn/cloud-code-central/handy-cloud-code-scripts/scriptscheduler-script/) for more information on how to use this great new feature.
+- **Paged Global Entity Fetches** \- it is now possible to retrieve more than 100 Global Entities. We've created a new paging system that allows you to navigate a larger set of Global Entities. The paging APIs use a sophisticated query syntax which gives you search and ordering flexibility. The query syntax is described [here](/api/appendix/genericpagedqueries) and the API itself can be found [here](/api/capi/globalentity/getpage).
 - **Support for "Lower Is Better" Leaderboards** \- You can now create Leaderboards where the best score kept will be the lowest score the user has posted.
 - **S3 File Listing** - we've created a new API that makes it even easier to fetch the list of files uploaded to S3.
 
@@ -28,7 +28,7 @@ Highlights of this release include:
 
 ### New APIs
 
-- **Schedule Cloud Code** \- To schedule cloud code you can use one of these [APIs](/apidocs/apiref/?cpp#capi-script-schedulerunscriptminutes).
+- **Schedule Cloud Code** \- To schedule cloud code you can use one of these [APIs](/api/capi/script/schedulerunscriptminutes).
     - **BrainCloudScript.ScheduleRunScriptUTC()** for an absolute date.
     - **BrainCloudScript.ScheduleRunScriptMinutes()** for scheduling x minutes from now.
 - **Global Entity Paged Fetches** \- To fetch global entities by Page

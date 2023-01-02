@@ -10,7 +10,7 @@ tags:
 Highlights of this release include:
 
 - **New Client Libs\*** - new Linux C++ Client, Visual Studio 2008 and Visual Studio 2010.
-- **New Unity Example** - we've built a UNET version of [brainCloud Bombers](/apidocs/tutorials/unity-tutorials/braincloud-bombers-example-game/)
+- **New Unity Example** - we've built a UNET version of [brainCloud Bombers](/learn/sdk-tutorials/unity-tutorials/braincloud-bombers-example-game/)
 - **Performance optimizations** - ongoing optimizations to tune performance and scalability
 
 _\* All other clients updated with the latest APIs, of course._

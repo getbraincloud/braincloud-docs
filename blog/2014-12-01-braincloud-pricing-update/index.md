@@ -17,7 +17,7 @@ The even better news is this means, effective immediately, we're adjusting our p
 
 This is part of our ongoing pledge to align brainCloud pricing with our costs, to ensure we're offering you the most cost-effective solution possible.
 
-[![braincloud_pricing](images/brainCloud_pricing.png)](/apidocs/wp-content/uploads/2016/09/brainCloud_pricing.png)
+[![braincloud_pricing](images/brainCloud_pricing.png)](images/brainCloud_pricing.png)
 
 While delivering the good news, we thought we'd spend a moment to provide a bit more background on brainCloud's pricing model.
 
@@ -82,4 +82,4 @@ We hope this clears up any questions you may have about pricing in brainCloud.
 
 **As always, brainCloud is free during development (up to 100 users), and if you sign up before March 6th, 2015, you lock in our special Early Adopter pricing until 2016!**
 
-\[otw\_shortcode\_button size="large" icon\_position="left" shape="square"\]Sign Up For Free\[/otw\_shortcode\_button\]
+[otw\_shortcode\_button size="large" icon\_position="left" shape="square"]Sign Up For Free[/otw\_shortcode\_button]

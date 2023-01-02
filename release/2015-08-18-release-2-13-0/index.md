@@ -15,7 +15,7 @@ Highlights of this release include:
 - **Twitter Authentication Support** - your users can now use Twitter to log into your app. How social!
 - **API Calls from Cloud Code are now free!\*** As per our original intent, API calls from cloud code scripts are now free\*. This incentivises you to write simple scripts to aggregate multiple calls - reducing round-trips to our servers, which reduces our costs - and in turn reduces yours!
 
-_\* Minor adjustments to the Cloud Code billing strategy were introduced in [2.17](/apidocs/release-2-17-0/) to accommodate long-running Cloud Code scripts._
+_\* Minor adjustments to the Cloud Code billing strategy were introduced in [2.17](/release/2015/04/02/release-2-7-0) to accommodate long-running Cloud Code scripts._
 
 ## Portal Changes
 

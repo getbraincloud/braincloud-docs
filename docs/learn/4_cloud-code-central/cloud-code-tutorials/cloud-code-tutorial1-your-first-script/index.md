@@ -11,8 +11,8 @@ To create our first script, perform the following steps:
 
 - Log into the brainCloud **Design Portal** (if you haven't already)
 - Choose your app, and go to **Design | Cloud Code | Scripts**
-- Click the **\[+\]** in the top right-hand corner to create a new script
-- Give your script a name - for example, _"Tut1\_AddTwoNumbers"_, make it **_Client Callable_**, and set its _**Test Parameters**_ to:
+- Click the **[+]** in the top right-hand corner to create a new script
+- Give your script a name - for example, _"Tut1_AddTwoNumbers"_, make it **_Client Callable_**, and set its _**Test Parameters**_ to:
 
 Test Parameters
 ```js
@@ -34,7 +34,7 @@ var c = a + b;
 // "Return" the result 
 c; 
 ```
-- Hit **\[Save\]** and then **\[Close\]** when you're done.
+- Hit **[Save]** and then **[Close]** when you're done.
 
 * * *
 
@@ -44,10 +44,10 @@ Okay, let's see if it works. To run the script:
 
 - Switch to the **API Explorer** by choosing **Design | Cloud Code | API Explorer** from the side menu
 - The API Explorer attempts to simulate a client application accessing the brainCloud servers. Thus, just like any brainCloud client, you must first authenticate.  To do so, choose the **Authenticate** _Service_ and the **Authenticate** _Operation_ from the drop-downs, and then click the green **RUN** button.
-- Next, we'll run the script. Choose **Script** from the _Service_ drop-down and Run Script "Tut1\_AddTwoNumbers" from the Operation drop-down. _If you don't see your script you probably forgot to make it Client Callable - go to its definition in the Scripts screen, and then come back._
+- Next, we'll run the script. Choose **Script** from the _Service_ drop-down and Run Script "Tut1_AddTwoNumbers" from the Operation drop-down. _If you don't see your script you probably forgot to make it Client Callable - go to its definition in the Scripts screen, and then come back._
 - You'll notice that the default parameters that you set are displayed in the _Parameters_ section of the API Explorer. Edit them if you wish. Then click the RUN button to run the script and see the results.
 
-[![](images/Tut1_API_Explorer-1024x572.png)](images/Tut1_API_Explorer.png)
+[![](images/Tut1_API_Explorer-1024x572.png)](images/Tut1_API_Explorer-1024x572.png)
 
 * * *
 
@@ -78,8 +78,8 @@ Calling scripts from client apps is straight-forward - you simply call the [Run
 
 Calling the script from a Unity C# app would look like the following:
 ```js
-string scriptName = "Tut1\_AddTwoNumbers";
-string jsonScriptData = "{ \\"num1\\": 1, \\"num2\\": 2 }";
+string scriptName = "Tut1_AddTwoNumbers";
+string jsonScriptData = "{ \"num1\": 1, \"num2\": 2 }";
 SuccessCallback successCallback = (response, cbObject) =>
 {
     Debug.Log(string.Format("Success | {0}", response));

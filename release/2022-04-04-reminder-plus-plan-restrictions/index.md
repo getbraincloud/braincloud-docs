@@ -31,7 +31,7 @@ To quickly update your app to a plus plan, simply:
 - Select **Change Plan** from the action menu associated with the app
 - Click on the **Plus Plans** tab
 - **Choose** the plan to switch to
-- And click **\[Choose Plan\]**
+- And click **[Choose Plan]**
 
 ![](images/2022-04-04_16-24-44-249x300.png)
 

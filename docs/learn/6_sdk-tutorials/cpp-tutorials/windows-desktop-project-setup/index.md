@@ -12,17 +12,17 @@ Note that if you are developing a Windows Store App, you should use the Window S
 - Unzip the SDK into a folder. In our case, we will unzip to a "bc" folder within the solution folder.
 - Right click your project in Solution Explorer and select Properties
 - Under Configuration Properties > C/C++ > Preprocessor > General > Additional Include Directories, enter the following include:
-    - $(ProjectDir)..\\bc\\include;$(ProjectDir)..\\bc\\thirdparty\\jsoncpp-1.0.0
+    - $(ProjectDir)..\bc\include;$(ProjectDir)..\bc\thirdparty\jsoncpp-1.0.0
     - Note that you should do this for all configurations and all platforms
 - Under Configuration Properties > Linker > Input enter the following libraries:
-    - brainCloud.lib;cpprest120\_2\_0.lib;winhttp.lib;bcrypt.lib;crypt32.lib
+    - brainCloud.lib;cpprest120_2_0.lib;winhttp.lib;bcrypt.lib;crypt32.lib
     - Note that you should do this for all configurations and all platforms
 - Under Configuration Properties > Linker > General > Additional Library Directories, enter the following path:
-    - $(ProjectDir)\\..\\bc\\lib\\win32\\debug  <--- for Win32 | Debug
+    - $(ProjectDir)\..\bc\lib\win32\debug  <--- for Win32 | Debug
     - Note you will need to enter a unique path for each platform and configuration. For instance:
-        - X64 | Debug:  $(ProjectDir)\\..\\bc\\lib\\x64\\debug
-        - X64 | Release:  $(ProjectDir)\\..\\bc\\lib\\x64\\release
-        - Win32 | Debug:  $(ProjectDir)\\..\\bc\\lib\\win32\\debug
-        - Win32 | Release:  $(ProjectDir)\\..\\bc\\lib\\win32\\release
+        - X64 | Debug:  $(ProjectDir)\..\bc\lib\x64\debug
+        - X64 | Release:  $(ProjectDir)\..\bc\lib\x64\release
+        - Win32 | Debug:  $(ProjectDir)\..\bc\lib\win32\debug
+        - Win32 | Release:  $(ProjectDir)\..\bc\lib\win32\release
 
 Done!

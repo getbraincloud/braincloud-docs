@@ -7,13 +7,13 @@ tags:
 
 We've got a bunch of fixes and tweaks for you this week, plus a game to play with your family on the holiday week-end!
 
-[![Icon_BCBombers](images/Icon_BCBombers-150x150.png)](/apidocs/wp-content/uploads/2015/06/Icon_BCBombers.png)
+[![Icon_BCBombers](images/Icon_BCBombers-150x150.png)](images/Icon_BCBombers.png)
 
 ## Release Highlights
 
 Highlights of this release include:
 
-- **brainCloud Bombers** - we're pleased to announce the availability of our new example game, **brainCloud Bombers!** Bombers is intended to show how well brainCloud works with other multiplayer tech, like Exit Games Photon. The source for the game is available here, and we've written several posts that talk about how the game was built and what features it uses. [Check it out!](/apidocs/tutorials/unity-tutorials/braincloud-bombers-example-game/)
+- **brainCloud Bombers** - we're pleased to announce the availability of our new example game, **brainCloud Bombers!** Bombers is intended to show how well brainCloud works with other multiplayer tech, like Exit Games Photon. The source for the game is available here, and we've written several posts that talk about how the game was built and what features it uses. [Check it out!](/learn/sdk-tutorials/unity-tutorials/braincloud-bombers-example-game/)
 
 - **Leaderboard changes** - we've made some changes to the way that leaderboard versioning / retention works. We used to version leaderboards based on a fixed start date + rotation period - which seemed pretty logical, but caused problems if you wanted to adjust the ration period/date+time, and \*didn't\* want to lose all your old leaderboards - d'oh! So we've changed that. Now if you adjust your leaderboard settings, they affect the leaderboard behaviour going forward, but do \*not\* affect the old leaderboard data at all. We've also fixed some inconsistencies in our display of leaderboard date+time settings. Finally, to top it all off, we've added new APIs to request data from old leaderboards.
 
@@ -41,11 +41,11 @@ Minor additions and behavioural changes to the APIs:
 - **(New) Looking up friends** - we're adding support for looking up friends. More methods will be added next release.
     - **`GetFriendProfileInfoFromExternalId()`** to look up other users based on their external id (returns the friend's summary data).
 - **(Change) User Entity Version exception handling**
-    - All variations of Update and Delete for user entities now throw an exception if the provided version is incorrect.  \[Used to simply return a null object\]
+    - All variations of Update and Delete for user entities now throw an exception if the provided version is incorrect.  [Used to simply return a null object]
 - **(Change) Cloud Code changes**
     - Added the missing ServiceProxy for accessing **Global Properties** from cloud code
     - **Script return format** has been updated to include separate status + data, to better align with the Client API.
-    - The old behaviour is preserved if _**\[x\] Use Legacy Script Result Format**_ is checked under _Compatibility Settings_ in **Design | Core App Info | Advanced Settings**. The old behaviour will be preserved by default for existing apps (though it is highly recommended that developers migrate to the new format when convenient).
+    - The old behaviour is preserved if _**[x] Use Legacy Script Result Format**_ is checked under _Compatibility Settings_ in **Design | Core App Info | Advanced Settings**. The old behaviour will be preserved by default for existing apps (though it is highly recommended that developers migrate to the new format when convenient).
 
  
 

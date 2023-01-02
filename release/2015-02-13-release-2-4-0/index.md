@@ -21,18 +21,18 @@ In this release, we've greatly improved our Cloud Code system.  We've expanded
 - **Updated Javascript Library.**  We've updated our Javascript library - you'll find it on the **Client Libs** download page.
 - **Updated C++ for Android Library.**  Includes all the functionality present in the iOS C++ library. We've also upgraded our Cocos2d-x example project and tutorial to use it.  You'll find the library in the Client Libs download page.
 
-\[caption id="attachment\_798" align="alignnone" width="536"\][![brainCloud S2S API](images/brainCloud-S2S-API.png)](/apidocs/wp-content/uploads/2015/02/brainCloud-S2S-API.png) brainCloud S2S API\[/caption\]
+[caption id="attachment\_798" align="alignnone" width="536"][![brainCloud S2S API](images/brainCloud-S2S-API.png)](images/brainCloud-S2S-API.png) brainCloud S2S API[/caption]
 
  
 
 ### Portal Changes
 
-- **(New) Ability to edit player \[user\] entities -** now not only can you view player entities, you can actually edit them straight from the portal and save the updates.  Great for debugging and user support.
+- **(New) Ability to edit player [user] entities -** now not only can you view player entities, you can actually edit them straight from the portal and save the updates.  Great for debugging and user support.
 - **(New) Ability to edit global entities -** like player entities, you can now edit and save global entities.  Note - we plan to further add the ability to create global entities from the editor in the future (think by end-of-March).
 - **(New) Newly added players screen** - super handy during development and testing - you'll see it when you first select **Player Monitoring**.  We'll be further adding new player search features in the next release.
 - **(New) User Platforms** - The **Player Summary** screen now shows what platforms a user has logged in from.
 
-\[caption id="attachment\_795" align="alignnone" width="474"\]![Window](images/Window-1024x621.png) Newly added players screen\[/caption\]
+[caption id="attachment\_795" align="alignnone" width="474"]![Window](images/Window-1024x621.png) Newly added players screen[/caption]
 
  
 

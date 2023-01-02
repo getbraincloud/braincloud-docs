@@ -9,7 +9,7 @@ This script deletes a list of users based on a provided list of pro
 
 ### Script
 
-Click [DeleteListOfUsers.ccjs.zip](script/BlockIfBanned.ccjs.zip) to download the file.
+Click [DeleteListOfUsers.ccjs.zip](script/DeleteListOfUsers.ccjs.zip) to download the file.
 
 ### Usage / Setup
 

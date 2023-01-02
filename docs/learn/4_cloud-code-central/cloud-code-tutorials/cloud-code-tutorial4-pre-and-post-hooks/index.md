@@ -11,7 +11,7 @@ Post-hooks allows you to massage the data that is returned after an API method 
 
 To utilize a pre or post-hook to modify brainCloud's behaviour, you:
 
-- First write the cloud code script with the appropriate parameter/return syntax (see below, or the [API Reference](/api/cc/ccscripts/apihooks))
+- First write the cloud code script with the appropriate parameter/return syntax (see below, or the [API Reference](/api//cc/writingscript#api-hooks))
 - Then attach the cloud code script to the API method via the **Design | Cloud Code | API Hooks** page of the portal
 
 The format and function of cloud code scripts are different from standard cloud code, so we've created two examples below.
@@ -29,36 +29,36 @@ Once you've created the script, go to the Edit tab and we'll write the logic for
 Similar to how regular Cloud Code scripts work, the parameters passed into the hook can be accessed through the "data" object.  However, the fields inside the object are different when the script is a hook. These are the available fields:
 
 - **service ** - The service that the API being hooked belongs to
-- **operation** \- The operation name for the hooked API
-- **message** \- The parameters being passed to the API
-- **parms** \- The custom parameters for the hook.  These are configured when adding the hook in the API Hooks page (covered further down).
+- **operation** - The operation name for the hooked API
+- **message** - The parameters being passed to the API
+- **parms** - The custom parameters for the hook.  These are configured when adding the hook in the API Hooks page (covered further down).
 
 In addition to the unique data object passed in, pre-hook scripts return a specific object that contains several fields that must be present for certain operations:
 
 - **status** - When set to a non-200 value the API call will be aborted, and an error return to the calling client
 - **messageOverride** - When a hook wants to modify the parameters being passed on to the API, the modified parameters must be assigned to this field of the return object
-- **reasonCode** \- A custom reason code for when the status is set to non-200. This is returned to the client as part of the error
+- **reasonCode** - A custom reason code for when the status is set to non-200. This is returned to the client as part of the error
 - **errorMessage** - A custom error message for when the status is set to non-200. This is returned to the client as part of the error
-- **parms** \- The custom parameters for the hook.  These are configured when adding the hook in the API Hooks page (covered further down).
+- **parms** - The custom parameters for the hook.  These are configured when adding the hook in the API Hooks page (covered further down).
 
 For this tutorial, we will hook onto the PlayerStatisitics | SetExperiencePoints API, and we need to keep in mind the parameters that get passed to it when writing our pre-hook. A single parameter is passed to the SetExperiencePoints API:
 ```js
 {
-    "xp\_points": 1
+    "xp_points": 1
 }
 ```
-The goal of our pre-hook is to multiply all XP values passed into this API method, therefore we need to modify the "xp\_points" field of the "message" and add it to the "messageOverride" field of the return object.
+The goal of our pre-hook is to multiply all XP values passed into this API method, therefore we need to modify the "xp_points" field of the "message" and add it to the "messageOverride" field of the return object.
 
-To give an example of returning an error, our script will also abort the call if the "xp\_points" value is over a certain threshold.
+To give an example of returning an error, our script will also abort the call if the "xp_points" value is over a certain threshold.
 ```js
 message = data.message; //get the passed in API parameters
 hookParms = data.parms; //get the custom hook parameters
 
-message.xp\_points \*= hookParms.experienceMultiplier; //multiply the XP points value that was passed in
+message.xp_points *= hookParms.experienceMultiplier; //multiply the XP points value that was passed in
 
 var retval = {}; //prepare the return object
 
-if(message.xp\_points > 10000) // the xp value is too large, return an error
+if(message.xp_points > 10000) // the xp value is too large, return an error
 {
    retval.status = 500;
    retval.reasonCode = 50000;
@@ -83,10 +83,10 @@ Let's create a post hook for the SetExperiencePoints method.  The process is si
 Similar to pre-hook scripts, the “service”, “operation” and “parms” are passed to the script. The “message” component is the result of the call rather than the original calling message data. The original calling message is passed in as “callingMessage”.
 
 - **service ** - The service that the API being hooked belongs to
-- **operation** \- The operation name for the hooked API
-- **message** \- The result of the API call
+- **operation** - The operation name for the hooked API
+- **message** - The result of the API call
 - **callingMessage** - The original message parameters passed into the API
-- **parms** \- The custom parameters for the hook.  These are configured when adding the hook in the API Hooks page (covered further down).
+- **parms** - The custom parameters for the hook.  These are configured when adding the hook in the API Hooks page (covered further down).
 
 The returned object for post hooks also differs slightly from pre hooks.  First, a null return object from the script will cause the return message from the API to be sent without modification.  Like the pre-hook, returning a non-200 status will return an error to the calling client with the specified reason code and error message.
 
@@ -95,8 +95,8 @@ To override the message data returned to the client, assign the modified message
 These are all the return object fields:
 
 - **status** - When set to a non-200 value the API call will be aborted, and an error return to the calling client
-- **data**\- When a hook wants to modify the message being returned to the client, the modified parameters must be assigned to this field of the return object
-- **reasonCode** \- A custom reason code for when the status is set to non-200. This is returned to the client as part of the error
+- **data**- When a hook wants to modify the message being returned to the client, the modified parameters must be assigned to this field of the return object
+- **reasonCode** - A custom reason code for when the status is set to non-200. This is returned to the client as part of the error
 - **errorMessage** - A custom error message for when the status is set to non-200. This is returned to the client as part of the error
 
 In our example script, we will simply append a bool to the return data.

@@ -29,7 +29,7 @@ Changes to the portal:
 - **Job Queue** - we've enhanced the Cloud Code Job Queue screen to show both the date+time that a job was _created_, as well as when the job is _scheduled to run_.  The list is sortable by either, of course.
 - **Reset Device Tokens** - you can now clear the device tokens for a user from the User Summary screen. Device tokens are used when sending push notifications to a user.
 
-[![Cloud_code_editor_two_pane](images/Cloud_code_editor_two_pane-1024x631.jpg)](/apidocs/wp-content/uploads/2015/10/Cloud_code_editor_two_pane.jpg)
+[![Cloud_code_editor_two_pane](images/Cloud_code_editor_two_pane-1024x631.jpg)](images/Cloud_code_editor_two_pane.jpg)
 
  
 

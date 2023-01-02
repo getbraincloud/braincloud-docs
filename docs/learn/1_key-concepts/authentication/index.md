@@ -36,7 +36,7 @@ _Important note - there are no global brainCloud Accounts for end-users.  All 
 These key concepts are essential to understanding brainCloud authentication:
 
 1. **Profile** - all the key information about a user in your game or app is stored in the **Profile**.  The profile is the key record for locating a users stats, entities, achievements, currency balances, etc.
-2. **Identities** - brainCloud uses identities to locate profiles.  Every brainCloud profile has at least \*one\* identity (the anonymous identity) associated with it - but it may have others (including a Facebook identity, Game Center identity, etc.)
+2. **Identities** - brainCloud uses identities to locate profiles.  Every brainCloud profile has at least *one* identity (the anonymous identity) associated with it - but it may have others (including a Facebook identity, Game Center identity, etc.)
 3. **Logging in** - when your app starts, it logs into brainCloud by providing an identity for brainCloud to use to locate the appropriate profile.
 4. **Advanced operations** - brainCloud provides advanced APIs to allow you to add additional identities to a profile after it's been created - and can even allow you to merge profiles where necessary.
 
@@ -44,7 +44,7 @@ These key concepts are essential to understanding brainCloud authentication:
 
 **There is no explicit _Create()_ and _Delete()_ methods for brainCloud profiles** - instead, they are automatically created during authentication if an existing profile cannot be found.
 
-Essentially, the client attempts to log into brainCloud using the selected authentication mechanism - and if an existing profile is not located, a new one will automatically be created.  _\[Technically speaking, the developer \*can\* choose to override this behavior by passing a FALSE to the forceCreate parameter, but that's not common usage.\]_ 
+Essentially, the client attempts to log into brainCloud using the selected authentication mechanism - and if an existing profile is not located, a new one will automatically be created.  _[Technically speaking, the developer *can* choose to override this behavior by passing a FALSE to the forceCreate parameter, but that's not common usage.]_ 
 
 Here's an example using anonymous authentication.
 ```js
@@ -52,8 +52,8 @@ Here's an example using anonymous authentication.
 // - if a profile for this anonymous id isn't found, create it
 BrainCloudWrapper.GetInstance().AuthenticateAnonymous(
      true,
-     OnSuccess\_Authenticate,
-     OnError\_Authenticate);
+     OnSuccess_Authenticate,
+     OnError_Authenticate);
 ```
 # Anonymous Identity and Profile Ids
 
@@ -61,11 +61,11 @@ As we mentioned above, **Identities** are used to lookup **Profiles**.  A key 
 
 To support this, brainCloud generates completely random (GUID-based) ids that are used to identify the device that a profile is connected to.  We generate (and have the client store) this id so that we're not breaking any rules about identifying users without their permission - e.g. the same reason developers are no longer allowed to use UDIDs in iOS.
 
-To keep things secure, the <AnonymousIdentity\> must be used in conjunction with the <ProfileId\> to look up the profile. Yes, you got that right - to look up a profile anonymously, you need to \*already\* have the profile's id - which you get when the profile is first created. Honestly, this isn't as crazy as it sounds - by requiring these two pieces of information we're preventing folks from hacking into our system and accessing any arbitrary user profile via a single identifier.
+To keep things secure, the <AnonymousIdentity\> must be used in conjunction with the <ProfileId\> to look up the profile. Yes, you got that right - to look up a profile anonymously, you need to *already* have the profile's id - which you get when the profile is first created. Honestly, this isn't as crazy as it sounds - by requiring these two pieces of information we're preventing folks from hacking into our system and accessing any arbitrary user profile via a single identifier.
 
 The nice thing is that the **BrainCloudWrapper** class stores both the <AnonymousIdentity\> and the <ProfileId\> for you - so you don't normally have to worry about it.
 
-[![brainCloud Anonymous Identity](images/brainCloud-Anonymous-Identity-1024x536.png)](images/brainCloud-Anonymous-Identity.png)
+[![brainCloud Anonymous Identity](images/brainCloud-Anonymous-Identity-1024x536.png)](images/brainCloud-Anonymous-Identity-1024x536.png)
 
 Anonymous identities are convenient - you don't need to bother your user with a login, yet can still persist their data on the cloud - but there are some significant disadvantages.
 
@@ -122,7 +122,7 @@ brainCloud does not store (or even ask for) the password to the third party acco
 
 Note - the client app is responsible for persisting the 3rd party's user id info if desired / required (e.g. for Facebook, the <externalId\> and <authenticationToken\>).
 
-Note - when authenticating with Facebook, you must request _**user\_friends**_ among your permissions to make use of social network support (e.g., social leaderboards).
+Note - when authenticating with Facebook, you must request _**user_friends**_ among your permissions to make use of social network support (e.g., social leaderboards).
 
 # GameCenter Authentication
 
@@ -136,7 +136,7 @@ It is recommended that Apple apps use GameCenter Authentication instead of Anon
 
 Most games/apps will probably want to allow their users to be anonymous initially.  Given an upfront account setup when creating an account can be bothersome, and it will cause a portion of your userbase to abandon the app before they start.
 
-Luckily, brainCloud supports this concept directly.  brainCloud allows the app to add additional identities to a profile \*after\* the profile has been created - this is often done by:
+Luckily, brainCloud supports this concept directly.  brainCloud allows the app to add additional identities to a profile *after* the profile has been created - this is often done by:
 
 - encouraging the user to connect to Facebook to play with friends
 - encouraging the user to create an account (e-mail + password) to save their data
@@ -145,3 +145,5 @@ Luckily, brainCloud supports this concept directly.  brainCloud allows the app 
 Adding additional identities to a profile is accomplished via the AttachIdentity() methods, which can be found [here](/api/capi/identity).  Identities can also be detached (if the user decides to disconnect from Facebook, etc.).
 
 Once a user has upgraded from an anonymous account to an authenticated account (because they're now using an authenticated identity), you should switch to retrieving their account via the appropriate authenticated authentication call (instead of the anonymous call).
+
+<DocCardList />

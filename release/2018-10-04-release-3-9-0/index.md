@@ -25,7 +25,7 @@ In addition, presence supports:
 - _real-time_ notification of status changes
 - ability of subjects to _appear invisible (i.e. offline)_
 
-For more information, see the [Presence Service API Reference](https://getbraincloud.com/apidocs/apiref/#capi-presence).
+For more information, see the [Presence Service API Reference](/api/capi/presence).
 
 _Note - Online Presence requires brainCloud RTT._
 
@@ -43,7 +43,7 @@ The advantages are significant:
 - _Greater control_ - there is a greater ability to tune the risk / reward structure of the contest, since the numbers are constrained
 - _Greater liquidity_ - divisions hide the actual size of your tournament pool, which can be advantageous when your app is still growing
 
-For more information, see the new _Division_ APIs in the [Tournament Service API Reference](https://getbraincloud.com/apidocs/apiref/#capi-tournament).
+For more information, see the new _Division_ APIs in the [Tournament Service API Reference](/api/capi/tournament).
 
 _Note - Divisions are available to Business Plan customers and above._
 
@@ -60,7 +60,7 @@ We've created two shiny new services to contain the new goodness:
 
 _Have no worries - we will ensure that the legacy **Product Service** continues to work until **July 1, 2020**, but we strongly suggest that new apps move to the new APIs now, and older apps migrate when they can._
 
-For more information, see the new [AppStore Service](https://getbraincloud.com/apidocs/apiref/#capi) and [VirtualCurrency Service](https://getbraincloud.com/apidocs/apiref/#capi-virtualcurrency) API References.
+For more information, see the new [AppStore Service](/api/capi) and [VirtualCurrency Service](/api/capi/virtualcurrency) API References.
 
  
 
@@ -102,7 +102,7 @@ We have made the following portal changes:
 - **Core App Info | Application IDs**
     - Added a new _Bundle Id_ field in Apple platform settings, which if filled in, is used to perform additional receipt validation in the new **AppStore Service.**
 - **Core App Info | Advanced Settings**
-    - A new compatibility flag, _\[x\] Enable legacy Purchase Collection support,_ has been added. It defaults to _enabled_ for both new and existing apps.
+    - A new compatibility flag, _[x] Enable legacy Purchase Collection support,_ has been added. It defaults to _enabled_ for both new and existing apps.
         - Apps with existing purchases should keep this enabled - it will allow the new purchase APIs and old purchase APIs to coexist nicely
         - New apps can feel free to disable this and use the new APIs only.
 - **Cloud Code | API Hooks**
@@ -123,7 +123,7 @@ We have made the following portal changes:
     - To configure a division:
         1. First create a tournament-enabled Leaderboard to act as a template (setting the template flag to enabled)
         2. Then create the division set, selecting the Leaderboard template and configuring the maximum # of players per division instance
-        3. Use the new [Tournament Division APIs](https://getbraincloud.com/apidocs/apiref/#capi-tournament) to join the tournament!
+        3. Use the new [Tournament Division APIs](/api/capi/tournament) to join the tournament!
 - **Marketplace | Products**
     - We have made a bunch of under-the-hood changes to allow for easier integration of new AppStores in the future
     - The screen should work largely as before - let us know if you experience any issues!
@@ -140,8 +140,8 @@ We have made the following portal changes:
     - Pro-tip - You can use the API explorer to find the division instances related to a particular player
         - Go to **Monitoring | User Monitoring**, and find the player in question
         - If the _Live Lock_ banner is showing, click the lock to unlock it
-        - Click on **\[Login as User\]** to login as this user in the API explorer
-        - Choose the _Tournament service_, and the _GetMyDivisions() operation,_ and click _**\[Run\]**._
+        - Click on **[Login as User]** to login as this user in the API explorer
+        - Choose the _Tournament service_, and the _GetMyDivisions() operation,_ and click _**[Run]**._
         - Voila - a list of the division ids instances for that player. Note that each id contains both the division set code, and the instance id (a number).
 - **User Monitoring**
     - We've added a new **Recent Users** tab to make it easier to find users that have recently logged into your app
@@ -164,25 +164,25 @@ We have made the following portal changes:
 The following changes/additions have affected the brainCloud API:
 
 - **AppStore Service**
-    - New [AppStore Service](https://getbraincloud.com/apidocs/apiref/?csharp#capi-appstore) for querying products / pricing / promotions, and performing in-app purchases.
+    - New [AppStore Service](/api/capi/appstore) for querying products / pricing / promotions, and performing in-app purchases.
     - The product / pricing / promotions APIs are identical to the Product Service versions - but the IAP APIs are all new!
 - **Group Service**
-    - Users can now call [RejectGroupJoinRequest()](https://getbraincloud.com/apidocs/apiref/?csharp#capi-group-rejectgroupjoinrequest) to reject a join request that they have made
-    - New APIs for managing groups: [SetGroupOpen()](https://getbraincloud.com/apidocs/apiref/?csharp#capi-group-setgroupopen) and [UpdateGroupACL()](https://getbraincloud.com/apidocs/apiref/?csharp#capi-group-updategroupacl)
+    - Users can now call [RejectGroupJoinRequest()](/api/capi/group/rejectgroupjoinrequest) to reject a join request that they have made
+    - New APIs for managing groups: [SetGroupOpen()](/api/capi/group/setgroupopen) and [UpdateGroupACL()](/api/capi/group/updategroupacl)
 - **Leaderboard Service**
-    - New versioned social leaderboard calls - [GetSocialLeaderboardByVersion()](https://getbraincloud.com/apidocs/apiref/?csharp#capi-leaderboard-getsocialleaderboardbyversion), [GetPlayersSocialLeaderboardByVersion()](https://getbraincloud.com/apidocs/apiref/?csharp#capi-leaderboard-getplayerssocialleaderboardbyversion)
+    - New versioned social leaderboard calls - [GetSocialLeaderboardByVersion()](/api/capi/leaderboard/getsocialleaderboardbyversion), [GetPlayersSocialLeaderboardByVersion()](/api/capi/leaderboard/getplayerssocialleaderboardbyversion)
 - **Product Service**
     - _Important: The Product Service is being **deprecated** in favour of the new AppStore and VirtualCurrency services._
     - The service and its APIs will continue to work until **July 1st, 2020**.
-    - There is a new compatibility flag in the portal under **Design | Core App Info | Advanced Settings**, which controls how purchase transactions are written to the database. Keep \[x\] Enable legacy Purchase Collection support checked if your app uses the old Product APIs, or a mixture of the old **Product**and new **AppStore**APIs. New apps that will only use the new AppStore APIs can feel free to clear that flag.
-    - Although deprecated, we did add the missing cloud-code version of the [VerifyItunesReceipt()](https://getbraincloud.com/apidocs/apiref/?cloudcode#capi-product-verifyitunesreceipt) back to the service (for those who need it!)
+    - There is a new compatibility flag in the portal under **Design | Core App Info | Advanced Settings**, which controls how purchase transactions are written to the database. Keep [x] Enable legacy Purchase Collection support checked if your app uses the old Product APIs, or a mixture of the old **Product**and new **AppStore**APIs. New apps that will only use the new AppStore APIs can feel free to clear that flag.
+    - Although deprecated, we did add the missing cloud-code version of the [VerifyItunesReceipt()](/api/capi/product/verifyitunesreceipt) back to the service (for those who need it!)
 - **Presence Service**
-    - There is an all-new [Presence](https://getbraincloud.com/apidocs/apiref/?csharp#capi-presence) service. Check it out!
+    - There is an all-new [Presence](/api/capi/presence) service. Check it out!
 - **Tournament Service**
     - New Division Set calls have been added - mostly used when querying and joining a Division Set instance.
-    - The new calls are: [GetDivisionInfo()](https://getbraincloud.com/apidocs/apiref/?csharp#capi-tournament-getdivisioninfo), [GetMyDivisions()](https://getbraincloud.com/apidocs/apiref/?csharp#capi-tournament-getmydivisions), [JoinDivision()](https://getbraincloud.com/apidocs/apiref/?csharp#capi-tournament-joindivision) and [LeaveDivisionInstance()](https://getbraincloud.com/apidocs/apiref/?csharp#capi-tournament-leavedivisioninstance)
+    - The new calls are: [GetDivisionInfo()](/api/capi/tournament/getdivisioninfo), [GetMyDivisions()](/api/capi/tournament/getmydivisions), [JoinDivision()](/api/capi/tournament/joindivision) and [LeaveDivisionInstance()](/api/capi/tournament/leavedivisioninstance)
 - **VirtualCurrency Service**
-    - New [VirtualCurrency Service](https://getbraincloud.com/apidocs/apiref/?csharp#capi-virtualcurrency) for currency operations. The operations are largely the same, with a bit of clean-up.
+    - New [VirtualCurrency Service](/api/capi/virtualcurrency) for currency operations. The operations are largely the same, with a bit of clean-up.
 
 * * *
 

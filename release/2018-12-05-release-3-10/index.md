@@ -15,14 +15,14 @@ We have added profanity filter support to our chat service. With it, you can aut
 
 You can configure this via the **Design | Messaging | Chat** page in the [Design Portal](https://portal.braincloudservers.com). Note that you must have signed up for [WebPurify](https://www.webpurify.com/) and configured it via the **Design | Integrations | Manage Integrations** page first.
 
-[![](images/2018-12-03_13-06-33-300x275.png)](https://getbraincloud.com/apidocs/wp-content/uploads/2018/12/2018-12-03_13-06-33.png)
+[![](images/2018-12-03_13-06-33-300x275.png)](images/2018-12-03_13-06-33.png)
 
 ## Email Validation Enhancements
 
 We have added two new features to make incorporating email verification into your apps easier.
 
 - **_Validation hooks_** \- brainCloud can now automatically trigger a cloud code script to run when a user clicks on the validation URL included in the verification email. The script to be called is configured with the **Design | Cloud Code | API Hooks** page - just choose the EmailAuth service and assign scripts to `Post` and/or `PostFail`.
-- _**Continue button**_ \- we have also added a configurable **\[Continue\]** button to the web screen that pops up for email validation. This button is configured to send the user to the web URL of your choice when clicked. Very useful if you want to bring the user to your site login (or back into your app) after validating their email.
+- _**Continue button**_ \- we have also added a configurable **[Continue]** button to the web screen that pops up for email validation. This button is configured to send the user to the web URL of your choice when clicked. Very useful if you want to bring the user to your site login (or back into your app) after validating their email.
 
 The _continue button_ is enabled by configuring a validation hook script (see above) that returns results in the following format when run:
 
@@ -48,9 +48,9 @@ Accomplishing this in brainCloud is possible, but challenging. All three potenti
 So - we have created a new way to do this, which we call _Handoff_. The idea is pretty simple:
 
 1. App A: The user is logged into brainCloud normally, and a session created
-2. App A: The app calls the new [CreateHandoffId()](https://getbraincloud.com/apidocs/apiref/#capi-identity-createhandoffid) method, that creates a temporary `handoffId`and `securityToken`that can be used to remotely log that user in. This _id + token_ is only valid for a short period (~ one hour) and can only be used once.
+2. App A: The app calls the new [CreateHandoffId()](/api/capi/identity/createhandoffid) method, that creates a temporary `handoffId`and `securityToken`that can be used to remotely log that user in. This _id + token_ is only valid for a short period (~ one hour) and can only be used once.
 3. App A: The handoffId + securityToken is passed to the other app/system. How that is done is app-specific. It could be as simple as passing it along in a URL. You could even separate the data - send the id in an email with a clickable link, but text the user the token so that they have to manually enter it <- useful for more security intensive use cases
-4. App B: The app calls the new [AuthenticateHandoff()](https://getbraincloud.com/apidocs/apiref/?csharp#capi-auth-authenticatehandoff) API call to log the user into brainCloud
+4. App B: The app calls the new [AuthenticateHandoff()](/api/capi/authentication/authenticatehandoff) API call to log the user into brainCloud
 
 Voila!
 
@@ -73,9 +73,9 @@ We have now taken the next step and implemented direct support for non-login Uni
 
 Usage is simple:
 
-- Call [AttachNonLoginUsername( <username\> )](https://getbraincloud.com/apidocs/apiref/#capi-identity-attachnonloginuniversalid) to create a _Universal Identity_ and attach it to the current profile. It will return an error if the username is not unique.
-- Later you can call [UpdateUniversalIdLogin()](https://getbraincloud.com/apidocs/apiref/#capi-identity-updateuniversalidlogin) to update the username if the user desires
-- To search for the user via the api, use [GetProfileInfoForCredential( "anId", "Universal")](https://getbraincloud.com/apidocs/apiref/#capi-friend-getprofileinfoforcredential)
+- Call [AttachNonLoginUsername( <username\> )](/api/capi/identity/attachnonloginuniversalid) to create a _Universal Identity_ and attach it to the current profile. It will return an error if the username is not unique.
+- Later you can call [UpdateUniversalIdLogin()](/api/capi/identity/updateuniversalidlogin) to update the username if the user desires
+- To search for the user via the api, use [GetProfileInfoForCredential( "anId", "Universal")](/api/capi/friend/getprofileinfoforcredential)
 - Finally, in the Design Portal search by Universal ID -- not by Name! -- to find the user.
 
 _Pro-tip: brainCloud just uses a string for universal identities. They are pretty free-form (i.e. can have spaces, in front, in back, special characters, etc.) If you want to be more restrictive, be sure to filter them and apply your restrictions before creating them!_
@@ -117,7 +117,7 @@ This page is currently limited to only a maximum of the last 100 requests. It wi
 
 ## Monitoring
 
-- **\[New!\] Global Monitoring | Server Logs**
+- **[New!] Global Monitoring | Server Logs**
     - New page collects S2S requests and responses for easier debugging of server scenarios
     - Note - currently a beta page - will be enhanced soon with pagination features (and later with filtering!)
 
@@ -132,13 +132,13 @@ This page is currently limited to only a maximum of the last 100 requests. It wi
 The following changes/additions have affected the client API:
 
 - **Authentication**
-    - New Handoff Authentication call added: [AuthenticateHandoff()](https://getbraincloud.com/apidocs/apiref/?csharp#capi-auth-authenticatehandoff)
+    - New Handoff Authentication call added: [AuthenticateHandoff()](/api/capi/authentication/authenticatehandoff)
 - **Identity**
-    - New API for creating handoff ids: [CreateHandoffId()](https://getbraincloud.com/apidocs/apiref/?cloudcode#capi-identity-createhandoffid)
-    - New [AttachNonLoginUniversalId()](https://getbraincloud.com/apidocs/apiref/?cloudcode#capi-identity-attachnonloginuniversalid) API has been added.
+    - New API for creating handoff ids: [CreateHandoffId()](/api/capi/identity/createhandoffid)
+    - New [AttachNonLoginUniversalId()](/api/capi/identity/attachnonloginuniversalid) API has been added.
 - **HttpClient**
-    - Added a new [PostJsonResponseText()](https://getbraincloud.com/apidocs/apiref/?cloudcode#cc-httpclient-postjsonresponsetext) method for those weird APIs <cough> _slack_ </cough> that post in JSON but return the result as a string? _I mean really - who does that? :)_
-    - The existing [PostJsonResponseJson()](https://getbraincloud.com/apidocs/apiref/#cc-httpclient-postjsonresponsejson) method also more gracefully handles text-only returns - enclosing them in a JSON object with the text in a field called `jsonString`.
+    - Added a new [PostJsonResponseText()](/api/cc/httpclient/postjsonresponsetext) method for those weird APIs <cough> _slack_ </cough> that post in JSON but return the result as a string? _I mean really - who does that? :)_
+    - The existing [PostJsonResponseJson()](/api/cc/httpclient/postjsonresponsejson) method also more gracefully handles text-only returns - enclosing them in a JSON object with the text in a field called `jsonString`.
 
  
 

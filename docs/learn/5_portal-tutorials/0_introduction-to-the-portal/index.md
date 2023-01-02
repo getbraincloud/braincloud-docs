@@ -24,13 +24,13 @@ The **Home Page** is the actually just the main page of the **Administration** s
 
 ## Creating an App
 
-The first thing you'll want to do is create an app.  Doing so is simple - just click the **\[+\]** button in the corner of the **Your Apps** section, and fill in the dialog.
+The first thing you'll want to do is create an app.  Doing so is simple - just click the **[+]** button in the corner of the **Your Apps** section, and fill in the dialog.
 
 [![brainCloud](images/brainCloud_dashboard_newApp.jpg)](images/brainCloud_dashboard_newApp.jpg)
 
 You can choose whether or not to _Enable Game Features_ - this justs shows and/or hides the gaming features of the design portal - like Achievements, Leaderboards, etc. If your app isn't planning to use these features, you can hide them to keep the portal simpler. Note you can always choose to enable them later.
 
-You'll want to pick at least one _Supported Platform_. brainCloud's APIs check the platform passed in during authentication - if the platform isn't enabled the authentication will be rejected. So be sure to enable both your development and deployment platforms. _\[Note - the API Explorer defaults to iOS for Authentication calls. It is convenient during development to enable that platform, even if you don't intend to deploy to it.\]_
+You'll want to pick at least one _Supported Platform_. brainCloud's APIs check the platform passed in during authentication - if the platform isn't enabled the authentication will be rejected. So be sure to enable both your development and deployment platforms. _[Note - the API Explorer defaults to iOS for Authentication calls. It is convenient during development to enable that platform, even if you don't intend to deploy to it.]_
 
 ## App Management
 
@@ -77,4 +77,4 @@ Now that you're logged in (_authenticated_), you can try additional API calls at
 
 And that's it - you've created your first app and logged in. Congrats!
 
-_\[P.S. Check your e-mail. brainCloud automatically sends a message to validate the e-mail address provided during account creation. You can customize this functionality in the **Design | Core App Info | Advanced Settings** page of the portal.\]_
+_[P.S. Check your e-mail. brainCloud automatically sends a message to validate the e-mail address provided during account creation. You can customize this functionality in the **Design | Core App Info | Advanced Settings** page of the portal.]_

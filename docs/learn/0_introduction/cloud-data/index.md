@@ -7,7 +7,7 @@ brainCloud provides very robust and specialized APIs for dealing with cloud data
 
 In regard to User (Player) data, brainCloud provides the following mechanisms:
 
-- **User \[Player\] Statistics** - advanced API for managing numeric stats on the server.  Statistics are defined ahead-of-time on the server and are concurrency-safe.  User statistics are a key building block for brainCloud's Gamification features, and therefore developers are encouraged to take advantage of the facility where appropriate
+- **User [Player] Statistics** - advanced API for managing numeric stats on the server.  Statistics are defined ahead-of-time on the server and are concurrency-safe.  User statistics are a key building block for brainCloud's Gamification features, and therefore developers are encouraged to take advantage of the facility where appropriate
 - **User Entities** - entities are used to store more complex (i.e. json) objects on the server. The brainCloud API has been optimized to allow retrieval of all entities via a single read operation, with support for a continuous stream of incremental updates.
 - **User Attributes** - brainCloud also provides support for free-form attributes (key+value pairs).  Attributes are useful for simple, less rigid data - and can be used to simplify the creation of complex user segments (for promotions targeting)
 

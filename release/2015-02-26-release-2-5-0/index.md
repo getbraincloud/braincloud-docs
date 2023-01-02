@@ -15,7 +15,7 @@ In hindsight, _the old process was clunky_.  You needed to first add the user
 
 You'll be happy to know that we've cleaned that up.  Now you only need to enter a name and e-mail, and we'll handle the e-mailing for you - including prompting the team member to pick their own password.  Easy peasy!
 
-[![inviting_new_team_members](images/inviting_new_team_members-1024x655.png)](/apidocs/wp-content/uploads/2015/02/inviting_new_team_members.png)
+[![inviting_new_team_members](images/inviting_new_team_members-1024x655.png)](images/inviting_new_team_members.png)
 
 If any of you with multiple accounts would like to merge them, just hit the green **Chat** button and we'll help you out.  It's pretty simple to do, but the tools are only available to us super-users right now.
 
@@ -30,14 +30,14 @@ Anyway, check out the release details below - and remember, if you're going to G
 
 ### Portal Changes
 
-- **New invite team member flow** \- now just type in their name and e-mail address, and brainCloud sends the invite for you.  _\[Yeah, we know, it always should have been that way!\]_
-- **Improved \[Select Players\] screen** - now finding players to view and debug in **Player Monitoring** is easier than ever!
+- **New invite team member flow** \- now just type in their name and e-mail address, and brainCloud sends the invite for you.  _[Yeah, we know, it always should have been that way!]_
+- **Improved [Select Players] screen** - now finding players to view and debug in **Player Monitoring** is easier than ever!
 - **(Minor) Versioning** tab under **Design | Core Game Info** has been renamed to **Platforms.**
 
 ### API Changes
 
 - **AuthenticateGoogle()** added to the brainCloud client APIs.
-- **Android libs** now support capturing of region, timezone and language during authentication. _\[Note - requires some custom client configuration - instructions coming soon!\]_
+- **Android libs** now support capturing of region, timezone and language during authentication. _[Note - requires some custom client configuration - instructions coming soon!]_
 
 ### Misc Fixes
 
@@ -45,4 +45,4 @@ Anyway, check out the release details below - and remember, if you're going to G
 - **Google Play Purchases -** we've streamlined our implementation to make it more compatible with 3rd party libraries (like Prime31)
 - **Javascript documentation** - we've updated much of the documentation with the lastest JavaScript APIs. We still have a bit further to go - bear with us!
 
-[![BC_TwitterPromo_18](images/BC_TwitterPromo_18-1024x512.png)](/apidocs/wp-content/uploads/2015/02/BC_TwitterPromo_18.png)
+[![BC_TwitterPromo_18](images/BC_TwitterPromo_18-1024x512.png)](images/BC_TwitterPromo_18.png)

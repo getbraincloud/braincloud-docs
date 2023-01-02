@@ -60,7 +60,7 @@ After setting up your products in the brainCloud marketplace, you'll want to ass
     
     [![2015-08-11_12-49-42](images/2015-08-11_12-49-42.png)](images/2015-08-11_12-49-42.png)
     
-- Enter your iTunes product id for this price - in our case "com.braincloud.mygame.goldsack1". Note that you can enter separate iPhone/iPad ids if your app is \*not\* a universal binary (or for some other reason uses two different product ids)  
+- Enter your iTunes product id for this price - in our case "com.braincloud.mygame.goldsack1". Note that you can enter separate iPhone/iPad ids if your app is *not* a universal binary (or for some other reason uses two different product ids)  
     
     [![2015-08-11_12-51-33](images/2015-08-11_12-51-33.png)](images/2015-08-11_12-51-33.png)
     

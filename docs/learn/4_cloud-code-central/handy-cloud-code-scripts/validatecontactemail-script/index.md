@@ -9,7 +9,7 @@ This script gives an app a way to validate the user's contact email when registe
 
 ## Script
 
-Click [validateContactEmail.zip](script/validateContactEmail.zip) to download the file.
+Click [validateContactEmail](script/ValidateContactEmail.ccjs.zip) to download the file.
 
 ## Usage/Setup
 
@@ -24,7 +24,7 @@ Test SendContactEmailVerification script from **Design | Cloud Code | Cloud Code
 
 Of course, if you want to view the results of responses, go to **Monitoring| Recent Errors**:
 
-- _change the filter to show info messages_ - enable the \[x\] checkbox by the **green "i"** and hit **\[Refresh\]**
+- _change the filter to show info messages_ - enable the [x] checkbox by the **green "i"** and hit **[Refresh]**
 
 - Click on a logline to view the details. The parameters will be displayed in the _Context_ field, which you can expand by dragging the bottom-right corner of the dialog.
 

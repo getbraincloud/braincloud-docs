@@ -31,8 +31,8 @@ Configuring the Parse connection is simple - go to **Design | Integrations | Man
 
 From there, there are two key APIs to integrate into your app:
 
-- [AuthenticateParse()](/apidocs/apiref/#capi-auth-authenticateparse) - used to authenticate with brainCloud via a Parse identity.
-- [ParseRequest()](/apidocs/apiref/#cc-httpclient-parserequest) - makes a web request from brainCloud from Parse
+- [AuthenticateParse()](/api/capi/authentication/authenticateparse) - used to authenticate with brainCloud via a Parse identity.
+- [ParseRequest()](/api/cc/httpclient/parserequest) - makes a web request from brainCloud from Parse
 
 We've even built a small sample app to show how these APIs can work together to dynamically migrate your users to brainCloud.
 
@@ -42,7 +42,7 @@ We think our CloudCoders will like this one. We've added a new Run tab to the ed
 
 Now edit, test and debug your code all from the same editor!
 
-[![Run Tab](images/Run_Tab.png)](/apidocs/wp-content/uploads/2016/04/Run_Tab.png)
+[![Run Tab](images/Run_Tab.png)](images/Run_Tab.png)
 
 _Pro tip: The session and log for the Run tab are shared with the API Explorer. This allows you to set up custom scenarios for testing._
 
@@ -63,8 +63,8 @@ The following changes have been made to the design portal:
     - API Explorer calls are now added to the user's request/response logs (can aid debugging in some scenarios)
 - **Design | Cloud Code | Script Editor**
     - New **Run** tab added to allow easy testing and debugging of scripts
-    - Click **\[Quick Authenticate\]** to create a session with default options
-    - Edit the parameters, and then click **\[Run\]** to execute the script
+    - Click **[Quick Authenticate]** to create a session with default options
+    - Edit the parameters, and then click **[Run]** to execute the script
     - Note - brainCloud only runs the saved version of a script. If a script has changed and has not yet been saved, it will show an asterix ("\*") in the Editor tab title.
 - **Monitoring | Global Monitoring | Recent logs**
     - Clicking on a _profile id_ in a log entry now brings you to the **Log** page of that user in **User Monitoring**
@@ -76,7 +76,7 @@ The following changes have been made to the design portal:
     - Added the script name to the Run Script entries
     - API Explorer initiated calls now appear in the logs
 - **Live Lock**
-    - Better keyboard support for unlocking apps. Clicking the banner now puts the cursor into the password field automatically, and password entry is confirmed by hitting the \[Enter\] key
+    - Better keyboard support for unlocking apps. Clicking the banner now puts the cursor into the password field automatically, and password entry is confirmed by hitting the [Enter] key
     - More buttons are now \*disabled\* when an app is locked, instead of hidden. This is so that locked features remain discoverable.
 - **Server Status**
     - You can now easily look up the status of brainCloud's servers via our new ServerStatus page.  You'll find the link by the version number in the Portal under the left-hand navigation bar - or just bookmark [braincloud.statuspage.io](http://braincloud.statuspage.io).
@@ -88,26 +88,26 @@ The following changes have been made to the design portal:
 The following changes have been made to the brainCloud API:
 
 - **Authentication** and **ReadPlayerState**
-    - [Authenticate()](/apidocs/apiref/#capi-auth) and [ReadPlayerState()](/apidocs/apiref/#capi-playerstate-readplayerstate) methods now return the users' `pictureUrl` property if available
-    - [Authenticate()](/apidocs/apiref/#capi-auth) and [ReadPlayerState()](/apidocs/apiref/#capi-playerstate-readplayerstate) no longer return the user's entities by default \[see _User Entities_\] section below
+    - [Authenticate()](/api/capi/authentication) and [ReadPlayerState()](/api/capi/playerstate/readuserstate) methods now return the users' `pictureUrl` property if available
+    - [Authenticate()](/api/capi/authentication) and [ReadPlayerState()](/api/capi/playerstate/readuserstate) no longer return the user's entities by default [see _User Entities_] section below
 -  **BrainCloudWrapper**
-    - [BrainCloudWrapper](/apidocs/apiref/#wrapper) wraps the authentication and identity portions of the API, simplifying authentication for your apps.
+    - [BrainCloudWrapper](/api/wrapper) wraps the authentication and identity portions of the API, simplifying authentication for your apps.
     - Because the wrapper isn't a core component of the library (and apps aren't required to use it), it was only available on a few platforms, and wasn't really documented.
-    - It is very useful however, and eliminates some common programming mistakes - so we are now providing it across all platforms (except AS3), and have documented it in [its own section](/apidocs/apiref/#wrapper) of the API documentation.
+    - It is very useful however, and eliminates some common programming mistakes - so we are now providing it across all platforms (except AS3), and have documented it in [its own section](/api/wrapper) of the API documentation.
 - **Friends**
-    - The new friends management methods are: [AddFriends()](/apidocs/apiref/#capi-friend-addfriends) and [RemoveFriends()](/apidocs/apiref/#capi-friend-removefriends). They are plural because they allow you to add multiple friends in a batch.
-    - A new method, [FindPlayerByUniversalId()](/apidocs/apiref/#capi-friend-findplayerbyuniversalid) has been added to facilitate looking up potential friends
+    - The new friends management methods are: [AddFriends()](/api/capi/friend/addfriends) and [RemoveFriends()](/api/capi/friend/removefriends). They are plural because they allow you to add multiple friends in a batch.
+    - A new method, [FindPlayerByUniversalId()](/api/capi/friend/finduserbyexactuniversalid) has been added to facilitate looking up potential friends
 - **Matchmaking**
-    - New [DisableMatchmaking()](/apidocs/apiref/#capi-matchmaking-disablematchmaking) api method has been added to all clients
+    - New [DisableMatchmaking()](/api/capi/matchmaking/disablematchmaking) api method has been added to all clients
 - **Parse Integration**
-    - You can now authenticate brainCloud users via the [AuthenticateParse()](/apidocs/apiref/#capi-auth-authenticateparse) method. _Pro tip: Once the brainCloud account has been created, you can attach a brainCloud identity (i.e. Universal or Email) via the AttachIdentity() methods._
-    - Once authenticated, you can make calls to Parse to retrieve data via the Cloud Code [ParseRequest()](/apidocs/apiref/#cc-httpclient-parserequest) method.
+    - You can now authenticate brainCloud users via the [AuthenticateParse()](/api/capi/authentication/authenticateparse) method. _Pro tip: Once the brainCloud account has been created, you can attach a brainCloud identity (i.e. Universal or Email) via the AttachIdentity() methods._
+    - Once authenticated, you can make calls to Parse to retrieve data via the Cloud Code [ParseRequest()](/api/cc/httpclient/parserequest) method.
     - You configure parse configuration from the **Design | Integrations | Manage Integrations** screen.
 - **User Entities**
     - **Behaviour Change:** UserEntities are no longer returned during Authenticate() and ReadPlayerState() calls by default. This is because some apps are actually storing thousands of entities per user, not all of which should be retrieved at once.
     - Apps can preserve the legacy behaviour by enabling the "Return user entites during authenticate and player state methods" flag in the **Compatiblity** section of the **Design | Core App Info | Advanced Settings** screen. This setting defaults to "on" for existing apps to preserve compatibility.
-    - New [GetList()](/apidocs/apiref/#capi-entity-getlist) and [GetListCount()](/apidocs/apiref/#capi-entity-getlistcount) methods have been added. These methods allow for more complex queries of user entities.
-    - [GetSharedEntityForPlayerId()](/apidocs/apiref/#capi-entity-getsharedentityforplayerid) method added - previously you could only retrieve \*all\* shared entities in a list.
+    - New [GetList()](/api/capi/entity/getlist) and [GetListCount()](/api/capi/entity/getlistcount) methods have been added. These methods allow for more complex queries of user entities.
+    - [GetSharedEntityForPlayerId()](/api/capi/entity/getsharedentityforprofileid) method added - previously you could only retrieve \*all\* shared entities in a list.
 
  
 
@@ -117,19 +117,19 @@ The following changes have been made to the brainCloud API:
     - Improvements to Push Notifications architecture for increased performance and reliability
     - Upgraded our TLS libraries to use 1.1+ for improved security when connecting to our billing system.
 - Removed methods - the following previously-deprecated methods have been removed from the 2.22 client libraries:
-    - Removed ReadFriendsWithApplication() - use [ListFriends()](/apidocs/apiref/#capi-friend-listfriends) instead
-    - Removed GetGlobalLeaderboard() - use [GetGlobalLeaderboardPage()](/apidocs/apiref/#capi-leaderboard-getgloballeaderboardpage) instead
-    - Removed GetLeaderboard() - use [GetSocialLeaderboard()](/apidocs/apiref/#capi-leaderboard-getsocialleaderboard) instead
+    - Removed ReadFriendsWithApplication() - use [ListFriends()](/api/capi/friend/listfriends) instead
+    - Removed GetGlobalLeaderboard() - use [GetGlobalLeaderboardPage()](/api/capi/leaderboard/getgloballeaderboardpage) instead
+    - Removed GetLeaderboard() - use [GetSocialLeaderboard()](/api/capi/leaderboard/getsocialleaderboard) instead
     - Removed RegisterPushNotificationDeviceToken with string device parameter - use version with Platform object instead
     - Removed ReadPlayerStatsSubset() with string parameter - use version that takes collection instead
     - Removed ReadAttributes() with string parameter - use version that takes collection instead
     - Removed ReadGlobalStatsSubset() with string parameter - use version that takes collection instead
     - Removed AwardAchievements() with string parameter - use version that takes collection instead
     - Removed UpdateSummaryFriendData() from BrainCloudFriend - use BrainCloudPlayerState version instead
-    - Removed GetOneWayPlayers() and GetOneWayPlayersWithFilter() - use the [FindPlayers()](/apidocs/apiref/#capi-matchmaking-findplayers) methods instead
+    - Removed GetOneWayPlayers() and GetOneWayPlayersWithFilter() - use the [FindPlayers()](/api/capi/matchmaking/findplayers) methods instead
 - Javascript library
-    - Added FileUpload capabilities to the Javascript libs - tutorial [here](/apidocs/tutorials/javascript-tutorials/js-file-upload/)
-    - Added [GenerateGUID()](/apidocs/apiref/#capi-auth-generateguid) and [GenerateNewAnonymousId()](/apidocs/apiref/#capi-auth-generatenewanonymousid) to the Javascript libs
+    - Added FileUpload capabilities to the Javascript libs - tutorial [here](/learn/sdk-tutorials/javascript-tutorials/js-file-upload/)
+    - Added [GenerateGUID()] and [GenerateNewAnonymousId()](/api/capi/authentication/generateanonymousid) to the Javascript libs
 - Unreal libs
     - Updated to support Unreal 4.11
 - Miscellaneous changes, fixes and performance improvements, including:

@@ -13,17 +13,17 @@ tags:
 
 Some of you are looking to use our new **WebHooks** feature for integration with systems like _Photon_, that can benefit from leveraging brainCloud authentication.
 
-To enable this, we have added a new Cloud Code Bridge method: [`GetSessionForSessionIdAndProfileId()`](/apidocs/apiref/#cc-bridge-getsessionforsessionidandprofileid). Using this API you can retrieve the current session for an active user, confirm that it is valid, and even take action within that user’s context.
+To enable this, we have added a new Cloud Code Bridge method: [`GetSessionForSessionIdAndProfileId()`](/api/cc/bridge/getsessionforsessionidandprofileid). Using this API you can retrieve the current session for an active user, confirm that it is valid, and even take action within that user’s context.
 
 ## Disabled Reason
 
 We’ve added the ability to custom configure information to be sent to your client apps should you choose to temporarily disable your app. The info is in the form of a snippet of custom JSON data that will be returned along with the `Authentication()` rejection.
 
-For more details, consult the [Authentication](/apidocs/apiref/#capi-auth) section of our API Reference.
+For more details, consult the [Authentication](/api/capi/authentication) section of our API Reference.
 
 ## User Online Status
 
-We’ve added a new method that you can use to query and report the online status of other users in the system. The method is called [`GetUsersOnlineStatus()`](/apidocs/apiref/#capi-friend-getusersonlinestatus) and works with an array of profile ids. Just the sort of thing you would want to gather the online status of a set of Group / Clan members!
+We’ve added a new method that you can use to query and report the online status of other users in the system. The method is called [`GetUsersOnlineStatus()`](/api/capi/friend/getusersonlinestatus) and works with an array of profile ids. Just the sort of thing you would want to gather the online status of a set of Group / Clan members!
 
 ## Clone Scripts
 
@@ -40,12 +40,12 @@ We’ve made the following portal changes:
 - **Design | Core App Info | App Ids**
     - _Google Services_ section - we now indicate whether a p12 certificate has been already uploaded.
 - **Design | Core App Info | Advanced Settings**
-    - There’s a new button, **\[Edit Disabled Reason\]**, up by the **\[x\] App Enabled** box, that allows you to edit the _JSON_ object that will be returned when your app is disabled.
+    - There’s a new button, **[Edit Disabled Reason]**, up by the **[x] App Enabled** box, that allows you to edit the _JSON_ object that will be returned when your app is disabled.
 - **Design | Cloud Code | Scripts**
     - The Script List functions have been organized into a new _action menu_, and includes the new _Duplicate_ feature!
 - **Design | Custom Config | Files**
     - The MD5 for a file is now displayed if you hover over its filename.
-    - Troubleshooting: If for some reason the MD5 is not present, click **\[Refresh File List\]** to retrieve it.
+    - Troubleshooting: If for some reason the MD5 is not present, click **[Refresh File List]** to retrieve it.
 - **Monitoring | User Monitoring**
     - All User Monitoring screens now bring up the _New Users_ list if a user has not already been selected
 - **Admin | Home**
@@ -60,13 +60,13 @@ We’ve made the following portal changes:
 The following changes/additions have affected the brainCloud API:
 
 - **Cloud Code Bridge**
-    - The new [`GetSessionForSessionIdAndProfileId()`](/apidocs/apiref/#cc-bridge-getsessionforsessionidandprofileid) method retrieves the specified active session object, if it is associated with the provided `profileId`. This can be used to validate that the user associated with the `profileId` _has_ indeed successfully authenticated with brainCloud.
+    - The new [`GetSessionForSessionIdAndProfileId()`](/api/cc/bridge/getsessionforsessionidandprofileid) method retrieves the specified active session object, if it is associated with the provided `profileId`. This can be used to validate that the user associated with the `profileId` _has_ indeed successfully authenticated with brainCloud.
 - **Friend**
-    - The new [`GetUsersOnlineStatus()`](/apidocs/apiref/#capi-friend-getusersonlinestatus) method can be used to retrieve the online status of the provided list of users.
-- **Global Statistics** and **User** \[Player\] **Statistics**
-    - New `ProcessStatistics()` methods have been added to both the [`GlobalStatistics`](/apidocs/apiref/#capi-globalstats-processstatistics) and [`PlayerStatistics`](/apidocs/apiref/#capi-playerstats-processstatistics) services that leverage the internal brainCloud [Statistics Grammar](/apidocs/apiref/#appendix-statisticsgrammar), allowing for the batch processing of complicated stats operations to be carried out by the server.
+    - The new [`GetUsersOnlineStatus()`](/api/capi/friend/getusersonlinestatus) method can be used to retrieve the online status of the provided list of users.
+- **Global Statistics** and **User** [Player] **Statistics**
+    - New `ProcessStatistics()` methods have been added to both the [`GlobalStatistics`](/api/capi/globalstats/processstatistics) and [`PlayerStatistics`](/api/capi/playerstats/processstatistics) services that leverage the internal brainCloud [Statistics Grammar](/api/appendix/statisticsgrammar), allowing for the batch processing of complicated stats operations to be carried out by the server.
 - **Identity**
-    - The various [Identity](/apidocs/apiref/?cloudcode#capi-identity) methods ( `Attach*()`, `Detach*()`, `Merge*()`, etc. ) are now available from cloud code.
+    - The various [Identity](/api/capi/identity) methods ( `Attach*()`, `Detach*()`, `Merge*()`, etc. ) are now available from cloud code.
 
 * * *
 
@@ -79,5 +79,5 @@ The following changes/additions have affected the brainCloud API:
     - All libraries have been updated with the latest API enhancements. Go get ’em!
 - Documentation updates
     - We continue to iterate and improve our new API reference
-    - There is a new tutorial for [Building the brainCloud Plugin for older versions of Unreal](/apidocs/tutorials/unreal-tutorials/building-the-plugin-for-older-versions-of-unreal/)
+    - There is a new tutorial for [Building the brainCloud Plugin for older versions of Unreal](/learn/sdk-tutorials/unreal-tutorials/building-the-plugin-for-older-versions-of-unreal/)
 - Plus miscellaneous fixes and performance enhancements…

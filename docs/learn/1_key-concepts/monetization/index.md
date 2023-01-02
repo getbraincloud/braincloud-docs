@@ -13,7 +13,7 @@ brainCloud's monetization support centers around the purchase of products.  Pro
 
 Products are often associated with Virtual Currencies, which brainCloud also provides support for -- but they don't have to be.
 
-[![](images/brainCloud_Dashboard_prodEdit-1024x588.jpg)](images/brainCloud_Dashboard_prodEdit.jpg)
+[![](images/brainCloud_Dashboard_prodEdit-1024x588.jpg)](images/brainCloud_Dashboard_prodEdit-1024x588.jpg)
 
 ## Pricing
 

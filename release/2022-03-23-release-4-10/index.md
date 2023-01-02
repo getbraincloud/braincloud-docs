@@ -15,7 +15,7 @@ As always, brainCloud 4.10 aims to be 100% backwards compatible with previous re
   
 **Rhino 1.7.14** - there is a known breaking change in the new engine. It involves using the _java_\-based (i.e. not _javascript_\-based) `java.util.HashMap()`class from within a cloud code script. Our production searches indicate that no developers are using this class in production - and thus we are disabling support for that feature. But _just_ in case - we are still noting it here.  
   
-**Group and Group Entity ACL changes** - there are fixes to how Groups and Group Entities handle ACL permissions, which may affect existing applications. To be safe, we have added a compatibility flag, “\[x\] Preserve legacy GroupEntity / Group ACL defect behaviour”, that preserves the old behaviour for existing apps by default.
+**Group and Group Entity ACL changes** - there are fixes to how Groups and Group Entities handle ACL permissions, which may affect existing applications. To be safe, we have added a compatibility flag, “[x] Preserve legacy GroupEntity / Group ACL defect behaviour”, that preserves the old behaviour for existing apps by default.
 :::
 ## Release Highlights
 
@@ -34,7 +34,7 @@ To facilitate a manageable transition - we have added an additional API endpoint
 
 Note that other than the version of TLS enforced, these two endpoints function exactly the same. Your apps and players will not see any difference!
 
-Our 4.10 client libraries have all been updated to use `api.braincloudservers.com` as the new default `serverUrl` for API calls. If you are using an older library, you can simply specify `"https://api.braincloudservers.com/dispatcherv2"` for the `serverUrl` parameter of the wrapper `Initialize()` call - see [API Reference](http://getbraincloud.com/apidocs/apiref/?csharp#wrapper-initialize).
+Our 4.10 client libraries have all been updated to use `api.braincloudservers.com` as the new default `serverUrl` for API calls. If you are using an older library, you can simply specify `"https://api.braincloudservers.com/dispatcherv2"` for the `serverUrl` parameter of the wrapper `Initialize()` call - see [API Reference](http://getbraincloud.com/api/wrapper/initialize).
 
 Once your app is calling the new endpoint, you can then go to the new **Design | Core App Info | Security** page, and set the minimum API TLS to 1.2. Careful though - this will mean that any calls to the older API endpoint (`sharedprod.braincloudservers.com`) will be rejected! ← because brainCloud cannot otherwise ensure that they were at least TLS 1.2.
 
@@ -194,25 +194,25 @@ We have attached warnings in the API docs to the following methods:
 - Documentation updates
     - API reference has been updated with the latest API changes.
 - Important Fixes
-    - \[BCLOUD-1508\] Fix for broken RTT disconnects
-    - \[BCLOUD-1508\] Fix for broken RTT disconnects
-    - \[BCLOUD-1565\] Dormant User Analytics changes: Users now only considered dormant if inactive > 365 days
-    - \[BCLOUD-1534\] \[Fixed\] Can't turn off Facebook Limited Login Friends once turned on
-    - \[BCLOUD-1530\] \[Fixed\] Design Portal Error log entry displayed date is not accurate
-    - \[BCLOUD-1378\] Add missing API Hooks for RedemptionCode service
-    - \[BCLOUD-266\] \[Fixed\] RTT DISCONNECT message not passed to the user
-    - \[BCLOUD-35\] \[Fixed\] Relay C++ UDP ping sent before CONNECT
-    - \[BCLOUD-1535\] Add missing Sys Group API (SysRemoveGroupMember)
-    - \[BCLOUD-1525\] ItemCatalog service missing some cloud code SYS calls
-    - \[BCLOUD-1298\] \[BuilderAPI\] Fixed NPE when request does not contain a content-type
-    - \[BCLOUD-1531\] Improved error message (and logic) for launching hosted servers when a region is not supported
-    - \[BCLOUD-1515\] \[Fixed\] Apps with billing plans with RTT disabled should not be able to send chat messages or make rtt connections
-    - \[BCLOUD-1587\] \[Fixed\] Group has two members having role of OWNER
-    - \[BCLOUD-1387\] \[Fixed\] User Monitoring - Login as User should set user’s languageCode and countryCode on created PlayerSession
-    - \[BCLOUD-1394\] Return Catalog Item Definition name and/or description in app's default language if none for user's language for User Item with metadata flagged true
-    - \[BCLOUD-1393\] Added missing support for getRunningOrQueuedCloudScripts Sys API on ScriptS2SServiceProxy
-    - \[BCLOUD-1331\] Group APIs for Group Entity should enforce Group Entity ACL, not Group ACL
-    - \[BCLOUD-1331\] Speed up SysIncrementGroupEntityData and SysUpdateGroupEntityData calls by avoiding Group lookup (only required for the equivalent non-Sys calls)
-    - \[BCLOUD-1402\] \[Fixed\] Messaging Sys APIs not allowing version -1 for any version
+    - [BCLOUD-1508] Fix for broken RTT disconnects
+    - [BCLOUD-1508] Fix for broken RTT disconnects
+    - [BCLOUD-1565] Dormant User Analytics changes: Users now only considered dormant if inactive > 365 days
+    - [BCLOUD-1534] [Fixed] Can't turn off Facebook Limited Login Friends once turned on
+    - [BCLOUD-1530] [Fixed] Design Portal Error log entry displayed date is not accurate
+    - [BCLOUD-1378] Add missing API Hooks for RedemptionCode service
+    - [BCLOUD-266] [Fixed] RTT DISCONNECT message not passed to the user
+    - [BCLOUD-35] [Fixed] Relay C++ UDP ping sent before CONNECT
+    - [BCLOUD-1535] Add missing Sys Group API (SysRemoveGroupMember)
+    - [BCLOUD-1525] ItemCatalog service missing some cloud code SYS calls
+    - [BCLOUD-1298] [BuilderAPI] Fixed NPE when request does not contain a content-type
+    - [BCLOUD-1531] Improved error message (and logic) for launching hosted servers when a region is not supported
+    - [BCLOUD-1515] [Fixed] Apps with billing plans with RTT disabled should not be able to send chat messages or make rtt connections
+    - [BCLOUD-1587] [Fixed] Group has two members having role of OWNER
+    - [BCLOUD-1387] [Fixed] User Monitoring - Login as User should set user’s languageCode and countryCode on created PlayerSession
+    - [BCLOUD-1394] Return Catalog Item Definition name and/or description in app's default language if none for user's language for User Item with metadata flagged true
+    - [BCLOUD-1393] Added missing support for getRunningOrQueuedCloudScripts Sys API on ScriptS2SServiceProxy
+    - [BCLOUD-1331] Group APIs for Group Entity should enforce Group Entity ACL, not Group ACL
+    - [BCLOUD-1331] Speed up SysIncrementGroupEntityData and SysUpdateGroupEntityData calls by avoiding Group lookup (only required for the equivalent non-Sys calls)
+    - [BCLOUD-1402] [Fixed] Messaging Sys APIs not allowing version -1 for any version
 
 - Plus miscellaneous fixes and performance enhancements...

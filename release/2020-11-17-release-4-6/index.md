@@ -109,7 +109,7 @@ We have made the following portal changes:
 - **User Monitoring | Recent Users**
     - We now capture and display the version of the client app that users are using to login.
 - **User Monitoring | Logs**
-    - A new **\[Refresh\]** button has been added. Very useful when viewing the live logs of a user while debugging.
+    - A new **[Refresh]** button has been added. Very useful when viewing the live logs of a user while debugging.
 
 _App Version now displayed in Recent Users list..._
 

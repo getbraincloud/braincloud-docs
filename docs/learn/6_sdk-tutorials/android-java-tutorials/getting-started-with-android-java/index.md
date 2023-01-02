@@ -8,7 +8,7 @@ For this tutorial, we will assume that you are using Android Studio to develop a
 ## Integrate brainCloud module
 
 - Download the brainCloud Android Java client library from the [brainCloud portal](https://portal.braincloudservers.com/) client libs section
-- Unzip the client library somewhere on your computer but \*not\* in your project folder
+- Unzip the client library somewhere on your computer but *not* in your project folder
 - Open Android Studio if not open already
 - Select File | New... | Import Module...
 - Choose the unzipped "brainCloud" folder
@@ -31,8 +31,8 @@ In order to use brainCloud you will need to initialize the client with your game
 
 ### First set up the imports
 ```java
-import com.bitheads.braincloud.client.\*;  
-import com.bitheads.braincloud.services.\*;
+import com.bitheads.braincloud.client.*;  
+import com.bitheads.braincloud.services.*;
 ```
 ### Initialize the BrainCloudClient
 
@@ -41,7 +41,7 @@ In the onCreate method of our MainActivity java file, we initialize the client. 
 protected void onCreate(Bundle savedInstanceState)
 {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity\_main);
+    setContentView(R.layout.activity_main);
 
     // initialize brainCloud with your gameId, secret, and game version
     BrainCloudClient.getInstance().initialize("your-game-id", "your-secret", "1.0.0");
@@ -140,7 +140,7 @@ See the [BrainCloudAuthentication.AuthenticateEmailPassword](/api/capi/authentic
 If you enabled logging (see initialize brainCloud step above) you should be able to see JSON being sent to the server, and JSON being returned from the server as follows:
 ```java
 #BCC OUTGOING: {
-  "messages": \[
+  "messages": [
     {
       "service": "authenticationV2",
       "operation": "AUTHENTICATE",
@@ -159,14 +159,14 @@ If you enabled logging (see initialize brainCloud step above) you should be able
         "timeZoneOffset": -5
       }
     }
-  \],
+  ],
   "gameId": "9999",
   "sessionId": "q3ddmrers7504rhrv4t4d9bt6g",
   "packetId": 1
 }
 #BCC INCOMING (200): {
   "packetId": 1,
-  "responses": \[
+  "responses": [
     {
       "status": 200,
       "data": {
@@ -174,7 +174,7 @@ If you enabled logging (see initialize brainCloud step above) you should be able
         "experiencePoints": 0,
         "refundCount": 0,
         "playerSessionExpiry": 1200,
-        "server\_time": 1453990136292,
+        "server_time": 1453990136292,
         "experienceLevel": 0,
         "abTestingId": 19,
         "statistics": {},
@@ -184,7 +184,7 @@ If you enabled logging (see initialize brainCloud step above) you should be able
         "profileId": "579c983f-e355-4474-9cf4-4926c557db1e",
         "newUser": "false",
         "xpCapped": false,
-        "sent\_events": \[\],
+        "sent_events": [],
         "timeZoneOffset": -5,
         "playerName": "",
         "vcClaimed": 0,
@@ -198,13 +198,13 @@ If you enabled logging (see initialize brainCloud step above) you should be able
         "loginCount": 2,
         "emailAddress": "email",
         "previousLogin": 1453990116294,
-        "incoming\_events": \[\],
+        "incoming_events": [],
         "lastLogin": 1453990136277,
         "languageCode": "en",
         "sessionId": "f828opj5p7huqe482e28ec75i7",
         "amountSpent": 0
       }
     }
-  \]
+  ]
 }
 ```

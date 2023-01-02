@@ -76,7 +76,7 @@ Before this change, if brainCloud were running script `/subFolder/myScript.ccjs`
 
 With this change, the two calls use the same algorithm to determine the referenced script.
 
-As you would expect, we have introduced a new compatibility flag that controls this improved behavior. The new **\[x\]** _**Use legacy script path handling**_ flag, if enabled, preserves the old functionality. _This flag is enabled by default for all existing apps, and disabled by default for newly created apps._
+As you would expect, we have introduced a new compatibility flag that controls this improved behavior. The new **[x]** _**Use legacy script path handling**_ flag, if enabled, preserves the old functionality. _This flag is enabled by default for all existing apps, and disabled by default for newly created apps._
 
 Information
 
@@ -102,7 +102,7 @@ This release also includes the following:
     - the query syntax for Custom Entities has been extended to support MongoDB $text queries.
 - Improved **RTT connection id** handling
     - The **Relay Server Protocol** protocol (and the _Relay Server_ and _Client Libraries_ that implement it) have been enhanced for more consistent usage of RTT connection IDs - basically, the protocol now uses `profileIdCx` ids instead of just `profileId`
-    - There is a new compatibility flag, **\[x\] Include legacy lobby owner field in API output**, that when enabled ensures that this new behavior still works with old clients. _This flag is enabled by default for all existing apps, and disabled for newly created apps._
+    - There is a new compatibility flag, **[x] Include legacy lobby owner field in API output**, that when enabled ensures that this new behavior still works with old clients. _This flag is enabled by default for all existing apps, and disabled for newly created apps._
 - Additions / Improvements to the **Builder API**
     - Support for **API Hook** management
     - Support for basic **Team Member** management
@@ -112,7 +112,7 @@ This release also includes the following:
     - Support for HTTP **PATCH**, **DELETE**, and **HEAD** commands
 - **External Authentication** enhancements
     - Ability to return additional information with authentication results
-    - For more info - see the new `authPayload` and `extraErrorJson` fields documents in the [API Docs](https://getbraincloud.com/apidocs/api-modules/authentication/external-authentication/).
+    - For more info - see the new `authPayload` and `extraErrorJson` fields documents in the [API Docs](/learn/key-concepts/authentication/external-authentication/).
 
 * * *
 
@@ -121,8 +121,8 @@ This release also includes the following:
 ### Design
 
 - **Core App Info | Advanced Settings**
-    - Added new compatibility flag: _**\[x\] Include legacy lobby owner field in API output**_. Enabled for existing apps by default. See _Improved RTT Connection ID_ handling for more information.
-    - Added new compatibility flag: **\[x\] Use legacy script path handling**. Enabled for existing apps by default. See _Updated Script Path Handling_ for more information.
+    - Added new compatibility flag: _**[x] Include legacy lobby owner field in API output**_. Enabled for existing apps by default. See _Improved RTT Connection ID_ handling for more information.
+    - Added new compatibility flag: **[x] Use legacy script path handling**. Enabled for existing apps by default. See _Updated Script Path Handling_ for more information.
 - **Cloud Code | My Servers**
     - The new **GameLift Room Server** option has been added.
 - **Cloud Code | Scripts**

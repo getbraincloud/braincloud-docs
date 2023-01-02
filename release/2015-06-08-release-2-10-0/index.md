@@ -18,7 +18,7 @@ Highlights of this week's release include:
     - Delete leaderboard entry
     - View user - jumps to a view of the user associated with the score
 - **Updated Javascript Client** - we've revamped the Javascript Client to use native HTTP calls (instead of JQuery). Useful for embedded client environments where JQuery is not a viable option.
-- **Cloud Code Enhancements** - we've enhanced and improved the ability to call cloud code scripts from other scripts. (Yay!).  We've also normalized the returns from the cloud code API methods vs. the native client API methods. Basically, both now have separate <result\> and <data\> sections. Because this will break existing scripts, we've implemented a settings in **Advanced Settings** called **\[x\] Use Legacy Script Result Format**.  This setting defaults to \[x\] True for all existing apps with cloud code, but \[ \] False for everyone else. _We recommend migrating your scripts to work with the \[ \] False setting when you have a chance._
+- **Cloud Code Enhancements** - we've enhanced and improved the ability to call cloud code scripts from other scripts. (Yay!).  We've also normalized the returns from the cloud code API methods vs. the native client API methods. Basically, both now have separate <result\> and <data\> sections. Because this will break existing scripts, we've implemented a settings in **Advanced Settings** called **[x] Use Legacy Script Result Format**.  This setting defaults to [x] True for all existing apps with cloud code, but [ ] False for everyone else. _We recommend migrating your scripts to work with the [ ] False setting when you have a chance._
 
 ## Portal Changes
 

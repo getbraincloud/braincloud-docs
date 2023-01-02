@@ -30,8 +30,8 @@ We're committed to aggressively adding and improving our tutorial library (and 
     - [Getting Started with Unity (Video)](/learn/sdk-tutorials/unity-tutorials/unity-getting-started/)
     - [Unity Authentication Example](/learn/sdk-tutorials/unity-tutorials/unity-authentication-example/)
     - [brainCloud Bombers Example Game](/learn/sdk-tutorials/unity-tutorials/braincloud-bombers-example-game/)
-    - [About brainCloud Bombers](/learn/sdk-tutorials/unity-tutorials/about-braincloud-bombers/)
-    - [Building brainCloud Bombers](/learn/sdk-tutorials/unity-tutorials/building-the-braincloud-bombers-project/)
+    - [About brainCloud Bombers](/learn/sdk-tutorials/unity-tutorials/about-bombers-rtt/)
+    - [Building brainCloud Bombers](/learn/sdk-tutorials/unity-tutorials/bombers-rtt-example-game/)
 - Unreal Tutorials
     - [Setting up the brainCloud plugin](/learn/sdk-tutorials/unreal-tutorials/setting-up-the-braincloud-plugin/)
     - [Getting Started With Blueprints](/learn/sdk-tutorials/unreal-tutorials/getting-started-with-blueprints/)

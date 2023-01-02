@@ -9,7 +9,7 @@ tags:
 
 This release marks the debut appearance of a key roadmap item for brainCloud - our **DataStream Architecture**. Currently in _beta_, the concept behind DataStream is to enable a meaningful flow of data and events from your apps to value-added tools. And to do this as painlessly as possible - i.e. little to no client code - leveraging the data and server-side interactions that brainCloud already knows about.
 
-[![brainCloud DataStream Architecture](images/brainCloud_datastream_architecture-1024x654.png)](/apidocs/wp-content/uploads/2015/12/brainCloud_datastream_architecture.png)
+[![brainCloud DataStream Architecture](images/brainCloud_datastream_architecture-1024x654.png)](images/brainCloud_datastream_architecture.png)
 
  
 
@@ -72,7 +72,7 @@ Changes to the portal:
 - **Revamped Notification Settings** - the settings dialogs have been revamped to be clearer, and we've added an expiry drop-down.  You can also choose to delete existing iOS or Android device tokens.
 - **Get Test Redemption Codes** - you can now search your datafill for a redemption code to use during testing.  You the Type and State of the code, and brainCloud will display the first one that matches. Available from the **Global Monitoring | Redemption Codes** screen.
 - **Reset Universal Authentication passwords** - you may now reset the password of Universal Authentication users via the design portal. Simply choose the _Set Password_ option in the new action menu displayed in the _Credentials_ section of the **User Monitoring | User Summary** page.
-- **Managing Device Tokens** - device tokens are used to push notifications to iOS and Android devices. The device tokens section of the **User Summary** page has been updated to display when the token was last registered (note - brainCloud only applies the first registration within a 24-hour period), and has a new **\[Reset Device Tokens\]** button to delete all the existing tokens for this user.
+- **Managing Device Tokens** - device tokens are used to push notifications to iOS and Android devices. The device tokens section of the **User Summary** page has been updated to display when the token was last registered (note - brainCloud only applies the first registration within a 24-hour period), and has a new **[Reset Device Tokens]** button to delete all the existing tokens for this user.
 
  
 

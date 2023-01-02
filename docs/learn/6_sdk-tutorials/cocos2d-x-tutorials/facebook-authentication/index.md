@@ -19,14 +19,14 @@ You will find the following links useful in understanding how to use Facebook in
 - Facebook with Cocos 2d-x starting page  
     [https://developers.facebook.com/docs/cocos2d-x](https://developers.facebook.com/docs/cocos2d-x)
 - Reference and setup guide  
-    [http://cocos2d-x.org/wiki/Facebook\_Support\_for\_Cocos2d-x\_Beta](http://cocos2d-x.org/wiki/Facebook_Support_for_Cocos2d-x_Beta)  
-    [http://www.cocos2d-x.org/wiki/Facebook\_API\_Reference\_for\_Cocos2d-x\_and\_Cocos2d-x-lua](http://www.cocos2d-x.org/wiki/Facebook_API_Reference_for_Cocos2d-x_and_Cocos2d-x-lua)
+    [http://cocos2d-x.org/wiki/Facebook_Support_for_Cocos2d-x_Beta](http://cocos2d-x.org/wiki/Facebook_Support_for_Cocos2d-x_Beta)  
+    [http://www.cocos2d-x.org/wiki/Facebook_API_Reference_for_Cocos2d-x_and_Cocos2d-x-lua](http://www.cocos2d-x.org/wiki/Facebook_API_Reference_for_Cocos2d-x_and_Cocos2d-x-lua)
 
 ## Configure Project
 
 First step is to follow the setup guide provided by Facebook/Cocos 2d-x:
 
-[http://cocos2d-x.org/wiki/Facebook\_integration\_instruction\_for\_Cocos2d-x\_and\_Cocos2d-x-Lua\_on\_iOS](http://cocos2d-x.org/wiki/Facebook_integration_instruction_for_Cocos2d-x_and_Cocos2d-x-Lua_on_iOS)
+[http://cocos2d-x.org/wiki/Facebook_integration_instruction_for_Cocos2d-x_and_Cocos2d-x-Lua_on_iOS](http://cocos2d-x.org/wiki/Facebook_integration_instruction_for_Cocos2d-x_and_Cocos2d-x-Lua_on_iOS)
 
 Note that these steps have been already completed in the example project. You may wish to point to your own Facebook app however which is detailed in the link above.
 
@@ -45,7 +45,7 @@ And then enter your Facebook App ID and Facebook Secret (both of which can be fo
 The code to log into Facebook and retrieve an authentication token is as follows:
 ```js
 auto facebook = cocos2d::plugin::FacebookAgent::getInstance();
-facebook->login(\[=\](int returnCode, std::string& jsonResponse) {
+facebook->login([=](int returnCode, std::string& jsonResponse) {
     if (returnCode == 0)
     {
         //handle success
@@ -67,7 +67,7 @@ auto facebook = cocos2d::plugin::FacebookAgent::getInstance();
 std::string fbUserId = facebook->getUserID();
 std::string fbToken = facebook->getAccessToken();
 
-BrainCloudWrapper::getInstance()->authenticateFacebook(fbUserId.c\_str(), fbToken.c\_str(), this);
+BrainCloudWrapper::getInstance()->authenticateFacebook(fbUserId.c_str(), fbToken.c_str(), this);
 ```
 In the example project, we authenticate with brainCloud in the ConnectFacebookLayer class onConnectPressed function.
 

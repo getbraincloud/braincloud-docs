@@ -13,7 +13,7 @@ Without further ado, here's what we've got.
 
 - **Multi-team Accounts** - brainCloud now allows your Team Member (i.e. Developer) account to be associated with multiple Teams (i.e. Companies). This is a much-requested feature, and will be especially useful to developers working on apps for multiple client companies, those with developer-publisher relationships, etc. You will immediately notice the new **Team Selection** dialog that displays after logging into the portal.
 
-[![SelectTeam](images/SelectTeam.png)](/apidocs/wp-content/uploads/2016/01/SelectTeam.png)
+[![SelectTeam](images/SelectTeam.png)](images/SelectTeam.png)
 
 - **Team Administrators** - As part of the Multi-team feature, we added the concept of Team Administrators. Now, only team administrators can perform team-level operations like Manage Users, Manage and Publish Apps, Edit company billing info, etc. Note - this does not affect the access of data within individual apps - all team members still have full privileges. This is the first step towards the **Role Security** feature that is currently in development. __Note that all existing users have Team Administrator access by default - you'll want to go to Admin | Team Members and adjust this permission accordingly.__
 
@@ -26,7 +26,7 @@ Without further ado, here's what we've got.
 - **Team is the New Company** - given the new Multi-Team feature, the portal is now largely using the word "team" in place of "company", which will now be used primarily for billing purposes.
 - **Team Selection** - you'll immediately notice the new Team Selection page that displays immediately upon logging into the portal. Just choose your team and you're into the same portal interface you're used to -- you are only ever logged into a single team at a time. But never fear, switching active teams is quick and easy - just click on the team name from the right-hand-corner menu.
 
-[![Switch_company](images/Switch_company.png)](/apidocs/wp-content/uploads/2016/01/Switch_company.png)
+[![Switch_company](images/Switch_company.png)](images/Switch_company.png)
 
 - **Team Members Screen** - has been revamped to show whether a member has Team Administrator privilege, and who how many apps they have access to. Currently all users have access to all apps, but that will change when we add our **Role Security** feature in the near future. Also note that you no longer _**Delete**_ team members, you _**Remove**_ them from your team. The user's **TeamMember** account will continue to exist - allowing it to still be used to log into other teams.
 - **Edit Team Member** - Users may now change their e-mail address, as well as their password. Team Members (even Team Administrators) may no longer change another Team Member's password.

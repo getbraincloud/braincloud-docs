@@ -24,7 +24,7 @@ var httpClientService = bridge.getHttpClientServiceProxy();
 // Construct the query parameters (they will be automatically encoded in the URL)
 var queryMap = {
     "q": data.location,
-    "num\_of\_days": 1,
+    "num_of_days": 1,
     "format": "json",
     "key": key
 };
@@ -70,7 +70,7 @@ _Via **Design | Cloud Code | Web Services** in the portal._
 - **Authenticate the user** - select the _Authenticate_ service, then _Authenticate_ Operation, and click the **Go** icon (Green Right Triangle).  You may have to play with the authentication parameters a bit (to ensure you're specifying a valid platform, etc.)
 - **Call the Cloud Script** - choose the _Script_ service, then "_Run Script GetWeather_" for the operation.  Customize the parameters if you'd like, and then hit **Go**.
 
-[![](images/Tut_5_4-1024x638.png)](images/Tut_5_4.png)
+[![](images/Tut_5_4-1024x638.png)](images/Tut_5_4-1024x638.png)
 
 Et voila!
 
@@ -80,122 +80,122 @@ _Note - if you are going to use this service in your app, please go to **WorldWe
 
 ### getResponseJson
 ```js
-/\*\*
- \* Gets a JSON formatted document via HTTP.
- \* @param serviceCode Web service service code
- \* @param path Resource path.
- \* @param query Optional query.
- \* @param headers map of extra headers
- \* @return Json object.
- \*        
- \* {
- \*    status : 200,
- \*    data : {
- \*        statusCode : 200,
- \*        json : {
- \*            "key" : "value"
- \*        }
- \*    }
- \* }
- \*/
+/**
+ * Gets a JSON formatted document via HTTP.
+ * @param serviceCode Web service service code
+ * @param path Resource path.
+ * @param query Optional query.
+ * @param headers map of extra headers
+ * @return Json object.
+ *        
+ * {
+ *    status : 200,
+ *    data : {
+ *        statusCode : 200,
+ *        json : {
+ *            "key" : "value"
+ *        }
+ *    }
+ * }
+ */
 public NativeObject getResponseJson(String serviceCode, String path, NativeObject query, NativeObject headers)
 ```
 ### getResponseText
 ```js
-/\*\*
- \* Gets text document via HTTP.
- \* @param serviceCode Web service service code
- \* @param path Resource path.
- \* @param query Optional query.
- \* @param headers map of extra headers
- \* @return Json object.
- \* {
- \*    status : 200,
- \*    data : {
- \*        statusCode : 200,
- \*        text : "text string"
- \*    }
- \* }
- \*/
+/**
+ * Gets text document via HTTP.
+ * @param serviceCode Web service service code
+ * @param path Resource path.
+ * @param query Optional query.
+ * @param headers map of extra headers
+ * @return Json object.
+ * {
+ *    status : 200,
+ *    data : {
+ *        statusCode : 200,
+ *        text : "text string"
+ *    }
+ * }
+ */
 public NativeObject getResponseText(String serviceCode, String path, NativeObject query, NativeObject headers)
 ```
 ### postFormResponseJson
 ```js
-/\*\*
- \* Posts a form encoded document via HTTP and expects a JSON response.
- \* @param serviceCode Web service service code
- \* @param path Resource path.
- \* @param headers map of extra headers
- \* @param form form parameters.
- \* @return Json object.
- \* {
- \*    status : 200,
- \*    data : {
- \*        statusCode : 200,
- \*        json : {
- \*            "key" : "value"
- \*        }
- \*    }
- \* }
- \*/
+/**
+ * Posts a form encoded document via HTTP and expects a JSON response.
+ * @param serviceCode Web service service code
+ * @param path Resource path.
+ * @param headers map of extra headers
+ * @param form form parameters.
+ * @return Json object.
+ * {
+ *    status : 200,
+ *    data : {
+ *        statusCode : 200,
+ *        json : {
+ *            "key" : "value"
+ *        }
+ *    }
+ * }
+ */
 public NativeObject postFormResponseJson(String serviceCode, String path, NativeObject headers, NativeObject form)
 ```
 ### postFormResponseText
 ```js
-/\*\*
- \* Posts a form encoded document via HTTP and expects a Text response.
- \* @param serviceCode Web service service code
- \* @param path Resource path.
- \* @param headers map of extra headers
- \* @param form form parameters.
- \* @return Json object.
- \* {
- \*    status : 200,
- \*    data : {
- \*        statusCode : 200,
- \*        text : "text string"
- \*    }
- \* }
- \*/
+/**
+ * Posts a form encoded document via HTTP and expects a Text response.
+ * @param serviceCode Web service service code
+ * @param path Resource path.
+ * @param headers map of extra headers
+ * @param form form parameters.
+ * @return Json object.
+ * {
+ *    status : 200,
+ *    data : {
+ *        statusCode : 200,
+ *        text : "text string"
+ *    }
+ * }
+ */
 public NativeObject postFormResponseText(String serviceCode, String path, NativeObject headers, NativeObject form)
 ```
 ### postJsonResponseJson
 ```js
-/\*\*
- \* Posts a JSON formatted document via HTTP and expects a JSON response.
- \* @param serviceCode Web service service code
- \* @param path Resource path.
- \* @param headers map of extra headers
- \* @param json JSON formatted data to post.
- \* @return Json object.
- \* {
- \*    status : 200,
- \*    data : {
- \*        statusCode : 200,
- \*        json : {
- \*            "key" : "value"
- \*        }
- \*    }
- \* }
- \*/
+/**
+ * Posts a JSON formatted document via HTTP and expects a JSON response.
+ * @param serviceCode Web service service code
+ * @param path Resource path.
+ * @param headers map of extra headers
+ * @param json JSON formatted data to post.
+ * @return Json object.
+ * {
+ *    status : 200,
+ *    data : {
+ *        statusCode : 200,
+ *        json : {
+ *            "key" : "value"
+ *        }
+ *    }
+ * }
+ */
 public NativeObject postJsonResponseJson(String serviceCode, String path, NativeObject headers, NativeObject json)
 ```
 ### postTextResponseText
 ```js
-/\*\*
- \* Posts a text document via HTTP and expects a Text response.
- \* @param serviceCode Web service service code
- \* @param path Resource path.
- \* @param headers map of extra headers
- \* @param form form parameters.
- \* @return Json object.
- \* {
- \*    status : 200,
- \*    data : {
- \*        statusCode : 200,
- \*        text : "text string"
- \*    }
- \* }
- \*/
+/**
+ * Posts a text document via HTTP and expects a Text response.
+ * @param serviceCode Web service service code
+ * @param path Resource path.
+ * @param headers map of extra headers
+ * @param form form parameters.
+ * @return Json object.
+ * {
+ *    status : 200,
+ *    data : {
+ *        statusCode : 200,
+ *        text : "text string"
+ *    }
+ * }
+ */
 public NativeObject postTextResponseText(String serviceCode, String path, NativeObject headers, String text)
 ```

@@ -13,7 +13,7 @@ This release is a minor update with some key optimizations and defect fixes.
 
 We've spent considerable time profiling and optimizing key tournament and leaderboard APIs - we think you'll like the results:
 
-- [GetGlobalLeaderboardView()](/apidocs/apiref/?csharp#capi-leaderboard-getgloballeaderboardview) is now up to **25X faster!** This is especially apparent for leaderboards of 50K or more users where the player doing the retrieval is near the end of the leaderboard
+- [GetGlobalLeaderboardView()](/api/capi/leaderboard/getgloballeaderboardview) is now up to **25X faster!** This is especially apparent for leaderboards of 50K or more users where the player doing the retrieval is near the end of the leaderboard
 - PostTournamentScoreWithResults() is also up to **50X faster!** We had recently pulled that call out-of-service due to performance issues - we hope to reinstate it in a few days after we've got more real-world data
 
 ### Miscellaneous Fixes

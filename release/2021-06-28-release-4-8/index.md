@@ -159,7 +159,7 @@ We have also deprecated the following methods:
     - Updates to tutorials and API References to match the new features/APIs in this release
 - Important Fixes
     - BCLOUD-29 - LobbyService joinLobby() is broken in some circumstances
-    - BCLOUD-56 - \[PROD\] Tournament rewards with only "custom" rewards cannot be claimed
+    - BCLOUD-56 - [PROD] Tournament rewards with only "custom" rewards cannot be claimed
     - BCLOUD-68 - Logging performance improvement
     - BCLOUD-519 - User Monitoring / Logs - Fix handling of mismatched request/response data for displayed packets.
     - BCLOUD-575 - Add packetId as a field in requestResponse logs

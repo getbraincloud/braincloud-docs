@@ -32,7 +32,7 @@ Use of the client library is required by apps. Use of the wrapper is highly reco
 
 Delving deeper into the design, you can see that the client object maintains a list of services and internal components that work together to provide the client functionality. The wrapper on the other hand is quite simple, and merely adds an additional simplification layer to the API.
 
-[![](images/braincloud-client-api-architecture-details.png)](/apidocs/wp-content/uploads/2017/12/braincloud-client-api-architecture-details.png)
+[![](images/braincloud-client-api-architecture-details.png)](images/braincloud-client-api-architecture-details.png)
 
 Of significance here is the use of singletons. There are two singletons in play - one for the client, and one for the wrapper. Not only are the singletons used as the reference from the client to the wrapper and/or client library objects - but they are also used for communications between BrainCloudWrapper and BrainCloudClient.
 
@@ -42,13 +42,13 @@ The cons (as we now see them) are:
 
 - Complicates the client code (calling the static class methods to retrieve a reference to the wrapper and or client object is more painful than using a direct global of some sort)
 - Complicates the documented code examples
-- Restricts a client to have one-and-only-one connection to the brainCloud server \[ _this is a crippling restriction for some use cases - couch co-op anyone?_ \]
+- Restricts a client to have one-and-only-one connection to the brainCloud server [ _this is a crippling restriction for some use cases - couch co-op anyone?_ ]
 
 ## The fix
 
 And so, we are fixing this.
 
-[![](images/braincloud-client-api-architecture-new.png)](/apidocs/wp-content/uploads/2017/12/braincloud-client-api-architecture-new.png)
+[![](images/braincloud-client-api-architecture-new.png)](images/braincloud-client-api-architecture-new.png)
 
 The changes to the new client libraries are three-fold:
 

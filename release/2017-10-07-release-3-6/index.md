@@ -27,9 +27,9 @@ The new plug-in has been totally re-written, and offers the following cool new f
 
 To install the new plug-in, simply go to our [GitHub site](https://github.com/getbraincloud/Unity-Csharp) and follow the instructions!
 
-[![](images/unity_plugin_1-2.png)](/apidocs/wp-content/uploads/2017/10/unity_plugin_1-2.png)
+[![](images/unity_plugin_1-2.png)](images/unity_plugin_1-2.png)
 
-### \[Popular Request ❤️\] Global Entity Import/Export Enhancements
+### [Popular Request ❤️] Global Entity Import/Export Enhancements
 
 We have expanded our support for importing and exporting the Global Entities of your apps.
 
@@ -39,7 +39,7 @@ This means that a Raw Global Entity export is really an exact representation of 
 
 You will find more details about the Global Entity file formats here.
 
-### \[Popular Request ❤️\] User Export Enhancements
+### [Popular Request ❤️] User Export Enhancements
 
 We've added two popular requests to your User Export functionality:
 

@@ -9,7 +9,7 @@ Allows an app to severely restrict access to brainCloud Client APIs. Very useful
 
 The script can be configured in one of two ways:
 
-- whitelist - all services and operations specified are \*allowed\*. Any API calls not specified are not allowed.
+- whitelist - all services and operations specified are *allowed*. Any API calls not specified are not allowed.
 - blacklist - disallow access to the services and operations specified. All other API calls allowed.
 
 ## Script
@@ -20,7 +20,7 @@ Click [RestrictClientCalls.ccjs.zip](script/RestrictClientCalls.ccjs.zip) to dow
 
 To configure this script, you must first import it into your app.
 
-Then go to the **Design | Cloud Code | API Hooks** screen, and click the **\[+ Create\]** button to configure the script.
+Then go to the **Design | Cloud Code | API Hooks** screen, and click the **[+ Create]** button to configure the script.
 
 On the configuration dialog that displays, choose:
 
@@ -35,7 +35,7 @@ And then in the _Params_ section, you can configure a whitelist or blacklist of 
     "listtype": "whitelist",
     "services": {
         "entity": { "READ": 1 },
-        "globalEntity": { "GET\_LIST": 1, "GET\_LIST\_COUNT": 1 },
+        "globalEntity": { "GET_LIST": 1, "GET_LIST_COUNT": 1 },
         "heartbeat": { "READ": 1 },
         "playerState": {},
         "script": {}
@@ -45,7 +45,7 @@ And then in the _Params_ section, you can configure a whitelist or blacklist of 
 The example above allows calls to:
 
 - "entity" service, "READ" operation only
-- "globalEntitity" service, "GET\_LIST" and "GET\_LIST\_COUNT" operations
+- "globalEntitity" service, "GET_LIST" and "GET_LIST_COUNT" operations
 - "heartbeat" service, "READ" operation only <- important - heartbeats are used to keep your client sessions alive!
 - "playerState" service - any operation
 - "script" service - any operation... <- note, individual script permissions still apply

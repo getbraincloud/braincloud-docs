@@ -5,7 +5,7 @@ date: "2015-09-22"
 
 ## Overview
 
-The [MatchMaking](/api/capi/matchmaking) API is used to find players for multiplayer matches. Once a player has been found using the MatchMaking API, that player can be used for starting a match using either the [BrainCloudOneWayMatch](/api/capi/oneway) API or the [BrainCloudAsyncMatch](/api/capi/asyncmatch) API. For an overview of the different types of multiplayer matches please refer to the [Multiplayer](/learn/key-concepts/multiplayer/) documentation.
+The [MatchMaking](/api/capi/matchmaking) API is used to find players for multiplayer matches. Once a player has been found using the MatchMaking API, that player can be used for starting a match using either the [BrainCloudOneWayMatch](/api/capi/onewaymatch) API or the [BrainCloudAsyncMatch](/api/capi/asyncmatch) API. For an overview of the different types of multiplayer matches please refer to the [Multiplayer](/learn/key-concepts/multiplayer/) documentation.
 
 ## Finding Players
 
@@ -68,7 +68,7 @@ You can also query the remaining shield time by calling [GetShieldExpiry](/api/
 brainCloud supports filtering players by custom cloud scripts. In order to filter players using cloud code, follow these steps:
 
 - Navigate to Edit Scripts in the Cloud Code section of the portal
-- Create a cloud script - we'll call ours "MATCHMAKING\_FILTER"
+- Create a cloud script - we'll call ours "MATCHMAKING_FILTER"
     - Client Callable should be set to false
 - Below is an example matchmaking filter script. Note that the return value is true or false depending on whether the player should be matched. Note also the two input parameters in the "data" variable
     - matchCandidate - The player object. This returns the same JSON as the MatchMaking.Read API call (see below).
@@ -76,12 +76,12 @@ brainCloud supports filtering players by custom cloud scripts. In order to filte
 
 [![](images/2018-06-20_19-51-23.png)](images/2018-06-20_19-51-23.png)
 ```js
-var matchCandidate = data\["matchCandidate"\];
-var extraParms    = data\["extraParms"\];
+var matchCandidate = data["matchCandidate"];
+var extraParms    = data["extraParms"];
 
 var retval = false;
 
-var playerID = matchCandidate\["playerId"\];
+var playerID = matchCandidate["playerId"];
 var otherPlayerSession = bridge.getSessionForProfile(playerID);
 
 // Now you can use the "otherPlayerSession" to execute API calls as that user.

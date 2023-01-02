@@ -28,16 +28,16 @@ The first thing you'll want to set up is a form for selecting a file. Note that 
 ```
 ## Upload the File
 
-Here are the functions defined to select a file and upload it. Note that fileSelected simply populates the divs defined in the form with information about the selected file. The uploadFile method creates the XMLHttpRequest object and, registers callback methods for various events. It then calls the [brainCloudClient.file.prepareFileUpload()](/api/preparefileupload/js/only) method with various details about the file being uploaded. The callback of this method will then (on success) start the upload of the file to the brainCloud server using the [brainCloudClient.file.uploadFile()](/api/uploadfile/js/only) method. and starts the upload of the file with brainCloud.
+Here are the functions defined to select a file and upload it. Note that fileSelected simply populates the divs defined in the form with information about the selected file. The uploadFile method creates the XMLHttpRequest object and, registers callback methods for various events. It then calls the [brainCloudClient.file.prepareFileUpload()](/api/capi/file/prepareuserupload/) method with various details about the file being uploaded. The callback of this method will then (on success) start the upload of the file to the brainCloud server using the [brainCloudClient.file.uploadFile()](/api/capi/file/uploadfile,javascript) method. and starts the upload of the file with brainCloud.
 ```js
 function fileSelected() {
-  var file = document.getElementById('fileToUpload').files\[0\];
+  var file = document.getElementById('fileToUpload').files[0];
   if (file) {
     var fileSize = 0;
-    if (file.size > 1024 \* 1024)
-      fileSize = (Math.round(file.size \* 100 / (1024 \* 1024)) / 100).toString() + 'MB';
+    if (file.size > 1024 * 1024)
+      fileSize = (Math.round(file.size * 100 / (1024 * 1024)) / 100).toString() + 'MB';
     else
-      fileSize = (Math.round(file.size \* 100 / 1024) / 100).toString() + 'KB';
+      fileSize = (Math.round(file.size * 100 / 1024) / 100).toString() + 'KB';
 
     document.getElementById('fileName').innerHTML = 'Name: ' + file.name;
     document.getElementById('fileSize').innerHTML = 'Size: ' + fileSize;
@@ -47,7 +47,7 @@ function fileSelected() {
 		
 function uploadFile() {
   var xhr = new XMLHttpRequest();
-  var file = document.getElementById('fileToUpload').files\[0\];
+  var file = document.getElementById('fileToUpload').files[0];
   var fileSize = file.size;
 		
   // register event listeners
@@ -79,7 +79,7 @@ function updateProgress(progress) {
 function uploadProgress(oEvent) {
   if (oEvent.lengthComputable) {
     var percentComplete = oEvent.loaded / oEvent.total;
-    updateProgress(percentComplete \* 100.0);
+    updateProgress(percentComplete * 100.0);
   }
   else {
     // Unable to compute progress information since the total size is unknown

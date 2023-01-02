@@ -34,10 +34,10 @@ To install Postman, simply:
 Incoming servers must be configured (i.e. declared) in the brainCloud dashboard before making S2S calls. This allows brainCloud to confirm that the requests are coming from a server that you own and aren't malicious.
 
 - Launch the [brainCloud Portal](https://portal.braincloudservers.com)
-- Navigate to the **Design | Cloud Code | My Servers** page. Click  the **\[+New Server\]** button
-- Give your server a name, like "EXAMPLE\_SERVER"
+- Navigate to the **Design | Cloud Code | My Servers** page. Click  the **[+New Server]** button
+- Give your server a name, like "EXAMPLE_SERVER"
 - Entering IP ranges restricts access to requests coming from the specified network addresses. This is highly recommended for production apps! For now, you can leave the ranges blank. This will make all IP ranges acceptable.
-- Hit **\[Save\]**, and note your _server secret_ - you will use it later.
+- Hit **[Save]**, and note your _server secret_ - you will use it later.
 
 * * *
 
@@ -58,16 +58,16 @@ _To simulate a session-less server request with Postman:_
 
 {  
    "appId":"12142",
-   "serverName":"EXAMPLE\_SERVER",
+   "serverName":"EXAMPLE_SERVER",
    "serverSecret":"b221c2a4-8df9-4937-8f9b-a95e4f71d5b6",
    "service":"globalApp",
-   "operation":"READ\_PROPERTIES",
+   "operation":"READ_PROPERTIES",
    "data":{  
 
    }
 }
 
-- Select **\[Send\]**
+- Select **[Send]**
 - View the Response
 
 Unless you have added some properties, you will see an empty JSON response.
@@ -94,18 +94,18 @@ _First, we need to Authenticate to get a SessionId_
 
 {  
    "packetId":0,
-   "messages":\[
+   "messages":[
        {
          "appId":"12142",
          "service":"authenticationV2",
          "operation":"AUTHENTICATE",
          "data": {  
             "appId":"12142",
-            "serverName":"EXAMPLE\_SERVER",
+            "serverName":"EXAMPLE_SERVER",
             "serverSecret":"b221c2a4-8df9-4937-8f9b-a95e4f71d5b6"
           }
        }
-   \]
+   ]
 }
 
 - View the response, and save the sessionId that is returned.
@@ -114,10 +114,10 @@ _First, we need to Authenticate to get a SessionId_
 {
    "sessionId":"df5gelac0mhrpht31ffgtgatoe",
    "packetId":1,
-   "messages":\[
+   "messages":[
       {
          "service":"globalEntity",
-         "operation":"CREATE\_SYSTEM\_ENTITY",
+         "operation":"CREATE_SYSTEM_ENTITY",
          "data":{
             "entityType":"address",
             "timeToLive":null,
@@ -129,7 +129,7 @@ _First, we need to Authenticate to get a SessionId_
             }
          }
       }
-   \]
+   ]
 }
 
 - For each subsequent request, be sure to increment the `packetId`. Try this one:
@@ -137,10 +137,10 @@ _First, we need to Authenticate to get a SessionId_
 {  
    "sessionId":"df5gelac0mhrpht31ffgtgatoe",
    "packetId":2,
-   "messages":\[  
+   "messages":[  
       {  
          "service":"globalEntity",
-         "operation":"GET\_LIST",
+         "operation":"GET_LIST",
          "data":{  
             "where":{  
                "entityType":"address"
@@ -151,7 +151,7 @@ _First, we need to Authenticate to get a SessionId_
             "maxReturn":50
          }
       }
-   \]
+   ]
 }
 
 So, you get the idea.

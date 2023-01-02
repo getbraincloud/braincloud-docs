@@ -72,7 +72,7 @@ For more information about setting up a development environment refer to the [Oc
 
 [![](https://downloads.intercomcdn.com/i/o/327826976/ef992a41d159fc46b180aa24/image.png?expires=1619204400&signature=a5ddb7b0dc9d4f1cacb86b0235f325f9c03a15e382ffa010e2628398fc381737)](https://downloads.intercomcdn.com/i/o/327826976/ef992a41d159fc46b180aa24/image.png?expires=1619204400&signature=a5ddb7b0dc9d4f1cacb86b0235f325f9c03a15e382ffa010e2628398fc381737)
 
-- Functions and its code that linked behind the hood \[Oculus Login& bc Auth\] are similar to below. Once the test-user is entitled into this Oculus app, from the success callback, retrieve the userId and nonce then pass them to brainCloud Oculus authentication method -- AuthenticateOculus
+- Functions and its code that linked behind the hood [Oculus Login& bc Auth] are similar to below. Once the test-user is entitled into this Oculus app, from the success callback, retrieve the userId and nonce then pass them to brainCloud Oculus authentication method -- AuthenticateOculus
 ```js
     void Start()
     {
@@ -113,7 +113,7 @@ For more information about setting up a development environment refer to the [Oc
         if (msg.IsError == false)
         {
             string oculusNonce = msg.Data.value;
-            \_bc.AuthenticateOculus(oculusUserId, oculusNonce, true, authSuccess\_BCcall, authError\_BCcall);
+            _bc.AuthenticateOculus(oculusUserId, oculusNonce, true, authSuccess_BCcall, authError_BCcall);
         }
     }
 ```

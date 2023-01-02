@@ -20,7 +20,7 @@ _brainCloud defines a Dormant User Account as any account where the user hasn�
 
 Beginning with the February 2023 billing cycle, which is invoiced on **March 1, 2023**, brainCloud apps will be charged **$75 / month** per Million dormant users (pro-rated). That is not a lot – though for some apps it would be – but ideally _we don’t want to collect any Dormant User revenues at all — we are looking for the cost savings!_ That’s why we have our **Auto-deletion** service!
 
-For instructions on enabling **Auto-Delete** to reduce and/or eliminate an Dormant User Account pricing charges, see the bottom section of our previous [post](https://getbraincloud.com/apidocs/upcoming-2022-billing-changes/).
+For instructions on enabling **Auto-Delete** to reduce and/or eliminate an Dormant User Account pricing charges, see the bottom section of our previous [post](/release/2022/07/19/upcoming-2022-billing-changes/).
 
 * * *
 

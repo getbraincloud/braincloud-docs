@@ -12,23 +12,23 @@ brainCloud has a very broad feature-set, you can use as much or as little of it
 
 ## 
 
-[![brainCloud Stack](images/BC_TechStack_05-1024x768.png)](images/BC_TechStack_05.png)
+[![brainCloud Stack](images/BC_TechStack_05-1024x768.png)](images/BC_TechStack_05-1024x768.png)
 
 The brainCloud Docs are organized as follows:
 
 - [**Introduction**](/learn/introduction/ "Introduction") - introduces the key concepts that are important to understanding the workings and organization of the APIs
 - **[Key Concepts](/learn/api-reference/)** - key concepts that programmers will need to understand
 - **[Client Libraries](/learn/client-libraries/)** \- links to the client libs
-- [**API Reference**](/api/capi/auth) - usage details for the API methods themselves (now in a separate [doc!](/api/introduction))
+- [**API Reference**](/api/capi/authentication) - usage details for the API methods themselves (now in a separate [doc!](/api/introduction))
 - **[Cloud Code Central](/learn/cloud-code-central/)** \- cloud code tips and examples
-- [**Portal Tutorials**](/learn/portal-usage/) - how to use the Design Portal
+- [**Portal Tutorials**](/learn/portal-tutorials/) - how to use the Design Portal
 - [**SDK Tutorials**](/learn/sdk-tutorials/) - tutorials on various aspects of the API
 - **[Support](/learn/support/)** - answers to frequently asked questions
-- **[Release History](/learn/releases/)** - view the latest platform updates
+- **[Release History](/release/)** - view the latest platform updates
 
 _We're continuously improving our documentation - so be sure to check back often.  And if you can't find what you're looking for - don't hesitate to reach out by clicking the green **Help** widget on any of our pages._
 
-[![Unity Logo](images/unityLogo-150x150.png)](images/unityLogo.png)
+[![Unity Logo](images/unityLogo-150x150.png)](images/unityLogo-150x150.png)
 
 _**Using Unity?**_ _Be sure to check out our [Unity Tutorials](/learn/sdk-tutorials/unity-tutorials/) and our [brainCloud Bombers](/learn/sdk-tutorials/unity-tutorials/braincloud-bombers-example-game/) example game!_
 

@@ -20,10 +20,10 @@ _Note - the new segment data structures aren't compatible with how things were 
 
 **Portal Changes**
 
-- **Design | Core Game Info | E-mail Authentication** - options for customizing the e-mails sent for validation and forgotten passwords.  Includes a **\[Test\]** button to send a test e-mail to validate (note that the test e-mails don't actually contain the URL links)
+- **Design | Core Game Info | E-mail Authentication** - options for customizing the e-mails sent for validation and forgotten passwords.  Includes a **[Test]** button to send a test e-mail to validate (note that the test e-mails don't actually contain the URL links)
 - **Design | Segments** - screens have been completely redone
 
-[![VIPs Leaving Segment](images/vip_leaving_segment-1024x410.png)](/apidocs/wp-content/uploads/2015/01/vip_leaving_segment.png)
+[![VIPs Leaving Segment](images/vip_leaving_segment-1024x410.png)](images/vip_leaving_segment.png)
 
 **API Changes**
 

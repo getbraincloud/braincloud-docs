@@ -11,7 +11,7 @@ Based on the brainCloud [TicTacToe](https://github.com/getbraincloud/examples-un
 
 ### Script
 
-Click [RankGame\_AutoJoinMatch.ccjs.zip](script/RankGame_AutoJoinMatch.ccjs.zip) to download the file.
+Click [RankGame_AutoJoinMatch.ccjs.zip](script/RankGame_AutoJoinMatch.ccjs.zip) to download the file.
 
 ### Usage / Setup
 

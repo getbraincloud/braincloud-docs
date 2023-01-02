@@ -13,11 +13,11 @@ From here you will be in the User Summary tab of the User Monitoring section.  
 
 Once the Select User popup is open you have a variety of options available to find the users you're looking for.  From the search tab you can perform a number of search types from the drop down to the left of the search bar (default is Name).
 
-- **Name** - This is the name that is set by calling the [UpdatePlayerName](/api/capi/playerstate/updateplayername) function of the PlayerState service.  Sometimes referred to as Profile Name.
+- **Name** - This is the name that is set by calling the [UpdatePlayerName](/api/capi/playerstate/updateusername) function of the PlayerState service.  Sometimes referred to as Profile Name.
 - **Anonymous** - The anonymous ID of the player created when the player was authenticated using [AuthenticateAnonymous](/api/capi/authentication/authenticateanonymous).
 - **Facebook ID** - The Facebook ID associated with a user through either [AuthenticateFacebook](/api/capi/authentication/authenticatefacebook) or [AttachFacebookIdentity](/api/capi/identity/attachfacebookidentity).
-- **Email** \- The email address associated with a user through either [AuthenticateEmailPassword](/api/capi/authentication/authenticateemailpassword) or [AttachEmailIdentity](/api/capi/identity/attachemailidentity).
-- **Steam** \- The Steam ID associated with a user through either [AuthenticateSteam](/api/capi/authentication/authenticatesteam) or [AttachSteamIdentity](/api/capi/identity/attachsteamidentity).
+- **Email** - The email address associated with a user through either [AuthenticateEmailPassword](/api/capi/authentication/authenticateemailpassword) or [AttachEmailIdentity](/api/capi/identity/attachemailidentity).
+- **Steam** - The Steam ID associated with a user through either [AuthenticateSteam](/api/capi/authentication/authenticatesteam) or [AttachSteamIdentity](/api/capi/identity/attachsteamidentity).
 - **Universal** - The Universal ID associated with a user through either [AuthenticateUniversal](/api/capi/authentication/authenticateuniversal) or [AttachUniversalIdentity](/api/capi/identity/attachuniversalidentity).
 - **Profile ID** - The unique ID generated for every user when they are created.  Used throughout the API to refer to individual users.
 

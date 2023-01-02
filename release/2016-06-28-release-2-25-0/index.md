@@ -7,7 +7,7 @@ tags:
 
 We've got a doozy of a release for you heading into the Summer Holidays!
 
-## [![](images/BANR_Webhook_Blue03-1024x512.png)](/apidocs/wp-content/uploads/2016/06/BANR_Webhook_Blue03.png)
+## [![](images/BANR_Webhook_Blue03-1024x512.png)](images/BANR_Webhook_Blue03.png)
 
 ## Release Highlights
 
@@ -21,7 +21,7 @@ Examples of useful services that employ WebHooks include: Photon, Twilio, MailCh
 
 Setting up a WebHook integration is pretty simple:
 
-- **Write a new Cloud Code method** that accepts our [_WebHook Parameter Syntax_](/apidocs/apiref/#cc-ccscripts-webhooks). The parameters you receive will be defined by the _External Service_ that is calling you.
+- **Write a new Cloud Code method** that accepts our [_WebHook Parameter Syntax_](/api/cc/writingscript#webhooks). The parameters you receive will be defined by the _External Service_ that is calling you.
 - **Configure the WebHook using the Design Portal.** You'll give the hook a name, determine how you are securing it, and link it to your **Cloud Code** method. You use the **Design | Cloud Code | WebHooks** screen to configure your WebHooks.
 - **Register your WebHook URL in the external service.** Finally, go to the external service and configure your WebHook, specifying the WebHook endpoint from the Design Portal, and any additional parameters that you require to be sent to your method.
 
@@ -29,17 +29,17 @@ _Note - as with every external integration, we have to protect our servers from
 
 _API Counts: Note that incoming webhook invocations count as 1 API count for the webhook itself, and 1 API count for the cloud code script being invoked._
 
-_\[Note - we'll be putting together a WebHooks tutorial in the next couple of days to better illustrate how they work.\]_
+_[Note - we'll be putting together a WebHooks tutorial in the next couple of days to better illustrate how they work.]_
 
  
 
 ### Faster File Downloads
 
-We have re-factored our file-handling services to enable significantly faster downloads. The executive summary is that now when the client attempts to download a file via the URLs that are returned from [`GetFileList()`](/apidocs/apiref/#capi-s3-getfilelist), [`GetUpdatedFiles()`](/apidocs/apiref/#capi-s3-getupdatedfiles), and [`ListUserFiles()`](/apidocs/apiref/#capi-file-listuserfiles) - it will automatically be redirected to a cached version of the file located on a Content Distribution Network (CDN) node that is closer to them geographically.
+We have re-factored our file-handling services to enable significantly faster downloads. The executive summary is that now when the client attempts to download a file via the URLs that are returned from [`GetFileList()`](/api/capi/s3handling/getfilelist), [`GetUpdatedFiles()`](/api/capi/s3handling/getupdatedfiles), and [`ListUserFiles()`](/api/capi/file/listuserfiles) - it will automatically be redirected to a cached version of the file located on a Content Distribution Network (CDN) node that is closer to them geographically.
 
 The hitch is that Unity doesn't natively support redirection (currently), so this doesn't _transparently_ work for our Unity apps. But don't worry, there are two simple solutions:
 
-#1 - Directly request the CDN-cached version of the File Url via the new [`GetCDNURL()`](/apidocs/apiref/#capi-s3-getcdnurl) methods (there are separate similarly-named methods for custom files vs. user files)
+#1 - Directly request the CDN-cached version of the File Url via the new [`GetCDNURL()`](/api/capi/s3handling/getcdnurl) methods (there are separate similarly-named methods for custom files vs. user files)
 
 #2 - Use the [UniWeb](https://www.assetstore.unity3d.com/en/#!/content/483) ($25) plug-in, which \*does\* support redirection, to retrieve the files instead of the built-in Unity libraries
 
@@ -57,13 +57,13 @@ The biggest change is that the `Create()` and `Update()` methods no longer retur
 
 Not that although the `Create()` and `Update()` methods for Entities\* (i.e. _User Entities_, _Global Entities_, _Groups_ and _Group Entities_) no longer return the _full_ object upon success, they do still return the object skeleton (or summary), which includes the entityId, entityType, version, etc. The diagram below should better illustrate the change.
 
-[![brainCloud entity create update optimization](images/brainCloud-entity-create-update-optimization-1024x864.png)](/apidocs/wp-content/uploads/2016/06/brainCloud-entity-create-update-optimization.png)
+[![brainCloud entity create update optimization](images/brainCloud-entity-create-update-optimization-1024x864.png)](images/brainCloud-entity-create-update-optimization.png)
 
 As always, we've added a new Compatibility Flag ("Default to returning full Entity contents for create and update operations") to preserve the old behaviour if your app requires it. This flag defaults to _ON_ for existing apps, and _OFF_ for new apps moving forward.
 
-Secondly, we've revised the new `IncrementData()` APIs to bring them into better alignment with the `Create()` and `Update()` methods. For example, like the methods above, [`IncrementUserEntityData()`](/apidocs/apiref/?csharp#capi-entity-incrementuserentitydata), will now return the full object skeleton upon success -- with one addition - it will also return the updated balance of any fields that were incremented.
+Secondly, we've revised the new `IncrementData()` APIs to bring them into better alignment with the `Create()` and `Update()` methods. For example, like the methods above, [`IncrementUserEntityData()`](/api/capi/entity/incrementuserentitydata), will now return the full object skeleton upon success -- with one addition - it will also return the updated balance of any fields that were incremented.
 
-[![increment_api_update](images/increment_api_update.png)](/apidocs/wp-content/uploads/2016/06/increment_api_update.png)
+[![increment_api_update](images/increment_api_update.png)](images/increment_api_update.png)
 
 This new protocol was implemented by removing the old `returnData` parameter, which was a less optimal attempt to give the user control over what data is returned. The old method still works for apps using the 2.24 version of the libraries, but devs updating to 2.25+ will need to adjust their method calls accordingly.
 
@@ -78,7 +78,7 @@ We've made the following portal changes:
 - **Design | Cloud Code | WebHooks**
     - New screens for defining WebHooks. See the feature section above for details.
 - **Design | Marketplace | Products**
-    - We have enhanced the workflows so that you no longer have to manually press the **\[Facebook Register Products\]** button after making changes to the Facebook pricing information for products - it is now done automatically. We have left the button to support advanced scenarios where manually re-registering still makes sense.
+    - We have enhanced the workflows so that you no longer have to manually press the **[Facebook Register Products]** button after making changes to the Facebook pricing information for products - it is now done automatically. We have left the button to support advanced scenarios where manually re-registering still makes sense.
 - **Monitoring | User Monitoring** 
     - The new **User Files** screen allows you to view the files uploaded to an individual user account.
     - We have moved the in-app purchases that were displayed as part of the **Virtual Currency** screen to their own **Transactions** screen.
@@ -99,23 +99,23 @@ The following changes/additions have affected the brainCloud API:
 
 - **`Authenticate()` and `ReadPlayerState()` methods**
     - `countryCode` is now being returned
-    - New `isTester` flag is being returned for users. This corresponds ot the **\[x\] Is Tester** checkbox that is selectable from **Monitoring | User Monitoring | User Summary**.  This is very handy if you want to trigger special logging, debug screens, etc to be available to testers but not regular users of your app.
+    - New `isTester` flag is being returned for users. This corresponds ot the **[x] Is Tester** checkbox that is selectable from **Monitoring | User Monitoring | User Summary**.  This is very handy if you want to trigger special logging, debug screens, etc to be available to testers but not regular users of your app.
 - **Client**
-    - New method ([`EndOfMessageBundleMarker()`](/apidocs/apiref/#capi-client-insertendofmessagebundlemarker)) for forcing the end of a message bundle. Useful for ensuring that large brainCloud requests are isolated into seaparate message bundles, and for ensuring that certain key calls (like [`LogOut()`](/apidocs/apiref/#capi-playerstate-logout)) get to return before continuing message processing.
+    - New method ([`EndOfMessageBundleMarker()`](/api/capi/client/insertendofmessagebundlemarker)) for forcing the end of a message bundle. Useful for ensuring that large brainCloud requests are isolated into seaparate message bundles, and for ensuring that certain key calls (like [`LogOut()`](/api/capi/playerstate/logout)) get to return before continuing message processing.
 - **Cloud Code APIs**
-    - New [`CancelScheduledScript()`](/apidocs/apiref/#capi-script-cancelscheduledscript) method to cancel a scheduled cloud code job
+    - New [`CancelScheduledScript()`](/api/capi/script/cancelscheduledscript) method to cancel a scheduled cloud code job
 - **Currency APIs**
-    - Now properly enforces balance server-side for all [`ConsumeCurrency()`](/apidocs/apiref/#capi-product-consumecurrency) operations. There's a compatibility switch that defaults to ON for existing apps, but we recommend that all devs go to **Design | Core App Info | Advanced Settings**, and turn the _"Enable legacy Currency handling (balance not enforced for Consume)"_ to OFF for their app (with appropriate testing, of course).
+    - Now properly enforces balance server-side for all [`ConsumeCurrency()`](/api/capi/product/consumecurrency) operations. There's a compatibility switch that defaults to ON for existing apps, but we recommend that all devs go to **Design | Core App Info | Advanced Settings**, and turn the _"Enable legacy Currency handling (balance not enforced for Consume)"_ to OFF for their app (with appropriate testing, of course).
 - **Entity Create / Update APIs**
     - As described in the _Release Hilights_ section, API's have been revised so that we do not return the full data content during `Create()` and `Update()` operations. There is a new compatibility flag to maintain the legacy behaviour (by default turned ON for existing apps).
-    - The `Increment()` API methods have been revised to return results that are consistant with the rest of the Entity Create()/Update() methods. Revised methods include [`IncrementUserEntityData()`](/apidocs/apiref/#capi-entity-incrementuserentitydata), [`IncrementSharedUserEntityData()`](/apidocs/apiref/#capi-entity-incrementshareduserentitydata), [`IncrementGlobalEntityData()`](/apidocs/apiref/#capi-globalentity-incrementglobalentitydata), [`IncrementGroupData()`](/apidocs/apiref/#capi-group-incrementgroupdata) and [`IncrementGroupEntityData()`](/apidocs/apiref/#capi-group-incrementgroupentitydata).
+    - The `Increment()` API methods have been revised to return results that are consistant with the rest of the Entity Create()/Update() methods. Revised methods include [`IncrementUserEntityData()`](/api/capi/entity/incrementuserentitydata), [`IncrementSharedUserEntityData()`](/api/capi/entity/incrementshareduserentitydata), [`IncrementGlobalEntityData()`](/api/capi/globalentity/incrementglobalentitydata), [`IncrementGroupData()`](/api/capi/group/incrementgroupdata) and [`IncrementGroupEntityData()`](/api/capi/group/incrementgroupentitydata).
 - **Friend API**
-    - New [`GetSummaryDataForProfileId()`](/apidocs/apiref/#capi-friend-getsummarydataforprofileid) method - returns the name, email, pictureUrl, and summary data for the specified user.
+    - New [`GetSummaryDataForProfileId()`](/api/capi/friend/getsummarydataforprofileid) method - returns the name, email, pictureUrl, and summary data for the specified user.
 - **Group APIs**
-    - New [`AutoJoinGroup()`](/apidocs/apiref/#capi-group-autojoingroup) method allows you to automatically join a group that meets the provided criteria. Useful for quickly creating arbitrary grops of users.
-    - The [`ReadGroupData()`](/apidocs/apiref/#capi-group-readgroupdata) method has been added to client libraries (was missed last release - oops!)
+    - New [`AutoJoinGroup()`](/api/capi/group/autojoingroup) method allows you to automatically join a group that meets the provided criteria. Useful for quickly creating arbitrary grops of users.
+    - The [`ReadGroupData()`](/api/capi/group/readgroupdata) method has been added to client libraries (was missed last release - oops!)
 - **Identity APIs**
-    - New [`RefreshIdentity()`](/apidocs/apiref/#capi-identity-refreshidentity) method allows you to update identity tokens that are not the primary login identity
+    - New [`RefreshIdentity()`](/api/capi/identity/refreshidentity) method allows you to update identity tokens that are not the primary login identity
 
 We have also removed / deprecated the following methods:
 
@@ -130,7 +130,7 @@ We have also removed / deprecated the following methods:
     - We have updated the C++ / Objective-C libraries to support IPv6.
     - We have re-confirmed that all other libraries properly support IPv6.
 - Documentation
-    - Completely revised and updated [Cloud Code](/apidocs/apiref/#cc-ccscripts) documentation section!
+    - Completely revised and updated [Cloud Code](/api/cc/writingscript) documentation section!
 - Updated libraries
     - All of the supported libraries have been updated to support the latest APIs
 - Plus miscellaneous fixes and performance enhancements.

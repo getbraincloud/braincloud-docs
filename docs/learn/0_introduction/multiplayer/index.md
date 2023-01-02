@@ -27,6 +27,6 @@ Finally, brainCloud famously plays nicely with third-party real-time multiplayer
 For more information:
 
 - [Turn-by-Turn Async API](/api/capi/asyncmatch)
-- [One-way Offline API](/api/capi/oneway)
+- [One-way Offline API](/api/capi/onewaymatch)
 - [Matchmaking API](/api/capi/matchmaking)
 - [Lobby API](/api/capi/lobby)

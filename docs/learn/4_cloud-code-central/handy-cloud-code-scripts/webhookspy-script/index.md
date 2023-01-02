@@ -29,5 +29,5 @@ You will then to go to the external system (the one that is calling the webhook)
 
 Finally, go to **Quick | Recent Errors** to view the results of invocation:
 
-- _change the filter to show info messages_ - enable the \[x\] checkbox by the **green "i"** and hit **\[Refresh\]**
+- _change the filter to show info messages_ - enable the [x] checkbox by the **green "i"** and hit **[Refresh]**
 - click on a log line to view the details. The parameters will be displayed in the _Context_ field, which you can expand by dragging the bottom-right corner of the dialog

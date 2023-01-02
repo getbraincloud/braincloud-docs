@@ -5,7 +5,7 @@ tags:
   - "release-history"
 ---
 
-## [![New Sendgrid integration](images/BC_TwitterPromo_3-1_SendGrid_1024x512.png)](/apidocs/wp-content/uploads/2016/10/BC_TwitterPromo_3-1_SendGrid_1024x512.png)
+## [![New Sendgrid integration](images/BC_TwitterPromo_3-1_SendGrid_1024x512.png)](images/BC_TwitterPromo_3-1_SendGrid_1024x512.png)
 
 ## Release Highlights
 
@@ -28,7 +28,7 @@ There are many advantages to this new system:
 
 The great news is that SendGrid's pricing starts at free (up to 12,000 emails per month) - and ramps up very reasonably from there ($9.99 for 40,000 emails, $19.99 for 100,000 emails, etc.). Check out the full [SendGrid Pricing](https://sendgrid.com/pricing/) details here (be sure to scroll down to find the free option!).
 
-For step-by-step instructions on integrating brainCloud with your SendGrid account, click [here](/apidocs/portal-usage/email-integration-sendgrid/)!
+For step-by-step instructions on integrating brainCloud with your SendGrid account, click [here](/learn/portal-tutorials/email-integration-sendgrid/)!
 
 _Note, we plan to add additional email integrations / features in the future - so feel free to contact us with your feedback and suggestions._
 
@@ -49,7 +49,7 @@ SendGrid includes the following template features:
 
 ### Transactional Emails
 
-In addition to using SendGrid for email authentication, brainCloud now supports a new [Mail Service API](/apidocs/apiref/#capi-mail) that allow you to send custom transactional emails directly to your users. So it is easy to send emails directly to users based on they're interactions with your app.
+In addition to using SendGrid for email authentication, brainCloud now supports a new [Mail Service API](/api/capi/mail) that allow you to send custom transactional emails directly to your users. So it is easy to send emails directly to users based on they're interactions with your app.
 
  
 
@@ -95,22 +95,22 @@ We've made the following portal changes:
 The following changes/additions have affected the brainCloud API:
 
 - **BrainCloudWrapper**
-    - [Reconnect()](/apidocs/apiref/#wrapper-reconnect) - a new method that makes it easy to re-establish a session to brainCloud, using the cached anonymousId and profileId of the most recent connection
+    - [Reconnect()](/api/wrapper/reconnect) - a new method that makes it easy to re-establish a session to brainCloud, using the cached anonymousId and profileId of the most recent connection
 - **Authentication**
     - New authentication error code - **UNKNOWN\_AUTH\_ERROR (40217)** - for when Authentication() fails, but it is not the fault of the passed in credentials (rather, it's an unexpected server error). The expected response would be to simply retry.
 - **Groups**
-    - The [ListGroupsPage()](/apidocs/apiref/?objective_c#capi-group-listgroupspage) method now returns the `memberCount` of the groups that are returned.
+    - The [ListGroupsPage()](/api/capi/group/listgroupspage) method now returns the `memberCount` of the groups that are returned.
 - **Leaderboards**
-    - [ListAllLeaderboards()](/apidocs/apiref/#capi-leaderboard-listallleaderboards) - returns a list of all of the leaderboards for an app.
+    - [ListAllLeaderboards()](/api/capi/leaderboard/listallleaderboards) - returns a list of all of the leaderboards for an app.
     - _Management APIs_ - note that these methods are only callable from cloud code.
-        - [CreateLeaderboard()](/apidocs/apiref/#capi-leaderboard-createleaderboard) - creates a new leaderboard.
-        - [EditLeaderboard()](/apidocs/apiref/?cloudcode#capi-leaderboard-editleaderboard) - updates an existing leaderboard definition.
-        - [DeleteLeaderboard()](/apidocs/apiref/?cloudcode#capi-leaderboard-deleteleaderboards) - deletes an existing leaderboard configuration, together with all versions and entries.
+        - [CreateLeaderboard()](/api/capi/leaderboard/createleaderboard) - creates a new leaderboard.
+        - [EditLeaderboard()](/api/capi/leaderboard/editleaderboard) - updates an existing leaderboard definition.
+        - [DeleteLeaderboard()](/api/capi/leaderboard/deleteleaderboards) - deletes an existing leaderboard configuration, together with all versions and entries.
 - **Log Service**
-    - The [LogServiceProxy](/apidocs/apiref/?cloudcode#s2s-bridge-getlogserviceproxy) has been added to S2S - so you can now send log messages from both client-context cloud code and S2S-based cloud code
+    - The [LogServiceProxy](/api/cc/bridge/getlogserviceproxy) has been added to S2S - so you can now send log messages from both client-context cloud code and S2S-based cloud code
 - **New Mail Service**
-    - [SendBasicEmail()](/apidocs/apiref/#capi-mail-sendbasicemail) - a quick and easy API for sending email messages to your users
-    - [SendAdvancedEmail()](/apidocs/apiref/#capi-mail-sendadvancedemail) - an advanced API that allows your app to take advantage of the richness of the email provider when sending email messages to your users
+    - [SendBasicEmail()](/api/capi/mail/sendbasicemail) - a quick and easy API for sending email messages to your users
+    - [SendAdvancedEmail()](/api/capi/mail/sendadvancedemail) - an advanced API that allows your app to take advantage of the richness of the email provider when sending email messages to your users
 
  
 

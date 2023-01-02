@@ -42,7 +42,7 @@ As we were putting together our new set of plans, we decided to simplify and sta
 
 All V4 plans use the _same_ discounting tiers as they scale (it used to differ by plan). So no matter what plan you start with, as you get to 15M total API calls for the month, the cost per M drops to $10.00.
 
-[![](images/APICallsTable4.png)](https://getbraincloud.com/apidocs/wp-content/uploads/2019/05/APICallsTable4.png)
+[![](images/APICallsTable4.png)](images/APICallsTable4.png)
 
 One side effect of this standardization is that the cost of additional usage for **Business Plan** customers now starts at $10.25 / M API, instead of $10.00 / M API from the old plan. To make up for this, we have bumped up the **Business Plan** to include **10M API** for free (instead of 9M) - so it is a net win.
 

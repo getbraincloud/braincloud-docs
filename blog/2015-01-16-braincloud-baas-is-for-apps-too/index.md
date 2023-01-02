@@ -26,7 +26,7 @@ The key app-related features include:
 - **Custom Cloud Code -** need brainCloud to do something special server-side - code it! (using JavaScript)
 - **Cross-platform Push Notifications** - reach out to your user base in real time across device platforms
 - **Server-side Receipt Validation** - increase revenues by eliminating in-app purchase piracy using server-side receipt validation
-- **Rich Gamification** - player XP, achievements, leaderboards and more are available for when \[if\] you decide to add Gamification
+- **Rich Gamification** - player XP, achievements, leaderboards and more are available for when [if] you decide to add Gamification
 - **Easy integration** - local libraries available across all device platforms (iOS, Android, WinPhone, BB10, Web, PC/Mac, etc.)
 - **Great designer / debugger web tools** - the brainCloud design tools make it easy to set up your game, and the monitoring tools make it easy to view, debug, and even edit the data of your app as you develop
 
@@ -57,4 +57,4 @@ So, the next time someone asks "Is brainCloud designed for games, or other types
 
 For more information, why not take a test drive? Sign-up free today!
 
-\[otw\_shortcode\_button href="https://portal.braincloudservers.com/signup" size="large" icon\_position="left" shape="radius"\]Sign Up For Free\[/otw\_shortcode\_button\]
+[otw\_shortcode\_button href="https://portal.braincloudservers.com/signup" size="large" icon\_position="left" shape="radius"]Sign Up For Free[/otw\_shortcode\_button]

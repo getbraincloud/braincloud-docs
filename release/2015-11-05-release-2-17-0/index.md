@@ -12,7 +12,7 @@ tags:
 Key features in this release:
 
 - **Apple TV Support!** We've updated our libraries to support the new Apple TV. We can't wait to see what you build!
-- **Unreal Blueprint Support!** It's been a long time coming, but we're pleased to finally announce the availability of our [Unreal plug-in](/apidocs/tutorials/unreal-tutorials/), with Blueprint, C++, and \[basic\] Online Subsystem support.
+- **Unreal Blueprint Support!** It's been a long time coming, but we're pleased to finally announce the availability of our [Unreal plug-in](/learn/sdk-tutorials/unreal-tutorials/), with Blueprint, C++, and [basic] Online Subsystem support.
 - **Redemption Codes** \- Planning to distribute individual codes to unlock characters / cards / etc. in your game? brainCloud's new redemption code system is exactly what you need. More info on the feature and it's API here.
 - **Long-running Cloud Code** - we've added support for long-running Cloud Code scripts, and _adapted our Cloud Code billing strategy_ to better support this use case.  _More details below_.
 
@@ -61,7 +61,7 @@ As part of this change, brainCloud no longer _automatically_ triggers the associ
 
 To register for the new Rewards Callback, call RegisterRewardCallback() in your local library.
 
-_\[Important note - the standard success and failure callbacks for the API calls still trigger. The rewards callback will trigger afterwards. Usage of the rewards callback is entirely optional.\]_
+_[Important note - the standard success and failure callbacks for the API calls still trigger. The rewards callback will trigger afterwards. Usage of the rewards callback is entirely optional.]_
 
  
 
@@ -93,7 +93,7 @@ It didn't take long before folks started to hit the 10-second watchdog timer, w
 
 In the short-term we had to raise that 10-second timeout globally across the system to keep some of our leading clients apps running properly.  We're pleased to have our long-term solution in place now - which _allows developers to set a custom timeout value for their individual scripts_.  All new scripts will default to **10-seconds** - but you can individually raise the timeout as high as 60 seconds.  Note - if required, it's possible to raise it even higher. Just message our team to have them raise your limit.
 
-\[caption id="attachment\_2197" align="alignnone" width="474"\][![Setting cloud code timeouts](images/Cloud_Code_Timeouts-1024x366.jpg)](/apidocs/wp-content/uploads/2015/11/Cloud_Code_Timeouts.jpg) Setting cloud code timeouts\[/caption\]
+[caption id="attachment\_2197" align="alignnone" width="474"][![Setting cloud code timeouts](images/Cloud_Code_Timeouts-1024x366.jpg)](images/Cloud_Code_Timeouts.jpg) Setting cloud code timeouts[/caption]
 
  
 

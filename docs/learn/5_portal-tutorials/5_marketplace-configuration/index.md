@@ -12,27 +12,21 @@ Below is a quick guide to configuring the brainCloud marketplace.
 In order to create a product in the marketplace, you need to have a virtual currency to award the player. Let's start by creating a virtual currency.
 
 - Navigate to the "Marketplace | Virtual Currencies" page in the design tab of the brainCloud portal  
-    [](images/brainCloud_dashboard_marketTab.jpg)
 - Click the + icon in the top right corner  
-    [](images/brainCloud_dashboard_addVC.jpg)
 - Enter a name for your virtual currency (it can be anything you want) and click Save  
-    [](images/brainCloud_dashboard_addVC2.jpg)
 - You should now see your virtual currency listed in the table  
-    [](images/brainCloud_dashboard_addVC3.jpg)
 
 ### Create a Product
 
 Now that you have a virtual currency defined, it's time to create a product so that users can purchase that virtual currency! To create a marketplace product do the following:
 
 - Navigate to the "Marketplace | Products" page in the design tab of the brainCloud portal  
-    [](images/brainCloud_dashboard_productsTab.jpg)
 - Click the "Add Product" button in the top right  
-    [](images/brainCloud_dashboard_addProduct1.jpg)
 - In the Create Product dialog enter the following information:
     - **Item Id** - This is a unique id for your product. You will use this id within the brainCloud APIs to identify your product.
     -  **Title** - The title of your product
     - **Category** - An optional field that allows you to categorize your products. When communicating with brainCloud you can ask for only a certain category of product (for cases where you have many products defined)
-    - **Description** \- Description of your product
+    - **Description** - Description of your product
     - **Product Type** - Configures what type of product you are defining. This is mostly related to the third party store that you are linking to the product.
         - **Consumable** - A one-time consumable product. Once purchased, this product will be consumed once and only once. Most products fall into this product type
         - **Non-consumable** - A product which can never be consumed. Buying an item in your game that can never be used up (say a special sword) might be an example of a non-consumable.
@@ -50,17 +44,12 @@ After having created a product, you'll want to attach some prices to it so that
 #### Add a default price
 
 - If you just created the product, you should already see the "Add Price" button for your product. If not, select a product in the marketplace product table and make sure the product is in "Edit" mode.  
-    [](images/brainCloud_dashboard_addProduct2.jpg)
 - Click the Add Price button  
-    [](images/brainCloud_dashboard_addProduct3.jpg)
 - Enter a default price which will be used to calculate internal brainCloud analytics such as daily/total revenue. Note this is NOT the actual price charged to the user. That information is defined elsewhere depending on the third party store being integrated. At this time you can also enter your third-party store information. If you're unsure of what to enter here please refer to the "Third Party Store Integration" tutorials in the portal section for your appropriate third-party store.  
-    [](images/brainCloud_dashboard_addProduct4.jpg)
 - Click Save.
 - Next, we can select our newly created price as the default. Note you may have to hit the "Edit" button at the top of the product dialog.  
-    [](images/brainCloud_dashboard_addProduct5.jpg)
 - Click Save and that's it!
 - For the more curious amongst you, you can also verify that your product is coming back in the Product "GetInventory" API call using the Cloud Code API Explorer  
-    [](images/brainCloud_dashboard_addProduct6.jpg)
 
 #### Add an "on sale" price
 

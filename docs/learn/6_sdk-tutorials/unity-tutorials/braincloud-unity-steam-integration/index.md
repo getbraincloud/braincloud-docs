@@ -25,21 +25,21 @@ Unity 2018.2.5f1 was used
 
 Enter in the Steam App Id and Steam Publisher Key into the brainCloud Design Portal via **Design -> Core App Info -> Application IDs.**  
 
-**Steam App Id** \- Retrievable via Steam’s partner network.
+**Steam App Id** - Retrievable via Steam’s partner network.
 
-**Steam Publisher Key** \- Also referred to as WEB API key within Steam.  From the Steam partner network, Users & Permissions.  Select the correct group, and select “Create WepAPI Key” from the right panel.  
+**Steam Publisher Key** - Also referred to as WEB API key within Steam.  From the Steam partner network, Users & Permissions.  Select the correct group, and select “Create WepAPI Key” from the right panel.  
 
 # Configure Steamworks.Net
 
-Update **Plugins\\Steamworks.NET\\redist\\steam\_appid.txt** with the appropriate steam app Id.  
+Update **Plugins\Steamworks.NET\redist\steam_appid.txt** with the appropriate steam app Id.  
 
 Update **SteamManager.cs**,  
 ```js
-if (SteamAPI.RestartAppIfNecessary(AppId\_t.Invalid))
+if (SteamAPI.RestartAppIfNecessary(AppId_t.Invalid))
 ```
 To
 ```js
-if (SteamAPI.RestartAppIfNecessary((AppId\_t)<yoursteamappid>) 
+if (SteamAPI.RestartAppIfNecessary((AppId_t)<yoursteamappid>) 
 ```
 # Setup Steamworks.Net
 ```js
@@ -49,11 +49,11 @@ public void SetupSteamManager()
 {
     if (SteamManager.Initialized)
     {
-        m\_bSteamInitialized = true;
+        m_bSteamInitialized = true;
         // required callback for authenticating, view Steamworks.Net + brainCloud Authentication
-        m\_getAuthSessionTicketResponse = Callback<GetAuthSessionTicketResponse\_t>.Create(OnGetAuthSessionTicketResponse);
+        m_getAuthSessionTicketResponse = Callback<GetAuthSessionTicketResponse_t>.Create(OnGetAuthSessionTicketResponse);
         // required callback for In-App Purchases, Steamworks.Net + brainCloud Microtransactions
-        m\_transactionCallback = Callback<MicroTxnAuthorizationResponse\_t>.Create(OnTransactionResponse);
+        m_transactionCallback = Callback<MicroTxnAuthorizationResponse_t>.Create(OnTransactionResponse);
     }        
 }
 ```
@@ -61,52 +61,52 @@ public void SetupSteamManager()
 ```js
 using BrainCloud;
 
-private bool m\_bAttachSteam = false; // used for after we receive the auth response
-private uint m\_ticketSize;           // cache ticket size
-private byte\[\] m\_ticket;             // cache auth ticket
+private bool m_bAttachSteam = false; // used for after we receive the auth response
+private uint m_ticketSize;           // cache ticket size
+private byte[] m_ticket;             // cache auth ticket
 
 // requests an auth ticket from Steam for use later
-public void AttachSteamAccount(bool in\_bAttach = false, SuccessCallback in\_success = null, FailureCallback in\_fail = null)
+public void AttachSteamAccount(bool in_bAttach = false, SuccessCallback in_success = null, FailureCallback in_fail = null)
 {
     if (SteamManager.Initialized)
     {
-        m\_bAttachSteam = in\_bAttach;
-        m\_steamAuthSuccess = in\_success;
-        m\_steamFailure = in\_fail;
+        m_bAttachSteam = in_bAttach;
+        m_steamAuthSuccess = in_success;
+        m_steamFailure = in_fail;
 
-        m\_ticket = new byte\[1024\];
-        SteamUser.GetAuthSessionTicket(m\_ticket, 1024, out m\_ticketSize);
+        m_ticket = new byte[1024];
+        SteamUser.GetAuthSessionTicket(m_ticket, 1024, out m_ticketSize);
     }
 }
 
-public void MergeSteamAccount(SuccessCallback in\_success = null, FailureCallback in\_fail = null, object in\_obj = null)
+public void MergeSteamAccount(SuccessCallback in_success = null, FailureCallback in_fail = null, object in_obj = null)
 {
-    if (m\_steamIdStr != "" && m\_authToken != "")
+    if (m_steamIdStr != "" && m_authToken != "")
     {
-        BCWrapper.IdentityService.MergeSteamIdentity(m\_steamIdStr, m\_authToken, in\_success, in\_fail, in\_obj);
-        m\_steamIdStr = ""; 
-        m\_authToken  = "";
+        BCWrapper.IdentityService.MergeSteamIdentity(m_steamIdStr, m_authToken, in_success, in_fail, in_obj);
+        m_steamIdStr = ""; 
+        m_authToken  = "";
     }
 }
 
-private string m\_authToken = "";    // will cache this, if we need it for a merge
-private string m\_steamIdStr = "";   // will cache this, if we need it for a merge
-private void OnGetAuthSessionTicketResponse(GetAuthSessionTicketResponse\_t pCallback)
+private string m_authToken = "";    // will cache this, if we need it for a merge
+private string m_steamIdStr = "";   // will cache this, if we need it for a merge
+private void OnGetAuthSessionTicketResponse(GetAuthSessionTicketResponse_t pCallback)
 {
     CSteamID steamId = SteamUser.GetSteamID();
-    if (pCallback.m\_hAuthTicket != HAuthTicket.Invalid && m\_ticketSize != 0)
+    if (pCallback.m_hAuthTicket != HAuthTicket.Invalid && m_ticketSize != 0)
     {
-        m\_steamIdStr = steamId.ToString();
+        m_steamIdStr = steamId.ToString();
         // IMPORTANT!!! CONVERT TO HEX STRING
-        m\_authToken = BitConverter.ToString(m\_ticket, 0, (int)m\_ticketSize).Replace("-", string.Empty);
+        m_authToken = BitConverter.ToString(m_ticket, 0, (int)m_ticketSize).Replace("-", string.Empty);
 
-        if (!m\_bAttachSteam)
+        if (!m_bAttachSteam)
         {
-           BCWrapper.AuthenticateSteam(m\_steamIdStr, m\_authToken, false, m\_steamAuthSuccess, m\_steamFailure, m\_steamObj);
+           BCWrapper.AuthenticateSteam(m_steamIdStr, m_authToken, false, m_steamAuthSuccess, m_steamFailure, m_steamObj);
         }
         else
         {
-           BCWrapper.IdentityService.AttachSteamIdentity(m\_steamIdStr, m\_authToken, m\_steamAuthSuccess, m\_steamFailure, m\_steamObj);
+           BCWrapper.IdentityService.AttachSteamIdentity(m_steamIdStr, m_authToken, m_steamAuthSuccess, m_steamFailure, m_steamObj);
         }
     }
 }
@@ -115,40 +115,40 @@ private void OnGetAuthSessionTicketResponse(GetAuthSessionTicketResponse\_t pCal
 ```js
  // steam is a two-step process, where you start a purchase, and then finalize it
 
-private SuccessCallback m\_successCallback;
-private FailureCallback m\_failureCallback;
-private string m\_delayedTransactionId = "";
+private SuccessCallback m_successCallback;
+private FailureCallback m_failureCallback;
+private string m_delayedTransactionId = "";
 
-public void StartPurchase(string in\_languageCode, string in\_storeProductId, SuccessCallback in\_success = null, FailureCallback in\_fail = null)
+public void StartPurchase(string in_languageCode, string in_storeProductId, SuccessCallback in_success = null, FailureCallback in_fail = null)
 {
-    m\_successCallback = in\_success;
-    m\_failureCallback = in\_failure;
-    m\_delayedTransactionId = "";
+    m_successCallback = in_success;
+    m_failureCallback = in_failure;
+    m_delayedTransactionId = "";
 
     Dictionary<string, object> purchaseData = new Dictionary<string, object>();
-    purchaseData\["language"\] = in\_languageCode;
-    purchaseData\["itemId"\] = in\_storeProductId;
+    purchaseData["language"] = in_languageCode;
+    purchaseData["itemId"] = in_storeProductId;
 
-    BCWrapper.Client.AppStoreService.StartPurchase("steam", JsonWriter.Serialize(purchaseData), onSteamStartPurchaseSuccess, m\_failureCallback);
+    BCWrapper.Client.AppStoreService.StartPurchase("steam", JsonWriter.Serialize(purchaseData), onSteamStartPurchaseSuccess, m_failureCallback);
 }
 
-private void onSteamStartPurchaseSuccess(string in\_json, object obj)
+private void onSteamStartPurchaseSuccess(string in_json, object obj)
 {
-    Dictionary<string, object> jsonMessage = (Dictionary<string, object>)JsonReader.Deserialize(in\_json);
-    Dictionary<string, object> jsonData = (Dictionary<string, object>)jsonMessage\["data"\];
+    Dictionary<string, object> jsonMessage = (Dictionary<string, object>)JsonReader.Deserialize(in_json);
+    Dictionary<string, object> jsonData = (Dictionary<string, object>)jsonMessage["data"];
     
     // brainCloud has given a transaction ID for this interaction, the STEAM overlay will popup
     // to finalize the purchase for the user        
-    m\_delayedTransactionId = (string)jsonData\["transactionId"\];
+    m_delayedTransactionId = (string)jsonData["transactionId"];
 }
 // callback was created during Steam Setup 
-private void OnTransactionResponse(MicroTxnAuthorizationResponse\_t pCallback)
+private void OnTransactionResponse(MicroTxnAuthorizationResponse_t pCallback)
 {
    Dictionary<string, object> transactionData = new Dictionary<string, object>();
-   transactionData\["transId"\] = m\_delayedTransactionId;
-   BCWrapper.AppStoreService.FinalizePurchase("steam", m\_delayedTransactionId, JsonWriter.Serialize(transactionData), m\_successCallback, m\_failureCallback);
+   transactionData["transId"] = m_delayedTransactionId;
+   BCWrapper.AppStoreService.FinalizePurchase("steam", m_delayedTransactionId, JsonWriter.Serialize(transactionData), m_successCallback, m_failureCallback);
 
-   m\_delayedTransactionId = "";
+   m_delayedTransactionId = "";
 }
 ```
 # More Info

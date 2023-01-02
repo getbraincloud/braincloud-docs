@@ -37,11 +37,11 @@ And of course you can use brainCloud Global Tournament features as building bloc
 
 _Warning - adding a Tournament Template to an existing Leaderboard changes the API required to interact with it (for example, you can no longer post a score to a leaderboard before joining it). For this reason, we do NOT recommend adding tournaments to existing leaderboards in live games._ 
 
-For more information, check out our new [Tournament API](/apidocs/apiref/?csharp#capi-tournament).
+For more information, check out our new [Tournament API](/api/capi/tournament).
 
  
 
-### Peer Services \[Beta\]
+### Peer Services [Beta]
 
 Another big feature of this release is brainCloud's new Peer Services system. This framework allows the services of one app (the _Peer Service_) to be used by other apps (_Peer Clients_). Peer Services can even be public, so that its services can be leveraged by other teams!
 
@@ -60,15 +60,15 @@ _Note - we'll be introducing our first sponsored Peer Service very soon - stay t
 
 ### **Cloud Code Enhancements**
 
-[![](images/2017-01-22_22-37-27-1024x334.png)](/apidocs/wp-content/uploads/2017/01/2017-01-22_22-37-27.png)
+[![](images/2017-01-22_22-37-27-1024x334.png)](images/2017-01-22_22-37-27.png)
 
 Finally, we've made some significant enhancements to our cloud code system to make writing scripts easier. Changes include:
 
 - **No more Script Types** - We have eliminated the confusing concept of "script types". Now, a script is a script is a script
-- **\[New\] Script Permissions** - scripts are now individually configured to be callable from the _Client API_, the _Server-to-Server (S2S) Interface_, and/or _Peer Clients_. All scripts are callable from other scripts.
+- **[New] Script Permissions** - scripts are now individually configured to be callable from the _Client API_, the _Server-to-Server (S2S) Interface_, and/or _Peer Clients_. All scripts are callable from other scripts.
 - **Three bridges, one consistant interface** - depending upon how your script is called, you will get one of three bridges. _Client Bridge_ (for calls from the client api and/or API hooks), _Server Bridge_ (for scheduled scripts and those from S2S api) and _Peer Bridge_ (special case for calls to peer scripts from peer clients). The APIs for these bridges has been normalized, so you no longer have to call special S2S versions of the proxy methods from the Server bridge. (i.e. getScriptServiceProxy() now works from all of them - though getS2SScriptServiceProxy() still works from the Server Bridge for compatibility).
 - **Normalized Proxies** - If you use methods in the proxy that are not implemented in the particular mode (Client/Server), the script will throw a not-implemented exception.
-- **Global Properties access** - new [getGlobalProperty()](/apidocs/apiref/?csharp#cc-bridge-getglobalproperty) method allows you to easily use global properties in scripts. No more magic values copied across scripts - simply define the value in **Design | Custom Config | Global Properties** for use.
+- **Global Properties access** - new [getGlobalProperty()](/api/cc/bridge/getglobalproperty) method allows you to easily use global properties in scripts. No more magic values copied across scripts - simply define the value in **Design | Custom Config | Global Properties** for use.
 - **New Documentation menu** - the Cloud Code Editor now contains its own version of the Docs menu for easy reference.
 - **Save Deleted Scripts** - we now continue to save a scripts version history even if you delete the script. So if you accidentally delete a script, just create a new one with the same name - and then restore the old version of the script from history!
 
@@ -92,7 +92,7 @@ In addition to the changes you would expect to support Tournaments and Peer s e
         - "Generate Legacy Event Ids" - we've changed how event ids work this release. If your app already uses our event system, and you aren't yet updating to the new API, you'll want to keep this enabled.
     - For more information on compatibility-related changes, see the API section
 
-- **Core App Info | Peer Publish \[NEW!\]**
+- **Core App Info | Peer Publish [NEW!]**
     - Used to publish your app as a Peer Service.
 
 - **Cloud Code | Scripts**
@@ -109,14 +109,14 @@ In addition to the changes you would expect to support Tournaments and Peer s e
 - **Cloud Code | S2S Explorer**
     - Now only lists scripts that have the S2S permission set to true
 
-- **Integrations | Peer Services \[NEW!\]**
+- **Integrations | Peer Services [NEW!]**
     - Used to connect your app to a Peer Service.
 
 - **Leaderboards | Leaderboard Configs**
     - Enhanced to support _Tournaments_. You create a tournament by attaching a tournament template to a Leaderboard.
     - We also added a new _Days_ rotation - that lets you rotate your leaderboard every <x\> days
 
-- **Leaderboards | Tournament Templates \[NEW!\]**
+- **Leaderboards | Tournament Templates [NEW!]**
     - New screen for creating tournament templates
 
 - **Marketplace | Products**
@@ -129,7 +129,7 @@ In addition to the changes you would expect to support Tournaments and Peer s e
 
 #### Monitoring Section
 
-[![](images/2017-01-19_21-57-14-1024x387.png)](/apidocs/wp-content/uploads/2017/01/2017-01-19_21-57-14.png)
+[![](images/2017-01-19_21-57-14-1024x387.png)](images/2017-01-19_21-57-14.png)
 
 - **Global Monitoring | Leaderboards**
     - The Leaderboards monitoring screens have been enhanced to support tournaments. These features are only shown for leaderboards that have one or more Tournament Templates attached to them:
@@ -140,7 +140,7 @@ In addition to the changes you would expect to support Tournaments and Peer s e
     - Enhanced to support Tournament Jobs for processing tournament results and sending tournament notifications
 
 - **Global Monitoring | Global Monitoring | Recent Logs**
-    - We've modified the UI behaviour of this screen somewhat. Instead of the screen automatically refreshing as you change filter settings (which caused problems when the log was long and lagging) - you now can change multiple settings, and refresh the list at once via the **\[Refresh\]** button
+    - We've modified the UI behaviour of this screen somewhat. Instead of the screen automatically refreshing as you change filter settings (which caused problems when the log was long and lagging) - you now can change multiple settings, and refresh the list at once via the **[Refresh]** button
     - The response logs are now being truncated if they are too large. The new maximum log response that will be stored for viewing is 10Kb.
 
 - **User Monitoring | User Summary**
@@ -177,7 +177,7 @@ In addition to the changes you would expect to support Tournaments and Peer s e
 The following changes/additions have affected the brainCloud API:
 
 - **Client (behaviour change)**
-    - As you may or may not know, the brainCloud client libraries automatically package multiple server requests \[sent within a short period of time\] into _bundles_ to be processed at the server. This both reduces network traffic and minimizes server utilization. Up until brainCloud 3.2, the client libraries were statically configured to allow up to 50 messages in a bundle \[a crazy high number in hind-sight!\]
+    - As you may or may not know, the brainCloud client libraries automatically package multiple server requests [sent within a short period of time] into _bundles_ to be processed at the server. This both reduces network traffic and minimizes server utilization. Up until brainCloud 3.2, the client libraries were statically configured to allow up to 50 messages in a bundle [a crazy high number in hind-sight!]
     - In general this approach works very well - and to be fair - the average bundle size is probably 2-3 messages for the average app.
     - However - we've had a few instances where client applications get into endless loops - where the same message is being stuffed into the bundles over-and-over. In those cases, sending 50 messages at a time - especially if those messages are something heavy like leaderboard requests - can generate an unsettling amount of server load!!! :)
     - As of 3.2 and moving forward, this limit is now controlled by the server, and enforced by the 3.2 client libraries. We will initially be setting the limit to 10, but we may notch it down a bit more if
@@ -200,16 +200,16 @@ The following changes/additions have affected the brainCloud API:
     - _About Bridges_ - when you run a script, at runtime it gets associated with one of three (3) bridges. Scripts called from the client API get a _Client Bridge_ - which is associated with a user session (and has access to their profile, etc). Scripts called from S2S, or from scheduled jobs and webhooks, get the _Server Bridge (which doesn't have an associated user session)_. And scripts run in a peer app get the new _Peer Bridge_, which can access both a client session and potentially a peer session (if the peer app has profiles).
     - _Bridge Refactoring_ - we have refactored our bridges a bit to make the interfaces between them the same. So now, if you try to access a method like getProfileId() that only makes sense in the client context, instead of getting a method-not-found error you'll receive null instead.
     - _New Convenience Methods_ - we've added some new methods to make writing scripts simpler. Some of the more useful methods include (methods with \* indicate client context only):
-        - [callScript()](/apidocs/apiref/?csharp#cc-bridge-callscript) - a simpler method for calling another script from within a script
-        - [getAppId()](/apidocs/apiref/?csharp#cc-bridge-getappid) - a method to get the appId of your app (useful in certain situations)
-        - [getClientAppId()](/apidocs/apiref/?csharp#cc-bridge-getclientappid) - useful in peer scripts to get the app id of the calling app
-        - [getGlobalProperty()](/apidocs/apiref/?csharp#cc-bridge-getglobalproperty) \- used to retrieve one of the global properties that you've defined in **Design | Custom Config | Global Properties**. _**No more hard-coding magic values in scripts!**_
-        - [getEmail()](/apidocs/apiref/?csharp#cc-bridge-getemail)\* - get the email of the user
-        - [getName()](/apidocs/apiref/?csharp#cc-bridge-getname)\* - get the name of the user
-        - [getProfileId()](/apidocs/apiref/?csharp#cc-bridge-getprofileid)\* - get the profileId of the user
-        - [isClientBridge()](/apidocs/apiref/?csharp#cc-bridge-isclientbridge) - returns true if the bridge is a client bridge
-        - [isPeerBridge()](/apidocs/apiref/?csharp#cc-bridge-ispeerbridge) - returns true if the bridge is a peer bridge
-        - [isServerBridge()](/apidocs/apiref/?csharp#cc-bridge-isserverbridge) - returns true if the bridge is a server bridge
+        - [callScript()](/api/cc/bridge/callscript) - a simpler method for calling another script from within a script
+        - [getAppId()](/api/cc/bridge/getappid) - a method to get the appId of your app (useful in certain situations)
+        - [getClientAppId()](/api/cc/bridge/getappid) - useful in peer scripts to get the app id of the calling app
+        - [getGlobalProperty()](/api/cc/bridge/getglobalproperty) \- used to retrieve one of the global properties that you've defined in **Design | Custom Config | Global Properties**. _**No more hard-coding magic values in scripts!**_
+        - [getEmail()](/api/cc/bridge/getemail)\* - get the email of the user
+        - [getName()](/api/cc/bridge/getname)\* - get the name of the user
+        - [getProfileId()](/api/cc/bridge/getprofileid)\* - get the profileId of the user
+        - [isClientBridge()](/api/cc/bridge/isclientbridge) - returns true if the bridge is a client bridge
+        - [isPeerBridge()](/api/cc/bridge/ispeerbridge) - returns true if the bridge is a peer bridge
+        - [isServerBridge()](/api/cc/bridge/isserverbridge) - returns true if the bridge is a server bridge
 
  
 
@@ -217,78 +217,78 @@ The following changes/additions have affected the brainCloud API:
     - Working on our the new Tournaments feature gave us an excuse to make some much-needed improvements to our Event System
     - We have made things faster and more reliable - but in doing so we have changed how we handle event ids
     - The new APIs use in evId instead of the old eventId. This id is mostly used when deleting events. All other data about an event remains the same.
-    - There are new versions of [DeleteIncomingEvent()](/apidocs/apiref/?csharp#capi-event-deleteincomingevent) and [UpdateIncomingEventData()](/apidocs/apiref/?csharp#capi-event-updateincomingeventdata).
-    - The old eventId will still be generated (for compatibility purposes) if the "\[x\] Generate Legacy Event Ids" flag is set on the **Design | Core App Info | Advanced Settings** page. That option is enabled by default. The old methods are deprecated, but are still available on the client, and work as long as the compatibility option is enabled.
+    - There are new versions of [DeleteIncomingEvent()](/api/capi/event/deleteincomingevent) and [UpdateIncomingEventData()](/api/capi/event/updateincomingeventdata).
+    - The old eventId will still be generated (for compatibility purposes) if the "[x] Generate Legacy Event Ids" flag is set on the **Design | Core App Info | Advanced Settings** page. That option is enabled by default. The old methods are deprecated, but are still available on the client, and work as long as the compatibility option is enabled.
 
  
 
 - **Friend**
-    - [GetProfileInfoForExternalAuthId()](/apidocs/apiref/?csharp#capi-friend-getprofileinfoforexternalauthid) - Allows you to look up users via a custom authentication type
-    - [GetProfileInfoForCredential()](/apidocs/apiref/?csharp#capi-friend-getprofileinfoforcredential) - A new version of the now-deprecated GetFriendProfileInfoForExternalId() - a bit better named, and returns an error if the profile cannot be located.
-    - [FindPlayerByUniversalId()](/apidocs/apiref/?csharp#capi-friend-findplayerbyuniversalid) - now returns the users universal id (in field externalId) with the results
+    - [GetProfileInfoForExternalAuthId()](/api/capi/friend/getprofileinfoforexternalauthid) - Allows you to look up users via a custom authentication type
+    - [GetProfileInfoForCredential()](/api/capi/friend/getprofileinfoforcredential) - A new version of the now-deprecated GetFriendProfileInfoForExternalId() - a bit better named, and returns an error if the profile cannot be located.
+    - [FindPlayerByUniversalId()](/api/capi/friend/finduserbyexactuniversalid) - now returns the users universal id (in field externalId) with the results
 
  
 
 - **Global Entity**
     - Background: Global Entities, by default, each have an owner - the user that created them. If the owner of an global entity is deleted, the entity will be deleted as well. This is not desirable in all cases - so we've created some methods to adjust the ownership of global entities.
-        - [MakeSystemEntity()](/apidocs/apiref/?csharp#capi-globalentity-makesystementity) - changes a global entity to "unowned" - and thus it won't be deleted when a user is deleted.
-        - [UpdateEntityOwnerAndACL()](/apidocs/apiref/?csharp#capi-globalentity-updateentityownerandacl) - changes the owner of a global entity to another user.
+        - [MakeSystemEntity()](/api/capi/globalentity/makesystementity) - changes a global entity to "unowned" - and thus it won't be deleted when a user is deleted.
+        - [UpdateEntityOwnerAndACL()](/api/capi/globalentity/updateentityownerandacl) - changes the owner of a global entity to another user.
 
  
 
 - **Identity**
     - Background - we've added some methods to work with Peer Services.
-        - [AttachPeerProfile()](/apidocs/apiref/?csharp#capi-identity-attachpeerprofile) - attach a peer profile to this account (optionally creating it if it doesn't already exist)
-        - [DetachPeer()](/apidocs/apiref/?csharp#capi-identity-detachpeer) - detach the specified peer profile
-        - [GetPeerProfiles()](/apidocs/apiref/?csharp#capi-identity-getpeerprofiles) - returns the peer profile associated with the specified peer code
+        - [AttachPeerProfile()](/api/capi/identity/attachpeerprofile) - attach a peer profile to this account (optionally creating it if it doesn't already exist)
+        - [DetachPeer()](/api/capi/identity/detachpeer) - detach the specified peer profile
+        - [GetPeerProfiles()](/api/capi/identity/getpeerprofiles) - returns the peer profile associated with the specified peer code
 
  
 
 - **Leaderboard**
-    - We've extended [`GetGlobalLeaderboardView()`](/apidocs/apiref/?csharp#capi-leaderboard-getgloballeaderboardview) and [`GetGlobalLeaderboardPage()`](/apidocs/apiref/?csharp#capi-leaderboard-getgloballeaderboardpage) to return the player's profilePic if available. After all, why should social leaderboards have all the fun?
-    - [CreateLeaderboard()](/apidocs/apiref/?csharp#capi-leaderboard-createleaderboard) - has been extended to support the new <days\> rotation
-    - \[New!\] [GetPlayerScore()](/apidocs/apiref/?csharp#capi-leaderboard-getplayerscore) - returns the players score from the leaderboard. Note does _not_ return the players rank.
-    - \[New!\] [GetPlayerScoresFromLeaderboards()](/apidocs/apiref/?csharp#capi-leaderboard-getplayerscoresfromleaderboards) - returns the score for the current player from a set of leaderboards
-    - \[New!\] [RemovePlayerScore()](/apidocs/apiref/?csharp#capi-leaderboard-removeplayerscore) method - replaces ResetScore(), which we are deprecating
+    - We've extended [`GetGlobalLeaderboardView()`](/api/capi/leaderboard/getgloballeaderboardview) and [`GetGlobalLeaderboardPage()`](/api/capi/leaderboard/getgloballeaderboardpage) to return the player's profilePic if available. After all, why should social leaderboards have all the fun?
+    - [CreateLeaderboard()](/api/capi/leaderboard/createleaderboard) - has been extended to support the new <days\> rotation
+    - [New!] [GetPlayerScore()](/api/capi/leaderboard/getplayerscore) - returns the players score from the leaderboard. Note does _not_ return the players rank.
+    - [New!] [GetPlayerScoresFromLeaderboards()](/api/capi/leaderboard/getplayerscoresfromleaderboards) - returns the score for the current player from a set of leaderboards
+    - [New!] [RemovePlayerScore()](/api/capi/leaderboard/removeplayerscore) method - replaces ResetScore(), which we are deprecating
     - 3.2 Client libraries are now updated to use _leaderboard_ service id instead of _socialLeaderboard_. If for some reason your callbacks are triggering off of the _socialLeaderboard_ service id, you'll need to make adjustments.
     - _**New restriction:**_ We are now limiting the maximum number of leaderboard entries that can be requested in a single page using GetGlobalLeaderboardPage(). If your request exceeds the limit we just adjust it within the limits (beginning from the lower index). The new immediate limit will be 100 entries, but we plan to further reduce that to 50 entries beginning February 15th. _This constant is tweakable per app so contact us if you need us to temporarily adjust that for you._
-    - _**API Change - Leaderboard Size:**_ We are removing the <getLeaderboardSize\> field from [GetGlobalLeaderboardPage()](/apidocs/apiref/?csharp#capi-leaderboard-getgloballeaderboardpage). Unfortunately it is an expensive operation that many clients set to true, but often were not using (and certainly doesn't need to be individually retrieved per page). We've replaced this operation with a separate calls, [GetGlobalLeaderboardEntryCount()](/apidocs/apiref/?csharp#capi-leaderboard-getgloballeaderboardentrycount) and [GetGlobalLeaderboardEntryCountByVersion()](/apidocs/apiref/?csharp#capi-leaderboard-getgloballeaderboardentrycountbyversion). _**Compatibility: The old API will continue to work for earlier client libraries. The change is effective starting in client library 3.2 and greater.**_
+    - _**API Change - Leaderboard Size:**_ We are removing the <getLeaderboardSize\> field from [GetGlobalLeaderboardPage()](/api/capi/leaderboard/getgloballeaderboardpage). Unfortunately it is an expensive operation that many clients set to true, but often were not using (and certainly doesn't need to be individually retrieved per page). We've replaced this operation with a separate calls, [GetGlobalLeaderboardEntryCount()](/api/capi/leaderboard/getgloballeaderboardentrycount) and [GetGlobalLeaderboardEntryCountByVersion()](/api/capi/leaderboard/getgloballeaderboardentrycountbyversion). _**Compatibility: The old API will continue to work for earlier client libraries. The change is effective starting in client library 3.2 and greater.**_
 
  
 
 - **Product**
     - Security Improvements - we've made some enhancements to the currency management methods of the Product API
-    - By default, the [AwardCurrency()](/apidocs/apiref/?csharp#capi-product-awardcurrency), [ConsumeCurrency()](/apidocs/apiref/?csharp#capi-product-consumecurrency) and [ResetCurrency()](/apidocs/apiref/?csharp#capi-product-resetcurrency) methods are no longer callable from the client. They are, however, callable from cloud code scripts - which is of course a lot more secure.
-    - Note that this security enforcement is controlled by a new compatibility option, "_\[x\] Allow Currency Calls from Client_" which defaults to "on" for existing apps.
+    - By default, the [AwardCurrency()](/api/capi/product/awardcurrency), [ConsumeCurrency()](/api/capi/product/consumecurrency) and [ResetCurrency()](/api/capi/product/resetcurrency) methods are no longer callable from the client. They are, however, callable from cloud code scripts - which is of course a lot more secure.
+    - Note that this security enforcement is controlled by a new compatibility option, "_[x] Allow Currency Calls from Client_" which defaults to "on" for existing apps.
     - Note - we've also made the AwardParentCurrency() and ConsumeParentCurrency() methods cloud code only - those weren't in use yet so we have removed them from the client directly.
-    - [GetCurrency()](/apidocs/apiref/?csharp#capi-product-getcurrency) now additionally returns parent and peer currencies for convenience
+    - [GetCurrency()](/api/capi/product/getcurrency) now additionally returns parent and peer currencies for convenience
 
  
 
 - **Script**
     - The script service has been enhanced to support Peer Services
-        - [RunPeerScript()](/apidocs/apiref/?csharp#capi-script-runpeerscript) - used to run a peer script
-        - [RunPeerScriptAsync()](/apidocs/apiref/?csharp#capi-script-runpeerscriptasync) - used to run a parent script asynchronously (without waiting for a response)
+        - [RunPeerScript()](/api/capi/script/runpeerscript) - used to run a peer script
+        - [RunPeerScriptAsync()](/api/capi/script/runpeerscriptasync) - used to run a parent script asynchronously (without waiting for a response)
 
  
 
 - **S2S Script Proxy**
-    - We've added the [ScheduleCloudScript()](/apidocs/apiref/?csharp#s2s-script-schedulecloudscript) method to the proxy, so that you no longer need to create a user session to schedule a script
+    - We've added the [ScheduleCloudScript()](/api/s2s/script/schedulecloudscript) method to the proxy, so that you no longer need to create a user session to schedule a script
 
  
 
-- **Tournament Service \[NEW!\]**
+- **Tournament Service [NEW!]**
     - Although Tournaments leverage our Leaderboard infrastructure, they add a whole new API for most operations (except for viewing leaderboard results).
     - A quick summary of the new methods:
-        - [`GetTournamentStatus()`](/apidocs/apiref/?csharp#capi-tournament-gettournamentstatus) - gets the player's status in the specified tournament leaderboard. Essentially tells you whether the player is enrolled or not, along with information about the tournament.
-        - [`JoinTournament()`](/apidocs/apiref/?csharp#capi-tournament-jointournament) - join a tournament on the specified leaderboard
-        - [`LeaveTournament()`](/apidocs/apiref/?csharp#capi-tournament-leavetournament) - leave a tournament
-        - [`PostTournamentScore()`](/apidocs/apiref/?csharp#capi-tournament-posttournamentscore) - post a score to the tournament. Note that you must have previously joined it.
-        - [`PostTournamentScoreWithResults()`](/apidocs/apiref/?csharp#capi-tournament-posttournamentscorewithresults) - post a score to the tournament, and notify any displaced players if a bump them down a notch in the rankings. Note - this is a more expensive API call that has to perform a few leaderboard sorts to accomplish its features. Because of that, we charge 1 Bulk API call in addition when called. But we return the updated leaderboard results though - saving you one API call in return - so it all evens out! :)
-        - [`ViewCurrentReward()`](/apidocs/apiref/?csharp#capi-tournament-viewcurrentreward) - used to retrieve what a player might earn if they maintain this rank in the tournament. Note that this value is approximate, and doesn't take ties into account. So the player will get that reward or better!
-        - [`ViewReward()`](/apidocs/apiref/?csharp#capi-tournament-viewreward) - used to retrieve what a player actually one in a completed tournament.
-        - [`ClaimTournamentReward()`](/apidocs/apiref/?csharp#capi-tournament-claimtournamentreward) - claim the player's winnings! Automatically adjusts the player's balances, and returns the prize data that the player won.
-    - For more information, see the [Tournament section](/apidocs/apiref/?csharp#capi-tournament) of the API Reference.
+        - [`GetTournamentStatus()`](/api/capi/tournament/gettournamentstatus) - gets the player's status in the specified tournament leaderboard. Essentially tells you whether the player is enrolled or not, along with information about the tournament.
+        - [`JoinTournament()`](/api/capi/tournament/jointournament) - join a tournament on the specified leaderboard
+        - [`LeaveTournament()`](/api/capi/tournament/leavetournament) - leave a tournament
+        - [`PostTournamentScore()`](/api/capi/tournament/posttournamentscoreutc) - post a score to the tournament. Note that you must have previously joined it.
+        - [`PostTournamentScoreWithResults()`](/api/capi/tournament/posttournamentscorewithresultsutc) - post a score to the tournament, and notify any displaced players if a bump them down a notch in the rankings. Note - this is a more expensive API call that has to perform a few leaderboard sorts to accomplish its features. Because of that, we charge 1 Bulk API call in addition when called. But we return the updated leaderboard results though - saving you one API call in return - so it all evens out! :)
+        - [`ViewCurrentReward()`](/api/capi/tournament/viewcurrentreward) - used to retrieve what a player might earn if they maintain this rank in the tournament. Note that this value is approximate, and doesn't take ties into account. So the player will get that reward or better!
+        - [`ViewReward()`](/api/capi/tournament/viewreward) - used to retrieve what a player actually one in a completed tournament.
+        - [`ClaimTournamentReward()`](/api/capi/tournament/claimtournamentreward) - claim the player's winnings! Automatically adjusts the player's balances, and returns the prize data that the player won.
+    - For more information, see the [Tournament section](/api/capi/tournament) of the API Reference.
 
  
 

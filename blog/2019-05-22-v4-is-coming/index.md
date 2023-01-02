@@ -22,7 +22,7 @@ New & Updated features include:
 - RTT-enhanced Async Matches
 - And more!
 
-In addition, our new updated **Billing Plans** will go live with this update as well. More info [here](https://getbraincloud.com/apidocs/braincloud-4-billing-plans/)!
+In addition, our new updated **Billing Plans** will go live with this update as well. More info [here](/blog/2019/05/18/braincloud-4-billing-plans/)!
 
 **Part 2 - Client Updates, New Examples and Sites**
 

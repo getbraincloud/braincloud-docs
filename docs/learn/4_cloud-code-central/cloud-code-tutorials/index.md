@@ -9,7 +9,7 @@ The following pages will help you to get up-and-running writing your first Cloud
 
 Cloud Code Tutorials:
 
-- [Background](/learn/cloud-code-central/cloud-code-tutorials/cloud-code-tutorial-background/) \- General overview of how Cloud Code works
+- [Background](/learn/cloud-code-central/cloud-code-tutorials/cloud-code-tutorial-background/) - General overview of how Cloud Code works
 - [Tutorial 1](/learn/cloud-code-central/cloud-code-tutorials/cloud-code-tutorial1-your-first-script/) - Your First Script
 - [Tutorial 2](/learn/cloud-code-central/cloud-code-tutorials/cloud-code-tutorial2-making-api-calls/) - Making API Calls
 - [Tutorial 3](/learn/cloud-code-central/cloud-code-tutorials/cloud-code-tutorial3-working-with-entities/) - Working with Global and User Entities

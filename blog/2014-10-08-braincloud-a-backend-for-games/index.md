@@ -27,7 +27,7 @@ We realized that there had to be a better way. A way to design a system that cou
 
 ## Presenting brainCloud - a Backend for Gaming
 
-[![braincloud_a_backend_platforms](images/braincloud_a_backend_platforms.png)](/apidocs/wp-content/uploads/2016/09/braincloud_a_backend_platforms.png)
+[![braincloud_a_backend_platforms](images/braincloud_a_backend_platforms.png)](images/braincloud_a_backend_platforms.png)
 
 And so, we’re pleased to present brainCloud - the result of three years of development, countless years of experience in the industry, and all our best thinking. We call it a “Backend in a Box” - and it’s so much more than the competing solutions out there.
 
@@ -45,4 +45,4 @@ I look forward to taking a deeper dive into brainCloud with you in the coming we
 
 For more information [download our datasheet](http://hub.getbraincloud.com/backend-as-a-service), or better yet...
 
-\[otw\_shortcode\_button href="https://portal.braincloudservers.com/signup" size="large" icon\_position="centre" shape="radius"\]Sign Up For Free\[/otw\_shortcode\_button\]
+[otw\_shortcode\_button href="https://portal.braincloudservers.com/signup" size="large" icon\_position="centre" shape="radius"]Sign Up For Free[/otw\_shortcode\_button]

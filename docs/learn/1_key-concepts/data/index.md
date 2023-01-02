@@ -9,10 +9,10 @@ brainCloud provides a very flexible set of APIs for storing and retrieving the d
 
 These APIs are organized by scope:
 
-- **User (Player) Scope** - the data stored and retrieved using these APIs are local to a single user\* of your application.
+- **User (Player) Scope** - the data stored and retrieved using these APIs are local to a single user* of your application.
 - **Global (App) Scope** - the data stored and retrieved using these APIs are accessible to all users of the application
 
-\* Note, as a special case, the **Shared Data APIs** allow users to access the data of other users. Example uses are multiplayer in games, shared document or list access, etc.
+* Note, as a special case, the **Shared Data APIs** allow users to access the data of other users. Example uses are multiplayer in games, shared document or list access, etc.
 
 Within each scope, the data APIs are organized according to the type of data to be managed.
 

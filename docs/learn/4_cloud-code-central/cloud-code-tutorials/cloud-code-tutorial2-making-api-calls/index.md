@@ -20,7 +20,7 @@ _Note that for this example we'll use the dynamic leaderboard calls so that we d
 
 We'll enter the script following the same steps as the last tutorial.
 
-First of all, create the script by going to **Design | Cloud Code | Script**, hitting the **\[+\]**, setting _Script Name_ to **"Tut2\_WriteToLeaderboards"**, ensuring _Client Callable_ is **TRUE**, and entering the following for the _Test Parameters_:
+First of all, create the script by going to **Design | Cloud Code | Script**, hitting the **[+]**, setting _Script Name_ to **"Tut2_WriteToLeaderboards"**, ensuring _Client Callable_ is **TRUE**, and entering the following for the _Test Parameters_:
 
 Test Parameters
 ```js
@@ -44,7 +44,7 @@ var leaderboardService = bridge.getLeaderboardServiceProxy();
 
 // Prepare the leaderboard paramaters. These are only used when creating the 
 // leaderboard (which happens the first time a score is posted to it)
-var leaderboardType = "HIGH\_VALUE";
+var leaderboardType = "HIGH_VALUE";
 var rotationType = "NEVER";
 var rotationReset = new Date("2016-01-01");  // Unused because rotationType is NEVER
 var retainedCount = 1; // Just keep the current leaderboard
@@ -79,12 +79,12 @@ if (scoreResult.status == "200") {
     
 }
 
-results\["leaderboardsWritten"\] = leaderboardsWritten;
+results["leaderboardsWritten"] = leaderboardsWritten;
 results;
 ```
 The important things to note from this example:
 
-- **Before you can make an API call, you must request the appropriate _service proxy_ from the bridge.**  Note that there are separate bridges for [Client API](/api/cc/bridge) and [S2S API](/api/s2s/bridge) calls - consult the appropriate one for the available proxies.
+- **Before you can make an API call, you must request the appropriate _service proxy_ from the bridge.**  Note that there are separate bridges for [Client API](/api/cc/bridge) and [S2S API](/api/s2s/) calls - consult the appropriate one for the available proxies.
 - **You then invoke the API call upon the _service proxy_ itself.**
 
 * * *
@@ -115,8 +115,8 @@ For fun, check out the leaderboards from our Monitoring section. Go to **Monito
 
 The following code would call the script from Unity:
 ```js
-string scriptName = "Tut2\_WriteToLeaderboards";
-string jsonScriptData = "{ \\"score\\": 100, \\"kills\\": 10 }";
+string scriptName = "Tut2_WriteToLeaderboards";
+string jsonScriptData = "{ \"score\": 100, \"kills\": 10 }";
 SuccessCallback successCallback = (response, cbObject) =>
 {
     Debug.Log(string.Format("Success | {0}", response));

@@ -48,7 +48,7 @@ Characteristics of arcade-style leaderboards:
 
 brainCloud adds support for the new **Facebook Limited Login** mode – which allows apps to utilize a Facebook Login while adhering to new Apple guidelines (and user preferences) that prohibit sharing of tracking data with 3rd parties.
 
-For more information on this feature, see the blog post [here](https://getbraincloud.com/apidocs/apple-ios-14-5-privacy-facebook-limited-login-mode/).
+For more information on this feature, see the blog post [here](/blog/2021/03/11/apple-ios-14-5-privacy-facebook-limited-login-mode/).
 
 ### Steam and Playstation Friend Support
 
@@ -67,7 +67,7 @@ brainCloud has a new-and-improved Unity Plug-in. Redesigned and re-implemented f
 - Can now enable/disable logging from the Plug-in without code changes
 - Refer to Github Documentation here: [https://github.com/getbraincloud/braincloud-csharp/tree/master](https://github.com/getbraincloud/braincloud-csharp/tree/master) for details on implementing the new plugin into your projects 
 
-### \[Beta\] Builder CLI
+### [Beta] Builder CLI
 
 brainCloud 4.7 marks the _beta release_ of our Builder CLI tool (and the underlying Builder API). 
 

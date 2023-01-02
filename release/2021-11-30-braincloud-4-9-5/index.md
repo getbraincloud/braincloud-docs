@@ -55,7 +55,7 @@ The following changes/additions have affected the brainCloud API:
 
 - **CustomEntity service**
     - Added a `_serverTime` field to the `ReadEntity()`, `ReadSingleton()`, `SysReadEntity()`, `GetEntityPage()`, `GetEntityPageOffset()`, and `GetRandomEntitiesMatching()` responses
-- **\[User\] Entity service**
+- **[User] Entity service**
     - Added a `_serverTime` field to the `GetEntitiesByType()`, `GetEntity()`, `GetList()`, `GetPage()`, `GetPageOffset()`, `GetSharedEntitiesForProfileId()`, `GetSharedEntitiesListForProfileId()`, `GetSharedEntityForProfileId()`, `GetSingleton()` responses
 - **GlobalEntity service**
     - Added a `_serverTime` field to the `GetList()`, `GetListByIndexedId()`, `GetPage()`, `GetPageOffset()`, `GetRandomEntitiesMatching()`, `GetSystemEntityList()`, `GetSystemEntityPage()`, `GetSystemEntityPageOffset()`, `ReadEntity()`, `ReadSystemEntity()` responses

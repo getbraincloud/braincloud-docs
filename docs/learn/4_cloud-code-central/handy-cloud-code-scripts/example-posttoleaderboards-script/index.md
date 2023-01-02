@@ -25,7 +25,7 @@ The script takes the following parameters:
 ```js
 // Example Parameters
 {
-   "leaderboards": \["regular", "alltime"\],
+   "leaderboards": ["regular", "alltime"],
    "score": 1000,
    "extras": {}
 }

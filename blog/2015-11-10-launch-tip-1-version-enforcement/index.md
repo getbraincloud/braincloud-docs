@@ -21,7 +21,7 @@ Sure - the app stores support automatic software updates - but even so, **it c
 
 This is why it is essential to implement **Version Enforcement** _before_ you go live.
 
-[![launch_tip__1__version_enforcement](images/Launch_Tip__1__Version_Enforcement.png)](/apidocs/wp-content/uploads/2016/09/Launch_Tip__1__Version_Enforcement.png)
+[![launch_tip__1__version_enforcement](images/Launch_Tip__1__Version_Enforcement.png)](images/Launch_Tip__1__Version_Enforcement.png)
 
 The good news is that brainCloud makes it easy.
 
@@ -42,7 +42,7 @@ These parameters aren’t just informational - brainCloud’s _**Version Enforce
 
 Version Enforcement is configured via the brainCloud Portal, and works in collaboration with integration code that you add to your app.
 
-[![bc_version_app](images/bc_version_app.png)](/apidocs/wp-content/uploads/2016/09/bc_version_app.png)
+[![bc_version_app](images/bc_version_app.png)](images/bc_version_app.png)
 
  
 
@@ -64,9 +64,9 @@ Integrating Version Enforcement into your app is very simple.
 
 Follow these steps:
 
-1. **Set the _app version_ in your client app.** In most of the brainCloud client libraries, this is done via the [BrainCloudClient.Initialize()](/apidocs/api-modules/client/braincloudclient/#bc-snippets-Initialize) function. In Unity, you can use the **brainCloud Settings** dialog.[![bc_version_unity](images/bc_version_unity.png)](/apidocs/wp-content/uploads/2016/09/bc_version_unity.png)In either case, the version should be a string of format of "X.X" or "X.X.X" - for example, "1.0.0".
+1. **Set the _app version_ in your client app.** In most of the brainCloud client libraries, this is done via the [BrainCloudClient.Initialize()](/api/capi/client/Initialize) function. In Unity, you can use the **brainCloud Settings** dialog.[![bc_version_unity](images/bc_version_unity.png)](images/bc_version_unity.png)In either case, the version should be a string of format of "X.X" or "X.X.X" - for example, "1.0.0".
 2. Go to **Design | Core App Info | Platforms**, and temporarily set the minimum app version to something higher than your current app version.
-3. Enhance the Authentication error handling of your app to catch the out-of-date error response (see the _Version Enhancement_ section of the [Authentication API](/apidocs/api-modules/authentication/braincloudauthentication/) page for details) - and display an appropriate message to the user. _Ideally you should redirect the user to your apps store page so that he/she can trigger the update immediately. The brainCloud portal allows you to datafill the upgrade URL along with the minimum version._
+3. Enhance the Authentication error handling of your app to catch the out-of-date error response (see the _Version Enhancement_ section of the [Authentication API](/api/capi/authentication/) page for details) - and display an appropriate message to the user. _Ideally you should redirect the user to your apps store page so that he/she can trigger the update immediately. The brainCloud portal allows you to datafill the upgrade URL along with the minimum version._
 4. Test to ensure that it works!
 
 That's it. Once this is in place, you will rest easier knowing that if (when) your users find problems in the field, that you'll be able to push fixes to them in no time!

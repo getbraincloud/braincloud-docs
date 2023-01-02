@@ -120,7 +120,7 @@ To validate purchases, brainCloud requires the usage of a **Service Account** in
 
 [![](https://downloads.intercomcdn.com/i/o/279464657/ff18d1a8095f3450418c4040/image.png)](https://downloads.intercomcdn.com/i/o/279464657/ff18d1a8095f3450418c4040/image.png)
 
-- Navigate to the **Home** \->**Credentials**, click \[+ CREATE CREDENTIALS\], select **Service account**
+- Navigate to the **Home** ->**Credentials**, click [+ CREATE CREDENTIALS], select **Service account**
 
 [![](https://downloads.intercomcdn.com/i/o/279464685/b43c8a3ca0b00517d706be58/image.png)](https://downloads.intercomcdn.com/i/o/279464685/b43c8a3ca0b00517d706be58/image.png)
 
@@ -211,7 +211,7 @@ After making a purchase client-side, GooglePlay will return a receipt with an or
 ```js
 @Override
 public void onBillingSetupFinished(BillingResult billingResult) {
-    // \[start querySku\]
+    // [start querySku]
     if (billingResult.getResponseCode() ==  BillingClient.BillingResponseCode.OK) {
         // The BillingClient is ready. You can query purchases here.
         List<String> skuList = new ArrayList<>();
@@ -249,28 +249,28 @@ public void onBillingSetupFinished(BillingResult billingResult) {
                                 Log.i(TAG, "onSkuDetailsResponse: count " + newSkusDetailList.size());
                             }
                             break;
-                        case BillingClient.BillingResponseCode.SERVICE\_DISCONNECTED:
-                        case BillingClient.BillingResponseCode.SERVICE\_UNAVAILABLE:
-                        case BillingClient.BillingResponseCode.BILLING\_UNAVAILABLE:
-                        case BillingClient.BillingResponseCode.ITEM\_UNAVAILABLE:
-                        case BillingClient.BillingResponseCode.DEVELOPER\_ERROR:
+                        case BillingClient.BillingResponseCode.SERVICE_DISCONNECTED:
+                        case BillingClient.BillingResponseCode.SERVICE_UNAVAILABLE:
+                        case BillingClient.BillingResponseCode.BILLING_UNAVAILABLE:
+                        case BillingClient.BillingResponseCode.ITEM_UNAVAILABLE:
+                        case BillingClient.BillingResponseCode.DEVELOPER_ERROR:
                         case BillingClient.BillingResponseCode.ERROR:
                             Log.e(TAG, "onSkuDetailsResponse: " + responseCode + " " + debugMessage);
                             break;
-                        case BillingClient.BillingResponseCode.USER\_CANCELED:
+                        case BillingClient.BillingResponseCode.USER_CANCELED:
                             Log.i(TAG, "onSkuDetailsResponse: " + responseCode + " " + debugMessage);
                             break;
                         // These response codes are not expected.
-                        case BillingClient.BillingResponseCode.FEATURE\_NOT\_SUPPORTED:
-                        case BillingClient.BillingResponseCode.ITEM\_ALREADY\_OWNED:
-                        case BillingClient.BillingResponseCode.ITEM\_NOT\_OWNED:
+                        case BillingClient.BillingResponseCode.FEATURE_NOT_SUPPORTED:
+                        case BillingClient.BillingResponseCode.ITEM_ALREADY_OWNED:
+                        case BillingClient.BillingResponseCode.ITEM_NOT_OWNED:
                         default:
                             Log.wtf(TAG, "onSkuDetailsResponse: " + responseCode + " " + debugMessage);
                     }
                 }
             });
     }
-    // \[Start query purchase\]
+    // [Start query purchase]
     if (!billingClient.isReady()) {
         Log.e(TAG, "queryPurchases: BillingClient is not ready");
     }
@@ -323,14 +323,14 @@ public void onPurchasesUpdated(BillingResult billingResult, List<Purchase> purch
                         e.printStackTrace();
                     }
                     String receiptDataS = receiptData.toString();
-                    //verify purchase from brainCloud                 \_bc.GetWrapper().getAppStoreService().verifyPurchase(storeId, receiptDataS, theCallback);
+                    //verify purchase from brainCloud                 _bc.GetWrapper().getAppStoreService().verifyPurchase(storeId, receiptDataS, theCallback);
                 }
             }
             break;
-        case BillingClient.BillingResponseCode.USER\_CANCELED:
+        case BillingClient.BillingResponseCode.USER_CANCELED:
             Log.i(TAG, "onPurchasesUpdated: User canceled the purchase");
             break;
-        case BillingClient.BillingResponseCode.ITEM\_ALREADY\_OWNED:
+        case BillingClient.BillingResponseCode.ITEM_ALREADY_OWNED:
             Log.i(TAG, "onPurchasesUpdated: The user already owns this item");
             break;
     }
@@ -369,19 +369,19 @@ public class BrainCloudInterface : MonoBehaviour, IStoreListener //needed for un
     string gpSig;
     Dictionary<string, object> gpJsonDict;
     //for purchasing
-    private static IStoreController m\_StoreController;          // The Unity Purchasing system.
-    private static IExtensionProvider m\_StoreExtensionProvider; // The store-specific Purchasing subsystems.
-    public static string kProductIDConsumable = "bc\_test\_orb";
+    private static IStoreController m_StoreController;          // The Unity Purchasing system.
+    private static IExtensionProvider m_StoreExtensionProvider; // The store-specific Purchasing subsystems.
+    public static string kProductIDConsumable = "bc_test_orb";
     // Use this for initialization
     void Start()
     {
         //allow the people who sign in to change profiles. 
-        BCConfig.\_bc.SetAlwaysAllowProfileSwitch(true);
-        BCConfig.\_bc.Client.EnableLogging(true);
+        BCConfig._bc.SetAlwaysAllowProfileSwitch(true);
+        BCConfig._bc.Client.EnableLogging(true);
         //unity's ugly way to look for gameobjects
         status = GameObject.Find("Status").GetComponent<Text>();
         // If we haven't set up the Unity Purchasing reference
-        if (m\_StoreController == null)
+        if (m_StoreController == null)
         {
             // Begin to configure our connection to Purchasing
             InitializePurchasing();
@@ -393,15 +393,15 @@ public class BrainCloudInterface : MonoBehaviour, IStoreListener //needed for un
     }
     public void OnAuthEmail()
     {
-        BCConfig.\_bc.AuthenticateEmailPassword("ryan.daniel.ruth@gmail.com", "password", true, OnSuccess\_AuthenticateEmail, OnError\_AuthenticateEmail);
+        BCConfig._bc.AuthenticateEmailPassword("ryan.daniel.ruth@gmail.com", "password", true, OnSuccess_AuthenticateEmail, OnError_AuthenticateEmail);
     }
-    public void OnSuccess\_AuthenticateEmail(string responseData, object cbObject)
+    public void OnSuccess_AuthenticateEmail(string responseData, object cbObject)
     {
-        statusText = "Logged into braincloud!\\n" + responseData;
+        statusText = "Logged into braincloud!\n" + responseData;
     }
-    public void OnError\_AuthenticateEmail(int statusCode, int reasonCode, string statusMessage, object cbObject)
+    public void OnError_AuthenticateEmail(int statusCode, int reasonCode, string statusMessage, object cbObject)
     {
-        statusText = "Failed to Login to braincloud...\\n" + statusMessage + "\\n" + reasonCode;
+        statusText = "Failed to Login to braincloud...\n" + statusMessage + "\n" + reasonCode;
     }
     //purchasing 
     public void InitializePurchasing()
@@ -425,7 +425,7 @@ public class BrainCloudInterface : MonoBehaviour, IStoreListener //needed for un
     private bool IsInitialized()
     {
         // Only say we are initialized if both the Purchasing references are set.
-        return m\_StoreController != null && m\_StoreExtensionProvider != null;
+        return m_StoreController != null && m_StoreExtensionProvider != null;
     }
     public void OnGooglePurchase()
     {
@@ -437,22 +437,22 @@ public class BrainCloudInterface : MonoBehaviour, IStoreListener //needed for un
     {
         gpJsonDict = (Dictionary<string, object>)MiniJson.JsonDecode(gpJson);
         Dictionary<string, object> receiptData = new Dictionary<string, object>();
-        receiptData.Add("productId", gpJsonDict\["productId"\]);
-        receiptData.Add("orderId", gpJsonDict\["orderId"\]);
-        receiptData.Add("token", gpJsonDict\["purchaseToken"\]);
+        receiptData.Add("productId", gpJsonDict["productId"]);
+        receiptData.Add("orderId", gpJsonDict["orderId"]);
+        receiptData.Add("token", gpJsonDict["purchaseToken"]);
         //Developer payload is not supported
         //Google Play deprecated developer payload and is replacing it with alternatives that are more meaningful and contextual. 
         receiptData.Add("developerPayload", ""); //So pass in empty string for developer payload.
         string receiptDataString = JsonWriter.Serialize(receiptData);
-        BCConfig.\_bc.AppStoreService.VerifyPurchase("googlePlay", receiptDataString, OnSuccess\_VerifyPurchase, OnError\_VerifyPurchase);
+        BCConfig._bc.AppStoreService.VerifyPurchase("googlePlay", receiptDataString, OnSuccess_VerifyPurchase, OnError_VerifyPurchase);
     }
-    public void OnSuccess\_VerifyPurchase(string responseData, object cbObject)
+    public void OnSuccess_VerifyPurchase(string responseData, object cbObject)
     {
-        statusText = "Verified Purchase!\\n" + responseData;
+        statusText = "Verified Purchase!\n" + responseData;
     }
-    public void OnError\_VerifyPurchase(int statusCode, int reasonCode, string statusMessage, object cbObject)
+    public void OnError_VerifyPurchase(int statusCode, int reasonCode, string statusMessage, object cbObject)
     {
-        statusText = "Failed to Verify Purchase...\\n" + statusMessage + "\\n" + reasonCode;
+        statusText = "Failed to Verify Purchase...\n" + statusMessage + "\n" + reasonCode;
     }
     void BuyProductID(string productId)
     {
@@ -461,14 +461,14 @@ public class BrainCloudInterface : MonoBehaviour, IStoreListener //needed for un
         {
             // ... look up the Product reference with the general product identifier and the Purchasing 
             // system's products collection.
-            Product product = m\_StoreController.products.WithID(productId);
+            Product product = m_StoreController.products.WithID(productId);
             // If the look up found a product for this device's store and that product is ready to be sold ... 
             if (product != null && product.availableToPurchase)
             {
                 Debug.Log(string.Format("Purchasing product asychronously: '{0}'", product.definition.id));
                 // ... buy the product. Expect a response either through ProcessPurchase or OnPurchaseFailed 
                 // asynchronously.
-                m\_StoreController.InitiatePurchase(product);
+                m_StoreController.InitiatePurchase(product);
             }
             // Otherwise ...
             else
@@ -487,12 +487,12 @@ public class BrainCloudInterface : MonoBehaviour, IStoreListener //needed for un
     }
     public void OnShowGoogleStats()
     {
-        statusText = "STORE: " + store +"\\nPAYLOAD: " + payload + "\\nJSON: " + gpJson + "\\nSIGNATURE: " + gpSig;
+        statusText = "STORE: " + store +"\nPAYLOAD: " + payload + "\nJSON: " + gpJson + "\nSIGNATURE: " + gpSig;
     }
     public void OnShowJSONStats()
     {
         gpJsonDict = (Dictionary<string, object>)MiniJson.JsonDecode(gpJson);
-        statusText = "PRODUCTID: " + gpJsonDict\["productId"\] + "\\n:ORDERID " + gpJsonDict\["orderId"\] + "\\nTOKEN: " + gpJsonDict\["purchaseToken"\];
+        statusText = "PRODUCTID: " + gpJsonDict["productId"] + "\n:ORDERID " + gpJsonDict["orderId"] + "\nTOKEN: " + gpJsonDict["purchaseToken"];
     }
     //  
     // --- IStoreListener callbacks
@@ -503,9 +503,9 @@ public class BrainCloudInterface : MonoBehaviour, IStoreListener //needed for un
         statusText = "OnInitialized: Google Store PASS";
         //Debug.Log("OnInitialized: PASS");
         // Overall Purchasing system, configured with products for this application.
-        m\_StoreController = controller;
+        m_StoreController = controller;
         // Store specific subsystem, for accessing device-specific store features.
-        m\_StoreExtensionProvider = extensions;
+        m_StoreExtensionProvider = extensions;
     }
     public void OnInitializeFailed(InitializationFailureReason error)
     {
@@ -528,11 +528,11 @@ public class BrainCloudInterface : MonoBehaviour, IStoreListener //needed for un
             statusText = "ProcessPurchase: FAIL. Unrecognized product: " + args.purchasedProduct.definition.id;
         }
         wrapper = (Dictionary<string, object>)MiniJson.JsonDecode(args.purchasedProduct.receipt);
-        store = (string)wrapper\["Store"\];
-        payload = (string)wrapper\["Payload"\];
+        store = (string)wrapper["Store"];
+        payload = (string)wrapper["Payload"];
         gpDetails = (Dictionary<string, object>)MiniJson.JsonDecode(payload);
-        gpJson = (string)gpDetails\["json"\];
-        gpSig = (string)gpDetails\["signature"\];
+        gpJson = (string)gpDetails["json"];
+        gpSig = (string)gpDetails["signature"];
         // Return a flag indicating whether this product has completely been received, or if the application needs 
         // to be reminded of this purchase at next app launch. Use PurchaseProcessingResult.Pending when still 
         // saving purchased products to the cloud, and when that save is delayed. 

@@ -25,7 +25,7 @@ For the full details on this week's update, keep reading! :)
 - **Show/hide Game Features** - To make things less confusing for the folks building non-game apps on top of brainCloud, we've added an ability to hide the gaming features (such as Leaderboards, Achievements, Multiplayer, etc.)
 - **Create app flow** - improved flow for creating new apps, with more consistent usage of terms throughout the portal.
 - **Consistent terms** - more consistent usage of terms throughout the portal.
-- **End-User Forgotten Password** - You can now trigger the _Forgotten Password_ feature for any end user that is using E-mail authentication.  Just click the \[envelope\] icon next to any Email-authentication type credential at the bottom of the **User Summary** page.
+- **End-User Forgotten Password** - You can now trigger the _Forgotten Password_ feature for any end user that is using E-mail authentication.  Just click the [envelope] icon next to any Email-authentication type credential at the bottom of the **User Summary** page.
 - The **Versioning** page has been renamed to **Platforms**
 
 ### API Changes / Additions

@@ -43,7 +43,7 @@ Achievements can be awarded directly using the [AwardAchievements()](/api/capi/g
 
 Milestones are used to define conditions under which rewards are to be delivered.  Milestones must first be unlocked before they can be completed and then awarded.
 
-[![brainCloud Milestone](images/brainCloud-Milestone-1024x798.png)](images/brainCloud-Milestone.png)
+[![brainCloud Milestone](images/brainCloud-Milestone-1024x798.png)](images/brainCloud-Milestone-1024x798.png)
 
 * * *
 
@@ -51,7 +51,7 @@ Milestones are used to define conditions under which rewards are to be delivered
 
 Quests are essentially compound Milestones. The completion status of the Quest is derived from the completion status of the Milestones (Tasks) that it is composed of.
 
-[![brainCloud Quest](images/brainCloud-Quest-174x300.png)](images/brainCloud-Quest.png)
+[![brainCloud Quest](images/brainCloud-Quest-174x300.png)](images/brainCloud-Quest-174x300.png)
 
 * * *
 
@@ -60,3 +60,5 @@ Quests are essentially compound Milestones. The completion status of the Quest 
 Stats Events are essentially Stats Macros.  The Macro is defined on the server and triggered by id from the client.
 
 For the same flexibility, but controlled directly from the client, try using the [ProcessStatistics()](/api/capi/playerstats/processstatistics) API.
+
+<DocCardList />

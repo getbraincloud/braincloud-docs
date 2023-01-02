@@ -16,7 +16,7 @@ brainCloud 2FA uses [Authy](https://www.authy.com), which gives the flexibility
 - Log into the brainCloud Portal
 - Choose the **Edit Profile** option from the top-right **Power** menu
 - Go to the **Two-factor** tab
-- Click the green **\[Click to enable 2FA\]** button
+- Click the green **[Click to enable 2FA]** button
 - Follow the prompts!
 
 [![brainCloud](images/brainCloud_Dashboard_tfa2.jpg)](images/brainCloud_Dashboard_tfa2.jpg)
@@ -32,21 +32,21 @@ Logging in with 2FA is pretty simple:
 - Log into the brainCloud Portal with **email + password** just like normal
 - If it's your first time using this computer (or it's been more than 30 days since your last verification), you'll be prompted to enter a verification code (i.e. one-time password)
 - Check your phone. You may have been sent the code via SMS, or you may have received a push notification to the Authy app if you have it installed. Even if you didn't receive the push notification, you can just launch the authy app directly.
-- Enter the code into the dialog and hit **\[Verify\]**. If you're on a public computer, be sure to un-check the "remember this computer" option during verification. Otherwise, leave it checked so that you don't have to do this for another 30 days!
+- Enter the code into the dialog and hit **[Verify]**. If you're on a public computer, be sure to un-check the "remember this computer" option during verification. Otherwise, leave it checked so that you don't have to do this for another 30 days!
 - Voila, you're in.
 
 ## Disabling 2FA
 
-If you decide that you no longer want to use 2FA for your account, you can click the red **\[Unlink\]** button from the Edit Profile screen.
+If you decide that you no longer want to use 2FA for your account, you can click the red **[Unlink]** button from the Edit Profile screen.
 
 [![brainCloud](images/brainCloud_Dashboard_tfa4.jpg)](images/brainCloud_Dashboard_tfa4.jpg)
 
 ## Frequently Asked Questions
 
-1. **Will I need my phone to log in \*every time\*?**  
+1. **Will I need my phone to log in *every time*?**  
     No. You can tell brainCloud to remember the computer that you are logging in from. It will remember it for 30 days, and thus not ask you for the verification code during that time.
 2. **Is the Authy app like Google Authenticator? Can I use that instead?**  
-    The Authy app \*is\* a lot like Google Authenticator, and you can even configure it to perform authentication for Google Authenticator-based sites. But the inverse is not true. You cannot use Google Authenticator for sites that use Authy (i.e. brainCloud).
+    The Authy app *is* a lot like Google Authenticator, and you can even configure it to perform authentication for Google Authenticator-based sites. But the inverse is not true. You cannot use Google Authenticator for sites that use Authy (i.e. brainCloud).
 3. **Why did brainCloud choose Authy?**  
     We choose Authy for the richness of features (app, text or voice authentication, plus one-touch, which we'll be adding soon), ease of integration, and better management features for our users (i.e. you can switch phones, use multiple devices, etc. without issue using Authy).
 4. **I don't have a cellphone. Can I still use 2FA?**  

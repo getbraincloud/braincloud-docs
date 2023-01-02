@@ -29,16 +29,16 @@ Example `algo` json object for geo matchmaking:
 
 { 
   "strategy":"compound",
-  "algos":\[ 
+  "algos":[ 
     { "criteria":"ping", "strategy":"absolute", "alignment":"absolute" },
     { "criteria":"rating", "strategy":"ranged-percent", "alignment":"center" }
-  \],
-  "compound-ranges":\[ 
-    \[ 40, \[ 10, 20.5, 80 \] \],
-    \[ 70, \[ 20, 20.5, 80, 160 \] \],
-    \[ 140, \[ 80, 160 \] \],
-    \[ 210, \[ 80, 160 \] \]
-  \]
+  ],
+  "compound-ranges":[ 
+    [ 40, [ 10, 20.5, 80 ] ],
+    [ 70, [ 20, 20.5, 80, 160 ] ],
+    [ 140, [ 80, 160 ] ],
+    [ 210, [ 80, 160 ] ]
+  ]
 }
 
 ### Custom Entity (Beta) Migration

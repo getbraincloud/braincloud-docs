@@ -13,11 +13,11 @@ In this tutorial, we will take you through the process of creating a simple S2S 
 
 [![](images/S2S-Start-1.png)](images/S2S-Start-1.png)
 
-- Click the **\[+\]** Plus icon to start adding a new Script
+- Click the **[+]** Plus icon to start adding a new Script
 
 [![](images/S2S-AddScript-1.png)](images/S2S-AddScript-1.png)
 
-- Give the Script a _name_ and _description_. Also, ensure the _\[x\] S2S_ checkbox is checked.  
+- Give the Script a _name_ and _description_. Also, ensure the _[x] S2S_ checkbox is checked.  
     _Note: Client callable is optional, but it's a good idea to disable it if the script will never be used client side._
 
 - Create some Test Parameters to use. For this tutorial, enter:  
@@ -37,15 +37,15 @@ _Note: The last line is always what will be returned in the response._
 
 [![](images/S2S-Editor-1.png)](images/S2S-Editor-1.png)
 
-- The last tab is the **Run** tab. Here, you can do a **\[Quick Authenticate\]**, and **\[Run\]** your new script to view the return!  
-    (**\[Save\]** and **\[Close\]** when you are done editing and testing your script)
+- The last tab is the **Run** tab. Here, you can do a **[Quick Authenticate]**, and **[Run]** your new script to view the return!  
+    (**[Save]** and **[Close]** when you are done editing and testing your script)
 
 [![](images/S2S-RunScript.png)](images/S2S-RunScript.png)
 
 ### Step 2 - Configure an S2S Server to call it from
 
-- Now go to the brainCloud Portal and open the **Design | Cloud Code | My Servers** page, and click **\[New Server\]**
-- Enter a name for your server, such as APP\_SERVER, and click save. This will generate a secret for your server  
+- Now go to the brainCloud Portal and open the **Design | Cloud Code | My Servers** page, and click **[New Server]**
+- Enter a name for your server, such as APP_SERVER, and click save. This will generate a secret for your server  
     Note: You can also limit the IP ranges for your server. This is highly recommended for production deployments.
 
 _Your script and server should now be visible in the S2S Explorer._
@@ -65,7 +65,7 @@ _Your script and server should now be visible in the S2S Explorer._
 ```js
 {
     "gameId": "11549",
-    "serverName": "APP\_SERVER",
+    "serverName": "APP_SERVER",
     "gameSecret": "97e1d95d-69f4-472e-904f-39f372777aee",
     "service": "script",
     "operation": "RUN",
@@ -80,7 +80,7 @@ _Your script and server should now be visible in the S2S Explorer._
 ```
 [![](images/S2S-PostMan.png)](images/S2S-PostMan.png)
 
-- Hit **\[Send\]**. If you app is properly configured, you should see this response:
+- Hit **[Send]**. If you app is properly configured, you should see this response:
 ```js
 {
     "response": {

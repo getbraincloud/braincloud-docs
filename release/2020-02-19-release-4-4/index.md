@@ -49,7 +49,7 @@ As you know, as the brainCloud API has grown (over 400+ API calls and counting!)
 
 We put the devs on it - and they were able to optimize it for a huge performance improvement. Now instead of taking 60+ seconds to load - it opens in 5-10 seconds from cold - even faster if you have it cached.
 
-Check it out - you’ll find it in the usual location [here](https://getbraincloud.com/apidocs/apiref). 
+Check it out - you’ll find it in the usual location [here](/api/introduction). 
 
 ### Misc
 

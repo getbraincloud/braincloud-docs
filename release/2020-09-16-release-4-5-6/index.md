@@ -76,7 +76,7 @@ The executive summary of the recommended approach is:
     - Configure the **V2 Server** definitions to use **Relay Protocol v2**
     - Configure the **V2 Lobby** definitions to use the new **V2 Server** definitions
 - Modify your Client App to use the new **V2 Lobby** definitions, as well as the appropriate **4.5.6 Client Library**
-- Optionally (but recommended), ensure that your Client App reacts to the _Minimum Version_ setting from the **Design | Core App Info | Platform** page. This will allow you to “force” your users to upgrade to the new client when you are ready (see [Version Enforcement](https://getbraincloud.com/apidocs/launch-tip-1-version-enforcement/))
+- Optionally (but recommended), ensure that your Client App reacts to the _Minimum Version_ setting from the **Design | Core App Info | Platform** page. This will allow you to “force” your users to upgrade to the new client when you are ready (see [Version Enforcement](/blog/2015/11/10/launch-tip-1-version-enforcement/))
 
 ### Step-by-step
 
@@ -84,7 +84,7 @@ This section describes step-by-step how to modify your app to implement the reco
 
 #### Design Portal
 
-1. Go to **Design | Cloud Code | My Servers** - and clone the Relay Server entries to create new “V2” versions. A new **\[Clone Server\]** button has been added to assist with this. After cloning each entry, be sure to _Edit_ it, and change the _Relay Protocol_ to **v2**!
+1. Go to **Design | Cloud Code | My Servers** - and clone the Relay Server entries to create new “V2” versions. A new **[Clone Server]** button has been added to assist with this. After cloning each entry, be sure to _Edit_ it, and change the _Relay Protocol_ to **v2**!
 2. Go to **Design | Multiplayer | Lobbies** - and clone the Lobby entries to create new “V2” versions. A new **Clone** option has been added to the **Action** menu to assist with this. After cloning each entry, be sure to **Edit** it, and change it to refer to one of the _V2 Servers_ that you created in Step 1.
 
 #### App Code
@@ -94,7 +94,7 @@ This section describes step-by-step how to modify your app to implement the reco
 3. **Rebuild** and **test** your client app to ensure everything works.
 4. _(Optional - but highly recommended)_ If you haven’t already, enhance your app to pass the app version during the BrainCloudWrapper.Initialize() method, and display a “Client update required” dialog if it receives a 40322 - APP\_VERSION\_NOT\_SUPPORTED error from the server during authentication. This will allow you to force users to upgrade to the new client when you are ready. Note - the required app versions are controlled via the **Design | Core App Info | Platforms** page.
 
-_For more information on implementing_ [_Version Enforcement_](https://getbraincloud.com/apidocs/launch-tip-1-version-enforcement/) _in brainCloud, see the article at the link._
+_For more information on implementing_ [_Version Enforcement_](/blog/2015/11/10/launch-tip-1-version-enforcement/) _in brainCloud, see the article at the link._
 
 #### App Submission & Migration
 
@@ -113,7 +113,7 @@ We have made the following portal changes:
 ### **Design**
 
 - **Cloud Code | My Servers**
-    - Added new **\[Clone Server\]** button to make it easier to duplicate server configurations
+    - Added new **[Clone Server]** button to make it easier to duplicate server configurations
 - **Messaging | Chat**
     - The _Replace Profanity with_ setting now properly defaults to “\*”
 - **Multiplayer | Lobbies**

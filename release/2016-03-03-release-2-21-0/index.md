@@ -13,7 +13,7 @@ Okay, this one got away from us a little bit. The release is absolutely chock-fu
 
 brainCloud now supports assigning permissions to Team Members on an app-by-app basis. The roles available are pre-defined (we don't offer custom roles _yet_), but we've taken considerable care in defining a flexible set of roles based on customer feedback. And of course, you can combine roles to meet your needs.
 
-[![brainCloud Team Member Roles](images/Roles_png.png)](/apidocs/wp-content/uploads/2016/02/Roles_png.png)
+[![brainCloud Team Member Roles](images/Roles_png.png)](images/Roles_png.png)
 
 Roles are assigned via the new **Administration | Permissions** page, which is accessible by Team Administrators. You can view the individual privileges that make up each role via the _Roles_ tab of the page.
 
@@ -35,7 +35,7 @@ As you might expect, brainCloud has seen an uptick in new sign-ups due to the Pa
 
 In an effort to be extra welcoming, we are pleased to roll-out Phase 1 of brainCloud's Parse Migration support - which allows for easy importing of Parse data into our Cloud Data system (as Global Entities). This facility is especially useful for teams that had Parse apps in development, and want to quickly import their data and keep moving forward with a brainCloud-based implementation.
 
-[![Parse to brainCloud](images/BC_TwitterBanner_1500x500_Parsetobc_02-1024x341.png)](/apidocs/wp-content/uploads/2016/03/BC_TwitterBanner_1500x500_Parsetobc_02.png)
+[![Parse to brainCloud](images/BC_TwitterBanner_1500x500_Parsetobc_02-1024x341.png)](images/BC_TwitterBanner_1500x500_Parsetobc_02.png)
 
 This is just the first step of our plan to assist customers migrate their apps from Parse. Stay tuned as we add additional features in the coming weeks, and be sure to fill in our [Parse Migration Survey](https://www.surveymonkey.com/r/W93BKYC) to ensure that your requirements are heard.
 
@@ -45,11 +45,11 @@ This is just the first step of our plan to assist customers migrate their apps 
 
 New, faster, more searchable API documentation? Don't mind if we do!
 
-[![New API Docs](images/BAN_New-API_03.png)](/apidocs/apiref)
+[![New API Docs](images/BAN_New-API_03.png)](/api/introduction)
 
 The new system is in beta, and the examples focus primarily on C# for now - but we think it's already better than the old reference documentation - so we're releasing it early. Going forward, our overview and tutorials will remain under the Docs header, with service and method references in the new system under API.
 
-Let us know what you think! Check out the new docs [here](/apidocs/apiref/)!
+Let us know what you think! Check out the new docs [here](/learn/introduction)!
 
  
 
@@ -76,7 +76,7 @@ The following changes have been made to the Design Portal:
 - **(New) Live Lock banner** - tells you whether you app is live, and allows you to unlock it for editing.
 - **(New) Parse Import** - available from the **Global Monitoring | Global Entity** screen.
 - **(Improved) User Monitor** - we now display the User's Profile picture if they have attached their Facebook identity.
-- **(Improved) Select Team screen** - we've updated the look of the Select Team screen that appears immediately upon login. And as a bonus, it automatically remembers the last team that you logged into - allowing you to quickly skip past by clicking the \[Continue\] button
+- **(Improved) Select Team screen** - we've updated the look of the Select Team screen that appears immediately upon login. And as a bonus, it automatically remembers the last team that you logged into - allowing you to quickly skip past by clicking the [Continue] button
 - **(Improved) Edit Profile dialog** - you can view your app access permissions by choosing Edit Profile from the sign out menu drop-down.
 - **(Improved) Log Viewer** - you can now click through from the Global Logs to the User Logs by clicking on the profile id in any log entry.
 - **(Improved) Analytics Charts** - improved and standardized the colors used in the charts on our Analytics page.
@@ -91,7 +91,7 @@ There have been significant changes to the error handling and communication subs
 
 - Network Error Message Caching
     - This feature allows you to cache in-transit messages to the brainCloud server when a network error occurs.
-    - More details can be [found here](/apidocs/tutorials/general-api-tutorials/network-error-message-caching/)
+    - More details can be [found here](/learn/sdk-tutorials/general-api-tutorials/network-error-message-caching/)
 - Global Error callback
     - brainCloud now allows you to register a Global Error callback method which is called anytime an error is encountered.
 - Authentication methods returning 202 error now go to error callback.
@@ -102,13 +102,13 @@ There have been significant changes to the error handling and communication subs
     - We've added support for POST operations with external web services
     - We've also simplified the API so that you don't have to repeat the URL being used (since you're already declaring the URL as part of the external service configuration)
 - Push Notifications
-    - New server-to-server method, [SendNormalizedToSegments()](/apidocs/apiref/#s2s-push-sendnormalizedtosegments), for sending push notifications with custom parameters
+    - New server-to-server method, [SendNormalizedToSegments()](/api/s2s/pushnotification/sendnormalizedtosegments), for sending push notifications with custom parameters
     - New server-to-server method for returning a list of segments
 - Leaderboards
     - Social Leaderboard calls now properly support LOWER\_IS\_BETTER leaderboards by returning the results in ascending order
 - Miscellaneous
-    - New method for looking up a user's credentials given their profileId - [GetExternalIdForProfileId()](/apidocs/apiref/#capi-friend-getexternalidforprofileid)
-    - [UpdateContactEmail()](/apidocs/apiref/#capi-playerstate-updatecontactemail) method added which allows you to update the user's email address (used for informational purposes, not authentication, which is controlled via the EmailIdentity)
+    - New method for looking up a user's credentials given their profileId - [GetExternalIdForProfileId()](/api/capi/friend/getexternalidforprofileid)
+    - [UpdateContactEmail()](/api/capi/playerstate/updatecontactemail) method added which allows you to update the user's email address (used for informational purposes, not authentication, which is controlled via the EmailIdentity)
     - Added API for generating anonymous id (GUID) to the Android / Java libs
 
  

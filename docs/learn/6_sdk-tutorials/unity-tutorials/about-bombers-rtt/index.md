@@ -21,7 +21,7 @@ In brainCloud Bombers, players can earn experience for destroying enemy planes i
 
 Experience and levels can be read through the PlayerStateService in the brainCloud API. The call returns the current player’s experience level and rank name/numeric value, all of which are saved as public member variables in the BrainCloudStats class. These stats are updated live on the brainCloud server, but on the local client, they are only updated when the player visits the Matchmaking menu, reducing the number of API calls required per user.
 
-## **Custom Player \[User\] Statistics**
+## **Custom Player [User] Statistics**
 
 ![](images/image-3.png)
 
@@ -41,14 +41,14 @@ Leaderboards can be accessed through the SocialLeaderboardService in the brainCl
 
 ![](images/image-7.png)
 
-Three achievements have been implemented for brainCloud Bombers: destroying 50 enemy planes, sinking 10 ships, and destroying five enemy planes in a single match. brainCloud tracks whether the achievements have been unlocked or not, and can even automatically award the achievements based on player stats using Milestones. At the end of the match, bombers sends the stats updates to brainCloud, and then checks the response to see if any Achievements have been awarded.  \[Exception: note that the Quickshot achievement is handled manually by the client code in real-time during the match.\]
+Three achievements have been implemented for brainCloud Bombers: destroying 50 enemy planes, sinking 10 ships, and destroying five enemy planes in a single match. brainCloud tracks whether the achievements have been unlocked or not, and can even automatically award the achievements based on player stats using Milestones. At the end of the match, bombers sends the stats updates to brainCloud, and then checks the response to see if any Achievements have been awarded.  [Exception: note that the Quickshot achievement is handled manually by the client code in real-time during the match.]
 
 Achievements can be accessed through the GamificationService in the brainCloud API. The call returns all of the achievements in the system, their names, the urls for their icons, their descriptions, and whether or not the current user has unlocked any of them. The achievement data is stored in a public member variable in the BrainCloudStats class. The achievements are updated from the server when the player visits the Matchmaking menu.
 
 [![](images/Milestone-2.png)](images/Milestone-2.png)
 
  1. When this condition is satisfied.   
-2\. Award this achievement.
+ 2. Award this achievement.
 
 ## Global Properties
 

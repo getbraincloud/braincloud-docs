@@ -25,7 +25,7 @@ _Nothing too earth-shattering in this release - some minor fixes and changes whi
 # Portal Changes
 
 - **Design | Marketplace | Products** - added support for categories, product type / sub-type, and extra data
-- **Officially Supported Browsers** - the brainCloud portal is designed to work with Chrome, Safari and Firefox.  Users of other browsers (<cough>IE</cough>) will be warned that they may experience issues.  _\[There are known refresh issues with IE.\]_
+- **Officially Supported Browsers** - the brainCloud portal is designed to work with Chrome, Safari and Firefox.  Users of other browsers (<cough>IE</cough>) will be warned that they may experience issues.  _[There are known refresh issues with IE.]_
 - **API Explorer** - the services and operations are now displayed in alphabetical order (FINALLY!) :)
 
  

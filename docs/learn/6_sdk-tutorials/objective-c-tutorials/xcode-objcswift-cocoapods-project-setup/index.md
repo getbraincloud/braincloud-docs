@@ -11,4 +11,4 @@ If you're a newcomer to the `CocoaPods` world, you can find documentation on how
 
 [https://guides.cocoapods.org/](https://guides.cocoapods.org/)
 
-Note that if you are using Swift or the "use\_frameworks!" flag and Cocoapods 1.0.0, you'll get an error about transitive dependencies when including brainCloud. To fix this update Cocoapods to version 1.1.0.
+Note that if you are using Swift or the "use_frameworks!" flag and Cocoapods 1.0.0, you'll get an error about transitive dependencies when including brainCloud. To fix this update Cocoapods to version 1.1.0.

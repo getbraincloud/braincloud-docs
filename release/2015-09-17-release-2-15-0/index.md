@@ -9,9 +9,9 @@ tags:
 
 Highlights of this release include:
 
-- **Shared Accounts** - highly requested feature - brainCloud now allows you to share user accounts across applications.  This is achieved by creating a master profile (associated with a separate App ID), which is associated with individual child profiles for each app. This is extremely powerful for companies looking to link the players across a collection of games together, or to model sub-accounts under a single Home account for a household.  \[i.e. think set-top box\]. For more information, see our [Shared Accounts](/apidocs/api-modules/authentication/shared-accounts/) page in the API Docs.
+- **Shared Accounts** - highly requested feature - brainCloud now allows you to share user accounts across applications.  This is achieved by creating a master profile (associated with a separate App ID), which is associated with individual child profiles for each app. This is extremely powerful for companies looking to link the players across a collection of games together, or to model sub-accounts under a single Home account for a household.  [i.e. think set-top box]. For more information, see our [Shared Accounts](/learn/key-concepts/authentication/shared-accounts/) page in the API Docs.
 
-[![Shared Account Overview](images/Shared-Account-Overview-1024x353.png)](/apidocs/wp-content/uploads/2015/09/Shared-Account-Overview.png)
+[![Shared Account Overview](images/Shared-Account-Overview-1024x353.png)](images/Shared-Account-Overview.png)
 
  
 
@@ -25,10 +25,10 @@ Highlights of this release include:
 Changes to the portal:
 
 - **Shared Accounts** - configure parent-child app relationships under **Design | Authentication | Shared Accounts**.
-- **Parent Currencies** - a child app can include parent currencies in rewards for XP level-ups, Milestones, Quests and Statistics Events. All configurable under **Design | Gamification**.  Parent Currencies are also visible on the Design | Marketplace | Virtual Currencies page.  _Note that you cannot yet award parent currencies for IAP Product Purchases \[that will come next release\]._
+- **Parent Currencies** - a child app can include parent currencies in rewards for XP level-ups, Milestones, Quests and Statistics Events. All configurable under **Design | Gamification**.  Parent Currencies are also visible on the Design | Marketplace | Virtual Currencies page.  _Note that you cannot yet award parent currencies for IAP Product Purchases [that will come next release]._
 - **Leaderboards** - we've added a few additional "Are you sure?" checks to the process of resetting / deleting leaderboards, especially for live apps.
 - **Improved Error Reporting** - we've improved our logging system to show errors from more sources, including Server-to-Server calls and Scheduled Cloud Code.  We've also added a new error category, "Sys Warnings".  Check it out in **Global Monitoring | Recent Logs**.
-- **Profile Relations** - profiles with parent or child profiles will see them listed at the bottom of the **User Monitoring | User Summary** page, in a section called Relations.  We've also moved the **\[Login as User\]** button to the top of the page for convenience.
+- **Profile Relations** - profiles with parent or child profiles will see them listed at the bottom of the **User Monitoring | User Summary** page, in a section called Relations.  We've also moved the **[Login as User]** button to the top of the page for convenience.
 
  
 

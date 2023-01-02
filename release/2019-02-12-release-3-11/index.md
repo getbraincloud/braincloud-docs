@@ -139,7 +139,7 @@ We largely removed:
 - Nested and redundant id information (i.e. nested fields like `id`, `seq`, `appId`, etc.)
 - `lobbyTypeDev`, `settings`, `connectData`and occasionally `members` fields from events that didn't require them 
 
-_For full details on Lobby Event composition, check out the details [here](https://getbraincloud.com/apidocs/apiref/#capi-lobby)._
+_For full details on Lobby Event composition, check out the details [here](/api/capi/lobby)._
 
 _Note - although RTT is still in beta, we don't take changes like this lightly. Rest assured, we have reached out to our live RTT customers separately to give them a heads up re: these changes._ 
 

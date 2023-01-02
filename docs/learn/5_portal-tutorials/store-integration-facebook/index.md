@@ -33,21 +33,13 @@ Once your products have been configured in the brainCloud marketplace, you will 
 
 - Log into the [brainCloud Portal](https://portal.braincloudservers.com/)
 - Go to the “Marketplace | Products” page in the Design tab  
-    [](images/brainCloud_dashboard_productsTab.jpg)
 - Select the product you would like to configure  
-    [](images/brainCloud_dashboard_addFbProduct1.jpg)
 - Click the “+ Edit Product” button  
-    [](images/brainCloud_dashboard_addProduct2.jpg)
 - Find your Price (or create one) and click the edit icon  
-    [](images/brainCloud_dashboard_addFbProduct2.jpg)
 - In the Edit Price dialog, click the + icon to add an entry for Facebook  
-    [](images/brainCloud_dashboard_addFbProduct3.jpg)
 - Click the "+ Add" button and configure the price/currency information. You can enter separate prices for multiple currencies if you'd like to maintain the price of the product for that currency. Note that Facebook will automatically convert prices to the user's currency if necessary.  
-    [](images/brainCloud_dashboard_addFbProduct4.jpg)
 - At this point, you may want to select your price to be the default if it isn’t already selected. You can do this back in the Edit Product page.  
-    [](images/brainCloud_dashboard_addFbProduct5.jpg)
 - You can now verify that your Product is coming back with the correct Facebook price information. Here is the output from the API Explorer “Product.GetInventory” call for "Facebook"  
-    [](images/brainCloud_dashboard_addFbProduct6.jpg)
 
 ## Facebook Developer Portal
 
@@ -55,10 +47,8 @@ In order to process real-time payment updates, you will need to do the following
 
 - Log into the [Facebook developer portal](https://developers.facebook.com/apps)
 - Select your app and go to the "Canvas Payments" section
-- Enter your dynamic URL (and any Facebook testers you'd like to test purchases with). Note the format of the Dynamic Pricing Callback URL must be: "https://sharedprod.braincloudservers.com/fbcreditservice?app\_id=YOUR\_FB\_APP\_ID" where "YOUR\_FB\_APP\_ID" should be replaced with a number such as 1234567890. 
-    [](images/2015-08-18_11-50-11.png)
-- Enter the callback URLs for Realtime subscriptions. Note both URLs should have this format: "https://sharedprod.braincloudservers.com/fbupdateservice?gameId=YOUR\_BRAINCLOUD\_GAME\_ID" where "YOUR\_BRAINCLOUD\_GAME\_ID" should be replaced with the brainCloud game/app id found in the "Core App Info | Application IDs" section of the brainCloud portal.[](images/2015-08-18_11-52-39.png)
+- Enter your dynamic URL (and any Facebook testers you'd like to test purchases with). Note the format of the Dynamic Pricing Callback URL must be: "https://sharedprod.braincloudservers.com/fbcreditservice?app_id=YOUR_FB_APP_ID" where "YOUR_FB_APP_ID" should be replaced with a number such as 1234567890. 
+- Enter the callback URLs for Realtime subscriptions. Note both URLs should have this format: "https://sharedprod.braincloudservers.com/fbupdateservice?gameId=YOUR_BRAINCLOUD_GAME_ID" where "YOUR_BRAINCLOUD_GAME_ID" should be replaced with the brainCloud game/app id found in the "Core App Info | Application IDs" section of the brainCloud portal.
 - If you'd like to test the callback URL, configure a verification token on both the Facebook developer portal as well as the brainCloud "Core App Info | Application IDs" Facebook section. You can use any string you'd like as long as they're the same. Once configured, the "Test Callback URL" button should show a success dialog similar to this one  
-    [](images/2015-08-18_11-57-57.png)
 
 You should now be configured to make Facebook purchases. Next steps that you will need to complete are to implement the API calls to Facebook + brainCloud. For further information in regard to implementing Facebook IAP integration, refer to [this linked article](http://help.getbraincloud.com/en/articles/4676736-facebook-iap-integration) in our knowledge base help center.

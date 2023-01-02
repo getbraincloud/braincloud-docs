@@ -63,18 +63,18 @@ But it's not all bad news. Not only have we launched new **_Plus_** plans that 
 
 Also note that we have added a new _Development Plus_plan, which is a $5 / month plan that gives your apps in development access to Hosting features (i.e. hosted Room Servers and Relay Servers).
 
-For full details on our updated billing plans, see our [billing announcement](https://getbraincloud.com/apidocs/braincloud-4-billing-plans/).
+For full details on our updated billing plans, see our [billing announcement](/blog/2019/05/18/braincloud-4-billing-plans).
 
 ## And a bunch more!
 
 And _that's_ not even all of it. brainCloud 4 also brings:
 
-- **\[New!\] brainCloud Bombers RTT**
+- **[New!] brainCloud Bombers RTT**
     - Our new example game fully demonstrates RTT and Relay Servers
     - Play it on Steam!
-- **\[New!\] Forums!**
+- **[New!] Forums!**
     - brainCloud now has forums for our development community. Check them out [here](https://forums.getbraincloud.com/)!
-- **\[Updated!\] Tic-Tac-Toe example**
+- **[Updated!] Tic-Tac-Toe example**
     - Now supports the new RTT-enabled Async Match API
 - **DataStream Enhancements**
     - Our DataStream service now pushes more events, including:
@@ -147,18 +147,18 @@ _Important: **The 4.0 libraries (especially Unity) contain changes that will be
 The following changes/additions have affected the brainCloud API:
 
 - **Authentication**
-    - New [ResetUniversalIdPassword()](https://getbraincloud.com/apidocs/apiref/?csharp#capi-auth-resetuniversalidpassword) and [ResetUniversalIdPasswordAdvanced()](https://getbraincloud.com/apidocs/apiref/?csharp#capi-auth-resetuniversalidpasswordadvanced) calls allow users to reset the passwords for their Universal IDs (via an email sent to them). Note that the [contactEmail](https://getbraincloud.com/apidocs/apiref/?csharp#capi-playerstate-updatecontactemail) of the user must be set for this to work.
+    - New [ResetUniversalIdPassword()](/api/capi/authentication/resetuniversalidpasswordwithexpiry) and [ResetUniversalIdPasswordAdvanced()](/api/capi/authentication/resetuniversalidpasswordadvancedWithExpiry) calls allow users to reset the passwords for their Universal IDs (via an email sent to them). Note that the [contactEmail](/api/capi/playerstate/updatecontactemail) of the user must be set for this to work.
 - **Cloud Code Bridge**
-    - Added new [GetSessionCacheObject()](https://getbraincloud.com/apidocs/apiref/?cloudcode#cc-bridge-getsessioncacheobject) and [SetSessionCacheObject()](https://getbraincloud.com/apidocs/apiref/?cloudcode#cc-bridge-setsessioncacheobject) methods for saving custom objects in the user session. This is quite helpful if you want to cache frequently accessed data for use by multiple cloud code scripts.
+    - Added new [GetSessionCacheObject()](/api/cc/bridge/getsessioncacheobject) and [SetSessionCacheObject()](/api/cc/bridge/setsessioncacheobject) methods for saving custom objects in the user session. This is quite helpful if you want to cache frequently accessed data for use by multiple cloud code scripts.
 - **Global Statistics**
-    - Support for new MIN and MAX operations. Very useful for keeping track of the personal high scores of a player. For details, see the updated [Statistics Grammar](https://getbraincloud.com/apidocs/apiref/#appendix-statisticsgrammar) page.
+    - Support for new MIN and MAX operations. Very useful for keeping track of the personal high scores of a player. For details, see the updated [Statistics Grammar](/api/appendix/statisticsgrammar) page.
 - **Lobby**
-    - New [CancelFindRequest()](https://getbraincloud.com/apidocs/apiref/?csharp#capi-lobby-cancelfindrequest) cancels an asynchronous FindLobby request.
-    - New [JoinLobby()](https://getbraincloud.com/apidocs/apiref/?csharp#capi-lobby-joinlobby) call allows a user to skip matchmaking and immediately join the specified lobby instance (potentially with party members).
+    - New [CancelFindRequest()](/api/capi/lobby/cancelfindrequest) cancels an asynchronous FindLobby request.
+    - New [JoinLobby()](/api/capi/lobby/joinlobby) call allows a user to skip matchmaking and immediately join the specified lobby instance (potentially with party members).
 - **Player Statistics**
-    - Support for new MIN and MAX operations. For details, see the updated [Statistics Grammar](https://getbraincloud.com/apidocs/apiref/#appendix-statisticsgrammar) page.
+    - Support for new MIN and MAX operations. For details, see the updated [Statistics Grammar](/api/appendix/statisticsgrammar) page.
 - **RTTService**
-    - Migrated the RTT Initialization methods ([EnableRTT()](https://getbraincloud.com/apidocs/apiref/#capi-rtt-enablertt), [RegisterRTTChatCallback()](https://getbraincloud.com/apidocs/apiref/#capi-rtt-registerrttchatcallback), etc.) to the RTTService for better API coherency
+    - Migrated the RTT Initialization methods ([EnableRTT()](/api/capi/rtt/enablertt), [RegisterRTTChatCallback()](/api/capi/rtt/registerrttchatcallback), etc.) to the RTTService for better API coherency
 
 We have also deprecated the following methods:
 
@@ -187,7 +187,7 @@ For more details and migration steps, see the [V4 Client Changes](https://mediu
 - Important Fixes
     - BCLD-4679 - Duplicate leaderboard config issues (leaderboard Duplicate, new "MOCK" division set instance creation) if Enrol or Announcement minutes and called when rotation minutes remaining < (Enrol + Announce + Buffer) minutes
     - BCLD-4651 - Permissions issue with groups - ReadGroup() vs. ReadGroupData() with other=1
-    - BCLD-4415 - \[Documentation\] - More documentation support for the parameter 'isOpenGroup' for the 'AutoJoin' operation
+    - BCLD-4415 - [Documentation] - More documentation support for the parameter 'isOpenGroup' for the 'AutoJoin' operation
     - BCLD-4650 - Issue in the UpdateGroupACL cloud code proxy
     - BCLD-4645 - UK Area code is missing from Authy
     - BCLD-4494 - Add documentation for 'UpdateEntityIndexedId' call in both API and S2S Explorer in the API Reference Docs.
@@ -212,7 +212,7 @@ For more details and migration steps, see the [V4 Client Changes](https://mediu
     - BCLD-4268 - Attaching an email identity overwrites an exisiting contact email
     - BCLD-3470 - Monitoring -> Global Entities -> Bulk options -> Export should be disabled when there are no global entites for the app
     - BCLD-4294 - Missing data in the new AppStore VerifyPurchase() call…
-    - BCLD-2788 - Portal: deleting an image in \[Achievements\] without saving the achievement causes a missing image
+    - BCLD-2788 - Portal: deleting an image in [Achievements] without saving the achievement causes a missing image
     - BCLD-3968 - Errors handing $and in Where clauses
     - BCLD-3969 - getRandomEntitiesMatching sometimes returns 0 items for max 1, even when items match
     - BCLD-3977 - Log processor is incorrectly attributing mongo log collection write failures (too to large log sizes) to a particular app

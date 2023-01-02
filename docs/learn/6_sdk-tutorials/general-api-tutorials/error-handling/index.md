@@ -46,61 +46,61 @@ If authentication fails, the HTTP status code, a reason code, and a json respons
 
 The C++ library has a slightly different mechanism for dealing with callbacks. Specifically, all API methods take in an "IServerCallback" pointer. This interface declares the following methods:
 ```js
-/\*\*
-\* The serverCallback() method returns server data back to the layer
-\* interfacing with the BrainCloud library.
-\*
-\* @param serviceName - name of the requested service
-\* @param serviceOperation - requested operation
-\* @param jsonData - returned data from the server
-\*/
+/**
+* The serverCallback() method returns server data back to the layer
+* interfacing with the BrainCloud library.
+*
+* @param serviceName - name of the requested service
+* @param serviceOperation - requested operation
+* @param jsonData - returned data from the server
+*/
 virtual void serverCallback( ServiceName serviceName, ServiceOperation serviceOperation, std::string const & jsonData) = 0;
 
-/\*\*
-\* Errors are returned back to the layer which is interfacing with the
-\* BrainCloud library through the serverError() callback.
-\*
-\* A server error might indicate a failure of the client to communicate
-\* with the server after N retries.
-\*
-\* @param serviceName The service name being called
-\* @param serviceOperation The service operation being called
-\* @param statusCode The error status return code (400, 403, 500, etc)
-\* @param reasonCode The brainCloud reason code (see reason codes on apidocs site)
-\* @param jsonError The error json string
-\*/
+/**
+* Errors are returned back to the layer which is interfacing with the
+* BrainCloud library through the serverError() callback.
+*
+* A server error might indicate a failure of the client to communicate
+* with the server after N retries.
+*
+* @param serviceName The service name being called
+* @param serviceOperation The service operation being called
+* @param statusCode The error status return code (400, 403, 500, etc)
+* @param reasonCode The brainCloud reason code (see reason codes on apidocs site)
+* @param jsonError The error json string
+*/
 virtual void serverError( ServiceName serviceName, ServiceOperation serviceOperation, int statusCode, int reasonCode, const std::string & jsonError) = 0;
 ```
 For example, the AuthenticateUniversal method is defined as follows:
 ```js
-void authenticateUniversal(const char \* in\_userid, const char \* in\_password, bool in\_forceCreate, IServerCallback \* in\_callback);
+void authenticateUniversal(const char * in_userid, const char * in_password, bool in_forceCreate, IServerCallback * in_callback);
 ```
 ### Java library
 
 The Java library is similar to C++ in that there is an IServerCallback interface that can be supplied to any API call. This interface declares the following methods:
 ```js
 public interface IServerCallback {
-    /\*\*
-     \* The serverCallback() method returns server data back to the layer
-     \* interfacing with the BrainCloud library.
-     \*
-     \* @param serviceName - name of the requested service
-     \* @param serviceOperation - requested operation
-     \* @param jsonData - returned data from the server
-     \*/
+    /**
+     * The serverCallback() method returns server data back to the layer
+     * interfacing with the BrainCloud library.
+     *
+     * @param serviceName - name of the requested service
+     * @param serviceOperation - requested operation
+     * @param jsonData - returned data from the server
+     */
    void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData);
 
-    /\*\*
-     \* Errors are returned back to the layer which is interfacing with the
-     \* BrainCloud library through the serverError() callback.
-     \*
-     \* A server error might indicate a failure of the client to communicate
-     \* with the server after N retries.
-     \*
-     \* @param statusCode The error status return code (400, 403, 500, etc)
-     \* @param reasonCode The brainCloud reason code (see reason codes on apidocs site)
-     \* @param jsonError The error json string
-     \*/
+    /**
+     * Errors are returned back to the layer which is interfacing with the
+     * BrainCloud library through the serverError() callback.
+     *
+     * A server error might indicate a failure of the client to communicate
+     * with the server after N retries.
+     *
+     * @param statusCode The error status return code (400, 403, 500, etc)
+     * @param reasonCode The brainCloud reason code (see reason codes on apidocs site)
+     * @param jsonError The error json string
+     */
    void serverError(int statusCode, int reasonCode, String jsonError);
 }
 ```

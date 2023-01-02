@@ -91,7 +91,7 @@ This article elaborates on the basic steps of how to authenticate end-users with
     {
         if (!string.IsNullOrEmpty(googleId))
         {
-            \_bc.AuthenticateGoogle(googleId, serverAuthCode, true, authSuccess\_BCcall, authError\_BCcall);
+            _bc.AuthenticateGoogle(googleId, serverAuthCode, true, authSuccess_BCcall, authError_BCcall);
         }
         else
         {

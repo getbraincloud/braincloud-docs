@@ -16,12 +16,12 @@ date: "2015-11-05"
 
 The first step is to create the BrainCloudConfig.ini file that the Subsystem will read in order to automatically initialize brainCloud. Note that this step is optional.  If you wish you can manually initialize the Client through Blueprint or native C++ instead by calling the [BrainCloudClient->Initialize](/api/capi/client/initialize) function.
 
-1. Open the root folder of your Unreal project (where the \*.uproject file is)
+1. Open the root folder of your Unreal project (where the *.uproject file is)
 2. Open the Config folder
 3. Create a new text file and rename it to BrainCloudConfig.ini (ensure the extension is changed from .txt to .ini, not just named BrainCloudConfig.ini.txt)
 4. Enter the following into the file, replacing the Secret and App ID and version with those of your App:
 
-\[BrainCloud.Client\]
+[BrainCloud.Client]
 ServerURL = "https://sharedprod.braincloudservers.com/dispatcherv2"
 Secret = YOUR-APP-SECRET-HERE
 AppID = YOUR-APP-ID-HERE

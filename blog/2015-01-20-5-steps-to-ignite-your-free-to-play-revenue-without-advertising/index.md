@@ -15,7 +15,7 @@ The business reality is that since 2011, [Free-to-Play (F2P) games have been mak
 
 Although still essential - _today's games must be more than j__ust fun -_ they must effectively employ [**F2P monetization**](http://hub.getbraincloud.com/monetization) to succeed.
 
-[![bc-5steps-succedss](images/bc-5steps-succedss.png)](/apidocs/wp-content/uploads/2016/09/bc-5steps-succedss.png)An effective [Backend-as-a-Service (BaaS)](http://hub.getbraincloud.com/richfeatureset) is an essential lubricant for the free-to-play economy. Here are 5 key ways a great Backend can ignite your free-to-play revenue:
+[![bc-5steps-succedss](images/bc-5steps-succedss.png)](images/bc-5steps-succedss.png)An effective [Backend-as-a-Service (BaaS)](http://hub.getbraincloud.com/richfeatureset) is an essential lubricant for the free-to-play economy. Here are 5 key ways a great Backend can ignite your free-to-play revenue:
 
 1. **Go Cross-Platform** - adding platforms adds audience, which feeds players into your F2P engine. An effective Back-end makes it easier to offer the same features across diverse platforms.
 2. **Enable Cross-play** - allowing your players to continue their play across devices encourages play when and where convenient, increasing engagement and forming habits
@@ -25,11 +25,11 @@ Although still essential - _today's games must be more than j__ust fun -_ they m
 
 _\* Player segment definitions (below) courtesy of Emily Greer's presentation at Casual Connect '12._
 
-[![bc-5steps-segments](images/bc-5steps-segments.png)](/apidocs/wp-content/uploads/2016/09/bc-5steps-segments.png)
+[![bc-5steps-segments](images/bc-5steps-segments.png)](images/bc-5steps-segments.png)
 
 For more details, check out the slideshare presentation below - and while you're at it, be sure to check out [brainCloud](http://getbraincloud.com/) - it's free during development, and starts at just $25 / month once you go live!
 
-\[otw\_shortcode\_button size="large" icon\_position="left" shape="radius"\]Sign Up For Free\[/otw\_shortcode\_button\]
+[otw\_shortcode\_button size="large" icon\_position="left" shape="radius"]Sign Up For Free[/otw\_shortcode\_button]
 
 http://www.slideshare.net/paulwinterhalder/migs-2014-5-steps-to-ignite-your-f2-p-revenue
 

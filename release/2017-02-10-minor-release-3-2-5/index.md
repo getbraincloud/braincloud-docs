@@ -11,7 +11,7 @@ _What's smaller than a Release, but bigger than a Patch?_
 
 Release 3.2.5 includes some key new optimizations, fixes and even a few _minor_ features.
 
-_Note - This is a minor update to [brainCloud 3.2](/apidocs/release-3-2-0/) - be sure to check it's [release notes](/apidocs/release-3-2-0/) for the full update on all the great 3.2 features._
+_Note - This is a minor update to [brainCloud 3.2](/release/2017/01/25/release-3-2-0/) - be sure to check it's [release notes](/release/2017/01/25/release-3-2-0/) for the full update on all the great 3.2 features._
 
  
 
@@ -19,9 +19,9 @@ _Note - This is a minor update to [brainCloud 3.2](/apidocs/release-3-2-0/) - b
 
 ### _Faster User Entities_
 
-We have significantly optimized the [UpdateSingleton()](/apidocs/apiref/#capi-entity-updatesingleton) API call by eliminating a superfluous read operation from most usage scenarios. To achieve this, we had to remove some unnecessary fields from the API's JSON return.
+We have significantly optimized the [UpdateSingleton()](/api/capi/entity/updatesingleton) API call by eliminating a superfluous read operation from most usage scenarios. To achieve this, we had to remove some unnecessary fields from the API's JSON return.
 
-As per our custom we _by default_ preserve compatibility. To fully gain the advantages of this optimization, confirm that your app isn't making use of the `entityId`, `acl`, `createdAt` and `updatedAt` fields that were previously returned - and then go to the **Design | Core App Info | Advanced Settings** page, _Compatibility Settings_ section - and uncheck the _\[ \] Include entityId+ in UpdateSingleton Api output_ option.
+As per our custom we _by default_ preserve compatibility. To fully gain the advantages of this optimization, confirm that your app isn't making use of the `entityId`, `acl`, `createdAt` and `updatedAt` fields that were previously returned - and then go to the **Design | Core App Info | Advanced Settings** page, _Compatibility Settings_ section - and uncheck the _[ ] Include entityId+ in UpdateSingleton Api output_ option.
 
  
 
@@ -57,7 +57,7 @@ Recently we've had a uptick in apps that _endlessly retry_ an operation if an e
 
 In these cases, if you retry the operation as before, there is a 99.999% chance you will get the same error! Implementing an endless retry in your code is akin to DDOS-ing our servers! And it costs you API calls to boot!
 
-So - we've implemented a way to stop you! Now, if your client app sends in the same erroneous requests ten times in a row, the client will stop actually sending the requests, and return an immediate error to your client app. This \*might\* cause an endless loop in your app - so once again - don't do this! \[Note - most mobile OSes will kill the app as soon as the loop is discovered\]
+So - we've implemented a way to stop you! Now, if your client app sends in the same erroneous requests ten times in a row, the client will stop actually sending the requests, and return an immediate error to your client app. This \*might\* cause an endless loop in your app - so once again - don't do this! [Note - most mobile OSes will kill the app as soon as the loop is discovered]
 
  
 
@@ -75,7 +75,7 @@ We've also include the following fixes:
 
 - _**Merging with Peer Profiles**_ - we've fixed some issues associated with merging of profiles that are associated with Peer Profiles
 - _**Reading Leaderboard Configs**_ - the read routines are now much-more robust
-- _**Incoming Events**_ - we've removed the unnecessary gameId field from all incoming event calls. Note - for compatibility reasons, the change only takes effect if the _\[ \] Generate Legacy Event Ids_ compatibility flag is unset.
+- _**Incoming Events**_ - we've removed the unnecessary gameId field from all incoming event calls. Note - for compatibility reasons, the change only takes effect if the _[ ] Generate Legacy Event Ids_ compatibility flag is unset.
 - _**Tournament Phases**_ - the display and configuration of Tournament Phases on the Leaderboard Config dialog and Leaderboard Monitoring pages has been improved.
 - _**Facebook Purchases**_ - we fixed an issue associated with the latest changes to Facebook's Purchase APIs.
 - _**Push Notification Tokens**_ - are now properly removed when players are deleted.

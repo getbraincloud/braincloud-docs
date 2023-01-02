@@ -82,7 +82,7 @@ Because this is a change to the previous brainCloud behaviour, we have introduce
 
 The new compatibility flag can be found in the **Design | Core App Info | Advanced Settings** page:
 
-_\[ x \] Include shared objects in Owned Custom Entity GetEntityPage queries (warning: can be slow). Can be overwritten by specifying 'ownedOnly' in query context 'options'._
+_[ x ] Include shared objects in Owned Custom Entity GetEntityPage queries (warning: can be slow). Can be overwritten by specifying 'ownedOnly' in query context 'options'._
 
 When _enabled_, the default for `ownedOnly` is `false` - and when _disabled_, the default for `ownedOnly` is `true`.
 

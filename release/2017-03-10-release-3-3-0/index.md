@@ -11,7 +11,7 @@ A small but mighty release :)
 
 ### Leaderboard Rewards
 
-In 3.2 we added [Global Tournaments](/apidocs/introducing-global-tournaments/) - which build upon brainCloud leaderboards to add support for opt-in tournament play. Our tournament feature is extremely flexible - with support for paid tournaments, variable tournament durations, configurable tournament phases, push notifications, and more.
+In 3.2 we added [Global Tournaments](/blog/2017/01/30/introducing-global-tournaments/) - which build upon brainCloud leaderboards to add support for opt-in tournament play. Our tournament feature is extremely flexible - with support for paid tournaments, variable tournament durations, configurable tournament phases, push notifications, and more.
 
 But what if you would like to simply add the reward capabilities from Tournaments to your game's _existing leaderboards_ - without all the code + presentation changes that go along with it?
 
@@ -20,7 +20,7 @@ We have good news. We are happy to present two new tournament features that w
 - _Auto Join_ - allows players to join a tournament simply by posting a score to the associated leaderboard. Note that Auto Join only works for _free_ tournaments, of course.
 - _Auto Claim_ - automatically awards the player their prizes when a tournament completes.
 
-For more information, see the _Auto Join_ and _Auto Claim_ features in our updated [Tournament](/apidocs/introducing-global-tournaments/) documentation.
+For more information, see the _Auto Join_ and _Auto Claim_ features in our updated [Tournament](/api/capi/tournament/) documentation.
 
 ### **Deployment Improvements**
 
@@ -51,7 +51,7 @@ The following screens have been changed:
 ### Design section
 
 - **Core App Info | Application Ids**
-    - The _\[x\] Show Game Design Features_ toggle is back! (It was lost, but now it is found.)
+    - The _[x] Show Game Design Features_ toggle is back! (It was lost, but now it is found.)
 - **Core App Info | Advanced Settings**
     - There are 3 new compatibility options - these first two default to "on" for existing apps, "off" for new apps
         - _Do not reprocess currencies for non-consumable IAP products in receipts_
@@ -75,8 +75,8 @@ The following screens have been changed:
 The following changes/additions have affected the brainCloud API:
 
 - **GlobalEntity**
-    - Added a new Cloud-code only [UpdateSystemEntity()](/apidocs/apiref/?csharp#capi-globalentity-updatesystementity) method to allow updating of the contents of a system entity, regardless of its ACL permissions. This is especially useful for system entities that .  _\[Reminder - SystemEntities are simply GlobalEntities that do not have an owner. The advantage being that they are not automatically deleted if the owner's profile is deleted.\]_
-    - Also added an [UpdateSystemEntityACL()](/apidocs/apiref/?csharp#capi-globalentity-updatesystementityacl) method that likewise, allows the developer to over-ride the ACL of a SystemEntity. This code is also Cloud-code only for security reasons.
+    - Added a new Cloud-code only [UpdateSystemEntity()](/api/capi/globalentity/updatesystementity) method to allow updating of the contents of a system entity, regardless of its ACL permissions. This is especially useful for system entities that .  _[Reminder - SystemEntities are simply GlobalEntities that do not have an owner. The advantage being that they are not automatically deleted if the owner's profile is deleted.]_
+    - Also added an [UpdateSystemEntityACL()](/api/capi/globalentity/updatesystementityacl) method that likewise, allows the developer to over-ride the ACL of a SystemEntity. This code is also Cloud-code only for security reasons.
 
  
 
@@ -89,7 +89,7 @@ The following changes/additions have affected the brainCloud API:
 - Documentation updates
     - We have added error handling examples to the C# sections of the Authentication documentation
 - Important Fixes and optimizations
-    - We have improved the performance of the [UpdateAttributes()](/apidocs/apiref/?csharp#capi-playerstate-updateattributes) operation of the _PlayerState_ service
+    - We have improved the performance of the [UpdateAttributes()](/api/capi/playerstate/updateattributes) operation of the _PlayerState_ service
     - We have fixed a race condition that under certain circumstances could award double currencies for Facebook purchases
-    - We have fixed the json outputted during reward handling for XP level-ups - the returned json no longer includes the redundant "reward" section. Note - the _\[x\] Send obsolete reward field content in XP level up rewards results_ compatibility flag preserves the old behaviour in case your app requires it.
+    - We have fixed the json outputted during reward handling for XP level-ups - the returned json no longer includes the redundant "reward" section. Note - the _[x] Send obsolete reward field content in XP level up rewards results_ compatibility flag preserves the old behaviour in case your app requires it.
 - Plus miscellaneous fixes and performance enhancements...

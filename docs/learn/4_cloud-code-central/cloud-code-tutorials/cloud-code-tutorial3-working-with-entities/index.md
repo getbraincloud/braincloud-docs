@@ -21,19 +21,19 @@ This example uses a combination of _Cloud Code_, _Global Entities_ and _User Ent
 
 ## Step 1 - Create, Delete and List Groups
 
-We'll start with the overall group management methods - Tut3\_CreateGroup(), Tut3\_DeleteGroup() and Tut3\_ListGroups(). Create methods using the listings below.
+We'll start with the overall group management methods - Tut3_CreateGroup(), Tut3_DeleteGroup() and Tut3_ListGroups(). Create methods using the listings below.
 
 ### CreateGroup() Script
 
-Parameters for Tut3\_CreateGroup()
+Parameters for Tut3_CreateGroup()
 ```js
 {
      "groupName": "The Tater Tots"
 }
 ```
-Tut3\_CreateGroup script
+Tut3_CreateGroup script
 ```js
-// Tut3\_CreateGroup() - creates a new group
+// Tut3_CreateGroup() - creates a new group
 
 // Retrieve the parameter
 var groupName = data.groupName;
@@ -72,15 +72,15 @@ results;
 ```
 ### DeleteGroup() Script
 
-Parameters for Tut3\_DeleteGroup()
+Parameters for Tut3_DeleteGroup()
 ```js
 {
   "groupId": "aGroupGUID"
 }
 ```
-Tut3\_DeleteGroup script
+Tut3_DeleteGroup script
 ```js
-// Tut3\_DeleteGroup() - deletes the specified group
+// Tut3_DeleteGroup() - deletes the specified group
 // Retrieve the parameter
 var groupId = data.groupId;
 var results = {};
@@ -111,9 +111,9 @@ results;
 ```
 ### ListGroups() code
 
-Tut3\_ListGroups() script
+Tut3_ListGroups() script
 ```js
-// Tut3\_ListGroups() - lists all the groups
+// Tut3_ListGroups() - lists all the groups
 // No parameters to retrieve
 var results = {};
 // Grab the Global Entity service proxy from the bridge
@@ -121,15 +121,15 @@ var globalEntityService = bridge.getGlobalEntityServiceProxy();
 // Get all groups of type group
 var searchResults = globalEntityService.getList({entityType: "group"}, {"data.groupName": 1}, 100);
 // Declare the groups array
-results.groups = \[\];
+results.groups = [];
 // Did we find it?
 if (searchResults.data.entityList.length > 0)
 {
     results.message = "Listing all groups";
     for (var i = 0; i < searchResults.data.entityList.length; i++) {
       var groupData = {};
-      groupData.name = searchResults.data.entityList\[i\].data.groupName;
-      groupData.groupId = searchResults.data.entityList\[i\].entityId;
+      groupData.name = searchResults.data.entityList[i].data.groupName;
+      groupData.groupId = searchResults.data.entityList[i].entityId;
       results.groups.push(groupData);
     }
 } else {
@@ -150,7 +150,7 @@ To use the viewer:
 - You can filter the list using the _Filter by Type_ drop-down box
 - You can _View/Edit_ an entity by clicking on the "eyeball"
 
-[![](images/Tut3_GlobalEntities-1024x496.png)](images/Tut3_GlobalEntities.png)
+[![](images/Tut3_GlobalEntities-1024x496.png)](images/Tut3_GlobalEntities-1024x496.png)
 
 ## Step 3 - Manage Members
 
@@ -160,16 +160,16 @@ We'll start by adding a JoinGroup() method.
 
 ### JoinGroup()
 
-Parameters for Tut3\_JoinGroup()
+Parameters for Tut3_JoinGroup()
 ```js
 {
   "groupId": "aGlobalEntityId",
   "memberId": "aProfileId"
 }
 ```
-Tut3\_JoinGroup() script"
+Tut3_JoinGroup() script"
 ```js
-// Tut3\_JoinGroup() - add myself to the specified group
+// Tut3_JoinGroup() - add myself to the specified group
 
 // Retrieve the parameter
 var groupId = data.groupId;
@@ -191,10 +191,10 @@ if ( (group !== null) && (group.entityType == "group") ) {
     
     // Add a new member to the group
     var memberRecord = {};
-    memberRecord\["profileId"\] = memberId;
+    memberRecord["profileId"] = memberId;
     
     // Storing the members in a map is a bit more flexible than an array
-    group.data.members\[memberId\] = memberRecord;
+    group.data.members[memberId] = memberRecord;
     
     // Write the updated group
     apiStatus = globalEntityService.updateEntity(groupId, group.version, group.data);
@@ -202,7 +202,7 @@ if ( (group !== null) && (group.entityType == "group") ) {
         
          // Store a reference from the user to the group in a user entity
         var userRefToGroup = {};
-        userRefToGroup\["groupId"\] = groupId;
+        userRefToGroup["groupId"] = groupId;
         
         // Update via the singleton API - the entity will be created if it 
         // doesn't already exist
@@ -236,16 +236,16 @@ And we'll round things off with the ability to leave a group.
 
 ### LeaveGroup()
 
-Parameters for Tut3\_LeaveGroup()
+Parameters for Tut3_LeaveGroup()
 ```js
 {
   "groupId": "aGlobalEntityId",
   "memberId": "aProfileId"
 }
 ```
-Tut3\_LeaveGroup() code
+Tut3_LeaveGroup() code
 ```js
-// Tut3\_LeaveGroup() - remove myself to the specified group
+// Tut3_LeaveGroup() - remove myself to the specified group
 
 // Retrieve the parameter
 var groupId = data.groupId;
@@ -266,7 +266,7 @@ var group = globalEntityService.readEntity(groupId).data;
 if ( (group !== null) && (group.entityType == "group") ) {
     
     // Delete the entry from the members map
-    delete group.data.members\[memberId\];
+    delete group.data.members[memberId];
     
     // Write the updated group
     apiStatus = globalEntityService.updateEntity(groupId, group.version, group.data);
@@ -274,7 +274,7 @@ if ( (group !== null) && (group.entityType == "group") ) {
         
          // Remove the group reference from the user entity
         var userRefToGroup = {};
-        userRefToGroup\["groupId"\] = null;
+        userRefToGroup["groupId"] = null;
         
         // Update via the singleton API - the entity will be created if it 
         // doesn't already exist

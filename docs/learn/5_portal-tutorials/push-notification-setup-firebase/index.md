@@ -70,7 +70,7 @@ This tutorial will walk you through the steps to configure Firebase Cloud Messag
 ...
     public void OnRegisterToken()
     {
-        \_bc.PushNotificationService.RegisterPushNotificationDeviceToken(Platform.GooglePlayAndroid, firebaseToken, authSuccess\_BCcall, authError\_BCcall);
+        _bc.PushNotificationService.RegisterPushNotificationDeviceToken(Platform.GooglePlayAndroid, firebaseToken, authSuccess_BCcall, authError_BCcall);
     }
 ...
 ```
@@ -87,7 +87,7 @@ This tutorial will walk you through the steps to configure Firebase Cloud Messag
 
           // Get new Instance ID token
           String token = task.getResult().getToken();
-          \_bc.GetWrapper().getPushNotificationService().registerPushNotificationToken(Platform.GooglePlayAndroid, token, theCallback);
+          _bc.GetWrapper().getPushNotificationService().registerPushNotificationToken(Platform.GooglePlayAndroid, token, theCallback);
       }
   });
 ```

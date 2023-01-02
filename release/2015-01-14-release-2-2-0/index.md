@@ -22,4 +22,4 @@ Portal/Server Features:
 - Segments - Now you can target only test users to be included in a segment. This allows for segments to be more easily tested before they're launched
 - Misc fixes and improvements
 
-We've continued to improve the documentation in our Apidocs portal. As usual, you can check it out by visiting: [http://apidocs.braincloudservers.com/](http://apidocs.braincloudservers.com/)
+We've continued to improve the documentation in our Apidocs portal. As usual, you can check it out by visiting: [brainCloud Docs](/learn/introduction/)

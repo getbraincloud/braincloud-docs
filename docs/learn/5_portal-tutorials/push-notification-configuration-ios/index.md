@@ -33,7 +33,7 @@ This article will walk you through the steps of setting up push notifications (i
 
 [![](images/Screen+Shot+2021-01-13+at+18.12.07.png)](https://downloads.intercomcdn.com/i/o/287327658/5ee06930a5d156ac1bf7d580/Screen+Shot+2021-01-13+at+18.12.07.png)
 
-- Functions and its code that linked behind the button \[Register device token\] are similar to below. Once authenticate end-user with their brainCloud account, from the Authorization request, retrieve the device token and pass it to brainCloud device token register method -- `RegisterPushNotificationDeviceToken`()
+- Functions and its code that linked behind the button [Register device token] are similar to below. Once authenticate end-user with their brainCloud account, from the Authorization request, retrieve the device token and pass it to brainCloud device token register method -- `RegisterPushNotificationDeviceToken`()
 ```js
     IEnumerator RequestAuthorization()  
     {  
@@ -44,13 +44,13 @@ This article will walk you through the steps of setting up push notifications (i
             {  
                 yield return null;  
             };  
-            string res = "\\n RequestAuthorization:";  
-            res += "\\n finished: " + req.IsFinished;  
-            res += "\\n granted:  " + req.Granted;  
-            res += "\\n error:  " + req.Error;  
-            res += "\\n deviceToken:  " + req.DeviceToken;  
+            string res = "\n RequestAuthorization:";  
+            res += "\n finished: " + req.IsFinished;  
+            res += "\n granted:  " + req.Granted;  
+            res += "\n error:  " + req.Error;  
+            res += "\n deviceToken:  " + req.DeviceToken;  
             Debug.Log("debug inside ienumerator the res: "+ res);  
-            \_bc.PushNotificationService.RegisterPushNotificationDeviceToken(req.DeviceToken, authSuccess\_BCcall, authError\_BCcall);  
+            _bc.PushNotificationService.RegisterPushNotificationDeviceToken(req.DeviceToken, authSuccess_BCcall, authError_BCcall);  
         }  
     }  
   

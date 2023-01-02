@@ -17,7 +17,7 @@ _Note that there are some breaking changes in the client libraries - but they ar
 
 We have added a new expiry feature to keep your matchmaking fresh. It is implemented via a nightly process that will disable the matchmaking flag for users that haven't logged into the app within the specified number of days.
 
-[![](images/2017-12-11_13-07-46.png)](/apidocs/wp-content/uploads/2017/12/2017-12-11_13-07-46.png)
+[![](images/2017-12-11_13-07-46.png)](images/2017-12-11_13-07-46.png)
 
  
 
@@ -51,7 +51,7 @@ result;
 
 You can call it via the S2S Explorer like this:
 
-[![](images/2017-12-11_13-39-51.png)](/apidocs/wp-content/uploads/2017/12/2017-12-11_13-39-51.png)
+[![](images/2017-12-11_13-39-51.png)](images/2017-12-11_13-39-51.png)
 
 Note that the scripts get queued to run on the users in the background - and depending upon the app's population may take several minutes or potentially several hours to complete.
 
@@ -90,7 +90,7 @@ Existing apps have the following options available to them:
 
 We highly recommend that new apps use the new paradigm - your code will be simpler for it.
 
-For more information, see our [blog post](/apidocs/wrappers-clients-and-inconvenient-singletons/) with the full details and rationale.
+For more information, see our [blog post](/blog/2017/12/12/wrappers-clients-and-inconvenient-singletons/) with the full details and rationale.
 
 * * *
 
@@ -108,7 +108,7 @@ We've made the following portal changes for this release:
 - Core App Info | Advanced Settings
     - _**Disable**_ _**Live Lock**_ - Live Lock helps to protect your live apps by forcing you to unlock them before editing. You can now disable this behaviour if you would like (_Note - not recommended for production apps!_)
 - Integrations | Sendgrid
-    - Fixed an issue where test emails were no longer being sent when the **\[Test\]** button was pressed.
+    - Fixed an issue where test emails were no longer being sent when the **[Test]** button was pressed.
 - Multiplayer | Matchmaking
     - **_Expire matchmaking_** - Automatically expire (disable) a user's eligibility for matchmaking after <x\> days without logging in. Helps to ensure that your players are matched with fresh opponents, instead of players who may no longer be active in your app!
 
@@ -161,7 +161,7 @@ The following changes/additions have affected the brainCloud API:
     - BCLD-2699 - GlobalEntity Raw Export fails to import when <timeToLive\> is 0 (Integer vs. Long)
     - BCLD-2696 - Portal - If you switch apps while editing a web service the page does not update
     - BCLD-2662 - Non Admin Users see the Remove option in the actions menu of the Members page
-    - BCLD-2607 - Disable the \[Go Live\] button once the user clicks it
+    - BCLD-2607 - Disable the [Go Live] button once the user clicks it
     - BCLD-2597 - Portal - If data field for an Entity contains an integer that is too high show a proper error dialog
     - BCLD-2594 - Segment country-code not standardized as UPPERCASE
     - BCLD-2593 - BigInteger web defect - GlobalEntity, ChildEntity, Group and GroupEntity editors

@@ -57,14 +57,14 @@ private void onRTTEnabled(string responseData, object cbPostObject)
 
 // the listener, can parse the json and request just the updated match 
 // in this example, just re-request it all
-private void queryMatchStateRTT(string in\_json)
+private void queryMatchStateRTT(string in_json)
 {
     queryMatchState();
 }
 
 private void queryMatchState()
 {
-    BcWrapper.MatchMakingService.FindPlayers(RANGE\_DELTA, NUMBER\_OF\_MATCHES, OnFindPlayers);
+    BcWrapper.MatchMakingService.FindPlayers(RANGE_DELTA, NUMBER_OF_MATCHES, OnFindPlayers);
 }
 
 private void onRTTFailure(int status, int reasonCode, string responseData, object cbPostObject)

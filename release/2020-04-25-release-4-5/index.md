@@ -136,12 +136,12 @@ We've made the following portal changes:
 ### Design
 
 - **Core App Info | Application IDs**
-    - Removed the _\[x\] Enable Facebook Scores_ setting from the Facebook Platform options. Facebook's APIs no longer support this functionality.
+    - Removed the _[x] Enable Facebook Scores_ setting from the Facebook Platform options. Facebook's APIs no longer support this functionality.
 - **Cloud Data | Custom Entities**
     - Added the ability to define (and describe) custom JSON templates for entity data.
     - Important: A _Plus Plan_ is now required to access this screen.
 - **Gamification | Achievements**
-    - Removed the \[Facebook Register Achievements\] button from the main screen, as well as the Facebook specifics from the sub-screens. Facebook’s APIs no longer support this functionality.
+    - Removed the [Facebook Register Achievements] button from the main screen, as well as the Facebook specifics from the sub-screens. Facebook’s APIs no longer support this functionality.
 
 ### Monitoring
 

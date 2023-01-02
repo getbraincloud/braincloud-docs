@@ -230,7 +230,7 @@ All of the SYS calls described above are available via the _Server-to-Server AP
     - There have been no changes to the S2S libraries themselves. The generic mechanism employed by our S2S libs is API agnostic - and thus the 4.5 libs already support all 4.5.5 APIs.
 - Documentation updates
     - All new methods are documented in our APIREF - https://getbraincloud.com/apidocs/apiref
-    - You’ll find our new Amazon IAP tutorial here - [https://getbraincloud.com/apidocs/portal-usage/store-integration-amazon/](https://getbraincloud.com/apidocs/portal-usage/store-integration-amazon/)
+    - You’ll find our new Amazon IAP tutorial here - [https://getbraincloud.com/apidocs/portal-usage/store-integration-amazon/](/learn/portal-tutorials/store-integration-amazon/)
 - Important Fixes
     - BCLD-5722 - Unreal blueprint tutorial on website is out of date for UE 4.24. will crash on initialize app.
     - BCLD-5724 - Unreal C++ tutorial on website is out of date, method getInstance() doesn't exist in BrainCloudClient class.

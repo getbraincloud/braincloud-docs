@@ -16,7 +16,7 @@ This tutorial goes through the steps of installing the brainCloud Unreal plugin 
 
 Installing the brainCloud plugin is a very straightforward process.
 
-1. Open the root folder of your Unreal project (where the \*.uproject file is)
+1. Open the root folder of your Unreal project (where the *.uproject file is)
 2. Open the Plugins folder, or create it if it does not exist
 3. Copy the BCClient folder from the downloaded Unreal plugin archive into the Plugins folder
 4. If your project is NOT Blueprint only, be sure to regenerate your code project files now
@@ -35,7 +35,7 @@ If you plan on using brainCloud in C++ there are a few more steps required befor
 1. Open your C++ project and find your project's Build.cs file.  It will be named after your project (ex. MyProject.Build.cs).
 2. Look for the PublicDependencyModuleNames and add "BCClientPlugin" to the list. It should look something like this:
 
-PublicDependencyModuleNames.AddRange(new string\[\] { "Core", "CoreUObject", "Engine", "InputCore", "BCClientPlugin" });
+PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "BCClientPlugin" });
 
 You should now be able to include the BrainCloudClient.h and compile your C++ code with brainCloud!
 
@@ -43,14 +43,14 @@ You should now be able to include the BrainCloudClient.h and compile your C++ co
 
 By default, the brainCloud Online Subsystem is not enabled.  These steps are only necessary if you wish to use the Unreal Online Subsystem with brainCloud.
 
-1. Open the root folder of your Unreal project (where the \*.uproject file is)
+1. Open the root folder of your Unreal project (where the *.uproject file is)
 2. Open the Config folder
 3. Find the DefaultEngine.ini file and open it in a text editor
 4. Add the following lines to the file and save:
 
-\[OnlineSubsystem\]
+[OnlineSubsystem]
 DefaultPlatformService=BrainCloud
-\[OnlineSubsystemBrainCloud\]
+[OnlineSubsystemBrainCloud]
 bEnabled=true
 
 This will tell Unreal to load the brainCloud Online Subsystem by default.

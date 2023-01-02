@@ -11,9 +11,9 @@ The latest version of the Bombers project can always be found [here](https://git
 
 brainCloud Bombers is a fun little game, written in **Unity**, that demonstrates how brainCloud can work together with external multiplayer tech (such as [Unity UNET](http://unity3d.com/services/multiplayer) or [Exit Games' Photon](https://www.exitgames.com/en/Realtime)) to produce real-time multiplayer game experiences.
 
-_\[Remember - brainCloud includes everything you need for turn-based (i.e. Trivia Crack) and offline (i.e. Clash of Clans) multiplayer, but does not provide real-time (i.e. Team Fortress 2) or near real-time (i.e. Hearthstone) multiplayer support - for that, a solution like UNET or Photon is ideal.\]_
+_[Remember - brainCloud includes everything you need for turn-based (i.e. Trivia Crack) and offline (i.e. Clash of Clans) multiplayer, but does not provide real-time (i.e. Team Fortress 2) or near real-time (i.e. Hearthstone) multiplayer support - for that, a solution like UNET or Photon is ideal.]_
 
-[![Unity_Web_Player___PhotonDemo](images/Unity_Web_Player___PhotonDemo-1024x715.png)](images/Unity_Web_Player___PhotonDemo.png)
+[![Unity_Web_Player___PhotonDemo](images/Unity_Web_Player___PhotonDemo-1024x715.png)](images/Unity_Web_Player___PhotonDemo-1024x715.png)
 
 Bombers is a fun multiplayer game with the following features:
 
@@ -29,15 +29,15 @@ Bombers is a fun multiplayer game with the following features:
 
 - **[Bombers UNET version (Mac)](https://sharedprod.braincloudservers.com/s3/brainCloudExamples/unity/bombersUnet/brainCloudBombersUNET_OSX_1.0.0.zip)** - download and install to play
 - **[Bombers UNET version (PC)](https://sharedprod.braincloudservers.com/s3/brainCloudExamples/unity/bombersUnet/brainCloudBombersUNET_Windows_1.0.0.zip)** - download and install to play
-- **[Bombers Photon version (Web)](http://sharedprod.braincloudservers.com/s3/brainCloudExamples/unity/bombers/brainCloudBombers.html)** \- uses the Unity Web Player, so be sure to use a compatible browser!
+- **[Bombers Photon version (Web)](http://sharedprod.braincloudservers.com/s3/brainCloudExamples/unity/bombers/brainCloudBombers.html)** - uses the Unity Web Player, so be sure to use a compatible browser!
 
 ## Full Source Available
 
 The full source of brainCloud bombers has been made available for our developers. Feel free to use and extend it - but please replace all art for commercial efforts and be sure to use brainCloud! Good luck!
 
-- [Read](/learn/sdk-tutorials/unity-tutorials/about-braincloud-bombers/) about how brainCloud bombers was written
+- [Read](/learn/sdk-tutorials/unity-tutorials/about-bombers-rtt/) about how brainCloud bombers was written
 - [View](https://github.com/getbraincloud/UnityExamples) the source (Github)
-- [Build](/learn/sdk-tutorials/unity-tutorials/building-the-braincloud-bombers-project/) it yourself!
+- [Build](/learn/sdk-tutorials/unity-tutorials//bombers-rtt-example-game/) it yourself!
 - [Download](https://assetstore.unity.com/packages/templates/tutorials/braincloud-bombers-for-photon-50657) it from the Unity Asset Store!
 
 * * *
@@ -67,24 +67,24 @@ The brainCloud Bombers source is stored on GitHub.  You can find it in the “
 
 ### Step 2: Register with brainCloud
 
-Registering with brainCloud is easy and free.  Go to [getBrainCloud.com](http://getbraincloud.com/) and click **\[Sign Up\]** in the top-right-hand corner.
+Registering with brainCloud is easy and free.  Go to [getBrainCloud.com](http://getbraincloud.com/) and click **[Sign Up]** in the top-right-hand corner.
 
 ### Step 3: Create the brainCloud Bombers App
 
 To create the app:
 
 - Go to the **Administration** section of the Portal by clicking on the “Gear” icon in the top-right
-- Click on the **\[+\]** button in the “Your Apps” section of the **Home** page
+- Click on the **[+]** button in the “Your Apps” section of the **Home** page
 - Fill out the **New App** dialog – be sure to enable game features and choose the platforms to run upon.
 
-[![New App Dialog](images/Bomber_new_app-277x300.png)](images/Bomber_new_app.png)
+[![New App Dialog](images/Bomber_new_app-277x300.png)](images/Bomber_new_app-277x300.png)
 
 New App Dialog
 
 - Go to the app by clicking on its name in the **Your Apps** list, or by choosing the **Design** tab, and then selecting it from the drop-down
 - You’ll see the brainCloud App ID and App Secret on the **Core App Info | Application IDs** page….  we’ll use those in our next step.
 
-[![Bomber_app_id](images/Bomber_app_id-1024x300.png)](images/Bomber_app_id.png)
+[![Bomber_app_id](images/Bomber_app_id-1024x300.png)](images/Bomber_app_id-1024x300.png)
 
 ### Step 4: Update the brainCloud appId and secret in the source code
 
@@ -92,31 +92,31 @@ New App Dialog
 - Choose **brainCloud | Settings** from the Unity menu bar
 - Enter the _brainCloud app id_ into the _Game Id_ field
 - Enter the _brainCloud secret_ into the _Game Secret_ field
-- Also, hit **\[Reset to Default Server URL\]** to ensure that the client is set to connect to the proper endpoint
+- Also, hit **[Reset to Default Server URL]** to ensure that the client is set to connect to the proper endpoint
 
-[![Unity_settings](images/Unity_settings-300x186.png)](images/Unity_settings.png)
+[![Unity_settings](images/Unity_settings-300x186.png)](images/Unity_settings-300x186.png)
 
 ### Step 5: Import the Bomber meta-data
 
 - Back in the brainCloud portal, go to **Design | Admin Tools** for the your app
-- Click the \[Import\] button in the Configuration Data section
-    - Choose **\[Select Configuration File (bcconfig)\]**, and navigate to the **_Bombers/ImportData/Bombers\_<some\_date>.bcconfig_**file included with the bomber source
+- Click the [Import] button in the Configuration Data section
+    - Choose **[Select Configuration File (bcconfig)]**, and navigate to the **_Bombers/ImportData/Bombers_<some_date>.bcconfig_**file included with the bomber source
     - You can leave the two “Do not overwrite” options blank – they’re not used in this example
-    - Click **\[Upload\]** to import the data
+    - Click **[Upload]** to import the data
     - You’ll immediately note that the brainCloud Bombers icon is now associated with your project.  You’ll also see user statistics, achievements, and XP levels filled in throughout the application.
 
 ### Step 6: Register with Photon
 
 - Go to **https://www.exitgames.com/en/PUN** to set up a free Photon account
-- Once you’ve registered, click **\[Dashboard\]** to view the free app that Photon has automatically configured for you
+- Once you’ve registered, click **[Dashboard]** to view the free app that Photon has automatically configured for you
 - You’ll notice the Photon App ID – we’ll be using that in the next step
 
-[![Photon_Setup](images/Photon_Setup-1024x411.png)](images/Photon_Setup.png)
+[![Photon_Setup](images/Photon_Setup-1024x411.png)](images/Photon_Setup-1024x411.png)
 
 ### UNET Step 6: Register with UNET
 
 - Go to [**https://www.unet.cloud.unity3d.com**](http://unet.cloud.unity3d.com/) to set up a free Unity Cloud account
-- Once you’ve registered, click **\[Multiplayer\]** at the top left and click the \[Create Project\] button at the top right
+- Once you’ve registered, click **[Multiplayer]** at the top left and click the [Create Project] button at the top right
 - Type in a name, a maximum number of players per room, and accept
 - Copy the **UPID** field from this page
 
@@ -125,7 +125,7 @@ New App Dialog
 - Back in Unity, Choose **Window | Photon Unity Networking | Local Settings Asset** from the drop-down menu
 - In the Inspector windows that shows, enter the Photon AppID
 
-[![Photon_app_id_in_Unity](images/Photon_app_id_in_Unity-300x137.png)](images/Photon_app_id_in_Unity.png)
+[![Photon_app_id_in_Unity](images/Photon_app_id_in_Unity-300x137.png)](images/Photon_app_id_in_Unity-300x137.png)
 
 ### UNET Step 7: Update the Cloud Project ID
 
@@ -137,7 +137,7 @@ New App Dialog
 - From the **Project** window, choose the **Assets** folder on the left, and then choose the Scenes subfolder
 - Select the **Connect** Scene in the **Assets** folder of the project, and then click **Play!** Have fun!
 
-[![Run_bombers](images/Run_bombers-300x142.png)](images/Run_bombers.png)
+[![Run_bombers](images/Run_bombers-300x142.png)](images/Run_bombers-300x142.png)
 
 * * *
 
@@ -168,7 +168,7 @@ Experience and levels can be read through the PlayerStateService in the brainClo
 
 Xp levels
 
-## **Custom Player \[User\] Statistics**
+## **Custom Player [User] Statistics**
 
 Every player in brainCloud bombers has a number of custom statistics that are stored on the brainCloud servers. These statistics include the number of ships they have sunk, the number of times they have fired their weapon, their total number of wins, and more. These statistics are updated at the end of each match. Players can view their statistics on the Matchmaking menu, where they are shown on the left side, below the player’s name. These statistics were created on the brainCloud design portal, and can also be edited from the monitoring section of the portal for each user.
 
@@ -184,13 +184,13 @@ brainCloud Bombers has two separate global leaderboards defined, that players m
 
 Leaderboards can be accessed through the SocialLeaderboardService in the brainCloud API. The call returns the entire listing of a given leaderboard, or can be broken up into just the current player’s score, or individual sections of the leaderboard with variable length. The values for the currently observed leaderboard are stored as a public member variable in the BrainCloudStats class. The leaderboards are updated live on the brainCloud server, but on the local client the leaderboards are only fetched when the player wishes to see them from the Matchmaking menu, reducing the number of API calls required per user.
 
-[![leaderboards](images/leaderboards-273x300.png)](images/leaderboards.png)
+[![leaderboards](images/leaderboards-273x300.png)](images/leaderboards-273x300.png)
 
 Bomber Leaderboards
 
 ## Achievement Tracking
 
-Three achievements have been implemented for brainCloud Bombers: destroying 50 enemy planes, sinking 10 ships, and destroying five enemy planes in a single match. brainCloud tracks whether the achievements have been unlocked or not, and can even automatically award the achievements based on player stats using Milestones. At the end of the match, bombers sends the stats updates to brainCloud, and then checks the response to see if any Achievements have been awarded.  \[Exception: note that the Quickshot achievement is handled manually by the client code in real-time during the match.\]
+Three achievements have been implemented for brainCloud Bombers: destroying 50 enemy planes, sinking 10 ships, and destroying five enemy planes in a single match. brainCloud tracks whether the achievements have been unlocked or not, and can even automatically award the achievements based on player stats using Milestones. At the end of the match, bombers sends the stats updates to brainCloud, and then checks the response to see if any Achievements have been awarded.  [Exception: note that the Quickshot achievement is handled manually by the client code in real-time during the match.]
 
 Achievements can be accessed through the GamificationService in the brainCloud API. The call returns all of the achievements in the system, their names, the urls for their icons, their descriptions, and whether or not the current user has unlocked any of them. The achievement data is stored in a public member variable in the BrainCloudStats class. The achievements are updated from the server when the player visits the Matchmaking menu.
 
@@ -201,7 +201,7 @@ Bomber achievements
 [![](images/Milestone-2.png)](images/Milestone-2.png)
 
  1. When this condition is satisfied.   
-2\. Award this achievement.
+ 2. Award this achievement.
 
 ## Global Properties
 
@@ -259,19 +259,19 @@ brainCloud Bombers uses a mixture of scenes and state machines to achieve the fl
     - Handles error messages from the brainCloud server
 - **Matchmaking.cs**
     - Uses a state machine to implement functionality for a number of menus available to the player
-        - GAME\_STATE\_SHOW\_ROOMS: Shows the main matchmaking menu, allowing the player to join games, create games, view the leaderboards, view the controls, view their achievements, and shows the player’s stats.
-        - GAME\_STATE\_NEW\_ROOM\_OPTIONS: Shows the create new room dialogue, allowing the player to set the options for a new room, and then joining into it automatically
-        - GAME\_STATE\_SHOW\_LEADERBOARDS: Displays one of the social leaderboards for brainCloud Bombers, allowing the player to switch between them, and displaying a chevron beside the player’s own entry (if one exists)
-        - GAME\_STATE\_SHOW\_CONTROLS: Displays the basic controls for the game, as well as the goal and some instructions on what to do
-        - GAME\_STATE\_SHOW\_ACHIEVEMENTS: Shows the available achievements for brainCloud Bombers, and tells the player whether they have achieved them or not.
+        - GAME_STATE_SHOW_ROOMS: Shows the main matchmaking menu, allowing the player to join games, create games, view the leaderboards, view the controls, view their achievements, and shows the player’s stats.
+        - GAME_STATE_NEW_ROOM_OPTIONS: Shows the create new room dialogue, allowing the player to set the options for a new room, and then joining into it automatically
+        - GAME_STATE_SHOW_LEADERBOARDS: Displays one of the social leaderboards for brainCloud Bombers, allowing the player to switch between them, and displaying a chevron beside the player’s own entry (if one exists)
+        - GAME_STATE_SHOW_CONTROLS: Displays the basic controls for the game, as well as the goal and some instructions on what to do
+        - GAME_STATE_SHOW_ACHIEVEMENTS: Shows the available achievements for brainCloud Bombers, and tells the player whether they have achieved them or not.
     - Checks the multiplayer server for open rooms, and allows the player to join any room that is not full and within their level range.
     - Allows players to filter room results using a number of filters
 - **GameManager.cs**
     - Uses a state machine to implement functionality for a number of menus available to the player
-        - GAME\_STATE\_WAITING\_FOR\_PLAYERS: Shows the “Bombers Assemble” menu, showing the players connected to the game on both teams, giving players the ability to switch teams, and allowing the host to start the game prematurely before the room is full
-        - GAME\_STATE\_STARTING\_GAME: Fades the screen in anticipation for the match to begin, telling players to get ready
-        - GAME\_STATE\_PLAYING\_GAME: The main state, showing the players their HUD and handling a number of interactions for the actual game, including updating the local scores and tracking the time left in the match
-        - GAME\_STATE\_GAME\_OVER: Shows the results screen to the players, telling them which team won and the scores for each player. The host may go back to the “Bombers Assemble” menu when they wish, and players may leave the room
+        - GAME_STATE_WAITING_FOR_PLAYERS: Shows the “Bombers Assemble” menu, showing the players connected to the game on both teams, giving players the ability to switch teams, and allowing the host to start the game prematurely before the room is full
+        - GAME_STATE_STARTING_GAME: Fades the screen in anticipation for the match to begin, telling players to get ready
+        - GAME_STATE_PLAYING_GAME: The main state, showing the players their HUD and handling a number of interactions for the actual game, including updating the local scores and tracking the time left in the match
+        - GAME_STATE_GAME_OVER: Shows the results screen to the players, telling them which team won and the scores for each player. The host may go back to the “Bombers Assemble” menu when they wish, and players may leave the room
     - Contains the majority of functionality for the live multiplayer, implementing a number of RPCs and controlling their effects (Photon version only)
     - Controls much of the game logic on the host side
 - **PlayerController.cs**

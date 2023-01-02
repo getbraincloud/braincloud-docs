@@ -7,7 +7,7 @@ tags:
 
 ## Release Highlights
 
-[![New Portal UI](images/ABNR_BCNewDesign_05.gif)](/apidocs/wp-content/uploads/2016/08/ABNR_BCNewDesign_05.gif)
+[![New Portal UI](images/ABNR_BCNewDesign_05.gif)](images/ABNR_BCNewDesign_05.gif)
 
 ### New Portal UI
 
@@ -35,17 +35,17 @@ _"Give me all Book GlobalEnties that are either:_
 
 {
 	"entityType": "book",
-	"$or": \[
-		{"data.author": {"$in": \["Isaac Asimov", "Timothy Zahn"\]}},
-		{"$and": \[
+	"$or": [
+		{"data.author": {"$in": ["Isaac Asimov", "Timothy Zahn"]}},
+		{"$and": [
 			{"data.category" : "Science Fiction"},
 			{"data.title": { "$regex": "robot", "$options": "i"}},
 			{"data.price": { "$lte": 500}}
-            	\]}
-	\]
+            	]}
+	]
 }
 
-More information on our query syntax [here](/apidocs/apiref/#appendix-mongodbwherequeries).
+More information on our query syntax [here](/api/appendix/mongodbwherequeries).
 
  
 
@@ -62,7 +62,7 @@ We've implemented a bunch of customer-requested API enhancements - check the API
 Although the overall look and top-level naviation of the Portal has changed significantly, the great majority of features are right where you left them. There is nothing new to learn!
 
 - **Portal Navigation**
-    - We've replaced the old **\[Design | Monitor | Reporting\]** and **\[Gear\]** widgets with a simpler, more elegant top-level menu
+    - We've replaced the old **[Design | Monitor | Reporting]** and **[Gear]** widgets with a simpler, more elegant top-level menu
     - The new **Team** menu is just the old **Admin** menu (which was triggered by clicking the Gear widget in the old UI). _Same features - but much easier to find!_
     - We've added a **Docs** drop-down so that brainCloud documentation is always just a click away
     - We've added a new **Quick** menu for commonly accessed screens, like the API Explorer, User Monitoring, and Analytics.
@@ -84,18 +84,18 @@ Although the overall look and top-level naviation of the Portal has changed si
 The following changes/additions have affected the brainCloud API:
 
 - **Client**
-    - \[NEW!\] `OverrideCountryCode()` and `OverrideLanguageCode()` - allow apps to override the country code and language that are automatically detected by the client libs and sent to brainCloud during authentication. This is useful especially for Unity apps on PC and Mac, because Unity does not properly detect these values. These methods should be called _before authenticating_ so that they are sent to the server.
+    - [NEW!] `OverrideCountryCode()` and `OverrideLanguageCode()` - allow apps to override the country code and language that are automatically detected by the client libs and sent to brainCloud during authentication. This is useful especially for Unity apps on PC and Mac, because Unity does not properly detect these values. These methods should be called _before authenticating_ so that they are sent to the server.
 - **Friend**
-    - \[IMPROVED!\] Added `pictureUrl` to the returns for `FindPlayerByUniversalId()`, `FindPlayerByName()` and `ListFriends()`
-    - \[NEW!\] `FindUsersByExactName()` - allows searching for users via an exact match (case insensitive). Will return as many users that match, up to the maximum.
-    - \[NEW!\] `FindUsersBySubstrName()` - similar to the old `FindPlayerByName()` method, but still returns _some_ search results even if the full results exceed the maximum.
+    - [IMPROVED!] Added `pictureUrl` to the returns for `FindPlayerByUniversalId()`, `FindPlayerByName()` and `ListFriends()`
+    - [NEW!] `FindUsersByExactName()` - allows searching for users via an exact match (case insensitive). Will return as many users that match, up to the maximum.
+    - [NEW!] `FindUsersBySubstrName()` - similar to the old `FindPlayerByName()` method, but still returns _some_ search results even if the full results exceed the maximum.
 - **Leaderboard**
-    - \[NEW!\] `GetPlayersSocialLeaderboard()` - note the plural "players" in the name. Allows the app to retrieve the scores for the specified set of players. Useful in certain tournament situations.
+    - [NEW!] `GetPlayersSocialLeaderboard()` - note the plural "players" in the name. Allows the app to retrieve the scores for the specified set of players. Useful in certain tournament situations.
 - **Logging**
-    - \[NEW!\] `LogInfo()`, `LogWarning()` and `LogError()` - new methods to allow you to easily log the results of cloud code routines
+    - [NEW!] `LogInfo()`, `LogWarning()` and `LogError()` - new methods to allow you to easily log the results of cloud code routines
 - **Push**
-    - \[NEW!\] `SendNormalizedPushNotification()` - ability to send normalized push notifications to individual users
-    - \[NEW!\] `SendNormalizedPushNotificationBatch()` - ability to send a normalized push notification to the specified set of users
+    - [NEW!] `SendNormalizedPushNotification()` - ability to send normalized push notifications to individual users
+    - [NEW!] `SendNormalizedPushNotificationBatch()` - ability to send a normalized push notification to the specified set of users
 - **Queries**
     - We have updated the accepted query syntax for all user, global and group entity lookups
     - These methods now accept queries that include (among others): $and, $or, $not, $nor, $in, $nin, $gt, $gte, $lt, $lte, $ne, $nin, and even $regex
@@ -103,7 +103,7 @@ The following changes/additions have affected the brainCloud API:
         - User Entities:  `GetList()`, `GetListCount()`, `GetSharedEntitiesListForPlayerId()`, `GetPage()`
         - Global Entities: `GetList()`, `GetListCount()`, `GetPage()`
         - Groups/Group Entities: `AutoJoinGroup()`, `ListGroupsPage()`, `ReadGroupEntitiesPage()`
-    - For more information, refer to the [Queries](/apidocs/apiref/#appendix-mongodbwherequeries) page in the Appendix of the API Reference.
+    - For more information, refer to the [Queries](/api/appendix/mongodbwherequeries) page in the Appendix of the API Reference.
 
  
 
@@ -116,7 +116,7 @@ The following changes/additions have affected the brainCloud API:
 - Documentation updates
     - Friend service - we've updated the docs to more clearly indicate with methods require that the user be "friends" with the other user to function. (_Spoiler: It is actually very few of them_.)
     - Cloud Code - added service + operation for all cloud code method documentation
-    - Obsolete docs - we've almost completely removed our old API docs - our new [API Reference](/apidocs/apiref) is the master now.
+    - Obsolete docs - we've almost completely removed our old API docs - our new [API Reference](/api/capi) is the master now.
 - Important Fixes
     - Fixed an issue where the global error handler was not sending the correct callback object when using the BrainCloudWrapper
     - Fixed a defect where the javascript library was could send a bad rotation date to the server (with certain dates)

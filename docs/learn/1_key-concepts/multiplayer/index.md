@@ -17,7 +17,7 @@ brainCloud has a full implementation of Turn-by-Turn Async Multiplayer, enabled 
 
 Another very popular form of mobile multiplayer is what we call One-Way Offline Multiplayer. It's our name for the form of multiplayer popularized by games like **_Clash of Clans_**, **_Boom Beach_**, etc.  In it, an Attacker attacks the settlement (base, camp, fort, etc.) that has been set up by the Defender. Once again, the great thing about this form of multiplayer is that the Defender does not have to be online during the attack.
 
-brainCloud has a full implementation of One-Way Offline Multiplayer, enabled via our [BrainCloudOneWayMatch](/api/capi/oneway) APIs. Opponents to attack can be found using the [BrainCloudMatchMaking](/api/capi/matchmaking) service, or via the [BrainCloudFriend](/api/capi/friend) API.
+brainCloud has a full implementation of One-Way Offline Multiplayer, enabled via our [BrainCloudOneWayMatch](/api/capi/onewaymatch) APIs. Opponents to attack can be found using the [BrainCloudMatchMaking](/api/capi/matchmaking) service, or via the [BrainCloudFriend](/api/capi/friend) API.
 
 Refer to our [One-Way Offline Multiplayer Example](/learn/key-concepts/multiplayer/one-way-offline-multiplayer-example/) for more information.
 
@@ -37,8 +37,10 @@ Games using these services still benefit from the rest of brainCloud's features,
 
 ## Semi-Realtime Multiplayer
 
-Semi-Realtime Multiplayer is very similar to Realtime Multiplayer regarding technology - though the gameplay itself is less "twitch" based, and does not normally require physics, etc. Examples of this multiplayer would include online card games, like _**Uno**_ or _**Hearthstone**_. All players must be online at the same time, and the interactions \*are\* still in real-time, though the gameplay isn't as sensitive to latency issues.
+Semi-Realtime Multiplayer is very similar to Realtime Multiplayer regarding technology - though the gameplay itself is less "twitch" based, and does not normally require physics, etc. Examples of this multiplayer would include online card games, like _**Uno**_ or _**Hearthstone**_. All players must be online at the same time, and the interactions *are* still in real-time, though the gameplay isn't as sensitive to latency issues.
 
 This form of multiplayer is perfect for brainCloud's new Real-time Tech (RTT) infrastructure. RTT allows you to integrate custom Game or Room Servers with brainCloud - which will be served up by brainCloud's online matchmaking and lobby services.
 
 _Check out our [Warstone](https://github.com/getbraincloud/examples-javascript) example game for more info._
+
+<DocCardList />

@@ -56,7 +56,7 @@ Note that if you are already logged into the portal you can return to the Home p
 
 #### Add brainCloud library to the project
 
-- Open the XCode project in _proj.ios\_mac/MyGame.xcodeproj_
+- Open the XCode project in _proj.ios_mac/MyGame.xcodeproj_
 - Because I'm paranoid I hit run just to make sure the project Cocos2d-x generated actually compiles and runs
 - Unzip the brainCloud libraries into a platform specific folder in your game project. I ended up creating a path that looks like this:_MyGame/libs/ios/brainCloud._Underneath this folder would be include, libs, src and thirdparty.
 - Add the brainCloud folder to the project by right clicking on the project and select "Add Files to MyGame..."
@@ -96,7 +96,7 @@ Your iOS project is now setup!
 
 - Install Android Studio (the important part is the [SDK manager](http://developer.android.com/tools/help/sdk-manager.html))
 - Install the Android SDK using the SDK Manager. I used 4.0 aka android-14
-- Install the [Android NDK](https://developer.android.com/tools/sdk/ndk/index.html) \- I used r10d
+- Install the [Android NDK](https://developer.android.com/tools/sdk/ndk/index.html) - I used r10d
 - Install [Eclipse](https://eclipse.org/)
 - Install the Eclipse [ADT Plugin](http://developer.android.com/tools/sdk/eclipse-adt.html)
 - Set your NDK path in Eclipse properties
@@ -118,7 +118,7 @@ The example project needs a few extra steps before you can run it properly. Name
 
     [![Properties_for_brainCloudExample](images/Properties_for_brainCloudExample.png)](images/Properties_for_brainCloudExample.png)
 
-- Next, go to C/C++ Build | Environment. Add a new environment variable "NDK\_ROOT" and point it to your NDK folder. Make sure to check "Add to all configurations".
+- Next, go to C/C++ Build | Environment. Add a new environment variable "NDK_ROOT" and point it to your NDK folder. Make sure to check "Add to all configurations".
 
     [![New_variable_and_Properties_for_brainCloudExample](images/New_variable_and_Properties_for_brainCloudExample.png)](images/New_variable_and_Properties_for_brainCloudExample.png)
 
@@ -133,40 +133,40 @@ After creating the cocos2d-x project skeleton, you can add brainCloud to your pr
     [![libs](images/libs.png)](images/libs.png)
     
 
-- Add the static library modules to your jni/Android.mk file. Note these should be before your main project definition (ie before the CLEAR\_VARS)
+- Add the static library modules to your jni/Android.mk file. Note these should be before your main project definition (ie before the CLEAR_VARS)
 ```js
-include $(CLEAR\_VARS)
-LOCAL\_MODULE := braincloud
-LOCAL\_SRC\_FILES := ../../libs/android/brainCloud/libs/$(TARGET\_ARCH\_ABI)/libbraincloud.a
-include $(PREBUILT\_STATIC\_LIBRARY)
+include $(CLEAR_VARS)
+LOCAL_MODULE := braincloud
+LOCAL_SRC_FILES := ../../libs/android/brainCloud/libs/$(TARGET_ARCH_ABI)/libbraincloud.a
+include $(PREBUILT_STATIC_LIBRARY)
 
-include $(CLEAR\_VARS)
-LOCAL\_MODULE := curl
-LOCAL\_SRC\_FILES := ../../cocos2d/external/curl/prebuilt/android/$(TARGET\_ARCH\_ABI)/libcurl.a
-include $(PREBUILT\_STATIC\_LIBRARY)
+include $(CLEAR_VARS)
+LOCAL_MODULE := curl
+LOCAL_SRC_FILES := ../../cocos2d/external/curl/prebuilt/android/$(TARGET_ARCH_ABI)/libcurl.a
+include $(PREBUILT_STATIC_LIBRARY)
 
-include $(CLEAR\_VARS)
-LOCAL\_MODULE := crypto
-LOCAL\_SRC\_FILES := ../../cocos2d/external/curl/prebuilt/android/$(TARGET\_ARCH\_ABI)/libcrypto.a
-include $(PREBUILT\_STATIC\_LIBRARY)
+include $(CLEAR_VARS)
+LOCAL_MODULE := crypto
+LOCAL_SRC_FILES := ../../cocos2d/external/curl/prebuilt/android/$(TARGET_ARCH_ABI)/libcrypto.a
+include $(PREBUILT_STATIC_LIBRARY)
 
-include $(CLEAR\_VARS)
-LOCAL\_MODULE := ssl
-LOCAL\_SRC\_FILES := ../../cocos2d/external/curl/prebuilt/android/$(TARGET\_ARCH\_ABI)/libssl.a
-include $(PREBUILT\_STATIC\_LIBRARY)
+include $(CLEAR_VARS)
+LOCAL_MODULE := ssl
+LOCAL_SRC_FILES := ../../cocos2d/external/curl/prebuilt/android/$(TARGET_ARCH_ABI)/libssl.a
+include $(PREBUILT_STATIC_LIBRARY)
 ```
 - Add the includes to jni/Android.mk:
 ```js
-LOCAL\_C\_INCLUDES += $(LOCAL\_PATH)/../../libs/android/brainCloud/include
-LOCAL\_C\_INCLUDES += $(LOCAL\_PATH)/../../libs/android/brainCloud/src
-LOCAL\_C\_INCLUDES += $(LOCAL\_PATH)/../../libs/android/brainCloud/thirdparty/jsoncpp-1.0.0
+LOCAL_C_INCLUDES += $(LOCAL_PATH)/../../libs/android/brainCloud/include
+LOCAL_C_INCLUDES += $(LOCAL_PATH)/../../libs/android/brainCloud/src
+LOCAL_C_INCLUDES += $(LOCAL_PATH)/../../libs/android/brainCloud/thirdparty/jsoncpp-1.0.0
 ```
 - Add the source files to jni/Android.mk:
 ```js
 define all-cpp-files-under
-$(patsubst ./%,%, \\
-  $(shell cd $(LOCAL\_PATH) ; \\
-    find $(1) -name "\*.cpp" -and -not -name ".\*") \\
+$(patsubst ./%,%, \
+  $(shell cd $(LOCAL_PATH) ; \
+    find $(1) -name "*.cpp" -and -not -name ".*") \
  )
 endef
 
@@ -178,13 +178,13 @@ define all-subdir-json-cpp-files
 $(call all-cpp-files-under,../../libs/android/brainCloud/thirdparty/jsoncpp-1.0.0)
 endef
 
-LOCAL\_SRC\_FILES += $(call all-subdir-braincloud-cpp-files)
+LOCAL_SRC_FILES += $(call all-subdir-braincloud-cpp-files)
 ```
 - Add the static library and c++ exception rule to jni/Android.mk:
 ```js
-LOCAL\_STATIC\_LIBRARIES := cocos2dx\_static braincloud curl crypto ssl
+LOCAL_STATIC_LIBRARIES := cocos2dx_static braincloud curl crypto ssl
 
-LOCAL\_CPP\_FEATURES += exceptions
+LOCAL_CPP_FEATURES += exceptions
 ```
 - Copy the AndroidBridge.java file from the brainCloud javasrc directory into your project's java source code directory
 - In the AppActivity.java file of your cocos project, add a call to AndroidBridge.initializeLocale(). We override the init method to accomplish this:  
@@ -199,11 +199,11 @@ public void init()
 ```
 #### Optional -  if you're creating a project from scratch you will probably need to do the following extra steps:
 
-- Add the NDK\_ROOT variable to your Project properties (C/C++ Build | Environment)
+- Add the NDK_ROOT variable to your Project properties (C/C++ Build | Environment)
 - Add the minimum Android SDK variable to your AndroidManifest.xml file (we used 14 in the example project)
-- Add the minimum Android SDK to your Application.mk (APP\_PLATFORM := android-14)
+- Add the minimum Android SDK to your Application.mk (APP_PLATFORM := android-14)
 - Set the minimum Android SDK in your Project properties (Android | Project Build Target)
-- Add the ABI to your Application.mk (APP\_ABI := x86 armeabi)
+- Add the ABI to your Application.mk (APP_ABI := x86 armeabi)
 
 #### Windows 8.1 (TBD)
 
@@ -225,12 +225,12 @@ There are a number of places where this can be done. We're going to use the AppD
 ```
 - Initialize BrainCloudWrapper with the appropriate parameters.
 ```js
-const char \* url = "https://sharedprod.braincloudservers.com/dispatcher"; 
-const char \* secretKey = "7014fb94-41e6-49cd-9a77-e50233d40133"; 
-const char \* gameId = "10068"; 
-const char \* gameVersion = "2.0"; 
-const char \* companyName = "bitHeads"; 
-const char \* gameName = "cocosExample"; 
+const char * url = "https://sharedprod.braincloudservers.com/dispatcher"; 
+const char * secretKey = "7014fb94-41e6-49cd-9a77-e50233d40133"; 
+const char * gameId = "10068"; 
+const char * gameVersion = "2.0"; 
+const char * companyName = "bitHeads"; 
+const char * gameName = "cocosExample"; 
 
 BrainCloudWrapper::getInstance()->initialize(url, secretKey, gameId, gameVersion, companyName, gameName);
 ```
@@ -250,7 +250,7 @@ void MainScene::update(float dt)
 ```
 MainScene kicks off the update method using this code in the init function:
 ```js
-Director::getInstance()->getScheduler()->schedule(schedule\_selector(MainScene::update), this, 0.1f, false);
+Director::getInstance()->getScheduler()->schedule(schedule_selector(MainScene::update), this, 0.1f, false);
 ```
 So in the example, there is nothing to add. However it is important to note that when implementing brainCloud for your game you will have to ensure the BrainCloudWrapper update method is being called regularly.
 
@@ -267,8 +267,8 @@ In our example project, you can navigate to "ConnectUniversalLayer.h/cpp" to fol
 In order to authenticate we use the following code:
 ```js
 // grab the username and password from the cocos edit box
-const char \* user = m\_usernameDisplay->getEditBox()->getText();
-const char \* pwd = m\_pwdDisplay->getEditBox()->getText();
+const char * user = m_usernameDisplay->getEditBox()->getText();
+const char * pwd = m_pwdDisplay->getEditBox()->getText();
 
 // and the call authenticate passing in this pointer as the callback object
 BrainCloudWrapper::getInstance()->authenticateUniversal(user, pwd, this);
@@ -305,11 +305,11 @@ void ConnectUniversalLayer::serverCallback( BrainCloud::ServiceName serviceName,
 {
     if (serviceName == BrainCloud::ServiceName::AuthenticateV2 && serviceOperation == BrainCloud::ServiceOperation::Authenticate)
     {
-        m\_logBox->addText("Authenticate was successful!");
-        if (m\_mainScene != NULL)
+        m_logBox->addText("Authenticate was successful!");
+        if (m_mainScene != NULL)
         {
             // add short delay before switching scenes
-            Action \*sequence = Sequence::createWithTwoActions(DelayTime::create(0.7f), CallFunc::create( CC\_CALLBACK\_0(MainScene::switchToMainLayer, m\_mainScene)));
+            Action *sequence = Sequence::createWithTwoActions(DelayTime::create(0.7f), CallFunc::create( CC_CALLBACK_0(MainScene::switchToMainLayer, m_mainScene)));
             runAction(sequence);
         }
     }
@@ -319,14 +319,14 @@ void ConnectUniversalLayer::serverCallback( BrainCloud::ServiceName serviceName,
 ```js
 void ConnectUniversalLayer::serverError( BrainCloud::ServiceName serviceName, BrainCloud::ServiceOperation serviceOperation, int returnCode, const std::string & jsonData)
 {
-    \_\_String\* errorString = String::createWithFormat("Server Error: %d  %s", returnCode, jsonData.c\_str());
-    m\_logBox->addText(errorString->getCString());
+    __String* errorString = String::createWithFormat("Server Error: %d  %s", returnCode, jsonData.c_str());
+    m_logBox->addText(errorString->getCString());
 }
 
 void ConnectUniversalLayer::serverWarning( BrainCloud::ServiceName serviceName, BrainCloud::ServiceOperation serviceOperation, int returnCode, int numRetries, const std::string & jsonData)
 {
-    \_\_String\* warningString = String::createWithFormat("Server Warning: %d  %s  attempt %d", returnCode, jsonData.c\_str(), numRetries);
-    m\_logBox->addText(warningString->getCString());
+    __String* warningString = String::createWithFormat("Server Warning: %d  %s  attempt %d", returnCode, jsonData.c_str(), numRetries);
+    m_logBox->addText(warningString->getCString());
 }
 ```
 ## Player Statistics
@@ -350,7 +350,7 @@ In this case I've added a statistic called "gamesWon".
 Now we can add the code which increments and retrieves statistics. In this case refer to the "PlayerStatsLayer" class in the example project.
 ```js
 Json::Value stats;
-stats\[statName\] = valueString;
+stats[statName] = valueString;
                 
 Json::FastWriter fastWriter;
 string jsonToSend = fastWriter.write(stats);
@@ -368,13 +368,13 @@ BrainCloudWrapper::getInstance()->getBCClient()->getPlayerStatisticsService()->r
 And then in our callback handler we can iterate through the player statistics as follows:
 
 Json::Value jsonValue = BrainCloudWrapper::getInstance()->getBCClient()->jsonStringToValue(jsonData);
-Json::Value statMap = jsonValue\["data"\]\["statistics"\];
+Json::Value statMap = jsonValue["data"]["statistics"];
 	
 auto memberNames = statMap.getMemberNames();
 for (int i = 0; i < memberNames.size(); i++)
 {
-    const char \* statName = memberNames\[i\].c\_str();
-    long statValue = statMap\[memberNames\[i\]\].asInt64();
+    const char * statName = memberNames[i].c_str();
+    long statValue = statMap[memberNames[i]].asInt64();
 }
 ```
 ## Conclusion

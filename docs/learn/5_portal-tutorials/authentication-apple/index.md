@@ -33,7 +33,7 @@ This article elaborates on the basic steps of how to authenticate end-users with
 
 [![](images/Screen+Shot+2021-01-10+at+9.13.34+PM.png)](https://downloads.intercomcdn.com/i/o/285890084/51ad044d85db7a5ca2592e7b/Screen+Shot+2021-01-10+at+9.13.34+PM.png)
 
-- Functions and its code that linked behind the button \[Sign in with Apple\] are similar to below. Once end-user login into their Apple account, from the success callback, retrieve the userId and id token and pass them to brainCloud Apple authentication method -- `AuthenticateApple`
+- Functions and its code that linked behind the button [Sign in with Apple] are similar to below. Once end-user login into their Apple account, from the success callback, retrieve the userId and id token and pass them to brainCloud Apple authentication method -- `AuthenticateApple`
 ```js
     void Start()
 
@@ -45,7 +45,7 @@ This article elaborates on the basic steps of how to authenticate end-users with
 
         password = GameObject.Find("password").GetComponent<InputField>();
 
-        \_bc.SetAlwaysAllowProfileSwitch(true);
+        _bc.SetAlwaysAllowProfileSwitch(true);
 
         gameObject.AddComponent<SignInWithApple>();
 
@@ -73,10 +73,10 @@ This article elaborates on the basic steps of how to authenticate end-users with
         idToken = userInfo.idToken;
         // Print out information about the user who logged in.
         Debug.Log(
-            string.Format("Display Name: {0}\\nEmail: {1}\\nUser ID: {2}\\nID Token: {3}", userInfo.displayName ?? "",
+            string.Format("Display Name: {0}\nEmail: {1}\nUser ID: {2}\nID Token: {3}", userInfo.displayName ?? "",
                 userInfo.email ?? "", userInfo.userId ?? "", userInfo.idToken ?? ""));
         //authenticate user to bc
-        \_bc.AuthenticateApple(userId, idToken, true, authSuccess\_BCcall, authError\_BCcall);
+        _bc.AuthenticateApple(userId, idToken, true, authSuccess_BCcall, authError_BCcall);
     }
 ```
 - Finish the rest callbacks code in your script.

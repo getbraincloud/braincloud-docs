@@ -5,7 +5,7 @@ tags:
   - "release-history"
 ---
 
-In [Release 4.5.5](https://getbraincloud.com/apidocs/release-4-5-5/) we added support for _Amazon In-app Purchases_. As part of that feature, we also expanded brainCloud to include Amazon devices as a separate _Platform_ - essentially so that devs implementing Amazon IAP would be able to get a better feel of the monetization of users on that platform.
+In [Release 4.5.5](/release/2020/07/15/release-4-5-5/) we added support for _Amazon In-app Purchases_. As part of that feature, we also expanded brainCloud to include Amazon devices as a separate _Platform_ - essentially so that devs implementing Amazon IAP would be able to get a better feel of the monetization of users on that platform.
 
 Regrettably, we neglected to properly anticipate and publicize the side effect of that change - with is that **brainCloud apps using the 4.5.5+ libs running on Amazon now need to have the new "Amazon" platform enabled.**
 

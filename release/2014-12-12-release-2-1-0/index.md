@@ -31,4 +31,4 @@ Portal/Server Features:
 
 Plus we've refreshed the look of our Apidocs portal, and continue to add new content.
 
-Check it out at [http://apidocs.braincloudservers.com/](http://apidocs.braincloudservers.com/)
+Check it out at [brainCloud Docs](/learn/introduction/)

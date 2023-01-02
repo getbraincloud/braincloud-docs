@@ -126,18 +126,18 @@ We've made the following portal changes:
 The following changes/additions have affected the brainCloud API:
 
 - **Authentication**
-    - AuthenticateExternal - We've added the ability for External Auth scripts to override the externalId that will be stored, and to even provide the specific profileId to load. More details in the _Advanced_ section of the [External Authentication](https://getbraincloud.com/apidocs/api-modules/authentication/external-authentication/) overview page in API Docs.
+    - AuthenticateExternal - We've added the ability for External Auth scripts to override the externalId that will be stored, and to even provide the specific profileId to load. More details in the _Advanced_ section of the [External Authentication](/learn/key-concepts/authentication/external-authentication/) overview page in API Docs.
 - **DataStream**
     - New CrashReporting API has been added. Send crash reports to your back-end system for further analysis.
     - For more information, see the DataStream service documentation
-- **\[New!\] Item Catalog**
+- **[New!] Item Catalog**
     - These APIs allow devs to read and modify the central item catalog
     - Purchases and other operations are handled via the User Items Service (below)
     - For more information, see the ItemCatalog service documentation
 - **Player State**
     - New Timed Status Effect API methods have been added to the Player State service
     - For more information, see the PlayerState service documentation
-- **\[New!\] User Items**
+- **[New!] User Items**
     - This service provides the functionality for purchasing, selling, trading, and using items
     - For more information, see the UserItem service documentation
 
@@ -156,6 +156,6 @@ The following changes/additions have affected the brainCloud API:
     - AS3
         - 4.2 version coming soon.
 - Documentation updates
-    - Check out the APIDocs for information on the latest APIs - [https://getbraincloud.com/apidocs/apiref](https://getbraincloud.com/apidocs/apiref) 
+    - Check out the APIDocs for information on the latest APIs - [https://getbraincloud.com/api/introduction](/api/introduction) 
     - Don't forget to check out our expanded knowledge base - [http://help.getbraincloud.com](http://help.getbraincloud.com/) 
 - Plus miscellaneous fixes and performance enhancements...

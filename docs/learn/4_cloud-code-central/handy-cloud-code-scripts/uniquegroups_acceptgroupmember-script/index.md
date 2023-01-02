@@ -37,7 +37,7 @@ _Example script parameters:_
 ```
 ### Debug
 
-Click [UTest\_UniqueGroups\_AcceptGroupMember.cloudcode.js](images/Test_UniqueGroups_AcceptGroupMember.cloudcode.js) to view the optional debug script. Right-click to download it.
+Click [UTest_UniqueGroups_AcceptGroupMember.ccjs](script/UTest_UniqueGroups_AcceptGroupMember.ccjs) to view the optional debug script. Right-click to download it.
 
 #### Example success response
 ```js
@@ -53,14 +53,14 @@ Click [UTest\_UniqueGroups\_AcceptGroupMember.cloudcode.js](images/Test_UniqueGr
       "data": null,
       "status": 200
      },
-     "rejectedRequests": \[
+     "rejectedRequests": [
       {
        "data": null,
        "status": 200,
        "requestedOwnerId": "c2c32dfe-f9f0-488a-b9b8-88b2ae06f774",
        "requestedGroupId": "cc448c05-42d6-461a-9144-7e6a299be553"
       }
-     \]
+     ]
     }
    }
   },

@@ -25,7 +25,7 @@ Start by dragging off of the Event node and adding the Initialize function node.
 You should now have the Initialize node on the Graph.  The information you need to initialize comes from the Core App Info > Application IDs page in the brainCloud web portal.
 
 - **Server Url -** The URL (default value: https://sharedprod.braincloudservers.com/dispatcherv2) of the brainCloud server to connect to. You should not have to change this.
-- **Secret Key** \- The **App Secret** for your application
+- **Secret Key** - The **App Secret** for your application
 - **App Id** - The game (or in the portal page **App ID**) of your application
 - **Game Version** - The current version of your application
 
@@ -55,17 +55,17 @@ Let's go over the structure that all server-communicating brainCloud Blueprint n
 
 This is a Latent node, meaning it has execution paths that are delayed.  There are **three** execution pins:
 
-1. **Immediate** \- Executes immediately, continuing the execution path that triggered the node
-2. **On Success** \- Executes when a **successful** response is received
+1. **Immediate** - Executes immediately, continuing the execution path that triggered the node
+2. **On Success** - Executes when a **successful** response is received
 3. **On Failure** - Executes when an **unsuccessful** response is received and the call has failed
 
 The next return parameter **Json Data** is a JSON-formatted string.  The return of this is conditional on the success or failure of the call, returning either the data specified by the API call made **or** the error information. We will get into parsing this string later in the tutorial.
 
 Finally, there is the **Additional Data** struct. This contains extra information that may be useful depending on the situation. It contains:
 
-- **Service Name** \- The name of the service the API call belongs to
+- **Service Name** - The name of the service the API call belongs to
 - **Service Operation** - The specific operation performed by the API call
-- **Status Code** \- The status code returned by the call.
+- **Status Code** - The status code returned by the call.
 - **Reason Code** - The reason code describes specific failures and is returned when an error is encountered. You can view the various reason codes [here](/api/appendix/reasoncodes).
 
 All brainCloud API calls that communicate with the brainCloud server will have this return structure.
@@ -76,11 +76,11 @@ Authentication is the next step and is required before calling any other brainCl
 
 By now you should have these nodes set up and connected in order:
 
-[![](images/unreal-initialize-authenticate-2.jpg)](images/unreal_prog_auth.png)
+[![](images/unreal-initialize-authenticate-2.jpg)](images/unreal-initialize-authenticate-2.jpg)
 
 Next, we will add some debug log messages to get a feel for how the different execution paths function.
 
-[![](images/node-5.jpg)](images/unreal_auth_return.png)
+[![](images/node-5.jpg)](images/node-5.jpg)
 
 The first execution pin fires **immediately**, continuing the execution path that triggered the Authenticate node in the first place.  This makes it suitable for printing the "Authenticating..." message.
 
@@ -124,6 +124,6 @@ Now we will decode the JSON, which is simply a call to the VaRest function **Dec
 
 The next step is to check if the Decode Json call was successful by branching off of its Return Value boolean. If it was, we now want to dig through the data and print the current server time.
 
-Referring to the JSON return structure in the [documentation](/api/capi/time/readservertime) we can see that the server time is represented by the key **"server\_time"** which is contained in the object **"data"**.  So to get to it we take the Json Data object we saved to a variable and use the VaRest functions **Get Object Field** and then **Get Number Field**, passing in "data" and "server\_time" as our Field Names.
+Referring to the JSON return structure in the [documentation](/api/capi/time/readservertime) we can see that the server time is represented by the key **"server_time"** which is contained in the object **"data"**.  So to get to it we take the Json Data object we saved to a variable and use the VaRest functions **Get Object Field** and then **Get Number Field**, passing in "data" and "server_time" as our Field Names.
 
 Lastly, we do a conversion from a float to a string and print the result.

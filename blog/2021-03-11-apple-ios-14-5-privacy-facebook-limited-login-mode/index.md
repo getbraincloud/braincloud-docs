@@ -39,7 +39,7 @@ A few more details about the changes in brainCloud 4.7:
 - Full Support for _Facebook Limited Login_ mode across the authentication + identity APIs. The same user using either mode will be linked to the same underlying brainCloud profile.
 - brainCloud will automatically handle the loss of the Graph API for Limited Login mode users — so for example, users will simply appear to have no Facebook friends (instead of the client app having to deal with errors).
 - Coincidentally, brainCloud 4.7 will include new support for Steam and Playstation Network friends — so apps can extend their friend support in other areas.
-- brainCloud already supports self-managed [Friend APIs](http://getbraincloud.com/apidocs/apiref/#capi-friend). See AddFriends(), ListFriends(), etc.
+- brainCloud already supports self-managed [Friend APIs](http://getbraincloud.com/api/capi/friend). See AddFriends(), ListFriends(), etc.
 
 We hope that this helps to clarify the impact of these changs to iOS 14.5, and how brainCloud can help your apps to adapt.
 

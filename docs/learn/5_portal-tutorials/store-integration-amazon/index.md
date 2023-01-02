@@ -38,12 +38,12 @@ After setting up your products in the brainCloud marketplace, you’ll want to a
 
 (for this tutorial we'll assume that the product(item) SKU is _bitheads.brainCloud.aiaptest.pc1_)
 
-Warning
+:::warning
 
 If you skip registering your Amazon product(item) SKU to the brainCloud portal, you will get an error like below when calling verifying purchase API.  
 `"transactionResultCode": 102,`  
 `"errorMessage": "Product not found",`
-
+:::
 - Log into the brainCloud Portal
 - Go to the “Marketplace | Products” page in the Design tab  
     
@@ -53,13 +53,11 @@ If you skip registering your Amazon product(item) SKU to the brainCloud portal, 
 
 ![](images/image-5.png)
 
-- [](images/brainCloud_dashboard_addFbProduct1.jpg)
-    
-    Click the **\[+ Edit Product\]** button to make it editable.
+    Click the **[+ Edit Product]** button to make it editable.
 
 ![](images/image-6.png)
 
-- Find your Price (or create one by click **\[+\]** icon) and click the edit icon
+- Find your Price (or create one by click **[+]** icon) and click the edit icon
 
 ![](images/image-7.png)
 
@@ -71,8 +69,6 @@ If you skip registering your Amazon product(item) SKU to the brainCloud portal, 
 
 ![](images/image-10.png)
 
-- [](images/brainCloud_dashboard_addFbProduct3.jpg)
-    
     At this point, you may want to select your price to be the default if it isn’t already selected. You can do this back in the Edit Product page.
     
 
@@ -191,7 +187,7 @@ public class BCinterface : MonoBehaviour
     //click authentication button
     public void AuthenticateBC()
     {
-        _bc.AuthenticateEmailPassword("unityuser@unity.com", "unitytest", true, authSuccess\_BCcall, authError\_BCcall);
+        _bc.AuthenticateEmailPassword("unityuser@unity.com", "unitytest", true, authSuccess_BCcall, authError_BCcall);
     }
     private void Awake()
     {
@@ -252,11 +248,11 @@ public class BCinterface : MonoBehaviour
         bool hasMore = args.HasMore;
 
         // for each purchase receipt you can get the following values
-        string receiptId = receipts\[0\].ReceiptId;
-        long cancelDate = receipts\[0\].CancelDate;
-        long purchaseDate = receipts\[0\].PurchaseDate;
-        string sku = receipts\[0\].Sku;
-        string productType = receipts\[0\].ProductType;
+        string receiptId = receipts[0].ReceiptId;
+        long cancelDate = receipts[0].CancelDate;
+        long purchaseDate = receipts[0].PurchaseDate;
+        string sku = receipts[0].Sku;
+        string productType = receipts[0].ProductType;
 
         aiapReceiptUpdateResponse = receiptId;
         aiapUserIdUpdateResponse = userId;
@@ -268,17 +264,17 @@ public class BCinterface : MonoBehaviour
         if (String.IsNullOrEmpty(aiapReceipt))
         {
             //call purchase updateResonse verify if purchase is not fulfilled
-            string receiptData = "{\\"receiptId\\":\\"" + aiapReceiptUpdateResponse + "\\",\\"userId\\":\\"" + aiapUserIdUpdateResponse + "\\"}";
+            string receiptData = "{\"receiptId\":\"" + aiapReceiptUpdateResponse + "\",\"userId\":\"" + aiapUserIdUpdateResponse + "\"}";
             Debug.Log("BrainCloudVerifyPurchase click with purchase updateResonse receiptData:" + receiptData);
-            _bc.AppStoreService.VerifyPurchase("amazon", receiptData, veriSuccess\_BCcall, veriError\_BCcall);
+            _bc.AppStoreService.VerifyPurchase("amazon", receiptData, veriSuccess_BCcall, veriError_BCcall);
 
         }
         else
         {
             //call purchase Resonse verify
-            string receiptData = "{\\"receiptId\\":\\"" + aiapReceipt + "\\",\\"userId\\":\\"" + aiapUserId + "\\"}";
+            string receiptData = "{\"receiptId\":\"" + aiapReceipt + "\",\"userId\":\"" + aiapUserId + "\"}";
             Debug.Log("BrainCloudVerifyPurchase click with purchase Resonse receiptData:" + receiptData);
-            _bc.AppStoreService.VerifyPurchase("amazon", receiptData, veriSuccess\_BCcall, veriError\_BCcall);
+            _bc.AppStoreService.VerifyPurchase("amazon", receiptData, veriSuccess_BCcall, veriError_BCcall);
         }
     }
 
@@ -335,7 +331,7 @@ public enum MySku {
         final SamplePurchasingListener purchasingListener = new SamplePurchasingListener(sampleIapManager);
         Log.d(TAG, "onCreate: registering PurchasingListener");
         PurchasingService.registerListener(this.getApplicationContext(), purchasingListener);
-        Log.d(TAG, "IS_SANDBOX_MODE:" + PurchasingService.IS\_SANDBOX\_MODE);
+        Log.d(TAG, "IS_SANDBOX_MODE:" + PurchasingService.IS_SANDBOX_MODE);
 ...
 
 ...

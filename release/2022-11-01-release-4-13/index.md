@@ -77,7 +77,7 @@ For instructions on how to configure them, see this [article](https://help.getbr
 
 Non-consumable In-App-Purchases can be processed multiple times (unless the “_Do not reprocess currencies for non-consumable IAP products in receipts_” compatibility flag is enabled).
 
-This can be triggered when an iOS user clicks \[Restore Purchases\] on an app. Doing so may cause the transaction to be moved from one brainCloud account to another… (for example - if the iOS user is using a different brainCloud account than when they originally made the purchase).
+This can be triggered when an iOS user clicks [Restore Purchases] on an app. Doing so may cause the transaction to be moved from one brainCloud account to another… (for example - if the iOS user is using a different brainCloud account than when they originally made the purchase).
 
 _Note that this sort of activity could also theoretically happen if your app has been cracked and users are sending stolen (but valid) receipts into brainCloud._
 
@@ -219,8 +219,8 @@ The following changes/additions have affected the brainCloud API:
 The following issues have been addressed in this release:
 
 - BCLOUD-1257 - Getting NPE When Paginating in the Server logs Page
-- BCLOUD-1728 - \[Internal\] The “Localize in” field stuck when user made a changes and click on Cancel button
-- BCLOUD-2050 - \[Internal\] Cloud Code – Scripts page, when user “Export All Scripts” and single "Export Script" in the TEAM | Audit Log shows duplicate entries for the exported
+- BCLOUD-1728 - [Internal] The “Localize in” field stuck when user made a changes and click on Cancel button
+- BCLOUD-2050 - [Internal] Cloud Code – Scripts page, when user “Export All Scripts” and single "Export Script" in the TEAM | Audit Log shows duplicate entries for the exported
 - BCLOUD-2084 - JoinDivision and SysGetLeaderboardConfig responses to include timestamp division set instance leaderboard was created at
 - BCLOUD-2113 - Missing translation "Details for" on Monitoring | Global Monitoring | Redemption Codes page
 - BCLOUD-2114 - Missing translation "Error! Invalid search criteria. Please enter a minimum of 3 characters." on User Monitoring | User Summary - Select User
@@ -232,18 +232,18 @@ The following issues have been addressed in this release:
 - BCLOUD-2349 - Return a 503 response status in the event of Memcached timeouts
 - BCLOUD-2351 - Reset password for email and universalId not trimming or lowercasing "externalId" input
 - BCLOUD-2352 - Custom Entity SysIncrementData and IncrementData APIs require Sharded versions for sharded custom collections
-- BCLOUD-2353 - \[Internal\] Nintendo is not in alphabetical order in Select User Identity list
-- BCLOUD-2375 - \[Internal \] Unlock App dialog ignores changes to the application name
+- BCLOUD-2353 - [Internal] Nintendo is not in alphabetical order in Select User Identity list
+- BCLOUD-2375 - [Internal ] Unlock App dialog ignores changes to the application name
 - BCLOUD-2376 - Errors in prod-baas for IdentityService ATTACH with Google OpenID
 - BCLOUD-2396 - Super / Manage / Apps - Search filter is performing the query against the server on EVERY character that is typed.
 - BCLOUD-2433 - Audit logs missing for a number of update and delete Push Notification settings requests from Portal
-- BCLOUD-2488 - \[Internal\] Generate error/warning message when user saves a User Statistics Event without proper Actions
+- BCLOUD-2488 - [Internal] Generate error/warning message when user saves a User Statistics Event without proper Actions
 - BCLOUD-2499 - Modify Steam IAP order id generation to incorporate app id
 - BCLOUD-2512 - We should have a way of re-sending end-user email verification emails?
 - BCLOUD-2525 - PATCH! Need IdentityService.getIdentityData() to be accessible from cloud code scripts!
 - BCLOUD-2526 - PATCH - missing CLIENT cloud code proxy for getSessionForValidatedCredential()
-- BCLOUD-2528 - \[Internal\] Design | Cloud Data | Custom Entities, HTTP Status 500 error message pops up when user create “Migrate:true” entity type collection in portal
-- BCLOUD-2550 - \[Internal \] While IOS platform disabled, the script Quick Authenticate throw exception error message "Processing exception (message): Platform IOS has not been enabled for this app"
+- BCLOUD-2528 - [Internal] Design | Cloud Data | Custom Entities, HTTP Status 500 error message pops up when user create “Migrate:true” entity type collection in portal
+- BCLOUD-2550 - [Internal ] While IOS platform disabled, the script Quick Authenticate throw exception error message "Processing exception (message): Platform IOS has not been enabled for this app"
 - BCLOUD-2558 - Legacy Portal - Cloud Code Scripts (remove usage of the "scripts-read" call).
 - BCLOUD-2601 - When Updating Existing Owned Entity(Custom Collection is Sharded) Incorrect Version is Getting Updated in API Response and Global Monitoring - Custom Entities Page
 - BCLOUD-2647 - API counts posted for scripts using relative reference to other scripts are failing
@@ -255,28 +255,28 @@ The following issues have been addressed in this release:
 - BCLOUD-2788 - Add new Group service SysAddGroupMember API
 - BCLOUD-2790 - Clicking a folder-based script execution entry from the API Usage page (under API Errors) is not redirecting to the correct location in the portal (API Errors).
 - BCLOUD-2791 - After a deployment, the system should set a timer for X seconds, and when it expires, trigger a refresh of the app
-- BCLOUD-2792 - \[Internal\] Not able to see newly created app in Admin Tools-Deployment drop-down menu of other app
+- BCLOUD-2792 - [Internal] Not able to see newly created app in Admin Tools-Deployment drop-down menu of other app
 - BCLOUD-2815 - Change Deploys, Import Configuration and Restore to Checkpoint processing to clear new appCache via prefix rather than looping
 - BCLOUD-2821 - New special "indexedId" field in Group Data
 - BCLOUD-2861 - Cloud Code - API Explorer - Service script list should be sorted by path+scriptname
-- BCLOUD-2865 - \[Internal \] Super | Manage | Teams page, previous Team Name is saving in delete dialog text field while attempting to delete different team
-- BCLOUD-2866 - \[Internal\] Design | Cloud Code | Scripts, when user export single script doesn’t logged in the Audit Log
-- BCLOUD-2873 - \[Internal\] Monitoring | User Monitoring | Groups, the ID links don’t use a hand cursor when user hover over to click on the ID links
+- BCLOUD-2865 - [Internal ] Super | Manage | Teams page, previous Team Name is saving in delete dialog text field while attempting to delete different team
+- BCLOUD-2866 - [Internal] Design | Cloud Code | Scripts, when user export single script doesn’t logged in the Audit Log
+- BCLOUD-2873 - [Internal] Monitoring | User Monitoring | Groups, the ID links don’t use a hand cursor when user hover over to click on the ID links
 - BCLOUD-2877 - Legacy Portal: Item Management - Make select virtual currency mandatory before the user enters the $ amount
 - BCLOUD-2880 - User batch script with passed in profileIds list to skip null profileId
 - BCLOUD-2881 - Enable setting of expiry date to applicable Leaderboard APIs to create or edit leaderboard configs
 - BCLOUD-2885 - Nightly purge of leaderboard scores for old versions is including gameId in query (slow)
 - BCLOUD-2891 - Legacy Portal - Monitoring / Global Monitoring / Custom Entities - Apply alphabetical order to entity type list.
 - BCLOUD-2901 - Total Users value displayed for Super | Manage | Apps isn't accurate
-- BCLOUD-2902 - \[Internal\] When user entering iTunes IAP Product ID no limitation and after 53 characters cutting off
-- BCLOUD-2904 - \[Internal\] When user entering Configure Platforms fields no limitation and after 56 characters cutting off
+- BCLOUD-2902 - [Internal] When user entering iTunes IAP Product ID no limitation and after 53 characters cutting off
+- BCLOUD-2904 - [Internal] When user entering Configure Platforms fields no limitation and after 56 characters cutting off
 - BCLOUD-2908 - Deployment / Import Configuration / Restore to Checkpoint safety measures required to prevent overlap
 - BCLOUD-2909 - Core App Info - Admin Tools - Deploy configuration button should be disabled when deployment is in progress
 - BCLOUD-2918 - Legacy Portal - API Key Name is Restricted to Numbers, letters and underscore (\_) When Adding a New Key in Edit Profile | Permissions | API Keys Tab
 - BCLOUD-2921 - Internal - Unlock dialog will display APP ID twice after user selects Cancel on the unlock dialog
-- BCLOUD-2923 - \[Internal \] Deploying to an app with incorrect app name does not show error, instead upon hovering over Deploy button ( active) shows red icon
+- BCLOUD-2923 - [Internal ] Deploying to an app with incorrect app name does not show error, instead upon hovering over Deploy button ( active) shows red icon
 - BCLOUD-2948 - Unreal Engine Heartbeat Not Working As Intended
-- BCLOUD-2956 - \[Internal\] French Version - Selecting Group id and Group Name from drop-down menu cut off
+- BCLOUD-2956 - [Internal] French Version - Selecting Group id and Group Name from drop-down menu cut off
 - BCLOUD-2958 - Modify Non-Consumable purchase behavior
 - BCLOUD-2996 - Legacy Portal - Scripts - API Usage should use new fields returned from the server instead of calculating the values itself.
 - BCLOUD-2998 - Legacy Portal - If passwords feature not enabled those password rules should not be displayed on the Reset Password page
@@ -284,10 +284,10 @@ The following issues have been addressed in this release:
 - BCLOUD-3002 - Set proper version on target files for deploy
 - BCLOUD-3029 - JSON Error App not found error generates when deploying to the same app multiple times
 - BCLOUD-3037 - New app-overridable brainCloud property to control audit logging of leaderboard configuration (create, edit) via Sys or post to dynamic APIs
-- BCLOUD-3040 - \[Legacy\] Desing | Gamification - Statistics Event 'Add User Statistics Event' pops up dialog has 'Currencies', 'User Statistics' and 'Global Statistics' options are enabled compared to XP Levels page
+- BCLOUD-3040 - [Legacy] Desing | Gamification - Statistics Event 'Add User Statistics Event' pops up dialog has 'Currencies', 'User Statistics' and 'Global Statistics' options are enabled compared to XP Levels page
 - BCLOUD-3044 - Add some additional logging around 3rd party authentication
 - BCLOUD-3045 - Legacy Portal - Player Selector - Applicable options in search drop-down not working correctly when language is French.
 - BCLOUD-3051 - Do some pre-processing on Nintendo externalId
-- BCLOUD-3054 - \[Legacy\] Icon of Platforms 'Oculus' and 'Apple watchOS' are not shown in User Monitoring >User Summary Logged In From section
+- BCLOUD-3054 - [Legacy] Icon of Platforms 'Oculus' and 'Apple watchOS' are not shown in User Monitoring >User Summary Logged In From section
 - BCLOUD-3067 - GlobalEntity IncrementGlobalEntityData is not enforcing read-only for other users
 - BCLOUD-3081 - Entity service Increment User Entity Data APIs are not enforcing read-only for other users

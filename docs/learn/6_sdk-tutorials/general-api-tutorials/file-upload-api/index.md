@@ -16,7 +16,7 @@ The API will return JSON similar to this:
 {
   "status": 200,
   "data": {
-  "fileList": \[
+  "fileList": [
     {
      "updatedAt": 1452603368201,
      "uploadedAt": 1452603368201,
@@ -30,7 +30,7 @@ The API will return JSON similar to this:
      "downloadUrl": "https://sharedprod.braincloudservers.com/s3/bc/g/99999/u/bf8a1433-62d2-448e-b396-f3dbffff44/f/test2/testup.dat",
      "cloudLocation": "bc/g/99999/u/bf8a1433-62d2-448e-b396-f3dbffff44/f/test2/testup.dat"
     }
-   \]
+   ]
   }
  }
 ```
@@ -44,7 +44,7 @@ You can retrieve the sessionId from the [BrainCloudClient.GetSessionId](/api/cap
 
 To start uploading a file use this API
 
-[BrainCloudFile.UploadFile](/api/capi/file/uploadfile(jsonly))
+[BrainCloudFile.UploadFile](/api/capi/file/uploadfile,javascript)
 
 This method will send a request to the server to prepare for an upload. On success, the client SDK will begin to send the file. The preparation of an upload will return JSON similar to this:
 ```js
@@ -93,7 +93,7 @@ Indicates a file has uploaded successfully. Parameters include:
 {
  "status": 200,
  "data": {
-  "fileList": \[
+  "fileList": [
     {
       "updatedAt": 1452603368201,
       "uploadedAt": null,
@@ -107,7 +107,7 @@ Indicates a file has uploaded successfully. Parameters include:
       "downloadUrl": "https://sharedprod.braincloudservers.com/s3/bc/g/99999/u/bf8a1433-62d2-448e-b396-f3dbffff44/f/test2/testup.dat"
       "cloudLocation": "bc/g/99999/u/bf8a1433-62d2-448e-b396-f3dbffff44/f/test2/testup.dat"
      }
-    \]
+    ]
   }
 }
 ```
@@ -122,8 +122,8 @@ Indicates a file upload has failed. Parameters include:
 ```js
 {
   "status": 403,
-  "reason\_code": 40300,
-  "status\_message": "Message describing failure",
+  "reason_code": 40300,
+  "status_message": "Message describing failure",
   "severity": "ERROR"
 }
 ```
@@ -145,8 +145,8 @@ To cancel an upload in progress, you can use this BrainCloudFile API method:
 
 When an upload is canceled, the **fileUploadFailed** callback handler will be called with:
 
-- Http status of 900 (HTTP\_CUSTOM)
-- Reason code of 90100 (CLIENT\_UPLOAD\_FILE\_CANCELLED)
+- Http status of 900 (HTTP_CUSTOM)
+- Reason code of 90100 (CLIENT_UPLOAD_FILE_CANCELLED)
 
 ### Configure Upload Timeouts
 
@@ -158,8 +158,8 @@ There are also several methods on the BrainCloudClient class which allow you to 
 
 Note that if an upload times out you will receive a **fileUploadFailed** callback with:
 
-- Http status of 900 (HTTP\_CUSTOM)
-- Reason code of 90101 (CLIENT\_UPLOAD\_FILE\_TIMED\_OUT)
+- Http status of 900 (HTTP_CUSTOM)
+- Reason code of 90101 (CLIENT_UPLOAD_FILE_TIMED_OUT)
 
 ### Deleting an Uploaded File
 

@@ -74,8 +74,8 @@ Some files under `PlayServiceResover` might be obsolete, most likely, you will n
             googleEmail = task.Result.Email;
             idToken = task.Result.IdToken;
 
-            bcreturn.GetComponent<Text>().text = "Logged into google! \\n Email: " + googleEmail + " \\n IdToken: " + idToken;
-            channelid.GetComponent<InputField>().text = "\[" + googleEmail + "\]" + idToken;
+            bcreturn.GetComponent<Text>().text = "Logged into google! \n Email: " + googleEmail + " \n IdToken: " + idToken;
+            channelid.GetComponent<InputField>().text = "[" + googleEmail + "]" + idToken;
         }
     }
 ```

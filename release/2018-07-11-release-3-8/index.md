@@ -5,7 +5,7 @@ tags:
   - "release-history"
 ---
 
-[![](images/braincloudrtt.500x120.png)](https://getbraincloud.com/apidocs/wp-content/uploads/2018/07/braincloudrtt.500x120.png)
+[![](images/braincloudrtt.500x120.png)](images/braincloudrtt.500x120.png)
 
 brainCloud 3.8 marks the _beta_ release of our new _Real-time Tech_, which we ingeniously call **brainCloud RTT**.
 
@@ -17,9 +17,9 @@ This enables a whole suite of new brainCloud features - the first of which you'l
 
 _Note - brainCloud RTT is available to customers using the Business Plan and above <- this has changed - see below! Usage pricing above the initial set of included concurrent users will be announced soon!_
 
-_To enable RTT, check **\[x\] Real-time Tech (RTT) Enabled** on the **Design | Core App Info | Advanced Settings** page._ 
+_To enable RTT, check **[x] Real-time Tech (RTT) Enabled** on the **Design | Core App Info | Advanced Settings** page._ 
 
-_Update - As of 4.0, brainCloud now supports Plus Plans - which provide RTT features across a variety of usage levels. For more information on Plus Plans, see our [4.0 plan announcement](https://getbraincloud.com/apidocs/braincloud-4-billing-plans/)._
+_Update - As of 4.0, brainCloud now supports Plus Plans - which provide RTT features across a variety of usage levels. For more information on Plus Plans, see our [4.0 plan announcement](/blog/2019/05/18/braincloud-4-billing-plans)._
 
 # Release Highlights
 
@@ -40,7 +40,7 @@ Chat offers the following features:
 
 _Note - Chat requires brainCloud RTT to be enabled for the app._
 
-For more info, check out the [Chat API](https://getbraincloud.com/apidocs/apiref/#capi-chat) page, and try out our example chat app - [bcChat](https://github.com/getbraincloud/BCChat)!
+For more info, check out the [Chat API](/api/capi/chat) page, and try out our example chat app - [bcChat](https://github.com/getbraincloud/BCChat)!
 
 ## Messaging
 
@@ -58,13 +58,13 @@ Messaging features:
 - Support for system messages (from the app, instead of an end-user)
 - Automatic clean-up / deletion of expired messages (important to keep storage utilization low)
 
-For more info, check out the [Messaging API](https://getbraincloud.com/apidocs/apiref/#capi-messaging) page.
+For more info, check out the [Messaging API](/api/capi/messaging) page.
 
 ## RTT Online
 
 With RTT, brainCloud now directly supports the development and integration of custom servers for shared experiences - such as online games (async or otherwise), online meetings, shared document editing, etc.
 
-[![](images/Online-Multiplayer-Process.png)](https://getbraincloud.com/apidocs/wp-content/uploads/2018/07/Online-Multiplayer-Process.png)
+[![](images/Online-Multiplayer-Process.png)](images/Online-Multiplayer-Process.png)
 
 ### Room Servers
 
@@ -97,7 +97,7 @@ The Lobby Matchmaking APIs allow the developer to:
 - specify an algorithm to use when _escalating_the search
 - provide a custom filter script to use to filter out candidates
 
-For more info, check out the [Lobby API](https://getbraincloud.com/apidocs/apiref/#capi-lobby) page.
+For more info, check out the [Lobby API](/api/capi/lobby) page.
 
 ## On Demand Tournaments
 
@@ -116,7 +116,7 @@ The handy cloud-code method below allows you to post a score to multiple leaderb
 var result = {};
 result.posted = 0;
 result.errors = 0;
-result.errorsList = \[\];
+result.errorsList = [];
 
 // Grab the parameters
 var leaderboards = data.leaderboards;
@@ -130,7 +130,7 @@ var postResult = {};
 for (var i = 0; i < leaderboards.length; i++ ) {
     
     // Post the score
-    postResult = \_leaderboard.postScoreToLeaderboard(leaderboards\[i\], score, extras);
+    postResult = \_leaderboard.postScoreToLeaderboard(leaderboards[i], score, extras);
     if (postResult.status == 200) {
         result.posted++;
     } else {
@@ -149,13 +149,13 @@ result;
 // "peerCallable":false,
 // "scriptTimeout":10,
 // "description":"Posts a score to multiple leaderboards",
-// "parms":"{\\n  \\"leaderboards\\": \[\\"weekly\\", \\"alltime\\"\],\\n  \\"score\\": 1000,\\n  \\"extras\\": {}\\n}",
+// "parms":"{\\n  \\"leaderboards\\": [\\"weekly\\", \\"alltime\\"],\\n  \\"score\\": 1000,\\n  \\"extras\\": {}\\n}",
 // "version":3,
 // "updatedAt":1530799500264
 
 To import it into your app:
 
-- Click [here](https://getbraincloud.com/apidocs/wp-content/uploads/2018/07/PostToLeaderboards.cloudcode.js.zip) to download the serialized version of the cloud code script to your workstation
+- Click [here](/learn/cloud-code-central/handy-cloud-code-scripts/example-posttoleaderboards-script/) to download the serialized version of the cloud code script to your workstation
 - Launch the _Design Portal_, and go to **Design | Cloud Code | Scripts**, and choose the _Import Script_ option from the **Import / Export** menu button
 - Navigate to your download directory, and choose the `PostToLeaderboards.cloudcode.js.zip` script
 - Click okay - and voila, you should now have the script, with all setting intact.
@@ -196,7 +196,7 @@ The following additions and changes have made to the Design Portal:
         - _room server manager_ - the web call to make to allocate a room server for the experience
         - _custom config_ - custom json parameters to pass onto the room server at the start of the experience
 
-[![](images/2018-07-17_21-06-03.gif)](https://getbraincloud.com/apidocs/wp-content/uploads/2018/07/2018-07-17_21-06-03.gif)
+[![](images/2018-07-17_21-06-03.gif)](images/2018-07-17_21-06-03.gif)
 
 ## Monitoring
 
@@ -209,28 +209,28 @@ The following additions and changes have made to the Design Portal:
 
 The following changes/additions have been made to the brainCloud API:
 
-- **\[New!\] Chat**
+- **[New!] Chat**
     - Add _online chat_ to your app quickly and easily!
-    - Check out the [Client](https://getbraincloud.com/apidocs/apiref/#capi-chat) and [S2S](https://getbraincloud.com/apidocs/apiref/#s2s-chat) Chat APIs.
+    - Check out the [Client](/api/capi/chat) and [S2S](/api/s2s/chat) Chat APIs.
 - **Client**
-    - **\[New!\]** [EnableRTT()](https://getbraincloud.com/apidocs/apiref/#capi-client-enablertt) - Used to establish the RTT connection from the client.
-    - **\[New!\]** [DisableRTT()](https://getbraincloud.com/apidocs/apiref/#capi-client-disablertt) - Disconnect from RTT.
-    - Plus methods for registering and de-registering RTT listeners for Chat, Events, Messaging and Lobbies. See [Client](https://getbraincloud.com/apidocs/apiref/#capi-client) service for details.
+    - **[New!]** [EnableRTT()](/api/capi/rtt/enablertt) - Used to establish the RTT connection from the client.
+    - **[New!]** [DisableRTT()](/api/capi/rtt/disablertt) - Disconnect from RTT.
+    - Plus methods for registering and de-registering RTT listeners for Chat, Events, Messaging and Lobbies. See [Client](/api/capi/client) service for details.
 - **Event**
-    - No more polling! [SendEvent()](https://getbraincloud.com/apidocs/apiref/#capi-event-sendevent) now sends a realtime event to the recipient if they are currently online, and RTT is enabled.
-    - See the [RegisterRTTEventCallback()](https://getbraincloud.com/apidocs/apiref/#capi-client-registerrtteventcallback) API for details.
+    - No more polling! [SendEvent()](/api/capi/event/sendevent) now sends a realtime event to the recipient if they are currently online, and RTT is enabled.
+    - See the [RegisterRTTEventCallback()](/api/capi/rtt/registerrtteventcallback) API for details.
 - **GlobalEntity**
     - Made the following system entity calls available from client session cloud-code scripts (they were previously S2S only)
-        - [CreateSystemEntity()](https://getbraincloud.com/apidocs/apiref/?cloudcode#capi-globalentity-createsystementity), [GetSystemEntityList()](https://getbraincloud.com/apidocs/apiref/?cloudcode#capi-globalentity-getsystementitylist), [GetSystemEntityListCount()](https://getbraincloud.com/apidocs/apiref/?cloudcode#capi-globalentity-getsystementitylistcount), [GetSystemEntityPage()](https://getbraincloud.com/apidocs/apiref/?cloudcode#capi-globalentity-getsystementitypage), [GetSystemEntityPageOffset()](https://getbraincloud.com/apidocs/apiref/?cloudcode#capi-globalentity-getsystementitypageoffset), and [ReadSystemEntity()](https://getbraincloud.com/apidocs/apiref/?cloudcode#capi-globalentity-readsystementity).
-    - [GetListByIndexedId()](https://getbraincloud.com/apidocs/apiref/?cloudcode#capi-globalentity-getlistbyindexedid) now returns `entityListCount` in addition to the list of items.
-- **\[New!\] Lobby**
+        - [CreateSystemEntity()](/api/capi/globalentity/createsystementity), [GetSystemEntityList()](/api/capi/globalentity/getsystementitylist), [GetSystemEntityListCount()](/api/capi/globalentity/getsystementitylistcount), [GetSystemEntityPage()](/api/capi/globalentity/getsystementitypage), [GetSystemEntityPageOffset()](/api/capi/globalentity/getsystementitypageoffset), and [ReadSystemEntity()](/api/capi/globalentity/readsystementity).
+    - [GetListByIndexedId()](/api/capi/globalentity/getlistbyindexedid) now returns `entityListCount` in addition to the list of items.
+- **[New!] Lobby**
     - Add online matchmaking, full lobby support and easy custom server integration to your app.
-    - Check out the [Client](https://getbraincloud.com/apidocs/apiref/#capi-lobby) and [S2S](https://getbraincloud.com/apidocs/apiref/#s2s-lobby) Lobby APIs.
-- **\[New!\] Messaging**
+    - Check out the [Client](/api/capi/lobby) and [S2S](/api/s2s/lobby) Lobby APIs.
+- **[New!] Messaging**
     - Add _user-to-user messaging_ to your app, with optional real-time delivery via RTT.
-    - Check out the [Client](https://getbraincloud.com/apidocs/apiref/#capi-messaging) and [S2S](https://getbraincloud.com/apidocs/apiref/#s2s-messaging) Messaging APIs.
+    - Check out the [Client](/api/capi/messaging) and [S2S](/api/s2s/messaging) Messaging APIs.
 - **Product**
-    - Added the missing [VerifyItunesReceipt()](https://getbraincloud.com/apidocs/apiref/#capi-product-verifyitunesreceipt) call to Cloud Code.
+    - Added the missing [VerifyItunesReceipt()](/api/capi/product/verifyitunesreceipt) call to Cloud Code.
 
 In addition, all brainCloud file downloads (global and user) are now resumable (we have added the "Accept-Ranges" header).
 

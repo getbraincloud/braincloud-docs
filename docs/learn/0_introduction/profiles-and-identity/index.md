@@ -7,9 +7,9 @@ A cloud-service such as brainCloud is only as flexible as it’s identity system
 
 - Contains all the information about the user and their state/progress in the app or game
 - Includes statistics, entities, attributes, virtual currency balances, the state of milestones, quests, achievements, etc.
-- Is local to an App/Game – not shared across games in brainCloud\*
+- Is local to an App/Game – not shared across games in brainCloud*
 
-_\* See details on our [Shared Accounts](/learn/key-concepts/authentication/shared-accounts/) service for ways to share a single user identity across multiple apps._ **User Identity**
+_* See details on our [Shared Accounts](/learn/key-concepts/authentication/shared-accounts/) service for ways to share a single user identity across multiple apps._ **User Identity**
 
 - Is used to identify a user in the system, and look up their Profile
 - Maybe unauthenticated (anonymous) or authenticated (GameCenter id, Facebook id, E-mail, etc.)

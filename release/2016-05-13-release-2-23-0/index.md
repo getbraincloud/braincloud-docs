@@ -7,7 +7,7 @@ tags:
 
 ## Release Highlights
 
-[![BC_TwitterT_Clans](images/BC_TwitterT_Clans-1024x512.png)](/apidocs/wp-content/uploads/2016/05/BC_TwitterT_Clans.png)
+[![BC_TwitterT_Clans](images/BC_TwitterT_Clans-1024x512.png)](images/BC_TwitterT_Clans.png)
 
 This release delivers six new features:
 
@@ -46,7 +46,7 @@ Groups have the following characteristics:
 - Groups can also own a set of entities (i.e. Group Entities) for more complex data needs. Group Entities can be owned by the group as a whole, or by individual members within a group.
 - Group membership can be used for leaderboard retrieval
 
-For more information re: brainCloud group support, refer to the [Group API Reference Page](/apidocs/apiref/?objective_c#capi-group) .
+For more information re: brainCloud group support, refer to the [Group API Reference Page](/api/capi/group) .
 
  
 
@@ -60,11 +60,11 @@ Hooking up 2FA to your account couldn't be simpler:
 
 - Choose **Edit Profile** from the top-right **Power** menu of the brainCloud Portal
 - Go to the new **Two-factor** tab
-- Click on the green **\[Click to Enable 2FA\]** button and follow the prompts!
+- Click on the green **[Click to Enable 2FA]** button and follow the prompts!
 
-[![Enable_2FA](images/Enable_2FA.png)](/apidocs/wp-content/uploads/2016/05/Enable_2FA.png)
+[![Enable_2FA](images/Enable_2FA.png)](images/Enable_2FA.png)
 
-For more information, refer to the [Enabling 2FA](/apidocs/portal-usage/two-factor-authentication-for-team-members/) page in our documentation.
+For more information, refer to the [Enabling 2FA](/learn/portal-tutorials/two-factor-authentication-for-team-members/) page in our documentation.
 
  
 
@@ -74,7 +74,7 @@ Through the magic of scheduled cloud code and our push notification API, it's al
 
 Until now. Our new Schedule Push Notification interface allows you to specify a local time to send all notifications at. brainCloud will then automatically create the appropriate set of scheduled push notification jobs - one for each timezone involved - and then automatically send the notifications at the appropriate time for each group of users.
 
-It's extremely powerful, and very simple to use. Check out the new S2S API calls [here](/apidocs/apiref/?cloudcode#s2s-push).
+It's extremely powerful, and very simple to use. Check out the new S2S API calls [here](/api/s2s/pushnotification).
 
  
 
@@ -131,17 +131,17 @@ In addition, we've made the following portal changes:
 The following additions / changes have been made to the brainCloud API:
 
 - **Global Entities**
-    - New [IncrementGlobalEntityData()](/apidocs/apiref/?csharp#capi-globalentity-incrementglobalentitydata) method allows you to increment discrete numeric values in a global entity. Great for incrementing atomic stats-like values without pushing a full update to the entire JSON object.
+    - New [IncrementGlobalEntityData()](/api/capi/globalentity/incrementglobalentitydata) method allows you to increment discrete numeric values in a global entity. Great for incrementing atomic stats-like values without pushing a full update to the entire JSON object.
 - **New Group API**
-    - There are too many new API methods to list here. For the full description of the new Group and Group Entity APIs, see the [Groups](/apidocs/apiref/?csharp#capi-group) section of the API Reference documentation.
+    - There are too many new API methods to list here. For the full description of the new Group and Group Entity APIs, see the [Groups](/api/capi/group) section of the API Reference documentation.
 - **Leaderboard API**
-    - New [GetGroupSocialLeaderboard()](/apidocs/apiref/?csharp#capi-leaderboard-getgroupsocialleaderboard) method retrieves a leaderboard filtered to the members of the specified group
+    - New [GetGroupSocialLeaderboard()](/api/capi/leaderboard/getgroupsocialleaderboard) method retrieves a leaderboard filtered to the members of the specified group
 - **Push Notifications**
-    - New [SendNormalizedPushNotificationToGroup()](/apidocs/apiref/#capi-push-sendnormalizedpushnotificationtogroup) and [SendTemplatedPushNotificationToGroup()](/apidocs/apiref/#capi-push-sendtemplatedpushnotificationtogroup) methods sends push notifications to the members of a group
-    - New S2S Scheduled Push Notifiation methods ( [ScheduleNormalizedPushNotifications()](/apidocs/apiref/#s2s-push-schedulenormalizedpushnotifications) and [ScheduleRichPushNotifications()](/apidocs/apiref/#s2s-push-schedulerichpushnotifications) ) allow you to send push notifications to users according to their timezone
+    - New [SendNormalizedPushNotificationToGroup()](/api/capi/pushnotification/sendnormalizedpushnotificationtogroup) and [SendTemplatedPushNotificationToGroup()](/api/capi/pushnotification/sendtemplatedpushnotificationtogroup) methods sends push notifications to the members of a group
+    - New S2S Scheduled Push Notifiation methods ( [ScheduleNormalizedPushNotifications()](/api/s2s/pushnotification/schedulenormalizedpushnotifications) and [ScheduleRichPushNotifications()](/api/s2s/pushnotification/schedulerichpushnotifications) ) allow you to send push notifications to users according to their timezone
 - **User Entities**
-    - New [IncrementUserEntityData()](/apidocs/apiref/?csharp#capi-entity-incrementuserentitydata) method allows you to increment discrete numeric values in a user entity. Just as useful as the GlobalEntity, Group and GroupEntity versions of the same method!
-    - New [GetSharedEntitiesListForPlayerId()](/apidocs/apiref/#capi-entity-getsharedentitieslistforplayerid) method retrieves a list of shared entities for the specified player based on the specified where clause
+    - New [IncrementUserEntityData()](/api/capi/entity/incrementuserentitydata) method allows you to increment discrete numeric values in a user entity. Just as useful as the GlobalEntity, Group and GroupEntity versions of the same method!
+    - New [GetSharedEntitiesListForPlayerId()](/api/capi/entity/getsharedentitieslistforprofileid) method retrieves a list of shared entities for the specified player based on the specified where clause
 
  
 

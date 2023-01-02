@@ -26,7 +26,7 @@ The BCClientPluginModule must be added to your Project's Build.cs file for the U
 
 Inside the Build.cs find the line **PublicDependencyModuleNames** and add the string **"BCClientPlugin"** to it. It should now look something like this:
 
-PublicDependencyModuleNames.AddRange(new string\[\] { "Core", "CoreUObject", "Engine", "InputCore", "BCClientPlugin" });
+PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "BCClientPlugin" });
 
 ### Initialization
 
@@ -44,7 +44,7 @@ Now in your actor's **BeginPlay()** function we can perform the initialization 
 void ABrainCloudTestActor::BeginPlay()
 {
     Super::BeginPlay();
-    \_bc.initialize(
+    _bc.initialize(
         "https://sharedprod.braincloudservers.com/dispatcherv2", 
         "91c3a097-4697-4787-ba1c-fakeSecret", 
         "123456", 
@@ -59,7 +59,7 @@ The BrainCloudClient relies on its Run Callbacks function being called every fra
 void ABrainCloudTestActor::Tick(float DeltaTime)
 {
     Super::Tick(DeltaTime);
-    \_bc.runCallbacks();
+    _bc.runCallbacks();
 }
 ```
 ### Setting Up Callbacks
@@ -75,9 +75,9 @@ Go to your actor's header file and include the **IServerCallback.h** header fil
 #include "BrainCloudTestActor.generated.h"
 
 UCLASS()
-class MYPROJECT\_API ABrainCloudTestActor : public AActor, public IServerCallback
+class MYPROJECT_API ABrainCloudTestActor : public AActor, public IServerCallback
 {
-	GENERATED\_BODY()
+	GENERATED_BODY()
 	
 public:	
 	// Sets default values for this actor's properties
@@ -116,7 +116,7 @@ And add the required header files for **ServiceName** and **ServiceOperation** 
 
 BrainCloud provides many different methods of authentication, but for this tutorial we will use [AuthenticateUniversal](/api/capi/authentication/authenticateuniversal).  Now that our actor can receive callbacks we can proceed to call the AuthenticateUniversal method after we initialize in **BeginPlay()**.
 ```js
-\_bc.getAuthenticationService()->authenticateUniversal("UnrealUser", "password1234", true, this);
+_bc.getAuthenticationService()->authenticateUniversal("UnrealUser", "password1234", true, this);
 ```
 Referring to the [documentation](/api/capi/authentication/authenticateuniversal), the last parameter of the AuthenticateUniversal function is a pointer to an IServerCallback.  Since our actor has inherited from IServerCallback we can pass in the **this** pointer and have our actor's serverCallback and serverError functions get called when the server responds to our request.
 
@@ -124,7 +124,7 @@ Let's add a log message to our serverCallback method so we know things are work
 ```js
 void ABrainCloudTestActor::serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, const FString& jsonData)
 {
-    UE\_LOG(LogTemp, Display, TEXT("Authenticated!"));
+    UE_LOG(LogTemp, Display, TEXT("Authenticated!"));
 }
 ```
 At this point, you should be able to run the Editor, drag your Actor into the Level, press Play, and see "LogTemp:Display: Authenticated!" in the Output Log window.
@@ -137,7 +137,7 @@ The first thing we need to do is add the Unreal Json module to our project's Bui
 
 Inside the Build.cs find the line **PrivateDependencyModuleNames** and add the string **"Json"** to it. It should look something like this:
 ```js
-PrivateDependencyModuleNames.AddRange(new string\[\] { "Json" });
+PrivateDependencyModuleNames.AddRange(new string[] { "Json" });
 ```
 Back in our Actor's cpp file, lets modify the serverCallback to send another call after AuthenticateUniversal returns, and then to handle the return of this additional call as well.
 ```js
@@ -145,14 +145,14 @@ void ABrainCloudTestActor::serverCallback(ServiceName serviceName, ServiceOperat
 {
     if (serviceName == ServiceName::AuthenticateV2) //authenticate return handling
     {
-        UE\_LOG(LogTemp, Display, TEXT("Authenticated!"));
+        UE_LOG(LogTemp, Display, TEXT("Authenticated!"));
 
         //send our next request
-        \_bc.getTimeService()->readServerTime(this);
+        _bc.getTimeService()->readServerTime(this);
     }
     else if (serviceName == ServiceName::Time) //time return handling
     {
-        UE\_LOG(LogTemp, Display, TEXT("Reading the time..."));
+        UE_LOG(LogTemp, Display, TEXT("Reading the time..."));
     }
 }
 ```
@@ -162,7 +162,7 @@ We've also added our next API call [ReadServerTime](/api/capi/time/readservertim
 
 First thing we need to do is create a new **TJsonReader** to read our JSON string, and a **FJsonObject** to hold our deserialized data.
 ```js
-TSharedRef<TJsonReader<>> reader = TJsonReaderFactory<>::Create(\*jsonData);
+TSharedRef<TJsonReader<>> reader = TJsonReaderFactory<>::Create(*jsonData);
 TSharedPtr<FJsonObject> jsonReadObject;
 ```
 Now we actually deserialize the string using the **FJsonSerializer::Deserialize** method and passing in our JsonReader and JsonObject.
@@ -171,15 +171,15 @@ bool result = FJsonSerializer::Deserialize(reader, jsonReadObject);
 
 We check the result bool returned by the Deserialize to make sure it was successful before digging into our jsonReadObject for the data we need.
 
-Referring to the JSON return structure in the [documentation](/api/capi/time/readservertime) we can see that the server time is represented by the key “**server\_time**” which is contained in the object “**data**”. So to get to it we take the jsonReadObject and use the functions GetObjectField and then GetNumberField, passing in “data” and “server\_time” as our Field Names.
+Referring to the JSON return structure in the [documentation](/api/capi/time/readservertime) we can see that the server time is represented by the key “**server_time**” which is contained in the object “**data**”. So to get to it we take the jsonReadObject and use the functions GetObjectField and then GetNumberField, passing in “data” and “server_time” as our Field Names.
 
 Finally we print the extracted time to the log.
 ```js
 if (result == true) //if deserializing was successful
 {
     TSharedPtr<FJsonObject> data = jsonReadObject->GetObjectField(TEXT("data"));
-    int64 serverTime = data->GetNumberField(TEXT("server\_time"));
-    UE\_LOG(LogTemp, Display, TEXT("The time is %d"), serverTime);
+    int64 serverTime = data->GetNumberField(TEXT("server_time"));
+    UE_LOG(LogTemp, Display, TEXT("The time is %d"), serverTime);
 }
 ```
 ### Full Source Code
@@ -193,9 +193,9 @@ Header:
 #include "BrainCloudTestActor.generated.h"
 
 UCLASS()
-class BCSUBSYSTEM\_API ABrainCloudTestActor : public AActor, public IServerCallback
+class BCSUBSYSTEM_API ABrainCloudTestActor : public AActor, public IServerCallback
 {
-	GENERATED\_BODY()
+	GENERATED_BODY()
 	
 public:	
 	// Sets default values for this actor's properties
@@ -221,7 +221,7 @@ Source:
 #include "BrainCloudClient.h"
 #include "ServiceName.h"
 #include "ServiceOperation.h"
-BrainCloudClient \_bc;
+BrainCloudClient _bc;
 
 // Sets default values
 ABrainCloudTestActor::ABrainCloudTestActor()
@@ -234,54 +234,54 @@ ABrainCloudTestActor::ABrainCloudTestActor()
 void ABrainCloudTestActor::BeginPlay()
 {
     Super::BeginPlay();
-    \_bc.initialize(
+    _bc.initialize(
         "https://sharedprod.braincloudservers.com/dispatcherv2", 
         "91c3a097-4697-4787-ba1c-fakeSecret", 
         "123456", 
         "1.0.0");
 
-    \_bc.getAuthenticationService()->authenticateUniversal("UnrealUser", "UnrealUser", true, this);
+    _bc.getAuthenticationService()->authenticateUniversal("UnrealUser", "UnrealUser", true, this);
 }
 
 // Called every frame
 void ABrainCloudTestActor::Tick(float DeltaTime)
 {
     Super::Tick(DeltaTime);
-    \_bc.runCallbacks();
+    _bc.runCallbacks();
 }
 
 void ABrainCloudTestActor::serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, const FString& jsonData)
 {
     if (serviceName == ServiceName::AuthenticateV2) //authenticate return handling
     {
-        UE\_LOG(LogTemp, Display, TEXT("Authenticated!"));
+        UE_LOG(LogTemp, Display, TEXT("Authenticated!"));
 
         //send our next request
-        \_bc.getTimeService()->readServerTime(this);
+        _bc.getTimeService()->readServerTime(this);
     }
     else if (serviceName == ServiceName::Time) //time return handling
     {
-        UE\_LOG(LogTemp, Display, TEXT("Reading the time..."));
+        UE_LOG(LogTemp, Display, TEXT("Reading the time..."));
 
-        TSharedRef<TJsonReader<>> reader = TJsonReaderFactory<>::Create(\*jsonData);
+        TSharedRef<TJsonReader<>> reader = TJsonReaderFactory<>::Create(*jsonData);
         TSharedPtr<FJsonObject> jsonReadObject;
         bool result = FJsonSerializer::Deserialize(reader, jsonReadObject);
 
         if (result == true) //if deserializing was successful
         {
             TSharedPtr<FJsonObject> data = jsonReadObject->GetObjectField(TEXT("data"));
-            int64 serverTime = data->GetNumberField(TEXT("server\_time"));
-            UE\_LOG(LogTemp, Display, TEXT("The time is %d"), serverTime);
+            int64 serverTime = data->GetNumberField(TEXT("server_time"));
+            UE_LOG(LogTemp, Display, TEXT("The time is %d"), serverTime);
         }
         else
         {
-            UE\_LOG(LogTemp, Error, TEXT("Failed to deserialize JSON!"));
+            UE_LOG(LogTemp, Error, TEXT("Failed to deserialize JSON!"));
         }
     }
 }
 
 void ABrainCloudTestActor::serverError(ServiceName serviceName, ServiceOperation serviceOperation, int32 statusCode, int32 reasonCode, const FString& jsonError)
 {
-    UE\_LOG(LogTemp, Error, TEXT("Call failed - %s - %s"), \*serviceName.getValue(), \*serviceOperation.getValue());
+    UE_LOG(LogTemp, Error, TEXT("Call failed - %s - %s"), *serviceName.getValue(), *serviceOperation.getValue());
 }
 ```

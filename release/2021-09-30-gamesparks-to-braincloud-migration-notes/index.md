@@ -179,11 +179,11 @@ For example, the call for Sign in with Apple is:
 
 Tutorials for configuring brainCloud and the 3rd party system can be found here:
 
-- Sign in with Apple - [https://getbraincloud.com/apidocs/portal-usage/authentication-apple/](https://getbraincloud.com/apidocs/portal-usage/authentication-apple/)
-- Facebook Login - [https://getbraincloud.com/apidocs/portal-usage/basic-configuration-facebook/](https://getbraincloud.com/apidocs/portal-usage/basic-configuration-facebook/)
-- Google Play - [https://getbraincloud.com/apidocs/portal-usage/authentication-google-playgame/](https://getbraincloud.com/apidocs/portal-usage/authentication-google-playgame/)
-- Google OpenId - [https://getbraincloud.com/apidocs/portal-usage/authentication-google-openid/](https://getbraincloud.com/apidocs/portal-usage/authentication-google-openid/)
-- Oculus - [https://getbraincloud.com/apidocs/portal-usage/authentication-oculus/](https://getbraincloud.com/apidocs/portal-usage/authentication-oculus/)
+- Sign in with Apple - [https://getbraincloud.com/apidocs/portal-usage/authentication-apple/](/learn/portal-tutorials/authentication-apple/)
+- Facebook Login - [https://getbraincloud.com/apidocs/portal-usage/basic-configuration-facebook/](/learn/portal-tutorials/authentication-facebook//)
+- Google Play - [https://getbraincloud.com/apidocs/portal-usage/authentication-google-playgame/](/learn/portal-tutorials/authentication-google-playgame/)
+- Google OpenId - [https://getbraincloud.com/apidocs/portal-usage/authentication-google-openid/](/learn/portal-tutorials/authentication-google-openid/)
+- Oculus - [https://getbraincloud.com/apidocs/portal-usage/authentication-oculus/](/learn/portal-tutorials/authentication-oculus/)
 
 * * *
 
@@ -256,7 +256,7 @@ brainCloud’s Cloud Code system is very similar to the model employed by GameSp
 In brainCloud:
 
 - Cloud code Scripts are written in **JavaScript**, and run upon an embedded **Rhino** engine
-- Scripts can [_include_](http://getbraincloud.com/apidocs/apiref/#cc-ccscripts-ccsharedscripts) other scripts and _call_ other scripts.
+- Scripts can [_include_](http://getbraincloud.com/api/cc/ccscripts/ccsharedscripts) other scripts and _call_ other scripts.
 - Scripts are passed **JSON parameters** when they are called
 - Scripts have access to the _full brainCloud API_ - including the ability to _**Get/Set Player Data**_ (like player statistics, attributes, User Entities, Owned Custom Entities, etc.) and **Get Static Game Data - MetaCollections** (like Global Properties, Global Entities, Un-owned Custom Entities, etc.)
 - API calls made from Cloud Code Scripts run **synchronously** for simplicity!
@@ -268,15 +268,15 @@ In brainCloud:
 
 ### brainCloud Data
 
-brainCloud offers a rich set of data APIs for storing player and game data. An overview of the different data APIs can be found [here](https://getbraincloud.com/apidocs/api-modules/data/) - as well as a discussion of the benefits of Custom Entities vs. the older User and Global Entity mechanisms [here](http://help.getbraincloud.com/en/articles/3754150-custom-entities-a-scalable-and-flexible-app-data-storage-and-querying-solution).
+brainCloud offers a rich set of data APIs for storing player and game data. An overview of the different data APIs can be found [here](/learn/key-concepts/data/) - as well as a discussion of the benefits of Custom Entities vs. the older User and Global Entity mechanisms [here](http://help.getbraincloud.com/en/articles/3754150-custom-entities-a-scalable-and-flexible-app-data-storage-and-querying-solution).
 
 ### MetaCollections
 
-Developers should use brainCloud’s Unowned Custom Entities in place of MetaCollections. Custom Entities are JSON objects with a rich API for storage and retrieval. For more information, see the [Custom Entity API reference](http://getbraincloud.com/apidocs/apiref/#capi-customentity).
+Developers should use brainCloud’s Unowned Custom Entities in place of MetaCollections. Custom Entities are JSON objects with a rich API for storage and retrieval. For more information, see the [Custom Entity API reference](http://getbraincloud.com/api/capi/customentity).
 
 ### System-Scripts
 
-brainCloud provides a mechanism called [**API Hooks**](http://getbraincloud.com/apidocs/apiref/#cc-ccscripts-apihooks) that allows you to attach custom scripts to API Calls and other events in brainCloud.
+brainCloud provides a mechanism called [**API Hooks**](http://getbraincloud.com/api/cc/ccscripts/apihooks) that allows you to attach custom scripts to API Calls and other events in brainCloud.
 
 API Hooks can be configured as either **Pre-** or **Post-** hooks - meaning that they will run either before or after the API calls they are enhancing. 
 
@@ -290,11 +290,11 @@ brainCloud offers a Batch User Script feature for scheduling a script to be run�
 
 Like GameSparks, the workload is spread across all players and executed as background jobs to not impact server performance. brainCloud also offers the ability to trigger a completion script when all users have been processed.
 
-For more information, check out the [RunBatchUserScriptAndCompletionScript()](http://getbraincloud.com/apidocs/apiref/#s2s-script-runbatchuserscriptandcompletionscript) API call.
+For more information, check out the [RunBatchUserScriptAndCompletionScript()](http://getbraincloud.com/api/s2s/script/runbatchuserscriptandcompletionscript) API call.
 
 ### Schedulers
 
-brainCloud offers APIs for scheduling a script to run at a specified time in the future. Although not the same as the every-hour, every-day scripts supported by GameSparks - the same sort of functionality can be achieved by having the script re-schedule itself to run again. An [example](https://getbraincloud.com/apidocs/cloud-code-central/handy-cloud-code-scripts/scriptscheduler-script/) of such a script can be found in brainCloud’s Cloud Code Central repository.
+brainCloud offers APIs for scheduling a script to run at a specified time in the future. Although not the same as the every-hour, every-day scripts supported by GameSparks - the same sort of functionality can be achieved by having the script re-schedule itself to run again. An [example](/learn/cloud-code-central/handy-cloud-code-scripts/scriptscheduler-script/) of such a script can be found in brainCloud’s Cloud Code Central repository.
 
 ### Transitioning MetaCollections
 
@@ -376,7 +376,7 @@ brainCloud provides a SendGrid integration for sending emails.
 To utilize brainCloud's SendGrid functionality, simply:
 
 - Configure the SendGrid settings on the **Design | Integrations | Manage Integrations** page, _SendGrid_ section of the design portal
-- Modify your scripts and/or client to use brainCloud's [`Mail` service](http://getbraincloud.com/apidocs/apiref/#capi-mail) APIs
+- Modify your scripts and/or client to use brainCloud's [`Mail` service](http://getbraincloud.com/api/capi/mail) APIs
 - _Optionally_ customize the system templates to be used for password resets and such on the **Design | Authentication | Email Authentication** page.
 
 * * *
@@ -436,7 +436,7 @@ The data is all accessible via the Monitoring portion of the portal. Monitoring 
 
 brainCloud also provides an S2S API that can be used to implement a custom management tool that manages your brainCloud-based apps.
 
-More information on the S2S API can be found [here](http://getbraincloud.com/apidocs/apiref/#s2s).
+More information on the S2S API can be found [here](http://getbraincloud.com/api/s2s).
 
 * * *
 
@@ -455,7 +455,7 @@ Lobby Matchmaking is highly configurable, with support for:
 - geo matching <- prioritizing players that are close together
 - filter scripts
 
-For more information, see the brainCloud [Lobby](http://getbraincloud.com/apidocs/apiref/#capi-lobby) service.
+For more information, see the brainCloud [Lobby](http://getbraincloud.com/api/capi/lobby) service.
 
 * * *
 
@@ -529,7 +529,7 @@ brainCloud supports two forms of team data:
 - Group Data - which is custom JSON attached to a group
 - Group Entities - which are JSON entity objects owned by a group
 
-Both types of data are serviced via the [Group Service API](http://getbraincloud.com/apidocs/apiref/#capi-group).
+Both types of data are serviced via the [Group Service API](http://getbraincloud.com/api/capi/group).
 
 * * *
 
@@ -560,13 +560,13 @@ _Note that brainCloud does not currently support bundles - though this can be wo
 
 brainCloud directly supports in-app purchases on iOS, Google, Facebook, Steam, and more.
 
-Purchases are enabled by defining _Products_ in the **Design | Marketplace | Products** screen of the _Design Portal_. Products are generally used to purchase Virtual Currency bundles, but in [brainCloud 4.9](https://getbraincloud.com/apidocs/braincloud-4-9/) we add support for purchasing User Items (i.e. Virtual Goods) as well.
+Purchases are enabled by defining _Products_ in the **Design | Marketplace | Products** screen of the _Design Portal_. Products are generally used to purchase Virtual Currency bundles, but in [brainCloud 4.9](/release/2021/10/12/release-4-9/) we add support for purchasing User Items (i.e. Virtual Goods) as well.
 
 Products in brainCloud can be defined with multiple price points - which are convenient for scheduling sales using the **Promotions** service.
 
 To configure Products in brainCloud for purchase, developers must first:
 
-- Configures the necessary platform integration settings. See tutorial examples for [iOS](https://getbraincloud.com/apidocs/portal-usage/store-integration-ios/) and [Google](https://getbraincloud.com/apidocs/portal-usage/store-integration-google-2/) to start.
+- Configures the necessary platform integration settings. See tutorial examples for [iOS](/learn/portal-tutorials/store-integration-ios/) and [Google](/learn/portal-tutorials/store-integration-google/) to start.
 - Configure the products to be purchased in the **Design | Marketplace | Products** page of the portal. The products should be configured to award Virtual Currencies, items from the Item Catalog, and/or custom rewards via attached JSON (and custom cloud code scripts)
 - Configure the **pricing** of the products - matching up the appStore IDs with the definitions in the platform stores
 
@@ -580,4 +580,4 @@ At purchase time, the app will:
 - brainCloud makes a server-to-server call to the Platform to verify the receipt data (as well as performs a few additional checks of our own)
 - If the purchase is valid, the player is awarded the contents of the Product - and the results are returned to the client app
 
-For more information, see the brainCloud [AppStore APIs](http://getbraincloud.com/apidocs/apiref/?csharp#capi-appstore).
+For more information, see the brainCloud [AppStore APIs](http://getbraincloud.com/api/capi/appstore).
