@@ -45,7 +45,7 @@ Incoming servers must be configured (i.e. declared) in the brainCloud dashboard 
 
 Session-less requests are simple. Each request is completely independent - no `sessionIds` or `packetIds` to manage. This API is best when calls into brainCloud are few and far between.
 
-[![](images/2018-11-17_17-16-51.png)](https://staging.getbraincloud.com/apidocs/wp-content/uploads/2018/11/2018-11-17_17-16-51.png)
+[![](images/2018-11-17_17-16-51.png)](images/2018-11-17_17-16-51.png)
 
 _To simulate a session-less server request with Postman:_
 
@@ -164,10 +164,10 @@ Important things to remember:
 
 ## Service and Operation Codes
 
-The API calls documented in the API Ref ([https://staging.getbraincloud.com/apidocs/apiref/?raw#s2s](https://staging.getbraincloud.com/apidocs/apiref/?raw#s2s)) are mapped to discrete _Services_ and _Operations_ on the server.
+The API calls documented in the API Ref ([/api/s2s](/api/s2s)) are mapped to discrete _Services_ and _Operations_ on the server.
 
 The codes, together with operation-specific parameters (specified in the JSON `data` object) are used to send commands to the server.
 
-[![](images/APIRef.png)](https://staging.getbraincloud.com/apidocs/wp-content/uploads/2018/11/APIRef.png)
+[![](images/APIRef.png)](images/APIRef.png)
 
 Only the API Calls in the S2S section of the API Ref can be used for S2S calls.

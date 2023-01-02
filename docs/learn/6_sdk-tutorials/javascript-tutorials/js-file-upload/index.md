@@ -28,7 +28,7 @@ The first thing you'll want to set up is a form for selecting a file. Note that 
 ```
 ## Upload the File
 
-Here are the functions defined to select a file and upload it. Note that fileSelected simply populates the divs defined in the form with information about the selected file. The uploadFile method creates the XMLHttpRequest object and, registers callback methods for various events. It then calls the [brainCloudClient.file.prepareFileUpload()](/apidocs/apiref/index.html#preparefileupload-js-only) method with various details about the file being uploaded. The callback of this method will then (on success) start the upload of the file to the brainCloud server using the [brainCloudClient.file.uploadFile()](/apidocs/apiref/index.html#uploadfile-js-only) method. and starts the upload of the file with brainCloud.
+Here are the functions defined to select a file and upload it. Note that fileSelected simply populates the divs defined in the form with information about the selected file. The uploadFile method creates the XMLHttpRequest object and, registers callback methods for various events. It then calls the [brainCloudClient.file.prepareFileUpload()](/api/preparefileupload/js/only) method with various details about the file being uploaded. The callback of this method will then (on success) start the upload of the file to the brainCloud server using the [brainCloudClient.file.uploadFile()](/api/uploadfile/js/only) method. and starts the upload of the file with brainCloud.
 ```js
 function fileSelected() {
   var file = document.getElementById('fileToUpload').files\[0\];

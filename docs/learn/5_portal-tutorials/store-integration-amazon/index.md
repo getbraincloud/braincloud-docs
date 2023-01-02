@@ -13,7 +13,7 @@ Here are the steps to configure brainCloud for Amazon Appstore purchases.
 
 Prerequisites
 
-- You should have set up your products in the brainCloud marketplace. Please refer to the [Marketplace Configuration](/apidocs/portal-usage/marketplace-configuration/) guide.
+- You should have set up your products in the brainCloud marketplace. Please refer to the [Marketplace Configuration](/learn/portal-tutorials/marketplace-configuration/) guide.
 - You should have created the Amazon Appstore In-App products(items) as per the [Amazon Appstore Developer documentation](https://developer.amazon.com/docs/in-app-purchasing/iap-overview.html). (Refer to our Unity example [here](https://github.com/getbraincloud/examples-unity/tree/develop/BCAmazonIAP).)
 
 ### Associate Amazon In-App Items with brainCloud Products
@@ -47,13 +47,13 @@ If you skip registering your Amazon product(item) SKU to the brainCloud portal, 
 - Log into the brainCloud Portal
 - Go to the “Marketplace | Products” page in the Design tab  
     
-    [![brainCloud](images/brainCloud_dashboard_productsTab.jpg)](/apidocs/wp-content/uploads/2016/08/brainCloud_dashboard_productsTab.jpg)
+    [![brainCloud](images/brainCloud_dashboard_productsTab.jpg)](images/brainCloud_dashboard_productsTab.jpg)
     
 - Select the product you would like to associate with.
 
 ![](images/image-5.png)
 
-- [](/apidocs/wp-content/uploads/2016/09/brainCloud_dashboard_addFbProduct1.jpg)
+- [](images/brainCloud_dashboard_addFbProduct1.jpg)
     
     Click the **\[+ Edit Product\]** button to make it editable.
 
@@ -71,7 +71,7 @@ If you skip registering your Amazon product(item) SKU to the brainCloud portal, 
 
 ![](images/image-10.png)
 
-- [](/apidocs/wp-content/uploads/2016/09/brainCloud_dashboard_addFbProduct3.jpg)
+- [](images/brainCloud_dashboard_addFbProduct3.jpg)
     
     At this point, you may want to select your price to be the default if it isn’t already selected. You can do this back in the Edit Product page.
     
@@ -131,7 +131,7 @@ Once the products have been configured, you will need to add the appropriate Ama
 
 - Navigate to the Application IDs page  
     
-    [![brainCloud](images/portal_addGoogProd4.jpg)](/apidocs/wp-content/uploads/2016/09/portal_addGoogProd4.jpg)
+    [![brainCloud](images/portal_addGoogProd4.jpg)](images/portal_addGoogProd4.jpg)
     
 - Click the Amazon icon and notice the following field is needed to fill in.
 
@@ -159,7 +159,7 @@ Notice your test status became **Processing** once submit your test, then **Publ
 
 ### Confirming the purchase Client Side
 
-After making a purchase client-side, Amazon Appstore will return a receipt with a receiptId, SKU, itemType, purchaseDate and userId such info, we will need receiptId and userId that are used by the [VerifyPurchase](/apidocs/apiref/#capi-product-confirmgoogleplaypurchase) API call.
+After making a purchase client-side, Amazon Appstore will return a receipt with a receiptId, SKU, itemType, purchaseDate and userId such info, we will need receiptId and userId that are used by the [VerifyPurchase](/api/capi/product/confirmgoogleplaypurchase) API call.
 
 - If your using Amazon IAP Plugin for Unity, some of your code may look like this:
 ```js

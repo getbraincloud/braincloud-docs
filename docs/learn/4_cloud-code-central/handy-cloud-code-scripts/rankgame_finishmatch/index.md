@@ -19,7 +19,7 @@ To configure this script, simply import it into your app.
 
 The script is expected to be called when a player is completing the match.
 
-You call the script in the app via the [RunScript()](https://staging.getbraincloud.com/apidocs/apiref/index.html#capi-script-runscript) API call.
+You call the script in the app via the [RunScript()](/api/capi/script/runscript) API call.
 
 The script takes the following parameters:
 

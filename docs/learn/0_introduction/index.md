@@ -39,21 +39,21 @@ brainCloud supports the most popular gaming engines, including:
 
 brainCloud has a very broad feature-set – you can use as much or as little of it as you like.
 
-This section gives some background on how the brainCloud APIs work, in terms of concepts and structure. The details on API usage can be found in the [API Reference](https://getbraincloud.com/apidocs/api-reference-new/) section.
+This section gives some background on how the brainCloud APIs work, in terms of concepts and structure. The details on API usage can be found in the [API Reference](/learn/api-reference/) section.
 
 This introduction is organized into the following sections:
 
-- **[Design Portal](/apidocs/introduction-2/design-portal/)** – getting started in the system
-- **[brainCloud API](/apidocs/introduction-2/braincloud-api/)** – connecting your app to brainCloud
-- **[brainCloud RTT](/apidocs/introduction-2/braincloud-rtt/)** – listen and react to events in real-time
-- **[Profiles and Identity](/apidocs/introduction-2/profiles-and-identity/)** – how brainCloud identifies end-users
-- **[Cloud Data](/apidocs/introduction-2/cloud-data/)** – overview of the brainCloud data APIs
-- **[Gamification](/apidocs/introduction-2/gamification/)** – discussion of the brainCloud gamification features
-- **[Multiplayer](/apidocs/introduction-2/multiplayer/)** – overview of brainCloud’s multiplayer capabilities
-- **[Push Notifications](/apidocs/introduction-2/notifications/)** – sending push notifications (programmatically) in brainCloud
-- **[Currency, Payments, and Promotions](/apidocs/introduction-2/currency-and-payments/)** – dealing with virtual currencies, products, pricing and promotions
-- **[Leaderboards and Tournaments](/apidocs/introduction-2/leaderboards-and-tournaments/)** - discussion of leaderboards, pacers, and tournaments
-- **[Cloud Code](/apidocs/introduction-2/cloud-code/)**  – writing your own cloud code
+- **[Design Portal](/learn/introduction/design-portal/)** – getting started in the system
+- **[brainCloud API](/learn/introduction/braincloud-api/)** – connecting your app to brainCloud
+- **[brainCloud RTT](/learn/introduction/braincloud-rtt/)** – listen and react to events in real-time
+- **[Profiles and Identity](/learn/introduction/profiles-and-identity/)** – how brainCloud identifies end-users
+- **[Cloud Data](/learn/introduction/cloud-data/)** – overview of the brainCloud data APIs
+- **[Gamification](/learn/introduction/gamification/)** – discussion of the brainCloud gamification features
+- **[Multiplayer](/learn/introduction/multiplayer/)** – overview of brainCloud’s multiplayer capabilities
+- **[Push Notifications](/learn/introduction/notifications/)** – sending push notifications (programmatically) in brainCloud
+- **[Currency, Payments, and Promotions](/learn/introduction/currency-and-payments/)** – dealing with virtual currencies, products, pricing and promotions
+- **[Leaderboards and Tournaments](/learn/introduction/leaderboards-and-tournaments/)** - discussion of leaderboards, pacers, and tournaments
+- **[Cloud Code](/learn/introduction/cloud-code/)**  – writing your own cloud code
 
 
 <DocCardList />

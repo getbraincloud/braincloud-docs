@@ -5,7 +5,7 @@ date: "2015-08-21"
 
 The Turn-By-Turn Multiplayer page allows you to view the status of any turn-based matches that the selected User has participated in.
 
-[![turnByTurnMP](images/turnByTurnMP.png)](/apidocs/wp-content/uploads/2015/08/turnByTurnMP.png)
+[![turnByTurnMP](images/turnByTurnMP.png)](images/turnByTurnMP.png)
 
 The **Match Status** dropdown allows you to filter the records displayed in the list.
 

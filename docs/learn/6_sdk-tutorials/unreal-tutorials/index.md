@@ -13,14 +13,14 @@ As part of our Unreal package we include:
 
 The following tutorials are available:
 
-- [Setting up the brainCloud plugin](/apidocs/tutorials/unreal-tutorials/setting-up-the-braincloud-plugin/)
-- [Getting Started With Blueprints](/apidocs/tutorials/unreal-tutorials/getting-started-with-blueprints/)
-- [Getting Started With C++](/apidocs/tutorials/unreal-tutorials/getting-started-with-c/)
-- [Getting Started With OnlineSubsystem](/apidocs/tutorials/unreal-tutorials/getting-started-with-the-online-subsystem/)
-- [Building The Plugin For Older Versions of Unreal](/apidocs/tutorials/unreal-tutorials/building-the-plugin-for-older-versions-of-unreal/)
+- [Setting up the brainCloud plugin](/learn/sdk-tutorials/unreal-tutorials/setting-up-the-braincloud-plugin/)
+- [Getting Started With Blueprints](/learn/sdk-tutorials/unreal-tutorials/getting-started-with-blueprints/)
+- [Getting Started With C++](/learn/sdk-tutorials/unreal-tutorials/getting-started-with-cpp/)
+- [Getting Started With OnlineSubsystem](/learn/sdk-tutorials/unreal-tutorials/getting-started-with-the-online-subsystem/)
+- [Building The Plugin For Older Versions of Unreal](/learn/sdk-tutorials/unreal-tutorials/building-the-plugin-for-older-versions-of-unreal/)
 
 The following examples are available:
 
-- [Tappy Chicken Example Game](/apidocs/tutorials/unreal-tutorials/tappy-chicken-example-game/)
+- [Tappy Chicken Example Game](/learn/sdk-tutorials/unreal-tutorials/tappy-chicken-example-game/)
 
 <DocCardList />

@@ -13,4 +13,4 @@ To facilitate this, brainCloud provides built-in support for common gaming mecha
 - **Quests** - quests are essentially multi-part milestones, with their own rewards
 - **Stats Events** - essentially server-side macros that expand into individual stats commands. Useful for creating an abstraction between the triggering of events in code (done by the developer) and their impact on the metagame of the app (controlled by the designer in the portal)
 
-[![brainCloud Gamification Features](images/brainCloud_dashboard_achiev.jpg)](/apidocs/wp-content/uploads/2016/08/brainCloud_dashboard_achiev.jpg)
+[![brainCloud Gamification Features](images/brainCloud_dashboard_achiev.jpg)](images/brainCloud_dashboard_achiev.jpg)

@@ -41,7 +41,7 @@ This tutorial will walk you through the steps to configure Firebase Cloud Messag
 
 ![](https://downloads.intercomcdn.com/i/o/363172566/c331289185689feda4332a47/image.png)
 
-- [](https://downloads.intercomcdn.com/i/o/363172566/c331289185689feda4332a47/image.png)In your app, after authenticating a user with brainCloud, you will need to register the `Firebase Registration token` with brainCloud. Specifically, you’ll want to call the [RegisterPushNotificationDeviceToken()](https://getbraincloud.com/apidocs/apiref/?cloudcode#capi-pushnotification-registerpushnotificationdevicetoken) method to pass in the token.
+- [](https://downloads.intercomcdn.com/i/o/363172566/c331289185689feda4332a47/image.png)In your app, after authenticating a user with brainCloud, you will need to register the `Firebase Registration token` with brainCloud. Specifically, you’ll want to call the [RegisterPushNotificationDeviceToken()](/api/capi/pushnotification/registerpushnotificationdevicetoken) method to pass in the token.
 - If you are using Unity SDK, your code should be similar to the following.
 ```js
     void InitializeFirebase()
@@ -101,7 +101,7 @@ This tutorial will walk you through the steps to configure Firebase Cloud Messag
 
 ![](https://downloads.intercomcdn.com/i/o/363176360/1474feee11f5367407b4e4b1/image.png)
 
-- [](https://downloads.intercomcdn.com/i/o/363176360/1474feee11f5367407b4e4b1/image.png)Hit `Send Notification` button from the above page will pop-up a `Send Notification` window, fill some text and Click `Send`. Your test device should receive this notification from brainCloud. You can always use brainCloud Push Notification [methods](https://getbraincloud.com/apidocs/apiref/?cloudcode#capi-pushnotification) to test push notifications too.
+- [](https://downloads.intercomcdn.com/i/o/363176360/1474feee11f5367407b4e4b1/image.png)Hit `Send Notification` button from the above page will pop-up a `Send Notification` window, fill some text and Click `Send`. Your test device should receive this notification from brainCloud. You can always use brainCloud Push Notification [methods](/api/capi/pushnotification) to test push notifications too.
 
 ![](https://downloads.intercomcdn.com/i/o/363181329/3755b318ffa0dd79912cbb1f/image.png)
 

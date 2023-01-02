@@ -18,9 +18,9 @@ brainCloud leaderboards support the following:
 
 brainCloud also supports Pacers to make leaderboards more compelling for players that are not connected to social networks.  Pacers are "canned" score entries that are automatically populated on a leaderboard with set score values.  These can be used to give the player a crew of game-provided avatars to compete against.
 
-For more information, check out the [Leaderboard API](https://staging.getbraincloud.com/apidocs/apiref/#capi-leaderboard).
+For more information, check out the [Leaderboard API](/api/capi/leaderboard).
 
-[![brainCloud](images/brainCloud_dashboard_lbConfig.jpg)](/apidocs/wp-content/uploads/2016/08/brainCloud_dashboard_lbConfig.jpg)
+[![brainCloud](images/brainCloud_dashboard_lbConfig.jpg)](images/brainCloud_dashboard_lbConfig.jpg)
 
 ## Tournaments
 
@@ -39,4 +39,4 @@ The power of brainCloud’s tournament system comes from how flexible they are, 
 - New Tournaments API – for fine control of displaying tournament information, handling player enrollment, recording player scores, and claiming awarded prizes
 - And of course, you can use brainCloud Global Tournament features as building blocks for more advanced tournament variations – for example, tournaments brackets.
 
-For more information on Global Tournaments, check out our [Tournament API](https://staging.getbraincloud.com/apidocs/apiref/#capi-tournament).
+For more information on Global Tournaments, check out our [Tournament API](/api/capi/tournament).

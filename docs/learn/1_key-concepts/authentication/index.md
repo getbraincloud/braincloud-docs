@@ -21,13 +21,13 @@ brainCloud supports the following types of identities:
     - Universal Userid + Password _(meant for development primarily - has limitations)_
     - Steam
 
-And we're always adding new ones!  (Indeed, we've recently added support for [External Authentication](/apidocs/api-modules/authentication/external-authentication/) and [Shared Accounts](/apidocs/api-modules/authentication/shared-accounts/) as well!)
+And we're always adding new ones!  (Indeed, we've recently added support for [External Authentication](/learn/key-concepts/authentication/external-authentication/) and [Shared Accounts](/learn/key-concepts/authentication/shared-accounts/) as well!)
 
 _Important note - there are no global brainCloud Accounts for end-users.  All end-user accounts (profiles) are local to the app they are associated with - we do this so that you completely_ _own_ _your end-user data, and there is no branding-confusion regarding the accounts._
 
 * * *
 
-[![brainCloud_api_diagrams](images/brainCloud_api_diagrams.png)](https://getbraincloud.com/apidocs/wp-content/uploads/2014/09/brainCloud_api_diagrams.png)
+[![brainCloud_api_diagrams](images/brainCloud_api_diagrams.png)](images/brainCloud_api_diagrams.png)
 
 * * *
 
@@ -65,7 +65,7 @@ To keep things secure, the <AnonymousIdentity\> must be used in conjunction with
 
 The nice thing is that the **BrainCloudWrapper** class stores both the <AnonymousIdentity\> and the <ProfileId\> for you - so you don't normally have to worry about it.
 
-[![brainCloud Anonymous Identity](images/brainCloud-Anonymous-Identity-1024x536.png)](/apidocs/wp-content/uploads/2014/09/brainCloud-Anonymous-Identity.png)
+[![brainCloud Anonymous Identity](images/brainCloud-Anonymous-Identity-1024x536.png)](images/brainCloud-Anonymous-Identity.png)
 
 Anonymous identities are convenient - you don't need to bother your user with a login, yet can still persist their data on the cloud - but there are some significant disadvantages.
 
@@ -142,6 +142,6 @@ Luckily, brainCloud supports this concept directly.  brainCloud allows the app 
 - encouraging the user to create an account (e-mail + password) to save their data
 - etc.
 
-Adding additional identities to a profile is accomplished via the AttachIdentity() methods, which can be found [here](/apidocs/apiref/#capi-identity).  Identities can also be detached (if the user decides to disconnect from Facebook, etc.).
+Adding additional identities to a profile is accomplished via the AttachIdentity() methods, which can be found [here](/api/capi/identity).  Identities can also be detached (if the user decides to disconnect from Facebook, etc.).
 
 Once a user has upgraded from an anonymous account to an authenticated account (because they're now using an authenticated identity), you should switch to retrieving their account via the appropriate authenticated authentication call (instead of the anonymous call).

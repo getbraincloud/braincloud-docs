@@ -18,7 +18,7 @@ brainCloud also provides customizable _offline matchmaking_ support (perfect for
 
 brainCloud RTT adds support for _Online Matchmaking_ and _Lobbies,_ and the development of custom _Room Experiences_ to meet the needs for today's most competitive online experiences.
 
-For more information, see the [Lobby Concepts](https://staging.getbraincloud.com/apidocs/api-modules/multiplayer/lobbies/) page.
+For more information, see the [Lobby Concepts](/learn/key-concepts/multiplayer/lobbies/) page.
 
 ## Third Party Multiplayer
 
@@ -26,7 +26,7 @@ Finally, brainCloud famously plays nicely with third-party real-time multiplayer
 
 For more information:
 
-- [Turn-by-Turn Async API](/apidocs/apiref/#capi-asyncmatch)
-- [One-way Offline API](/apidocs/apiref/#capi-oneway)
-- [Matchmaking API](/apidocs/apiref/#capi-matchmaking)
-- [Lobby API](https://staging.getbraincloud.com/apidocs/apiref/#capi-lobby)
+- [Turn-by-Turn Async API](/api/capi/asyncmatch)
+- [One-way Offline API](/api/capi/oneway)
+- [Matchmaking API](/api/capi/matchmaking)
+- [Lobby API](/api/capi/lobby)

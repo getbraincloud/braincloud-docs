@@ -45,7 +45,7 @@ Three achievements have been implemented for brainCloud Bombers: destroying 50 e
 
 Achievements can be accessed through the GamificationService in the brainCloud API. The call returns all of the achievements in the system, their names, the urls for their icons, their descriptions, and whether or not the current user has unlocked any of them. The achievement data is stored in a public member variable in the BrainCloudStats class. The achievements are updated from the server when the player visits the Matchmaking menu.
 
-[![](images/Milestone-2.png)](https://getbraincloud.com/apidocs/wp-content/uploads/2018/11/Milestone-2.png)
+[![](images/Milestone-2.png)](images/Milestone-2.png)
 
  1. When this condition is satisfied.   
 2\. Award this achievement.
@@ -56,6 +56,6 @@ brainCloud Global Properties can be used in place of constants in your games –
 
 These properties can be read through the GlobalAppService in the brainCloud API. The call returns all of the currently saved global variables, which are then stored as public member variables in the BrainCloudStats class. To reduce API calls from the client, these values are only read once when the game is started, meaning clients will need to restart the app to get any changes, but they could be checked more often for the sake of app security or faster testing.
 
-[![](images/GlobalProps.png)](https://getbraincloud.com/apidocs/wp-content/uploads/2018/11/GlobalProps.png)
+[![](images/GlobalProps.png)](images/GlobalProps.png)
 
 Global Properties

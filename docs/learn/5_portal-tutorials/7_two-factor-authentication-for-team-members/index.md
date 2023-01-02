@@ -7,7 +7,7 @@ brainCloud's Two-factor Authentication (2FA) support keeps intruders out of your
 
 It works by sending a special verification code to your mobile device whenever you log into brainCloud from a new computer (or if it's been 30 days since your last verification). This significantly increases the security of your brainCloud account and it's associated applications.
 
-[![](images/2017-06-15_20-26-34.png)](/apidocs/wp-content/uploads/2016/05/2017-06-15_20-26-34.png)
+[![](images/2017-06-15_20-26-34.png)](images/2017-06-15_20-26-34.png)
 
 brainCloud 2FA uses [Authy](https://www.authy.com), which gives the flexibility of performing authentication via text message or the Authy App (which is available for iOS, Android, Mac OS, Windows, Chrome and more). For the best possible experience, we recommend that folks download the [Authy App](https://www.authy.com/app/mobile/).
 
@@ -19,15 +19,15 @@ brainCloud 2FA uses [Authy](https://www.authy.com), which gives the flexibility
 - Click the green **\[Click to enable 2FA\]** button
 - Follow the prompts!
 
-[![brainCloud](images/brainCloud_Dashboard_tfa2.jpg)](/apidocs/wp-content/uploads/2016/08/brainCloud_Dashboard_tfa2.jpg)
+[![brainCloud](images/brainCloud_Dashboard_tfa2.jpg)](images/brainCloud_Dashboard_tfa2.jpg)
 
-[![brainCloud](images/brainCloud_Dashboard_tfa3.jpg)](/apidocs/wp-content/uploads/2016/08/brainCloud_Dashboard_tfa3.jpg)
+[![brainCloud](images/brainCloud_Dashboard_tfa3.jpg)](images/brainCloud_Dashboard_tfa3.jpg)
 
 ## Logging in with 2FA
 
 Logging in with 2FA is pretty simple:
 
-[![brainCloud](images/Login_2FA.png)](/apidocs/wp-content/uploads/2016/05/Login_2FA.png)
+[![brainCloud](images/Login_2FA.png)](images/Login_2FA.png)
 
 - Log into the brainCloud Portal with **email + password** just like normal
 - If it's your first time using this computer (or it's been more than 30 days since your last verification), you'll be prompted to enter a verification code (i.e. one-time password)
@@ -39,7 +39,7 @@ Logging in with 2FA is pretty simple:
 
 If you decide that you no longer want to use 2FA for your account, you can click the red **\[Unlink\]** button from the Edit Profile screen.
 
-[![brainCloud](images/brainCloud_Dashboard_tfa4.jpg)](/apidocs/wp-content/uploads/2016/08/brainCloud_Dashboard_tfa4.jpg)
+[![brainCloud](images/brainCloud_Dashboard_tfa4.jpg)](images/brainCloud_Dashboard_tfa4.jpg)
 
 ## Frequently Asked Questions
 

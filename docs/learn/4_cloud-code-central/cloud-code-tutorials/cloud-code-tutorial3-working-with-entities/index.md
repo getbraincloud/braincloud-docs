@@ -5,7 +5,7 @@ date: "2016-02-25"
 
 This tutorial uses brainCloud's **Global** and **User Entity** features.
 
-_Global Entities_ are json objects that are available globally to _all users_ of a system (subject to the specified ACL of the object). _User Entities_ are local to a single user, and thus largely private (though there are mechanisms in place to share them). _For more information on brainCloud data features, see the [Cloud Data](/apidocs/api-modules/data/) section of the brainCloud documentation._
+_Global Entities_ are json objects that are available globally to _all users_ of a system (subject to the specified ACL of the object). _User Entities_ are local to a single user, and thus largely private (though there are mechanisms in place to share them). _For more information on brainCloud data features, see the [Cloud Data](/learn/key-concepts/data/) section of the brainCloud documentation._
 
 The combination of Cloud Code working together with Global and User Entities is very powerful in brainCloud.
 
@@ -150,7 +150,7 @@ To use the viewer:
 - You can filter the list using the _Filter by Type_ drop-down box
 - You can _View/Edit_ an entity by clicking on the "eyeball"
 
-[![](images/Tut3_GlobalEntities-1024x496.png)](/apidocs/wp-content/uploads/2018/03/Tut3_GlobalEntities.png)
+[![](images/Tut3_GlobalEntities-1024x496.png)](images/Tut3_GlobalEntities.png)
 
 ## Step 3 - Manage Members
 

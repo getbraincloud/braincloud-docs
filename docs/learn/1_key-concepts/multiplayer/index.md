@@ -11,15 +11,15 @@ brainCloud's multiplayer support is organized along the following definitions:
 
 Turn-by-Turn Async Multiplayer is arguably the most common form of mobile multiplayer - made popular by games such as **_Words With Friends_**, **_Draw Something_**, **_Trivia Crack_**, etc.  This multiplayer is very popular because it supports very casual + social types of games - and because it doesn't require the players to be online at the same time.
 
-brainCloud has a full implementation of Turn-by-Turn Async Multiplayer, enabled via our [BrainCloudAsyncMatch](https://staging.getbraincloud.com/apidocs/apiref/#capi-asyncmatch) APIs, that works across all device types, and even supports anonymous matchmaking via the [BrainCloudMatchMaking](https://staging.getbraincloud.com/apidocs/apiref/#capi-matchmaking) service.  Players can also start matches with Facebook friends (by retrieving their profileID via the [BrainCloudFriend](https://staging.getbraincloud.com/apidocs/apiref/#capi-friend) API).
+brainCloud has a full implementation of Turn-by-Turn Async Multiplayer, enabled via our [BrainCloudAsyncMatch](/api/capi/asyncmatch) APIs, that works across all device types, and even supports anonymous matchmaking via the [BrainCloudMatchMaking](/api/capi/matchmaking) service.  Players can also start matches with Facebook friends (by retrieving their profileID via the [BrainCloudFriend](/api/capi/friend) API).
 
 ## One-Way Offline Multiplayer
 
 Another very popular form of mobile multiplayer is what we call One-Way Offline Multiplayer. It's our name for the form of multiplayer popularized by games like **_Clash of Clans_**, **_Boom Beach_**, etc.  In it, an Attacker attacks the settlement (base, camp, fort, etc.) that has been set up by the Defender. Once again, the great thing about this form of multiplayer is that the Defender does not have to be online during the attack.
 
-brainCloud has a full implementation of One-Way Offline Multiplayer, enabled via our [BrainCloudOneWayMatch](https://staging.getbraincloud.com/apidocs/apiref/#capi-oneway) APIs. Opponents to attack can be found using the [BrainCloudMatchMaking](/apidocs/apiref/#capi-matchmaking) service, or via the [BrainCloudFriend](https://staging.getbraincloud.com/apidocs/apiref/#capi-friend) API.
+brainCloud has a full implementation of One-Way Offline Multiplayer, enabled via our [BrainCloudOneWayMatch](/api/capi/oneway) APIs. Opponents to attack can be found using the [BrainCloudMatchMaking](/api/capi/matchmaking) service, or via the [BrainCloudFriend](/api/capi/friend) API.
 
-Refer to our [One-Way Offline Multiplayer Example](https://staging.getbraincloud.com/apidocs/api-modules/multiplayer/one-way-offline-multiplayer-example/) for more information.
+Refer to our [One-Way Offline Multiplayer Example](/learn/key-concepts/multiplayer/one-way-offline-multiplayer-example/) for more information.
 
 ## Real-time Multiplayer
 
@@ -27,7 +27,7 @@ This is our name for the form of multiplayer commonly used in Arena Shooters, MO
 
 brainCloud provides all the building blocks necessary to build great multiplayer experiences - and easily integrates with third-party tech as well.
 
-brainCloud provides built-in _Online Matchmaking_ and _Lobby Services_ - and our own _Relay Servers_ for simple, peer-to-peer multiplayer. Be sure to check out our multiplayer demo game, [brainCloud](https://staging.getbraincloud.com/apidocs/tutorials/unity-tutorials/bombers-rtt-example-game/) [Bombers](https://staging.getbraincloud.com/apidocs/tutorials/unity-tutorials/braincloud-bombers-example-game/), for more info!
+brainCloud provides built-in _Online Matchmaking_ and _Lobby Services_ - and our own _Relay Servers_ for simple, peer-to-peer multiplayer. Be sure to check out our multiplayer demo game, [brainCloud](/learn/sdk-tutorials/unity-tutorials/bombers-rtt-example-game/) [Bombers](/learn/sdk-tutorials/unity-tutorials/braincloud-bombers-example-game/), for more info!
 
 For more competitive multiplayer, brainCloud can now host your custom Room/Game Servers - automatically launching them after users ready-up in lobbies. _**And as of release 4.9, brainCloud can now launch custom AWS GameLift servers as well!**_
 

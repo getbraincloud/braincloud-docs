@@ -8,8 +8,8 @@ This tutorial will introduce you to the basics of using brainCloud in Blueprints
 ### Prerequisites
 
 - Created a brainCloud Portal account
-- Created a game in the brainCloud Portal. If you need help with this step refer to the [Unity Tutorial #1 video](/apidocs/tutorials/unity-tutorials/unity-tutorial-1-getting-started/).
-- An Unreal project with the brainCloud plugin installed as described [here](/apidocs/tutorials/unreal-tutorials/setting-up-the-braincloud-plugin/)
+- Created a game in the brainCloud Portal. If you need help with this step refer to the [Unity Tutorial #1 video](/learn/sdk-tutorials/unity-tutorials/unity-getting-started/).
+- An Unreal project with the brainCloud plugin installed as described [here](/learn/sdk-tutorials/unreal-tutorials/setting-up-the-braincloud-plugin/)
 - Basic experience with Blueprint, see the [Unreal documentation](https://docs.unrealengine.com/latest/INT/Engine/Blueprints/GettingStarted/index.html) for help
 
 ### Initialization
@@ -66,21 +66,21 @@ Finally, there is the **Additional Data** struct. This contains extra informati
 - **Service Name** \- The name of the service the API call belongs to
 - **Service Operation** - The specific operation performed by the API call
 - **Status Code** \- The status code returned by the call.
-- **Reason Code** - The reason code describes specific failures and is returned when an error is encountered. You can view the various reason codes [here](/apidocs/apiref/#appendix-reasoncodes).
+- **Reason Code** - The reason code describes specific failures and is returned when an error is encountered. You can view the various reason codes [here](/api/appendix/reasoncodes).
 
 All brainCloud API calls that communicate with the brainCloud server will have this return structure.
 
 ### Authentication
 
-Authentication is the next step and is required before calling any other brainCloud APIs.  Create a new [Authenticate Universal](/apidocs/apiref/?cpp#capi-auth-authenticateuniversal) node, which can be found under BrainCloud > Authentication.
+Authentication is the next step and is required before calling any other brainCloud APIs.  Create a new [Authenticate Universal](/api/capi/authentication/authenticateuniversal) node, which can be found under BrainCloud > Authentication.
 
 By now you should have these nodes set up and connected in order:
 
-[![](images/unreal-initialize-authenticate-2.jpg)](/apidocs/wp-content/uploads/2015/10/unreal_prog_auth.png)
+[![](images/unreal-initialize-authenticate-2.jpg)](images/unreal_prog_auth.png)
 
 Next, we will add some debug log messages to get a feel for how the different execution paths function.
 
-[![](images/node-5.jpg)](/apidocs/wp-content/uploads/2015/10/unreal_auth_return.png)
+[![](images/node-5.jpg)](images/unreal_auth_return.png)
 
 The first execution pin fires **immediately**, continuing the execution path that triggered the Authenticate node in the first place.  This makes it suitable for printing the "Authenticating..." message.
 
@@ -94,7 +94,7 @@ At this point, you should be able to compile your Blueprint, run it, and see the
 
 Once we've successfully authenticated let's call a few more API functions.
 
-[![unreal_nodes](images/unreal_nodes.png)](/apidocs/wp-content/uploads/2015/10/unreal_nodes.png)
+[![unreal_nodes](images/unreal_nodes.png)](images/unreal_nodes.png)
 
 Continuing off the **On Success** path of our authentication node we've added an Update Player Name node (BrainCloud > Player State) and a Get Achievements node (BrainCloud > Gamification).
 
@@ -102,7 +102,7 @@ Note that we are using the first execution pin,  which we learned earlier wil
 
 We've also implemented a generic **Handle Error** function and connected it to the **On Error** pins of both functions.  This way we can handle either error without duplicate code.
 
-[![unreal_error](images/unreal_error.png)](/apidocs/wp-content/uploads/2015/10/unreal_error.png)
+[![unreal_error](images/unreal_error.png)](images/unreal_error.png)
 
 You can see inside our **Handle Error** function that we use the **Service Name** and **Service Operation** of the additional return data to output an error log that specifies what call has failed.
 
@@ -110,9 +110,9 @@ You can see inside our **Handle Error** function that we use the **Service Name
 
 Parsing the **Json Data** string is essential to using brainCloud and it requires the use of a third-party plugin.  There are several options available (we leave that up to you to decide) but for this tutorial we will be using the **VaRest** plugin available [here](https://github.com/ufna/VaRest).
 
-First, we will need to make another API call to parse the return from, in this case, [ReadServerTime](/apidocs/apiref/?cpp#capi-time-readservertime) which will return the current server time (BrainCloud > Time).  We can see the JSON return structure on the documentation page so we know what we will be looking for when we parse the JSON.
+First, we will need to make another API call to parse the return from, in this case, [ReadServerTime](/api/capi/time/readservertime) which will return the current server time (BrainCloud > Time).  We can see the JSON return structure on the documentation page so we know what we will be looking for when we parse the JSON.
 
-[![unreal_json_read](images/unreal_json_read.png)](/apidocs/wp-content/uploads/2015/10/unreal_json_read.png)
+[![unreal_json_read](images/unreal_json_read.png)](images/unreal_json_read.png)
 
 You can see here that On Success we are doing two things, constructing a new Json Object (a VaRest type) and decoding the Json Data response into it.
 
@@ -120,10 +120,10 @@ Constructing the Json Object is done by calling the **Construct Json Object** f
 
 Now we will decode the JSON, which is simply a call to the VaRest function **Decode Json**.  We pass in our newly created Json Object as well as our **Json Data** string.
 
-[![unreal_json_parse](images/unreal_json_parse.png)](/apidocs/wp-content/uploads/2015/10/unreal_json_parse.png)
+[![unreal_json_parse](images/unreal_json_parse.png)](images/unreal_json_parse.png)
 
 The next step is to check if the Decode Json call was successful by branching off of its Return Value boolean. If it was, we now want to dig through the data and print the current server time.
 
-Referring to the JSON return structure in the [documentation](/apidocs/apiref/?cpp#capi-time-readservertime) we can see that the server time is represented by the key **"server\_time"** which is contained in the object **"data"**.  So to get to it we take the Json Data object we saved to a variable and use the VaRest functions **Get Object Field** and then **Get Number Field**, passing in "data" and "server\_time" as our Field Names.
+Referring to the JSON return structure in the [documentation](/api/capi/time/readservertime) we can see that the server time is represented by the key **"server\_time"** which is contained in the object **"data"**.  So to get to it we take the Json Data object we saved to a variable and use the VaRest functions **Get Object Field** and then **Get Number Field**, passing in "data" and "server\_time" as our Field Names.
 
 Lastly, we do a conversion from a float to a string and print the result.

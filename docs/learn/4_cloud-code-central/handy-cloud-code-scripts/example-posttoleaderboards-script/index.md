@@ -15,7 +15,7 @@ Click [PostToLeaderboards.ccjs.zip](script/PostToLeaderboards.ccjs.zip) to downl
 
 To configure this script, simply import it into your app.
 
-Then call it from your app via the [RunScript()](https://staging.getbraincloud.com/apidocs/apiref/index.html#capi-script-runscript) API call.
+Then call it from your app via the [RunScript()](/api/capi/script/runscript) API call.
 
 The script takes the following parameters:
 

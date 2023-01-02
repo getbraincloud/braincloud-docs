@@ -5,7 +5,7 @@ date: "2015-09-22"
 
 ## Overview
 
-The [MatchMaking](/apidocs/apiref/#capi-matchmaking) API is used to find players for multiplayer matches. Once a player has been found using the MatchMaking API, that player can be used for starting a match using either the [BrainCloudOneWayMatch](/apidocs/apiref/#capi-oneway) API or the [BrainCloudAsyncMatch](/apidocs/apiref/#capi-asyncmatch) API. For an overview of the different types of multiplayer matches please refer to the [Multiplayer](/apidocs/api-modules/multiplayer/) documentation.
+The [MatchMaking](/api/capi/matchmaking) API is used to find players for multiplayer matches. Once a player has been found using the MatchMaking API, that player can be used for starting a match using either the [BrainCloudOneWayMatch](/api/capi/oneway) API or the [BrainCloudAsyncMatch](/api/capi/asyncmatch) API. For an overview of the different types of multiplayer matches please refer to the [Multiplayer](/learn/key-concepts/multiplayer/) documentation.
 
 ## Finding Players
 
@@ -16,13 +16,13 @@ In order for players to be eligible for MatchMaking your app must do the follow
 - Click the Matchmaking page, under **Design | Multiplayer | Matchmaking**
 - Check the "Matchmaking Enabled" option
 
-[![](images/2018-06-20_19-47-01.png)](https://staging.getbraincloud.com/apidocs/wp-content/uploads/2018/06/2018-06-20_19-47-01.png)
+[![](images/2018-06-20_19-47-01.png)](images/2018-06-20_19-47-01.png)
 
 ### BrainCloudClient API
 
 After enabling MatchMaking in the brainCloud portal, you also need to enable MatchMaking for your player. When you've authenticated as the player you will need to:
 
-- Call [MatchMaking.EnableMatchMaking](/apidocs/apiref/#capi-matchmaking-enablematchmaking) to allow the player to be considered for matches
+- Call [MatchMaking.EnableMatchMaking](/api/capi/matchmaking/enablematchmaking) to allow the player to be considered for matches
 - Optionally set a player rating. See below for more information on player ratings
 
 Your player should now be considered for matches.
@@ -39,7 +39,7 @@ Note that while developing/debugging, it may be useful to set this flag to true
 
 ### Player Rating
 
-All players in the system have a rating. The initial value can be specified in the portal MatchMaking section. The player rating can also be affected through the MatchMaking API functions [IncrementPlayerRating](/apidocs/apiref/#capi-matchmaking-incrementplayerrating) and [DecrementPlayerRating](/apidocs/apiref/#capi-matchmaking-decrementplayerrating).
+All players in the system have a rating. The initial value can be specified in the portal MatchMaking section. The player rating can also be affected through the MatchMaking API functions [IncrementPlayerRating](/api/capi/matchmaking/incrementplayerrating) and [DecrementPlayerRating](/api/capi/matchmaking/decrementplayerrating).
 
 When a request is made through MatchMaking to GetOneWayPlayers, a "rangeDelta" parameter is supplied which limits the range of player ratings that are eligible, in relation to the currently authenticated player's rating.
 
@@ -61,7 +61,7 @@ Players in brainCloud can turn on a shield which prevents them from being matche
 - TurnShieldOff
 - TurnShieldOnFor (with the caller supplying a time in minutes)
 
-You can also query the remaining shield time by calling [GetShieldExpiry](/apidocs/apiref/#capi-matchmaking-getshieldexpiry).
+You can also query the remaining shield time by calling [GetShieldExpiry](/api/capi/matchmaking/getshieldexpiry).
 
 ## Filtering Player Eligibility With Cloud Code
 
@@ -74,7 +74,7 @@ brainCloud supports filtering players by custom cloud scripts. In order to filte
     - matchCandidate - The player object. This returns the same JSON as the MatchMaking.Read API call (see below).
     - extraParms - The JSON extraParms object sent in the GetOneWayPlayersFilter API method. This is defined by the API method caller and can be used to help drive the custom filter results.
 
-[![](images/2018-06-20_19-51-23.png)](https://staging.getbraincloud.com/apidocs/wp-content/uploads/2018/06/2018-06-20_19-51-23.png)
+[![](images/2018-06-20_19-51-23.png)](images/2018-06-20_19-51-23.png)
 ```js
 var matchCandidate = data\["matchCandidate"\];
 var extraParms    = data\["extraParms"\];

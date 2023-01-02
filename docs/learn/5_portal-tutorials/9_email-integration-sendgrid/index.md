@@ -38,7 +38,7 @@ Note - it can take a few hours for SendGrid to provision your new account - duri
     - Marketing Campaigns - Full Access (future use)
 - Hit **\[Save\]**, and copy the API Key into your clipboard or a document for safe keeping.
 
-[![2016-10-26_13-57-29](images/2016-10-26_13-57-29.png)](/apidocs/wp-content/uploads/2016/10/2016-10-26_13-57-29.png)
+[![2016-10-26_13-57-29](images/2016-10-26_13-57-29.png)](images/2016-10-26_13-57-29.png)
 
 ### Step 3 - Configure the SendGrid Integration in brainCloud
 
@@ -49,7 +49,7 @@ Note - it can take a few hours for SendGrid to provision your new account - duri
 - Click the **\[Test\]** button to validate that everything is hooked up properly. brainCloud should send a test email to the email address that you've used to log into the portal.
 - Once you've confirmed that the email was sent, click the **\[Save\]** button to save the configuration and activate the SendGrid integration.
 
-[![SendGrid Integration](images/2016-10-26_14-05-36.png)](/apidocs/wp-content/uploads/2016/10/2016-10-26_14-05-36.png)
+[![SendGrid Integration](images/2016-10-26_14-05-36.png)](images/2016-10-26_14-05-36.png)
 
 ### Step 4 - Enable Email Verification
 
@@ -69,7 +69,7 @@ Then confirm your email templates:
 - Click \[Test\] to test individual templates.
 - Click \[Save\] when you are happy with your changes.
 
-[![2016-10-26_14-24-13](images/2016-10-26_14-24-13.png)](/apidocs/wp-content/uploads/2016/10/2016-10-26_14-24-13.png)
+[![2016-10-26_14-24-13](images/2016-10-26_14-24-13.png)](images/2016-10-26_14-24-13.png)
 
 ### Step 5 - Create SendGrid Templates
 
@@ -90,7 +90,7 @@ We won't go through all the ins and outs of creating templates in SendGrid, but
 - Click **\[Save\]** to save the template, and then the **left-arrow** on the left-hand side of the screen to exit the editor.
 - In the templates list screen, click on the **action button** of the template version, and choose **\[Preview & Test\]**. Then click **\[Send Test\],** and then **\[Send\]** to send yourself a raw test email (without substitution). Click **\[Cancel\]** to exit the screen.
 
-[![verify_email_template](images/2016-11-02_17-08-19.png)](/apidocs/wp-content/uploads/2016/10/2016-11-02_17-08-19.png)
+[![verify_email_template](images/2016-11-02_17-08-19.png)](images/2016-11-02_17-08-19.png)
 
 While you're at it, you should create the templates for the _Reset Password_ and _Confirmation_ emails as well. When configuring Rich Templates for email authentication, you must configure all templates for a language at the same time.
 
@@ -121,4 +121,4 @@ Voila! You are all set!
 
 ### Step 7 - \[Optional\] Send email from your app!
 
-You can also send emails to users programmatically. Check out our new [Mail Service](https://staging.getbraincloud.com/apidocs/apiref/#capi-mail) APIs!
+You can also send emails to users programmatically. Check out our new [Mail Service](/api/capi/mail) APIs!

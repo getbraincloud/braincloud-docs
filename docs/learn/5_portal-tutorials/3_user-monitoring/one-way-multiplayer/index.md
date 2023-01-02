@@ -5,7 +5,7 @@ date: "2015-08-20"
 
 The One-Way MP tab allows you to view the status of recent one-way multiplayer matches involving the selected User.
 
-[![oneWayMultiplayer](images/oneWayMultiplayer.png)](/apidocs/wp-content/uploads/2015/08/oneWayMultiplayer.png)
+[![oneWayMultiplayer](images/oneWayMultiplayer.png)](images/oneWayMultiplayer.png)
 
 The **Match Status** dropdown lets you filter records by their status.  **Owner** allows you to filter the results further by showing results for the player who started the match.
 

@@ -42,7 +42,7 @@ In our examples below we will assume our game is called "MyGame".
 
 Log into the brainCloud portal and grab the latest brainCloud client libraries. When you first log in you will see a link to the client libraries in the left hand nav bar. Click this link and grab the appropriate library for your development platform.
 
-[![brainCloud_Dashboard_Project_Cyber](images/brainCloud_Dashboard_Project_Cyber.png)](http://apidocs.braincloudservers.com/wp-content/uploads/2014/11/brainCloud_Dashboard_Project_Cyber.png)
+[![brainCloud_Dashboard_Project_Cyber](images/brainCloud_Dashboard_Project_Cyber.png)](images/brainCloud_Dashboard_Project_Cyber.png)
 
 Note that if you are already logged into the portal you can return to the Home page/Administration area by clicking the gear icon in the upper right.
 
@@ -61,11 +61,11 @@ Note that if you are already logged into the portal you can return to the Home p
 - Unzip the brainCloud libraries into a platform specific folder in your game project. I ended up creating a path that looks like this:_MyGame/libs/ios/brainCloud._Underneath this folder would be include, libs, src and thirdparty.
 - Add the brainCloud folder to the project by right clicking on the project and select "Add Files to MyGame..."
 
-    [![Fullscreen_2014-12-02__9_02_AM](images/Fullscreen_2014-12-02__9_02_AM.png)](https://getbraincloud.com/apidocs/wp-content/uploads/2014/11/Fullscreen_2014-12-02__9_02_AM.png)
+    [![Fullscreen_2014-12-02__9_02_AM](images/Fullscreen_2014-12-02__9_02_AM.png)](images/Fullscreen_2014-12-02__9_02_AM.png)
 
 - Point to the libs folder you just created and make sure the "Create Groups" option is selected. You should now see a folder structure like the image below:
 
-    [![MyGame_xcodeproj](images/MyGame_xcodeproj.png)](https://getbraincloud.com/apidocs/wp-content/uploads/2014/11/MyGame_xcodeproj.png)
+    [![MyGame_xcodeproj](images/MyGame_xcodeproj.png)](images/MyGame_xcodeproj.png)
 
 #### Build Settings
 
@@ -73,7 +73,7 @@ In order to compile we need to set up a few include and link paths. Open up buil
 
 - In "Header Search Paths", add the following include:__$(SRCROOT)/../libs/ios/brainCloud/thirdparty/jsoncpp-1.0.0__
     
-    [![MyGame_xcodeproj 2](images/MyGame_xcodeproj-2.png)](https://getbraincloud.com/apidocs/wp-content/uploads/2014/11/MyGame_xcodeproj-2.png)
+    [![MyGame_xcodeproj 2](images/MyGame_xcodeproj-2.png)](images/MyGame_xcodeproj-2.png)
     
 
 #### Build Phases
@@ -107,20 +107,20 @@ The example project needs a few extra steps before you can run it properly. Name
 
 - Open Eclipse and import the project using the "Existing Projects into Workspace" option.
 
-    [![Import_and_Java_EE_-_Eclipse_-__Users_prestonjennings_Documents_workspace](images/Import_and_Java_EE_-_Eclipse_-__Users_prestonjennings_Documents_workspace.png)](/apidocs/wp-content/uploads/2014/11/Import_and_Java_EE_-_Eclipse_-__Users_prestonjennings_Documents_workspace.png)
+    [![Import_and_Java_EE_-_Eclipse_-__Users_prestonjennings_Documents_workspace](images/Import_and_Java_EE_-_Eclipse_-__Users_prestonjennings_Documents_workspace.png)](images/Import_and_Java_EE_-_Eclipse_-__Users_prestonjennings_Documents_workspace.png)
 
 - Select the "brainCloudExample/proj.android" folder
 
-    [![Import_and_Java_EE_-_Eclipse_-__Users_prestonjennings_Documents_workspace 2](images/Import_and_Java_EE_-_Eclipse_-__Users_prestonjennings_Documents_workspace-2.png)](/apidocs/wp-content/uploads/2014/11/Import_and_Java_EE_-_Eclipse_-__Users_prestonjennings_Documents_workspace-2.png)
+    [![Import_and_Java_EE_-_Eclipse_-__Users_prestonjennings_Documents_workspace 2](images/Import_and_Java_EE_-_Eclipse_-__Users_prestonjennings_Documents_workspace-2.png)](images/Import_and_Java_EE_-_Eclipse_-__Users_prestonjennings_Documents_workspace-2.png)
 
 - Once the project is imported, right click on the project and select properties
 - In the Android section, select the appropriate Build Target. I'm using Google API 4.0
 
-    [![Properties_for_brainCloudExample](images/Properties_for_brainCloudExample.png)](/apidocs/wp-content/uploads/2014/11/Properties_for_brainCloudExample.png)
+    [![Properties_for_brainCloudExample](images/Properties_for_brainCloudExample.png)](images/Properties_for_brainCloudExample.png)
 
 - Next, go to C/C++ Build | Environment. Add a new environment variable "NDK\_ROOT" and point it to your NDK folder. Make sure to check "Add to all configurations".
 
-    [![New_variable_and_Properties_for_brainCloudExample](images/New_variable_and_Properties_for_brainCloudExample.png)](/apidocs/wp-content/uploads/2014/11/New_variable_and_Properties_for_brainCloudExample.png)
+    [![New_variable_and_Properties_for_brainCloudExample](images/New_variable_and_Properties_for_brainCloudExample.png)](images/New_variable_and_Properties_for_brainCloudExample.png)
 
 You should now be setup to build the example project. To test things out, try setting the active build target to debug and doing a "Debug As | Android Native Application"
 
@@ -130,7 +130,7 @@ After creating the cocos2d-x project skeleton, you can add brainCloud to your pr
 
 - Unzip the Android library into a libs folder. I chose to put them in a top level folder (same level as the Classes directory). My folder structure looks like the following:
     
-    [![libs](images/libs.png)](/apidocs/wp-content/uploads/2014/11/libs.png)
+    [![libs](images/libs.png)](images/libs.png)
     
 
 - Add the static library modules to your jni/Android.mk file. Note these should be before your main project definition (ie before the CLEAR\_VARS)
@@ -258,7 +258,7 @@ So in the example, there is nothing to add. However it is important to note that
 
 Now that the brainCloud client library is initialized and the callback routine is hooked up, you can begin authentication with the server. There are various authentication methods available but for this simple example, we will use Universal authentication. This allows us to specify a username and password and automatically have the account created if it doesn't already exist.
 
-[See more details on Authentication here](/apidocs/apiref/#capi-auth "BrainCloudAuthentication")
+[See more details on Authentication here](/api/capi/authentication "BrainCloudAuthentication")
 
 In our example project, you can navigate to "ConnectUniversalLayer.h/cpp" to follow along.
 
@@ -337,11 +337,11 @@ brainCloud allows you to store statistics for a player. Below we show you how to
 
 The first step is to add your player statistics to your game in the brainCloud Portal. Navigate to the Player Statistics section
 
-[![brainCloud_Dashboard_-_Simple_Example](images/brainCloud_Dashboard_-_Simple_Example.png)](https://getbraincloud.com/apidocs/wp-content/uploads/2014/11/brainCloud_Dashboard_-_Simple_Example.png)
+[![brainCloud_Dashboard_-_Simple_Example](images/brainCloud_Dashboard_-_Simple_Example.png)](images/brainCloud_Dashboard_-_Simple_Example.png)
 
 Click the + icon on the right hand of the screen to add a Player Statistic
 
-[![brainCloud_Dashboard_-_Simple_Example 4](images/brainCloud_Dashboard_-_Simple_Example-4.png)](https://getbraincloud.com/apidocs/wp-content/uploads/2014/11/brainCloud_Dashboard_-_Simple_Example-4.png)
+[![brainCloud_Dashboard_-_Simple_Example 4](images/brainCloud_Dashboard_-_Simple_Example-4.png)](images/brainCloud_Dashboard_-_Simple_Example-4.png)
 
 In this case I've added a statistic called "gamesWon".
 

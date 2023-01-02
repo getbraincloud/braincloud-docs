@@ -10,7 +10,7 @@ The brainCloud Design Portal is 4 powerful tools in one:
 3. **Monitoring Tool** – the monitoring features provide easy debugging of global and user data – and are also very useful in supporting your app once it goes live.
 4. **Reporting** – brainCloud’s reporting features provide cross-platform analytics, as well as an API usage report that is useful for understanding the usage and performance of your application.
 
-[![brainCloud Dashboard](images/brainCloud_Dashboard_portal_2.jpg)](/apidocs/wp-content/uploads/2016/08/brainCloud_Dashboard_portal_2.jpg)
+[![brainCloud Dashboard](images/brainCloud_Dashboard_portal_2.jpg)](images/brainCloud_Dashboard_portal_2.jpg)
 
 The brainCloud portal is used by developers, designers, and product managers to configure, design and publish a game. Each role has a different set of everyday tasks that they will use the portal to achieve.
 

@@ -11,7 +11,7 @@ Before we start, ensure that you've signed up with brainCloud and have logged in
 
 When you first log in to the portal, you'll arrive at the Team Home Page.
 
-[![brainCloud Home](images/brainCloud_dashboard_home.jpg)](/apidocs/wp-content/uploads/2016/08/brainCloud_dashboard_home.jpg)
+[![brainCloud Home](images/brainCloud_dashboard_home.jpg)](images/brainCloud_dashboard_home.jpg)
 
 Key components of this page include:
 
@@ -26,7 +26,7 @@ The **Home Page** is the actually just the main page of the **Administration** s
 
 The first thing you'll want to do is create an app.  Doing so is simple - just click the **\[+\]** button in the corner of the **Your Apps** section, and fill in the dialog.
 
-[![brainCloud](images/brainCloud_dashboard_newApp.jpg)](/apidocs/wp-content/uploads/2016/08/brainCloud_dashboard_newApp.jpg)
+[![brainCloud](images/brainCloud_dashboard_newApp.jpg)](images/brainCloud_dashboard_newApp.jpg)
 
 You can choose whether or not to _Enable Game Features_ - this justs shows and/or hides the gaming features of the design portal - like Achievements, Leaderboards, etc. If your app isn't planning to use these features, you can hide them to keep the portal simpler. Note you can always choose to enable them later.
 
@@ -36,7 +36,7 @@ You'll want to pick at least one _Supported Platform_. brainCloud's APIs check t
 
 After creating the app you'll be placed in the **Administration | App Management** page.  This is where you view and control the publishing of your apps - see the Actions menu on the right-hand side of your app.
 
-[![brainCloud](images/brainCloud_dashboard_appsList.jpg)](/apidocs/wp-content/uploads/2016/08/brainCloud_dashboard_appsList.jpg)
+[![brainCloud](images/brainCloud_dashboard_appsList.jpg)](images/brainCloud_dashboard_appsList.jpg)
 
 For now, we're just going to move along to the design settings for this app. _Click on your app's name in the list._
 
@@ -44,7 +44,7 @@ For now, we're just going to move along to the design settings for this app. _C
 
 The Design section is the heart of the brainCloud Portal - it's where you _set up the rules_ about what your app can do, configure integrations with other services, write custom cloud code scripts, and even test API _calls_ live with the system.
 
-[![brainCloud](images/brainCloud_Dashboard_appIds.jpg)](/apidocs/wp-content/uploads/2016/08/brainCloud_Dashboard_appIds.jpg)
+[![brainCloud](images/brainCloud_Dashboard_appIds.jpg)](images/brainCloud_Dashboard_appIds.jpg)
 
 Before we get too far, we should mention the navigation items at the top of the screen.
 
@@ -63,7 +63,7 @@ The API explorer is a central feature of the brainCloud Portal. You can use it 
 - Confirm the json response format of API calls
 - Debug user support scenarios
 
-[![brainCloud](images/brainCloud_dashboard_apiExpl.jpg)](/apidocs/wp-content/uploads/2016/08/brainCloud_dashboard_apiExpl.jpg)
+[![brainCloud](images/brainCloud_dashboard_apiExpl.jpg)](images/brainCloud_dashboard_apiExpl.jpg)
 
 As a simple test, we'll try authenticating with brainCloud. You always have to authenticate with brainCloud before you perform any other operations.
 

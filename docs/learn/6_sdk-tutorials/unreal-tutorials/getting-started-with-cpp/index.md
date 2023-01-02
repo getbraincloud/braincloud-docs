@@ -8,15 +8,15 @@ Just as with Blueprints the entire BrainCloud API is available through C++ in Un
 ### Prerequisites
 
 - Created a brainCloud Portal account
-- Created a game in the brainCloud Portal. If you need help with this step refer to the [Unity Tutorial #1 video](/apidocs/tutorials/unity-tutorials/unity-tutorial-1-getting-started/).
-- An Unreal project with the brainCloud plugin installed as described [here](/apidocs/tutorials/unreal-tutorials/setting-up-the-braincloud-plugin/)
+- Created a game in the brainCloud Portal. If you need help with this step refer to the [Unity Tutorial #1 video](/learn/sdk-tutorials/unity-tutorials/unity-getting-started/).
+- An Unreal project with the brainCloud plugin installed as described [here](/learn/sdk-tutorials/unreal-tutorials/setting-up-the-braincloud-plugin/)
 - Basic experience with Unreal C++, see the [Unreal documentation](https://docs.unrealengine.com/latest/INT/Programming/Introduction/index.html) for help
 
 ### Creating a Test Actor
 
 For this tutorial we will need to create an actor where we will write our code to interact with brainCloud. To create a new actor open the editor and go to File>New C++ Class.  Select Actor as the parent class, click Next, and name it whatever you like.
 
-[![unreal_cpp_actor](images/unreal_cpp_actor.png)](/apidocs/wp-content/uploads/2015/10/unreal_cpp_actor.png)
+[![unreal_cpp_actor](images/unreal_cpp_actor.png)](images/unreal_cpp_actor.png)
 
 One your actor is created switch over to your programming IDE and continue the tutorial from there.
 
@@ -38,7 +38,7 @@ Open your newly created Actor's code (cpp) file and include the "BrainCloudCli
 #include "BrainCloudClient.h"
 ```
 
-Now in your actor's **BeginPlay()** function we can perform the initialization using the [BrainCloudClient->Initialize](/apidocs/apiref/?cpp#capi-client-initialize) function.  
+Now in your actor's **BeginPlay()** function we can perform the initialization using the [BrainCloudClient->Initialize](/api/capi/client/initialize) function.  
 ```js
 // Called when the game starts or when spawned
 void ABrainCloudTestActor::BeginPlay()
@@ -114,11 +114,11 @@ And add the required header files for **ServiceName** and **ServiceOperation** 
 ```
 ### Authentication
 
-BrainCloud provides many different methods of authentication, but for this tutorial we will use [AuthenticateUniversal](/apidocs/apiref/?cpp#capi-auth-authenticateuniversal).  Now that our actor can receive callbacks we can proceed to call the AuthenticateUniversal method after we initialize in **BeginPlay()**.
+BrainCloud provides many different methods of authentication, but for this tutorial we will use [AuthenticateUniversal](/api/capi/authentication/authenticateuniversal).  Now that our actor can receive callbacks we can proceed to call the AuthenticateUniversal method after we initialize in **BeginPlay()**.
 ```js
 \_bc.getAuthenticationService()->authenticateUniversal("UnrealUser", "password1234", true, this);
 ```
-Referring to the [documentation](/apidocs/apiref/?cpp#capi-auth-authenticateuniversal), the last parameter of the AuthenticateUniversal function is a pointer to an IServerCallback.  Since our actor has inherited from IServerCallback we can pass in the **this** pointer and have our actor's serverCallback and serverError functions get called when the server responds to our request.
+Referring to the [documentation](/api/capi/authentication/authenticateuniversal), the last parameter of the AuthenticateUniversal function is a pointer to an IServerCallback.  Since our actor has inherited from IServerCallback we can pass in the **this** pointer and have our actor's serverCallback and serverError functions get called when the server responds to our request.
 
 Let's add a log message to our serverCallback method so we know things are working.
 ```js
@@ -158,7 +158,7 @@ void ABrainCloudTestActor::serverCallback(ServiceName serviceName, ServiceOperat
 ```
 Because we're passing in a pointer to our Actor for our next call as well we need to check which call is invoking our serverCallback function.  We can do this by comparing the **ServiceName** and acting accordingly.
 
-We've also added our next API call [ReadServerTime](/apidocs/apiref/?cpp#capi-time-readservertime) which as the documentation says "returns the server time in UTC. This is in UNIX millis time format." Now lets process the return JSON string to get the time and print it to the log.
+We've also added our next API call [ReadServerTime](/api/capi/time/readservertime) which as the documentation says "returns the server time in UTC. This is in UNIX millis time format." Now lets process the return JSON string to get the time and print it to the log.
 
 First thing we need to do is create a new **TJsonReader** to read our JSON string, and a **FJsonObject** to hold our deserialized data.
 ```js
@@ -171,7 +171,7 @@ bool result = FJsonSerializer::Deserialize(reader, jsonReadObject);
 
 We check the result bool returned by the Deserialize to make sure it was successful before digging into our jsonReadObject for the data we need.
 
-Referring to the JSON return structure in the [documentation](/apidocs/apiref/?cpp#capi-time-readservertime) we can see that the server time is represented by the key “**server\_time**” which is contained in the object “**data**”. So to get to it we take the jsonReadObject and use the functions GetObjectField and then GetNumberField, passing in “data” and “server\_time” as our Field Names.
+Referring to the JSON return structure in the [documentation](/api/capi/time/readservertime) we can see that the server time is represented by the key “**server\_time**” which is contained in the object “**data**”. So to get to it we take the jsonReadObject and use the functions GetObjectField and then GetNumberField, passing in “data” and “server\_time” as our Field Names.
 
 Finally we print the extracted time to the log.
 ```js

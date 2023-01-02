@@ -13,12 +13,12 @@ Further information about the card game can be found on [wikipedia](http://en.w
 
 The example game shows off the following brainCloud features:
 
-- Email authentication - the user must authenticate using the [BrainCloudAuthentication](/apidocs/apiref/#capi-auth "BrainCloudAuthentication") AuthenticateEmailPassword API.
+- Email authentication - the user must authenticate using the [BrainCloudAuthentication](/api/capi/authentication "BrainCloudAuthentication") AuthenticateEmailPassword API.
 - Email verification - the user is sent an email to verify that they own the account (although this does not prevent you from playing the game)
-- Player Name - the user's name is stored using the [BrainCloudPlayerState](/apidocs/apiref/#capi-playerstate "BrainCloudPlayerState") UpdatePlayerName API.
-- Player Statistics - the user's wins/losses are tracked using the [BrainCloudPlayerStatistics](/apidocs/apiref/#capi-playerstats "BrainCloudPlayerStatistics") APIs.
-- Player Currency - the user's balance is tracked using the [BrainCloudProduct](/apidocs/apiref/#capi-product "BrainCloudProduct") currency APIs.
-- Global Leaderboards - a list of the top Acey Deucey players using the [BrainCloudLeaderboard](/apidocs/apiref/#capi-leaderboard "BrainCloudSocialLeaderboard") APIs.
+- Player Name - the user's name is stored using the [BrainCloudPlayerState](/api/capi/playerstate "BrainCloudPlayerState") UpdatePlayerName API.
+- Player Statistics - the user's wins/losses are tracked using the [BrainCloudPlayerStatistics](/api/capi/playerstats "BrainCloudPlayerStatistics") APIs.
+- Player Currency - the user's balance is tracked using the [BrainCloudProduct](/api/capi/product "BrainCloudProduct") currency APIs.
+- Global Leaderboards - a list of the top Acey Deucey players using the [BrainCloudLeaderboard](/api/capi/leaderboard "BrainCloudSocialLeaderboard") APIs.
 
 All of the code that interacts with the brainCloud js library is located in cardGame.js.
 

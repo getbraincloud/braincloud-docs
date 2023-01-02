@@ -3,7 +3,7 @@ title: "brainCloud API"
 date: "2015-02-06"
 ---
 
-[![brainCloud API Architecture](images/BrainCloud-architecture-boxes.jpg)](/apidocs/wp-content/uploads/2016/08/BrainCloud-architecture-boxes.jpg)
+[![brainCloud API Architecture](images/BrainCloud-architecture-boxes.jpg)](images/BrainCloud-architecture-boxes.jpg)
 
 The brainCloud API is implemented as a REST-based protocol for communicating with the brainCloud servers.
 
@@ -53,4 +53,4 @@ Here is an example of a successful response:
 Success and failures:
 
 - The Status field indicates the overall success or failure of the operation - 200 is success
-- Non-success (!= 200) return values will include a [reason code](/apidocs/apiref/#appendix-reasoncodes "Processing Exception Reason Codes") and message
+- Non-success (!= 200) return values will include a [reason code](/api/appendix/reasoncodes "Processing Exception Reason Codes") and message

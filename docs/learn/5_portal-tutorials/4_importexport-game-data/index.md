@@ -7,4 +7,4 @@ Importing and exporting your game data is easy to do in the brainCloud portal. I
 
 Note if you are importing data from an example project, you will want to create your game first before doing the import step.
 
-[![brainCloud](images/brainCloud_dashboard_importExport.jpg)](/apidocs/wp-content/uploads/2016/08/brainCloud_dashboard_importExport.jpg)
+[![brainCloud](images/brainCloud_dashboard_importExport.jpg)](images/brainCloud_dashboard_importExport.jpg)

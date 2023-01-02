@@ -10,7 +10,7 @@ When using brainCloud, your app will need to handle certain error conditions. Th
 
 In order to effectively respond to these error conditions, developers need to implement error handlers. A list of error reason codes returned by brainCloud can be found here:
 
-[Reason Codes Appendix](/apidocs/apiref/#appendix-reasoncodes)
+[Reason Codes Appendix](/api/appendix/reasoncodes)
 
 Below are the specifics for implementing error handlers for the various supported brainCloud client platforms.
 
@@ -40,7 +40,7 @@ public void AuthenticateUniversal(string userid, string password, bool forceCrea
 
 If authentication succeeds, the success callback function will be called with the json response from brainCloud. The user-supplied callback object will also be returned (in case you need to keep track of some contextual information).
 
-If authentication fails, the HTTP status code, a reason code, and a json response describing the error will be returned. In order to handle the error effectively, you can refer to the [Reason Code Appendix](/apidocs/apiref/#appendix-reasoncodes).
+If authentication fails, the HTTP status code, a reason code, and a json response describing the error will be returned. In order to handle the error effectively, you can refer to the [Reason Code Appendix](/api/appendix/reasoncodes).
 
 ### C++ library
 
@@ -114,4 +114,4 @@ Coming soon!
 
 ### Cloud Code
 
-See [Cloud Code section](/apidocs/apiref/#cc) in API modules
+See [Cloud Code section](/api/cc) in API modules

@@ -9,7 +9,7 @@ A cloud-service such as brainCloud is only as flexible as it’s identity system
 - Includes statistics, entities, attributes, virtual currency balances, the state of milestones, quests, achievements, etc.
 - Is local to an App/Game – not shared across games in brainCloud\*
 
-_\* See details on our [Shared Accounts](/apidocs/api-modules/authentication/shared-accounts/) service for ways to share a single user identity across multiple apps._ **User Identity**
+_\* See details on our [Shared Accounts](/learn/key-concepts/authentication/shared-accounts/) service for ways to share a single user identity across multiple apps._ **User Identity**
 
 - Is used to identify a user in the system, and look up their Profile
 - Maybe unauthenticated (anonymous) or authenticated (GameCenter id, Facebook id, E-mail, etc.)
@@ -28,7 +28,7 @@ brainCloud currently supports the following identity types:
 
 In addition to the above, brainCloud now supports two advanced forms of authentication:
 
-- [External Authentication](/apidocs/api-modules/authentication/external-authentication/) – allows you to authenticate your users using an external (custom) directory service
-- [Shared Accounts](/apidocs/api-modules/authentication/shared-accounts/) – allows user accounts to be shared across brainCloud apps
+- [External Authentication](/learn/key-concepts/authentication/external-authentication/) – allows you to authenticate your users using an external (custom) directory service
+- [Shared Accounts](/learn/key-concepts/authentication/shared-accounts/) – allows user accounts to be shared across brainCloud apps
 
-For more information, refer to the **[Authentication API](/apidocs/api-modules/authentication/)** docs.
+For more information, refer to the **[Authentication API](/learn/key-concepts/authentication/)** docs.

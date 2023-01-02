@@ -15,4 +15,4 @@ brainCloud's advanced notifications features include:
 - **Scheduled** - schedule notifications to happen at a later date - even specific to timezone
 - **Groups** - send notifications to specific user Groups
 
-For more information on brainCloud notifications, refer to the [Push Notification tutorials](https://staging.getbraincloud.com/apidocs/portal-usage/) in the Connecting to Third Party Systems section.
+For more information on brainCloud notifications, refer to the [Push Notification tutorials](/learn/portal-tutorials/) in the Connecting to Third Party Systems section.

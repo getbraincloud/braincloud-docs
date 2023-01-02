@@ -47,7 +47,7 @@ Okay, let's see if it works. To run the script:
 - Next, we'll run the script. Choose **Script** from the _Service_ drop-down and Run Script "Tut1\_AddTwoNumbers" from the Operation drop-down. _If you don't see your script you probably forgot to make it Client Callable - go to its definition in the Scripts screen, and then come back._
 - You'll notice that the default parameters that you set are displayed in the _Parameters_ section of the API Explorer. Edit them if you wish. Then click the RUN button to run the script and see the results.
 
-[![](images/Tut1_API_Explorer-1024x572.png)](/apidocs/wp-content/uploads/2018/03/Tut1_API_Explorer.png)
+[![](images/Tut1_API_Explorer-1024x572.png)](images/Tut1_API_Explorer.png)
 
 * * *
 
@@ -74,7 +74,7 @@ Results
 
 ## Step 4 - Calling the Script from your client app
 
-Calling scripts from client apps is straight-forward - you simply call the [RunScript()](/apidocs/apiref/#capi-script-runscript) method, passing in the name of the script, and any required parameters.
+Calling scripts from client apps is straight-forward - you simply call the [RunScript()](/api/capi/script/runscript) method, passing in the name of the script, and any required parameters.
 
 Calling the script from a Unity C# app would look like the following:
 ```js

@@ -17,7 +17,7 @@ Here are the steps to configure brainCloud for Google Play purchases.
 
 Prerequisites
 
-- You should have set up your products in the brainCloud marketplace. Please refer to the [Marketplace Configuration](https://getbraincloud.com/apidocs/portal-usage/marketplace-configuration/) guide.
+- You should have set up your products in the brainCloud marketplace. Please refer to the [Marketplace Configuration](/learn/portal-tutorials/marketplace-configuration/) guide.
 - You should have created the Google Store In-App products as per the Google Developer documentation
 
 ### Associate Google In-App Products with brainCloud Products
@@ -203,7 +203,7 @@ For the **Service Account** to be active, you will need to link the console proj
 
 ### Confirming the purchase Client Side
 
-After making a purchase client-side, GooglePlay will return a receipt with an orderId, productId, and purchaseToken that is used by the [VerifyPurchase](https://getbraincloud.com/apidocs/apiref/#capi-product-confirmgoogleplaypurchase) API call.
+After making a purchase client-side, GooglePlay will return a receipt with an orderId, productId, and purchaseToken that is used by the [VerifyPurchase](/api/capi/product/confirmgoogleplaypurchase) API call.
 
 #### Code Snippets of Integrating the Google Play Billing Library into your Android app - Android Studio
 

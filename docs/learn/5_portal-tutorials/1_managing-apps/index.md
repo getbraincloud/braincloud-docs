@@ -21,7 +21,7 @@ Via this page, you can:
 
 Developers can perform an operation on an app by clicking on the Action button and choosing the associated menu option.
 
-[![brainCloud](images/brainCloud_dashboard_appAdminActions.jpg)](/apidocs/wp-content/uploads/2016/08/brainCloud_dashboard_appAdminActions.jpg)
+[![brainCloud](images/brainCloud_dashboard_appAdminActions.jpg)](images/brainCloud_dashboard_appAdminActions.jpg)
 
 Important information displayed on this screen:
 
@@ -31,4 +31,4 @@ Important information displayed on this screen:
 - **Run Status** - the run-time status of your app. Indicates whether brainCloud is doing any special checks (to enforce limitations) as users log in.
 - **Discounts** - whether or not any discounts have been applied to the subscription pricing of the app
 
-For more information on publishing apps, refer to the [Publishing Apps](/apidocs/portal-usage/publishing-apps/) page.
+For more information on publishing apps, refer to the [Publishing Apps](/learn/portal-tutorials/publishing-apps/) page.

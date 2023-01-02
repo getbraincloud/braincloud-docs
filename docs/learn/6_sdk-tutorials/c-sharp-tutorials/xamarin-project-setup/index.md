@@ -18,6 +18,6 @@ From there we need to remove some non-Xamarin compatible files from the library.
 
 Finally, we can add the library to the shared code project.  Drag and drop the BrainCloud folder onto the shared code project in Visual Studio and it will automatically be copied to the correct directory and added to the project.
 
-[![xamarinDocAddToProject](images/xamarinDocAddToProject.png)](/apidocs/wp-content/uploads/2016/05/xamarinDocAddToProject.png)
+[![xamarinDocAddToProject](images/xamarinDocAddToProject.png)](images/xamarinDocAddToProject.png)
 
 That's all the setup needed to add the brainCloud library to your project! Now you can get started using brainCloud in your app.

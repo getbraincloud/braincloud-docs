@@ -3,7 +3,7 @@ title: "brainCloud RTT"
 date: "2018-07-15"
 ---
 
-[![](images/braincloudrtt.tagline.500x160.png)](https://staging.getbraincloud.com/apidocs/wp-content/uploads/2018/07/braincloudrtt.tagline.500x160.png)
+[![](images/braincloudrtt.tagline.500x160.png)](images/braincloudrtt.tagline.500x160.png)
 
 **RTT** is the new _Real-Time Technology_ extension of brainCloud.
 

@@ -11,11 +11,11 @@ In this tutorial, we will take you through the process of creating a simple S2S 
 
 - Go to the brainCloud Portal and open the **Design | Cloud Code | Scripts** page
 
-[![](images/S2S-Start-1.png)](/apidocs/wp-content/uploads/2017/07/S2S-Start-1.png)
+[![](images/S2S-Start-1.png)](images/S2S-Start-1.png)
 
 - Click the **\[+\]** Plus icon to start adding a new Script
 
-[![](images/S2S-AddScript-1.png)](/apidocs/wp-content/uploads/2017/07/S2S-AddScript-1.png)
+[![](images/S2S-AddScript-1.png)](images/S2S-AddScript-1.png)
 
 - Give the Script a _name_ and _description_. Also, ensure the _\[x\] S2S_ checkbox is checked.  
     _Note: Client callable is optional, but it's a good idea to disable it if the script will never be used client side._
@@ -33,14 +33,14 @@ _Note: The last line is always what will be returned in the response._
 
 -  You should have something that looks like this after.
 
-[![](images/S2S-Details.png)](/apidocs/wp-content/uploads/2017/07/S2S-Details.png)
+[![](images/S2S-Details.png)](images/S2S-Details.png)
 
-[![](images/S2S-Editor-1.png)](/apidocs/wp-content/uploads/2017/07/S2S-Editor-1.png)
+[![](images/S2S-Editor-1.png)](images/S2S-Editor-1.png)
 
 - The last tab is the **Run** tab. Here, you can do a **\[Quick Authenticate\]**, and **\[Run\]** your new script to view the return!  
     (**\[Save\]** and **\[Close\]** when you are done editing and testing your script)
 
-[![](images/S2S-RunScript.png)](/apidocs/wp-content/uploads/2017/07/S2S-RunScript.png)
+[![](images/S2S-RunScript.png)](images/S2S-RunScript.png)
 
 ### Step 2 - Configure an S2S Server to call it from
 
@@ -50,7 +50,7 @@ _Note: The last line is always what will be returned in the response._
 
 _Your script and server should now be visible in the S2S Explorer._
 
-[![](images/S2S-Explorer-1.png)](/apidocs/wp-content/uploads/2017/07/S2S-Explorer-1.png)
+[![](images/S2S-Explorer-1.png)](images/S2S-Explorer-1.png)
 
 ### Step 3 - Call it!
 
@@ -78,7 +78,7 @@ _Your script and server should now be visible in the S2S Explorer._
     }
 }
 ```
-[![](images/S2S-PostMan.png)](/apidocs/wp-content/uploads/2017/07/S2S-PostMan.png)
+[![](images/S2S-PostMan.png)](images/S2S-PostMan.png)
 
 - Hit **\[Send\]**. If you app is properly configured, you should see this response:
 ```js
@@ -114,7 +114,7 @@ var response = entityProxy.createEntity(entityType, entityData, acl);
 //And return the response
 response;
 ```
-[![](images/S2S-Documentation.png)](/apidocs/wp-content/uploads/2017/07/S2S-Documentation.png)
+[![](images/S2S-Documentation.png)](images/S2S-Documentation.png)
 
-- If you haven't checked out our API docs yet, you should check them out here:  [S2S](/apidocs/apiref/?cloudcode#s2s)  
+- If you haven't checked out our API docs yet, you should check them out here:  [S2S](/api/s2s)  
     You can find more examples on how to use the brainCloud cloud scripts for your application!

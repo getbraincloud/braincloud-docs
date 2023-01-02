@@ -84,7 +84,7 @@ results;
 ```
 The important things to note from this example:
 
-- **Before you can make an API call, you must request the appropriate _service proxy_ from the bridge.**  Note that there are separate bridges for [Client API](/apidocs/apiref/#cc-bridge) and [S2S API](/apidocs/apiref/#s2s-bridge) calls - consult the appropriate one for the available proxies.
+- **Before you can make an API call, you must request the appropriate _service proxy_ from the bridge.**  Note that there are separate bridges for [Client API](/api/cc/bridge) and [S2S API](/api/s2s/bridge) calls - consult the appropriate one for the available proxies.
 - **You then invoke the API call upon the _service proxy_ itself.**
 
 * * *

@@ -24,9 +24,9 @@ Installing the brainCloud plugin is a very straightforward process.
 
 You can confirm the install from inside the Unreal Editor by opening the Plugins window (Edit>Plugins) and verifying that brainCloud is visible under the Project>Network category.
 
-[![unreal_plugin](images/unreal_plugin.jpg)](/apidocs/wp-content/uploads/2015/10/unreal_plugin.jpg)
+[![unreal_plugin](images/unreal_plugin.jpg)](images/unreal_plugin.jpg)
 
-That's all that's required to start using brainCloud in Blueprints.  You can learn more about using brainCloud inside Blueprints in our [Getting Started With Blueprints tutorial](/apidocs/tutorials/unreal-tutorials/getting-started-with-blueprints/).
+That's all that's required to start using brainCloud in Blueprints.  You can learn more about using brainCloud inside Blueprints in our [Getting Started With Blueprints tutorial](/learn/sdk-tutorials/unreal-tutorials/getting-started-with-blueprints/).
 
 ## brainCloud C++ Setup
 

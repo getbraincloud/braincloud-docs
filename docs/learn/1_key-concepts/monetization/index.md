@@ -13,7 +13,7 @@ brainCloud's monetization support centers around the purchase of products.  Pro
 
 Products are often associated with Virtual Currencies, which brainCloud also provides support for -- but they don't have to be.
 
-[![](images/brainCloud_Dashboard_prodEdit-1024x588.jpg)](https://staging.getbraincloud.com/apidocs/wp-content/uploads/2016/08/brainCloud_Dashboard_prodEdit.jpg)
+[![](images/brainCloud_Dashboard_prodEdit-1024x588.jpg)](images/brainCloud_Dashboard_prodEdit.jpg)
 
 ## Pricing
 
@@ -21,9 +21,9 @@ Products in brainCloud can have multiple price points (called Price Entries) - 
 
 Price Entries are used to tie brainCloud Products to the product/pricing info of the Platform Stores (like the iOS App Store).
 
-[![](images/brainCloud_Dashboard_prodPriceEdit.jpg)](/apidocs/wp-content/uploads/2016/08/brainCloud_Dashboard_prodPriceEdit.jpg)
+[![](images/brainCloud_Dashboard_prodPriceEdit.jpg)](images/brainCloud_Dashboard_prodPriceEdit.jpg)
 
-[![Price entry details in iTunes Connect](images/iTunes_Connect.png)](/apidocs/wp-content/uploads/2014/09/iTunes_Connect.png)
+[![Price entry details in iTunes Connect](images/iTunes_Connect.png)](images/iTunes_Connect.png)
 
   
 Each AppStore works differently - in iOS, all price points must be defined ahead of time in iTunes Connect.  Google Play and Windows Store work this way too.  In Facebook and Steam, however, the product prices are controlled directly by brainCloud and provided to the store upon request.  Although the exact details vary by store - brainCloud allows you to manage the pricing of your products centrally across all platforms.
@@ -39,4 +39,4 @@ brainCloud provides two forms of promotions:
 
 ## More Information
 
-For more information, consult the brainCloud [Product](/apidocs/apiref/#capi-product) API.
+For more information, consult the brainCloud [Product](/api/capi/product) API.

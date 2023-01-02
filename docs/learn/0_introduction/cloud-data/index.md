@@ -21,6 +21,6 @@ brainCloud also provides support for **Global** data elements:
 
 _Note that brainCloud's Design Portal provides support for viewing (and in some cases editing) all User and Global data._
 
-[![brainCloud Portal](images/brainCloud_dashboard_userStatsMonitoring.jpg)](/apidocs/wp-content/uploads/2016/08/brainCloud_dashboard_userStatsMonitoring.jpg)
+[![brainCloud Portal](images/brainCloud_dashboard_userStatsMonitoring.jpg)](images/brainCloud_dashboard_userStatsMonitoring.jpg)
 
-For a more detailed overview of brainCloud's Cloud Data features, see the introductory section of the [Cloud Data APIs](https://staging.getbraincloud.com/apidocs/api-modules/data/).
+For a more detailed overview of brainCloud's Cloud Data features, see the introductory section of the [Cloud Data APIs](/learn/key-concepts/data/).

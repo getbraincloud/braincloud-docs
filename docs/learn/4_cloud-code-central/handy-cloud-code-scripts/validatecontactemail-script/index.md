@@ -18,7 +18,7 @@ To configure these scripts, you must:
 - First, extract the zip file and import them into your app. Make sure S2S is checked since you will call this script from an external server.
 - Then go to **Design | Cloud Code | WebHooks**, and link ContactEmailWebhookUrl script into a new or existing webhook. Make sure you have at least one server created from my servers, so you can call the script from an external server.
 
-You can test calling the script using a browser, [Postman](https://www.getpostman.com/), or something similar - just to confirm that the logging is working. ([reference S2S Scripts in brainCloud](https://staging.getbraincloud.com/apidocs/cloud-code-central/cloud-code-tutorials/s2s-cloud-code-scripts/))
+You can test calling the script using a browser, [Postman](https://www.getpostman.com/), or something similar - just to confirm that the logging is working. ([reference S2S Scripts in brainCloud](/learn/cloud-code-central/cloud-code-tutorials/cloud-code-tutorial6-s2s-cloud-code-scripts/))
 
 Test SendContactEmailVerification script from **Design | Cloud Code | Cloud Code**, or call it from your app. (make sure your email integration is set up properly since this script will send email to currently logged in user at the contact email address.)
 

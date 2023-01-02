@@ -15,16 +15,16 @@ To solve this issue, brainCloud provides a single **Network Error** callback whi
 
 The basic flow is as follows:
 
-[![NetworkErrorMessageCaching Sequence Diagram](images/NetworkErrorMessageCaching-Sequence-Diagram.png)](/apidocs/wp-content/uploads/2016/03/NetworkErrorMessageCaching-Sequence-Diagram.png)
+[![NetworkErrorMessageCaching Sequence Diagram](images/NetworkErrorMessageCaching-Sequence-Diagram.png)](images/NetworkErrorMessageCaching-Sequence-Diagram.png)
 
 ## Implementation
 
 Here are the steps to use the Network Error Message Cache:
 
-1. Enable the network error message caching using [EnableNetworkErrorMessageCaching()](/apiref/#capi-client-enablenetworkerrormessagecaching)
-2. Register a network error callback using [RegisterNetworkErrorCallback()](/apiref/#capi-client-registernetworkerrorcallback)
+1. Enable the network error message caching using [EnableNetworkErrorMessageCaching()](/api/capi/client/enablenetworkerrormessagecaching)
+2. Register a network error callback using [RegisterNetworkErrorCallback()](/api/capi/client/registernetworkerrorcallback)
 3. On receiving a network error callback either
-    1. Call [RetryCachedMessages()](/apidocs/apiref/#capi-client-retrycachedmessages) to attempt a retry or,
-    2. Call [FlushCachedMessages()](/apidocs/apiref/#capi-client-flushcachedmessages) to flush all messages
+    1. Call [RetryCachedMessages()](/api/capi/client/retrycachedmessages) to attempt a retry or,
+    2. Call [FlushCachedMessages()](/api/capi/client/flushcachedmessages) to flush all messages
 
 Note that once you enable network message caching, **all messages to brainCloud** will be cached upon a network error callback being raised. Until your app takes an action to retry or flush, no messages will be sent to brainCloud.

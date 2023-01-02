@@ -27,13 +27,13 @@ Finally, there are two additional data APIs available to the developer:
 
 Related Information:
 
-- **Custom Entities** - API accessed via [CustomEntity](/apidocs/apiref/#capi-customentity). Custom Entity collections can be defined in the Portal under **Design | Cloud Data | Custom Entities** and viewed and edited in **Global Monitoring** and **User Monitoring** sections.
-- **User Entities** - API accessed via [BrainCloudEntity](/apidocs/apiref/#capi-entity). User Entities can be viewed and edited in the Portal under **User (Player) Monitoring** section.
-- **Global Entities** - API accessed via [BrainCloudGlobalEntity](/apidocs/apiref/#capi-globalentity). Global Entities can be viewed and edited in the Portal in the **Global Monitoring** section.
-- **Shared Data API** - API accessed via [BrainCloudEntity](/apidocs/apiref/#capi-entity) -- set GetSharedEntitiesForPlayerId().
-- **User (Player) Statistics** - API accessed via [BrainCloudPlayerStatistics](/apidocs/apiref/#capi-playerstats).  Statistics rules are defined in the Portal in the **Design | Statistics Rules** section.
-- **Global Statistics** - API accessed via [BrainCloudGlobalStatistics](/apidocs/apiref/#capi-globalstats).  Statistics rules are defined in the Portal in the **Design | Statistics Rules** section.
-- **User Attributes** - API accessed via [BrainCloudPlayerState](/apidocs/apiref/#capi-playerstate).  User attributes can be viewed and edited in the **User (Player) Monitoring | Attributes** section of the Portal.
-- **Friend Data** - API accessed via [BrainCloudFriend](/apidocs/apiref/#capi-friend).  Not currently viewable via the player monitor.
-- **Global Properties** - API accessed via [BrainCloudGlobalApp](/apidocs/apiref/#capi-globalapp).  Global properties can be viewed and edited in the **Design | Custom Config | Global Properties** section of the Portal.
-- **Groups** - API accessed via [BrainCloudGroup](/apidocs/apiref/#capi-group) and [BrainCloudGroupEntities](/apidocs/apiref/#capi-group). Data can be viewed and edited in the **Monitoring | Group Monitoring** sections of the Portal.
+- **Custom Entities** - API accessed via [CustomEntity](/api/capi/customentity). Custom Entity collections can be defined in the Portal under **Design | Cloud Data | Custom Entities** and viewed and edited in **Global Monitoring** and **User Monitoring** sections.
+- **User Entities** - API accessed via [BrainCloudEntity](/api/capi/entity). User Entities can be viewed and edited in the Portal under **User (Player) Monitoring** section.
+- **Global Entities** - API accessed via [BrainCloudGlobalEntity](/api/capi/globalentity). Global Entities can be viewed and edited in the Portal in the **Global Monitoring** section.
+- **Shared Data API** - API accessed via [BrainCloudEntity](/api/capi/entity) -- set GetSharedEntitiesForPlayerId().
+- **User (Player) Statistics** - API accessed via [BrainCloudPlayerStatistics](/api/capi/playerstats).  Statistics rules are defined in the Portal in the **Design | Statistics Rules** section.
+- **Global Statistics** - API accessed via [BrainCloudGlobalStatistics](/api/capi/globalstats).  Statistics rules are defined in the Portal in the **Design | Statistics Rules** section.
+- **User Attributes** - API accessed via [BrainCloudPlayerState](/api/capi/playerstate).  User attributes can be viewed and edited in the **User (Player) Monitoring | Attributes** section of the Portal.
+- **Friend Data** - API accessed via [BrainCloudFriend](/api/capi/friend).  Not currently viewable via the player monitor.
+- **Global Properties** - API accessed via [BrainCloudGlobalApp](/api/capi/globalapp).  Global properties can be viewed and edited in the **Design | Custom Config | Global Properties** section of the Portal.
+- **Groups** - API accessed via [BrainCloudGroup](/api/capi/group) and [BrainCloudGroupEntities](/api/capi/group). Data can be viewed and edited in the **Monitoring | Group Monitoring** sections of the Portal.

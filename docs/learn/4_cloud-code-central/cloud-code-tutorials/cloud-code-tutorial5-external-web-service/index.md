@@ -3,7 +3,7 @@ title: "CC Tutorial5 - External Web Services"
 date: "2015-04-01"
 ---
 
-brainCloud provides an HTTP Client proxy object, retrieved via the [bridge](/apidocs/apiref/#cc-bridge "Bridge – Client"), that allows you to make HTTP GET requests to external 3rd party servers.
+brainCloud provides an HTTP Client proxy object, retrieved via the [bridge](/api/cc/bridge "Bridge – Client"), that allows you to make HTTP GET requests to external 3rd party servers.
 
 The HTTPClientProxyObject currently has a number of public methods.  The methods are defined at the bottom of this page. The 'serviceCode' parameter in these methods refers to the value assigned in the portal configuration.
 
@@ -54,7 +54,7 @@ Follow these steps to try this for yourself.
 
 _Via **Design | Cloud Code | Edit Scripts** in the portal._
 
-[![](images/Tut_5_1.png)](/apidocs/wp-content/uploads/2018/03/Tut_5_1.png)
+[![](images/Tut_5_1.png)](images/Tut_5_1.png)
 
 ![](images/image-2-1024x573.png)
 
@@ -62,7 +62,7 @@ _Via **Design | Cloud Code | Edit Scripts** in the portal._
 
 _Via **Design | Cloud Code | Web Services** in the portal._
 
-[![](images/Tut_5_3.png)](/apidocs/wp-content/uploads/2018/03/Tut_5_3.png)
+[![](images/Tut_5_3.png)](images/Tut_5_3.png)
 
 ### Step 3 - **Test from the API Explorer**
 
@@ -70,7 +70,7 @@ _Via **Design | Cloud Code | Web Services** in the portal._
 - **Authenticate the user** - select the _Authenticate_ service, then _Authenticate_ Operation, and click the **Go** icon (Green Right Triangle).  You may have to play with the authentication parameters a bit (to ensure you're specifying a valid platform, etc.)
 - **Call the Cloud Script** - choose the _Script_ service, then "_Run Script GetWeather_" for the operation.  Customize the parameters if you'd like, and then hit **Go**.
 
-[![](images/Tut_5_4-1024x638.png)](/apidocs/wp-content/uploads/2018/03/Tut_5_4.png)
+[![](images/Tut_5_4-1024x638.png)](images/Tut_5_4.png)
 
 Et voila!
 

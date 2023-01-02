@@ -59,18 +59,18 @@ Ensure that the correct platforms have been enabled in the brainCloud Portal, un
 
 4. Import the app data from the “ImportData” folder. 
 
-See [Import/Export Game Data](https://getbraincloud.com/apidocs/portal-usage/importexport-game-data/) in the portal tutorial section for more information. 
+See [Import/Export Game Data](/learn/portal-tutorials/importexport-game-data/) in the portal tutorial section for more information. 
 
 The Authentication app also features the following brainCloud functionality:
 
-- [User Entities](https://getbraincloud.com/apidocs/apiref/?cloudcode#capi-entity)
-- [Custom Entities](https://getbraincloud.com/apidocs/apiref/?cloudcode#capi-customentity)
-- [Player XP and Player Leveling](https://getbraincloud.com/apidocs/apiref/?cloudcode#capi-playerstats)
-- [Virtual Currencies](https://getbraincloud.com/apidocs/apiref/?cloudcode#capi-virtualcurrency)
-- [Player Stats](https://getbraincloud.com/apidocs/apiref/?cloudcode#capi-playerstats)
-- [Global Stats](https://getbraincloud.com/apidocs/apiref/?cloudcode#capi-globalstats)
-- [Cloud Code scripting](https://getbraincloud.com/apidocs/apiref/?cloudcode#capi-script) 
-- [Identity Attaching / Merging](https://getbraincloud.com/apidocs/apiref/?cloudcode#capi-identity)
+- [User Entities](/api/capi/entity)
+- [Custom Entities](/api/capi/customentity)
+- [Player XP and Player Leveling](/api/capi/playerstats)
+- [Virtual Currencies](/api/capi/virtualcurrency)
+- [Player Stats](/api/capi/playerstats)
+- [Global Stats](/api/capi/globalstats)
+- [Cloud Code scripting](/api/capi/script) 
+- [Identity Attaching / Merging](/api/capi/identity)
 
 Enjoy interacting with this example project and getting an idea for some of the features brainCloud has to offer. 
 
@@ -179,6 +179,6 @@ public void AuthenticateAdvanced(AuthenticationType authType, BrainCloud.Authent
 
 You can find more information on the Authentication methods by visiting this section of the API reference: 
 
-[Authentication APIs](https://getbraincloud.com/apidocs/apiref/#capi-auth)
+[Authentication APIs](/api/capi/authentication)
 
 The code in the example project that deals with authentication is located in “Scripts/BrainCloudInterface.cs”.

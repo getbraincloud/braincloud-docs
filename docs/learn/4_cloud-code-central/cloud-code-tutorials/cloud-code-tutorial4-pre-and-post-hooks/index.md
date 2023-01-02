@@ -11,7 +11,7 @@ Post-hooks allows you to massage the data that is returned after an API method 
 
 To utilize a pre or post-hook to modify brainCloud's behaviour, you:
 
-- First write the cloud code script with the appropriate parameter/return syntax (see below, or the [API Reference](/apidocs/apiref/?cloudcode#cc-ccscripts-apihooks))
+- First write the cloud code script with the appropriate parameter/return syntax (see below, or the [API Reference](/api/cc/ccscripts/apihooks))
 - Then attach the cloud code script to the API method via the **Design | Cloud Code | API Hooks** page of the portal
 
 The format and function of cloud code scripts are different from standard cloud code, so we've created two examples below.
@@ -119,7 +119,7 @@ Now we'll go over how a hook is configured in the portal.  This is the process
 - Next, go to the API Hooks tab (also under the Cloud Code heading).
 - Click the Create button to configure a new hook. You will see the dialogue below.
 
-[![](images/Tut4_PrePostHook-1.png)](/apidocs/wp-content/uploads/2018/03/Tut4_PrePostHook-1.png)
+[![](images/Tut4_PrePostHook-1.png)](images/Tut4_PrePostHook-1.png)
 
 The dialogue is fairly straightforward.  Select the Service and Operation you want to hook, choose whether it is a pre (before API execution) or post (after API execution) hook, and then select the actual hook script.
 

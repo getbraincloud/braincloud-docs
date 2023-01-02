@@ -17,7 +17,7 @@ To enroll in a Subscription Plan, you'll need to create a billing account, and s
 
 brainCloud uses a secure, 3rd party billing system to maintain your payment info and handle monthly invoicing.
 
-[![brainCloud](images/brainCloud_dashboard_goLive.jpg)](/apidocs/wp-content/uploads/2016/08/brainCloud_dashboard_goLive.jpg)
+[![brainCloud](images/brainCloud_dashboard_goLive.jpg)](images/brainCloud_dashboard_goLive.jpg)
 
 To create your billing account:
 
@@ -31,7 +31,7 @@ To create your billing account:
 - Enter your contact info on the **\[Customer Information\]** tab
 - Enter your payment info on the **\[Payment Method\]** tab
 
-[![brainCloud](images/Billing_Payment_Method-1024x630.png)](/apidocs/wp-content/uploads/2015/05/Billing_Payment_Method-1024x630.png)
+[![brainCloud](images/Billing_Payment_Method-1024x630.png)](images/Billing_Payment_Method-1024x630.png)
 
 When you're done entering the information in the billing portal:
 

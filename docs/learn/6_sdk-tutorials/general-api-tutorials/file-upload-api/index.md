@@ -9,7 +9,7 @@ The File Upload API allows brainCloud users to upload files to their individual 
 
 In order to list the uploaded files, make use of this API:
 
-[BrainCloudFile.ListUserFiles](/apiref/#capi-file-listuserfiles)
+[BrainCloudFile.ListUserFiles](/api/capi/file/listuserfiles)
 
 The API will return JSON similar to this:
 ```js
@@ -38,13 +38,13 @@ Notice that there is a "downloadUrl" parameter. This is the URL to download the 
 
 https://url-to-get-file?sessionId=1234
 
-You can retrieve the sessionId from the [BrainCloudClient.GetSessionId](/apiref/#capi-client-getsessionid) method once you've authenticated with brainCloud.
+You can retrieve the sessionId from the [BrainCloudClient.GetSessionId](/api/capi/client/getsessionid) method once you've authenticated with brainCloud.
 
 ### Starting an Upload
 
 To start uploading a file use this API
 
-[BrainCloudFile.UploadFile](/apiref/#capi-file-uploadfile(jsonly))
+[BrainCloudFile.UploadFile](/api/capi/file/uploadfile(jsonly))
 
 This method will send a request to the server to prepare for an upload. On success, the client SDK will begin to send the file. The preparation of an upload will return JSON similar to this:
 ```js
@@ -77,9 +77,9 @@ Again, this success callback only indicates that an upload is about to take plac
 
 In order to receive notifications when file uploads complete or fail, you need to register a file upload callback handler. To register your File Upload callback see these two APIs:
 
-[BrainCloudClient.RegisterFileUploadCallback](/apiref/#capi-client-registerfileuploadcallback)
+[BrainCloudClient.RegisterFileUploadCallback](/api/capi/client/registerfileuploadcallback)
 
-[BrainCloudClient.DeregisterFileUploadCallback](/apiref/#capi-client-deregisterfileuploadcallback)
+[BrainCloudClient.DeregisterFileUploadCallback](/api/capi/client/deregisterfileuploadcallback)
 
 Once you've registered your FileUploadCallback handler, you will receive notifications from these two methods:
 
@@ -131,17 +131,17 @@ Indicates a file upload has failed. Parameters include:
 
 While a file is being uploaded, you can query the BrainCloudFile API for the following information:
 
-[BrainCloudFile.GetUploadProgress](/apiref/#capi-file-getuploadprogress) - returns a number from 0.0 to 1.0 indicating how far along the upload is
+[BrainCloudFile.GetUploadProgress](/api/capi/file/getuploadprogress) - returns a number from 0.0 to 1.0 indicating how far along the upload is
 
-[BrainCloudFile.GetUploadBytesTransferred](/apiref/#capi-file-getuploadbytestransferred) - returns bytes that have been transferred
+[BrainCloudFile.GetUploadBytesTransferred](/api/capi/file/getuploadbytestransferred) - returns bytes that have been transferred
 
-[BrainCloudFile.GetUploadTotalBytesToTransfer](/apiref/#capi-file-getuploadtotalbytestotransfer) - returns total number of bytes to be transferred
+[BrainCloudFile.GetUploadTotalBytesToTransfer](/api/capi/file/getuploadtotalbytestotransfer) - returns total number of bytes to be transferred
 
 ### Cancelling an Upload
 
 To cancel an upload in progress, you can use this BrainCloudFile API method:
 
-[BrainCloudFile.CancelUpload](/apiref/#capi-file-cancelupload)
+[BrainCloudFile.CancelUpload](/api/capi/file/cancelupload)
 
 When an upload is canceled, the **fileUploadFailed** callback handler will be called with:
 
@@ -152,9 +152,9 @@ When an upload is canceled, the **fileUploadFailed** callback handler will be ca
 
 There are also several methods on the BrainCloudClient class which allow you to configure upload transfer timeouts:
 
-[BrainCloudClient.SetUploadLowTransferRateTimeout](/apiref/#capi-client-setuploadlowtransferratetimeout)
+[BrainCloudClient.SetUploadLowTransferRateTimeout](/api/capi/client/setuploadlowtransferratetimeout)
 
-[BrainCloudClient.SetUploadLowTransferRateThreshold](/apiref/#capi-client-setuploadlowtransferratethreshold)
+[BrainCloudClient.SetUploadLowTransferRateThreshold](/api/capi/client/setuploadlowtransferratethreshold)
 
 Note that if an upload times out you will receive a **fileUploadFailed** callback with:
 
@@ -165,6 +165,6 @@ Note that if an upload times out you will receive a **fileUploadFailed** callbac
 
 To delete uploaded files you can use these two APIs:
 
-[BrainCloudFile.DeleteUserFile](/apiref/#capi-file-deleteuserfile) - to delete a single file
+[BrainCloudFile.DeleteUserFile](/api/capi/file/deleteuserfile) - to delete a single file
 
-[BrainCloudFile.DeleteUserFiles](/apiref/#capi-file-deleteuserfiles) - to delete multiple files
+[BrainCloudFile.DeleteUserFiles](/api/capi/file/deleteuserfiles) - to delete multiple files

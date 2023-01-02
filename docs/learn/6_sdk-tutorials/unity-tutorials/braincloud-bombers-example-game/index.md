@@ -3,7 +3,7 @@ title: "brainCloud Bombers Example Game"
 date: "2015-06-23"
 ---
 
-_This is a legacy tutorial for those using our UNET or Photon examples. Please find our latest tutorial_ [_here_](https://getbraincloud.com/apidocs/tutorials/unity-tutorials/braincloud-bombers-example-game/)_._
+_This is a legacy tutorial for those using our UNET or Photon examples. Please find our latest tutorial_ [_here_](/learn/sdk-tutorials/unity-tutorials/braincloud-bombers-example-game/)_._
 
 * * *
 
@@ -13,7 +13,7 @@ brainCloud Bombers is a fun little game, written in **Unity**, that demonstra
 
 _\[Remember - brainCloud includes everything you need for turn-based (i.e. Trivia Crack) and offline (i.e. Clash of Clans) multiplayer, but does not provide real-time (i.e. Team Fortress 2) or near real-time (i.e. Hearthstone) multiplayer support - for that, a solution like UNET or Photon is ideal.\]_
 
-[![Unity_Web_Player___PhotonDemo](images/Unity_Web_Player___PhotonDemo-1024x715.png)](/apidocs/wp-content/uploads/2015/06/Unity_Web_Player___PhotonDemo.png)
+[![Unity_Web_Player___PhotonDemo](images/Unity_Web_Player___PhotonDemo-1024x715.png)](images/Unity_Web_Player___PhotonDemo.png)
 
 Bombers is a fun multiplayer game with the following features:
 
@@ -35,9 +35,9 @@ Bombers is a fun multiplayer game with the following features:
 
 The full source of brainCloud bombers has been made available for our developers. Feel free to use and extend it - but please replace all art for commercial efforts and be sure to use brainCloud! Good luck!
 
-- [Read](/apidocs/tutorials/unity-tutorials/about-braincloud-bombers/) about how brainCloud bombers was written
+- [Read](/learn/sdk-tutorials/unity-tutorials/about-braincloud-bombers/) about how brainCloud bombers was written
 - [View](https://github.com/getbraincloud/UnityExamples) the source (Github)
-- [Build](/apidocs/tutorials/unity-tutorials/building-the-braincloud-bombers-project/) it yourself!
+- [Build](/learn/sdk-tutorials/unity-tutorials/building-the-braincloud-bombers-project/) it yourself!
 - [Download](https://assetstore.unity.com/packages/templates/tutorials/braincloud-bombers-for-photon-50657) it from the Unity Asset Store!
 
 * * *
@@ -77,14 +77,14 @@ To create the app:
 - Click on the **\[+\]** button in the “Your Apps” section of the **Home** page
 - Fill out the **New App** dialog – be sure to enable game features and choose the platforms to run upon.
 
-[![New App Dialog](images/Bomber_new_app-277x300.png)](https://getbraincloud.com/apidocs/wp-content/uploads/2015/06/Bomber_new_app.png)
+[![New App Dialog](images/Bomber_new_app-277x300.png)](images/Bomber_new_app.png)
 
 New App Dialog
 
 - Go to the app by clicking on its name in the **Your Apps** list, or by choosing the **Design** tab, and then selecting it from the drop-down
 - You’ll see the brainCloud App ID and App Secret on the **Core App Info | Application IDs** page….  we’ll use those in our next step.
 
-[![Bomber_app_id](images/Bomber_app_id-1024x300.png)](https://getbraincloud.com/apidocs/wp-content/uploads/2015/06/Bomber_app_id.png)
+[![Bomber_app_id](images/Bomber_app_id-1024x300.png)](images/Bomber_app_id.png)
 
 ### Step 4: Update the brainCloud appId and secret in the source code
 
@@ -94,7 +94,7 @@ New App Dialog
 - Enter the _brainCloud secret_ into the _Game Secret_ field
 - Also, hit **\[Reset to Default Server URL\]** to ensure that the client is set to connect to the proper endpoint
 
-[![Unity_settings](images/Unity_settings-300x186.png)](https://getbraincloud.com/apidocs/wp-content/uploads/2015/06/Unity_settings.png)
+[![Unity_settings](images/Unity_settings-300x186.png)](images/Unity_settings.png)
 
 ### Step 5: Import the Bomber meta-data
 
@@ -111,7 +111,7 @@ New App Dialog
 - Once you’ve registered, click **\[Dashboard\]** to view the free app that Photon has automatically configured for you
 - You’ll notice the Photon App ID – we’ll be using that in the next step
 
-[![Photon_Setup](images/Photon_Setup-1024x411.png)](https://getbraincloud.com/apidocs/wp-content/uploads/2015/06/Photon_Setup.png)
+[![Photon_Setup](images/Photon_Setup-1024x411.png)](images/Photon_Setup.png)
 
 ### UNET Step 6: Register with UNET
 
@@ -125,7 +125,7 @@ New App Dialog
 - Back in Unity, Choose **Window | Photon Unity Networking | Local Settings Asset** from the drop-down menu
 - In the Inspector windows that shows, enter the Photon AppID
 
-[![Photon_app_id_in_Unity](images/Photon_app_id_in_Unity-300x137.png)](https://getbraincloud.com/apidocs/wp-content/uploads/2015/06/Photon_app_id_in_Unity.png)
+[![Photon_app_id_in_Unity](images/Photon_app_id_in_Unity-300x137.png)](images/Photon_app_id_in_Unity.png)
 
 ### UNET Step 7: Update the Cloud Project ID
 
@@ -137,7 +137,7 @@ New App Dialog
 - From the **Project** window, choose the **Assets** folder on the left, and then choose the Scenes subfolder
 - Select the **Connect** Scene in the **Assets** folder of the project, and then click **Play!** Have fun!
 
-[![Run_bombers](images/Run_bombers-300x142.png)](https://getbraincloud.com/apidocs/wp-content/uploads/2015/06/Run_bombers.png)
+[![Run_bombers](images/Run_bombers-300x142.png)](images/Run_bombers.png)
 
 * * *
 
@@ -164,7 +164,7 @@ In brainCloud Bombers, players can earn experience for destroying enemy planes i
 
 Experience and levels can be read through the PlayerStateService in the brainCloud API. The call returns the current player’s experience level and rank name/numeric value, all of which are saved as public member variables in the BrainCloudStats class. These stats are updated live on the brainCloud server, but on the local client, they are only updated when the player visits the Matchmaking menu, reducing the number of API calls required per user.
 
-[![](images/xp_levels.png)](https://getbraincloud.com/apidocs/wp-content/uploads/2015/06/xp_levels.png)
+[![](images/xp_levels.png)](images/xp_levels.png)
 
 Xp levels
 
@@ -172,7 +172,7 @@ Xp levels
 
 Every player in brainCloud bombers has a number of custom statistics that are stored on the brainCloud servers. These statistics include the number of ships they have sunk, the number of times they have fired their weapon, their total number of wins, and more. These statistics are updated at the end of each match. Players can view their statistics on the Matchmaking menu, where they are shown on the left side, below the player’s name. These statistics were created on the brainCloud design portal, and can also be edited from the monitoring section of the portal for each user.
 
-[![](images/UserStats.png)](https://getbraincloud.com/apidocs/wp-content/uploads/2018/11/UserStats.png)
+[![](images/UserStats.png)](images/UserStats.png)
 
 User Statistics
 
@@ -184,7 +184,7 @@ brainCloud Bombers has two separate global leaderboards defined, that players m
 
 Leaderboards can be accessed through the SocialLeaderboardService in the brainCloud API. The call returns the entire listing of a given leaderboard, or can be broken up into just the current player’s score, or individual sections of the leaderboard with variable length. The values for the currently observed leaderboard are stored as a public member variable in the BrainCloudStats class. The leaderboards are updated live on the brainCloud server, but on the local client the leaderboards are only fetched when the player wishes to see them from the Matchmaking menu, reducing the number of API calls required per user.
 
-[![leaderboards](images/leaderboards-273x300.png)](https://getbraincloud.com/apidocs/wp-content/uploads/2015/06/leaderboards.png)
+[![leaderboards](images/leaderboards-273x300.png)](images/leaderboards.png)
 
 Bomber Leaderboards
 
@@ -194,11 +194,11 @@ Three achievements have been implemented for brainCloud Bombers: destroying 50 e
 
 Achievements can be accessed through the GamificationService in the brainCloud API. The call returns all of the achievements in the system, their names, the urls for their icons, their descriptions, and whether or not the current user has unlocked any of them. The achievement data is stored in a public member variable in the BrainCloudStats class. The achievements are updated from the server when the player visits the Matchmaking menu.
 
-[![achievements_png](images/achievements_png.png)](https://getbraincloud.com/apidocs/wp-content/uploads/2015/06/achievements_png.png)
+[![achievements_png](images/achievements_png.png)](images/achievements_png.png)
 
 Bomber achievements
 
-[![](images/Milestone-2.png)](https://getbraincloud.com/apidocs/wp-content/uploads/2018/11/Milestone-2.png)
+[![](images/Milestone-2.png)](images/Milestone-2.png)
 
  1. When this condition is satisfied.   
 2\. Award this achievement.
@@ -209,7 +209,7 @@ brainCloud Global Properties can be used in place of constants in your games –
 
 These properties can be read through the GlobalAppService in the brainCloud API. The call returns all of the currently saved global variables, which are then stored as public member variables in the BrainCloudStats class. To reduce API calls from the client, these values are only read once when the game is started, meaning clients will need to restart the app to get any changes, but they could be checked more often for the sake of app security or faster testing.
 
-[![](images/GlobalProps.png)](https://getbraincloud.com/apidocs/wp-content/uploads/2018/11/GlobalProps.png)
+[![](images/GlobalProps.png)](images/GlobalProps.png)
 
 Global Properties
 
@@ -219,7 +219,7 @@ brainCloud Bombers requires users to sign in with an email and password, with th
 
 User authentication is done through the BrainCloudWrapper instance, and is taken care of on the server end. The server will send a message back saying whether the authentication was successful or not, and the error that occurred if it wasn’t successful. Since brainCloud Bombers uses external servers (UNET or Photon), the player must wait until they are connected to their servers before logging in to brainCloud. This requirement is optional; the services do not depend on each other – this is done under **Design | Authentication | Email Authentication**.
 
-[![](images/EmailAuth.png)](https://getbraincloud.com/apidocs/wp-content/uploads/2018/11/EmailAuth.png)
+[![](images/EmailAuth.png)](images/EmailAuth.png)
 
 Email Authentication Settings
 

@@ -27,7 +27,7 @@ We now need to create a project to recompile the source in.
 
 Now we're ready to recompile the binaries.  Open the uproject file for the project and you should see this prompt:
 
-[![unreal_plugin_build](images/unreal_plugin_build.png)](/apidocs/wp-content/uploads/2016/07/unreal_plugin_build.png)
+[![unreal_plugin_build](images/unreal_plugin_build.png)](images/unreal_plugin_build.png)
 
 Click Yes to rebuild the binaries for the plugin.  Once the build is complete the editor will open, close the editor to continue.
 
@@ -36,4 +36,4 @@ Navigate to the Project Root | Plugins | BCClient folder and you should see two 
 - Delete the Intermediate folder
 - Copy the BCClient folder out of the build project
 
-The new BCClient folder is now ready to be added to your blueprint only project!  If you haven't yet installed the plugin in your project see [here for instructions](/apidocs/tutorials/unreal-tutorials/setting-up-the-braincloud-plugin/).
+The new BCClient folder is now ready to be added to your blueprint only project!  If you haven't yet installed the plugin in your project see [here for instructions](/learn/sdk-tutorials/unreal-tutorials/setting-up-the-braincloud-plugin/).

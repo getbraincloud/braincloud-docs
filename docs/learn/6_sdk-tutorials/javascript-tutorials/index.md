@@ -7,10 +7,10 @@ Building a web app or game? The brainCloud JavaScript library is what you will n
 
 In this section, you will find tutorials related to the use of the brainCloud JavaScript client library.
 
-Check out the [Example JavaScript Game](/apidocs/tutorials/javascript-tutorials/javascript-example-game/ "Javascript Example Game") to get started!
+Check out the [Example JavaScript Game](/learn/sdk-tutorials/javascript-tutorials/javascript-example-game/ "Javascript Example Game") to get started!
 
 Further tutorials for the JavaScript library are listed below:
 
-- [JS File Upload API](/apidocs/tutorials/javascript-tutorials/js-file-upload/)
+- [JS File Upload API](/learn/sdk-tutorials/javascript-tutorials/js-file-upload/)
 
 <DocCardList />

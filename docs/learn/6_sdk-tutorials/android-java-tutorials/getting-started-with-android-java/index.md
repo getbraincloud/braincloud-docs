@@ -18,11 +18,11 @@ For this tutorial, we will assume that you are using Android Studio to develop a
 - Right-click your "app" module and select "Open Module Settings"
 - Navigate to the Dependencies tab and click the + icon at the bottom to add a "Module dependency"  
     
-    [![2016-01-27_15-23-23](images/2016-01-27_15-23-23.png)](/apidocs/wp-content/uploads/2016/01/2016-01-27_15-23-23.png)
+    [![2016-01-27_15-23-23](images/2016-01-27_15-23-23.png)](images/2016-01-27_15-23-23.png)
     
 - Select the "brainCloud" module and hit OK  
     
-    [![2016-01-27_15-23-35](images/2016-01-27_15-23-35.png)](/apidocs/wp-content/uploads/2016/01/2016-01-27_15-23-35.png)
+    [![2016-01-27_15-23-35](images/2016-01-27_15-23-35.png)](images/2016-01-27_15-23-35.png)
     
 
 ## Initializing brainCloud and callbacks
@@ -135,7 +135,7 @@ public void onLoginClick(View v)
             .authenticateEmailPassword("me@somewhere.com", "pwd", true, this);
 }
 ```
-See the [BrainCloudAuthentication.AuthenticateEmailPassword](/apidocs/apiref/#capi-auth-authenticateemailpassword) API docs for more info.
+See the [BrainCloudAuthentication.AuthenticateEmailPassword](/api/capi/authentication/authenticateemailpassword) API docs for more info.
 
 If you enabled logging (see initialize brainCloud step above) you should be able to see JSON being sent to the server, and JSON being returned from the server as follows:
 ```java

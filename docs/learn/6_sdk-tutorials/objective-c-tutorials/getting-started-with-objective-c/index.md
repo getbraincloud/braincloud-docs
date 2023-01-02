@@ -19,19 +19,19 @@ The first step to using the Objective-C brainCloud library is adding it to your 
 
 - Unzip the brainCloud library within your Xcode project. You should end up with a similar path  
     
-    [![2015-08-10_13-52-38](images/2015-08-10_13-52-38.png)](/apidocs/wp-content/uploads/2015/08/2015-08-10_13-52-38.png)
+    [![2015-08-10_13-52-38](images/2015-08-10_13-52-38.png)](images/2015-08-10_13-52-38.png)
     
 - Right click on your project in Xcode  
     
-    [![2015-08-10_13-55-05](images/2015-08-10_13-55-05.png)](/apidocs/wp-content/uploads/2015/08/2015-08-10_13-55-05.png)
+    [![2015-08-10_13-55-05](images/2015-08-10_13-55-05.png)](images/2015-08-10_13-55-05.png)
     
 - Select "Add Files To Project..."  
     
-    [![2015-08-10_13-55-59](images/2015-08-10_13-55-59.png)](/apidocs/wp-content/uploads/2015/08/2015-08-10_13-55-59.png)
+    [![2015-08-10_13-55-59](images/2015-08-10_13-55-59.png)](images/2015-08-10_13-55-59.png)
     
 - Select the unzipped brainCloudClientObjc folder
     
-    [![2015-08-10_13-57-55](images/2015-08-10_13-57-55.png)](/apidocs/wp-content/uploads/2015/08/2015-08-10_13-57-55.png)
+    [![2015-08-10_13-57-55](images/2015-08-10_13-57-55.png)](images/2015-08-10_13-57-55.png)
     
 - Ensure that CreateGroups is selected and your project in the "Add to targets" section is selected
 - Click Add
@@ -40,12 +40,12 @@ The first step to using the Objective-C brainCloud library is adding it to your 
 
 - Select your project in Xcode and select "Build Settings"  
     
-    [![2015-08-10_14-03-22](images/2015-08-10_14-03-22.png)](/apidocs/wp-content/uploads/2015/08/2015-08-10_14-03-22.png)
+    [![2015-08-10_14-03-22](images/2015-08-10_14-03-22.png)](images/2015-08-10_14-03-22.png)
     
 - Look for the "header search paths" parameter
 - Double click on the value of the "header search paths" parameter  
     
-    [![2015-08-10_14-14-17](images/2015-08-10_14-14-17.png)](/apidocs/wp-content/uploads/2015/08/2015-08-10_14-14-17.png)
+    [![2015-08-10_14-14-17](images/2015-08-10_14-14-17.png)](images/2015-08-10_14-14-17.png)
     
 - Add the following lines being careful to replace "BCTest" with the folder name of your project.
     - "$(SRCROOT)/BCTest/brainCloudClientObjc"
@@ -54,18 +54,18 @@ The first step to using the Objective-C brainCloud library is adding it to your 
     - "$(SRCROOT)/BCTest/brainCloudClientObjc/brainCloudClient/thirdparty/jsoncpp-1.0.0"
 - You should now have Header Search Paths that look similar to this:  
     
-    [![2015-08-10_14-15-29](images/2015-08-10_14-15-29.png)](/apidocs/wp-content/uploads/2015/08/2015-08-10_14-15-29.png)
+    [![2015-08-10_14-15-29](images/2015-08-10_14-15-29.png)](images/2015-08-10_14-15-29.png)
     
 
 ### Add link libraries to project
 
 - Select your project in Xcode and select "Build Phases"  
     
-    [![2015-08-10_14-21-47](images/2015-08-10_14-21-471.png)](/apidocs/wp-content/uploads/2015/08/2015-08-10_14-21-471.png)
+    [![2015-08-10_14-21-47](images/2015-08-10_14-21-471.png)](images/2015-08-10_14-21-471.png)
     
 - Under "Link Binary With Libraries", click the + icon  
     
-    [![2015-08-10_14-25-41](images/2015-08-10_14-25-41.png)](/apidocs/wp-content/uploads/2015/08/2015-08-10_14-25-41.png)
+    [![2015-08-10_14-25-41](images/2015-08-10_14-25-41.png)](images/2015-08-10_14-25-41.png)
     
 - Add the following libraries:
     - GameKit.framework
