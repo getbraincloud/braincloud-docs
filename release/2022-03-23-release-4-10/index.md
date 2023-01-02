@@ -7,7 +7,7 @@ tags:
 
 brainCloud 4.10 adds new _**Security Options**_, an upgraded _**Cloud Code Engine**_, new _**Advanced Authentication**_ calls, and more.
 
-Compatibility
+:::caution Compatibility
 
 As always, brainCloud 4.10 aims to be 100% backwards compatible with previous releases. There are some changes/fixes that could affect existing apps:  
   
@@ -16,17 +16,17 @@ As always, brainCloud 4.10 aims to be 100% backwards compatible with previous re
 **Rhino 1.7.14** - there is a known breaking change in the new engine. It involves using the _java_\-based (i.e. not _javascript_\-based) `java.util.HashMap()`class from within a cloud code script. Our production searches indicate that no developers are using this class in production - and thus we are disabling support for that feature. But _just_ in case - we are still noting it here.  
   
 **Group and Group Entity ACL changes** - there are fixes to how Groups and Group Entities handle ACL permissions, which may affect existing applications. To be safe, we have added a compatibility flag, “\[x\] Preserve legacy GroupEntity / Group ACL defect behaviour”, that preserves the old behaviour for existing apps by default.
-
+:::
 ## Release Highlights
 
 ### TLS Security Enforcement
 
 We are hardening the security of our Public BaaS environment to enforce **TLS 1.2** for all APIs.
 
-Background
+:::note Background
 
 Up until now, we have accepted TLS 1.0 and 1.1 for API calls to ensure maximum compatibility for older apps. TLS 1.2 is well established now though, and we risk more by allowing 1.0 and 1.1 than we gain in backwards compatibility keeping them. Apologies to those devs that may be affected - but we must all march forward!
-
+:::
 To facilitate a manageable transition - we have added an additional API endpoint to our public BaaS. So our public BaaS now supports:
 
 - `api.braincloudservers.com` - our new API endpoint that supports TLS 1.2 only… (we will further upgrade it to support TLS 1.3 as well when AWS supports it)
@@ -42,14 +42,14 @@ Once your app is calling the new endpoint, you can then go to the new **Design |
 
 Note that our RTT websocket endpoint is already enforcing a minimum TLS of 1.2. The raw TCP version of RTT however, which is used only for clients that cannot support WebSockets, is not encrypted. Setting _Minimum RTT TLS Version_ to 1.2 thus disables the raw TCP connection option for your app. Note that both Unity and Unreal clients use the encrypted websocket implementation by default - so removing this option does not affect 99% of apps.
 
-Information
+:::info
 
 Note - S2S and Builder APIs are also available via the new `api.braincloudservers.com` endpoint. It is recommended that all devs move to these endpoints at their earliest convenience.
-
-Warning
+:::
+:::warning
 
 Older libraries - Our tests indicate that our older libraries should support TLS 1.2 - but we haven’t been able to exhaustively test across all client platforms. As always, it is recommended that developers keep pace with the latest brainCloud libraries for maximum performance and reliability.
-
+:::
 #### Migration options
 
 In summary, brainCloud 4.10 allows developers to bump up the minimum level of TLS for client APIs. Developers have two options on how they would like to migrate:
@@ -62,10 +62,10 @@ In summary, brainCloud 4.10 allows developers to bump up the minimum level of TL
     4. Set the minimum client version of your app to force upgrades for any stragglers.
     5. Adjust the TLS settings of your app to require TLS 1.2. You are done!
 
-Pro-tip
+:::tip
 
 One final note - the `api.braincloudservers.com` endpoint is actually ready now - _before_ the official 4.10 release. So you don’t have to wait to start migrating your apps to the more secure endpoint. _Start today!_
-
+:::
 ### Cloud Code Engine Upgrade
 
 We have upgraded the Mozilla Rhino Engine from 1.7.13 → [1.7.14](https://github.com/mozilla/rhino/releases/tag/Rhino1_7_14_Release).

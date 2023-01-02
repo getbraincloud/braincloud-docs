@@ -13,7 +13,7 @@ _Note that this is a server-only release. There are no changes to the client lib
 
 ## Release Highlights
 
-### Client API Blocking
+### 🚀 Client API Blocking
 
 We have added a new feature that makes it easier to secure your app from mischievous players.
 
@@ -63,7 +63,7 @@ There are no changes to individual API calls, but the new API Blocking feature m
 
 * * *
 
-## Miscellaneous Changes / Fixes
+## 🔧 Miscellaneous Changes / Fixes
 
 - Additional Fixes
     - BCLOUD-3305 and BCLOUD-3331 - Improvements to resetting of end-user passwords. Now preventing double-clicks, and waiting until code has been successfully changed to remove the link code.
