@@ -101,9 +101,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       algolia: {
-        appId: 'YL53QZ2LX7',
-        apiKey: 'fa09d615b23ef909f631aa18a344d7b5',
-        indexName: 'netlify_28bbf63d-44fe-4eb7-b9f5-80f7990d4410_main_all',
+        appId: 'ZPF1VHGGT0',
+        apiKey: 'e2b081523fe2ceb57ab46545aca7b530',
+        indexName: 'braincloud',
         contextualSearch: true,
       },
       docs: {
