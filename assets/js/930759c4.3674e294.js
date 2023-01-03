@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocusauruns_ts=self.webpackChunkdocusauruns_ts||[]).push([[57476],{905:e=>{e.exports=JSON.parse('{"permalink":"/braincloud-apiref/release/page/8","page":8,"postsPerPage":10,"totalPages":8,"totalCount":80,"previousPage":"/braincloud-apiref/release/page/7","blogDescription":"Blog","blogTitle":"Blog"}')}}]);

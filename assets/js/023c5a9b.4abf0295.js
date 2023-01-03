@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocusauruns_ts=self.webpackChunkdocusauruns_ts||[]).push([[13367],{4235:s=>{s.exports=JSON.parse('{"permalink":"/braincloud-apiref/blog/tags/game-sparks","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

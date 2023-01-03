@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocusauruns_ts=self.webpackChunkdocusauruns_ts||[]).push([[13441],{55728:a=>{a.exports=JSON.parse('{"label":"bitheads","permalink":"/braincloud-apiref/blog/tags/bitheads","allTagsPath":"/braincloud-apiref/blog/tags","count":1}')}}]);
