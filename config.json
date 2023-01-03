@@ -1,8 +1,5 @@
 {
-    "index_name": "braincloud",
-    "start_urls": [
-      "https://brainclouddocs.netlify.app/"
-    ],
+    "index_name": "braincloud_tmp",
     "sitemap_urls": [
       "https://brainclouddocs.netlify.app/sitemap.xml"
     ],

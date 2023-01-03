@@ -102,8 +102,8 @@ const config = {
     ({
       algolia: {
         appId: 'ZPF1VHGGT0',
-        apiKey: '538f0f3d29d37c436650263181ca0a6f',
-        indexName: 'braincloud',
+        apiKey: 'e2b081523fe2ceb57ab46545aca7b530',
+        indexName: 'braincloud_tmp',
         contextualSearch: true,
       },
       docs: {
