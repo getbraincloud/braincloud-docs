@@ -103,7 +103,7 @@ const config = {
       algolia: {
         appId: 'YL53QZ2LX7',
         apiKey: 'fa09d615b23ef909f631aa18a344d7b5',
-        indexName: 'docsearch',
+        indexName: 'netlify_28bbf63d-44fe-4eb7-b9f5-80f7990d4410_main_all',
         contextualSearch: true,
       },
       docs: {
