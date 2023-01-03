@@ -16,13 +16,13 @@ That said, brainCloud does support authentication-based integrations with third 
 
 The Frequently Asked Questions from the [Apple page linked above](https://developer.apple.com/app-store/user-privacy-and-data-use/) clarify their guidance in this area:
 
-![](images/1*XbJCJVzTBMjkaDlcmmmmgQ.png)
+![](images/facebookL1.png)
 
 By this interpretation, just offering a classic Facebook Account login for your app — which is prety standard practice — requires you to get the user’s permission for tracking across apps and websites owned by other companies. The rationale is that your app may not be sharing the data — but Facebook itself certainly is.
 
 Aside from Facebook’s objections to these changes (we don’t want to get into that) — Facebook has offered a recommended technical solution — they have extended their Facebook Login feature to include a new [Limited Login Mode](https://developers.facebook.com/blog/post/2021/01/19/facebook-login-updates-new-limited-data-mode/).
 
-![](images/1*GcvS9VJr6EwWPf09xxP27w.png)
+![](images/facebookL.png)
 
 So — Limited Login mode seems like a pretty good solution to this problem. There is a pretty big limitation here though. **_If users opt for the Limited Login mode, the app will not have access to the Graph API_**.
 
