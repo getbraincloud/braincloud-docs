@@ -53,33 +53,39 @@ The following example returns all items whose price is greater than 1.99.
 
 A compound query can specify conditions for more than one field in the data. Implicitly, a logical AND conjunction connects the clauses of a compound query so that the query selects the data in the collection that match all the conditions.
 
-`{ 
+```
+{ 
   "entityType": "example", 
   "data.rank": { "$lt": 9000 } 
-}`
+}
+```
 
 This query returns all entities where the entityType field has the value 'example' and the value of the rank field is less than 9000.
 
 For nested conditions, you can also specify an explicit `$and` clause. For example:
 
-`{ 
+```
+{ 
   "$and": [ 
     { "data.localTimezone": { "$gte": 5 } }, 
     { "data.localTimezone": { "$lte": 8 } } 
   ] 
-}`
+}
+```
 
 
 ### OR
 
 Using the $or operator, you can specify a compound query that joins each clause with a logical OR conjunction so that the query selects the data in the collection that match at least one condition.
 
-`{ 
+```
+{ 
   "$or": [ 
     { "data.rank": { "$gt": 100 } }, 
     { "data.rank": { "$lt": 10 } } 
   ] 
-}`
+}
+```
 
 *Note that there is also an **$nor** operator that is functionally the opposite of $or.*
 

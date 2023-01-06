@@ -21,7 +21,8 @@ Some of the more useful fields for context queries are:
 
 This context searches for all messages in the "inbox", sorts them by creation (i.e. arrival time, newest first) and returns them using the default pagination.
 
-`{
+```
+{
     "context": {
         "searchCriteria": {
             "msgbox": "inbox"
@@ -30,13 +31,15 @@ This context searches for all messages in the "inbox", sorts them by creation (i
             "mbCr": -1
         }
     }
-}`
+}
+```
 
 ### Context example - search by party
 
 This context searches for all messages sent to/from the specified profile, sorts them by creation time, and returns them in batches of 10.
 
-`{
+```
+{
     "context": {
         "searchCriteria": {
             "$or": [
@@ -52,7 +55,8 @@ This context searches for all messages sent to/from the specified profile, sorts
             "pageNumber": 1
         }
     }
-}`
+}
+```
 
 
 ### Status Codes

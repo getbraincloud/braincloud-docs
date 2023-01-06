@@ -29,8 +29,8 @@ The brainCloud Docs are organized as follows:
 _We're continuously improving our documentation - so be sure to check back often.  And if you can't find what you're looking for - don't hesitate to reach out by clicking the green **Help** widget on any of our pages._
 
 
-:::info
-_**Using [![Unity Logo](images/logo-unity-web.png)](images/logo-unity-web.png) ?**_ _Be sure to check out our [Unity Tutorials](/learn/sdk-tutorials/unity-tutorials/) and our [brainCloud Bombers](/learn/sdk-tutorials/unity-tutorials/braincloud-bombers-example-game/) example game!_
+:::info ![Unity Logo](images/logo-unity-web.png)
+_**Using Unity?**_ _Be sure to check out our [Unity Tutorials](/learn/sdk-tutorials/unity-tutorials/) and our [brainCloud Bombers RTT](/learn/sdk-tutorials/unity-tutorials/bombers-rtt-example-game/) example game!_
 :::
 ## Get started
 

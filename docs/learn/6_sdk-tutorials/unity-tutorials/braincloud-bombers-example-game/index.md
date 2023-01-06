@@ -2,16 +2,18 @@
 title: "brainCloud Bombers Example Game"
 date: "2015-06-23"
 ---
-
-_This is a legacy tutorial for those using our UNET or Photon examples. Please find our latest tutorial_ [_here_](/learn/sdk-tutorials/unity-tutorials/braincloud-bombers-example-game/)_._
-
+:::note
+_This is a legacy tutorial for those using our UNET or Photon examples. Please find our latest tutorial_ [_here -- using brainCloud Relay server_](/learn/sdk-tutorials/unity-tutorials/bombers-rtt-example-game/)_._
+:::
 * * *
 
 The latest version of the Bombers project can always be found [here](https://github.com/getbraincloud/UnityExamples/) on GitHub
 
 brainCloud Bombers is a fun little game, written in **Unity**, that demonstrates how brainCloud can work together with external multiplayer tech (such as [Unity UNET](http://unity3d.com/services/multiplayer) or [Exit Games' Photon](https://www.exitgames.com/en/Realtime)) to produce real-time multiplayer game experiences.
 
-_[Remember - brainCloud includes everything you need for turn-based (i.e. Trivia Crack) and offline (i.e. Clash of Clans) multiplayer, but does not provide real-time (i.e. Team Fortress 2) or near real-time (i.e. Hearthstone) multiplayer support - for that, a solution like UNET or Photon is ideal.]_
+:::info
+brainCloud includes everything you need for turn-based (i.e. Trivia Crack) and offline (i.e. Clash of Clans) multiplayer, also provide real-time (i.e. Team Fortress 2) or near real-time (i.e. Hearthstone) multiplayer support.]
+:::
 
 [![Unity_Web_Player___PhotonDemo](images/Unity_Web_Player___PhotonDemo-1024x715.png)](images/Unity_Web_Player___PhotonDemo-1024x715.png)
 
