@@ -65,6 +65,10 @@ table {
   display: table;
 }
 
+.table-wrapper {
+  overflow-x: auto;
+}
+
 table.servop {
   width: 100%;
   padding: 0;
