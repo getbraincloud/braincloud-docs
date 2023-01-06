@@ -4,12 +4,6 @@ Attach the user's Ultra credentials to the current profile.
 
 
 
-### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40211 | DUPLICATE_IDENTITY_TYPE | Returned when trying to attach an identity type that already exists for that profile. For instance you can have only one Email identity for a profile.
-40212 | MERGE_PROFILES | Returned when trying to attach an identity type that would result in two profiles being merged into one (for instance an anonymous account and a Email account).
-
 <PartialServop service_name="identity" operation_name="ATTACH" / >
 
 ## Usage
@@ -143,6 +137,18 @@ var ultraIdToken = "ultraIdToken";
 }
 ```
 </details>
+
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40211 | DUPLICATE_IDENTITY_TYPE | Returned when trying to attach an identity type that already exists for that profile. For instance you can have only one Email identity for a profile.
+40212 | MERGE_PROFILES | Returned when trying to attach an identity type that would result in two profiles being merged into one (for instance an anonymous account and a Email account).
+
+</details>
+
 
 ## Method Parameters
 Parameter | Description

@@ -41,14 +41,6 @@ public void FailureCallback(int statusCode, int reasonCode, string statusMessage
 }
 ```
 
-### Status Codes
-
-Code | Name | Description
----- | ---- | -----------
-40206 | MISSING_IDENTITY_ERROR | Both an anonymousId and profileId were provided for authentication - but the anonymousId doesn't exist on the server. The profileId may or may not exist. **It is possible that the user account was deleted via the Design Portal.** The proper recourse is to reset the stored profile id, and re-authenticate. [There is no need to delete the anonymousId since it doesn't exist on the server anyway.]
-40207 | SWITCHING_PROFILES | This means that the anonymousId provided *does* point to a profile, but not the same one that was saved in the client. This fails the anonymous security check. For any other authentication type, this might indicate that the user wants to switch accounts (thus the name of the error constant). For anonymous, the only response is to reset *both* the stored anonymousId and profileId, and then re-authenticate.
-40217 | UNKNOWN_AUTH_ERROR | An unknown error has occurred during authentication
-
 <PartialServop service_name="authenticationV2" operation_name="AUTHENTICATE" / >
 
 ## Usage
@@ -195,4 +187,18 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 }
 ```
 </details>
+
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+
+Code | Name | Description
+---- | ---- | -----------
+40206 | MISSING_IDENTITY_ERROR | Both an anonymousId and profileId were provided for authentication - but the anonymousId doesn't exist on the server. The profileId may or may not exist. **It is possible that the user account was deleted via the Design Portal.** The proper recourse is to reset the stored profile id, and re-authenticate. [There is no need to delete the anonymousId since it doesn't exist on the server anyway.]
+40207 | SWITCHING_PROFILES | This means that the anonymousId provided *does* point to a profile, but not the same one that was saved in the client. This fails the anonymous security check. For any other authentication type, this might indicate that the user wants to switch accounts (thus the name of the error constant). For anonymous, the only response is to reset *both* the stored anonymousId and profileId, and then re-authenticate.
+40217 | UNKNOWN_AUTH_ERROR | An unknown error has occurred during authentication
+
+</details>
+
 

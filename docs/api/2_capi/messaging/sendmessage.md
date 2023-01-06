@@ -4,12 +4,6 @@ Sends a message on behalf of the user. The content of the message can be anythin
 
 
 
-### Status Codes
-Code | Name | Description                         
------ | ----------------------- | ----------------------------------- 
-40601 | FEATURE_NOT_ENABLED | Messaging feature is not enabled for app. 
-40621 | MESSAGING_MAX_RECIPIENTS_EXCEEDED | Message recipients count cannot exceed 5 (defaults to 5)
-
 <PartialServop service_name="messaging" operation_name="SEND_MESSAGE" / >
 
 ## Usage
@@ -168,6 +162,18 @@ if (postResult.status == 200) {
 }
 ```
 </details>
+
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+Code | Name | Description                         
+----- | ----------------------- | ----------------------------------- 
+40601 | FEATURE_NOT_ENABLED | Messaging feature is not enabled for app. 
+40621 | MESSAGING_MAX_RECIPIENTS_EXCEEDED | Message recipients count cannot exceed 5 (defaults to 5)
+
+</details>
+
 
 ## Method Parameters
 Parameter | Description                          

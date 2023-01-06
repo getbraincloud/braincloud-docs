@@ -188,6 +188,17 @@ if (postResult.status == 200) {
 ```
 </details>
 
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40332 | UPDATE_FAILED | An update operation failed. Used for entities, global entities, and updates on the user.
+
+</details>
+
+
 ## Method Parameters
 Parameter | Description
 --------- | -----------
@@ -196,9 +207,4 @@ targetProfileId | The id of the entity's owner
 entityType | The entity type as defined by the user
 data | The entity's data object
 version | The version of the entity to update. Use -1 to indicate the newest version
-#### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40332 | UPDATE_FAILED | An update operation failed. Used for entities, global entities, and updates on the user.
-
-
+#

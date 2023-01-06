@@ -4,11 +4,6 @@ Detach the Oculus identity from this profile.
 
 
 
-### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40210 | DOWNGRADING_TO_ANONYMOUS_ERROR | Occurs when detaching the last non-anonymous identity from an account with continueAnon set to false.
-
 <PartialServop service_name="identity" operation_name="DETACH" / >
 
 ## Usage
@@ -113,6 +108,17 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 }
 ```
 </details>
+
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40210 | DOWNGRADING_TO_ANONYMOUS_ERROR | Occurs when detaching the last non-anonymous identity from an account with continueAnon set to false.
+
+</details>
+
 
 ## Method Parameters
 Parameter | Description

@@ -4,11 +4,6 @@ Set the password associated with the universal id of the given profile.
 
 
 
-### Status Codes
-Code | Name | Description
----- | ---- | -----------
-550022 | INVALID_PASSWORD_CONTENT | The password doesn't meet the minimum password requirements.
-
 <PartialServop service_name="user" operation_name="SYS_SET_PASSWORD_UNIVERSAL_ID" / >
 
 ## Usage
@@ -102,6 +97,17 @@ if (postResult.status == 200) {
 }
 ```
 </details>
+
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+550022 | INVALID_PASSWORD_CONTENT | The password doesn't meet the minimum password requirements.
+
+</details>
+
 
 ## Method Parameters
 Parameter | Description

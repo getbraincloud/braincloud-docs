@@ -4,11 +4,6 @@ Merge the user's Oculus credentials with the current profile.
 
 
 
-### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40211 | DUPLICATE_IDENTITY_TYPE | Returned when trying to attach an identity type that already exists for that profile. For instance you can have only one Twitter identity for a profile.
-
 <PartialServop service_name="identity" operation_name="MERGE" / >
 
 ## Usage
@@ -118,6 +113,17 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 }
 ```
 </details>
+
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40211 | DUPLICATE_IDENTITY_TYPE | Returned when trying to attach an identity type that already exists for that profile. For instance you can have only one Twitter identity for a profile.
+
+</details>
+
 
 ## Method Parameters
 Parameter | Description

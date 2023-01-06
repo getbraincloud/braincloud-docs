@@ -152,15 +152,21 @@ if (postResult.status == 200) {
 ```
 </details>
 
-## Method Parameters
-Parameter | Description
---------- | -----------
-cloudPath | File path
-cloudFilename | Name of file
-#### Status Codes
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
 Code | Name | Description
 ---- | ---- | -----------
 40431 | CLOUD_STORAGE_SERVICE_ERROR | Cloud storage service error
 40432 | FILE_DOES_NOT_EXIST | File does not exist
 
+</details>
 
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+cloudPath | File path
+cloudFilename | Name of file
+#

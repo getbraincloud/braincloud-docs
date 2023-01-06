@@ -168,13 +168,10 @@ if (postResult.status == 200) {
 ```
 </details>
 
-## Method Parameters
-Parameter | Description
---------- | -----------
-scanCode | The code to redeem
-codeType | The type of code
-jsonCustomRedemptionInfo | Optional - A JSON string containing custom redemption data
-#### Status Codes
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
 Code | Name | Description
 ---- | ---- | -----------
 40395 | REDEMPTION_CODE_NOT_FOUND | The specified code was not found
@@ -184,4 +181,13 @@ Code | Name | Description
 40402 | REDEMPTION_CODE_REDEEMED_BY_SELF | The code has already been redeemed by the calling user
 40403 | REDEMPTION_CODE_REDEEMED_BY_OTHER | The code has already been redeemed by another user
 
+</details>
 
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+scanCode | The code to redeem
+codeType | The type of code
+jsonCustomRedemptionInfo | Optional - A JSON string containing custom redemption data
+#

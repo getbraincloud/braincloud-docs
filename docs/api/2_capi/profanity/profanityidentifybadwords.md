@@ -171,6 +171,20 @@ if (postResult.status == 200) {
 ```
 </details>
 
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40421 | WEBPURIFY_NOT_CONFIGURED | WebPurify not configured
+40422 | WEBPURIFY_EXCEPTION | General exception occurred
+40423 | WEBPURIFY_FAILURE | WebPurify returned an error (Http status != 200)
+40424 | WEBPURIFY_NOT_ENABLED | WebPurify not enabled
+
+</details>
+
+
 ## Method Parameters
 Parameter | Description
 --------- | -----------
@@ -179,12 +193,4 @@ languages | Optional comma delimited list of two character language codes
 flagEmail | Optional processing of email addresses
 flagPhone | Optional processing of phone numbers
 flagUrls | Optional processing of urls
-#### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40421 | WEBPURIFY_NOT_CONFIGURED | WebPurify not configured
-40422 | WEBPURIFY_EXCEPTION | General exception occurred
-40423 | WEBPURIFY_FAILURE | WebPurify returned an error (Http status != 200)
-40424 | WEBPURIFY_NOT_ENABLED | WebPurify not enabled
-
-
+#

@@ -4,12 +4,6 @@ Returns a list of max \<n\> messages from history.
 
 
 
-### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
-40603 | CHAT_UNRECOGNIZED_CHANNEL | The specified channel is invalid
-
 <PartialServop service_name="chat" operation_name="GET_RECENT_MESSAGES" / >
 
 ## Usage
@@ -211,6 +205,18 @@ if (getResult.status == 200 ) {
 }
 ```
 </details>
+
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
+40603 | CHAT_UNRECOGNIZED_CHANNEL | The specified channel is invalid
+
+</details>
+
 
 ## Method Parameters
 Parameter | Description

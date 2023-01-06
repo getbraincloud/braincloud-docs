@@ -8,11 +8,6 @@ Edits a existing leaderboard under the context of the current game. You can opti
 
 
 
-### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40499 | NO_LEADERBOARD_FOUND | No leaderboard with given leaderboardId
-
 <PartialServop service_name="leaderboard" operation_name="EDIT_LEADERBOARD" / >
 
 ## Usage
@@ -147,6 +142,17 @@ var retVal = leaderboardProxy.editLeaderboard(
 }
 ```
 </details>
+
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40499 | NO_LEADERBOARD_FOUND | No leaderboard with given leaderboardId
+
+</details>
+
 
 ## Method Parameters
 Parameter | Description

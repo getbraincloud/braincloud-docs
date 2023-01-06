@@ -3,15 +3,6 @@
 Invalidate a redemption code.
 
 
-### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40395 | REDEMPTION_CODE_NOT_FOUND | The specified code was not found
-40399 | REDEMPTION_CODE_TYPE_NOT_FOUND | The specified code type was not found
-40400 | REDEMPTION_CODE_INVALID | Redemption code invalid
-40753 | REDEMPTION_CODE_TYPE_DISABLED | Invalid code. Redemption code type has been disabled
-40755 | REDEMPTION_CODE_TYPE_MISMATCH | Redemption code's code type does not match specified code type
-
 <PartialServop service_name="redemptionCode" operation_name="INVALIDATE_CODE" / >
 
 ## Usage
@@ -179,6 +170,21 @@ if (postResult.status == 200) {
 }
 ```
 </details>
+
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40395 | REDEMPTION_CODE_NOT_FOUND | The specified code was not found
+40399 | REDEMPTION_CODE_TYPE_NOT_FOUND | The specified code type was not found
+40400 | REDEMPTION_CODE_INVALID | Redemption code invalid
+40753 | REDEMPTION_CODE_TYPE_DISABLED | Invalid code. Redemption code type has been disabled
+40755 | REDEMPTION_CODE_TYPE_MISMATCH | Redemption code's code type does not match specified code type
+
+</details>
+
 
 ## Method Parameters
 Parameter | Description

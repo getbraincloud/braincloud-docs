@@ -147,14 +147,20 @@ if (postResult.status == 200) {
 ```
 </details>
 
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40344 | ENTITY_VERSION_MISMATCH | The version parameter does not match the current version on the server
+
+</details>
+
+
 ## Method Parameters
 Parameter | Description
 --------- | -----------
 entityType | The entity type as defined by the user
 version | The version of the entity to delete. Use -1 to indicate the newest version
-#### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40344 | ENTITY_VERSION_MISMATCH | The version parameter does not match the current version on the server
-
-
+#

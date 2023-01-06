@@ -3,12 +3,6 @@
 Generates specified quantity of redemption codes.
 
 
-### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40399 | REDEMPTION_CODE_TYPE_NOT_FOUND | The specified code type was not found
-40753 | REDEMPTION_CODE_TYPE_DISABLED | Invalid code. Redemption code type has been disabled
-
 <PartialServop service_name="redemptionCode" operation_name="GENERATE_CODES" / >
 
 ## Usage
@@ -207,6 +201,18 @@ if (postResult.status == 200) {
 }
 ```
 </details>
+
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40399 | REDEMPTION_CODE_TYPE_NOT_FOUND | The specified code type was not found
+40753 | REDEMPTION_CODE_TYPE_DISABLED | Invalid code. Redemption code type has been disabled
+
+</details>
+
 
 ## Method Parameters
 Parameter | Description

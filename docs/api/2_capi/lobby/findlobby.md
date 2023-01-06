@@ -4,11 +4,6 @@ Finds a lobby matching the specified parameters. Asynchronous - returns 200 to i
 
 
 
-### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
-
 <PartialServop service_name="lobby" operation_name="FIND_LOBBY" / >
 
 ## Usage
@@ -238,6 +233,17 @@ if (postResult.status == 200) {
 }
 ```
 </details>
+
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
+
+</details>
+
 
 ## Method Parameters
 Parameter | Description

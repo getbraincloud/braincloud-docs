@@ -9,11 +9,6 @@ Returns the next/prev set of messages. Takes the encoded-context from <code>[Get
 
 
 
-### Status Codes
-Code | Name | Description                        
------ | ----------------------- | -----------------------------------
-40601 | FEATURE_NOT_ENABLED | Messaging feature is not enabled for app.
-
 <PartialServop service_name="messaging" operation_name="GET_MESSAGES_PAGE_OFFSET" / >
 
 ## Usage
@@ -155,6 +150,17 @@ if (postResult.status == 200) {
 }
 ```
 </details>
+
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+Code | Name | Description                        
+----- | ----------------------- | -----------------------------------
+40601 | FEATURE_NOT_ENABLED | Messaging feature is not enabled for app.
+
+</details>
+
 
 ## Method Parameters
 Parameter | Description                         

@@ -63,16 +63,6 @@ public void FailureCallback(int statusCode, int reasonCode, string statusMessage
 }
 ```
 
-### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40206 | MISSING_IDENTITY_ERROR | Both an anonymousId and profileId were provided for authentication - but the anonymousId doesn't exist on the server. The profileId may or may not exist. **It is possible that the user account was deleted via the Design Portal.** The proper recourse is to reset the stored profile id, and re-authenticate. [There is no need to delete the anonymousId since it doesn't exist on the server anyway.]
-40207 | SWITCHING_PROFILES | This means that the anonymousId provided *does* point to a profile, but not the same one that was saved in the client. This fails the anonymous security check. For any other authentication type, this might indicate that the user wants to switch accounts (thus the name of the error constant). For anonymous, the only response is to reset *both* the stored anonymousId and profileId, and then re-authenticate.
-40208 | MISSING_PROFILE_ERROR | The anonymousId provided is not associated with an existing profile and forceCreate = false. To create an account, retry with forceCreate = true.
-40209 | SECURITY_ERROR | Occurs when attempting to authenticate anonymously to an existing user without providing the matching profile ID
-40217 | UNKNOWN_AUTH_ERROR | An unknown error has occurred on authentication
-40358 | MISSING_REQUIRED_PARAMETER | The provided anonymous ID cannot be null
-
 
 :::caution
 Make sure you've initialized the <%= data.branding.productName %> library before authenticating.
@@ -256,6 +246,22 @@ var forceCreate = true;
 }
 ```
 </details>
+
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40206 | MISSING_IDENTITY_ERROR | Both an anonymousId and profileId were provided for authentication - but the anonymousId doesn't exist on the server. The profileId may or may not exist. **It is possible that the user account was deleted via the Design Portal.** The proper recourse is to reset the stored profile id, and re-authenticate. [There is no need to delete the anonymousId since it doesn't exist on the server anyway.]
+40207 | SWITCHING_PROFILES | This means that the anonymousId provided *does* point to a profile, but not the same one that was saved in the client. This fails the anonymous security check. For any other authentication type, this might indicate that the user wants to switch accounts (thus the name of the error constant). For anonymous, the only response is to reset *both* the stored anonymousId and profileId, and then re-authenticate.
+40208 | MISSING_PROFILE_ERROR | The anonymousId provided is not associated with an existing profile and forceCreate = false. To create an account, retry with forceCreate = true.
+40209 | SECURITY_ERROR | Occurs when attempting to authenticate anonymously to an existing user without providing the matching profile ID
+40217 | UNKNOWN_AUTH_ERROR | An unknown error has occurred on authentication
+40358 | MISSING_REQUIRED_PARAMETER | The provided anonymous ID cannot be null
+
+</details>
+
 
 ## Method Parameters
 Parameter | Description

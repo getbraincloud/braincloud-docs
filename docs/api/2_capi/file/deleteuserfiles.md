@@ -159,14 +159,20 @@ if (postResult.status == 200) {
 ```
 </details>
 
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40431 | CLOUD_STORAGE_SERVICE_ERROR | Cloud storage service error
+
+</details>
+
+
 ## Method Parameters
 Parameter | Description
 --------- | -----------
 cloudPath | File path
 recurse | Whether to recurse into sub-directories
-#### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40431 | CLOUD_STORAGE_SERVICE_ERROR | Cloud storage service error
-
-
+#

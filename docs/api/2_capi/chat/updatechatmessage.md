@@ -4,14 +4,6 @@ Update the specified chat message. Message must have been from this user. Versio
 
 
 
-### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40346 | INSUFFICIDENT_PERMISSIONS | The channel id provided is invalid.
-40595 | CHAT_MESSASAGE_NOT_FOUND | The specified message cannot be found
-40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
-40603 | CHAT_UNRECOGNIZED_CHANNEL | The specified channel is invalid
-
 <PartialServop service_name="chat" operation_name="UPDATE_CHAT_MESSAGE" / >
 
 ## Usage
@@ -183,6 +175,20 @@ if (postResult.status == 200) {
 }
 ```
 </details>
+
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40346 | INSUFFICIDENT_PERMISSIONS | The channel id provided is invalid.
+40595 | CHAT_MESSASAGE_NOT_FOUND | The specified message cannot be found
+40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
+40603 | CHAT_UNRECOGNIZED_CHANNEL | The specified channel is invalid
+
+</details>
+
 
 ## Method Parameters
 #### Method Parameters

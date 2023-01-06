@@ -6,13 +6,6 @@ This method is available in Cloud Code scripts only.
 
 Sends a potentially richer member chat message. By convention, content should contain a field named text for plain-text content. From is a json containing the message originator info - in this case normally "name" and potentially a "pic" url. Returns the id of the message created.
 
-### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
-40603 | CHAT_UNRECOGNIZED_CHANNEL | The specified channel is invalid
-40616 | CLOUD_CODE_ONLY | Method only available via cloud code
-
 <PartialServop service_name="chat" operation_name="SYS_POST_CHAT_MESSAGE_SIMPLE" / >
 
 ## Usage
@@ -123,6 +116,19 @@ if (postResult.status == 200) {
 }
 ```
 </details>
+
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
+40603 | CHAT_UNRECOGNIZED_CHANNEL | The specified channel is invalid
+40616 | CLOUD_CODE_ONLY | Method only available via cloud code
+
+</details>
+
 
 ## Method Parameters
 Parameter | Description

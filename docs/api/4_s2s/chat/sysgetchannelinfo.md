@@ -2,13 +2,6 @@
 ## Overview
 Returns *description info* and *activity stats* for the specified channel. Note that `numMembers`, `numListeners` and `listeners` are only returned for non-global groups. 
 
-### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40346 | CHAT_INVALID_CHANNEL_ID | The channel id provided is invalid.
-40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
-40616 | CLOUD_CODE_ONLY | Method only available via cloud code
-
 <PartialServop service_name="chat" operation_name="SYS_GET_CHANNEL_INFO" / >
 
 ## Usage
@@ -114,6 +107,19 @@ if (postResult.status == 200) {
 }
 ```
 </details>
+
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40346 | CHAT_INVALID_CHANNEL_ID | The channel id provided is invalid.
+40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
+40616 | CLOUD_CODE_ONLY | Method only available via cloud code
+
+</details>
+
 
 ## Method Parameters
 Parameter | Description

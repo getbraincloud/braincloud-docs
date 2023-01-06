@@ -3,23 +3,6 @@
 Callback with asynchronous response for the redemption code service to process for an asynchronous redemption code.
 
 
-### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40395 | REDEMPTION_CODE_NOT_FOUND | The specified code was not found
-40398 | REDEMPTION_CODE_NOT_ACTIVE | The specified code is not active
-40401 | REDEMPTION_CODE_REDEEMED | The code has already been redeemed
-40402 | REDEMPTION_CODE_REDEEMED_BY_SELF | The code has already been redeemed by the calling user
-40403 | REDEMPTION_CODE_REDEEMED_BY_OTHER | The code has already been redeemed by another user
-40757 | REDEMPTION_OF_CUSTOM_CODE_FAILED | Missing identity, required for get identity data
-40758 | REDEMPTION_CODE_NOT_IN_PROGRESS | The code state is not in progress
-40759 | REDEMPTION_CODE_ATTEMPT_ERROR | The attempt number input was not correct
-40760 | REDEMPTION_CODE_ATTEMPT_MISMATCH | The applicable attempt number associated with the redemption attempt being processed doesn't match the code type
-40761 | REDEMPTION_CODE_ASYNC_BAD_RESPONSE | The asynchronous response was not correct
-40762 | REDEMPTION_CODE_BY_ID_NOT_FOUND | The specified code was not found by redemptionCodeId
-40767 | REDEMPTION_CODE_TYPE_NOT_ASYNC | The specified codeType was not asynchronous
-40768 | REDEMPTION_CODE_ASYNC_PROCESSING_TIMEOUT | The specified timeout was hit
-
 <PartialServop service_name="redemptionCode" operation_name="PROCESS_ASYNCHRONOUS_RESPONSE" / >
 
 ## Usage
@@ -176,6 +159,29 @@ if (postResult.status == 200) {
 }
 ```
 </details>
+
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40395 | REDEMPTION_CODE_NOT_FOUND | The specified code was not found
+40398 | REDEMPTION_CODE_NOT_ACTIVE | The specified code is not active
+40401 | REDEMPTION_CODE_REDEEMED | The code has already been redeemed
+40402 | REDEMPTION_CODE_REDEEMED_BY_SELF | The code has already been redeemed by the calling user
+40403 | REDEMPTION_CODE_REDEEMED_BY_OTHER | The code has already been redeemed by another user
+40757 | REDEMPTION_OF_CUSTOM_CODE_FAILED | Missing identity, required for get identity data
+40758 | REDEMPTION_CODE_NOT_IN_PROGRESS | The code state is not in progress
+40759 | REDEMPTION_CODE_ATTEMPT_ERROR | The attempt number input was not correct
+40760 | REDEMPTION_CODE_ATTEMPT_MISMATCH | The applicable attempt number associated with the redemption attempt being processed doesn't match the code type
+40761 | REDEMPTION_CODE_ASYNC_BAD_RESPONSE | The asynchronous response was not correct
+40762 | REDEMPTION_CODE_BY_ID_NOT_FOUND | The specified code was not found by redemptionCodeId
+40767 | REDEMPTION_CODE_TYPE_NOT_ASYNC | The specified codeType was not asynchronous
+40768 | REDEMPTION_CODE_ASYNC_PROCESSING_TIMEOUT | The specified timeout was hit
+
+</details>
+
 
 ## Method Parameters
 Parameter | Description

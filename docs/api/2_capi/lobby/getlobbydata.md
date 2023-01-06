@@ -4,11 +4,6 @@ Returns the data for the specified lobby, including member data.
 
 
 
-### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
-
 <PartialServop service_name="lobby" operation_name="GET_LOBBY_DATA" / >
 
 ## Usage
@@ -196,6 +191,17 @@ if (postResult.status == 200) {
 }
 ```
 </details>
+
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
+
+</details>
+
 
 ## Method Parameters
 Parameter | Description

@@ -22,7 +22,7 @@ You configure <em>Lobby Types</em> in the portal under <strong>Design | Multipla
 
 The *Lobby Service* also offers highly configurable *Online Matchmaking* - to quickly and efficiently pair users up together.
 
-*For more information on Lobby Concepts, see the [Lobby Overview](https://getbraincloud.com/apidocs/api-modules/multiplayer/lobbies/) page.*
+*For more information on Lobby Concepts, see the [Lobby Overview](/learn/key-concepts/multiplayer/lobbies/) page.*
 
 
 ### API Summary

@@ -4,11 +4,6 @@ Manually creates a new user for the current app. Note that this API is normally 
 
 
 
-### Status Codes
-Code | Name | Description
----- | ---- | -----------
-550022 | INVALID_PASSWORD_CONTENT | The password doesn't meet the minimum password requirements.
-
 <PartialServop service_name="user" operation_name="SYS_CREATE_USER_UNIVERSAL_ID" / >
 
 ## Usage
@@ -107,6 +102,17 @@ if (postResult.status == 200) {
 }
 ```
 </details>
+
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+550022 | INVALID_PASSWORD_CONTENT | The password doesn't meet the minimum password requirements.
+
+</details>
+
 
 ## Method Parameters
 Parameter | Description

@@ -6,12 +6,6 @@ Returns the number of messages that were deleted. Since the history rolls over, 
 
 
 
-### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40346 | CHAT_INVALID_CHANNEL_ID | The channel id provided is invalid.
-40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
-
 <PartialServop service_name="chat" operation_name="DELETE_CHAT_MESSAGE" / >
 
 ## Usage
@@ -162,6 +156,18 @@ var result = chatProxy.deleteChatMessage( channelId, msgId, ver );
 }
 ```
 </details>
+
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40346 | CHAT_INVALID_CHANNEL_ID | The channel id provided is invalid.
+40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
+
+</details>
+
 
 ## Method Parameters
 Parameter | Description

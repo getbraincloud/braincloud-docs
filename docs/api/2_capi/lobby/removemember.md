@@ -5,11 +5,6 @@ Evicts the specified user from the specified lobby. The caller must be the owner
 
 
 
-### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
-
 <PartialServop service_name="lobby" operation_name="REMOVE_MEMBER" / >
 
 ## Usage
@@ -150,6 +145,17 @@ if (postResult.status == 200) {
 }
 ```
 </details>
+
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
+
+</details>
+
 
 ## Method Parameters
 Parameter | Description

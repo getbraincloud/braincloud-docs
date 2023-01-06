@@ -177,16 +177,22 @@ if (postResult.status == 200) {
 ```
 </details>
 
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40344 | ENTITY_VERSION_MISMATCH | The version passed in does not match the version of the entity on the server
+40531 | ACL_NOT_READABLE | The acl passed does not the minimum permissions required for system entities (readable/other)
+
+</details>
+
+
 ## Method Parameters
 Parameter | Description
 --------- | -----------
 entityId | The id of the entity to update
 version | The version of the entity to update. Use -1 to indicate the newest version
 jsonEntityAcl | The entity's [Access Control List](/api/appendix/acl) as json.
-#### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40344 | ENTITY_VERSION_MISMATCH | The version passed in does not match the version of the entity on the server
-40531 | ACL_NOT_READABLE | The acl passed does not the minimum permissions required for system entities (readable/other)
-
-
+#

@@ -4,11 +4,6 @@ Changes email address associated with specified user's email identity.
 
 
 
-### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40583 | APP_ERROR | New email address is already in use
-
 <PartialServop service_name="identity" operation_name="SYS_CHANGE_EMAIL_IDENTITY" / >
 
 ## Usage
@@ -112,6 +107,17 @@ if (postResult.status == 200) {
 }
 ```
 </details>
+
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40583 | APP_ERROR | New email address is already in use
+
+</details>
+
 
 ## Method Parameters
 Parameter | Description

@@ -4,12 +4,6 @@ Prepares a user file upload. On success an uploadId will be returned which can b
 
 
 
-### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40429 | UPLOAD_FILE_TOO_LARGE | File maximum file size exceeded
-40430 | FILE_ALREADY_EXISTS | File exists, replaceIfExists not set
-
 <PartialServop service_name="file" operation_name="PREPARE_USER_UPLOAD" / >
 
 ## Usage
@@ -139,6 +133,18 @@ var retVal = fileProxy.prepareUserUpload(cloudPath, cloudName, shareable, replac
 }
 ```
 </details>
+
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40429 | UPLOAD_FILE_TOO_LARGE | File maximum file size exceeded
+40430 | FILE_ALREADY_EXISTS | File exists, replaceIfExists not set
+
+</details>
+
 
 ## Method Parameters
 Parameter | Description

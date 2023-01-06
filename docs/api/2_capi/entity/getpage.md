@@ -219,13 +219,19 @@ if (postResult.status == 200) {
 ```
 </details>
 
-## Method Parameters
-Parameter | Description
---------- | -----------
-context | The JSON context for the page request.
-#### Status Codes
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
 Code | Name | Description
 ---- | ---- | -----------
 40384 | INVALID_QUERY_CONTEXT | Invalid query context
 
+</details>
 
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+context | The JSON context for the page request.
+#

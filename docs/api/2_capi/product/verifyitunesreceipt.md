@@ -10,14 +10,6 @@ Apple receipts will often contain old transactions. The key values of the return
 * `processedCount` - number of transactions successfully processed. To be processed, a transaction receipt must be valid, the product must be found, and the transaction must not have been processed before.
 * `unprocessedCount` - the number of transactions that were rejected. See the `transactionStatus` code associated with the transaction for details.
 
-### Status Codes
-Code | Name | Description
----- | ---- | -----------
-0 | STATUS_OK | Successfully verified, new currencies awarded.
-100 | STATUS_FAILED_ALREADY_PROCESSED | Already verified and awarded currencies.
-101 | STATUS_FAILED_NO_ITUNES_PRODUCT_ID | The product id is not configured in iTunes Connect for this app. *This is likely a fraud attempt.*
-102 | STATUS_FAILED_PRODUCT_NOT_FOUND | iTunes product id exists, but cannot locate the product in <%= data.branding.productName %> Product Inventory. *This is likely a configuration error in the <%= data.branding.productName %> product - double-check the iTunes price settings for the product.**
-
 <PartialServop service_name="product" operation_name="OP_CASH_IN_RECEIPT" / >
 
 ## Usage
@@ -170,6 +162,20 @@ if (postResult.status == 200) {
 }
 ```
 </details>
+
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+0 | STATUS_OK | Successfully verified, new currencies awarded.
+100 | STATUS_FAILED_ALREADY_PROCESSED | Already verified and awarded currencies.
+101 | STATUS_FAILED_NO_ITUNES_PRODUCT_ID | The product id is not configured in iTunes Connect for this app. *This is likely a fraud attempt.*
+102 | STATUS_FAILED_PRODUCT_NOT_FOUND | iTunes product id exists, but cannot locate the product in <%= data.branding.productName %> Product Inventory. *This is likely a configuration error in the <%= data.branding.productName %> product - double-check the iTunes price settings for the product.**
+
+</details>
+
 
 ## Method Parameters
 Parameter | Description

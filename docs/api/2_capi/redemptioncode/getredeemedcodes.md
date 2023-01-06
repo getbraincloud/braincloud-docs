@@ -154,13 +154,19 @@ if (postResult.status == 200) {
 ```
 </details>
 
-## Method Parameters
-Parameter | Description
---------- | -----------
-codeType | Optional - The type of codes to retrieve. Returns all codes if left unspecified.
-#### Status Codes
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
 Code | Name | Description
 ---- | ---- | -----------
 40399 | REDEMPTION_CODE_TYPE_NOT_FOUND | The specified code type was not found
 
+</details>
 
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+codeType | Optional - The type of codes to retrieve. Returns all codes if left unspecified.
+#

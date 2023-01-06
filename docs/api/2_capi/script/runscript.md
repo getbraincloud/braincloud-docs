@@ -12,11 +12,6 @@ Pro-tip: If a script path is not specified in scriptName field, it will default 
 :::
 
 
-### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40363 | MISSING_SCRIPT | The script not found in specified folder.
-
 <PartialServop service_name="script" operation_name="RUN" / >
 
 ## Usage
@@ -169,6 +164,17 @@ if (postResult.status == 200) {
 }
 ```
 </details>
+
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40363 | MISSING_SCRIPT | The script not found in specified folder.
+
+</details>
+
 
 ## Method Parameters
 Parameter | Description

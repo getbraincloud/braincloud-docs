@@ -3,15 +3,6 @@
 Activate a redemption code. Optional parameters: customCodeInfo.
 
 
-### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40399 | REDEMPTION_CODE_TYPE_NOT_FOUND | The specified code type was not found
-40395 | REDEMPTION_CODE_NOT_FOUND | The specified code was not found
-40397 | REDEMPTION_CODE_ACTIVE | Redemption code already activated
-40400 | REDEMPTION_CODE_INVALID | Redemption code invalid
-40753 | REDEMPTION_CODE_TYPE_DISABLED | Invalid code. Redemption code type has been disabled
-
 <PartialServop service_name="redemptionCode" operation_name="ACTIVATE_CODE" / >
 
 ## Usage
@@ -179,6 +170,21 @@ if (postResult.status == 200) {
 }
 ```
 </details>
+
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40399 | REDEMPTION_CODE_TYPE_NOT_FOUND | The specified code type was not found
+40395 | REDEMPTION_CODE_NOT_FOUND | The specified code was not found
+40397 | REDEMPTION_CODE_ACTIVE | Redemption code already activated
+40400 | REDEMPTION_CODE_INVALID | Redemption code invalid
+40753 | REDEMPTION_CODE_TYPE_DISABLED | Invalid code. Redemption code type has been disabled
+
+</details>
+
 
 ## Method Parameters
 Parameter | Description

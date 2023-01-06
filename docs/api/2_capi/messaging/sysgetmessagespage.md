@@ -9,12 +9,6 @@ Returns a page of messages from the master repository of message content (i.e. i
 
 
 
-### Status Codes
-Code | Name | Description
------ | ----------------------- | -----------------------------------
-40601 | FEATURE_NOT_ENABLED | Messaging feature is not enabled for app.
-40001 | APP_ERROR | Not supported for sharded message boxes. Use SysGetMessagesForOwnerPage API instead.
-
 <PartialServop service_name="messaging" operation_name="SYS_GET_MESSAGES_PAGE" / >
 
 ## Usage
@@ -170,6 +164,18 @@ if (postResult.status == 200) {
 }
 ```
 </details>
+
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+Code | Name | Description
+----- | ----------------------- | -----------------------------------
+40601 | FEATURE_NOT_ENABLED | Messaging feature is not enabled for app.
+40001 | APP_ERROR | Not supported for sharded message boxes. Use SysGetMessagesForOwnerPage API instead.
+
+</details>
+
 
 ## Method Parameters
 Parameter | Description

@@ -4,11 +4,6 @@ Returns a list of the channels of the specified type that the user has access to
 
 
 
-### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
-
 <PartialServop service_name="chat" operation_name="GET_SUBSCRIBED_CHANNELS" / >
 
 ## Usage
@@ -184,6 +179,17 @@ if ( subResult.status == 200 ) {
 }
 ```
 </details>
+
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
+
+</details>
+
 
 ## Method Parameters
 Parameter | Description

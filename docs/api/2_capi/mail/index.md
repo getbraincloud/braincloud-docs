@@ -47,7 +47,7 @@ The available parameters will depend on the mail service provider you have enabl
 
 Mail template formats sent into SendGrid.
 
-Information on setting up SendGrid can be found [here](https://getbraincloud.com/apidocs/portal-usage/email-integration-sendgrid/).
+Information on setting up SendGrid can be found [here](/learn/portal-tutorials/email-integration-sendgrid/).
 
 
 

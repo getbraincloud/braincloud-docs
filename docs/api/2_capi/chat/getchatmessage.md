@@ -161,15 +161,21 @@ if (getReult.status == 200 ) {
 ```
 </details>
 
-## Method Parameters
-Parameter | Description
---------- | -----------
-channelId | The channel of the message
-msgId | The message id
-#### Status Codes
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
 Code | Name | Description
 ---- | ---- | -----------
 40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
 40603 | CHAT_UNRECOGNIZED_CHANNEL | The specified channel is invalid
 
+</details>
 
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+channelId | The channel of the message
+msgId | The message id
+#

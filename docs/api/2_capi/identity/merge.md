@@ -6,11 +6,6 @@ NOTE: If using the <%= data.branding.codeWrapper %>, once the merge is complete,
 
 
 
-### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40211 | DUPLICATE_IDENTITY_TYPE | Returned when trying to attach an identity type that already exists for that profile. For instance you can have only one Facebook identity for a profile.
-
 <PartialServop service_name="identity" operation_name="MERGE" / >
 
 ## Usage
@@ -115,6 +110,17 @@ if (postResult.status == 200) {
 }
 ```
 </details>
+
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40211 | DUPLICATE_IDENTITY_TYPE | Returned when trying to attach an identity type that already exists for that profile. For instance you can have only one Facebook identity for a profile.
+
+</details>
+
 
 ## Method Parameters
 Parameter | Description

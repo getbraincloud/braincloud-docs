@@ -11,13 +11,6 @@ Returns the number of messages that were deleted. Since the history rolls over, 
 
 
 
-### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40346 | CHAT_INVALID_CHANNEL_ID | The channel id provided is invalid.
-40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
-40616 | CLOUD_CODE_ONLY | Method only available via cloud code
-
 <PartialServop service_name="chat" operation_name="SYS_DELETE_CHAT_MESSAGE" / >
 
 ## Usage
@@ -120,6 +113,19 @@ if (postResult.status == 200) {
 }
 ```
 </details>
+
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40346 | CHAT_INVALID_CHANNEL_ID | The channel id provided is invalid.
+40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
+40616 | CLOUD_CODE_ONLY | Method only available via cloud code
+
+</details>
+
 
 ## Method Parameters
 Parameter | Description

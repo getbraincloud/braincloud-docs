@@ -4,12 +4,6 @@ Disconnects from the specified channel, unregistering the handler.
 
 
 
-### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40346 | CHAT_INVALID_CHANNEL_ID | The channel id provided is invalid.
-40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
-
 <PartialServop service_name="chat" operation_name="CHANNEL_DISCONNECT" / >
 
 ## Usage
@@ -143,6 +137,18 @@ chatProxy.channelDisconnect(channelId);
 }
 ```
 </details>
+
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40346 | CHAT_INVALID_CHANNEL_ID | The channel id provided is invalid.
+40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
+
+</details>
+
 
 ## Method Parameters
 Parameter | Description

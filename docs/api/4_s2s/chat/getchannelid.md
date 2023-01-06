@@ -2,12 +2,6 @@
 ## Overview
 Retrieves a channel id given the specified lookup parameters.
 
-### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
-40603 | CHAT_UNRECOGNIZED_CHANNEL | The sub id for the channel type is not recognized
-
 <PartialServop service_name="chat" operation_name="GET_CHANNEL_ID" / >
 
 ## Usage
@@ -108,6 +102,18 @@ if (postResult.status == 200) {
 }
 ```
 </details>
+
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
+40603 | CHAT_UNRECOGNIZED_CHANNEL | The sub id for the channel type is not recognized
+
+</details>
+
 
 ## Method Parameters
 Parameter | Description

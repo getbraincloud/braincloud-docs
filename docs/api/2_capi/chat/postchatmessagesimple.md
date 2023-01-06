@@ -156,16 +156,22 @@ if (postResult.status == 200 ) {
 ```
 </details>
 
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
+40603 | CHAT_UNRECOGNIZED_CHANNEL | The specified channel is invalid
+
+</details>
+
+
 ## Method Parameters
 Parameter | Description
 --------- | -----------
 channelId | The chat channel to post to
 contentString | Simple string content for the message. Will be placed inside of a `text` field of the `content` section.
 recordInHistory | Set to `false` if the message shouldn't be recorded to history. Useful for sending non-conversational messages, like when users join a room, etc.
-#### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
-40603 | CHAT_UNRECOGNIZED_CHANNEL | The specified channel is invalid
-
-
+#

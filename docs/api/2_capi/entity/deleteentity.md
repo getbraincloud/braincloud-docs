@@ -6,11 +6,6 @@ This method is affected by versioning. See the [versioning documentation](/api/a
 
 
 
-### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40344 | ENTITY_VERSION_MISMATCH | The version parameter does not match the current version on the server
-
 <PartialServop service_name="entity" operation_name="DELETE" / >
 
 ## Usage
@@ -151,6 +146,17 @@ if (postResult.status == 200) {
 }
 ```
 </details>
+
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40344 | ENTITY_VERSION_MISMATCH | The version parameter does not match the current version on the server
+
+</details>
+
 
 ## Method Parameters
 Parameter | Description

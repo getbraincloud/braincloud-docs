@@ -11,10 +11,6 @@ On a 200 http status, the JSON return is available from XMLHttpRequest.responseT
 
 
 
-### Status Codes
-
-The XMLHttpRequest object will return a 200 http status if the upload is successful.
-
 <PartialServop service_name="file" operation_name="UPLOAD_FILE" / >
 
 ## Usage
@@ -128,6 +124,16 @@ var fileSize = file.size;
 }
 ```
 </details>
+
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+
+The XMLHttpRequest object will return a 200 http status if the upload is successful.
+
+</details>
+
 
 ## Method Parameters
 Parameter | Description

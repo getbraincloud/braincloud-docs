@@ -38,13 +38,6 @@ public void FailureCallback(int statusCode, int reasonCode, string statusMessage
     }
 ```
 
-### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40210 | DOWNGRADING_TO_ANONYMOUS_ERROR | Occurs when detaching the last non-anonymous identity from an account with continueAnon set to false.
-40206 | MISSING_IDENTITY_ERROR | A "profileId" was supplied in the authentication request submitted with new credentials. In other words the credentials record was not found in the <%= data.branding.productName %> database. The solution would be to provide known credentials or not supply a "profileId" if the user is actually new.
-40209 | SECURITY_ERROR | Returned if a security exception was encountered.
-
 <PartialServop service_name="identity" operation_name="DETACH" / >
 
 ## Usage
@@ -141,6 +134,19 @@ public void detachUniversalIdentity(String userId, boolean continueAnon, IServer
 }
 ```
 </details>
+
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40210 | DOWNGRADING_TO_ANONYMOUS_ERROR | Occurs when detaching the last non-anonymous identity from an account with continueAnon set to false.
+40206 | MISSING_IDENTITY_ERROR | A "profileId" was supplied in the authentication request submitted with new credentials. In other words the credentials record was not found in the <%= data.branding.productName %> database. The solution would be to provide known credentials or not supply a "profileId" if the user is actually new.
+40209 | SECURITY_ERROR | Returned if a security exception was encountered.
+
+</details>
+
 
 ## Method Parameters
 Parameter | Description

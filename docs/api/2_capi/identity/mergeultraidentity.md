@@ -4,11 +4,6 @@ Merge the profile associated with the provided Ultra credentials with the curren
 
 
 
-### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40211 | DUPLICATE_IDENTITY_TYPE | Returned when trying to attach an identity type that already exists for that profile. For instance you can have only one Twitter identity for a profile.
-
 <PartialServop service_name="identity" operation_name="MERGE" / >
 
 ## Usage
@@ -144,6 +139,17 @@ var ultraIdToken = "ultraIdToken";
 }
 ```
 </details>
+
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40211 | DUPLICATE_IDENTITY_TYPE | Returned when trying to attach an identity type that already exists for that profile. For instance you can have only one Twitter identity for a profile.
+
+</details>
+
 
 ## Method Parameters
 Parameter | Description

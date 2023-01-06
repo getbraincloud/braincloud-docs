@@ -4,11 +4,6 @@ Detaches an identity from the current profile.
 
 
 
-### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40210 | DOWNGRADING_TO_ANONYMOUS_ERROR | Occurs when detaching the last non-anonymous identity from an account with continueAnon set to false.
-
 <PartialServop service_name="identity" operation_name="DETACH" / >
 
 ## Usage
@@ -109,6 +104,17 @@ if (postResult.status == 200) {
 }
 ```
 </details>
+
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40210 | DOWNGRADING_TO_ANONYMOUS_ERROR | Occurs when detaching the last non-anonymous identity from an account with continueAnon set to false.
+
+</details>
+
 
 ## Method Parameters
 Parameter | Description

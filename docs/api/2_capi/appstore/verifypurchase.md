@@ -80,17 +80,6 @@ The key values of the return to evaluate include:
 * `unprocessedCount` - the number of transactions that were rejected. See the `transactionStatus` code associated with the transaction for details.
 
 
-### Status Codes
-Code | Name | Description
----- | ---- | -----------
-0 | RESULT_OK | Successfully verified, new currencies awarded.
-100 | RESULT_FAILED_ALREADY_PROCESSED | Already verified and awarded currencies.
-101 | RESULT_FAILED_APPSTORE_ERROR | Purchase error with the used app store. 
-102 | RESULT_FAILED_PRODUCT_NOT_FOUND | Cannot locate the product in <%= data.branding.productName %> Product Inventory. *This is likely a configuration error in the <%= data.branding.productName %> product - double-check the price settings for the product.**
-103 | RESULT_FAILED_UNKNOWN_ERROR | Unexpected error.
-104 | RESULT_FAILED_CONFIGURATION_ERROR | Configuration error on the used app store.
-105 | RESULT_FAILED_REQUEST_ERROR | Credential missing for used app store. Ensure Facebook or Stream credential is correct.
-
 <PartialServop service_name="appStore" operation_name="VERIFY_PURCHASE" / >
 
 ## Usage
@@ -327,6 +316,23 @@ if (postResult.status == 200) {
 }
 ```
 </details>
+
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+0 | RESULT_OK | Successfully verified, new currencies awarded.
+100 | RESULT_FAILED_ALREADY_PROCESSED | Already verified and awarded currencies.
+101 | RESULT_FAILED_APPSTORE_ERROR | Purchase error with the used app store. 
+102 | RESULT_FAILED_PRODUCT_NOT_FOUND | Cannot locate the product in <%= data.branding.productName %> Product Inventory. *This is likely a configuration error in the <%= data.branding.productName %> product - double-check the price settings for the product.**
+103 | RESULT_FAILED_UNKNOWN_ERROR | Unexpected error.
+104 | RESULT_FAILED_CONFIGURATION_ERROR | Configuration error on the used app store.
+105 | RESULT_FAILED_REQUEST_ERROR | Credential missing for used app store. Ensure Facebook or Stream credential is correct.
+
+</details>
+
 
 ## Method Parameters
 Parameter | Description

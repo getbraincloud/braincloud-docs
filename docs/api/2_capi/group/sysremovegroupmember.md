@@ -3,11 +3,6 @@
 Remove a member from the group, bypassing group ownership/ACL checks.
 
 
-### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40455 | APP_ERROR | Cannot delete group owner.
-
 <PartialServop service_name="group" operation_name="SYS_REMOVE_GROUP_MEMBER" / >
 
 ## Usage
@@ -107,6 +102,17 @@ if (postResult.status == 200) {
 }
 ```
 </details>
+
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40455 | APP_ERROR | Cannot delete group owner.
+
+</details>
+
 
 ## Method Parameters
 Parameter | Description

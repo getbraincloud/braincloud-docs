@@ -3,11 +3,6 @@
 Read a friend's user state. If the specified Id is not a friend of the current user, will get "Not friends" message (40310) back.
 
 
-### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40310 | NOT_FRIENDS  | The specified Id is not a friend of the current user
-
 <PartialServop service_name="friend" operation_name="READ_FRIEND_PLAYER_STATE" / >
 
 ## Usage
@@ -180,6 +175,17 @@ if (postResult.status == 200) {
 }
 ```
 </details>
+
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40310 | NOT_FRIENDS  | The specified Id is not a friend of the current user
+
+</details>
+
 
 ## Method Parameters
 Parameter | Description

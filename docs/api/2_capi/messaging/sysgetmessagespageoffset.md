@@ -5,11 +5,6 @@ Returns the next/prev page of messages.
 
 
 
-### Status Codes
-Code | Name | Description
------ | ----------------------- | -----------------------------------
-40601 | FEATURE_NOT_ENABLED | Messaging feature is not enabled for app.
-
 <PartialServop service_name="messaging" operation_name="SYS_GET_MESSAGES_PAGE_OFFSET" / >
 
 ## Usage
@@ -143,6 +138,17 @@ if (postResult.status == 200) {
 }
 ```
 </details>
+
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+Code | Name | Description
+----- | ----------------------- | -----------------------------------
+40601 | FEATURE_NOT_ENABLED | Messaging feature is not enabled for app.
+
+</details>
+
 
 ## Method Parameters
 Parameter | Description
