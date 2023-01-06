@@ -45,6 +45,7 @@ const config = {
   },
 
   plugins: [
+    "./src/plugins/intercom.js",
     [
       '@docusaurus/plugin-content-blog',
       {
