@@ -45,6 +45,7 @@ const config = {
   },
 
   plugins: [
+    require.resolve('docusaurus-lunr-search'),
     "./src/plugins/intercom.js",
     [
       '@docusaurus/plugin-content-blog',
