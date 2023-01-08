@@ -55,6 +55,7 @@ const config = {
         path: './release',
         blogSidebarTitle: 'All posts',
         blogSidebarCount: 'ALL',
+        // editUrl: 'https://github.com/getbraincloud/braincloud-apiref/tree/main/',
       },
     ],
   ],
@@ -67,8 +68,7 @@ const config = {
         docs: {
           routeBasePath: '/', // Serve the docs at the site's root
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl:
-            'https://github.com/getbraincloud/braincloud-apiref/tree/main/',
+          // editUrl: 'https://github.com/getbraincloud/braincloud-apiref/tree/main/',
           versions: {
             current: {
               label: '4.13.0',
@@ -83,8 +83,7 @@ const config = {
         },
         blog: {
           showReadingTime: true,
-          editUrl:
-            'https://github.com/getbraincloud/braincloud-apiref/tree/main/',
+          // editUrl: 'https://github.com/getbraincloud/braincloud-apiref/tree/main/',
           feedOptions: {
             type: 'all',
             copyright: `Copyright © ${new Date().getFullYear()} bitHeads, Inc.`,
@@ -219,7 +218,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/getbraincloud/braincloud-apiref/',
+                href: 'https://github.com/getbraincloud/',
               },
             ],
           },
