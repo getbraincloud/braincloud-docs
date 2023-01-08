@@ -98,15 +98,40 @@ const config = {
     ],
   ],
 
+  themes: ['docusaurus-theme-search-typesense'],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      algolia: {
-        appId: 'ZPF1VHGGT0',
-        apiKey: 'e2b081523fe2ceb57ab46545aca7b530',
-        indexName: 'braincloud_tmp',
+      typesense: {
+        typesenseCollectionName: 'braincloud_1673113845', // typesense cloud
+        // typesenseCollectionName: 'braincloud_1673115062', // typesense local
+        typesenseServerConfig: {
+          nodes: [
+            {
+              host: '8zu5ies4pvo0jgyxp-1.a1.typesense.net',
+              port: 443,
+              protocol: 'https',
+            },
+            // {
+            //   host: '192.168.0.16',
+            //   port: 8108,
+            //   protocol: 'http',
+            // },
+          ],
+          apiKey: 'S49eI5xsoyfcxrVIW35LocFYE5LrxZtP',
+          // apiKey: 'xyz',
+        },
+        // Optional: Typesense search parameters: https://typesense.org/docs/0.21.0/api/search.md#search-parameters
+        typesenseSearchParameters: {},
+        // Optional
         contextualSearch: true,
       },
+      // algolia: {
+      //   appId: 'ZPF1VHGGT0',
+      //   apiKey: 'e2b081523fe2ceb57ab46545aca7b530',
+      //   indexName: 'braincloud_tmp',
+      //   contextualSearch: true,
+      // },
       docs: {
         sidebar: {
           hideable: true,
