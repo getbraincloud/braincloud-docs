@@ -229,7 +229,7 @@ const config = {
               // },
               {
                 label: 'Blog RSS',
-                href: 'https://brainclouddocs-feature.netlify.app/blog/rss.xml',
+                href: 'https://brainclouddocs-lunar.netlify.app/blog/rss.xml',
               },
             ],
           },
