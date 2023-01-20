@@ -50,6 +50,7 @@ const config = {
       '@docusaurus/plugin-content-blog',
       {
         id: 'release',
+        // editUrl: 'https://github.com/getbraincloud/braincloud-apiref/tree/develop/',
         routeBasePath: 'release',
         path: './release',
         blogSidebarTitle: 'All posts',
@@ -66,8 +67,7 @@ const config = {
         docs: {
           routeBasePath: '/', // Serve the docs at the site's root
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl:
-            'https://github.com/getbraincloud/braincloud-apiref/tree/main/',
+          // editUrl: 'https://github.com/getbraincloud/braincloud-apiref/tree/develop/',
           versions: {
             current: {
               label: '4.13.0',
@@ -82,8 +82,7 @@ const config = {
         },
         blog: {
           showReadingTime: true,
-          editUrl:
-            'https://github.com/getbraincloud/braincloud-apiref/tree/main/',
+          // editUrl: 'https://github.com/getbraincloud/braincloud-apiref/tree/develop/',
           feedOptions: {
             type: 'all',
             copyright: `Copyright © ${new Date().getFullYear()} bitHeads, Inc.`,
@@ -104,7 +103,8 @@ const config = {
     ({
       typesense: {
         typesenseCollectionName: 'braincloud_1673113845', // typesense cloud
-        // typesenseCollectionName: 'braincloud_1673115062', // typesense local
+        // typesenseCollectionName: 'braincloud_1673465514', // typesense local
+        // typesenseCollectionName: 'braincloud_1673456235', // typesense local docker
         typesenseServerConfig: {
           nodes: [
             {
@@ -114,6 +114,12 @@ const config = {
             },
             // {
             //   host: '192.168.0.16',
+            //   port: 8108,
+            //   protocol: 'http',
+            // },
+            // {
+            //   // local host by brew services or docker both are the same, can use host '192.168.0.16', '127.0.0.1' or 'localhost'
+            //   host: 'localhost',
             //   port: 8108,
             //   protocol: 'http',
             // },
@@ -218,7 +224,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/getbraincloud/braincloud-apiref/',
+                href: 'https://github.com/getbraincloud/',
               },
             ],
           },
