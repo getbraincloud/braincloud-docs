@@ -1,7 +1,7 @@
 pipeline {
     agent { 
         node {
-            label 'linux_35'
+            label 'linux_51'
             }
       }
     triggers {
