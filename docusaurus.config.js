@@ -33,7 +33,7 @@ const config = {
   // url: 'https://brainclouddocs.netlify.app',
   // baseUrl: '/', // for netlify
   url: 'https://apiref-working-public.s3.us-west-2.amazonaws.com/',
-  baseUrl: '/apiref-dev/index.html/', // for s3 bucket
+  baseUrl: '/apiref-dev/', // for s3 bucket
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
