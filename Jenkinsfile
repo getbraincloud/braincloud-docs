@@ -24,7 +24,8 @@ pipeline {
             steps {
                 echo "Testing.."
                 sh '''
-                rm bcdoc-*.zip
+                touch bcdoc-test.txt
+                rm bcdoc-*.*
                 '''
             }
         }
