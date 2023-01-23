@@ -5,13 +5,16 @@ pipeline {
             }
       }
     triggers {
-        pollSCM 'H * * * *'
+        pollSCM '* * * * *'
     }
     stages {
         stage('Build') {
             steps {
                 echo "Building.."
                 sh '''
+                export NVM_DIR="$HOME/.nvm"
+                [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+                [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
                 npm install
                 npm run build
                 '''
@@ -21,7 +24,7 @@ pipeline {
             steps {
                 echo "Testing.."
                 sh '''
-                npm run serve
+                rm bcdoc-*.zip
                 '''
             }
         }
