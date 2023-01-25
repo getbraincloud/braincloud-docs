@@ -198,6 +198,10 @@ const config = {
                 label: 'API',
                 to: '/api/introduction',
               },
+              {
+                label: 'Knowledge Base',
+                href: 'https://help.getbraincloud.com/',
+              },
             ],
           },
           {
@@ -221,12 +225,19 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
+                label: 'Forums',
+                href: 'https://forums.getbraincloud.com/',
               },
               {
                 label: 'GitHub',
                 href: 'https://github.com/getbraincloud/',
+              },
+              // {
+              //   html: `<a href="https://brainclouddocs.netlify.app/blog/rss.xml"><img src="img/Generic_Feed-icon.png" width="30" height="30" /></a>`,
+              // },
+              {
+                label: 'Blog RSS',
+                href: 'http://bcapidocs-dev.s3-website-us-east-1.amazonaws.com/blog/rss.xml',
               },
             ],
           },
