@@ -32,8 +32,8 @@ const config = {
   // baseUrl: '/braincloud-apiref/', // for github page must attach a repository name after url
   // url: 'https://brainclouddocs.netlify.app',
   // baseUrl: '/', // for netlify
-  url: 'https://apiref-working-public.s3.us-west-2.amazonaws.com/',
-  baseUrl: '/apiref-dev/', // for s3 bucket
+  url: 'http://bcapidocs-dev.s3-website-us-east-1.amazonaws.com/',
+  baseUrl: '/', // for s3 bucket
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
