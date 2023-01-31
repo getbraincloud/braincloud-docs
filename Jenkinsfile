@@ -12,9 +12,9 @@ pipeline {
             steps {
                 echo "Building.."
                 sh '''
-                export NVM_DIR="$HOME/.nvm"
-                [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-                [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
+                curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+                unzip awscliv2.zip
+                sudo ./aws/install
                 npm install
                 npm run build
                 '''
