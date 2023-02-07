@@ -104,16 +104,17 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       typesense: {
-        typesenseCollectionName: 'braincloud_1673113845', // typesense cloud
+        // typesenseCollectionName: 'braincloud_1673113845', // typesense cloud
         // typesenseCollectionName: 'braincloud_1673465514', // typesense local
         // typesenseCollectionName: 'braincloud_1673456235', // typesense local docker
+        typesenseCollectionName: 'braincloud_1675803005', // typesense linode docker
         typesenseServerConfig: {
           nodes: [
-            {
-              host: '8zu5ies4pvo0jgyxp-1.a1.typesense.net',
-              port: 443,
-              protocol: 'https',
-            },
+            // {
+            //   host: '8zu5ies4pvo0jgyxp-1.a1.typesense.net',
+            //   port: 443,
+            //   protocol: 'https',
+            // },
             // {
             //   host: '192.168.0.16',
             //   port: 8108,
@@ -125,9 +126,14 @@ const config = {
             //   port: 8108,
             //   protocol: 'http',
             // },
+            {
+              host: '170.187.183.18', //hosted docker on linode
+              port: 8108,
+              protocol: 'http',
+            },
           ],
-          apiKey: 'S49eI5xsoyfcxrVIW35LocFYE5LrxZtP',
-          // apiKey: 'xyz',
+          // apiKey: 'S49eI5xsoyfcxrVIW35LocFYE5LrxZtP',
+          apiKey: 'xyz',
         },
         // Optional: Typesense search parameters: https://typesense.org/docs/0.21.0/api/search.md#search-parameters
         typesenseSearchParameters: {},

@@ -1,10 +1,10 @@
 {
     "index_name": "braincloud",
     "start_urls": [
-      "https://brainclouddocs.netlify.app/"
+      "http://bcapidocs-dev.s3-website-us-east-1.amazonaws.com/"
     ],
     "sitemap_urls": [
-      "https://brainclouddocs.netlify.app/sitemap.xml"
+      "http://bcapidocs-dev.s3-website-us-east-1.amazonaws.com/sitemap.xml"
     ],
     "sitemap_alternate_links": true,
     "stop_urls": [
