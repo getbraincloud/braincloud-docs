@@ -63,8 +63,8 @@ Set the password associated with the universal id of the given profile.
 var userProxy = bridge.getUserServiceProxy();
 
 var postResult = userProxy.sysSetPasswordUniversalId(
-  "aaa-bbb-ccc-ddd",        // profileId
-  "password": "a-password"  // new password
+  "aaa-bbb-ccc-ddd",  // profileId
+  "a-password"  // new password
 );
 
 if (postResult.status == 200) {

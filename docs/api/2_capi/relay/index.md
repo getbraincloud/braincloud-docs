@@ -22,7 +22,7 @@ A client that wishes to talk to the relay server is required to follow the brain
 
 All the integer values in the following tables are unsigned and in network byte order (Big Endian).
 
-![Relay-Server Packets](@site/docs/img/api-img/packets_4_5_6.png)
+![Relay-Server Packets](@site/docs/img/api-img/packets_4_14_0.png)
 
 #### Ping
 
@@ -51,6 +51,10 @@ The relay server will sometimes communicate important system messages to the cli
 #### Owner migration
 
 If the owner left or never connected in a timely manner, the relay-server will migrate the role to the next member with the best ping. If no one else is currently connected yet, it will be transferred to the next member in the lobby members' list. This last scenario can only occur if the owner connected first, then quickly disconnected. Leaving only unconnected lobby members.
+
+#### End Match
+
+Normal procedure for match termination is to wait for all the participants to disconnect before terminating the instance. This is insufficient however in the case of long-lived lobbies because when a client disconnects from an instance associated with a long-running lobby we send a notification to the brainCloud API servers that said client has prematurely left and the API servers will remove them from any lobbies they are currently a member of. This is not ideal for a long-lived lobby since the clients are meant to stay in it even after the relay server instance has terminated. For this scenario, in release 4.14.0 we have introduced a new END_MATCH message that the instance owner can use to signal that the match is over and can be safely terminated leaving all the clients joined to the lobby instance.
 
 #### UDP Reliables
 
