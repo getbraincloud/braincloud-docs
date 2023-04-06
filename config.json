@@ -1,5 +1,5 @@
 {
-    "index_name": "braincloud",
+    "index_name": "bcdocs",
     "start_urls": [
       "http://bcapidocs-dev.s3-website-us-east-1.amazonaws.com/"
     ],

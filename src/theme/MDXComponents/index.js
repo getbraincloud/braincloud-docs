@@ -16,6 +16,7 @@ import TabItem from '@theme/TabItem';
 import PartialServop from '@site/docs/api/_partial/_servop.md';
 import DocCardList from '@theme/DocCardList';
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 const MDXComponents = {
   head: MDXHead,
   code: MDXCode,

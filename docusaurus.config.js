@@ -99,53 +99,59 @@ const config = {
     ],
   ],
 
-  themes: ['docusaurus-theme-search-typesense'],
+  // themes: ['docusaurus-theme-search-typesense'],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      typesense: {
-        // typesenseCollectionName: 'braincloud_1673113845', // typesense cloud
-        // typesenseCollectionName: 'braincloud_1673465514', // typesense local
-        // typesenseCollectionName: 'braincloud_1673456235', // typesense local docker
-        typesenseCollectionName: 'braincloud_1675803005', // typesense linode docker
-        typesenseServerConfig: {
-          nodes: [
-            // {
-            //   host: '8zu5ies4pvo0jgyxp-1.a1.typesense.net',
-            //   port: 443,
-            //   protocol: 'https',
-            // },
-            // {
-            //   host: '192.168.0.16',
-            //   port: 8108,
-            //   protocol: 'http',
-            // },
-            // {
-            //   // local host by brew services or docker both are the same, can use host '192.168.0.16', '127.0.0.1' or 'localhost'
-            //   host: 'localhost',
-            //   port: 8108,
-            //   protocol: 'http',
-            // },
-            {
-              host: '170.187.183.18', //hosted docker on linode
-              port: 8108,
-              protocol: 'http',
-            },
-          ],
-          // apiKey: 'S49eI5xsoyfcxrVIW35LocFYE5LrxZtP',
-          apiKey: 'xyz',
-        },
-        // Optional: Typesense search parameters: https://typesense.org/docs/0.21.0/api/search.md#search-parameters
-        typesenseSearchParameters: {},
-        // Optional
-        contextualSearch: true,
-      },
+      // typesense: {
+      //   // typesenseCollectionName: 'braincloud_1673113845', // typesense cloud
+      //   // typesenseCollectionName: 'braincloud_1673465514', // typesense local
+      //   // typesenseCollectionName: 'braincloud_1673456235', // typesense local docker
+      //   typesenseCollectionName: 'braincloud_1675803005', // typesense linode docker
+      //   typesenseServerConfig: {
+      //     nodes: [
+      //       // {
+      //       //   host: '8zu5ies4pvo0jgyxp-1.a1.typesense.net',
+      //       //   port: 443,
+      //       //   protocol: 'https',
+      //       // },
+      //       // {
+      //       //   host: '192.168.0.16',
+      //       //   port: 8108,
+      //       //   protocol: 'http',
+      //       // },
+      //       // {
+      //       //   // local host by brew services or docker both are the same, can use host '192.168.0.16', '127.0.0.1' or 'localhost'
+      //       //   host: 'localhost',
+      //       //   port: 8108,
+      //       //   protocol: 'http',
+      //       // },
+      //       {
+      //         host: '170.187.183.18', //hosted docker on linode
+      //         port: 8108,
+      //         protocol: 'http',
+      //       },
+      //     ],
+      //     // apiKey: 'S49eI5xsoyfcxrVIW35LocFYE5LrxZtP',
+      //     apiKey: 'xyz',
+      //   },
+      //   // Optional: Typesense search parameters: https://typesense.org/docs/0.21.0/api/search.md#search-parameters
+      //   typesenseSearchParameters: {},
+      //   // Optional
+      //   contextualSearch: true,
+      // },
       // algolia: {
       //   appId: 'ZPF1VHGGT0',
       //   apiKey: 'e2b081523fe2ceb57ab46545aca7b530',
       //   indexName: 'braincloud_tmp',
       //   contextualSearch: true,
       // },
+      algolia: {
+        appId: '5T9F73JFG3',
+        apiKey: '6ba3774d7b707e915f0acb12fbfae506',
+        indexName: 'bcdocs',
+        contextualSearch: true,
+      },
       docs: {
         sidebar: {
           hideable: true,
