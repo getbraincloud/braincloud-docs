@@ -4,7 +4,7 @@ Retrieves profile information for the specified external auth user.
 
 Does not require the calling user to be a friend of the other user.
 
-<PartialServop service_name="friend" operation_name="GET_PROFILE_INFO_FOR_EXTERNAL_AUTH_ID" / >
+<PartialServop service_name="friend" operation_name="GET_PROFILE_INFO_FOR_EXTERNAL_AUTH_ID" />
 
 ## Usage
 

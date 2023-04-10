@@ -2,7 +2,7 @@
 ## Overview
 Method returns all of the global statistics.
 
-<PartialServop service_name="globalGameStatistics" operation_name="READ" / >
+<PartialServop service_name="globalGameStatistics" operation_name="READ" />
 
 ## Usage
 

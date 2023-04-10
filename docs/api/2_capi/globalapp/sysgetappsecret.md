@@ -2,7 +2,7 @@
 ## Overview
 Retrieves app secret.
 
-<PartialServop service_name="globalApp" operation_name="SYS_GET_APP_SECRET" / >
+<PartialServop service_name="globalApp" operation_name="SYS_GET_APP_SECRET" />
 
 ## Usage
 

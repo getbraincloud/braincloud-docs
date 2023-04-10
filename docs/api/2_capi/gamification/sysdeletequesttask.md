@@ -2,7 +2,7 @@
 ## Overview
 Deletes an embedded task in the specified quest. The id of the deleted task will be returned in the `data.deletedTask` field of the JSON result.
 
-<PartialServop service_name="gamification" operation_name="SYS_DELETE_QUEST_TASK" / >
+<PartialServop service_name="gamification" operation_name="SYS_DELETE_QUEST_TASK" />
 
 ## Usage
 

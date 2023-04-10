@@ -23,7 +23,7 @@ Context example:
 }
 ```
 
-<PartialServop service_name="entity" operation_name="GET_PAGE" / >
+<PartialServop service_name="entity" operation_name="GET_PAGE" />
 
 ## Usage
 

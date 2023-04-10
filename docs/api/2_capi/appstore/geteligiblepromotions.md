@@ -2,7 +2,7 @@
 ## Overview
 Get eligible promotions.
 
-<PartialServop service_name="appStore" operation_name="ELIGIBLE_PROMOTIONS" / >
+<PartialServop service_name="appStore" operation_name="ELIGIBLE_PROMOTIONS" />
 
 ## Usage
 

@@ -2,7 +2,7 @@
 ## Overview
 Update the acl settings for a group entity, enforcing ownership.
 
-<PartialServop service_name="group" operation_name="UPDATE_GROUP_ENTITY_ACL" / >
+<PartialServop service_name="group" operation_name="UPDATE_GROUP_ENTITY_ACL" />
 
 ## Usage
 

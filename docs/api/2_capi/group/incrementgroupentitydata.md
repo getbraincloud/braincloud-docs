@@ -2,7 +2,7 @@
 ## Overview
 Increment elements for a group entity's data field.
 
-<PartialServop service_name="group" operation_name="INCREMENT_GROUP_ENTITY_DATA" / >
+<PartialServop service_name="group" operation_name="INCREMENT_GROUP_ENTITY_DATA" />
 
 ## Usage
 

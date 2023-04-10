@@ -65,7 +65,7 @@ Example context object with `ownedOnly` option:
 In all cases, having proper custom indexes defined for your queries is essential for best performance. Developers are encouraged to contact support to have our team examine your entities and indexes before significant launches / feature releases. We are happy to help! 
 :::
 
-<PartialServop service_name="customEntity" operation_name="GET_ENTITY_PAGE" / >
+<PartialServop service_name="customEntity" operation_name="GET_ENTITY_PAGE" />
 
 ## Usage
 

@@ -2,7 +2,7 @@
 ## Overview
 Edit a player or group entry leaderboard configuration.
 
-<PartialServop service_name="leaderboard" operation_name="SYS_EDIT_LEADERBOARD" / >
+<PartialServop service_name="leaderboard" operation_name="SYS_EDIT_LEADERBOARD" />
 
 ## Usage
 

@@ -8,7 +8,7 @@ Run a cloud script in a parent app.
 Note that the data object will contain anything returned from the script
 :::
 
-<PartialServop service_name="script" operation_name="RUN_PARENT_SCRIPT" / >
+<PartialServop service_name="script" operation_name="RUN_PARENT_SCRIPT" />
 
 ## Usage
 

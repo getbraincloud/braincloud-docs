@@ -2,7 +2,7 @@
 ## Overview
 Stops the caller from receiving RTT presence updates. Does not affect the broadcasting of *their* presence updates to other listeners. Note that *Real-time Tech(RTT) updates* must be enabled in order for this API call to work (see Messaging > Presence in the portal).
 
-<PartialServop service_name="presence" operation_name="STOP_LISTENING" / >
+<PartialServop service_name="presence" operation_name="STOP_LISTENING" />
 
 ## Usage
 

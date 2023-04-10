@@ -2,7 +2,7 @@
 ## Overview
 Read the members of the group.
 
-<PartialServop service_name="group" operation_name="READ_MEMBERS_OF_GROUP" / >
+<PartialServop service_name="group" operation_name="READ_MEMBERS_OF_GROUP" />
 
 ## Usage
 

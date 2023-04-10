@@ -40,7 +40,7 @@ After retrieving a page of entities with this method use [getPageOffset](/api/ca
 
 See the [Generic Paged Queries](/api/appendix/genericpagedqueries) documentation for creating the context object.
 
-<PartialServop service_name="globalEntity" operation_name="GET_PAGE" / >
+<PartialServop service_name="globalEntity" operation_name="GET_PAGE" />
 
 ## Usage
 

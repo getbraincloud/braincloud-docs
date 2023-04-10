@@ -8,7 +8,7 @@ Update the user's contact email.
 Note this is unrelated to email authentication.
 :::
 
-<PartialServop service_name="playerState" operation_name="UPDATE_CONTACT_EMAIL" / >
+<PartialServop service_name="playerState" operation_name="UPDATE_CONTACT_EMAIL" />
 
 ## Usage
 

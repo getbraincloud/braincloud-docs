@@ -4,7 +4,7 @@ Method returns a view of global leaderboard results that centers on the current 
 
 See GetGlobalLeaderboardVersions method to retrieve the version ID.
 
-<PartialServop service_name="leaderboard" operation_name="GET_GLOBAL_LEADERBOARD_VIEW" / >
+<PartialServop service_name="leaderboard" operation_name="GET_GLOBAL_LEADERBOARD_VIEW" />
 
 ## Usage
 

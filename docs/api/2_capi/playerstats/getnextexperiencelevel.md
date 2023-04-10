@@ -2,7 +2,7 @@
 ## Overview
 Returns JSON representing the next experience level for the user.
 
-<PartialServop service_name="playerStatistics" operation_name="READ_NEXT_XPLEVEL" / >
+<PartialServop service_name="playerStatistics" operation_name="READ_NEXT_XPLEVEL" />
 
 ## Usage
 

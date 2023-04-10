@@ -4,7 +4,7 @@ Merge the profile associated with the provided Nintendo credentials with the cur
 
 
 
-<PartialServop service_name="identity" operation_name="MERGE" / >
+<PartialServop service_name="identity" operation_name="MERGE" />
 
 ## Usage
 

@@ -2,7 +2,7 @@
 ## Overview
 Confirm Facebook Purchase. On success, the player will be awarded the associated currencies.
 
-<PartialServop service_name="product" operation_name="FB_CONFIRM_PURCHASE" / >
+<PartialServop service_name="product" operation_name="FB_CONFIRM_PURCHASE" />
 
 ## Usage
 

@@ -2,7 +2,7 @@
 ## Overview
 List all user files
 
-<PartialServop service_name="file" operation_name="LIST_USER_FILES" / >
+<PartialServop service_name="file" operation_name="LIST_USER_FILES" />
 
 ## Usage
 

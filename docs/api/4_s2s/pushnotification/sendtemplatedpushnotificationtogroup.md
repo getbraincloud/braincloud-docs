@@ -10,7 +10,7 @@ Message could be `You have won a {2} for entering the {1} contest`.
 
 Substitutions parameter would be `{ "1" : "User Appreciation", "2", "User Appreciation Prize" }`
 
-<PartialServop service_name="pushNotification" operation_name="SEND_TEMPLATED_TO_GROUP" / >
+<PartialServop service_name="pushNotification" operation_name="SEND_TEMPLATED_TO_GROUP" />
 
 ## Usage
 

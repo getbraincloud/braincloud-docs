@@ -9,7 +9,7 @@ Returns a page of messages from the master repository of message content (i.e. i
 
 
 
-<PartialServop service_name="messaging" operation_name="SYS_GET_MESSAGES_PAGE" / >
+<PartialServop service_name="messaging" operation_name="SYS_GET_MESSAGES_PAGE" />
 
 ## Usage
 

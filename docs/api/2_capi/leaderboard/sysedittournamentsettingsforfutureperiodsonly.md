@@ -13,7 +13,7 @@ tTournament | Tournament settings changes for the in-progress leaderboard rotati
   | * 'tAutoClaim' -- Set to true to have users automatically claim tournament rewards on login.
 tPhases | Defines the phases (states), in minutes, within the start and end period times. The total time for the enabled phases cannot exceed the overall length of the period. The competition minutes are calculated and must be greater than 0. Configurable phases: 'enrolMins', 'disallowMins', 'bufferMins', 'announcementMins'.
 
-<PartialServop service_name="leaderboard" operation_name="SYS_EDIT_TOURNAMENT_SETTINGS_FOR_FUTURE_PERIODS_ONLY" / >
+<PartialServop service_name="leaderboard" operation_name="SYS_EDIT_TOURNAMENT_SETTINGS_FOR_FUTURE_PERIODS_ONLY" />
 
 ## Usage
 

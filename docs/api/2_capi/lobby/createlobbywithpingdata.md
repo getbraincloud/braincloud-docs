@@ -4,7 +4,7 @@ Creates an instance of a lobby.
 
 Use [PingRegions](/api/capi/lobby/pingregions) to generate the ping data.
 
-<PartialServop service_name="lobby" operation_name="CREATE_LOBBY_WITH_PING_DATA" / >
+<PartialServop service_name="lobby" operation_name="CREATE_LOBBY_WITH_PING_DATA" />
 
 ## Usage
 

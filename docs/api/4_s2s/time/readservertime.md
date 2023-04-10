@@ -2,7 +2,7 @@
 ## Overview
 Retrieve the server time in UTC.
 
-<PartialServop service_name="time" operation_name="READ" / >
+<PartialServop service_name="time" operation_name="READ" />
 
 ## Usage
 

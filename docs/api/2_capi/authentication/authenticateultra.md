@@ -2,7 +2,7 @@
 ## Overview
 Authenticate the user for Ultra.
 
-<PartialServop service_name="authenticationV2" operation_name="AUTHENTICATE" / >
+<PartialServop service_name="authenticationV2" operation_name="AUTHENTICATE" />
 
 ## Usage
 

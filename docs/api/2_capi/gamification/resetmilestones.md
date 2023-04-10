@@ -2,7 +2,7 @@
 ## Overview
 Resets the specified milestones' statuses.
 
-<PartialServop service_name="gamification" operation_name="RESET_MILESTONES" / >
+<PartialServop service_name="gamification" operation_name="RESET_MILESTONES" />
 
 ## Usage
 

@@ -2,7 +2,7 @@
 ## Overview
 Update a member of the group.
 
-<PartialServop service_name="group" operation_name="SYS_UPDATE_GROUP_MEMBER" / >
+<PartialServop service_name="group" operation_name="SYS_UPDATE_GROUP_MEMBER" />
 
 ## Usage
 

@@ -2,7 +2,7 @@
 ## Overview
 Schedules a raw push notification to a user at a future absolute time.
 
-<PartialServop service_name="pushNotification" operation_name="SCHEDULE_RAW_NOTIFICATION" / >
+<PartialServop service_name="pushNotification" operation_name="SCHEDULE_RAW_NOTIFICATION" />
 
 ## Usage
 

@@ -2,7 +2,7 @@
 ## Overview
 Advanced version of deleteEntity that bypasses the ACL check. Available from S2S sessions.
 
-<PartialServop service_name="customEntity" operation_name="SYS_DELETE_ENTITY" / >
+<PartialServop service_name="customEntity" operation_name="SYS_DELETE_ENTITY" />
 
 ## Usage
 

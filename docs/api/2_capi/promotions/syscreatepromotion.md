@@ -2,7 +2,7 @@
 ## Overview
 Creates a new promotion. The full promotion JSON (minus the promotionId) should be provided. The full promotion JSON, including the created promotionId, will be returned as a result (similar to SysReadPromotion()).
 
-<PartialServop service_name="promotions" operation_name="SYS_CREATE_PROMOTION" / >
+<PartialServop service_name="promotions" operation_name="SYS_CREATE_PROMOTION" />
 
 ## Usage
 

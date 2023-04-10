@@ -6,7 +6,7 @@ Some operations will return this summary data. For instance the social leaderboa
 
 The friend summary data can also be requested with the [<code>GetSummaryDataForProfileId</code>](/api/capi/friend/getsummarydataforprofileid) api call.
 
-<PartialServop service_name="playerState" operation_name="UPDATE_SUMMARY" / >
+<PartialServop service_name="playerState" operation_name="UPDATE_SUMMARY" />
 
 ## Usage
 

@@ -2,7 +2,7 @@
 ## Overview
 Lists the custom entity collections configured for the application.
 
-<PartialServop service_name="customEntity" operation_name="SYS_LIST_COLLECTIONS" / >
+<PartialServop service_name="customEntity" operation_name="SYS_LIST_COLLECTIONS" />
 
 ## Usage
 

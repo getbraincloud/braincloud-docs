@@ -2,7 +2,7 @@
 ## Overview
 Returns *description info* and *activity stats* for the specified channel. Note that `numMembers`, `numListeners` and `listeners` are only returned for non-global groups. 
 
-<PartialServop service_name="chat" operation_name="SYS_GET_CHANNEL_INFO" / >
+<PartialServop service_name="chat" operation_name="SYS_GET_CHANNEL_INFO" />
 
 ## Usage
 

@@ -2,7 +2,7 @@
 ## Overview
 Allows the current player (only) to update Summary data without having to submit a whole turn.
 
-<PartialServop service_name="asyncMatch" operation_name="UPDATE_SUMMARY" / >
+<PartialServop service_name="asyncMatch" operation_name="UPDATE_SUMMARY" />
 
 ## Usage
 

@@ -20,7 +20,7 @@
 
 Deletes the specified leaderboards from <%= data.branding.productName %> server.
 
-<PartialServop service_name="leaderboard" operation_name="DELETE_LEADERBOARDS" / >
+<PartialServop service_name="leaderboard" operation_name="DELETE_LEADERBOARDS" />
 
 ## Usage
 

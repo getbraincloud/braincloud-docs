@@ -2,7 +2,7 @@
 ## Overview
 Sends a text-only member chat message on behalf of the user. *This method provides convenience by simplifying message construction.* Returns the id of the message that was created.
 
-<PartialServop service_name="chat" operation_name="POST_CHAT_MESSAGE_SIMPLE" / >
+<PartialServop service_name="chat" operation_name="POST_CHAT_MESSAGE_SIMPLE" />
 
 ## Usage
 

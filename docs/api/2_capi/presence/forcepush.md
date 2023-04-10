@@ -2,7 +2,7 @@
 ## Overview
 Force an RTT presence update to all listeners of the caller. Note that *Real-time Tech(RTT) updates* must be enabled in order for this API call to work (see Messaging > Presence in the portal).
 
-<PartialServop service_name="presence" operation_name="FORCE_PUSH" / >
+<PartialServop service_name="presence" operation_name="FORCE_PUSH" />
 
 ## Usage
 

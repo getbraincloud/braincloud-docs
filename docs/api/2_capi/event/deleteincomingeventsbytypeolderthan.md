@@ -2,7 +2,7 @@
 ## Overview
 Delete any events of the given type older than the given date out of the user's incoming mailbox.
 
-<PartialServop service_name="event" operation_name="DELETE_INCOMING_EVENTS_BY_TYPE_OLDER_THAN" / >
+<PartialServop service_name="event" operation_name="DELETE_INCOMING_EVENTS_BY_TYPE_OLDER_THAN" />
 
 ## Usage
 

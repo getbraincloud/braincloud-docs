@@ -2,7 +2,7 @@
 ## Overview
 Revoke the specified catalog item on the server.
 
-<PartialServop service_name="itemCatalog" operation_name="SYS_REVOKE_CATALOG_ITEM" / >
+<PartialServop service_name="itemCatalog" operation_name="SYS_REVOKE_CATALOG_ITEM" />
 
 ## Usage
 

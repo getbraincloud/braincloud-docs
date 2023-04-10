@@ -4,7 +4,7 @@ Detach the universal identity from the current profile.
 
 
 
-<PartialServop service_name="identity" operation_name="DETACH" / >
+<PartialServop service_name="identity" operation_name="DETACH" />
 
 ## Usage
 

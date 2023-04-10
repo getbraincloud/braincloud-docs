@@ -4,7 +4,7 @@ Sends a message on behalf of the user. The content of the message can be anythin
 
 
 
-<PartialServop service_name="messaging" operation_name="SEND_MESSAGE" / >
+<PartialServop service_name="messaging" operation_name="SEND_MESSAGE" />
 
 ## Usage
 

@@ -2,7 +2,7 @@
 ## Overview
 Retrieves and transfers the gift item from the specified player, who must have previously called giveUserItemTo.
 
-<PartialServop service_name="userItems" operation_name="RECEIVE_USER_ITEM_FROM" / >
+<PartialServop service_name="userItems" operation_name="RECEIVE_USER_ITEM_FROM" />
 
 ## Usage
 

@@ -4,7 +4,7 @@ Detach the Twitter identity from this profile.
 
 
 
-<PartialServop service_name="identity" operation_name="DETACH" / >
+<PartialServop service_name="identity" operation_name="DETACH" />
 
 ## Usage
 

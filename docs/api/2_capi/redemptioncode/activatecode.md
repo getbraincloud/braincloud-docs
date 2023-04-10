@@ -3,7 +3,7 @@
 Activate a redemption code. Optional parameters: customCodeInfo.
 
 
-<PartialServop service_name="redemptionCode" operation_name="ACTIVATE_CODE" / >
+<PartialServop service_name="redemptionCode" operation_name="ACTIVATE_CODE" />
 
 ## Usage
 

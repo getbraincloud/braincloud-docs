@@ -6,7 +6,7 @@ This method is affected by versioning. See the [versioning documentation](/api/a
 
 
 
-<PartialServop service_name="entity" operation_name="DELETE" / >
+<PartialServop service_name="entity" operation_name="DELETE" />
 
 ## Usage
 

@@ -2,7 +2,7 @@
 ## Overview
 Gets the shield expiry for the given player id. Passing in a null player id will return the shield expiry for the current player. The value returned is the time in UTC millis when the shield will expire.
 
-<PartialServop service_name="matchMaking" operation_name="GET_SHIELD_EXPIRY" / >
+<PartialServop service_name="matchMaking" operation_name="GET_SHIELD_EXPIRY" />
 
 ## Usage
 

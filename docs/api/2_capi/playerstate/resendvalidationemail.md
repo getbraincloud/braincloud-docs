@@ -7,7 +7,7 @@ This method is available in Cloud Code scripts only.
 
 Resend validation email.
 
-<PartialServop service_name="playerState" operation_name="RESEND_VALIDATION_EMAIL" / >
+<PartialServop service_name="playerState" operation_name="RESEND_VALIDATION_EMAIL" />
 
 ## Usage
 

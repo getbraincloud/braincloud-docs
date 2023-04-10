@@ -2,7 +2,7 @@
 ## Overview
 Removes a user from the legacy list of flagged users.
 
-<PartialServop service_name="globalApp" operation_name="SYS_REMOVE_FROM_LEGACY_FLAGGED_USERS" / >
+<PartialServop service_name="globalApp" operation_name="SYS_REMOVE_FROM_LEGACY_FLAGGED_USERS" />
 
 ## Usage
 

@@ -6,7 +6,7 @@ If there are more results than the maximum requested, then maximum requested res
 
 Does not require the calling user to be a friend of the retrieved users.
 
-<PartialServop service_name="friend" operation_name="FIND_USERS_BY_EXACT_NAME" / >
+<PartialServop service_name="friend" operation_name="FIND_USERS_BY_EXACT_NAME" />
 
 ## Usage
 

@@ -38,14 +38,12 @@ The minimum versions that your app supports can be configured on the [Core App I
 
 If the client app is older than the minimum version specified, authenticate will return a result similar to:
 
-```
-{
+`{
     "status": 400,
     "reason_code": 40322,
     "upgradeAppId": "http://itunes.com/apps/myappname",
     "status_message": "Processing exception (message): App version 1.0.0 is obsolete."
-}
-```
+}`
 
 Recommended behavior of the client is to pop up a dialog inviting the user to upgrade the client, and then redirect them to the appropriate software update page.  Note that an upgrade URL may be data-filled with the minimum version # in the server portal.
 

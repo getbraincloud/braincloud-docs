@@ -2,7 +2,7 @@
 ## Overview
 Method reads an existing entity on the server. It must have public read access.
 
-<PartialServop service_name="globalEntity" operation_name="READ" / >
+<PartialServop service_name="globalEntity" operation_name="READ" />
 
 ## Usage
 

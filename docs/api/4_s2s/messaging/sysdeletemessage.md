@@ -2,7 +2,7 @@
 ## Overview
 Deletes specified system message on the server. Note, if a regular message, deletes all references to it.
 
-<PartialServop service_name="messaging" operation_name="SYS_DELETE_MESSAGE" / >
+<PartialServop service_name="messaging" operation_name="SYS_DELETE_MESSAGE" />
 
 ## Usage
 

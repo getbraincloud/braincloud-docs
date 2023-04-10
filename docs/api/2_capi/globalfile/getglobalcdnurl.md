@@ -8,7 +8,7 @@ This call is not required in the great majority of cases. Just use the regular f
 
 Returns the CDN URL for the specified file.
 
-<PartialServop service_name="globalFileV3" operation_name="GET_GLOBAL_CDN_URL" / >
+<PartialServop service_name="globalFileV3" operation_name="GET_GLOBAL_CDN_URL" />
 
 ## Usage
 

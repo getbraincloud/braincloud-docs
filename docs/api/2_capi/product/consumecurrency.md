@@ -25,7 +25,7 @@ Consume the passed-in amount of currency from the player.
 
 Note: Consuming 0 or negative currency will return an error. Use AwardCurrency to add currency values.
 
-<PartialServop service_name="product" operation_name="CONSUME_VC" / >
+<PartialServop service_name="product" operation_name="CONSUME_VC" />
 
 ## Usage
 

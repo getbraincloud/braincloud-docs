@@ -2,7 +2,7 @@
 ## Overview
 Similar to <code>[LeaveTournament](/api/capi/tournament/leavetournament)</code>, but for a division instance. The player's score will be removed, and the instance will no longer appear in the player's division list.
 
-<PartialServop service_name="tournament" operation_name="LEAVE_DIVISION_INSTANCE" / >
+<PartialServop service_name="tournament" operation_name="LEAVE_DIVISION_INSTANCE" />
 
 ## Usage
 

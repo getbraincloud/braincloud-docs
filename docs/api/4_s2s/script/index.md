@@ -17,9 +17,9 @@ This service allows you to execute cloud code scripts
 * [CancelScheduledScript](/api/s2s/script/cancelscheduledscript) - Cancels a previously scheduled script.
 * [GetScheduledCloudScripts](/api/s2s/script/getscheduledcloudscripts) - Retrieves scripts scheduled to run up to and including the specified start time (UTC in ms).
 * [GetRunningOrQueuedCloudScripts](/api/s2s/script/getrunningorqueuedcloudscripts) - Retrieves scripts are running up and queued by server.
-* [ScheduleRunScriptUTC](/api/capi/script/schedulerunscriptutc) - Schedules a script to run on the server at a later time in UTC format.
-* [ScheduleRunScriptUTCv2](/api/capi/script/schedulerunscriptutcv2) - Schedules a script to run on the server at a later time in UTC format.
-* [SysCancelScheduledScriptIfExists](/api/capi/script/syscancelscheduledscriptifexists) - Cancels a previously scheduled script, if it exists and is still in Scheduled state.
+* [ScheduleRunScriptUTC](/api/s2s/script/schedulerunscriptutc) - Schedules a script to run on the server at a later time in UTC format.
+* [ScheduleRunScriptUTCv2](/api/s2s/script/schedulerunscriptutcv2) - Schedules a script to run on the server at a later time in UTC format.
+* [SysCancelScheduledScriptIfExists](/api/capi/script/syscancelscheduledscriptffexists) - Cancels a previously scheduled script, if it exists and is still in Scheduled state.
 * [SysCancelUserScriptBatchIfExists](/api/capi/script/syscanceluserscriptbatchifexists) - Cancels a user script batch, if it exists and is in Scheduled, Queued or Running state.
 
 :::tip

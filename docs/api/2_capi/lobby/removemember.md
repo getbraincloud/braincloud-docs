@@ -5,7 +5,7 @@ Evicts the specified user from the specified lobby. The caller must be the owner
 
 
 
-<PartialServop service_name="lobby" operation_name="REMOVE_MEMBER" / >
+<PartialServop service_name="lobby" operation_name="REMOVE_MEMBER" />
 
 ## Usage
 

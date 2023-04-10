@@ -11,7 +11,7 @@ tPeriod | Required. Defines the UTC 'startingAt' time and the duration: 'duratio
 tTournament | Required. Must specify 'tConfigs' defining the tournament configuration code(s) ('tConfigCode') and tournament template version(s) ('activeUpUntil', set to -1 to pick up latest version of tournament template at time of rotation, or optionally set to a maximum fixed version) for the ADHOC period, as well as 'tAutoClaim' flag indicating whether users can automatically claim tournament rewards on login, and 'tAutoJoin' flag indicating whether users automatically join the tournament on posting score (must be free entry and only 1 tournament configured).
 tPhases | Required. Defines the phases, in minutes, within the start and end period times. The total time for the enabled phases cannot exceed the overall length of the period. The competition minutes are calculated and must be greater than 0. Configurable phases: 'enrolMins', 'disallowMins', 'minMins', 'bufferMins', 'announcementMins'; and, if ADHOC tournament in progress, tournament settings may include 'tPeriod' duration settings: 'durationDays', 'durationDays', 'durationDays', which may affect endingAt time and cannot overlap with any future ADHOC periods scheduled.
 
-<PartialServop service_name="leaderboard" operation_name="SYS_EDIT_ADHOC_TOURNAMENT_PERIOD" / >
+<PartialServop service_name="leaderboard" operation_name="SYS_EDIT_ADHOC_TOURNAMENT_PERIOD" />
 
 ## Usage
 

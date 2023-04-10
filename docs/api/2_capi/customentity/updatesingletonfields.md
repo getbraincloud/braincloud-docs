@@ -2,7 +2,7 @@
 ## Overview
 Partially updates the data, of the singleton owned by the user for the specified custom entity type, with the specified fields, on the server.
 
-<PartialServop service_name="customEntity" operation_name="UPDATE_SINGLETON_FIELDS" / >
+<PartialServop service_name="customEntity" operation_name="UPDATE_SINGLETON_FIELDS" />
 
 ## Usage
 

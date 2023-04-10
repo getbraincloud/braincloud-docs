@@ -2,7 +2,7 @@
 ## Overview
 Method returns all user entities that match the given type.
 
-<PartialServop service_name="entity" operation_name="READ_BY_TYPE" / >
+<PartialServop service_name="entity" operation_name="READ_BY_TYPE" />
 
 ## Usage
 

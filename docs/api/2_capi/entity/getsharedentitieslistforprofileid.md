@@ -10,7 +10,7 @@ Fields available for use in the 'where' clause are:
 
  Along with all custom data (using `data.`).  For more information on the query syntax see [here](/api/appendix/mongodbwherequeries).
 
-<PartialServop service_name="entity" operation_name="READ_SHARED_ENTITIES_LIST" / >
+<PartialServop service_name="entity" operation_name="READ_SHARED_ENTITIES_LIST" />
 
 ## Usage
 

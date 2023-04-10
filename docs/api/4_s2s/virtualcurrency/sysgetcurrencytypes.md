@@ -2,7 +2,7 @@
 ## Overview
 Retrieves the virtual currency types defined for the current app.
 
-<PartialServop service_name="virtualCurrency" operation_name="SYS_GET_CURRENCY_TYPES" / >
+<PartialServop service_name="virtualCurrency" operation_name="SYS_GET_CURRENCY_TYPES" />
 
 ## Usage
 

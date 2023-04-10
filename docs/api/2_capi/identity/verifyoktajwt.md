@@ -1,4 +1,4 @@
-# VerifyOktaJWT
+# VerifyOktaJwt
 ## Overview
 Used in an External Authentication script to validate an OKTA login. 
 
@@ -13,7 +13,7 @@ Usage:
 
 Constants like the Okta domain and audience are best stored as global properties in your app.
 
-<PartialServop service_name="identity" operation_name="VERIFY_OKTA_JWT" / >
+<PartialServop service_name="identity" operation_name="VERIFY_OKTA_JWT" />
 
 ## Usage
 

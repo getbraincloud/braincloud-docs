@@ -7,7 +7,7 @@ Consider using <strong>IncrementDataSharded()</strong> version of this method in
 
 Increments the specified fields by the specified amount within custom entity data on the server, enforcing ownership/ACL permissions.
 
-<PartialServop service_name="customEntity" operation_name="INCREMENT_DATA" / >
+<PartialServop service_name="customEntity" operation_name="INCREMENT_DATA" />
 
 ## Usage
 

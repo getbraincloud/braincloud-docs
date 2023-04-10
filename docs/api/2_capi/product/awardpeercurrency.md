@@ -2,7 +2,7 @@
 ## Overview
 Used to award Peer currency.
 
-<PartialServop service_name="product" operation_name="AWARD_PEER_VC" / >
+<PartialServop service_name="product" operation_name="AWARD_PEER_VC" />
 
 ## Usage
 

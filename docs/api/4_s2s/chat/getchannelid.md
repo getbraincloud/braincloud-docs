@@ -2,7 +2,7 @@
 ## Overview
 Retrieves a channel id given the specified lookup parameters.
 
-<PartialServop service_name="chat" operation_name="GET_CHANNEL_ID" / >
+<PartialServop service_name="chat" operation_name="GET_CHANNEL_ID" />
 
 ## Usage
 

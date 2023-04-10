@@ -2,7 +2,7 @@
 ## Overview
 Reset all of the statistics for this user back to their initial value.
 
-<PartialServop service_name="playerStatistics" operation_name="RESET" / >
+<PartialServop service_name="playerStatistics" operation_name="RESET" />
 
 ## Usage
 

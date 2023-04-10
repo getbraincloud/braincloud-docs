@@ -2,7 +2,7 @@
 ## Overview
 Read all the global properties of the app identified by the property names provided in parameter.
 
-<PartialServop service_name="globalApp" operation_name="READ_SELECTED_PROPERTIES" / >
+<PartialServop service_name="globalApp" operation_name="READ_SELECTED_PROPERTIES" />
 
 ## Usage
 

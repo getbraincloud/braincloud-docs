@@ -29,6 +29,7 @@ Returns the netId associated with a connection Id.
 ```
 
 ```cpp
+<%= data.branding.codePrefix %>->getRelayService()->getNetIdForCxId();
 ```
 
 ```mdx-code-block
@@ -37,6 +38,7 @@ Returns the netId associated with a connection Id.
 ```
 
 ```cpp
+<%= data.branding.codePrefix %>->getRelayService()->getNetIdForCxId();
 ```
 
 ```mdx-code-block
@@ -45,6 +47,7 @@ Returns the netId associated with a connection Id.
 ```
 
 ```cpp
+<%= data.branding.codePrefix %>->getRelayService()->getNetIdForCxId();
 ```
 
 ```mdx-code-block

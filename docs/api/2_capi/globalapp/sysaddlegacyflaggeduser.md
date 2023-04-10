@@ -2,7 +2,7 @@
 ## Overview
 Adds a user to the legacy list of flagged users.
 
-<PartialServop service_name="globalApp" operation_name="SYS_ADD_LEGACY_FLAGGED_USER" / >
+<PartialServop service_name="globalApp" operation_name="SYS_ADD_LEGACY_FLAGGED_USER" />
 
 ## Usage
 

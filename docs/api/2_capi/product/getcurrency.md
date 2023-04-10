@@ -2,7 +2,7 @@
 ## Overview
 Gets the player's currency for the given currency type **or** all currency types if null passed in.
 
-<PartialServop service_name="product" operation_name="GET_PLAYER_VC" / >
+<PartialServop service_name="product" operation_name="GET_PLAYER_VC" />
 
 ## Usage
 

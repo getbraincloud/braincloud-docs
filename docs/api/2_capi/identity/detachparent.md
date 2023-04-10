@@ -2,7 +2,7 @@
 ## Overview
 Detaches the parent identity from the current profile.
 
-<PartialServop service_name="identity" operation_name="DETACH_PARENT" / >
+<PartialServop service_name="identity" operation_name="DETACH_PARENT" />
 
 ## Usage
 

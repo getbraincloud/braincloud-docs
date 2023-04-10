@@ -2,7 +2,7 @@
 ## Overview
 Method returns list of global properties.
 
-<PartialServop service_name="globalApp" operation_name="READ_PROPERTIES" / >
+<PartialServop service_name="globalApp" operation_name="READ_PROPERTIES" />
 
 ## Usage
 

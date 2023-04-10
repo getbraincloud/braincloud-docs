@@ -32,7 +32,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 ```
 
 ```cpp
-<%= data.branding.codePrefix %>->getRelayService()->getCount(eRelayConnectionType.WEBSOCKET, server.host, port, server.passcode, server.lobbyId, this);
+<%= data.branding.codePrefix %>->getRelayService()->connect(eRelayConnectionType.WEBSOCKET, server.host, port, server.passcode, server.lobbyId, this);
 ```
 
 ```mdx-code-block
@@ -41,7 +41,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 ```
 
 ```cpp
-<%= data.branding.codePrefix %>->getRelayService()->getCount(eRelayConnectionType.WEBSOCKET, server.host, port, server.passcode, server.lobbyId, this);
+<%= data.branding.codePrefix %>->getRelayService()->connect(eRelayConnectionType.WEBSOCKET, server.host, port, server.passcode, server.lobbyId, this);
 ```
 
 ```mdx-code-block
@@ -50,7 +50,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 ```
 
 ```cpp
-<%= data.branding.codePrefix %>->getRelayService()->getCount(eRelayConnectionType.WEBSOCKET, server.host, port, server.passcode, server.lobbyId, this);
+<%= data.branding.codePrefix %>->getRelayService()->connect(eRelayConnectionType.WEBSOCKET, server.host, port, server.passcode, server.lobbyId, this);
 ```
 
 ```mdx-code-block
@@ -59,7 +59,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 ```
 
 ```cpp
-<%= data.branding.codePrefix %>->getRelayService()->getCount(eRelayConnectionType.WEBSOCKET, server.host, port, server.passcode, server.lobbyId, this);
+<%= data.branding.codePrefix %>->getRelayService()->connect(eRelayConnectionType.WEBSOCKET, server.host, port, server.passcode, server.lobbyId, this);
 ```
 
 ```mdx-code-block

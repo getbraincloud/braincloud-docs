@@ -24,7 +24,7 @@ Award user the passed-in amount of currency. Returns an object representing the 
 
 Note: Awarding 0 or negative currency will return an error. Use ConsumeCurrency to remove currency values.
 
-<PartialServop service_name="product" operation_name="AWARD_VC" / >
+<PartialServop service_name="product" operation_name="AWARD_VC" />
 
 ## Usage
 

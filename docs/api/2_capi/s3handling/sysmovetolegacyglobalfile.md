@@ -2,7 +2,7 @@
 ## Overview
 Copies the specified User File to the *legacy* Global File system.
 
-<PartialServop service_name="globalFile" operation_name="SYS_MOVE_TO_LEGACY_GLOBAL_FILE" / >
+<PartialServop service_name="globalFile" operation_name="SYS_MOVE_TO_LEGACY_GLOBAL_FILE" />
 
 ## Usage
 

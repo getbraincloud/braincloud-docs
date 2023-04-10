@@ -2,7 +2,7 @@
 ## Overview
 Send the given data to all members of the given lobby.
 
-<PartialServop service_name="lobby" operation_name="SYS_SEND_SIGNAL" / >
+<PartialServop service_name="lobby" operation_name="SYS_SEND_SIGNAL" />
 
 ## Usage
 

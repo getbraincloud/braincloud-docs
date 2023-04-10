@@ -2,7 +2,7 @@
 ## Overview
 Set whether a group is open (true) or closed (false).
 
-<PartialServop service_name="group" operation_name="SET_GROUP_OPEN" / >
+<PartialServop service_name="group" operation_name="SET_GROUP_OPEN" />
 
 ## Usage
 

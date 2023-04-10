@@ -4,7 +4,7 @@ Updates a *System Entity*, regardless of the ACL permissions of the object. This
 
 This method is affected by versioning. See the [versioning documentation](/api/appendix/version) for more information.
 
-<PartialServop service_name="globalEntity" operation_name="UPDATE" / >
+<PartialServop service_name="globalEntity" operation_name="UPDATE" />
 
 ## Usage
 

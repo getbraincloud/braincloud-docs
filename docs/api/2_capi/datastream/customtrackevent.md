@@ -2,7 +2,7 @@
 ## Overview
 Creates custom data stream track event
 
-<PartialServop service_name="dataStream" operation_name="CUSTOM_TRACK_EVENT" / >
+<PartialServop service_name="dataStream" operation_name="CUSTOM_TRACK_EVENT" />
 
 ## Usage
 

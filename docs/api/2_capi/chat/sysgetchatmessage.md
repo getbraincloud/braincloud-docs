@@ -8,7 +8,7 @@ Retrieves a chat message object from history. If the message cannot be found, th
 
 
 
-<PartialServop service_name="chat" operation_name="SYS_GET_CHAT_MESSAGE" / >
+<PartialServop service_name="chat" operation_name="SYS_GET_CHAT_MESSAGE" />
 
 ## Usage
 

@@ -2,7 +2,7 @@
 ## Overview
 Gets a map keyed by rating of the visible lobby instances matching the given type and rating range.
 
-<PartialServop service_name="lobby" operation_name="GET_LOBBY_INSTANCES" / >
+<PartialServop service_name="lobby" operation_name="GET_LOBBY_INSTANCES" />
 
 ## Usage
 

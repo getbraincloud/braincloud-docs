@@ -15,7 +15,7 @@ Leaderboards entries contain the player's score and optionally, some user-define
 This method allows the client to retrieve pages from within the global leaderboard list
 :::
 
-<PartialServop service_name="leaderboard" operation_name="GET_GLOBAL_LEADERBOARD_PAGE" / >
+<PartialServop service_name="leaderboard" operation_name="GET_GLOBAL_LEADERBOARD_PAGE" />
 
 ## Usage
 

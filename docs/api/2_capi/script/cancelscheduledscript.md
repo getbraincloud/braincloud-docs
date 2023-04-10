@@ -2,7 +2,7 @@
 ## Overview
 Cancels a scheduled script
 
-<PartialServop service_name="script" operation_name="CANCEL_SCHEDULED_SCRIPT" / >
+<PartialServop service_name="script" operation_name="CANCEL_SCHEDULED_SCRIPT" />
 
 ## Usage
 

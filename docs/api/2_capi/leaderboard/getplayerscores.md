@@ -2,7 +2,7 @@
 ## Overview
 Retrieves up to maxResults scores data for user for arcade-style leaderboard.
 
-<PartialServop service_name="leaderboard" operation_name="GET_PLAYER_SCORES" / >
+<PartialServop service_name="leaderboard" operation_name="GET_PLAYER_SCORES" />
 
 ## Usage
 

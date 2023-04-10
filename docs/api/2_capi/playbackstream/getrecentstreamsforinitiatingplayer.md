@@ -2,7 +2,7 @@
 ## Overview
 Gets recent streams for initiating player.
 
-<PartialServop service_name="playbackStream" operation_name="GET_RECENT_STREAMS_FOR_INITIATING_PLAYER" / >
+<PartialServop service_name="playbackStream" operation_name="GET_RECENT_STREAMS_FOR_INITIATING_PLAYER" />
 
 ## Usage
 

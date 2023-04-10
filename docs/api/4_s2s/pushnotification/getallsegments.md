@@ -12,7 +12,7 @@ name | Readable name of the segmentId
 testersOnly | If segement only applies to end-users flagged as testersOnly
 description | Readable description of the segment
 
-<PartialServop service_name="pushNotification" operation_name="GET_ALL_SEGMENTS" / >
+<PartialServop service_name="pushNotification" operation_name="GET_ALL_SEGMENTS" />
 
 ## Usage
 

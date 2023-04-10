@@ -2,7 +2,7 @@
 ## Overview
 Update a group's name.
 
-<PartialServop service_name="group" operation_name="UPDATE_GROUP_NAME" / >
+<PartialServop service_name="group" operation_name="UPDATE_GROUP_NAME" />
 
 ## Usage
 

@@ -4,7 +4,7 @@ Returns a list of the channels of the specified type that the user has access to
 
 
 
-<PartialServop service_name="chat" operation_name="GET_SUBSCRIBED_CHANNELS" / >
+<PartialServop service_name="chat" operation_name="GET_SUBSCRIBED_CHANNELS" />
 
 ## Usage
 

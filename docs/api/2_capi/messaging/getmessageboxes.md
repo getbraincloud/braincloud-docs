@@ -6,7 +6,7 @@ Returns the list of messageboxes for this user. <%= data.branding.productName %>
 
 None.
 
-<PartialServop service_name="messaging" operation_name="GET_MESSAGE_BOXES" / >
+<PartialServop service_name="messaging" operation_name="GET_MESSAGE_BOXES" />
 
 ## Usage
 

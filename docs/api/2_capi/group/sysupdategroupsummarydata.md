@@ -2,7 +2,7 @@
 ## Overview
 Update a group's summary data, bypassing ownership/ACL checks.
 
-<PartialServop service_name="group" operation_name="SYS_UPDATE_GROUP_SUMMARY_DATA" / >
+<PartialServop service_name="group" operation_name="SYS_UPDATE_GROUP_SUMMARY_DATA" />
 
 ## Usage
 

@@ -7,7 +7,7 @@ Marks the given match as abandoned and sets the matchState to EXPIRED.
 Only a match whose current status is NOT_STARTED, PENDING or EXPIRED can be abandoned (status set to EXPIRED)
 :::
 
-<PartialServop service_name="asyncMatch" operation_name="ABANDON_MATCH_WITH_SUMMARY_DATA" / >
+<PartialServop service_name="asyncMatch" operation_name="ABANDON_MATCH_WITH_SUMMARY_DATA" />
 
 ## Usage
 

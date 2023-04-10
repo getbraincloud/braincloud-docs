@@ -2,7 +2,7 @@
 ## Overview
 Returns a list of all child profiles in child Apps.
 
-<PartialServop service_name="identity" operation_name="GET_CHILD_PROFILES" / >
+<PartialServop service_name="identity" operation_name="GET_CHILD_PROFILES" />
 
 ## Usage
 

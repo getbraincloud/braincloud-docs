@@ -2,7 +2,7 @@
 ## Overview
 Updates (replaces) a price for the given product item.
 
-<PartialServop service_name="productManagement" operation_name="SYS_UPDATE_PRODUCT_PRICE" / >
+<PartialServop service_name="productManagement" operation_name="SYS_UPDATE_PRODUCT_PRICE" />
 
 ## Usage
 

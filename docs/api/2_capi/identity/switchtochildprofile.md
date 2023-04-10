@@ -2,7 +2,7 @@
 ## Overview
 Switch to a Child Profile
 
-<PartialServop service_name="identity" operation_name="SWITCH_TO_CHILD_PROFILE" / >
+<PartialServop service_name="identity" operation_name="SWITCH_TO_CHILD_PROFILE" />
 
 ## Usage
 

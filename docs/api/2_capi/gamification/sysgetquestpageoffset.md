@@ -54,7 +54,7 @@ Retrieves the next/prev page of quests.
 
 See the [Generic Paged Queries](/api/appendix/genericpagedqueries) documentation for creating the context object.
 
-<PartialServop service_name="gamification" operation_name="SYS_GET_QUEST_PAGE_OFFSET" / >
+<PartialServop service_name="gamification" operation_name="SYS_GET_QUEST_PAGE_OFFSET" />
 
 ## Usage
 

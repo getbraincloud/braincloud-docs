@@ -17,7 +17,7 @@ Name | Description
 --------- | -----------
 notificationJobs | Number of notification jobs/time zones targeted
 
-<PartialServop service_name="pushNotification" operation_name="SCHEDULE_RICH_NOTIFICATIONS" / >
+<PartialServop service_name="pushNotification" operation_name="SCHEDULE_RICH_NOTIFICATIONS" />
 
 ## Usage
 

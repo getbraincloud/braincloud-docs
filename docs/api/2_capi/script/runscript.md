@@ -12,7 +12,7 @@ Pro-tip: If a script path is not specified in scriptName field, it will default 
 :::
 
 
-<PartialServop service_name="script" operation_name="RUN" / >
+<PartialServop service_name="script" operation_name="RUN" />
 
 ## Usage
 

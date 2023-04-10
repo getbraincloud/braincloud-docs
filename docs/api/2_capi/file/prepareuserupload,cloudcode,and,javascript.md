@@ -4,7 +4,7 @@ Prepares a user file upload. On success an uploadId will be returned which can b
 
 
 
-<PartialServop service_name="file" operation_name="PREPARE_USER_UPLOAD" / >
+<PartialServop service_name="file" operation_name="PREPARE_USER_UPLOAD" />
 
 ## Usage
 

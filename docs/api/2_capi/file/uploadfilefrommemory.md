@@ -11,7 +11,7 @@ This method allows uploads to happen in situations where local file access is no
 UploadFileFromMemory currently only works in Unity WebGL and javaScript HTML interface.
 :::
 
-<PartialServop service_name="file" operation_name="PREPARE_USER_UPLOAD" / >
+<PartialServop service_name="file" operation_name="PREPARE_USER_UPLOAD" />
 
 ## Usage
 

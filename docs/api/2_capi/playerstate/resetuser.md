@@ -9,7 +9,7 @@ Data which is not deleted includes:
 
 ResetUser is different from DeleteUser in that the user record will continue to exist after the reset (so the user does not need to re-authenticate).
 
-<PartialServop service_name="playerState" operation_name="GAME_DATA_RESET" / >
+<PartialServop service_name="playerState" operation_name="GAME_DATA_RESET" />
 
 ## Usage
 

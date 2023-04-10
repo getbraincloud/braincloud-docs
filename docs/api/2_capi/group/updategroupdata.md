@@ -9,7 +9,7 @@ This method is affected by versioning. See the [versioning documentation](/api/a
 There is a special index on a field called "indexedId" in the group data for effiicent group searching.
 :::
 
-<PartialServop service_name="group" operation_name="UPDATE_GROUP_DATA" / >
+<PartialServop service_name="group" operation_name="UPDATE_GROUP_DATA" />
 
 ## Usage
 

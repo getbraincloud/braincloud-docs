@@ -2,7 +2,7 @@
 ## Overview
 Remove a member from the group.
 
-<PartialServop service_name="group" operation_name="REMOVE_GROUP_MEMBER" / >
+<PartialServop service_name="group" operation_name="REMOVE_GROUP_MEMBER" />
 
 ## Usage
 

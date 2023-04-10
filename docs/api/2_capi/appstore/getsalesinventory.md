@@ -12,7 +12,7 @@ Valid platforms are:
 - googlePlay
 - amazon
 
-<PartialServop service_name="appStore" operation_name="GET_INVENTORY" / >
+<PartialServop service_name="appStore" operation_name="GET_INVENTORY" />
 
 ## Usage
 

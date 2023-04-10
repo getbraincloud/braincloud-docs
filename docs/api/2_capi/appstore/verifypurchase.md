@@ -80,7 +80,7 @@ The key values of the return to evaluate include:
 * `unprocessedCount` - the number of transactions that were rejected. See the `transactionStatus` code associated with the transaction for details.
 
 
-<PartialServop service_name="appStore" operation_name="VERIFY_PURCHASE" / >
+<PartialServop service_name="appStore" operation_name="VERIFY_PURCHASE" />
 
 ## Usage
 

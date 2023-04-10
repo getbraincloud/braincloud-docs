@@ -4,7 +4,7 @@ Updates the ready status and extra json for the given lobby member.
 
 
 
-<PartialServop service_name="lobby" operation_name="UPDATE_READY" / >
+<PartialServop service_name="lobby" operation_name="UPDATE_READY" />
 
 ## Usage
 

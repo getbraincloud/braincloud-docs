@@ -2,7 +2,7 @@
 ## Overview
 Returns the full configuration data of the specified promotion.
 
-<PartialServop service_name="promotions" operation_name="SYS_READ_PROMOTION" / >
+<PartialServop service_name="promotions" operation_name="SYS_READ_PROMOTION" />
 
 ## Usage
 

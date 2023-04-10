@@ -18,7 +18,7 @@ data | Optional parameter for data.
 tEnabled | Optional parameter to set whether tournaments are enabled (true) or not (false). Can only be true for recurring rotation types (not NEVER or ADHOC). Defaults to false.
 tTemplateOnly | Optional parameter to set whether leaderboard is a tournament template only (true) or not (false). Can only be true if tEnabled is true. Defaults to false.
 
-<PartialServop service_name="leaderboard" operation_name="SYS_CREATE_LEADERBOARD_CONFIG" / >
+<PartialServop service_name="leaderboard" operation_name="SYS_CREATE_LEADERBOARD_CONFIG" />
 
 ## Usage
 

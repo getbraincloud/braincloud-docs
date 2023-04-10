@@ -2,7 +2,7 @@
 ## Overview
 Detaches the blockchain identity to the current profile.
 
-<PartialServop service_name="identity" operation_name="DETACH_BLOCKCHAIN_IDENTITY" / >
+<PartialServop service_name="identity" operation_name="DETACH_BLOCKCHAIN_IDENTITY" />
 
 ## Usage
 

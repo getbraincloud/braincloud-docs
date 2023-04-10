@@ -18,7 +18,7 @@
 
 Get tournament configs associated with a leaderboard.
 
-<PartialServop service_name="tournament" operation_name="GET_TOURNAMENT_CONFIGS" / >
+<PartialServop service_name="tournament" operation_name="GET_TOURNAMENT_CONFIGS" />
 
 ## Usage
 

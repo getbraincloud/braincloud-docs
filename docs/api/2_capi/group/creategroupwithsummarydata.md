@@ -2,7 +2,7 @@
 ## Overview
 Create a group. Optional parameters: all except name and groupType.
 
-<PartialServop service_name="group" operation_name="CREATE_GROUP" / >
+<PartialServop service_name="group" operation_name="CREATE_GROUP" />
 
 ## Usage
 

@@ -2,7 +2,7 @@
 ## Overview
 Creates or updates the presence of \<profileId\>. \<visible\> is optional (defaults to true). \<activity\> is optional. \<expirySecs\> is optional (defaults to <%= data.branding.productName %> property \<presPxExpirySecs\>).
 
-<PartialServop service_name="presence" operation_name="SYS_INITIALIZE_PRESENCE" / >
+<PartialServop service_name="presence" operation_name="SYS_INITIALIZE_PRESENCE" />
 
 ## Usage
 

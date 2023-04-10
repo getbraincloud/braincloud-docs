@@ -2,7 +2,7 @@
 ## Overview
 Returns the monthly analytics counts for the current app for the specified month.
 
-<PartialServop service_name="globalApp" operation_name="SYS_GET_MONTHLY_COUNTS" / >
+<PartialServop service_name="globalApp" operation_name="SYS_GET_MONTHLY_COUNTS" />
 
 ## Usage
 

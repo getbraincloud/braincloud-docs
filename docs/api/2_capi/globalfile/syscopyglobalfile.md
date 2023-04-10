@@ -2,7 +2,7 @@
 ## Overview
 Makes a copy of the specified file.
 
-<PartialServop service_name="globalFileV3" operation_name="SYS_COPY_GLOBAL_FILE" / >
+<PartialServop service_name="globalFileV3" operation_name="SYS_COPY_GLOBAL_FILE" />
 
 ## Usage
 

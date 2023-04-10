@@ -2,7 +2,7 @@
 ## Overview
 Method returns quests with a status.
 
-<PartialServop service_name="gamification" operation_name="READ_QUESTS_WITH_STATUS" / >
+<PartialServop service_name="gamification" operation_name="READ_QUESTS_WITH_STATUS" />
 
 ## Usage
 

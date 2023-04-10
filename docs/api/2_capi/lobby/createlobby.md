@@ -9,7 +9,7 @@ Sends LOBBY_MEMBER_JOINED to all lobby members, with copy of member data
 
 
 
-<PartialServop service_name="lobby" operation_name="CREATE_LOBBY" / >
+<PartialServop service_name="lobby" operation_name="CREATE_LOBBY" />
 
 ## Usage
 

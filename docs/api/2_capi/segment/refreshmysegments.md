@@ -4,7 +4,7 @@ Refreshes the segments for the current user. Available via cloud-code only.
 
 *Note that segments are already automatically refreshed upon authentication – this method can be used to cause segments to refresh mid-session - for example, after completing a level.*
 
-<PartialServop service_name="segment" operation_name="REFRESH_MY_SEGMENTS" / >
+<PartialServop service_name="segment" operation_name="REFRESH_MY_SEGMENTS" />
 
 ## Usage
 

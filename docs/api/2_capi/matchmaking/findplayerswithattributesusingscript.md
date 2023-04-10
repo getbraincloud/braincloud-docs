@@ -6,11 +6,11 @@ to findPlayersUsingFilter.
 
 Similarly passing null for player rating will use the players current rating.
 
-Additional information of filters can be found under [Matchmaking Filters](/api/capi/matchmaking/#matchmaking-filters).
+Additional information of filters can be found under [Matchmaking Filters](/api/capi/matchmaking/matchmakingfilters).
 
 This call is cloud-code only.
 
-<PartialServop service_name="matchMaking" operation_name="FIND_PLAYERS_USING_SCRIPT" / >
+<PartialServop service_name="matchMaking" operation_name="FIND_PLAYERS_USING_SCRIPT" />
 
 ## Usage
 

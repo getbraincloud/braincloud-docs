@@ -2,7 +2,7 @@
 ## Overview
 Retrieves the list of legacy flagged users for an app.
 
-<PartialServop service_name="globalApp" operation_name="SYS_GET_LEGACY_FLAGGED_USER_DATA_LIST" / >
+<PartialServop service_name="globalApp" operation_name="SYS_GET_LEGACY_FLAGGED_USER_DATA_LIST" />
 
 ## Usage
 

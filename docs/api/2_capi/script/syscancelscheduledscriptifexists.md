@@ -2,7 +2,7 @@
 ## Overview
 Cancels a previously scheduled script, if it exists and is still in Scheduled state.
 
-<PartialServop service_name="script" operation_name="SYS_CANCEL_SCHEDULED_SCRIPT_IF_EXISTS" / >
+<PartialServop service_name="script" operation_name="SYS_CANCEL_SCHEDULED_SCRIPT_IF_EXISTS" />
 
 ## Usage
 

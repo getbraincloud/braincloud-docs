@@ -2,7 +2,7 @@
 ## Overview
 Creates custom data stream screen event
 
-<PartialServop service_name="dataStream" operation_name="CUSTOM_SCREEN_EVENT" / >
+<PartialServop service_name="dataStream" operation_name="CUSTOM_SCREEN_EVENT" />
 
 ## Usage
 

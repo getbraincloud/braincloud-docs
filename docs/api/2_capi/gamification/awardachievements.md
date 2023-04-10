@@ -2,7 +2,7 @@
 ## Overview
 Method will award the achievements specified. On success, this will call AwardThirdPartyAchievement to hook into the client-side Achievement service (ie GameCentre, Facebook etc).
 
-<PartialServop service_name="gamification" operation_name="AWARD_ACHIEVEMENTS" / >
+<PartialServop service_name="gamification" operation_name="AWARD_ACHIEVEMENTS" />
 
 ## Usage
 

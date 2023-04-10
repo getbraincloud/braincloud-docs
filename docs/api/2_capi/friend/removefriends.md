@@ -2,7 +2,7 @@
 ## Overview
 Unlinks the current user and the specified users as <%= data.branding.productName %> friends.
 
-<PartialServop service_name="friend" operation_name="REMOVE_FRIENDS" / >
+<PartialServop service_name="friend" operation_name="REMOVE_FRIENDS" />
 
 ## Usage
 

@@ -2,7 +2,7 @@
 ## Overview
 Retrieves the meta-data for the specified milestone.
 
-<PartialServop service_name="gamification" operation_name="SYS_READ_MILESTONE" / >
+<PartialServop service_name="gamification" operation_name="SYS_READ_MILESTONE" />
 
 ## Usage
 

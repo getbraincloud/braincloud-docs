@@ -33,7 +33,7 @@ public void FailureCallback(int statusCode, int reasonCode, string statusMessage
     }
 ```
 
-<PartialServop service_name="identity" operation_name="ATTACH" / >
+<PartialServop service_name="identity" operation_name="ATTACH" />
 
 ## Usage
 

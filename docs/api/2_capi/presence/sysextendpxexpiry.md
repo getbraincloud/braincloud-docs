@@ -7,7 +7,7 @@ This method is available in Cloud Code scripts only.
 Extends the px expiry of `profileId` by the specified amount of `seconds`. If no time limit is given, the value of <%= data.branding.productName %> property `presPxExpirySecs` will be used.
 If seconds is greater than <%= data.branding.productName %> property `presPxExpiryExtSecMax`, then it will just extend by `presPxExpiryExtSecMax`.
 
-<PartialServop service_name="presence" operation_name="SYS_EXTEND_PX_EXPIRY" / >
+<PartialServop service_name="presence" operation_name="SYS_EXTEND_PX_EXPIRY" />
 
 ## Usage
 

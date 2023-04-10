@@ -2,7 +2,7 @@
 ## Overview
 Delete an entity in the group, bypassing ownership/ACL checks
 
-<PartialServop service_name="group" operation_name="SYS_DELETE_GROUP_ENTITY" / >
+<PartialServop service_name="group" operation_name="SYS_DELETE_GROUP_ENTITY" />
 
 ## Usage
 

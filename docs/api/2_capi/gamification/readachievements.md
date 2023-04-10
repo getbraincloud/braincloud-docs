@@ -2,7 +2,7 @@
 ## Overview
 Read all of the achievements defined for the game.
 
-<PartialServop service_name="gamification" operation_name="READ_ACHIEVEMENTS" / >
+<PartialServop service_name="gamification" operation_name="READ_ACHIEVEMENTS" />
 
 ## Usage
 

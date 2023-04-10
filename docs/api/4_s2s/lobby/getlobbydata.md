@@ -4,7 +4,7 @@ Returns the data for the specified lobby, including member data.
 
 
 
-<PartialServop service_name="lobby" operation_name="GET_LOBBY_DATA" / >
+<PartialServop service_name="lobby" operation_name="GET_LOBBY_DATA" />
 
 ## Usage
 

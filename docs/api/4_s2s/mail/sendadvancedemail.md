@@ -3,7 +3,7 @@
 Sends a advanced email to the given user. 
  See the documentation for contents of 'serviceParams'.
 
-<PartialServop service_name="mail" operation_name="SEND_ADVANCED_EMAIL" / >
+<PartialServop service_name="mail" operation_name="SEND_ADVANCED_EMAIL" />
 
 ## Usage
 

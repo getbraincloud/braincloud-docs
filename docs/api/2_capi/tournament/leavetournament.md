@@ -2,7 +2,7 @@
 ## Overview
 Removes player's score from tournament leaderboard
 
-<PartialServop service_name="tournament" operation_name="LEAVE_TOURNAMENT" / >
+<PartialServop service_name="tournament" operation_name="LEAVE_TOURNAMENT" />
 
 ## Usage
 

@@ -8,7 +8,7 @@ Edits a existing leaderboard under the context of the current game. You can opti
 
 
 
-<PartialServop service_name="leaderboard" operation_name="EDIT_LEADERBOARD" / >
+<PartialServop service_name="leaderboard" operation_name="EDIT_LEADERBOARD" />
 
 ## Usage
 

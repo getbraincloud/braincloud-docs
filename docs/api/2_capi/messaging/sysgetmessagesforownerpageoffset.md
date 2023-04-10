@@ -5,7 +5,7 @@ Retrieves the page of messages, owned by specified ownerId, from the server base
 
 
 
-<PartialServop service_name="messaging" operation_name="SYS_GET_MESSAGES_FOR_OWNER_PAGE_OFFSET" / >
+<PartialServop service_name="messaging" operation_name="SYS_GET_MESSAGES_FOR_OWNER_PAGE_OFFSET" />
 
 ## Usage
 

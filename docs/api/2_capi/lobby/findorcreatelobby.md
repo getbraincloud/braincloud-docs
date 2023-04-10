@@ -4,7 +4,7 @@ Finds a lobby matching the specified parameters, or creates one. Asynchronous - 
 
 
 
-<PartialServop service_name="lobby" operation_name="FIND_LOBBY" / >
+<PartialServop service_name="lobby" operation_name="FIND_LOBBY" />
 
 ## Usage
 

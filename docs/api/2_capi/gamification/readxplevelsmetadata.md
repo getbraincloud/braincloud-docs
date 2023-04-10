@@ -2,7 +2,7 @@
 ## Overview
 Method returns all defined XP levels and any rewards associated with those XP levels.
 
-<PartialServop service_name="gamification" operation_name="READ_XP_LEVELS" / >
+<PartialServop service_name="gamification" operation_name="READ_XP_LEVELS" />
 
 ## Usage
 

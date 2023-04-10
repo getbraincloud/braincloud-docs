@@ -2,7 +2,7 @@
 ## Overview
 Get a list of entities from the server base on indexed id.
 
-<PartialServop service_name="globalEntity" operation_name="GET_LIST_BY_INDEXED_ID" / >
+<PartialServop service_name="globalEntity" operation_name="GET_LIST_BY_INDEXED_ID" />
 
 ## Usage
 

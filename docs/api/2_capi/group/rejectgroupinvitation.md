@@ -2,7 +2,7 @@
 ## Overview
 Reject an invitation to become a member of the group.
 
-<PartialServop service_name="group" operation_name="REJECT_GROUP_INVITATION" / >
+<PartialServop service_name="group" operation_name="REJECT_GROUP_INVITATION" />
 
 ## Usage
 

@@ -10,7 +10,7 @@ Any events that have been sent to a user will show up in their incoming event qu
 Note that the list of sent and incoming events for a user is also returned in the "ReadUserState" call (in the UserState module).
 :::
 
-<PartialServop service_name="event" operation_name="SEND" / >
+<PartialServop service_name="event" operation_name="SEND" />
 
 ## Usage
 

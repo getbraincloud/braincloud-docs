@@ -14,7 +14,7 @@ Note that the key of the JSON object is the substitution variable number and the
 
 The resulting string would be "Hello George Smith, welcome to the Poker Pirates game.".
 
-<PartialServop service_name="pushNotification" operation_name="SEND_TEMPLATED_TO_GROUP" / >
+<PartialServop service_name="pushNotification" operation_name="SEND_TEMPLATED_TO_GROUP" />
 
 ## Usage
 

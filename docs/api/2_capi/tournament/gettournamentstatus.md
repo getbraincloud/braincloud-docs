@@ -2,7 +2,7 @@
 ## Overview
 Get tournament status associated with a leaderboard.
 
-<PartialServop service_name="tournament" operation_name="GET_TOURNAMENT_STATUS" / >
+<PartialServop service_name="tournament" operation_name="GET_TOURNAMENT_STATUS" />
 
 ## Usage
 

@@ -2,7 +2,7 @@
 ## Overview
 Sends a simple string-based message on behalf of the system (i.e. app) to the specified users.
 
-<PartialServop service_name="messaging" operation_name="SYS_SEND_MESSAGE_SIMPLE" / >
+<PartialServop service_name="messaging" operation_name="SYS_SEND_MESSAGE_SIMPLE" />
 
 ## Usage
 

@@ -2,7 +2,7 @@
 ## Overview
 Updates an existing entity's IndexedId on the server.
 
-<PartialServop service_name="globalEntity" operation_name="UPDATE_INDEXED_ID" / >
+<PartialServop service_name="globalEntity" operation_name="UPDATE_INDEXED_ID" />
 
 ## Usage
 

@@ -2,7 +2,7 @@
 ## Overview
 Deletes a dynamic chat channel. Channel type must be "dy". This will delete the chat history as well.
 
-<PartialServop service_name="chat" operation_name="SYS_DELETE_CHANNEL" / >
+<PartialServop service_name="chat" operation_name="SYS_DELETE_CHANNEL" />
 
 ## Usage
 

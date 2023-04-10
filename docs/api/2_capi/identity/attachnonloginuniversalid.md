@@ -6,7 +6,7 @@ Useful if the app is not using UniversalId for authentication, and you still wan
 
 The call will fail if the UniversalId is already in use, or if the profile already contains a UniversalId.
 
-<PartialServop service_name="identity" operation_name="ATTACH_NONLOGIN_UNIVERSAL" / >
+<PartialServop service_name="identity" operation_name="ATTACH_NONLOGIN_UNIVERSAL" />
 
 ## Usage
 

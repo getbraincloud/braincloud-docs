@@ -2,7 +2,7 @@
 ## Overview
 Update user attributes.
 
-<PartialServop service_name="playerState" operation_name="UPDATE_ATTRIBUTES" / >
+<PartialServop service_name="playerState" operation_name="UPDATE_ATTRIBUTES" />
 
 ## Usage
 

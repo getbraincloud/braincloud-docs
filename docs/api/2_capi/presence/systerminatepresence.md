@@ -6,7 +6,7 @@ This method is available in Cloud Code scripts only.
 
 Terminates the presence of 'profileId'.
 
-<PartialServop service_name="presence" operation_name="SYS_TERMINATE_PRESENCE" / >
+<PartialServop service_name="presence" operation_name="SYS_TERMINATE_PRESENCE" />
 
 ## Usage
 

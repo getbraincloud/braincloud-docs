@@ -4,7 +4,7 @@ Method clears an existing entity's owner and updates the ACL on the server.
 
 This method is affected by versioning. See the [versioning documentation](/api/appendix/version) for more information.
 
-<PartialServop service_name="globalEntity" operation_name="MAKE_SYSTEM_ENTITY" / >
+<PartialServop service_name="globalEntity" operation_name="MAKE_SYSTEM_ENTITY" />
 
 ## Usage
 

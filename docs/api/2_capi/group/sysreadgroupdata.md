@@ -2,7 +2,7 @@
 ## Overview
 Retrieve a group's data object, bypassing ownership/ACL checks.
 
-<PartialServop service_name="group" operation_name="SYS_READ_GROUP_DATA" / >
+<PartialServop service_name="group" operation_name="SYS_READ_GROUP_DATA" />
 
 ## Usage
 

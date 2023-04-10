@@ -4,7 +4,7 @@ Sends LOBBY_SIGNAL_DATA message to all lobby members.
 
 
 
-<PartialServop service_name="lobby" operation_name="SEND_SIGNAL" / >
+<PartialServop service_name="lobby" operation_name="SEND_SIGNAL" />
 
 ## Usage
 

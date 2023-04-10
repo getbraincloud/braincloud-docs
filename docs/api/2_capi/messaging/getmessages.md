@@ -4,7 +4,7 @@ Return the content of the specified messages (if found).
 
 
 
-<PartialServop service_name="messaging" operation_name="GET_MESSAGES" / >
+<PartialServop service_name="messaging" operation_name="GET_MESSAGES" />
 
 ## Usage
 

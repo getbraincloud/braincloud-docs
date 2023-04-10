@@ -2,7 +2,7 @@
 ## Overview
 Update a group's summary data.
 
-<PartialServop service_name="group" operation_name="UPDATE_GROUP_SUMMARY_DATA" / >
+<PartialServop service_name="group" operation_name="UPDATE_GROUP_SUMMARY_DATA" />
 
 ## Usage
 

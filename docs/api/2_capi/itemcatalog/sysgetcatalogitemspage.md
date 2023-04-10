@@ -2,7 +2,7 @@
 ## Overview
 Retrieves page of catalog items from the server, with full language fields mappings.
 
-<PartialServop service_name="itemCatalog" operation_name="SYS_GET_CATALOG_ITEMS_PAGE" / >
+<PartialServop service_name="itemCatalog" operation_name="SYS_GET_CATALOG_ITEMS_PAGE" />
 
 ## Usage
 

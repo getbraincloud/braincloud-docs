@@ -2,7 +2,7 @@
 ## Overview
 Set a group's access conditions.
 
-<PartialServop service_name="group" operation_name="UPDATE_GROUP_ACL" / >
+<PartialServop service_name="group" operation_name="UPDATE_GROUP_ACL" />
 
 ## Usage
 

@@ -11,7 +11,7 @@ Returns the number of messages that were deleted. Since the history rolls over, 
 
 
 
-<PartialServop service_name="chat" operation_name="SYS_DELETE_CHAT_MESSAGE" / >
+<PartialServop service_name="chat" operation_name="SYS_DELETE_CHAT_MESSAGE" />
 
 ## Usage
 

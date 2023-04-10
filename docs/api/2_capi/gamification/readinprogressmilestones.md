@@ -2,7 +2,7 @@
 ## Overview
 Method retrieves the list of in progress milestones.
 
-<PartialServop service_name="gamification" operation_name="READ_IN_PROGRESS_MILESTONES" / >
+<PartialServop service_name="gamification" operation_name="READ_IN_PROGRESS_MILESTONES" />
 
 ## Usage
 

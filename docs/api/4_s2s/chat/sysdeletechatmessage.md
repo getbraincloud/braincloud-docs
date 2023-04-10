@@ -4,7 +4,7 @@ Delete the specified chat message. Message can be from any user (or the system).
 
 Returns the number of messages that were deleted. Since the history rolls over, it is possible that the message had already expired before the deletion attempt - in that case, the value of the `deleted` field will be `0`.
 
-<PartialServop service_name="chat" operation_name="SYS_DELETE_CHAT_MESSAGE" / >
+<PartialServop service_name="chat" operation_name="SYS_DELETE_CHAT_MESSAGE" />
 
 ## Usage
 

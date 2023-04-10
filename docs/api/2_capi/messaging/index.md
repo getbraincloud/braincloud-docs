@@ -103,6 +103,7 @@ Available via cleint session cloud code, as well as S2S.
 ### Updating messages
 
 * [SysDeleteMessage](/api/capi/messaging/sysdeletemessage)
+* [SysDeleteMessages](/api/capi/messaging/sysdeletemessages)
 * [SysUpdateMessage](/api/capi/messaging/sysupdatemessage)
 
 

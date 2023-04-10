@@ -22,7 +22,7 @@ An example of this string would be:
 }]
 ```
 
-<PartialServop service_name="asyncMatch" operation_name="CREATE" / >
+<PartialServop service_name="asyncMatch" operation_name="CREATE" />
 
 ## Usage
 

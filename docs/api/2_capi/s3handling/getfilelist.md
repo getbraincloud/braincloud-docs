@@ -2,7 +2,7 @@
 ## Overview
 Retrieves the details of custom files stored on the server.
 
-<PartialServop service_name="s3Handling" operation_name="GET_FILE_LIST" / >
+<PartialServop service_name="s3Handling" operation_name="GET_FILE_LIST" />
 
 ## Usage
 

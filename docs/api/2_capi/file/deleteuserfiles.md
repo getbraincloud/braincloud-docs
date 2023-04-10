@@ -2,7 +2,7 @@
 ## Overview
 Deletes multiple user files.
 
-<PartialServop service_name="file" operation_name="DELETE_USER_FILES" / >
+<PartialServop service_name="file" operation_name="DELETE_USER_FILES" />
 
 ## Usage
 

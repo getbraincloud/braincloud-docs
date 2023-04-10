@@ -7,7 +7,7 @@ Use them for storing data that the users should not be able to delete.
 
 This method is affected by versioning. See the [versioning documentation](/api/appendix/version) for more information.
 
-<PartialServop service_name="entity" operation_name="DELETE" / >
+<PartialServop service_name="entity" operation_name="DELETE" />
 
 ## Usage
 

@@ -2,7 +2,7 @@
 ## Overview
 Sends a simple text email to the specified user.
 
-<PartialServop service_name="mail" operation_name="SEND_BASIC_EMAIL" / >
+<PartialServop service_name="mail" operation_name="SEND_BASIC_EMAIL" />
 
 ## Usage
 

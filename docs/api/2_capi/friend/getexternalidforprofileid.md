@@ -4,7 +4,7 @@ Retrieves the external ID for the specified user profile ID on the specified soc
 
 Does not require the calling user to be a friend of the other user.
 
-<PartialServop service_name="friend" operation_name="GET_EXTERNAL_ID_FOR_PROFILE_ID" / >
+<PartialServop service_name="friend" operation_name="GET_EXTERNAL_ID_FOR_PROFILE_ID" />
 
 ## Usage
 

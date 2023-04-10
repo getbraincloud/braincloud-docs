@@ -2,7 +2,7 @@
 ## Overview
 Join the specified tournament. Any entry fees will be automatically collected.
 
-<PartialServop service_name="tournament" operation_name="JOIN_TOURNAMENT" / >
+<PartialServop service_name="tournament" operation_name="JOIN_TOURNAMENT" />
 
 ## Usage
 

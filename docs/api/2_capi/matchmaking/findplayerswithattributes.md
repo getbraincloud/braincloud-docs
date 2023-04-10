@@ -2,7 +2,7 @@
 ## Overview
 Finds matchmaking enabled players with additional attributes
 
-<PartialServop service_name="matchMaking" operation_name="FIND_PLAYERS" / >
+<PartialServop service_name="matchMaking" operation_name="FIND_PLAYERS" />
 
 ## Usage
 

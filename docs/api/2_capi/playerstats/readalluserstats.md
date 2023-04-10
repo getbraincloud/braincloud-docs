@@ -2,7 +2,7 @@
 ## Overview
 Read all available user statistics.
 
-<PartialServop service_name="playerStatistics" operation_name="READ" / >
+<PartialServop service_name="playerStatistics" operation_name="READ" />
 
 ## Usage
 

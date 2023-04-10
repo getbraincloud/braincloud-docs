@@ -2,7 +2,7 @@
 ## Overview
 Cancels a match.
 
-<PartialServop service_name="onewayMatch" operation_name="CANCEL_MATCH" / >
+<PartialServop service_name="onewayMatch" operation_name="CANCEL_MATCH" />
 
 ## Usage
 

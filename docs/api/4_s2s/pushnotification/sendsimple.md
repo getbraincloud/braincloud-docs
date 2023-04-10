@@ -11,7 +11,7 @@ Name | Description
 --------- | -----------
 estimatedTargets | Estimate number of targeted users.
 
-<PartialServop service_name="pushNotification" operation_name="SEND_SIMPLE" / >
+<PartialServop service_name="pushNotification" operation_name="SEND_SIMPLE" />
 
 ## Usage
 

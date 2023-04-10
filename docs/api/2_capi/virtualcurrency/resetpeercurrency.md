@@ -2,7 +2,7 @@
 ## Overview
 Resets the peer user's currency back to zero.
 
-<PartialServop service_name="virtualCurrency" operation_name="RESET_PEER_VC" / >
+<PartialServop service_name="virtualCurrency" operation_name="RESET_PEER_VC" />
 
 ## Usage
 

@@ -14,7 +14,7 @@ The brainCloud relay server's only purpose is to relay packet data between peer.
 
 It is designed to handle clients from various connection types: UDP, TCP or WS. So if I client plays in a webgl version of a game, using WS, he can communicate with a client that plays in UDP on desktop.
 
-The maximum number of players supported by the relay server is 128. But it is highly recommended to keep it low, around 8 players. Peer to Peer generates a lot of traffic.
+The maximum number of players supported by the relay server is 40. But it is highly recommended to keep it low, around 8 players. Peer to Peer generates a lot of traffic.
 
 ### Packets
 
@@ -81,6 +81,8 @@ static const auto CHANNEL_HIGH_PRIORITY_1      = 0;
 static const auto CHANNEL_HIGH_PRIORITY_2      = 1;
 static const auto CHANNEL_NORMAL_PRIORITY      = 2;
 static const auto CHANNEL_LOW_PRIORITY         = 3;
+static const int      MIN_PACKET_SIZE   = 3;
+static const int      MAX_PACKET_SIZE   = 1024;
 static const uint8_t  MAX_PLAYERS       = 40;
 static const uint8_t  INVALID_NET_ID    = MAX_PLAYERS;
 static const uint64_t ALL_PLAYERS_MASK  = 0xFFFFFFFFFFFFFFFF;
@@ -91,12 +93,14 @@ static const uint8_t CL2RS_RELAY        = 2;
 static const uint8_t CL2RS_ACK          = 3;
 static const uint8_t CL2RS_PING         = 4;
 static const uint8_t CL2RS_RSMG_ACK     = 5;
+static const uint8_t CL2RS_END_MATCH    = 6;
 // Messages sent from Relay-Server to Client
 static const uint8_t RS2CL_RSMG         = 0;
 static const uint8_t RS2CL_DISCONNECT   = 1; // CL2RS_DISCONNECT
 static const uint8_t RS2CL_RELAY        = 2; // CL2RS_RELAY
 static const uint8_t RS2CL_ACK          = 3; // CL2RS_ACK
 static const uint8_t RS2CL_PONG         = 4; // CL2RS_PING
+static const int ACK_ID_BYTES_SIZE = 8;
 ```
 
 And channel resends the intervals:
@@ -176,7 +180,7 @@ timeout|too many packet lost
 * [Send](/api/capi/relay/send) - Send a packet to peer(s).
 * [SendToPlayers](/api/capi/relay/sendtoplayers) - Send a packet to any players by using a mask.
 * [SendToAll](/api/capi/relay/sendtoall) - Send a packet to all except yourself.
-
+* [EndMatch](/api/capi/relay/endmatch) - Terminate the match instance by the owner.
 
 ### Callbacks
 * [RegisterRelayCallback](/api/capi/relay/registerrelaycallback) - Register callback for relay messages coming from peers.

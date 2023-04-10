@@ -4,7 +4,7 @@ Adds the caller to the lobby entry queue and will create a lobby if none are fou
 
 Use [PingRegions](/api/capi/lobby/pingregions) to generate the ping data.
 
-<PartialServop service_name="lobby" operation_name="FIND_OR_CREATE_LOBBY_WITH_PING_DATA" / >
+<PartialServop service_name="lobby" operation_name="FIND_OR_CREATE_LOBBY_WITH_PING_DATA" />
 
 ## Usage
 

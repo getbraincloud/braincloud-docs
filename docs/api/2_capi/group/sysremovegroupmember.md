@@ -3,7 +3,7 @@
 Remove a member from the group, bypassing group ownership/ACL checks.
 
 
-<PartialServop service_name="group" operation_name="SYS_REMOVE_GROUP_MEMBER" / >
+<PartialServop service_name="group" operation_name="SYS_REMOVE_GROUP_MEMBER" />
 
 ## Usage
 

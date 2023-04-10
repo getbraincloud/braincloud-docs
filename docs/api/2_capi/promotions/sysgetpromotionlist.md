@@ -2,7 +2,7 @@
 ## Overview
 Returns the list of configured promotions (without full details).
 
-<PartialServop service_name="promotions" operation_name="SYS_GET_PROMOTION_LIST" / >
+<PartialServop service_name="promotions" operation_name="SYS_GET_PROMOTION_LIST" />
 
 ## Usage
 

@@ -4,7 +4,7 @@ Delete a group.
 
 This method is affected by versioning. See the [versioning documentation](/api/appendix/version) for more information.
 
-<PartialServop service_name="group" operation_name="DELETE_GROUP" / >
+<PartialServop service_name="group" operation_name="DELETE_GROUP" />
 
 ## Usage
 

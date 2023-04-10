@@ -2,7 +2,7 @@
 ## Overview
 Cancel an outstanding invitation to the group.
 
-<PartialServop service_name="group" operation_name="CANCEL_GROUP_INVITATION" / >
+<PartialServop service_name="group" operation_name="CANCEL_GROUP_INVITATION" />
 
 ## Usage
 

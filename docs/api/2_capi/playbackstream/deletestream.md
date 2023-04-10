@@ -2,7 +2,7 @@
 ## Overview
 Deletes a stream.
 
-<PartialServop service_name="playbackStream" operation_name="DELETE_STREAM" / >
+<PartialServop service_name="playbackStream" operation_name="DELETE_STREAM" />
 
 ## Usage
 

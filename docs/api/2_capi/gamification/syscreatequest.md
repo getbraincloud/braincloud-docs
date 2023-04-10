@@ -47,7 +47,7 @@ An example questJson object:
 }
 ```
 
-<PartialServop service_name="gamification" operation_name="SYS_CREATE_QUEST" / >
+<PartialServop service_name="gamification" operation_name="SYS_CREATE_QUEST" />
 
 ## Usage
 

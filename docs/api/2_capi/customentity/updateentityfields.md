@@ -35,7 +35,7 @@ For the above example:
 * the `data.homeAddress` field will be set to the full JSON address provided
 * just the `phone` sub-field of the `data.workAddress` object will be set to "555-555-5555"
 
-<PartialServop service_name="customEntity" operation_name="UPDATE_ENTITY_FIELDS" / >
+<PartialServop service_name="customEntity" operation_name="UPDATE_ENTITY_FIELDS" />
 
 ## Usage
 

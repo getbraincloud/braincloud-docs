@@ -34,7 +34,7 @@ public void FailureCallback(int statusCode, int reasonCode, string statusMessage
     }
 ```
 
-<PartialServop service_name="identity" operation_name="DETACH" / >
+<PartialServop service_name="identity" operation_name="DETACH" />
 
 ## Usage
 

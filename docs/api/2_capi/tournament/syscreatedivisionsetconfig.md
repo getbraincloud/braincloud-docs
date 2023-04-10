@@ -2,7 +2,7 @@
 ## Overview
 Creates a new division set configuration
 
-<PartialServop service_name="tournament" operation_name="SYS_CREATE_DIVISION_SET_CONFIG" / >
+<PartialServop service_name="tournament" operation_name="SYS_CREATE_DIVISION_SET_CONFIG" />
 
 ## Usage
 

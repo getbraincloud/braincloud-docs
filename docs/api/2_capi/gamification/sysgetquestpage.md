@@ -120,7 +120,7 @@ Supported `searchCriteria` fields include:
 * `category`
 * and `extraData` fields (must be prefixed by `extraData`) - i.e. `extraData.actionIndex`
 
-<PartialServop service_name="gamification" operation_name="SYS_GET_QUEST_PAGE" / >
+<PartialServop service_name="gamification" operation_name="SYS_GET_QUEST_PAGE" />
 
 ## Usage
 

@@ -7,7 +7,7 @@ A redemption code is a special code associated with a product that gives the use
 
 <%= data.branding.productName %>'s Redemption Code feature supports the management and implementation of single-use redemption codes.
 
-![Redemption Code States](@site/docs/img/api-img/redemption_code_states_4_11_1.png)
+![Redemption Code States](@site/docs/img/api-img/redemption_code_states_4_11.png)
 
 At any time, a redemption code is in one of four states:
 

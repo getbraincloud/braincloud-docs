@@ -25,7 +25,7 @@
 
 Edits a existing leaderboard under the context of the current game. You can optionally send a user-defined json string of data with the edit leaderboard. This string could include information relevant to the edited leaderboard.
 
-<PartialServop service_name="leaderboard" operation_name="EDIT_LEADERBOARD" / >
+<PartialServop service_name="leaderboard" operation_name="EDIT_LEADERBOARD" />
 
 ## Usage
 

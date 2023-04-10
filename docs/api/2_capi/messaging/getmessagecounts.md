@@ -6,7 +6,7 @@ Returns the total # of messages, and # of unread messages, per messagbox, for th
 
 None.
 
-<PartialServop service_name="messaging" operation_name="GET_MESSAGE_COUNTS" / >
+<PartialServop service_name="messaging" operation_name="GET_MESSAGE_COUNTS" />
 
 ## Usage
 

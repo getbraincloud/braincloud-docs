@@ -2,7 +2,7 @@
 ## Overview
 Method to retrieve previous or next pages after having called the GetSystemEntityPage method.
 
-<PartialServop service_name="globalEntity" operation_name="GET_SYSTEM_ENTITY_PAGE_BY_OFFSET" / >
+<PartialServop service_name="globalEntity" operation_name="GET_SYSTEM_ENTITY_PAGE_BY_OFFSET" />
 
 ## Usage
 

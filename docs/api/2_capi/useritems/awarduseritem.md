@@ -2,7 +2,7 @@
 ## Overview
 Allows item(s) to be awarded to a user without collecting the purchase amount. If includeDef is true, response includes associated itemDef with language fields limited to the current or default language.
 
-<PartialServop service_name="userItems" operation_name="AWARD_USER_ITEM" / >
+<PartialServop service_name="userItems" operation_name="AWARD_USER_ITEM" />
 
 ## Usage
 

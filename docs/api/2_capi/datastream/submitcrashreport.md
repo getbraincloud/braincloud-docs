@@ -4,7 +4,7 @@ Allows the system to send a Crash Report to the servers, to be forwarded to any 
 
 This API can be called silently by the app - or can be sent after presenting an error dialog to the user (requestion more info). User submitted reports should be flagged as such, so that the app's support team knows to follow up.
 
-<PartialServop service_name="dataStream" operation_name="SEND_CRASH_REPORT" / >
+<PartialServop service_name="dataStream" operation_name="SEND_CRASH_REPORT" />
 
 ## Usage
 

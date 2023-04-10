@@ -8,7 +8,7 @@ Sends a simple-text member chat message. From is a json containing the message o
 
 
 
-<PartialServop service_name="chat" operation_name="SYS_POST_CHAT_MESSAGE_SIMPLE" / >
+<PartialServop service_name="chat" operation_name="SYS_POST_CHAT_MESSAGE_SIMPLE" />
 
 ## Usage
 

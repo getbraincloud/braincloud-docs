@@ -2,7 +2,7 @@
 ## Overview
 Update the presence data `visible` field for the caller. An RTT event will be sent to any registered listeners of the caller with their updated presence info.
 
-<PartialServop service_name="presence" operation_name="SET_VISIBILITY" / >
+<PartialServop service_name="presence" operation_name="SET_VISIBILITY" />
 
 ## Usage
 

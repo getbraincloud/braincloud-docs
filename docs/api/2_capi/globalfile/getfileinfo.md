@@ -2,7 +2,7 @@
 ## Overview
 Returns information about the specified file.
 
-<PartialServop service_name="globalFileV3" operation_name="GET_FILE_INFO" / >
+<PartialServop service_name="globalFileV3" operation_name="GET_FILE_INFO" />
 
 ## Usage
 

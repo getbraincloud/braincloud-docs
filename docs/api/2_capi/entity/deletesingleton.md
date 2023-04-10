@@ -6,7 +6,7 @@ Singletons are defined by their **entity type**, so no two singletons of the sam
 
 This method is affected by versioning. See the [versioning documentation](/api/appendix/version) for more information.
 
-<PartialServop service_name="entity" operation_name="DELETE_SINGLETON" / >
+<PartialServop service_name="entity" operation_name="DELETE_SINGLETON" />
 
 ## Usage
 

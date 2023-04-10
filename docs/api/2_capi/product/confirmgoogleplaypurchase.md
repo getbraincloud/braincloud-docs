@@ -8,7 +8,7 @@ Confirm Google Play purchase.
 WARNING: <code>ConfirmGooglePlayPurchase()</code> returns a 200 result even if the purchase was declined by Google. You must check the <code>data.result</code> value to see that it <strong>exists</strong> and is <code><strong>"OK"</strong></code> to confirm that a purchase was a success.
 :::
 
-<PartialServop service_name="product" operation_name="CONFIRM_GOOGLEPLAY_PURCHASE" / >
+<PartialServop service_name="product" operation_name="CONFIRM_GOOGLEPLAY_PURCHASE" />
 
 ## Usage
 

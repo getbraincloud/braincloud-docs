@@ -2,7 +2,7 @@
 ## Overview
 Method returns quests for the given category.
 
-<PartialServop service_name="gamification" operation_name="READ_QUESTS_BY_CATEGORY" / >
+<PartialServop service_name="gamification" operation_name="READ_QUESTS_BY_CATEGORY" />
 
 ## Usage
 

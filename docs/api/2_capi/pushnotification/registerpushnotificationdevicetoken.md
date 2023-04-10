@@ -2,7 +2,7 @@
 ## Overview
 Registers the given device token from the server to enable this device to receive push notifications.
 
-<PartialServop service_name="pushNotification" operation_name="REGISTER" / >
+<PartialServop service_name="pushNotification" operation_name="REGISTER" />
 
 ## Usage
 

@@ -4,7 +4,7 @@ Returns a list of max \<n\> messages from history.
 
 
 
-<PartialServop service_name="chat" operation_name="GET_RECENT_MESSAGES" / >
+<PartialServop service_name="chat" operation_name="GET_RECENT_MESSAGES" />
 
 ## Usage
 

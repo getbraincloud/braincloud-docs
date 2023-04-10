@@ -2,7 +2,7 @@
 ## Overview
 Consumes currency in a peer.
 
-<PartialServop service_name="product" operation_name="CONSUME_PEER_VC" / >
+<PartialServop service_name="product" operation_name="CONSUME_PEER_VC" />
 
 ## Usage
 

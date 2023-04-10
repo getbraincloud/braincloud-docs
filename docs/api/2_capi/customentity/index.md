@@ -24,8 +24,7 @@ Like *Global Entities*, *Custom Entites* are:
 
 *Custom Entities* supports `text` index, `$text` operator can be use to query document fields once a `text` index is set up. Note that as the MongoDB restriction, one collection can have only one `text` index. 
 
-```
-{
+`{
   "entityType": "questions",
   "context": {
     "pagination": {
@@ -39,8 +38,7 @@ Like *Global Entities*, *Custom Entites* are:
       "createdAt": 1
     }
   }
-}
-```
+}`
   
 :::tip
 Custom Entities are a premium feature available to <em>Plus Plan</em> customers. Additional usage fees apply.

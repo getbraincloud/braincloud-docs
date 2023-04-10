@@ -4,7 +4,7 @@ Changes email address associated with specified user's email identity.
 
 
 
-<PartialServop service_name="identity" operation_name="SYS_CHANGE_EMAIL_IDENTITY" / >
+<PartialServop service_name="identity" operation_name="SYS_CHANGE_EMAIL_IDENTITY" />
 
 ## Usage
 

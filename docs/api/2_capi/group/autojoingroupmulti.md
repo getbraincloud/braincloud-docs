@@ -9,7 +9,7 @@ AutoJoinStrategy is defined by enum or constant in most of the client libraries.
 - **JoinFirstGroup** - Joins the first group found that matches the specified criteria.
 - **JoinRandomGroup** - Finds all groups that matches the specified criteria and then randomly chooses one to join.
 
-<PartialServop service_name="group" operation_name="AUTO_JOIN_GROUP_MULTI" / >
+<PartialServop service_name="group" operation_name="AUTO_JOIN_GROUP_MULTI" />
 
 ## Usage
 

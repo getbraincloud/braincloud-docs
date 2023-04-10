@@ -2,7 +2,7 @@
 ## Overview
 Reads multiple social leaderboards.
 
-<PartialServop service_name="leaderboard" operation_name="GET_MULTI_SOCIAL_LEADERBOARD" / >
+<PartialServop service_name="leaderboard" operation_name="GET_MULTI_SOCIAL_LEADERBOARD" />
 
 ## Usage
 

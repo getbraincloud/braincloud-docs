@@ -2,7 +2,7 @@
 ## Overview
 Reads an existing item definition from the server, with language fields limited to the current or default language.
 
-<PartialServop service_name="itemCatalog" operation_name="GET_CATALOG_ITEM_DEFINITION" / >
+<PartialServop service_name="itemCatalog" operation_name="GET_CATALOG_ITEM_DEFINITION" />
 
 ## Usage
 

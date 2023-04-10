@@ -12,7 +12,7 @@ Name | Description
 --------- | -----------
 response | JSON formatted response.
 
-<PartialServop service_name="httpClient" operation_name="POST_FORM_RESPONSE_JSON" / >
+<PartialServop service_name="httpClient" operation_name="POST_FORM_RESPONSE_JSON" />
 
 ## Usage
 

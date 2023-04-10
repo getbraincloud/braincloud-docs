@@ -2,7 +2,7 @@
 ## Overview
 Set the specified catalog item to invisible on the server.
 
-<PartialServop service_name="itemCatalog" operation_name="SYS_SET_INVISIBLE_CATALOG_ITEM" / >
+<PartialServop service_name="itemCatalog" operation_name="SYS_SET_INVISIBLE_CATALOG_ITEM" />
 
 ## Usage
 

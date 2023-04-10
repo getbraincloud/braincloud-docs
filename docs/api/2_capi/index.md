@@ -26,6 +26,7 @@ The Client API is organized into the following services:
 * [Global File](/api/capi/globalfile)
 * [Global Statistics](/api/capi/globalstats)
 * [Group](/api/capi/group)
+* [Group File](/api/capi/groupfile)
 * [Identity](/api/capi/identity)
 * [Item Catalog](/api/capi/itemcatalog)
 * [Leaderboard](/api/capi/leaderboard)

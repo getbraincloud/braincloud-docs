@@ -2,7 +2,7 @@
 ## Overview
 Resets the specified quests' statuses.
 
-<PartialServop service_name="gamification" operation_name="RESET_QUESTS" / >
+<PartialServop service_name="gamification" operation_name="RESET_QUESTS" />
 
 ## Usage
 

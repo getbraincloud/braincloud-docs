@@ -2,7 +2,7 @@
 ## Overview
 Sends a notification to a list of users consisting of alert content and custom data.
 
-<PartialServop service_name="pushNotification" operation_name="SEND_NORMALIZED_BATCH" / >
+<PartialServop service_name="pushNotification" operation_name="SEND_NORMALIZED_BATCH" />
 
 ## Usage
 

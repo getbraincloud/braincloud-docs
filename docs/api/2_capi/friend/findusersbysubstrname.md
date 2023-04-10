@@ -8,7 +8,7 @@ Does not require the calling user to be a friend of the retrieved users.
 
 In event that the call takes too long, this call has a timelimit enforcement on retrieving partial matches. When a timeout occurs, it will return no partial matches. The user will need to narrow down their search criteria.
 
-<PartialServop service_name="friend" operation_name="FIND_USERS_BY_SUBSTR_NAME" / >
+<PartialServop service_name="friend" operation_name="FIND_USERS_BY_SUBSTR_NAME" />
 
 ## Usage
 

@@ -2,7 +2,7 @@
 ## Overview
 Given a path and filename, returns information on the corresponding file.
 
-<PartialServop service_name="globalFileV3" operation_name="SYS_GET_FILE_INFO_SIMPLE" / >
+<PartialServop service_name="globalFileV3" operation_name="SYS_GET_FILE_INFO_SIMPLE" />
 
 ## Usage
 

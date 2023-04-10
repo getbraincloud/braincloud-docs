@@ -2,7 +2,7 @@
 ## Overview
 Allows a quantity of a specified user item to be dropped, without any recovery of the money paid for the item. If any quantity of the user item remains, it will be returned, potentially with the associated itemDef (with language fields limited to the current or default language).
 
-<PartialServop service_name="userItems" operation_name="DROP_USER_ITEM" / >
+<PartialServop service_name="userItems" operation_name="DROP_USER_ITEM" />
 
 ## Usage
 

@@ -2,7 +2,7 @@
 ## Overview
 Read matchmaking record.
 
-<PartialServop service_name="matchMaking" operation_name="READ" / >
+<PartialServop service_name="matchMaking" operation_name="READ" />
 
 ## Usage
 

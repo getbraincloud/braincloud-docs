@@ -2,7 +2,7 @@
 ## Overview
 Increments the user's experience. If the player goes up a level, the new level details will be returned along with a list of rewards.
 
-<PartialServop service_name="playerStatistics" operation_name="UPDATE" / >
+<PartialServop service_name="playerStatistics" operation_name="UPDATE" />
 
 ## Usage
 

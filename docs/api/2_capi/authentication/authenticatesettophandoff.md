@@ -9,7 +9,7 @@ Authenticate the user with a custom Set-top Handoff Code - which is an short, ea
 Make sure you've initialized the <%= data.branding.productName %> library before authenticating.
 :::
 
-<PartialServop service_name="authenticationV2" operation_name="AUTHENTICATE" / >
+<PartialServop service_name="authenticationV2" operation_name="AUTHENTICATE" />
 
 ## Usage
 

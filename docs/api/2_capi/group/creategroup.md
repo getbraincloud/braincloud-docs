@@ -8,7 +8,7 @@ The group ACL contains two elements defining access to the groups data for non-m
 - ReadOnly = 1
 - ReadWrite = 2
 
-<PartialServop service_name="group" operation_name="CREATE_GROUP" / >
+<PartialServop service_name="group" operation_name="CREATE_GROUP" />
 
 ## Usage
 

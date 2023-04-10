@@ -6,7 +6,7 @@ You can optionally send a user-defined json string of data with the posted score
 
 Note that the behavior of posting a score can be modified in the <%= data.branding.productName %> portal. By default, the server will only keep the player's best score.
 
-<PartialServop service_name="leaderboard" operation_name="POST_SCORE" / >
+<PartialServop service_name="leaderboard" operation_name="POST_SCORE" />
 
 ## Usage
 

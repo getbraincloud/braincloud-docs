@@ -4,7 +4,7 @@ Post the players score to the given social leaderboard. You can optionally send 
 
 The passed in leaderboard config data is to dynamically create the leaderboard if it does not exist already.
 
-<PartialServop service_name="leaderboard" operation_name="POST_SCORE_DYNAMIC" / >
+<PartialServop service_name="leaderboard" operation_name="POST_SCORE_DYNAMIC" />
 
 ## Usage
 

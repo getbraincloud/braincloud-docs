@@ -4,7 +4,7 @@ Method updates a shared entity owned by another user. This operation results in 
 
 This method is affected by versioning. See the [versioning documentation](/api/appendix/version) for more information.
 
-<PartialServop service_name="entity" operation_name="UPDATE_SHARED" / >
+<PartialServop service_name="entity" operation_name="UPDATE_SHARED" />
 
 ## Usage
 

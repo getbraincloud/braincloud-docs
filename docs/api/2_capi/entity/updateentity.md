@@ -4,7 +4,7 @@ Method updates an entity on the server. This operation results in the entity dat
 
 This method is affected by versioning. See the [versioning documentation](/api/appendix/version) for more information.
 
-<PartialServop service_name="entity" operation_name="UPDATE" / >
+<PartialServop service_name="entity" operation_name="UPDATE" />
 
 ## Usage
 

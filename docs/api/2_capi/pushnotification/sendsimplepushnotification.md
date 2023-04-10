@@ -2,7 +2,7 @@
 ## Overview
 Sends a simple push notification based on the passed in message.
 
-<PartialServop service_name="pushNotification" operation_name="SEND_SIMPLE" / >
+<PartialServop service_name="pushNotification" operation_name="SEND_SIMPLE" />
 
 ## Usage
 

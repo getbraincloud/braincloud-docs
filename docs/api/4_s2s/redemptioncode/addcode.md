@@ -10,7 +10,7 @@ Name | Description
 --------- | -----------
 response | Newly created redemption code object.
 
-<PartialServop service_name="redemptionCode" operation_name="ADD_CODE" / >
+<PartialServop service_name="redemptionCode" operation_name="ADD_CODE" />
 
 ## Usage
 

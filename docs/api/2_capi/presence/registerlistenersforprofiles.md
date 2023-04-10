@@ -2,7 +2,7 @@
 ## Overview
 Registers the caller for RTT presence updates for the given `profileIds`. If `bidirectional` is set to true, then also registers the targeted users for presence updates from the caller.
 
-<PartialServop service_name="presence" operation_name="REGISTER_LISTENERS_FOR_PROFILES" / >
+<PartialServop service_name="presence" operation_name="REGISTER_LISTENERS_FOR_PROFILES" />
 
 ## Usage
 

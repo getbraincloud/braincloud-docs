@@ -18,7 +18,7 @@ Approve an outstanding request to join the group. Optional parameters: jsonAttri
 }
 ```
 
-<PartialServop service_name="group" operation_name="APPROVE_GROUP_JOIN_REQUEST" / >
+<PartialServop service_name="group" operation_name="APPROVE_GROUP_JOIN_REQUEST" />
 
 ## Usage
 

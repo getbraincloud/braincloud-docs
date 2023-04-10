@@ -2,7 +2,7 @@
 ## Overview
 Deletes the specified custom entity singleton, owned by the session's user, for the specified entity type, on the server.
 
-<PartialServop service_name="customEntity" operation_name="DELETE_SINGLETON" / >
+<PartialServop service_name="customEntity" operation_name="DELETE_SINGLETON" />
 
 ## Usage
 

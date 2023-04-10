@@ -2,7 +2,7 @@
 ## Overview
 Schedules a normalized push notification to a user at a future relative time.
 
-<PartialServop service_name="pushNotification" operation_name="SCHEDULE_NORMALIZED_NOTIFICATION" / >
+<PartialServop service_name="pushNotification" operation_name="SCHEDULE_NORMALIZED_NOTIFICATION" />
 
 ## Usage
 

@@ -4,7 +4,7 @@ Attach the user's Facebook Limited login credentials to the current profile.
 
 
 
-<PartialServop service_name="identity" operation_name="ATTACH" / >
+<PartialServop service_name="identity" operation_name="ATTACH" />
 
 ## Usage
 

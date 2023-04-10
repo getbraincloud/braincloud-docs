@@ -8,9 +8,9 @@ Fields available for use in the 'where' clause are:
  - createdAt
  - updatedAt
 
-Along with all custom data (using `data.`).  For more information on the query syntax see [here](/api/appendix/mongodbwherequeries).
+ Along with all custom data (using `data.`).  For more information on the query syntax see [here](/api/appendix/mongodbwherequeries).
 
-<PartialServop service_name="entity" operation_name="GET_LIST" / >
+<PartialServop service_name="entity" operation_name="GET_LIST" />
 
 ## Usage
 

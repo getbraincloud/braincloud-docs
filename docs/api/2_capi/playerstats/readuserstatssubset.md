@@ -2,7 +2,7 @@
 ## Overview
 Reads a subset of user statistics.
 
-<PartialServop service_name="playerStatistics" operation_name="READ_SUBSET" / >
+<PartialServop service_name="playerStatistics" operation_name="READ_SUBSET" />
 
 ## Usage
 

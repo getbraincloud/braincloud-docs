@@ -3,7 +3,7 @@
 Update the custom information for a redemption code.
 
 
-<PartialServop service_name="redemptionCode" operation_name="UPDATE_CUSTOM_INFO" / >
+<PartialServop service_name="redemptionCode" operation_name="UPDATE_CUSTOM_INFO" />
 
 ## Usage
 

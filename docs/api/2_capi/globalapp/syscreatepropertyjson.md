@@ -2,7 +2,7 @@
 ## Overview
 Creates the named global property with the given json value.
 
-<PartialServop service_name="globalApp" operation_name="SYS_CREATE_PROPERTY_JSON" / >
+<PartialServop service_name="globalApp" operation_name="SYS_CREATE_PROPERTY_JSON" />
 
 ## Usage
 

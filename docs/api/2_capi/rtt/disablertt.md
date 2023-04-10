@@ -2,7 +2,7 @@
 ## Overview
 Disables the RTT connection.
 
-<PartialServop service_name="rttRegistration" operation_name="disconnect" / >
+<PartialServop service_name="rttRegistration" operation_name="disconnect" />
 
 ## Usage
 

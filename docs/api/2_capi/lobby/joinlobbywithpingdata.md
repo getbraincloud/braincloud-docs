@@ -4,7 +4,7 @@ Adds the caller to the given lobby instance.
 
 Use [PingRegions](/api/capi/lobby/pingregions) to generate the ping data.
 
-<PartialServop service_name="lobby" operation_name="JOIN_LOBBY_WITH_PING_DATA" / >
+<PartialServop service_name="lobby" operation_name="JOIN_LOBBY_WITH_PING_DATA" />
 
 ## Usage
 

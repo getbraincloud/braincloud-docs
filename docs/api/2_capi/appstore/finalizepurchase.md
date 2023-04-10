@@ -2,7 +2,7 @@
 ## Overview
 Finalize a two-part purchase transaction. Currently only used for Steam purchases. On success, the player will be awarded the associated currencies.
 
-<PartialServop service_name="appStore" operation_name="FINALIZE_PURCHASE" / >
+<PartialServop service_name="appStore" operation_name="FINALIZE_PURCHASE" />
 
 ## Usage
 

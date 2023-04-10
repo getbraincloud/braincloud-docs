@@ -8,7 +8,7 @@ Returns a list of max \<n\> messages from history.
 
 
 
-<PartialServop service_name="chat" operation_name="SYS_GET_RECENT_CHAT_MESSAGES" / >
+<PartialServop service_name="chat" operation_name="SYS_GET_RECENT_CHAT_MESSAGES" />
 
 ## Usage
 

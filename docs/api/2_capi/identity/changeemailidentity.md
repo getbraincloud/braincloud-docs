@@ -2,7 +2,7 @@
 ## Overview
 Changes email address in email identity for this player
 
-<PartialServop service_name="identity" operation_name="CHANGE_EMAIL_IDENTITY" / >
+<PartialServop service_name="identity" operation_name="CHANGE_EMAIL_IDENTITY" />
 
 ## Usage
 

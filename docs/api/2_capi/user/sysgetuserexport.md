@@ -2,7 +2,7 @@
 ## Overview
 Exports user information for a single profile ID.
 
-<PartialServop service_name="user" operation_name="SYS_GET_USER_EXPORT" / >
+<PartialServop service_name="user" operation_name="SYS_GET_USER_EXPORT" />
 
 ## Usage
 

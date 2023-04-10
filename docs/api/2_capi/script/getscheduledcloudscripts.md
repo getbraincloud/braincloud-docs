@@ -3,7 +3,7 @@
 Retrieves list of scheduled cloud scripts having a scheduled start time 
 less than or equal to the specified scheduledStartTime time (UTC time in milliseconds).
 
-<PartialServop service_name="script" operation_name="GET_SCHEDULED_CLOUD_SCRIPTS" / >
+<PartialServop service_name="script" operation_name="GET_SCHEDULED_CLOUD_SCRIPTS" />
 
 ## Usage
 

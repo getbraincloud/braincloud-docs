@@ -2,7 +2,7 @@
 ## Overview
 Method returns the number of entries in a global leaderboard.
 
-<PartialServop service_name="leaderboard" operation_name="GET_GLOBAL_LEADERBOARD_ENTRY_COUNT" / >
+<PartialServop service_name="leaderboard" operation_name="GET_GLOBAL_LEADERBOARD_ENTRY_COUNT" />
 
 ## Usage
 

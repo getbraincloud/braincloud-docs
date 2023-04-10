@@ -6,7 +6,7 @@ Currently, this method is available in Cloud Code scripts and for Ultra authenti
 
 Retrieves identity data for given identity type for this profile.
 
-<PartialServop service_name="identity" operation_name="GET_IDENTITY_DATA" / >
+<PartialServop service_name="identity" operation_name="GET_IDENTITY_DATA" />
 
 ## Usage
 

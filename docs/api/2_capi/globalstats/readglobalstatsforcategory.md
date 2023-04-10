@@ -2,7 +2,7 @@
 ## Overview
 Method retrieves the global statistics for the given category.
 
-<PartialServop service_name="globalGameStatistics" operation_name="READ_FOR_CATEGORY" / >
+<PartialServop service_name="globalGameStatistics" operation_name="READ_FOR_CATEGORY" />
 
 ## Usage
 

@@ -2,7 +2,7 @@
 ## Overview
 Delete the product item.
 
-<PartialServop service_name="productManagement" operation_name="SYS_DELETE_PRODUCT" / >
+<PartialServop service_name="productManagement" operation_name="SYS_DELETE_PRODUCT" />
 
 ## Usage
 

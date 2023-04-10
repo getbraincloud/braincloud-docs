@@ -2,7 +2,7 @@
 ## Overview
 Attach a peer identity profile to the current profile. Create if necessary.
 
-<PartialServop service_name="identity" operation_name="ATTACH_PEER_PROFILE" / >
+<PartialServop service_name="identity" operation_name="ATTACH_PEER_PROFILE" />
 
 ## Usage
 

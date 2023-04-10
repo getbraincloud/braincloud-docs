@@ -2,7 +2,7 @@
 ## Overview
 Enables match making for the player.
 
-<PartialServop service_name="matchMaking" operation_name="ENABLE_FOR_MATCH" / >
+<PartialServop service_name="matchMaking" operation_name="ENABLE_FOR_MATCH" />
 
 ## Usage
 

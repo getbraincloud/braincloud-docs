@@ -4,7 +4,7 @@ Causes the caller to leave the specified lobby. If the user was the owner, a new
 
 
 
-<PartialServop service_name="lobby" operation_name="LEAVE_LOBBY" / >
+<PartialServop service_name="lobby" operation_name="LEAVE_LOBBY" />
 
 ## Usage
 

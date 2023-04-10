@@ -2,7 +2,7 @@
 ## Overview
 Method retrieves all of the quests defined for the game.
 
-<PartialServop service_name="gamification" operation_name="READ_QUESTS" / >
+<PartialServop service_name="gamification" operation_name="READ_QUESTS" />
 
 ## Usage
 

@@ -2,7 +2,7 @@
 ## Overview
 Delete a list of events out of the user's incoming mailbox.
 
-<PartialServop service_name="event" operation_name="DELETE_INCOMING_EVENTS" / >
+<PartialServop service_name="event" operation_name="DELETE_INCOMING_EVENTS" />
 
 ## Usage
 

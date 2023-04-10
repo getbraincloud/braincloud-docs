@@ -2,7 +2,7 @@
 ## Overview
 Completes a match.
 
-<PartialServop service_name="onewayMatch" operation_name="COMPLETE_MATCH" / >
+<PartialServop service_name="onewayMatch" operation_name="COMPLETE_MATCH" />
 
 ## Usage
 

@@ -23,7 +23,7 @@ This call, <code>ResetCurrency()</code>, is included in the client libraries for
 
 Resets the player's currency back to zero.
 
-<PartialServop service_name="product" operation_name="RESET_PLAYER_VC" / >
+<PartialServop service_name="product" operation_name="RESET_PLAYER_VC" />
 
 ## Usage
 

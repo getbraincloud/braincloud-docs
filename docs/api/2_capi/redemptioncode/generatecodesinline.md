@@ -3,7 +3,7 @@
 Generates specified quantity of redemption codes inline.
 
 
-<PartialServop service_name="redemptionCode" operation_name="GENERATE_CODES_INLINE" / >
+<PartialServop service_name="redemptionCode" operation_name="GENERATE_CODES_INLINE" />
 
 ## Usage
 

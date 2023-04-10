@@ -4,7 +4,7 @@ Adds the caller to the lobby entry queue.
 
 Use [PingRegions](/api/capi/lobby/pingregions) to generate the ping data.
 
-<PartialServop service_name="lobby" operation_name="FIND_LOBBY_WITH_PING_DATA" / >
+<PartialServop service_name="lobby" operation_name="FIND_LOBBY_WITH_PING_DATA" />
 
 ## Usage
 

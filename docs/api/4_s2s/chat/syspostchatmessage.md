@@ -2,7 +2,7 @@
 ## Overview
 Send a message on behalf of the system to the specified users.
 
-<PartialServop service_name="chat" operation_name="SYS_POST_CHAT_MESSAGE" / >
+<PartialServop service_name="chat" operation_name="SYS_POST_CHAT_MESSAGE" />
 
 ## Usage
 

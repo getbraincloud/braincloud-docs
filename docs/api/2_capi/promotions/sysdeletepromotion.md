@@ -2,7 +2,7 @@
 ## Overview
 Deletes the specified promotion from the server.
 
-<PartialServop service_name="promotions" operation_name="SYS_DELETE_PROMOTION" / >
+<PartialServop service_name="promotions" operation_name="SYS_DELETE_PROMOTION" />
 
 ## Usage
 

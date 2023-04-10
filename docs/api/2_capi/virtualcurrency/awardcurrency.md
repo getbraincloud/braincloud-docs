@@ -4,7 +4,7 @@ Award user the passed-in amount of currency. Returns an object representing the 
 
 Note: Awarding 0 or negative currency will return an error. Use <code>[ConsumeCurrency](/api/capi/virtualcurrency/consumecurrency)</code> to remove currency values.
 
-<PartialServop service_name="virtualCurrency" operation_name="AWARD_VC" / >
+<PartialServop service_name="virtualCurrency" operation_name="AWARD_VC" />
 
 ## Usage
 

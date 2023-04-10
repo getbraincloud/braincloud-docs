@@ -2,7 +2,7 @@
 ## Overview
 Retrieves the virtual currency types inherited from the configured peer apps.
 
-<PartialServop service_name="virtualCurrency" operation_name="SYS_GET_PEER_CURRENCY_TYPES" / >
+<PartialServop service_name="virtualCurrency" operation_name="SYS_GET_PEER_CURRENCY_TYPES" />
 
 ## Usage
 

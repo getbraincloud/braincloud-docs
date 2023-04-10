@@ -2,7 +2,7 @@
 ## Overview
 Award parent user the passed-in amount of currency. Returns an object representing the new currency values.
 
-<PartialServop service_name="virtualCurrency" operation_name="AWARD_PARENT_VC" / >
+<PartialServop service_name="virtualCurrency" operation_name="AWARD_PARENT_VC" />
 
 ## Usage
 

@@ -2,7 +2,7 @@
 ## Overview
 Reads a custom entity. Ignores ownership/ACL checks.
 
-<PartialServop service_name="customEntity" operation_name="SYS_READ_ENTITY" / >
+<PartialServop service_name="customEntity" operation_name="SYS_READ_ENTITY" />
 
 ## Usage
 

@@ -2,7 +2,7 @@
 ## Overview
 Retrieves next/prev page of users from server based on the specified query context.
 
-<PartialServop service_name="user" operation_name="SYS_GET_PAGE_OFFSET" / >
+<PartialServop service_name="user" operation_name="SYS_GET_PAGE_OFFSET" />
 
 ## Usage
 

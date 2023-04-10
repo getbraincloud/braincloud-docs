@@ -2,7 +2,7 @@
 ## Overview
 Reject a request to join the group.
 
-<PartialServop service_name="group" operation_name="REJECT_GROUP_JOIN_REQUEST" / >
+<PartialServop service_name="group" operation_name="REJECT_GROUP_JOIN_REQUEST" />
 
 ## Usage
 

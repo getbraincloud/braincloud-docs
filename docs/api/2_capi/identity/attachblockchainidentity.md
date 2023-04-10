@@ -2,7 +2,7 @@
 ## Overview
 Attaches the given block chain public key identity to the current profile.
 
-<PartialServop service_name="identity" operation_name="ATTACH_BLOCKCHAIN_IDENTITY" / >
+<PartialServop service_name="identity" operation_name="ATTACH_BLOCKCHAIN_IDENTITY" />
 
 ## Usage
 

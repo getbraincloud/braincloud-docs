@@ -11,7 +11,7 @@ Returns whether the <%= data.branding.codeClient %> has been initialized using t
 ```
 
 ```csharp
-bool isInitialized = <%= data.branding.codePrefix %>.Initialized;
+bool isInitialized = <%= data.branding.codePrefix %>.isInitialized();
 ```
 
 ```mdx-code-block

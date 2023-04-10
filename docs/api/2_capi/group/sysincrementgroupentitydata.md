@@ -2,7 +2,7 @@
 ## Overview
 Partial increment of group entity data field items. Partial set of items incremented as specified. Bypasses ownership/ACL checks.
 
-<PartialServop service_name="group" operation_name="SYS_INCREMENT_GROUP_ENTITY_DATA" / >
+<PartialServop service_name="group" operation_name="SYS_INCREMENT_GROUP_ENTITY_DATA" />
 
 ## Usage
 

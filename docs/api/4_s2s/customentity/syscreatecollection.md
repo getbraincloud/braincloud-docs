@@ -2,7 +2,7 @@
 ## Overview
 Creates configuration for new custom entity collection.
 
-<PartialServop service_name="customEntity" operation_name="SYS_CREATE_COLLECTION" / >
+<PartialServop service_name="customEntity" operation_name="SYS_CREATE_COLLECTION" />
 
 ## Usage
 

@@ -2,7 +2,7 @@
 ## Overview
 Returns a list of the player's recently active divisions, organized by simplified tournament state: ACTIVE, PENDING, CLAIMABLE, or COMPLETE.
 
-<PartialServop service_name="tournament" operation_name="GET_MY_DIVISIONS" / >
+<PartialServop service_name="tournament" operation_name="GET_MY_DIVISIONS" />
 
 ## Usage
 

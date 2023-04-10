@@ -6,7 +6,7 @@ NOTE: If using the <%= data.branding.codeWrapper %>, once the merge is complete 
 
 
 
-<PartialServop service_name="identity" operation_name="MERGE" / >
+<PartialServop service_name="identity" operation_name="MERGE" />
 
 ## Usage
 

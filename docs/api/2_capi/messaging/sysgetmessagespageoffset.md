@@ -5,7 +5,7 @@ Returns the next/prev page of messages.
 
 
 
-<PartialServop service_name="messaging" operation_name="SYS_GET_MESSAGES_PAGE_OFFSET" / >
+<PartialServop service_name="messaging" operation_name="SYS_GET_MESSAGES_PAGE_OFFSET" />
 
 ## Usage
 

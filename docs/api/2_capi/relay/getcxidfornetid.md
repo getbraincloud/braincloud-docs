@@ -1,6 +1,6 @@
 # GetCxIdForNetId
 ## Overview
-Returns the netId associated with a connection Id.
+Returns the RTT connection Id associated with a netId.
 
 ## Usage
 
@@ -28,7 +28,8 @@ Returns the netId associated with a connection Id.
 <TabItem value="objectivec" label="Objective-C">
 ```
 
-```objectivec
+```cpp
+<%= data.branding.codePrefix %>->getRelayService()->getCxIdForNetId();
 ```
 
 ```mdx-code-block
@@ -36,7 +37,8 @@ Returns the netId associated with a connection Id.
 <TabItem value="java" label="Java">
 ```
 
-```java
+```cpp
+<%= data.branding.codePrefix %>->getRelayService()->getCxIdForNetId();
 ```
 
 ```mdx-code-block
@@ -44,7 +46,8 @@ Returns the netId associated with a connection Id.
 <TabItem value="js" label="JavaScript">
 ```
 
-```javascript
+```cpp
+<%= data.branding.codePrefix %>->getRelayService()->getCxIdForNetId();
 ```
 
 ```mdx-code-block
@@ -61,7 +64,7 @@ Returns the netId associated with a connection Id.
 <TabItem value="r" label="Raw">
 ```
 
-```r
+```cfscript
 // N/A
 ```
 

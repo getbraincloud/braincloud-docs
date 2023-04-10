@@ -2,7 +2,7 @@
 ## Overview
 Gets a list of up to randomCount randomly selected entities from the server based on the where condition and specified maximum return count.
 
-<PartialServop service_name="globalEntity" operation_name="GET_RANDOM_ENTITIES_MATCHING" / >
+<PartialServop service_name="globalEntity" operation_name="GET_RANDOM_ENTITIES_MATCHING" />
 
 ## Usage
 

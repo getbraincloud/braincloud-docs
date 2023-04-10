@@ -9,7 +9,7 @@ Returns *description info* and *activity stats* for the specified channel. Note 
 
 
 
-<PartialServop service_name="chat" operation_name="SYS_GET_CHANNEL_INFO" / >
+<PartialServop service_name="chat" operation_name="SYS_GET_CHANNEL_INFO" />
 
 ## Usage
 

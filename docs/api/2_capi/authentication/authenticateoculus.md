@@ -8,7 +8,7 @@ Authenticate the user with <%= data.branding.productName %> using their Oculus C
 Make sure you've initialized the <%= data.branding.productName %> library before authenticating.
 :::
 
-<PartialServop service_name="authenticationV2" operation_name="AUTHENTICATE" / >
+<PartialServop service_name="authenticationV2" operation_name="AUTHENTICATE" />
 
 ## Usage
 

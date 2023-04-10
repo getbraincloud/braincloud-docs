@@ -2,7 +2,7 @@
 ## Overview
 Create a new player or group entry leaderboard configuration.
 
-<PartialServop service_name="leaderboard" operation_name="SYS_CREATE_LEADERBOARD" / >
+<PartialServop service_name="leaderboard" operation_name="SYS_CREATE_LEADERBOARD" />
 
 ## Usage
 

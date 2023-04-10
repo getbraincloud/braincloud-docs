@@ -2,7 +2,7 @@
 ## Overview
 Returns the segments for the current user - in legacy format (i.e. using the existing, numeric segment ids). Available via cloud-code only.
 
-<PartialServop service_name="segment" operation_name="GET_MY_SEGMENTS_LEGACY" / >
+<PartialServop service_name="segment" operation_name="GET_MY_SEGMENTS_LEGACY" />
 
 ## Usage
 

@@ -2,7 +2,7 @@
 ## Overview
 Update User picture URL.
 
-<PartialServop service_name="playerState" operation_name="UPDATE_PICTURE_URL" / >
+<PartialServop service_name="playerState" operation_name="UPDATE_PICTURE_URL" />
 
 ## Usage
 

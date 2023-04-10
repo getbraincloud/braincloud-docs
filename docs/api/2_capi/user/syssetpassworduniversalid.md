@@ -4,7 +4,7 @@ Set the password associated with the universal id of the given profile.
 
 
 
-<PartialServop service_name="user" operation_name="SYS_SET_PASSWORD_UNIVERSAL_ID" / >
+<PartialServop service_name="user" operation_name="SYS_SET_PASSWORD_UNIVERSAL_ID" />
 
 ## Usage
 

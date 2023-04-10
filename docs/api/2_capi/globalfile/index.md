@@ -51,7 +51,7 @@ The <em>treeId</em> (aka globalTreeId, folder or file Id) represents the guid fo
 * [SysDeleteGlobalFile()](/api/capi/globalfile/sysdeleteglobalfile) - delete a file
 * [SysDeleteGlobalFiles()](/api/capi/globalfile/sysdeleteglobalfiles) - delete the contents of a directory
 
-### Folder Management ###
+### Folder Management
 
 * [SysLookupFolder](/api/capi/globalfile/syslookupfolder) - lookup a folder given it's path
 * [SysCreateFolder](/api/capi/globalfile/syscreatefolder) - create a folder

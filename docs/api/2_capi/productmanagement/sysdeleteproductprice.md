@@ -2,7 +2,7 @@
 ## Overview
 Deletes a price for the given product item. If the priceId being deleted is the currently active price, the defaultPriceId will be set to -1 (not-for-sale).
 
-<PartialServop service_name="productManagement" operation_name="SYS_DELETE_PRODUCT_PRICE" / >
+<PartialServop service_name="productManagement" operation_name="SYS_DELETE_PRODUCT_PRICE" />
 
 ## Usage
 

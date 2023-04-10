@@ -2,7 +2,7 @@
 ## Overview
 Refreshes an identity for this player
 
-<PartialServop service_name="identity" operation_name="REFRESH_IDENTITY" / >
+<PartialServop service_name="identity" operation_name="REFRESH_IDENTITY" />
 
 ## Usage
 

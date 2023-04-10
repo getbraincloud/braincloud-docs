@@ -4,7 +4,7 @@ Retrieves profile information for the specified user.
 
 Does not require the calling user to be a friend of the other user.
 
-<PartialServop service_name="friend" operation_name="GET_PROFILE_INFO_FOR_CREDENTIAL" / >
+<PartialServop service_name="friend" operation_name="GET_PROFILE_INFO_FOR_CREDENTIAL" />
 
 ## Usage
 

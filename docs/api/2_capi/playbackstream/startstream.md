@@ -2,7 +2,7 @@
 ## Overview
 Starts a stream.
 
-<PartialServop service_name="playbackStream" operation_name="START_STREAM" / >
+<PartialServop service_name="playbackStream" operation_name="START_STREAM" />
 
 ## Usage
 

@@ -6,7 +6,7 @@ Sends LOBBY_MEMBER_UPDATED to all lobby members, with copy of member data
 
 
 
-<PartialServop service_name="lobby" operation_name="SWITCH_TEAM" / >
+<PartialServop service_name="lobby" operation_name="SWITCH_TEAM" />
 
 ## Usage
 

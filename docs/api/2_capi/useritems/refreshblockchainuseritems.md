@@ -2,7 +2,7 @@
 ## Overview
 Syncs the caller's user items with the item management attached blockchain. Results are reported asynchronously via an RTT event.
 
-<PartialServop service_name="userItems" operation_name="REFRESH_BLOCKCHAIN_USER_ITEMS" / >
+<PartialServop service_name="userItems" operation_name="REFRESH_BLOCKCHAIN_USER_ITEMS" />
 
 ## Usage
 

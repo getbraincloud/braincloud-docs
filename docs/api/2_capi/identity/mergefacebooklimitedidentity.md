@@ -2,7 +2,7 @@
 ## Overview
 Merge the user's Facebook Limited login credentials with the current profile.
 
-<PartialServop service_name="identity" operation_name="MERGE" / >
+<PartialServop service_name="identity" operation_name="MERGE" />
 
 ## Usage
 

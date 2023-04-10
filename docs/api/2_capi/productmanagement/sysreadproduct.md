@@ -2,7 +2,7 @@
 ## Overview
 Retrieve the full product meta-data for the specified product.
 
-<PartialServop service_name="productManagement" operation_name="SYS_READ_PRODUCT" / >
+<PartialServop service_name="productManagement" operation_name="SYS_READ_PRODUCT" />
 
 ## Usage
 

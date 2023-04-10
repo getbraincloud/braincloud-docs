@@ -6,7 +6,7 @@ To be informed of success/failure of the upload register the File Upload Callbac
 
 
 
-<PartialServop service_name="file" operation_name="PREPARE_USER_UPLOAD" / >
+<PartialServop service_name="file" operation_name="PREPARE_USER_UPLOAD" />
 
 ## Usage
 

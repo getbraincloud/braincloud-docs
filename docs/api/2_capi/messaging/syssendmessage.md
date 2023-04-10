@@ -8,7 +8,7 @@ Sends a message on behalf of the system (i.e. app) to the specified users.
 
 
 
-<PartialServop service_name="messaging" operation_name="SYS_SEND_MESSAGE" / >
+<PartialServop service_name="messaging" operation_name="SYS_SEND_MESSAGE" />
 
 ## Usage
 

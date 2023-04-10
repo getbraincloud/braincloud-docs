@@ -2,7 +2,7 @@
 ## Overview
 Counts the number of custom entities meeting the specified where clause.
 
-<PartialServop service_name="customEntity" operation_name="SYS_DROP_COLLECTION" / >
+<PartialServop service_name="customEntity" operation_name="SYS_DROP_COLLECTION" />
 
 ## Usage
 

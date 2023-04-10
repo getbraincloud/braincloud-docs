@@ -2,7 +2,7 @@
 ## Overview
 Gifts item to the specified player.
 
-<PartialServop service_name="userItems" operation_name="GIVE_USER_ITEM_TO" / >
+<PartialServop service_name="userItems" operation_name="GIVE_USER_ITEM_TO" />
 
 ## Usage
 

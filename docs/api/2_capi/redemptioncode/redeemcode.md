@@ -2,7 +2,7 @@
 ## Overview
 Redeem a code.
 
-<PartialServop service_name="redemptionCode" operation_name="REDEEM_CODE" / >
+<PartialServop service_name="redemptionCode" operation_name="REDEEM_CODE" />
 
 ## Usage
 

@@ -6,7 +6,7 @@ WARNING: This call, <code>CreateLeaderboard()</code>, will be deprecated and rep
 
 Creates a leaderboard under the context of the current game. You can optionally send a user-defined json string of data with the created leaderboard. This string could include information relevant to the created leaderboard.
 
-<PartialServop service_name="leaderboard" operation_name="CREATE_LEADERBOARD" / >
+<PartialServop service_name="leaderboard" operation_name="CREATE_LEADERBOARD" />
 
 ## Usage
 

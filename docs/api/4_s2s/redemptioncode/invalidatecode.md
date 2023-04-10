@@ -10,7 +10,7 @@ Name | Description
 --------- | -----------
 response | Newly updated redemption code object
 
-<PartialServop service_name="redemptionCode" operation_name="INVALIDATE_CODE" / >
+<PartialServop service_name="redemptionCode" operation_name="INVALIDATE_CODE" />
 
 ## Usage
 

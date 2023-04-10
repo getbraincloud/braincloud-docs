@@ -2,7 +2,7 @@
 ## Overview
 Reads a stream.
 
-<PartialServop service_name="playbackStream" operation_name="READ_STREAM" / >
+<PartialServop service_name="playbackStream" operation_name="READ_STREAM" />
 
 ## Usage
 

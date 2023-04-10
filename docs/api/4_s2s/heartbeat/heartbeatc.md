@@ -17,7 +17,7 @@ This service allows you to send no-op packets to the server to keep the session 
 }
 ```
 
-<PartialServop service_name="heartbeat" operation_name="HEARTBEAT" / >
+<PartialServop service_name="heartbeat" operation_name="HEARTBEAT" />
 
 ## Usage
 

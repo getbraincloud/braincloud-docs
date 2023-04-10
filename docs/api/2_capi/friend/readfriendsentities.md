@@ -2,7 +2,7 @@
 ## Overview
 Returns entities of all friends based on type and/or subtype.
 
-<PartialServop service_name="friend" operation_name="READ_FRIENDS_ENTITIES" / >
+<PartialServop service_name="friend" operation_name="READ_FRIENDS_ENTITIES" />
 
 ## Usage
 

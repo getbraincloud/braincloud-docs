@@ -2,7 +2,7 @@
 ## Overview
 Retrieve a page of the global leaderboard specified by the start and end indexes (0-based).
 
-<PartialServop service_name="leaderboard" operation_name="GET_GLOBAL_LEADERBOARD_PAGE" / >
+<PartialServop service_name="leaderboard" operation_name="GET_GLOBAL_LEADERBOARD_PAGE" />
 
 ## Usage
 

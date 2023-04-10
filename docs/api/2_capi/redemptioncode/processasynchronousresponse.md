@@ -3,7 +3,7 @@
 Callback with asynchronous response for the redemption code service to process for an asynchronous redemption code.
 
 
-<PartialServop service_name="redemptionCode" operation_name="PROCESS_ASYNCHRONOUS_RESPONSE" / >
+<PartialServop service_name="redemptionCode" operation_name="PROCESS_ASYNCHRONOUS_RESPONSE" />
 
 ## Usage
 

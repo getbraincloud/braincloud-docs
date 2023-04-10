@@ -2,6 +2,7 @@
 ## Overview
 
 
+
 ### API Summary
 
 ### Messaging
@@ -10,6 +11,7 @@
 * [SysGetMessages](/api/s2s/messaging/sysgetmessages) - Retrieves list of specified system messages.
 * [SysUpdateMessage](/api/s2s/messaging/sysupdatemessage) - Updates a system message.
 * [SysDeleteMessage](/api/s2s/messaging/sysdeletemessage) - Deletes specified system message on the server. Note, if a regular message, deletes all references to it.
+* [SysDeleteMessages](/api/capi/messaging/sysdeletemessages) - Deletes specified system messages on the server. Note, if a regular message, deletes all references to it.
 * [SysSendMessageSimple](/api/s2s/messaging/syssendmessagesimple) - Sends a simple string-based message on behalf of the system (i.e. app) to the specified users.
 * [SysSendMessage](/api/s2s/messaging/syssendmessage) - Sends a message on behalf of the system (i.e. app) to the specified users.
 * [SysGetMessagesForOwnerPage](/api/capi/messaging/sysgetmessagesforownerpage) - Retrieves the page of messages, owned by specified ownerId, from the server based on the encoded context.

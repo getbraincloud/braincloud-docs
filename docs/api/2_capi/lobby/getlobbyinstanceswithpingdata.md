@@ -2,7 +2,7 @@
 ## Overview
 Gets a map keyed by rating of the lobby instances matching the given type, rating range, and ping threshold.
 
-<PartialServop service_name="lobby" operation_name="GET_LOBBY_INSTANCES_WITH_PING_DATA" / >
+<PartialServop service_name="lobby" operation_name="GET_LOBBY_INSTANCES_WITH_PING_DATA" />
 
 ## Usage
 

@@ -34,7 +34,7 @@ Name | Description
 --------- | -----------
 response | JSON formatted response
 
-<PartialServop service_name="httpClient" operation_name="GET_RESPONSE_JSON" / >
+<PartialServop service_name="httpClient" operation_name="GET_RESPONSE_JSON" />
 
 ## Usage
 

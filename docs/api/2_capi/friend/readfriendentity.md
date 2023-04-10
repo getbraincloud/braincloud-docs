@@ -2,7 +2,7 @@
 ## Overview
 Returns a particular entity of a particular friend.
 
-<PartialServop service_name="friend" operation_name="READ_FRIEND_ENTITY" / >
+<PartialServop service_name="friend" operation_name="READ_FRIEND_ENTITY" />
 
 ## Usage
 

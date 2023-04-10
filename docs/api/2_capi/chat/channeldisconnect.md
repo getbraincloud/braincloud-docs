@@ -4,7 +4,7 @@ Disconnects from the specified channel, unregistering the handler.
 
 
 
-<PartialServop service_name="chat" operation_name="CHANNEL_DISCONNECT" / >
+<PartialServop service_name="chat" operation_name="CHANNEL_DISCONNECT" />
 
 ## Usage
 

@@ -2,7 +2,7 @@
 ## Overview
 Retrieve a list of all expired identities for the current user. The app may choose to take action and prompt
 
-<PartialServop service_name="identity" operation_name="GET_EXPIRED_IDENTITIES" / >
+<PartialServop service_name="identity" operation_name="GET_EXPIRED_IDENTITIES" />
 
 ## Usage
 

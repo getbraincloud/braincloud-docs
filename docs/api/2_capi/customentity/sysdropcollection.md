@@ -2,7 +2,7 @@
 ## Overview
 Drops the specified entity type collection.
 
-<PartialServop service_name="customEntity" operation_name="SYS_DROP_COLLECTION" / >
+<PartialServop service_name="customEntity" operation_name="SYS_DROP_COLLECTION" />
 
 ## Usage
 

@@ -4,7 +4,7 @@ Registers a handler for incoming events from the specified `channelId`. Also ret
 
 
 
-<PartialServop service_name="chat" operation_name="CHANNEL_CONNECT" / >
+<PartialServop service_name="chat" operation_name="CHANNEL_CONNECT" />
 
 ## Usage
 

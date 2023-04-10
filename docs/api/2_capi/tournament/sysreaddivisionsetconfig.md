@@ -2,7 +2,7 @@
 ## Overview
 Reads the current version of the division set configuration identified by the division set id.
 
-<PartialServop service_name="tournament" operation_name="SYS_READ_DIVISION_SET_CONFIG" / >
+<PartialServop service_name="tournament" operation_name="SYS_READ_DIVISION_SET_CONFIG" />
 
 ## Usage
 

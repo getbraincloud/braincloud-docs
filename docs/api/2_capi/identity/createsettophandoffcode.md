@@ -2,7 +2,7 @@
 ## Overview
 Creates a settop handoff code that is valid for a limited amount of time, and in accordance with the provided specifications. Use the [<code>AuthenticateSettopHandoff</code>](/api/capi/authentication/authenticatesettophandoff) call to log the user in via the generated code.
 
-<PartialServop service_name="identity" operation_name="CREATE_HANDOFF_ID" / >
+<PartialServop service_name="identity" operation_name="CREATE_HANDOFF_ID" />
 
 ## Usage
 

@@ -2,7 +2,7 @@
 ## Overview
 Method returns list of all the leaderboards from the server based on gameId of the user.
 
-<PartialServop service_name="leaderboard" operation_name="LIST_ALL_LEADERBOARDS" / >
+<PartialServop service_name="leaderboard" operation_name="LIST_ALL_LEADERBOARDS" />
 
 ## Usage
 

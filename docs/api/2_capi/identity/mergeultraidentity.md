@@ -4,7 +4,7 @@ Merge the profile associated with the provided Ultra credentials with the curren
 
 
 
-<PartialServop service_name="identity" operation_name="MERGE" / >
+<PartialServop service_name="identity" operation_name="MERGE" />
 
 ## Usage
 

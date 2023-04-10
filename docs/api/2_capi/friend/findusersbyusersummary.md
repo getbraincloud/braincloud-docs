@@ -12,7 +12,7 @@ Due to the custom data fields are not indexed, this call is not recommended for 
 10,000 players, consider using Owned Custom Entity with a custom index for efficient lookups instead.
 :::
 
-<PartialServop service_name="friend" operation_name="FIND_USERS_BY_USER_SUMMARY" / >
+<PartialServop service_name="friend" operation_name="FIND_USERS_BY_USER_SUMMARY" />
 
 ## Usage
 

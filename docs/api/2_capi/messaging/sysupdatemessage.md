@@ -9,7 +9,7 @@ Update the content of the specified message.
 
 
 
-<PartialServop service_name="messaging" operation_name="SYS_UPDATE_MESSAGE" / >
+<PartialServop service_name="messaging" operation_name="SYS_UPDATE_MESSAGE" />
 
 ## Usage
 

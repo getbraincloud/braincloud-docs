@@ -2,7 +2,7 @@
 ## Overview
 Returns a list of all peer profiles for this user.
 
-<PartialServop service_name="identity" operation_name="GET_PEER_PROFILES" / >
+<PartialServop service_name="identity" operation_name="GET_PEER_PROFILES" />
 
 ## Usage
 

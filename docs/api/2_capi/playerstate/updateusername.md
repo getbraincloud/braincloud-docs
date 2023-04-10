@@ -2,7 +2,7 @@
 ## Overview
 Sets the user's name.
 
-<PartialServop service_name="playerState" operation_name="UPDATE_NAME" / >
+<PartialServop service_name="playerState" operation_name="UPDATE_NAME" />
 
 ## Usage
 

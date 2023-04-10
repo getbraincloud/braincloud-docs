@@ -11,7 +11,7 @@ Parameter | Description
 --------- | -----------
 40443 | Processing exception (message): Invalid service code. Ensure the Web Service has been configured
 
-<PartialServop service_name="httpClient" operation_name="POST_JSON_OFFBOARD" / >
+<PartialServop service_name="httpClient" operation_name="POST_JSON_OFFBOARD" />
 
 ## Usage
 

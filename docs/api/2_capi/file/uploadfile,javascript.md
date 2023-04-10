@@ -11,7 +11,7 @@ On a 200 http status, the JSON return is available from XMLHttpRequest.responseT
 
 
 
-<PartialServop service_name="file" operation_name="UPLOAD_FILE" / >
+<PartialServop service_name="file" operation_name="UPLOAD_FILE" />
 
 ## Usage
 

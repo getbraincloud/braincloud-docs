@@ -2,7 +2,7 @@
 ## Overview
 Ends a stream.
 
-<PartialServop service_name="playbackStream" operation_name="END_STREAM" / >
+<PartialServop service_name="playbackStream" operation_name="END_STREAM" />
 
 ## Usage
 

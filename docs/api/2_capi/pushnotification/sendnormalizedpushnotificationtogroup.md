@@ -2,7 +2,7 @@
 ## Overview
 Sends a notification to a "group" of user consisting of alert content and custom data.
 
-<PartialServop service_name="pushNotification" operation_name="SEND_NORMALIZED_TO_GROUP" / >
+<PartialServop service_name="pushNotification" operation_name="SEND_NORMALIZED_TO_GROUP" />
 
 ## Usage
 

@@ -36,7 +36,7 @@ public void FailureCallback(int statusCode, int reasonCode, string statusMessage
     }
 ```
 
-<PartialServop service_name="identity" operation_name="MERGE" / >
+<PartialServop service_name="identity" operation_name="MERGE" />
 
 ## Usage
 

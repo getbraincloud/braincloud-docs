@@ -2,7 +2,7 @@
 ## Overview
 Verify Microsoft Receipt. On success, the player will be awarded the associated currencies.
 
-<PartialServop service_name="product" operation_name="VERIFY_MICROSOFT_RECEIPT" / >
+<PartialServop service_name="product" operation_name="VERIFY_MICROSOFT_RECEIPT" />
 
 ## Usage
 

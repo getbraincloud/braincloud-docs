@@ -4,7 +4,7 @@ Deletes the local copies of messages from the user's mailbox.
 
 
 
-<PartialServop service_name="messaging" operation_name="DELETE_MESSAGES" / >
+<PartialServop service_name="messaging" operation_name="DELETE_MESSAGES" />
 
 ## Usage
 

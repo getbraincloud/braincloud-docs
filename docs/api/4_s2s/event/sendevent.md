@@ -10,7 +10,7 @@ Name | Description
 --------- | -----------
 response | Includes evId of sent event
 
-<PartialServop service_name="event" operation_name="SEND" / >
+<PartialServop service_name="event" operation_name="SEND" />
 
 ## Usage
 

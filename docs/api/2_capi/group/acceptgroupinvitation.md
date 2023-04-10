@@ -22,7 +22,7 @@ data" : {
 }
 ```
 
-<PartialServop service_name="group" operation_name="ACCEPT_GROUP_INVITATION" / >
+<PartialServop service_name="group" operation_name="ACCEPT_GROUP_INVITATION" />
 
 ## Usage
 

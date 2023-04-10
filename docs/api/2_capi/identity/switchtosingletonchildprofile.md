@@ -2,7 +2,7 @@
 ## Overview
 Switches to a child profile of an app when only one profile exists. If multiple profiles exist this returns an error.
 
-<PartialServop service_name="identity" operation_name="SWITCH_TO_CHILD_PROFILE" / >
+<PartialServop service_name="identity" operation_name="SWITCH_TO_CHILD_PROFILE" />
 
 ## Usage
 

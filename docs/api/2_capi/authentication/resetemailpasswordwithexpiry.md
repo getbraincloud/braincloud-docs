@@ -2,7 +2,7 @@
 ## Overview
 Sends a password reset email to the specified address. Allows the developer to specify how long the URL is valid for (in minutes).
 
-<PartialServop service_name="authenticationV2" operation_name="RESET_EMAIL_PASSWORD_WITH_EXPIRY" / >
+<PartialServop service_name="authenticationV2" operation_name="RESET_EMAIL_PASSWORD_WITH_EXPIRY" />
 
 ## Usage
 

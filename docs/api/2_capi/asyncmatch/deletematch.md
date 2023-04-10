@@ -8,7 +8,7 @@ Removes the match and match history from the server.
 DEBUG ONLY, in production it is recommended the user leave it as completed.
 :::
 
-<PartialServop service_name="asyncMatch" operation_name="DELETE_MATCH" / >
+<PartialServop service_name="asyncMatch" operation_name="DELETE_MATCH" />
 
 ## Usage
 

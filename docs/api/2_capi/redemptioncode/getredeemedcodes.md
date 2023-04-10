@@ -2,7 +2,7 @@
 ## Overview
 Retrieve the codes already redeemed by user.
 
-<PartialServop service_name="redemptionCode" operation_name="GET_REDEEMED_CODES" / >
+<PartialServop service_name="redemptionCode" operation_name="GET_REDEEMED_CODES" />
 
 ## Usage
 

@@ -6,7 +6,7 @@ RTT must be enabled in the *Design Portal*, under **Design | Core App Info | Adv
 
 RTT is available to all *Plus* plan subscriptions.
 
-<PartialServop service_name="rttRegistration" operation_name="REQUEST_CLIENT_CONNECTION" / >
+<PartialServop service_name="rttRegistration" operation_name="REQUEST_CLIENT_CONNECTION" />
 
 ## Usage
 

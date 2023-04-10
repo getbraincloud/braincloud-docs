@@ -4,7 +4,7 @@ Schedules a scheduled cloud code job.  Can be scheduled minutes from the current
 
 *Note - <%= data.branding.productName %> checks for schedule cloud code scripts every minute, so it is not recommended to run jobs that require only a 1-60 second delay.*
 
-<PartialServop service_name="script" operation_name="SCHEDULE_CLOUD_SCRIPT" / >
+<PartialServop service_name="script" operation_name="SCHEDULE_CLOUD_SCRIPT" />
 
 ## Usage
 

@@ -8,7 +8,7 @@ Sends a potentially richer member chat message. By convention, `content` should 
 
 
 
-<PartialServop service_name="chat" operation_name="SYS_POST_CHAT_MESSAGE" / >
+<PartialServop service_name="chat" operation_name="SYS_POST_CHAT_MESSAGE" />
 
 ## Usage
 

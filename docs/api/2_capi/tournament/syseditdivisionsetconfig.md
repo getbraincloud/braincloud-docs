@@ -2,7 +2,7 @@
 ## Overview
 Updates a division set configuration with specified changes
 
-<PartialServop service_name="tournament" operation_name="SYS_EDIT_DIVISION_SET_CONFIG" / >
+<PartialServop service_name="tournament" operation_name="SYS_EDIT_DIVISION_SET_CONFIG" />
 
 ## Usage
 

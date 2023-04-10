@@ -14,7 +14,7 @@ There are many more complex operations supported such as
 
 which increments stat1 by 9 up to a limit of 30.
 
-<PartialServop service_name="globalGameStatistics" operation_name="UPDATE_INCREMENT" / >
+<PartialServop service_name="globalGameStatistics" operation_name="UPDATE_INCREMENT" />
 
 ## Usage
 

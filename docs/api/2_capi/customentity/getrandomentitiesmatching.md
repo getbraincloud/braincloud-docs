@@ -2,7 +2,7 @@
 ## Overview
 Gets a list of up to maxReturn randomly selected custom entities from the server based on the entity type and where condition.
 
-<PartialServop service_name="customEntity" operation_name="GET_RANDOM_ENTITIES_MATCHING" / >
+<PartialServop service_name="customEntity" operation_name="GET_RANDOM_ENTITIES_MATCHING" />
 
 ## Usage
 

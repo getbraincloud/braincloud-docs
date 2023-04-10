@@ -2,7 +2,7 @@
 ## Overview
 Retrieves profile information for users whose universal ID starts with search text. Optional parameter: maxResults
 
-<PartialServop service_name="friend" operation_name="FIND_USERS_BY_UNIVERSAL_ID_STARTING_WITH" / >
+<PartialServop service_name="friend" operation_name="FIND_USERS_BY_UNIVERSAL_ID_STARTING_WITH" />
 
 ## Usage
 

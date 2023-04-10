@@ -10,7 +10,7 @@ Leaderboards entries contain the player's score and optionally, some user-define
 Pro Tip: The best way to get just the current player's score is to use GetGlobalLeaderboardView and pass in 0 to 'beforeCount' and 'afterCount'
 :::
 
-<PartialServop service_name="leaderboard" operation_name="GET_GLOBAL_LEADERBOARD_VIEW" / >
+<PartialServop service_name="leaderboard" operation_name="GET_GLOBAL_LEADERBOARD_VIEW" />
 
 ## Usage
 

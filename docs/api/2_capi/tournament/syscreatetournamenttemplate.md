@@ -2,7 +2,7 @@
 ## Overview
 Creates a new tournament template.
 
-<PartialServop service_name="tournament" operation_name="SYS_CREATE_TOURNAMENT_TEMPLATE" / >
+<PartialServop service_name="tournament" operation_name="SYS_CREATE_TOURNAMENT_TEMPLATE" />
 
 ## Usage
 

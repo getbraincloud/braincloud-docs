@@ -2,7 +2,7 @@
 ## Overview
 Method deletes an exisiting system entity on the server.
 
-<PartialServop service_name="globalEntity" operation_name="DELETE_SYSTEM_ENTITY" / >
+<PartialServop service_name="globalEntity" operation_name="DELETE_SYSTEM_ENTITY" />
 
 ## Usage
 

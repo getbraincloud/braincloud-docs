@@ -2,7 +2,7 @@
 ## Overview
 Delete the specified folder (and optionally child files and subfolders). Return the updated directory tree.
 
-<PartialServop service_name="globalFileV3" operation_name="SYS_DELETE_FOLDER" / >
+<PartialServop service_name="globalFileV3" operation_name="SYS_DELETE_FOLDER" />
 
 ## Usage
 

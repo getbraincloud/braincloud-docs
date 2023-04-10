@@ -2,7 +2,7 @@
 ## Overview
 Detaches a peer identity from the current profile.
 
-<PartialServop service_name="identity" operation_name="DETACH_PEER" / >
+<PartialServop service_name="identity" operation_name="DETACH_PEER" />
 
 ## Usage
 

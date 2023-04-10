@@ -2,7 +2,7 @@
 ## Overview
 Gets the presence data for the given `groupId`. Will not include offline profiles unless `includeOffline` is set to true.
 
-<PartialServop service_name="presence" operation_name="GET_PRESENCE_OF_GROUP" / >
+<PartialServop service_name="presence" operation_name="GET_PRESENCE_OF_GROUP" />
 
 ## Usage
 

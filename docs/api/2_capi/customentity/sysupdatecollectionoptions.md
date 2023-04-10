@@ -2,7 +2,7 @@
 ## Overview
 Updates the collection options for the custom collection.
 
-<PartialServop service_name="customEntity" operation_name="SYS_UPDATE_COLLECTION_OPTIONS" / >
+<PartialServop service_name="customEntity" operation_name="SYS_UPDATE_COLLECTION_OPTIONS" />
 
 ## Usage
 

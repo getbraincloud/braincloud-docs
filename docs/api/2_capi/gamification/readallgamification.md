@@ -2,7 +2,7 @@
 ## Overview
 Method retrieves all gamification data for the player.
 
-<PartialServop service_name="gamification" operation_name="READ" / >
+<PartialServop service_name="gamification" operation_name="READ" />
 
 ## Usage
 

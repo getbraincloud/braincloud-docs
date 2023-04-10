@@ -2,7 +2,7 @@
 ## Overview
 Method creates a new entity on the server.
 
-<PartialServop service_name="globalEntity" operation_name="CREATE" / >
+<PartialServop service_name="globalEntity" operation_name="CREATE" />
 
 ## Usage
 

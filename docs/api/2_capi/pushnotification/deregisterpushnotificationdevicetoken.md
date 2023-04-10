@@ -2,7 +2,7 @@
 ## Overview
 Deregisters the given device token from the server to disable this device from receiving push notifications.
 
-<PartialServop service_name="pushNotification" operation_name="DEREGISTER" / >
+<PartialServop service_name="pushNotification" operation_name="DEREGISTER" />
 
 ## Usage
 

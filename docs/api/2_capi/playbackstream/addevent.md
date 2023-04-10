@@ -2,7 +2,7 @@
 ## Overview
 Adds a stream event.
 
-<PartialServop service_name="playbackStream" operation_name="ADD_EVENT" / >
+<PartialServop service_name="playbackStream" operation_name="ADD_EVENT" />
 
 ## Usage
 

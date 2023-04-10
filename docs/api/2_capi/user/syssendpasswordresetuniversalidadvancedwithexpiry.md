@@ -19,7 +19,7 @@ Example serviceParams (for Sendgrid dynamic templates):
 }
 ```
 
-<PartialServop service_name="user" operation_name="SYS_SEND_PASSWORD_RESET_UNIVERSAL_ID_ADVANCED_WITH_EXPIRY" / >
+<PartialServop service_name="user" operation_name="SYS_SEND_PASSWORD_RESET_UNIVERSAL_ID_ADVANCED_WITH_EXPIRY" />
 
 ## Usage
 

@@ -8,7 +8,7 @@ Marks the given match as complete.
 Only a match whose current status is PENDING (at least one turn has occurred) or COMPLETE can be marked as COMPLETE
 :::
 
-<PartialServop service_name="asyncMatch" operation_name="COMPLETE" / >
+<PartialServop service_name="asyncMatch" operation_name="COMPLETE" />
 
 ## Usage
 

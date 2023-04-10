@@ -4,7 +4,7 @@ Update the specified chat message. Message must have been from this user. Versio
 
 
 
-<PartialServop service_name="chat" operation_name="UPDATE_CHAT_MESSAGE" / >
+<PartialServop service_name="chat" operation_name="UPDATE_CHAT_MESSAGE" />
 
 ## Usage
 

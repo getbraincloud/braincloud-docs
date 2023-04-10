@@ -6,7 +6,7 @@ After retrieving a page of entities with this method use [<code>getPageOffset</c
 
 See the [Generic Paged Queries](/api/appendix/genericpagedqueries) documentation for creating the context object.
 
-<PartialServop service_name="group" operation_name="READ_GROUP_ENTITIES_PAGE" / >
+<PartialServop service_name="group" operation_name="READ_GROUP_ENTITIES_PAGE" />
 
 ## Usage
 

@@ -4,7 +4,7 @@ Updates the UniversalId of the current profile. *Note - works for non-login vers
 
 Call will fail if the new UniversalId is already in use, or if the profile does not have a UniversalId.
 
-<PartialServop service_name="identity" operation_name="UPDATE_UNIVERSAL_LOGIN" / >
+<PartialServop service_name="identity" operation_name="UPDATE_UNIVERSAL_LOGIN" />
 
 ## Usage
 

@@ -11,7 +11,7 @@ Name | Description
 --------- | -----------
 response | Text response.
 
-<PartialServop service_name="httpClient" operation_name="POST_FORM_RESPONSE_TEXT" / >
+<PartialServop service_name="httpClient" operation_name="POST_FORM_RESPONSE_TEXT" />
 
 ## Usage
 

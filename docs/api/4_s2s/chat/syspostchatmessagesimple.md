@@ -6,7 +6,7 @@ This method is available in Cloud Code scripts only.
 
 Sends a potentially richer member chat message. By convention, content should contain a field named text for plain-text content. From is a json containing the message originator info - in this case normally "name" and potentially a "pic" url. Returns the id of the message created.
 
-<PartialServop service_name="chat" operation_name="SYS_POST_CHAT_MESSAGE_SIMPLE" / >
+<PartialServop service_name="chat" operation_name="SYS_POST_CHAT_MESSAGE_SIMPLE" />
 
 ## Usage
 

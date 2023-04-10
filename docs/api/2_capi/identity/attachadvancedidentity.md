@@ -5,7 +5,7 @@ Attach the user's credentials to the current profile.
 
 
 
-<PartialServop service_name="identity" operation_name="ATTACH" / >
+<PartialServop service_name="identity" operation_name="ATTACH" />
 
 ## Usage
 

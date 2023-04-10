@@ -2,7 +2,7 @@
 ## Overview
 Method retrieves the list of completed milestones
 
-<PartialServop service_name="gamification" operation_name="READ_COMPLETED_MILESTONES" / >
+<PartialServop service_name="gamification" operation_name="READ_COMPLETED_MILESTONES" />
 
 ## Usage
 

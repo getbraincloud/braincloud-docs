@@ -2,7 +2,7 @@
 ## Overview
 Sends a notification to a "group" of user consisting of raw message content.
 
-<PartialServop service_name="pushNotification" operation_name="SEND_RAW_TO_GROUP" / >
+<PartialServop service_name="pushNotification" operation_name="SEND_RAW_TO_GROUP" />
 
 ## Usage
 

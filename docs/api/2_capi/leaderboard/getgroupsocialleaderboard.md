@@ -2,7 +2,7 @@
 ## Overview
 Retrieve the social leaderboard for a group.
 
-<PartialServop service_name="leaderboard" operation_name="GET_GROUP_SOCIAL_LEADERBOARD" / >
+<PartialServop service_name="leaderboard" operation_name="GET_GROUP_SOCIAL_LEADERBOARD" />
 
 ## Usage
 

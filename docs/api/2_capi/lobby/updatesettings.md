@@ -4,7 +4,7 @@ Updates the settings for the given lobby instance.
 
 
 
-<PartialServop service_name="lobby" operation_name="UPDATE_SETTINGS" / >
+<PartialServop service_name="lobby" operation_name="UPDATE_SETTINGS" />
 
 ## Usage
 

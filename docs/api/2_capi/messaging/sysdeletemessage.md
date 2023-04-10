@@ -9,7 +9,7 @@ Delete the specified message.
 
 
 
-<PartialServop service_name="messaging" operation_name="SYS_DELETE_MESSAGE" / >
+<PartialServop service_name="messaging" operation_name="SYS_DELETE_MESSAGE" />
 
 ## Usage
 

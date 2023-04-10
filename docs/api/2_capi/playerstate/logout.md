@@ -2,7 +2,7 @@
 ## Overview
 Logs user out of server.
 
-<PartialServop service_name="playerState" operation_name="LOGOUT" / >
+<PartialServop service_name="playerState" operation_name="LOGOUT" />
 
 ## Usage
 

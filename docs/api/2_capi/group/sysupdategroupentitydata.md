@@ -4,7 +4,7 @@ Update the data for a group entity, bypassing ownership/ACL checks. Optional par
 
 This method is affected by versioning. See the [versioning documentation](/api/appendix/version) for more information.
 
-<PartialServop service_name="group" operation_name="SYS_UPDATE_GROUP_ENTITY_DATA" / >
+<PartialServop service_name="group" operation_name="SYS_UPDATE_GROUP_ENTITY_DATA" />
 
 ## Usage
 

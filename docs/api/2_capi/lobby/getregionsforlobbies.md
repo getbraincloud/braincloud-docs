@@ -2,7 +2,7 @@
 ## Overview
 Retrieves the region settings for each of the given lobby types.
 
-<PartialServop service_name="lobby" operation_name="GET_REGIONS_FOR_LOBBIES" / >
+<PartialServop service_name="lobby" operation_name="GET_REGIONS_FOR_LOBBIES" />
 
 ## Usage
 

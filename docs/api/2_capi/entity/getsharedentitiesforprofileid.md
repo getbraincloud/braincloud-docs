@@ -4,7 +4,7 @@ Method returns all shared entities for the given profile id.
 
 An entity is shared if its ACL allows for the currently logged in user to read the data.
 
-<PartialServop service_name="entity" operation_name="READ_SHARED" / >
+<PartialServop service_name="entity" operation_name="READ_SHARED" />
 
 ## Usage
 

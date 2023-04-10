@@ -10,7 +10,7 @@ Apple receipts will often contain old transactions. The key values of the return
 * `processedCount` - number of transactions successfully processed. To be processed, a transaction receipt must be valid, the product must be found, and the transaction must not have been processed before.
 * `unprocessedCount` - the number of transactions that were rejected. See the `transactionStatus` code associated with the transaction for details.
 
-<PartialServop service_name="product" operation_name="OP_CASH_IN_RECEIPT" / >
+<PartialServop service_name="product" operation_name="OP_CASH_IN_RECEIPT" />
 
 ## Usage
 

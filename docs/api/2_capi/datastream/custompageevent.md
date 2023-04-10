@@ -2,7 +2,7 @@
 ## Overview
 Creates custom data stream page event
 
-<PartialServop service_name="dataStream" operation_name="CUSTOM_PAGE_EVENT" / >
+<PartialServop service_name="dataStream" operation_name="CUSTOM_PAGE_EVENT" />
 
 ## Usage
 

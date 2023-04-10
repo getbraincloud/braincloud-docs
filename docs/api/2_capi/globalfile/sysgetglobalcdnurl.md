@@ -2,7 +2,7 @@
 ## Overview
 Returns the CDN URL for the specified file.
 
-<PartialServop service_name="globalFileV3" operation_name="SYS_GET_GLOBAL_CDN_URL" / >
+<PartialServop service_name="globalFileV3" operation_name="SYS_GET_GLOBAL_CDN_URL" />
 
 ## Usage
 

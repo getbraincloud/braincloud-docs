@@ -26,7 +26,7 @@ Scripts must have the “Client Callable” flag set to True to be callable from
 * [ScheduleRunScriptMillisUTC](/api/capi/script/schedulerunscriptmillisutc) - Schedules a script to run on the server at a later time in UTC format.
 * [ScheduleRunScriptUTC](/api/capi/script/schedulerunscriptutc) - Schedules a script to run on the server at a later time in UTC format.
 * [ScheduleRunScriptUTCv2](/api/capi/script/schedulerunscriptutcv2) - Schedules a script to run on the server at a later time in UTC format.
-* [SysCancelScheduledScriptIfExists](/api/capi/script/syscancelscheduledscriptifexists) - Cancels a previously scheduled script, if it exists and is still in Scheduled state.
+* [SysCancelScheduledScriptIfExists](/api/capi/script/syscancelscheduledscriptffexists) - Cancels a previously scheduled script, if it exists and is still in Scheduled state.
 * [SysCancelUserScriptBatchIfExists](/api/capi/script/syscanceluserscriptbatchifexists) - Cancels a user script batch, if it exists and is in Scheduled, Queued or Running state.
 
 <DocCardList />

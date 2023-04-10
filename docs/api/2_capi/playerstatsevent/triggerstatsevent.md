@@ -4,7 +4,7 @@ Trigger an event server side that will increase the users statistics. This may c
 
 This mechanism supersedes the [<code>PlayerStatisticsService</code>](/api/capi/playerstats) API methods, since PlayerStatisticsService API method only update the raw statistics without triggering the rewards.
 
-<PartialServop service_name="playerStatisticsEvent" operation_name="TRIGGER" / >
+<PartialServop service_name="playerStatisticsEvent" operation_name="TRIGGER" />
 
 ## Usage
 

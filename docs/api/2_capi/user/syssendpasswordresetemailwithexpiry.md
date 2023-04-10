@@ -2,7 +2,7 @@
 ## Overview
 Triggers the sending of a password reset email to the specified user. Note that the user must have an email identity attached to their profile.
 
-<PartialServop service_name="user" operation_name="SYS_SEND_PASSWORD_RESET_EMAIL_WITH_EXPIRY" / >
+<PartialServop service_name="user" operation_name="SYS_SEND_PASSWORD_RESET_EMAIL_WITH_EXPIRY" />
 
 ## Usage
 

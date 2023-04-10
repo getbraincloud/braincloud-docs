@@ -3,7 +3,7 @@
 Add a redemption code. Optional parameters: codeState and customCodeInfo.
 
 
-<PartialServop service_name="redemptionCode" operation_name="ADD_CODE" / >
+<PartialServop service_name="redemptionCode" operation_name="ADD_CODE" />
 
 ## Usage
 

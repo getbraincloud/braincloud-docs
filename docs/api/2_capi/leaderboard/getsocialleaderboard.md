@@ -17,7 +17,7 @@ Leaderboards entries contain the player's score and optionally, some user-data a
 If no friends have played the game, the bestScore, createdAt, update will contain NULL.
 :::
 
-<PartialServop service_name="leaderboard" operation_name="GET_SOCIAL_LEADERBOARD" / >
+<PartialServop service_name="leaderboard" operation_name="GET_SOCIAL_LEADERBOARD" />
 
 ## Usage
 

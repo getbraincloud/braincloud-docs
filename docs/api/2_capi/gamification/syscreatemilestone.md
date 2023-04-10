@@ -52,7 +52,7 @@ An example milestoneJson object:
 }
 ```
 
-<PartialServop service_name="gamification" operation_name="SYS_CREATE_MILESTONE" / >
+<PartialServop service_name="gamification" operation_name="SYS_CREATE_MILESTONE" />
 
 ## Usage
 

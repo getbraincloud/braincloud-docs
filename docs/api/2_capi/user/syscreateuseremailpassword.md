@@ -4,7 +4,7 @@ Manually creates a new user for the current app. Note that this API is normally 
 
 
 
-<PartialServop service_name="user" operation_name="SYS_CREATE_USER_EMAIL_PASSWORD" / >
+<PartialServop service_name="user" operation_name="SYS_CREATE_USER_EMAIL_PASSWORD" />
 
 ## Usage
 

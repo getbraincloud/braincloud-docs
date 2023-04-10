@@ -11,7 +11,7 @@ Valid platforms are:
 - windowsPhone
 - googlePlay
 
-<PartialServop service_name="product" operation_name="GET_INVENTORY" / >
+<PartialServop service_name="product" operation_name="GET_INVENTORY" />
 
 ## Usage
 

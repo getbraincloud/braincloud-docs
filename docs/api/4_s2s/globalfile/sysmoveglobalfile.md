@@ -2,7 +2,7 @@
 ## Overview
 Move or rename the specified file.
 
-<PartialServop service_name="globalFileV3" operation_name="SYS_MOVE_GLOBAL_FILE" / >
+<PartialServop service_name="globalFileV3" operation_name="SYS_MOVE_GLOBAL_FILE" />
 
 ## Usage
 

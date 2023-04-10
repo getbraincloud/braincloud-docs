@@ -4,7 +4,7 @@ Retrieves first page of users from server based on the specified query context.
 
 _Note that for apps with > 10,000 users, it is recommended that `doCount` be set to false for better performance._
 
-<PartialServop service_name="user" operation_name="SYS_GET_PAGE" / >
+<PartialServop service_name="user" operation_name="SYS_GET_PAGE" />
 
 ## Usage
 

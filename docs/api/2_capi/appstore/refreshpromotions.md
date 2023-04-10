@@ -10,7 +10,7 @@ A user’s segments and promotions are automatically refreshed when they authent
 Note that this is an expensive call - calling it is equates to 2 API counts (technically 1 API + 10 bulk API) - so use it sparingly!
 :::
 
-<PartialServop service_name="appStore" operation_name="REFRESH_PROMOTIONS" / >
+<PartialServop service_name="appStore" operation_name="REFRESH_PROMOTIONS" />
 
 ## Usage
 

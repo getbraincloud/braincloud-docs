@@ -32,7 +32,7 @@ The above example would:
 
 For the full statistics grammar see the [statistics grammar section](/api/appendix/statisticsgrammar).
 
-<PartialServop service_name="globalGameStatistics" operation_name="PROCESS_STATISTICS" / >
+<PartialServop service_name="globalGameStatistics" operation_name="PROCESS_STATISTICS" />
 
 ## Usage
 

@@ -4,7 +4,7 @@ Post the users score to the tournament leaderboard.
 
 tRank will always be zero in the response of this API call. The value generates after the tournament is complete or on <code>[ViewCurrentReward](/api/capi/tournament/viewcurrentreward)</code>.
 
-<PartialServop service_name="tournament" operation_name="POST_TOURNAMENT_SCORE" / >
+<PartialServop service_name="tournament" operation_name="POST_TOURNAMENT_SCORE" />
 
 ## Usage
 

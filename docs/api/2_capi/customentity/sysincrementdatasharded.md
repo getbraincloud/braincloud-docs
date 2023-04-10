@@ -2,7 +2,7 @@
 ## Overview
 Increments the specified fields by the specified amount within custom entity data on the server, bypassing ownership/ACL permissions.
 
-<PartialServop service_name="customEntity" operation_name="SYS_INCREMENT_DATA_SHARDED" / >
+<PartialServop service_name="customEntity" operation_name="SYS_INCREMENT_DATA_SHARDED" />
 
 ## Usage
 

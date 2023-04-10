@@ -2,7 +2,7 @@
 ## Overview
 Post score to another user.
 
-<PartialServop service_name="tournament" operation_name="POST_TOURNAMENT_SCORE_ON_BEHALF_OF" / >
+<PartialServop service_name="tournament" operation_name="POST_TOURNAMENT_SCORE_ON_BEHALF_OF" />
 
 ## Usage
 

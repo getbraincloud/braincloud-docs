@@ -9,7 +9,7 @@ Retrieves the specified message, irregardless of ownership.
 
 
 
-<PartialServop service_name="messaging" operation_name="SYS_GET_MESSAGES" / >
+<PartialServop service_name="messaging" operation_name="SYS_GET_MESSAGES" />
 
 ## Usage
 

@@ -73,7 +73,7 @@ _Note that this call does not return milestones (i.e. tasks) that are embedded w
 
 See the [Generic Paged Queries](/api/appendix/genericpagedqueries) documentation for creating the context object.
 
-<PartialServop service_name="gamification" operation_name="SYS_GET_MILESTONE_PAGE_OFFSET" / >
+<PartialServop service_name="gamification" operation_name="SYS_GET_MILESTONE_PAGE_OFFSET" />
 
 ## Usage
 

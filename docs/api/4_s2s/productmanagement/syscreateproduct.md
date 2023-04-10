@@ -2,7 +2,7 @@
 ## Overview
 Creates a new product with the specifed values.
 
-<PartialServop service_name="productManagement" operation_name="SYS_CREATE_PRODUCT" / >
+<PartialServop service_name="productManagement" operation_name="SYS_CREATE_PRODUCT" />
 
 ## Usage
 

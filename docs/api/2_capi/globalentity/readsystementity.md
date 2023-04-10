@@ -2,7 +2,7 @@
 ## Overview
 Method reads an existing system entity on the server. It cannot be an owned/global entity.
 
-<PartialServop service_name="globalEntity" operation_name="READ_SYSTEM_ENTITY" / >
+<PartialServop service_name="globalEntity" operation_name="READ_SYSTEM_ENTITY" />
 
 ## Usage
 

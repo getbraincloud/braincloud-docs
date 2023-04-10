@@ -22,7 +22,7 @@ Example context object:
 }
 ```
 
-<PartialServop service_name="customEntity" operation_name="SYS_GET_ENTITY_PAGE" / >
+<PartialServop service_name="customEntity" operation_name="SYS_GET_ENTITY_PAGE" />
 
 ## Usage
 

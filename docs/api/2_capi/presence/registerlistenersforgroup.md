@@ -2,7 +2,7 @@
 ## Overview
 Registers the caller for RTT presence updates from the members of the given `groupId`. Caller must be a member of said group. If `bidirectional` is set to true, then also registers the targeted users for presence updates from the caller.
 
-<PartialServop service_name="presence" operation_name="REGISTER_LISTENERS_FOR_GROUP" / >
+<PartialServop service_name="presence" operation_name="REGISTER_LISTENERS_FOR_GROUP" />
 
 ## Usage
 

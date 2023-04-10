@@ -2,7 +2,7 @@
 ## Overview
 Deletes all applicable custom entities from the server based on the custom entity type and specified delete criteria, enforcing ownership/ACL permissions.
 
-<PartialServop service_name="customEntity" operation_name="DELETE_ENTITIES" / >
+<PartialServop service_name="customEntity" operation_name="DELETE_ENTITIES" />
 
 ## Usage
 

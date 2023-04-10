@@ -2,7 +2,7 @@
 ## Overview
 Logs an App Info message to the error log.
 
-<PartialServop service_name="log" operation_name="LOG_INFO" / >
+<PartialServop service_name="log" operation_name="LOG_INFO" />
 
 ## Usage
 

@@ -2,7 +2,7 @@
 ## Overview
 Read an entity in the group, bypassing ownership/ACL checks.
 
-<PartialServop service_name="group" operation_name="SYS_READ_GROUP_ENTITY" / >
+<PartialServop service_name="group" operation_name="SYS_READ_GROUP_ENTITY" />
 
 ## Usage
 
