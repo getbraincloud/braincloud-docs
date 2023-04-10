@@ -12,10 +12,10 @@ Downloading files is usually as simple as getting the file URL via the [ListUser
 
 :::tip
 Pro-tip: There are two URLs for file downloading, <strong>downloadUrl</strong> and <strong>cdnUrl</strong>, in our file system. 
-    <ul>
-        <li>The <em>downloadUrl</em> is a persistant URL that automatically redirects to a CDN URL (if enabled) when called</li>
-        <li>The <em>cdnUrl</em> is a temporary URL that is good for downloading the file right away (in an hour from the time to generate that URL)</li>
-    </ul>
+<ul>
+    <li>The <em>downloadUrl</em> is a persistant URL that automatically redirects to a CDN URL (if enabled) when called</li>
+    <li>The <em>cdnUrl</em> is a temporary URL that is good for downloading the file right away (in an hour from the time to generate that URL)</li>
+</ul>
 
 Apps do not have to specifically retrieve the CDN urls of files. brainCloud will automatically redirect the client to the CDN address when a download attempt is made. 
 :::
@@ -56,8 +56,8 @@ To get the session ID simply call the [<code>GetSessionId</code>](/api/capi/clie
 
 ### JavaScript Methods
 
-* [PrepareUserUpload](/api/capi/file/prepareuserupload/cloudcodeandjavascript)
-* [UploadFile](/api/capi/file/uploadfile/javascript)
+* [PrepareUserUpload](/api/capi/file/prepareuserupload)
+* [UploadFile](/api/capi/file/uploadfile,javascript)
 
 ### Unity Methods
 
