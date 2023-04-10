@@ -80,6 +80,7 @@ Notes regarding the data returned by the leaderboard calls:
 * [PostScoreToDynamicLeaderboardUTC](/api/capi/leaderboard/postscoretodynamicleaderboardutc) - post a score to a leaderboard (creating the leaderboard if it doesn't already exist)
 * [PostScoreToDynamicLeaderboardDaysUTC](/api/capi/leaderboard/postscoretodynamicleaderboarddaysutc) - post a score to a leaderboard (creating the leaderboard if it doesn't already exist) based on an arbitrary number of days rotation
 * [PostScoreToLeaderboardOnBehalfOf](/api/capi/leaderboard/postscoretoleaderboardonbehalfof) - post score to another player's score
+* [PostScoreToDynamicLeaderboardUsingConfig](/api/capi/leaderboard/postscoretodynamicleaderboardusingconfig) - Post the player's score to the given social leaderboard, dynamically creating the leaderboard if it does not exist yet. To create new leaderboard, configJson must specify leaderboardType, rotationType, resetAt, and retainedCount, at a minimum, with support to optionally specify an expiry in minutes.
 * [RemovePlayerScore](/api/capi/leaderboard/removeplayerscore) - Remove the players
 
 
@@ -89,6 +90,7 @@ Notes regarding the data returned by the leaderboard calls:
 * [GetGroupLeaderboardViewByVersion](/api/capi/leaderboard/getgroupleaderboardviewbyversion) - leaderboard results that centers on the current group
 * [PostScoreToGroupLeaderboard](/api/capi/leaderboard/postscoretogroupleaderboard) - post the group score to the given group leaderboard
 * [PostScoreToDynamicGroupLeaderboardUTC](/api/capi/leaderboard/postscoretodynamicgroupleaderboardutc) - post the group score to the given group leaderboard (creating the leaderboard if it doesn't already exist)
+* [PostScoreToDynamicGroupLeaderboardUsingConfig](/api/capi/leaderboard/postscoretodynamicgroupleaderboardusingconfig) - Post the group's score to the given social leaderboard, dynamically creating the group leaderboard if it does not exist yet. To create new leaderboard, configJson must specify leaderboardType, rotationType, resetAt, and retainedCount, at a minimum, with support to optionally specify an expiry in minutes.
 * [RemoveGroupScore](/api/capi/leaderboard/removegroupscore) - removes the group's score data from the specified group leaderboard
 
 ### Leaderboard Managerment
