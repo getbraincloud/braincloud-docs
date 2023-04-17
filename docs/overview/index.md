@@ -4,7 +4,7 @@ date: "2014-09-12"
 slug: /
 ---
 
-## Welcome
+## Welcome👋
 
 Welcome to the [brainCloud BaaS](http://getbraincloud.com) documentation.  Here you will find the latest details on developing with brainCloud - including feature overviews, how-to's, [API references](/learn/api-reference/) and video tutorials.
 
