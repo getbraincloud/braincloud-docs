@@ -4,7 +4,7 @@ title: "Introduction"
 date: "2014-09-09"
 ---
 
-[![brainCloud Stack](images/BC_TechStack_05.png)](images/BC_TechStack_05.png)
+<!-- [![brainCloud Stack](images/BC_TechStack_05.png)](images/BC_TechStack_05.png) -->
 
 ## What is brainCloud?
 
@@ -15,6 +15,18 @@ brainCloud consists of:
 - **Cloud Service** - an advanced, Backend-as-a-Service (BaaS)
 - **Client Libraries** - local client libraries (SDKs)
 - **Design Portal** - a portal that allows you to design and debug your apps
+
+```mdx-code-block
+<div className="video-container">
+  <LiteYouTubeEmbed
+    id="0CquU0IbUD8"
+    params="autoplay=1&autohide=1&showinfo=0&rel=0"
+    title="brainCloud overview"
+    poster="maxresdefault"
+    webp
+  />
+</div>
+```
 
 ## SDK libraries
 
