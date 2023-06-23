@@ -5,12 +5,6 @@ Upload screenshots from memory instead of local file storage. On success the fil
 This method allows uploads to happen in situations where local file access is not possible or convenient. For example, screenshots from Unity-based WebGL apps.
 
 
-
-
-:::tip
-UploadFileFromMemory currently only works in Unity WebGL and javaScript HTML interface.
-:::
-
 <PartialServop service_name="file" operation_name="PREPARE_USER_UPLOAD" />
 
 ## Usage
@@ -87,7 +81,7 @@ var share = true;
 var overwrite = true;
 var encodedText = new Blob(["hello, world!"], {type: 'text/plain'});
 
-<%= data.branding.codePrefix %>.file.UploadFileFromMemory(cloudPath, cloudName, share, overwrite, result =>
+<%= data.branding.codePrefix %>.file.UploadFileFromMemory(cloudPath, cloudName, share, overwrite, encodedText, result =>
 {
 	var status = result.status;
 	console.log(status + " : " + JSON.stringify(result, null, 2));

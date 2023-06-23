@@ -59,7 +59,7 @@ To create a group you must first configure a Group Type on the [Group Types page
 * [AutoJoinGroupMulti](/api/capi/group/autojoingroupmulti) - use when there are multiple group types to consider when auto-joining
 * [CancelGroupInvitation](/api/capi/group/cancelgroupinvitation) - cancel a previously sent invitation
 * [InviteGroupMember](/api/capi/group/invitegroupmember) - invite a member to the group
-* [JoinGroup](/api/capi/group/joingroup) - join the specified group
+* [JoinGroup](/api/capi/group/joingroup) - join an open group or request membership in a closed group.
 * [LeaveGroup](/api/capi/group/leavegroup) - leave the specified group
 * [ReadGroupMembers](/api/capi/group/readgroupmembers) - returns a list of the group's members
 * [RejectGroupInvitation](/api/capi/group/rejectgroupinvitation) - reject a group invitation

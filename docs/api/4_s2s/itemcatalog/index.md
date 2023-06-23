@@ -17,6 +17,7 @@
 
 #### Edit
 * [SysEditCatalogItem](/api/s2s/itemcatalog/syseditcatalogitem) - Update a catalog item on the server.
+* [SysDeleteCatalogItem](/api/capi/itemcatalog/sysdeletecatalogitem) - Delete an exsiting catalog item catalog.
 
 #### Life Cycle
 * [SysPublishCatalogItem](/api/s2s/itemcatalog/syspublishcatalogitem) - Publish the specified catalog item on the server.
@@ -24,6 +25,10 @@
 * [SysRetireCatalogItem](/api/s2s/itemcatalog/sysretirecatalogitem) - Retire the specified catalog item on the server.
 * [SysRevokeCatalogItem](/api/s2s/itemcatalog/sysrevokecatalogitem) - Revoke the specified catalog item on the server.
 
-
+:::tip
+All the client APIs that the names beigin with <strong>"Sys"</strong> <em>are</em> also available to S2S. 
+For the usages of the S2S customEntity APIs (if they are not listed at this section),
+refer to <%= data.branding.productName %> client [itemCatalog](/api/capi/itemcatalog) APIs.
+:::
 
 <DocCardList />

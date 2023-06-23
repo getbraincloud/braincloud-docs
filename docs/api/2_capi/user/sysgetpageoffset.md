@@ -58,7 +58,7 @@ Retrieves next/prev page of users from server based on the specified query conte
 ```
 
 ```cfscript
-var context = 
+var context = "eyJzZWFyY2hDcml0ZXJpYSI6eyJnYW1lSWQiOiIyMTc3NCxxx...";
 
 var userProxy = bridge.getUserServiceProxy();
 

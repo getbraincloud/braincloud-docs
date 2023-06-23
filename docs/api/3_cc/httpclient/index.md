@@ -37,6 +37,7 @@ Note that you must configure (declare) the external service via the [Cloud Code 
 
 ### Other
 * [ParseRequest()](/api/cc/httpclient/parserequest) - Makes a request to Parse Rest API.
+* [HeadRequest()](/api/cc/httpclient/headrequest) - Executes a HEAD request.
 
 
 <DocCardList />

@@ -190,7 +190,7 @@ var numLogins = playerStateService.readUserState().data.loginCount;
 The larger example on the right shows how you can easily create a script to perform multiple operations on the server.
 
 :::tip
-Pro-tip: Invoking a cloud code script costs 1 API count - but its first 3 API calls are free, and every call after that is just 1/2 API count.
+Pro-tip: Invoking a cloud code script costs 1 API count - but its first 2 API calls are free, and every call after that is just 1/2 API count.
 :::
 
 :::success
