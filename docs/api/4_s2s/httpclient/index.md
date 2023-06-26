@@ -22,6 +22,7 @@ The "serviceCode" parameter in the following operations refers to the items conf
 * [PostMultipartResponseJson()](/api/cc/httpclient/postmultipartresponsejson) - Posts a Form encoded document, expects a Json response.
 * [PostFormResponseText()](/api/cc/httpclient/postformresponsetext) - Posts a Form encoded document, expects a Text response.
 * [PostTextResponseText()](/api/cc/httpclient/posttextresponsetext) - Posts a text document, expects a Text response.
+* [PostTextResponseJson()](/api/cc/httpclient/posttextresponsejson) - Posts a text document, expects a Json response.
 
 ### Put
 * [PutJsonResponseJson()](/api/cc/httpclient/putjsonresponsejson) - Puts a JSON document, expects a Json response.
