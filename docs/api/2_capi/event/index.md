@@ -20,6 +20,7 @@ When an Event is sent to a user, they can receive it in one of two ways:
 #### Sending Event
 * [SendEvent](/api/capi/event/sendevent) - Sends an event to the designated user ID with the attached json data.
 * [SysSendEventRTTOnly](/api/capi/event/syssendeventrttonly) - Sends an event to the designated user ID with the attached json data. Will only deliver the event via RTT. Will not persist the event.
+* [SysSendEventToProfiles](/api/capi/event/syssendeventtoprofiles) - Sends an event to multiple users.
 
 #### Deleting Event
 * [DeleteIncomingEvent](/api/capi/event/deleteincomingevent) - Delete an event out of the user's incoming mailbox.

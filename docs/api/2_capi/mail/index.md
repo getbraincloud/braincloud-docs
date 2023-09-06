@@ -23,6 +23,12 @@ The available parameters will depend on the mail service provider you have enabl
     "fromName": "Jane Doe",
     "replyToAddress": "optional@company.com",
     "replyToName": "Optional ReplyTo",
+    "cc": [
+        "xxx@company.com"
+    ],
+    "bcc": [
+        "yyy@company.com"
+    ],
     "templateId": "d-www-xxx-yyy-zzz",
     "dynamicData": {
         "user": {
@@ -58,6 +64,8 @@ fromAddress | An alternate from address.
 fromName | An alternate from name.
 replyToAddress | An alternate reply-to address.
 replyToName | An alternate reply-to name.
+cc | Array of email addresses to cc.
+bcc | Array of email addresses to bcc.
 templateId | The templateId of the SendGrid template to use for this message.
 categories | Additional category tags for this email.
 attachments | File attachments.

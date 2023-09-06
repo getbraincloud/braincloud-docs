@@ -14,7 +14,8 @@ Use `"itunes"` as the `storeId`.
 iTunes `receiptData` format:
 ```
 {
-    "receipt": "ENCODED-RECEIPT-DATA"
+    "receipt": "ENCODED-RECEIPT-DATA",
+	"excludeOldTransactions": false
 }
 ```
 

@@ -8,6 +8,7 @@
 ### Messaging
 * [SendEvent](/api/s2s/event/sendevent) - This service allows you to send events to specified players.
 * [SysSendEventRTTOnly](/api/capi/event/syssendeventrttonly) - Sends an event to the designated user ID with the attached json data. Will only deliver the event via RTT. Will not persist the event.
+* [SysSendEventToProfiles](/api/capi/event/syssendeventtoprofiles) - Sends an event to multiple users.
 
 :::tip
 All the client APIs that the names beigin with <strong>"Sys"</strong> <em>are</em> also available to S2S. 

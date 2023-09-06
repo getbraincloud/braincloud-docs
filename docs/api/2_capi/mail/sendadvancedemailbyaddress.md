@@ -92,6 +92,12 @@ var jsonServiceParams = {
     "fromName": "Jane Doe",
     "replyToAddress": "optional@company.com",
     "replyToName": "Optional ReplyTo",
+    "cc": [
+        "xxx@company.com"
+    ],
+    "bcc": [
+        "yyy@company.com"
+    ],
     "templateId": "d-www-xxx-yyy-zzz",
     "dynamicData": {
         "user": {
@@ -131,6 +137,12 @@ var jsonServiceParams = {
     "fromName": "Jane Doe",
     "replyToAddress": "optional@company.com",
     "replyToName": "Optional ReplyTo",
+    "cc": [
+        "xxx@company.com"
+    ],
+    "bcc": [
+        "yyy@company.com"
+    ],
     "templateId": "d-www-xxx-yyy-zzz",
     "dynamicData": {
         "user": {
