@@ -1,7 +1,7 @@
 # CreateLeaderboard
 ## Overview
 :::caution
-WARNING: This call, <code>CreateLeaderboard()</code>, will be deprecated and replaced with <code>SysCreateLeaderboard()</code>.
+WARNING: This call, <code>CreateLeaderboard()</code>, has been deprecated and replaced with <code>SysCreateLeaderboard()</code>.
 :::
 
 Creates a leaderboard under the context of the current game. You can optionally send a user-defined json string of data with the created leaderboard. This string could include information relevant to the created leaderboard.
