@@ -48,17 +48,17 @@ const config = {
 
   plugins: [
     "./src/plugins/intercom.js",
-    [
-      '@docusaurus/plugin-content-blog',
-      {
-        id: 'release',
-        // editUrl: 'https://github.com/getbraincloud/braincloud-apiref/tree/develop/',
-        routeBasePath: 'release',
-        path: './release',
-        blogSidebarTitle: 'All posts',
-        blogSidebarCount: 'ALL',
-      },
-    ],
+    // [
+    //   '@docusaurus/plugin-content-blog',
+    //   {
+    //     id: 'release',
+    //     // editUrl: 'https://github.com/getbraincloud/braincloud-apiref/tree/develop/',
+    //     routeBasePath: 'release',
+    //     path: './release',
+    //     blogSidebarTitle: 'All posts',
+    //     blogSidebarCount: 'ALL',
+    //   },
+    // ],
   ],
 
   presets: [
@@ -82,16 +82,16 @@ const config = {
             [findreplace, options],
           ],
         },
-        blog: {
-          showReadingTime: true,
-          // editUrl: 'https://github.com/getbraincloud/braincloud-apiref/tree/develop/',
-          feedOptions: {
-            type: 'all',
-            copyright: `Copyright © ${new Date().getFullYear()} bitHeads, Inc.`,
-          },
-          blogSidebarTitle: 'All posts',
-          blogSidebarCount: 'ALL',
-        },
+        // blog: {
+        //   showReadingTime: true,
+        //   // editUrl: 'https://github.com/getbraincloud/braincloud-apiref/tree/develop/',
+        //   feedOptions: {
+        //     type: 'all',
+        //     copyright: `Copyright © ${new Date().getFullYear()} bitHeads, Inc.`,
+        //   },
+        //   blogSidebarTitle: 'All posts',
+        //   blogSidebarCount: 'ALL',
+        // },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -182,8 +182,13 @@ const config = {
             position: 'left',
             label: 'API',
           },
-          { to: '/blog', label: 'Blog', position: 'left' },
-          { to: '/release', label: 'Release', position: 'left' },
+          // { to: '/blog', label: 'Blog', position: 'left' },
+          // { to: '/release', label: 'Release', position: 'left' },
+          {
+            href: 'https://bootcamp.braincloudservers.com',
+            position: 'left',
+            label: 'Bootcamp',
+          },
           {
             type: 'docsVersionDropdown',
             position: 'right',
@@ -211,8 +216,8 @@ const config = {
                 to: '/api/introduction',
               },
               {
-                label: 'Knowledge Base',
-                href: 'https://help.getbraincloud.com/',
+                label: 'Bootcamp',
+                href: 'https://bootcamp.braincloudservers.com/',
               },
             ],
           },
@@ -248,8 +253,8 @@ const config = {
               //   html: `<a href="https://brainclouddocs.netlify.app/blog/rss.xml"><img src="img/Generic_Feed-icon.png" width="30" height="30" /></a>`,
               // },
               {
-                label: 'Blog RSS',
-                href: 'http://bcapidocs-dev.s3-website-us-east-1.amazonaws.com/blog/rss.xml',
+                label: 'Knowledge Base',
+                href: 'https://help.getbraincloud.com/',
               },
             ],
           },

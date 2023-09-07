@@ -16,6 +16,7 @@ pipeline {
                 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
                 [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
                 npm install
+                export NODE_OPTIONS="--max-old-space-size=8192"
                 npm run build
                 '''
             }
@@ -33,7 +34,7 @@ pipeline {
             steps {
                 echo 'Deliver....'
                 sh '''
-                aws --profile JenkinsAPIDOCSS3Bucket s3 sync build s3://bcapidocs-dev
+                aws --profile JenkinsAPIDOCSS3Bucket s3 sync build s3://bcapidocs-prod
                 zip -r "bcdoc-${BUILD_ID}.zip" build
                 '''
             }
