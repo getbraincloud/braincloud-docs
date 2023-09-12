@@ -1,8 +1,7 @@
 # Time
 ## Overview
 
-
-<%# TODO Write Desc %>
+The **TimeService** allow you to get the current serverTime from <%= data.branding.productName %>.
 
 
 <DocCardList />

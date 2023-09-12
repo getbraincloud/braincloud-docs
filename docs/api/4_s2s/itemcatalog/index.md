@@ -1,10 +1,20 @@
 # Item Catalog
 ## Overview
 
+The **Item Catalog** service is a key component of the **Item Management** system.
+All items to be managed (i.e. awarded, purchased, sold, traded, etc.) must be first defined in the *Item Catalog*.
 
+Items in the catalog can be in one of four states:
 
+* DRAFT - item is currently still be defined. Cannot be purchased or awarded
+* PUBLISHED - item is now available for award, purchase and trading.
+* RETIRED - item is no longer available for purchase or awarding, but a user can still keep it in their inventory. And the item can still be traded or sold.
+* REVOKED - the item has being removed from circulation. Will be deleted from user's inventory upon refresh.
 
-<%# TODO Write Desc %>
+Items are normally defined and published via the **Design | Item Management | Item Catalog** screen of the Design Portal.
+
+This service is primarily used to retrieve lists of items from the catalog for display in store purchase screens. Items are then awarded/purchased/traded via the **User Items** service.
+
 ### API Summary
 
 #### Get

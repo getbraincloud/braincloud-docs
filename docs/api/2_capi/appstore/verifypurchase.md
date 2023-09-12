@@ -29,7 +29,8 @@ Google Play `receiptData` format:
     "productId" : "gems_pack_small",
     "orderId" : "GPA.0000-1111-2222-33333",
     "token" : "ENCODED_TOKEN_STRING",
-    "developerPayload" : "STRING_ENCODED_JSON"
+    "developerPayload" : "STRING_ENCODED_JSON",
+    "includeSubscriptionCheck" : false
 }
 ```
 

@@ -163,11 +163,11 @@ const config = {
         content: `⭐️ Subscript brainCloud service on <a target="_blank" rel="noopener noreferrer" href="https://portal.braincloudservers.com/login#/development">brainCloud portal</a>`,
       },
       navbar: {
-        title: 'brainCloud Docs',
+        // title: 'brainCloud Docs',
         logo: {
           alt: 'brainCloud Logo',
-          src: 'img/logobc_v_forlightbg.svg',
-          srcDark: 'img/logobc_v_fordarkbg1.svg',
+          src: 'img/apidocs_light_horizontal@1x.svg',
+          srcDark: 'img/apidocs_dark_horizontal@1x.svg',
         },
         items: [
           {
