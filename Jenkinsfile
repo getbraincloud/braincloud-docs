@@ -16,6 +16,7 @@ pipeline {
                 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
                 [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
                 npm install
+                node -e 'console.log(v8.getHeapStatistics().heap_size_limit/(1024*1024))'
                 export NODE_OPTIONS="--max-old-space-size=8192"
                 npm run build
                 '''
