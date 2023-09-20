@@ -18,13 +18,13 @@ Cloud Code scripts can be called from:
 
 - client apps - via the [Script Service](/api/capi/script) APIs
 - developer-operated servers - via the [Server-to-Server](/api/s2s) API
-- third-party services - via brainCloud's [WebHooks](/api/cc/writingscript#webhooks) interface
-- triggered via other operations ([API Hooks](/api/cc/writingscript#apihooks)) - scripts can be configured to be triggered automatically as pre- or post- conditions for other API operations
-- scheduled - scripts [scheduled](/api/cc/writingscript#scheduled-scripts) to execute in the future
+- third-party services - via brainCloud's [WebHooks](/api/cc/writingscripts/webhooks) interface
+- triggered via other operations ([API Hooks](/api/cc/writingscripts/apihooks)) - scripts can be configured to be triggered automatically as pre- or post- conditions for other API operations
+- scheduled - scripts [scheduled](/api/cc/writingscripts/scheduledscripts) to execute in the future
 
 Cloud Code scripts are written using brainCloud's web-based script editor, located in the Portal under **Design | Cloud Code | Scripts**.
 
 For more information, check out:
 
-- [Writing Scripts](/api/cc/writingscript) section of the API Reference
+- [Writing Scripts](/api/cc/writingscripts) section of the API Reference
 - [Cloud Code Tutorials](/learn/cloud-code-central/cloud-code-tutorials/) section of SDK Tutorials
