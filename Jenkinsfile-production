@@ -16,10 +16,10 @@ pipeline {
                 node -e 'console.log(v8.getHeapStatistics().heap_size_limit/(1024*1024))'
                 export NODE_OPTIONS="--max-old-space-size=8192"
                 pwd
-                sed -i -e 's/__DOCSNAME__/brainCloud Docs (DEV)/g' docusaurus.config.js
-                sed -i -e 's/__DOCSURL__/docs-internal/g' docusaurus.config.js
-                sed -i -e 's/__APPID__/5T9F73JFG3/g' docusaurus.config.js
-                sed -i -e 's/__APIKEY__/6ba3774d7b707e915f0acb12fbfae506/g' docusaurus.config.js
+                sed -i -e 's/__DOCSNAME__/brainCloud Docs/g' docusaurus.config.js
+                sed -i -e 's/__DOCSURL__/docs/g' docusaurus.config.js
+                sed -i -e 's/__APPID__/RCZOOC8RDH/g' docusaurus.config.js
+                sed -i -e 's/__APIKEY__/5bcced4ae699527e13fd034f2183afc8/g' docusaurus.config.js
                 npm run build
                 '''
             }
@@ -37,7 +37,7 @@ pipeline {
             steps {
                 echo 'Deliver....'
                 sh '''
-                aws --profile JenkinsAPIDOCSS3Bucket s3 sync build s3://bcapidocs-dev
+                aws --profile JenkinsAPIDOCSS3Bucket s3 sync build s3://bcapidocs-prod
                 zip -r "bcdoc-${BUILD_ID}.zip" build
                 '''
             }

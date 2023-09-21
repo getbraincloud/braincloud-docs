@@ -26,13 +26,15 @@ let options = {
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'brainCloud docs',
+  //title: 'brainCloud docs',
+  title: '__DOCSNAME__',
   tagline: 'BaaS',
   // url: 'https://getbraincloud.github.io',
   // baseUrl: '/braincloud-apiref/', // for github page must attach a repository name after url
   // url: 'https://brainclouddocs.netlify.app',
   // baseUrl: '/', // for netlify
-  url: 'http://bcapidocs-dev.s3-website-us-east-1.amazonaws.com/',
+  //url: 'http://bcapidocs-dev.s3-website-us-east-1.amazonaws.com/',
+  url: 'http://__DOCSURL__.braincloudservers.com/',
   baseUrl: '/', // for s3 bucket
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -141,14 +143,14 @@ const config = {
       //   contextualSearch: true,
       // },
       // algolia: {
-      //   appId: 'ZPF1VHGGT0',
-      //   apiKey: 'e2b081523fe2ceb57ab46545aca7b530',
+      //   appId: 'XXX',
+      //   apiKey: 'YYY',
       //   indexName: 'braincloud_tmp',
       //   contextualSearch: true,
       // },
       algolia: {
-        appId: '5T9F73JFG3',
-        apiKey: '6ba3774d7b707e915f0acb12fbfae506',
+        appId: '__APPID__',
+        apiKey: '__APIKEY__',
         indexName: 'bcdocs',
         contextualSearch: true,
       },
