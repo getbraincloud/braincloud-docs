@@ -14,6 +14,8 @@
   --ifm-color-primary-lighter: #359962;
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 95%;
+  --ifm-link-color: #369fff;
+  --ifm-menu-color-active: #369fff;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
@@ -122,4 +124,17 @@ table.servop tr {
 
 table.servop thead th:last-child {
   border-left: 1px solid #efefef;
+}
+
+.navbar__link {
+  border-bottom: 3px solid transparent;
+}
+
+.navbar__link--active, .navbar__link--active:hover {
+  color: var(--ifm-link-color);
+  border-bottom: 3px solid var(--ifm-link-color);
+}
+
+.menu__link--active, .menu__link--active:hover {
+  color: var(--ifm-menu-color-active);
 }

@@ -3,10 +3,7 @@ pipeline {
         node {
             label 'linux_41'
             }
-      }
-    triggers {
-        pollSCM 'H/2 * * * *'
-    }
+        }
     stages {
         stage('Build') {
             steps {
