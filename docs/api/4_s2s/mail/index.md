@@ -1,8 +1,7 @@
 # Mail
 ## Overview
 
-
-<%# TODO Write Desc %>
+The Mail service allows you to send emails though <%= data.branding.productName %> using the mail service provider you have configured on the [Manage Integrations page](https://portal.braincloudservers.com/admin/dashboard#/development/integrations-manage-integrations) of the <%= data.branding.productName %> portal.
 ### API Summary
 
 ### Mail

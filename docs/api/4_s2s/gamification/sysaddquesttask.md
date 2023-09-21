@@ -54,7 +54,7 @@ An example taskJson object:
 }
 ```
 
-<PartialServop service_name="gamification" operation_name="SYS_ADD_QUEST_TASK" / >
+<PartialServop service_name="gamification" operation_name="SYS_ADD_QUEST_TASK" />
 
 ## Usage
 

@@ -1,10 +1,7 @@
 # Virtual Currency
 ## Overview
 
-
-
-
-<%# TODO Write Desc %>
+The **VirtualCurrency Service** manages virtual currency balances for app users.
 ### API Summary
 
 ### User Currency

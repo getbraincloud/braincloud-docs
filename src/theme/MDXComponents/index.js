@@ -16,6 +16,7 @@ import TabItem from '@theme/TabItem';
 import PartialServop from '@site/docs/api/_partial/_servop.md';
 import DocCardList from '@theme/DocCardList';
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 const MDXComponents = {
   head: MDXHead,
   code: MDXCode,
@@ -38,5 +39,14 @@ const MDXComponents = {
   PartialServop: PartialServop,
   DocCardList: DocCardList,
   LiteYouTubeEmbed: LiteYouTubeEmbed,
+  table: ({ children, ...props }) => {
+    const tableHeadings = children[0].props.children.props.children;
+    const hasTheadValue = !Array.isArray(tableHeadings) || tableHeadings.every(({ props }) => props.children);
+    return (
+      <div className="table-wrapper">
+        <table {...props} children={hasTheadValue ? children : children.slice(1)} />
+      </div>
+    );
+  },
 };
 export default MDXComponents;

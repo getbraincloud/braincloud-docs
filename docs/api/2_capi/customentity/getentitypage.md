@@ -65,7 +65,42 @@ Example context object with `ownedOnly` option:
 In all cases, having proper custom indexes defined for your queries is essential for best performance. Developers are encouraged to contact support to have our team examine your entities and indexes before significant launches / feature releases. We are happy to help! 
 :::
 
-<PartialServop service_name="customEntity" operation_name="GET_ENTITY_PAGE" / >
+:::info
+Developers are now able to access Atlas “explain” information for Custom Entity GetPage() queries – via the API Explorer ONLY!
+
+This can be useful when evaluating whether your indexes are sufficient to cover specific queries. The explain results can tell you what indexes Atlas will utilize for the query – and stats on the resulting query performance.
+
+To request the explain data for a GetEntityPage() query – simply supply an “options” section under "context" field with the desired “explain” level.
+For example:
+```
+{
+  "pagination": {
+    "rowsPerPage": 50,
+    "pageNumber": 1,
+    "doCount": false
+  },
+  "searchCriteria": {
+    "data.position": "defense"
+  },
+  "sortCriteria": {},
+  "options": {
+    "explain": "QUERY_PLANNER"
+  }
+}
+```
+
+The following 3 levels are supported:
+
+*QUERY_PLANNER* – MongoDB runs the query optimizer to choose the winning plan for the operation under evaluation – and returns the queryPlanner information for the evaluated method.
+
+*EXECUTION_STATS* – MongoDB runs the query optimizer to choose the winning plan, executes the winning plan to completion, and returns statistics describing the execution of the winning plan.
+
+*ALL_PLANS_EXECUTION* – MongoDB runs the query optimizer to choose the winning plan and executes the winning plan to completion. In “allPlansExecution” mode, MongoDB returns statistics describing the execution of the winning plan as well as statistics for the other candidate plans captured during plan selection.
+
+The explain results are returned in a map named explain under the data section of the results JSON.
+:::
+
+<PartialServop service_name="customEntity" operation_name="GET_ENTITY_PAGE" />
 
 ## Usage
 
