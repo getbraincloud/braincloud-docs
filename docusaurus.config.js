@@ -26,6 +26,16 @@ let options = {
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
+  webpack: {
+    jsLoader: (isServer) => ({
+      loader: require.resolve('esbuild-loader'),
+      options: {
+        loader: 'tsx',
+        format: isServer ? 'cjs' : undefined,
+        target: isServer ? 'node14' : 'es2017',
+      },
+    }),
+  },
   //title: 'brainCloud docs',
   title: '__DOCSNAME__',
   tagline: 'BaaS',
