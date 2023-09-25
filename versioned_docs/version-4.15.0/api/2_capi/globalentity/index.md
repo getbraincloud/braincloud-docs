@@ -10,7 +10,7 @@ Performance warning: Global Entities are best-suited for a moderate number (i.e.
 <br/>
 <p>Do <em>not</em> use Global Entities in cases where the data is primarily <em>owned by users</em> and the number of objects will <em>grow as the user population grows</em>. Use <em>User Entities</em> instead - or for maximum flexibility use <em>Owned Custom Entities</em>.</p>
 
-<p>Also - if the data is <em>un-owned</em>, but high populations of objects are required (i.e. > 1000), use <em>Un-owned Custom Entities</em>.</p>
+<p>Also - if the data is <em>un-owned</em>, but high populations of objects are required (i.e. more than 1000), use <em>Un-owned Custom Entities</em>.</p>
 :::
 
 Note that the integrity of Global Entities are protected by two key mechanisms:

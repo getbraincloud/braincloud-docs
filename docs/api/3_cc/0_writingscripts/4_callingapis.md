@@ -1,5 +1,27 @@
 # Calling APIs
 
+
+
+To call a <%= data.branding.productName %> API from within a script, you must retrieve the appropriate service proxy from the `bridge`. You then call the desired method on the proxy.
+
+*The code below retrieves the number of times a user has logged into the app:*
+```
+var playerStateService = bridge.getPlayerStateServiceProxy();
+var numLogins = playerStateService.readUserState().data.loginCount;
+```
+
+> PostScores - example parameters
+
+```json
+{
+    "score1": 100,
+    "score2": 200,
+    "score3": 300
+}
+```
+
+The larger example below shows how you can easily create a script to perform multiple operations on the server.
+
 > PostScores - Post to multiple leaderboards
 
 ```cfscript
@@ -37,26 +59,6 @@ numPosted += postScore( leaderboardService, "board3", score3);
 // Return the total posted
 numPosted;
 ```
-
-To call a <%= data.branding.productName %> API from within a script, you must retrieve the appropriate service proxy from the `bridge`. You then call the desired method on the proxy.
-
-*The code below retrieves the number of times a user has logged into the app:*
-```
-var playerStateService = bridge.getPlayerStateServiceProxy();
-var numLogins = playerStateService.readUserState().data.loginCount;
-```
-
-> PostScores - example parameters
-
-```json
-{
-    "score1": 100,
-    "score2": 200,
-    "score3": 300
-}
-```
-
-The larger example on the right shows how you can easily create a script to perform multiple operations on the server.
 
 :::tip
 Pro-tip: Invoking a cloud code script costs 1 API count - but its first 2 API calls are free, and every call after that is just 1/2 API count.

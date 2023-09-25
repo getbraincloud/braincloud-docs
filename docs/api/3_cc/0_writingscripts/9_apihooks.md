@@ -1,5 +1,51 @@
 # API Hooks
 
+<%= data.branding.productName %> allows you to modify the default behaviour of most API methods by configuring a Cloud Code script to run immediately before (*pre*) or after (*post*) the built-in API code.
+
+<%= data.branding.productName %> commons refers to these as *Pre-Hooks* and *Post-Hooks*.
+
+<%= data.branding.productName %> also allows you to specify a "Post-Fail-Hook" that gets called in the event of an API processing exception. These are very similar to "Post-Hooks" except that is passes
+the "errorData" to the script rather than "message".
+
+
+## Configuring API Hooks
+
+API Hooks are configured in the Design Portal, from the **Design | Cloud Code | API Hooks** screen.
+
+When configuring an API Hook you need to specify:
+
+* The *Service* and *Operation* to hook into
+* The *Script* to invoke
+* Whether it is a *Pre* (before), *Post* (after) or *PostFail* (after failure) scripts
+* Any additional *Parameters* that you'd like to send into the script at runtime (allows you to potentially configure the same script for use in different situations)
+
+## Pre-Hook Scripts
+
+Pre-hook scripts are called *prior* to executing the specified API method. Pre-Hook scripts can:
+
+* Do some pre-processing prior to the API call
+* Modify the parameters being passed to the API
+* Abort the call if required
+
+The `data` object sent to a pre-hook script contains the following standard elements:
+
+Data Element | Description
+-------------- | -----------
+service | the name of the <%= data.branding.productName %> service
+operation | the name of the <%= data.branding.productName %> operation being invokes (related to, but not necessarily the same as, the method name)
+message | the arguments sent to the API call that is being modified
+parms | the static parameters defined as part of the hook configuration
+
+Pre-hook scripts must return results in a specific format so that <%= data.branding.productName %> can decide how/if to modify the behaviour of the API call.
+
+The JSON map returned by the script may contain the following members:
+
+Data Element | Description
+-------------- | -----------
+status | Return 200 to continue processing, anything else to abort and return that status to the client
+reasonCode | Additional error info (numeric) returned if status != 200
+errorMessage | Textual error info returned if status != 200
+messageOverride | To override the parameters sent to the API call, return a messageOverride element with the replacement set of parameters
 
 > **CreateContactPreHook** - intercepts the creation of **contacts**
 
@@ -56,55 +102,31 @@ result;
 }
 ```
 
-<%= data.branding.productName %> allows you to modify the default behaviour of most API methods by configuring a Cloud Code script to run immediately before (*pre*) or after (*post*) the built-in API code.
-
-<%= data.branding.productName %> commons refers to these as *Pre-Hooks* and *Post-Hooks*.
-
-<%= data.branding.productName %> also allows you to specify a "Post-Fail-Hook" that gets called in the event of an API processing exception. These are very similar to "Post-Hooks" except that is passes
-the "errorData" to the script rather than "message".
+## Post-Hook Scripts
 
 
-## Configuring API Hooks
 
-API Hooks are configured in the Design Portal, from the **Design | Cloud Code | API Hooks** screen.
+Post-hook scripts are called after executing a particular API call. Post-hook scripts can do some post-processing of the API results, optionally modifying the data that is returned to the client.
 
-When configuring an API Hook you need to specify:
-
-* The *Service* and *Operation* to hook into
-* The *Script* to invoke
-* Whether it is a *Pre* (before), *Post* (after) or *PostFail* (after failure) scripts
-* Any additional *Parameters* that you'd like to send into the script at runtime (allows you to potentially configure the same script for use in different situations)
-
-## Pre-Hook Scripts
-
-Pre-hook scripts are called *prior* to executing the specified API method. Pre-Hook scripts can:
-
-* Do some pre-processing prior to the API call
-* Modify the parameters being passed to the API
-* Abort the call if required
-
-The `data` object sent to a pre-hook script contains the following standard elements:
+The `data` object sent to a post-hook script contains the following standard elements:
 
 Data Element | Description
 -------------- | -----------
 service | the name of the <%= data.branding.productName %> service
 operation | the name of the <%= data.branding.productName %> operation being invokes (related to, but not necessarily the same as, the method name)
-message | the arguments sent to the API call that is being modified
+callingMessage | the original parameters sent into the API call
+message | the data results from the api call
 parms | the static parameters defined as part of the hook configuration
 
-Pre-hook scripts must return results in a specific format so that <%= data.branding.productName %> can decide how/if to modify the behaviour of the API call.
-
-The JSON map returned by the script may contain the following members:
+The script can return `null` to have no effect on the original return value. If not `null`, the returned object may include the following parameters:
 
 Data Element | Description
 -------------- | -----------
-status | Return 200 to continue processing, anything else to abort and return that status to the client
+status | Return 200 for ok, other for not
 reasonCode | Additional error info (numeric) returned if status != 200
 errorMessage | Textual error info returned if status != 200
-messageOverride | To override the parameters sent to the API call, return a messageOverride element with the replacement set of parameters
+data | Replacement results of the call
 
-
-## Post-Hook Scripts
 
 > **ReadContactPostHook** - adds a fullName field when returning contacts
 
@@ -160,50 +182,9 @@ result;
 ```
 
 
-Post-hook scripts are called after executing a particular API call. Post-hook scripts can do some post-processing of the API results, optionally modifying the data that is returned to the client.
-
-The `data` object sent to a post-hook script contains the following standard elements:
-
-Data Element | Description
--------------- | -----------
-service | the name of the <%= data.branding.productName %> service
-operation | the name of the <%= data.branding.productName %> operation being invokes (related to, but not necessarily the same as, the method name)
-callingMessage | the original parameters sent into the API call
-message | the data results from the api call
-parms | the static parameters defined as part of the hook configuration
-
-The script can return `null` to have no effect on the original return value. If not `null`, the returned object may include the following parameters:
-
-Data Element | Description
--------------- | -----------
-status | Return 200 for ok, other for not
-reasonCode | Additional error info (numeric) returned if status != 200
-errorMessage | Textual error info returned if status != 200
-data | Replacement results of the call
-
 
 ## Post-Fail-Hook Scripts
 
-> **UpdateCreatePostFailHook** - creates a record if the update fails due non-existing record
-
-```cfscript
-var result = {};
-
-// If the error is missing record
-if (data.errorData.reasonCode == 40332) {
-
-    // create the record
-    var entityProxy = bridge.getEntityServiceProxy();
-    var createResult = entityProxy.create(data.callingMessage.entityType, data.callingMessage.data, data.callingMessage.acl);
-
-    // provide the result of the create
-    result['status'] = createResult.status;
-    result['data'] = createResult.data;
-
-}
-
-result;
-```
 
 Post-fail-hook scripts are called after executing a particular API call and encountering a processing exception.
 Post-fail-hook scripts can do some post-processing of the API failure, optionally overriding the failure in the return to the client.
@@ -226,3 +207,24 @@ status | Return 200 for error override to success, other for replacement error
 reasonCode | Replacement error info (numeric) returned if status != 200
 errorMessage | Replacement error info returned if status != 200
 data | Replacement results of the call if returning 200
+
+> **UpdateCreatePostFailHook** - creates a record if the update fails due non-existing record
+
+```cfscript
+var result = {};
+
+// If the error is missing record
+if (data.errorData.reasonCode == 40332) {
+
+    // create the record
+    var entityProxy = bridge.getEntityServiceProxy();
+    var createResult = entityProxy.create(data.callingMessage.entityType, data.callingMessage.data, data.callingMessage.acl);
+
+    // provide the result of the create
+    result['status'] = createResult.status;
+    result['data'] = createResult.data;
+
+}
+
+result;
+```

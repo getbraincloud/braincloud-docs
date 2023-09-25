@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo "Building.."
+                echo "Building..."
                 sh '''
                 export NVM_DIR="$HOME/.nvm"
                 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
@@ -26,7 +26,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo "Testing.."
+                echo "Testing..."
                 sh '''
                 touch bcdoc-test.txt
                 rm bcdoc-*.*
@@ -35,7 +35,7 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                echo 'Deliver....'
+                echo 'Deliver...'
                 sh '''
                 aws --profile JenkinsAPIDOCSS3Bucket s3 sync build s3://bcapidocs-dev
                 zip -r "bcdoc-${BUILD_ID}.zip" build
