@@ -1,5 +1,12 @@
 # Basic Structure
 
+
+The simplest scripts are composed of the following elements:
+
+* Parameters - arguments passed to the scripts
+* Inline code
+* Returned results
+
 > CalculateArea - A simple cloud code script
 
 ```cfscript
@@ -13,13 +20,6 @@ var result = width * height;
 // Return the result
 result;
 ```
-
-The simplest scripts are composed of the following elements:
-
-* Parameters - arguments passed to the scripts
-* Inline code
-* Returned results
-
 
 ## Parameters (Arguments)
 

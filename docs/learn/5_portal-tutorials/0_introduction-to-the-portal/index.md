@@ -18,13 +18,13 @@ Key components of this page include:
 - The list of **Your Apps** (with quick links to jump to them)
 - The latest **brainCloud News**
 - Quick links for common actions - like **Inviting Team Members**
-- The green **Help** button in the bottom-right hand corner - click to talk to us!
+- The **Ask Support** button in the top-right hand corner - click to talk to us!
 
 The **Home Page** is the actually just the main page of the **Administration** section of the portal. You can view the other admin pages by clicking on the appropriate tabs on the left-hand side of the page.  You can return to the home page at any time by clicking on the **<Gear\>** icon in the top-right-hand corner.
 
 ## Creating an App
 
-The first thing you'll want to do is create an app.  Doing so is simple - just click the **[+]** button in the corner of the **Your Apps** section, and fill in the dialog.
+The first thing you'll want to do is create an app.  Doing so is simple - just click the **[+ NEW APP]** button in the corner of the **Manage - Apps** section, and fill in the dialog.
 
 [![brainCloud](images/brainCloud_dashboard_newApp.jpg)](images/brainCloud_dashboard_newApp.jpg)
 
@@ -34,9 +34,7 @@ You'll want to pick at least one _Supported Platform_. brainCloud's APIs check t
 
 ## App Management
 
-After creating the app you'll be placed in the **Administration | App Management** page.  This is where you view and control the publishing of your apps - see the Actions menu on the right-hand side of your app.
-
-[![brainCloud](images/brainCloud_dashboard_appsList.jpg)](images/brainCloud_dashboard_appsList.jpg)
+After creating the app you'll be placed in the **Administration | App Management** page.  This is where you view and control the publishing of your apps - click the **Vertical ellipsis &vellip;** (Actions menu) on the right-hand side of your app.
 
 For now, we're just going to move along to the design settings for this app. _Click on your app's name in the list._
 

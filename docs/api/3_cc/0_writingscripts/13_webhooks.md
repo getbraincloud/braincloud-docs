@@ -1,5 +1,35 @@
 # WebHooks
 
+<%= data.branding.productName %> also allows S2S-style Cloud Code scripts to be called via WebHooks.
+
+WebHooks are defined and linked to Cloud Code scripts from the **Design | Cloud Code | WebHooks** page of the portal.
+
+WebHook scripts receive a `data` object with the following elements:
+
+Data Element | Description
+-------------- | -----------
+headers | An object representing the HTTP headers in the WebHook call
+stringBody | The body of the WebHook call if it is a non-json string
+jsonBody | An object representing the body of the WebHook call
+pathBalance | The balance of the path in the WebHook call, exclusive of the required url as specified in the portal config
+parameters | An object representing the parameters passed in the WebHook call
+queryString | An string representation of the parameter component of the request URL
+requestUrl | The full request url
+
+The script return object can be populated with optional fields that can modify the results sent to the caller:
+
+Data Element | Description
+-------------- | -----------
+jsonResponse | An object which the WebHook handler will stringify and return as a body. Setting this field will default the response content type to "application/json".
+stringResponse | A string which will be returned as a body if a non-json body is required
+statusOverride | A numeric value to override the normal 200 OK return of the WebHook handler
+contentType | A string which will override the content-type of the response
+responseHeaders | A json map that overrides the http response headers.
+
+:::tip
+When the WebHook has been configured to require a secret <strong>header</strong>, a header named "x-bc-secret" must be included in the HTTP call from the caller site.
+:::
+
 > **WebHookPassThru** - Handy script to log any webhook requests sent to it. Useful for confirming the format of the parameters being sent from an external system. [*Click on* ***Cloud Code*** *(above) to view.*]
 
 ```cfscript
@@ -90,33 +120,3 @@ response;
     "requestUrl": "url"
 }
 ```
-
-<%= data.branding.productName %> also allows S2S-style Cloud Code scripts to be called via WebHooks.
-
-WebHooks are defined and linked to Cloud Code scripts from the **Design | Cloud Code | WebHooks** page of the portal.
-
-WebHook scripts receive a `data` object with the following elements:
-
-Data Element | Description
--------------- | -----------
-headers | An object representing the HTTP headers in the WebHook call
-stringBody | The body of the WebHook call if it is a non-json string
-jsonBody | An object representing the body of the WebHook call
-pathBalance | The balance of the path in the WebHook call, exclusive of the required url as specified in the portal config
-parameters | An object representing the parameters passed in the WebHook call
-queryString | An string representation of the parameter component of the request URL
-requestUrl | The full request url
-
-The script return object can be populated with optional fields that can modify the results sent to the caller:
-
-Data Element | Description
--------------- | -----------
-jsonResponse | An object which the WebHook handler will stringify and return as a body. Setting this field will default the response content type to "application/json".
-stringResponse | A string which will be returned as a body if a non-json body is required
-statusOverride | A numeric value to override the normal 200 OK return of the WebHook handler
-contentType | A string which will override the content-type of the response
-responseHeaders | A json map that overrides the http response headers.
-
-:::tip
-When the WebHook has been configured to require a secret <strong>header</strong>, a header named "x-bc-secret" must be included in the HTTP call from the caller site.
-:::
