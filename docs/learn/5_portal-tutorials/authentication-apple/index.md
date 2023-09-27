@@ -15,23 +15,23 @@ This article elaborates on the basic steps of how to authenticate end-users with
 - Open Unity hub and create a new project.
 - Download and import the latest [brainCloud client Unity package](https://github.com/getbraincloud/braincloud-csharp/releases) to this project. Once imported the plugin correctly, you will find the brainCloud tab appears on the editor menu.
 
-![](images/Screen+Shot+2021-01-10+at+8.10.14+PM.png)
+![](images/1.png)
 
 - Download and import the latest `Sign in with Apple` plugin (the left one on the picture below) to this project via the Asset store.
 
-![](images/Screen+Shot+2021-01-10+at+8.57.20+PM.png)
+![](images/2.png)
 
 - You should find the Unity Technologies folder under the asset after `SignInWithApple` plugin imported.
 
-![](images/Screen+Shot+2021-01-10+at+9.05.16+PM.png)
+![](images/3.png)
 
 - Open brainCloud setting from the tab, select or create a brainCloud back-end app linked to your project.
 
-![](images/Screen+Shot+2021-01-10+at+9.11.08+PM.png)
+![](images/4.png)
 
 - Create some UI elements and initialize brainCloud and Apple SignIn from your script. You can compare the differences between brainCloud universal authentication and Apple authentication by setting both of them to UI.
 
-![](images/Screen+Shot+2021-01-10+at+9.13.34+PM.png)
+![](images/5.png)
 
 - Functions and its code that linked behind the button [Sign in with Apple] are similar to below. Once end-user login into their Apple account, from the success callback, retrieve the userId and id token and pass them to brainCloud Apple authentication method -- `AuthenticateApple`
 ```js
@@ -82,15 +82,15 @@ This article elaborates on the basic steps of how to authenticate end-users with
 - Finish the rest callbacks code in your script.
 - Click `Build Settings` from Unity `File` tab, switch platform to iOS.
 
-![](images/Screen+Shot+2021-01-10+at+9.44.33+PM.png)
+![](images/6.png)
 
 - Set up project `Bundle Identifier` via `Player Settings` .
 
-![](images/Screen+Shot+2021-01-10+at+9.47.48+PM.png)
+![](images/7.png)
 
 - Click `Build and Run`, then create a folder to save this Xcode project on your local storage.
 
-![](images/Screen+Shot+2021-01-10+at+9.55.52+PM.png)
+![](images/8.png)
 
 **Step 2: Configure bundle identifier on brainCloud**
 
@@ -100,7 +100,7 @@ This article elaborates on the basic steps of how to authenticate end-users with
 
 - Click **Apple** under Configure Platforms and paste your `Bundle Identifier` to `Signin Client Id` field.
 
-![](images/Screen+Shot+2021-01-10+at+11.26.27+PM.png)
+![](images/9.png)
 
 - Make sure the `Apple iOS` platform is selected from the **Design | Core App Info | Platforms** page.
 
@@ -108,17 +108,21 @@ This article elaborates on the basic steps of how to authenticate end-users with
 
 - Open the build Xcode project via Xcode editor, make sure `AuthenticationServices.framework` is added to `UnityFramework`
 
-![](images/Screen+Shot+2021-01-10+at+11.00.41+PM.png)
+![](images/10.png)
 
 - Add `Sign in with Apple` capability to Unity-iPhone from `Signing & Capabilities` tab.
 - Select `Automatically manage signing` checkbox, then login to your Apple developer team.
 
-![](images/Screen+Shot+2021-01-10+at+11.11.17+PM.png)
+![](images/11.png)
 
 - Once the above step is done, check the `Identifiers` is added to your Apple developer account under `Certificates, Identifiers & Profiles` section.
 
-![](images/Screen+Shot+2021-01-10+at+11.13.37+PM.png)
+![](images/12.png)
 
 - Connect your testing device to Xcode, then run this project on your testing device.
 
-![](images/Screen+Shot+2021-01-10+at+11.37.43+PM.png)
+![](images/13.png)
+
+:::info
+For the example of using **AuthenticateApple** with Swift, refer to our Swift example repository [here](https://github.com/getbraincloud/examples-swift#bcchat-example)
+:::
