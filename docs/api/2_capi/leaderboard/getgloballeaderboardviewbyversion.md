@@ -1,5 +1,5 @@
 # GetGlobalLeaderboardViewByVersion
-## Overview
+
 Method returns a view of global leaderboard results that centers on the current player. By using a non-current version id, the user can retrieve a historical leaderboard.
 
 See GetGlobalLeaderboardVersions method to retrieve the version ID.

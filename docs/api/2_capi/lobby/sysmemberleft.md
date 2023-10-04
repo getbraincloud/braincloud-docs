@@ -1,5 +1,5 @@
 # SysMemberLeft
-## Overview
+
 Informs brainCloud that the specified user has left the specified lobby.
 
 <PartialServop service_name="lobby" operation_name="SYS_MEMBER_LEFT" />

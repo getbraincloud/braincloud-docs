@@ -1,5 +1,5 @@
 # GetEntityPageOffset
-## Overview
+
 Gets the page of custom entities from the server based on the encoded context and specified page offset.
 
 <PartialServop service_name="customEntity" operation_name="GET_ENTITY_PAGE_OFFSET" />

@@ -1,5 +1,5 @@
 # MergeAppleIdentity
-## Overview
+
 Merge the profile associated with the provided Sigh in with Apple credentials with the current profile.
 
 NOTE: If using the <%= data.branding.codeWrapper %>, once the merge is complete you should call [<code>SetStoredProfileId</code>](/api/wrapper/setstoredprofileid) in the <%= data.branding.codeWrapper %> with the profileId returned in the Merge call.

@@ -1,5 +1,5 @@
 # UpdateAttributes
-## Overview
+
 Update user attributes.
 
 <PartialServop service_name="playerState" operation_name="UPDATE_ATTRIBUTES" />

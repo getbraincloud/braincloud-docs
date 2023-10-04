@@ -1,5 +1,5 @@
 # CreateGroupEntity
-## Overview
+
 Create an entity in the group. Optional parameters: entityType, acl and jsonData
 
 <PartialServop service_name="group" operation_name="CREATE_GROUP_ENTITY" />

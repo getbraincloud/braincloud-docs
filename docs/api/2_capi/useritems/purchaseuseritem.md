@@ -1,5 +1,5 @@
 # PurchaseUserItem
-## Overview
+
 Purchases a quantity of an item from the specified store, if the user has enough funds. If includeDef is true, response includes associated itemDef with language fields limited to the current or default language.
 
 <PartialServop service_name="userItems" operation_name="PURCHASE_USER_ITEM" />

@@ -1,5 +1,5 @@
 # PostScoreToDynamicLeaderboardDaysUTC
-## Overview
+
 Post the players score to the given social leaderboard with a rotation type of DAYS. You can optionally send a user-defined JSON string of data with the posted score. This string could include information relevant to the posted score.
 
 The passed in leaderboard config data is to dynamically create the leaderboard if it does not exist already.

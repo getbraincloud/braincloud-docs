@@ -1,5 +1,5 @@
 # ReadGroup
-## Overview
+
 Retrieve information about the group.
 
 <PartialServop service_name="group" operation_name="READ_GROUP" />

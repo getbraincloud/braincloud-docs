@@ -1,5 +1,5 @@
 # SendMessageSimple
-## Overview
+
 Sends a simple string-based message on behalf of the user.
 
 

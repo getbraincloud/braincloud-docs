@@ -1,5 +1,5 @@
 # PostScoreToDynamicGroupLeaderboardUTC
-## Overview
+
 Post the group score to the given group leaderboard and dynamically create if necessary. LeaderboardType, rotationType, rotationReset, and retainedCount are required.
 
 <PartialServop service_name="leaderboard" operation_name="POST_GROUP_SCORE" />

@@ -1,5 +1,5 @@
 # UpdateUniversalIdPassword
-## Overview
+
 Updates the password for the universal id of the current profile.
 
 <PartialServop service_name="identity" operation_name="UPDATE_UNIVERSAL_PASSWORD" />

@@ -1,5 +1,5 @@
 # GetPushNotificationServiceProxy
-## Overview
+
 Retrieves a S2S PushNotification proxy object.
 
 ## Usage

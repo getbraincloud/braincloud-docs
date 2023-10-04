@@ -1,5 +1,5 @@
 # ClearUserStatus
-## Overview
+
 Deletes the specified status.
 
 <PartialServop service_name="playerState" operation_name="CLEAR_USER_STATUS" />

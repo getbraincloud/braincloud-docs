@@ -1,5 +1,5 @@
 # ListFriends
-## Overview
+
 Retrieves a list of user and friend platform information for all friends of the current user.
 
 <PartialServop service_name="friend" operation_name="LIST_FRIENDS" />

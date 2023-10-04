@@ -1,5 +1,5 @@
 # GetProfileInfoForCredentialIfExists
-## Overview
+
 Retrieves profile information for the specified user. Silently fails
 
 <PartialServop service_name="friend" operation_name="GET_PROFILE_INFO_FOR_CREDENTIAL_IF_EXISTS" />

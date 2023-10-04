@@ -1,5 +1,5 @@
 # SysAddCatalogItem
-## Overview
+
 Create a new catalog item on the server.
 
 <PartialServop service_name="itemCatalog" operation_name="SYS_ADD_CATALOG_ITEM" />

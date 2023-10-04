@@ -1,5 +1,5 @@
 # GetChatServiceProxy
-## Overview
+
 Retrieves a ChatService proxy object.
 
 Documentation for the service methods can be found [here](/api/capi/chat).

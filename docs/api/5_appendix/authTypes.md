@@ -1,5 +1,5 @@
 # Authentication Types
-## Overview
+
 This is a list of all valid Authentication Types for <%= data.branding.productName %>.  The following authentication types are currently supported:
 
 Type | ID

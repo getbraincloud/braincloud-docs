@@ -1,5 +1,5 @@
 # ScheduleCloudScript
-## Overview
+
 Schedules a scheduled cloud code job.  Can be scheduled minutes from the current time or at a set time.
 
 *Note - <%= data.branding.productName %> checks for schedule cloud code scripts every minute, so it is not recommended to run jobs that require only a 1-60 second delay.*

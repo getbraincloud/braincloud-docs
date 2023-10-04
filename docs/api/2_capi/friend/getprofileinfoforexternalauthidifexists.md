@@ -1,5 +1,5 @@
 # GetProfileInfoForExternalAuthIdIfExists
-## Overview
+
 Retrieves profile information for the specified user. Silently fails
 
 <PartialServop service_name="friend" operation_name="GET_PROFILE_INFO_FOR_EXTERNAL_AUTH_ID_IF_EXISTS" />

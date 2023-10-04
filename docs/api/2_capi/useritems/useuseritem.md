@@ -1,5 +1,5 @@
 # UseUserItem
-## Overview
+
 Uses the specified item, potentially consuming it.
 
 <PartialServop service_name="userItems" operation_name="USE_USER_ITEM" />

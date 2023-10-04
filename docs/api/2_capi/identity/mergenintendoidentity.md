@@ -1,5 +1,5 @@
 # MergeNintendoIdentity
-## Overview
+
 Merge the profile associated with the provided Nintendo credentials with the current profile.
 
 

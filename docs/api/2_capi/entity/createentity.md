@@ -1,5 +1,5 @@
 # CreateEntity
-## Overview
+
 Method creates a new entity on the server.
 
 <PartialServop service_name="entity" operation_name="CREATE" />

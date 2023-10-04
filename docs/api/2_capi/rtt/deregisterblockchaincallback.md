@@ -1,5 +1,5 @@
 # DeregisterBlockchainCallback
-## Overview
+
 Deregisters the blockchain callback.
 
 ## Usage

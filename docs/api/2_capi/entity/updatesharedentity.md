@@ -1,5 +1,5 @@
 # UpdateSharedEntity
-## Overview
+
 Method updates a shared entity owned by another user. This operation results in the entity data being completely replaced by the passed in JSON string.
 
 This method is affected by versioning. See the [versioning documentation](/api/appendix/version) for more information.

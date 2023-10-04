@@ -1,5 +1,5 @@
 # AttachFacebookLimitedIdentity
-## Overview
+
 Attach the user's Facebook Limited login credentials to the current profile.
 
 

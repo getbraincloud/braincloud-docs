@@ -1,5 +1,5 @@
 # FindLobby
-## Overview
+
 Finds a lobby matching the specified parameters. Asynchronous - returns 200 to indicate that matchmaking has started.
 
 

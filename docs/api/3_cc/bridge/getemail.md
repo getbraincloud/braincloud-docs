@@ -1,5 +1,5 @@
 # GetEmail
-## Overview
+
 Retrieves the email of the current user as a string.
 
 ## Usage

@@ -1,5 +1,5 @@
 # GetSharedEntitiesListForProfileId
-## Overview
+
 Method gets list of shared entities for the specified user based on type and/or where clause.
 
 Fields available for use in the 'where' clause are:

@@ -1,5 +1,5 @@
 # GetResponseJson
-## Overview
+
 ```
 {
     "packetId": 1,

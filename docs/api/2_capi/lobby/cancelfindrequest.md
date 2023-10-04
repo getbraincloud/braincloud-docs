@@ -1,5 +1,5 @@
 # CancelFindRequest
-## Overview
+
 Cancels any FindLobby or FindOrCreateLobby requests that have been previously submitted by the caller for the given lobbyType.
 
 <PartialServop service_name="lobby" operation_name="CANCEL_FIND_REQUEST" />

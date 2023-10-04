@@ -1,5 +1,5 @@
 # IsInitialized
-## Overview
+
 Returns whether the <%= data.branding.codeClient %> has been initialized using the Initialize() method.
 
 ## Usage

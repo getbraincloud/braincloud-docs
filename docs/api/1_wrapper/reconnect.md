@@ -1,5 +1,5 @@
 # Reconnect
-## Overview
+
 Re-authenticates the user with <%= data.branding.productName %>
 
 ## Usage

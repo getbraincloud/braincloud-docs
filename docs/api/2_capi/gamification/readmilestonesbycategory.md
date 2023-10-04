@@ -1,5 +1,5 @@
 # ReadMilestonesByCategory
-## Overview
+
 Method returns milestones for the given category.
 
 <PartialServop service_name="gamification" operation_name="READ_MILESTONES_BY_CATEGORY" />

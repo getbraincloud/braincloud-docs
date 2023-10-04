@@ -1,5 +1,5 @@
 # RegisterRTTPresenceCallback
-## Overview
+
 Registers a callback for RTT Presence updates.
 
 ## Usage

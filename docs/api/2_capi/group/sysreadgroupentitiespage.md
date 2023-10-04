@@ -1,5 +1,5 @@
 # SysReadGroupEntitiesPage
-## Overview
+
 Retrieve a page of group entity information based on the specified context, bypassing ownership/ACL checks.
 
 <PartialServop service_name="group" operation_name="SYS_READ_GROUP_ENTITIES_PAGE" />

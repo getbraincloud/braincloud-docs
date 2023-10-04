@@ -1,5 +1,5 @@
 # SysAddProductPrice
-## Overview
+
 Adds a new price to the given product item.
 
 <PartialServop service_name="productManagement" operation_name="SYS_ADD_PRODUCT_PRICE" />

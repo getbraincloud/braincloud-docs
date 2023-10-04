@@ -1,5 +1,5 @@
 # OverrideCountryCode
-## Overview
+
 Sets the country code sent to <%= data.branding.productName %> when a user authenticates. Will override any auto detected country.
 
 These methods should be called before authenticating so that they are sent to the server.

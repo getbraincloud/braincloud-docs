@@ -1,5 +1,5 @@
 # StartStream
-## Overview
+
 Starts a stream.
 
 <PartialServop service_name="playbackStream" operation_name="START_STREAM" />

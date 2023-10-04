@@ -1,5 +1,5 @@
 # CreateHandoffId
-## Overview
+
 Creates a handoff authentication id with security token.
 
 <PartialServop service_name="identity" operation_name="CREATE_HANDOFF_ID" />

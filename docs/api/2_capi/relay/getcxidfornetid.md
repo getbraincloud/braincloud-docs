@@ -1,5 +1,5 @@
 # GetCxIdForNetId
-## Overview
+
 Returns the RTT connection Id associated with a netId.
 
 ## Usage

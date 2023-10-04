@@ -1,5 +1,5 @@
 # ResetStoredAnonymousId
-## Overview
+
 Resets the anonymous ID to empty string.  When the anonymousId is empty a new one will be generated automatically on authentication.
 
 ## Usage

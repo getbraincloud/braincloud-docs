@@ -1,5 +1,5 @@
 # ResetEmailPasswordAdvanced
-## Overview
+
 Advanced reset email password using templates
 
 <PartialServop service_name="authenticationV2" operation_name="RESET_EMAIL_PASSWORD_ADVANCED" / >

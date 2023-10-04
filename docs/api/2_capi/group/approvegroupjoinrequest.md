@@ -1,5 +1,5 @@
 # ApproveGroupJoinRequest
-## Overview
+
 Approve an outstanding request to join the group. Optional parameters: jsonAttributes.
 
 ```

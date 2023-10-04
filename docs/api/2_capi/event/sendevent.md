@@ -1,5 +1,5 @@
 # SendEvent
-## Overview
+
 Sends an event to the designated profile id with the attached JSON data.
 
 Any events that have been sent to a user will show up in their incoming event queue.

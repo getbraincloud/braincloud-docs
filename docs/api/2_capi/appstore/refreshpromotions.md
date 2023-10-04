@@ -1,5 +1,5 @@
 # RefreshPromotions
-## Overview
+
 Returns up-to-date eligible 'promotions' for the user and a 'promotionsRefreshed' flag indicating whether the user's promotion info required refreshing.
 
 :::success

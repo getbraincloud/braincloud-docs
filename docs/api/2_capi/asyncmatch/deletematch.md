@@ -1,5 +1,5 @@
 # DeleteMatch
-## Overview
+
 Removes the match and match history from the server.
 
 

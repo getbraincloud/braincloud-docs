@@ -1,5 +1,5 @@
 # CreateLobby
-## Overview
+
 Creates a new lobby.
 
 Sends LOBBY_JOIN_SUCCESS message to the user, with full copy of lobby data

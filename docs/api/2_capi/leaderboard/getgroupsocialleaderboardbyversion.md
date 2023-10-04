@@ -1,5 +1,5 @@
 # GetGroupSocialLeaderboardByVersion
-## Overview
+
 Retrieve the social leaderboard by version, for a group.
 
 <PartialServop service_name="leaderboard" operation_name="GET_GROUP_SOCIAL_LEADERBOARD_BY_VERSION" />

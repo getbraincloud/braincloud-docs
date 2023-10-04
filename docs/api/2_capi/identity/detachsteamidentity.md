@@ -1,5 +1,5 @@
 # DetachSteamIdentity
-## Overview
+
 Detach the universal identity from the current profile.
 
 

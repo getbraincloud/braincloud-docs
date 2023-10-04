@@ -1,5 +1,5 @@
 # SysEditCatalogItem
-## Overview
+
 Update a catalog item on the server.
 
 <PartialServop service_name="itemCatalog" operation_name="SYS_EDIT_CATALOG_ITEM" />

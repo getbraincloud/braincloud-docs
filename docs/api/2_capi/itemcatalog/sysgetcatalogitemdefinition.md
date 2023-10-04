@@ -1,5 +1,5 @@
 # SysGetCatalogItemDefinition
-## Overview
+
 Reads an existing item definition from the server, with full language fields mappings.
 
 <PartialServop service_name="itemCatalog" operation_name="SYS_GET_CATALOG_ITEM_DEFINITION" />

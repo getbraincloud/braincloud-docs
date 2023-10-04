@@ -1,5 +1,5 @@
 # GetGlobalLeaderboardPage
-## Overview
+
 > NOTE: The friend summary data is returned for each record in the leaderboard.
 
 > NOTE: "timeBeforeReset" is only returned when the requested version is also the active version.

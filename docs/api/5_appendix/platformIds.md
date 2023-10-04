@@ -1,5 +1,5 @@
 # Platform IDs
-## Overview
+
 The <%= data.branding.productName %> client libraries automatically determine the platform they're running upon, and provide the appropriate platform id when performing authentication.
 
 If you're using the API Explorer, you may want to override the default platform id.

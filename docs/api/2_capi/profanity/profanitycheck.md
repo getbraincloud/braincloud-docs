@@ -1,5 +1,5 @@
 # ProfanityCheck
-## Overview
+
 Checks supplied text for profanity.
 
 <PartialServop service_name="profanity" operation_name="PROFANITY_CHECK" />

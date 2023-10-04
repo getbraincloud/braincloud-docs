@@ -1,5 +1,5 @@
 # SendRawPushToCustomQuery
-## Overview
+
 Sends a push to users based on custom collection query and the profileIdField storing the user's <%= data.branding.productName %> profile Id.
 
 <PartialServop service_name="pushNotification" operation_name="SEND_RAW_PUSH_TO_CUSTOM_QUERY" />

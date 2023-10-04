@@ -1,5 +1,5 @@
 # SignHMACSha256
-## Overview
+
 Given a piece of data and a shared secrect key, calculates an SHA-256 with HMAC signature for the data.
 
 ## Usage

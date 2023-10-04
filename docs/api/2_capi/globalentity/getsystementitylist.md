@@ -1,5 +1,5 @@
 # GetSystemEntityList
-## Overview
+
 Method gets list of system entities from the server base on type and/or where clause.
 
 Fields available for use in the 'where' clause are:

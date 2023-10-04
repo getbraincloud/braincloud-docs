@@ -1,5 +1,5 @@
 # AddEvent
-## Overview
+
 Adds a stream event.
 
 <PartialServop service_name="playbackStream" operation_name="ADD_EVENT" />

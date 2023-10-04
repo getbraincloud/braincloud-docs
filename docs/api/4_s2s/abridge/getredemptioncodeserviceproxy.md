@@ -1,5 +1,5 @@
 # GetRedemptionCodeServiceProxy
-## Overview
+
 Retrieves a Redemption Code Service proxy object.
 
 ## Usage

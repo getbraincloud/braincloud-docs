@@ -1,5 +1,5 @@
 # GetGlobalLeaderboardVersions
-## Overview
+
 Method returns version information about the global leaderboard and some configuration information for the leaderboard.
 
 <PartialServop service_name="leaderboard" operation_name="GET_GLOBAL_LEADERBOARD_VERSIONS" />

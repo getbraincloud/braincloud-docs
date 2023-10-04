@@ -1,5 +1,5 @@
 # RegisterServer
-## Overview
+
 Register a new server.
 
 ## Usage

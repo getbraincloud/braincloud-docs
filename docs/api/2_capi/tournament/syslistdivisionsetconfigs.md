@@ -1,5 +1,5 @@
 # SysListDivisionSetConfigs
-## Overview
+
 Lists all division set configurations for the app.
 
 <PartialServop service_name="tournament" operation_name="SYS_LIST_DIVISION_SET_CONFIGS" />

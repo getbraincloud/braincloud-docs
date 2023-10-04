@@ -1,5 +1,5 @@
 # SellUserItem
-## Overview
+
 Allows a quantity of a specified user item to be sold. If any quantity of the user item remains, it will be returned, potentially with the associated itemDef (with language fields limited to the current or default language), along with the currency refunded and currency balances.
 
 <PartialServop service_name="userItems" operation_name="SELL_USER_ITEM" />

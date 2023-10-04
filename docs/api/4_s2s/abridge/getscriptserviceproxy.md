@@ -1,5 +1,5 @@
 # GetScriptServiceProxy
-## Overview
+
 Retrieves a S2S ScriptService proxy object.
 
 ## Usage

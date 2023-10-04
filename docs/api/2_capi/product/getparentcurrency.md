@@ -1,5 +1,5 @@
 # GetParentCurrency
-## Overview
+
 Gets the parent player's currency for the given currency type **or** all currency types if null passed in.
 
 <PartialServop service_name="product" operation_name="GET_PARENT_VC" />

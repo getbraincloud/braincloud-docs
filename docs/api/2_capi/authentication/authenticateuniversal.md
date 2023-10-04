@@ -1,5 +1,5 @@
 # AuthenticateUniversal
-## Overview
+
 Universal authentication allows the developer to pass in any user/password string combination. As with all authentication methods, if the create new profile flag is specified as false, the authentication will fail if the user/password combination does not match a user in the database.
 
 

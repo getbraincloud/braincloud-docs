@@ -1,5 +1,5 @@
 # JoinGroup
-## Overview
+
 Join an open group or request membership in a closed group.
 
 <PartialServop service_name="group" operation_name="JOIN_MEMBER_TO_GROUP" />

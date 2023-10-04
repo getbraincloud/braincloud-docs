@@ -1,5 +1,5 @@
 # PostScoreToDynamicGroupLeaderboardDaysUTC
-## Overview
+
 Post the group score to the given group leaderboard with a rotation type of DAYS and dynamically create if necessary.
 
 <PartialServop service_name="leaderboard" operation_name="POST_GROUP_SCORE" />

@@ -1,5 +1,5 @@
 # FindOrCreateLobbyWithPingData
-## Overview
+
 Adds the caller to the lobby entry queue and will create a lobby if none are found.
 
 Use [PingRegions](/api/capi/lobby/pingregions) to generate the ping data.

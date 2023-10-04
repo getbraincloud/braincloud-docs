@@ -1,5 +1,5 @@
 # PostJsonResponseText
-## Overview
+
 Posts a JSON document, expects a text response.
 
 <PartialServop service_name="httpClient" operation_name="POSTEXT" />

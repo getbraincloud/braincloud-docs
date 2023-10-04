@@ -1,5 +1,5 @@
 # GetTeamInfo
-## Overview
+
 Retrieves the team info for the current assocaited session as a JSON.
 
 :::tip

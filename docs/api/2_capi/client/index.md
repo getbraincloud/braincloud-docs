@@ -1,5 +1,5 @@
 # Client
-## Overview
+
 
 
 The <%= data.branding.codeClient %> class is the core of the <%= data.branding.productName %> API.  From the <%= data.branding.codeClient %> you can access all of <%= data.branding.productName %>'s services (Authentication, Entity, etc) and from there the individual API's they contain.

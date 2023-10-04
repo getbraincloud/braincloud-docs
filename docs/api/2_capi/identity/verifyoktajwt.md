@@ -1,5 +1,5 @@
 # VerifyOktaJwt
-## Overview
+
 Used in an External Authentication script to validate an OKTA login. 
 
 Usage:

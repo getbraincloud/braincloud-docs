@@ -1,5 +1,5 @@
 # SendNormalizedPushNotification
-## Overview
+
 Sends a notification to a user consisting of alert content and custom data.
 
 <PartialServop service_name="pushNotification" operation_name="SEND_NORMALIZED" />

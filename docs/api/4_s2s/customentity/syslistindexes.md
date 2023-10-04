@@ -1,5 +1,5 @@
 # SysListIndexes
-## Overview
+
 Retrieves list of indexes configured for a custom entity collection.
 
 <PartialServop service_name="customEntity" operation_name="SYS_LIST_INDEXES" />

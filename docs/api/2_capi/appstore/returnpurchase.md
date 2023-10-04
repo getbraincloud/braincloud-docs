@@ -1,5 +1,5 @@
 # ReturnPurchase
-## Overview
+
 Mock version of return purchase, use for test purpose.
 
 <PartialServop service_name="appStore" operation_name="RETURN_PURCHASE" />

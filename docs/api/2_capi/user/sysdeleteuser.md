@@ -1,5 +1,5 @@
 # SysDeleteUser
-## Overview
+
 Delete user with option to also delete user's children.
 
 <PartialServop service_name="user" operation_name="SYS_DELETE_USER" />

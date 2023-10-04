@@ -1,5 +1,5 @@
 # SysUpdateChatMessage
-## Overview
+
 Update the specified chat message. Message can have been from any user (or system). Version provided must match (or pass -1 to bypass version enforcement).
 
 <PartialServop service_name="chat" operation_name="SYS_UPDATE_CHAT_MESSAGE" />

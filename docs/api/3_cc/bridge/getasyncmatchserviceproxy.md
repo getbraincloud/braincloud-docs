@@ -1,5 +1,5 @@
 # GetAsyncMatchServiceProxy
-## Overview
+
 Retrieves an asyncMatchService proxy object.
 
 Documentation for the service methods can be found [here](/api/capi/asyncmatch).

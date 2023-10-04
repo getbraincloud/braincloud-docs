@@ -1,5 +1,5 @@
 # GetPage
-## Overview
+
 Method uses a paging system to iterate through user entities.
 
 After retrieving a page of entities with this method use [getPageOffset](/api/capi/entity/getpageoffset) to retrieve previous or next pages.

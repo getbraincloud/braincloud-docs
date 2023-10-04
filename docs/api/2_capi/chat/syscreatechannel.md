@@ -1,5 +1,5 @@
 # SysCreateChannel
-## Overview
+
 Initializes a dynamic chat channel. Returns the channelId. Channel type must be "dy".
 
 <PartialServop service_name="chat" operation_name="SYS_CREATE_CHANNEL" />

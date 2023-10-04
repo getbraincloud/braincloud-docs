@@ -1,5 +1,5 @@
 # InitializeIdentity
-## Overview
+
 Initializes the authentication service with an anonymous installation ID and most recently used profile ID.
 You will need to call this method before authenticating anonymously.
 

@@ -1,5 +1,5 @@
 # SubmitCrashReport
-## Overview
+
 Allows the system to send a Crash Report to the servers, to be forwarded to any connected DataStream services.
 
 This API can be called silently by the app - or can be sent after presenting an error dialog to the user (requestion more info). User submitted reports should be flagged as such, so that the app's support team knows to follow up.

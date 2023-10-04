@@ -1,5 +1,5 @@
 # ReadAchievedAchievements
-## Overview
+
 Method retrieves the list of achieved achievements.
 
 <PartialServop service_name="gamification" operation_name="READ_ACHIEVED_ACHIEVEMENTS" />

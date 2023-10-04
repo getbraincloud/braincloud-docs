@@ -1,5 +1,5 @@
 # ScheduleNormalizedPushNotificationMinutes
-## Overview
+
 Schedules a normalized push notification to a user at a future relative time.
 
 <PartialServop service_name="pushNotification" operation_name="SCHEDULE_NORMALIZED_NOTIFICATION" />

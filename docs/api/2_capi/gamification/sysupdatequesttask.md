@@ -1,5 +1,5 @@
 # SysUpdateQuestTask
-## Overview
+
 Updates an embedded task in the specified quest. The id of the newly updated task will be returned in the `data.updatedTask` field of the JSON result.
 
 <PartialServop service_name="gamification" operation_name="SYS_UPDATE_QUEST_TASK" />

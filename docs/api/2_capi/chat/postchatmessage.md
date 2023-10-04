@@ -1,5 +1,5 @@
 # PostChatMessage
-## Overview
+
 Sends a potentially richer member chat message. By convention, `content` should contain a field named `text` for plain-text content. Returns the id of the message created.
 
 

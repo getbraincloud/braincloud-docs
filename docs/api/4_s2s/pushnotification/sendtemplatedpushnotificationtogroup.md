@@ -1,5 +1,5 @@
 # SendTemplatedPushNotificationToGroup
-## Overview
+
 Sends a notification to a "group" of user based on a <%= data.branding.productName %> portal configured notification template. Includes JSON defining the substitution params to use with the template.
 
 See the Portal documentation for more info.

@@ -1,5 +1,5 @@
 # ResetCommunication
-## Overview
+
 Clears any pending messages from communication library and clears all session information.
 
 ## Usage

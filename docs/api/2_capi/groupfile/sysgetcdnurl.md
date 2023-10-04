@@ -1,5 +1,5 @@
 # SysGetCDNUrl
-## Overview
+
 Return CDN url for file for clients that cannot handle redirect.
 
 <PartialServop service_name="groupFile" operation_name="SYS_GET_CDN_URL" />

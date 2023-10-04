@@ -1,5 +1,5 @@
 # SysCreatePropertyString
-## Overview
+
 Creates the named global property with the given string value.
 
 <PartialServop service_name="globalApp" operation_name="SYS_CREATE_PROPERTY_STRING" />

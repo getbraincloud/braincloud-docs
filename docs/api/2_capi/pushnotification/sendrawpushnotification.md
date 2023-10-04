@@ -1,5 +1,5 @@
 # SendRawPushNotification
-## Overview
+
 Sends a notification to a user consisting of raw platform dependent content.
 
 <PartialServop service_name="pushNotification" operation_name="SEND_RAW" />

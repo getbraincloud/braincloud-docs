@@ -1,5 +1,5 @@
 # GetSubscribedChannels
-## Overview
+
 Returns a list of the channels of the specified type that the user has access to, with description info. Channel type can be one of "gl", "gr" or "all".
 
 

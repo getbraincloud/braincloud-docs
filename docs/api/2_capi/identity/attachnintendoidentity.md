@@ -1,5 +1,5 @@
 # AttachNintendoIdentity
-## Overview
+
 Attach the user's Nintendo credentials to the current profile.
 
 

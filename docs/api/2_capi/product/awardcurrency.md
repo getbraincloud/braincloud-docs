@@ -1,5 +1,5 @@
 # AwardCurrency
-## Overview
+
 :::caution
 WARNING: This call, <code>AwardCurrency()</code>, is included in the client libraries for convenience and backwards compatibility, but for app security reasons we recommend it only be called server-side via Cloud Code. By default the <%= data.branding.productName %> servers will block any client-side invocations of currency altering methods. To enable client-side support (not recommended), you need to enable the [x] Allow Currency Calls from Client compatibility setting on the Design | Core App Info | Advanced Settings page of the portal.
 :::

@@ -1,5 +1,5 @@
 # CreateMatchWithInitialTurn
-## Overview
+
 Creates an instance of an asynchronous match with an initial turn.
 
 Opponent IDs is a JSON array containing objects with a Platform and player ID. Platforms are identified as:

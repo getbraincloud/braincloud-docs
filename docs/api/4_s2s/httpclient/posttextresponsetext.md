@@ -1,5 +1,5 @@
 # PostTextResponseText
-## Overview
+
 ```
 {
     "packetId": 1,

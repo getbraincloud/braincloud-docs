@@ -1,5 +1,5 @@
 # IncrementUserEntityData
-## Overview
+
 Partial increment of entity data field items. Partial set of items incremented as specified.
 
 <PartialServop service_name="entity" operation_name="INCREMENT_USER_ENTITY_DATA" />

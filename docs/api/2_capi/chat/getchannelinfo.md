@@ -1,5 +1,5 @@
 # GetChannelInfo
-## Overview
+
 Returns *description info* and *activity stats* for the specified channel. Note that `numMembers`, `numListeners` and `listeners` are only returned for non-global groups. Only callable by members of the channel.
 
 

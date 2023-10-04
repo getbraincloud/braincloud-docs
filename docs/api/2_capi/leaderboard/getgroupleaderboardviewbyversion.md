@@ -1,5 +1,5 @@
 # GetGroupLeaderboardViewByVersion
-## Overview
+
 Method returns a view of group leaderboard results that centers on the current group. By using a non-current version id, the user can retrieve a historical group leaderboard.
 
 <PartialServop service_name="leaderboard" operation_name="GET_GROUP_LEADERBOARD_VIEW" />

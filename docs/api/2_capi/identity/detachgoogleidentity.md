@@ -1,5 +1,5 @@
 # DetachGoogleIdentity
-## Overview
+
 Detach the Google identity from this profile.
 
 

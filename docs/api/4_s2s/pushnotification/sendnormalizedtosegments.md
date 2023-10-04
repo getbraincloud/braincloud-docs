@@ -1,5 +1,5 @@
 # SendNormalizedToSegments
-## Overview
+
 This operation sends a normalized message to multiple user targets.
 
 

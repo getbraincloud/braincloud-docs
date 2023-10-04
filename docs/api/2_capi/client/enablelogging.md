@@ -1,5 +1,5 @@
 # EnableLogging
-## Overview
+
 Enables console logging of outgoing/incoming packets and other informational logs from the client.
 
 ## Usage

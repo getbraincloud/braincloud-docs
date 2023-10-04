@@ -1,5 +1,5 @@
 # SendRawToSegments
-## Overview
+
 This operation sends a raw message to targetted segments.
 
 

@@ -1,5 +1,5 @@
 # LogWarningJson
-## Overview
+
 Logs an App Warning message to the error log.
 
 ## Usage

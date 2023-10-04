@@ -1,5 +1,5 @@
 # SysGetNotificationTemplates
-## Overview
+
 Returns an array of the notification templates defined - with the text for the specified language.
 
 <PartialServop service_name="pushNotification" operation_name="SYS_GET_NOTIFICATION_TEMPLATES" />

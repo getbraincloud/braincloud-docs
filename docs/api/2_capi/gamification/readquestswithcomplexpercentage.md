@@ -1,5 +1,5 @@
 # ReadQuestsWithComplexPercentage
-## Overview
+
 Method returns quests with a complex percentage.
 
 <PartialServop service_name="gamification" operation_name="READ_QUESTS_WITH_COMPLEX_PERCENTAGE" />

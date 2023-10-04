@@ -1,5 +1,5 @@
 # SysRoomStopped
-## Overview
+
 Indicates that the gameplay for the room associated with the given lobby has completed. The lobby can be returned to the 'setup' state.
 
 <PartialServop service_name="lobby" operation_name="SYS_ROOM_STOPPED" />

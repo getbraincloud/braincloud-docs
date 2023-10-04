@@ -1,5 +1,5 @@
 # GetClientAppId
-## Overview
+
 Retrieves the appId of the client who called the peer script.
 
 ## Usage

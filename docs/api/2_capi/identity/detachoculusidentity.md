@@ -1,5 +1,5 @@
 # DetachOculusIdentity
-## Overview
+
 Detach the Oculus identity from this profile.
 
 

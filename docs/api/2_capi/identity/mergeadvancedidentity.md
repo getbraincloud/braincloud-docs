@@ -1,5 +1,5 @@
 # MergeAdvancedIdentity
-## Overview
+
 Merge the profile associated with the provided credentials with the current profile.
 
 <PartialServop service_name="identity" operation_name="MERGE" />

@@ -1,5 +1,5 @@
 # SysGetChatMessage
-## Overview
+
 Retrieves a chat message object from history. If the message cannot be found, that `data` section returned will be empty.
 
 <PartialServop service_name="chat" operation_name="SYS_GET_CHAT_MESSAGE" />

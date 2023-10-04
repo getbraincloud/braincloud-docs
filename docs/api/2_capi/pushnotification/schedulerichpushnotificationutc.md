@@ -1,5 +1,5 @@
 # ScheduleRichPushNotificationUTC
-## Overview
+
 Schedules a rich push notification to a user at a future absolute time.
 
 <PartialServop service_name="pushNotification" operation_name="SCHEDULE_RICH_NOTIFICATION" />

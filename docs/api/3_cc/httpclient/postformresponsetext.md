@@ -1,5 +1,5 @@
 # PostFormResponseText
-## Overview
+
 Posts a form encoded document via HTTP and expects a Text response.
 
 <PartialServop service_name="httpClient" operation_name="POST_FORM_RESPONSE_TEXT" / >

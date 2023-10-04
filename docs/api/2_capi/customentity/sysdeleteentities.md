@@ -1,5 +1,5 @@
 # SysDeleteEntities
-## Overview
+
 Deletes all applicable custom entities from the server based on the custom entity type, specified delete criteria and acrossAllUsers flag, bypassing ownership/ACL checks.
 
 <PartialServop service_name="customEntity" operation_name="SYS_DELETE_ENTITIES" />

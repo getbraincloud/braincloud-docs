@@ -1,5 +1,5 @@
 # SwitchToParentProfile
-## Overview
+
 Switch to a Parent profile.
 
 <PartialServop service_name="identity" operation_name="SWITCH_TO_PARENT_PROFILE" />

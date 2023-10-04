@@ -1,5 +1,5 @@
 # CreateGroup
-## Overview
+
 Create a group.
 
 The group ACL contains two elements defining access to the groups data for non-members (other) and members. Access is defined as:

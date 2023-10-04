@@ -1,5 +1,5 @@
 # UpdateChatMessage
-## Overview
+
 Update the specified chat message. Message must have been from this user. Version provided must match (or pass -1 to bypass version enforcement).
 
 

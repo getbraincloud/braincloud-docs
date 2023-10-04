@@ -1,5 +1,5 @@
 # RequestManagerConnection
-## Overview
+
 Request an RTT manager connection.
 
 ## Usage

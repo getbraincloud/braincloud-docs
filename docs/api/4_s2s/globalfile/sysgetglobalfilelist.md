@@ -1,5 +1,5 @@
 # SysGetGlobalFileList
-## Overview
+
 Retrieves the list of global files stored at the specified directory location.
 
 <PartialServop service_name="globalFileV3" operation_name="SYS_GET_GLOBAL_FILE_LIST" />

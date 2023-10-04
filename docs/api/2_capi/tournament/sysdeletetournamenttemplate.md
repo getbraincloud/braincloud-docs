@@ -1,5 +1,5 @@
 # SysDeleteTournamentTemplate
-## Overview
+
 Deletes the tournament template identified by the tournament code.
 
 <PartialServop service_name="tournament" operation_name="SYS_DELETE_TOURNAMENT_TEMPLATE" />

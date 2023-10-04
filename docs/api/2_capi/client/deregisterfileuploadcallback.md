@@ -1,5 +1,5 @@
 # DeregisterFileUploadCallback
-## Overview
+
 Deregisters the file upload callback
 
 ## Usage

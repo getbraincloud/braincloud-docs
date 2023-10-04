@@ -1,5 +1,5 @@
 # SysUpdateLegacyFlaggedUser
-## Overview
+
 Updates a user's entry in the legacy list of flagged users.
 
 <PartialServop service_name="globalApp" operation_name="SYS_UPDATE_LEGACY_FLAGGED_USER" />

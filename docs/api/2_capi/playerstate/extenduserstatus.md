@@ -1,5 +1,5 @@
 # ExtendUserStatus
-## Overview
+
 Extends a user's status.
 
 <PartialServop service_name="playerState" operation_name="EXTEND_USER_STATUS" />

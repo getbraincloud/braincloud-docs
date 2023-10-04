@@ -1,5 +1,5 @@
 # EnableCompressedResponses
-## Overview
+
 Enables receiving compressed packets of responses.
 
 ## Usage

@@ -1,5 +1,5 @@
 # UpdateSettings
-## Overview
+
 Updates the settings for the given lobby instance.
 
 

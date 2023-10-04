@@ -1,5 +1,5 @@
 # GetUserItemsPageOffset
-## Overview
+
 Retrieves the page of user's inventory from the server based on the encoded context. If includeDef is true, response includes associated itemDef with each user item, with language fields limited to the current or default language.
 
 <PartialServop service_name="userItems" operation_name="GET_USER_ITEMS_PAGE_OFFSET" />

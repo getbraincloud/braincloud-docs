@@ -1,5 +1,5 @@
 # EnableCompressedRequests
-## Overview
+
 Enables sending Gzip compressed packets of requests from client side. Which can significantely decrease response time for requests with large body content.
 
 ## Usage

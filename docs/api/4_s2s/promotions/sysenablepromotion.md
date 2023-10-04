@@ -1,5 +1,5 @@
 # SysEnablePromotion
-## Overview
+
 Enable/Disable a promotion. A convenience API for easily toggling a promotion on/off.
 
 <PartialServop service_name="promotions" operation_name="SYS_ENABLE_PROMOTION" />

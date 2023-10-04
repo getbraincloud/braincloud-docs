@@ -1,5 +1,5 @@
 # EnableRTT
-## Overview
+
 Attempts to establish an RTT connection to the <%= data.branding.productName %> servers. 
 
 RTT must be enabled in the *Design Portal*, under **Design | Core App Info | Advanced Settings**.

@@ -1,5 +1,5 @@
 # DeregisterRTTLobbyCallback
-## Overview
+
 Deregisters the RTT Lobby callback.
 
 ## Usage

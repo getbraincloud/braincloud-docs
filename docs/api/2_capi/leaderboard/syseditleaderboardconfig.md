@@ -1,5 +1,5 @@
 # SysEditLeaderboardConfig
-## Overview
+
 Edits a leaderboard configuration, with support for tournament leaderboards.
 
 

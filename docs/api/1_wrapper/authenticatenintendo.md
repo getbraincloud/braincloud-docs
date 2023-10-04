@@ -1,5 +1,5 @@
 # AuthenticateNintendo
-## Overview
+
 Authenticate the user on Nintendo Switch.
 
 <PartialServop service_name="authenticationV2" operation_name="AUTHENTICATE" / >

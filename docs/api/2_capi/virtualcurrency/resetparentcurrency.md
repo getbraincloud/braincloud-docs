@@ -1,5 +1,5 @@
 # ResetParentCurrency
-## Overview
+
 Resets the player's parent currency back to zero.
 
 <PartialServop service_name="virtualCurrency" operation_name="RESET_PARENT_VC" />

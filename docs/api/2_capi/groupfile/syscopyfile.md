@@ -1,5 +1,5 @@
 # SysCopyFile
-## Overview
+
 Copy a file.
 
 <PartialServop service_name="groupFile" operation_name="SYS_COPY_FILE" />

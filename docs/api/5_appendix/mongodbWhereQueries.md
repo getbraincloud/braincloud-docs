@@ -1,5 +1,5 @@
 # MongoDB Where Queries
-## Overview
+
 Some <%= data.branding.productName %> APIs take a JSON formatted MongoDB-style where clause as a parameter.  These allow you to perform more complex queries on data to get specific results.
 
 Depending on the service different default (<%= data.branding.productName %> created) fields are allowed to be queried on (see the documentation for these services for a list of allowed fields).

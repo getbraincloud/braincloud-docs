@@ -1,5 +1,5 @@
 # ReadFriendUserState
-## Overview
+
 Read a friend's user state. If the specified Id is not a friend of the current user, will get "Not friends" message (40310) back.
 
 

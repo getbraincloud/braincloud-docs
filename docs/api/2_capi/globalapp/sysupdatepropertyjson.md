@@ -1,5 +1,5 @@
 # SysUpdatePropertyJson
-## Overview
+
 Updates the named global property with the given json value. Note that the property must already be created for the app.
 
 <PartialServop service_name="globalApp" operation_name="SYS_UPDATE_PROPERTY_JSON" />

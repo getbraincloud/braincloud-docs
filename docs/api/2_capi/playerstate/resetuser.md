@@ -1,5 +1,5 @@
 # ResetUser
-## Overview
+
 This method will delete *most* data for the currently logged in user.
 
 Data which is not deleted includes:

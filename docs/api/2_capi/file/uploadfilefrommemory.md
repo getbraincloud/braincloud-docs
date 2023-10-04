@@ -1,5 +1,5 @@
 # UploadFileFromMemory
-## Overview
+
 Upload screenshots from memory instead of local file storage. On success the file will begin uploading to the <%= data.branding.productName %> server.
 
 This method allows uploads to happen in situations where local file access is not possible or convenient. For example, screenshots from Unity-based WebGL apps.

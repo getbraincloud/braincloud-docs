@@ -1,5 +1,5 @@
 # SysLookupFolder
-## Overview
+
 Returns the treeId for the specified folder.
 
 <PartialServop service_name="globalFileV3" operation_name="SYS_LOOKUP_FOLDER" />

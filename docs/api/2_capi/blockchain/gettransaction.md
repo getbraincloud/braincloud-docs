@@ -1,5 +1,5 @@
 # GetTransaction
-## Overview
+
 Retrieves the transaction details for the given transaction id.
 
 <PartialServop service_name="blockchain" operation_name="GET_TRANSACTION" />

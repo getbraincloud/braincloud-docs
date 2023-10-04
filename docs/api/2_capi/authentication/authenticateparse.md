@@ -1,5 +1,5 @@
 # AuthenticateParse
-## Overview
+
 Authenticate the user using a Parse user ID and authentication token.
 
 

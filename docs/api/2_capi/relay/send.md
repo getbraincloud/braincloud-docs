@@ -1,5 +1,5 @@
 # Send
-## Overview
+
 Send a packet to peer(s).
 
 ## Usage

@@ -1,5 +1,5 @@
 # AttachFacebookIdentity
-## Overview
+
 Attach the user's Facebook credentials to the current profile.
 
 

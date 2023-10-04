@@ -1,5 +1,5 @@
 # PostScoreToLeaderboardOnBehalfOf
-## Overview
+
 Post score to another player's score.
 
 <PartialServop service_name="leaderboard" operation_name="POST_SCORE_TO_LEADERBOARD_ON_BEHALF_OF" />

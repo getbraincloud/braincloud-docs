@@ -1,5 +1,5 @@
 # SysCreateMilestone
-## Overview
+
 Creates the specified milestone. _Note that users will not see the milestone in their data until the next time they log in_.
 
 

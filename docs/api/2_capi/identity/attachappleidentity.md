@@ -1,5 +1,5 @@
 # AttachAppleIdentity
-## Overview
+
 Attach the user's Sign in with Apple credentials to the current profile.
 
 

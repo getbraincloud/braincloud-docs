@@ -1,5 +1,5 @@
 # ReadGroupEntity
-## Overview
+
 Read an entity in the group.
 
 <PartialServop service_name="group" operation_name="READ_GROUP_ENTITY" />

@@ -1,5 +1,5 @@
 # FindPlayersWithAttributesUsingScript
-## Overview
+
 Finds matchmaking enabled players using optionally specified filter script, optional player rating override and additional attributes.
 Passing empty string (i.e. "") for scriptName will not run a script filter. Passing null will invoke the configured script similar
 to findPlayersUsingFilter.

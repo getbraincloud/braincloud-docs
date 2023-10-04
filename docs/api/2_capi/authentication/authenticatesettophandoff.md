@@ -1,5 +1,5 @@
 # AuthenticateSettopHandoff
-## Overview
+
 Authenticate the user with a custom Set-top Handoff Code - which is an short, easy-to-enter code suitable for use in devices with limited data entry capabilities (i.e. Set-top boxes, VR headsets, etc.) The hand-off code can be generated via the [<code>CreateSettopHandoffCode</code>](/api/capi/identity/createsettophandoffcode) cloud-code call.
 
 

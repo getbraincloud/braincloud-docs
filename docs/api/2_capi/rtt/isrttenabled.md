@@ -1,5 +1,5 @@
 # IsRTTEnabled
-## Overview
+
 Returns true if RTT is enabled.
 
 ## Usage

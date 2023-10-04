@@ -1,5 +1,5 @@
 # SysUpdateGroupAcl
-## Overview
+
 Set a group's access conditions, bypassing ownership/ACL checks.
 
 <PartialServop service_name="group" operation_name="SYS_UPDATE_GROUP_ACL" />

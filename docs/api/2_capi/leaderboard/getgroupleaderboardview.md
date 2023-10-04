@@ -1,5 +1,5 @@
 # GetGroupLeaderboardView
-## Overview
+
 Retrieve a view of the group leaderboard surrounding the current group score.
 
 <PartialServop service_name="leaderboard" operation_name="GET_GROUP_LEADERBOARD_VIEW" />

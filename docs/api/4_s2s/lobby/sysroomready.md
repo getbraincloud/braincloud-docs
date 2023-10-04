@@ -1,5 +1,5 @@
 # SysRoomReady
-## Overview
+
 Tells the lobby system that a room server is ready to go.
 
 <PartialServop service_name="lobby" operation_name="SYS_ROOM_READY" />

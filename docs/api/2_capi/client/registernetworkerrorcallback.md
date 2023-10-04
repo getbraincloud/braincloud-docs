@@ -1,5 +1,5 @@
 # RegisterNetworkErrorCallback
-## Overview
+
 Registers a callback that is invoked for network errors. Note this is only called if EnableNetworkErrorMessageCaching has been set to true.
 
 ## Usage

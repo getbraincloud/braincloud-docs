@@ -1,5 +1,5 @@
 # GetAppName
-## Overview
+
 Returns the name of the app.
 
 ## Usage

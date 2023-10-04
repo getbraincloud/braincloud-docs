@@ -1,5 +1,5 @@
 # SysMoveToGlobalFile
-## Overview
+
 Copies the specified User File to the Global File V3 system.
 
 <PartialServop service_name="globalFileV3" operation_name="SYS_MOVE_TO_GLOBAL_FILE" />

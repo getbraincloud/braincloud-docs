@@ -1,5 +1,5 @@
 # RegisterGlobalErrorCallback
-## Overview
+
 Registers the Global Error callbacks.
 
 Useful for tracking and logging all errors.

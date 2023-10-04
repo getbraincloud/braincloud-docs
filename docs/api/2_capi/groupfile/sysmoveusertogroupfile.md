@@ -1,5 +1,5 @@
 # SysMoveUserToGroupFile
-## Overview
+
 Move a file from user space to group space.
 
 <PartialServop service_name="groupFile" operation_name="SYS_MOVE_USER_TO_GROUP_FILE" />

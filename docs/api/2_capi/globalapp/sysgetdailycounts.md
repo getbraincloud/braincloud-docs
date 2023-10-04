@@ -1,5 +1,5 @@
 # SysGetDailyCounts
-## Overview
+
 Returns the daily analytics counts for the current app for the specified date.
 
 <PartialServop service_name="globalApp" operation_name="SYS_GET_DAILY_COUNTS" />

@@ -1,5 +1,5 @@
 # UpdateEntity
-## Overview
+
 Replaces the specified custom entity's data, and optionally updates the acl and expiry, on the server.
 
 <PartialServop service_name="customEntity" operation_name="UPDATE_ENTITY" />

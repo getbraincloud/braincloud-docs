@@ -1,5 +1,5 @@
 # DeleteStream
-## Overview
+
 Deletes a stream.
 
 <PartialServop service_name="playbackStream" operation_name="DELETE_STREAM" />

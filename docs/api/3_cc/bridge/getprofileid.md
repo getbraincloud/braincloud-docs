@@ -1,5 +1,5 @@
 # GetProfileId
-## Overview
+
 Retrieves the profile ID for the current user as a string.
 
 ## Usage

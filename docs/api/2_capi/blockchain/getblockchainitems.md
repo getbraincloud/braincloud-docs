@@ -1,5 +1,5 @@
 # GetBlockchainItems
-## Overview
+
 Retrieves the blockchain items owned by the caller.
 
 <PartialServop service_name="blockchain" operation_name="GET_BLOCKCHAIN_ITEMS" />

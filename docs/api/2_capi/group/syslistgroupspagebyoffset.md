@@ -1,5 +1,5 @@
 # SysListGroupsPageByOffset
-## Overview
+
 Retrieve a page of group summary information based on the encoded context and specified page offset, bypassing ownership/ACL checks.
 
 <PartialServop service_name="group" operation_name="SYS_LIST_GROUPS_PAGE_BY_OFFSET" />

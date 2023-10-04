@@ -1,5 +1,5 @@
 # DeleteEntity
-## Overview
+
 Deletes the specified custom entity on the server.
 
 <PartialServop service_name="customEntity" operation_name="DELETE_ENTITY" />

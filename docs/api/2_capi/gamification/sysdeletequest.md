@@ -1,5 +1,5 @@
 # SysDeleteQuest
-## Overview
+
 Deletes the specified quest.
 
 <PartialServop service_name="gamification" operation_name="SYS_DELETE_QUEST" />

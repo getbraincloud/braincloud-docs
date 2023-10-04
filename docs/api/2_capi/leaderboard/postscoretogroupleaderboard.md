@@ -1,5 +1,5 @@
 # PostScoreToGroupLeaderboard
-## Overview
+
 Post the group score to the given group leaderboard. Optional parameters: data.
 
 <PartialServop service_name="leaderboard" operation_name="POST_GROUP_SCORE" />

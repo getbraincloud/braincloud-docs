@@ -1,5 +1,5 @@
 # SysUpdateEntityOwner
-## Overview
+
 Updates the owner of the specified custom entity.
 
 <PartialServop service_name="customEntity" operation_name="SYS_UPDATE_ENTITY_OWNER" />

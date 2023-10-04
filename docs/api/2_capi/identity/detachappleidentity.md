@@ -1,5 +1,5 @@
 # DetachAppleIdentity
-## Overview
+
 Detach the Sign in with Apple identity from this profile.
 
 

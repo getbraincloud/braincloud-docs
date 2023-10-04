@@ -1,5 +1,5 @@
 # RegisterRTTLobbyCallback
-## Overview
+
 Registers a callback for RTT Lobby updates.
 
 ## Usage

@@ -1,5 +1,5 @@
 # SysReorderQuestTasks
-## Overview
+
 Re-orders the tasks in the quest. If any tasks are missing from the new order, they will be deleted. The ids of any deleted tasks will be returned in the `data.deletedTasks` field of the JSON result.
 
 <PartialServop service_name="gamification" operation_name="SYS_REORDER_QUEST_TASKS" />

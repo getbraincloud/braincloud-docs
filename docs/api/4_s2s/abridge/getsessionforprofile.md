@@ -1,5 +1,5 @@
 # GetSessionForProfile
-## Overview
+
 Creates and returns a session for the profileId provided.
 
 ## Usage

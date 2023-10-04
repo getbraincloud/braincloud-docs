@@ -1,5 +1,5 @@
 # AddCode
-## Overview
+
 Add a redemption code. Optional parameters: codeState and customCodeInfo.
 
 

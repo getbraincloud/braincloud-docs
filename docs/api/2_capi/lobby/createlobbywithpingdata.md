@@ -1,5 +1,5 @@
 # CreateLobbyWithPingData
-## Overview
+
 Creates an instance of a lobby.
 
 Use [PingRegions](/api/capi/lobby/pingregions) to generate the ping data.

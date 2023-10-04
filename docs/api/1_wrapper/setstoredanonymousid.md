@@ -1,5 +1,5 @@
 # SetStoredAnonymousId
-## Overview
+
 Sets the stored anonymous ID
 
 ## Usage

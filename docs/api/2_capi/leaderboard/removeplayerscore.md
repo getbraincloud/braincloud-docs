@@ -1,5 +1,5 @@
 # RemovePlayerScore
-## Overview
+
 Removes a player's score from the leaderboard.
 
 <PartialServop service_name="leaderboard" operation_name="REMOVE_PLAYER_SCORE" />

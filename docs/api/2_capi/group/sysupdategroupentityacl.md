@@ -1,5 +1,5 @@
 # SysUpdateGroupEntityAcl
-## Overview
+
 Update the acl settings for a group entity, bypassing ownership/ACL checks.
 
 <PartialServop service_name="group" operation_name="SYS_UPDATE_GROUP_ENTITY_ACL" />

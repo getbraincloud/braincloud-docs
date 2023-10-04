@@ -1,5 +1,5 @@
 # SysTerminatePresence
-## Overview
+
 Terminates the presence of \<profileId\>.
 
 <PartialServop service_name="presence" operation_name="SYS_TERMINATE_PRESENCE" />

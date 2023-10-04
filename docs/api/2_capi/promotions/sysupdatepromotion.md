@@ -1,5 +1,5 @@
 # SysUpdatePromotion
-## Overview
+
 Updates the specified promotion with the provided promotionJson. Any promotionId included in the promotionJson will be ignored.
 
 <PartialServop service_name="promotions" operation_name="SYS_UPDATE_PROMOTION" />

@@ -1,5 +1,5 @@
 # DetachPlaystationNetworkIdentity
-## Overview
+
 Detach the PlaystationNetwork identity from this profile.
 
 

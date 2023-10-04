@@ -1,5 +1,5 @@
 # ProcessStatistics
-## Overview
+
 Apply a set of operations to the specified statistics. User (player) Statistics are defined through the <%= data.branding.productName %> portal.
 
 The operations available are much richer than the standard *increment* operation available via `IncrementUserStats()`.

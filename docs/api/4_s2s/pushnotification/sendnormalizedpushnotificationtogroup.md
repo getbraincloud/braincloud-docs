@@ -1,5 +1,5 @@
 # SendNormalizedPushNotificationToGroup
-## Overview
+
 Sends a notification to a "group" of user consisting of alert content and custom data.
 
 See the Portal documentation for more info.

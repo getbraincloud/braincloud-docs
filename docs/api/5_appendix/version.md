@@ -1,5 +1,5 @@
 # Versioning
-## Overview
+
 Some data in <%= data.branding.productName %> has a 'version' attribute associated with it (Entites for example). This version is automatically incremented by the server each time an update is performed.
 
 For a client to successfully modify data protected by versioning, the client must provide the current 'version' in the method that modifies the data,

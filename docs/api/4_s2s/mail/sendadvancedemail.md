@@ -1,5 +1,5 @@
 # SendAdvancedEmail
-## Overview
+
 Sends a advanced email to the given user. 
  See the documentation for contents of 'serviceParams'.
 

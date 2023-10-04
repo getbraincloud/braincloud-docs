@@ -1,5 +1,5 @@
 # UploadFile - JavaScript
-## Overview
+
 Method uploads the supplied file to the <%= data.branding.productName %> server. Note that you must call prepareUserUpload to retrieve the uploadId before calling this method. It is assumed that any methods required to monitor the file upload including progress, and completion are attached to the XMLHttpRequest xhr object's events such as:
 
 * xhr.upload.addEventListener("progress", uploadProgress);

@@ -1,5 +1,5 @@
 # GetSessionForCredential
-## Overview
+
 Creates and returns a session for the credentials provided.
 
 ## Usage

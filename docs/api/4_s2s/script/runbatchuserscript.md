@@ -1,5 +1,5 @@
 # RunBatchUserScript
-## Overview
+
 Runs a script against the users targetted by the provided segments or all players.
 
 <PartialServop service_name="script" operation_name="RUN_BATCH_USER_SCRIPT" />

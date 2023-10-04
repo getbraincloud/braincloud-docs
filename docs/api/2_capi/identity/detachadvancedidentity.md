@@ -1,5 +1,5 @@
 # DetachAdvancedIdentity
-## Overview
+
 Detach the identity from this profile.
 
 

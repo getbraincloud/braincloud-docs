@@ -1,5 +1,5 @@
 # GetUploadLowTransferRateTimeout
-## Overview
+
 Returns the low transfer rate timeout in seconds.
 
 ## Usage

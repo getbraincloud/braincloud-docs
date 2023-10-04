@@ -1,5 +1,5 @@
 # SysGetEntityPage
-## Overview
+
 Retrieves first page of custom entities from the server based on the custom entity type and specified query context. Bypasses ownership/ACL checks.
 
 _Note that for collections with > 1,000 records, it is recommended that `doCount` be set to false for better performance._

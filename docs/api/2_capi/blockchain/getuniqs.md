@@ -1,5 +1,5 @@
 # GetUniqs
-## Overview
+
 Retrieves the uniqs owned by the caller.
 
 <PartialServop service_name="blockchain" operation_name="GET_UNIQS" />

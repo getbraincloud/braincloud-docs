@@ -1,5 +1,5 @@
 # GetUploadTotalBytesToTransfer
-## Overview
+
 Returns the total number of bytes that will be uploaded or -1 if upload not found.
 
 ## Usage

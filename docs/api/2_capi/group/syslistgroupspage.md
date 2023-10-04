@@ -1,5 +1,5 @@
 # SysListGroupsPage
-## Overview
+
 Retrieve a page of group summary information based on the specified context, bypassing ownership/ACL checks.
 
 <PartialServop service_name="group" operation_name="SYS_LIST_GROUPS_PAGE" />

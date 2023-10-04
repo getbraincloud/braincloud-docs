@@ -1,5 +1,5 @@
 # SysDisbandLobby
-## Overview
+
 Disbands the given lobby. `msg` and `details` are optional values.
 
 <PartialServop service_name="lobby" operation_name="SYS_DISBAND_LOBBY" />

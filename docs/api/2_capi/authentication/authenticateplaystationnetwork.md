@@ -1,5 +1,5 @@
 # AuthenticatePlaystationNetwork
-## Overview
+
 Authenticate the user with <%= data.branding.productName %> using their PlaystationNetwork Credentials.
 
 

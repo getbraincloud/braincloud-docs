@@ -1,5 +1,5 @@
 # SysGetRandomGroupsMatching
-## Overview
+
 Gets a list of up to maxReturn randomly selected groups from the server based on the where condition, bypassing ownership/ACL checks.
 
 <PartialServop service_name="group" operation_name="SYS_GET_RANDOM_GROUPS_MATCHING" />

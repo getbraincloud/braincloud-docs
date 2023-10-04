@@ -1,5 +1,5 @@
 # MergeOculusIdentity
-## Overview
+
 Merge the user's Oculus credentials with the current profile.
 
 

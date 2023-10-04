@@ -1,5 +1,5 @@
 # LogError
-## Overview
+
 Logs an App Error message to the error log.
 
 <PartialServop service_name="log" operation_name="LOG_ERROR" />

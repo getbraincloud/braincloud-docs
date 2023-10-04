@@ -1,5 +1,5 @@
 # GetFileServiceProxy
-## Overview
+
 Retrieves a FileService proxy object.
 
 Documentation for the service methods can be found [here](/api/capi/file).

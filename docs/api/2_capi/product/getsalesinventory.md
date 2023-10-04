@@ -1,5 +1,5 @@
 # GetSalesInventory
-## Overview
+
 Method gets the active sales inventory for the passed-in currency type and platform.
 
 Valid platforms are:

@@ -1,5 +1,5 @@
 # SendMessage
-## Overview
+
 Sends a message on behalf of the user. The content of the message can be anything - though be convention it *should* contain a `text` field for plaintext content.
 
 

@@ -1,5 +1,5 @@
 # CreateMatch
-## Overview
+
 Creates an instance of an asynchronous match.
 
 Opponents is a JSON array containing objects with a Platform and player ID. Platforms are identified as:

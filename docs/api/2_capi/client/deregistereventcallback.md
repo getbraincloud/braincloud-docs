@@ -1,5 +1,5 @@
 # DeregisterEventCallback
-## Overview
+
 Deregisters the event callback.
 
 ## Usage

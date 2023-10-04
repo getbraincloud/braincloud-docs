@@ -1,5 +1,5 @@
 # ResetEmailPasswordAdvancedWithExpiry
-## Overview
+
 Advanced reset email password using templates. Allows the developer to specify how long the URL is valid for (in minutes).
 
 <PartialServop service_name="authenticationV2" operation_name="RESET_EMAIL_PASSWORD_ADVANCED_WITH_EXPIRY" />

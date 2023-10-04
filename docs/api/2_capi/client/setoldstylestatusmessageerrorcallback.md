@@ -1,5 +1,5 @@
 # SetOldStyleStatusMessageErrorCallback
-## Overview
+
 Sets the error callback to return the status message instead of the error JSON string. This flag is used to conform to pre-2.17 client
 behavior.
 

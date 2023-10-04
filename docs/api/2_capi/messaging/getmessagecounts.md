@@ -1,5 +1,5 @@
 # GetMessageCounts
-## Overview
+
 Returns the total # of messages, and # of unread messages, per messagbox, for this user. Note that `unread` for `sent` messagebox will always be 0.
 
 

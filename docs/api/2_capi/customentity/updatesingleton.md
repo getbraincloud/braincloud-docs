@@ -1,5 +1,5 @@
 # UpdateSingleton
-## Overview
+
 Updates the singleton owned by the user for the specified custom entity type on the server, creating the singleton if it does not exist. This operation results in the owned singleton's data being completely replaced by the passed in JSON object.
 
 <PartialServop service_name="customEntity" operation_name="UPDATE_SINGLETON" />

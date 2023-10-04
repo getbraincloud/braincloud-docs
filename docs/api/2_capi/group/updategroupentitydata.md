@@ -1,5 +1,5 @@
 # UpdateGroupEntityData
-## Overview
+
 Update the data for a group entity . Optional parameters: jsonData (will clear data if not provided)
 
 This method is affected by versioning. See the [versioning documentation](/api/appendix/version) for more information.

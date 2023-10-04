@@ -1,5 +1,5 @@
 # ReadNotStartedQuests
-## Overview
+
 Method returns quests that have not been started.
 
 <PartialServop service_name="gamification" operation_name="READ_NOT_STARTED_QUESTS" />

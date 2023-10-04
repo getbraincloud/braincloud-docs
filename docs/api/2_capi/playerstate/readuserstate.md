@@ -1,5 +1,5 @@
 # ReadUserState
-## Overview
+
 Read the state of the currently logged in user.
 
 This method returns a JSON object describing most of the user's data: entities, statistics, level, currency. Apps will typically call this method after authenticating to get an up-to-date view of the user's data.

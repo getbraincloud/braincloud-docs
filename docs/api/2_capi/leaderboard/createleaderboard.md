@@ -1,5 +1,5 @@
 # CreateLeaderboard
-## Overview
+
 :::caution
 WARNING: This call, <code>CreateLeaderboard()</code>, has been deprecated and replaced with <code>SysCreateLeaderboard()</code>.
 :::

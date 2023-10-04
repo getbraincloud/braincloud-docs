@@ -1,5 +1,5 @@
 # AuthenticateOculus
-## Overview
+
 Authenticate the user with <%= data.branding.productName %> using their Oculus Credentials.
 
 

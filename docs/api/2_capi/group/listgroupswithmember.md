@@ -1,5 +1,5 @@
 # ListGroupsWithMember
-## Overview
+
 Retrieve group summary information about the groups in which the specified user is a member.
 
 <PartialServop service_name="group" operation_name="LIST_GROUPS_WITH_MEMBER" />

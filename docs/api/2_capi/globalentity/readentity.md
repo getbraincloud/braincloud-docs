@@ -1,5 +1,5 @@
 # ReadEntity
-## Overview
+
 Method reads an existing entity from the server.
 
 <PartialServop service_name="globalEntity" operation_name="READ" />

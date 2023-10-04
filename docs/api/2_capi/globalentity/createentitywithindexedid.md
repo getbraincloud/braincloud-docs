@@ -1,5 +1,5 @@
 # CreateEntityWithIndexedId
-## Overview
+
 Method creates a new entity on the server with an indexed ID.
 
 <PartialServop service_name="globalEntity" operation_name="CREATE_WITH_INDEXED_ID" />

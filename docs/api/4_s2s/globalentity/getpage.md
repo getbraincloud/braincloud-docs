@@ -1,5 +1,5 @@
 # GetPage
-## Overview
+
 ```json-doc
 // S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```

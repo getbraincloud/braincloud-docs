@@ -1,5 +1,5 @@
 # DeregisterAllRTTCallbacks
-## Overview
+
 Deregisters the RTT all callbacks.
 
 ## Usage

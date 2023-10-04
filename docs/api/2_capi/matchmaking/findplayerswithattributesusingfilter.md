@@ -1,5 +1,5 @@
 # FindPlayersWithAttributesUsingFilter
-## Overview
+
 Finds matchmaking enabled players using a cloud code filter and additional attributes.
 
 Additional information of filters can be found under [Matchmaking Filters](/api/capi/matchmaking/#matchmaking-filters).

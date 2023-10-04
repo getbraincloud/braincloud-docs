@@ -1,5 +1,5 @@
 # AttachTwitterIdentity
-## Overview
+
 Attach the user's Twitter credentials to the current profile.
 
 

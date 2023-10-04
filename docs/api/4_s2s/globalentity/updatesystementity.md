@@ -1,5 +1,5 @@
 # UpdateSystemEntity
-## Overview
+
 Method updates the data of an exisiting system entity on the server.
 
 <PartialServop service_name="globalEntity" operation_name="UPDATE_SYSTEM_ENTITY" />

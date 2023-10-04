@@ -1,5 +1,5 @@
 # DeleteFile
-## Overview
+
 Delete a file.
 
 <PartialServop service_name="groupFile" operation_name="DELETE_FILE" />

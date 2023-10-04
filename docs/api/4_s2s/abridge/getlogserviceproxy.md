@@ -1,5 +1,5 @@
 # GetLogServiceProxy
-## Overview
+
 Retrieves a S2S LogService proxy object.
 
 ## Usage

@@ -1,5 +1,5 @@
 # SysCreateEntity
-## Overview
+
 Advanced version of createEntity that allows a specific user to be specified as owner (or none). Also callable from S2S sessions.
 
 <PartialServop service_name="customEntity" operation_name="SYS_CREATE_ENTITY" />

@@ -1,5 +1,5 @@
 # SysGetEntityPageOffset
-## Overview
+
 Gets the page of custom entities from the server based on the encoded context and specified page offset. Bypasses ownership/ACL checks.
 
 <PartialServop service_name="customEntity" operation_name="SYS_GET_ENTITY_PAGE_OFFSET" />

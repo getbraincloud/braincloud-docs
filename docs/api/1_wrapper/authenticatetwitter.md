@@ -1,5 +1,5 @@
 # AuthenticateTwitter
-## Overview
+
 Authenticate the user using a Twitter user ID, authentication token, and secret from Twitter.
 
 

@@ -1,5 +1,5 @@
 # GenerateAnonymousId
-## Overview
+
 Generates a GUID for use as an anonymous installation ID for <%= data.branding.productName %>. Normally only called once when the application starts for the first time.
 
 The generated ID is used in conjunction with [<code>InitializeIdentity</code>](/api/capi/client/initializeidentity) in the <%= data.branding.codeClient %>.

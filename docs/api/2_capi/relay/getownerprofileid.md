@@ -1,5 +1,5 @@
 # GetOwnerProfileId
-## Overview
+
 Get the lobby's owner profile Id.
 
 ## Usage

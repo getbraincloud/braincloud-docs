@@ -1,5 +1,5 @@
 # IncrementPlayerRating
-## Overview
+
 Increments player rating.
 
 <PartialServop service_name="matchMaking" operation_name="INCREMENT_PLAYER_RATING" />

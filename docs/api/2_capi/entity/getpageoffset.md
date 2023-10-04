@@ -1,5 +1,5 @@
 # GetPageOffset
-## Overview
+
 Method to retrieve previous or next pages after having called the GetPage method.
 
 <PartialServop service_name="entity" operation_name="GET_PAGE_BY_OFFSET" />

@@ -1,5 +1,5 @@
 # UpdateGroupData
-## Overview
+
 Update a group's data.
 
 This method is affected by versioning. See the [versioning documentation](/api/appendix/version) for more information.

@@ -1,5 +1,5 @@
 # RemoveMember
-## Overview
+
 Evicts the specified user from the specified lobby. The caller must be the owner of the lobby.
 
 

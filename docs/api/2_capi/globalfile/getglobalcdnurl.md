@@ -1,5 +1,5 @@
 # GetGlobalCDNUrl
-## Overview
+
 :::tip
 This method was added to support clients (like very old versions of Unity - i.e. circa 2016) that cannot handle HTTP Redirects. This method allows clients to <em>pre-resolve</em> the CDN endpoint for the file to download.<br />
 <br />

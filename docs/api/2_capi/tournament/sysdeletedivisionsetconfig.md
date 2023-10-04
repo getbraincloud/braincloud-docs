@@ -1,5 +1,5 @@
 # SysDeleteDivisionSetConfig
-## Overview
+
 Deletes the division set configuration uniquely identified by the division set id, with optional, additional enforcement. NOTE: Does NOT delete any division set instance leaderboards that have currently been created, those will expire at the normal time. Does NOT prevent players from posting scores to a division set instance they are already a member of. WILL prevent new players for joining the deleted division set (JoinDivisionSet Tournament service API). WILL prevent users from querying the division info (GetDivisionInfo Tournament service API). WILL prevent Design Portal users from being able to view the rankings of the division set instance leaderboards for the deleted Division Set config.
 
 <PartialServop service_name="tournament" operation_name="SYS_DELETE_DIVISION_SET_CONFIG" />

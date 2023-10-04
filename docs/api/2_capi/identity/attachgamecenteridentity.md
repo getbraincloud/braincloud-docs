@@ -1,5 +1,5 @@
 # AttachGameCenterIdentity
-## Overview
+
 Attach a Game Center identity to the current profile.
 
 

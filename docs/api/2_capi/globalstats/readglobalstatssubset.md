@@ -1,5 +1,5 @@
 # ReadGlobalStatsSubset
-## Overview
+
 Reads a subset of global statistics.
 
 <PartialServop service_name="globalGameStatistics" operation_name="READ_SUBSET" />

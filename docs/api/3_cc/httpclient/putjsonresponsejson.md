@@ -1,5 +1,5 @@
 # PutJsonResponseJson
-## Overview
+
 Puts a JSON document, expects a Json response.
 
 <PartialServop service_name="httpClient" operation_name="PUT_JSON_RESPONSE_JSON" / >

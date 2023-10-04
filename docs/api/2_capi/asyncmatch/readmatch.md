@@ -1,5 +1,5 @@
 # ReadMatch
-## Overview
+
 Returns the current state of the given match.
 
 <PartialServop service_name="asyncMatch" operation_name="READ_MATCH" />

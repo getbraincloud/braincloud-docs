@@ -1,5 +1,5 @@
 # Update
-## Overview
+
 Update method needs to be called regularly in order to process incoming and outgoing messages.
 
 See RunCallbacks function for other platforms.

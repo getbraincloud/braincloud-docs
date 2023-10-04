@@ -1,5 +1,5 @@
 # UpdateRewards
-## Overview
+
 Updates player rewards.
 
 <PartialServop service_name="gamification" operation_name="UPDATE_REWARDS" />

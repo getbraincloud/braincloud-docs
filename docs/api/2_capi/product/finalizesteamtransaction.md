@@ -1,5 +1,5 @@
 # FinalizeSteamTransaction
-## Overview
+
 Finalize Steam Transaction. On success, the player will be awarded the associated currencies.
 
 <PartialServop service_name="product" operation_name="FINALIZE_STEAM_TRANSACTION" />

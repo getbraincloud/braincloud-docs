@@ -1,5 +1,5 @@
 # SysEditTournamentTemplate
-## Overview
+
 Creates a new tournament template.
 
 <PartialServop service_name="tournament" operation_name="SYS_EDIT_TOURNAMENT_TEMPLATE" />

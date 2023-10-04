@@ -1,5 +1,5 @@
 # Sleep
-## Overview
+
 :::tip
 Note that the max time you can sleep for is the timeout value of the script it is called from. 
 If you ask to sleep for longer than that, it automatically caps the sleep time to the script timeout value.

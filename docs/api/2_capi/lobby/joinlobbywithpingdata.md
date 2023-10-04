@@ -1,5 +1,5 @@
 # JoinLobbyWithPingData
-## Overview
+
 Adds the caller to the given lobby instance.
 
 Use [PingRegions](/api/capi/lobby/pingregions) to generate the ping data.

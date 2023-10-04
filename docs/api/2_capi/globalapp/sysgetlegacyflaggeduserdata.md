@@ -1,5 +1,5 @@
 # SysGetLegacyFlaggedUserData
-## Overview
+
 Retrieves the details about a legacy flagged user.
 
 <PartialServop service_name="globalApp" operation_name="SYS_GET_LEGACY_FLAGGED_USER_DATA" />

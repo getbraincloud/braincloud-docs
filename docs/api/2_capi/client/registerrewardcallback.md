@@ -1,5 +1,5 @@
 # RegisterRewardCallback
-## Overview
+
 Sets a reward handler for any API call results that return rewards.
 
 ## Usage

@@ -1,5 +1,5 @@
 # RegisterEventCallback
-## Overview
+
 :::caution
 This method is now deprecated. For real-time events, you should use the RTT API method,  <strong>RegisterRTTEventCallback()</strong>, instead.
 :::

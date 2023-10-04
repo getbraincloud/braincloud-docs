@@ -1,5 +1,5 @@
 # RegisterRTTChatCallback
-## Overview
+
 Registers a callback for RTT Chat Channel updates.
 
 ## Usage

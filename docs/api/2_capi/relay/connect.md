@@ -1,5 +1,5 @@
 # Connect
-## Overview
+
 Start off a connection, based off connection type to <%= data.branding.productName %>'s Relay Servers.  Connect options come in from "ROOM_ASSIGNED" lobby callback
 
 ## Usage

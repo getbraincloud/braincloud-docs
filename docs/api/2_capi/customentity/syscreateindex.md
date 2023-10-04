@@ -1,5 +1,5 @@
 # SysCreateIndex
-## Overview
+
 Creates a new index on a custom entity collection.
 
 <PartialServop service_name="customEntity" operation_name="SYS_CREATE_INDEX" />

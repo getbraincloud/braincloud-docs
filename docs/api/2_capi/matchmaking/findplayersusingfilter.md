@@ -1,5 +1,5 @@
 # FindPlayersUsingFilter
-## Overview
+
 Finds matchmaking enabled players using a cloud code filter.
 
 <PartialServop service_name="matchMaking" operation_name="FIND_PLAYERS_USING_FILTER" />

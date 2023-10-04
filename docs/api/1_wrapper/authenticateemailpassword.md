@@ -1,5 +1,5 @@
 # AuthenticateEmailPassword
-## Overview
+
 Authenticate the user with a custom Email and Password.  Note that the client app is responsible for collecting (and storing) the e-mail and potentially password (for convenience) in the client data.  For the greatest security, force the user to re-enter their password at each login (or at least give them that option).
 
 

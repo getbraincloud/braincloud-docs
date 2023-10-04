@@ -1,5 +1,5 @@
 # ProcessAsynchronousResponse
-## Overview
+
 Callback with asynchronous response for the redemption code service to process for an asynchronous redemption code.
 
 

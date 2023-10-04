@@ -1,5 +1,5 @@
 # AttachParseIdentity
-## Overview
+
 Attach the user's Parse credentials to the current profile.
 
 

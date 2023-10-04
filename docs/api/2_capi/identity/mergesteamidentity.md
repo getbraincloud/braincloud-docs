@@ -1,5 +1,5 @@
 # MergeSteamIdentity
-## Overview
+
 Merge the profile associated with the provided steam ID with the current profile.
 
 NOTE: If using the <%= data.branding.codeWrapper %>, once the merge is complete you should call [<code>SetStoredProfileId</code>](/api/wrapper/setstoredprofileid) in the <%= data.branding.codeWrapper %> with the profileId returned in the Merge call.

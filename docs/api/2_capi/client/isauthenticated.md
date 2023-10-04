@@ -1,5 +1,5 @@
 # IsAuthenticated
-## Overview
+
 Returns true if the user is authenticated.
 
 If a session has timed out or if the server returns a session invalidation error, this flag will reset back to false.

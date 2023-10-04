@@ -1,5 +1,5 @@
 # SysSendPasswordResetUniversalIdAdvancedWithExpiry
-## Overview
+
 Triggers the sending of a password reset email to the specified user - but allows the dev to override the email template that will be used. _Note that the user must have a universalId identity attached to their profile, and an email address in their contact info._
 _
 

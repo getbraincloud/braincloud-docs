@@ -1,5 +1,5 @@
 # PingRegions
-## Overview
+
 Retrieves associated PingData averages to be used with all associated WithPingData APIs.
 Call anytime after GetRegionsForLobbies before proceeding.
 

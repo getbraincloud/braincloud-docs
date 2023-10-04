@@ -1,5 +1,5 @@
 # SendToAll
-## Overview
+
 Send a packet to all except yourself.
 
 ## Usage

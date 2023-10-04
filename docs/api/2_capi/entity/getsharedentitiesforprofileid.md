@@ -1,5 +1,5 @@
 # GetSharedEntitiesForProfileId
-## Overview
+
 Method returns all shared entities for the given profile id.
 
 An entity is shared if its ACL allows for the currently logged in user to read the data.

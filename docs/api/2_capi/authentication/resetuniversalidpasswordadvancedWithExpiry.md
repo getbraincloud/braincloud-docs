@@ -1,5 +1,5 @@
 # ResetUniversalIdPasswordAdvancedWithExpiry
-## Overview
+
 Advanced universalId password reset using templates. Allows the developer to specify how long the URL is valid for (in minutes).
 
 <PartialServop service_name="authenticationV2" operation_name="RESET_UNIVERSAL_ID_PASSWORD_ADVANCED_WITH_EXPIRY" />

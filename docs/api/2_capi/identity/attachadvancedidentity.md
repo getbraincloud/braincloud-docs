@@ -1,5 +1,5 @@
 # AttachAdvancedIdentity
-## Overview
+
 Attach the user's credentials to the current profile.
 
 

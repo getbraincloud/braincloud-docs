@@ -1,5 +1,5 @@
 # SendRawPushNotificationBatch
-## Overview
+
 Sends a notification to a list of users consisting of raw message content.
 
 <PartialServop service_name="pushNotification" operation_name="SEND_RAW_BATCH" />

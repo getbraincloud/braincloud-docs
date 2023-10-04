@@ -1,5 +1,5 @@
 # SysUpdateMilestone
-## Overview
+
 Updates the specified milestone. Note that only the fields present in the JSON object will be updated. (i.e. to leave ACL as is, don't include it in the milestoneJson field).
 
 <PartialServop service_name="gamification" operation_name="SYS_UPDATE_MILESTONE" />

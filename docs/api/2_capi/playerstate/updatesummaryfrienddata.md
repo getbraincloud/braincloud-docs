@@ -1,5 +1,5 @@
 # UpdateSummaryFriendData
-## Overview
+
 Updates the "friend summary data" associated with the logged in user.
 
 Some operations will return this summary data. For instance the social leaderboards will return the player's score in the leaderboard along with the friend summary data. Generally this data is used to provide a quick overview of the user without requiring a separate API call to read their public stats or entity data.

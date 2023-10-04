@@ -1,5 +1,5 @@
 # DetachFacebookIdentity
-## Overview
+
 Detach the Facebook identity from this profile.
 
 

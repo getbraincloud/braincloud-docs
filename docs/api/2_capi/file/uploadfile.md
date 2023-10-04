@@ -1,5 +1,5 @@
 # UploadFile
-## Overview
+
 Prepares a user file upload. On success the file will begin uploading to the <%= data.branding.productName %> server.
 
 To be informed of success/failure of the upload register the File Upload Callbacks with the <%= data.branding.codeClient %> class.

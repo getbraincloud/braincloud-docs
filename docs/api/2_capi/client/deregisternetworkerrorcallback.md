@@ -1,5 +1,5 @@
 # DeregisterNetworkErrorCallback
-## Overview
+
 Deregisters the network error callback.
 
 ## Usage

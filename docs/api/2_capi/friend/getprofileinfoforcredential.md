@@ -1,5 +1,5 @@
 # GetProfileInfoForCredential
-## Overview
+
 Retrieves profile information for the specified user.
 
 Does not require the calling user to be a friend of the other user.

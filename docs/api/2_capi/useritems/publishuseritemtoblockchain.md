@@ -1,5 +1,5 @@
 # PublishUserItemToBlockchain
-## Overview
+
 Publishes the specified item to the item management attached blockchain. Results are reported asynchronously via an RTT event.
 
 <PartialServop service_name="userItems" operation_name="PUBLISH_USER_ITEM_TO_BLOCKCHAIN" />

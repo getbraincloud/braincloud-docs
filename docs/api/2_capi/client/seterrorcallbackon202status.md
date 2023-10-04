@@ -1,5 +1,5 @@
 # SetErrorCallbackOn202Status
-## Overview
+
 Sets whether the error callback is triggered when a 202 status is received from the server. By default this is true.
 
 :::caution

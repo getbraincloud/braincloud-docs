@@ -1,5 +1,5 @@
 # SysDeleteMessage
-## Overview
+
 :::tip
 This method is available in Cloud Code scripts only.
 :::

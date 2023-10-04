@@ -1,5 +1,5 @@
 # PostTournamentScoreWithResultsUTC
-## Overview
+
 Post the users score to the tournament leaderboard, and returns updated standings.
 
 tRank will always be zero in the response of this API call. The value generates after the tournament is complete or on <code>[ViewCurrentReward](/api/capi/tournament/viewcurrentreward)</code>.

@@ -1,5 +1,5 @@
 # SysSetGroupOpen
-## Overview
+
 Set whether a group is open (true) or closed (false), bypassing ownership/ACL checks.
 
 <PartialServop service_name="group" operation_name="SYS_SET_GROUP_OPEN" />

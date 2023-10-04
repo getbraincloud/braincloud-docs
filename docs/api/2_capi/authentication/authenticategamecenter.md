@@ -1,5 +1,5 @@
 # AuthenticateGameCenter
-## Overview
+
 Authenticate the user using their Game Center ID.
 
 

@@ -1,5 +1,5 @@
 # SysEditTournamentSettingsForFuturePeriodsOnly
-## Overview
+
 Updates the tournament settings for the leaderboard configuration, for future recurring periods only (does not affect current rotation). Supported tSettingsJson settings include: 'tTournament' (with 'tConfigs' to configure tournament templates, 'tAutoJoin' flag, 'tAutoClaim' flag), and 'tPhases' (to schedule 'enrolMins', 'announcementMins', 'disallowMins' and 'bufferMins' minutes).
 
 

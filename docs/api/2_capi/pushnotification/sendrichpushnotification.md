@@ -1,5 +1,5 @@
 # SendRichPushNotification
-## Overview
+
 Sends a notification to a user based on a <%= data.branding.productName %> portal configured notification template.
 
 <PartialServop service_name="pushNotification" operation_name="SEND_RICH" />

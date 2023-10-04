@@ -1,5 +1,5 @@
 # GetMessagesPage
-## Overview
+
 Given a json context object, returns a page of messages for this user. Note also returns an encoded context object that is used in the follow-up <code>[GetMessagesPageOffset](/api/capi/messaging/getmessagespageoffset)</code> api call.
 
 

@@ -1,5 +1,5 @@
 # GetPlayerStatisticsEventServiceProxy
-## Overview
+
 Retrieves a PlayerStatisticsEventService proxy object.
 
 Documentation for the service methods can be found [here](/api/capi/playerstatsevent).

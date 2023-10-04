@@ -1,5 +1,5 @@
 # GenerateCodesInline
-## Overview
+
 Generates specified quantity of redemption codes inline.
 
 

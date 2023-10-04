@@ -1,5 +1,5 @@
 # GetSummaryDataForProfileId
-## Overview
+
 Retrieves the summary information for the specified user profile ID.
 
 Does not require the calling user to be a friend of the other user.

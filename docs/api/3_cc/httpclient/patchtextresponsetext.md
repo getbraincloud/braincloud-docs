@@ -1,5 +1,5 @@
 # PatchTextResponseText
-## Overview
+
 Patches a JSON document, expects a Json response.
 
 <PartialServop service_name="httpClient" operation_name="PATCH_TEXT_RESPONSE_TEXT" / >

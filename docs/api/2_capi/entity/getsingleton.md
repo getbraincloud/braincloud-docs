@@ -1,5 +1,5 @@
 # GetSingleton
-## Overview
+
 Method retrieves a singleton entity on the server. If the entity doesn't exist, null is returned.
 
 <PartialServop service_name="entity" operation_name="READ_SINGLETON" />

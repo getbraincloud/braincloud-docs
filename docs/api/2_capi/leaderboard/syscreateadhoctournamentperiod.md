@@ -1,5 +1,5 @@
 # SysCreateAdhocTournamentPeriod
-## Overview
+
 Schedules a new tournament period for the ADHOC leaderboard configuration. Tournament must be scheduled in the future. Tournament settings ('tSettingsJson') must include tournament period ('tPeriod'), tournament configs and associated flags ('tTournament') and tournament phases ('tPhases').
 
 

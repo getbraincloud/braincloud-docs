@@ -1,5 +1,5 @@
 # SetUserStatus
-## Overview
+
 Set timed status for a user.
 
 <PartialServop service_name="playerState" operation_name="SET_USER_STATUS" />

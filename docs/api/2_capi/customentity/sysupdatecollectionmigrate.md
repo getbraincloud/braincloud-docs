@@ -1,5 +1,5 @@
 # SysUpdateCollectionMigrate
-## Overview
+
 Updates the collection option indicating whether custom collection data is to be migrated during deployment (true) or not (false).
 
 <PartialServop service_name="customEntity" operation_name="SYS_UPDATE_COLLECTION_MIGRATE" />

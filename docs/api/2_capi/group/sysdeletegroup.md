@@ -1,5 +1,5 @@
 # SysDeleteGroup
-## Overview
+
 Delete a group, bypassing ownership/ACL checks.
 
 This method is affected by versioning. See the [versioning documentation](/api/appendix/version) for more information.

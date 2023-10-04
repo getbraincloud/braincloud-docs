@@ -1,5 +1,5 @@
 # SysGetProductList
-## Overview
+
 Returns the list of products (summary details only) for the specified category (optional).
 
 <PartialServop service_name="productManagement" operation_name="SYS_GET_PRODUCT_LIST" />

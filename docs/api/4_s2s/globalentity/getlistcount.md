@@ -1,5 +1,5 @@
 # GetListCount
-## Overview
+
 Method gets a count of entities based on the where clause.
 
 Fields available for use in the 'where' clause are:

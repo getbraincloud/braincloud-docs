@@ -1,5 +1,5 @@
 # GetScriptName
-## Overview
+
 This returns the name of the currently running script.
 
 ## Usage

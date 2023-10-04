@@ -1,5 +1,5 @@
 # DetachTwitterIdentity
-## Overview
+
 Detach the Twitter identity from this profile.
 
 

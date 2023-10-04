@@ -1,5 +1,5 @@
 # InvalidateCode
-## Overview
+
 Invalidate a redemption code.
 
 

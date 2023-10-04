@@ -1,5 +1,5 @@
 # SysCreateLeaderboardConfig
-## Overview
+
 Creates a leaderboard configuration, with support for tournament leaderboards.
 
 

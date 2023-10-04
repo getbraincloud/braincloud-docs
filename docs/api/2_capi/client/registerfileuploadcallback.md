@@ -1,5 +1,5 @@
 # RegisterFileUploadCallback
-## Overview
+
 Registers the file upload callbacks.
 
 ## Usage

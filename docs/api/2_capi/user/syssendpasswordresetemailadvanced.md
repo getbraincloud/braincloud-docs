@@ -1,5 +1,5 @@
 # SysSendPasswordResetEmailAdvanced
-## Overview
+
 Reset users password using templates.
 
 <PartialServop service_name="user" operation_name="SYS_SEND_PASSWORD_RESET_EMAIL_ADVANCED" />

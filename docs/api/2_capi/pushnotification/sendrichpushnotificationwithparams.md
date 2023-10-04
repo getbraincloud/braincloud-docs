@@ -1,5 +1,5 @@
 # SendRichPushNotificationWithParams
-## Overview
+
 Sends a notification to a user based on a <%= data.branding.productName %> portal configured notification template and includes JSON defining the substitution params to use with the template.
 
 The format of the parameterized string is based on the MessageFormat java class.

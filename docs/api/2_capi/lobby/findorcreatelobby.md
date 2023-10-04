@@ -1,5 +1,5 @@
 # FindOrCreateLobby
-## Overview
+
 Finds a lobby matching the specified parameters, or creates one. Asynchronous - returns 200 to indicate that matchmaking has started.
 
 

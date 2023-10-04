@@ -1,5 +1,5 @@
 # GetProfileIdForNetId
-## Overview
+
 Returns the profileId associated with a netId.
 
 ## Usage

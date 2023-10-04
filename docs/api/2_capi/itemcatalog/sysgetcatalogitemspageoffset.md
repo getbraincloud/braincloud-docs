@@ -1,5 +1,5 @@
 # SysGetCatalogItemsPageOffset
-## Overview
+
 Gets the page of catalog items from the server based on the encoded context and specified page offset, with full language fields mappings.
 
 <PartialServop service_name="itemCatalog" operation_name="SYS_GET_CATALOG_ITEMS_PAGE_OFFSET" />

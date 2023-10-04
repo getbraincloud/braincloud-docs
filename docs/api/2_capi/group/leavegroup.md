@@ -1,5 +1,5 @@
 # LeaveGroup
-## Overview
+
 Leave as member of a group.
 
 <PartialServop service_name="group" operation_name="LEAVE_GROUP" />

@@ -1,5 +1,5 @@
 # ConfirmGooglePlayPurchase
-## Overview
+
 Confirm Google Play purchase.
 
 

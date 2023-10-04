@@ -1,5 +1,5 @@
 # RemoveGroupScore
-## Overview
+
 Removes the group's score data from the specified group leaderboard. Optional parameters: versionId
 
 <PartialServop service_name="leaderboard" operation_name="REMOVE_GROUP_SCORE" />

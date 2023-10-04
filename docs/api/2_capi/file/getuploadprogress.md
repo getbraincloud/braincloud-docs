@@ -1,5 +1,5 @@
 # GetUploadProgress
-## Overview
+
 Returns the progress of the given upload from 0.0 to 1.0 or -1 if upload not found.
 
 :::caution

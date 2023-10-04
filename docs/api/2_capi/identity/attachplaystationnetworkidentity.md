@@ -1,5 +1,5 @@
 # AttachPlaystationNetworkIdentity
-## Overview
+
 Attach the user's PlaystationNetwork credentials to the current profile.
 
 

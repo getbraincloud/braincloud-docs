@@ -1,5 +1,5 @@
 # UpdateTimezoneOffset
-## Overview
+
 Sets the user's timezone offset.
 
 <PartialServop service_name="playerState" operation_name="UPDATE_TIMEZONE_OFFSET" />

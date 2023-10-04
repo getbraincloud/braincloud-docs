@@ -1,5 +1,5 @@
 # ScheduleNormalizedPushNotifications
-## Overview
+
 Schedules normalized notifications based on user local time.
 
 

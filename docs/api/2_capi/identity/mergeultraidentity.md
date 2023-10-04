@@ -1,5 +1,5 @@
 # MergeUltraIdentity
-## Overview
+
 Merge the profile associated with the provided Ultra credentials with the current profile.
 
 

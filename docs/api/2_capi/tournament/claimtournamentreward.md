@@ -1,5 +1,5 @@
 # ClaimTournamentReward
-## Overview
+
 Processes any outstanding rewards for the player.
 
 <PartialServop service_name="tournament" operation_name="CLAIM_TOURNAMENT_REWARD" />

@@ -1,5 +1,5 @@
 # SendSimple
-## Overview
+
 This operation sends a simple message to multiple user targets.
 
 

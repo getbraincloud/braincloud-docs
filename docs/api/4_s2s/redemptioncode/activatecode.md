@@ -1,5 +1,5 @@
 # ActivateCode
-## Overview
+
 This operation activates the specified redemption code.
 
 

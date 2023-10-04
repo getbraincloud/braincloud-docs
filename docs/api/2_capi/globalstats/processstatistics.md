@@ -1,5 +1,5 @@
 # ProcessStatistics
-## Overview
+
 Apply statistics grammar to a partial set of statistics. Global statistics are defined through the <%= data.branding.productName %> portal.
 
 The operations available are much richer than the standard *increment* operation available via `IncrementGlobalStats()`.

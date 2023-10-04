@@ -1,5 +1,5 @@
 # InviteGroupMember
-## Overview
+
 Invite a user to the group.
 
 <PartialServop service_name="group" operation_name="INVITE_MEMBER_TO_GROUP" />

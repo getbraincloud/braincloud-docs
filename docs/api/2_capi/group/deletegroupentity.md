@@ -1,5 +1,5 @@
 # DeleteGroupEntity
-## Overview
+
 Delete an entity in the group.
 
 <PartialServop service_name="group" operation_name="DELETE_GROUP_ENTITY" />

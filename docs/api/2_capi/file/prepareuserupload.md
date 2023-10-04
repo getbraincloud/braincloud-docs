@@ -1,5 +1,5 @@
 # PrepareUserUpload - CloudCode and JavaScript
-## Overview
+
 Prepares a user file upload. On success an uploadId will be returned which can be used to upload the file using the <%= data.branding.codePrefix %>.file.uploadFile method.
 
 

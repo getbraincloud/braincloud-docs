@@ -1,5 +1,5 @@
 # IncrementGlobalEntityData
-## Overview
+
 Partial increment of global entity data field items. Partial set of items incremented as specified.
 
 <PartialServop service_name="globalEntity" operation_name="INCREMENT_GLOBAL_ENTITY_DATA" />

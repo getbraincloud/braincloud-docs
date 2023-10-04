@@ -1,5 +1,5 @@
 # IncrementUserStats
-## Overview
+
 Atomically increment (or decrement) user statistics. User statistics are defined through the <%= data.branding.productName %> portal.
 
 StatisticsData like

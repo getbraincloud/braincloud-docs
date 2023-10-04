@@ -1,5 +1,5 @@
 # FindPlayers
-## Overview
+
 Finds matchmaking enabled players.
 
 <PartialServop service_name="matchMaking" operation_name="FIND_PLAYERS" />

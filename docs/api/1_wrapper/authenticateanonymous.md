@@ -1,5 +1,5 @@
 # AuthenticateAnonymous
-## Overview
+
 Authenticate a user anonymously with <%= data.branding.productName %> - used for apps that don't want to bother the user to login, or for users who are sensitive to their privacy.
 
 

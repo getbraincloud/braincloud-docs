@@ -1,5 +1,5 @@
 # AttachNonLoginUniversalId
-## Overview
+
 Attaches a UniversalId to the current profile with no login capability.
 
 Useful if the app is not using UniversalId for authentication, and you still want to attach a UniversalId to create an app-unique display name for the user.

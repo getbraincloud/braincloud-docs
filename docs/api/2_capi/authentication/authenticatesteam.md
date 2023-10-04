@@ -1,5 +1,5 @@
 # AuthenticateSteam
-## Overview
+
 Authenticate the user using a steam userId and session ticket (without any validation on the userId).
 
 

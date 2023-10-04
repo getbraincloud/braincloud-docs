@@ -1,5 +1,5 @@
 # CreateLeaderboard
-## Overview
+
 ```
 {
     "packetId": 1,

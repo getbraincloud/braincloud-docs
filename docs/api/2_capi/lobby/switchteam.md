@@ -1,5 +1,5 @@
 # SwitchTeam
-## Overview
+
 Switches to the specified team (if allowed.)
 
 Sends LOBBY_MEMBER_UPDATED to all lobby members, with copy of member data

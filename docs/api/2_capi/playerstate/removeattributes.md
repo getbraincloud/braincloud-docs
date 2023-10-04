@@ -1,5 +1,5 @@
 # RemoveAttributes
-## Overview
+
 Remove user attributes.
 
 <PartialServop service_name="playerState" operation_name="REMOVE_ATTRIBUTES" />

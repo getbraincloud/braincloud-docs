@@ -1,5 +1,5 @@
 # SysAddQuestTask
-## Overview
+
 Adds a new task to the specified quest. The id of the newly added task will be returned in the `data.newTask` field of the JSON result.
 
 _Note that tasks are essentially milestones that are embedded within a quest._

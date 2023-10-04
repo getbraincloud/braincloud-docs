@@ -1,5 +1,5 @@
 # AuthenticateApple
-## Overview
+
 Authenticates the user using Sign in with Apple.
 
 To use this authentication method, your app must first perform the client-side portion of the *Sign in with Apple* login, and then pass the JWT returned from Apple to the `AuthenticateApple()` API call.

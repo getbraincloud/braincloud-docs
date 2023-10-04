@@ -1,5 +1,5 @@
 # RetryCachedMessages
-## Overview
+
 Attempts to resend any cached messages. If no messages are in the cache, this method does nothing.
 
 ## Usage

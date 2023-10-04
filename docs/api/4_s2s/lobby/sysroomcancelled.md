@@ -1,5 +1,5 @@
 # SysRoomCancelled
-## Overview
+
 Tells the lobby system that creation of the room experience failed.
 
 <PartialServop service_name="lobby" operation_name="SYS_ROOM_CANCELLED" />

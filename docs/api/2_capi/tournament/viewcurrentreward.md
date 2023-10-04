@@ -1,5 +1,5 @@
 # ViewCurrentReward
-## Overview
+
 Returns the user's expected reward based on the current scores.
 
 <PartialServop service_name="tournament" operation_name="VIEW_CURRENT_REWARD" />

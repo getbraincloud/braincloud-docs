@@ -1,5 +1,5 @@
 # ActivateCode
-## Overview
+
 Activate a redemption code. Optional parameters: customCodeInfo.
 
 

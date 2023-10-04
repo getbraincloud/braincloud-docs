@@ -1,5 +1,5 @@
 # SysUpdateGroupName
-## Overview
+
 Update a group's name, bypassing ownership/ACL checks.
 
 <PartialServop service_name="group" operation_name="SYS_UPDATE_GROUP_NAME" />

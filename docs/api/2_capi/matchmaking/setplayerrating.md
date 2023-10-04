@@ -1,5 +1,5 @@
 # SetPlayerRating
-## Overview
+
 Sets player rating.
 
 <PartialServop service_name="matchMaking" operation_name="SET_PLAYER_RATING" />

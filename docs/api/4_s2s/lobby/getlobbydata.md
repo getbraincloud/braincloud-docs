@@ -1,5 +1,5 @@
 # GetLobbyData
-## Overview
+
 Returns the data for the specified lobby, including member data.
 
 

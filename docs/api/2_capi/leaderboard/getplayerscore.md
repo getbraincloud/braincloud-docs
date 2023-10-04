@@ -1,5 +1,5 @@
 # GetPlayerScore
-## Overview
+
 Gets a player's score from a leaderboard. If the player does not have a score in a leaderboard this method returns an error.
 
 <PartialServop service_name="leaderboard" operation_name="GET_PLAYER_SCORE" />

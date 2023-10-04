@@ -1,5 +1,5 @@
 # DetachGoogleOpenIdIdentity
-## Overview
+
 Detach the Google OpenId identity from this profile.
 
 

@@ -1,5 +1,5 @@
 # UpdateCustomInfo
-## Overview
+
 This operation updates the specified redemption code.
 
 

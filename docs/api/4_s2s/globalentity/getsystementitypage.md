@@ -1,5 +1,5 @@
 # GetSystemEntityPage
-## Overview
+
 Method uses a paging system to iterate through global system entities.
 
 After retrieving a page of entities with this method use <code>[getPageOffset](/api/s2s/globalentity/getpageoffset)</code> to retrieve previous or next pages.

@@ -1,5 +1,5 @@
 # ChannelConnect
-## Overview
+
 Registers a handler for incoming events from the specified `channelId`. Also returns a list of that channel's recent messages (from history).
 
 

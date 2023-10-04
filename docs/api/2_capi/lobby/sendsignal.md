@@ -1,5 +1,5 @@
 # SendSignal
-## Overview
+
 Sends LOBBY_SIGNAL_DATA message to all lobby members.
 
 

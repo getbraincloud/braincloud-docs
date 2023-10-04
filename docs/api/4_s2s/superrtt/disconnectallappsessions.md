@@ -1,5 +1,5 @@
 # DisconnectAllAppSessions
-## Overview
+
 Force a disconnect for all currently active RTT sessions for the app.
 
 ## Usage

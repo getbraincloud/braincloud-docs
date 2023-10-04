@@ -1,5 +1,5 @@
 # GetResponseText
-## Overview
+
 This operation retrieves a Text document from an external web site.
 
 

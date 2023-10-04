@@ -1,5 +1,5 @@
 # ReadGroupEntitiesPage
-## Overview
+
 Retrieve a page of group entity information based on the specified context. The groupId is required as part of the searchCriteria of the context.
 
 After retrieving a page of entities with this method use [<code>getPageOffset</code>](/api/capi/globalentity/getpageoffset) to retrieve previous or next pages.

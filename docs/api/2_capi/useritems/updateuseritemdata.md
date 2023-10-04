@@ -1,5 +1,5 @@
 # UpdateUserItemData
-## Overview
+
 Updates the item data on the specified user item.
 
 <PartialServop service_name="userItems" operation_name="UPDATE_USER_ITEM_DATA" />

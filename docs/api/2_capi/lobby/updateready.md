@@ -1,5 +1,5 @@
 # UpdateReady
-## Overview
+
 Updates the ready status and extra json for the given lobby member.
 
 

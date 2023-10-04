@@ -1,5 +1,5 @@
 # ReadGroupEntitiesPageByOffset
-## Overview
+
 Retrieve a page of group entity information based on the encoded context and specified page offset.
 
 <PartialServop service_name="group" operation_name="READ_GROUP_ENTITIES_PAGE_BY_OFFSET" />

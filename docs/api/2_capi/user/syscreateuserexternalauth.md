@@ -1,5 +1,5 @@
 # SysCreateUserExternalAuth
-## Overview
+
 Manually creates a new user for the current app. Note that this API is normally used for in an admin app for pre-creating users. Standard, dynamic, on-the-fly authentication is done via the Authentication service.
 
 <PartialServop service_name="user" operation_name="SYS_CREATE_USER_EXTERNAL_AUTH" />

@@ -1,5 +1,5 @@
 # ReadCompletedQuests
-## Overview
+
 Method returns all completed quests.
 
 <PartialServop service_name="gamification" operation_name="READ_COMPLETED_QUESTS" />

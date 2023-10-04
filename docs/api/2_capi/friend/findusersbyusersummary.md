@@ -1,5 +1,5 @@
 # FindUsersByUserSummary
-## Overview
+
 Retrieves profile information based on the search criteria of the user summary data.
 
 If there are more results than the maximum requested, then maximum requested results are returned.

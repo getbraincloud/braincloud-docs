@@ -1,5 +1,5 @@
 # GetMessageBoxes
-## Overview
+
 Returns the list of messageboxes for this user. <%= data.branding.productName %> currently only supports the default "inbox" and "sent" messageboxes.
 
 

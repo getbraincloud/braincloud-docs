@@ -1,5 +1,5 @@
 # SysReadTournamentTemplate
-## Overview
+
 Read a specific tournament template by tournament code and version.
 
 <PartialServop service_name="tournament" operation_name="SYS_READ_TOURNAMENT_TEMPLATE" />

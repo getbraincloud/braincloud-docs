@@ -1,5 +1,5 @@
 # SysSetDefaultProductPrice
-## Overview
+
 Sets the default (i.e. active) price for the given product item.
 
 <PartialServop service_name="productManagement" operation_name="SYS_SET_DEFAULT_PRODUCT_PRICE" />

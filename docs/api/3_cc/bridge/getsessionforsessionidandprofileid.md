@@ -1,5 +1,5 @@
 # GetSessionForSessionIdAndProfileId
-## Overview
+
 Retrieves a session object based on the provided sessionId and profileId. Can be passed into the proxy service getter methods.
 
 ## Usage

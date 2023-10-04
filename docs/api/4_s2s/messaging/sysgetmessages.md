@@ -1,5 +1,5 @@
 # SysGetMessages
-## Overview
+
 Retrieves list of specified system messages.
 
 <PartialServop service_name="messaging" operation_name="SYS_GET_MESSAGES" />

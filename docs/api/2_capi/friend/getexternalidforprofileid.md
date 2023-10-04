@@ -1,5 +1,5 @@
 # GetExternalIdForProfileId
-## Overview
+
 Retrieves the external ID for the specified user profile ID on the specified social platform.
 
 Does not require the calling user to be a friend of the other user.

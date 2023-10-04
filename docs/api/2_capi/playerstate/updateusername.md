@@ -1,5 +1,5 @@
 # UpdateUserName
-## Overview
+
 Sets the user's name.
 
 <PartialServop service_name="playerState" operation_name="UPDATE_NAME" />

@@ -1,5 +1,5 @@
 # DeregisterSystemCallback
-## Overview
+
 Deregister callback for RelayServer system messages.
 
 ## Usage

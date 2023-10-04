@@ -1,5 +1,5 @@
 # GetUserStatus
-## Overview
+
 Retrieve the specified user status effect. If `statusName` parameter is empty string returns all active status effects.
 
 <PartialServop service_name="playerState" operation_name="GET_USER_STATUS" />

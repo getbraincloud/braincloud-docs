@@ -1,5 +1,5 @@
 # Authenticate
-## Overview
+
 This service is used to authenticate the server request for the session based protocol.
 
 

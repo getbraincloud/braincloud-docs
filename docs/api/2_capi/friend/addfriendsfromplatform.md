@@ -1,5 +1,5 @@
 # AddFriendsFromPlatform
-## Overview
+
 Links the profiles for the specified externalIds for the given friend platform as internal friends.
 
 <PartialServop service_name="friend" operation_name="ADD_FRIENDS_FROM_PLATFORM" />

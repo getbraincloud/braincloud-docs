@@ -1,5 +1,5 @@
 # DeleteJsonResponseJson
-## Overview
+
 Deletes a document, passes a Json body, expects a Json response.
 
 <PartialServop service_name="httpClient" operation_name="DELETE_JSON_RESPONSE_JSON" / >

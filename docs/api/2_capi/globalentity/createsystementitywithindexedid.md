@@ -1,5 +1,5 @@
 # CreateSystemEntityWithIndexedId
-## Overview
+
 Create a new system entity on the server with an indexed id.
 
 <PartialServop service_name="globalEntity" operation_name="CREATE_SYSTEM_ENTITY_WITH_INDEXED_ID" />

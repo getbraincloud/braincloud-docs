@@ -1,5 +1,5 @@
 # AuthenticateHandoff
-## Overview
+
 Authenticate the user with a custom Authentication Handoff.  
 
 

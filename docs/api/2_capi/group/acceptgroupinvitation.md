@@ -1,5 +1,5 @@
 # AcceptGroupInvitation
-## Overview
+
 Accept an invitation to become a member of the group.
 
 Example group invite request:

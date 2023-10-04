@@ -1,5 +1,5 @@
 # FindUsersBySubstrName
-## Overview
+
 Retrieves profile information for an exact text match, then it retrieves partial matches of the specified text.
 
 If there are more results than the maximum requested, then maximum requested results are returned.

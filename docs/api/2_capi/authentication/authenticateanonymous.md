@@ -1,5 +1,5 @@
 # AuthenticateAnonymous
-## Overview
+
 To authenticate anonymously you must have first called InitializeIdentity. You must supply an anonymous ID if you are creating a brand new profile or if you are logging into an already created profile you need to supply the anonymous ID AND the profile ID of the user.
 
 Once you've logged in successfully make sure to save the anonymous and profile ID for future logins.

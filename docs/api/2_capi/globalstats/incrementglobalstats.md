@@ -1,5 +1,5 @@
 # IncrementGlobalStats
-## Overview
+
 Atomically increment (or decrement) global statistics. Global statistics are defined through the <%= data.branding.productName %> portal.
 
 StatisticsData like

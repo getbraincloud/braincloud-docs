@@ -1,5 +1,5 @@
 # GenerateCodes
-## Overview
+
 Generates specified quantity of redemption codes.
 
 

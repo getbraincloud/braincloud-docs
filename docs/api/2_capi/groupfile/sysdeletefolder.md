@@ -1,5 +1,5 @@
 # SysDeleteFolder
-## Overview
+
 Delete a folder.
 
 <PartialServop service_name="groupFile" operation_name="SYS_DELETE_FOLDER" />

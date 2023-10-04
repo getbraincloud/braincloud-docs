@@ -1,5 +1,5 @@
 # VerifyItunesReceipt
-## Overview
+
 Method verifies an iTunes receipt. On success, the player will be awarded the associated currencies.
 
 

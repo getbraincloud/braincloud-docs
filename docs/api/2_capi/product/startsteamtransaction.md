@@ -1,5 +1,5 @@
 # StartSteamTransaction
-## Overview
+
 Initialize a Steam transaction.
 
 <PartialServop service_name="product" operation_name="START_STEAM_TRANSACTION" />

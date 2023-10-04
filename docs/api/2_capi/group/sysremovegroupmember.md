@@ -1,5 +1,5 @@
 # SysRemoveGroupMember
-## Overview
+
 Remove a member from the group, bypassing group ownership/ACL checks.
 
 

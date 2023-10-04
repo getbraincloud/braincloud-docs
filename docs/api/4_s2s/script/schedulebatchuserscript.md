@@ -1,5 +1,5 @@
 # ScheduleBatchUserScript
-## Overview
+
 Schedules a script to run on the server at a later date.
 
 <PartialServop service_name="script" operation_name="SCHEDULE_BATCH_USER_SCRIPT" />

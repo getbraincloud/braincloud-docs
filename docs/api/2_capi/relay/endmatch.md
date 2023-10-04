@@ -1,5 +1,5 @@
 # EndMatch
-## Overview
+
 Terminate the match instance by the owner.
 
 ## Usage

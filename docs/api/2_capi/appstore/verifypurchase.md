@@ -1,5 +1,5 @@
 # VerifyPurchase
-## Overview
+
 Used to verify a purchase receipt for Apple AppStore, Google Play, Facebook or Windows. The contents passed into `receiptData` are store-specific. On success, the player will be awarded the associated currencies.
 
 

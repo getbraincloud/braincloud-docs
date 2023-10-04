@@ -1,5 +1,5 @@
 # DeleteChatMessage
-## Overview
+
 Delete the specified chat message. Message must have been from this user. Version must match (or pass -1 to bypass version enforcement).
 
 Returns the number of messages that were deleted. Since the history rolls over, it is possible that the message had already expired before the delete attempt - in that case, the value of the `deleted` field will be `0`.

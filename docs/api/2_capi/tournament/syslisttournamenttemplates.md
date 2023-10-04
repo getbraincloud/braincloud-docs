@@ -1,5 +1,5 @@
 # SysListTournamentTemplates
-## Overview
+
 Lists all tournament templates.
 
 <PartialServop service_name="tournament" operation_name="SYS_LIST_TOURNAMENT_TEMPLATES" />

@@ -1,5 +1,5 @@
 # SysRetireCatalogItem
-## Overview
+
 Retire the specified catalog item on the server.
 
 <PartialServop service_name="itemCatalog" operation_name="SYS_RETIRE_CATALOG_ITEM" />

@@ -1,5 +1,5 @@
 # GetChannelId
-## Overview
+
 Retrieves a channel id given the specified lookup parameters.
 
 

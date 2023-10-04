@@ -1,5 +1,5 @@
 # SysGetMessagesPage
-## Overview
+
 Gets the page of system messages from the server based on the encoded context.
 
 <PartialServop service_name="messaging" operation_name="SYS_GET_MESSAGES_PAGE" />

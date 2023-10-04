@@ -1,5 +1,5 @@
 # GetDivisionInfo
-## Overview
+
 Essentially the same as <code>[GetTournamentStatus](/api/capi/tournament/gettournamentstatus)</code>, but takes a division set id instead of a leaderboardId as its parameter. 
 
 Provides information about the division - schedule, entry fees, prizes - as well as the player's enrollment status.

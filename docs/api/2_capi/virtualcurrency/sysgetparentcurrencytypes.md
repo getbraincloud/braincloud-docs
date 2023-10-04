@@ -1,5 +1,5 @@
 # SysGetParentCurrencyTypes
-## Overview
+
 Retrieves the virtual currency types inherited from the parent app(s).
 
 <PartialServop service_name="virtualCurrency" operation_name="SYS_GET_PARENT_CURRENCY_TYPES" />

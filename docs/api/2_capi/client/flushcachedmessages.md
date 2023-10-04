@@ -1,5 +1,5 @@
 # FlushCachedMessages
-## Overview
+
 Flushes the cached messages to resume API call processing. This will dump all of the cached messages in the queue.
 
 ## Usage

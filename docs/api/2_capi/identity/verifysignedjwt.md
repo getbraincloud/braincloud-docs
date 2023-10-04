@@ -1,5 +1,5 @@
 # VerifySignedJwt
-## Overview
+
 Verifies a signed JWT provided as a string.
 
 <PartialServop service_name="identity" operation_name="VERIFY_SIGNED_JWT" />

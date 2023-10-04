@@ -1,5 +1,5 @@
 # GetMySocialInfo
-## Overview
+
 Retrieves the social information associated with the logged in user. Includes summary data if includeSummaryData is true.
 
 <PartialServop service_name="friend" operation_name="GET_MY_SOCIAL_INFO" />

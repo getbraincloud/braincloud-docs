@@ -1,5 +1,5 @@
 # GetMailServiceProxy
-## Overview
+
 Retrieves a MailService proxy object.
 
 Documentation for the service methods can be found [here](/api/capi/mail).

@@ -1,5 +1,5 @@
 # DetachNintendoIdentity
-## Overview
+
 Detach the Nintendo identity from this profile.
 
 

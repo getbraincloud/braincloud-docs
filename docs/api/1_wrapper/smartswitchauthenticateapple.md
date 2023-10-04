@@ -1,5 +1,5 @@
 # SmartSwitchAuthenticateApple
-## Overview
+
 Smart Switch Authenticate will logout of the current profile, and switch to the new authentication type. 
 
 In event the current session was previously a completely anonymous account, the smart switch will delete that profile (since completely anonymous accounts are irretrievable once you switch away from them). 

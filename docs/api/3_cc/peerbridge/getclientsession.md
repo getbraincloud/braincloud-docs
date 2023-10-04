@@ -1,5 +1,5 @@
 # GetClientSession
-## Overview
+
 Retrieves the session for the peer client to allow client proxy creation.
 
 ## Usage

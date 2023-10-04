@@ -1,5 +1,5 @@
 # CompleteMatchWithSummaryData
-## Overview
+
 Marks the given match as complete.
 
 

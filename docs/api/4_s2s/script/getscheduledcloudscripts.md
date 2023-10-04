@@ -1,5 +1,5 @@
 # GetScheduledCloudScripts
-## Overview
+
 Retrieves scripts scheduled to run up to and including the specified start time (UTC in ms).
 
 <PartialServop service_name="script" operation_name="GET_SCHEDULED_CLOUD_SCRIPTS" />

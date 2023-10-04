@@ -1,5 +1,5 @@
 # SysSendEventRTTOnly
-## Overview
+
 Sends an event to the designated user ID with the attached json data. Will only deliver the event via RTT. Will not persist the event.
 
 :::tip

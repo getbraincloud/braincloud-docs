@@ -1,5 +1,5 @@
 # SysDeleteGlobalFiles
-## Overview
+
 Delete all the files in the specified directory. Returns a list of the files that were deleted.
 
 <PartialServop service_name="globalFileV3" operation_name="SYS_DELETE_GLOBAL_FILES" />

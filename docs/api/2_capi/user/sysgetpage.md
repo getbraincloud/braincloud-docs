@@ -1,5 +1,5 @@
 # SysGetPage
-## Overview
+
 Retrieves first page of users from server based on the specified query context.
 
 _Note that for apps with > 10,000 users, it is recommended that `doCount` be set to false for better performance._

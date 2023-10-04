@@ -1,5 +1,5 @@
 # PostScoreToLeaderboard
-## Overview
+
 Post the players score to the given social leaderboard.
 
 You can optionally send a user-defined json string of data with the posted score. This string could include information relevant to the posted score.

@@ -1,5 +1,5 @@
 # SendRawPushNotificationToGroup
-## Overview
+
 Sends a notification to a "group" of user consisting of raw message content.
 
 See the Portal documentation for more info.

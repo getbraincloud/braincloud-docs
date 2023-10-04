@@ -1,5 +1,5 @@
 # CompleteMatch
-## Overview
+
 Marks the given match as complete.
 
 

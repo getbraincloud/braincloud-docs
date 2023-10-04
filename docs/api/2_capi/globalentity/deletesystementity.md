@@ -1,5 +1,5 @@
 # DeleteSystemEntity
-## Overview
+
 Method deletes the given system entity on the server.
 
 System entities are entities that can only be deleted via cloudCode, or the <%= data.branding.productName %> dashboard.

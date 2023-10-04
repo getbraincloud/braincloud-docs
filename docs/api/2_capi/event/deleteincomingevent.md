@@ -1,5 +1,5 @@
 # DeleteIncomingEvent
-## Overview
+
 Delete an event out of the player's incoming event queue.
 
 <PartialServop service_name="event" operation_name="DELETE_INCOMING" />

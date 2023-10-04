@@ -1,5 +1,5 @@
 # GetSocialLeaderboardByVersion
-## Overview
+
 > Note that friend summary data is returned for each record in the leaderboard.
 
 

@@ -1,5 +1,5 @@
 # SysUpdateEntity
-## Overview
+
 Replaces the specified custom entity's data, and optionally updates the acl and expiry, on the server. Ignores ownership/ACL checks.
 
 <PartialServop service_name="customEntity" operation_name="SYS_UPDATE_ENTITY" />

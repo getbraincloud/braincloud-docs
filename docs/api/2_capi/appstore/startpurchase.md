@@ -1,5 +1,5 @@
 # StartPurchase
-## Overview
+
 Initialize a two-part purchase transaction. Currently only used for Steam purchases.
 
 <PartialServop service_name="appStore" operation_name="START_PURCHASE" />

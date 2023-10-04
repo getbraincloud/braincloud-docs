@@ -1,5 +1,5 @@
 # ConsumeParentCurrency
-## Overview
+
 Consumes currency in a parent app.
 
 <PartialServop service_name="virtualCurrency" operation_name="CONSUME_PARENT_VC" />

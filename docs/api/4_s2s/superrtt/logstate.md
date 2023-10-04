@@ -1,5 +1,5 @@
 # LogState
-## Overview
+
 Initiate a state dump for diagnostic purposes on the given RTT servers. An empty server list will target all servers.
 
 ## Usage

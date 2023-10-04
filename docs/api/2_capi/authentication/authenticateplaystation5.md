@@ -1,5 +1,5 @@
 # AuthenticatePlaystation5
-## Overview
+
 Authenticate the user with <%= data.branding.productName %> using their Playstation5 Credentials.
 
 

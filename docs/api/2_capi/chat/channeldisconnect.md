@@ -1,5 +1,5 @@
 # ChannelDisconnect
-## Overview
+
 Disconnects from the specified channel, unregistering the handler.
 
 

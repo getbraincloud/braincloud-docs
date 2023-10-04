@@ -1,5 +1,5 @@
 # AuthenticateGoogleOpenId
-## Overview
+
 Authenticate the user using google's modern OpenId mechanism.
 
 

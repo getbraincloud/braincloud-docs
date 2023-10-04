@@ -1,5 +1,5 @@
 # SubmitTurn
-## Overview
+
 Submits a turn for the given match.
 
 <PartialServop service_name="asyncMatch" operation_name="SUBMIT_TURN" />

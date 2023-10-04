@@ -1,5 +1,5 @@
 # CreateSystemEntity
-## Overview
+
 Method creates a new system entity on the server.
 
 <PartialServop service_name="globalEntity" operation_name="CREATE_SYSTEM_ENTITY" />

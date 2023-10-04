@@ -1,5 +1,5 @@
 # SysIsGroupMember
-## Overview
+
 Verifies if user is a group member and returns information about group member, bypassing ownership/ACL checks.
 
 <PartialServop service_name="group" operation_name="SYS_IS_GROUP_MEMBER" />

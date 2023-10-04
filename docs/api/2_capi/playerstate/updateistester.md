@@ -1,5 +1,5 @@
 # UpdateIsTester
-## Overview
+
 Set a user's IsTester flag.
 
 <PartialServop service_name="playerState" operation_name="UPDATE_IS_TESTER" />

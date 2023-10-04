@@ -1,5 +1,5 @@
 # SysCancelUserScriptBatchIfExists
-## Overview
+
 Cancels a user script batch, if it exists and is in Scheduled, Queued or Running state.
 
 <PartialServop service_name="script" operation_name="SYS_CANCEL_USER_SCRIPT_BATCH_IF_EXISTS" />

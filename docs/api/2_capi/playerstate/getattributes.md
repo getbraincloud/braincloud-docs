@@ -1,5 +1,5 @@
 # GetAttributes
-## Overview
+
 Retrieve the user attributes.
 
 <PartialServop service_name="playerState" operation_name="GET_ATTRIBUTES" />

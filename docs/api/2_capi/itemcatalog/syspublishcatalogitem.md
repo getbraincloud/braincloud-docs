@@ -1,5 +1,5 @@
 # SysPublishCatalogItem
-## Overview
+
 Publish the specified catalog item on the server.
 
 <PartialServop service_name="itemCatalog" operation_name="SYS_PUBLISH_CATALOG_ITEM" />

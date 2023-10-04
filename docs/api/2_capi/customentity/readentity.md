@@ -1,5 +1,5 @@
 # ReadEntity
-## Overview
+
 Reads a custom entity.
 
 <PartialServop service_name="customEntity" operation_name="READ_ENTITY" />

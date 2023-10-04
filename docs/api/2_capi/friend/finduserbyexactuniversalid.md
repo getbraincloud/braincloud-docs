@@ -1,5 +1,5 @@
 # FindUserByExactUniversalId
-## Overview
+
 Retrieves profile information for the partial Universal ID matches of the specified text.
 
 Does not require the calling user to be a friend of the retrieved users.

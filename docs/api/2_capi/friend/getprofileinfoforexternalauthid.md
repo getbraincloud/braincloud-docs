@@ -1,5 +1,5 @@
 # GetProfileInfoForExternalAuthId
-## Overview
+
 Retrieves profile information for the specified external auth user.
 
 Does not require the calling user to be a friend of the other user.

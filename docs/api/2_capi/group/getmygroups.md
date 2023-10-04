@@ -1,5 +1,5 @@
 # GetMyGroups
-## Overview
+
 Retrieve group information about the groups in which the current user is a member.
 
 <PartialServop service_name="group" operation_name="GET_MY_GROUPS" />

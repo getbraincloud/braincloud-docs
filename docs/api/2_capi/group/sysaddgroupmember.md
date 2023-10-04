@@ -1,5 +1,5 @@
 # SysAddGroupMember
-## Overview
+
 Add a user as a member to the group, bypassing ownership/ACL checks. Optional parameters: role OR attributes.
 
 <PartialServop service_name="group" operation_name="SYS_ADD_GROUP_MEMBER" />

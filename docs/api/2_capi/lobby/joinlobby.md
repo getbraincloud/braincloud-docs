@@ -1,5 +1,5 @@
 # JoinLobby
-## Overview
+
 Adds the caller to the given lobby instance.
 
 <PartialServop service_name="lobby" operation_name="JOIN_LOBBY" />

@@ -1,5 +1,5 @@
 # UpdateIncomingEventData
-## Overview
+
 Updates an event in the player's incoming event queue.
 
 <PartialServop service_name="event" operation_name="UPDATE_EVENT_DATA" />

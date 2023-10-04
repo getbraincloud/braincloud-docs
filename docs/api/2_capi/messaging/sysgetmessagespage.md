@@ -1,5 +1,5 @@
 # SysGetMessagesPage
-## Overview
+
 :::caution
 Calls to SysGetMessagesPage and PageOffset will start throwing a ProcessingException when brainCloud property useShardSafeMessageLookup set to true, using SysGetMessagesForOwnerPage() instead.
 :::

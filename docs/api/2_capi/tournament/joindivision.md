@@ -1,5 +1,5 @@
 # JoinDivision
-## Overview
+
 Similar to <code>[JoinTournament](/api/capi/tournament/jointournament)</code>, except that you specify the *division set id* instead of the *leaderboard id*. 
 
 Returns the *division instance id* (i.e. `leaderboardId`) upon success. If joining the tournament requires a fee, it is possible to fail (if the user doesn't have enough currency).

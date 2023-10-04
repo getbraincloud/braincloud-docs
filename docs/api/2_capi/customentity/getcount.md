@@ -1,5 +1,5 @@
 # GetCount
-## Overview
+
 Counts the number of custom entities meeting the specified where clause.
 
 <PartialServop service_name="customEntity" operation_name="GET_COUNT" />

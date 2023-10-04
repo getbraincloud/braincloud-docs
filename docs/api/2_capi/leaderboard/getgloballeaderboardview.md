@@ -1,5 +1,5 @@
 # GetGlobalLeaderboardView
-## Overview
+
 Method returns a view of global leaderboard results that centers on the current player.
 
 Leaderboards entries contain the player's score and optionally, some user-defined data associated with the score.

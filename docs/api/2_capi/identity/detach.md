@@ -1,5 +1,5 @@
 # Detach
-## Overview
+
 Detaches an identity from the current profile.
 
 

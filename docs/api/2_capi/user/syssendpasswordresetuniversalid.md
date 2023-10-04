@@ -1,5 +1,5 @@
 # SysSendPasswordResetUniversalId
-## Overview
+
 Reset users password.
 
 <PartialServop service_name="user" operation_name="SYS_SEND_PASSWORD_RESET_UNIVERSAL_ID" />

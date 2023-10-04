@@ -1,5 +1,5 @@
 # GetUsersOnlineStatus
-## Overview
+
 Get the online status for a list of users based on profile ID.
 
 Does not require the calling user to be a friend of the other user.

@@ -1,5 +1,5 @@
 # ReadInProgressQuests
-## Overview
+
 Method returns quests that are in progress.
 
 <PartialServop service_name="gamification" operation_name="READ_IN_PROGRESS_QUESTS" />

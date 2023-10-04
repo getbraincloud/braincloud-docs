@@ -1,5 +1,5 @@
 # SysDeleteGlobalFile
-## Overview
+
 Deletes the specified global file.
 
 <PartialServop service_name="globalFileV3" operation_name="SYS_DELETE_GLOBAL_FILE" />

@@ -1,5 +1,5 @@
 # PutTextResponseText
-## Overview
+
 Puts a text document, expects a Text response.
 
 <PartialServop service_name="httpClient" operation_name="PUT_TEXT_RESPONSE_TEXT" / >

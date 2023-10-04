@@ -1,5 +1,5 @@
 # DeleteMessages
-## Overview
+
 Deletes the local copies of messages from the user's mailbox.
 
 

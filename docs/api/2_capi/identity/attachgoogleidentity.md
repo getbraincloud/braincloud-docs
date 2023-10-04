@@ -1,5 +1,5 @@
 # AttachGoogleIdentity
-## Overview
+
 Attach the user's Google credentials to the current profile.
 
 

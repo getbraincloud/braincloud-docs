@@ -1,5 +1,5 @@
 # PostJsonResponseJson
-## Overview
+
 This operation posts a JSON document and expects a JSON formatted document in response.
 
 

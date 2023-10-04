@@ -1,5 +1,5 @@
 # StartMatch
-## Overview
+
 Starts a match.
 
 <PartialServop service_name="onewayMatch" operation_name="START_MATCH" />

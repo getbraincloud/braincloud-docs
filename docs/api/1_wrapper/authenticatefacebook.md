@@ -1,5 +1,5 @@
 # AuthenticateFacebook
-## Overview
+
 Authenticate the user with <%= data.branding.productName %> using their Facebook Credentials.
 
 

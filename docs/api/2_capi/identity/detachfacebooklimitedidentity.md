@@ -1,5 +1,5 @@
 # DetachFacebookLimitedIdentity
-## Overview
+
 Detach the Facebook Limited login identity from this profile.
 
 

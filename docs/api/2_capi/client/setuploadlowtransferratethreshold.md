@@ -1,5 +1,5 @@
 # SetUploadLowTransferRateThreshold
-## Overview
+
 Sets the low transfer rate threshold of an upload in bytes/sec.
 
 If the transfer rate dips below the given threshold longer than the specified timeout, the transfer will fail.

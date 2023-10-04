@@ -1,5 +1,5 @@
 # FindUsersByNameStartingWith
-## Overview
+
 Retrieves profile information for users whose name starts with search text. Optional parameter: maxResults
 
 <PartialServop service_name="friend" operation_name="FIND_USERS_BY_NAME_STARTING_WITH" />

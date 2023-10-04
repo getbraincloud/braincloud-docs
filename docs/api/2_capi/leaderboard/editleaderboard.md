@@ -1,5 +1,5 @@
 # EditLeaderboard
-## Overview
+
 :::caution
 WARNING: This call, <code>EditLeaderboard()</code>, will be deprecated and replaced with <code>SysEditLeaderboard()</code>.
 :::

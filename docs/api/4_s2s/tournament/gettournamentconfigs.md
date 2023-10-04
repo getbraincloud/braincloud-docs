@@ -1,5 +1,5 @@
 # GetTournamentConfigs
-## Overview
+
 ```
 {
     "packetId": 1,

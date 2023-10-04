@@ -1,5 +1,5 @@
 # MintNFTFromRedemptionCode
-## Overview
+
 Mints an NFT for the caller in response to the given redemption code.
 
 <PartialServop service_name="blockchain" operation_name="MINT_NFT_FROM_REDEMPTION_CODE" />

@@ -1,5 +1,5 @@
 # FindUsersByExactName
-## Overview
+
 Retrieves profile information for the exact matches of the specified text.
 
 If there are more results than the maximum requested, then maximum requested results are returned.

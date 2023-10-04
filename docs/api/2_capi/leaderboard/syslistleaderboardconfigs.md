@@ -1,5 +1,5 @@
 # SysListLeaderboardConfigs
-## Overview
+
 Returns list of applicable leaderboards, with summary leaderboard configuration information, including tournament flags, if applicable. Option 'filterType' defaults to 'standard', with additional supported filter types of 'all', 'tournament', 'divisions' and 'templates'.
 
 <PartialServop service_name="leaderboard" operation_name="SYS_LIST_LEADERBOARD_CONFIGS" />

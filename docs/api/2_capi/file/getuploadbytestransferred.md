@@ -1,5 +1,5 @@
 # GetUploadBytesTransferred
-## Overview
+
 Returns the number of bytes uploaded or -1 if upload not found.
 
 :::caution

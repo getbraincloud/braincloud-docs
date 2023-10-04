@@ -1,5 +1,5 @@
 # SendRichToSegments
-## Overview
+
 This operation sends a template based message to multiple user targets.
 
 Example of substitution usage:

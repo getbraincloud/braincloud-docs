@@ -1,5 +1,5 @@
 # DetachGameCenterIdentity
-## Overview
+
 Detach the Game Center identity from the current profile.
 
 

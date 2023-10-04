@@ -1,5 +1,5 @@
 # GetServerList
-## Overview
+
 Get a list servers with the specified type.
 
 ## Usage

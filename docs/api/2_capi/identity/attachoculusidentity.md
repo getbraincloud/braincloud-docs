@@ -1,5 +1,5 @@
 # AttachOculusIdentity
-## Overview
+
 Attach the user's Oculus credentials to the current profile.
 
 

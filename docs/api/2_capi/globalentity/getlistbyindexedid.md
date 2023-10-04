@@ -1,5 +1,5 @@
 # GetListByIndexedId
-## Overview
+
 Method gets list of entities from the server base on indexed ID.
 
 <PartialServop service_name="globalEntity" operation_name="GET_LIST_BY_INDEXED_ID" />

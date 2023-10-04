@@ -1,5 +1,5 @@
 # UpdateEmailIdentityPassword
-## Overview
+
 Updates the password associated with the user's email identity.
 
 <PartialServop service_name="identity" operation_name="UPDATE_EMAIL_IDENTITY_PASSWORD" />

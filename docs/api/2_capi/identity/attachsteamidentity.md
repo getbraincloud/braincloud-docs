@@ -1,5 +1,5 @@
 # AttachSteamIdentity
-## Overview
+
 Attach a Steam (steam ID + steam session ticket) identity to the current profile.
 
 

@@ -1,5 +1,5 @@
 # UpdateSystemEntity
-## Overview
+
 Updates a *System Entity*, regardless of the ACL permissions of the object. This method is very useful when dealing with read-only system entities - since otherwise because they do not have an owner, they would not be editable at all. *Note that for obvious security reasons, this API method is available via cloud-code only.*
 
 This method is affected by versioning. See the [versioning documentation](/api/appendix/version) for more information.

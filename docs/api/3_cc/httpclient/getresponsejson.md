@@ -1,5 +1,5 @@
 # GetResponseJson
-## Overview
+
 Gets a JSON formatted document via HTTP.
 
 <PartialServop service_name="httpClient" operation_name="GET_RESPONSE_JSON" / >

@@ -1,5 +1,5 @@
 # SetPingInterval
-## Overview
+
 Set the ping interval.
 
 ## Usage

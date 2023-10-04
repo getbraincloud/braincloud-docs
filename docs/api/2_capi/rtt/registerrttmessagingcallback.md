@@ -1,5 +1,5 @@
 # RegisterRTTMessagingCallback
-## Overview
+
 Registers a callback for RTT Message updates.
 
 ## Usage

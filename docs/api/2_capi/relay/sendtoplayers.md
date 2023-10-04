@@ -1,5 +1,5 @@
 # SendToPlayers
-## Overview
+
 Send a packet to any players by using a mask.
 
 ## Usage

@@ -1,5 +1,5 @@
 # AuthenticateGoogle
-## Overview
+
 Authenticate the user using a google user ID (gXXX) and google authentication token.
 
 

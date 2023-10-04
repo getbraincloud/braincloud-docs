@@ -1,5 +1,5 @@
 # InitializeWithApps
-## Overview
+
 Method initializes `<%= data.branding.codeWrapper %>` and `<%= data.branding.codeClient %>`  with a map of appid->secretkey.
 
 The parameters for this method vary by client (for example the Unity client takes none at all, as all data is pulled from the <%= data.branding.productName %> editor menu data).

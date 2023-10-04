@@ -1,5 +1,5 @@
 # DeleteLeaderboards
-## Overview
+
 ```
 {
     "packetId": 1,

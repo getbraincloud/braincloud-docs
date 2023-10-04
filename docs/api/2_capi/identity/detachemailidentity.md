@@ -1,5 +1,5 @@
 # DetachEmailIdentity
-## Overview
+
 Detach the e-mail identity from the current profile
 
 

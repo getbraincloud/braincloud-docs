@@ -1,5 +1,5 @@
 # LeaveLobby
-## Overview
+
 Causes the caller to leave the specified lobby. If the user was the owner, a new owner will be chosen. If user was the last member, the lobby will be deleted.
 
 

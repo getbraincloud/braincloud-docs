@@ -1,5 +1,5 @@
 # UpdateSingleton
-## Overview
+
 Method updates a singleton entity on the server. This operation results in the entity data being completely replaced by the passed in JSON string. If the entity doesn't exist it is created.
 
 Singletons are defined by their **entity type**, so no two singletons of the same type can exist at once.

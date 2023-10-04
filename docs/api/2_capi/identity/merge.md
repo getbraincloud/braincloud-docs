@@ -1,5 +1,5 @@
 # Merge
-## Overview
+
 Merges an identity from another profile to this player's profile. The left over profile is decided by the higher XP.
 
 NOTE: If using the <%= data.branding.codeWrapper %>, once the merge is complete, from the <%= data.branding.productName %> client, you should call [<code>SetStoredProfileId</code>](/api/wrapper/setstoredprofileid) in the <%= data.branding.codeWrapper %> with the profileId returned in the cloud code script.

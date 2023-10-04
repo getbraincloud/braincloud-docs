@@ -1,5 +1,5 @@
 # ReadQuestsWithBasicPercentage
-## Overview
+
 Method returns quests with a basic percentage.
 
 <PartialServop service_name="gamification" operation_name="READ_QUESTS_WITH_BASIC_PERCENTAGE" />

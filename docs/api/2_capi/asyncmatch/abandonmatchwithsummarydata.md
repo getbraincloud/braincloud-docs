@@ -1,5 +1,5 @@
 # AbandonMatchWithSummaryData
-## Overview
+
 Marks the given match as abandoned and sets the matchState to EXPIRED.
 
 

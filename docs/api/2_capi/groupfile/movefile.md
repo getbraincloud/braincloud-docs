@@ -1,5 +1,5 @@
 # MoveFile
-## Overview
+
 Move a file.
 
 <PartialServop service_name="groupFile" operation_name="MOVE_FILE" />

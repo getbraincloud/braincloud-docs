@@ -1,5 +1,5 @@
 # CheckFullpathFilenameExists
-## Overview
+
 Check if filename exists for provided full path name.
 
 <PartialServop service_name="groupFile" operation_name="CHECK_FULLPATH_FILENAME_EXISTS" />

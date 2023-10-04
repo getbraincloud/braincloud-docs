@@ -1,5 +1,5 @@
 # ScheduleRichPushNotifications
-## Overview
+
 Schedules rich notifications based on user local time.
 
 Example of substitution usage:

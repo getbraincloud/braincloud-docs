@@ -1,5 +1,5 @@
 # Presence
-## Overview
+
 
 Online Presence allows an app's users to know which of their friends are currently online, what they are doing, and whether they are available to interact.
 

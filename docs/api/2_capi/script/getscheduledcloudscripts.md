@@ -1,5 +1,5 @@
 # GetScheduledCloudScripts
-## Overview
+
 Retrieves list of scheduled cloud scripts having a scheduled start time 
 less than or equal to the specified scheduledStartTime time (UTC time in milliseconds).
 

@@ -1,5 +1,5 @@
 # SysDeleteMilestone
-## Overview
+
 Deletes the specified milestone.
 
 <PartialServop service_name="gamification" operation_name="SYS_DELETE_MILESTONE" />

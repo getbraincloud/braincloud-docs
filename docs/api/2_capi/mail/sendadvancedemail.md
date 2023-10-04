@@ -1,5 +1,5 @@
 # SendAdvancedEmail
-## Overview
+
 Sends an advanced email to the specified user.  The advanced API takes a set of parameters that are
 dependant on the mail service configured in the <%= data.branding.productName %> Portal.
 For a list of all available parameters see the top of the Mail service documentation.

@@ -1,5 +1,5 @@
 # GetAppStoreServiceProxy
-## Overview
+
 Retrieves a AppStoreService proxy object.
 
 Documentation for the service methods can be found [here](/api/capi/appstore).

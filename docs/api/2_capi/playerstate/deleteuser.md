@@ -1,5 +1,5 @@
 # DeleteUser
-## Overview
+
 Completely deletes the user record and all data fully owned by the user. After calling this method, the user will need to re-authenticate and create a new profile.
 
 <PartialServop service_name="playerState" operation_name="FULL_PLAYER_RESET" />

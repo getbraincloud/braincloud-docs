@@ -1,5 +1,5 @@
 # EditLeaderboard
-## Overview
+
 ```
 {
     "packetId": 1,

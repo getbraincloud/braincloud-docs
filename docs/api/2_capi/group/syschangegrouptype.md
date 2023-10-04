@@ -1,5 +1,5 @@
 # SysChangeGroupType
-## Overview
+
 Changes the Group Type.
 
 <PartialServop service_name="group" operation_name="SYS_CHANGE_GROUP_TYPE" />

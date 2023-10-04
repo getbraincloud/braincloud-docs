@@ -1,5 +1,5 @@
 # SysDeleteGlobalFiles
-## Overview
+
 ```objective_c
 // S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```

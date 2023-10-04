@@ -1,5 +1,5 @@
 # GetIdentities
-## Overview
+
 Retrieve a list of all non-anonymous identities for the current user.
 
 <PartialServop service_name="identity" operation_name="GET_IDENTITIES" />

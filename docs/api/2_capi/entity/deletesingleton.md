@@ -1,5 +1,5 @@
 # DeleteSingleton
-## Overview
+
 Method deletes the given singleton on the server.
 
 Singletons are defined by their **entity type**, so no two singletons of the same type can exist at once.

@@ -1,5 +1,5 @@
 # GenerateGuid
-## Overview
+
 Generate a random GUID.
 
 ## Usage

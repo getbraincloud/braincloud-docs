@@ -1,5 +1,5 @@
 # UpdateActivity
-## Overview
+
 Update the presence data activity field for the caller. Note that *Support rich activity* must be enabled in order for this API call to work (see Messaging > Presence in the portal). An RTT event will be sent to any registered listeners of the caller with their updated presence info.
 
 <PartialServop service_name="presence" operation_name="UPDATE_ACTIVITY" />

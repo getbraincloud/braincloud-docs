@@ -1,5 +1,5 @@
 # ViewReward
-## Overview
+
 Returns the user's reward from a finished tournament.
 
 <PartialServop service_name="tournament" operation_name="VIEW_REWARD" />

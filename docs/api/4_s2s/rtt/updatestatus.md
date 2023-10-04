@@ -1,5 +1,5 @@
 # UpdateStatus
-## Overview
+
 Updates the server status.
 
 ## Usage

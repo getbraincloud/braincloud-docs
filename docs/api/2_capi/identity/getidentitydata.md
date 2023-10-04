@@ -1,5 +1,5 @@
 # GetIdentityData
-## Overview
+
 :::tip
 Currently, this method is available in Cloud Code scripts and for Ultra authentication type only.
 :::

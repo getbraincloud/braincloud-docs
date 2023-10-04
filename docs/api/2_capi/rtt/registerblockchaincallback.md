@@ -1,5 +1,5 @@
 # RegisterBlockchainCallback
-## Overview
+
 Registers a callback for RTT blockchain updates.
 
 ## Usage

@@ -1,5 +1,5 @@
 # CreateEntity
-## Overview
+
 Creates a new custom entity.
 
 <PartialServop service_name="customEntity" operation_name="CREATE_ENTITY" />

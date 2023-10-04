@@ -1,5 +1,5 @@
 # GetEntity
-## Overview
+
 Method to get a specific entity.
 
 <PartialServop service_name="entity" operation_name="READ" />

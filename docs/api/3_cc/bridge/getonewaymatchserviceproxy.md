@@ -1,5 +1,5 @@
 # GetOnewayMatchServiceProxy
-## Overview
+
 Retrieves a OnewayMatchService proxy object.
 
 Documentation for the service methods can be found [here](/api/capi/onewaymatch).

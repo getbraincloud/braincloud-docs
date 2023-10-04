@@ -1,5 +1,5 @@
 # AutoJoinGroupMulti
-## Overview
+
 Find and join an open group in the pool of groups in multiple group types provided as input arguments.
 
 - **isOpenGroup** - the isOpenGroup flag is set on group creation, or via the [SetGroupOpen](/api/capi/group/setgroupopen) method.

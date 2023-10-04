@@ -1,5 +1,5 @@
 # AwardCurrency
-## Overview
+
 Award user the passed-in amount of currency. Returns an object representing the new currency values.
 
 Note: Awarding 0 or negative currency will return an error. Use <code>[ConsumeCurrency](/api/capi/virtualcurrency/consumecurrency)</code> to remove currency values.

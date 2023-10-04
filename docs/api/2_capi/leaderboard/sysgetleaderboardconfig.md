@@ -1,5 +1,5 @@
 # SysGetLeaderboardConfig
-## Overview
+
 Returns leaderboard configuration information, including tournament settings, for future and current (active) version of the specified leaderboard.
 
 <PartialServop service_name="leaderboard" operation_name="SYS_GET_LEADERBOARD_CONFIG" />

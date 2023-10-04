@@ -1,5 +1,5 @@
 # AttachGoogleOpenIdIdentity
-## Overview
+
 Attach the user's Google OpenId credentials to the current profile.
 
 

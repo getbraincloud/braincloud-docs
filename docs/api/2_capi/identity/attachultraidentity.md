@@ -1,5 +1,5 @@
 # AttachUltraIdentity
-## Overview
+
 Attach the user's Ultra credentials to the current profile.
 
 

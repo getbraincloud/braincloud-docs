@@ -1,5 +1,5 @@
 # GetPresenceOfFriends
-## Overview
+
 Gets the presence data for the given `platform`. Can be one of "all", "<%= data.branding.productName %>", or "facebook". Will not include offline profiles unless `includeOffline` is set to true.
 
 <PartialServop service_name="presence" operation_name="GET_PRESENCE_OF_FRIENDS" />

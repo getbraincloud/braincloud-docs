@@ -1,5 +1,5 @@
 # GetFileInfo
-## Overview
+
 Returns information on a file using fileId.
 
 <PartialServop service_name="groupFile" operation_name="GET_FILE_INFO" />

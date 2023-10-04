@@ -1,5 +1,5 @@
 # SysUpdateEntityFieldsSharded
-## Overview
+
 For sharded custom collection entities. Sets the specified fields within custom entity data on the server, bypassing ACL permissions checks.
 
 <PartialServop service_name="customEntity" operation_name="SYS_UPDATE_ENTITY_FIELDS_SHARDED" />
