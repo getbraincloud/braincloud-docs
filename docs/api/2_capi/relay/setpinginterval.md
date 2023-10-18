@@ -2,6 +2,11 @@
 
 Set the ping interval.
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+interval | Seconds inbetween pings.
+
 ## Usage
 
 ```mdx-code-block
@@ -74,10 +79,4 @@ float interval = 10;
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-interval | Seconds inbetween pings.
-
 

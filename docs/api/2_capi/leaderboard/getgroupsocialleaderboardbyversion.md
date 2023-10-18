@@ -4,6 +4,13 @@ Retrieve the social leaderboard by version, for a group.
 
 <PartialServop service_name="leaderboard" operation_name="GET_GROUP_SOCIAL_LEADERBOARD_BY_VERSION" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardId | The ID of the leaderboard
+groupId | The ID of the group
+version | Leaderboard version to get
+
 ## Usage
 
 ```mdx-code-block
@@ -177,12 +184,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | The ID of the leaderboard
-groupId | The ID of the group
-version | Leaderboard version to get
-
 

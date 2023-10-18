@@ -8,6 +8,11 @@ The friend summary data can also be requested with the [<code>GetSummaryDataForP
 
 <PartialServop service_name="playerState" operation_name="UPDATE_SUMMARY" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+summaryFriendData | A JSON string defining the summary data. For example `{ "xp":123, "level":12, "highScore":45123 }`
+
 ## Usage
 
 ```mdx-code-block
@@ -147,10 +152,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-summaryFriendData | A JSON string defining the summary data. For example `{ "xp":123, "level":12, "highScore":45123 }`
-
 

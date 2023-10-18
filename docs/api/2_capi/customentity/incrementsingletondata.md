@@ -4,6 +4,12 @@ Increments the specified fields, of the singleton owned by the user, by the spec
 
 <PartialServop service_name="customEntity" operation_name="INCREMENT_SINGLETON_DATA" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityType | The type of custom entity being updated.
+fieldsJson | Specific fields, as JSON, within entity's custom data, with respective increment amount.
+
 ## Usage
 
 ```mdx-code-block
@@ -169,11 +175,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityType | The type of custom entity being updated.
-fieldsJson | Specific fields, as JSON, within entity's custom data, with respective increment amount.
-
 

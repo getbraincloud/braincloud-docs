@@ -6,6 +6,11 @@ Call will fail if the new UniversalId is already in use, or if the profile does 
 
 <PartialServop service_name="identity" operation_name="UPDATE_UNIVERSAL_LOGIN" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+externalId | The new universal id to update to
+
 ## Usage
 
 ```mdx-code-block
@@ -132,10 +137,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-externalId | The new universal id to update to
-
 

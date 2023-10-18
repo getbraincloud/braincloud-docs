@@ -4,6 +4,11 @@ Returns entities of all friends based on type and/or subtype.
 
 <PartialServop service_name="friend" operation_name="READ_FRIENDS_ENTITIES" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityType | Type of entities to retrieve
+
 ## Usage
 
 ```mdx-code-block
@@ -157,10 +162,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityType | Type of entities to retrieve
-
 

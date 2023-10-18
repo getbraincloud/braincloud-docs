@@ -4,6 +4,13 @@ Award parent user the passed-in amount of currency. Returns an object representi
 
 <PartialServop service_name="product" operation_name="AWARD_PARENT_VC" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+currencyType | The currency type to award.
+amount | The amount of currency to award.
+levelName | Name of the parent level.
+
 ## Usage
 
 ```mdx-code-block
@@ -121,12 +128,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-currencyType | The currency type to award.
-amount | The amount of currency to award.
-levelName | Name of the parent level.
-
 

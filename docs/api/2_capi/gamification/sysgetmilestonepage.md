@@ -100,6 +100,11 @@ Supported `searchCriteria` fields include:
 
 <PartialServop service_name="gamification" operation_name="SYS_GET_MILESTONE_PAGE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+context | The json context for the page request.
+
 ## Usage
 
 ```mdx-code-block
@@ -203,10 +208,4 @@ var milestonePage = gameficationProxy.sysGetMilestonePage(context);
 // Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-context | The json context for the page request.
-
 

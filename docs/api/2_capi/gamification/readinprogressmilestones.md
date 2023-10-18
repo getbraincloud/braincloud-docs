@@ -4,6 +4,11 @@ Method retrieves the list of in progress milestones.
 
 <PartialServop service_name="gamification" operation_name="READ_IN_PROGRESS_MILESTONES" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+includeMetaData | Whether to return meta data as well
+
 ## Usage
 
 ```mdx-code-block
@@ -154,10 +159,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-includeMetaData | Whether to return meta data as well
-
 

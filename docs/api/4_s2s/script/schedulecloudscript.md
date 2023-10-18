@@ -6,6 +6,14 @@ Schedules a scheduled cloud code job.  Can be scheduled minutes from the current
 
 <PartialServop service_name="script" operation_name="SCHEDULE_CLOUD_SCRIPT" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+scriptName | The name of the script with its path to be run. 
+scriptData | Data to be sent to the script in JSON format. 
+startDateUTC | If scheduling at a set time. The start date in UTC in Unix millis timestamp format. 
+minutesFromNow | If scheduling in minutes from the current time.  Number of minutes from now to run the script. 
+
 ## Usage
 
 ```mdx-code-block
@@ -126,13 +134,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-scriptName | The name of the script with its path to be run. 
-scriptData | Data to be sent to the script in JSON format. 
-startDateUTC | If scheduling at a set time. The start date in UTC in Unix millis timestamp format. 
-minutesFromNow | If scheduling in minutes from the current time.  Number of minutes from now to run the script. 
-
 

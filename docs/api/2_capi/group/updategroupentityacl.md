@@ -4,6 +4,13 @@ Update the acl settings for a group entity, enforcing ownership.
 
 <PartialServop service_name="group" operation_name="UPDATE_GROUP_ENTITY_ACL" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | The id of the group.
+entityId | The id of the entity to update.
+acl | Access control list for the group entity.
+
 ## Usage
 
 ```mdx-code-block
@@ -174,12 +181,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | The id of the group.
-entityId | The id of the entity to update.
-acl | Access control list for the group entity.
-
 

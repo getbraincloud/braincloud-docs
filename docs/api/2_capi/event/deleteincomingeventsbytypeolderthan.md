@@ -4,6 +4,12 @@ Delete any events of the given type older than the given date out of the user's 
 
 <PartialServop service_name="event" operation_name="DELETE_INCOMING_EVENTS_BY_TYPE_OLDER_THAN" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+eventType | The user-defined type of the event
+dateMillis | createdAt cut-off time whereby older events will be deleted
+
 ## Usage
 
 ```mdx-code-block
@@ -144,11 +150,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-eventType | The user-defined type of the event
-dateMillis | createdAt cut-off time whereby older events will be deleted
-
 

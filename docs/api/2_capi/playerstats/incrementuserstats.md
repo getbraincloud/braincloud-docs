@@ -16,6 +16,11 @@ which increments stat1 by 9 up to a limit of 30.
 
 <PartialServop service_name="playerStatistics" operation_name="UPDATE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+statistics | The data to be passed to method
+
 ## Usage
 
 ```mdx-code-block
@@ -163,10 +168,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-statistics | The data to be passed to method
-
 

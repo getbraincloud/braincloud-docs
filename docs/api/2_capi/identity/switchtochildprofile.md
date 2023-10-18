@@ -4,6 +4,13 @@ Switch to a Child Profile
 
 <PartialServop service_name="identity" operation_name="SWITCH_TO_CHILD_PROFILE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+childProfileId | The profileId of the child profile to switch to. If null and forceCreate is true a new profile will be created.
+childAppId | The appId of the child app to switch to.
+forceCreate | Should a new profile be created if it does not exist?
+
 ## Usage
 
 ```mdx-code-block
@@ -170,12 +177,4 @@ var retVal = identityProxy.switchToChildProfile(profileId, childAppId, forceCrea
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-childProfileId | The profileId of the child profile to switch to. If null and forceCreate is true a new profile will be created.
-childAppId | The appId of the child app to switch to.
-forceCreate | Should a new profile be created if it does not exist?
-
 

@@ -6,6 +6,14 @@ Returns the *division instance id* (i.e. `leaderboardId`) upon success. If joini
 
 <PartialServop service_name="tournament" operation_name="JOIN_DIVISION" />
 
+## Method Parameters
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+divSetId | Division set id.
+tournamentCode | The code for the tournament to join (eg. free vs. premium, etc.)
+initialScore | The initial score to give the player on the leaderboard.
+
 ## Usage
 
 ```mdx-code-block
@@ -167,13 +175,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-#### Method Parameters
-Parameter | Description
---------- | -----------
-divSetId | Division set id.
-tournamentCode | The code for the tournament to join (eg. free vs. premium, etc.)
-initialScore | The initial score to give the player on the leaderboard.
-
 

@@ -4,6 +4,12 @@ Tells the lobby system that a room server is ready to go.
 
 <PartialServop service_name="lobby" operation_name="SYS_ROOM_READY" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+lobbyId | The id of lobby that this room server is associated with. 
+connectInfo | Info the clients will use to connect to the room server. 
+
 ## Usage
 
 ```mdx-code-block
@@ -110,12 +116,5 @@ Code | Name | Description
 40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-lobbyId | The id of lobby that this room server is associated with. 
-connectInfo | Info the clients will use to connect to the room server. 
 
 

@@ -4,6 +4,12 @@ Change the groupType of a given group.
 
 <PartialServop service_name="group" operation_name="SYS_CHANGE_GROUP_TYPE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | Id of a group. 
+groupType | A group type. 
+
 ## Usage
 
 ```mdx-code-block
@@ -89,11 +95,4 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | Id of a group. 
-groupType | A group type. 
-
 

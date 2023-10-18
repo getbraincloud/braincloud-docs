@@ -33,6 +33,11 @@ For the full statistics grammar see the [statistics grammar section](/api/append
 
 <PartialServop service_name="playerStatistics" operation_name="PROCESS_STATISTICS" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+statistics | The stats data to be passed to the method
+
 ## Usage
 
 ```mdx-code-block
@@ -188,10 +193,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-statistics | The stats data to be passed to the method
-
 

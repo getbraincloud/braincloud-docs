@@ -4,6 +4,14 @@ Allows the current player (only) to update Summary data without having to submit
 
 <PartialServop service_name="asyncMatch" operation_name="UPDATE_SUMMARY" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+ownerId | Match owner identifier
+matchId | Match identifier
+version | Game state version to ensure turns are submitted once and in order
+jsonSummary | JSON string provided by the caller that other players will see as a summary of the game when listing their games
+
 ## Usage
 
 ```mdx-code-block
@@ -187,13 +195,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-ownerId | Match owner identifier
-matchId | Match identifier
-version | Game state version to ensure turns are submitted once and in order
-jsonSummary | JSON string provided by the caller that other players will see as a summary of the game when listing their games
-
 

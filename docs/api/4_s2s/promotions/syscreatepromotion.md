@@ -4,6 +4,11 @@ Creates a new promotion. The full promotion JSON (minus the promotionId) should 
 
 <PartialServop service_name="promotions" operation_name="SYS_CREATE_PROMOTION" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+promotionJson | The full promotion JSON (minus the promotionId).
+
 ## Usage
 
 ```mdx-code-block
@@ -178,10 +183,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-promotionJson | The full promotion JSON (minus the promotionId).
-
 

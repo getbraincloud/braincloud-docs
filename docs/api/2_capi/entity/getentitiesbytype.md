@@ -4,6 +4,11 @@ Method returns all user entities that match the given type.
 
 <PartialServop service_name="entity" operation_name="READ_BY_TYPE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityType | The entity type to search for
+
 ## Usage
 
 ```mdx-code-block
@@ -151,10 +156,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityType | The entity type to search for
-
 

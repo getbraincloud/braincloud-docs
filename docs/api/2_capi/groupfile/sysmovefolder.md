@@ -4,6 +4,16 @@ Move a folder in the global file tree.
 
 <PartialServop service_name="groupFile" operation_name="SYS_MOVE_FOLDER" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | The id of the group.
+treeId | The id of the source folder.
+treeVersion | The target version of the folder tree.
+newFolderPath | The destination folder path.
+updatedName | The optional new name of the folder.
+createInterimDirectories | Whether to automatically create folders if needed.
+
 ## Usage
 
 ```mdx-code-block
@@ -195,15 +205,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | The id of the group.
-treeId | The id of the source folder.
-treeVersion | The target version of the folder tree.
-newFolderPath | The destination folder path.
-updatedName | The optional new name of the folder.
-createInterimDirectories | Whether to automatically create folders if needed.
-
 

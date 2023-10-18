@@ -4,6 +4,11 @@ Unlinks the current user and the specified users as <%= data.branding.productNam
 
 <PartialServop service_name="friend" operation_name="REMOVE_FRIENDS" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+profileIds | Collection of profile IDs.
+
 ## Usage
 
 ```mdx-code-block
@@ -139,10 +144,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-profileIds | Collection of profile IDs.
-
 

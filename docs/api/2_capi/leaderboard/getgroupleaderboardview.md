@@ -4,6 +4,15 @@ Retrieve a view of the group leaderboard surrounding the current group score.
 
 <PartialServop service_name="leaderboard" operation_name="GET_GROUP_LEADERBOARD_VIEW" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardId | The id of the leaderboard.
+groupId | The id of the group. 
+sort | Sort order of page. ("HIGH_TO_LOW" or "LOW_TO_HIGH")
+beforeCount | The count of number of players before the current player to include.
+afterCount | The count of number of players after the current player to include.
+
 ## Usage
 
 ```mdx-code-block
@@ -156,14 +165,4 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | The id of the leaderboard.
-groupId | The id of the group. 
-sort | Sort order of page. ("HIGH_TO_LOW" or "LOW_TO_HIGH")
-beforeCount | The count of number of players before the current player to include.
-afterCount | The count of number of players after the current player to include.
-
 

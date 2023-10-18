@@ -4,6 +4,13 @@ Method updates the acl of an exisiting system entity on the server.
 
 <PartialServop service_name="globalEntity" operation_name="UPDATE_SYSTEM_ENTITY_ACL" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityId | The id of the entity to update. 
+version | The version of the entity to update. Use -1 to indicate the newest version. 
+acl | The entity's Access Control List as an object. A null ACL implies default permissions which make the entity readable/writeable by only the owner. 
+
 ## Usage
 
 ```mdx-code-block
@@ -126,12 +133,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityId | The id of the entity to update. 
-version | The version of the entity to update. Use -1 to indicate the newest version. 
-acl | The entity's Access Control List as an object. A null ACL implies default permissions which make the entity readable/writeable by only the owner. 
-
 

@@ -4,6 +4,13 @@ Finds matchmaking enabled players with additional attributes
 
 <PartialServop service_name="matchMaking" operation_name="FIND_PLAYERS" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+rangeDelta | How close an opponents rating must be to yours
+numMatches | The maximum number of matches to return
+jsonAttributes | Attributes match criteria
+
 ## Usage
 
 ```mdx-code-block
@@ -169,12 +176,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-rangeDelta | How close an opponents rating must be to yours
-numMatches | The maximum number of matches to return
-jsonAttributes | Attributes match criteria
-
 

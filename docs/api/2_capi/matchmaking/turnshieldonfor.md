@@ -4,6 +4,11 @@ Turns shield on for the specified number of minutes.
 
 <PartialServop service_name="matchMaking" operation_name="SHIELD_ON_FOR" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+minutes | Number of minutes to turn the shield on for
+
 ## Usage
 
 ```mdx-code-block
@@ -130,10 +135,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-minutes | Number of minutes to turn the shield on for
-
 

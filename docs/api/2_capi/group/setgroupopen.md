@@ -4,6 +4,12 @@ Set whether a group is open (true) or closed (false).
 
 <PartialServop service_name="group" operation_name="SET_GROUP_OPEN" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | ID of the group
+isOpenGroup | true if group is open; false if closed
+
 ## Usage
 
 ```mdx-code-block
@@ -143,11 +149,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | ID of the group
-isOpenGroup | true if group is open; false if closed
-
 

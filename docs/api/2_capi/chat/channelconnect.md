@@ -6,6 +6,12 @@ Registers a handler for incoming events from the specified `channelId`. Also ret
 
 <PartialServop service_name="chat" operation_name="CHANNEL_CONNECT" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+channelId | The id of the channel to connect to.
+maxReturn | The maximum number of recent messages to return from history.
+
 ## Usage
 
 ```mdx-code-block
@@ -237,12 +243,5 @@ Code | Name | Description
 40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-channelId | The id of the channel to connect to.
-maxReturn | The maximum number of recent messages to return from history.
 
 

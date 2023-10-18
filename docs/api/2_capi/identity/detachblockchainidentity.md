@@ -4,6 +4,11 @@ Detaches the blockchain identity to the current profile.
 
 <PartialServop service_name="identity" operation_name="DETACH_BLOCKCHAIN_IDENTITY" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+blockchainConfig | Identifies the block chain. 
+
 ## Usage
 
 ```mdx-code-block
@@ -123,10 +128,4 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-blockchainConfig | Identifies the block chain. 
-
 

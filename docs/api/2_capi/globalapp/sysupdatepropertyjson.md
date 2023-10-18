@@ -4,6 +4,12 @@ Updates the named global property with the given json value. Note that the prope
 
 <PartialServop service_name="globalApp" operation_name="SYS_UPDATE_PROPERTY_JSON" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+name | The name of the property to update
+value | The JSON value to set the property to
+
 ## Usage
 
 ```mdx-code-block
@@ -107,11 +113,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-name | The name of the property to update
-value | The JSON value to set the property to
-
 

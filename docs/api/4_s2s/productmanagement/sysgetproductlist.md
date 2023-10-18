@@ -4,6 +4,11 @@ Returns the list of products (summary details only) for the specified category (
 
 <PartialServop service_name="productManagement" operation_name="SYS_GET_PRODUCT_LIST" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+category | Optional. The product item category to filter on. Leave blank or null to retrieve all products.
+
 ## Usage
 
 ```mdx-code-block
@@ -114,10 +119,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-category | Optional. The product item category to filter on. Leave blank or null to retrieve all products.
-
 

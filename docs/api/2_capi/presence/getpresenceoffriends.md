@@ -4,6 +4,12 @@ Gets the presence data for the given `platform`. Can be one of "all", "<%= data.
 
 <PartialServop service_name="presence" operation_name="GET_PRESENCE_OF_FRIENDS" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+platform | Gets a list of Presence entries for the specified platform or "all" for all platforms. 
+includeOffline | Should offline users be included in the response?
+
 ## Usage
 
 ```mdx-code-block
@@ -162,11 +168,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-platform | Gets a list of Presence entries for the specified platform or "all" for all platforms. 
-includeOffline | Should offline users be included in the response?
-
 

@@ -4,6 +4,13 @@ Sends a simple string-based message on behalf of the system (i.e. app) to the sp
 
 <PartialServop service_name="messaging" operation_name="SYS_SEND_MESSAGE_SIMPLE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+toProfileIds | The array of recipients. 
+text | Simple text message. 
+fromJson | Who the message is from. Should contain at least "name" field, and potential "pic" field as well. 
+
 ## Usage
 
 ```mdx-code-block
@@ -103,12 +110,4 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-toProfileIds | The array of recipients. 
-text | Simple text message. 
-fromJson | Who the message is from. Should contain at least "name" field, and potential "pic" field as well. 
-
 

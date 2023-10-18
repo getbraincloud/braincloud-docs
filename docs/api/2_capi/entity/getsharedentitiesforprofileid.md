@@ -6,6 +6,11 @@ An entity is shared if its ACL allows for the currently logged in user to read t
 
 <PartialServop service_name="entity" operation_name="READ_SHARED" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+targetProfileId | The profile id to retrieve shared entities for
+
 ## Usage
 
 ```mdx-code-block
@@ -155,10 +160,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-targetProfileId | The profile id to retrieve shared entities for
-
 

@@ -4,6 +4,12 @@ Using the array of file details sent, returns the current details of any of thos
 
 <PartialServop service_name="s3Handling" operation_name="GET_UPDATED_FILES" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+category | Category of files on server to compare against
+fileDetails | An array of file details
+
 ## Usage
 
 ```mdx-code-block
@@ -208,11 +214,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-category | Category of files on server to compare against
-fileDetails | An array of file details
-
 

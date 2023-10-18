@@ -4,6 +4,11 @@ Retrieves list of specified system messages.
 
 <PartialServop service_name="messaging" operation_name="SYS_GET_MESSAGES" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+msgIds | An array of the ids of messages to retrieve. 
+
 ## Usage
 
 ```mdx-code-block
@@ -93,10 +98,4 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-msgIds | An array of the ids of messages to retrieve. 
-
 

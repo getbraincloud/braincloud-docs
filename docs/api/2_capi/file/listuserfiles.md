@@ -4,6 +4,12 @@ List all user files
 
 <PartialServop service_name="file" operation_name="LIST_USER_FILES" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+cloudPath | File path
+recurse | Whether to recurse into sub-directories
+
 ## Usage
 
 ```mdx-code-block
@@ -158,11 +164,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-cloudPath | File path
-recurse | Whether to recurse into sub-directories
-
 

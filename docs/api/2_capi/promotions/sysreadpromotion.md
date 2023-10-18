@@ -4,6 +4,11 @@ Returns the full configuration data of the specified promotion.
 
 <PartialServop service_name="promotions" operation_name="SYS_READ_PROMOTION" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+promotionId | ID uniquely identifying the promotion to read.
+
 ## Usage
 
 ```mdx-code-block
@@ -129,10 +134,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-promotionId | ID uniquely identifying the promotion to read.
-
 

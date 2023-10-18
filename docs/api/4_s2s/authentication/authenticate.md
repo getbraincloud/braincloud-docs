@@ -11,6 +11,13 @@ sessionId | String to pass in with subsequent requests
 
 <PartialServop service_name="authenticationV2" operation_name="AUTHENTICATE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+gameId | Same usage as for simple request
+serverName | Same usage as for simple request
+gameSecret | Same usage as for simple request
+
 ## Usage
 
 ```mdx-code-block
@@ -199,12 +206,4 @@ sessionId | String to pass in with subsequent requests
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-gameId | Same usage as for simple request
-serverName | Same usage as for simple request
-gameSecret | Same usage as for simple request
-
 

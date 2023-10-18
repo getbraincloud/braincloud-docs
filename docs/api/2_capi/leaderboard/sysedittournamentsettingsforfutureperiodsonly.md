@@ -15,6 +15,13 @@ tPhases | Defines the phases (states), in minutes, within the start and end peri
 
 <PartialServop service_name="leaderboard" operation_name="SYS_EDIT_TOURNAMENT_SETTINGS_FOR_FUTURE_PERIODS_ONLY" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardId | ID uniquely identifying the leaderboard configuration being edited. Leaderboard must have tournaments enabled.
+dbVersion | The database version of the leaderboard config being edited. For any version, specify -1.
+tSettingsJson | Tournament and tPhases settings changes for the in-progress leaderboard rotation, specified as JSON object.
+
 ## Usage
 
 ```mdx-code-block
@@ -233,12 +240,4 @@ var retVal = leaderboardProxy.SysEditTournamentSettingsForFuturePeriodsOnly(lead
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | ID uniquely identifying the leaderboard configuration being edited. Leaderboard must have tournaments enabled.
-dbVersion | The database version of the leaderboard config being edited. For any version, specify -1.
-tSettingsJson | Tournament and tPhases settings changes for the in-progress leaderboard rotation, specified as JSON object.
-
 

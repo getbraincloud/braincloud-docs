@@ -4,6 +4,11 @@ Resets the peer user's currency back to zero.
 
 <PartialServop service_name="virtualCurrency" operation_name="RESET_PEER_VC" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+peerCode | Name of the peer
+
 ## Usage
 
 ```mdx-code-block
@@ -87,10 +92,4 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-peerCode | Name of the peer
-
 

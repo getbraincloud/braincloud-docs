@@ -4,6 +4,13 @@ Partial increment of entity data field items. Partial set of items incremented a
 
 <PartialServop service_name="entity" operation_name="INCREMENT_SHARED_USER_ENTITY_DATA" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityId | The id of the entity to update
+targetProfileId | Profile ID of the entity owner
+jsonData | The entity's data object
+
 ## Usage
 
 ```mdx-code-block
@@ -185,12 +192,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityId | The id of the entity to update
-targetProfileId | Profile ID of the entity owner
-jsonData | The entity's data object
-
 

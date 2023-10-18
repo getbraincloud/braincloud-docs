@@ -4,6 +4,12 @@ Creates configuration for new custom entity collection.
 
 <PartialServop service_name="customEntity" operation_name="SYS_CREATE_COLLECTION" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityType | The type of custom entity collection to be created. 
+collectionOptsJson | The collection options, as JSON object. 
+
 ## Usage
 
 ```mdx-code-block
@@ -139,11 +145,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityType | The type of custom entity collection to be created. 
-collectionOptsJson | The collection options, as JSON object. 
-
 

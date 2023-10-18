@@ -4,6 +4,13 @@ Updates a user's entry in the legacy list of flagged users.
 
 <PartialServop service_name="globalApp" operation_name="SYS_UPDATE_LEGACY_FLAGGED_USER" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+profileId | Target user's profile id.
+isActive | Flag indicating whether the user is flagged or not.
+notes | A field for recording something noteworthy about this user.
+
 ## Usage
 
 ```mdx-code-block
@@ -103,12 +110,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | Target user's profile id.
-isActive | Flag indicating whether the user is flagged or not.
-notes | A field for recording something noteworthy about this user.
-
 

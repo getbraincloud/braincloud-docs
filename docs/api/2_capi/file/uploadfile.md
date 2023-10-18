@@ -8,6 +8,15 @@ To be informed of success/failure of the upload register the File Upload Callbac
 
 <PartialServop service_name="file" operation_name="PREPARE_USER_UPLOAD" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+cloudPath | The desired cloud path of the file
+cloudFilename | The desired cloud fileName of the file
+shareable | True if the file is shareable
+replaceIfExists | Whether to replace file if it exists
+localPath | The path and fileName of the local file
+
 ## Usage
 
 ```mdx-code-block
@@ -171,15 +180,5 @@ Code | Name | Description
 40430 | FILE_ALREADY_EXISTS | File exists, replaceIfExists not set
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-cloudPath | The desired cloud path of the file
-cloudFilename | The desired cloud fileName of the file
-shareable | True if the file is shareable
-replaceIfExists | Whether to replace file if it exists
-localPath | The path and fileName of the local file
 
 

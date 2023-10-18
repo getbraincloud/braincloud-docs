@@ -4,6 +4,12 @@ Adds a user to the legacy list of flagged users.
 
 <PartialServop service_name="globalApp" operation_name="SYS_ADD_LEGACY_FLAGGED_USER" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+profileId | Target user's profile id.
+notes | A field for recording something noteworthy about this user.
+
 ## Usage
 
 ```mdx-code-block
@@ -101,11 +107,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | Target user's profile id.
-notes | A field for recording something noteworthy about this user.
-
 

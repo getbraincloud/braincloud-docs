@@ -36,6 +36,12 @@ public void FailureCallback(int statusCode, int reasonCode, string statusMessage
 
 <PartialServop service_name="identity" operation_name="DETACH" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+email | The user's e-mail address
+continueAnon | Proceed even if the profile will revert to anonymous?
+
 ## Usage
 
 ```mdx-code-block
@@ -142,12 +148,5 @@ Code | Name | Description
 40209 | SECURITY_ERROR | Returned if a security exception was encountered.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-email | The user's e-mail address
-continueAnon | Proceed even if the profile will revert to anonymous?
 
 

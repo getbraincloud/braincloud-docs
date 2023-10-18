@@ -4,6 +4,12 @@ Gets the peer currency for the given currency type **or** all currency types if 
 
 <PartialServop service_name="virtualCurrency" operation_name="GET_PARENT_VC" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+vcId | The currency type to retrieve or null if all currency types are being requested.
+peer | Name of the peer
+
 ## Usage
 
 ```mdx-code-block
@@ -151,11 +157,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-vcId | The currency type to retrieve or null if all currency types are being requested.
-peer | Name of the peer
-
 

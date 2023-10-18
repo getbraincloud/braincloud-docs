@@ -4,6 +4,12 @@ Starts a stream.
 
 <PartialServop service_name="playbackStream" operation_name="START_STREAM" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+targetPlayerId | The player to start a stream with
+includeSharedData | Whether to include shared data in the stream
+
 ## Usage
 
 ```mdx-code-block
@@ -156,11 +162,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-targetPlayerId | The player to start a stream with
-includeSharedData | Whether to include shared data in the stream
-
 

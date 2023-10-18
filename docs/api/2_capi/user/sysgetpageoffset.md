@@ -4,6 +4,12 @@ Retrieves next/prev page of users from server based on the specified query conte
 
 <PartialServop service_name="user" operation_name="SYS_GET_PAGE_OFFSET" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+context | A context JSON object describing the pagination, searchCriteria and sortCriteria options
+pageOffset | +1 for next page, -1 for previous page
+
 ## Usage
 
 ```mdx-code-block
@@ -117,11 +123,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-context | A context JSON object describing the pagination, searchCriteria and sortCriteria options
-pageOffset | +1 for next page, -1 for previous page
-
 

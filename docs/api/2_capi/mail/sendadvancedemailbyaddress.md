@@ -6,6 +6,12 @@ For a list of all available parameters see the top of the Mail service documenta
 
 <PartialServop service_name="mail" operation_name="SEND_ADVANCED_EMAIL_BY_ADDRESS" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+emailAddress | The address to send the email to
+serviceParams | Set of parameters dependant on the mail service configured
+
 ## Usage
 
 ```mdx-code-block
@@ -227,11 +233,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-emailAddress | The address to send the email to
-serviceParams | Set of parameters dependant on the mail service configured
-
 

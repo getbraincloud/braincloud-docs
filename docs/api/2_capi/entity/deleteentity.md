@@ -8,6 +8,12 @@ This method is affected by versioning. See the [versioning documentation](/api/a
 
 <PartialServop service_name="entity" operation_name="DELETE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityId | The id of the entity to delete
+version | The version of the entity to delete. Use -1 to indicate the newest version
+
 ## Usage
 
 ```mdx-code-block
@@ -156,12 +162,5 @@ Code | Name | Description
 40344 | ENTITY_VERSION_MISMATCH | The version parameter does not match the current version on the server
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityId | The id of the entity to delete
-version | The version of the entity to delete. Use -1 to indicate the newest version
 
 

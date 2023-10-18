@@ -18,6 +18,13 @@ tTemplateOnly | Optional parameter to set whether leaderboard is a tournament te
 
 <PartialServop service_name="leaderboard" operation_name="SYS_EDIT_LEADERBOARD_CONFIG" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardId | ID uniquely identifying the leaderboard configuration to retrieve.
+dbVersion | The database version of the leaderboard config being edited. For any version, specify -1.
+configJson | Configuration changes for the leaderboard, specified as JSON object.
+
 ## Usage
 
 ```mdx-code-block
@@ -159,12 +166,4 @@ var retVal = leaderboardProxy.sysEditLeaderboardConfig(
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | ID uniquely identifying the leaderboard configuration to retrieve.
-dbVersion | The database version of the leaderboard config being edited. For any version, specify -1.
-configJson | Configuration changes for the leaderboard, specified as JSON object.
-
 

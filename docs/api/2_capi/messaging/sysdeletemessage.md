@@ -11,6 +11,12 @@ Delete the specified message.
 
 <PartialServop service_name="messaging" operation_name="SYS_DELETE_MESSAGE" />
 
+## Method Parameters
+Parameter | Description
+--------- | ------------------------------------
+msgId | The id of the message to update.
+msgVer | The version of the message.
+
 ## Usage
 
 ```mdx-code-block
@@ -118,12 +124,5 @@ Code | Name | Description
 40601 | FEATURE_NOT_ENABLED | Messaging feature is not enabled for app.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | ------------------------------------
-msgId | The id of the message to update.
-msgVer | The version of the message.
 
 

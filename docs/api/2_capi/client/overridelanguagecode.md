@@ -6,6 +6,11 @@ These methods should be called before authenticating so that they are sent to th
 
 Will override any auto detected language.
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+languageCode | ISO 639-1 two-letter language code
+
 ## Usage
 
 ```mdx-code-block
@@ -84,10 +89,4 @@ var languageCode = "en";
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-languageCode | ISO 639-1 two-letter language code
-
 

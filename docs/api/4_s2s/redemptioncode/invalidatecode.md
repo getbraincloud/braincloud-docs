@@ -12,6 +12,13 @@ response | Newly updated redemption code object
 
 <PartialServop service_name="redemptionCode" operation_name="INVALIDATE_CODE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+scanCode | The scan code. 
+codeType | The code type. 
+invalidationReason | Optional custom information. 
+
 ## Usage
 
 ```mdx-code-block
@@ -134,12 +141,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-scanCode | The scan code. 
-codeType | The code type. 
-invalidationReason | Optional custom information. 
-
 

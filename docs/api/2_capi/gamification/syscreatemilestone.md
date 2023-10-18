@@ -54,6 +54,11 @@ An example milestoneJson object:
 
 <PartialServop service_name="gamification" operation_name="SYS_CREATE_MILESTONE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+milestoneJson | A json object describing the milestone to create.
+
 ## Usage
 
 ```mdx-code-block
@@ -185,10 +190,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-milestoneJson | A json object describing the milestone to create.
-
 

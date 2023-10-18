@@ -4,6 +4,14 @@ Informs brainCloud that the specified user has left the specified lobby.
 
 <PartialServop service_name="lobby" operation_name="SYS_MEMBER_LEFT" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+lobbyId | The id of lobby that should be returned to the 'setup' state
+cxId | RTT connection id of specified member to be removed from the lobby
+reason | Optional reason for the member leaving. Can be one of 'LEFT_BY_CHOICE', 'EVICTED', or 'LOST_CONNECTION'
+newOwnerCxId | Optional RTT connection id of another lobby member to be made owner of the lobby if the member leaving is the current owner
+
 ## Usage
 
 ```mdx-code-block
@@ -93,13 +101,4 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-lobbyId | The id of lobby that should be returned to the 'setup' state
-cxId | RTT connection id of specified member to be removed from the lobby
-reason | Optional reason for the member leaving. Can be one of 'LEFT_BY_CHOICE', 'EVICTED', or 'LOST_CONNECTION'
-newOwnerCxId | Optional RTT connection id of another lobby member to be made owner of the lobby if the member leaving is the current owner
-
 

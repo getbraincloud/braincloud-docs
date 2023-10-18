@@ -4,6 +4,13 @@ Tells the lobby system that creation of the room experience failed.
 
 <PartialServop service_name="lobby" operation_name="SYS_ROOM_CANCELLED" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+lobbyId | The id of lobby that this room server is associated with. 
+msg | Info the clients will use to connect to the room server. 
+details | Optional details to send to room members. 
+
 ## Usage
 
 ```mdx-code-block
@@ -112,13 +119,5 @@ Code | Name | Description
 40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-lobbyId | The id of lobby that this room server is associated with. 
-msg | Info the clients will use to connect to the room server. 
-details | Optional details to send to room members. 
 
 

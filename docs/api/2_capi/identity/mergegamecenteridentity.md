@@ -8,6 +8,11 @@ NOTE: If using the <%= data.branding.codeWrapper %>, once the merge is complete 
 
 <PartialServop service_name="identity" operation_name="MERGE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+gameCenterId | The player's game center id  (use the playerID property from the local GKPlayer object)
+
 ## Usage
 
 ```mdx-code-block
@@ -112,11 +117,5 @@ Code | Name | Description
 40211 | DUPLICATE_IDENTITY_TYPE | Returned when trying to attach an identity type that already exists for that profile. For instance you can have only one Game Center identity for a profile.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-gameCenterId | The player's game center id  (use the playerID property from the local GKPlayer object)
 
 

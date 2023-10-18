@@ -2,6 +2,11 @@
 
 Method cancels an upload. If a File Upload Callback has been registered with the <%= data.branding.codeClient %> class, the fileUploadFailed callback method will be called once the upload has been canceled.
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+uploadId | The id of the upload
+
 ## Usage
 
 ```mdx-code-block
@@ -79,10 +84,4 @@ NSString * myUploadId = @"1234-1234-1234-1234"; //From UploadFile return data
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-uploadId | The id of the upload
-
 

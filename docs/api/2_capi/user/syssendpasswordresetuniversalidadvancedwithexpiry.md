@@ -21,6 +21,13 @@ Example serviceParams (for Sendgrid dynamic templates):
 
 <PartialServop service_name="user" operation_name="SYS_SEND_PASSWORD_RESET_UNIVERSAL_ID_ADVANCED_WITH_EXPIRY" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+profileId | The profileId of the user to send the password reset email to
+serviceParams | The service-specific email paramaters
+tokenTtlInMinutes | The time-to-live for the password reset url, in minutes.
+
 ## Usage
 
 ```mdx-code-block
@@ -125,12 +132,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | The profileId of the user to send the password reset email to
-serviceParams | The service-specific email paramaters
-tokenTtlInMinutes | The time-to-live for the password reset url, in minutes.
-
 

@@ -11,6 +11,11 @@ Returns *description info* and *activity stats* for the specified channel. Note 
 
 <PartialServop service_name="chat" operation_name="SYS_GET_CHANNEL_INFO" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+channelId | The id of the channel
+
 ## Usage
 
 ```mdx-code-block
@@ -126,11 +131,5 @@ Code | Name | Description
 40616 | CLOUD_CODE_ONLY | Method only available via cloud code
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-channelId | The id of the channel
 
 

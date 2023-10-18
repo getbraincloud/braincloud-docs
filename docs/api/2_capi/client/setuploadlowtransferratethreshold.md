@@ -10,6 +10,11 @@ By default this is set to 50 bytes/sec.
 This timeout method does not work on Unity mobile platforms.
 :::
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+bytesPerSec | The low transfer rate threshold in bytes/sec
+
 ## Usage
 
 ```mdx-code-block
@@ -84,10 +89,4 @@ int minTransferRate = 1500;
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-bytesPerSec | The low transfer rate threshold in bytes/sec
-
 

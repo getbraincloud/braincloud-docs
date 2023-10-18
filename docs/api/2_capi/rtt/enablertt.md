@@ -8,6 +8,11 @@ RTT is available to all *Plus* plan subscriptions.
 
 <PartialServop service_name="rttRegistration" operation_name="REQUEST_CLIENT_CONNECTION" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+connectionType | Type of RTT connections being established. Examples: WebSocket, TCP.
+
 ## Usage
 
 ```mdx-code-block
@@ -128,10 +133,4 @@ public void rttConnectFailure(String errorMessage)
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-connectionType | Type of RTT connections being established. Examples: WebSocket, TCP.
-
 

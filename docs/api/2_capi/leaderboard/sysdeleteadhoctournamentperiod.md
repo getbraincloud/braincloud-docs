@@ -4,6 +4,13 @@ Deletes a future ADHOC tournament period scheduled for the leaderboard configura
 
 <PartialServop service_name="leaderboard" operation_name="SYS_DELETE_ADHOC_TOURNAMENT_PERIOD" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardId | ID uniquely identifying the leaderboard configuration to edit. Leaderboard must be configured with ADHOC rotation type.
+dbVersion | The database version of the leaderboard config being edited. For any version, specify -1.
+periodStartingAtUtcMillis | The exact startingAt UTC timestamp, in milliseconds, identifying the ADHOC period being edited.
+
 ## Usage
 
 ```mdx-code-block
@@ -125,12 +132,4 @@ var retVal = leaderboardProxy.sysDeleteAdhocTournamentPeriod(
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | ID uniquely identifying the leaderboard configuration to edit. Leaderboard must be configured with ADHOC rotation type.
-dbVersion | The database version of the leaderboard config being edited. For any version, specify -1.
-periodStartingAtUtcMillis | The exact startingAt UTC timestamp, in milliseconds, identifying the ADHOC period being edited.
-
 

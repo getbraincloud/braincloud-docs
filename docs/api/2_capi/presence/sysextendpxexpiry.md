@@ -9,6 +9,12 @@ If seconds is greater than <%= data.branding.productName %> property `presPxExpi
 
 <PartialServop service_name="presence" operation_name="SYS_EXTEND_PX_EXPIRY" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+profileId | Target profile ID.
+seconds | Number of seconds to extend px expiry
+
 ## Usage
 
 ```mdx-code-block
@@ -105,11 +111,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | Target profile ID.
-seconds | Number of seconds to extend px expiry
-
 

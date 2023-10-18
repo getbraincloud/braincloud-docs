@@ -8,6 +8,11 @@ These methods should be called before authenticating so that they are sent to th
 Because of a Unity limitation country code cannot be detected automatically on any platforms other than iOS and Android.
 :::
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+countryCode | ISO 3166-1 two-letter country code
+
 ## Usage
 
 ```mdx-code-block
@@ -86,10 +91,4 @@ var countryCode = "CA";
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-countryCode | ISO 3166-1 two-letter country code
-
 

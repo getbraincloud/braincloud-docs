@@ -8,6 +8,11 @@ By default this is set to 120 seconds. Setting this value to 0 will turn off the
 This timeout method does not work on Unity mobile platforms.
 :::
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+timeoutSecs | The timeout in seconds
+
 ## Usage
 
 ```mdx-code-block
@@ -82,10 +87,4 @@ int timeoutSecs = 60;
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-timeoutSecs | The timeout in seconds
-
 

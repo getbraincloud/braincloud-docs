@@ -4,6 +4,11 @@ Deletes a dynamic chat channel. Channel type must be "dy". This will delete the 
 
 <PartialServop service_name="chat" operation_name="SYS_DELETE_CHANNEL" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+channelId | The channel id - must be of type 'dy'. 
+
 ## Usage
 
 ```mdx-code-block
@@ -87,10 +92,4 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-channelId | The channel id - must be of type 'dy'. 
-
 

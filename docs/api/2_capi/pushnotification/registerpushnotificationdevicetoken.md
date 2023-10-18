@@ -4,6 +4,12 @@ Registers the given device token from the server to enable this device to receiv
 
 <PartialServop service_name="pushNotification" operation_name="REGISTER" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+platform | The device platform being registered.
+token | The platform-dependant device token needed for push notifications.
+
 ## Usage
 
 ```mdx-code-block
@@ -142,11 +148,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-platform | The device platform being registered.
-token | The platform-dependant device token needed for push notifications.
-
 

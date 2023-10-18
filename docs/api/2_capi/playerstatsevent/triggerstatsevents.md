@@ -6,6 +6,11 @@ This mechanism supersedes the [<code>PlayerStatisticsService</code>](/api/capi/p
 
 <PartialServop service_name="playerStatisticsEvent" operation_name="TRIGGER_MULTIPLE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+jsonData | An array of JSON objects representing Event Names and Multipliers.  ex. `[ { "eventName": "event1", "eventMultiplier": 1 } ]`
+
 ## Usage
 
 ```mdx-code-block
@@ -173,10 +178,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-jsonData | An array of JSON objects representing Event Names and Multipliers.  ex. `[ { "eventName": "event1", "eventMultiplier": 1 } ]`
-
 

@@ -8,6 +8,15 @@ NOTE: If using the <%= data.branding.codeWrapper %>, once the merge is complete 
 
 <PartialServop service_name="identity" operation_name="MERGE_PEER_PROFILE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+peer | Name of the peer service
+externalId | User ID
+authenticationToken | Password or client side token
+authenticationType | Type of authentication. Full list of types can be found [here](/api/appendix/authtypes).
+externalAuthName | The name of the external authentication mechanism (optional, used for custom authentication types)
+
 ## Usage
 
 ```mdx-code-block
@@ -119,15 +128,5 @@ Code | Name | Description
 40211 | DUPLICATE_IDENTITY_TYPE | Returned when trying to attach an identity type that already exists for that profile. For instance you can have only one Steam identity for a profile.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-peer | Name of the peer service
-externalId | User ID
-authenticationToken | Password or client side token
-authenticationType | Type of authentication. Full list of types can be found [here](/api/appendix/authtypes).
-externalAuthName | The name of the external authentication mechanism (optional, used for custom authentication types)
 
 

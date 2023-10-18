@@ -4,6 +4,12 @@ Cancels any FindLobby or FindOrCreateLobby requests that have been previously su
 
 <PartialServop service_name="lobby" operation_name="CANCEL_FIND_REQUEST" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+cxId | RTT connection id. 
+lobbyType | Type of lobby being targeted. 
+
 ## Usage
 
 ```mdx-code-block
@@ -122,11 +128,4 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-cxId | RTT connection id. 
-lobbyType | Type of lobby being targeted. 
-
 

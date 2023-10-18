@@ -6,6 +6,12 @@ This mechanism supersedes the [<code>PlayerStatisticsService</code>](/api/capi/p
 
 <PartialServop service_name="playerStatisticsEvent" operation_name="TRIGGER" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+eventName | The name of the event configured through the <%= data.branding.productName %> portal
+multiplier | The multiplier to apply to the event
+
 ## Usage
 
 ```mdx-code-block
@@ -149,11 +155,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-eventName | The name of the event configured through the <%= data.branding.productName %> portal
-multiplier | The multiplier to apply to the event
-
 

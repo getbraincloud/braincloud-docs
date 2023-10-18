@@ -4,6 +4,13 @@ Gets a list of up to maxReturn randomly selected custom entities from the server
 
 <PartialServop service_name="customEntity" operation_name="SYS_GET_RANDOM_ENTITIES_MATCHING" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityType | The type of custom entity being retrieved. 
+whereJson | The where clause, as JSON object.
+maxReturn | The maximum number of entities to return.
+
 ## Usage
 
 ```mdx-code-block
@@ -150,12 +157,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityType | The type of custom entity being retrieved. 
-whereJson | The where clause, as JSON object.
-maxReturn | The maximum number of entities to return.
-
 

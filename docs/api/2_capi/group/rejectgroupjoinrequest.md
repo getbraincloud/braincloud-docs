@@ -4,6 +4,12 @@ Reject a request to join the group.
 
 <PartialServop service_name="group" operation_name="REJECT_GROUP_JOIN_REQUEST" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | ID of the group
+profileId | Profile ID of the user being rejected
+
 ## Usage
 
 ```mdx-code-block
@@ -143,11 +149,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | ID of the group
-profileId | Profile ID of the user being rejected
-
 

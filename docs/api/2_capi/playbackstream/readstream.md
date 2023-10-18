@@ -4,6 +4,11 @@ Reads a stream.
 
 <PartialServop service_name="playbackStream" operation_name="READ_STREAM" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+playbackStreamId | Identifies the stream to read
+
 ## Usage
 
 ```mdx-code-block
@@ -167,10 +172,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-playbackStreamId | Identifies the stream to read
-
 

@@ -5,6 +5,13 @@ Activate a redemption code. Optional parameters: customCodeInfo.
 
 <PartialServop service_name="redemptionCode" operation_name="ACTIVATE_CODE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+scanCode | The scan code.
+codeType | The code type.
+customCodeInfo | Optional custom information.
+
 ## Usage
 
 ```mdx-code-block
@@ -184,13 +191,5 @@ Code | Name | Description
 40753 | REDEMPTION_CODE_TYPE_DISABLED | Invalid code. Redemption code type has been disabled
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-scanCode | The scan code.
-codeType | The code type.
-customCodeInfo | Optional custom information.
 
 

@@ -4,6 +4,11 @@ Method reads an existing system entity on the server. It cannot be an owned/glob
 
 <PartialServop service_name="globalEntity" operation_name="READ_SYSTEM_ENTITY" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityId | The id of the entity to read. 
+
 ## Usage
 
 ```mdx-code-block
@@ -113,10 +118,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityId | The id of the entity to read. 
-
 

@@ -4,6 +4,12 @@ Deregisters the given device token from the server to disable this device from r
 
 <PartialServop service_name="pushNotification" operation_name="DEREGISTER" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+device | The device platform being deregistered.
+token | The platform-dependant device token needed for push notifications.
+
 ## Usage
 
 ```mdx-code-block
@@ -142,11 +148,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-device | The device platform being deregistered.
-token | The platform-dependant device token needed for push notifications.
-
 

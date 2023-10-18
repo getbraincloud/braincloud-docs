@@ -4,6 +4,12 @@ Deletes the specified quest.
 
 <PartialServop service_name="gamification" operation_name="SYS_DELETE_QUEST" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+questId | The id of the quest to delete
+version | The current revision of the quest. Use -1 to bypass the version-check.
+
 ## Usage
 
 ```mdx-code-block
@@ -94,11 +100,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-questId | The id of the quest to delete
-version | The current revision of the quest. Use -1 to bypass the version-check.
-
 

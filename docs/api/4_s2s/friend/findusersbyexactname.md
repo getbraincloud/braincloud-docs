@@ -8,6 +8,12 @@ Does not require the calling user to be a friend of the retrieved users.
 
 <PartialServop service_name="friend" operation_name="FIND_USERS_BY_EXACT_NAME" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+searchText | The exact string to search for.
+maxResults | Maximum number of results to return.
+
 ## Usage
 
 ```mdx-code-block
@@ -114,11 +120,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-searchText | The exact string to search for.
-maxResults | Maximum number of results to return.
-
 

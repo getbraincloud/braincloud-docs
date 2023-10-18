@@ -4,6 +4,11 @@ Sets the user's timezone offset.
 
 <PartialServop service_name="playerState" operation_name="UPDATE_TIMEZONE_OFFSET" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+timeZoneOffset | The numeric timezone offset of the user
+
 ## Usage
 
 ```mdx-code-block
@@ -137,10 +142,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-timeZoneOffset | The numeric timezone offset of the user
-
 

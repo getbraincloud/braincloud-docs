@@ -4,6 +4,11 @@ Increments the user's experience. If the player goes up a level, the new level d
 
 <PartialServop service_name="playerStatistics" operation_name="UPDATE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+xpValue | The amount to increase the user's experience by
+
 ## Usage
 
 ```mdx-code-block
@@ -141,10 +146,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-xpValue | The amount to increase the user's experience by
-
 

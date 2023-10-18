@@ -4,6 +4,13 @@ Gets the page of custom entities from the server based on the encoded context an
 
 <PartialServop service_name="customEntity" operation_name="SYS_GET_ENTITY_PAGE_OFFSET" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityType | The type of custom entity being retrieved. 
+context | The context string returned from the server from a previous call to GetPage or GetPageOffset. 
+pageOffset | The positive or negative page offset to fetch. Uses the last page retrieved using the context string to determine a starting point. 
+
 ## Usage
 
 ```mdx-code-block
@@ -126,12 +133,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityType | The type of custom entity being retrieved. 
-context | The context string returned from the server from a previous call to GetPage or GetPageOffset. 
-pageOffset | The positive or negative page offset to fetch. Uses the last page retrieved using the context string to determine a starting point. 
-
 

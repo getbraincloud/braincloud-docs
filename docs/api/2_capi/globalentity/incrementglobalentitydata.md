@@ -4,6 +4,12 @@ Partial increment of global entity data field items. Partial set of items increm
 
 <PartialServop service_name="globalEntity" operation_name="INCREMENT_GLOBAL_ENTITY_DATA" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityId | The id of the entity to update
+jsonEntityData | The entity's data object
+
 ## Usage
 
 ```mdx-code-block
@@ -181,11 +187,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityId | The id of the entity to update
-jsonEntityData | The entity's data object
-
 

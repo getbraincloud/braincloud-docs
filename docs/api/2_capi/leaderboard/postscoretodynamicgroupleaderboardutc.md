@@ -4,6 +4,18 @@ Post the group score to the given group leaderboard and dynamically create if ne
 
 <PartialServop service_name="leaderboard" operation_name="POST_GROUP_SCORE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardId | The id of the leaderboard.
+groupId | The id of the group. 
+score | The score to post.
+data | Optional user-defined data to post with the score.
+leaderboardType | the type of leaderboard
+rotationType | daily, weekly, monthly
+rotationResetTime | the date to reset the rotation in milliseconds UTC
+retainedCount | times to retain the leaderboard
+
 ## Usage
 
 ```mdx-code-block
@@ -196,17 +208,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | The id of the leaderboard.
-groupId | The id of the group. 
-score | The score to post.
-data | Optional user-defined data to post with the score.
-leaderboardType | the type of leaderboard
-rotationType | daily, weekly, monthly
-rotationResetTime | the date to reset the rotation in milliseconds UTC
-retainedCount | times to retain the leaderboard
-
 

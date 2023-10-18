@@ -4,6 +4,15 @@ Mints an NFT for the caller in response to the given redemption code.
 
 <PartialServop service_name="blockchain" operation_name="MINT_NFT_FROM_REDEMPTION_CODE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+integrationId | The blockchain integration id. Currently only 'default' is supported.
+redemptionCodeId | The internal id for the redemption code being redeemed.
+attempt | The redemption attempt number.
+codeType | The type of redemption code being redeemed.
+mintDataJson | JSON object containing blockchain provider specific data for minting NFTs.
+
 ## Usage
 
 ```mdx-code-block
@@ -201,14 +210,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-integrationId | The blockchain integration id. Currently only 'default' is supported.
-redemptionCodeId | The internal id for the redemption code being redeemed.
-attempt | The redemption attempt number.
-codeType | The type of redemption code being redeemed.
-mintDataJson | JSON object containing blockchain provider specific data for minting NFTs.
-
 

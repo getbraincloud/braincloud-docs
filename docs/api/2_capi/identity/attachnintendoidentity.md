@@ -6,6 +6,12 @@ Attach the user's Nintendo credentials to the current profile.
 
 <PartialServop service_name="identity" operation_name="ATTACH" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+nintendoAccountId | The Nintendo Network Services Account (NSA) ID for the user
+nintendoAuthToken | An NSA ID token retrieved via the NintendoSDK
+
 ## Usage
 
 ```mdx-code-block
@@ -117,12 +123,5 @@ Code | Name | Description
 40212 | MERGE_PROFILES | Returned when trying to attach an identity type that would result in two profiles being merged into one (for instance an anonymous account and a Email account).
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-nintendoAccountId | The Nintendo Network Services Account (NSA) ID for the user
-nintendoAuthToken | An NSA ID token retrieved via the NintendoSDK
 
 

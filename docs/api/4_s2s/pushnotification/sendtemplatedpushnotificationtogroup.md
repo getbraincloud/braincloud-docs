@@ -12,6 +12,14 @@ Substitutions parameter would be `{ "1" : "User Appreciation", "2", "User Apprec
 
 <PartialServop service_name="pushNotification" operation_name="SEND_TEMPLATED_TO_GROUP" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | The target group. 
+senderId | Optional id of sender. 
+notificationTemplateId | The template to use. 
+substitutions | Map of substitution positions to strings. 
+
 ## Usage
 
 ```mdx-code-block
@@ -123,13 +131,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | The target group. 
-senderId | Optional id of sender. 
-notificationTemplateId | The template to use. 
-substitutions | Map of substitution positions to strings. 
-
 

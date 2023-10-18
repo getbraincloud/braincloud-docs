@@ -6,6 +6,11 @@ Sets whether the error callback is triggered when a 202 status is received from 
 This flag is only intended for backward compatibility and is NOT recommended to be disabled otherwise.
 :::
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+isError | If set to true, 202 is treated as an error
+
 ## Usage
 
 ```mdx-code-block
@@ -77,10 +82,4 @@ This flag is only intended for backward compatibility and is NOT recommended to 
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-isError | If set to true, 202 is treated as an error
-
 

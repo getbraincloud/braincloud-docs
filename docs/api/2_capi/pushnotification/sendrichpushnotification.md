@@ -4,6 +4,12 @@ Sends a notification to a user based on a <%= data.branding.productName %> porta
 
 <PartialServop service_name="pushNotification" operation_name="SEND_RICH" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+toId | The profileId of the user to receive the notification
+notificationTemplateId | Id of the notification template
+
 ## Usage
 
 ```mdx-code-block
@@ -146,11 +152,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-toId | The profileId of the user to receive the notification
-notificationTemplateId | Id of the notification template
-
 

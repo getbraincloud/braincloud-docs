@@ -11,6 +11,13 @@ There is a special index on a field called "indexedId" in the group data for eff
 
 <PartialServop service_name="group" operation_name="SYS_UPDATE_GROUP_DATA" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | ID of the group
+version | Version to verify
+jsonData | Data to apply
+
 ## Usage
 
 ```mdx-code-block
@@ -169,12 +176,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | ID of the group
-version | Version to verify
-jsonData | Data to apply
-
 

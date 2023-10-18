@@ -4,6 +4,13 @@ Used to award Peer currency.
 
 <PartialServop service_name="product" operation_name="AWARD_PEER_VC" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+currencyType | Type of currency (Ex. ticket, tokens)
+amount | Currency amount to be awarded
+peer | Name of the peer
+
 ## Usage
 
 ```mdx-code-block
@@ -91,12 +98,4 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-currencyType | Type of currency (Ex. ticket, tokens)
-amount | Currency amount to be awarded
-peer | Name of the peer
-
 

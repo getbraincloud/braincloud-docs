@@ -8,6 +8,10 @@ None.
 
 <PartialServop service_name="messaging" operation_name="GET_MESSAGE_COUNTS" />
 
+## Method Parameters
+
+None.
+
 ## Usage
 
 ```mdx-code-block
@@ -148,10 +152,5 @@ if (postResult.status == 200) {
 | 40601 | FEATURE_NOT_ENABLED | Messaging feature is not enabled for app. |
 
 </details>
-
-
-## Method Parameters
-
-None.
 
 

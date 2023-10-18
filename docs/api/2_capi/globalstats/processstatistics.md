@@ -34,6 +34,11 @@ For the full statistics grammar see the [statistics grammar section](/api/append
 
 <PartialServop service_name="globalGameStatistics" operation_name="PROCESS_STATISTICS" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+statistics | A collection containing the statistics to process
+
 ## Usage
 
 ```mdx-code-block
@@ -201,10 +206,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-statistics | A collection containing the statistics to process
-
 

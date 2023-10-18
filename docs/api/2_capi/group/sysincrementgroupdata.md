@@ -4,6 +4,12 @@ Partial increment of group data field items. Partial set of items incremented as
 
 <PartialServop service_name="group" operation_name="SYS_INCREMENT_GROUP_DATA" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | ID of the group
+jsonData | Partial data map with incremental values
+
 ## Usage
 
 ```mdx-code-block
@@ -114,11 +120,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | ID of the group
-jsonData | Partial data map with incremental values
-
 

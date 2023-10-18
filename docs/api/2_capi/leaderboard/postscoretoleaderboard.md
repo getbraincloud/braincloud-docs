@@ -8,6 +8,13 @@ Note that the behavior of posting a score can be modified in the <%= data.brandi
 
 <PartialServop service_name="leaderboard" operation_name="POST_SCORE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardId | The leaderboard to post to.
+score | The score to post.
+data | Optional user-defined data to post with the score.
+
 ## Usage
 
 ```mdx-code-block
@@ -160,12 +167,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | The leaderboard to post to.
-score | The score to post.
-data | Optional user-defined data to post with the score.
-
 

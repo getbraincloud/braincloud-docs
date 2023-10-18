@@ -13,6 +13,13 @@ response | Newly updated redemption code object.
 
 <PartialServop service_name="redemptionCode" operation_name="ACTIVATE_CODE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+scanCode | The scan code. 
+codeType | The code type. 
+customCodeInfo | Optional custom information. 
+
 ## Usage
 
 ```mdx-code-block
@@ -135,12 +142,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-scanCode | The scan code. 
-codeType | The code type. 
-customCodeInfo | Optional custom information. 
-
 

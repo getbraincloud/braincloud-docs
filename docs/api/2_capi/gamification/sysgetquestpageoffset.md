@@ -56,6 +56,12 @@ See the [Generic Paged Queries](/api/appendix/genericpagedqueries) documentation
 
 <PartialServop service_name="gamification" operation_name="SYS_GET_QUEST_PAGE_OFFSET" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+encodedContext | The json context from the previous page request.
+pageOffset | The positive or negative page offset to fetch. Uses the last page retrieved using the context string to determine a starting point.
+
 ## Usage
 
 ```mdx-code-block
@@ -195,11 +201,4 @@ if ( questPage.status == 200 ) {
 // Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-encodedContext | The json context from the previous page request.
-pageOffset | The positive or negative page offset to fetch. Uses the last page retrieved using the context string to determine a starting point.
-
 

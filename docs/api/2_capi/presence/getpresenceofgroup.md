@@ -4,6 +4,12 @@ Gets the presence data for the given `groupId`. Will not include offline profile
 
 <PartialServop service_name="presence" operation_name="GET_PRESENCE_OF_GROUP" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | Gets a list of Presence for the members of the specified group. The caller must be a member of the given group. 
+includeOffline | Should offline users be included in the response?
+
 ## Usage
 
 ```mdx-code-block
@@ -161,11 +167,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | Gets a list of Presence for the members of the specified group. The caller must be a member of the given group. 
-includeOffline | Should offline users be included in the response?
-
 

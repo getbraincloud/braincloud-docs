@@ -4,6 +4,12 @@ Method deletes an exisiting system entity on the server.
 
 <PartialServop service_name="globalEntity" operation_name="DELETE_SYSTEM_ENTITY" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityId | The id of the entity to update. 
+version | The version of the entity to update. Use -1 to indicate the newest version. 
+
 ## Usage
 
 ```mdx-code-block
@@ -106,11 +112,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityId | The id of the entity to update. 
-version | The version of the entity to update. Use -1 to indicate the newest version. 
-
 

@@ -4,6 +4,19 @@ Move a file from user space to group space.
 
 <PartialServop service_name="groupFile" operation_name="SYS_MOVE_USER_TO_GROUP_FILE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+userProfileId | The user file owner.
+userCloudPath | The user file folder.
+userCloudFilename | The user file name.
+groupId | The id of the group.
+groupTreeId | The id of the destination folder.
+groupFilename | The group file name.
+groupFileOwnerId | The optional owner id of of the new group file.
+overwriteIfPresent | Whether to allow overwrite of an existing file if present.
+groupFileAcl | The acl of the new group file.
+
 ## Usage
 
 ```mdx-code-block
@@ -137,18 +150,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-userProfileId | The user file owner.
-userCloudPath | The user file folder.
-userCloudFilename | The user file name.
-groupId | The id of the group.
-groupTreeId | The id of the destination folder.
-groupFilename | The group file name.
-groupFileOwnerId | The optional owner id of of the new group file.
-overwriteIfPresent | Whether to allow overwrite of an existing file if present.
-groupFileAcl | The acl of the new group file.
-
 

@@ -4,6 +4,12 @@ Delete the product item.
 
 <PartialServop service_name="productManagement" operation_name="SYS_DELETE_PRODUCT" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+itemId | The item id being deleted.
+version | The version being validated. Pass -1 to bypass version checking.
+
 ## Usage
 
 ```mdx-code-block
@@ -100,11 +106,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-itemId | The item id being deleted.
-version | The version being validated. Pass -1 to bypass version checking.
-
 

@@ -37,6 +37,14 @@ For the above example:
 
 <PartialServop service_name="customEntity" operation_name="UPDATE_ENTITY_FIELDS" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityType | The type of custom entity being updated. 
+entityId | The id of custom entity being updated. 
+version | Version of the custom entity being updated. 
+fieldsJson | Specific fields, as JSON, to set within entity's custom data. 
+
 ## Usage
 
 ```mdx-code-block
@@ -211,13 +219,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityType | The type of custom entity being updated. 
-entityId | The id of custom entity being updated. 
-version | Version of the custom entity being updated. 
-fieldsJson | Specific fields, as JSON, to set within entity's custom data. 
-
 

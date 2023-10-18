@@ -4,6 +4,12 @@ Registers the caller for RTT presence updates from friends on the given `platfor
 
 <PartialServop service_name="presence" operation_name="REGISTER_LISTENERS_FOR_FRIENDS" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+platform | Presence for friends of the caller on the specified platform. Use "all" or omit for all platforms. 
+bidirectional | Should those profiles be mutually registered to listen to the current profile?
+
 ## Usage
 
 ```mdx-code-block
@@ -162,11 +168,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-platform | Presence for friends of the caller on the specified platform. Use "all" or omit for all platforms. 
-bidirectional | Should those profiles be mutually registered to listen to the current profile?
-
 

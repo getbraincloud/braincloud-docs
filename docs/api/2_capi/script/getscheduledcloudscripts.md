@@ -5,6 +5,11 @@ less than or equal to the specified scheduledStartTime time (UTC time in millise
 
 <PartialServop service_name="script" operation_name="GET_SCHEDULED_CLOUD_SCRIPTS" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+startDateUTC | Return scripts that are scheduled to run before this specified time.
+
 ## Usage
 
 ```mdx-code-block
@@ -206,10 +211,4 @@ retVal;
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-startDateUTC | Return scripts that are scheduled to run before this specified time.
-
 

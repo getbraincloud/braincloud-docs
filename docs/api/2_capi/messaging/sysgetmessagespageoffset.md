@@ -7,6 +7,12 @@ Returns the next/prev page of messages.
 
 <PartialServop service_name="messaging" operation_name="SYS_GET_MESSAGES_PAGE_OFFSET" />
 
+## Method Parameters
+Parameter | Description
+--------- | ----------------------------
+context | The search and paging criteria
+pageOffset | Number of pages to go forward or back
+
 ## Usage
 
 ```mdx-code-block
@@ -148,12 +154,5 @@ Code | Name | Description
 40601 | FEATURE_NOT_ENABLED | Messaging feature is not enabled for app.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | ----------------------------
-context | The search and paging criteria
-pageOffset | Number of pages to go forward or back
 
 

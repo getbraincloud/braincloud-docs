@@ -4,6 +4,11 @@ Reads an existing item definition from the server, with language fields limited 
 
 <PartialServop service_name="itemCatalog" operation_name="GET_CATALOG_ITEM_DEFINITION" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+defId | The unique id of the item definition. 
+
 ## Usage
 
 ```mdx-code-block
@@ -168,10 +173,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-defId | The unique id of the item definition. 
-
 

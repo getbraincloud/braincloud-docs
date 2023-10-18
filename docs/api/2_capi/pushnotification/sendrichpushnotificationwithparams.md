@@ -16,6 +16,13 @@ The resulting string would be "Hello George Smith, welcome to the Poker Pirates 
 
 <PartialServop service_name="pushNotification" operation_name="SEND_RICH" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+toProfileId | The profileId of the user to receive the notification
+notificationTemplateId | Id of the notification template
+substitutionJson | JSON defining the substitution params to use with the template
+
 ## Usage
 
 ```mdx-code-block
@@ -171,12 +178,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-toProfileId | The profileId of the user to receive the notification
-notificationTemplateId | Id of the notification template
-substitutionJson | JSON defining the substitution params to use with the template
-
 

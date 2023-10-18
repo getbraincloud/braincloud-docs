@@ -4,6 +4,12 @@ Retrieves profile information for users whose name starts with search text. Opti
 
 <PartialServop service_name="friend" operation_name="FIND_USERS_BY_NAME_STARTING_WITH" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+searchText | The exact string to search for.
+maxResults | Maximum number of results to return.
+
 ## Usage
 
 ```mdx-code-block
@@ -159,11 +165,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-searchText | The exact string to search for.
-maxResults | Maximum number of results to return.
-
 

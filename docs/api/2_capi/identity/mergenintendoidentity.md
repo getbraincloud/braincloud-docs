@@ -6,6 +6,12 @@ Merge the profile associated with the provided Nintendo credentials with the cur
 
 <PartialServop service_name="identity" operation_name="MERGE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+nintendoAccountId | The Nintendo Network Services Account (NSA) ID for the user
+nintendoAuthToken | An NSA ID token retrieved via the NintendoSDK
+
 ## Usage
 
 ```mdx-code-block
@@ -118,12 +124,5 @@ Code | Name | Description
 40211 | DUPLICATE_IDENTITY_TYPE | Returned when trying to attach an identity type that already exists for that profile. For instance you can have only one Twitter identity for a profile.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-nintendoAccountId | The Nintendo Network Services Account (NSA) ID for the user
-nintendoAuthToken | An NSA ID token retrieved via the NintendoSDK
 
 

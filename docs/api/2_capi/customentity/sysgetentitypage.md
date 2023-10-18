@@ -24,6 +24,12 @@ Example context object:
 
 <PartialServop service_name="customEntity" operation_name="SYS_GET_ENTITY_PAGE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityType | The type of custom entity being retrieved. 
+context | A context object describing the desired paging behaviour
+
 ## Usage
 
 ```mdx-code-block
@@ -173,11 +179,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityType | The type of custom entity being retrieved. 
-context | A context object describing the desired paging behaviour
-
 

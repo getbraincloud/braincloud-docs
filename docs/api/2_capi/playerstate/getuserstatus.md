@@ -4,6 +4,11 @@ Retrieve the specified user status effect. If `statusName` parameter is empty st
 
 <PartialServop service_name="playerState" operation_name="GET_USER_STATUS" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+statusName | Name of the status to retrieve. Retrieve all if empty string.
+
 ## Usage
 
 ```mdx-code-block
@@ -141,10 +146,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-statusName | Name of the status to retrieve. Retrieve all if empty string.
-
 

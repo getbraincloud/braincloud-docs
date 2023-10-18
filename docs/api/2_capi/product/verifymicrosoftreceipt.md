@@ -4,6 +4,11 @@ Verify Microsoft Receipt. On success, the player will be awarded the associated 
 
 <PartialServop service_name="product" operation_name="VERIFY_MICROSOFT_RECEIPT" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+receipt | Receipt XML
+
 ## Usage
 
 ```mdx-code-block
@@ -117,10 +122,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-receipt | Receipt XML
-
 

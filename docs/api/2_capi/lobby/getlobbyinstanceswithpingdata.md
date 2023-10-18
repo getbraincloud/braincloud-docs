@@ -4,6 +4,13 @@ Gets a map keyed by rating of the lobby instances matching the given type, ratin
 
 <PartialServop service_name="lobby" operation_name="GET_LOBBY_INSTANCES_WITH_PING_DATA" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+lobbyType | The type of lobby to look for. Lobby types are defined in the portal.
+criteriaJson | JSON object describing the filter criteria. Supported sub-values include: 'rating'.
+pingData | Ping times for each region available for this lobby type. Can use GET_REGIONS_FOR_LOBBIES to retreive the list of regions for a given lobby type. Ping data is automatically passed in on the clients.
+
 ## Usage
 
 ```mdx-code-block
@@ -210,12 +217,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-lobbyType | The type of lobby to look for. Lobby types are defined in the portal.
-criteriaJson | JSON object describing the filter criteria. Supported sub-values include: 'rating'.
-pingData | Ping times for each region available for this lobby type. Can use GET_REGIONS_FOR_LOBBIES to retreive the list of regions for a given lobby type. Ping data is automatically passed in on the clients.
-
 

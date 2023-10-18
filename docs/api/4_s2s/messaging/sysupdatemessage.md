@@ -4,6 +4,13 @@ Updates a system message.
 
 <PartialServop service_name="messaging" operation_name="SYS_UPDATE_MESSAGE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+msgId | The id of the message to update. 
+msgVer | The version of the message. Use -1 to specify latest version. 
+contentJson | The new content to write to the message. 
+
 ## Usage
 
 ```mdx-code-block
@@ -97,12 +104,4 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-msgId | The id of the message to update. 
-msgVer | The version of the message. Use -1 to specify latest version. 
-contentJson | The new content to write to the message. 
-
 

@@ -37,6 +37,12 @@ public void FailureCallback(int statusCode, int reasonCode, string statusMessage
 
 <PartialServop service_name="identity" operation_name="ATTACH" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+email | The user's e-mail address
+password | The user's password
+
 ## Usage
 
 ```mdx-code-block
@@ -145,12 +151,5 @@ Code | Name | Description
 550022 | INVALID_PASSWORD_CONTENT | The password doesn't meet the minimum password requirements.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-email | The user's e-mail address
-password | The user's password
 
 

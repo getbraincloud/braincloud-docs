@@ -4,6 +4,13 @@ Links the profiles for the specified externalIds for the given friend platform a
 
 <PartialServop service_name="friend" operation_name="ADD_FRIENDS_FROM_PLATFORM" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+friendPlatform | Friend platform to query. Valid values are "Facebook", "Steam", and "PlaystationNetwork"
+mode | "ADD" to add friends only, "SYNC" to delete any previously saved friends that are not in the externalIds list
+externalIds | The list of platform-specific external IDs of the friends to add
+
 ## Usage
 
 ```mdx-code-block
@@ -159,12 +166,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-friendPlatform | Friend platform to query. Valid values are "Facebook", "Steam", and "PlaystationNetwork"
-mode | "ADD" to add friends only, "SYNC" to delete any previously saved friends that are not in the externalIds list
-externalIds | The list of platform-specific external IDs of the friends to add
-
 

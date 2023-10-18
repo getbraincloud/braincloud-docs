@@ -4,6 +4,12 @@ Deletes specified system message on the server. Note, if a regular message, dele
 
 <PartialServop service_name="messaging" operation_name="SYS_DELETE_MESSAGE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+msgId | The id of the message to update. 
+msgVer | The version of the message. Use -1 to specify latest version. 
+
 ## Usage
 
 ```mdx-code-block
@@ -89,11 +95,4 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-msgId | The id of the message to update. 
-msgVer | The version of the message. Use -1 to specify latest version. 
-
 

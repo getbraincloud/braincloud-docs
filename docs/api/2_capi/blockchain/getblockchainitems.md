@@ -4,6 +4,12 @@ Retrieves the blockchain items owned by the caller.
 
 <PartialServop service_name="blockchain" operation_name="GET_BLOCKCHAIN_ITEMS" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+integrationId | The blockchain integration id. Currently only 'default' is supported.
+contextJson | Optional. Reserved for future use.
+
 ## Usage
 
 ```mdx-code-block
@@ -161,11 +167,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-integrationId | The blockchain integration id. Currently only 'default' is supported.
-contextJson | Optional. Reserved for future use.
-
 

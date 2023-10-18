@@ -4,6 +4,12 @@ Reset users password using templates.
 
 <PartialServop service_name="user" operation_name="SYS_SEND_PASSWORD_RESET_UNIVERSAL_ID_ADVANCED" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+profileId | The profileId of the user to send the password reset email to
+serviceParams | Set of parameters dependant on the mail service configured
+
 ## Usage
 
 ```mdx-code-block
@@ -107,11 +113,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | The profileId of the user to send the password reset email to
-serviceParams | Set of parameters dependant on the mail service configured
-
 

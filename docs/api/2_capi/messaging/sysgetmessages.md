@@ -11,6 +11,11 @@ Retrieves the specified message, irregardless of ownership.
 
 <PartialServop service_name="messaging" operation_name="SYS_GET_MESSAGES" />
 
+## Method Parameters
+Parameter | Description
+--------- | ------------------------------------
+msgIds | An array of the ids of messages to retrieve.
+
 ## Usage
 
 ```mdx-code-block
@@ -119,11 +124,5 @@ Code | Name | Description
 40601 | FEATURE_NOT_ENABLED | Messaging feature is not enabled for app.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | ------------------------------------
-msgIds | An array of the ids of messages to retrieve.
 
 

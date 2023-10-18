@@ -4,6 +4,11 @@ Leave as member of a group.
 
 <PartialServop service_name="group" operation_name="LEAVE_GROUP" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | ID of the group
+
 ## Usage
 
 ```mdx-code-block
@@ -135,10 +140,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | ID of the group
-
 

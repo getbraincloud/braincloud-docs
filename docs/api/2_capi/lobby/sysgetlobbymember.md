@@ -4,6 +4,12 @@ Retrieves lobby membership details for the specified user.
 
 <PartialServop service_name="lobby" operation_name="SYS_GET_LOBBY_MEMBER" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+lobbyId | Id of chosen lobby
+cxId | RTT connection id of a lobby member
+
 ## Usage
 
 ```mdx-code-block
@@ -110,11 +116,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-lobbyId | Id of chosen lobby
-cxId | RTT connection id of a lobby member
-
 

@@ -10,6 +10,12 @@ In event that the call takes too long, this call has a timelimit enforcement on 
 
 <PartialServop service_name="friend" operation_name="FIND_USERS_BY_SUBSTR_NAME" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+searchText | The substring to search for. Minimum length of 3 characters.
+maxResults | Maximum number of results to return.
+
 ## Usage
 
 ```mdx-code-block
@@ -164,11 +170,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-searchText | The substring to search for. Minimum length of 3 characters.
-maxResults | Maximum number of results to return.
-
 

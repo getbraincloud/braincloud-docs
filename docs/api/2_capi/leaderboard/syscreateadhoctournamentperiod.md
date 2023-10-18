@@ -13,6 +13,13 @@ tPhases | Required. Defines the phases, in minutes, within the start and end per
 
 <PartialServop service_name="leaderboard" operation_name="SYS_CREATE_ADHOC_TOURNAMENT_PERIOD" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardId | ID uniquely identifying the leaderboard configuration to edit. Leaderboard must be configured with ADHOC rotation type.
+dbVersion | The database version of the leaderboard config being edited. For any version, specify -1.
+tSettingsJson | Tournament settings for the new ADHOC tournament period being scheduled.
+
 ## Usage
 
 ```mdx-code-block
@@ -214,12 +221,4 @@ var retVal = leaderboardProxy.sysCreateAdhocTournamentPeriod(
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | ID uniquely identifying the leaderboard configuration to edit. Leaderboard must be configured with ADHOC rotation type.
-dbVersion | The database version of the leaderboard config being edited. For any version, specify -1.
-tSettingsJson | Tournament settings for the new ADHOC tournament period being scheduled.
-
 

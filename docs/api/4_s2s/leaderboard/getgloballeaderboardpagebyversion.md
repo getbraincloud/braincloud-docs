@@ -16,6 +16,15 @@ See GetGlobalLeaderboardVersions method to retrieve the version id.
 
 <PartialServop service_name="leaderboard" operation_name="GET_GLOBAL_LEADERBOARD_PAGE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardId | The id of the leaderboard
+sortOrder | Sort order of page. ("HIGH_TO_LOW" or "LOW_TO_HIGH")
+startIndex | The rank at which to start the page.
+endIndex | The rank at which to end the page.
+versionId | The historical version to retrieve.
+
 ## Usage
 
 ```mdx-code-block
@@ -149,14 +158,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | The id of the leaderboard
-sortOrder | Sort order of page. ("HIGH_TO_LOW" or "LOW_TO_HIGH")
-startIndex | The rank at which to start the page.
-endIndex | The rank at which to end the page.
-versionId | The historical version to retrieve.
-
 

@@ -4,6 +4,11 @@ Deletes the specified leaderboards from <%= data.branding.productName %> server.
 
 <PartialServop service_name="leaderboard" operation_name="DELETE_LEADERBOARDS" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardIds | Collection of leaderboard IDs.
+
 ## Usage
 
 ```mdx-code-block
@@ -101,10 +106,4 @@ var retVal = leaderboardProxy.deleteLeaderboards(leaderboardsIds);
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardIds | Collection of leaderboard IDs.
-
 

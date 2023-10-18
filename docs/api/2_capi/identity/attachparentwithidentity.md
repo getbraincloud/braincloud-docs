@@ -4,6 +4,15 @@ Attach a parent identity to the current profile. Create if necessary.
 
 <PartialServop service_name="identity" operation_name="ATTACH_PARENT_WITH_IDENTITY" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+externalId | User ID
+authenticationToken | Password or client side token
+authenticationType | Type of authentication. Full list of types can be found [here](/api/appendix/authtypes).
+externalAuthName | The name of the external authentication mechanism (optional, used for custom authentication types)
+forceCreate | Whether to create the profile if it does not exist
+
 ## Usage
 
 ```mdx-code-block
@@ -169,14 +178,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-externalId | User ID
-authenticationToken | Password or client side token
-authenticationType | Type of authentication. Full list of types can be found [here](/api/appendix/authtypes).
-externalAuthName | The name of the external authentication mechanism (optional, used for custom authentication types)
-forceCreate | Whether to create the profile if it does not exist
-
 

@@ -8,6 +8,12 @@ NOTE: If using the <%= data.branding.codeWrapper %>, once the merge is complete 
 
 <PartialServop service_name="identity" operation_name="MERGE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+playstationNetworkId | The playstationNetwork id of the user
+authenticationToken | The validated token from the PlaystationNetwork SDK (that will be further validated when sent to the <%= data.branding.productName %> service)
+
 ## Usage
 
 ```mdx-code-block
@@ -112,12 +118,5 @@ Code | Name | Description
 40211 | DUPLICATE_IDENTITY_TYPE | Returned when trying to attach an identity type that already exists for that profile. For instance you can have only one PlaystationNetwork identity for a profile.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-playstationNetworkId | The playstationNetwork id of the user
-authenticationToken | The validated token from the PlaystationNetwork SDK (that will be further validated when sent to the <%= data.branding.productName %> service)
 
 

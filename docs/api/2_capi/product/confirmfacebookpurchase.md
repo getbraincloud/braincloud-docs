@@ -4,6 +4,11 @@ Confirm Facebook Purchase. On success, the player will be awarded the associated
 
 <PartialServop service_name="product" operation_name="FB_CONFIRM_PURCHASE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+signedRequest | signed_request object received from Facebook
+
 ## Usage
 
 ```mdx-code-block
@@ -116,10 +121,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-signedRequest | signed_request object received from Facebook
-
 

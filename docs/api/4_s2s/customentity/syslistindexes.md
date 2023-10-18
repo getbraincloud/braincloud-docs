@@ -4,6 +4,11 @@ Retrieves list of indexes configured for a custom entity collection.
 
 <PartialServop service_name="customEntity" operation_name="SYS_LIST_INDEXES" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityType | The entity type identifying the applicable custom entity collection. 
+
 ## Usage
 
 ```mdx-code-block
@@ -87,10 +92,4 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityType | The entity type identifying the applicable custom entity collection. 
-
 

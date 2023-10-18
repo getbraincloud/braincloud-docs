@@ -4,6 +4,11 @@ Sets the packet timeouts using a list of integers that represent timeout values 
 
 The number of entries in this array determines how many packet retries will occur. By default, the packet timeout array is {15, 20, 35, 50}
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+intervalInSeconds | The time between heartbeats in milliseconds
+
 ## Usage
 
 ```mdx-code-block
@@ -85,10 +90,4 @@ ArrayList<Integer> packetTimeouts = new ArrayList<Integer>(
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-intervalInSeconds | The time between heartbeats in milliseconds
-
 

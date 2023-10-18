@@ -10,6 +10,13 @@ Make sure you've initialized the <%= data.branding.productName %> library before
 
 <PartialServop service_name="authenticationV2" operation_name="AUTHENTICATE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+parseId | String representation of Parse user ID
+parseToken | The authentication token from Parse
+forceCreate | Should a new profile be created for this user if the account does not exist?
+
 ## Usage
 
 ```mdx-code-block
@@ -194,13 +201,5 @@ Code | Name | Description
 40307 | TOKEN_DOES_NOT_MATCH_USER | The user credentials are invalid (i.e. parseId and parseToken are invalid). May also indicate that Parse Integration is not properly configured.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-parseId | String representation of Parse user ID
-parseToken | The authentication token from Parse
-forceCreate | Should a new profile be created for this user if the account does not exist?
 
 

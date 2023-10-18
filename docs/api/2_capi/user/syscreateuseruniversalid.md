@@ -6,6 +6,15 @@ Manually creates a new user for the current app. Note that this API is normally 
 
 <PartialServop service_name="user" operation_name="SYS_CREATE_USER_UNIVERSAL_ID" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+externalId | The email address of the user
+password | The user's initial password (if the password is null, a random one will be generated)
+username | The display or contact name of the user (stored in player state)
+contactEmail | The email address of the user
+notificationTemplateId | If specified, the user will be sent an email confirming that the account has been created
+
 ## Usage
 
 ```mdx-code-block
@@ -112,15 +121,5 @@ Code | Name | Description
 550022 | INVALID_PASSWORD_CONTENT | The password doesn't meet the minimum password requirements.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-externalId | The email address of the user
-password | The user's initial password (if the password is null, a random one will be generated)
-username | The display or contact name of the user (stored in player state)
-contactEmail | The email address of the user
-notificationTemplateId | If specified, the user will be sent an email confirming that the account has been created
 
 

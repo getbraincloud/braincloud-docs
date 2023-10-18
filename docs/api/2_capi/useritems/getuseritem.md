@@ -4,6 +4,12 @@ Retrieves the identified user item from the server. If includeDef is true, respo
 
 <PartialServop service_name="userItems" operation_name="GET_USER_ITEM" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+itemId | The unique id of the user item. 
+includeDef | If true, the associated item definition will be included in the response. 
+
 ## Usage
 
 ```mdx-code-block
@@ -190,11 +196,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-itemId | The unique id of the user item. 
-includeDef | If true, the associated item definition will be included in the response. 
-
 

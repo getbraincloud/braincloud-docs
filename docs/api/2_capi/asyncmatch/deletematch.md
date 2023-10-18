@@ -10,6 +10,12 @@ DEBUG ONLY, in production it is recommended the user leave it as completed.
 
 <PartialServop service_name="asyncMatch" operation_name="DELETE_MATCH" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+ownerId | Match owner identifier
+matchId | Match identifier
+
 ## Usage
 
 ```mdx-code-block
@@ -148,11 +154,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-ownerId | Match owner identifier
-matchId | Match identifier
-
 

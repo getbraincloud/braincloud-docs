@@ -4,6 +4,12 @@ Updates the named global property with the given string value. Note that the pro
 
 <PartialServop service_name="globalApp" operation_name="SYS_UPDATE_PROPERTY_STRING" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+name | The name of the property to update
+value | The string value to set the property to
+
 ## Usage
 
 ```mdx-code-block
@@ -101,11 +107,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-name | The name of the property to update
-value | The string value to set the property to
-
 

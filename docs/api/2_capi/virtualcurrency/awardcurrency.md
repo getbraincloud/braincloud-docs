@@ -6,6 +6,12 @@ Note: Awarding 0 or negative currency will return an error. Use <code>[ConsumeCu
 
 <PartialServop service_name="virtualCurrency" operation_name="AWARD_VC" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+vcId | The currency type to award. 
+vcAmount | The amount of currency to award. 
+
 ## Usage
 
 ```mdx-code-block
@@ -160,11 +166,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-vcId | The currency type to award. 
-vcAmount | The amount of currency to award. 
-
 

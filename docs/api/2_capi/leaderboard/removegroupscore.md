@@ -4,6 +4,13 @@ Removes the group's score data from the specified group leaderboard. Optional pa
 
 <PartialServop service_name="leaderboard" operation_name="REMOVE_GROUP_SCORE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardId | The id of the leaderboard.
+groupId | The id of the group. 
+versionId | The version of the leaderboard. Use -1 to specify the currently active leaderboard version.
+
 ## Usage
 
 ```mdx-code-block
@@ -139,12 +146,4 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | The id of the leaderboard.
-groupId | The id of the group. 
-versionId | The version of the leaderboard. Use -1 to specify the currently active leaderboard version.
-
 

@@ -52,6 +52,13 @@ Make sure you've initialized the <%= data.branding.productName %> library before
 
 <PartialServop service_name="authenticationV2" operation_name="AUTHENTICATE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+handoffId | The id for the given handoff 
+secruityToken | The secruity token used to verify the handoff
+forceCreate | Should a new profile be created for this user if the account does not exist?
+
 ## Usage
 
 ```mdx-code-block
@@ -247,13 +254,5 @@ Code | Name | Description
 40307 | TOKEN_DOES_NOT_MATCH_USER | The user's password is incorrect.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-handoffId | The id for the given handoff 
-secruityToken | The secruity token used to verify the handoff
-forceCreate | Should a new profile be created for this user if the account does not exist?
 
 

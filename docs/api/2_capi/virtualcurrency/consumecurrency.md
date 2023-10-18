@@ -6,6 +6,12 @@ Note: Consuming 0 or negative currency will return an error. Use <code>[AwardCur
 
 <PartialServop service_name="virtualCurrency" operation_name="CONSUME_VC" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+vcId | The currency type to consume. 
+vcAmount | The amount of currency to consume. 
+
 ## Usage
 
 ```mdx-code-block
@@ -159,11 +165,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-vcId | The currency type to consume. 
-vcAmount | The amount of currency to consume. 
-
 

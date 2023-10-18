@@ -7,6 +7,11 @@ behavior.
 This flag is only intended for backward compatibility and is NOT recommended to be enabled otherwise.
 :::
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+enabled | If set to true, enable legacy error message format
+
 ## Usage
 
 ```mdx-code-block
@@ -78,10 +83,4 @@ This flag is only intended for backward compatibility and is NOT recommended to 
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-enabled | If set to true, enable legacy error message format
-
 

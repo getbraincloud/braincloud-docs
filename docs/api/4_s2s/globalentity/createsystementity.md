@@ -4,6 +4,14 @@ Method creates a new system new entity on the server.
 
 <PartialServop service_name="globalEntity" operation_name="CREATE_SYSTEM_ENTITY" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityType | The entity type as defined by the user. 
+timeToLive | Sets expiry time for entity in milliseconds if > 0. 
+acl | The entity's Access Control List as an object. A null ACL implies default permissions which make the entity readable/writeable by only the owner. 
+data | The entity's data object. 
+
 ## Usage
 
 ```mdx-code-block
@@ -132,13 +140,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityType | The entity type as defined by the user. 
-timeToLive | Sets expiry time for entity in milliseconds if > 0. 
-acl | The entity's Access Control List as an object. A null ACL implies default permissions which make the entity readable/writeable by only the owner. 
-data | The entity's data object. 
-
 

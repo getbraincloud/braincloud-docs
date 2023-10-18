@@ -4,6 +4,11 @@ Reads a subset of global statistics.
 
 <PartialServop service_name="globalGameStatistics" operation_name="READ_SUBSET" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+statistics | A collection containing the statistics to read
+
 ## Usage
 
 ```mdx-code-block
@@ -141,10 +146,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-statistics | A collection containing the statistics to read
-
 

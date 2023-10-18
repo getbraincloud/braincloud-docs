@@ -84,6 +84,12 @@ The key values of the return to evaluate include:
 
 <PartialServop service_name="appStore" operation_name="VERIFY_PURCHASE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+storeId | The store type - "itunes", "googlePlay", "amazon", "facebook" or "windows"
+receiptData | A JSON object with data in the format for the specified store
+
 ## Usage
 
 ```mdx-code-block
@@ -334,12 +340,5 @@ Code | Name | Description
 105 | RESULT_FAILED_REQUEST_ERROR | Credential missing for used app store. Ensure Facebook or Stream credential is correct.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-storeId | The store type - "itunes", "googlePlay", "amazon", "facebook" or "windows"
-receiptData | A JSON object with data in the format for the specified store
 
 

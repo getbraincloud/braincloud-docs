@@ -4,6 +4,13 @@ Send the given data to all members of the given lobby.
 
 <PartialServop service_name="lobby" operation_name="SYS_SEND_SIGNAL" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+lobbyId | Id of chosen lobby. 
+signalData | Signal data to be sent. 
+from | Optional 'from' data to be sent. 
+
 ## Usage
 
 ```mdx-code-block
@@ -91,12 +98,4 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-lobbyId | Id of chosen lobby. 
-signalData | Signal data to be sent. 
-from | Optional 'from' data to be sent. 
-
 

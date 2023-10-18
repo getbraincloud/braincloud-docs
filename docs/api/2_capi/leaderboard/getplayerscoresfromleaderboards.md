@@ -4,6 +4,11 @@ Gets a player's score from multiple leaderboards. Will only return scores if the
 
 <PartialServop service_name="leaderboard" operation_name="GET_PLAYER_SCORES_FROM_LEADERBOARDS" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardIds | Collection of leaderboard IDs
+
 ## Usage
 
 ```mdx-code-block
@@ -157,10 +162,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardIds | Collection of leaderboard IDs
-
 

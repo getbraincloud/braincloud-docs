@@ -4,6 +4,11 @@ Returns the monthly analytics counts for the current app for the specified month
 
 <PartialServop service_name="globalApp" operation_name="SYS_GET_MONTHLY_COUNTS" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+month | The month to retrieve the data for, in "yyyy-MM" format. If empty, uses the current month.
+
 ## Usage
 
 ```mdx-code-block
@@ -160,10 +165,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-month | The month to retrieve the data for, in "yyyy-MM" format. If empty, uses the current month.
-
 

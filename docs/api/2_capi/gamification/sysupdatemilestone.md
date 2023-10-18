@@ -4,6 +4,13 @@ Updates the specified milestone. Note that only the fields present in the JSON o
 
 <PartialServop service_name="gamification" operation_name="SYS_UPDATE_MILESTONE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+milestoneId | The id of the milestone to update
+version | The current revision of the milestone
+milestoneJson | A json object describing the updated milestone data. Only the fields present will be updated.
+
 ## Usage
 
 ```mdx-code-block
@@ -128,12 +135,4 @@ if (readResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-milestoneId | The id of the milestone to update
-version | The current revision of the milestone
-milestoneJson | A json object describing the updated milestone data. Only the fields present will be updated.
-
 

@@ -4,6 +4,11 @@ Update the presence data `visible` field for the caller. An RTT event will be se
 
 <PartialServop service_name="presence" operation_name="SET_VISIBILITY" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+visible | Should user appear in presence? True by default.
+
 ## Usage
 
 ```mdx-code-block
@@ -136,10 +141,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-visible | Should user appear in presence? True by default.
-
 

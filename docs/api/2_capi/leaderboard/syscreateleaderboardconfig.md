@@ -20,6 +20,12 @@ tTemplateOnly | Optional parameter to set whether leaderboard is a tournament te
 
 <PartialServop service_name="leaderboard" operation_name="SYS_CREATE_LEADERBOARD_CONFIG" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardId | ID uniquely identifying the leaderboard configuration to retrieve.
+configJson | Configuration for the leaderboard, specified as JSON object.
+
 ## Usage
 
 ```mdx-code-block
@@ -163,11 +169,4 @@ var retVal = leaderboardProxy.sysCreateLeaderboardConfig(
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | ID uniquely identifying the leaderboard configuration to retrieve.
-configJson | Configuration for the leaderboard, specified as JSON object.
-
 

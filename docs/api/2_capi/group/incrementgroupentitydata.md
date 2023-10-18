@@ -4,6 +4,13 @@ Increment elements for a group entity's data field.
 
 <PartialServop service_name="group" operation_name="INCREMENT_GROUP_ENTITY_DATA" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | ID of the group
+entityId | ID of the entity.
+jsonData | Partial data map with incremental values.
+
 ## Usage
 
 ```mdx-code-block
@@ -172,12 +179,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | ID of the group
-entityId | ID of the entity.
-jsonData | Partial data map with incremental values.
-
 

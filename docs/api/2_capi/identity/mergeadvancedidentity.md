@@ -4,6 +4,13 @@ Merge the profile associated with the provided credentials with the current prof
 
 <PartialServop service_name="identity" operation_name="MERGE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+authenticationType | Universal, Universal, Facebook, etc
+ids | Auth IDs structure
+extraJson | Additional to piggyback along with the call, to be picked up by pre- or post- hooks. Leave empty string for no extraJson
+
 ## Usage
 
 ```mdx-code-block
@@ -142,12 +149,4 @@ var extraJson = {"key":"value"};
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-authenticationType | Universal, Universal, Facebook, etc
-ids | Auth IDs structure
-extraJson | Additional to piggyback along with the call, to be picked up by pre- or post- hooks. Leave empty string for no extraJson
-
 

@@ -4,6 +4,11 @@ Retrieve the full product meta-data for the specified product.
 
 <PartialServop service_name="productManagement" operation_name="SYS_READ_PRODUCT" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+itemId | The item id being requested.
+
 ## Usage
 
 ```mdx-code-block
@@ -153,10 +158,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-itemId | The item id being requested.
-
 

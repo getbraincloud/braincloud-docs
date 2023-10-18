@@ -6,6 +6,14 @@ This method is affected by versioning. See the [versioning documentation](/api/a
 
 <PartialServop service_name="group" operation_name="UPDATE_GROUP_ENTITY_DATA" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | ID of the group
+entityId | The id of the entity to update
+version | Version to verify
+jsonData | Data to apply
+
 ## Usage
 
 ```mdx-code-block
@@ -161,13 +169,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | ID of the group
-entityId | The id of the entity to update
-version | Version to verify
-jsonData | Data to apply
-
 

@@ -4,6 +4,12 @@ Method to retrieve previous or next pages after having called the GetSystemEntit
 
 <PartialServop service_name="globalEntity" operation_name="GET_SYSTEM_ENTITY_PAGE_BY_OFFSET" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+context | The context string returned from the server from a previous call to GetPage or GetPageOffset. 
+pageOffset | The positive or negative page offset to fetch. Uses the last page retrieved using the context string to determine a starting point. 
+
 ## Usage
 
 ```mdx-code-block
@@ -127,11 +133,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-context | The context string returned from the server from a previous call to GetPage or GetPageOffset. 
-pageOffset | The positive or negative page offset to fetch. Uses the last page retrieved using the context string to determine a starting point. 
-
 

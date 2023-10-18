@@ -13,6 +13,13 @@ Valid platforms are:
 
 <PartialServop service_name="product" operation_name="GET_INVENTORY" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+platform | The store platform.
+userCurrency | The currency to retrieve the sales inventory for. This is only used for Steam and Facebook stores.
+category | The product category
+
 ## Usage
 
 ```mdx-code-block
@@ -186,12 +193,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-platform | The store platform.
-userCurrency | The currency to retrieve the sales inventory for. This is only used for Steam and Facebook stores.
-category | The product category
-
 

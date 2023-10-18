@@ -6,6 +6,12 @@ Attach a Steam (steam ID + steam session ticket) identity to the current profile
 
 <PartialServop service_name="identity" operation_name="ATTACH" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+steamId | String representation of 64 bit steam id
+sessionTicket | The player's session ticket (hex encoded)
+
 ## Usage
 
 ```mdx-code-block
@@ -113,12 +119,5 @@ Code | Name | Description
 40212 | MERGE_PROFILES | Returned when trying to attach an identity type that would result in two profiles being merged into one (for instance an anonymous account and a Steam account).
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-steamId | String representation of 64 bit steam id
-sessionTicket | The player's session ticket (hex encoded)
 
 

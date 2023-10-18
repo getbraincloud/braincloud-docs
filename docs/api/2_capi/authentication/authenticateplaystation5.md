@@ -10,6 +10,13 @@ Make sure you've initialized the <%= data.branding.productName %> library before
 
 <PartialServop service_name="authenticationV2" operation_name="AUTHENTICATE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+accountId | The Playstation5 ID of the user
+authToken | The validated token from the Playstation5 SDK
+forceCreate | Should a new profile be created for this user if the account does not exist?
+
 ## Usage
 
 ```mdx-code-block
@@ -163,13 +170,5 @@ Code | Name | Description
 40307 | TOKEN_DOES_NOT_MATCH_USER | The user credentials are invalid (i.e. bad PlaystationNetwork id / token). May also indicate that PlaystationNetwork integration is not properly configured.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-accountId | The Playstation5 ID of the user
-authToken | The validated token from the Playstation5 SDK
-forceCreate | Should a new profile be created for this user if the account does not exist?
 
 

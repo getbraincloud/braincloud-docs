@@ -4,6 +4,12 @@ Update a group's name.
 
 <PartialServop service_name="group" operation_name="UPDATE_GROUP_NAME" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | ID of the group
+name | Name to apply
+
 ## Usage
 
 ```mdx-code-block
@@ -143,11 +149,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | ID of the group
-name | Name to apply
-
 

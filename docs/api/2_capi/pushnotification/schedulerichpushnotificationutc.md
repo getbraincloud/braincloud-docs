@@ -4,6 +4,14 @@ Schedules a rich push notification to a user at a future absolute time.
 
 <PartialServop service_name="pushNotification" operation_name="SCHEDULE_RICH_NOTIFICATION" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+profileId | Identifies the user to send to
+notificationTemplateId | Id of the notification template
+substitutions | JSON defining the substitution params to use with the template
+startTime | Time to send notification (UTC)
+
 ## Usage
 
 ```mdx-code-block
@@ -157,13 +165,4 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | Identifies the user to send to
-notificationTemplateId | Id of the notification template
-substitutions | JSON defining the substitution params to use with the template
-startTime | Time to send notification (UTC)
-
 

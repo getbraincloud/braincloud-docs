@@ -8,6 +8,11 @@ Terminates the presence of 'profileId'.
 
 <PartialServop service_name="presence" operation_name="SYS_TERMINATE_PRESENCE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+profileId | Target profile ID.
+
 ## Usage
 
 ```mdx-code-block
@@ -102,10 +107,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | Target profile ID.
-
 

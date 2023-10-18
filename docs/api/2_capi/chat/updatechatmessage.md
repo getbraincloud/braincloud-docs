@@ -6,6 +6,15 @@ Update the specified chat message. Message must have been from this user. Versio
 
 <PartialServop service_name="chat" operation_name="UPDATE_CHAT_MESSAGE" />
 
+## Method Parameters
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+channelId | The channel of the message
+msgId | The message id
+version | The version of the message. Pass it -1 to bypass version checking.
+contentJson | Replacement content for the message
+
 ## Usage
 
 ```mdx-code-block
@@ -188,15 +197,5 @@ Code | Name | Description
 40603 | CHAT_UNRECOGNIZED_CHANNEL | The specified channel is invalid
 
 </details>
-
-
-## Method Parameters
-#### Method Parameters
-Parameter | Description
---------- | -----------
-channelId | The channel of the message
-msgId | The message id
-version | The version of the message. Pass it -1 to bypass version checking.
-contentJson | Replacement content for the message
 
 

@@ -4,6 +4,13 @@ Enable/Disable a promotion. A convenience API for easily toggling a promotion on
 
 <PartialServop service_name="promotions" operation_name="SYS_ENABLE_PROMOTION" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+promotionId | ID uniquely identifying the promotion to update. Note: If promotionId is included in the promotionJson, it is ignored. The promotionId provided as a direct parameter takes priority.
+version | Version of the promotion to update. Can bypass version check by passing in -1.
+enabled | Flag true to enable promotion, false to disable promotion.
+
 ## Usage
 
 ```mdx-code-block
@@ -130,12 +137,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-promotionId | ID uniquely identifying the promotion to update. Note: If promotionId is included in the promotionJson, it is ignored. The promotionId provided as a direct parameter takes priority.
-version | Version of the promotion to update. Can bypass version check by passing in -1.
-enabled | Flag true to enable promotion, false to disable promotion.
-
 

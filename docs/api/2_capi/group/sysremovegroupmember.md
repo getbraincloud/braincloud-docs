@@ -5,6 +5,12 @@ Remove a member from the group, bypassing group ownership/ACL checks.
 
 <PartialServop service_name="group" operation_name="SYS_REMOVE_GROUP_MEMBER" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | The id of the group.
+profileId | The profile id of the user being removed from the group.
+
 ## Usage
 
 ```mdx-code-block
@@ -112,12 +118,5 @@ Code | Name | Description
 40455 | APP_ERROR | Cannot delete group owner.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | The id of the group.
-profileId | The profile id of the user being removed from the group.
 
 

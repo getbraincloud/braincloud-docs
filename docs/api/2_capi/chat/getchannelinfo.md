@@ -6,6 +6,11 @@ Returns *description info* and *activity stats* for the specified channel. Note 
 
 <PartialServop service_name="chat" operation_name="GET_CHANNEL_INFO" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+channelId | The id of the channel
+
 ## Usage
 
 ```mdx-code-block
@@ -160,11 +165,5 @@ Code | Name | Description
 40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-channelId | The id of the channel
 
 

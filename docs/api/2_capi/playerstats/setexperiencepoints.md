@@ -4,6 +4,11 @@ Sets the user's experience to an absolute value. Note that this is simply a set 
 
 <PartialServop service_name="playerStatistics" operation_name="SET_XPPOINTS" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+xpValue | The amount to set the the user's experience to
+
 ## Usage
 
 ```mdx-code-block
@@ -135,10 +140,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-xpValue | The amount to set the the user's experience to
-
 

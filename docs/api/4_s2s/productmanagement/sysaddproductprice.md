@@ -4,6 +4,13 @@ Adds a new price to the given product item.
 
 <PartialServop service_name="productManagement" operation_name="SYS_ADD_PRODUCT_PRICE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+itemId | The product item identifier.
+version | The product configuration version. 
+priceJson | The price details as JSON map.
+
 ## Usage
 
 ```mdx-code-block
@@ -223,12 +230,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-itemId | The product item identifier.
-version | The product configuration version. 
-priceJson | The price details as JSON map.
-
 

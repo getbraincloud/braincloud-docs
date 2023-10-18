@@ -4,6 +4,12 @@ Deletes the tournament template identified by the tournament code.
 
 <PartialServop service_name="tournament" operation_name="SYS_DELETE_TOURNAMENT_TEMPLATE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+tournamentCode | The tournament code uniquely identifying the tournament template to be deleted.
+versionId | Version of the tournament, use -1 for the latest version.
+
 ## Usage
 
 ```mdx-code-block
@@ -99,11 +105,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-tournamentCode | The tournament code uniquely identifying the tournament template to be deleted.
-versionId | Version of the tournament, use -1 for the latest version.
-
 

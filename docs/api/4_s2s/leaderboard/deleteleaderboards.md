@@ -22,6 +22,11 @@ Deletes the specified leaderboards from <%= data.branding.productName %> server.
 
 <PartialServop service_name="leaderboard" operation_name="DELETE_LEADERBOARDS" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardIds | A collection of leaderboards to delete. 
+
 ## Usage
 
 ```mdx-code-block
@@ -130,10 +135,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardIds | A collection of leaderboards to delete. 
-
 

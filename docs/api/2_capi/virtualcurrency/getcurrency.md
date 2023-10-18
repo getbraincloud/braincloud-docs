@@ -4,6 +4,11 @@ Gets the player's currency for the given currency type **or** all currency types
 
 <PartialServop service_name="virtualCurrency" operation_name="GET_PLAYER_VC" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+vcId | The currency type to retrieve or null if all currency types are being requested. 
+
 ## Usage
 
 ```mdx-code-block
@@ -163,10 +168,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-vcId | The currency type to retrieve or null if all currency types are being requested. 
-
 

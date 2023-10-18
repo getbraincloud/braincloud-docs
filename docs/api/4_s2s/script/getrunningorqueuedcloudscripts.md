@@ -4,6 +4,11 @@ Retrieves scripts currently running or queued.
 
 <PartialServop service_name="script" operation_name="GET_RUNNING_OR_QUEUED_CLOUD_SCRIPTS" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+n/a | No parameters.
+
 ## Usage
 
 ```mdx-code-block
@@ -155,10 +160,4 @@ if ((result.status == 200) && (result.data !== null)) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-n/a | No parameters.
-
 

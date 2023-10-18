@@ -4,6 +4,14 @@ Method creates a new entity on the server.
 
 <PartialServop service_name="globalEntity" operation_name="CREATE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityType | The entity type as defined by the user
+timeToLive | Sets expiry time for entity in milliseconds if > 0
+jsonEntityAcl | The entity's [Access Control List](/api/appendix/acl) as object. A null ACL implies default permissions which make the entity readable/writeable by only the user.
+jsonEntityData | The entity's data object
+
 ## Usage
 
 ```mdx-code-block
@@ -184,13 +192,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityType | The entity type as defined by the user
-timeToLive | Sets expiry time for entity in milliseconds if > 0
-jsonEntityAcl | The entity's [Access Control List](/api/appendix/acl) as object. A null ACL implies default permissions which make the entity readable/writeable by only the user.
-jsonEntityData | The entity's data object
-
 

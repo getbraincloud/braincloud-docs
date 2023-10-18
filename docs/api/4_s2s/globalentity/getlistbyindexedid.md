@@ -4,6 +4,12 @@ Get a list of entities from the server base on indexed id.
 
 <PartialServop service_name="globalEntity" operation_name="GET_LIST_BY_INDEXED_ID" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityIndexedId | The entity indexed Id. 
+maxReturn | The maximum number of entities to return. 
+
 ## Usage
 
 ```mdx-code-block
@@ -89,11 +95,4 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityIndexedId | The entity indexed Id. 
-maxReturn | The maximum number of entities to return. 
-
 

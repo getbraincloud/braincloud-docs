@@ -4,6 +4,11 @@ Retrieves the meta-data for the specified quest.
 
 <PartialServop service_name="gamification" operation_name="SYS_READ_QUEST" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+questId | The id of the quest to read
+
 ## Usage
 
 ```mdx-code-block
@@ -113,10 +118,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-questId | The id of the quest to read
-
 

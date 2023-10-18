@@ -4,6 +4,11 @@ Retrieves scripts scheduled to run up to and including the specified start time 
 
 <PartialServop service_name="script" operation_name="GET_SCHEDULED_CLOUD_SCRIPTS" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+startDateUTC | If scheduling at a set time. The start date in UTC in Unix millis timestamp format. 
+
 ## Usage
 
 ```mdx-code-block
@@ -87,10 +92,4 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-startDateUTC | If scheduling at a set time. The start date in UTC in Unix millis timestamp format. 
-
 

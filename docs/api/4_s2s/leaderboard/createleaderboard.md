@@ -27,6 +27,17 @@ Creates a leaderboard under the context of the current game. You can optionally 
 
 <PartialServop service_name="leaderboard" operation_name="CREATE_LEADERBOARD" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardId | A leaderboard id. 
+leaderboardType | The leaderboard type. 
+rotationType | Type of rotation. 
+rotationResetTime | Date to start the rotation (Date is in millis.) 
+retainedCount | How many previous rotations to keep. 
+numDaysToRotate | How many previous rotations to keep. 
+data | Optional user-defined data to post with the score. 
+
 ## Usage
 
 ```mdx-code-block
@@ -164,16 +175,4 @@ var retVal = leaderboardProxy.createLeaderboard(
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | A leaderboard id. 
-leaderboardType | The leaderboard type. 
-rotationType | Type of rotation. 
-rotationResetTime | Date to start the rotation (Date is in millis.) 
-retainedCount | How many previous rotations to keep. 
-numDaysToRotate | How many previous rotations to keep. 
-data | Optional user-defined data to post with the score. 
-
 

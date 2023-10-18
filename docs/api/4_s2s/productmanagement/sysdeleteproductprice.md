@@ -4,6 +4,13 @@ Deletes a price for the given product item. If the priceId being deleted is the 
 
 <PartialServop service_name="productManagement" operation_name="SYS_DELETE_PRODUCT_PRICE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+itemId | The product item identifier.
+version | The product configuration version. The version being validated. Pass -1 to bypass version checking.
+priceId | The priceId being deleted.
+
 ## Usage
 
 ```mdx-code-block
@@ -194,12 +201,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-itemId | The product item identifier.
-version | The product configuration version. The version being validated. Pass -1 to bypass version checking.
-priceId | The priceId being deleted.
-
 

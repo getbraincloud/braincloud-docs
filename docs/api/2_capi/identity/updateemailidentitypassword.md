@@ -4,6 +4,12 @@ Updates the password associated with the user's email identity.
 
 <PartialServop service_name="identity" operation_name="UPDATE_EMAIL_IDENTITY_PASSWORD" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+oldPassword | The current password associated with the user's email identity.
+newPassword | The new password to associate with the user's email identity.
+
 ## Usage
 
 ```mdx-code-block
@@ -101,11 +107,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-oldPassword | The current password associated with the user's email identity.
-newPassword | The new password to associate with the user's email identity.
-
 

@@ -56,6 +56,15 @@ An example taskJson object:
 
 <PartialServop service_name="gamification" operation_name="SYS_ADD_QUEST_TASK" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+questId | The quest to add to
+version | The current revision of the quest
+taskJson | The data defining the task
+beforeTaskId | The id of the task to insert before. Pass in null to add to end
+ 
+
 ## Usage
 
 ```mdx-code-block
@@ -215,14 +224,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-questId | The quest to add to
-version | The current revision of the quest
-taskJson | The data defining the task
-beforeTaskId | The id of the task to insert before. Pass in null to add to end
- 
-
 

@@ -15,6 +15,13 @@ Constants like the Okta domain and audience are best stored as global properties
 
 <PartialServop service_name="identity" operation_name="VERIFY_OKTA_JWT" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+domain | Okta domain (also known as the *Okta Issuer URI*)
+audience | JWT audience (also known as *Okta Client ID*)
+jwtString | JWT string (passed in as `data.authenticationToken` to the script)
+
 ## Usage
 
 ```mdx-code-block
@@ -149,12 +156,4 @@ hasPermission;
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-domain | Okta domain (also known as the *Okta Issuer URI*)
-audience | JWT audience (also known as *Okta Client ID*)
-jwtString | JWT string (passed in as `data.authenticationToken` to the script)
-
 

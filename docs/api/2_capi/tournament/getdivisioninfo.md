@@ -6,6 +6,11 @@ Provides information about the division - schedule, entry fees, prizes - as well
 
 <PartialServop service_name="tournament" operation_name="GET_DIVISION_INFO" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+divSetId | Division set id
+
 ## Usage
 
 ```mdx-code-block
@@ -208,10 +213,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-divSetId | Division set id
-
 

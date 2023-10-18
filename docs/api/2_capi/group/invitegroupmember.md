@@ -4,6 +4,14 @@ Invite a user to the group.
 
 <PartialServop service_name="group" operation_name="INVITE_MEMBER_TO_GROUP" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | ID of the group
+profileId | Profile ID of the member being added
+role | Role of the member being added
+jsonAttributes | Attributes of the member being added
+
 ## Usage
 
 ```mdx-code-block
@@ -155,13 +163,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | ID of the group
-profileId | Profile ID of the member being added
-role | Role of the member being added
-jsonAttributes | Attributes of the member being added
-
 

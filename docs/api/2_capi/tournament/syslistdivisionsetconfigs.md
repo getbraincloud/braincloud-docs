@@ -4,6 +4,11 @@ Lists all division set configurations for the app.
 
 <PartialServop service_name="tournament" operation_name="SYS_LIST_DIVISION_SET_CONFIGS" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+optionsJson | Optional JSON to sort the list of division set configs. Valid values for sort field are \ASCENDING\ or \DESCENDING\. Unsorted if not specified.
+
 ## Usage
 
 ```mdx-code-block
@@ -129,10 +134,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-optionsJson | Optional JSON to sort the list of division set configs. Valid values for sort field are \ASCENDING\ or \DESCENDING\. Unsorted if not specified.
-
 

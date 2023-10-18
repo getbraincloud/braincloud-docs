@@ -4,6 +4,12 @@ Switches to a child profile of an app when only one profile exists. If multiple 
 
 <PartialServop service_name="identity" operation_name="SWITCH_TO_CHILD_PROFILE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+childAppId | The App ID of the child app to switch to
+forceCreate | Should a new profile be created if it does not exist?
+
 ## Usage
 
 ```mdx-code-block
@@ -160,11 +166,4 @@ var retVal = identityProxy.switchToSingletonChildProfile(childAppId, forceCreate
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-childAppId | The App ID of the child app to switch to
-forceCreate | Should a new profile be created if it does not exist?
-
 

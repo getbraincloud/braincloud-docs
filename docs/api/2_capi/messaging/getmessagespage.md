@@ -57,6 +57,11 @@ This context searches for all messages sent to/from the specified profile, sorts
 
 <PartialServop service_name="messaging" operation_name="GET_MESSAGES_PAGE" />
 
+## Method Parameters
+Parameter | Description                         
+--------- | ------------------------------------ 
+context | A context object that controls the searchCriteria, pagination and sorting of the results to be returned.
+
 ## Usage
 
 ```mdx-code-block
@@ -302,11 +307,5 @@ Code | Name | Description
 | 40601 | FEATURE_NOT_ENABLED | Messaging feature is not enabled for app.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description                         
---------- | ------------------------------------ 
-context | A context object that controls the searchCriteria, pagination and sorting of the results to be returned.
 
 

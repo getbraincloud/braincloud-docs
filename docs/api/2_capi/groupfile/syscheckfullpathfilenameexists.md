@@ -4,6 +4,12 @@ Check if filename exists for provided full path name.
 
 <PartialServop service_name="groupFile" operation_name="SYS_CHECK_FULLPATH_FILENAME_EXISTS" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | The id of the group.
+fullPathFilename | The full file name with path.
+
 ## Usage
 
 ```mdx-code-block
@@ -118,11 +124,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | The id of the group.
-fullPathFilename | The full file name with path.
-
 

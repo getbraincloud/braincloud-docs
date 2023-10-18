@@ -8,6 +8,14 @@ Creates or updates the presence of `profileId`. `visible` is optional (defaults 
 
 <PartialServop service_name="presence" operation_name="SYS_INITIALIZE_PRESENCE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+profileId | Target profile ID.
+visible | Should user appear in presence? True by default.
+activity | Presence activity record json.
+expirySecs | Time before this activity record expires.
+
 ## Usage
 
 ```mdx-code-block
@@ -108,13 +116,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | Target profile ID.
-visible | Should user appear in presence? True by default.
-activity | Presence activity record json.
-expirySecs | Time before this activity record expires.
-
 

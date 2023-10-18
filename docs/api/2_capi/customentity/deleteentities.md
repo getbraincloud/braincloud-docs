@@ -4,6 +4,12 @@ Deletes all applicable custom entities from the server based on the custom entit
 
 <PartialServop service_name="customEntity" operation_name="DELETE_ENTITIES" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityType | The type of custom entity being deleted. 
+deleteCriteria | The delete criteria to be applied. 
+
 ## Usage
 
 ```mdx-code-block
@@ -156,11 +162,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityType | The type of custom entity being deleted. 
-deleteCriteria | The delete criteria to be applied. 
-
 

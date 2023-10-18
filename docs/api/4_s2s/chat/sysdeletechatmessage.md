@@ -6,6 +6,13 @@ Returns the number of messages that were deleted. Since the history rolls over, 
 
 <PartialServop service_name="chat" operation_name="SYS_DELETE_CHAT_MESSAGE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+channelId | The channel id of the message. 
+msgId | The id of the message to delete. 
+version | The version of the message. Pass it -1 to bypass version checking. 
+
 ## Usage
 
 ```mdx-code-block
@@ -118,13 +125,5 @@ Code | Name | Description
 40616 | CLOUD_CODE_ONLY | Method only available via cloud code
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-channelId | The channel id of the message. 
-msgId | The id of the message to delete. 
-version | The version of the message. Pass it -1 to bypass version checking. 
 
 

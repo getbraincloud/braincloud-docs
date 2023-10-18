@@ -6,6 +6,13 @@ Attach the user's Twitter credentials to the current profile.
 
 <PartialServop service_name="identity" operation_name="ATTACH" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+twitterId | String representation of a Twitter user ID
+authenticationToken | The authentication token derived via the Twitter API
+secret | The secret given when attempting to link with Twitter
+
 ## Usage
 
 ```mdx-code-block
@@ -121,13 +128,5 @@ Code | Name | Description
 40212 | MERGE_PROFILES | Returned when trying to attach an identity type that would result in two profiles being merged into one (for instance an anonymous account and a Twitter account).
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-twitterId | String representation of a Twitter user ID
-authenticationToken | The authentication token derived via the Twitter API
-secret | The secret given when attempting to link with Twitter
 
 

@@ -15,6 +15,13 @@ Fields available for use in the 'where' clause are:
 
 <PartialServop service_name="globalEntity" operation_name="GET_LIST" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+where | Mongo style query string
+orderBy | Specifies the order in which the query returns matching documents. The sort parameter consists of a field followed by an ascending(1)/descending flag(-1). eg. `{ "name" : 1}` sorts by name in ascending order
+maxReturn | The maximum number of entities to return
+
 ## Usage
 
 ```mdx-code-block
@@ -197,12 +204,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-where | Mongo style query string
-orderBy | Specifies the order in which the query returns matching documents. The sort parameter consists of a field followed by an ascending(1)/descending flag(-1). eg. `{ "name" : 1}` sorts by name in ascending order
-maxReturn | The maximum number of entities to return
-
 

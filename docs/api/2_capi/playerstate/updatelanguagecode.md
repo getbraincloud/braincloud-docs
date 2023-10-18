@@ -4,6 +4,11 @@ Update user's language code preference on their profile.
 
 <PartialServop service_name="playerState" operation_name="UPDATE_LANGUAGE_CODE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+languageCode | A string-based language code
+
 ## Usage
 
 ```mdx-code-block
@@ -137,10 +142,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-languageCode | A string-based language code
-
 

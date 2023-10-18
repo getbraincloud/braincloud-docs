@@ -12,6 +12,13 @@ response | Includes evId of sent event
 
 <PartialServop service_name="event" operation_name="SEND" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+toId | Profile Id of user to send event to. 
+eventType | User-defined event type (optional.) 
+eventData | User defined event data encoded in JSON. 
+
 ## Usage
 
 ```mdx-code-block
@@ -123,12 +130,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-toId | Profile Id of user to send event to. 
-eventType | User-defined event type (optional.) 
-eventData | User defined event data encoded in JSON. 
-
 

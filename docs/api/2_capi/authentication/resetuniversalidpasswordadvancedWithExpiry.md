@@ -4,6 +4,13 @@ Advanced universalId password reset using templates. Allows the developer to spe
 
 <PartialServop service_name="authenticationV2" operation_name="RESET_UNIVERSAL_ID_PASSWORD_ADVANCED_WITH_EXPIRY" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+universalId | The universalId to send the reset email to.
+serviceParams | Set of parameters dependant on the mail service configured.
+tokenTtlInMinutes | The time-to-live for the password reset url, in minutes.
+
 ## Usage
 
 ```mdx-code-block
@@ -141,12 +148,4 @@ var resetUrlTTLMinutes = 1440;
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-universalId | The universalId to send the reset email to.
-serviceParams | Set of parameters dependant on the mail service configured.
-tokenTtlInMinutes | The time-to-live for the password reset url, in minutes.
-
 

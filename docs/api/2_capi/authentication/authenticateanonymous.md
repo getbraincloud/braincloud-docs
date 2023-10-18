@@ -74,6 +74,11 @@ You can set the profile and anonymous IDs directly using <a href="#capi-client-i
 
 <PartialServop service_name="authenticationV2" operation_name="AUTHENTICATE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+forceCreate | If set to true, create a new profile if anonymous ID not found. If set to false and anonymous ID does not exist on the server, return an error.
+
 ## Usage
 
 ```mdx-code-block
@@ -261,11 +266,5 @@ Code | Name | Description
 40358 | MISSING_REQUIRED_PARAMETER | The provided anonymous ID cannot be null
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-forceCreate | If set to true, create a new profile if anonymous ID not found. If set to false and anonymous ID does not exist on the server, return an error.
 
 

@@ -4,6 +4,11 @@ Method returns version information about the global leaderboard and some configu
 
 <PartialServop service_name="leaderboard" operation_name="GET_GLOBAL_LEADERBOARD_VERSIONS" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardId | The id of the leaderboard
+
 ## Usage
 
 ```mdx-code-block
@@ -151,10 +156,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | The id of the leaderboard
-
 

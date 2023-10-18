@@ -4,6 +4,12 @@ Get tournament status associated with a leaderboard.
 
 <PartialServop service_name="tournament" operation_name="GET_TOURNAMENT_STATUS" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardId | The leaderboard for the tournament
+versionId | Version of the tournament, use -1 for the latest version
+
 ## Usage
 
 ```mdx-code-block
@@ -190,11 +196,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | The leaderboard for the tournament
-versionId | Version of the tournament, use -1 for the latest version
-
 

@@ -6,6 +6,16 @@ Use [PingRegions](/api/capi/lobby/pingregions) to generate the ping data.
 
 <PartialServop service_name="lobby" operation_name="JOIN_LOBBY_WITH_PING_DATA" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+lobbyId | The lobby instance to join. 
+otherUserCxIds | Array of other users (i.e. party members) to add to the lobby as well. The call will fail if all users can't be added. 
+isReady | Initial ready-status of this user. 
+extraJson | Initial extra-data about this user. 
+teamCode | Preferred team for this user, if applicable. Send `""` or `null` for automatic assignment. 
+pingData | Ping times for each region available for this lobby type. Can use GET_REGIONS_FOR_LOBBIES to retreive the list of regions for a given lobby type. Ping data is automatically passed in on the clients.
+
 ## Usage
 
 ```mdx-code-block
@@ -168,15 +178,4 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-lobbyId | The lobby instance to join. 
-otherUserCxIds | Array of other users (i.e. party members) to add to the lobby as well. The call will fail if all users can't be added. 
-isReady | Initial ready-status of this user. 
-extraJson | Initial extra-data about this user. 
-teamCode | Preferred team for this user, if applicable. Send `""` or `null` for automatic assignment. 
-pingData | Ping times for each region available for this lobby type. Can use GET_REGIONS_FOR_LOBBIES to retreive the list of regions for a given lobby type. Ping data is automatically passed in on the clients.
-
 

@@ -6,6 +6,18 @@ This API can be called silently by the app - or can be sent after presenting an 
 
 <PartialServop service_name="dataStream" operation_name="SEND_CRASH_REPORT" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+crashType | Identifies the crash category. Developer-defined, can be anything. 
+errorMsg | Short message describing the crash.
+crashJson | Exception data.
+crashLog | Client log up until the crash (if available.)
+userName | Name provided by the user (if provided.)
+userEmail | Email address to respond to (if provided.)
+userNotes | Notes provided by the user (if provided.)
+userSubmitted | User submitted flag.
+
 ## Usage
 
 ```mdx-code-block
@@ -187,17 +199,4 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-crashType | Identifies the crash category. Developer-defined, can be anything. 
-errorMsg | Short message describing the crash.
-crashJson | Exception data.
-crashLog | Client log up until the crash (if available.)
-userName | Name provided by the user (if provided.)
-userEmail | Email address to respond to (if provided.)
-userNotes | Notes provided by the user (if provided.)
-userSubmitted | User submitted flag.
-
 

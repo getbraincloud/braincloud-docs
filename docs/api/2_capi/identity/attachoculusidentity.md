@@ -6,6 +6,12 @@ Attach the user's Oculus credentials to the current profile.
 
 <PartialServop service_name="identity" operation_name="ATTACH" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+userId | The Oculus id of the user
+nonce | The returned nonce from the Oculus Platform SDK
+
 ## Usage
 
 ```mdx-code-block
@@ -122,12 +128,5 @@ Code | Name | Description
 40212 | MERGE_PROFILES | Returned when trying to attach an identity type that would result in two profiles being merged into one (for instance an anonymous account and a Oculus account).
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-userId | The Oculus id of the user
-nonce | The returned nonce from the Oculus Platform SDK
 
 

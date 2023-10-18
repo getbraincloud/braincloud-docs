@@ -4,6 +4,11 @@ Method will award the achievements specified. On success, this will call AwardTh
 
 <PartialServop service_name="gamification" operation_name="AWARD_ACHIEVEMENTS" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+achievementIds | A list of achievement ids to award
+
 ## Usage
 
 ```mdx-code-block
@@ -141,10 +146,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-achievementIds | A list of achievement ids to award
-
 

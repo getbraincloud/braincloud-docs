@@ -4,6 +4,12 @@ Updates the collection option indicating whether custom collection data is to be
 
 <PartialServop service_name="customEntity" operation_name="SYS_UPDATE_COLLECTION_MIGRATE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityType | The name of the entity type collection
+migrate | true or false 
+
 ## Usage
 
 ```mdx-code-block
@@ -100,11 +106,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityType | The name of the entity type collection
-migrate | true or false 
-
 

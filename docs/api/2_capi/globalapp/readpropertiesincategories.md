@@ -4,6 +4,11 @@ Read all the global properties of the app that exist in any of the categories pr
 
 <PartialServop service_name="globalApp" operation_name="READ_PROPERTIES_IN_CATEGORIES" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+categories | List of categories to retrieve the global properties.
+
 ## Usage
 
 ```mdx-code-block
@@ -145,10 +150,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-categories | List of categories to retrieve the global properties.
-
 

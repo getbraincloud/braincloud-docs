@@ -4,6 +4,11 @@ Registers the Global Error callbacks.
 
 Useful for tracking and logging all errors.
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+failureCallback | The error callback handler.
+
 ## Usage
 
 ```mdx-code-block
@@ -91,10 +96,4 @@ errorCompletionBlock  = ^(NSString *serviceName, NSString *serviceOperation, NSI
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-failureCallback | The error callback handler.
-
 

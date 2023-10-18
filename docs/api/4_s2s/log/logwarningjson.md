@@ -4,6 +4,12 @@ Logs an App Warning message to the error log.
 
 <PartialServop service_name="log" operation_name="LOG_WARNING" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+errorMessage | The error message. 
+jsonContext | JSON formatted string that will display via the context icon click. 
+
 ## Usage
 
 ```mdx-code-block
@@ -104,11 +110,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-errorMessage | The error message. 
-jsonContext | JSON formatted string that will display via the context icon click. 
-
 

@@ -6,6 +6,12 @@ Detach the Google identity from this profile.
 
 <PartialServop service_name="identity" operation_name="DETACH" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+googleId | The google ID of the user
+continueAnon | Proceed even if the profile will revert to anonymous?
+
 ## Usage
 
 ```mdx-code-block
@@ -110,12 +116,5 @@ Code | Name | Description
 40210 | DOWNGRADING_TO_ANONYMOUS_ERROR | Occurs when detaching the last non-anonymous identity from an account with continueAnon set to false.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-googleId | The google ID of the user
-continueAnon | Proceed even if the profile will revert to anonymous?
 
 

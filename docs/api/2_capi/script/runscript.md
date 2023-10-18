@@ -14,6 +14,12 @@ Pro-tip: If a script path is not specified in scriptName field, it will default 
 
 <PartialServop service_name="script" operation_name="RUN" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+scriptName | The name of the script with its path to be run
+scriptData | Data to be sent to the script in JSON format
+
 ## Usage
 
 ```mdx-code-block
@@ -174,12 +180,5 @@ Code | Name | Description
 40363 | MISSING_SCRIPT | The script not found in specified folder.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-scriptName | The name of the script with its path to be run
-scriptData | Data to be sent to the script in JSON format
 
 

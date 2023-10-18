@@ -4,6 +4,12 @@ Cancel an outstanding invitation to the group.
 
 <PartialServop service_name="group" operation_name="CANCEL_GROUP_INVITATION" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | ID of the group
+profileId | Profile ID of user whos invitation is being deleted.
+
 ## Usage
 
 ```mdx-code-block
@@ -143,11 +149,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | ID of the group
-profileId | Profile ID of user whos invitation is being deleted.
-
 

@@ -4,6 +4,13 @@ Sends a notification to a "group" of user consisting of alert content and custom
 
 <PartialServop service_name="pushNotification" operation_name="SEND_NORMALIZED_TO_GROUP" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | Target group ID
+alertContentJson | Body and title of alert
+customDataJson | Optional custom data
+
 ## Usage
 
 ```mdx-code-block
@@ -168,12 +175,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | Target group ID
-alertContentJson | Body and title of alert
-customDataJson | Optional custom data
-
 

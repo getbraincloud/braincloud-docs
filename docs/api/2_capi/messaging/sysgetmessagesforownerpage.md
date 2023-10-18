@@ -7,6 +7,12 @@ Retrieves the page of messages, owned by specified ownerId, from the server base
 
 <PartialServop service_name="messaging" operation_name="SYS_GET_MESSAGES_FOR_OWNER_PAGE" />
 
+## Method Parameters
+Parameter | Description
+--------- | ------------------------------------
+ownerId | The profile ID of the owner
+context | The search and paging criteria
+
 ## Usage
 
 ```mdx-code-block
@@ -172,12 +178,5 @@ Code | Name | Description
 40601 | FEATURE_NOT_ENABLED | Messaging feature is not enabled for app.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | ------------------------------------
-ownerId | The profile ID of the owner
-context | The search and paging criteria
 
 

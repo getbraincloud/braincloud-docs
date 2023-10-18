@@ -4,6 +4,13 @@ Consumes currency in a peer.
 
 <PartialServop service_name="product" operation_name="CONSUME_PEER_VC" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+currencyType | Type of currency (Ex. ticket, tokens)
+amount | Currency amount to be consumed
+peer | Name of the peer
+
 ## Usage
 
 ```mdx-code-block
@@ -91,12 +98,4 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-currencyType | Type of currency (Ex. ticket, tokens)
-amount | Currency amount to be consumed
-peer | Name of the peer
-
 

@@ -4,6 +4,11 @@ Resets the specified milestones' statuses.
 
 <PartialServop service_name="gamification" operation_name="RESET_MILESTONES" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+milestones | A list of milestones to reset
+
 ## Usage
 
 ```mdx-code-block
@@ -92,10 +97,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-milestones | A list of milestones to reset
-
 

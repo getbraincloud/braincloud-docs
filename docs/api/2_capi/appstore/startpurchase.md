@@ -4,6 +4,12 @@ Initialize a two-part purchase transaction. Currently only used for Steam purcha
 
 <PartialServop service_name="appStore" operation_name="START_PURCHASE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+storeId | The store id. Currently only accepts "steam."
+purchaseData | Data for the purchase. language: ISO 639-1 language code. itemId: Items to purchase.
+
 ## Usage
 
 ```mdx-code-block
@@ -165,11 +171,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-storeId | The store id. Currently only accepts "steam."
-purchaseData | Data for the purchase. language: ISO 639-1 language code. itemId: Items to purchase.
-
 

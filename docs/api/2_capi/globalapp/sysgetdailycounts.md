@@ -4,6 +4,11 @@ Returns the daily analytics counts for the current app for the specified date.
 
 <PartialServop service_name="globalApp" operation_name="SYS_GET_DAILY_COUNTS" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+day | The day to retrieve the data for, in "yyyy-MM-dd" format. If empty, uses the current date.
+
 ## Usage
 
 ```mdx-code-block
@@ -310,10 +315,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-day | The day to retrieve the data for, in "yyyy-MM-dd" format. If empty, uses the current date.
-
 

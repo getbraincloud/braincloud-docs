@@ -6,6 +6,12 @@ This method is affected by versioning. See the [versioning documentation](/api/a
 
 <PartialServop service_name="group" operation_name="DELETE_GROUP" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | ID of the group
+version | The current group version
+
 ## Usage
 
 ```mdx-code-block
@@ -145,11 +151,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | ID of the group
-version | The current group version
-
 

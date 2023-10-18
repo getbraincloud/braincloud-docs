@@ -6,6 +6,12 @@ Deletes the local copies of messages from the user's mailbox.
 
 <PartialServop service_name="messaging" operation_name="DELETE_MESSAGES" />
 
+## Method Parameters
+Parameter | Description                          
+--------- | ------------------------------------ 
+msgbox | The msgbox that we are deleting messages from 
+msgIds | An array of ids of the messages to delete 
+
 ## Usage
 
 ```mdx-code-block
@@ -162,12 +168,5 @@ Code | Name | Description
 40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
 
 </details>
-
-
-## Method Parameters
-Parameter | Description                          
---------- | ------------------------------------ 
-msgbox | The msgbox that we are deleting messages from 
-msgIds | An array of ids of the messages to delete 
 
 

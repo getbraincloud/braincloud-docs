@@ -8,6 +8,12 @@ NOTE: If using the <%= data.branding.codeWrapper %>, once the merge is complete 
 
 <PartialServop service_name="identity" operation_name="MERGE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+steamId | String representation of 64 bit steam id
+sessionTicket | The player's session ticket (hex encoded)
+
 ## Usage
 
 ```mdx-code-block
@@ -116,12 +122,5 @@ Code | Name | Description
 40211 | DUPLICATE_IDENTITY_TYPE | Returned when trying to attach an identity type that already exists for that profile. For instance you can have only one Steam identity for a profile.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-steamId | String representation of 64 bit steam id
-sessionTicket | The player's session ticket (hex encoded)
 
 

@@ -4,6 +4,13 @@ Rename the specified folder.
 
 <PartialServop service_name="globalFileV3" operation_name="SYS_RENAME_FOLDER" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+treeId | The id of the folder to rename
+treeVersion | The current tree version
+updatedName | The updated name of the folder
+
 ## Usage
 
 ```mdx-code-block
@@ -156,12 +163,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-treeId | The id of the folder to rename
-treeVersion | The current tree version
-updatedName | The updated name of the folder
-
 

@@ -4,6 +4,17 @@ Copy a file.
 
 <PartialServop service_name="groupFile" operation_name="SYS_COPY_FILE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | The id of the group.
+fileId | The id of the file.
+version | The target version of the file.
+newTreeId | The id of the destination folder.
+treeVersion | The target version of the folder tree.
+newFilename | The optional new file name.
+overwriteIfPresent | Whether to allow overwrite of an existing file if present.
+
 ## Usage
 
 ```mdx-code-block
@@ -127,16 +138,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | The id of the group.
-fileId | The id of the file.
-version | The target version of the file.
-newTreeId | The id of the destination folder.
-treeVersion | The target version of the folder tree.
-newFilename | The optional new file name.
-overwriteIfPresent | Whether to allow overwrite of an existing file if present.
-
 

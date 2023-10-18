@@ -20,6 +20,11 @@ Registers a real-time (RTT) callback for Events. Allows the standard [<code>Send
 }
 ```
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+rttCallback | The RTT Event callback handler.
+
 ## Usage
 
 ```mdx-code-block
@@ -95,10 +100,4 @@ Coming soon!
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-rttCallback | The RTT Event callback handler.
-
 

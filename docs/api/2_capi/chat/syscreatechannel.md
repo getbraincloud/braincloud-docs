@@ -4,6 +4,12 @@ Initializes a dynamic chat channel. Returns the channelId. Channel type must be 
 
 <PartialServop service_name="chat" operation_name="SYS_CREATE_CHANNEL" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+channelType | The channel type - currently only 'dy' is supported. 
+channelSubId | An app-defined channel sub id. Only letters, numbers, dashes, and underscores are allowed. 
+
 ## Usage
 
 ```mdx-code-block
@@ -102,11 +108,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-channelType | The channel type - currently only 'dy' is supported. 
-channelSubId | An app-defined channel sub id. Only letters, numbers, dashes, and underscores are allowed. 
-
 

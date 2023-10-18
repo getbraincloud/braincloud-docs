@@ -4,6 +4,12 @@ Run a service script.
 
 <PartialServop service_name="script" operation_name="RUN" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+scriptName | The name of the script with its path to be run
+scriptData | Data to be sent to the script in JSON format
+
 ## Usage
 
 ```mdx-code-block
@@ -108,11 +114,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-scriptName | The name of the script with its path to be run
-scriptData | Data to be sent to the script in JSON format
-
 

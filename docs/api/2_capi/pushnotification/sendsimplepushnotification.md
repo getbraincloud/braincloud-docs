@@ -4,6 +4,12 @@ Sends a simple push notification based on the passed in message.
 
 <PartialServop service_name="pushNotification" operation_name="SEND_SIMPLE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+toProfileId | The profileId of the user to receive the notification.
+message | The content of the message.
+
 ## Usage
 
 ```mdx-code-block
@@ -142,11 +148,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-toProfileId | The profileId of the user to receive the notification.
-message | The content of the message.
-
 

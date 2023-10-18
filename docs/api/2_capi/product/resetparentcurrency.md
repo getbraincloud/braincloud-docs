@@ -4,6 +4,12 @@ Resets the player's parent currency back to zero.
 
 <PartialServop service_name="product" operation_name="RESET_PARENT_VC" />
 
+## Method Parameters
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+leveName | Name of the parent level.
+
 ## Usage
 
 ```mdx-code-block
@@ -98,11 +104,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-#### Method Parameters
-Parameter | Description
---------- | -----------
-leveName | Name of the parent level.
-
 

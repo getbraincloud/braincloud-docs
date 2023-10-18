@@ -6,6 +6,14 @@ tRank will always be zero in the response of this API call. The value generates 
 
 <PartialServop service_name="tournament" operation_name="POST_TOURNAMENT_SCORE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardId | The leaderboard for the tournament
+score | The score to post
+jsonData | Optional data attached to the leaderboard entry
+roundStartedTime | Time the user started the match resulting in the score being posted. (date in millis UTC)
+
 ## Usage
 
 ```mdx-code-block
@@ -178,13 +186,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | The leaderboard for the tournament
-score | The score to post
-jsonData | Optional data attached to the leaderboard entry
-roundStartedTime | Time the user started the match resulting in the score being posted. (date in millis UTC)
-
 

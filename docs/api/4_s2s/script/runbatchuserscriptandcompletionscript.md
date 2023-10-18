@@ -4,6 +4,13 @@ Runs a script against the users targetted by the provided segments or all player
 
 <PartialServop service_name="script" operation_name="RUN_BATCH_USER_SCRIPT" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+scriptName | The name of the script with its path to be run against *each user*
+scriptData | Data to be sent to the script in JSON format. 
+completionScript | The name of the script with its path to be run after all users have been processed.
+
 ## Usage
 
 ```mdx-code-block
@@ -110,12 +117,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-scriptName | The name of the script with its path to be run against *each user*
-scriptData | Data to be sent to the script in JSON format. 
-completionScript | The name of the script with its path to be run after all users have been processed.
-
 

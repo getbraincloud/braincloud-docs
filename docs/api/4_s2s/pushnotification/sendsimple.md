@@ -13,6 +13,12 @@ estimatedTargets | Estimate number of targeted users.
 
 <PartialServop service_name="pushNotification" operation_name="SEND_SIMPLE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+message | The content of the message. 
+segmentIdList | List of target segments. Omit to send to all users. 
+
 ## Usage
 
 ```mdx-code-block
@@ -122,11 +128,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-message | The content of the message. 
-segmentIdList | List of target segments. Omit to send to all users. 
-
 

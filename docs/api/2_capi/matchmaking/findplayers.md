@@ -4,6 +4,12 @@ Finds matchmaking enabled players.
 
 <PartialServop service_name="matchMaking" operation_name="FIND_PLAYERS" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+rangeDelta | How close an opponents rating must be to yours
+numMatches | The maximum number of matches to return
+
 ## Usage
 
 ```mdx-code-block
@@ -155,11 +161,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-rangeDelta | How close an opponents rating must be to yours
-numMatches | The maximum number of matches to return
-
 

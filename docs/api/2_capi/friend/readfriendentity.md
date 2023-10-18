@@ -4,6 +4,12 @@ Returns a particular entity of a particular friend.
 
 <PartialServop service_name="friend" operation_name="READ_FRIEND_ENTITY" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+friendId | Profile Id of friend who owns entity.
+entityId | Id of entity to retrieve.
+
 ## Usage
 
 ```mdx-code-block
@@ -156,11 +162,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-friendId | Profile Id of friend who owns entity.
-entityId | Id of entity to retrieve.
-
 

@@ -2,6 +2,11 @@
 
 Registers a callback for RTT Lobby updates.
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+rttCallback | The RTT Chat callback handler.
+
 ## Usage
 
 ```mdx-code-block
@@ -77,10 +82,4 @@ Coming soon!
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-rttCallback | The RTT Chat callback handler.
-
 

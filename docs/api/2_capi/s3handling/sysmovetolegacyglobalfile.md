@@ -4,6 +4,16 @@ Copies the specified User File to the *legacy* Global File system.
 
 <PartialServop service_name="globalFile" operation_name="SYS_MOVE_TO_LEGACY_GLOBAL_FILE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+userProfileId | ProfileId of the user to copy the file from
+userCloudPath | Directory of the file in User Files
+userCloudFilename | Filename of the user file
+shortName | The shortname to use for the file
+globalCloudFilename | Filename to use in global files
+overwriteIfPresent | Overwrite the file if it already exists?
+
 ## Usage
 
 ```mdx-code-block
@@ -132,15 +142,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-userProfileId | ProfileId of the user to copy the file from
-userCloudPath | Directory of the file in User Files
-userCloudFilename | Filename of the user file
-shortName | The shortname to use for the file
-globalCloudFilename | Filename to use in global files
-overwriteIfPresent | Overwrite the file if it already exists?
-
 

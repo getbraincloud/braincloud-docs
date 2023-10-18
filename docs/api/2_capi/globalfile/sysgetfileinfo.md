@@ -4,6 +4,11 @@ Returns information on the specified file.
 
 <PartialServop service_name="globalFileV3" operation_name="SYS_GET_FILE_INFO" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+fileId | File ID
+
 ## Usage
 
 ```mdx-code-block
@@ -110,10 +115,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-fileId | File ID
-
 

@@ -4,6 +4,15 @@ Creates a new Global File folder. Returns the updated directory tree and version
 
 <PartialServop service_name="globalFileV3" operation_name="SYS_CREATE_FOLDER" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+folderPath | Parent directory path. Can include additional directories in path to quickly build a nested structure.
+treeVersion | Current tree version
+name | Name of the new directory
+desc | Directory description; will be displayed in Design Portal UI (when available)
+createInterimDirectories | Allows for creating multiple levels of a tree at once
+
 ## Usage
 
 ```mdx-code-block
@@ -129,14 +138,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-folderPath | Parent directory path. Can include additional directories in path to quickly build a nested structure.
-treeVersion | Current tree version
-name | Name of the new directory
-desc | Directory description; will be displayed in Design Portal UI (when available)
-createInterimDirectories | Allows for creating multiple levels of a tree at once
-
 

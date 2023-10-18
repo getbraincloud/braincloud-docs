@@ -4,6 +4,11 @@ Remove user attributes.
 
 <PartialServop service_name="playerState" operation_name="REMOVE_ATTRIBUTES" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+attributeNames | Array of attribute names.
+
 ## Usage
 
 ```mdx-code-block
@@ -139,10 +144,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-attributeNames | Array of attribute names.
-
 

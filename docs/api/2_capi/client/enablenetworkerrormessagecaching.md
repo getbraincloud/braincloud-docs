@@ -18,6 +18,11 @@ This effectively freezes all communication with <%= data.branding.productName %>
 ResetCommunication() will also clear the message cache.
 :::
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+enabled | True if message should be cached on timeout
+
 ## Usage
 
 ```mdx-code-block
@@ -89,10 +94,4 @@ ResetCommunication() will also clear the message cache.
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-enabled | True if message should be cached on timeout
-
 

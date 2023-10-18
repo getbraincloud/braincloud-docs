@@ -6,6 +6,11 @@ Disconnects from the specified channel, unregistering the handler.
 
 <PartialServop service_name="chat" operation_name="CHANNEL_DISCONNECT" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+channelId | The id of the channel to connect to.
+
 ## Usage
 
 ```mdx-code-block
@@ -148,11 +153,5 @@ Code | Name | Description
 40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-channelId | The id of the channel to connect to.
 
 

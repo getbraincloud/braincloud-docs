@@ -10,6 +10,11 @@ Note this is unrelated to email authentication.
 
 <PartialServop service_name="playerState" operation_name="UPDATE_CONTACT_EMAIL" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+contactEmail | Updated email
+
 ## Usage
 
 ```mdx-code-block
@@ -142,10 +147,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-contactEmail | Updated email
-
 

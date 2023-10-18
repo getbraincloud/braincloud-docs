@@ -26,6 +26,12 @@ Note: Awarding 0 or negative currency will return an error. Use ConsumeCurrency 
 
 <PartialServop service_name="product" operation_name="AWARD_VC" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+currencyType | The currency type to award.
+amount | The amount of currency to award.
+
 ## Usage
 
 ```mdx-code-block
@@ -183,11 +189,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-currencyType | The currency type to award.
-amount | The amount of currency to award.
-
 

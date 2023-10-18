@@ -24,6 +24,15 @@ An example of this string would be:
 
 <PartialServop service_name="asyncMatch" operation_name="CREATE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+jsonOpponentIds | List of objects identifying the opponent platform and id for this match.
+jsonMatchState | JSON string blob provided by the caller
+pushNotificationMessage | Optional push notification message to send to the other party. Refer to the Push Notification functions for the syntax required.
+nextPlayer | Optionally, force the next player player to be a specific player
+jsonSummary | Optional JSON string defining what the other player will see as a summary of the game when listing their games
+
 ## Usage
 
 ```mdx-code-block
@@ -245,14 +254,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-jsonOpponentIds | List of objects identifying the opponent platform and id for this match.
-jsonMatchState | JSON string blob provided by the caller
-pushNotificationMessage | Optional push notification message to send to the other party. Refer to the Push Notification functions for the syntax required.
-nextPlayer | Optionally, force the next player player to be a specific player
-jsonSummary | Optional JSON string defining what the other player will see as a summary of the game when listing their games
-
 

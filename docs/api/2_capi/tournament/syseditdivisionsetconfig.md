@@ -4,6 +4,13 @@ Updates a division set configuration with specified changes
 
 <PartialServop service_name="tournament" operation_name="SYS_EDIT_DIVISION_SET_CONFIG" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+divSetId | The division set id uniquely identifying the division set configuration to be updated.
+version | Current version number of division set config to update. Use -1 to disable version checking.
+configJson | Configuration data defining the division set configuration changes, which may include changes to: description (desc), schedule type (scheduleType), id of template leaderboard (templateLeaderboardId), maximum number of players per division set instance (maxPlayers), and number of days after which division set instance results are to be expired (expireResultsAfterDays).
+
 ## Usage
 
 ```mdx-code-block
@@ -126,12 +133,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-divSetId | The division set id uniquely identifying the division set configuration to be updated.
-version | Current version number of division set config to update. Use -1 to disable version checking.
-configJson | Configuration data defining the division set configuration changes, which may include changes to: description (desc), schedule type (scheduleType), id of template leaderboard (templateLeaderboardId), maximum number of players per division set instance (maxPlayers), and number of days after which division set instance results are to be expired (expireResultsAfterDays).
-
 

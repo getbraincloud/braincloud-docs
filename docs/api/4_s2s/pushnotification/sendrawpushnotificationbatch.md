@@ -4,6 +4,14 @@ Sends a notification to a list of users consisting of raw message content.
 
 <PartialServop service_name="pushNotification" operation_name="SEND_RAW_BATCH" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+profileIds | Target list of users. 
+fcmContent | FCM dependent message content. 
+iosContent | IOS dependent message content. 
+facebookContent | Facebook dependent message content. 
+
 ## Usage
 
 ```mdx-code-block
@@ -157,13 +165,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-profileIds | Target list of users. 
-fcmContent | FCM dependent message content. 
-iosContent | IOS dependent message content. 
-facebookContent | Facebook dependent message content. 
-
 

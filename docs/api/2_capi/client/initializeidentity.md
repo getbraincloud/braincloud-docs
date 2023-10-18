@@ -9,6 +9,12 @@ Note that calling this is the same as calling [<code>Initialize</code>](/api/cap
 InitializeIdentity must be called before you can authenticate a user anonymously.
 :::
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+profileId | The profile id of the user
+anonymousId | The anonymous id of the user
+
 ## Usage
 
 ```mdx-code-block
@@ -80,11 +86,4 @@ InitializeIdentity must be called before you can authenticate a user anonymously
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | The profile id of the user
-anonymousId | The anonymous id of the user
-
 

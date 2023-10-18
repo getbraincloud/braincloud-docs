@@ -4,6 +4,12 @@ Registers the caller for RTT presence updates for the given `profileIds`. If `bi
 
 <PartialServop service_name="presence" operation_name="REGISTER_LISTENERS_FOR_PROFILES" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+profileIds | Array of target profile IDs.
+bidirectional | Should those profiles be mutually registered to listen to the current profile?
+
 ## Usage
 
 ```mdx-code-block
@@ -167,11 +173,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-profileIds | Array of target profile IDs.
-bidirectional | Should those profiles be mutually registered to listen to the current profile?
-
 

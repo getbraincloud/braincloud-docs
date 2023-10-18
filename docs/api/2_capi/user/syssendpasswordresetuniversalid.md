@@ -4,6 +4,11 @@ Reset users password.
 
 <PartialServop service_name="user" operation_name="SYS_SEND_PASSWORD_RESET_UNIVERSAL_ID" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+profileId | The universal Id of the target user to reset password
+
 ## Usage
 
 ```mdx-code-block
@@ -94,10 +99,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | The universal Id of the target user to reset password
-
 

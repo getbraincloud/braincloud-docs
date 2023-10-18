@@ -58,6 +58,13 @@ Make sure you've initialized the <%= data.branding.productName %> library before
 
 <PartialServop service_name="authenticationV2" operation_name="AUTHENTICATE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+email | The e-mail address of the user
+password | The password of the user
+forceCreate | Should a new profile be created for this user if the account does not exist?
+
 ## Usage
 
 ```mdx-code-block
@@ -254,13 +261,5 @@ Code | Name | Description
 550022 | INVALID_PASSWORD_CONTENT | The password doesn't meet the minimum password requirements.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-email | The e-mail address of the user
-password | The password of the user
-forceCreate | Should a new profile be created for this user if the account does not exist?
 
 

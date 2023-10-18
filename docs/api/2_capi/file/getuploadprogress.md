@@ -6,6 +6,11 @@ Returns the progress of the given upload from 0.0 to 1.0 or -1 if upload not fou
 This will always return 1 on Unity mobile platforms.
 :::
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+uploadId | The id of the upload
+
 ## Usage
 
 ```mdx-code-block
@@ -83,10 +88,4 @@ public double getUploadProgress(String uploadId)
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-uploadId | The id of the upload
-
 

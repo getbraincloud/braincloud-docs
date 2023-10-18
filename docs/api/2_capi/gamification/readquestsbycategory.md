@@ -4,6 +4,12 @@ Method returns quests for the given category.
 
 <PartialServop service_name="gamification" operation_name="READ_QUESTS_BY_CATEGORY" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+category | The quest category
+includeMetaData | Whether to return meta data as well
+
 ## Usage
 
 ```mdx-code-block
@@ -145,11 +151,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-category | The quest category
-includeMetaData | Whether to return meta data as well
-
 

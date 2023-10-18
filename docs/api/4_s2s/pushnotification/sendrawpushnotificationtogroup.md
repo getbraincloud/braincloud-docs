@@ -6,6 +6,15 @@ See the Portal documentation for more info.
 
 <PartialServop service_name="pushNotification" operation_name="SEND_RAW_TO_GROUP" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | The target group. 
+senderId | Optional id of sender. 
+fcmContent | FCM dependent message content. 
+iosContent | IOS dependent message content. 
+facebookContent | Facebook dependent message content. 
+
 ## Usage
 
 ```mdx-code-block
@@ -155,14 +164,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | The target group. 
-senderId | Optional id of sender. 
-fcmContent | FCM dependent message content. 
-iosContent | IOS dependent message content. 
-facebookContent | Facebook dependent message content. 
-
 

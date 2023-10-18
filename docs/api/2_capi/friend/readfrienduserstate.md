@@ -5,6 +5,11 @@ Read a friend's user state. If the specified Id is not a friend of the current u
 
 <PartialServop service_name="friend" operation_name="READ_FRIEND_PLAYER_STATE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+friendId | Profile Id of friend who owns entity.
+
 ## Usage
 
 ```mdx-code-block
@@ -185,11 +190,5 @@ Code | Name | Description
 40310 | NOT_FRIENDS  | The specified Id is not a friend of the current user
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-friendId | Profile Id of friend who owns entity.
 
 

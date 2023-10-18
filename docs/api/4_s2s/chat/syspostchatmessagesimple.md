@@ -8,6 +8,14 @@ Sends a potentially richer member chat message. By convention, content should co
 
 <PartialServop service_name="chat" operation_name="SYS_POST_CHAT_MESSAGE_SIMPLE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+channelId | The chat channel to post to. 
+text | A simple message. 
+recordInHistory | Should the message be recorded in history? Using 'false' is useful for sending non-conversational messages, like when users join a room, etc. 
+from | Details of the user posting the message. 
+
 ## Usage
 
 ```mdx-code-block
@@ -128,14 +136,5 @@ Code | Name | Description
 40616 | CLOUD_CODE_ONLY | Method only available via cloud code
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-channelId | The chat channel to post to. 
-text | A simple message. 
-recordInHistory | Should the message be recorded in history? Using 'false' is useful for sending non-conversational messages, like when users join a room, etc. 
-from | Details of the user posting the message. 
 
 

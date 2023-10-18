@@ -8,6 +8,12 @@ Retrieves identity data for given identity type for this profile.
 
 <PartialServop service_name="identity" operation_name="GET_IDENTITY_DATA" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+authenticationType | Type of authentication.
+externalAuthName | The name of the external authentication mechanism (optional, used for custom authentication types)
+
 ## Usage
 
 ```mdx-code-block
@@ -109,11 +115,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-authenticationType | Type of authentication.
-externalAuthName | The name of the external authentication mechanism (optional, used for custom authentication types)
-
 

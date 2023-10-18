@@ -4,6 +4,11 @@ Creates a new product with the specifed values.
 
 <PartialServop service_name="productManagement" operation_name="SYS_CREATE_PRODUCT" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+productJson | The product details.
+
 ## Usage
 
 ```mdx-code-block
@@ -166,10 +171,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-productJson | The product details.
-
 

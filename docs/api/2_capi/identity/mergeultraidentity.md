@@ -6,6 +6,12 @@ Merge the profile associated with the provided Ultra credentials with the curren
 
 <PartialServop service_name="identity" operation_name="MERGE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+ultraUsername | It's what the user uses to log into the Ultra endpoint initially
+ultraIdToken | The "id_token" taken from Ultra's JWT.
+
 ## Usage
 
 ```mdx-code-block
@@ -149,12 +155,5 @@ Code | Name | Description
 40211 | DUPLICATE_IDENTITY_TYPE | Returned when trying to attach an identity type that already exists for that profile. For instance you can have only one Twitter identity for a profile.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-ultraUsername | It's what the user uses to log into the Ultra endpoint initially
-ultraIdToken | The "id_token" taken from Ultra's JWT.
 
 

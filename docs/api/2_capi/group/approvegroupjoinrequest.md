@@ -20,6 +20,14 @@ Approve an outstanding request to join the group. Optional parameters: jsonAttri
 
 <PartialServop service_name="group" operation_name="APPROVE_GROUP_JOIN_REQUEST" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | ID of the group
+profileId | Profile ID of the member being added
+role | Role of the member being added
+jsonAttributes | Attributes of the member being added
+
 ## Usage
 
 ```mdx-code-block
@@ -171,13 +179,4 @@ var retVal = groupProxy.approveGroupJoinRequest(groupId, profileId, role, attrib
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | ID of the group
-profileId | Profile ID of the member being added
-role | Role of the member being added
-jsonAttributes | Attributes of the member being added
-
 

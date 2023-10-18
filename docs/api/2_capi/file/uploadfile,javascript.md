@@ -13,6 +13,13 @@ On a 200 http status, the JSON return is available from XMLHttpRequest.responseT
 
 <PartialServop service_name="file" operation_name="UPLOAD_FILE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+xhr | The XMLHttpRequest object that the <%= data.branding.productName %> client will use to upload the file
+file | The file object
+uploadId | The upload id obtained via prepareFileUpload()
+
 ## Usage
 
 ```mdx-code-block
@@ -133,13 +140,5 @@ var fileSize = file.size;
 The XMLHttpRequest object will return a 200 http status if the upload is successful.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-xhr | The XMLHttpRequest object that the <%= data.branding.productName %> client will use to upload the file
-file | The file object
-uploadId | The upload id obtained via prepareFileUpload()
 
 

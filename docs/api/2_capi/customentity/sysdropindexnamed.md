@@ -4,6 +4,13 @@ Drops the specified index from the identified custom entity collection.
 
 <PartialServop service_name="customEntity" operation_name="SYS_DROP_INDEX_NAMED" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityType | The entity type identifying the applicable custom entity collection.
+indexName | The name of the index to be dropped.
+indexKeysJson | The field index keys, as JSON object, identifying the index to be dropped. 
+
 ## Usage
 
 ```mdx-code-block
@@ -95,12 +102,4 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityType | The entity type identifying the applicable custom entity collection.
-indexName | The name of the index to be dropped.
-indexKeysJson | The field index keys, as JSON object, identifying the index to be dropped. 
-
 

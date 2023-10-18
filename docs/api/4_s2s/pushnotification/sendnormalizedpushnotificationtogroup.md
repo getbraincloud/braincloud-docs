@@ -6,6 +6,14 @@ See the Portal documentation for more info.
 
 <PartialServop service_name="pushNotification" operation_name="SEND_NORMALIZED_TO_GROUP" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | The target group. 
+senderId | Optional id of sender. 
+alertContent | Body and title of alert. 
+customData | Optional custom data. 
+
 ## Usage
 
 ```mdx-code-block
@@ -123,13 +131,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | The target group. 
-senderId | Optional id of sender. 
-alertContent | Body and title of alert. 
-customData | Optional custom data. 
-
 

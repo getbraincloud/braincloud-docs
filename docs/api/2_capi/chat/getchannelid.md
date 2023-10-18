@@ -7,6 +7,12 @@ Retrieves a channel id given the specified lookup parameters.
 
 <PartialServop service_name="chat" operation_name="GET_CHANNEL_ID" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+channelType | The channel type - ‘gl’ for global, ‘gr’ for groups, ‘dy’ for dynamic.
+channelSubId | The type-specific sub id
+
 ## Usage
 
 ```mdx-code-block
@@ -162,12 +168,5 @@ Code | Name | Description
 40603 | CHAT_UNRECOGNIZED_CHANNEL | The sub id for the channel type is not recognized
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-channelType | The channel type - ‘gl’ for global, ‘gr’ for groups, ‘dy’ for dynamic.
-channelSubId | The type-specific sub id
 
 

@@ -4,6 +4,11 @@ Method to get a specific entity.
 
 <PartialServop service_name="entity" operation_name="READ" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityId | The id of the entity
+
 ## Usage
 
 ```mdx-code-block
@@ -148,10 +153,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityId | The id of the entity
-
 

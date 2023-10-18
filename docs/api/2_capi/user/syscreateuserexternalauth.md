@@ -4,6 +4,15 @@ Manually creates a new user for the current app. Note that this API is normally 
 
 <PartialServop service_name="user" operation_name="SYS_CREATE_USER_EXTERNAL_AUTH" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+externalId | The email address of the user
+externalAuthType | The external auth type code
+username | The display or contact name of the user (stored in player state)
+contactEmail | The email address of the user
+notificationTemplateId | If specified, the user will be sent an email confirming that the account has been created
+
 ## Usage
 
 ```mdx-code-block
@@ -100,14 +109,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-externalId | The email address of the user
-externalAuthType | The external auth type code
-username | The display or contact name of the user (stored in player state)
-contactEmail | The email address of the user
-notificationTemplateId | If specified, the user will be sent an email confirming that the account has been created
-
 

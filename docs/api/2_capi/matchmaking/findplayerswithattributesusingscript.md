@@ -12,6 +12,16 @@ This call is cloud-code only.
 
 <PartialServop service_name="matchMaking" operation_name="FIND_PLAYERS_USING_SCRIPT" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+rangeDelta | How close an opponents rating must be to yours
+numMatches | The maximum number of matches to return
+jsonAttributes | Attributes match criteria
+playerRating | Player rating override
+scriptName | Name of filter script
+jsonExtraParms | Parameters to be passed to the filter
+
 ## Usage
 
 ```mdx-code-block
@@ -137,15 +147,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-rangeDelta | How close an opponents rating must be to yours
-numMatches | The maximum number of matches to return
-jsonAttributes | Attributes match criteria
-playerRating | Player rating override
-scriptName | Name of filter script
-jsonExtraParms | Parameters to be passed to the filter
-
 

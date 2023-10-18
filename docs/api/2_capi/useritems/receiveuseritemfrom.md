@@ -4,6 +4,12 @@ Retrieves and transfers the gift item from the specified player, who must have p
 
 <PartialServop service_name="userItems" operation_name="RECEIVE_USER_ITEM_FROM" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+profileId | The profile ID of the user who is giving the item. 
+itemId | The ID uniquely identifying the user item to be transferred. 
+
 ## Usage
 
 ```mdx-code-block
@@ -162,11 +168,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | The profile ID of the user who is giving the item. 
-itemId | The ID uniquely identifying the user item to be transferred. 
-
 

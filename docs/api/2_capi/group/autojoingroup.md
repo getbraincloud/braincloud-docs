@@ -11,6 +11,13 @@ AutoJoinStrategy is defined by enum or constant in most of the client libraries.
 
 <PartialServop service_name="group" operation_name="AUTO_JOIN_GROUP" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupTypeName | Name of the associated group type
+autoJoinStrategy | Selection strategy to employ when there are multiple matches
+dataQueryJson | Query parameters (optional)
+
 ## Usage
 
 ```mdx-code-block
@@ -188,12 +195,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupTypeName | Name of the associated group type
-autoJoinStrategy | Selection strategy to employ when there are multiple matches
-dataQueryJson | Query parameters (optional)
-
 

@@ -4,6 +4,13 @@ Reads multiple social leaderboards.
 
 <PartialServop service_name="leaderboard" operation_name="GET_MULTI_SOCIAL_LEADERBOARD" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardIds | Collection of leaderboard IDs
+leaderboardResultCount | Maximum count of entries to return for each leaderboard.
+replaceName | If true, the currently logged in player's name will be replaced by the string "You"
+
 ## Usage
 
 ```mdx-code-block
@@ -205,12 +212,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardIds | Collection of leaderboard IDs
-leaderboardResultCount | Maximum count of entries to return for each leaderboard.
-replaceName | If true, the currently logged in player's name will be replaced by the string "You"
-
 

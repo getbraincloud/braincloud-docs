@@ -10,6 +10,12 @@ Retrieves a chat message object from history. If the message cannot be found, th
 
 <PartialServop service_name="chat" operation_name="SYS_GET_CHAT_MESSAGE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+channelId | The channel of the message
+msgId | The message id
+
 ## Usage
 
 ```mdx-code-block
@@ -134,12 +140,5 @@ Code | Name | Description
 40616 | CLOUD_CODE_ONLY | Method only available via cloud code
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-channelId | The channel of the message
-msgId | The message id
 
 

@@ -4,6 +4,12 @@ Retrieves profile information for users whose universal ID starts with search te
 
 <PartialServop service_name="friend" operation_name="FIND_USERS_BY_UNIVERSAL_ID_STARTING_WITH" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+searchText | The substring to search for. Minimum length of 3 characters.
+maxResults | Maximum number of results to return. If there are more the message.
+
 ## Usage
 
 ```mdx-code-block
@@ -159,11 +165,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-searchText | The substring to search for. Minimum length of 3 characters.
-maxResults | Maximum number of results to return. If there are more the message.
-
 

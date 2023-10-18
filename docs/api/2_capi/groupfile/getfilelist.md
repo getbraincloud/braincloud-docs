@@ -4,6 +4,13 @@ Returns a list of files.
 
 <PartialServop service_name="groupFile" operation_name="GET_FILE_LIST" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | The id of the group.
+folderPath | The folder path.
+recurse | Whether to recurse beyond the starting folder.
+
 ## Usage
 
 ```mdx-code-block
@@ -321,12 +328,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | The id of the group.
-folderPath | The folder path.
-recurse | Whether to recurse beyond the starting folder.
-
 

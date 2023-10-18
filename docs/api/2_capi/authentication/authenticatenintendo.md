@@ -4,6 +4,13 @@ Authenticate the user on Nintendo Switch.
 
 <PartialServop service_name="authenticationV2" operation_name="AUTHENTICATE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+nintendoAccountId | The Nintendo Network Services Account (NSA) ID for the user
+nintendoAuthToken | An NSA ID token retrieved via the NintendoSDK
+forceCreate | Should a new profile be created for this user if the account does not exist?
+
 ## Usage
 
 ```mdx-code-block
@@ -151,12 +158,4 @@ bool forceCreate = true;
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-nintendoAccountId | The Nintendo Network Services Account (NSA) ID for the user
-nintendoAuthToken | An NSA ID token retrieved via the NintendoSDK
-forceCreate | Should a new profile be created for this user if the account does not exist?
-
 

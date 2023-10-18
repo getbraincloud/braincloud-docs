@@ -4,6 +4,12 @@ Gets recent streams for initiating player.
 
 <PartialServop service_name="playbackStream" operation_name="GET_RECENT_STREAMS_FOR_INITIATING_PLAYER" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+initiatingPlayerId | The player that started the stream
+maxNumStreams | The max number of stream to return in the response
+
 ## Usage
 
 ```mdx-code-block
@@ -170,11 +176,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-initiatingPlayerId | The player that started the stream
-maxNumStreams | The max number of stream to return in the response
-
 

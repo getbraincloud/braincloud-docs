@@ -4,6 +4,16 @@ Makes a copy of the specified file.
 
 <PartialServop service_name="globalFileV3" operation_name="SYS_COPY_GLOBAL_FILE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+fileId | The file id 
+version | The current version of the file 
+newTreeId | The location in the tree for the new file. Use emptystring for root.
+treeVersion | The current version of the tree
+newFilename | The filename to use for the copied file
+overwriteIfPresent | Set to true to overwrite an existing file if present.
+
 ## Usage
 
 ```mdx-code-block
@@ -119,15 +129,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-fileId | The file id 
-version | The current version of the file 
-newTreeId | The location in the tree for the new file. Use emptystring for root.
-treeVersion | The current version of the tree
-newFilename | The filename to use for the copied file
-overwriteIfPresent | Set to true to overwrite an existing file if present.
-
 

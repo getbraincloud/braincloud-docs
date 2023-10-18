@@ -4,6 +4,13 @@ Sends a simple text email to the specified user.
 
 <PartialServop service_name="mail" operation_name="SEND_BASIC_EMAIL" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+profileId | The user to send the email to
+subject | The email subject
+body | The email body
+
 ## Usage
 
 ```mdx-code-block
@@ -152,12 +159,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | The user to send the email to
-subject | The email subject
-body | The email body
-
 

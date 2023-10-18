@@ -4,6 +4,13 @@ Deletes the division set configuration uniquely identified by the division set i
 
 <PartialServop service_name="tournament" operation_name="SYS_DELETE_DIVISION_SET_CONFIG" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+divSetId | The division set id uniquely identifying the division set configuration to be deleted.
+version | Current version number of division set config being deleted. Use -1 to disable version checking.
+force | Optional flag, defaults to false. If false, ensures the division set config has no associated, unexpired division set instance leaderboards that still exist (disallows the deletion if so). If true, this checking is not enforced and may result in some limitations.
+
 ## Usage
 
 ```mdx-code-block
@@ -103,12 +110,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-divSetId | The division set id uniquely identifying the division set configuration to be deleted.
-version | Current version number of division set config being deleted. Use -1 to disable version checking.
-force | Optional flag, defaults to false. If false, ensures the division set config has no associated, unexpired division set instance leaderboards that still exist (disallows the deletion if so). If true, this checking is not enforced and may result in some limitations.
-
 

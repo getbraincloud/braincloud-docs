@@ -10,6 +10,11 @@ Returns the CDN URL for a file.
 
 <PartialServop service_name="file" operation_name="GET_CDN_URL" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+fileId | File ID
+
 ## Usage
 
 ```mdx-code-block
@@ -144,10 +149,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-fileId | File ID
-
 

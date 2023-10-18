@@ -4,6 +4,12 @@ Gets a player's score from a leaderboard. If the player does not have a score in
 
 <PartialServop service_name="leaderboard" operation_name="GET_PLAYER_SCORE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardId | The leaderboard to retrieve the score from
+versionId | The version of the leaderboard
+
 ## Usage
 
 ```mdx-code-block
@@ -153,11 +159,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | The leaderboard to retrieve the score from
-versionId | The version of the leaderboard
-
 

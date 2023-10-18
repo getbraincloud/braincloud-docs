@@ -4,6 +4,12 @@ Processes any outstanding rewards for the player.
 
 <PartialServop service_name="tournament" operation_name="CLAIM_TOURNAMENT_REWARD" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardId | The leaderboard for the tournament
+versionId | Version of the completed tournament
+
 ## Usage
 
 ```mdx-code-block
@@ -203,11 +209,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | The leaderboard for the tournament
-versionId | Version of the completed tournament
-
 

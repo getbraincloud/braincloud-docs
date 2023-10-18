@@ -10,6 +10,13 @@ WARNING: <code>ConfirmGooglePlayPurchase()</code> returns a 200 result even if t
 
 <PartialServop service_name="product" operation_name="CONFIRM_GOOGLEPLAY_PURCHASE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+orderId | Google Play `orderId` ("GPA.####-####-####-#####")
+productId | Google Play `productId` ("com.acme.runner.birdseed1")
+token | Google Play `purchaseToken` ("bhcmgnlflegpffpbcpeknjpi.AO-J1Oy_...")
+
 ## Usage
 
 ```mdx-code-block
@@ -174,12 +181,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-orderId | Google Play `orderId` ("GPA.####-####-####-#####")
-productId | Google Play `productId` ("com.acme.runner.birdseed1")
-token | Google Play `purchaseToken` ("bhcmgnlflegpffpbcpeknjpi.AO-J1Oy_...")
-
 

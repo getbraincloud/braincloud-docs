@@ -19,6 +19,13 @@ estimatedTargets | Estimate number of targeted users
 
 <PartialServop service_name="pushNotification" operation_name="SEND_RICH_TO_SEGMENTS" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+notificationTemplateId | Identifies the template that will determine the message content. 
+segmentIdList | List of target segements. Omit to send to all users. 
+substitutions | Positional message substitution values. 
+
 ## Usage
 
 ```mdx-code-block
@@ -136,12 +143,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-notificationTemplateId | Identifies the template that will determine the message content. 
-segmentIdList | List of target segements. Omit to send to all users. 
-substitutions | Positional message substitution values. 
-
 

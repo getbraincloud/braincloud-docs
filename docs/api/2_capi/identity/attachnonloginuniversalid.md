@@ -8,6 +8,11 @@ The call will fail if the UniversalId is already in use, or if the profile alrea
 
 <PartialServop service_name="identity" operation_name="ATTACH_NONLOGIN_UNIVERSAL" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+externalId | The user's user ID
+
 ## Usage
 
 ```mdx-code-block
@@ -134,10 +139,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-externalId | The user's user ID
-
 

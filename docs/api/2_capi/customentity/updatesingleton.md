@@ -4,6 +4,15 @@ Updates the singleton owned by the user for the specified custom entity type on 
 
 <PartialServop service_name="customEntity" operation_name="UPDATE_SINGLETON" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityType | The type of custom entity singleton to create/update. Custom entity type must have option isOwned set to true. 
+version | Version of the custom entity singleton being updated. 
+dataJson | The singleton entity's custom field data, as JSON.
+acl | The singleton entity's Access Control List as an object. A null ACL implies default permissions which make the entity readable by others.
+timeToLive | The duration of time, in milliseconds, the singleton custom entity should live before being expired. Null indicates never expires. Value of -1 indicates no change for updates.
+
 ## Usage
 
 ```mdx-code-block
@@ -195,14 +204,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityType | The type of custom entity singleton to create/update. Custom entity type must have option isOwned set to true. 
-version | Version of the custom entity singleton being updated. 
-dataJson | The singleton entity's custom field data, as JSON.
-acl | The singleton entity's Access Control List as an object. A null ACL implies default permissions which make the entity readable by others.
-timeToLive | The duration of time, in milliseconds, the singleton custom entity should live before being expired. Null indicates never expires. Value of -1 indicates no change for updates.
-
 

@@ -4,6 +4,11 @@ Resets a leaderboard configured with rotation strategy NEVER by incrementing its
 
 <PartialServop service_name="leaderboard" operation_name="SYS_RESET_NEVER_LEADERBOARD" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardId | The leaderboard to reset.
+
 ## Usage
 
 ```mdx-code-block
@@ -103,10 +108,4 @@ var retVal = leaderboardProxy.sysResetNeverLeaderboard(leaderboardId);
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | The leaderboard to reset.
-
 

@@ -42,6 +42,11 @@ See the [Generic Paged Queries](/api/appendix/genericpagedqueries) documentation
 
 <PartialServop service_name="globalEntity" operation_name="GET_PAGE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+context | The json context for the page request.
+
 ## Usage
 
 ```mdx-code-block
@@ -219,10 +224,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-context | The json context for the page request.
-
 

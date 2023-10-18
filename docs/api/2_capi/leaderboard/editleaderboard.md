@@ -10,6 +10,17 @@ Edits a existing leaderboard under the context of the current game. You can opti
 
 <PartialServop service_name="leaderboard" operation_name="EDIT_LEADERBOARD" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardId | The leaderboard to edit
+data | Optional user-defined data to relevant to the edited leaderboard
+leaderboardType | Leaderboard type
+rotationType | Type of rotation
+rotationReset | Date to start the rotation (date in millis)
+retainedCount | How many previous rotations to keep
+numDaysToRotate | Optional parameter for use only with DAYS rotation type
+
 ## Usage
 
 ```mdx-code-block
@@ -152,17 +163,5 @@ Code | Name | Description
 40499 | NO_LEADERBOARD_FOUND | No leaderboard with given leaderboardId
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | The leaderboard to edit
-data | Optional user-defined data to relevant to the edited leaderboard
-leaderboardType | Leaderboard type
-rotationType | Type of rotation
-rotationReset | Date to start the rotation (date in millis)
-retainedCount | How many previous rotations to keep
-numDaysToRotate | Optional parameter for use only with DAYS rotation type
 
 

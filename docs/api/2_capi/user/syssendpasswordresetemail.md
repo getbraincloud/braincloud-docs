@@ -4,6 +4,11 @@ Triggers the sending of a password reset email to the specified user. Note that 
 
 <PartialServop service_name="user" operation_name="SYS_SEND_PASSWORD_RESET_EMAIL" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+profileId | The profileId of the user to send the password reset email to
+
 ## Usage
 
 ```mdx-code-block
@@ -94,10 +99,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | The profileId of the user to send the password reset email to
-
 

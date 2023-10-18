@@ -4,6 +4,11 @@ Returns leaderboard configuration information, including tournament settings, fo
 
 <PartialServop service_name="leaderboard" operation_name="SYS_GET_LEADERBOARD_CONFIG" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardId | ID uniquely identifying the leaderboard configuration to retrieve.
+
 ## Usage
 
 ```mdx-code-block
@@ -164,10 +169,4 @@ var retVal = leaderboardProxy.sysGetLeaderboardConfig(leaderboardId);
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | ID uniquely identifying the leaderboard configuration to retrieve.
-
 

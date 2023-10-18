@@ -6,6 +6,12 @@ Updates the settings for the given lobby instance.
 
 <PartialServop service_name="lobby" operation_name="UPDATE_SETTINGS" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+lobbyId | Id of the specfified lobby.
+settings | Configuration data for the room.
+
 ## Usage
 
 ```mdx-code-block
@@ -154,12 +160,5 @@ Code | Name | Description
 40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-lobbyId | Id of the specfified lobby.
-settings | Configuration data for the room.
 
 

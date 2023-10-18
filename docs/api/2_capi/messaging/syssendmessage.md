@@ -10,6 +10,13 @@ Sends a message on behalf of the system (i.e. app) to the specified users.
 
 <PartialServop service_name="messaging" operation_name="SYS_SEND_MESSAGE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+toProfileIds | The array of recipients  
+contentJson | The json content object to send in the message  
+fromJson | Who the message is from. Should contain at least "name" field, and potential "pic" field as well.  
+
 ## Usage
 
 ```mdx-code-block
@@ -134,13 +141,5 @@ Code | Name | Description
 40601 | FEATURE_NOT_ENABLED | Messaging feature is not enabled for app.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-toProfileIds | The array of recipients  
-contentJson | The json content object to send in the message  
-fromJson | Who the message is from. Should contain at least "name" field, and potential "pic" field as well.  
 
 

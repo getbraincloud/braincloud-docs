@@ -11,6 +11,11 @@ Returns the next/prev set of messages. Takes the encoded-context from <code>[Get
 
 <PartialServop service_name="messaging" operation_name="GET_MESSAGES_PAGE_OFFSET" />
 
+## Method Parameters
+Parameter | Description                         
+--------- | ------------------------------------
+channelId | The id of the channel to connect to.
+
 ## Usage
 
 ```mdx-code-block
@@ -160,11 +165,5 @@ Code | Name | Description
 40601 | FEATURE_NOT_ENABLED | Messaging feature is not enabled for app.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description                         
---------- | ------------------------------------
-channelId | The id of the channel to connect to.
 
 

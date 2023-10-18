@@ -4,6 +4,14 @@ Verifies a signed JWT provided as a string.
 
 <PartialServop service_name="identity" operation_name="VERIFY_SIGNED_JWT" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+jksUri | JKS uri.
+issuer | issuer uri.
+audience | JWT audience.
+jwtString | JWT string representation.
+
 ## Usage
 
 ```mdx-code-block
@@ -133,13 +141,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-jksUri | JKS uri.
-issuer | issuer uri.
-audience | JWT audience.
-jwtString | JWT string representation.
-
 

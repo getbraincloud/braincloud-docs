@@ -4,6 +4,12 @@ Remove a member from the group.
 
 <PartialServop service_name="group" operation_name="REMOVE_GROUP_MEMBER" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | ID of the group
+profileId | Profile ID of the user being removed
+
 ## Usage
 
 ```mdx-code-block
@@ -143,11 +149,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | ID of the group
-profileId | Profile ID of the user being removed
-
 

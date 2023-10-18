@@ -6,6 +6,13 @@ Sends a potentially richer member chat message. By convention, `content` should 
 
 <PartialServop service_name="chat" operation_name="POST_CHAT_MESSAGE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+channelId | The chat channel to post to
+contentJson | The json content of the message. Split into chatMessage and jsonRich for plain text and json content respectively.
+recordInHistory | Set to `false` if the message shouldn't be recorded to history. Useful for sending non-conversational messages, like when users join a room, etc.
+
 ## Usage
 
 ```mdx-code-block
@@ -194,13 +201,5 @@ Code | Name | Description
 40603 | CHAT_UNRECOGNIZED_CHANNEL | The specified channel is invalid
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-channelId | The chat channel to post to
-contentJson | The json content of the message. Split into chatMessage and jsonRich for plain text and json content respectively.
-recordInHistory | Set to `false` if the message shouldn't be recorded to history. Useful for sending non-conversational messages, like when users join a room, etc.
 
 

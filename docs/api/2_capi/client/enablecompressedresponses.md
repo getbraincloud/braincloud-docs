@@ -2,6 +2,11 @@
 
 Enables receiving compressed packets of responses.
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+enabled | True if response packets should be compressed
+
 ## Usage
 
 ```mdx-code-block
@@ -73,10 +78,4 @@ Enables receiving compressed packets of responses.
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-enabled | True if response packets should be compressed
-
 

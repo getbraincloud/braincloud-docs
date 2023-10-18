@@ -31,6 +31,11 @@ Retrieve a page of group summary information based on the specified context.
 
 <PartialServop service_name="group" operation_name="LIST_GROUPS_PAGE" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+context | The JSON context for the page request
+
 ## Usage
 
 ```mdx-code-block
@@ -208,10 +213,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-context | The JSON context for the page request
-
 

@@ -4,6 +4,15 @@ Adds the caller to the given lobby instance.
 
 <PartialServop service_name="lobby" operation_name="JOIN_LOBBY" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+lobbyId | The lobby instance to join. 
+otherUserCxIds | Array of other users (i.e. party members) to add to the lobby as well. The call will fail if all users can't be added. 
+isReady | Initial ready-status of this user. 
+extraJson | Initial extra-data about this user. 
+teamCode | Preferred team for this user, if applicable. Send `""` or `null` for automatic assignment. 
+
 ## Usage
 
 ```mdx-code-block
@@ -158,14 +167,4 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-lobbyId | The lobby instance to join. 
-otherUserCxIds | Array of other users (i.e. party members) to add to the lobby as well. The call will fail if all users can't be added. 
-isReady | Initial ready-status of this user. 
-extraJson | Initial extra-data about this user. 
-teamCode | Preferred team for this user, if applicable. Send `""` or `null` for automatic assignment. 
-
 

@@ -4,6 +4,12 @@ Verifies if user is a group member and returns information about group member, b
 
 <PartialServop service_name="group" operation_name="SYS_IS_GROUP_MEMBER" />
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | The id of the group.
+profileId | The profile id of the user to be checked.
+
 ## Usage
 
 ```mdx-code-block
@@ -104,11 +110,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | The id of the group.
-profileId | The profile id of the user to be checked.
-
 
