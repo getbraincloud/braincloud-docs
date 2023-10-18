@@ -6,6 +6,12 @@ Use this function to keep a clean designflow from anonymous to signed profiles
 
 Authenticate the user using their Game Center id
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+gameCenterId | The player's game center ID (use the playerID property from the local GKPlayer object)
+forceCreate | Should a new profile be created for this user if the account does not exist?
+
 ## Usage
 
 ```mdx-code-block
@@ -139,11 +145,4 @@ var forceCreate = true;
 });
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-gameCenterId | The player's game center ID (use the playerID property from the local GKPlayer object)
-forceCreate | Should a new profile be created for this user if the account does not exist?
-
 

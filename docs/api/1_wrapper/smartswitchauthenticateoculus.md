@@ -6,6 +6,13 @@ Use this function to keep a clean designflow from anonymous to signed profiles.
 
 Authenticate the user with <%= data.branding.productName %> using their Oculus Credentials.
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+userId | The Oculus ID of the user
+nonce | The returned nonce from the Oculus Platform SDK
+forceCreate | Should a new profile be created for this user if the account does not exist?
+
 ## Usage
 
 ```mdx-code-block
@@ -112,12 +119,4 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 // N/A
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-userId | The Oculus ID of the user
-nonce | The returned nonce from the Oculus Platform SDK
-forceCreate | Should a new profile be created for this user if the account does not exist?
-
 

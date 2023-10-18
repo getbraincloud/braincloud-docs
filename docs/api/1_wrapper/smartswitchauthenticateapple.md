@@ -8,6 +8,13 @@ Use this function to keep a clean designflow from anonymous to signed profiles.
  
 Authenticate the user with Sign in with Apple.
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+appleUserId | The user id of the authenticated user. It should match the `sub` field of the identity token. This is the identifier that will be attached to the user's profile. 
+identityToken | The JSON Web Token that represents the user's identity
+forceCreate | Should a new profile be created for this user if the account does not exist?
+
 ## Usage
 
 ```mdx-code-block
@@ -149,12 +156,4 @@ var forceCreate = true;
 });
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-appleUserId | The user id of the authenticated user. It should match the `sub` field of the identity token. This is the identifier that will be attached to the user's profile. 
-identityToken | The JSON Web Token that represents the user's identity
-forceCreate | Should a new profile be created for this user if the account does not exist?
-
 

@@ -6,6 +6,14 @@ Use this function to keep a clean designflow from anonymous to signed profiles
 
 Authenticate the user using a Twitter user ID, authentication token, and secret from Twitter
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+userId | String representation of Twitter user ID
+token | The authentication token derived via the Twitter APIs
+secret | The secret given when attempting to link with Twitter
+forceCreate | Should a new profile be created for this user if the account does not exist?
+
 ## Usage
 
 ```mdx-code-block
@@ -159,13 +167,4 @@ var forceCreate = true;
 });
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-userId | String representation of Twitter user ID
-token | The authentication token derived via the Twitter APIs
-secret | The secret given when attempting to link with Twitter
-forceCreate | Should a new profile be created for this user if the account does not exist?
-
 

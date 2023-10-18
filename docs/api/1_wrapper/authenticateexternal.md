@@ -11,6 +11,14 @@ Make sure you've initialized the <%= data.branding.productName %> wrapper before
 
 <PartialServop service_name="authenticationV2" operation_name="AUTHENTICATE" / >
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+userId | The userId
+token | The user token (password etc)
+externalAuthName | The name of the custom authentication type (linked to a cloud script that performs authentication). Configured via the **Design &#124; Authentication &#124; External** page of the Design Portal.
+forceCreate | Should a new profile be created for this user if the account does not exist?
+
 ## Usage
 
 ```mdx-code-block
@@ -218,14 +226,5 @@ Code | Name | Description
 40307 | TOKEN_DOES_NOT_MATCH_USER | The user credentials don't match (according to the 3rd party system). May also indicate an issue with the external authentication script.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-userId | The userId
-token | The user token (password etc)
-externalAuthName | The name of the custom authentication type (linked to a cloud script that performs authentication). Configured via the **Design &#124; Authentication &#124; External** page of the Design Portal.
-forceCreate | Should a new profile be created for this user if the account does not exist?
 
 

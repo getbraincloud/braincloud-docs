@@ -6,6 +6,13 @@ Use this function to keep a clean designflow from anonymous to signed profiles.
 
 Authenticate the user with <%= data.branding.productName %> using their Facebook Credentials.
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+facebookId | The Facebook ID of the user
+facebookToken | The authentication token from the Facebook SDK
+forceCreate | Should a new profile be created for this user if the account does not exist?
+
 ## Usage
 
 ```mdx-code-block
@@ -132,12 +139,4 @@ var forceCreate = true;
 // N/A
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-facebookId | The Facebook ID of the user
-facebookToken | The authentication token from the Facebook SDK
-forceCreate | Should a new profile be created for this user if the account does not exist?
-
 

@@ -4,6 +4,13 @@ Authenticate the user for Ultra.
 
 <PartialServop service_name="authenticationV2" operation_name="AUTHENTICATE" / >
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+ultraUsername | It's what the user uses to log into the Ultra endpoint initially
+ultraIdToken | The "id_token" taken from Ultra's JWT.
+forceCreate | Should a new profile be created for this user if the account does not exist?
+
 ## Usage
 
 ```mdx-code-block
@@ -184,12 +191,4 @@ var forceCreate = true;
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-ultraUsername | It's what the user uses to log into the Ultra endpoint initially
-ultraIdToken | The "id_token" taken from Ultra's JWT.
-forceCreate | Should a new profile be created for this user if the account does not exist?
-
 

@@ -54,6 +54,13 @@ Make sure you've initialized the <%= data.branding.productName %> wrapper before
 
 <PartialServop service_name="authenticationV2" operation_name="AUTHENTICATE" / >
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+email | The e-mail address of the user
+password | The password of the user
+forceCreate | Should a new profile be created for this user if the account does not exist?
+
 ## Usage
 
 ```mdx-code-block
@@ -249,13 +256,5 @@ Code | Name | Description
 40307 | TOKEN_DOES_NOT_MATCH_USER | The user credentials don't match (i.e. incorrect password).
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-email | The e-mail address of the user
-password | The password of the user
-forceCreate | Should a new profile be created for this user if the account does not exist?
 
 

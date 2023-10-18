@@ -10,6 +10,13 @@ Make sure you've initialized the <%= data.branding.productName %> wrapper before
 
 <PartialServop service_name="authenticationV2" operation_name="AUTHENTICATE" / >
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+googleUserId | String representation of google userid (gXXX)
+serverAuthCode | The authentication token derived via the google apis.
+forceCreate | Should a new profile be created for this user if the account does not exist?
+
 ## Usage
 
 ```mdx-code-block
@@ -214,13 +221,5 @@ Code | Name | Description
 40307 | TOKEN_DOES_NOT_MATCH_USER | The user credentials are invalid (i.e. googleUserId and serverAuthCode are invalid). May also indicate that Google Integration is not properly configured.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-googleUserId | String representation of google userid (gXXX)
-serverAuthCode | The authentication token derived via the google apis.
-forceCreate | Should a new profile be created for this user if the account does not exist?
 
 

@@ -4,6 +4,11 @@ For non-anonymous authentication methods, a profile ID will be passed in when th
 
 By default, this value is true.
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+alwaysAllow | Controls whether the profile ID is passed in with non-anonymous authentications.
+
 ## Usage
 
 ```mdx-code-block
@@ -85,10 +90,4 @@ By default, this value is true.
 <%= data.branding.codePrefix %>.setAlwaysAllowProfileSwitch(true);
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-alwaysAllow | Controls whether the profile ID is passed in with non-anonymous authentications.
-
 

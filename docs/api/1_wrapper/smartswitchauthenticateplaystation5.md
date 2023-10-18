@@ -6,6 +6,13 @@ Use this function to keep a clean designflow from anonymous to signed profiles.
 
 Authenticate the user with <%= data.branding.productName %> using their Playstation5 Credentials.
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+accountId | The Playstation5 ID of the user
+authToken | The validated token from the Playstation5 SDK
+forceCreate | Should a new profile be created for this user if the account does not exist?
+
 ## Usage
 
 ```mdx-code-block
@@ -98,12 +105,4 @@ bool forceCreate = true;
 // N/A
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-accountId | The Playstation5 ID of the user
-authToken | The validated token from the Playstation5 SDK
-forceCreate | Should a new profile be created for this user if the account does not exist?
-
 
