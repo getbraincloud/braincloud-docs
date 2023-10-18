@@ -1,8 +1,8 @@
-# SysGetPresenceOfUsers
+# GetPresenceOfUsers
 ## Overview
 Gets the presence data for the given \<profileIds\>. Will not include offline profiles unless \<includeOffline\> is set to true.
 
-<PartialServop service_name="presence" operation_name="SYS_GET_PRESENCE_OF_USERS" />
+<PartialServop service_name="presence" operation_name="GET_PRESENCE_OF_USERS" />
 
 ## Usage
 
@@ -62,7 +62,7 @@ var profileIds = ["aaa-bbb-ccc-ddd","bbb-ccc-ddd-eee"];
 var includeOffline = true;
 var presenceProxy = bridge.getPresenceServiceProxy();
 
-var postResult = presenceProxy.sysGetPresenceOfUsers(profileIds, includeOffline);
+var postResult = presenceProxy.getPresenceOfUsers(profileIds, includeOffline);
 if (postResult.status == 200) {
     // Success!
 }
@@ -76,7 +76,7 @@ if (postResult.status == 200) {
 ```r
 {
 	"service": "presence",
-	"operation": "SYS_GET_PRESENCE_OF_USERS",
+	"operation": "GET_PRESENCE_OF_USERS",
 	"data": {
 		"profileIds": [
 			"aaa-bbb-ccc-ddd",
