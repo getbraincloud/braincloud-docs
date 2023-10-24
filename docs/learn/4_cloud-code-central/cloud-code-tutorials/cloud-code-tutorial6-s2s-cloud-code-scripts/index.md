@@ -11,11 +11,9 @@ In this tutorial, we will take you through the process of creating a simple S2S 
 
 - Go to the brainCloud Portal and open the **Design | Cloud Code | Scripts** page
 
-[![](images/S2S-Start-1.png)](images/S2S-Start-1.png)
-
 - Click the **[+]** Plus icon to start adding a new Script
 
-[![](images/S2S-AddScript-1.png)](images/S2S-AddScript-1.png)
+[![](images/S2S-Details.png)](images/S2S-Details.png)
 
 - Give the Script a _name_ and _description_. Also, ensure the _[x] S2S_ checkbox is checked.  
     _Note: Client callable is optional, but it's a good idea to disable it if the script will never be used client side._
@@ -32,10 +30,6 @@ response;
 _Note: The last line is always what will be returned in the response._
 
 -  You should have something that looks like this after.
-
-[![](images/S2S-Details.png)](images/S2S-Details.png)
-
-[![](images/S2S-Editor-1.png)](images/S2S-Editor-1.png)
 
 - The last tab is the **Run** tab. Here, you can do a **[Quick Authenticate]**, and **[Run]** your new script to view the return!  
     (**[Save]** and **[Close]** when you are done editing and testing your script)
