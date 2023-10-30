@@ -81,17 +81,17 @@ substitutions | Positional message substitution values.
 
 ```cfscript
 var notificationTemplateId = 1;
-var segmentIdList = [
-	1,
-	2
-];
 var substitutions = {
 	"0": "value0",
 	"1": "value1"
 };
+var segmentIdList = [
+	1,
+	2
+];
 var pushNotificationProxy = bridge.getPushNotificationServiceProxy();
 
-var postResult = pushNotificationProxy.sendRichToSegments(notificationTemplateId, segmentIdList, substitutions);
+var postResult = pushNotificationProxy.sendRichToSegments(notificationTemplateId, substitutions, segmentIdList);
 if (postResult.status == 200) {
     // Success!
 }
