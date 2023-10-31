@@ -1,14 +1,12 @@
-# SysCreateChannel
+# SysChannelDisconnect
+Disconnect from a chat channel.
 
-Initializes a dynamic or system chat channel. Returns the channelId. Channel type can be "dy" or "sy".
-
-<PartialServop service_name="chat" operation_name="SYS_CREATE_CHANNEL" />
+<PartialServop service_name="chat" operation_name="SYS_CHANNEL_DISCONNECT" />
 
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-channelType | The channel type - currently 'dy' and 'sy' are supported. 
-channelSubId | An app-defined channel sub id. Only letters, numbers, dashes, and underscores are allowed. 
+channelId | The channel id to connect to.
 
 ## Usage
 
@@ -64,14 +62,10 @@ channelSubId | An app-defined channel sub id. Only letters, numbers, dashes, and
 ```
 
 ```cfscript
-var channelType = "dy";
-var channelSubId = "myChatRoom";
+var channelId = "55555:sy:mysyschannel";
 var chatProxy = bridge.getChatServiceProxy();
 
-var postResult = chatProxy.sysCreateChannel(channelType, channelSubId);
-if (postResult.status == 200) {
-    // Success!
-}
+var postResult = chatProxy.SysChannelDisconnect(channelId);
 ```
 
 ```mdx-code-block
@@ -81,12 +75,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "chat",
-	"operation": "SYS_CREATE_CHANNEL",
-	"data": {
-		"channelType": "dy",
-		"channelSubId": "myChatRoom"
-	}
+    "service":"chat",
+    "operation":"SYS_CHANNEL_DISCONNECT",
+    "data":{
+        "channelId":"55555:sy:mysyschannel"
+    }
 }
 ```
 
@@ -95,4 +88,14 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
+<details>
+<summary>JSON Response</summary>
+
+```json
+{
+  "status" : 200
+}
+```
+
+</details>
 

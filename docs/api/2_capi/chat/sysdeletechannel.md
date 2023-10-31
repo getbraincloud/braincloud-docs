@@ -1,13 +1,13 @@
 # SysDeleteChannel
 
-Deletes a dynamic chat channel. Channel type must be "dy". This will delete the chat history as well.
+Deletes a dynamic chat channel. Channel type can be "dy" or "sy". This will delete the chat history as well.
 
 <PartialServop service_name="chat" operation_name="SYS_DELETE_CHANNEL" />
 
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-channelId | The channel id - must be of type 'dy'. 
+channelId | The channel id - can be of type 'dy' or 'sy'. 
 
 ## Usage
 

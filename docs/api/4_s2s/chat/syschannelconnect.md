@@ -1,14 +1,13 @@
-# SysCreateChannel
+# SysChannelConnect
+Connect to a chat channel.
 
-Initializes a dynamic or system chat channel. Returns the channelId. Channel type can be "dy" or "sy".
-
-<PartialServop service_name="chat" operation_name="SYS_CREATE_CHANNEL" />
+<PartialServop service_name="chat" operation_name="SYS_CHANNEL_CONNECT" />
 
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-channelType | The channel type - currently 'dy' and 'sy' are supported. 
-channelSubId | An app-defined channel sub id. Only letters, numbers, dashes, and underscores are allowed. 
+channelId | The channel id to connect to.
+maxReturn | Max channel messages to return.
 
 ## Usage
 
@@ -64,14 +63,11 @@ channelSubId | An app-defined channel sub id. Only letters, numbers, dashes, and
 ```
 
 ```cfscript
-var channelType = "dy";
-var channelSubId = "myChatRoom";
+var channelId = "55555:sy:mysyschannel";
+var maxReturn = 10;
 var chatProxy = bridge.getChatServiceProxy();
 
-var postResult = chatProxy.sysCreateChannel(channelType, channelSubId);
-if (postResult.status == 200) {
-    // Success!
-}
+var postResult = chatProxy.SysChannelConnect(channelId, maxReturn);
 ```
 
 ```mdx-code-block
@@ -81,12 +77,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "chat",
-	"operation": "SYS_CREATE_CHANNEL",
-	"data": {
-		"channelType": "dy",
-		"channelSubId": "myChatRoom"
-	}
+    "service":"chat",
+    "operation":"SYS_CHANNEL_CONNECT",
+    "data":{
+        "channelId":"55555:sy:mysyschannel",
+        "maxReturn":10
+    }
 }
 ```
 
@@ -95,4 +91,37 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
+<details>
+<summary>JSON Response</summary>
+
+```json
+{
+  "data": {
+    "messages": [
+      {
+        "date": 1698765119868,
+        "ver": 1,
+        "msgId": "869767741372417",
+        "from": {
+          "name": "Homer",
+          "pic": "http://www.simpsons.test/homer.jpg",
+          "id": ""
+        },
+        "content": {
+          "text": "Hello world",
+          "custom": {
+            "somethingCustom": "wow"
+          }
+        },
+        "expiresAt": 1701357119868,
+        "chId": "55555:sy:mysyschannel",
+        "updatedAt": 1698765119868
+      }
+    ]
+  },
+  "status": 200
+}
+```
+
+</details>
 
