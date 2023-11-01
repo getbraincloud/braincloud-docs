@@ -38,6 +38,8 @@ The <em>treeId</em> (aka globalTreeId, folder or file Id) represents the guid fo
 
 *Accessible via cloud-code and S2S.*
 
+* [SysCheckFilenameExists](/api/capi/globalfile/syscheckfilenameexists) - Check if filename exists for provided path and name.
+* [SysCheckFullpathFilenameExists](/api/capi/globalfile/syscheckfullpathfilenameexists) - Check if filename exists for provided full path name.
 * [SysGetGlobalFileList](/api/capi/globalfile/sysgetglobalfilelist) - list all global files at the specified `folderPath`
 * [SysGetFileInfo()](/api/capi/globalfile/sysgetfileinfo) - returns information about the specified file, given a `fileId`.
 * [SysGetFileInfoSimple()](/api/capi/globalfile/sysgetfileinfosimple) - returns information about the specified file, given a `folderPath` + `filename`.
