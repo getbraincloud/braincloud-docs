@@ -1,8 +1,13 @@
 # ReadUserStatsForCategory
-## Overview
+
 Method retrieves the user statistics for the given category.
 
 <PartialServop service_name="playerStatistics" operation_name="READ_FOR_CATEGORY" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+category | The user statistics category
 
 ## Usage
 
@@ -142,10 +147,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-category | The user statistics category
-
 

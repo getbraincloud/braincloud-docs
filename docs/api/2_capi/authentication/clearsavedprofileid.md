@@ -1,5 +1,5 @@
 # ClearSavedProfileId
-## Overview
+
 Used to clear the saved profile ID - to use in cases when the user is attempting to switch to a different game profile.
 
 ## Usage

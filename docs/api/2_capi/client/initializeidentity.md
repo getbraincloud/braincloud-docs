@@ -1,5 +1,5 @@
 # InitializeIdentity
-## Overview
+
 Initializes the authentication service with an anonymous installation ID and most recently used profile ID.
 You will need to call this method before authenticating anonymously.
 
@@ -8,6 +8,12 @@ Note that calling this is the same as calling [<code>Initialize</code>](/api/cap
 :::caution
 InitializeIdentity must be called before you can authenticate a user anonymously.
 :::
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+profileId | The profile id of the user
+anonymousId | The anonymous id of the user
 
 ## Usage
 
@@ -80,11 +86,4 @@ InitializeIdentity must be called before you can authenticate a user anonymously
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | The profile id of the user
-anonymousId | The anonymous id of the user
-
 

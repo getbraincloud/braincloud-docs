@@ -1,8 +1,13 @@
 # ResetQuests
-## Overview
+
 Resets the specified quests' statuses.
 
 <PartialServop service_name="gamification" operation_name="RESET_QUESTS" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+quests | A list of quests to reset
 
 ## Usage
 
@@ -92,10 +97,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-quests | A list of quests to reset
-
 

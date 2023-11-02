@@ -1,5 +1,5 @@
 # SysDeleteChatMessage
-## Overview
+
 :::tip
 This method is available in Cloud Code scripts only.
 :::
@@ -12,6 +12,13 @@ Returns the number of messages that were deleted. Since the history rolls over, 
 
 
 <PartialServop service_name="chat" operation_name="SYS_DELETE_CHAT_MESSAGE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+channelId | The channel of the message
+msgId | The message id
+version | The version of the message. Pass it -1 to bypass version checking.
 
 ## Usage
 
@@ -125,13 +132,5 @@ Code | Name | Description
 40616 | CLOUD_CODE_ONLY | Method only available via cloud code
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-channelId | The channel of the message
-msgId | The message id
-version | The version of the message. Pass it -1 to bypass version checking.
 
 

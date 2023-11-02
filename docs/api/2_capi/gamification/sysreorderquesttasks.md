@@ -1,8 +1,15 @@
 # SysReorderQuestTasks
-## Overview
+
 Re-orders the tasks in the quest. If any tasks are missing from the new order, they will be deleted. The ids of any deleted tasks will be returned in the `data.deletedTasks` field of the JSON result.
 
 <PartialServop service_name="gamification" operation_name="SYS_REORDER_QUEST_TASKS" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+questId | The quest to reorder
+version | The current revision of the _quest_.
+newTaskArray | An ordered array of task ids. Note - any tasks not present in the array will be deleted from the quest.
 
 ## Usage
 
@@ -164,12 +171,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-questId | The quest to reorder
-version | The current revision of the _quest_.
-newTaskArray | An ordered array of task ids. Note - any tasks not present in the array will be deleted from the quest.
-
 

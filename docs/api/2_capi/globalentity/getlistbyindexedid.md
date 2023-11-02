@@ -1,8 +1,14 @@
 # GetListByIndexedId
-## Overview
+
 Method gets list of entities from the server base on indexed ID.
 
 <PartialServop service_name="globalEntity" operation_name="GET_LIST_BY_INDEXED_ID" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityIndexedId | The entity indexed Id
+maxReturn | The maximum number of entities to return
 
 ## Usage
 
@@ -166,11 +172,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityIndexedId | The entity indexed Id
-maxReturn | The maximum number of entities to return
-
 

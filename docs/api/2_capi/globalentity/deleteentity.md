@@ -1,5 +1,5 @@
 # DeleteEntity
-## Overview
+
 Method deletes the given entity on the server.
 
 This method is affected by versioning. See the [versioning documentation](/api/appendix/version) for more information.

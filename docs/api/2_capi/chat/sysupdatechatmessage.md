@@ -1,5 +1,5 @@
 # SysUpdateChatMessage
-## Overview
+
 :::tip
 This method is available in Cloud Code scripts only.
 :::
@@ -10,6 +10,15 @@ Update the specified chat message. Message can have been from any user (or syste
 
 
 <PartialServop service_name="chat" operation_name="SYS_UPDATE_CHAT_MESSAGE" />
+
+## Method Parameters
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+channelId | The channel of the message
+msgId | The message id
+version | The version of the message. Pass it -1 to bypass version checking.
+contentJson | Replacement content for the message
 
 ## Usage
 
@@ -130,15 +139,5 @@ Code | Name | Description
 40616 | CLOUD_CODE_ONLY | Method only available via cloud code
 
 </details>
-
-
-## Method Parameters
-#### Method Parameters
-Parameter | Description
---------- | -----------
-channelId | The channel of the message
-msgId | The message id
-version | The version of the message. Pass it -1 to bypass version checking.
-contentJson | Replacement content for the message
 
 

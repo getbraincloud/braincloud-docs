@@ -1,6 +1,11 @@
 # GetSessionForProfile
-## Overview
+
 Creates and returns a session for the profileId provided.
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+profileId | The profile Id
 
 ## Usage
 
@@ -75,10 +80,4 @@ var session = bridge.getSessionForProfile(profileId);
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | The profile Id
-
 

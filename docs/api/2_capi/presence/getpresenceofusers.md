@@ -1,8 +1,14 @@
 # GetPresenceOfUsers
-## Overview
+
 Gets the presence data for the given `profileIds`. Will not include offline profiles unless `includeOffline` is set to true.
 
 <PartialServop service_name="presence" operation_name="GET_PRESENCE_OF_USERS" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+profileIds | Gets a list of Presence for the specified profile ids. 
+includeOffline | Should offline users be included in the response?
 
 ## Usage
 
@@ -166,11 +172,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-profileIds | Gets a list of Presence for the specified profile ids. 
-includeOffline | Should offline users be included in the response?
-
 

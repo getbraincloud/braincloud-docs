@@ -1,5 +1,5 @@
 # ProcessStatistics
-## Overview
+
 Apply a set of operations to the specified statistics. User (player) Statistics are defined through the <%= data.branding.productName %> portal.
 
 The operations available are much richer than the standard *increment* operation available via `IncrementUserStats()`.
@@ -32,6 +32,11 @@ The above example would:
 For the full statistics grammar see the [statistics grammar section](/api/appendix/statisticsgrammar).
 
 <PartialServop service_name="playerStatistics" operation_name="PROCESS_STATISTICS" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+statistics | The stats data to be passed to the method
 
 ## Usage
 
@@ -188,10 +193,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-statistics | The stats data to be passed to the method
-
 

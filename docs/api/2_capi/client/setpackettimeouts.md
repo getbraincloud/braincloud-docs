@@ -1,8 +1,13 @@
 # SetPacketTimeouts
-## Overview
+
 Sets the packet timeouts using a list of integers that represent timeout values in seconds for each packet retry. The first item in the list represents the timeout for the first packet attempt, the second for the second packet attempt, and so on.
 
 The number of entries in this array determines how many packet retries will occur. By default, the packet timeout array is {15, 20, 35, 50}
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+intervalInSeconds | The time between heartbeats in milliseconds
 
 ## Usage
 
@@ -85,10 +90,4 @@ ArrayList<Integer> packetTimeouts = new ArrayList<Integer>(
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-intervalInSeconds | The time between heartbeats in milliseconds
-
 

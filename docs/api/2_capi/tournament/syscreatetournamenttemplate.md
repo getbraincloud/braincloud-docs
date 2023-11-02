@@ -1,8 +1,14 @@
 # SysCreateTournamentTemplate
-## Overview
+
 Creates a new tournament template.
 
 <PartialServop service_name="tournament" operation_name="SYS_CREATE_TOURNAMENT_TEMPLATE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+tournamentCode | The unique tournament code to assign to the template
+configJson | Configuration data defining the tournament template
 
 ## Usage
 
@@ -330,11 +336,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-tournamentCode | The unique tournament code to assign to the template
-configJson | Configuration data defining the tournament template
-
 

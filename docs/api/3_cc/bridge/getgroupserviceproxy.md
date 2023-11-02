@@ -1,5 +1,5 @@
 # GetGroupServiceProxy
-## Overview
+
 Retrieves a GroupServiceProxy proxy object.
 
 Documentation for the service methods can be found [here](/api/capi/group).

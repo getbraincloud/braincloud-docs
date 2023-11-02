@@ -1,8 +1,15 @@
 # SendNormalizedPushNotificationBatch
-## Overview
+
 Sends a notification to a list of users consisting of alert content and custom data.
 
 <PartialServop service_name="pushNotification" operation_name="SEND_NORMALIZED_BATCH" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+profileIds | Target list of users. 
+alertContent | Body and title of alert. 
+customData | Optional custom data. 
 
 ## Usage
 
@@ -122,12 +129,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-profileIds | Target list of users. 
-alertContent | Body and title of alert. 
-customData | Optional custom data. 
-
 

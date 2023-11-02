@@ -1,8 +1,13 @@
 # SysRemoveFromLegacyFlaggedUsers
-## Overview
+
 Removes a user from the legacy list of flagged users.
 
 <PartialServop service_name="globalApp" operation_name="SYS_REMOVE_FROM_LEGACY_FLAGGED_USERS" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+profileId | Target user's profile id.
 
 ## Usage
 
@@ -101,10 +106,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | Target user's profile id.
-
 

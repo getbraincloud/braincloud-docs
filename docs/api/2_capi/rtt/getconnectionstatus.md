@@ -1,5 +1,5 @@
 # GetConnectionStatus
-## Overview
+
 Return the RTT connection status (CONNECTED, DISCONNECTED, CONNECTING, and DISCONNECTING).
 
 <PartialServop service_name="rttRegistration" operation_name="GET_CONNECTION_STATUS" />

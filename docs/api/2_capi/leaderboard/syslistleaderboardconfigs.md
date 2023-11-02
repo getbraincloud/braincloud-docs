@@ -1,8 +1,13 @@
 # SysListLeaderboardConfigs
-## Overview
+
 Returns list of applicable leaderboards, with summary leaderboard configuration information, including tournament flags, if applicable. Option 'filterType' defaults to 'standard', with additional supported filter types of 'all', 'tournament', 'divisions' and 'templates'.
 
 <PartialServop service_name="leaderboard" operation_name="SYS_LIST_LEADERBOARD_CONFIGS" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+optionsJson | Supports filtering of returned list of leaderboard configs. Option 'filterType' defaults to 'standard' if not specified. Valid filterType values include 'all', 'standard', 'tournament', 'divisions' and 'templates'. If 'tournament' is specified, returned list will include leaderboards configured for tournaments, but excludes division set instances and templates. If 'division', returned list will include division set tournament leaderboard instances. If 'templates', returned list will include leaderboards flagged as division template only.
 
 ## Usage
 
@@ -175,10 +180,4 @@ var retVal = leaderboardProxy.sysListLeaderboardConfigs(optionsJson);
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-optionsJson | Supports filtering of returned list of leaderboard configs. Option 'filterType' defaults to 'standard' if not specified. Valid filterType values include 'all', 'standard', 'tournament', 'divisions' and 'templates'. If 'tournament' is specified, returned list will include leaderboards configured for tournaments, but excludes division set instances and templates. If 'division', returned list will include division set tournament leaderboard instances. If 'templates', returned list will include leaderboards flagged as division template only.
-
 

@@ -1,5 +1,5 @@
 # SysGetMessagesPage
-## Overview
+
 :::caution
 Calls to SysGetMessagesPage and PageOffset will start throwing a ProcessingException when brainCloud property useShardSafeMessageLookup set to true, using SysGetMessagesForOwnerPage() instead.
 :::
@@ -10,6 +10,11 @@ Returns a page of messages from the master repository of message content (i.e. i
 
 
 <PartialServop service_name="messaging" operation_name="SYS_GET_MESSAGES_PAGE" />
+
+## Method Parameters
+Parameter | Description
+--------- | ------------------------------------
+context | The search and paging criteria
 
 ## Usage
 
@@ -175,11 +180,5 @@ Code | Name | Description
 40001 | APP_ERROR | Not supported for sharded message boxes. Use SysGetMessagesForOwnerPage API instead.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | ------------------------------------
-context | The search and paging criteria
 
 

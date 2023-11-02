@@ -1,8 +1,16 @@
 # PurchaseUserItem
-## Overview
+
 Purchases a quantity of an item from the specified store, if the user has enough funds. If includeDef is true, response includes associated itemDef with language fields limited to the current or default language.
 
 <PartialServop service_name="userItems" operation_name="PURCHASE_USER_ITEM" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+defId | The unique id of the item definition to purchase. 
+quantity | The quantity of the item to purchase. 
+shopId | The id identifying the store the item is being purchased from (not yet supported). Use null or empty string to specify the default shop price.
+includeDef | If true, the associated item definition will be included in the response. 
 
 ## Usage
 
@@ -224,13 +232,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-defId | The unique id of the item definition to purchase. 
-quantity | The quantity of the item to purchase. 
-shopId | The id identifying the store the item is being purchased from (not yet supported). Use null or empty string to specify the default shop price.
-includeDef | If true, the associated item definition will be included in the response. 
-
 

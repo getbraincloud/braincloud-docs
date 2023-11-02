@@ -1,10 +1,16 @@
 # DetachUltraIdentity
-## Overview
+
 Detach the Ultra identity from this profile.
 
 
 
 <PartialServop service_name="identity" operation_name="DETACH" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+ultraUsername | It's what the user uses to log into the Ultra endpoint initially
+continueAnon | Proceed even if the profile will revert to anonymous?
 
 ## Usage
 
@@ -110,12 +116,5 @@ Code | Name | Description
 40210 | DOWNGRADING_TO_ANONYMOUS_ERROR | Occurs when detaching the last non-anonymous identity from an account with continueAnon set to false.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-ultraUsername | It's what the user uses to log into the Ultra endpoint initially
-continueAnon | Proceed even if the profile will revert to anonymous?
 
 

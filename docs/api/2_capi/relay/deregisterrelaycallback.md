@@ -1,5 +1,5 @@
 # DeregisterRelayCallback
-## Overview
+
 Deregisters callback for relay messages coming from peers.
 
 ## Usage

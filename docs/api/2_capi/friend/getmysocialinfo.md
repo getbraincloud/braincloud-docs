@@ -1,8 +1,14 @@
 # GetMySocialInfo
-## Overview
+
 Retrieves the social information associated with the logged in user. Includes summary data if includeSummaryData is true.
 
 <PartialServop service_name="friend" operation_name="GET_MY_SOCIAL_INFO" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+friendPlatform | Friend platform to query. Valid values are "Facebook", "<%= data.branding.productName %>" and "All".
+includeSummaryData | True if including summary data; false otherwise.
 
 ## Usage
 
@@ -156,11 +162,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-friendPlatform | Friend platform to query. Valid values are "Facebook", "<%= data.branding.productName %>" and "All".
-includeSummaryData | True if including summary data; false otherwise.
-
 

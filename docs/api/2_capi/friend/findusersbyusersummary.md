@@ -1,5 +1,5 @@
 # FindUsersByUserSummary
-## Overview
+
 Retrieves profile information based on the search criteria of the user summary data.
 
 If there are more results than the maximum requested, then maximum requested results are returned.
@@ -13,6 +13,12 @@ Due to the custom data fields are not indexed, this call is not recommended for 
 :::
 
 <PartialServop service_name="friend" operation_name="FIND_USERS_BY_USER_SUMMARY" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+where | Mongo style query string
+maxResults | Maximum number of results to return.
 
 ## Usage
 
@@ -129,11 +135,4 @@ var retVal = friendProxy.findUsersByUserSummary(where, maxResults);
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-where | Mongo style query string
-maxResults | Maximum number of results to return.
-
 

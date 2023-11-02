@@ -1,5 +1,5 @@
 # HeadRequest
-## Overview
+
 Executes a HEAD request.
 
 <PartialServop service_name="httpClient" operation_name="HEAD" / >

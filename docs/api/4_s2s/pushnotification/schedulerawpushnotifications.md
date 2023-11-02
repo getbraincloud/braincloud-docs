@@ -1,5 +1,5 @@
 # ScheduleRawPushNotifications
-## Overview
+
 Schedules raw notifications based on user local time.
 
 
@@ -12,6 +12,17 @@ Name | Description
 notificationJobs | Number of notification jobs/time zones targeted
 
 <PartialServop service_name="pushNotification" operation_name="SCHEDULE_RAW_NOTIFICATIONS" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+fcmContent | FCM dependent message content. 
+iosContent | IOS dependent message content. 
+facebookContent | Facebook dependent message content. 
+segmentIdList | List of target segments. Omit to send to all users. 
+localTime | The scheduled local arrival time. 
+minimizeJobs | Optional flag to cause the server to scan players time zones to reduce scope. 
+startDateUTC | Optional base date for local time calculation. 
 
 ## Usage
 
@@ -174,16 +185,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-fcmContent | FCM dependent message content. 
-iosContent | IOS dependent message content. 
-facebookContent | Facebook dependent message content. 
-segmentIdList | List of target segments. Omit to send to all users. 
-localTime | The scheduled local arrival time. 
-minimizeJobs | Optional flag to cause the server to scan players time zones to reduce scope. 
-startDateUTC | Optional base date for local time calculation. 
-
 

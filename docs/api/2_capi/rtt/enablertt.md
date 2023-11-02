@@ -1,5 +1,5 @@
 # EnableRTT
-## Overview
+
 Attempts to establish an RTT connection to the <%= data.branding.productName %> servers. 
 
 RTT must be enabled in the *Design Portal*, under **Design | Core App Info | Advanced Settings**.
@@ -7,6 +7,11 @@ RTT must be enabled in the *Design Portal*, under **Design | Core App Info | Adv
 RTT is available to all *Plus* plan subscriptions.
 
 <PartialServop service_name="rttRegistration" operation_name="REQUEST_CLIENT_CONNECTION" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+connectionType | Type of RTT connections being established. Examples: WebSocket, TCP.
 
 ## Usage
 
@@ -128,10 +133,4 @@ public void rttConnectFailure(String errorMessage)
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-connectionType | Type of RTT connections being established. Examples: WebSocket, TCP.
-
 

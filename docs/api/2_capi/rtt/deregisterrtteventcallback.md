@@ -1,5 +1,5 @@
 # DeregisterRTTEventCallback
-## Overview
+
 Deregisters the RTT Event callback.
 
 ## Usage

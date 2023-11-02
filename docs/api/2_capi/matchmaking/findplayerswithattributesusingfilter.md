@@ -1,10 +1,18 @@
 # FindPlayersWithAttributesUsingFilter
-## Overview
+
 Finds matchmaking enabled players using a cloud code filter and additional attributes.
 
 Additional information of filters can be found under [Matchmaking Filters](/api/capi/matchmaking/#matchmaking-filters).
 
 <PartialServop service_name="matchMaking" operation_name="FIND_PLAYERS_USING_FILTER" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+rangeDelta | How close an opponents rating must be to yours
+numMatches | The maximum number of matches to return
+jsonAttributes | Attributes match criteria
+jsonExtraParms | Parameters to be passed to the filter
 
 ## Usage
 
@@ -157,13 +165,4 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-rangeDelta | How close an opponents rating must be to yours
-numMatches | The maximum number of matches to return
-jsonAttributes | Attributes match criteria
-jsonExtraParms | Parameters to be passed to the filter
-
 

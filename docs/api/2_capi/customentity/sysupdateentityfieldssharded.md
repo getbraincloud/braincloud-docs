@@ -1,8 +1,17 @@
 # SysUpdateEntityFieldsSharded
-## Overview
+
 For sharded custom collection entities. Sets the specified fields within custom entity data on the server, bypassing ACL permissions checks.
 
 <PartialServop service_name="customEntity" operation_name="SYS_UPDATE_ENTITY_FIELDS_SHARDED" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityType | The type of custom entity being updated.
+entityId | The id of custom entity being updated.
+version | Version of the custom entity being updated.
+fieldsJson | Specific fields, as JSON, to set within entity's custom data.
+shardKeyJson | The shard key field(s) and value(s), as JSON, applicable to the entity being updated.
 
 ## Usage
 
@@ -127,14 +136,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityType | The type of custom entity being updated.
-entityId | The id of custom entity being updated.
-version | Version of the custom entity being updated.
-fieldsJson | Specific fields, as JSON, to set within entity's custom data.
-shardKeyJson | The shard key field(s) and value(s), as JSON, applicable to the entity being updated.
-
 

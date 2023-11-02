@@ -1,5 +1,5 @@
 # GetAllSegments
-## Overview
+
 Gets the end-user segments for your app.
 
 Segments are manually created on the <%= data.branding.productName %> portal, on the **Design | Segmentation | Segments** page.

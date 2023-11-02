@@ -1,5 +1,5 @@
 # Client Heartbeat
-## Overview
+
 This service allows you to send no-op packets to the server to keep the session alive. The default session will expire after 20 minutes.
 
 

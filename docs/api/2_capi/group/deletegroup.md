@@ -1,10 +1,16 @@
 # DeleteGroup
-## Overview
+
 Delete a group.
 
 This method is affected by versioning. See the [versioning documentation](/api/appendix/version) for more information.
 
 <PartialServop service_name="group" operation_name="DELETE_GROUP" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | ID of the group
+version | The current group version
 
 ## Usage
 
@@ -145,11 +151,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | ID of the group
-version | The current group version
-
 

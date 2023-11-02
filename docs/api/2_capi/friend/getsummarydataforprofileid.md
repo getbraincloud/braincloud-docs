@@ -1,10 +1,15 @@
 # GetSummaryDataForProfileId
-## Overview
+
 Retrieves the summary information for the specified user profile ID.
 
 Does not require the calling user to be a friend of the other user.
 
 <PartialServop service_name="friend" operation_name="GET_SUMMARY_DATA_FOR_PROFILE_ID" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+profileId | Profile (user) ID.
 
 ## Usage
 
@@ -144,10 +149,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | Profile (user) ID.
-
 

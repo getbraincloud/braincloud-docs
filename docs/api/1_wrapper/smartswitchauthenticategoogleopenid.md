@@ -1,5 +1,5 @@
 # SmartSwitchAuthenticateGoogleOpenId
-## Overview
+
 Smart Switch Authenticate will logout of the current profile, and switch to the new authentication type.
 
 In event the current session was previously an anonymous account, the smart switch will delete that profile (since completely anonymous accounts are irretrievable once you switch away from them).
@@ -7,6 +7,13 @@ In event the current session was previously an anonymous account, the smart swit
 Use this function to keep a clean designflow from anonymous to signed profiles
 
 Authenticate the user using a google user id (gXXX) and google authentication token.
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+userid | String representation of google userid (gXXX)
+token | The authentication token derived via the google apis.
+forceCreate | Should a new profile be created for this user if the account does not exist?
 
 ## Usage
 
@@ -151,12 +158,4 @@ var forceCreate = true;
 });
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-userid | String representation of google userid (gXXX)
-token | The authentication token derived via the google apis.
-forceCreate | Should a new profile be created for this user if the account does not exist?
-
 

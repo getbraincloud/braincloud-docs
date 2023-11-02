@@ -1,8 +1,14 @@
 # SysGetRandomGroupsMatching
-## Overview
+
 Gets a list of up to maxReturn randomly selected groups from the server based on the where condition, bypassing ownership/ACL checks.
 
 <PartialServop service_name="group" operation_name="SYS_GET_RANDOM_GROUPS_MATCHING" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+where | A mongo style query string.
+maxReturn | The max count of groups to randomly select.
 
 ## Usage
 
@@ -147,11 +153,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-where | A mongo style query string.
-maxReturn | The max count of groups to randomly select.
-
 

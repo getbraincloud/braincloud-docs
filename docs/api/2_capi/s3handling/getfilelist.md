@@ -1,8 +1,13 @@
 # GetFileList
-## Overview
+
 Retrieves the details of custom files stored on the server.
 
 <PartialServop service_name="s3Handling" operation_name="GET_FILE_LIST" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+category | Category of files to retrieve
 
 ## Usage
 
@@ -141,10 +146,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-category | Category of files to retrieve
-
 

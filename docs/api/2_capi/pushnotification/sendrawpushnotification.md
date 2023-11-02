@@ -1,8 +1,16 @@
 # SendRawPushNotification
-## Overview
+
 Sends a notification to a user consisting of raw platform dependent content.
 
 <PartialServop service_name="pushNotification" operation_name="SEND_RAW" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+toProfileId | The profileId of the user to receive the notification
+fcmContent | FCM dependent content
+iosContent | IOS (APNS) dependent content
+facebookContent | Facebook dependent content
 
 ## Usage
 
@@ -221,13 +229,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-toProfileId | The profileId of the user to receive the notification
-fcmContent | FCM dependent content
-iosContent | IOS (APNS) dependent content
-facebookContent | Facebook dependent content
-
 

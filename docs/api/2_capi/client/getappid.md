@@ -1,5 +1,5 @@
 # GetAppId
-## Overview
+
 Returns the app id of the client app.
 
 ## Usage

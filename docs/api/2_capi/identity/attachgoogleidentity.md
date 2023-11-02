@@ -1,10 +1,16 @@
 # AttachGoogleIdentity
-## Overview
+
 Attach the user's Google credentials to the current profile.
 
 
 
 <PartialServop service_name="identity" operation_name="ATTACH" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+googleId | The google ID of the user
+authenticationToken | The validated token from the Google SDK (that will be further validated when sent to the <%= data.branding.productName %> service)
 
 ## Usage
 
@@ -113,12 +119,5 @@ Code | Name | Description
 40212 | MERGE_PROFILES | Returned when trying to attach an identity type that would result in two profiles being merged into one (for instance an anonymous account and a Google account).
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-googleId | The google ID of the user
-authenticationToken | The validated token from the Google SDK (that will be further validated when sent to the <%= data.branding.productName %> service)
 
 

@@ -1,5 +1,5 @@
 # ConsumeCurrency
-## Overview
+
 :::caution
 WARNING: 
 This call, <code>ConsumeCurrency()</code>, is included in the client libraries for convenience and backwards compatibility, but for app security reasons we recommend it only be called server-side via Cloud Code. By default the <%= data.branding.productName %> servers will block any client-side invocations of currency altering methods. To enable client-side support (not recommended), you need to enable the [x] Allow Currency Calls from Client compatibility setting on the Design | Core App Info | Advanced Settings page of the portal.
@@ -26,6 +26,12 @@ Consume the passed-in amount of currency from the player.
 Note: Consuming 0 or negative currency will return an error. Use AwardCurrency to add currency values.
 
 <PartialServop service_name="product" operation_name="CONSUME_VC" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+currencyType | The currency type to consume.
+amount | The amount of currency to consume.
 
 ## Usage
 
@@ -183,11 +189,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-currencyType | The currency type to consume.
-amount | The amount of currency to consume.
-
 

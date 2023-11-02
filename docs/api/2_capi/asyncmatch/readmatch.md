@@ -1,8 +1,14 @@
 # ReadMatch
-## Overview
+
 Returns the current state of the given match.
 
 <PartialServop service_name="asyncMatch" operation_name="READ_MATCH" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+ownerId | Match owner identifier
+matchId | Match identifier
 
 ## Usage
 
@@ -169,11 +175,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-ownerId | Match owner identifier
-matchId | Match identifier
-
 

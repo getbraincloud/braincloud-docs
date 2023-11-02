@@ -1,5 +1,5 @@
 # Initialize
-## Overview
+
 > To initialize, use this code:
 
 
@@ -17,6 +17,14 @@ This method initializes the <%= data.branding.productName %> client SDK.  The in
 :::caution
 Initialize must be called before you can call any <%= data.branding.productName %> APIs.
 :::
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+serverUrl | The url of the <%= data.branding.productName %> server.
+secretKey | The secret key for your app found in the <%= data.branding.productName %> portal.
+appId | The id of your app found in the <%= data.branding.productName %> portal.
+appVersion | The version of your app. This can be used to prevent older versions of your app from logging into <%= data.branding.productName %>.
 
 ## Usage
 
@@ -118,13 +126,4 @@ var appId = "123456";
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-serverUrl | The url of the <%= data.branding.productName %> server.
-secretKey | The secret key for your app found in the <%= data.branding.productName %> portal.
-appId | The id of your app found in the <%= data.branding.productName %> portal.
-appVersion | The version of your app. This can be used to prevent older versions of your app from logging into <%= data.branding.productName %>.
-
 

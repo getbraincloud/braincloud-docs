@@ -1,5 +1,5 @@
 # GetCurrentTimezoneOffset
-## Overview
+
 Get the timezone offset from UTC.
 
 ## Usage

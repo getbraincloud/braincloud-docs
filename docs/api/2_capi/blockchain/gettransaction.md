@@ -1,8 +1,14 @@
 # GetTransaction
-## Overview
+
 Retrieves the transaction details for the given transaction id.
 
 <PartialServop service_name="blockchain" operation_name="GET_TRANSACTION" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+integrationId | The blockchain integration id. Currently only 'default' is supported.
+transactionId | The target transaction id.
 
 ## Usage
 
@@ -293,11 +299,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-integrationId | The blockchain integration id. Currently only 'default' is supported.
-transactionId | The target transaction id.
-
 

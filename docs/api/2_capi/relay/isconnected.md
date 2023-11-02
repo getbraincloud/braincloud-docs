@@ -1,5 +1,5 @@
 # IsConnected
-## Overview
+
 Returns whether or not we have a successful connection with the relay server.
 
 ## Usage

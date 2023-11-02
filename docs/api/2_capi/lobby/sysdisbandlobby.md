@@ -1,8 +1,15 @@
 # SysDisbandLobby
-## Overview
+
 Disbands the given lobby. `msg` and `details` are optional values.
 
 <PartialServop service_name="lobby" operation_name="SYS_DISBAND_LOBBY" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+lobbyId | The id of lobby that this room server is associated with. 
+msg | Optional message to send to lobby members. 
+details | Optional data to send to lobby members. 
 
 ## Usage
 
@@ -91,12 +98,4 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-lobbyId | The id of lobby that this room server is associated with. 
-msg | Optional message to send to lobby members. 
-details | Optional data to send to lobby members. 
-
 

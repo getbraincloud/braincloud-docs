@@ -1,5 +1,5 @@
 # VerifyItunesReceipt
-## Overview
+
 Method verifies an iTunes receipt. On success, the player will be awarded the associated currencies.
 
 
@@ -11,6 +11,11 @@ Apple receipts will often contain old transactions. The key values of the return
 * `unprocessedCount` - the number of transactions that were rejected. See the `transactionStatus` code associated with the transaction for details.
 
 <PartialServop service_name="product" operation_name="OP_CASH_IN_RECEIPT" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+base64EncReceiptData | The iTunes receipt **`payload`** string
 
 ## Usage
 
@@ -175,11 +180,5 @@ Code | Name | Description
 102 | STATUS_FAILED_PRODUCT_NOT_FOUND | iTunes product id exists, but cannot locate the product in <%= data.branding.productName %> Product Inventory. *This is likely a configuration error in the <%= data.branding.productName %> product - double-check the iTunes price settings for the product.**
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-base64EncReceiptData | The iTunes receipt **`payload`** string
 
 

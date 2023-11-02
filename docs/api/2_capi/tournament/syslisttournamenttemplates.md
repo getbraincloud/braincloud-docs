@@ -1,8 +1,13 @@
 # SysListTournamentTemplates
-## Overview
+
 Lists all tournament templates.
 
 <PartialServop service_name="tournament" operation_name="SYS_LIST_TOURNAMENT_TEMPLATES" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+optionsJson | Optional json to sort the list of tournament templates. Valid values for sort field are \"ASCENDING\" or \"DESCENDING\"; defaults to ASCENDING
 
 ## Usage
 
@@ -248,10 +253,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-optionsJson | Optional json to sort the list of tournament templates. Valid values for sort field are \"ASCENDING\" or \"DESCENDING\"; defaults to ASCENDING
-
 

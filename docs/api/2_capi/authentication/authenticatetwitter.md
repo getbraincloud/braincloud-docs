@@ -1,5 +1,5 @@
 # AuthenticateTwitter
-## Overview
+
 Authenticate the user using a Twitter user ID, authentication token, and secret from Twitter.
 
 
@@ -9,6 +9,14 @@ Make sure you've initialized the <%= data.branding.productName %> library before
 :::
 
 <PartialServop service_name="authenticationV2" operation_name="AUTHENTICATE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+twitterId | String representation of Twitter user ID
+token | The authentication token derived via the Twitter APIs
+secret | The secret given when attempting to link with Twitter
+forceCreate | Should a new profile be created for this user if the account does not exist?
 
 ## Usage
 
@@ -209,14 +217,5 @@ Code | Name | Description
 40307 | TOKEN_DOES_NOT_MATCH_USER | The user credentials are invalid (i.e. bad Twitter userId / token / secret). May also indicate that Twitter integration is not properly configured.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-twitterId | String representation of Twitter user ID
-token | The authentication token derived via the Twitter APIs
-secret | The secret given when attempting to link with Twitter
-forceCreate | Should a new profile be created for this user if the account does not exist?
 
 

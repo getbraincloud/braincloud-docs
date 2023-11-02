@@ -1,6 +1,11 @@
 # SetStoredProfileId
-## Overview
+
 Sets the stored profile ID
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+profileId | The profile ID to set
 
 ## Usage
 
@@ -83,10 +88,4 @@ Sets the stored profile ID
 <%= data.branding.codePrefix %>.setStoredProfileId("1234-1234-1234-1234");
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | The profile ID to set
-
 

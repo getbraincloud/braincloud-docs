@@ -1,11 +1,18 @@
 # DetachAdvancedIdentity
-## Overview
+
 Detach the identity from this profile.
 
 
 
 
 <PartialServop service_name="identity" operation_name="DETACH" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+authenticationType | Universal, Universal, Facebook, etc
+ids | Auth IDs structure
+extraJson | Additional to piggyback along with the call, to be picked up by pre- or post- hooks. Leave empty string for no extraJson
 
 ## Usage
 
@@ -155,13 +162,5 @@ Code | Name | Description
 40209 | SECURITY_ERROR | Returned if a security exception was encountered.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-authenticationType | Universal, Universal, Facebook, etc
-ids | Auth IDs structure
-extraJson | Additional to piggyback along with the call, to be picked up by pre- or post- hooks. Leave empty string for no extraJson
 
 

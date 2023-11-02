@@ -1,8 +1,15 @@
 # SysUpdateProduct
-## Overview
+
 Updates an existing product with the specifed values. Pass -1 as the version to bypass version checking.
 
 <PartialServop service_name="productManagement" operation_name="SYS_UPDATE_PRODUCT" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+itemId | The product item identifier.
+version | The product configuration version.
+productJson | The product details to update. Note: If itemId is included in the productJson, it is ignored. The itemId provided as a direct parameter takes priority.
 
 ## Usage
 
@@ -133,12 +140,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-itemId | The product item identifier.
-version | The product configuration version.
-productJson | The product details to update. Note: If itemId is included in the productJson, it is ignored. The itemId provided as a direct parameter takes priority.
-
 

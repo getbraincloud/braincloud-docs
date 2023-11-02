@@ -1,5 +1,5 @@
 # Delete
-## Overview
+
 Deletes a document.
 
 <PartialServop service_name="httpClient" operation_name="DELETE" / >

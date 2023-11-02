@@ -1,5 +1,5 @@
 # PostScoreToLeaderboard
-## Overview
+
 Post the players score to the given social leaderboard.
 
 You can optionally send a user-defined json string of data with the posted score. This string could include information relevant to the posted score.
@@ -7,6 +7,13 @@ You can optionally send a user-defined json string of data with the posted score
 Note that the behavior of posting a score can be modified in the <%= data.branding.productName %> portal. By default, the server will only keep the player's best score.
 
 <PartialServop service_name="leaderboard" operation_name="POST_SCORE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardId | The leaderboard to post to.
+score | The score to post.
+data | Optional user-defined data to post with the score.
 
 ## Usage
 
@@ -160,12 +167,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | The leaderboard to post to.
-score | The score to post.
-data | Optional user-defined data to post with the score.
-
 

@@ -1,5 +1,5 @@
 # SysDeleteGlobalFiles
-## Overview
+
 ```objective_c
 // S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
@@ -12,6 +12,14 @@
 Delete all the files in the specified directory. Returns a list of the files that were deleted.
 
 <PartialServop service_name="globalFileV3" operation_name="SYS_DELETE_GLOBAL_FILES" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+treeId | Tree location to delete all files
+folderPath | Path of that tree location (as an intention check)
+treeVersion | Current tree version
+recurse | Delete files in subdirectories as well?
 
 ## Usage
 
@@ -137,13 +145,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-treeId | Tree location to delete all files
-folderPath | Path of that tree location (as an intention check)
-treeVersion | Current tree version
-recurse | Delete files in subdirectories as well?
-
 

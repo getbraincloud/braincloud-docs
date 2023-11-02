@@ -1,8 +1,13 @@
 # SysGetPromotionList
-## Overview
+
 Returns the list of configured promotions (without full details).
 
 <PartialServop service_name="promotions" operation_name="SYS_GET_PROMOTION_LIST" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+type | SCHEDULED or AUTOMATED to filter specific type, or empty string to return all promotions.
 
 ## Usage
 
@@ -125,10 +130,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-type | SCHEDULED or AUTOMATED to filter specific type, or empty string to return all promotions.
-
 

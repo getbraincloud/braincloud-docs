@@ -1,6 +1,11 @@
 # SetPingInterval
-## Overview
+
 Set the ping interval.
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+interval | Seconds inbetween pings.
 
 ## Usage
 
@@ -74,10 +79,4 @@ float interval = 10;
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-interval | Seconds inbetween pings.
-
 

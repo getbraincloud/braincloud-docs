@@ -1,5 +1,5 @@
 # PostScoreToDynamicGroupLeaderboardUsingConfig
-## Overview
+
 Post the group's score to the given social leaderboard, dynamically creating the group leaderboard if it does not exist yet. To create new leaderboard, configJson must specify leaderboardType, rotationType, resetAt, and retainedCount, at a minimum, with support to optionally specify an expiry in minutes.
 
 <PartialServop service_name="leaderboard" operation_name="POST_GROUP_SCORE_DYNAMIC_USING_CONFIG" />

@@ -1,10 +1,18 @@
 # SysUpdateGroupEntityData
-## Overview
+
 Update the data for a group entity, bypassing ownership/ACL checks. Optional parameters: data (will clear data if not provided)
 
 This method is affected by versioning. See the [versioning documentation](/api/appendix/version) for more information.
 
 <PartialServop service_name="group" operation_name="SYS_UPDATE_GROUP_ENTITY_DATA" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | ID of the group
+entityId | The id of the entity to update
+version | Version to verify
+jsonData | Data to apply
 
 ## Usage
 
@@ -106,13 +114,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | ID of the group
-entityId | The id of the entity to update
-version | Version to verify
-jsonData | Data to apply
-
 

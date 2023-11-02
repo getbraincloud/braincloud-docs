@@ -1,8 +1,15 @@
 # RefreshIdentity
-## Overview
+
 Refreshes an identity for this player
 
 <PartialServop service_name="identity" operation_name="REFRESH_IDENTITY" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+externalId | User ID
+authenticationToken | Password or client side token
+authenticationType | Type of authentication
 
 ## Usage
 
@@ -153,12 +160,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-externalId | User ID
-authenticationToken | Password or client side token
-authenticationType | Type of authentication
-
 

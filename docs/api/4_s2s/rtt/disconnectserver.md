@@ -1,5 +1,5 @@
 # DisconnectServer
-## Overview
+
 Disconnects and unregisters the server.
 
 ## Usage

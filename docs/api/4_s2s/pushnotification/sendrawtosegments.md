@@ -1,5 +1,5 @@
 # SendRawToSegments
-## Overview
+
 This operation sends a raw message to targetted segments.
 
 
@@ -12,6 +12,14 @@ Name | Description
 estimatedTargets | Estimate number of targeted users
 
 <PartialServop service_name="pushNotification" operation_name="SEND_RAW_TO_SEGMENTS" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+segmentIdList | List of target segments. Omit to send to all users. 
+fcmContent | FCM dependent message content. 
+iosContent | IOS dependent message content. 
+facebookContent | Facebook dependent message content. 
 
 ## Usage
 
@@ -168,13 +176,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-segmentIdList | List of target segments. Omit to send to all users. 
-fcmContent | FCM dependent message content. 
-iosContent | IOS dependent message content. 
-facebookContent | Facebook dependent message content. 
-
 

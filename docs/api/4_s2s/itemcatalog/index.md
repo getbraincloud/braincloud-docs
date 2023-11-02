@@ -1,5 +1,5 @@
 # Item Catalog
-## Overview
+
 
 The **Item Catalog** service is a key component of the **Item Management** system.
 All items to be managed (i.e. awarded, purchased, sold, traded, etc.) must be first defined in the *Item Catalog*.

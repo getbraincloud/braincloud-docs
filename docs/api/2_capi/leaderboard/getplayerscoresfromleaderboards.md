@@ -1,8 +1,13 @@
 # GetPlayerScoresFromLeaderboards
-## Overview
+
 Gets a player's score from multiple leaderboards. Will only return scores if they exist.
 
 <PartialServop service_name="leaderboard" operation_name="GET_PLAYER_SCORES_FROM_LEADERBOARDS" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardIds | Collection of leaderboard IDs
 
 ## Usage
 
@@ -157,10 +162,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardIds | Collection of leaderboard IDs
-
 

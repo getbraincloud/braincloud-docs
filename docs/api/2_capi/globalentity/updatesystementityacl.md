@@ -1,5 +1,5 @@
 # UpdateSystemEntityAcl
-## Overview
+
 Updates an existing *System Entity's* ACL on the server, regardless of the entity's current ACL permissions. *Note that for obvious security reasons, this API method is available via cloud-code only.*
 
 This method is affected by versioning. See the [versioning documentation](/api/appendix/version) for more information.

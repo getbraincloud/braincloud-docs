@@ -1,8 +1,13 @@
 # SwitchToParentProfile
-## Overview
+
 Switch to a Parent profile.
 
 <PartialServop service_name="identity" operation_name="SWITCH_TO_PARENT_PROFILE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+parentLevelName | The level of the parent to switch to
 
 ## Usage
 
@@ -138,10 +143,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-parentLevelName | The level of the parent to switch to
-
 

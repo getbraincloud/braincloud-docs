@@ -1,5 +1,5 @@
 # CreateLeaderboard
-## Overview
+
 ```
 {
     "packetId": 1,
@@ -26,6 +26,17 @@
 Creates a leaderboard under the context of the current game. You can optionally send a user-defined json string of data with the created leaderboard. This string could include information relevant to the created leaderboard.
 
 <PartialServop service_name="leaderboard" operation_name="CREATE_LEADERBOARD" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardId | A leaderboard id. 
+leaderboardType | The leaderboard type. 
+rotationType | Type of rotation. 
+rotationResetTime | Date to start the rotation (Date is in millis.) 
+retainedCount | How many previous rotations to keep. 
+numDaysToRotate | How many previous rotations to keep. 
+data | Optional user-defined data to post with the score. 
 
 ## Usage
 
@@ -164,16 +175,4 @@ var retVal = leaderboardProxy.createLeaderboard(
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | A leaderboard id. 
-leaderboardType | The leaderboard type. 
-rotationType | Type of rotation. 
-rotationResetTime | Date to start the rotation (Date is in millis.) 
-retainedCount | How many previous rotations to keep. 
-numDaysToRotate | How many previous rotations to keep. 
-data | Optional user-defined data to post with the score. 
-
 

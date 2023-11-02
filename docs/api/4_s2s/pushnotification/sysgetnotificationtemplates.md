@@ -1,8 +1,13 @@
 # SysGetNotificationTemplates
-## Overview
+
 Returns an array of the notification templates defined - with the text for the specified language.
 
 <PartialServop service_name="pushNotification" operation_name="SYS_GET_NOTIFICATION_TEMPLATES" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+defaultLanguageCode | The language code (lowercase) to be used for returning the default message text.
 
 ## Usage
 
@@ -116,10 +121,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-defaultLanguageCode | The language code (lowercase) to be used for returning the default message text.
-
 

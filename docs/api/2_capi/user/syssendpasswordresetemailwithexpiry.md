@@ -1,8 +1,14 @@
 # SysSendPasswordResetEmailWithExpiry
-## Overview
+
 Triggers the sending of a password reset email to the specified user. Note that the user must have an email identity attached to their profile.
 
 <PartialServop service_name="user" operation_name="SYS_SEND_PASSWORD_RESET_EMAIL_WITH_EXPIRY" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+profileId | The profileId of the user to send the password reset email to
+tokenTtlInMinutes | The time-to-live for the password reset url, in minutes.
 
 ## Usage
 
@@ -94,11 +100,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | The profileId of the user to send the password reset email to
-tokenTtlInMinutes | The time-to-live for the password reset url, in minutes.
-
 

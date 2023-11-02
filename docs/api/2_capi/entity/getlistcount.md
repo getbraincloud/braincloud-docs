@@ -1,5 +1,5 @@
 # GetListCount
-## Overview
+
 Method gets a count of entities based on the where clause.
 
 Fields available for use in the 'where' clause are:
@@ -11,6 +11,11 @@ Fields available for use in the 'where' clause are:
  Along with all custom data (using `data.`).  For more information on the query syntax see [here](/api/appendix/mongodbwherequeries).
 
 <PartialServop service_name="entity" operation_name="GET_LIST_COUNT" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+whereJson | Mongo style query string
 
 ## Usage
 
@@ -150,10 +155,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-whereJson | Mongo style query string
-
 

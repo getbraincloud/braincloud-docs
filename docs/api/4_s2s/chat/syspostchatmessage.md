@@ -1,8 +1,16 @@
 # SysPostChatMessage
-## Overview
+
 Send a message on behalf of the system to the specified users.
 
 <PartialServop service_name="chat" operation_name="SYS_POST_CHAT_MESSAGE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+channelId | The id of the channel to post to. 
+content | The content to post. 
+recordInHistory | Should the message be recorded in history? Using 'false' is useful for sending non-conversational messages, like when users join a room, etc. 
+from | Details of the user posting the message. 
 
 ## Usage
 
@@ -134,14 +142,5 @@ Code | Name | Description
 40616 | CLOUD_CODE_ONLY | Method only available via cloud code
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-channelId | The id of the channel to post to. 
-content | The content to post. 
-recordInHistory | Should the message be recorded in history? Using 'false' is useful for sending non-conversational messages, like when users join a room, etc. 
-from | Details of the user posting the message. 
 
 

@@ -1,8 +1,14 @@
 # SysChangeGroupType
-## Overview
+
 Changes the Group Type.
 
 <PartialServop service_name="group" operation_name="SYS_CHANGE_GROUP_TYPE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | ID of the group 
+groupType | Group Type 
 
 ## Usage
 
@@ -100,11 +106,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | ID of the group 
-groupType | Group Type 
-
 

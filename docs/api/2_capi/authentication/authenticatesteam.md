@@ -1,5 +1,5 @@
 # AuthenticateSteam
-## Overview
+
 Authenticate the user using a steam userId and session ticket (without any validation on the userId).
 
 
@@ -9,6 +9,13 @@ Make sure you've initialized the <%= data.branding.productName %> library before
 :::
 
 <PartialServop service_name="authenticationV2" operation_name="AUTHENTICATE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+userId | String representation of 64 bit steam ID
+sessionTicket | The session ticket of the user (hex encoded)
+forceCreate | Should a new profile be created for this user if the account does not exist?
 
 ## Usage
 
@@ -202,13 +209,5 @@ Code | Name | Description
 40307 | TOKEN_DOES_NOT_MATCH_USER | The user credentials are invalid (i.e. bad Steam userId and/or sessionTicket). May also indicate that Steam Integration is not properly configured.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-userId | String representation of 64 bit steam ID
-sessionTicket | The session ticket of the user (hex encoded)
-forceCreate | Should a new profile be created for this user if the account does not exist?
 
 

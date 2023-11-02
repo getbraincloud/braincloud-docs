@@ -1,8 +1,14 @@
 # SysSendPasswordResetEmailAdvanced
-## Overview
+
 Reset users password using templates.
 
 <PartialServop service_name="user" operation_name="SYS_SEND_PASSWORD_RESET_EMAIL_ADVANCED" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+profileId | Profile Id of the target user to reset password
+serviceParams | Set of parameters dependant on the mail service configured
 
 ## Usage
 
@@ -105,11 +111,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | Profile Id of the target user to reset password
-serviceParams | Set of parameters dependant on the mail service configured
-
 

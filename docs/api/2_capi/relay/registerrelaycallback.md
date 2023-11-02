@@ -1,5 +1,5 @@
 # RegisterRelayCallback
-## Overview
+
 Register callback for relay messages coming from peers.
 
 ## Usage

@@ -1,5 +1,5 @@
 # GetStoredProfileId
-## Overview
+
 Returns the stored profile ID
 
 ## Usage

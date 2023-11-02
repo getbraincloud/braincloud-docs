@@ -1,5 +1,5 @@
 # RunPeerScriptAsync
-## Overview
+
 Run a cloud script asynchronously in a peer app.
 
 
@@ -9,6 +9,13 @@ The result of the script run can be observed via the portal page for Queued Jobs
 :::
 
 <PartialServop service_name="script" operation_name="RUN_PEER_SCRIPT_ASYNC" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+scriptName | The name of the script with its path to be run
+scriptData | Data to be sent to the script in json format
+peer | Identifies the peer app
 
 ## Usage
 
@@ -176,12 +183,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-scriptName | The name of the script with its path to be run
-scriptData | Data to be sent to the script in json format
-peer | Identifies the peer app
-
 

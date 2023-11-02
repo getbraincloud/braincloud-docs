@@ -1,8 +1,14 @@
 # IncrementUserEntityData
-## Overview
+
 Partial increment of entity data field items. Partial set of items incremented as specified.
 
 <PartialServop service_name="entity" operation_name="INCREMENT_USER_ENTITY_DATA" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityId | The id of the entity to update
+jsonData | The entity's data object
 
 ## Usage
 
@@ -177,11 +183,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityId | The id of the entity to update
-jsonData | The entity's data object
-
 

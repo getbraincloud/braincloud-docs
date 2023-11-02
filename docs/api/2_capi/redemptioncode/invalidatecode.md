@@ -1,9 +1,16 @@
 # InvalidateCode
-## Overview
+
 Invalidate a redemption code.
 
 
 <PartialServop service_name="redemptionCode" operation_name="INVALIDATE_CODE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+scanCode | The scan code.
+codeType | The code type.
+invalidationReason | Optional custom information.
 
 ## Usage
 
@@ -184,13 +191,5 @@ Code | Name | Description
 40755 | REDEMPTION_CODE_TYPE_MISMATCH | Redemption code's code type does not match specified code type
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-scanCode | The scan code.
-codeType | The code type.
-invalidationReason | Optional custom information.
 
 

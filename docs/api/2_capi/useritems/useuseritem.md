@@ -1,8 +1,16 @@
 # UseUserItem
-## Overview
+
 Uses the specified item, potentially consuming it.
 
 <PartialServop service_name="userItems" operation_name="USE_USER_ITEM" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+itemId | The unique id of the user item. 
+version | The version of the user item being used. 
+newItemData | Optional item data to replace existing user item data. Specify null to leave item data unchanged. Specify empty map to clear item data. 
+includeDef | If true, the associated item definition will be included in the response. 
 
 ## Usage
 
@@ -227,13 +235,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-itemId | The unique id of the user item. 
-version | The version of the user item being used. 
-newItemData | Optional item data to replace existing user item data. Specify null to leave item data unchanged. Specify empty map to clear item data. 
-includeDef | If true, the associated item definition will be included in the response. 
-
 

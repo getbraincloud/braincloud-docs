@@ -1,5 +1,5 @@
 # RunPeerScript
-## Overview
+
 Run a cloud script in a peer app.
 
 
@@ -9,6 +9,13 @@ Note that the data object will contain anything returned from the script
 :::
 
 <PartialServop service_name="script" operation_name="RUN_PEER_SCRIPT" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+scriptName | The name of the script with its path to be run
+scriptData | Data to be sent to the script in json format
+peer | Identifies the peer app
 
 ## Usage
 
@@ -165,12 +172,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-scriptName | The name of the script with its path to be run
-scriptData | Data to be sent to the script in json format
-peer | Identifies the peer app
-
 

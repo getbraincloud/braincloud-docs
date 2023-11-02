@@ -1,8 +1,14 @@
 # GetProfileInfoForCredentialIfExists
-## Overview
+
 Retrieves profile information for the specified user. Silently fails
 
 <PartialServop service_name="friend" operation_name="GET_PROFILE_INFO_FOR_CREDENTIAL_IF_EXISTS" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+externalId | External id.
+authenticationType | Associated authentication type.
 
 ## Usage
 
@@ -144,11 +150,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-externalId | External id.
-authenticationType | Associated authentication type.
-
 

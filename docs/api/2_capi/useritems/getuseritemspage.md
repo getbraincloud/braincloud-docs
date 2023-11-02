@@ -1,8 +1,14 @@
 # GetUserItemsPage
-## Overview
+
 Retrieves the page of user's inventory from the server based on the context. If includeDef is true, response includes associated itemDef with each user item, with language fields limited to the current or default language.
 
 <PartialServop service_name="userItems" operation_name="GET_USER_ITEMS_PAGE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+context | The json context for the page request. 
+includeDef | If true, the associated item definition will be included in the response. 
 
 ## Usage
 
@@ -235,11 +241,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-context | The json context for the page request. 
-includeDef | If true, the associated item definition will be included in the response. 
-
 

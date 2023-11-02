@@ -1,8 +1,17 @@
 # SellUserItem
-## Overview
+
 Allows a quantity of a specified user item to be sold. If any quantity of the user item remains, it will be returned, potentially with the associated itemDef (with language fields limited to the current or default language), along with the currency refunded and currency balances.
 
 <PartialServop service_name="userItems" operation_name="SELL_USER_ITEM" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+itemId | The unique id of the user item. 
+version | The version of the user item being sold. 
+quantity | The quantity of the user item to sell. 
+shopId | The id identifying the store the item is being purchased from (not yet supported). Use null or empty string to specify the default shop price.
+includeDef | If true and any quantity of the user item remains, the associated item definition will be included in the response. 
 
 ## Usage
 
@@ -184,14 +193,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-itemId | The unique id of the user item. 
-version | The version of the user item being sold. 
-quantity | The quantity of the user item to sell. 
-shopId | The id identifying the store the item is being purchased from (not yet supported). Use null or empty string to specify the default shop price.
-includeDef | If true and any quantity of the user item remains, the associated item definition will be included in the response. 
-
 

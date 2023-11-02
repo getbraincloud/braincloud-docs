@@ -1,5 +1,5 @@
 # GetSharedEntitiesListForProfileId
-## Overview
+
 Method gets list of shared entities for the specified user based on type and/or where clause.
 
 Fields available for use in the 'where' clause are:
@@ -11,6 +11,14 @@ Fields available for use in the 'where' clause are:
  Along with all custom data (using `data.`).  For more information on the query syntax see [here](/api/appendix/mongodbwherequeries).
 
 <PartialServop service_name="entity" operation_name="READ_SHARED_ENTITIES_LIST" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+targetProfileId | The profile ID to retrieve shared entities for
+whereJson | Mongo style query string
+orderByJson | Specifies the order in which the query returns matching documents. The sort parameter consists of a field followed by an ascending(1)/descending flag(-1). eg. `{ "name" : 1}` sorts by name in ascending order
+maxReturn | The maximum number of entities to return
 
 ## Usage
 
@@ -200,13 +208,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-targetProfileId | The profile ID to retrieve shared entities for
-whereJson | Mongo style query string
-orderByJson | Specifies the order in which the query returns matching documents. The sort parameter consists of a field followed by an ascending(1)/descending flag(-1). eg. `{ "name" : 1}` sorts by name in ascending order
-maxReturn | The maximum number of entities to return
-
 

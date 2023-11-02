@@ -1,8 +1,14 @@
 # GetRecentStreamsForTargetPlayer
-## Overview
+
 Gets recent streams for initiating player.
 
 <PartialServop service_name="playbackStream" operation_name="GET_RECENT_STREAMS_FOR_TARGET_PLAYER" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+targetPlayerId | The player that received the stream
+maxNumStreams | The max number of stream to return in the response
 
 ## Usage
 
@@ -170,11 +176,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-targetPlayerId | The player that received the stream
-maxNumStreams | The max number of stream to return in the response
-
 

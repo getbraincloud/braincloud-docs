@@ -1,5 +1,5 @@
 # DeregisterAllPushNotificationDeviceTokens
-## Overview
+
 Clears the device tokens currently registered to the user.
 
 <PartialServop service_name="pushNotification" operation_name="DEREGISTER_ALL" />

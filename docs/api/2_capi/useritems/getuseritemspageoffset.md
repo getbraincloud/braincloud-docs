@@ -1,8 +1,15 @@
 # GetUserItemsPageOffset
-## Overview
+
 Retrieves the page of user's inventory from the server based on the encoded context. If includeDef is true, response includes associated itemDef with each user item, with language fields limited to the current or default language.
 
 <PartialServop service_name="userItems" operation_name="GET_USER_ITEMS_PAGE_OFFSET" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+context | The context string returned from the server from a previous call to SysGetCatalogItemsPage or SysGetCatalogItemsPageOffset. 
+pageOffset | The positive or negative page offset to fetch. Uses the last page retrieved using the context string to determine a starting point. 
+includeDef | If true, the associated item definition will be included in the response. 
 
 ## Usage
 
@@ -159,12 +166,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-context | The context string returned from the server from a previous call to SysGetCatalogItemsPage or SysGetCatalogItemsPageOffset. 
-pageOffset | The positive or negative page offset to fetch. Uses the last page retrieved using the context string to determine a starting point. 
-includeDef | If true, the associated item definition will be included in the response. 
-
 

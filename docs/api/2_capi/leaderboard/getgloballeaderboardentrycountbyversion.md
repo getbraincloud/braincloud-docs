@@ -1,8 +1,14 @@
 # GetGlobalLeaderboardEntryCountByVersion
-## Overview
+
 Method returns the number of entries in a global leaderboard.
 
 <PartialServop service_name="leaderboard" operation_name="GET_GLOBAL_LEADERBOARD_ENTRY_COUNT" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardId | The id of the leaderboard
+versionId | Version of the leaderboard
 
 ## Usage
 
@@ -144,11 +150,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | The id of the leaderboard
-versionId | Version of the leaderboard
-
 

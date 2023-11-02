@@ -1,8 +1,14 @@
 # GetUniqs
-## Overview
+
 Retrieves the uniqs owned by the caller.
 
 <PartialServop service_name="blockchain" operation_name="GET_UNIQS" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+integrationId | The blockchain integration id. Currently only 'default' is supported.
+contextJson | Optional. Reserved for future use.
 
 ## Usage
 
@@ -161,11 +167,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-integrationId | The blockchain integration id. Currently only 'default' is supported.
-contextJson | Optional. Reserved for future use.
-
 

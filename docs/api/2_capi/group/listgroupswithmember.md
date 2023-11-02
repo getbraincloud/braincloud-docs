@@ -1,8 +1,13 @@
 # ListGroupsWithMember
-## Overview
+
 Retrieve group summary information about the groups in which the specified user is a member.
 
 <PartialServop service_name="group" operation_name="LIST_GROUPS_WITH_MEMBER" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+profileId | ID of the user to search for
 
 ## Usage
 
@@ -148,10 +153,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | ID of the user to search for
-
 

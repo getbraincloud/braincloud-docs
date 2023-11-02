@@ -1,8 +1,13 @@
 # SysLookupFolder
-## Overview
+
 Returns the treeId for the specified folder.
 
 <PartialServop service_name="globalFileV3" operation_name="SYS_LOOKUP_FOLDER" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+fullFolderPath | Fully folder path to lookup
 
 ## Usage
 
@@ -103,10 +108,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-fullFolderPath | Fully folder path to lookup
-
 

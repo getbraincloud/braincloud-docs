@@ -1,5 +1,5 @@
 # SwitchTeam
-## Overview
+
 Switches to the specified team (if allowed.)
 
 Sends LOBBY_MEMBER_UPDATED to all lobby members, with copy of member data
@@ -7,6 +7,12 @@ Sends LOBBY_MEMBER_UPDATED to all lobby members, with copy of member data
 
 
 <PartialServop service_name="lobby" operation_name="SWITCH_TEAM" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+lobbyId | Id of chosen lobby.
+toTeamCode | Specified team code.
 
 ## Usage
 
@@ -156,12 +162,5 @@ Code | Name | Description
 40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-lobbyId | Id of chosen lobby.
-toTeamCode | Specified team code.
 
 

@@ -1,5 +1,5 @@
 # ReadGroupEntitiesPage
-## Overview
+
 Retrieve a page of group entity information based on the specified context. The groupId is required as part of the searchCriteria of the context.
 
 After retrieving a page of entities with this method use [<code>getPageOffset</code>](/api/capi/globalentity/getpageoffset) to retrieve previous or next pages.
@@ -7,6 +7,11 @@ After retrieving a page of entities with this method use [<code>getPageOffset</c
 See the [Generic Paged Queries](/api/appendix/genericpagedqueries) documentation for creating the context object.
 
 <PartialServop service_name="group" operation_name="READ_GROUP_ENTITIES_PAGE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+context | The JSON context for the page request
 
 ## Usage
 
@@ -204,10 +209,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-context | The JSON context for the page request
-
 

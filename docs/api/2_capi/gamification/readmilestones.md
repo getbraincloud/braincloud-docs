@@ -1,8 +1,13 @@
 # ReadMilestones
-## Overview
+
 Method retrieves all milestones defined for the game.
 
 <PartialServop service_name="gamification" operation_name="READ_MILESTONES" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+includeMetaData | Whether to return meta data as well
 
 ## Usage
 
@@ -164,10 +169,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-includeMetaData | Whether to return meta data as well
-
 

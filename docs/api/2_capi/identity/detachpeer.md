@@ -1,8 +1,13 @@
 # DetachPeer
-## Overview
+
 Detaches a peer identity from the current profile.
 
 <PartialServop service_name="identity" operation_name="DETACH_PEER" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+peer | Identifies the peer of the profile you wish to detach
 
 ## Usage
 
@@ -136,10 +141,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-peer | Identifies the peer of the profile you wish to detach
-
 

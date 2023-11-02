@@ -1,6 +1,11 @@
 # RegisterRTTChatCallback
-## Overview
+
 Registers a callback for RTT Chat Channel updates.
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+rttCallback | The RTT Chat callback handler.
 
 ## Usage
 
@@ -77,10 +82,4 @@ Coming soon!
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-rttCallback | The RTT Chat callback handler.
-
 

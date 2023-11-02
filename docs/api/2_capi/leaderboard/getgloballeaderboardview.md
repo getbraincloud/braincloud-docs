@@ -1,5 +1,5 @@
 # GetGlobalLeaderboardView
-## Overview
+
 Method returns a view of global leaderboard results that centers on the current player.
 
 Leaderboards entries contain the player's score and optionally, some user-defined data associated with the score.
@@ -11,6 +11,14 @@ Pro Tip: The best way to get just the current player's score is to use GetGlobal
 :::
 
 <PartialServop service_name="leaderboard" operation_name="GET_GLOBAL_LEADERBOARD_VIEW" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardId | The id of the leaderboard.
+sortOrder | Sort order of page. ("HIGH_TO_LOW" or "LOW_TO_HIGH")
+beforeCount | The count of number of players before the current player to include.
+afterCount | The count of number of players after the current player to include.
 
 ## Usage
 
@@ -206,13 +214,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | The id of the leaderboard.
-sortOrder | Sort order of page. ("HIGH_TO_LOW" or "LOW_TO_HIGH")
-beforeCount | The count of number of players before the current player to include.
-afterCount | The count of number of players after the current player to include.
-
 

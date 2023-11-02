@@ -1,9 +1,18 @@
 # ProcessAsynchronousResponse
-## Overview
+
 Callback with asynchronous response for the redemption code service to process for an asynchronous redemption code.
 
 
 <PartialServop service_name="redemptionCode" operation_name="PROCESS_ASYNCHRONOUS_RESPONSE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+scanCode | The scan code being redeemed. Required.
+redemptionCodeId | The redemption code id of the redemption code being processed. Required.
+codeType | The type of the scan code. Optional.
+attempt | The applicable attempt number associated with the redemption attempt being processed. Required.
+asyncResponse | Required asynchronous response info, as JSON object, indicating status via success and complete flags, along with applicable, but optional, customRedemptionInfo (JSON object) and/or errorCode (Integer) and errorMsg (String).  Note: A timeout exception is thrown if the max asynchronous processing time (configured for the associated redemption code type) has been exceeded and processing is still in progress (complete: false).
 
 ## Usage
 
@@ -181,15 +190,5 @@ Code | Name | Description
 40768 | REDEMPTION_CODE_ASYNC_PROCESSING_TIMEOUT | The specified timeout was hit
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-scanCode | The scan code being redeemed. Required.
-redemptionCodeId | The redemption code id of the redemption code being processed. Required.
-codeType | The type of the scan code. Optional.
-attempt | The applicable attempt number associated with the redemption attempt being processed. Required.
-asyncResponse | Required asynchronous response info, as JSON object, indicating status via success and complete flags, along with applicable, but optional, customRedemptionInfo (JSON object) and/or errorCode (Integer) and errorMsg (String).  Note: A timeout exception is thrown if the max asynchronous processing time (configured for the associated redemption code type) has been exceeded and processing is still in progress (complete: false).
 
 

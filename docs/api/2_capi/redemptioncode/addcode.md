@@ -1,9 +1,17 @@
 # AddCode
-## Overview
+
 Add a redemption code. Optional parameters: codeState and customCodeInfo.
 
 
 <PartialServop service_name="redemptionCode" operation_name="ADD_CODE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+scanCode | A scan code.
+codeType | The code type.
+codeState | Initial state of the redemption code.
+customCodeInfo | Optional custom information.
 
 ## Usage
 
@@ -189,14 +197,5 @@ Code | Name | Description
 40753 | REDEMPTION_CODE_TYPE_DISABLED | Invalid code. Redemption code type has been disabled
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-scanCode | A scan code.
-codeType | The code type.
-codeState | Initial state of the redemption code.
-customCodeInfo | Optional custom information.
 
 

@@ -1,6 +1,11 @@
 # RegisterRewardCallback
-## Overview
+
 Sets a reward handler for any API call results that return rewards.
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+rewardCallback | The reward callback handler.
 
 ## Usage
 
@@ -94,10 +99,4 @@ rewardBlock = ^(NSString *rewardsJson) {  };
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-rewardCallback | The reward callback handler.
-
 

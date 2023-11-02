@@ -1,8 +1,18 @@
 # InitializeWithApps
-## Overview
+
 Method initializes `<%= data.branding.codeWrapper %>` and `<%= data.branding.codeClient %>`  with a map of appid->secretkey.
 
 The parameters for this method vary by client (for example the Unity client takes none at all, as all data is pulled from the <%= data.branding.productName %> editor menu data).
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+serverURL | The URL to the <%= data.branding.productName %> server
+appId | The default app ID
+secretMap | All app ids to secret keys used by this application
+version | The app version
+*companyName* | Client dependent - The company name used in the keychain for storing anonymous and profile IDs. You are free to pick anything you want.
+*appName* | Client dependent - The app name used in the keychain for storing anonymous and profile IDs. You are free to pick anything you want.
 
 ## Usage
 
@@ -174,15 +184,4 @@ var version = <%= data.example.appVersion %>;
 <%= data.branding.codePrefix %>.initializeWithApps(appId, secretMap, version);
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-serverURL | The URL to the <%= data.branding.productName %> server
-appId | The default app ID
-secretMap | All app ids to secret keys used by this application
-version | The app version
-*companyName* | Client dependent - The company name used in the keychain for storing anonymous and profile IDs. You are free to pick anything you want.
-*appName* | Client dependent - The app name used in the keychain for storing anonymous and profile IDs. You are free to pick anything you want.
-
 

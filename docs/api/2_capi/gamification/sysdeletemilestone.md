@@ -1,8 +1,14 @@
 # SysDeleteMilestone
-## Overview
+
 Deletes the specified milestone.
 
 <PartialServop service_name="gamification" operation_name="SYS_DELETE_MILESTONE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+milestoneId | The id of the milestone to delete
+version | The current revision of the milestone. Use -1 to bypass the version-check.
 
 ## Usage
 
@@ -94,11 +100,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-milestoneId | The id of the milestone to delete
-version | The current revision of the milestone. Use -1 to bypass the version-check.
-
 

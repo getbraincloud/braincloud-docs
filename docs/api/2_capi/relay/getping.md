@@ -1,5 +1,5 @@
 # GetPing
-## Overview
+
 Get the current ping for our user. Note: Pings are not distributed among other members. Your game will have to bundle it inside a packet and distribute to other peers.
 
 ## Usage

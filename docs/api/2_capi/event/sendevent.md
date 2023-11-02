@@ -1,5 +1,5 @@
 # SendEvent
-## Overview
+
 Sends an event to the designated profile id with the attached JSON data.
 
 Any events that have been sent to a user will show up in their incoming event queue.
@@ -11,6 +11,13 @@ Note that the list of sent and incoming events for a user is also returned in th
 :::
 
 <PartialServop service_name="event" operation_name="SEND" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+toProfileId | The id of the player who is being sent the event
+eventType | The user-defined type of the event.
+eventData | The user-defined data for this event encoded in JSON.
 
 ## Usage
 
@@ -166,12 +173,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-toProfileId | The id of the player who is being sent the event
-eventType | The user-defined type of the event.
-eventData | The user-defined data for this event encoded in JSON.
-
 

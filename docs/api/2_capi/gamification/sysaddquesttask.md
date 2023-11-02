@@ -1,5 +1,5 @@
 # SysAddQuestTask
-## Overview
+
 Adds a new task to the specified quest. The id of the newly added task will be returned in the `data.newTask` field of the JSON result.
 
 _Note that tasks are essentially milestones that are embedded within a quest._
@@ -55,6 +55,15 @@ An example taskJson object:
 ```
 
 <PartialServop service_name="gamification" operation_name="SYS_ADD_QUEST_TASK" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+questId | The quest to add to
+version | The current revision of the quest
+taskJson | The data defining the task
+beforeTaskId | The id of the task to insert before. Pass in null to add to end
+ 
 
 ## Usage
 
@@ -215,14 +224,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-questId | The quest to add to
-version | The current revision of the quest
-taskJson | The data defining the task
-beforeTaskId | The id of the task to insert before. Pass in null to add to end
- 
-
 

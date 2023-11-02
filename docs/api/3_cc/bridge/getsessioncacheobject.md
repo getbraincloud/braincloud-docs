@@ -1,5 +1,5 @@
 # GetSessionCacheObject
-## Overview
+
 Retrieves the named JSON object from the session cache. Returns `null` if the object cannot be found.
 
 Field | Description

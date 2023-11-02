@@ -1,5 +1,5 @@
 # AuthenticateOculus
-## Overview
+
 Authenticate the user with <%= data.branding.productName %> using their Oculus Credentials.
 
 
@@ -9,6 +9,13 @@ Make sure you've initialized the <%= data.branding.productName %> library before
 :::
 
 <PartialServop service_name="authenticationV2" operation_name="AUTHENTICATE" / >
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+userId | The Oculus ID of the user
+nonce | The returned nonce from the Oculus Platform SDK
+forceCreate | Should a new profile be created for this user if the account does not exist?
 
 ## Usage
 
@@ -176,13 +183,5 @@ Code | Name | Description
 40217 | UNKNOWN_AUTH_ERROR | An unknown error has occurred during authentication.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-userId | The Oculus ID of the user
-nonce | The returned nonce from the Oculus Platform SDK
-forceCreate | Should a new profile be created for this user if the account does not exist?
 
 

@@ -1,5 +1,5 @@
 # SysPostChatMessage
-## Overview
+
 :::tip
 This method is available in Cloud Code scripts only.
 :::
@@ -9,6 +9,14 @@ Sends a potentially richer member chat message. By convention, `content` should 
 
 
 <PartialServop service_name="chat" operation_name="SYS_POST_CHAT_MESSAGE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+channelId | The chat channel to post to
+contentJson | The json content of the message
+recordInHistory | Set to `false` if the message shouldn't be recorded to history. Useful for sending non-conversational messages, like when users join a room, etc.
+fromJson | the from information for message. Should not include `id`.
 
 ## Usage
 
@@ -135,14 +143,5 @@ Code | Name | Description
 40616 | CLOUD_CODE_ONLY | Method only available via cloud code
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-channelId | The chat channel to post to
-contentJson | The json content of the message
-recordInHistory | Set to `false` if the message shouldn't be recorded to history. Useful for sending non-conversational messages, like when users join a room, etc.
-fromJson | the from information for message. Should not include `id`.
 
 

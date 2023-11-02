@@ -1,10 +1,18 @@
 # Attach
-## Overview
+
 Attach an identity to the current profile.
 
 
 
 <PartialServop service_name="identity" operation_name="ATTACH" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+externalId | User ID
+authenticationToken | Password or client side token
+authenticationType | Type of authentication. Full list of types can be found [here](/api/appendix/authtypes).
+externalAuthName | The name of the external authentication mechanism (optional, used for custom authentication types)
 
 ## Usage
 
@@ -117,14 +125,5 @@ Code | Name | Description
 40212 | MERGE_PROFILES | Returned when trying to attach an identity type that would result in two profiles being merged into one (for instance an anonymous account and a Facebook account).
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-externalId | User ID
-authenticationToken | Password or client side token
-authenticationType | Type of authentication. Full list of types can be found [here](/api/appendix/authtypes).
-externalAuthName | The name of the external authentication mechanism (optional, used for custom authentication types)
 
 

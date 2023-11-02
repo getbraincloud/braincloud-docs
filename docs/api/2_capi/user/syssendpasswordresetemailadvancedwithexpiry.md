@@ -1,5 +1,5 @@
 # SysSendPasswordResetEmailAdvancedWithExpiry
-## Overview
+
 Triggers the sending of a password reset email to the specified user - but allows the dev to override the email template that will be used. _Note that the user must have an email identity attached to their profile._
 
 
@@ -19,6 +19,13 @@ Example serviceParams (for Sendgrid dynamic templates):
 ```
 
 <PartialServop service_name="user" operation_name="SYS_SEND_PASSWORD_RESET_EMAIL_ADVANCED_WITH_EXPIRY" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+profileId | The profileId of the user to send the password reset email to
+tokenTtlInMinutes | The time-to-live for the password reset url, in minutes
+serviceParams | The service-specific email paramaters
 
 ## Usage
 
@@ -125,12 +132,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | The profileId of the user to send the password reset email to
-tokenTtlInMinutes | The time-to-live for the password reset url, in minutes
-serviceParams | The service-specific email paramaters
-
 

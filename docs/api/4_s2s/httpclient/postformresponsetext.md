@@ -1,5 +1,5 @@
 # PostFormResponseText
-## Overview
+
 This operation posts a form encoded document and expects a Text document in response.
 
 
@@ -12,6 +12,14 @@ Name | Description
 response | Text response.
 
 <PartialServop service_name="httpClient" operation_name="POST_FORM_RESPONSE_TEXT" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+serviceCode | Service code of the external service configured in the Cloud Code - Web Services section of the portal. 
+path | Path to append to the Base URL of the service. 
+headers | A map of extra headers (optional.) 
+form | Form parameters. 
 
 ## Usage
 
@@ -128,13 +136,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-serviceCode | Service code of the external service configured in the Cloud Code - Web Services section of the portal. 
-path | Path to append to the Base URL of the service. 
-headers | A map of extra headers (optional.) 
-form | Form parameters. 
-
 

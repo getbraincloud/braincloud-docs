@@ -1,5 +1,5 @@
 # GetSystemEntityPage
-## Overview
+
 ```json-doc
 {
 	"status": 200,
@@ -41,6 +41,11 @@ After retrieving a page of entities with this method use [getPageOffset](/api/ca
 See the [Generic Paged Queries](/api/appendix/genericpagedqueries) documentation for creating the context object.
 
 <PartialServop service_name="globalEntity" operation_name="GET_SYSTEM_ENTITY_PAGE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+context | The json context for the page request.
 
 ## Usage
 
@@ -154,10 +159,4 @@ var retVal = globalEntityProxy.getSystemEntityPage(context);
 // Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-context | The json context for the page request.
-
 

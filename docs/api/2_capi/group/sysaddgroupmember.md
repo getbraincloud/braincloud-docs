@@ -1,8 +1,16 @@
 # SysAddGroupMember
-## Overview
+
 Add a user as a member to the group, bypassing ownership/ACL checks. Optional parameters: role OR attributes.
 
 <PartialServop service_name="group" operation_name="SYS_ADD_GROUP_MEMBER" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | The id of the group.
+profileId | The profile id of the member being added.
+role | Role of the user being added as a member.
+attributes | Attributes of the member being added.
 
 ## Usage
 
@@ -105,13 +113,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | The id of the group.
-profileId | The profile id of the member being added.
-role | Role of the user being added as a member.
-attributes | Attributes of the member being added.
-
 

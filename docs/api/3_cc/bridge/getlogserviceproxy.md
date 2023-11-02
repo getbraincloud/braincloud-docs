@@ -1,5 +1,5 @@
 # GetLogServiceProxy
-## Overview
+
 Retrieves a LogService proxy object.
 
 Documentation for the service methods can be found [here](/api/cc/log).

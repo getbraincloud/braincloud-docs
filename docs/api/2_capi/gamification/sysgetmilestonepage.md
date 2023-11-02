@@ -1,5 +1,5 @@
 # SysGetMilestonePage
-## Overview
+
 ```json-doc
 {
   "status": 200,
@@ -99,6 +99,11 @@ Supported `searchCriteria` fields include:
 * and `extraData` fields (must be prefixed by `extraData`) - i.e. `extraData.actionIndex`
 
 <PartialServop service_name="gamification" operation_name="SYS_GET_MILESTONE_PAGE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+context | The json context for the page request.
 
 ## Usage
 
@@ -203,10 +208,4 @@ var milestonePage = gameficationProxy.sysGetMilestonePage(context);
 // Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-context | The json context for the page request.
-
 

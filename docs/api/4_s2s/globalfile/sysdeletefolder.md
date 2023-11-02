@@ -1,8 +1,16 @@
 # SysDeleteFolder
-## Overview
+
 Delete the specified folder (and optionally child files and subfolders). Return the updated directory tree.
 
 <PartialServop service_name="globalFileV3" operation_name="SYS_DELETE_FOLDER" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+treeId | Tree location of the folder to delete
+folderPath | Path of that tree location (as an intention check)
+treeVersion | Current tree version
+recurse | Delete files and subfolders if not empty?
 
 ## Usage
 
@@ -127,13 +135,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-treeId | Tree location of the folder to delete
-folderPath | Path of that tree location (as an intention check)
-treeVersion | Current tree version
-recurse | Delete files and subfolders if not empty?
-
 

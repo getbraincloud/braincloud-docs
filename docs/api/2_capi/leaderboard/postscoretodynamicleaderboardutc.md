@@ -1,10 +1,21 @@
 # PostScoreToDynamicLeaderboardUTC
-## Overview
+
 Post the players score to the given social leaderboard. You can optionally send a user-defined json string of data with the posted score. This string could include information relevant to the posted score.
 
 The passed in leaderboard config data is to dynamically create the leaderboard if it does not exist already.
 
 <PartialServop service_name="leaderboard" operation_name="POST_SCORE_DYNAMIC" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardId | The leaderboard to post to
+score | The score to post
+data | Optional user-defined data to post with the score
+leaderboardType | Leaderboard type
+rotationType | Type of rotation
+rotationReset | Date to next rotate rotation (date in millis UTC)
+retainedCount | How many previous rotations to keep
 
 ## Usage
 
@@ -192,16 +203,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | The leaderboard to post to
-score | The score to post
-data | Optional user-defined data to post with the score
-leaderboardType | Leaderboard type
-rotationType | Type of rotation
-rotationReset | Date to next rotate rotation (date in millis UTC)
-retainedCount | How many previous rotations to keep
-
 

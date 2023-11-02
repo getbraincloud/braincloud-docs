@@ -1,5 +1,5 @@
 # GetNetIdForCxId
-## Overview
+
 Returns the netId associated with a connection Id.
 
 ## Usage

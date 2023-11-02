@@ -1,8 +1,13 @@
 # ResetParentCurrency
-## Overview
+
 Resets the player's parent currency back to zero.
 
 <PartialServop service_name="virtualCurrency" operation_name="RESET_PARENT_VC" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+leveName | Name of the parent level.
 
 ## Usage
 
@@ -98,10 +103,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leveName | Name of the parent level.
-
 

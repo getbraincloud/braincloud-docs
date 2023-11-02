@@ -1,8 +1,18 @@
 # PostTournamentScoreOnBehalfOf
-## Overview
+
 Post score to another user.
 
 <PartialServop service_name="tournament" operation_name="POST_TOURNAMENT_SCORE_ON_BEHALF_OF" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+profileId | Profile id of the target user. 
+leaderboardId | The leaderboard for the tournament. 
+score | The score to post. 
+data | Optional data attached to the leaderboard entry. 
+roundStartedEpoch | Time the user started the match resulting in the score being posted. (Date is in millis.) 
+forceCreate | Should a new score be created? When false, the call can only modify a currently existing score. 
 
 ## Usage
 
@@ -127,15 +137,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | Profile id of the target user. 
-leaderboardId | The leaderboard for the tournament. 
-score | The score to post. 
-data | Optional data attached to the leaderboard entry. 
-roundStartedEpoch | Time the user started the match resulting in the score being posted. (Date is in millis.) 
-forceCreate | Should a new score be created? When false, the call can only modify a currently existing score. 
-
 

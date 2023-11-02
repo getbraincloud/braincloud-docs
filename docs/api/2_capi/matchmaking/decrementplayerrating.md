@@ -1,8 +1,13 @@
 # DecrementPlayerRating
-## Overview
+
 Decrements player rating.
 
 <PartialServop service_name="matchMaking" operation_name="DECREMENT_PLAYER_RATING" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+decrement | The decrement amount
 
 ## Usage
 
@@ -130,10 +135,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-decrement | The decrement amount
-
 

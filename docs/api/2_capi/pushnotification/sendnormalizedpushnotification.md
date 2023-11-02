@@ -1,8 +1,15 @@
 # SendNormalizedPushNotification
-## Overview
+
 Sends a notification to a user consisting of alert content and custom data.
 
 <PartialServop service_name="pushNotification" operation_name="SEND_NORMALIZED" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+toProfileId | The profileId of the user to receive the notification
+alertContentJson | Body and title of alert
+customDataJson | Optional custom data
 
 ## Usage
 
@@ -168,12 +175,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-toProfileId | The profileId of the user to receive the notification
-alertContentJson | Body and title of alert
-customDataJson | Optional custom data
-
 

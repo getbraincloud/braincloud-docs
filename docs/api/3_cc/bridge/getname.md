@@ -1,5 +1,5 @@
 # GetName
-## Overview
+
 Retrieves the name of the current user as a string.
 
 ## Usage

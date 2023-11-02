@@ -1,8 +1,15 @@
 # SysDeleteGlobalFile
-## Overview
+
 Deletes the specified global file.
 
 <PartialServop service_name="globalFileV3" operation_name="SYS_DELETE_GLOBAL_FILE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+fileId | The id of the file
+version | The version of the file
+filename | The filename of the file (provided as a check)
 
 ## Usage
 
@@ -110,12 +117,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-fileId | The id of the file
-version | The version of the file
-filename | The filename of the file (provided as a check)
-
 

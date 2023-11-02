@@ -1,5 +1,5 @@
 # SysGetSegmentList
-## Overview
+
 Returns a list of all segments with basic meta-data. i.e. does not include the criteria details.
 
 <PartialServop service_name="segment" operation_name="SYS_GET_SEGMENT_LIST" />

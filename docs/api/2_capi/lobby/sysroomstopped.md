@@ -1,8 +1,13 @@
 # SysRoomStopped
-## Overview
+
 Indicates that the gameplay for the room associated with the given lobby has completed. The lobby can be returned to the 'setup' state.
 
 <PartialServop service_name="lobby" operation_name="SYS_ROOM_STOPPED" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+lobbyId | The id of lobby that should be returned to the 'setup' state
 
 ## Usage
 
@@ -87,10 +92,4 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-lobbyId | The id of lobby that should be returned to the 'setup' state
-
 

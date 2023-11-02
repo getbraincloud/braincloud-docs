@@ -1,8 +1,13 @@
 # SysGetLeaderboardConfig
-## Overview
+
 Returns leaderboard configuration information, including tournament settings, for future and current (active) version of the specified leaderboard.
 
 <PartialServop service_name="leaderboard" operation_name="SYS_GET_LEADERBOARD_CONFIG" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardId | ID uniquely identifying the leaderboard configuration to retrieve.
 
 ## Usage
 
@@ -164,10 +169,4 @@ var retVal = leaderboardProxy.sysGetLeaderboardConfig(leaderboardId);
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | ID uniquely identifying the leaderboard configuration to retrieve.
-
 

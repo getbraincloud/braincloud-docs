@@ -1,5 +1,5 @@
 # MergePeerProfile
-## Overview
+
 Merge the peer profile associated with the provided externalId with the current profile.
 
 NOTE: If using the <%= data.branding.codeWrapper %>, once the merge is complete you should call [<code>SetStoredProfileId</code>](/api/wrapper/setstoredprofileid) in the <%= data.branding.codeWrapper %> with the profileId returned in the Merge call.
@@ -7,6 +7,15 @@ NOTE: If using the <%= data.branding.codeWrapper %>, once the merge is complete 
 
 
 <PartialServop service_name="identity" operation_name="MERGE_PEER_PROFILE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+peer | Name of the peer service
+externalId | User ID
+authenticationToken | Password or client side token
+authenticationType | Type of authentication. Full list of types can be found [here](/api/appendix/authtypes).
+externalAuthName | The name of the external authentication mechanism (optional, used for custom authentication types)
 
 ## Usage
 
@@ -119,15 +128,5 @@ Code | Name | Description
 40211 | DUPLICATE_IDENTITY_TYPE | Returned when trying to attach an identity type that already exists for that profile. For instance you can have only one Steam identity for a profile.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-peer | Name of the peer service
-externalId | User ID
-authenticationToken | Password or client side token
-authenticationType | Type of authentication. Full list of types can be found [here](/api/appendix/authtypes).
-externalAuthName | The name of the external authentication mechanism (optional, used for custom authentication types)
 
 

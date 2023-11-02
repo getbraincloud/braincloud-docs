@@ -1,8 +1,15 @@
 # SysDeleteQuestTask
-## Overview
+
 Deletes an embedded task in the specified quest. The id of the deleted task will be returned in the `data.deletedTask` field of the JSON result.
 
 <PartialServop service_name="gamification" operation_name="SYS_DELETE_QUEST_TASK" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+questId | The quest the task belongs to
+version | The current revision of the parent _quest_. (Note - _not_ the version of the embedded _task_)
+taskId | The id of the task to delete
 
 ## Usage
 
@@ -141,12 +148,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-questId | The quest the task belongs to
-version | The current revision of the parent _quest_. (Note - _not_ the version of the embedded _task_)
-taskId | The id of the task to delete
-
 

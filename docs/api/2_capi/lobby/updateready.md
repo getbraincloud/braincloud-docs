@@ -1,10 +1,17 @@
 # UpdateReady
-## Overview
+
 Updates the ready status and extra json for the given lobby member.
 
 
 
 <PartialServop service_name="lobby" operation_name="UPDATE_READY" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+lobbyType | The type of lobby to look for. Lobby types are defined in the portal.
+isReady | Initial ready-status of this user.
+extraJson | Initial extra-data about this user.
 
 ## Usage
 
@@ -162,13 +169,5 @@ Code | Name | Description
 40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-lobbyType | The type of lobby to look for. Lobby types are defined in the portal.
-isReady | Initial ready-status of this user.
-extraJson | Initial extra-data about this user.
 
 

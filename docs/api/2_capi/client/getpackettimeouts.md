@@ -1,5 +1,5 @@
 # GetPacketTimeouts
-## Overview
+
 Returns the list of packet timeouts.
 
 ## Usage

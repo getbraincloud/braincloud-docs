@@ -1,8 +1,16 @@
 # RunBatchUserScriptForSegmentsAndCompletionScript
-## Overview
+
 Runs a script against the users in the specified segments, and then a completion script at the end.
 
 <PartialServop service_name="script" operation_name="RUN_BATCH_USER_SCRIPT" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+scriptName | The name of the script with its path to be run against *each user* 
+scriptData | Data to be sent to the script in JSON format.
+segmentIdList | Array of segments that identify the users to run the *user script* against
+completionScript| The name of the script with its path to be run *once*, *after* all users have been processed.
 
 ## Usage
 
@@ -119,13 +127,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-scriptName | The name of the script with its path to be run against *each user* 
-scriptData | Data to be sent to the script in JSON format.
-segmentIdList | Array of segments that identify the users to run the *user script* against
-completionScript| The name of the script with its path to be run *once*, *after* all users have been processed.
-
 

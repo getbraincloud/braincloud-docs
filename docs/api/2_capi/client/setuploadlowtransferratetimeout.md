@@ -1,5 +1,5 @@
 # SetUploadLowTransferRateTimeout
-## Overview
+
 Sets the timeout in seconds of a low speed upload (ie transfer rate which is underneath the low transfer rate threshold).
 
 By default this is set to 120 seconds. Setting this value to 0 will turn off the timeout.
@@ -7,6 +7,11 @@ By default this is set to 120 seconds. Setting this value to 0 will turn off the
 :::tip
 This timeout method does not work on Unity mobile platforms.
 :::
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+timeoutSecs | The timeout in seconds
 
 ## Usage
 
@@ -82,10 +87,4 @@ int timeoutSecs = 60;
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-timeoutSecs | The timeout in seconds
-
 

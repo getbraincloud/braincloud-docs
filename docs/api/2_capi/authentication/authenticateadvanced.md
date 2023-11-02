@@ -1,5 +1,5 @@
 # AuthenticateAdvanced
-## Overview
+
 A generic Authenticate method that translates to the same as calling a specific one, except it takes an extraJson that will be passed along to pre- or post- hooks.
 
 
@@ -9,6 +9,14 @@ Make sure you've initialized the <%= data.branding.productName %> library before
 :::
 
 <PartialServop service_name="authenticationV2" operation_name="AUTHENTICATE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+authenticationType | Universal, Universal, Facebook, etc
+ids | Auth IDs structure
+forceCreate | Should a new profile be created for this user if the account does not exist?
+extraJson | Additional to piggyback along with the call, to be picked up by pre- or post- hooks. Leave empty string for no extraJson
 
 ## Usage
 
@@ -207,14 +215,5 @@ Code | Name | Description
 550022 | INVALID_PASSWORD_CONTENT | The password doesn't meet the minimum password requirements.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-authenticationType | Universal, Universal, Facebook, etc
-ids | Auth IDs structure
-forceCreate | Should a new profile be created for this user if the account does not exist?
-extraJson | Additional to piggyback along with the call, to be picked up by pre- or post- hooks. Leave empty string for no extraJson
 
 

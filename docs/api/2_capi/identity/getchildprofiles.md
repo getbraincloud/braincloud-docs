@@ -1,8 +1,13 @@
 # GetChildProfiles
-## Overview
+
 Returns a list of all child profiles in child Apps.
 
 <PartialServop service_name="identity" operation_name="GET_CHILD_PROFILES" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+includeSummaryData | Whether to return the summary friend data along with this call
 
 ## Usage
 
@@ -146,10 +151,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-includeSummaryData | Whether to return the summary friend data along with this call
-
 

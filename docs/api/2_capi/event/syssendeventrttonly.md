@@ -1,5 +1,5 @@
 # SysSendEventRTTOnly
-## Overview
+
 Sends an event to the designated user ID with the attached json data. Will only deliver the event via RTT. Will not persist the event.
 
 :::tip
@@ -7,6 +7,13 @@ The blank evId from the response indicates that the event has not been persisted
 :::
 
 <PartialServop service_name="event" operation_name="SYS_SEND_RTT_ONLY" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+toId | The id of the player who is being sent the event.
+eventType | The user-defined type of the event.
+eventData | The user-defined data for this event encoded in JSON.
 
 ## Usage
 
@@ -113,12 +120,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-toId | The id of the player who is being sent the event.
-eventType | The user-defined type of the event.
-eventData | The user-defined data for this event encoded in JSON.
-
 

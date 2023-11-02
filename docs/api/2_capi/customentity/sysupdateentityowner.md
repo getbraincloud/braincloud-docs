@@ -1,8 +1,17 @@
 # SysUpdateEntityOwner
-## Overview
+
 Updates the owner of the specified custom entity.
 
 <PartialServop service_name="customEntity" operation_name="SYS_UPDATE_ENTITY_OWNER" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityType | The type of custom entity being updated. 
+entityId | The id of custom entity being updated. 
+oldOwnerId | The profileId of the existing owner of the entity.
+newOwnerId | The profileId of the new owner of the entity.
+version | Version of the custom entity being updated. 
 
 ## Usage
 
@@ -118,14 +127,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityType | The type of custom entity being updated. 
-entityId | The id of custom entity being updated. 
-oldOwnerId | The profileId of the existing owner of the entity.
-newOwnerId | The profileId of the new owner of the entity.
-version | Version of the custom entity being updated. 
-
 

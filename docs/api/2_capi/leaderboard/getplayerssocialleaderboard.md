@@ -1,8 +1,14 @@
 # GetPlayersSocialLeaderboard
-## Overview
+
 Retrieve the social leaderboard for a list of players.
 
 <PartialServop service_name="leaderboard" operation_name="GET_PLAYERS_SOCIAL_LEADERBOARD" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardId | The ID of the leaderboard
+profileIds | The IDs of the players
 
 ## Usage
 
@@ -177,11 +183,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | The ID of the leaderboard
-profileIds | The IDs of the players
-
 

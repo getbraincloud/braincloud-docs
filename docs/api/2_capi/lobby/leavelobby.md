@@ -1,10 +1,15 @@
 # LeaveLobby
-## Overview
+
 Causes the caller to leave the specified lobby. If the user was the owner, a new owner will be chosen. If user was the last member, the lobby will be deleted.
 
 
 
 <PartialServop service_name="lobby" operation_name="LEAVE_LOBBY" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+lobbyId | Id of chosen lobby.
 
 ## Usage
 
@@ -146,11 +151,5 @@ Code | Name | Description
 40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-lobbyId | Id of chosen lobby.
 
 

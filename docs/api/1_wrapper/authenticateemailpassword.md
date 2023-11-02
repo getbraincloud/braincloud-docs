@@ -1,5 +1,5 @@
 # AuthenticateEmailPassword
-## Overview
+
 Authenticate the user with a custom Email and Password.  Note that the client app is responsible for collecting (and storing) the e-mail and potentially password (for convenience) in the client data.  For the greatest security, force the user to re-enter their password at each login (or at least give them that option).
 
 
@@ -53,6 +53,13 @@ Make sure you've initialized the <%= data.branding.productName %> wrapper before
 :::
 
 <PartialServop service_name="authenticationV2" operation_name="AUTHENTICATE" / >
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+email | The e-mail address of the user
+password | The password of the user
+forceCreate | Should a new profile be created for this user if the account does not exist?
 
 ## Usage
 
@@ -249,13 +256,5 @@ Code | Name | Description
 40307 | TOKEN_DOES_NOT_MATCH_USER | The user credentials don't match (i.e. incorrect password).
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-email | The e-mail address of the user
-password | The password of the user
-forceCreate | Should a new profile be created for this user if the account does not exist?
 
 

@@ -1,5 +1,5 @@
 # UpdateCustomInfo
-## Overview
+
 This operation updates the specified redemption code.
 
 
@@ -11,6 +11,14 @@ Name | Description
 response | Newly updated redemption code object
 
 <PartialServop service_name="redemptionCode" operation_name="UPDATE_CUSTOM_INFO" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+scanCode | The scan code. 
+codeType | The code type. 
+version | Current version of the redemption code (for concurrency checking.) 
+customCodeInfo | Optional custom information. 
 
 ## Usage
 
@@ -136,13 +144,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-scanCode | The scan code. 
-codeType | The code type. 
-version | Current version of the redemption code (for concurrency checking.) 
-customCodeInfo | Optional custom information. 
-
 

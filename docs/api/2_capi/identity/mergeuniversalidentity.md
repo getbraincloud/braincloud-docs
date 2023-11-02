@@ -1,5 +1,5 @@
 # MergeUniversalIdentity
-## Overview
+
 Merge the profile associated with the provided user ID with the current profile.
 
 NOTE: If using the <%= data.branding.codeWrapper %>, once the merge is complete you should call [<code>SetStoredProfileId</code>](/api/wrapper/setstoredprofileid) in the <%= data.branding.codeWrapper %> with the profileId returned in the Merge call.
@@ -37,6 +37,12 @@ public void FailureCallback(int statusCode, int reasonCode, string statusMessage
 ```
 
 <PartialServop service_name="identity" operation_name="MERGE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+userId | The player's user ID
+password | The player's password
 
 ## Usage
 
@@ -147,12 +153,5 @@ Code | Name | Description
 40211 | DUPLICATE_IDENTITY_TYPE | Returned when trying to attach an identity type that already exists for that profile. For instance you can have only one Universal identity for a profile.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-userId | The player's user ID
-password | The player's password
 
 

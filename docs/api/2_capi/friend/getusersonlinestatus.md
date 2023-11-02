@@ -1,10 +1,15 @@
 # GetUsersOnlineStatus
-## Overview
+
 Get the online status for a list of users based on profile ID.
 
 Does not require the calling user to be a friend of the other user.
 
 <PartialServop service_name="friend" operation_name="GET_USERS_ONLINE_STATUS" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+profileIds | Collection of profile IDs.
 
 ## Usage
 
@@ -149,10 +154,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-profileIds | Collection of profile IDs.
-
 

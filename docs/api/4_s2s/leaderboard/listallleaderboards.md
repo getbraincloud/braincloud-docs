@@ -1,5 +1,5 @@
 # ListAllLeaderboards
-## Overview
+
 ```
 {
     "packetId": 1,

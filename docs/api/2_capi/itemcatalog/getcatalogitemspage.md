@@ -1,8 +1,13 @@
 # GetCatalogItemsPage
-## Overview
+
 Retrieves page of catalog items from the server, with language fields limited to the text for the current or default language.
 
 <PartialServop service_name="itemCatalog" operation_name="GET_CATALOG_ITEMS_PAGE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+context | The json context for the page request. 
 
 ## Usage
 
@@ -221,10 +226,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-context | The json context for the page request. 
-
 

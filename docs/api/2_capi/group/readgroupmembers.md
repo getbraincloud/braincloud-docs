@@ -1,8 +1,13 @@
 # ReadGroupMembers
-## Overview
+
 Read the members of the group.
 
 <PartialServop service_name="group" operation_name="READ_MEMBERS_OF_GROUP" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | ID of the group
 
 ## Usage
 
@@ -150,10 +155,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | ID of the group
-
 

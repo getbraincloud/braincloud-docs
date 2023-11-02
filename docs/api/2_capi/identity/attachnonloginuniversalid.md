@@ -1,5 +1,5 @@
 # AttachNonLoginUniversalId
-## Overview
+
 Attaches a UniversalId to the current profile with no login capability.
 
 Useful if the app is not using UniversalId for authentication, and you still want to attach a UniversalId to create an app-unique display name for the user.
@@ -7,6 +7,11 @@ Useful if the app is not using UniversalId for authentication, and you still wan
 The call will fail if the UniversalId is already in use, or if the profile already contains a UniversalId.
 
 <PartialServop service_name="identity" operation_name="ATTACH_NONLOGIN_UNIVERSAL" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+externalId | The user's user ID
 
 ## Usage
 
@@ -134,10 +139,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-externalId | The user's user ID
-
 

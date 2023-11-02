@@ -1,5 +1,5 @@
 # GetPeerProfileSession
-## Overview
+
 Creates a session for the peer profile to allow profile context proxy creation.
 Requires the client to have attached a peer profile via the [<code>AttachPeerProfile</code>](/api/capi/identity/attachpeerprofile) method.
 

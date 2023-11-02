@@ -1,5 +1,5 @@
 # CreateLeaderboard
-## Overview
+
 :::caution
 WARNING: This call, <code>CreateLeaderboard()</code>, has been deprecated and replaced with <code>SysCreateLeaderboard()</code>.
 :::
@@ -7,6 +7,17 @@ WARNING: This call, <code>CreateLeaderboard()</code>, has been deprecated and re
 Creates a leaderboard under the context of the current game. You can optionally send a user-defined json string of data with the created leaderboard. This string could include information relevant to the created leaderboard.
 
 <PartialServop service_name="leaderboard" operation_name="CREATE_LEADERBOARD" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardId | The leaderboard to create
+leaderboardType | Leaderboard type
+rotationType | Type of rotation
+rotationReset | Date to start the rotation (date in millis)
+retainedCount | How many previous rotations to keep
+data | Optional user-defined data to relevant to the created leaderboard
+numDaysToRotate | Optional parameter for use only with DAYS rotation type
 
 ## Usage
 
@@ -140,16 +151,4 @@ var retVal = leaderboardProxy.createLeaderboard(
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | The leaderboard to create
-leaderboardType | Leaderboard type
-rotationType | Type of rotation
-rotationReset | Date to start the rotation (date in millis)
-retainedCount | How many previous rotations to keep
-data | Optional user-defined data to relevant to the created leaderboard
-numDaysToRotate | Optional parameter for use only with DAYS rotation type
-
 

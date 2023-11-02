@@ -1,9 +1,21 @@
 # GenerateCodes
-## Overview
+
 Generates specified quantity of redemption codes.
 
 
 <PartialServop service_name="redemptionCode" operation_name="GENERATE_CODES" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+codeType | The code type.
+codeState | Optional. Initial state of the redemption code: 'Inactive' or 'Available'. Defaults to 'Inactive'.
+quantity | The quantity of scan codes to be generated.
+customCodeInfo | Optional custom information, as JSON object.
+prefix | Prefix for all scan codes generate. Optional.
+algorithmName | Name of the algorithm to be used to generate the codes. Currently supporting 'StructuredGuid' and 'FiveByFive'.
+algorithmDetailsJson | Optional algorithm details, as JSON object.
+emailAddress | Email address to send to for background generated codes. Optional.
 
 ## Usage
 
@@ -212,18 +224,5 @@ Code | Name | Description
 40753 | REDEMPTION_CODE_TYPE_DISABLED | Invalid code. Redemption code type has been disabled
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-codeType | The code type.
-codeState | Optional. Initial state of the redemption code: 'Inactive' or 'Available'. Defaults to 'Inactive'.
-quantity | The quantity of scan codes to be generated.
-customCodeInfo | Optional custom information, as JSON object.
-prefix | Prefix for all scan codes generate. Optional.
-algorithmName | Name of the algorithm to be used to generate the codes. Currently supporting 'StructuredGuid' and 'FiveByFive'.
-algorithmDetailsJson | Optional algorithm details, as JSON object.
-emailAddress | Email address to send to for background generated codes. Optional.
 
 

@@ -1,5 +1,5 @@
 # SendRichPushNotificationWithParams
-## Overview
+
 Sends a notification to a user based on a <%= data.branding.productName %> portal configured notification template and includes JSON defining the substitution params to use with the template.
 
 The format of the parameterized string is based on the MessageFormat java class.
@@ -15,6 +15,13 @@ Note that the key of the JSON object is the substitution variable number and the
 The resulting string would be "Hello George Smith, welcome to the Poker Pirates game.".
 
 <PartialServop service_name="pushNotification" operation_name="SEND_RICH" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+toProfileId | The profileId of the user to receive the notification
+notificationTemplateId | Id of the notification template
+substitutionJson | JSON defining the substitution params to use with the template
 
 ## Usage
 
@@ -171,12 +178,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-toProfileId | The profileId of the user to receive the notification
-notificationTemplateId | Id of the notification template
-substitutionJson | JSON defining the substitution params to use with the template
-
 

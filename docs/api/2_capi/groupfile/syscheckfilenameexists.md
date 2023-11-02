@@ -1,8 +1,15 @@
 # SysCheckFilenameExists
-## Overview
+
 Check if filename exists for provided path and name.
 
 <PartialServop service_name="groupFile" operation_name="SYS_CHECK_FILENAME_EXISTS" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | The id of the group.
+folderPath | The folder path.
+filename | The file name.
 
 ## Usage
 
@@ -120,12 +127,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | The id of the group.
-folderPath | The folder path.
-filename | The file name.
-
 

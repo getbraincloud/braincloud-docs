@@ -1,10 +1,16 @@
 # GetRecentChatMessages
-## Overview
+
 Returns a list of max \<n\> messages from history.
 
 
 
 <PartialServop service_name="chat" operation_name="GET_RECENT_MESSAGES" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+channelId | The chat channel to retrieve messages from
+maxReturn | Maximum number of messages to return
 
 ## Usage
 
@@ -216,12 +222,5 @@ Code | Name | Description
 40603 | CHAT_UNRECOGNIZED_CHANNEL | The specified channel is invalid
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-channelId | The chat channel to retrieve messages from
-maxReturn | Maximum number of messages to return
 
 

@@ -1,8 +1,15 @@
 # SetUserStatus
-## Overview
+
 Set timed status for a user.
 
 <PartialServop service_name="playerState" operation_name="SET_USER_STATUS" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+statusName | Name of the status. 
+durationSecs | An active duration.
+details | Json String to add additional details.
 
 ## Usage
 
@@ -157,12 +164,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-statusName | Name of the status. 
-durationSecs | An active duration.
-details | Json String to add additional details.
-
 

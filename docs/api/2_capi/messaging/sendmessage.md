@@ -1,10 +1,16 @@
 # SendMessage
-## Overview
+
 Sends a message on behalf of the user. The content of the message can be anything - though be convention it *should* contain a `text` field for plaintext content.
 
 
 
 <PartialServop service_name="messaging" operation_name="SEND_MESSAGE" />
+
+## Method Parameters
+Parameter | Description                          
+--------- | ------------------------------------ 
+toProfileIds | An array of recipients of the message. 
+contentJson | The message content.  
 
 ## Usage
 
@@ -173,12 +179,5 @@ Code | Name | Description
 40621 | MESSAGING_MAX_RECIPIENTS_EXCEEDED | Message recipients count cannot exceed 5 (defaults to 5)
 
 </details>
-
-
-## Method Parameters
-Parameter | Description                          
---------- | ------------------------------------ 
-toProfileIds | An array of recipients of the message. 
-contentJson | The message content.  
 
 

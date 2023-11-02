@@ -1,10 +1,15 @@
 # GetSubscribedChannels
-## Overview
+
 Returns a list of the channels of the specified type that the user has access to, with description info. Channel type can be one of "gl", "gr" or "all".
 
 
 
 <PartialServop service_name="chat" operation_name="GET_SUBSCRIBED_CHANNELS" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+channelType | Specifies the type of channels subscriptions to return. If empty string, returns channels of all types.
 
 ## Usage
 
@@ -189,11 +194,5 @@ Code | Name | Description
 40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-channelType | Specifies the type of channels subscriptions to return. If empty string, returns channels of all types.
 
 

@@ -1,5 +1,5 @@
 # AddCode
-## Overview
+
 This operation adds a code to your inventory.
 
 
@@ -11,6 +11,14 @@ Name | Description
 response | Newly created redemption code object.
 
 <PartialServop service_name="redemptionCode" operation_name="ADD_CODE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+scanCode | A scan code. 
+codeType | The code type. 
+codeState | Initial state of the redemption code. 
+customCodeInfo | Optional custom information. 
 
 ## Usage
 
@@ -136,13 +144,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-scanCode | A scan code. 
-codeType | The code type. 
-codeState | Initial state of the redemption code. 
-customCodeInfo | Optional custom information. 
-
 

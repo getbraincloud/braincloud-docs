@@ -1,11 +1,18 @@
 # SysGetMessagesForOwnerPageOffset
-## Overview
+
 Retrieves the page of messages, owned by specified ownerId, from the server based on the encoded context and specified page offset.
 
 
 
 
 <PartialServop service_name="messaging" operation_name="SYS_GET_MESSAGES_FOR_OWNER_PAGE_OFFSET" />
+
+## Method Parameters
+Parameter | Description
+--------- | ----------------------------
+ownerId | The profile ID of the owner
+context | The search and paging criteria
+pageOffset | Number of pages to go forward or back
 
 ## Usage
 
@@ -150,13 +157,5 @@ Code | Name | Description
 40601 | FEATURE_NOT_ENABLED | Messaging feature is not enabled for app.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | ----------------------------
-ownerId | The profile ID of the owner
-context | The search and paging criteria
-pageOffset | Number of pages to go forward or back
 
 

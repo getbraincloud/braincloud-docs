@@ -1,5 +1,5 @@
 # GetGlobalAppServiceProxy
-## Overview
+
 Retrieves a GlobalAppService proxy object.
 
 Documentation for the service methods can be found [here](/api/capi/globalapp).

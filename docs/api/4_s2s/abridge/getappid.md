@@ -1,5 +1,5 @@
 # GetAppId
-## Overview
+
 This returns the appId of the script context.
 
 ## Usage

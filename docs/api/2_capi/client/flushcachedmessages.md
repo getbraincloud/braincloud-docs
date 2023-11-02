@@ -1,6 +1,11 @@
 # FlushCachedMessages
-## Overview
+
 Flushes the cached messages to resume API call processing. This will dump all of the cached messages in the queue.
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+sendApiErrorCallbacks | If set to true API error callbacks will be called for every cached message with statusCode CLIENT_NETWORK_ERROR and reasonCode CLIENT_NETWORK_ERROR_TIMEOUT.
 
 ## Usage
 
@@ -73,10 +78,4 @@ Flushes the cached messages to resume API call processing. This will dump all of
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-sendApiErrorCallbacks | If set to true API error callbacks will be called for every cached message with statusCode CLIENT_NETWORK_ERROR and reasonCode CLIENT_NETWORK_ERROR_TIMEOUT.
-
 

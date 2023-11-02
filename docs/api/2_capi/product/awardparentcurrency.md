@@ -1,8 +1,15 @@
 # AwardParentCurrency
-## Overview
+
 Award parent user the passed-in amount of currency. Returns an object representing the new currency values.
 
 <PartialServop service_name="product" operation_name="AWARD_PARENT_VC" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+currencyType | The currency type to award.
+amount | The amount of currency to award.
+levelName | Name of the parent level.
 
 ## Usage
 
@@ -121,12 +128,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-currencyType | The currency type to award.
-amount | The amount of currency to award.
-levelName | Name of the parent level.
-
 

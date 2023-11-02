@@ -1,8 +1,13 @@
 # GetRegionsForLobbies
-## Overview
+
 Retrieves the region settings for each of the given lobby types.
 
 <PartialServop service_name="lobby" operation_name="GET_REGIONS_FOR_LOBBIES" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+lobbyTypes | Types of lobby being queried. 
 
 ## Usage
 
@@ -151,10 +156,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-lobbyTypes | Types of lobby being queried. 
-
 

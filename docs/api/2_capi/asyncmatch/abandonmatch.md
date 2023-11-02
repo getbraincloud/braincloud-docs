@@ -1,5 +1,5 @@
 # AbandonMatch
-## Overview
+
 Marks the given match as abandoned and sets the matchState to EXPIRED.
 
 
@@ -8,6 +8,12 @@ Only a match whose current status is NOT_STARTED, PENDING or EXPIRED can be aban
 :::
 
 <PartialServop service_name="asyncMatch" operation_name="ABANDON" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+ownerId | Match owner identifier
+matchId | Match identifier
 
 ## Usage
 
@@ -147,11 +153,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-ownerId | Match owner identifier
-matchId | Match identifier
-
 

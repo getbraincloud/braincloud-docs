@@ -1,5 +1,5 @@
 # IncrementGlobalStats
-## Overview
+
 Atomically increment (or decrement) global statistics. Global statistics are defined through the <%= data.branding.productName %> portal.
 
 StatisticsData like
@@ -15,6 +15,11 @@ There are many more complex operations supported such as
 which increments stat1 by 9 up to a limit of 30.
 
 <PartialServop service_name="globalGameStatistics" operation_name="UPDATE_INCREMENT" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+statistics | A collection containing the statistics to increment
 
 ## Usage
 
@@ -157,10 +162,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-statistics | A collection containing the statistics to increment
-
 

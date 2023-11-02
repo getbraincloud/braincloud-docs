@@ -1,8 +1,16 @@
 # SysCreateGroupEntity
-## Overview
+
 Create an entity in the group with no owner. Optional parameters: All except groupId.
 
 <PartialServop service_name="group" operation_name="SYS_CREATE_GROUP_ENTITY" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | ID of the group
+entityType | Type of the group entity
+acl | Access control list for the group entity
+jsonData | Custom application data
 
 ## Usage
 
@@ -128,13 +136,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | ID of the group
-entityType | Type of the group entity
-acl | Access control list for the group entity
-jsonData | Custom application data
-
 

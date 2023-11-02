@@ -1,8 +1,14 @@
 # CheckFilenameExists
-## Overview
+
 Check if filename exists for provided path and name.
 
 <PartialServop service_name="globalFileV3" operation_name="CHECK_FILENAME_EXISTS" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+folderPath | File located cloud path/folder
+filename | File cloud name
 
 ## Usage
 
@@ -102,11 +108,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-folderPath | File located cloud path/folder
-filename | File cloud name
-
 

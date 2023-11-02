@@ -1,8 +1,13 @@
 # ReadSingleton
-## Overview
+
 Reads the custom entity singleton owned by the session's user.
 
 <PartialServop service_name="customEntity" operation_name="READ_SINGLETON" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityType | The type of custom entity being read. Custom entity type must have option isOwned set to true.
 
 ## Usage
 
@@ -154,10 +159,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityType | The type of custom entity being read. Custom entity type must have option isOwned set to true.
-
 

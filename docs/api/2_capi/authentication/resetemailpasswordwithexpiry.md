@@ -1,8 +1,14 @@
 # ResetEmailPasswordWithExpiry
-## Overview
+
 Sends a password reset email to the specified address. Allows the developer to specify how long the URL is valid for (in minutes).
 
 <PartialServop service_name="authenticationV2" operation_name="RESET_EMAIL_PASSWORD_WITH_EXPIRY" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+emailAddress | The email address to send the reset email to.
+tokenTtlInMinutes | The time-to-live for the password reset url, in minutes.
 
 ## Usage
 
@@ -128,11 +134,4 @@ var resetUrlTTLMinutes = 1440;
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-emailAddress | The email address to send the reset email to.
-tokenTtlInMinutes | The time-to-live for the password reset url, in minutes.
-
 

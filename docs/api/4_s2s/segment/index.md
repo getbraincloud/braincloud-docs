@@ -1,5 +1,5 @@
 # Segment
-## Overview
+
 
 
 **Segment** is a new service that Allows devs to retrieve the current segments that a user (i.e. player) is in. Devs can also retrieve the master list of segments.

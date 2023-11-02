@@ -1,8 +1,14 @@
 # ResetEmailPasswordAdvanced
-## Overview
+
 Advanced reset email password using templates
 
 <PartialServop service_name="authenticationV2" operation_name="RESET_EMAIL_PASSWORD_ADVANCED" / >
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+emailAddress | The email address to send the reset email to. 
+serviceParams | Set of parameters dependant on the mail service configured.
 
 ## Usage
 
@@ -137,11 +143,4 @@ var serviceParams = {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-emailAddress | The email address to send the reset email to. 
-serviceParams | Set of parameters dependant on the mail service configured.
-
 

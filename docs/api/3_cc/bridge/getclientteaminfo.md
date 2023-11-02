@@ -1,5 +1,5 @@
 # GetClientTeamInfo
-## Overview
+
 Retrieves the team info for the current user as a JSON.
 
 :::tip

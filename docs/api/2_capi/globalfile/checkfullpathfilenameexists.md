@@ -1,8 +1,13 @@
 # CheckFullpathFilenameExists
-## Overview
+
 Check if filename exists for provided path and name.
 
 <PartialServop service_name="globalFileV3" operation_name="CHECK_FULLPATH_FILENAME_EXISTS" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+fullPathFilename | File cloud name in full path
 
 ## Usage
 
@@ -100,10 +105,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-fullPathFilename | File cloud name in full path
-
 

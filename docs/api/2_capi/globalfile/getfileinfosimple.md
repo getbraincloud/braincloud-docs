@@ -1,8 +1,14 @@
 # GetFileInfoSimple
-## Overview
+
 Given a path and filename, returns information about the corresponding file.
 
 <PartialServop service_name="globalFileV3" operation_name="GET_FILE_INFO_SIMPLE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+folderPath | path to the file
+filename | filename
 
 ## Usage
 
@@ -156,11 +162,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-folderPath | path to the file
-filename | filename
-
 

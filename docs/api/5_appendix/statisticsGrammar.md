@@ -1,5 +1,5 @@
 # Statistics Grammar
-## Overview
+
 *This section provides background for the **grammar** used by the `ProcessStatistics` operations of the [Global Statistics](/api/capi/globalstats/processstatistics) and [Player Statistics](/api/capi/playerstats/processstatistics) services.*
 
 Statistics are passed around within <%= data.branding.productName %> as a keyed collection of name / value pairs. Semantically, a statistic looks like:

@@ -1,8 +1,17 @@
 # SysUpdateFileInfo
-## Overview
+
 Returns information on a file using fileId.
 
 <PartialServop service_name="groupFile" operation_name="SYS_UPDATE_FILE_INFO" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | The id of the group.
+fileId | The id of the file.
+version | The target version of the file.
+newFilename | The optional new file name.
+newAcl | The optional new acl.
 
 ## Usage
 
@@ -129,14 +138,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | The id of the group.
-fileId | The id of the file.
-version | The target version of the file.
-newFilename | The optional new file name.
-newAcl | The optional new acl.
-
 

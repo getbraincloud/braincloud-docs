@@ -1,8 +1,13 @@
 # SysGetLegacyFlaggedUserDataList
-## Overview
+
 Retrieves the list of legacy flagged users for an app.
 
 <PartialServop service_name="globalApp" operation_name="SYS_GET_LEGACY_FLAGGED_USER_DATA_LIST" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+isActiveOnly | Optional flag to include only actively flagged users. Default is true.
 
 ## Usage
 
@@ -109,10 +114,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-isActiveOnly | Optional flag to include only actively flagged users. Default is true.
-
 

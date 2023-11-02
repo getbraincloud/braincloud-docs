@@ -1,5 +1,5 @@
 # GetTournamentConfigs
-## Overview
+
 ```
 {
     "packetId": 1,
@@ -19,6 +19,12 @@
 Get tournament configs associated with a leaderboard.
 
 <PartialServop service_name="tournament" operation_name="GET_TOURNAMENT_CONFIGS" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardId | The leaderboard to retrieve tournament info from. 
+leaderboardVersionId | The version of the leaderboard to retrieve tournament info from.  Use -1 for current version. 
 
 ## Usage
 
@@ -182,11 +188,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | The leaderboard to retrieve tournament info from. 
-leaderboardVersionId | The version of the leaderboard to retrieve tournament info from.  Use -1 for current version. 
-
 

@@ -1,8 +1,13 @@
 # UpdateIsTester
-## Overview
+
 Set a user's IsTester flag.
 
 <PartialServop service_name="playerState" operation_name="UPDATE_IS_TESTER" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+isTester | Boolean flag to indicate if the profile belongs to a test account.
 
 ## Usage
 
@@ -100,10 +105,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-isTester | Boolean flag to indicate if the profile belongs to a test account.
-
 

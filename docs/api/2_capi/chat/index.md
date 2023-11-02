@@ -1,5 +1,5 @@
 # Chat
-## Overview
+
 
 
 
@@ -62,6 +62,7 @@ Channel Type | Membership | Creation | Description
 ------------ | ---------- | --------- | -----------
 global | All users of the app | Via portal | All users of an app can access global channels. By default, an app can have up to 10 channels. Contact us with your use case for more. The global channel id is formed as `appId:gl:channelCode`.
 group | All members of a Group | Auto | A channel is automatically created for each group in the system. Any group member can access it. The group channel id is formed as `appId:gr:groupId`.
+system | Use for s2s system channel | Auto | A channel is designed for s2s connenction. The system channel id is formed as `appId:sy:channelCode`. 
 
 
 *Pro-tip - if you are interested in one-to-one chat, see our [Messaging](/api/capi/messaging) api...*

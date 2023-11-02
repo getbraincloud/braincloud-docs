@@ -1,6 +1,11 @@
 # RegisterNetworkErrorCallback
-## Overview
+
 Registers a callback that is invoked for network errors. Note this is only called if EnableNetworkErrorMessageCaching has been set to true.
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+callback | The callback handler.
 
 ## Usage
 
@@ -75,10 +80,4 @@ networkErrorBlock = ^() {  };
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-callback | The callback handler.
-
 

@@ -1,8 +1,14 @@
 # ReadMilestonesByCategory
-## Overview
+
 Method returns milestones for the given category.
 
 <PartialServop service_name="gamification" operation_name="READ_MILESTONES_BY_CATEGORY" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+category | The milestone category
+includeMetaData | Whether to return meta data as well
 
 ## Usage
 
@@ -145,11 +151,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-category | The milestone category
-includeMetaData | Whether to return meta data as well
-
 

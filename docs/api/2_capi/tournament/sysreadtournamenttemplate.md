@@ -1,8 +1,14 @@
 # SysReadTournamentTemplate
-## Overview
+
 Read a specific tournament template by tournament code and version.
 
 <PartialServop service_name="tournament" operation_name="SYS_READ_TOURNAMENT_TEMPLATE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+tournamentCode | The tournament code uniquely identifying the template to return
+version | Version number of tournament template to return, use -1 to return current default version
 
 ## Usage
 
@@ -180,11 +186,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-tournamentCode | The tournament code uniquely identifying the template to return
-version | Version number of tournament template to return, use -1 to return current default version
-
 

@@ -1,8 +1,13 @@
 # LeaveTournament
-## Overview
+
 Removes player's score from tournament leaderboard
 
 <PartialServop service_name="tournament" operation_name="LEAVE_TOURNAMENT" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardId | The leaderboard for the tournament
 
 ## Usage
 
@@ -136,10 +141,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | The leaderboard for the tournament
-
 

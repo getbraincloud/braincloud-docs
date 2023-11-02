@@ -1,5 +1,5 @@
 # SendRichToSegments
-## Overview
+
 This operation sends a template based message to multiple user targets.
 
 Example of substitution usage:
@@ -18,6 +18,13 @@ Name | Description
 estimatedTargets | Estimate number of targeted users
 
 <PartialServop service_name="pushNotification" operation_name="SEND_RICH_TO_SEGMENTS" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+notificationTemplateId | Identifies the template that will determine the message content. 
+segmentIdList | List of target segements. Omit to send to all users. 
+substitutions | Positional message substitution values. 
 
 ## Usage
 
@@ -74,17 +81,17 @@ estimatedTargets | Estimate number of targeted users
 
 ```cfscript
 var notificationTemplateId = 1;
-var segmentIdList = [
-	1,
-	2
-];
 var substitutions = {
 	"0": "value0",
 	"1": "value1"
 };
+var segmentIdList = [
+	1,
+	2
+];
 var pushNotificationProxy = bridge.getPushNotificationServiceProxy();
 
-var postResult = pushNotificationProxy.sendRichToSegments(notificationTemplateId, segmentIdList, substitutions);
+var postResult = pushNotificationProxy.sendRichToSegments(notificationTemplateId, substitutions, segmentIdList);
 if (postResult.status == 200) {
     // Success!
 }
@@ -136,12 +143,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-notificationTemplateId | Identifies the template that will determine the message content. 
-segmentIdList | List of target segements. Omit to send to all users. 
-substitutions | Positional message substitution values. 
-
 

@@ -1,8 +1,18 @@
 # SysUpdateEntity
-## Overview
+
 Replaces the specified custom entity's data, and optionally updates the acl and expiry, on the server. Ignores ownership/ACL checks.
 
 <PartialServop service_name="customEntity" operation_name="SYS_UPDATE_ENTITY" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityType | The type of custom entity being updated. 
+entityId | The id of custom entity being updated. 
+version | Version of the custom entity being updated. 
+dataJson | New custom data, as JSON, to replace existing custom data. 
+acl | New access control list settings to replace existing acl. Optional, ignored if null. 
+timeToLive | The duration of time, in milliseconds, the custom entity should live from now before being expired. Null indicates never expires. To indicate no change, use -1. 
 
 ## Usage
 
@@ -133,15 +143,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityType | The type of custom entity being updated. 
-entityId | The id of custom entity being updated. 
-version | Version of the custom entity being updated. 
-dataJson | New custom data, as JSON, to replace existing custom data. 
-acl | New access control list settings to replace existing acl. Optional, ignored if null. 
-timeToLive | The duration of time, in milliseconds, the custom entity should live from now before being expired. Null indicates never expires. To indicate no change, use -1. 
-
 

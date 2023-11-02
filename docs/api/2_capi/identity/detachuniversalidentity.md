@@ -1,5 +1,5 @@
 # DetachUniversalIdentity
-## Overview
+
 Detach the universal identity from the current profile
 
 
@@ -39,6 +39,12 @@ public void FailureCallback(int statusCode, int reasonCode, string statusMessage
 ```
 
 <PartialServop service_name="identity" operation_name="DETACH" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+userId | The player's user ID
+continueAnon | Proceed even if the profile will revert to anonymous?
 
 ## Usage
 
@@ -146,12 +152,5 @@ Code | Name | Description
 40209 | SECURITY_ERROR | Returned if a security exception was encountered.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-userId | The player's user ID
-continueAnon | Proceed even if the profile will revert to anonymous?
 
 

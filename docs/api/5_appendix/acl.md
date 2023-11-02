@@ -1,5 +1,5 @@
 # ACL
-## Overview
+
 > ACL example - private to the owner
 
 ```json

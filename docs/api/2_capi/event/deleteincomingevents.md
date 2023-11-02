@@ -1,8 +1,13 @@
 # DeleteIncomingEvents
-## Overview
+
 Delete a list of events out of the user's incoming mailbox.
 
 <PartialServop service_name="event" operation_name="DELETE_INCOMING_EVENTS" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+evIds | Collection of event ids
 
 ## Usage
 
@@ -138,10 +143,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-evIds | Collection of event ids
-
 

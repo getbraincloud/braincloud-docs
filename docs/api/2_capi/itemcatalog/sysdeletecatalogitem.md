@@ -1,5 +1,5 @@
 # SysDeleteCatalogItem
-## Overview
+
 Delete an existing Item catalog
 
 <PartialServop service_name="itemCatalog" operation_name="SYS_DELETE_CATALOG_ITEM" />

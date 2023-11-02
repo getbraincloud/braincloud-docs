@@ -1,5 +1,5 @@
 # SmartSwitchAuthenticateUltra
-## Overview
+
 Smart Switch Authenticate will logout of the current profile, and switch to the new authentication type. 
 
 In event the current session was previously a completely anonymous account, the smart switch will delete that profile (since completely anonymous accounts are irretrievable once you switch away from them). 
@@ -9,6 +9,13 @@ Use this function to keep a clean designflow from anonymous to signed profiles.
 Authenticate the user for Ultra.
 
 <PartialServop service_name="authenticationV2" operation_name="AUTHENTICATE" / >
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+ultraUsername | It's what the user uses to log into the Ultra endpoint initially
+ultraIdToken | The "id_token" taken from Ultra's JWT.
+forceCreate | Should a new profile be created for this user if the account does not exist?
 
 ## Usage
 
@@ -190,12 +197,4 @@ var forceCreate = true;
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-ultraUsername | It's what the user uses to log into the Ultra endpoint initially
-ultraIdToken | The "id_token" taken from Ultra's JWT.
-forceCreate | Should a new profile be created for this user if the account does not exist?
-
 

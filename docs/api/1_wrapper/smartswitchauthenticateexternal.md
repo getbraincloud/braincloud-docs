@@ -1,11 +1,19 @@
 # SmartSwitchAuthenticateExternal
-## Overview
+
 Smart Switch Authenticate will logout of the current profile, and switch to the new authentication type.
 In event the current session was previously an anonymous account, the smart switch will delete that profile.
 Use this function to keep a clean designflow from anonymous to signed profiles
 
 Authenticate the user via cloud code (which in turn validates the supplied credentials against an external system).
 This allows the developer to extend <%= data.branding.productName %> authentication to support other backend authentication systems.
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+userId | The userId
+token | The user token (password etc)
+externalAuthName | The name of the custom authentication type (linked to a cloud script that performs authentication). Configured via the **Design &#124; Authentication &#124; External** page of the Design Portal.
+forceCreate | Should a new profile be created for this user if the account does not exist?
 
 ## Usage
 
@@ -167,13 +175,4 @@ var forceCreate = true;
 });
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-userId | The userId
-token | The user token (password etc)
-externalAuthName | The name of the custom authentication type (linked to a cloud script that performs authentication). Configured via the **Design &#124; Authentication &#124; External** page of the Design Portal.
-forceCreate | Should a new profile be created for this user if the account does not exist?
-
 

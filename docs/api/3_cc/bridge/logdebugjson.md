@@ -1,5 +1,5 @@
 # LogDebugJson
-## Overview
+
 Use this call to log messages to the API Explorer or Cloud Code Editor's log display only. It does not write to the persistant error logs. This method does nothing when calls from a cloud code script in normal execution circumstances.
 
 ## Usage

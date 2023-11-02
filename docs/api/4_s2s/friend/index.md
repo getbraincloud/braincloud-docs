@@ -1,5 +1,5 @@
 # Friend
-## Overview
+
 
 
 Friends in <%= data.branding.productName %> are other users (i.e. players) that you want to

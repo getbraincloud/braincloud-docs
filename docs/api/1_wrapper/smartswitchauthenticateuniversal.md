@@ -1,10 +1,17 @@
 # SmartSwitchAuthenticateUniversal
-## Overview
+
 Smart Switch Authenticate will logout of the current profile, and switch to the new authentication type.
 In event the current session was previously an anonymous account, the smart switch will delete that profile.
 Use this function to keep a clean designflow from anonymous to signed profiles
 
 Method authenticates the user using universal credentials
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+userId | The user's ID.
+password | The password of the user.
+forceCreate | Should a new profile be created for this user if the account does not exist?
 
 ## Usage
 
@@ -148,12 +155,4 @@ var forceCreate = true;
 });
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-userId | The user's ID.
-password | The password of the user.
-forceCreate | Should a new profile be created for this user if the account does not exist?
-
 

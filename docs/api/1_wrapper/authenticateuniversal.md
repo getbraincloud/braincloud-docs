@@ -1,5 +1,5 @@
 # AuthenticateUniversal
-## Overview
+
 Universal authentication allows the developer to pass in any user/password string combination. As with all authentication methods, if the create new profile flag is specified as false, the authentication will fail if the user/password combination does not match a user in the database.
 
 
@@ -54,6 +54,13 @@ You must initialize the <%= data.branding.productName %> wrapper in order to aut
 :::
 
 <PartialServop service_name="authenticationV2" operation_name="AUTHENTICATE" / >
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+userId | The user's ID.
+password | The password of the user.
+forceCreate | Should a new profile be created for this user if the account does not exist?
 
 ## Usage
 
@@ -255,13 +262,5 @@ Code | Name | Description
 40307 | TOKEN_DOES_NOT_MATCH_USER | The user credentials don't match (i.e. incorrect password).
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-userId | The user's ID.
-password | The password of the user.
-forceCreate | Should a new profile be created for this user if the account does not exist?
 
 

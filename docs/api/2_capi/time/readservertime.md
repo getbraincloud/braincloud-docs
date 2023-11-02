@@ -1,5 +1,5 @@
 # ReadServerTime
-## Overview
+
 Method returns the server time in UTC. This is in UNIX millis time format.
 
 For instance 1472138108000 represents 8/25/2016, 11:15:08 AM in GMT-4.

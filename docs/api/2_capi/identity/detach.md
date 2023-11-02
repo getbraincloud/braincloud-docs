@@ -1,10 +1,17 @@
 # Detach
-## Overview
+
 Detaches an identity from the current profile.
 
 
 
 <PartialServop service_name="identity" operation_name="DETACH" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+externalId | User ID
+authenticationType | Type of authentication. Full list of types can be found [here](/api/appendix/authtypes).
+confirmAnonymous | If false will generate an error when downgrading to anonymous (null is false)
 
 ## Usage
 
@@ -114,13 +121,5 @@ Code | Name | Description
 40210 | DOWNGRADING_TO_ANONYMOUS_ERROR | Occurs when detaching the last non-anonymous identity from an account with continueAnon set to false.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-externalId | User ID
-authenticationType | Type of authentication. Full list of types can be found [here](/api/appendix/authtypes).
-confirmAnonymous | If false will generate an error when downgrading to anonymous (null is false)
 
 

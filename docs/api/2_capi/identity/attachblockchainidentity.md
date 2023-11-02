@@ -1,8 +1,14 @@
 # AttachBlockchainIdentity
-## Overview
+
 Attaches the given block chain public key identity to the current profile.
 
 <PartialServop service_name="identity" operation_name="ATTACH_BLOCKCHAIN_IDENTITY" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+blockchainConfig | Identifies the block chain. 
+publicKey | Block chain public key. 
 
 ## Usage
 
@@ -131,11 +137,4 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-blockchainConfig | Identifies the block chain. 
-publicKey | Block chain public key. 
-
 

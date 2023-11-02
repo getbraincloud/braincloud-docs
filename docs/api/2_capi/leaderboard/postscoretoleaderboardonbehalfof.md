@@ -1,8 +1,17 @@
 # PostScoreToLeaderboardOnBehalfOf
-## Overview
+
 Post score to another player's score.
 
 <PartialServop service_name="leaderboard" operation_name="POST_SCORE_TO_LEADERBOARD_ON_BEHALF_OF" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+profileId | The profileId of the player to post on behalf of.
+leaderboardId | The id of the leaderboard.
+score | The score to post.
+data | Optional user-defined data to post with the score.
+forceCreate | Should a new score be created if one doesn't currently exist? 
 
 ## Usage
 
@@ -99,14 +108,4 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | The profileId of the player to post on behalf of.
-leaderboardId | The id of the leaderboard.
-score | The score to post.
-data | Optional user-defined data to post with the score.
-forceCreate | Should a new score be created if one doesn't currently exist? 
-
 

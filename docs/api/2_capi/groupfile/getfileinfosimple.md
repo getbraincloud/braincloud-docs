@@ -1,8 +1,15 @@
 # GetFileInfoSimple
-## Overview
+
 Returns information on a file using path and name.
 
 <PartialServop service_name="groupFile" operation_name="GET_FILE_INFO_SIMPLE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | The id of the group.
+folderPath | The folder path.
+filename | The file name.
 
 ## Usage
 
@@ -168,12 +175,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | The id of the group.
-folderPath | The folder path.
-filename | The file name.
-
 

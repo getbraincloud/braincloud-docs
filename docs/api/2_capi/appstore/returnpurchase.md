@@ -1,8 +1,14 @@
 # ReturnPurchase
-## Overview
+
 Mock version of return purchase, use for test purpose.
 
 <PartialServop service_name="appStore" operation_name="RETURN_PURCHASE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+storeId | The store type.
+transactionId | Id of transaction to return
 
 ## Usage
 
@@ -100,11 +106,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-storeId | The store type.
-transactionId | Id of transaction to return
-
 

@@ -1,5 +1,5 @@
 # GetSystemEntityPage
-## Overview
+
 Method uses a paging system to iterate through global system entities.
 
 After retrieving a page of entities with this method use <code>[getPageOffset](/api/s2s/globalentity/getpageoffset)</code> to retrieve previous or next pages.
@@ -7,6 +7,11 @@ After retrieving a page of entities with this method use <code>[getPageOffset](/
 See the [Generic Paged Queries](/api/appendix/genericpagedqueries) documentation for creating the context object.
 
 <PartialServop service_name="globalEntity" operation_name="GET_SYSTEM_ENTITY_PAGE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+context | The json context for the page request. 
 
 ## Usage
 
@@ -153,10 +158,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-context | The json context for the page request. 
-
 

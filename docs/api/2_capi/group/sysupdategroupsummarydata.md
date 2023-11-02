@@ -1,8 +1,15 @@
 # SysUpdateGroupSummaryData
-## Overview
+
 Update a group's summary data, bypassing ownership/ACL checks.
 
 <PartialServop service_name="group" operation_name="SYS_UPDATE_GROUP_SUMMARY_DATA" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | ID of the group 
+version | Version to verify 
+summaryData | Public summary data for the group that is viewable even by non-members 
 
 ## Usage
 
@@ -130,12 +137,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | ID of the group 
-version | Version to verify 
-summaryData | Public summary data for the group that is viewable even by non-members 
-
 

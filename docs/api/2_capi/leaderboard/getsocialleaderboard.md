@@ -1,5 +1,5 @@
 # GetSocialLeaderboard
-## Overview
+
 > Note that friend summary data is returned for each record in the leaderboard.
 
 
@@ -18,6 +18,12 @@ If no friends have played the game, the bestScore, createdAt, update will contai
 :::
 
 <PartialServop service_name="leaderboard" operation_name="GET_SOCIAL_LEADERBOARD" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardId | The id of the leaderboard to retrieve
+replaceName | If true, the currently logged in player's name will be replaced by the string "You"
 
 ## Usage
 
@@ -187,11 +193,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | The id of the leaderboard to retrieve
-replaceName | If true, the currently logged in player's name will be replaced by the string "You"
-
 

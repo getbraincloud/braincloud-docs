@@ -1,8 +1,19 @@
 # SysCreateFolder
-## Overview
+
 Create a folder in the global file tree.
 
 <PartialServop service_name="groupFile" operation_name="SYS_CREATE_FOLDER" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | The id of the group.
+folderPath | The folder path.
+treeVersion | The target version of the folder tree.
+name | The new folder name.
+desc | The new folder description.
+createInterimDirectories | Whether to automatically create folders if needed.
+groupFolderAcl | The acl of the new group folder.
 
 ## Usage
 
@@ -179,16 +190,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | The id of the group.
-folderPath | The folder path.
-treeVersion | The target version of the folder tree.
-name | The new folder name.
-desc | The new folder description.
-createInterimDirectories | Whether to automatically create folders if needed.
-groupFolderAcl | The acl of the new group folder.
-
 

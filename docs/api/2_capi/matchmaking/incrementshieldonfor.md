@@ -1,8 +1,13 @@
 # IncrementShieldOnFor
-## Overview
+
 Increments shield on for the specified number of minutes.
 
 <PartialServop service_name="matchMaking" operation_name="INCREMENT_SHIELD_ON_FOR" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+minutes | Number of minutes to increment the shield on for.
 
 ## Usage
 
@@ -130,10 +135,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-minutes | Number of minutes to increment the shield on for.
-
 

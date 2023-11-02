@@ -1,8 +1,15 @@
 # SysPublishCatalogItem
-## Overview
+
 Publish the specified catalog item on the server.
 
 <PartialServop service_name="itemCatalog" operation_name="SYS_PUBLISH_CATALOG_ITEM" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+defId | Unique ID identifying catalog item. 
+version | Version of catalog item being edited. 
+force | Specify true to publish items that have previously been retired or revoked, otherwise false. 
 
 ## Usage
 
@@ -149,12 +156,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-defId | Unique ID identifying catalog item. 
-version | Version of catalog item being edited. 
-force | Specify true to publish items that have previously been retired or revoked, otherwise false. 
-
 

@@ -1,8 +1,13 @@
 # CancelScheduledScript
-## Overview
+
 Cancels a scheduled cloud code job.
 
 <PartialServop service_name="script" operation_name="CANCEL_SCHEDULED_SCRIPT" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+jobId | The id of the job to cancel. 
 
 ## Usage
 
@@ -118,10 +123,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-jobId | The id of the job to cancel. 
-
 

@@ -1,6 +1,11 @@
 # GetUploadTotalBytesToTransfer
-## Overview
+
 Returns the total number of bytes that will be uploaded or -1 if upload not found.
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+uploadId | The id of the upload
 
 ## Usage
 
@@ -80,10 +85,4 @@ public void cancelUpload(String uploadId)
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-uploadId | The id of the upload
-
 

@@ -1,8 +1,16 @@
 # SysDeleteFile
-## Overview
+
 Delete a file.
 
 <PartialServop service_name="groupFile" operation_name="SYS_DELETE_FILE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | The id of the group.
+fileId | The id of the file.
+version | The target version of the file.
+filename | The file name for verification purposes.
 
 ## Usage
 
@@ -113,13 +121,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | The id of the group.
-fileId | The id of the file.
-version | The target version of the file.
-filename | The file name for verification purposes.
-
 

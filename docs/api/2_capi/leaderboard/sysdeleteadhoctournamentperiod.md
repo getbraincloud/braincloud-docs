@@ -1,8 +1,15 @@
 # SysDeleteAdhocTournamentPeriod
-## Overview
+
 Deletes a future ADHOC tournament period scheduled for the leaderboard configuration, identified by the existing period's UTC startingAt time, in milliseconds. Period being edited must be scheduled in the future, not in-progress. Tournament settings may include tournament period ('tPeriod'), tournament configs and associated flags ('tTournament') and tournament phases ('tPhases').
 
 <PartialServop service_name="leaderboard" operation_name="SYS_DELETE_ADHOC_TOURNAMENT_PERIOD" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardId | ID uniquely identifying the leaderboard configuration to edit. Leaderboard must be configured with ADHOC rotation type.
+dbVersion | The database version of the leaderboard config being edited. For any version, specify -1.
+periodStartingAtUtcMillis | The exact startingAt UTC timestamp, in milliseconds, identifying the ADHOC period being edited.
 
 ## Usage
 
@@ -125,12 +132,4 @@ var retVal = leaderboardProxy.sysDeleteAdhocTournamentPeriod(
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | ID uniquely identifying the leaderboard configuration to edit. Leaderboard must be configured with ADHOC rotation type.
-dbVersion | The database version of the leaderboard config being edited. For any version, specify -1.
-periodStartingAtUtcMillis | The exact startingAt UTC timestamp, in milliseconds, identifying the ADHOC period being edited.
-
 

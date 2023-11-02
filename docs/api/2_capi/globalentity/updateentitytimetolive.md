@@ -1,5 +1,5 @@
 # UpdateEntityTimeToLive
-## Overview
+
 Method updates an existing entity's time to live on the server.
 
 This method is affected by versioning. See the [versioning documentation](/api/appendix/version) for more information.

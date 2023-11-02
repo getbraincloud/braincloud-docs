@@ -1,5 +1,5 @@
 # SignRSASha256
-## Overview
+
 Given a piece of data and a private key, calculates an SHA-256 with RSA (SHA256withRSA) signature for the data. This signature can then be verified as authentic by a receiver with access to an associated public key. 
 
 *Note that the implementation supports both PKCS1 and PKCS8 RSA format private keys.*

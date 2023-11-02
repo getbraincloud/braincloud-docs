@@ -1,5 +1,5 @@
 # GetEventServiceProxy
-## Overview
+
 Retrieves a S2S EventService proxy object.
 
 ## Usage

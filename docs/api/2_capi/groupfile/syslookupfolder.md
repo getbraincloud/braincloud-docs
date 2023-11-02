@@ -1,8 +1,14 @@
 # SysLookupFolder
-## Overview
+
 Retrieves tree id of specified folder.
 
 <PartialServop service_name="groupFile" operation_name="SYS_LOOKUP_FOLDER" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | The id of the group.
+fullFolderPath | The full folder path.
 
 ## Usage
 
@@ -106,11 +112,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | The id of the group.
-fullFolderPath | The full folder path.
-
 

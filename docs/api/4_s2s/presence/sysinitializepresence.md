@@ -1,8 +1,16 @@
 # SysInitializePresence
-## Overview
+
 Creates or updates the presence of \<profileId\>. \<visible\> is optional (defaults to true). \<activity\> is optional. \<expirySecs\> is optional (defaults to <%= data.branding.productName %> property \<presPxExpirySecs\>).
 
 <PartialServop service_name="presence" operation_name="SYS_INITIALIZE_PRESENCE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+profileId | Target profile id. 
+visible | Should user appear in presence? True by default. 
+activity | Presence activity record json. Size of the given activity must be equal to or less than the *Max content size (bytes)* app setting (see Messaging > Presence in the portal.) 
+expirySecs | Number of seconds before expiry. 
 
 ## Usage
 
@@ -93,13 +101,4 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | Target profile id. 
-visible | Should user appear in presence? True by default. 
-activity | Presence activity record json. Size of the given activity must be equal to or less than the *Max content size (bytes)* app setting (see Messaging > Presence in the portal.) 
-expirySecs | Number of seconds before expiry. 
-
 

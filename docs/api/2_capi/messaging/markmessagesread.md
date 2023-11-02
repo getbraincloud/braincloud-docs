@@ -1,11 +1,17 @@
 # MarkMessagesRead
-## Overview
+
 Marks the specified message(s) as read.
 
 
 
 
 <PartialServop service_name="messaging" operation_name="MARK_MESSAGES_READ" />
+
+## Method Parameters
+Parameter | Description
+--------- | ------------------------------------
+msgbox | The box that the messages reside in.
+msgIds | An array of msgIds.
 
 ## Usage
 
@@ -163,12 +169,5 @@ Code | Name | Description
 40601 | FEATURE_NOT_ENABLED | Messaging feature is not enabled for app.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | ------------------------------------
-msgbox | The box that the messages reside in.
-msgIds | An array of msgIds.
 
 

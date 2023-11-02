@@ -1,8 +1,14 @@
 # UpdateAttributes
-## Overview
+
 Update user attributes.
 
 <PartialServop service_name="playerState" operation_name="UPDATE_ATTRIBUTES" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+jsonAttributes | Single layer JSON string that is a set of key-value pairs
+wipeExisting | Whether to wipe existing attributes prior to update.
 
 ## Usage
 
@@ -151,11 +157,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-jsonAttributes | Single layer JSON string that is a set of key-value pairs
-wipeExisting | Whether to wipe existing attributes prior to update.
-
 

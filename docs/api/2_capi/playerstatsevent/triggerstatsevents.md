@@ -1,10 +1,15 @@
 # TriggerStatsEvents
-## Overview
+
 Triggers multiple events server side that will increase the users statistics. This may cause one or more awards to be sent back to the player - could be achievements, experience, etc. Achievements will be sent by this client library to the appropriate awards service (Apple Game Center, etc).
 
 This mechanism supersedes the [<code>PlayerStatisticsService</code>](/api/capi/playerstats) API methods, since PlayerStatisticsService API method only update the raw statistics without triggering the rewards.
 
 <PartialServop service_name="playerStatisticsEvent" operation_name="TRIGGER_MULTIPLE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+jsonData | An array of JSON objects representing Event Names and Multipliers.  ex. `[ { "eventName": "event1", "eventMultiplier": 1 } ]`
 
 ## Usage
 
@@ -173,10 +178,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-jsonData | An array of JSON objects representing Event Names and Multipliers.  ex. `[ { "eventName": "event1", "eventMultiplier": 1 } ]`
-
 

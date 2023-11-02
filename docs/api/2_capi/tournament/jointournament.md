@@ -1,8 +1,15 @@
 # JoinTournament
-## Overview
+
 Join the specified tournament. Any entry fees will be automatically collected.
 
 <PartialServop service_name="tournament" operation_name="JOIN_TOURNAMENT" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardId | The leaderboard for the tournament
+tournamentCode | Tournament to join
+initialScore | Initial score for the user
 
 ## Usage
 
@@ -169,12 +176,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | The leaderboard for the tournament
-tournamentCode | Tournament to join
-initialScore | Initial score for the user
-
 

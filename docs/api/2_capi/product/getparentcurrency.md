@@ -1,8 +1,14 @@
 # GetParentCurrency
-## Overview
+
 Gets the parent player's currency for the given currency type **or** all currency types if null passed in.
 
 <PartialServop service_name="product" operation_name="GET_PARENT_VC" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+currencyType | The currency type to retrieve or null if all currency types are being requested.
+levelName | Name of the parent level.
 
 ## Usage
 
@@ -112,11 +118,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-currencyType | The currency type to retrieve or null if all currency types are being requested.
-levelName | Name of the parent level.
-
 

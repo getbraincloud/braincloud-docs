@@ -1,10 +1,16 @@
 # AttachPlaystation5Identity
-## Overview
+
 Attach the user's PlaystationNetwork credentials to the current profile.
 
 
 
 <PartialServop service_name="identity" operation_name="ATTACH" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+accountId | The playstation5 id of the user
+authToken | The validated token from the Playstation5 SDK (that will be further validated when sent to the <%= data.branding.productName %> service)
 
 ## Usage
 
@@ -109,12 +115,5 @@ Code | Name | Description
 40212 | MERGE_PROFILES | Returned when trying to attach an identity type that would result in two profiles being merged into one (for instance an anonymous account and a PlaystationNetwork account).
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-accountId | The playstation5 id of the user
-authToken | The validated token from the Playstation5 SDK (that will be further validated when sent to the <%= data.branding.productName %> service)
 
 

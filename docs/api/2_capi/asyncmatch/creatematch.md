@@ -1,5 +1,5 @@
 # CreateMatch
-## Overview
+
 Creates an instance of an asynchronous match.
 
 Opponents is a JSON array containing objects with a Platform and player ID. Platforms are identified as:
@@ -21,6 +21,12 @@ An example of this string would be:
 }]`
 
 <PartialServop service_name="asyncMatch" operation_name="CREATE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+jsonOpponentIds | List of objects identifying the opponent platform and id for this match.
+pushNotificationMessage | Optional push notification message to send to the other party. Refer to the Push Notification functions for the syntax required.
 
 ## Usage
 
@@ -227,11 +233,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-jsonOpponentIds | List of objects identifying the opponent platform and id for this match.
-pushNotificationMessage | Optional push notification message to send to the other party. Refer to the Push Notification functions for the syntax required.
-
 

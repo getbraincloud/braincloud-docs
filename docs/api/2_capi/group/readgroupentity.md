@@ -1,8 +1,14 @@
 # ReadGroupEntity
-## Overview
+
 Read an entity in the group.
 
 <PartialServop service_name="group" operation_name="READ_GROUP_ENTITY" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | ID of the group
+entityId | ID of the entity
 
 ## Usage
 
@@ -158,11 +164,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | ID of the group
-entityId | ID of the entity
-
 

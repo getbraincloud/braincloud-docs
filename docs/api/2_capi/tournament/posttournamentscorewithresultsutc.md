@@ -1,10 +1,22 @@
 # PostTournamentScoreWithResultsUTC
-## Overview
+
 Post the users score to the tournament leaderboard, and returns updated standings.
 
 tRank will always be zero in the response of this API call. The value generates after the tournament is complete or on <code>[ViewCurrentReward](/api/capi/tournament/viewcurrentreward)</code>.
 
 <PartialServop service_name="tournament" operation_name="POST_TOURNAMENT_SCORE_WITH_RESULTS" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardId | The leaderboard for the tournament
+score | The score to post
+jsonData | Optional data attached to the leaderboard entry
+roundStartedTime | Time the user started the match resulting in the score being posted (in millis UTC)
+sort | Sort key Sort order of page.  ("HIGH_TO_LOW" or "LOW_TO_HIGH")
+beforeCount | The count of number of players before the current player to include.
+afterCount | The count of number of players after the current player to include.
+initialScore | The initial score for players first joining a tournament. Usually 0, unless leaderboard is LOW_VALUE.
 
 ## Usage
 
@@ -248,17 +260,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | The leaderboard for the tournament
-score | The score to post
-jsonData | Optional data attached to the leaderboard entry
-roundStartedTime | Time the user started the match resulting in the score being posted (in millis UTC)
-sort | Sort key Sort order of page.  ("HIGH_TO_LOW" or "LOW_TO_HIGH")
-beforeCount | The count of number of players before the current player to include.
-afterCount | The count of number of players after the current player to include.
-initialScore | The initial score for players first joining a tournament. Usually 0, unless leaderboard is LOW_VALUE.
-
 

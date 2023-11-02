@@ -1,8 +1,13 @@
 # AddFriends
-## Overview
+
 Links the current user and the specified users as <%= data.branding.productName %> friends.
 
 <PartialServop service_name="friend" operation_name="ADD_FRIENDS" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+profileIds | Collection of profile IDs.
 
 ## Usage
 
@@ -139,10 +144,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-profileIds | Collection of profile IDs.
-
 

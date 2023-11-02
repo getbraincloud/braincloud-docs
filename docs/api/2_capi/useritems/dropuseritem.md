@@ -1,8 +1,15 @@
 # DropUserItem
-## Overview
+
 Allows a quantity of a specified user item to be dropped, without any recovery of the money paid for the item. If any quantity of the user item remains, it will be returned, potentially with the associated itemDef (with language fields limited to the current or default language).
 
 <PartialServop service_name="userItems" operation_name="DROP_USER_ITEM" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+itemId | The unique id of the user item. 
+quantity | The quantity of the user item to drop. 
+includeDef | If true and any quantity of the user item remains, the associated item definition will be included in the response. 
 
 ## Usage
 
@@ -152,12 +159,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-itemId | The unique id of the user item. 
-quantity | The quantity of the user item to drop. 
-includeDef | If true and any quantity of the user item remains, the associated item definition will be included in the response. 
-
 

@@ -1,5 +1,5 @@
 # GetCustomEntityServiceProxy
-## Overview
+
 Retrieves a CustomEntityService proxy object.
 
 ## Usage

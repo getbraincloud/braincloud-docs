@@ -1,8 +1,14 @@
 # UpdateIncomingEventData
-## Overview
+
 Updates an event in the player's incoming event queue.
 
 <PartialServop service_name="event" operation_name="UPDATE_EVENT_DATA" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+evId | The event ID
+eventData | The user-defined data for this event encoded in JSON.
 
 ## Usage
 
@@ -148,11 +154,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-evId | The event ID
-eventData | The user-defined data for this event encoded in JSON.
-
 

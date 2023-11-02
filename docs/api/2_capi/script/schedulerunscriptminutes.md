@@ -1,8 +1,15 @@
 # ScheduleRunScriptMinutes
-## Overview
+
 Schedules a script to run X minutes from now.
 
 <PartialServop service_name="script" operation_name="SCHEDULE_CLOUD_SCRIPT" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+scriptName | The name of the script with its path to be run
+scriptData | Data to be sent to the script in JSON format
+minutesFromNow | Number of minutes from now to run script (date in millis)
 
 ## Usage
 
@@ -170,12 +177,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-scriptName | The name of the script with its path to be run
-scriptData | Data to be sent to the script in JSON format
-minutesFromNow | Number of minutes from now to run script (date in millis)
-
 

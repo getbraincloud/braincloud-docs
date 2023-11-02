@@ -1,8 +1,17 @@
 # SysMoveFolder
-## Overview
+
 Move a folder (and its contents). Returns the updated directory tree.
 
 <PartialServop service_name="globalFileV3" operation_name="SYS_MOVE_FOLDER" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+treeId | The id of the folder to move
+treeVersion | Current tree version
+newCloudPath | New path to move the folder to
+updatedName | Updated name for the folder
+createInterimDirectories | Create any sub-folders that don't already exist in `newCloudPath` ?
 
 ## Usage
 
@@ -160,14 +169,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-treeId | The id of the folder to move
-treeVersion | Current tree version
-newCloudPath | New path to move the folder to
-updatedName | Updated name for the folder
-createInterimDirectories | Create any sub-folders that don't already exist in `newCloudPath` ?
-
 

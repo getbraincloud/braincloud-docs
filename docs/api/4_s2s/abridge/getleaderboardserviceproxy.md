@@ -1,5 +1,5 @@
 # GetLeaderboardServiceProxy
-## Overview
+
 Retrieves a S2S LeaderboardService proxy object.
 
 ## Usage

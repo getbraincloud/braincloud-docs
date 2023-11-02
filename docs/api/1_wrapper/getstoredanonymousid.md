@@ -1,5 +1,5 @@
 # GetStoredAnonymousId
-## Overview
+
 Returns the stored anonymous ID
 
 ## Usage

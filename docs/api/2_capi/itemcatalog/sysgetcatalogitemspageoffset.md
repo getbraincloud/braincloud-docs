@@ -1,8 +1,14 @@
 # SysGetCatalogItemsPageOffset
-## Overview
+
 Gets the page of catalog items from the server based on the encoded context and specified page offset, with full language fields mappings.
 
 <PartialServop service_name="itemCatalog" operation_name="SYS_GET_CATALOG_ITEMS_PAGE_OFFSET" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+context | The context string returned from the server from a previous call to SysGetCatalogItemsPage or SysGetCatalogItemsPageOffset.
+pageOffset | The positive or negative page offset to fetch. Uses the last page retrieved using the context string to determine a starting point.
 
 ## Usage
 
@@ -149,11 +155,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-context | The context string returned from the server from a previous call to SysGetCatalogItemsPage or SysGetCatalogItemsPageOffset.
-pageOffset | The positive or negative page offset to fetch. Uses the last page retrieved using the context string to determine a starting point.
-
 

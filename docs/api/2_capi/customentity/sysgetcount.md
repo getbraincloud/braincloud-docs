@@ -1,8 +1,14 @@
 # SysGetCount
-## Overview
+
 Counts the number of custom entities meeting the specified where clause.
 
 <PartialServop service_name="customEntity" operation_name="SYS_DROP_COLLECTION" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityType | The name of the entity type collection
+whereJson | Criteria to search on 
 
 ## Usage
 
@@ -98,11 +104,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityType | The name of the entity type collection
-whereJson | Criteria to search on 
-
 

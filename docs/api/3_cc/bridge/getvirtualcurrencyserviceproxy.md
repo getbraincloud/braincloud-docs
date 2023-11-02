@@ -1,5 +1,5 @@
 # GetVirtualCurrencyServiceProxy
-## Overview
+
 Retrieves a VirtualCurrencyService proxy object.
 
 Documentation for the service methods can be found [here](/api/capi/virtualcurrency).

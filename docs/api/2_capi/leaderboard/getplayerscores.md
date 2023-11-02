@@ -1,8 +1,15 @@
 # GetPlayerScores
-## Overview
+
 Retrieves up to maxResults scores data for user for arcade-style leaderboard.
 
 <PartialServop service_name="leaderboard" operation_name="GET_PLAYER_SCORES" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardId | The leaderboard to retrieve the score from.
+versionId | The version of the leaderboard. Use -1 to specify the currently active leaderboard version.
+maxResults | The maximum number of player scores to retrieve.
 
 ## Usage
 
@@ -178,12 +185,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | The leaderboard to retrieve the score from.
-versionId | The version of the leaderboard. Use -1 to specify the currently active leaderboard version.
-maxResults | The maximum number of player scores to retrieve.
-
 

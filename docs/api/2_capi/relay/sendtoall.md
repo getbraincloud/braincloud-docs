@@ -1,6 +1,15 @@
 # SendToAll
-## Overview
+
 Send a packet to all except yourself.
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+data | Byte array for the data to send
+size | Size of data in bytes
+reliable | Send this reliably or not
+ordered | Received this ordered or not
+channel | One of: (CHANNEL_HIGH_PRIORITY_1, CHANNEL_HIGH_PRIORITY_2, CHANNEL_NORMAL_PRIORITY, CHANNEL_LOW_PRIORITY)
 
 ## Usage
 
@@ -78,14 +87,4 @@ RSDataCallback rsDataCallback = (response) =>
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-data | Byte array for the data to send
-size | Size of data in bytes
-reliable | Send this reliably or not
-ordered | Received this ordered or not
-channel | One of: (CHANNEL_HIGH_PRIORITY_1, CHANNEL_HIGH_PRIORITY_2, CHANNEL_NORMAL_PRIORITY, CHANNEL_LOW_PRIORITY)
-
 

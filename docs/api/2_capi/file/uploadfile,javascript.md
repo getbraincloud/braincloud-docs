@@ -1,5 +1,5 @@
 # UploadFile - JavaScript
-## Overview
+
 Method uploads the supplied file to the <%= data.branding.productName %> server. Note that you must call prepareUserUpload to retrieve the uploadId before calling this method. It is assumed that any methods required to monitor the file upload including progress, and completion are attached to the XMLHttpRequest xhr object's events such as:
 
 * xhr.upload.addEventListener("progress", uploadProgress);
@@ -12,6 +12,13 @@ On a 200 http status, the JSON return is available from XMLHttpRequest.responseT
 
 
 <PartialServop service_name="file" operation_name="UPLOAD_FILE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+xhr | The XMLHttpRequest object that the <%= data.branding.productName %> client will use to upload the file
+file | The file object
+uploadId | The upload id obtained via prepareFileUpload()
 
 ## Usage
 
@@ -133,13 +140,5 @@ var fileSize = file.size;
 The XMLHttpRequest object will return a 200 http status if the upload is successful.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-xhr | The XMLHttpRequest object that the <%= data.branding.productName %> client will use to upload the file
-file | The file object
-uploadId | The upload id obtained via prepareFileUpload()
 
 

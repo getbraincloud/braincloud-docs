@@ -1,10 +1,16 @@
 # ConsumeCurrency
-## Overview
+
 Consume the passed-in amount of currency from the player.
 
 Note: Consuming 0 or negative currency will return an error. Use <code>[AwardCurrency](/api/capi/virtualcurrency/awardcurrency)</code> to add currency values.
 
 <PartialServop service_name="virtualCurrency" operation_name="CONSUME_VC" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+vcId | The currency type to consume. 
+vcAmount | The amount of currency to consume. 
 
 ## Usage
 
@@ -159,11 +165,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-vcId | The currency type to consume. 
-vcAmount | The amount of currency to consume. 
-
 

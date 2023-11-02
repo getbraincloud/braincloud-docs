@@ -1,5 +1,5 @@
 # AuthenticateExternal
-## Overview
+
 Authenticate the user via cloud code (which in turn validates the supplied credentials against an external system).
 This allows the developer to extend <%= data.branding.productName %> authentication to support other backend authentication systems.
 
@@ -11,6 +11,14 @@ Make sure you've initialized the <%= data.branding.productName %> library before
 :::
 
 <PartialServop service_name="authenticationV2" operation_name="AUTHENTICATE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+userId | The userId
+token | The user token (password etc)
+externalAuthName | The name of the cloud script to call for external authentication
+forceCreate | Should a new profile be created for this user if the account does not exist?
 
 ## Usage
 
@@ -215,14 +223,5 @@ Code | Name | Description
 40307 | TOKEN_DOES_NOT_MATCH_USER | The user credentials don't match (according to the 3rd party system). May also indicate an issue with the external authentication script.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-userId | The userId
-token | The user token (password etc)
-externalAuthName | The name of the cloud script to call for external authentication
-forceCreate | Should a new profile be created for this user if the account does not exist?
 
 

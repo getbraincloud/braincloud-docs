@@ -1,8 +1,13 @@
 # DeleteIncomingEvent
-## Overview
+
 Delete an event out of the player's incoming event queue.
 
 <PartialServop service_name="event" operation_name="DELETE_INCOMING" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+evId | The event ID
 
 ## Usage
 
@@ -134,10 +139,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-evId | The event ID
-
 

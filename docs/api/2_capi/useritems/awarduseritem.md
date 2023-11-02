@@ -1,8 +1,15 @@
 # AwardUserItem
-## Overview
+
 Allows item(s) to be awarded to a user without collecting the purchase amount. If includeDef is true, response includes associated itemDef with language fields limited to the current or default language.
 
 <PartialServop service_name="userItems" operation_name="AWARD_USER_ITEM" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+defId | The unique id of the item definition to award. 
+quantity | The quantity of the item to award. 
+includeDef | If true, the associated item definition will be included in the response. 
 
 ## Usage
 
@@ -208,12 +215,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-defId | The unique id of the item definition to award. 
-quantity | The quantity of the item to award. 
-includeDef | If true, the associated item definition will be included in the response. 
-
 

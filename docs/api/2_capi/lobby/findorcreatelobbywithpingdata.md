@@ -1,10 +1,25 @@
 # FindOrCreateLobbyWithPingData
-## Overview
+
 Adds the caller to the lobby entry queue and will create a lobby if none are found.
 
 Use [PingRegions](/api/capi/lobby/pingregions) to generate the ping data.
 
 <PartialServop service_name="lobby" operation_name="FIND_OR_CREATE_LOBBY_WITH_PING_DATA" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+lobbyType | The type of lobby to look for. Lobby types are defined in the portal. 
+rating | The skill rating to use for finding the lobby. Provided as a separate parameter because it may not exactly match the user's rating (especially in cases where parties are involved). 
+maxSteps | The maximum number of steps to wait when looking for an applicable lobby. Each step is ~5 seconds. 
+algo | The algorithm to use for increasing the search scope. 
+filterJson | Used to help filter the list of rooms to consider. Passed to the matchmaking filter, if configured. 
+otherUserCxIds | Array of other users (i.e. party members) to add to the lobby as well. Will constrain things so that only lobbies with room for all players will be considered. 
+settings | Owner settings for the lobby. 
+isReady | Initial ready-status of this user. 
+extraJson | Initial extra-data about this user. 
+teamCode | Preferred team for this user, if applicable. Send `""` or `null` for automatic assignment. 
+pingData | Ping times for each region available for this lobby type. Can use GET_REGIONS_FOR_LOBBIES to retreive the list of regions for a given lobby type. Ping data is automatically passed in on the clients.
 
 ## Usage
 
@@ -238,20 +253,4 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-lobbyType | The type of lobby to look for. Lobby types are defined in the portal. 
-rating | The skill rating to use for finding the lobby. Provided as a separate parameter because it may not exactly match the user's rating (especially in cases where parties are involved). 
-maxSteps | The maximum number of steps to wait when looking for an applicable lobby. Each step is ~5 seconds. 
-algo | The algorithm to use for increasing the search scope. 
-filterJson | Used to help filter the list of rooms to consider. Passed to the matchmaking filter, if configured. 
-otherUserCxIds | Array of other users (i.e. party members) to add to the lobby as well. Will constrain things so that only lobbies with room for all players will be considered. 
-settings | Owner settings for the lobby. 
-isReady | Initial ready-status of this user. 
-extraJson | Initial extra-data about this user. 
-teamCode | Preferred team for this user, if applicable. Send `""` or `null` for automatic assignment. 
-pingData | Ping times for each region available for this lobby type. Can use GET_REGIONS_FOR_LOBBIES to retreive the list of regions for a given lobby type. Ping data is automatically passed in on the clients.
-
 

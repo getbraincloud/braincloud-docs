@@ -1,8 +1,17 @@
 # SysCreatePropertyJson
-## Overview
+
 Creates the named global property with the given json value.
 
 <PartialServop service_name="globalApp" operation_name="SYS_CREATE_PROPERTY_JSON" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+name | Name of the global property being created.
+value | Property value as JSON
+category | Category of the new property
+description | Description of the new property
+optionsJson | Optional boolean property preserveValue to indicate whether to preserve value during deploy, defaults to false
 
 ## Usage
 
@@ -124,14 +133,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-name | Name of the global property being created.
-value | Property value as JSON
-category | Category of the new property
-description | Description of the new property
-optionsJson | Optional boolean property preserveValue to indicate whether to preserve value during deploy, defaults to false
-
 

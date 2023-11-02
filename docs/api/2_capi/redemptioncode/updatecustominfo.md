@@ -1,9 +1,17 @@
 # UpdateCustomInfo
-## Overview
+
 Update the custom information for a redemption code.
 
 
 <PartialServop service_name="redemptionCode" operation_name="UPDATE_CUSTOM_INFO" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+scanCode | The scan code.
+codeType | The code type.
+version | Current version of the redemption code (for concurrency checking.)
+customCodeInfo | Optional custom information.
 
 ## Usage
 
@@ -194,14 +202,5 @@ Code | Name | Description
 40755 | REDEMPTION_CODE_TYPE_MISMATCH | Redemption code's code type does not match specified code type
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-scanCode | The scan code.
-codeType | The code type.
-version | Current version of the redemption code (for concurrency checking.)
-customCodeInfo | Optional custom information.
 
 

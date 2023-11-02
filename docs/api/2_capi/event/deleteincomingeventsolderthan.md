@@ -1,8 +1,13 @@
 # DeleteIncomingEventsOlderThan
-## Overview
+
 Delete any events older than the given date out of the user's incoming mailbox.
 
 <PartialServop service_name="event" operation_name="DELETE_INCOMING_EVENTS_OLDER_THAN" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+dateMillis | createdAt cut-off time whereby older events will be deleted
 
 ## Usage
 
@@ -136,10 +141,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-dateMillis | createdAt cut-off time whereby older events will be deleted
-
 

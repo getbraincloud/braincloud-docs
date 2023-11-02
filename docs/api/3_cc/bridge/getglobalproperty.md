@@ -1,5 +1,5 @@
 # GetGlobalProperty
-## Overview
+
 This is basically a shortcut method for retrieving a specified global property which is predefined on <%= data.branding.productName %> portal.
 It is equivalent to:
 

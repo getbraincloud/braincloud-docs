@@ -1,8 +1,13 @@
 # SysDropCollection
-## Overview
+
 Drops the specified entity type collection.
 
 <PartialServop service_name="customEntity" operation_name="SYS_DROP_COLLECTION" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityType | The name of the entity type collection to delete 
 
 ## Usage
 
@@ -95,10 +100,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityType | The name of the entity type collection to delete 
-
 

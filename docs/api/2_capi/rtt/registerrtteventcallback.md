@@ -1,5 +1,5 @@
 # RegisterRTTEventCallback
-## Overview
+
 Registers a real-time (RTT) callback for Events. Allows the standard [<code>SendEvent</code>](/api/capi/event/sendevent) call to push updates in real-time if the recipient is online.
 
 > **RTT Event Format**
@@ -19,6 +19,11 @@ Registers a real-time (RTT) callback for Events. Allows the standard [<code>Send
     }
 }
 ```
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+rttCallback | The RTT Event callback handler.
 
 ## Usage
 
@@ -95,10 +100,4 @@ Coming soon!
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-rttCallback | The RTT Event callback handler.
-
 

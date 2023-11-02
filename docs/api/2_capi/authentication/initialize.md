@@ -1,9 +1,15 @@
 # Initialize
-## Overview
+
 Initializes the authentication service with an anonymous installation ID and most recently used profile ID.
 You will need to call this method before authenticating anonymously.
 
 Note that calling this is the same as calling [<code>InitializeIdentity</code>](/api/capi/client/initializeidentity) in the <%= data.branding.codeClient %>.
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+profileId | The ID of the profile ID that was most recently used by the app (on this device)
+anonymousId | The anonymous installation ID that was generated for this device
 
 ## Usage
 
@@ -84,11 +90,4 @@ String anonymousID = "anonId";
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | The ID of the profile ID that was most recently used by the app (on this device)
-anonymousId | The anonymous installation ID that was generated for this device
-
 

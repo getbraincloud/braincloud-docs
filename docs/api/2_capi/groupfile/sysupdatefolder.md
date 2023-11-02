@@ -1,8 +1,18 @@
 # SysUpdateFolder
-## Overview
+
 Update a folder in the group file tree.
 
 <PartialServop service_name="groupFile" operation_name="SYS_UPDATE_FOLDER" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | The id of the group.
+treeId | The id of the folder to update.
+treeVersion | The target version of the folder tree.
+updatedName | The optional new name of the folder.
+updatedDesc | The optional new description of the folder.
+updatedAcl | The optional new acl of the folder.
 
 ## Usage
 
@@ -201,15 +211,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | The id of the group.
-treeId | The id of the folder to update.
-treeVersion | The target version of the folder tree.
-updatedName | The optional new name of the folder.
-updatedDesc | The optional new description of the folder.
-updatedAcl | The optional new acl of the folder.
-
 

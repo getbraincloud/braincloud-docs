@@ -1,8 +1,15 @@
 # ResetEmailPasswordAdvancedWithExpiry
-## Overview
+
 Advanced reset email password using templates. Allows the developer to specify how long the URL is valid for (in minutes).
 
 <PartialServop service_name="authenticationV2" operation_name="RESET_EMAIL_PASSWORD_ADVANCED_WITH_EXPIRY" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+emailAddress | The email address to send the reset email to. 
+serviceParams | Set of parameters dependant on the mail service configured.
+tokenTtlInMinutes | The time-to-live for the password reset url, in minutes.
 
 ## Usage
 
@@ -143,12 +150,4 @@ var resetUrlTTLMinutes = 1440;
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-emailAddress | The email address to send the reset email to. 
-serviceParams | Set of parameters dependant on the mail service configured.
-tokenTtlInMinutes | The time-to-live for the password reset url, in minutes.
-
 

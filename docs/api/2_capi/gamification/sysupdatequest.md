@@ -1,8 +1,15 @@
 # SysUpdateQuest
-## Overview
+
 Updates the specified quest. Note that only the fields present in the JSON object will be updated. (i.e. to leave ACL as is, don't include it in the `questJson` field).
 
 <PartialServop service_name="gamification" operation_name="SYS_UPDATE_QUEST" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+questId | The id of the quest to update
+version | The current revision of the quest
+questJson | A json object describing the updated quest data. Only the fields present will be updated.
 
 ## Usage
 
@@ -125,12 +132,4 @@ if (readResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-questId | The id of the quest to update
-version | The current revision of the quest
-questJson | A json object describing the updated quest data. Only the fields present will be updated.
-
 

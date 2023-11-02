@@ -1,8 +1,14 @@
 # DeleteSingleton
-## Overview
+
 Deletes the specified custom entity singleton, owned by the session's user, for the specified entity type, on the server.
 
 <PartialServop service_name="customEntity" operation_name="DELETE_SINGLETON" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityType | The type of custom entity singleton being deleted. Custom entity type must have option isOwned set to true.
+version | Version of the custom entity singleton being deleted. 
 
 ## Usage
 
@@ -143,11 +149,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityType | The type of custom entity singleton being deleted. Custom entity type must have option isOwned set to true.
-version | Version of the custom entity singleton being deleted. 
-
 

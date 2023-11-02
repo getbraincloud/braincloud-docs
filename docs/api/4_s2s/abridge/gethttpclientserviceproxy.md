@@ -1,5 +1,5 @@
 # GetHttpClientServiceProxy
-## Overview
+
 Retrieves a S2S HttpClientService proxy object.
 
 ## Usage

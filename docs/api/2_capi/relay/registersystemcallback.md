@@ -1,5 +1,5 @@
 # RegisterSystemCallback
-## Overview
+
 Register callback for RelayServer system messages.
 
 ## Usage

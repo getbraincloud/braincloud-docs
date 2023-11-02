@@ -1,5 +1,5 @@
 # GetEntityServiceProxy
-## Overview
+
 Retrieves an EntityService proxy object.
 
 Documentation for the service methods can be found [here](/api/capi/entity).

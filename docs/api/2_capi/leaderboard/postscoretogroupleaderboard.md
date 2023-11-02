@@ -1,8 +1,16 @@
 # PostScoreToGroupLeaderboard
-## Overview
+
 Post the group score to the given group leaderboard. Optional parameters: data.
 
 <PartialServop service_name="leaderboard" operation_name="POST_GROUP_SCORE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardId | The id of the leaderboard.
+groupId | The id of the group. 
+score | The score to post.
+data | Optional user-defined data to post with the score.
 
 ## Usage
 
@@ -164,13 +172,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | The id of the leaderboard.
-groupId | The id of the group. 
-score | The score to post.
-data | Optional user-defined data to post with the score.
-
 

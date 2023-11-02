@@ -1,5 +1,5 @@
 # GetAppVersion
-## Overview
+
 Returns the version of the client app.
 
 ## Usage

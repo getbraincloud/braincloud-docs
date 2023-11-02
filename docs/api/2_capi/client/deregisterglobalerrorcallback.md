@@ -1,5 +1,5 @@
 # DeregisterGlobalErrorCallback
-## Overview
+
 Deregisters the global error callback.
 
 ## Usage

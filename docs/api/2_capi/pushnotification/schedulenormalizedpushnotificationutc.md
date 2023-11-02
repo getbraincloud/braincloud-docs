@@ -1,8 +1,16 @@
 # ScheduleNormalizedPushNotificationUTC
-## Overview
+
 Schedules a normalized push notification to a user at a future absolute time.
 
 <PartialServop service_name="pushNotification" operation_name="SCHEDULE_NORMALIZED_NOTIFICATION" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+profileId | Identifies the user to send to
+alertContent | Body and title of alert
+customData | Optional custom data
+startTime | Time to send notification (UTC)
 
 ## Usage
 
@@ -165,13 +173,4 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | Identifies the user to send to
-alertContent | Body and title of alert
-customData | Optional custom data
-startTime | Time to send notification (UTC)
-
 

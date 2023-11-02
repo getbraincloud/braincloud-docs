@@ -1,5 +1,5 @@
 # DeregisterRewardCallback
-## Overview
+
 Deregisters the event callback.
 
 ## Usage

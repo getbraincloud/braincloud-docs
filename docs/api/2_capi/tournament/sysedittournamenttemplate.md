@@ -1,8 +1,16 @@
 # SysEditTournamentTemplate
-## Overview
+
 Creates a new tournament template.
 
 <PartialServop service_name="tournament" operation_name="SYS_EDIT_TOURNAMENT_TEMPLATE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+tournamentCode | The unique tournament code to assign to the template
+configJson | Configuration data defining the tournament template
+version | Current version number of tournament template to update, use -1 to disable version checking
+applyChangesToLiveLeaderboards | If true, forces updates to all leaderboards with current version referencing that tournament code to set the new tournament template version. If false, new tournament template version is picked up on the leaderboards' next rotation.
 
 ## Usage
 
@@ -338,13 +346,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-tournamentCode | The unique tournament code to assign to the template
-configJson | Configuration data defining the tournament template
-version | Current version number of tournament template to update, use -1 to disable version checking
-applyChangesToLiveLeaderboards | If true, forces updates to all leaderboards with current version referencing that tournament code to set the new tournament template version. If false, new tournament template version is picked up on the leaderboards' next rotation.
-
 

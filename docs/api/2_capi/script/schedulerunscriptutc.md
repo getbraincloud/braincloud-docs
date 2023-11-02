@@ -1,8 +1,15 @@
 # ScheduleRunScriptUTC
-## Overview
+
 Schedules a script to run at given UTC time.
 
 <PartialServop service_name="script" operation_name="SCHEDULE_CLOUD_SCRIPT" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+scriptName | The name of the script with its path to be run.
+scriptData | Data to be sent to the script in JSON format.
+startDateInUTC | The start date. (date in millis UTC)
 
 ## Usage
 
@@ -124,12 +131,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-scriptName | The name of the script with its path to be run.
-scriptData | Data to be sent to the script in JSON format.
-startDateInUTC | The start date. (date in millis UTC)
-
 

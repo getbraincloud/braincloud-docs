@@ -1,8 +1,13 @@
 # ReadSelectedProperties
-## Overview
+
 Read all the global properties of the app identified by the property names provided in parameter.
 
 <PartialServop service_name="globalApp" operation_name="READ_SELECTED_PROPERTIES" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+propertyNames | List of property names identifying the global properties to return.
 
 ## Usage
 
@@ -145,10 +150,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-propertyNames | List of property names identifying the global properties to return.
-
 

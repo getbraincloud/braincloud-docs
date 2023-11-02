@@ -1,5 +1,5 @@
 # GetEntityPage
-## Overview
+
 Retrieves the first page of custom entities from the server based on the custom entity type and specified query context.
 
 _Note that for collections with > 1,000 records, it is recommended that `doCount` be set to false for better performance._
@@ -101,6 +101,12 @@ The explain results are returned in a map named explain under the data section o
 :::
 
 <PartialServop service_name="customEntity" operation_name="GET_ENTITY_PAGE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityType | The type of custom entity being retrieved. 
+context | A context object describing the desired paging behaviour
 
 ## Usage
 
@@ -328,11 +334,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityType | The type of custom entity being retrieved. 
-context | A context object describing the desired paging behaviour
-
 

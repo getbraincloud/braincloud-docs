@@ -1,5 +1,5 @@
 # GetEnvironmentName
-## Overview
+
 This returns the name of the deployment environment that app is running within. 
 
 *This is most useful for developers who have access to both public and private <%= data.branding.productName %> environments.*

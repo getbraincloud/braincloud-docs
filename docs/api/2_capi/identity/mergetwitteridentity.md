@@ -1,5 +1,5 @@
 # MergeTwitterIdentity
-## Overview
+
 Merge the profile associated with the provided Twitter credentials with the current profile.
 
 NOTE: If using the <%= data.branding.codeWrapper %>, once the merge is complete you should call [<code>SetStoredProfileId</code>](/api/wrapper/setstoredprofileid) in the <%= data.branding.codeWrapper %> with the profileId returned in the Merge call.
@@ -7,6 +7,13 @@ NOTE: If using the <%= data.branding.codeWrapper %>, once the merge is complete 
 
 
 <PartialServop service_name="identity" operation_name="MERGE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+twitterId | String representation of a Twitter user ID
+authenticationToken | The authentication token derived via the Twitter API
+secret | The secret given when attempting to link with Twitter
 
 ## Usage
 
@@ -124,13 +131,5 @@ Code | Name | Description
 40211 | DUPLICATE_IDENTITY_TYPE | Returned when trying to attach an identity type that already exists for that profile. For instance you can have only one Twitter identity for a profile.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-twitterId | String representation of a Twitter user ID
-authenticationToken | The authentication token derived via the Twitter API
-secret | The secret given when attempting to link with Twitter
 
 

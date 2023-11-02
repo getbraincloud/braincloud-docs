@@ -1,5 +1,5 @@
 # GetProfanityServiceProxy
-## Overview
+
 Retrieves a ProfanityService proxy object.
 
 Documentation for the service methods can be found [here](/api/capi/profanity).

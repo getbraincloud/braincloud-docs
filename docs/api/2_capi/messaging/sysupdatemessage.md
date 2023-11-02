@@ -1,5 +1,5 @@
 # SysUpdateMessage
-## Overview
+
 :::tip
 This method is available in Cloud Code scripts only.
 :::
@@ -10,6 +10,13 @@ Update the content of the specified message.
 
 
 <PartialServop service_name="messaging" operation_name="SYS_UPDATE_MESSAGE" />
+
+## Method Parameters
+Parameter | Description
+--------- | --------------------------------
+msgId | The id of the message to update.
+msgVer | The version of the message.
+content | The new content to write to the message.
 
 ## Usage
 
@@ -129,13 +136,5 @@ Code | Name | Description
 40601 | FEATURE_NOT_ENABLED | Messaging feature is not enabled for app.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | --------------------------------
-msgId | The id of the message to update.
-msgVer | The version of the message.
-content | The new content to write to the message.
 
 

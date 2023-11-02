@@ -1,8 +1,14 @@
 # SysReadEntity
-## Overview
+
 Reads a custom entity. Ignores ownership/ACL checks.
 
 <PartialServop service_name="customEntity" operation_name="SYS_READ_ENTITY" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityType | The type of custom entity being read. 
+entityId | The id of custom entity being read. 
 
 ## Usage
 
@@ -120,11 +126,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityType | The type of custom entity being read. 
-entityId | The id of custom entity being read. 
-
 

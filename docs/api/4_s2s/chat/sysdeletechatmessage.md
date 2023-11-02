@@ -1,10 +1,17 @@
 # SysDeleteChatMessage
-## Overview
+
 Delete the specified chat message. Message can be from any user (or the system). Version must match (or pass -1 to bypass version enforcement).
 
 Returns the number of messages that were deleted. Since the history rolls over, it is possible that the message had already expired before the deletion attempt - in that case, the value of the `deleted` field will be `0`.
 
 <PartialServop service_name="chat" operation_name="SYS_DELETE_CHAT_MESSAGE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+channelId | The channel id of the message. 
+msgId | The id of the message to delete. 
+version | The version of the message. Pass it -1 to bypass version checking. 
 
 ## Usage
 
@@ -118,13 +125,5 @@ Code | Name | Description
 40616 | CLOUD_CODE_ONLY | Method only available via cloud code
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-channelId | The channel id of the message. 
-msgId | The id of the message to delete. 
-version | The version of the message. Pass it -1 to bypass version checking. 
 
 

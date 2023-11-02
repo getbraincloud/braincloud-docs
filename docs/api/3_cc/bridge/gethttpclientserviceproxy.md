@@ -1,5 +1,5 @@
 # GetHttpClientServiceProxy
-## Overview
+
 Retrieves an HttpClientService proxy object.
 
 Documentation for the service methods can be found [here](/api/cc/httpclient).

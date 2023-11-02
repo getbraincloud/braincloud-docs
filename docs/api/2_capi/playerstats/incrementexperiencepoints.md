@@ -1,8 +1,13 @@
 # IncrementExperiencePoints
-## Overview
+
 Increments the user's experience. If the player goes up a level, the new level details will be returned along with a list of rewards.
 
 <PartialServop service_name="playerStatistics" operation_name="UPDATE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+xpValue | The amount to increase the user's experience by
 
 ## Usage
 
@@ -141,10 +146,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-xpValue | The amount to increase the user's experience by
-
 

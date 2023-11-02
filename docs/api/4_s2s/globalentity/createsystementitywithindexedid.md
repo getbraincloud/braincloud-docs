@@ -1,8 +1,17 @@
 # CreateSystemEntityWithIndexedId
-## Overview
+
 Create a new system entity on the server with an indexed id.
 
 <PartialServop service_name="globalEntity" operation_name="CREATE_SYSTEM_ENTITY_WITH_INDEXED_ID" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityType | The entity type as defined by the user. 
+entityIndexedId | Id used to index the entity. 
+timeToLive | Sets expiry time for entity in milliseconds if > 0. 
+acl | The entity's Access Control List as an object. A null ACL implies default permissions which make the entity readable/writeable by only the owner. 
+data | The entity's data object. 
 
 ## Usage
 
@@ -128,14 +137,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityType | The entity type as defined by the user. 
-entityIndexedId | Id used to index the entity. 
-timeToLive | Sets expiry time for entity in milliseconds if > 0. 
-acl | The entity's Access Control List as an object. A null ACL implies default permissions which make the entity readable/writeable by only the owner. 
-data | The entity's data object. 
-
 

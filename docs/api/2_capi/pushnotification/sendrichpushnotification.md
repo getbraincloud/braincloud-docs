@@ -1,8 +1,14 @@
 # SendRichPushNotification
-## Overview
+
 Sends a notification to a user based on a <%= data.branding.productName %> portal configured notification template.
 
 <PartialServop service_name="pushNotification" operation_name="SEND_RICH" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+toId | The profileId of the user to receive the notification
+notificationTemplateId | Id of the notification template
 
 ## Usage
 
@@ -146,11 +152,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-toId | The profileId of the user to receive the notification
-notificationTemplateId | Id of the notification template
-
 

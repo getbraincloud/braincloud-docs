@@ -1,9 +1,14 @@
 # SetAuthenticationPacketTimeout
-## Overview
+
 Sets the authentication packet timeout which is tracked separately from all other packets. Note that authentication packets are never retried and so this value represents the total time a client would
 wait to receive a reply to an authentication API call.
 
 By default this timeout is set to 15 seconds.
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+timeoutSecs | The timeout in seconds.
 
 ## Usage
 
@@ -80,10 +85,4 @@ int timeoutInSeconds = 30;
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-timeoutSecs | The timeout in seconds.
-
 

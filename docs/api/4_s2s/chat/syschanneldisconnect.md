@@ -1,8 +1,12 @@
-# SysGetPresenceOfUsers
-## Overview
-Gets the presence data for the given \<profileIds\>. Will not include offline profiles unless \<includeOffline\> is set to true.
+# SysChannelDisconnect
+Disconnect from a chat channel.
 
-<PartialServop service_name="presence" operation_name="SYS_GET_PRESENCE_OF_USERS" />
+<PartialServop service_name="chat" operation_name="SYS_CHANNEL_DISCONNECT" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+channelId | The channel id to connect to.
 
 ## Usage
 
@@ -58,14 +62,10 @@ Gets the presence data for the given \<profileIds\>. Will not include offline pr
 ```
 
 ```cfscript
-var profileIds = ["aaa-bbb-ccc-ddd","bbb-ccc-ddd-eee"];
-var includeOffline = true;
-var presenceProxy = bridge.getPresenceServiceProxy();
+var channelId = "55555:sy:mysyschannel";
+var chatProxy = bridge.getChatServiceProxy();
 
-var postResult = presenceProxy.sysGetPresenceOfUsers(profileIds, includeOffline);
-if (postResult.status == 200) {
-    // Success!
-}
+var postResult = chatProxy.SysChannelDisconnect(channelId);
 ```
 
 ```mdx-code-block
@@ -75,15 +75,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "presence",
-	"operation": "SYS_GET_PRESENCE_OF_USERS",
-	"data": {
-		"profileIds": [
-			"aaa-bbb-ccc-ddd",
-			"bbb-ccc-ddd-eee"
-		],
-		"includeOffline": true
-	}
+    "service":"chat",
+    "operation":"SYS_CHANNEL_DISCONNECT",
+    "data":{
+        "channelId":"55555:sy:mysyschannel"
+    }
 }
 ```
 
@@ -92,11 +88,14 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
+<details>
+<summary>JSON Response</summary>
 
-## Method Parameters
-Parameter | Description
---------- | -----------
-profileIds | Gets a list of Presence for the specified profile ids. 
-includeOffline | Should offline users be included in the response? 
+```json
+{
+  "status" : 200
+}
+```
 
+</details>
 

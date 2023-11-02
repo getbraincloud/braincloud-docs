@@ -1,5 +1,5 @@
 # IncrementUserStats
-## Overview
+
 Atomically increment (or decrement) user statistics. User statistics are defined through the <%= data.branding.productName %> portal.
 
 StatisticsData like
@@ -15,6 +15,11 @@ There are many more complex operations supported such as
 which increments stat1 by 9 up to a limit of 30.
 
 <PartialServop service_name="playerStatistics" operation_name="UPDATE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+statistics | The data to be passed to method
 
 ## Usage
 
@@ -163,10 +168,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-statistics | The data to be passed to method
-
 

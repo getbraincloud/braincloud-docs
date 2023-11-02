@@ -1,8 +1,15 @@
 # SysIncrementGroupEntityData
-## Overview
+
 Partial increment of group entity data field items. Partial set of items incremented as specified. Bypasses ownership/ACL checks.
 
 <PartialServop service_name="group" operation_name="SYS_INCREMENT_GROUP_ENTITY_DATA" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | ID of the group
+entityId | ID of the entity.
+jsonData | Partial data map with incremental values.
 
 ## Usage
 
@@ -116,12 +123,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | ID of the group
-entityId | ID of the entity.
-jsonData | Partial data map with incremental values.
-
 

@@ -1,5 +1,5 @@
 # GetMessageBoxes
-## Overview
+
 Returns the list of messageboxes for this user. <%= data.branding.productName %> currently only supports the default "inbox" and "sent" messageboxes.
 
 
@@ -7,6 +7,10 @@ Returns the list of messageboxes for this user. <%= data.branding.productName %>
 None.
 
 <PartialServop service_name="messaging" operation_name="GET_MESSAGE_BOXES" />
+
+## Method Parameters
+
+None.
 
 ## Usage
 
@@ -144,10 +148,5 @@ if (postResult.status == 200) {
 | 40601 | FEATURE_NOT_ENABLED | Messaging feature is not enabled for app. |
 
 </details>
-
-
-## Method Parameters
-
-None.
 
 

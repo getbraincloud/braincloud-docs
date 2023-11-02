@@ -1,5 +1,5 @@
 # DeregisterRTTPresenceCallback
-## Overview
+
 Deregisters the RTT Chat callback.
 
 ## Usage

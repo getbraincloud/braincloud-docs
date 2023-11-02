@@ -1,8 +1,17 @@
 # SysCreateEntity
-## Overview
+
 Advanced version of createEntity that allows a specific user to be specified as owner (or none). Also callable from S2S sessions.
 
 <PartialServop service_name="customEntity" operation_name="SYS_CREATE_ENTITY" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityType | The type of custom entity to create. 
+dataJson | The entity's custom field data, as JSON. 
+acl | The entity's Access Control List as an object. A null ACL implies default permissions which make the entity readable by others. 
+timeToLive | The duration of time, in milliseconds, the custom entity should live before being expired. Null indicates never expires. 
+ownerId | ProfileId of the user that will own this identity, or null if no owner. 
 
 ## Usage
 
@@ -122,14 +131,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityType | The type of custom entity to create. 
-dataJson | The entity's custom field data, as JSON. 
-acl | The entity's Access Control List as an object. A null ACL implies default permissions which make the entity readable by others. 
-timeToLive | The duration of time, in milliseconds, the custom entity should live before being expired. Null indicates never expires. 
-ownerId | ProfileId of the user that will own this identity, or null if no owner. 
-
 

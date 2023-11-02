@@ -1,8 +1,14 @@
 # PublishUserItemToBlockchain
-## Overview
+
 Publishes the specified item to the item management attached blockchain. Results are reported asynchronously via an RTT event.
 
 <PartialServop service_name="userItems" operation_name="PUBLISH_USER_ITEM_TO_BLOCKCHAIN" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+itemId | The unique id of the user item. 
+version | The version of the user item being published. 
 
 ## Usage
 
@@ -131,11 +137,4 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-itemId | The unique id of the user item. 
-version | The version of the user item being published. 
-
 

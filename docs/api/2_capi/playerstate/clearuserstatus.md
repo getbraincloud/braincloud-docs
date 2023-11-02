@@ -1,8 +1,13 @@
 # ClearUserStatus
-## Overview
+
 Deletes the specified status.
 
 <PartialServop service_name="playerState" operation_name="CLEAR_USER_STATUS" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+statusName | Name of the status.
 
 ## Usage
 
@@ -134,10 +139,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-statusName | Name of the status.
-
 

@@ -1,11 +1,20 @@
 # UploadFileFromMemory
-## Overview
+
 Upload screenshots from memory instead of local file storage. On success the file will begin uploading to the <%= data.branding.productName %> server.
 
 This method allows uploads to happen in situations where local file access is not possible or convenient. For example, screenshots from Unity-based WebGL apps.
 
 
 <PartialServop service_name="file" operation_name="PREPARE_USER_UPLOAD" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+cloudPath | The desired cloud path of the file
+cloudFilename | The desired cloud fileName of the file
+shareable | True if the file is shareable
+replaceIfExists | Whether to replace file if it exists
+encodedText | The converted file data from memory in string format
 
 ## Usage
 
@@ -139,14 +148,4 @@ var encodedText = new Blob(["hello, world!"], {type: 'text/plain'});
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-cloudPath | The desired cloud path of the file
-cloudFilename | The desired cloud fileName of the file
-shareable | True if the file is shareable
-replaceIfExists | Whether to replace file if it exists
-encodedText | The converted file data from memory in string format
-
 

@@ -1,5 +1,5 @@
 # GetSessionId
-## Overview
+
 Returns the session id if a connection with <%= data.branding.productName %> has been established.
 
 ## Usage

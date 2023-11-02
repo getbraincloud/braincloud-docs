@@ -1,8 +1,15 @@
 # UpdateEntityIndexedId
-## Overview
+
 Updates an existing entity's IndexedId on the server.
 
 <PartialServop service_name="globalEntity" operation_name="UPDATE_INDEXED_ID" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityId | The id of the entity to update. 
+version | The version of the entity to update. Use -1 to indicate the newest version. 
+entityIndexedId | InxdexedId of the entity to update. 
 
 ## Usage
 
@@ -116,12 +123,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityId | The id of the entity to update. 
-version | The version of the entity to update. Use -1 to indicate the newest version. 
-entityIndexedId | InxdexedId of the entity to update. 
-
 

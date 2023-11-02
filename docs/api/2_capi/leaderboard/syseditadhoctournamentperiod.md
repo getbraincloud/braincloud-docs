@@ -1,5 +1,5 @@
 # SysEditAdhocTournamentPeriod
-## Overview
+
 Updates a future ADHOC tournament period scheduled for the leaderboard configuration, identified by the existing period's UTC startingAt time, in milliseconds. Period being edited must be scheduled in the future, not in-progress. Tournament settings may include tournament period ('tPeriod'), tournament configs and associated flags ('tTournament') and tournament phases ('tPhases').
 
 
@@ -12,6 +12,14 @@ tTournament | Required. Must specify 'tConfigs' defining the tournament configur
 tPhases | Required. Defines the phases, in minutes, within the start and end period times. The total time for the enabled phases cannot exceed the overall length of the period. The competition minutes are calculated and must be greater than 0. Configurable phases: 'enrolMins', 'disallowMins', 'minMins', 'bufferMins', 'announcementMins'; and, if ADHOC tournament in progress, tournament settings may include 'tPeriod' duration settings: 'durationDays', 'durationDays', 'durationDays', which may affect endingAt time and cannot overlap with any future ADHOC periods scheduled.
 
 <PartialServop service_name="leaderboard" operation_name="SYS_EDIT_ADHOC_TOURNAMENT_PERIOD" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardId | ID uniquely identifying the leaderboard configuration to edit. Leaderboard must be configured with ADHOC rotation type.
+dbVersion | The database version of the leaderboard config being edited. For any version, specify -1.
+periodStartingAtUtcMillis | The exact startingAt UTC timestamp, in milliseconds, identifying the ADHOC period being edited.
+tSettingsJson | Tournament settings for the new ADHOC tournament period being scheduled.
 
 ## Usage
 
@@ -221,13 +229,4 @@ var retVal = leaderboardProxy.sysEditAdhocTournamentPeriod(
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | ID uniquely identifying the leaderboard configuration to edit. Leaderboard must be configured with ADHOC rotation type.
-dbVersion | The database version of the leaderboard config being edited. For any version, specify -1.
-periodStartingAtUtcMillis | The exact startingAt UTC timestamp, in milliseconds, identifying the ADHOC period being edited.
-tSettingsJson | Tournament settings for the new ADHOC tournament period being scheduled.
-
 

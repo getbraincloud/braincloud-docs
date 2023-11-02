@@ -1,5 +1,5 @@
 # SysDropIndex
-## Overview
+
 Drops the specified index from the identified custom entity collection.
 
 <PartialServop service_name="customEntity" operation_name="SYS_DROP_INDEX" />

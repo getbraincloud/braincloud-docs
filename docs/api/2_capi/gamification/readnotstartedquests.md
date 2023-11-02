@@ -1,8 +1,13 @@
 # ReadNotStartedQuests
-## Overview
+
 Method returns quests that have not been started.
 
 <PartialServop service_name="gamification" operation_name="READ_NOT_STARTED_QUESTS" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+includeMetaData | Whether to return meta data as well
 
 ## Usage
 
@@ -137,10 +142,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-includeMetaData | Whether to return meta data as well
-
 

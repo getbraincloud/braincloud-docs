@@ -1,5 +1,5 @@
 # ResetAllQuestsAndMilestones
-## Overview
+
 Sets all quests and milestones for the current user.
 
 <PartialServop service_name="gamification" operation_name="RESET_ALL_QUESTS_AND_MILESTONES" />

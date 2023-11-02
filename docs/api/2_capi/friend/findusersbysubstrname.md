@@ -1,5 +1,5 @@
 # FindUsersBySubstrName
-## Overview
+
 Retrieves profile information for an exact text match, then it retrieves partial matches of the specified text.
 
 If there are more results than the maximum requested, then maximum requested results are returned.
@@ -9,6 +9,12 @@ Does not require the calling user to be a friend of the retrieved users.
 In event that the call takes too long, this call has a timelimit enforcement on retrieving partial matches. When a timeout occurs, it will return no partial matches. The user will need to narrow down their search criteria.
 
 <PartialServop service_name="friend" operation_name="FIND_USERS_BY_SUBSTR_NAME" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+searchText | The substring to search for. Minimum length of 3 characters.
+maxResults | Maximum number of results to return.
 
 ## Usage
 
@@ -164,11 +170,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-searchText | The substring to search for. Minimum length of 3 characters.
-maxResults | Maximum number of results to return.
-
 

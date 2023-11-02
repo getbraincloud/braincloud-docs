@@ -1,8 +1,18 @@
 # SysMoveToGlobalFile
-## Overview
+
 Copies the specified User File to the Global File V3 system.
 
 <PartialServop service_name="globalFileV3" operation_name="SYS_MOVE_TO_GLOBAL_FILE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+userProfileId | ProfileId of the user to copy the file from
+userCloudPath | Directory of the file in User Files
+userCloudFilename | Filename of the user file
+globalTreeId | TreeId to move the file to
+globalFilename | Filename to use in global files
+overwriteIfPresent | Overwrite the file if it already exists?
 
 ## Usage
 
@@ -121,15 +131,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-userProfileId | ProfileId of the user to copy the file from
-userCloudPath | Directory of the file in User Files
-userCloudFilename | Filename of the user file
-globalTreeId | TreeId to move the file to
-globalFilename | Filename to use in global files
-overwriteIfPresent | Overwrite the file if it already exists?
-
 

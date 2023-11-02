@@ -1,8 +1,13 @@
 # FinalizeSteamTransaction
-## Overview
+
 Finalize Steam Transaction. On success, the player will be awarded the associated currencies.
 
 <PartialServop service_name="product" operation_name="FINALIZE_STEAM_TRANSACTION" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+transId | Steam transaction id
 
 ## Usage
 
@@ -111,10 +116,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-transId | Steam transaction id
-
 

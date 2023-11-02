@@ -1,8 +1,15 @@
 # FinalizePurchase
-## Overview
+
 Finalize a two-part purchase transaction. Currently only used for Steam purchases. On success, the player will be awarded the associated currencies.
 
 <PartialServop service_name="appStore" operation_name="FINALIZE_PURCHASE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+storeId | Store type
+transactionId | id of transaction to finalize
+transactionData | Store-specific purchase data
 
 ## Usage
 
@@ -186,12 +193,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-storeId | Store type
-transactionId | id of transaction to finalize
-transactionData | Store-specific purchase data
-
 

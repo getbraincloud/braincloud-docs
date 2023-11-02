@@ -1,6 +1,12 @@
 # Connect
-## Overview
+
 Start off a connection, based off connection type to <%= data.branding.productName %>'s Relay Servers.  Connect options come in from "ROOM_ASSIGNED" lobby callback
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+connectionType | The connection type. INVALID, WEBSOCKET, TCP, UDP, MAX
+options | Options sent in the connection
 
 ## Usage
 
@@ -85,11 +91,4 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-connectionType | The connection type. INVALID, WEBSOCKET, TCP, UDP, MAX
-options | Options sent in the connection
-
 

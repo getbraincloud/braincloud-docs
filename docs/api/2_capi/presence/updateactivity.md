@@ -1,8 +1,13 @@
 # UpdateActivity
-## Overview
+
 Update the presence data activity field for the caller. Note that *Support rich activity* must be enabled in order for this API call to work (see Messaging > Presence in the portal). An RTT event will be sent to any registered listeners of the caller with their updated presence info.
 
 <PartialServop service_name="presence" operation_name="UPDATE_ACTIVITY" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+activity | Presence activity record json. Size of the given activity must be equal to or less than the *Max content size (bytes)* app setting (see Messaging > Presence in the portal).
 
 ## Usage
 
@@ -136,10 +141,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-activity | Presence activity record json. Size of the given activity must be equal to or less than the *Max content size (bytes)* app setting (see Messaging > Presence in the portal).
-
 

@@ -1,8 +1,14 @@
 # GetCDNUrl
-## Overview
+
 Return CDN url for file for clients that cannot handle redirect.
 
 <PartialServop service_name="groupFile" operation_name="GET_CDN_URL" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | The id of the group.
+fileId | The id of the file.
 
 ## Usage
 
@@ -148,11 +154,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | The id of the group.
-fileId | The id of the file.
-
 

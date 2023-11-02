@@ -1,8 +1,13 @@
 # CancelMatch
-## Overview
+
 Cancels a match.
 
 <PartialServop service_name="onewayMatch" operation_name="CANCEL_MATCH" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+playbackStreamId | The playback stream id returned in the start match
 
 ## Usage
 
@@ -134,10 +139,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-playbackStreamId | The playback stream id returned in the start match
-
 

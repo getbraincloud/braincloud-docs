@@ -1,5 +1,5 @@
 # GetList
-## Overview
+
 Method gets list of entities from the server base on type and/or where clause.
 
 Fields available for use in the 'where' clause are:
@@ -14,6 +14,13 @@ Fields available for use in the 'where' clause are:
  Along with all custom data (using `data.`).  For more information on the query syntax see [here](/api/appendix/mongodbwherequeries).
 
 <PartialServop service_name="globalEntity" operation_name="GET_LIST" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+where | A mongo style query string. 
+orderBy | Specifies the order in which the query returns matching documents. The sort parameter consists of a field followed by an ascending(1)/descending flag(-1). eg. `{ "name" : 1}` sorts by name in ascending order. 
+maxReturn | The maximum number of entities to return. 
 
 ## Usage
 
@@ -144,12 +151,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-where | A mongo style query string. 
-orderBy | Specifies the order in which the query returns matching documents. The sort parameter consists of a field followed by an ascending(1)/descending flag(-1). eg. `{ "name" : 1}` sorts by name in ascending order. 
-maxReturn | The maximum number of entities to return. 
-
 

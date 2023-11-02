@@ -1,5 +1,5 @@
 # Virtual Currency
-## Overview
+
 
 The **VirtualCurrency Service** manages virtual currency balances for app users.
 ### API Summary

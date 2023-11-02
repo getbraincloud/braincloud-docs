@@ -1,10 +1,16 @@
 # SysSetPasswordUniversalId
-## Overview
+
 Set the password associated with the universal id of the given profile.
 
 
 
 <PartialServop service_name="user" operation_name="SYS_SET_PASSWORD_UNIVERSAL_ID" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+profileId | Profile ID of the target user to set password
+password | New password value
 
 ## Usage
 
@@ -107,12 +113,5 @@ Code | Name | Description
 550022 | INVALID_PASSWORD_CONTENT | The password doesn't meet the minimum password requirements.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | Profile ID of the target user to set password
-password | New password value
 
 

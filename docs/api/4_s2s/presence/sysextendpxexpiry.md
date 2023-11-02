@@ -1,8 +1,14 @@
 # SysExtendPxExpiry
-## Overview
+
 Extends the presence TTL for \<profileId\> by \<seconds\>.
 
 <PartialServop service_name="presence" operation_name="SYS_EXTEND_PX_EXPIRY" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+profileId | Target profile id. 
+seconds | Number of seconds to extend the px expiry. 
 
 ## Usage
 
@@ -89,11 +95,4 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | Target profile id. 
-seconds | Number of seconds to extend the px expiry. 
-
 

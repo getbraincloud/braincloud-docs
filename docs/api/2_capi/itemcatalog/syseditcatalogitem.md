@@ -1,8 +1,15 @@
 # SysEditCatalogItem
-## Overview
+
 Update a catalog item on the server.
 
 <PartialServop service_name="itemCatalog" operation_name="SYS_EDIT_CATALOG_ITEM" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+defId | Unique ID identifying catalog item to be updated. 
+version | Version of catalog item being edited. 
+itemDefData | The data to update on the catalog item. 
 
 ## Usage
 
@@ -235,12 +242,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-defId | Unique ID identifying catalog item to be updated. 
-version | Version of catalog item being edited. 
-itemDefData | The data to update on the catalog item. 
-
 

@@ -1,8 +1,21 @@
 # PostScoreToDynamicGroupLeaderboardDaysUTC
-## Overview
+
 Post the group score to the given group leaderboard with a rotation type of DAYS and dynamically create if necessary.
 
 <PartialServop service_name="leaderboard" operation_name="POST_GROUP_SCORE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardId | The id of the leaderboard.
+groupId | The id of the group. 
+score | The score to post.
+data | Optional user-defined data to post with the score.
+leaderboardType | the type of leaderboard
+rotationType | daily, weekly, monthly
+rotationResetTime | the date to reset the rotation in milliseconds UTC
+retainedCount | times to retain the leaderboard
+numDaysToRotate | How many days between each rotation
 
 ## Usage
 
@@ -204,18 +217,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | The id of the leaderboard.
-groupId | The id of the group. 
-score | The score to post.
-data | Optional user-defined data to post with the score.
-leaderboardType | the type of leaderboard
-rotationType | daily, weekly, monthly
-rotationResetTime | the date to reset the rotation in milliseconds UTC
-retainedCount | times to retain the leaderboard
-numDaysToRotate | How many days between each rotation
-
 

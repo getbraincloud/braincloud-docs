@@ -1,8 +1,14 @@
 # SysCreateDivisionSetConfig
-## Overview
+
 Creates a new division set configuration
 
 <PartialServop service_name="tournament" operation_name="SYS_CREATE_DIVISION_SET_CONFIG" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+divSetId | The unique division set id.
+configJson | Configuration data defining the division set, including: description (desc), schedule type (scheduleType), id of template leaderboard (templateLeaderboardId), maximum number of players per division set instance (maxPlayers), and number of days after which division set instance results are to be expired (expireResultsAfterDays).
 
 ## Usage
 
@@ -124,11 +130,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-divSetId | The unique division set id.
-configJson | Configuration data defining the division set, including: description (desc), schedule type (scheduleType), id of template leaderboard (templateLeaderboardId), maximum number of players per division set instance (maxPlayers), and number of days after which division set instance results are to be expired (expireResultsAfterDays).
-
 

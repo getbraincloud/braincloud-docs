@@ -1,8 +1,13 @@
 # ResetEmailPassword
-## Overview
+
 Sends a password reset email to the specified address.
 
 <PartialServop service_name="authenticationV2" operation_name="RESET_EMAIL_PASSWORD" / >
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+emailAddress | The email address to send the reset email to.
 
 ## Usage
 
@@ -122,10 +127,4 @@ var emailAddress = "email@email.com";
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-emailAddress | The email address to send the reset email to.
-
 

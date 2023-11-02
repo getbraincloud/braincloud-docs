@@ -1,5 +1,5 @@
 # UpdateEntityOwnerAndAcl
-## Overview
+
 Method updates an existing entity's owner and ACL on the server.
 
 This method is affected by versioning. See the [versioning documentation](/api/appendix/version) for more information.

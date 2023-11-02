@@ -1,5 +1,5 @@
 # CallAPIForSession
-## Overview
+
 This is a generic method for calling client API services with a player session context.
 
 Field | Description

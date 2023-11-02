@@ -1,10 +1,15 @@
 # UpdateUniversalIdLogin
-## Overview
+
 Updates the UniversalId of the current profile. *Note - works for non-login versions of UniversalId as well.*
 
 Call will fail if the new UniversalId is already in use, or if the profile does not have a UniversalId.
 
 <PartialServop service_name="identity" operation_name="UPDATE_UNIVERSAL_LOGIN" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+externalId | The new universal id to update to
 
 ## Usage
 
@@ -132,10 +137,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-externalId | The new universal id to update to
-
 

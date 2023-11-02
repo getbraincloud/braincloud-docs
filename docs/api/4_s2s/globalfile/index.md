@@ -1,5 +1,5 @@
 # Global File
-## Overview
+
 
 
 
@@ -26,6 +26,8 @@ To access the files uploaded into the [Custom Config | Files](https://portal.bra
 
 *Accessible via cloud-code and S2S.*
 
+* [SysCheckFilenameExists](/api/capi/globalfile/syscheckfilenameexists) - Check if filename exists for provided path and name.
+* [SysCheckFullpathFilenameExists](/api/capi/globalfile/syscheckfullpathfilenameexists) - Check if filename exists for provided full path name.
 * [SysGetGlobalFileList](/api/s2s/globalfile/sysgetglobalfilelist) - list all global files at the specified `folderPath`
 * [SysGetFileInfo()](/api/s2s/globalfile/sysgetfileinfo) - returns information about the specified file, given a `fileId`.
 * [SysGetFileInfoSimple()](/api/s2s/globalfile/sysgetfileinfosimple) - returns information about the specified file, given a `folderPath` + `filename`.

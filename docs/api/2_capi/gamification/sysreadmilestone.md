@@ -1,8 +1,13 @@
 # SysReadMilestone
-## Overview
+
 Retrieves the meta-data for the specified milestone.
 
 <PartialServop service_name="gamification" operation_name="SYS_READ_MILESTONE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+milestoneId | The id of the milestone to read
 
 ## Usage
 
@@ -116,10 +121,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-milestoneId | The id of the milestone to read
-
 

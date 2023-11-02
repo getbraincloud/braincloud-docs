@@ -1,5 +1,5 @@
 # UpdateGroupData
-## Overview
+
 Update a group's data.
 
 This method is affected by versioning. See the [versioning documentation](/api/appendix/version) for more information.
@@ -10,6 +10,13 @@ There is a special index on a field called "indexedId" in the group data for eff
 :::
 
 <PartialServop service_name="group" operation_name="UPDATE_GROUP_DATA" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | ID of the group
+version | Version to verify
+jsonData | Data to apply
 
 ## Usage
 
@@ -220,12 +227,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | ID of the group
-version | Version to verify
-jsonData | Data to apply
-
 

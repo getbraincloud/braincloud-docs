@@ -1,10 +1,16 @@
 # AwardCurrency
-## Overview
+
 Award user the passed-in amount of currency. Returns an object representing the new currency values.
 
 Note: Awarding 0 or negative currency will return an error. Use <code>[ConsumeCurrency](/api/capi/virtualcurrency/consumecurrency)</code> to remove currency values.
 
 <PartialServop service_name="virtualCurrency" operation_name="AWARD_VC" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+vcId | The currency type to award. 
+vcAmount | The amount of currency to award. 
 
 ## Usage
 
@@ -160,11 +166,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-vcId | The currency type to award. 
-vcAmount | The amount of currency to award. 
-
 

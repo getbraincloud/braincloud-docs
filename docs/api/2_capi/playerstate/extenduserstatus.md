@@ -1,8 +1,15 @@
 # ExtendUserStatus
-## Overview
+
 Extends a user's status.
 
 <PartialServop service_name="playerState" operation_name="EXTEND_USER_STATUS" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+statusName | Name of the status.
+additionalSecs | Add time to existing expiry time. 
+details | Json String to add additional details.
 
 ## Usage
 
@@ -155,12 +162,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-statusName | Name of the status.
-additionalSecs | Add time to existing expiry time. 
-details | Json String to add additional details.
-
 

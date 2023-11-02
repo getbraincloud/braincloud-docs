@@ -1,10 +1,15 @@
 # RegisterEventCallback
-## Overview
+
 :::caution
 This method is now deprecated. For real-time events, you should use the RTT API method,  <strong>RegisterRTTEventCallback()</strong>, instead.
 :::
 
 Sets a callback handler for any out of band event messages that come from <%= data.branding.productName %>.
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+eventCallback | A function which takes a JSON string as it's only parameter.
 
 ## Usage
 
@@ -101,10 +106,4 @@ eventBlock = ^(NSString *eventsJson) {  };
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-eventCallback | A function which takes a JSON string as it's only parameter.
-
 

@@ -1,5 +1,5 @@
 # GetSalesInventoryByCategory
-## Overview
+
 Method gets the active sales inventory for the passed-in currency type, platform, and category.
 
 Valid platforms are:
@@ -12,6 +12,13 @@ Valid platforms are:
 - googlePlay
 
 <PartialServop service_name="product" operation_name="GET_INVENTORY" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+platform | The store platform.
+userCurrency | The currency to retrieve the sales inventory for. This is only used for Steam and Facebook stores.
+category | The product category
 
 ## Usage
 
@@ -186,12 +193,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-platform | The store platform.
-userCurrency | The currency to retrieve the sales inventory for. This is only used for Steam and Facebook stores.
-category | The product category
-
 

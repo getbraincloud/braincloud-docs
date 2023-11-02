@@ -1,10 +1,18 @@
 # JoinDivision
-## Overview
+
 Similar to <code>[JoinTournament](/api/capi/tournament/jointournament)</code>, except that you specify the *division set id* instead of the *leaderboard id*. 
 
 Returns the *division instance id* (i.e. `leaderboardId`) upon success. If joining the tournament requires a fee, it is possible to fail (if the user doesn't have enough currency).
 
 <PartialServop service_name="tournament" operation_name="JOIN_DIVISION" />
+
+## Method Parameters
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+divSetId | Division set id.
+tournamentCode | The code for the tournament to join (eg. free vs. premium, etc.)
+initialScore | The initial score to give the player on the leaderboard.
 
 ## Usage
 
@@ -167,13 +175,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-#### Method Parameters
-Parameter | Description
---------- | -----------
-divSetId | Division set id.
-tournamentCode | The code for the tournament to join (eg. free vs. premium, etc.)
-initialScore | The initial score to give the player on the leaderboard.
-
 

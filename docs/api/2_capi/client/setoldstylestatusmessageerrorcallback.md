@@ -1,11 +1,16 @@
 # SetOldStyleStatusMessageErrorCallback
-## Overview
+
 Sets the error callback to return the status message instead of the error JSON string. This flag is used to conform to pre-2.17 client
 behavior.
 
 :::caution
 This flag is only intended for backward compatibility and is NOT recommended to be enabled otherwise.
 :::
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+enabled | If set to true, enable legacy error message format
 
 ## Usage
 
@@ -78,10 +83,4 @@ This flag is only intended for backward compatibility and is NOT recommended to 
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-enabled | If set to true, enable legacy error message format
-
 

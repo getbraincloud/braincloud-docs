@@ -1,10 +1,19 @@
 # SysChangeEmailIdentity
-## Overview
+
 Changes email address associated with specified user's email identity.
 
 
 
 <PartialServop service_name="identity" operation_name="SYS_CHANGE_EMAIL_IDENTITY" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+oldEmailAddress | Old email address
+profileId | The profileId of the applicable user
+oldEmailAddress | The user's old email address
+newEmailAddress | The user's new email address
+updateContactEmail | Whether to also update contact email in user's profile
 
 ## Usage
 
@@ -116,15 +125,5 @@ Code | Name | Description
 40583 | APP_ERROR | New email address is already in use
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-oldEmailAddress | Old email address
-profileId | The profileId of the applicable user
-oldEmailAddress | The user's old email address
-newEmailAddress | The user's new email address
-updateContactEmail | Whether to also update contact email in user's profile
 
 

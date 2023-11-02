@@ -1,5 +1,5 @@
 # UpdateSummaryFriendData
-## Overview
+
 Updates the "friend summary data" associated with the logged in user.
 
 Some operations will return this summary data. For instance the social leaderboards will return the player's score in the leaderboard along with the friend summary data. Generally this data is used to provide a quick overview of the user without requiring a separate API call to read their public stats or entity data.
@@ -7,6 +7,11 @@ Some operations will return this summary data. For instance the social leaderboa
 The friend summary data can also be requested with the [<code>GetSummaryDataForProfileId</code>](/api/capi/friend/getsummarydataforprofileid) api call.
 
 <PartialServop service_name="playerState" operation_name="UPDATE_SUMMARY" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+summaryFriendData | A JSON string defining the summary data. For example `{ "xp":123, "level":12, "highScore":45123 }`
 
 ## Usage
 
@@ -147,10 +152,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-summaryFriendData | A JSON string defining the summary data. For example `{ "xp":123, "level":12, "highScore":45123 }`
-
 

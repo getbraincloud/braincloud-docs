@@ -1,8 +1,17 @@
 # CreateGroupEntity
-## Overview
+
 Create an entity in the group. Optional parameters: entityType, acl and jsonData
 
 <PartialServop service_name="group" operation_name="CREATE_GROUP_ENTITY" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | ID of the group
+entityType | Type of the group entity
+isOwnedByGroupMember | true if entity is owned by a member; false if owned by the entire group
+acl | Access control list for the group entity
+jsonData | Custom application data
 
 ## Usage
 
@@ -198,14 +207,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | ID of the group
-entityType | Type of the group entity
-isOwnedByGroupMember | true if entity is owned by a member; false if owned by the entire group
-acl | Access control list for the group entity
-jsonData | Custom application data
-
 

@@ -1,5 +1,5 @@
 # ResetStoredProfileId
-## Overview
+
 Resets the profile ID to empty string.
 
 ## Usage

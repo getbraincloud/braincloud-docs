@@ -1,6 +1,11 @@
 # RegisterBlockchainCallback
-## Overview
+
 Registers a callback for RTT blockchain updates.
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+rttCallback | The RTT blockchain callback handler.
 
 ## Usage
 
@@ -77,10 +82,4 @@ Coming soon!
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-rttCallback | The RTT blockchain callback handler.
-
 

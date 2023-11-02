@@ -1,8 +1,13 @@
 # EndStream
-## Overview
+
 Ends a stream.
 
 <PartialServop service_name="playbackStream" operation_name="END_STREAM" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+playbackStreamId | Identifies the stream to end
 
 ## Usage
 
@@ -135,10 +140,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-playbackStreamId | Identifies the stream to end
-
 

@@ -1,5 +1,5 @@
 # ActivateCode
-## Overview
+
 This operation activates the specified redemption code.
 
 
@@ -12,6 +12,13 @@ Name | Description
 response | Newly updated redemption code object.
 
 <PartialServop service_name="redemptionCode" operation_name="ACTIVATE_CODE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+scanCode | The scan code. 
+codeType | The code type. 
+customCodeInfo | Optional custom information. 
 
 ## Usage
 
@@ -135,12 +142,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-scanCode | The scan code. 
-codeType | The code type. 
-customCodeInfo | Optional custom information. 
-
 

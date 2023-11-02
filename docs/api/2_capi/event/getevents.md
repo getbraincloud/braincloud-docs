@@ -1,5 +1,5 @@
 # GetEvents
-## Overview
+
 Gets the events currently queued for the player.
 
 <PartialServop service_name="event" operation_name="GET_EVENTS" />

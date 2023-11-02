@@ -1,8 +1,14 @@
 # SysAddCatalogItem
-## Overview
+
 Create a new catalog item on the server.
 
 <PartialServop service_name="itemCatalog" operation_name="SYS_ADD_CATALOG_ITEM" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+defId | Unique ID for new catalog item. Required. 
+itemDefData | The data defining the catalog item. 
 
 ## Usage
 
@@ -233,11 +239,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-defId | Unique ID for new catalog item. Required. 
-itemDefData | The data defining the catalog item. 
-
 

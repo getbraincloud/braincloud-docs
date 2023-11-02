@@ -1,5 +1,5 @@
 # AuthenticateGoogleOpenId
-## Overview
+
 Authenticate the user using google's modern OpenId mechanism.
 
 
@@ -9,6 +9,13 @@ Make sure you've initialized the <%= data.branding.productName %> library before
 :::
 
 <PartialServop service_name="authenticationV2" operation_name="AUTHENTICATE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+googleUserAccountEmail | Either the user's google email, or their google userid (gXXX)
+IdToken | The id token of the google account. Can get with calls like requestIdToken
+forceCreate | Should a new profile be created for this user if the account does not exist?
 
 ## Usage
 
@@ -194,13 +201,5 @@ Code | Name | Description
 40307 | TOKEN_DOES_NOT_MATCH_USER | The user credentials are invalid (i.e. googleUserAccountEmail and IdToken are invalid). May also indicate that Google Integration is not properly configured.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-googleUserAccountEmail | Either the user's google email, or their google userid (gXXX)
-IdToken | The id token of the google account. Can get with calls like requestIdToken
-forceCreate | Should a new profile be created for this user if the account does not exist?
 
 

@@ -1,5 +1,5 @@
 # GetIdentityData
-## Overview
+
 :::tip
 Currently, this method is available in Cloud Code scripts and for Ultra authentication type only.
 :::
@@ -7,6 +7,12 @@ Currently, this method is available in Cloud Code scripts and for Ultra authenti
 Retrieves identity data for given identity type for this profile.
 
 <PartialServop service_name="identity" operation_name="GET_IDENTITY_DATA" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+authenticationType | Type of authentication.
+externalAuthName | The name of the external authentication mechanism (optional, used for custom authentication types)
 
 ## Usage
 
@@ -109,11 +115,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-authenticationType | Type of authentication.
-externalAuthName | The name of the external authentication mechanism (optional, used for custom authentication types)
-
 

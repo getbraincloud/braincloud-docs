@@ -1,6 +1,11 @@
 # SetStoredAnonymousId
-## Overview
+
 Sets the stored anonymous ID
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+anonymousId | The anonymous ID to set
 
 ## Usage
 
@@ -83,10 +88,4 @@ Sets the stored anonymous ID
 <%= data.branding.codePrefix %>.setStoredAnonymousId("1234-1234-1234-1234");
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-anonymousId | The anonymous ID to set
-
 

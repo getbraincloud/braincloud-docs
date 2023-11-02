@@ -1,8 +1,16 @@
 # AddGroupMember
-## Overview
+
 Add a member to the group. Optional parameters: jsonAttributes.
 
 <PartialServop service_name="group" operation_name="ADD_MEMBER_TO_GROUP" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | ID of the group
+profileId | Profile ID of the member being added
+role | Role of the member being added
+jsonAttributes | Attributes of the member being added
 
 ## Usage
 
@@ -151,13 +159,4 @@ var retVal = groupProxy.addGroupMember(groupId, profileId, role, jsonAttributes)
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | ID of the group
-profileId | Profile ID of the member being added
-role | Role of the member being added
-jsonAttributes | Attributes of the member being added
-
 

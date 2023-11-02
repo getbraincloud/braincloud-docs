@@ -1,8 +1,14 @@
 # MergeFacebookLimitedIdentity
-## Overview
+
 Merge the user's Facebook Limited login credentials with the current profile.
 
 <PartialServop service_name="identity" operation_name="MERGE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+facebookId | The facebook id of the user
+authenticationToken | The validated token from the Facebook SDK (that will be further validated when sent to the <%= data.branding.productName %> service)
 
 ## Usage
 
@@ -121,11 +127,4 @@ var authenticationToken = "someFacebookAuthToken";
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-facebookId | The facebook id of the user
-authenticationToken | The validated token from the Facebook SDK (that will be further validated when sent to the <%= data.branding.productName %> service)
-
 

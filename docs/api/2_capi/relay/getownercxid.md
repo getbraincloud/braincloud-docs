@@ -1,5 +1,5 @@
 # GetOwnerCxId
-## Overview
+
 Get the lobby's owner Connection Id.
 
 ## Usage

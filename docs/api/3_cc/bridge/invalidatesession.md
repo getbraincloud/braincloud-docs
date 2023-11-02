@@ -1,5 +1,5 @@
 # InvalidateSession
-## Overview
+
 Invalidates the current session, thus disconnecting the user from <%= data.branding.productName %>.
 
 When would I used invalidateSession? Check our [BlockIfBanned](/learn/cloud-code-central/handy-cloud-code-scripts/example-blockifbanned-script/) and [OnRegisterNewUser](/learn/cloud-code-central/handy-cloud-code-scripts/onregisternewuser-script/) script examples.

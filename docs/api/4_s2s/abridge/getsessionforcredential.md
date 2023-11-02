@@ -1,6 +1,13 @@
 # GetSessionForCredential
-## Overview
+
 Creates and returns a session for the credentials provided.
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+externalId | User ID for the given authenticationType
+authenticationType | Type of authentication. Full list of types can be found [here](/api/appendix/authtypes).
+externalAuthType | Optional parameter to specify the external authenticationType to use for the passed in credentials
 
 ## Usage
 
@@ -79,12 +86,4 @@ var session = bridge.getSessionForCredential(externalId, authenticationType, ext
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-externalId | User ID for the given authenticationType
-authenticationType | Type of authentication. Full list of types can be found [here](/api/appendix/authtypes).
-externalAuthType | Optional parameter to specify the external authenticationType to use for the passed in credentials
-
 

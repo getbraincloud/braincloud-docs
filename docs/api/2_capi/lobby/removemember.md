@@ -1,11 +1,17 @@
 # RemoveMember
-## Overview
+
 Evicts the specified user from the specified lobby. The caller must be the owner of the lobby.
 
 
 
 
 <PartialServop service_name="lobby" operation_name="REMOVE_MEMBER" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+lobbyId | Id of chosen lobby.
+connectionID | RTT connection id of specified member to be removed from the lobby.
 
 ## Usage
 
@@ -155,12 +161,5 @@ Code | Name | Description
 40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-lobbyId | Id of chosen lobby.
-connectionID | RTT connection id of specified member to be removed from the lobby.
 
 

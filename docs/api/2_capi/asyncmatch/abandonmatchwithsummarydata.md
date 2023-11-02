@@ -1,5 +1,5 @@
 # AbandonMatchWithSummaryData
-## Overview
+
 Marks the given match as abandoned and sets the matchState to EXPIRED.
 
 
@@ -8,6 +8,14 @@ Only a match whose current status is NOT_STARTED, PENDING or EXPIRED can be aban
 :::
 
 <PartialServop service_name="asyncMatch" operation_name="ABANDON_MATCH_WITH_SUMMARY_DATA" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+ownerId | The match owner id. 
+matchId | The match id. 
+pushContent | Optional push notification message to send to the other party. Refer to the Push Notification functions for the syntax required. 
+summary | Optional JSON string defining what the other player will see as a summary of the game when listing their games. 
 
 ## Usage
 
@@ -181,13 +189,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-ownerId | The match owner id. 
-matchId | The match id. 
-pushContent | Optional push notification message to send to the other party. Refer to the Push Notification functions for the syntax required. 
-summary | Optional JSON string defining what the other player will see as a summary of the game when listing their games. 
-
 

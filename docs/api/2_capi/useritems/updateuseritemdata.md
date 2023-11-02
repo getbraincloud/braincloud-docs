@@ -1,8 +1,15 @@
 # UpdateUserItemData
-## Overview
+
 Updates the item data on the specified user item.
 
 <PartialServop service_name="userItems" operation_name="UPDATE_USER_ITEM_DATA" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+itemId | The unique id of the user item. 
+version | The version of the user item being updated. 
+newItemData | New item data to replace existing user item data. 
 
 ## Usage
 
@@ -182,12 +189,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-itemId | The unique id of the user item. 
-version | The version of the user item being updated. 
-newItemData | New item data to replace existing user item data. 
-
 

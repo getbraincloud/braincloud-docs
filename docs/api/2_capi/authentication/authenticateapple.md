@@ -1,5 +1,5 @@
 # AuthenticateApple
-## Overview
+
 Authenticates the user using Sign in with Apple.
 
 To use this authentication method, your app must first perform the client-side portion of the *Sign in with Apple* login, and then pass the JWT returned from Apple to the `AuthenticateApple()` API call.
@@ -13,6 +13,13 @@ Make sure you've initialized the <%= data.branding.productName %> library before
 :::
 
 <PartialServop service_name="authenticationV2" operation_name="AUTHENTICATE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+appleUserId | The user id of the authenticated user. It should match the `sub` field of the identity token. This is the identifier that will be attached to the user's profile. 
+identityToken | The JSON Web Token that represents the user's identity. Retrieved as part of the users profile, given back after successfully signing in with apple.
+forceCreate | Should a new profile be created for this user if the account does not exist?
 
 ## Usage
 
@@ -198,13 +205,5 @@ Code | Name | Description
 40307 | TOKEN_DOES_NOT_MATCH_USER | The user credentials are invalid (i.e. appleUserId and identityToken are invalid). May also indicate that Apple Integration is not properly configured.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-appleUserId | The user id of the authenticated user. It should match the `sub` field of the identity token. This is the identifier that will be attached to the user's profile. 
-identityToken | The JSON Web Token that represents the user's identity. Retrieved as part of the users profile, given back after successfully signing in with apple.
-forceCreate | Should a new profile be created for this user if the account does not exist?
 
 

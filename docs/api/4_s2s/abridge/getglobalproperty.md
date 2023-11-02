@@ -1,11 +1,16 @@
 # GetGlobalProperty
-## Overview
+
 This is basically a shortcut method for retrieving a specified global property which is predefined on <%= data.branding.productName %> portal.
 It is equivalent to:
 
 var proxy = bridge.getGlobalAppServiceProxy();
 var props = proxy.readProperties();
 var prop = props['a-name-of-global-property']
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+propname | The name of a global property to retrive
 
 ## Usage
 
@@ -80,10 +85,4 @@ var prop = bridge.getGlobalProperty(propname);
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-propname | The name of a global property to retrive
-
 

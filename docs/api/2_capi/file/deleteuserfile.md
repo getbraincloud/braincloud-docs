@@ -1,5 +1,5 @@
 # DeleteUserFile
-## Overview
+
 Deletes a single user file.
 
 <PartialServop service_name="file" operation_name="DELETE_USER_FILE" />

@@ -1,8 +1,13 @@
 # SetPlayerRating
-## Overview
+
 Sets player rating.
 
 <PartialServop service_name="matchMaking" operation_name="SET_PLAYER_RATING" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+playerRating | The new player rating.
 
 ## Usage
 
@@ -130,10 +135,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-playerRating | The new player rating.
-
 

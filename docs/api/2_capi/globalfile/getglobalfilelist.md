@@ -1,8 +1,14 @@
 # GetGlobalFileList
-## Overview
+
 Retrieves the list of global files stored at the specified directory location.
 
 <PartialServop service_name="globalFileV3" operation_name="GET_GLOBAL_FILE_LIST" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+folderPath | Directory location of the files. Use empty string or "/" for root.
+recurse | Whether to recurse into subdirectories
 
 ## Usage
 
@@ -186,11 +192,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-folderPath | Directory location of the files. Use empty string or "/" for root.
-recurse | Whether to recurse into subdirectories
-
 

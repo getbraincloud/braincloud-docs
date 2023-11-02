@@ -1,8 +1,17 @@
 # CreateEntity
-## Overview
+
 Creates a new custom entity.
 
 <PartialServop service_name="customEntity" operation_name="CREATE_ENTITY" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityType | The type of custom entity to create. 
+dataJson | The entity's custom field data, as JSON. 
+acl | The entity's Access Control List as an object. A null ACL implies default permissions which make the entity readable by others. 
+timeToLive | The duration of time, in milliseconds, the custom entity should live before being expired. Null indicates never expires. 
+isOwned | Boolean to indicate whether the current user should be recorded as the owner of the object. If owned, the object will be automatically deleted if/when the user is deleted.
 
 ## Usage
 
@@ -200,14 +209,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityType | The type of custom entity to create. 
-dataJson | The entity's custom field data, as JSON. 
-acl | The entity's Access Control List as an object. A null ACL implies default permissions which make the entity readable by others. 
-timeToLive | The duration of time, in milliseconds, the custom entity should live before being expired. Null indicates never expires. 
-isOwned | Boolean to indicate whether the current user should be recorded as the owner of the object. If owned, the object will be automatically deleted if/when the user is deleted.
-
 

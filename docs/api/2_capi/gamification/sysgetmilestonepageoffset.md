@@ -1,5 +1,5 @@
 # SysGetMilestonePageOffset
-## Overview
+
 ```json-doc
 {
   "status": 200,
@@ -74,6 +74,12 @@ _Note that this call does not return milestones (i.e. tasks) that are embedded w
 See the [Generic Paged Queries](/api/appendix/genericpagedqueries) documentation for creating the context object.
 
 <PartialServop service_name="gamification" operation_name="SYS_GET_MILESTONE_PAGE_OFFSET" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+encodedContext | The json context from the previous page request.
+pageOffset | The positive or negative page offset to fetch. Uses the last page retrieved using the context string to determine a starting point.
 
 ## Usage
 
@@ -214,11 +220,4 @@ if ( milestonePage.status == 200 ) {
 // Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-encodedContext | The json context from the previous page request.
-pageOffset | The positive or negative page offset to fetch. Uses the last page retrieved using the context string to determine a starting point.
-
 

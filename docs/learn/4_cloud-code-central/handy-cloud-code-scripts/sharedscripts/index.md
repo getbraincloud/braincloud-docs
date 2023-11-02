@@ -38,6 +38,7 @@ function addTwoNums( a, b ) {
 To configure this script, simply import it into your app.
 
 Authenticate, and run the script.
+![](images/image-2.png)
 
 This is the response you should get.
 ```js

@@ -1,5 +1,5 @@
 # PostJsonResponseJson
-## Overview
+
 Posts a JSON formatted document via HTTP and expects a JSON response.
 
 <PartialServop service_name="httpClient" operation_name="POST_JSON_RESPONSE_JSON" / >

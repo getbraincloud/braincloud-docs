@@ -1,5 +1,5 @@
 # DisconnectClient
-## Overview
+
 Records a user disconnection.
 
 ## Usage

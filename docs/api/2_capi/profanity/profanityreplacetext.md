@@ -1,5 +1,5 @@
 # ProfanityReplaceText
-## Overview
+
 Replaces the characters of profanity text with a passed character(s).
 
 <PartialServop service_name="profanity" operation_name="PROFANITY_REPLACE_TEXT" />

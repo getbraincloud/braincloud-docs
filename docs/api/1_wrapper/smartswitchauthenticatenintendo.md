@@ -1,5 +1,5 @@
 # SmartSwitchAuthenticateNintendo
-## Overview
+
 Smart Switch Authenticate will logout of the current profile, and switch to the new authentication type. 
 
 In event the current session was previously a completely anonymous account, the smart switch will delete that profile (since completely anonymous accounts are irretrievable once you switch away from them). 
@@ -9,6 +9,13 @@ Use this function to keep a clean designflow from anonymous to signed profiles.
 Authenticate the user on Nintendo Switch.
 
 <PartialServop service_name="authenticationV2" operation_name="AUTHENTICATE" / >
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+nintendoAccountId | The Nintendo Network Services Account (NSA) ID for the user
+nintendoAuthToken | An NSA ID token retrieved via the NintendoSDK
+forceCreate | Should a new profile be created for this user if the account does not exist?
 
 ## Usage
 
@@ -157,12 +164,4 @@ bool forceCreate = true;
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-nintendoAccountId | The Nintendo Network Services Account (NSA) ID for the user
-nintendoAuthToken | An NSA ID token retrieved via the NintendoSDK
-forceCreate | Should a new profile be created for this user if the account does not exist?
-
 

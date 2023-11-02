@@ -1,8 +1,14 @@
 # GetRandomEntitiesMatching
-## Overview
+
 Gets a list of up to randomCount randomly selected entities from the server based on the where condition and specified maximum return count.
 
 <PartialServop service_name="globalEntity" operation_name="GET_RANDOM_ENTITIES_MATCHING" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+where | Mongo style query string.
+maxReturn | The maximum number of entities to return.
 
 ## Usage
 
@@ -190,11 +196,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-where | Mongo style query string.
-maxReturn | The maximum number of entities to return.
-
 

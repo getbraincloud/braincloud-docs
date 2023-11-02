@@ -1,5 +1,5 @@
 # UpdateSingleton
-## Overview
+
 Method updates a singleton entity on the server. This operation results in the entity data being completely replaced by the passed in JSON string. If the entity doesn't exist it is created.
 
 Singletons are defined by their **entity type**, so no two singletons of the same type can exist at once.
@@ -7,6 +7,14 @@ Singletons are defined by their **entity type**, so no two singletons of the sam
 This method is affected by versioning. See the [versioning documentation](/api/appendix/version) for more information.
 
 <PartialServop service_name="entity" operation_name="UPDATE_SINGLETON" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityType | The entity type as defined by the user
+data | The entity's data object
+acl | The entity's [Access Control List](/api/appendix/acl) as object. A null ACL implies default permissions which make the entity readable/writeable by only the user.
+version | The version of the entity to update. Use -1 to indicate the newest version
 
 ## Usage
 
@@ -177,13 +185,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityType | The entity type as defined by the user
-data | The entity's data object
-acl | The entity's [Access Control List](/api/appendix/acl) as object. A null ACL implies default permissions which make the entity readable/writeable by only the user.
-version | The version of the entity to update. Use -1 to indicate the newest version
-
 

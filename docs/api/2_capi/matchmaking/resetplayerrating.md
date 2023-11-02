@@ -1,5 +1,5 @@
 # ResetPlayerRating
-## Overview
+
 Resets player rating.
 
 <PartialServop service_name="matchMaking" operation_name="RESET_PLAYER_RATING" />

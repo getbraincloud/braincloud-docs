@@ -1,8 +1,14 @@
 # LogError
-## Overview
+
 Logs an App Error message to the error log.
 
 <PartialServop service_name="log" operation_name="LOG_ERROR" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+errorMessage | The error message. 
+context | JSON formatted string that will display via the context icon click. 
 
 ## Usage
 
@@ -102,11 +108,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-errorMessage | The error message. 
-context | JSON formatted string that will display via the context icon click. 
-
 

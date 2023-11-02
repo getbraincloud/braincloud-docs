@@ -1,5 +1,5 @@
 # Disconnect
-## Overview
+
 Disconnect from the relay server.
 
 ## Usage

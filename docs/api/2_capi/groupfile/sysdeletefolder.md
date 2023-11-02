@@ -1,8 +1,17 @@
 # SysDeleteFolder
-## Overview
+
 Delete a folder.
 
 <PartialServop service_name="groupFile" operation_name="SYS_DELETE_FOLDER" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | The id of the group.
+treeId | The id of the folder to delete.
+folderPath | The folder path.
+treeVersion | The target version of the folder tree.
+force | Whether to delete non-empty folders, sub-folders and their files.
 
 ## Usage
 
@@ -194,14 +203,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | The id of the group.
-treeId | The id of the folder to delete.
-folderPath | The folder path.
-treeVersion | The target version of the folder tree.
-force | Whether to delete non-empty folders, sub-folders and their files.
-
 

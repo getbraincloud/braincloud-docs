@@ -1,5 +1,5 @@
 # SysUpdateEntityFields
-## Overview
+
 :::tip
 This method is not sharding safe - and thus is not recommended for custom entities that you may want to shard for greater performance and scalability in the future. 
 Consider using <strong>SysUpdateEntityFieldsSharded()</strong> version of this method instead.
@@ -35,6 +35,14 @@ For the above example:
 * just the `phone` sub-field of the `data.workAddress` object will be set to "555-555-5555"
 
 <PartialServop service_name="customEntity" operation_name="SYS_UPDATE_ENTITY_FIELDS" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityType | The type of custom entity being updated. 
+entityId | The id of custom entity being updated. 
+version | Version of the custom entity being updated. 
+fieldsJson | Specific fields, as JSON, to set within entity's custom data. 
 
 ## Usage
 
@@ -153,13 +161,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityType | The type of custom entity being updated. 
-entityId | The id of custom entity being updated. 
-version | Version of the custom entity being updated. 
-fieldsJson | Specific fields, as JSON, to set within entity's custom data. 
-
 

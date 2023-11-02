@@ -1,5 +1,5 @@
 # VerifyPurchase
-## Overview
+
 Used to verify a purchase receipt for Apple AppStore, Google Play, Facebook or Windows. The contents passed into `receiptData` are store-specific. On success, the player will be awarded the associated currencies.
 
 
@@ -83,6 +83,12 @@ The key values of the return to evaluate include:
 
 
 <PartialServop service_name="appStore" operation_name="VERIFY_PURCHASE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+storeId | The store type - "itunes", "googlePlay", "amazon", "facebook" or "windows"
+receiptData | A JSON object with data in the format for the specified store
 
 ## Usage
 
@@ -334,12 +340,5 @@ Code | Name | Description
 105 | RESULT_FAILED_REQUEST_ERROR | Credential missing for used app store. Ensure Facebook or Stream credential is correct.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-storeId | The store type - "itunes", "googlePlay", "amazon", "facebook" or "windows"
-receiptData | A JSON object with data in the format for the specified store
 
 

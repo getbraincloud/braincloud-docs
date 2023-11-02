@@ -1,5 +1,5 @@
 # GetGlobalEntityServiceProxy
-## Overview
+
 Retrieves a GlobalEntitysService proxy object.
 
 Documentation for the service methods can be found [here](/api/capi/globalentity).

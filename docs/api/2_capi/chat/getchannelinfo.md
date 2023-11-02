@@ -1,10 +1,15 @@
 # GetChannelInfo
-## Overview
+
 Returns *description info* and *activity stats* for the specified channel. Note that `numMembers`, `numListeners` and `listeners` are only returned for non-global groups. Only callable by members of the channel.
 
 
 
 <PartialServop service_name="chat" operation_name="GET_CHANNEL_INFO" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+channelId | The id of the channel
 
 ## Usage
 
@@ -160,11 +165,5 @@ Code | Name | Description
 40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-channelId | The id of the channel
 
 

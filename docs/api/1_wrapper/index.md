@@ -1,6 +1,14 @@
 # BrainCloudWrapper
-## Overview
 
+The <%= data.branding.codeWrapper %> class provides an easier way for developers to handle user authentication when they are getting started with the authentication system. This includes persisting authentication data between application runs.
+
+By using the wrapper authentication methods, the anonymous and profile IDs will be automatically persisted upon successful authentication. When authenticating, any stored anonymous/profile IDs will be sent to the server. This strategy is useful when using Anonymous authentication.
+
+:::tip
+*Note - you should [initialize the wrapper](/api/wrapper/initialize) before using it. It will in turn initialize the <%= data.branding.productName %> client for you* - **don't do both!**
+:::
+
+### Usage
 
 ```mdx-code-block
 <BrowserWindow>
@@ -81,11 +89,7 @@ public class BCConfig : MonoBehaviour {
 </BrowserWindow>
 ```
 
-The <%= data.branding.codeWrapper %> class provides an easier way for developers to handle user authentication when they are getting started with the authentication system. This includes persisting authentication data between application runs.
 
-By using the wrapper authentication methods, the anonymous and profile IDs will be automatically persisted upon successful authentication. When authenticating, any stored anonymous/profile IDs will be sent to the server. This strategy is useful when using Anonymous authentication.
-
-*Note - you should [initialize the wrapper](/api/wrapper/initialize) before using it. It will in turn initialize the <%= data.branding.productName %> client for you* - **don't do both!**
 
 ### Method Parameters
 Parameter | Description

@@ -1,8 +1,16 @@
 # IncrementDataSharded
-## Overview
+
 Increments the specified fields by the specified amount within custom entity data on the server, enforcing ownership/ACL permissions.
 
 <PartialServop service_name="customEntity" operation_name="INCREMENT_DATA_SHARDED" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityType | The type of custom entity being updated.
+entityId | The id of custom entity being updated.
+fieldsJson | Specific fields, as JSON, within entity's custom data, with respective increment amount.
+shardKeyJson | The shard key field(s) and value(s), as JSON, applicable to the entity being updated. If entity is owned, ownerId must be specified in the shardKeyJson info; otherwise, shardKeyJson must indicate values for all fields in the applicable shard key index.
 
 ## Usage
 
@@ -192,13 +200,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityType | The type of custom entity being updated.
-entityId | The id of custom entity being updated.
-fieldsJson | Specific fields, as JSON, within entity's custom data, with respective increment amount.
-shardKeyJson | The shard key field(s) and value(s), as JSON, applicable to the entity being updated. If entity is owned, ownerId must be specified in the shardKeyJson info; otherwise, shardKeyJson must indicate values for all fields in the applicable shard key index.
-
 

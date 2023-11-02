@@ -1,9 +1,15 @@
 # SendAdvancedEmail
-## Overview
+
 Sends a advanced email to the given user. 
  See the documentation for contents of 'serviceParams'.
 
 <PartialServop service_name="mail" operation_name="SEND_ADVANCED_EMAIL" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+profileId | The user to send the email to. 
+serviceParams | Set of parameters dependant on the mail service configured. 
 
 ## Usage
 
@@ -124,11 +130,4 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | The user to send the email to. 
-serviceParams | Set of parameters dependant on the mail service configured. 
-
 

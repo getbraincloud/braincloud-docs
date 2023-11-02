@@ -1,5 +1,5 @@
 # SetUploadLowTransferRateThreshold
-## Overview
+
 Sets the low transfer rate threshold of an upload in bytes/sec.
 
 If the transfer rate dips below the given threshold longer than the specified timeout, the transfer will fail.
@@ -9,6 +9,11 @@ By default this is set to 50 bytes/sec.
 :::tip
 This timeout method does not work on Unity mobile platforms.
 :::
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+bytesPerSec | The low transfer rate threshold in bytes/sec
 
 ## Usage
 
@@ -84,10 +89,4 @@ int minTransferRate = 1500;
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-bytesPerSec | The low transfer rate threshold in bytes/sec
-
 

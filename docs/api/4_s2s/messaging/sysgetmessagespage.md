@@ -1,8 +1,13 @@
 # SysGetMessagesPage
-## Overview
+
 Gets the page of system messages from the server based on the encoded context.
 
 <PartialServop service_name="messaging" operation_name="SYS_GET_MESSAGES_PAGE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+context | The search and paging criteria. 
 
 ## Usage
 
@@ -111,10 +116,4 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-context | The search and paging criteria. 
-
 

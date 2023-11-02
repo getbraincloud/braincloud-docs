@@ -1,5 +1,5 @@
 # Data Stream
-## Overview
+
 
 
 The data stream service allows you to send information about your users and their activity to <%= data.branding.productName %>.

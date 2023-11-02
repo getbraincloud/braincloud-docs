@@ -1,10 +1,15 @@
 # GetLobbyData
-## Overview
+
 Returns the data for the specified lobby, including member data.
 
 
 
 <PartialServop service_name="lobby" operation_name="GET_LOBBY_DATA" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+lobbyId | Id of chosen lobby.
 
 ## Usage
 
@@ -201,11 +206,5 @@ Code | Name | Description
 40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-lobbyId | Id of chosen lobby.
 
 

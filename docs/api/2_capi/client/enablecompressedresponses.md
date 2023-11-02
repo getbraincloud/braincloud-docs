@@ -1,6 +1,11 @@
 # EnableCompressedResponses
-## Overview
+
 Enables receiving compressed packets of responses.
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+enabled | True if response packets should be compressed
 
 ## Usage
 
@@ -73,10 +78,4 @@ Enables receiving compressed packets of responses.
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-enabled | True if response packets should be compressed
-
 

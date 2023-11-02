@@ -1,5 +1,5 @@
 # Generic Paged Queries
-## Overview
+
 > The context object has the following general form:
 
 ```json

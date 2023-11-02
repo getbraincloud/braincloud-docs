@@ -1,8 +1,13 @@
 # SysGetLegacyFlaggedUserData
-## Overview
+
 Retrieves the details about a legacy flagged user.
 
 <PartialServop service_name="globalApp" operation_name="SYS_GET_LEGACY_FLAGGED_USER_DATA" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+profileId | Target user's profile id.
 
 ## Usage
 
@@ -107,10 +112,4 @@ if (postResult.status == 200) {
 +}
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | Target user's profile id.
-
 

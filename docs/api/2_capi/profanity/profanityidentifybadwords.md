@@ -1,5 +1,5 @@
 # ProfanityIdentifyBadWords
-## Overview
+
 Checks supplied text for profanity and returns a list of bad words.
 
 <PartialServop service_name="profanity" operation_name="PROFANITY_IDENTIFY_BAD_WORDS" />

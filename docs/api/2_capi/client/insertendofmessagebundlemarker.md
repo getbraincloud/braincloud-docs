@@ -1,5 +1,5 @@
 # InsertEndOfMessageBundleMarker
-## Overview
+
 Inserts a marker which will tell the <%= data.branding.productName %> comms layer to close the message bundle off at this point. Any messages queued before this method was called will likely be bundled together in the next send to the server.
 
 ## Usage

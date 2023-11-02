@@ -1,10 +1,16 @@
 # SendSignal
-## Overview
+
 Sends LOBBY_SIGNAL_DATA message to all lobby members.
 
 
 
 <PartialServop service_name="lobby" operation_name="SEND_SIGNAL" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+lobbyId | Id of chosen lobby.
+signalData | Signal data to be sent.
 
 ## Usage
 
@@ -154,12 +160,5 @@ Code | Name | Description
 40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-lobbyId | Id of chosen lobby.
-signalData | Signal data to be sent.
 
 

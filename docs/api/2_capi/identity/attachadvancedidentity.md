@@ -1,11 +1,18 @@
 # AttachAdvancedIdentity
-## Overview
+
 Attach the user's credentials to the current profile.
 
 
 
 
 <PartialServop service_name="identity" operation_name="ATTACH" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+authenticationType | Universal, Universal, Facebook, etc
+ids | Auth IDs structure
+extraJson | Additional to piggyback along with the call, to be picked up by pre- or post- hooks. Leave empty string for no extraJson
 
 ## Usage
 
@@ -155,13 +162,5 @@ Code | Name | Description
 550022 | INVALID_PASSWORD_CONTENT | The password doesn't meet the minimum password requirements.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-authenticationType | Universal, Universal, Facebook, etc
-ids | Auth IDs structure
-extraJson | Additional to piggyback along with the call, to be picked up by pre- or post- hooks. Leave empty string for no extraJson
 
 

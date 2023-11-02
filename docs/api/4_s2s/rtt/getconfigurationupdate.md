@@ -1,5 +1,5 @@
 # GetConfigurationUpdate
-## Overview
+
 Retrieve the configuration parameters.
 
 ## Usage

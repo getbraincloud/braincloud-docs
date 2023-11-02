@@ -1,8 +1,15 @@
 # UpdateSystemEntity
-## Overview
+
 Method updates the data of an exisiting system entity on the server.
 
 <PartialServop service_name="globalEntity" operation_name="UPDATE_SYSTEM_ENTITY" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityId | The id of the entity to update. 
+version | The version of the entity to update. Use -1 to indicate the newest version. 
+data | The entity's data object. 
 
 ## Usage
 
@@ -126,12 +133,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityId | The id of the entity to update. 
-version | The version of the entity to update. Use -1 to indicate the newest version. 
-data | The entity's data object. 
-
 

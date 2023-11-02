@@ -1,8 +1,14 @@
 # SysGetUserExport
-## Overview
+
 Exports user information for a single profile ID.
 
 <PartialServop service_name="user" operation_name="SYS_GET_USER_EXPORT" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+profileId | Profile ID of the user
+optionsJson | Export options as JSON object, `includeEntities` field is required, the `customEntity` field is optional (with `include` and `exclude` options, if `include` specified - only include entities from the owned custom entities specified, if `exclude` specified - included all owned custom entities for this user, except for the specified collections.)
 
 ## Usage
 
@@ -236,11 +242,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | Profile ID of the user
-optionsJson | Export options as JSON object, `includeEntities` field is required, the `customEntity` field is optional (with `include` and `exclude` options, if `include` specified - only include entities from the owned custom entities specified, if `exclude` specified - included all owned custom entities for this user, except for the specified collections.)
-
 

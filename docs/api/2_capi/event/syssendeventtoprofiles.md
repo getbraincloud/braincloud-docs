@@ -1,5 +1,5 @@
 # SysSendEventToProfiles
-## Overview
+
 Sends an event to multiple users with the attached json data.
 
 <PartialServop service_name="event" operation_name="SYS_SEND_EVENT_TO_PROFILES" />

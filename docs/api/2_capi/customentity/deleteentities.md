@@ -1,8 +1,14 @@
 # DeleteEntities
-## Overview
+
 Deletes all applicable custom entities from the server based on the custom entity type and specified delete criteria, enforcing ownership/ACL permissions.
 
 <PartialServop service_name="customEntity" operation_name="DELETE_ENTITIES" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityType | The type of custom entity being deleted. 
+deleteCriteria | The delete criteria to be applied. 
 
 ## Usage
 
@@ -156,11 +162,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityType | The type of custom entity being deleted. 
-deleteCriteria | The delete criteria to be applied. 
-
 

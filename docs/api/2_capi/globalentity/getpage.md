@@ -1,5 +1,5 @@
 # GetPage
-## Overview
+
 ```json-doc
 {
 	"status": 200,
@@ -41,6 +41,11 @@ After retrieving a page of entities with this method use [getPageOffset](/api/ca
 See the [Generic Paged Queries](/api/appendix/genericpagedqueries) documentation for creating the context object.
 
 <PartialServop service_name="globalEntity" operation_name="GET_PAGE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+context | The json context for the page request.
 
 ## Usage
 
@@ -219,10 +224,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-context | The json context for the page request.
-
 

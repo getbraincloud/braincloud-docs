@@ -1,5 +1,5 @@
 # PostJsonOffboard
-## Overview
+
 Posts a JSON document to an offboard service. Send and forget.
 
 
@@ -12,6 +12,14 @@ Parameter | Description
 40443 | Processing exception (message): Invalid service code. Ensure the Web Service has been configured
 
 <PartialServop service_name="httpClient" operation_name="POST_JSON_OFFBOARD" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+serviceCode | Service code of the external service configured in the Cloud Code - Web Services section of the portal. 
+path | Path to append to the Base URL of the service. 
+headers | A map of extra headers. 
+json | JSON formatted data to post. 
 
 ## Usage
 
@@ -110,13 +118,4 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-serviceCode | Service code of the external service configured in the Cloud Code - Web Services section of the portal. 
-path | Path to append to the Base URL of the service. 
-headers | A map of extra headers. 
-json | JSON formatted data to post. 
-
 

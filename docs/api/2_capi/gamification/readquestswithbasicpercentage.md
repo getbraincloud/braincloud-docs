@@ -1,8 +1,13 @@
 # ReadQuestsWithBasicPercentage
-## Overview
+
 Method returns quests with a basic percentage.
 
 <PartialServop service_name="gamification" operation_name="READ_QUESTS_WITH_BASIC_PERCENTAGE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+includeMetaData | Whether to return meta data as well
 
 ## Usage
 
@@ -137,10 +142,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-includeMetaData | Whether to return meta data as well
-
 

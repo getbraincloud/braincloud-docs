@@ -1,8 +1,14 @@
 # ListFriends
-## Overview
+
 Retrieves a list of user and friend platform information for all friends of the current user.
 
 <PartialServop service_name="friend" operation_name="LIST_FRIENDS" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+friendPlatform | Friend platform to query. Valid values are "Facebook", "PlaystationNetwork", "Steam", "<%= data.branding.productName %>" and "All".
+includeSummaryData | True if including summary data; false otherwise.
 
 ## Usage
 
@@ -221,11 +227,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-friendPlatform | Friend platform to query. Valid values are "Facebook", "PlaystationNetwork", "Steam", "<%= data.branding.productName %>" and "All".
-includeSummaryData | True if including summary data; false otherwise.
-
 

@@ -1,8 +1,14 @@
 # CustomScreenEvent
-## Overview
+
 Creates custom data stream screen event
 
 <PartialServop service_name="dataStream" operation_name="CUSTOM_SCREEN_EVENT" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+eventName | The name of the event
+eventProperties | The properties of the event
 
 ## Usage
 
@@ -151,11 +157,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-eventName | The name of the event
-eventProperties | The properties of the event
-
 

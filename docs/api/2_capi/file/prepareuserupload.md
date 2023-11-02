@@ -1,10 +1,20 @@
 # PrepareUserUpload - CloudCode and JavaScript
-## Overview
+
 Prepares a user file upload. On success an uploadId will be returned which can be used to upload the file using the <%= data.branding.codePrefix %>.file.uploadFile method.
 
 
 
 <PartialServop service_name="file" operation_name="PREPARE_USER_UPLOAD" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+cloudPath | The desired cloud path of the file
+cloudFilename | The desired cloud fileName of the file
+shareable | True if the file is shareable
+replaceIfExists | Whether to replace file if it exists
+fileSize | The size of the file in bytes
+localPath | The path and fileName of the local file
 
 ## Usage
 
@@ -144,16 +154,5 @@ Code | Name | Description
 40430 | FILE_ALREADY_EXISTS | File exists, replaceIfExists not set
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-cloudPath | The desired cloud path of the file
-cloudFilename | The desired cloud fileName of the file
-shareable | True if the file is shareable
-replaceIfExists | Whether to replace file if it exists
-fileSize | The size of the file in bytes
-localPath | The path and fileName of the local file
 
 

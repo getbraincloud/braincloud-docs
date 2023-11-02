@@ -1,8 +1,13 @@
 # SetAlwaysAllowProfileSwitch
-## Overview
+
 For non-anonymous authentication methods, a profile ID will be passed in when this value is set to false. This will generate an error on the server if the profile ID passed in does not match the profile associated with the authentication credentials.
 
 By default, this value is true.
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+alwaysAllow | Controls whether the profile ID is passed in with non-anonymous authentications.
 
 ## Usage
 
@@ -85,10 +90,4 @@ By default, this value is true.
 <%= data.branding.codePrefix %>.setAlwaysAllowProfileSwitch(true);
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-alwaysAllow | Controls whether the profile ID is passed in with non-anonymous authentications.
-
 

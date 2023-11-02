@@ -1,5 +1,5 @@
 # MergePlaystation5Identity
-## Overview
+
 Merge the profile associated with the provided Playstation5 credentials with the current profile.
 
 NOTE: If using the <%= data.branding.codeWrapper %>, once the merge is complete you should call [<code>SetStoredProfileId</code>](/api/wrapper/setstoredprofileid) in the <%= data.branding.codeWrapper %> with the profileId returned in the Merge call.
@@ -7,6 +7,12 @@ NOTE: If using the <%= data.branding.codeWrapper %>, once the merge is complete 
 
 
 <PartialServop service_name="identity" operation_name="MERGE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+accountId | The playstation5 id of the user
+authToken | The validated token from the Playstation5 SDK (that will be further validated when sent to the <%= data.branding.productName %> service)
 
 ## Usage
 
@@ -112,12 +118,5 @@ Code | Name | Description
 40211 | DUPLICATE_IDENTITY_TYPE | Returned when trying to attach an identity type that already exists for that profile. For instance you can have only one PlaystationNetwork identity for a profile.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-accountId | The playstation5 id of the user
-authToken | The validated token from the Playstation5 SDK (that will be further validated when sent to the <%= data.branding.productName %> service)
 
 

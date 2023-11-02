@@ -1,8 +1,14 @@
 # SysUpdateCollectionOptions
-## Overview
+
 Updates the collection options for the custom collection.
 
 <PartialServop service_name="customEntity" operation_name="SYS_UPDATE_COLLECTION_OPTIONS" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityType | The type of the custom entity collection to update.
+collectionOptsJson | The collection options updates, as JSON object.
 
 ## Usage
 
@@ -150,11 +156,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityType | The type of the custom entity collection to update.
-collectionOptsJson | The collection options updates, as JSON object.
-
 

@@ -1,5 +1,5 @@
 # ProcessStatistics
-## Overview
+
 Apply statistics grammar to a partial set of statistics. Global statistics are defined through the <%= data.branding.productName %> portal.
 
 The operations available are much richer than the standard *increment* operation available via `IncrementGlobalStats()`.
@@ -33,6 +33,11 @@ The above example would:
 For the full statistics grammar see the [statistics grammar section](/api/appendix/statisticsgrammar).
 
 <PartialServop service_name="globalGameStatistics" operation_name="PROCESS_STATISTICS" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+statistics | A collection containing the statistics to process
 
 ## Usage
 
@@ -201,10 +206,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-statistics | A collection containing the statistics to process
-
 

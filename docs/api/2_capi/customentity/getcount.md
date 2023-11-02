@@ -1,8 +1,14 @@
 # GetCount
-## Overview
+
 Counts the number of custom entities meeting the specified where clause.
 
 <PartialServop service_name="customEntity" operation_name="GET_COUNT" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityType | The type of custom entity to be counted. 
+whereJson | The where clause, as JSON object. 
 
 ## Usage
 
@@ -150,11 +156,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityType | The type of custom entity to be counted. 
-whereJson | The where clause, as JSON object. 
-
 

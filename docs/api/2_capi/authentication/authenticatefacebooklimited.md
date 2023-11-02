@@ -1,5 +1,5 @@
 # AuthenticateFacebookLimited
-## Overview
+
 Authenticate the user with <%= data.branding.productName %> using their Facebook Credentials.
 
 
@@ -9,6 +9,13 @@ Make sure you've initialized the <%= data.branding.productName %> library before
 :::
 
 <PartialServop service_name="authenticationV2" operation_name="AUTHENTICATE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+facebookId | The Facebook ID of the user
+facebookToken | The authentication token from the Facebook SDK
+forceCreate | Should a new profile be created for this user if the account does not exist?
 
 ## Usage
 
@@ -197,13 +204,5 @@ Code | Name | Description
 40307 | TOKEN_DOES_NOT_MATCH_USER | The user credentials are invalid (i.e. bad Facebook id / token). May also indicate that Facebook integration is not properly configured.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-facebookId | The Facebook ID of the user
-facebookToken | The authentication token from the Facebook SDK
-forceCreate | Should a new profile be created for this user if the account does not exist?
 
 

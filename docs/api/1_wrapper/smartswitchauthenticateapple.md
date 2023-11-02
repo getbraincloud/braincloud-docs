@@ -1,5 +1,5 @@
 # SmartSwitchAuthenticateApple
-## Overview
+
 Smart Switch Authenticate will logout of the current profile, and switch to the new authentication type. 
 
 In event the current session was previously a completely anonymous account, the smart switch will delete that profile (since completely anonymous accounts are irretrievable once you switch away from them). 
@@ -7,6 +7,13 @@ In event the current session was previously a completely anonymous account, the 
 Use this function to keep a clean designflow from anonymous to signed profiles.
  
 Authenticate the user with Sign in with Apple.
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+appleUserId | The user id of the authenticated user. It should match the `sub` field of the identity token. This is the identifier that will be attached to the user's profile. 
+identityToken | The JSON Web Token that represents the user's identity
+forceCreate | Should a new profile be created for this user if the account does not exist?
 
 ## Usage
 
@@ -149,12 +156,4 @@ var forceCreate = true;
 });
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-appleUserId | The user id of the authenticated user. It should match the `sub` field of the identity token. This is the identifier that will be attached to the user's profile. 
-identityToken | The JSON Web Token that represents the user's identity
-forceCreate | Should a new profile be created for this user if the account does not exist?
-
 

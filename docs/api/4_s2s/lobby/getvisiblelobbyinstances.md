@@ -1,8 +1,15 @@
 # GetVisibleLobbyInstances
-## Overview
+
 Gets a map keyed by rating of the visible lobby instances matching the given type and rating range.
 
 <PartialServop service_name="lobby" operation_name="GET_VISIBLE_LOBBY_INSTANCES" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+lobbyType | The type of lobby to look for. Lobby types are defined in the portal.
+minRating | The minimum skill rating to use for finding the lobbies.
+maxRating | The maximum skill rating to use for finding the lobbies.
 
 ## Usage
 
@@ -123,12 +130,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-lobbyType | The type of lobby to look for. Lobby types are defined in the portal.
-minRating | The minimum skill rating to use for finding the lobbies.
-maxRating | The maximum skill rating to use for finding the lobbies.
-
 

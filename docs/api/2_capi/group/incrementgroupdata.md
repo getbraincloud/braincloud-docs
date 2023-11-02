@@ -1,8 +1,14 @@
 # IncrementGroupData
-## Overview
+
 Increment elements for the group's data field.
 
 <PartialServop service_name="group" operation_name="INCREMENT_GROUP_DATA" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | ID of the group
+jsonData | Partial data map with incremental values
 
 ## Usage
 
@@ -164,11 +170,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | ID of the group
-jsonData | Partial data map with incremental values
-
 

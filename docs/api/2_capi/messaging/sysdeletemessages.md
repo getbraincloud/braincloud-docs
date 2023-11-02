@@ -1,8 +1,13 @@
 # SysDeleteMessages
-## Overview
+
 Deletes specified system messages on the server. Note, if a regular message, deletes all references to it.
 
 <PartialServop service_name="messaging" operation_name="SYS_DELETE_MESSAGES" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+msgIds | An array of message ids.
 
 ## Usage
 
@@ -108,10 +113,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-msgIds | An array of message ids.
-
 

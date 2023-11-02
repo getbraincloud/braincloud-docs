@@ -1,5 +1,5 @@
 # AuthenticatePlaystationNetwork
-## Overview
+
 Authenticate the user with <%= data.branding.productName %> using their PlaystationNetwork Credentials.
 
 
@@ -9,6 +9,13 @@ Make sure you've initialized the <%= data.branding.productName %> library before
 :::
 
 <PartialServop service_name="authenticationV2" operation_name="AUTHENTICATE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+accountId | The PlaystationNetwork ID of the user
+authToken | The validated token from the PlaystationNetwork SDK
+forceCreate | Should a new profile be created for this user if the account does not exist?
 
 ## Usage
 
@@ -163,13 +170,5 @@ Code | Name | Description
 40307 | TOKEN_DOES_NOT_MATCH_USER | The user credentials are invalid (i.e. bad PlaystationNetwork id / token). May also indicate that PlaystationNetwork integration is not properly configured.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-accountId | The PlaystationNetwork ID of the user
-authToken | The validated token from the PlaystationNetwork SDK
-forceCreate | Should a new profile be created for this user if the account does not exist?
 
 

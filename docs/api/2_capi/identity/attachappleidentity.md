@@ -1,10 +1,16 @@
 # AttachAppleIdentity
-## Overview
+
 Attach the user's Sign in with Apple credentials to the current profile.
 
 
 
 <PartialServop service_name="identity" operation_name="ATTACH" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+appleId | The Apple ID of the user (i.e. the `sub` id from the JWT)
+authenticationToken | The validated token from the Sign in with Apple SDK (that will be further validated when sent to the <%= data.branding.productName %> service)
 
 ## Usage
 
@@ -113,12 +119,5 @@ Code | Name | Description
 40212 | MERGE_PROFILES | Returned when trying to attach an identity type that would result in two profiles being merged into one (for instance an anonymous account and a Apple account).
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-appleId | The Apple ID of the user (i.e. the `sub` id from the JWT)
-authenticationToken | The validated token from the Sign in with Apple SDK (that will be further validated when sent to the <%= data.branding.productName %> service)
 
 

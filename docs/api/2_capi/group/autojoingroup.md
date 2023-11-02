@@ -1,5 +1,5 @@
 # AutoJoinGroup
-## Overview
+
 Automatically join an open group (isOpenGroup) that matches the search criteria and has space available.
 
 - **isOpenGroup** - the isOpenGroup flag is set on group creation, or via the [SetGroupOpen](/api/capi/group/setgroupopen) method.
@@ -10,6 +10,13 @@ AutoJoinStrategy is defined by enum or constant in most of the client libraries.
 - **JoinRandomGroup** - Finds all groups that matches the specified criteria and then randomly chooses one to join.
 
 <PartialServop service_name="group" operation_name="AUTO_JOIN_GROUP" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupTypeName | Name of the associated group type
+autoJoinStrategy | Selection strategy to employ when there are multiple matches
+dataQueryJson | Query parameters (optional)
 
 ## Usage
 
@@ -188,12 +195,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupTypeName | Name of the associated group type
-autoJoinStrategy | Selection strategy to employ when there are multiple matches
-dataQueryJson | Query parameters (optional)
-
 

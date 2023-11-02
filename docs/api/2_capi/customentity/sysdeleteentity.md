@@ -1,8 +1,15 @@
 # SysDeleteEntity
-## Overview
+
 Advanced version of deleteEntity that bypasses the ACL check. Available from S2S sessions.
 
 <PartialServop service_name="customEntity" operation_name="SYS_DELETE_ENTITY" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityType | The type of custom entity being deleted. 
+entityId | The id of custom entity being deleted. 
+version | Version of the custom entity being deleted.
 
 ## Usage
 
@@ -102,12 +109,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityType | The type of custom entity being deleted. 
-entityId | The id of custom entity being deleted. 
-version | Version of the custom entity being deleted.
-
 

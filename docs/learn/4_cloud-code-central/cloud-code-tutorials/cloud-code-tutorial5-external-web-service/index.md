@@ -56,8 +56,6 @@ _Via **Design | Cloud Code | Edit Scripts** in the portal._
 
 [![](images/Tut_5_1.png)](images/Tut_5_1.png)
 
-![](images/image-2-1024x573.png)
-
 ### Step 2 - **Add the Service to the Whitelist**
 
 _Via **Design | Cloud Code | Web Services** in the portal._

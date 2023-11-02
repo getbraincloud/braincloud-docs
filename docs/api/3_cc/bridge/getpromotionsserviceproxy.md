@@ -1,5 +1,5 @@
 # GetPromotionsServiceProxy
-## Overview
+
 Retrieves a PromotionsService proxy object.
 
 Documentation for the service methods can be found [here](/api/capi/promotions).

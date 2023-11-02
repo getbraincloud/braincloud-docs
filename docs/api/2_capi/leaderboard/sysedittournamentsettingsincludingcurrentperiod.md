@@ -1,5 +1,5 @@
 # SysEditTournamentSettingsIncludingCurrentPeriod
-## Overview
+
 Updates the tournament settings for the leaderboard configuration, for the current period in progress, as well as the future periods if recurring periods (not ADHOC). Supported tSettingsJson settings include: 'tTournament' (with 'tConfigs' to configure tournament templates, 'tAutoJoin' flag, 'tAutoClaim' flag), and 'tPhases' (to schedule 'enrolMins', 'announcementMins', 'disallowMins' and 'bufferMins' minutes), and, if ADHOC tournament in progress, API also supports 'tPeriod' duration settings ('durationDays', 'durationDays', 'durationDays').
 
 
@@ -14,6 +14,13 @@ tTournament | Tournament settings changes for the in-progress leaderboard rotati
 tPhases | Defines the phases (states), in minutes, within the start and end period times. The total time for the enabled phases cannot exceed the overall length of the period. The competition minutes are calculated and must be greater than 0. Configurable phases: 'enrolMins', 'disallowMins', 'bufferMins', 'announcementMins'.
 
 <PartialServop service_name="leaderboard" operation_name="SYS_EDIT_TOURNAMENT_SETTINGS_INCLUDING_CURRENT_PERIOD" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardId | ID uniquely identifying the leaderboard configuration being edited. Leaderboard must have tournaments enabled.
+dbVersion | The database version of the leaderboard config being edited. For any version, specify -1.
+tSettingsJson | Tournament and tPhases settings changes specified as JSON object. 
 
 ## Usage
 
@@ -243,12 +250,4 @@ var retVal = leaderboardProxy.sysEditTournamentSettingsIncludingCurrentPeriod(le
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | ID uniquely identifying the leaderboard configuration being edited. Leaderboard must have tournaments enabled.
-dbVersion | The database version of the leaderboard config being edited. For any version, specify -1.
-tSettingsJson | Tournament and tPhases settings changes specified as JSON object. 
-
 

@@ -1,5 +1,5 @@
 # IsServerBridge
-## Overview
+
 This returns true if the script context is server.
 
 ## Usage

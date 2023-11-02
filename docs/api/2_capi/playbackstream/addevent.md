@@ -1,8 +1,15 @@
 # AddEvent
-## Overview
+
 Adds a stream event.
 
 <PartialServop service_name="playbackStream" operation_name="ADD_EVENT" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+playbackStreamId | Identifies the stream to read
+eventData | Describes the event
+summary | Current summary data as of this event
 
 ## Usage
 
@@ -163,12 +170,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-playbackStreamId | Identifies the stream to read
-eventData | Describes the event
-summary | Current summary data as of this event
-
 

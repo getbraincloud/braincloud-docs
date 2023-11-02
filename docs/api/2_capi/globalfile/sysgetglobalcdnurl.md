@@ -1,8 +1,13 @@
 # SysGetGlobalCDNUrl
-## Overview
+
 Returns the CDN URL for the specified file.
 
 <PartialServop service_name="globalFileV3" operation_name="SYS_GET_GLOBAL_CDN_URL" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+fileId | File ID
 
 ## Usage
 
@@ -101,10 +106,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-fileId | File ID
-
 

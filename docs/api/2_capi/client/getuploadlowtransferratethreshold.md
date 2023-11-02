@@ -1,5 +1,5 @@
 # GetUploadLowTransferRateThreshold
-## Overview
+
 Returns the low transfer rate threshold in bytes/sec.
 
 ## Usage

@@ -1,5 +1,5 @@
 # SysGetRecentChatMessages
-## Overview
+
 :::tip
 This method is available in Cloud Code scripts only.
 :::
@@ -9,6 +9,12 @@ Returns a list of max \<n\> messages from history.
 
 
 <PartialServop service_name="chat" operation_name="SYS_GET_RECENT_CHAT_MESSAGES" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+channelId | The chat channel to retrieve messages from
+maxReturn | Maximum number of messages to return
 
 ## Usage
 
@@ -149,12 +155,5 @@ Code | Name | Description
 40616 | CLOUD_CODE_ONLY | Method only available via cloud code
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-channelId | The chat channel to retrieve messages from
-maxReturn | Maximum number of messages to return
 
 

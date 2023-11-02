@@ -1,6 +1,11 @@
 # EnableLogging
-## Overview
+
 Enables console logging of outgoing/incoming packets and other informational logs from the client.
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+enabled | True if logging should be enabled
 
 ## Usage
 
@@ -73,10 +78,4 @@ Enables console logging of outgoing/incoming packets and other informational log
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-enabled | True if logging should be enabled
-
 

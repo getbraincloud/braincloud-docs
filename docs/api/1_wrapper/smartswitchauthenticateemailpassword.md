@@ -1,10 +1,17 @@
 # SmartSwitchAuthenticateEmailPassword
-## Overview
+
 Smart Switch Authenticate will logout of the current profile, and switch to the new authentication type. 
 In event the current session was previously an anonymous account, the smart switch will delete that profile.
 Use this function to keep a clean designflow from anonymous to signed profiles
  
 Authenticate the user with a custom Email and Password. Note that the client app is responsible for collecting and storing the e-mail and potentially password (for convenience) in the client data. For the greatest security, force the user to re-enter their password at each login (or at least give them that option).
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+email | The e-mail address of the user
+password | The password of the user
+forceCreate | Should a new profile be created for this user if the account does not exist?
 
 ## Usage
 
@@ -153,12 +160,4 @@ var forceCreate = true;
 });
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-email | The e-mail address of the user
-password | The password of the user
-forceCreate | Should a new profile be created for this user if the account does not exist?
-
 

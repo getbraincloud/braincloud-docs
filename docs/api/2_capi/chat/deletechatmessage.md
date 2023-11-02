@@ -1,5 +1,5 @@
 # DeleteChatMessage
-## Overview
+
 Delete the specified chat message. Message must have been from this user. Version must match (or pass -1 to bypass version enforcement).
 
 Returns the number of messages that were deleted. Since the history rolls over, it is possible that the message had already expired before the delete attempt - in that case, the value of the `deleted` field will be `0`.
@@ -7,6 +7,13 @@ Returns the number of messages that were deleted. Since the history rolls over, 
 
 
 <PartialServop service_name="chat" operation_name="DELETE_CHAT_MESSAGE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+channelId | The channel of the message
+msgId | The message id
+version | The version of the message. Pass it -1 to bypass version checking.
 
 ## Usage
 
@@ -167,13 +174,5 @@ Code | Name | Description
 40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-channelId | The channel of the message
-msgId | The message id
-version | The version of the message. Pass it -1 to bypass version checking.
 
 

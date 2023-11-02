@@ -1,8 +1,15 @@
 # UpdateSingletonFields
-## Overview
+
 Partially updates the data, of the singleton owned by the user for the specified custom entity type, with the specified fields, on the server.
 
 <PartialServop service_name="customEntity" operation_name="UPDATE_SINGLETON_FIELDS" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityType | The type of custom entity singleton being updated. Custom entity type must have option isOwned set to true.
+version | Version of the custom entity singleton being updated. 
+fieldsJson | Specific fields, as JSON, to set within singleton entity's custom data. 
 
 ## Usage
 
@@ -162,12 +169,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityType | The type of custom entity singleton being updated. Custom entity type must have option isOwned set to true.
-version | Version of the custom entity singleton being updated. 
-fieldsJson | Specific fields, as JSON, to set within singleton entity's custom data. 
-
 

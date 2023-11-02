@@ -1,5 +1,5 @@
 # DeregisterRTTMessagingCallback
-## Overview
+
 Deregisters the RTT Messaging callback.
 
 ## Usage

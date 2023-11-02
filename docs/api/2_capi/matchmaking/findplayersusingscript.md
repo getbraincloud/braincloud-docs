@@ -1,5 +1,5 @@
 # FindPlayersUsingScript
-## Overview
+
 Finds matchmaking enabled players using optionally specified filter script and optional player rating override.
 Passing empty string (i.e. "") for scriptName will not run a script filter. Passing null will invoke the configured script similar
 to findPlayersUsingFilter.
@@ -9,6 +9,15 @@ Similarly passing null for player rating will use the players current rating.
 Additional information of filters can be found under [Matchmaking Filters](/api/capi/matchmaking/#matchmaking-filters).
 
 <PartialServop service_name="matchMaking" operation_name="FIND_PLAYERS_USING_SCRIPT" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+rangeDelta | How close an opponents rating must be to yours
+numMatches | The maximum number of matches to return
+playerRating | Player rating override
+scriptName | Name of filter script
+jsonExtraParms | Parameters to be passed to the filter
 
 ## Usage
 
@@ -129,14 +138,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-rangeDelta | How close an opponents rating must be to yours
-numMatches | The maximum number of matches to return
-playerRating | Player rating override
-scriptName | Name of filter script
-jsonExtraParms | Parameters to be passed to the filter
-
 

@@ -1,5 +1,5 @@
 # CreateLobby
-## Overview
+
 Creates a new lobby.
 
 Sends LOBBY_JOIN_SUCCESS message to the user, with full copy of lobby data
@@ -10,6 +10,17 @@ Sends LOBBY_MEMBER_JOINED to all lobby members, with copy of member data
 
 
 <PartialServop service_name="lobby" operation_name="CREATE_LOBBY" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+lobbyType | The type of lobby to look for. Lobby types are defined in the portal.
+rating | The skill rating to use for finding the lobby. Provided as a separate parameter because it may not exactly match the user's rating (especially in cases where parties are involved).
+otherUserCxIds | Array of other users (i.e. party members) to add to the lobby as well. Will constrain things so that only lobbies with room for all players will be considered.
+settings | Owner settings for this lobby.
+isReady | Initial ready-status of this user.
+extraJson | Initial extra-data about this user.
+teamCode | Preferred team for this user, if applicable. Send `""` or `null` for automatic assignment.
 
 ## Usage
 
@@ -202,17 +213,5 @@ Code | Name | Description
 40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-lobbyType | The type of lobby to look for. Lobby types are defined in the portal.
-rating | The skill rating to use for finding the lobby. Provided as a separate parameter because it may not exactly match the user's rating (especially in cases where parties are involved).
-otherUserCxIds | Array of other users (i.e. party members) to add to the lobby as well. Will constrain things so that only lobbies with room for all players will be considered.
-settings | Owner settings for this lobby.
-isReady | Initial ready-status of this user.
-extraJson | Initial extra-data about this user.
-teamCode | Preferred team for this user, if applicable. Send `""` or `null` for automatic assignment.
 
 

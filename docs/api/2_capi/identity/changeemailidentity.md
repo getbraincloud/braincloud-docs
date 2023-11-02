@@ -1,8 +1,16 @@
 # ChangeEmailIdentity
-## Overview
+
 Changes email address in email identity for this player
 
 <PartialServop service_name="identity" operation_name="CHANGE_EMAIL_IDENTITY" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+oldEmailAddress | Old email address
+password | Password
+newEmailAddress | New email address
+updateContactEmail | Whether to update contact email in profile
 
 ## Usage
 
@@ -159,13 +167,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-oldEmailAddress | Old email address
-password | Password
-newEmailAddress | New email address
-updateContactEmail | Whether to update contact email in profile
-
 

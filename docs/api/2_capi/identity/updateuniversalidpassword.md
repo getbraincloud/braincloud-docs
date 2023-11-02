@@ -1,8 +1,14 @@
 # UpdateUniversalIdPassword
-## Overview
+
 Updates the password for the universal id of the current profile.
 
 <PartialServop service_name="identity" operation_name="UPDATE_UNIVERSAL_PASSWORD" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+oldPassword | The current password associated with the user's universal id.
+newPassword | The new password to associate with the user's universal id.
 
 ## Usage
 
@@ -101,11 +107,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-oldPassword | The current password associated with the user's universal id.
-newPassword | The new password to associate with the user's universal id.
-
 

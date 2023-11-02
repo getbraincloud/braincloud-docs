@@ -1,6 +1,11 @@
 # EndMatch
-## Overview
+
 Terminate the match instance by the owner.
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+payloadJson | payload data sent in JSON format. It will be relayed to other connnected players.
 
 ## Usage
 
@@ -88,10 +93,4 @@ const char* payloadJson = "{\"key\":\"value\"}";
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-payloadJson | payload data sent in JSON format. It will be relayed to other connnected players.
-
 

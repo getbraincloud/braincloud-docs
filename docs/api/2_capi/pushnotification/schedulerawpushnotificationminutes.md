@@ -1,8 +1,17 @@
 # ScheduleRawPushNotificationMinutes
-## Overview
+
 Schedules a raw push notification to a user at a future relative time.
 
 <PartialServop service_name="pushNotification" operation_name="SCHEDULE_RAW_NOTIFICATION" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+profileId | Identifies the user to send to
+fcmContent | FCM dependent content
+iosContent | IOS (APNS) dependent content
+facebookContent | Facebook dependent content
+minutes | Minutes in the future to send notification
 
 ## Usage
 
@@ -219,14 +228,4 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | Identifies the user to send to
-fcmContent | FCM dependent content
-iosContent | IOS (APNS) dependent content
-facebookContent | Facebook dependent content
-minutes | Minutes in the future to send notification
-
 

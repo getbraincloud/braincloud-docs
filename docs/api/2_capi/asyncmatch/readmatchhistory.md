@@ -1,8 +1,14 @@
 # ReadMatchHistory
-## Overview
+
 Returns the match history of the given match.
 
 <PartialServop service_name="asyncMatch" operation_name="READ_MATCH_HISTORY" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+ownerId | Match owner identifier
+matchId | Match identifier
 
 ## Usage
 
@@ -160,11 +166,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-ownerId | Match owner identifier
-matchId | Match identifier
-
 

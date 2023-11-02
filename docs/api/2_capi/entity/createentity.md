@@ -1,8 +1,15 @@
 # CreateEntity
-## Overview
+
 Method creates a new entity on the server.
 
 <PartialServop service_name="entity" operation_name="CREATE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityType | The entity type as defined by the user
+data | The entity's data object
+acl | The entity's [Access Control List](/api/appendix/acl) as object. A null ACL implies default permissions which make the entity readable/writeable by only the user.
 
 ## Usage
 
@@ -171,12 +178,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityType | The entity type as defined by the user
-data | The entity's data object
-acl | The entity's [Access Control List](/api/appendix/acl) as object. A null ACL implies default permissions which make the entity readable/writeable by only the user.
-
 

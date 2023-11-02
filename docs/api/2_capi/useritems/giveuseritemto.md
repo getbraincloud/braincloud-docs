@@ -1,8 +1,17 @@
 # GiveUserItemTo
-## Overview
+
 Gifts item to the specified player.
 
 <PartialServop service_name="userItems" operation_name="GIVE_USER_ITEM_TO" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+profileId | The ID of the recipient's user profile. 
+itemId | The ID uniquely identifying the user item to be transferred. 
+version | The version of the user item being transferred. 
+quantity | The quantity of the user item to transfer. 
+immediate | Flag set to true if item is to be immediately transferred, otherwise false to have the sender sents an event and transfers item(s) only when recipient calls receiveUserItemFrom. 
 
 ## Usage
 
@@ -187,14 +196,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | The ID of the recipient's user profile. 
-itemId | The ID uniquely identifying the user item to be transferred. 
-version | The version of the user item being transferred. 
-quantity | The quantity of the user item to transfer. 
-immediate | Flag set to true if item is to be immediately transferred, otherwise false to have the sender sents an event and transfers item(s) only when recipient calls receiveUserItemFrom. 
-
 

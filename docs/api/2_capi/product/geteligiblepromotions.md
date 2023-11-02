@@ -1,5 +1,5 @@
 # GetEligiblePromotions
-## Overview
+
 Get eligible promotions.
 
 <PartialServop service_name="product" operation_name="ELIGIBLE_PROMOTIONS" />

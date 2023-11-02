@@ -1,8 +1,14 @@
 # GetGroupSocialLeaderboard
-## Overview
+
 Retrieve the social leaderboard for a group.
 
 <PartialServop service_name="leaderboard" operation_name="GET_GROUP_SOCIAL_LEADERBOARD" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardId | The ID of the leaderboard
+groupId | The ID of the group
 
 ## Usage
 
@@ -169,11 +175,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | The ID of the leaderboard
-groupId | The ID of the group
-
 

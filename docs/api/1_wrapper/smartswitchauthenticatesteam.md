@@ -1,10 +1,17 @@
 # SmartSwitchAuthenticateSteam
-## Overview
+
 Smart Switch Authenticate will logout of the current profile, and switch to the new authentication type.
 In event the current session was previously an anonymous account, the smart switch will delete that profile.
 Use this function to keep a clean designflow from anonymous to signed profiles
 
 Authenticate the user using a steam userId and session ticket (without any validation on the userId).
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+userId | String representation of 64 bit steam ID
+sessionTicket | The session ticket of the user (hex encoded)
+forceCreate | Should a new profile be created for this user if the account does not exist?
 
 ## Usage
 
@@ -149,12 +156,4 @@ var forceCreate = true;
 });
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-userId | String representation of 64 bit steam ID
-sessionTicket | The session ticket of the user (hex encoded)
-forceCreate | Should a new profile be created for this user if the account does not exist?
-
 

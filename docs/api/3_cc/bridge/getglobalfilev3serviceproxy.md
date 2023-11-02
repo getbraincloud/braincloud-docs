@@ -1,5 +1,5 @@
 # GetGlobalFileV3ServiceProxy
-## Overview
+
 Retrieves a GlobalFileV3ServiceProxy proxy object.
 
 Documentation for the service methods can be found [here](/api/capi/globalfile).

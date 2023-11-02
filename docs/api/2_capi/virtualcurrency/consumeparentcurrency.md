@@ -1,8 +1,15 @@
 # ConsumeParentCurrency
-## Overview
+
 Consumes currency in a parent app.
 
 <PartialServop service_name="virtualCurrency" operation_name="CONSUME_PARENT_VC" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+vcId | The currency type to consume.
+vcAmount | The amount of currency to consume.
+levelName | Name of the parent level.
 
 ## Usage
 
@@ -119,12 +126,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-vcId | The currency type to consume.
-vcAmount | The amount of currency to consume.
-levelName | Name of the parent level.
-
 

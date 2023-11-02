@@ -1,5 +1,5 @@
 # ResetCurrency
-## Overview
+
 Resets the player's currency back to zero.
 
 <PartialServop service_name="virtualCurrency" operation_name="RESET_PLAYER_VC" />

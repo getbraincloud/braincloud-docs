@@ -1,5 +1,5 @@
 # IsClientBridge
-## Overview
+
 This returns true if the script context is client.
 
 ## Usage

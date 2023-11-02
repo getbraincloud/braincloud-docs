@@ -1,6 +1,11 @@
 # RegisterFileUploadCallback
-## Overview
+
 Registers the file upload callbacks.
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+fileUploadCallback | The file upload callback handler.
 
 ## Usage
 
@@ -113,10 +118,4 @@ fileUploadFailedBlock = ^(NSString *fileUploadId, NSInteger status, NSInteger re
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-fileUploadCallback | The file upload callback handler.
-
 

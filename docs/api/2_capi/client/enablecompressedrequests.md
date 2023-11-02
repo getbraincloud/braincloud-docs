@@ -1,6 +1,11 @@
 # EnableCompressedRequests
-## Overview
+
 Enables sending Gzip compressed packets of requests from client side. Which can significantely decrease response time for requests with large body content.
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+enabled | True if request packets should be compressed
 
 ## Usage
 
@@ -73,10 +78,4 @@ Enables sending Gzip compressed packets of requests from client side. Which can 
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-enabled | True if request packets should be compressed
-
 

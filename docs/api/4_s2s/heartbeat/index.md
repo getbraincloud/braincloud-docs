@@ -1,5 +1,5 @@
 # Heartbeat
-## Overview
+
 
 
 Heartbeats are used to help keep the user's session alive. Sessions have a timeout (that is by default 20 minutes). 

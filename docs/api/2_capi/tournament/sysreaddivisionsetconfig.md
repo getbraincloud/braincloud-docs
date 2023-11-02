@@ -1,8 +1,13 @@
 # SysReadDivisionSetConfig
-## Overview
+
 Reads the current version of the division set configuration identified by the division set id.
 
 <PartialServop service_name="tournament" operation_name="SYS_READ_DIVISION_SET_CONFIG" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+divSetId | The division set id uniquely identifying the division set configuration to be returned.
 
 ## Usage
 
@@ -110,10 +115,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-divSetId | The division set id uniquely identifying the division set configuration to be returned.
-
 

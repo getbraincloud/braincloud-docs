@@ -1,5 +1,5 @@
 # ScheduleRichPushNotifications
-## Overview
+
 Schedules rich notifications based on user local time.
 
 Example of substitution usage:
@@ -18,6 +18,16 @@ Name | Description
 notificationJobs | Number of notification jobs/time zones targeted
 
 <PartialServop service_name="pushNotification" operation_name="SCHEDULE_RICH_NOTIFICATIONS" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+notificationTemplateId | Identifies the template that will determine the message content. 
+segmentIdList | List of target segments. Omit to send to all users. 
+substitutions | Positional message substitution values. 
+startDateUTC | Optional base date for local time calculation. 
+localTime | The scheduled local arrival time. 
+minimizeJobs | Optional flag to cause the server to scan players time zones to reduce scope. 
 
 ## Usage
 
@@ -142,15 +152,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-notificationTemplateId | Identifies the template that will determine the message content. 
-segmentIdList | List of target segments. Omit to send to all users. 
-substitutions | Positional message substitution values. 
-startDateUTC | Optional base date for local time calculation. 
-localTime | The scheduled local arrival time. 
-minimizeJobs | Optional flag to cause the server to scan players time zones to reduce scope. 
-
 

@@ -1,10 +1,16 @@
 # SendMessageSimple
-## Overview
+
 Sends a simple string-based message on behalf of the user.
 
 
 
 <PartialServop service_name="messaging" operation_name="SEND_MESSAGE_SIMPLE" />
+
+## Method Parameters
+Parameter | Description                         
+--------- | ------------------------------------
+toProfileIds | An array of recipients of the message.
+contentString | The text to send. 
 
 ## Usage
 
@@ -163,12 +169,5 @@ Code | Name | Description
 40601 | FEATURE_NOT_ENABLED | Messaging feature is not enabled for app.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description                         
---------- | ------------------------------------
-toProfileIds | An array of recipients of the message.
-contentString | The text to send. 
 
 

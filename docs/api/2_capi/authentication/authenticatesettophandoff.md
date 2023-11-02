@@ -1,5 +1,5 @@
 # AuthenticateSettopHandoff
-## Overview
+
 Authenticate the user with a custom Set-top Handoff Code - which is an short, easy-to-enter code suitable for use in devices with limited data entry capabilities (i.e. Set-top boxes, VR headsets, etc.) The hand-off code can be generated via the [<code>CreateSettopHandoffCode</code>](/api/capi/identity/createsettophandoffcode) cloud-code call.
 
 
@@ -10,6 +10,11 @@ Make sure you've initialized the <%= data.branding.productName %> library before
 :::
 
 <PartialServop service_name="authenticationV2" operation_name="AUTHENTICATE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+handoffCode | The set-top hand-off code generated via [<code>CreateSettopHandoffCode</code>](/api/capi/identity/createsettophandoffcode) 
 
 ## Usage
 
@@ -213,11 +218,5 @@ Code | Name | Description
 40307 | TOKEN_DOES_NOT_MATCH_USER | The user's password is incorrect.
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-handoffCode | The set-top hand-off code generated via [<code>CreateSettopHandoffCode</code>](/api/capi/identity/createsettophandoffcode) 
 
 

@@ -1,8 +1,16 @@
 # UpdateGroupMember
-## Overview
+
 Update a member of the group.
 
 <PartialServop service_name="group" operation_name="UPDATE_MEMBER_OF_GROUP" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | ID of the group
+profileId | Profile ID of the member being updated
+role | Role of the member being updated
+jsonAttributes | Attributes of the member being updated
 
 ## Usage
 
@@ -155,13 +163,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | ID of the group
-profileId | Profile ID of the member being updated
-role | Role of the member being updated
-jsonAttributes | Attributes of the member being updated
-
 

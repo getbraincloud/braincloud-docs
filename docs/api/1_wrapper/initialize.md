@@ -1,8 +1,18 @@
 # Initialize
-## Overview
+
 Method initializes both `<%= data.branding.codeWrapper %>` and `<%= data.branding.codeClient %>`.
 
 The parameters for this method vary by client (for example the Unity client takes none at all, as all data is pulled from the <%= data.branding.productName %> editor menu data).
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+serverURL | The URL to the <%= data.branding.productName %> server
+secretKey | The secret key for your app
+appId | The app ID
+version | The app version
+*companyName* | Client dependent - The company name used in the keychain for storing anonymous and profile IDs. You are free to pick anything you want.
+*appName* | Client dependent - The app name used in the keychain for storing anonymous and profile IDs. You are free to pick anything you want.
 
 ## Usage
 
@@ -136,15 +146,4 @@ appId = "123456";
 <%= data.branding.codePrefix %>.initialize(appId, secret, "1.0.0");
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-serverURL | The URL to the <%= data.branding.productName %> server
-secretKey | The secret key for your app
-appId | The app ID
-version | The app version
-*companyName* | Client dependent - The company name used in the keychain for storing anonymous and profile IDs. You are free to pick anything you want.
-*appName* | Client dependent - The app name used in the keychain for storing anonymous and profile IDs. You are free to pick anything you want.
-
 

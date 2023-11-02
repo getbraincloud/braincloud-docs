@@ -1,8 +1,13 @@
 # UpdateUserName
-## Overview
+
 Sets the user's name.
 
 <PartialServop service_name="playerState" operation_name="UPDATE_NAME" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+userName | The name of the user
 
 ## Usage
 
@@ -137,10 +142,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-userName | The name of the user
-
 

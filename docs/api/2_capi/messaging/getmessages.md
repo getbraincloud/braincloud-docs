@@ -1,10 +1,17 @@
 # GetMessages
-## Overview
+
 Return the content of the specified messages (if found).
 
 
 
 <PartialServop service_name="messaging" operation_name="GET_MESSAGES" />
+
+## Method Parameters
+Parameter | Description |
+--------- | ------------------------------------ |
+msgbox | The messagebox that the messages reside in |
+msgids | An array of message ids |
+markAsRead | Whether the messages should be marked as read once retrieved. |
 
 ## Usage
 
@@ -216,13 +223,5 @@ if (postResult.status == 200) {
 | 40601 | FEATURE_NOT_ENABLED | Messaging feature is not enabled for app. |
 
 </details>
-
-
-## Method Parameters
-Parameter | Description |
---------- | ------------------------------------ |
-msgbox | The messagebox that the messages reside in |
-msgids | An array of message ids |
-markAsRead | Whether the messages should be marked as read once retrieved. |
 
 

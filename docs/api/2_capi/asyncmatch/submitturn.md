@@ -1,8 +1,20 @@
 # SubmitTurn
-## Overview
+
 Submits a turn for the given match.
 
 <PartialServop service_name="asyncMatch" operation_name="SUBMIT_TURN" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+ownerId | Match owner identifier
+matchId | Match identifier
+version | Game state version to ensure turns are submitted once and in order
+jsonMatchState | JSON string blob provided by the caller
+pushNotificationMessage | Optional push notification message to send to the other party. Refer to the Push Notification functions for the syntax required.
+nextPlayer | Optionally, force the next player player to be a specific player
+jsonSummary | Optional JSON string defining what the other player will see as a summary of the game when listing their games
+jsonStatistics | Optional JSON string blob provided by the caller
 
 ## Usage
 
@@ -224,17 +236,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-ownerId | Match owner identifier
-matchId | Match identifier
-version | Game state version to ensure turns are submitted once and in order
-jsonMatchState | JSON string blob provided by the caller
-pushNotificationMessage | Optional push notification message to send to the other party. Refer to the Push Notification functions for the syntax required.
-nextPlayer | Optionally, force the next player player to be a specific player
-jsonSummary | Optional JSON string defining what the other player will see as a summary of the game when listing their games
-jsonStatistics | Optional JSON string blob provided by the caller
-
 

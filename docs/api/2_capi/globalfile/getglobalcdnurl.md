@@ -1,5 +1,5 @@
 # GetGlobalCDNUrl
-## Overview
+
 :::tip
 This method was added to support clients (like very old versions of Unity - i.e. circa 2016) that cannot handle HTTP Redirects. This method allows clients to <em>pre-resolve</em> the CDN endpoint for the file to download.<br />
 <br />
@@ -9,6 +9,11 @@ This call is not required in the great majority of cases. Just use the regular f
 Returns the CDN URL for the specified file.
 
 <PartialServop service_name="globalFileV3" operation_name="GET_GLOBAL_CDN_URL" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+fileId | File ID
 
 ## Usage
 
@@ -144,10 +149,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-fileId | File ID
-
 

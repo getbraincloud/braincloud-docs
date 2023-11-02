@@ -1,5 +1,5 @@
 # GetSessionForValidatedCredential
-## Overview
+
 Creates and returns a session for the credentials provided.
 
 This method is used for when you need a session for a user other than the one calling the script, or validate a crendential,

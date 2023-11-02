@@ -1,5 +1,5 @@
 # LogInfoJson
-## Overview
+
 Logs an App Info message to the error log.
 
 ## Usage

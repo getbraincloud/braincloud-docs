@@ -1,8 +1,13 @@
 # UpdateUserPictureUrl
-## Overview
+
 Update User picture URL.
 
 <PartialServop service_name="playerState" operation_name="UPDATE_PICTURE_URL" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+pictureUrl | URL to apply
 
 ## Usage
 
@@ -136,10 +141,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-pictureUrl | URL to apply
-
 

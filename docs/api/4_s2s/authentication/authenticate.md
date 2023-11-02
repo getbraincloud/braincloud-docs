@@ -1,5 +1,5 @@
 # Authenticate
-## Overview
+
 This service is used to authenticate the server request for the session based protocol.
 
 
@@ -10,6 +10,13 @@ Name | Description
 sessionId | String to pass in with subsequent requests
 
 <PartialServop service_name="authenticationV2" operation_name="AUTHENTICATE" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+gameId | Same usage as for simple request
+serverName | Same usage as for simple request
+gameSecret | Same usage as for simple request
 
 ## Usage
 
@@ -199,12 +206,4 @@ sessionId | String to pass in with subsequent requests
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-gameId | Same usage as for simple request
-serverName | Same usage as for simple request
-gameSecret | Same usage as for simple request
-
 

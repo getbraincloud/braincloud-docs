@@ -1,5 +1,5 @@
 # FindCompleteMatches
-## Overview
+
 Returns all matches that are in a COMPLETE state for which the player is involved.
 
 <PartialServop service_name="asyncMatch" operation_name="FIND_MATCHES_COMPLETED" />

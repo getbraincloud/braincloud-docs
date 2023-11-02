@@ -1,5 +1,5 @@
 # IsPeerBridge
-## Overview
+
 This returns true if the script context is peer.
 
 ## Usage

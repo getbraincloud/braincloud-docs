@@ -1,10 +1,17 @@
 # SmartSwitchAuthenticateFacebookLimited
-## Overview
+
 Smart Switch Authenticate will logout of the current profile, and switch to the new authentication type.
 In event the current session was previously an anonymous account, the smart switch will delete that profile.
 Use this function to keep a clean designflow from anonymous to signed profiles.
 
 Authenticate the user with <%= data.branding.productName %> using their Facebook Credentials.
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+facebookId | The Facebook ID of the user
+facebookToken | The authentication token from the Facebook SDK
+forceCreate | Should a new profile be created for this user if the account does not exist?
 
 ## Usage
 
@@ -132,12 +139,4 @@ var forceCreate = true;
 // N/A
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-facebookId | The Facebook ID of the user
-facebookToken | The authentication token from the Facebook SDK
-forceCreate | Should a new profile be created for this user if the account does not exist?
-
 

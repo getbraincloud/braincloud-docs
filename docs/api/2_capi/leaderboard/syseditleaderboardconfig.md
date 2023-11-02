@@ -1,5 +1,5 @@
 # SysEditLeaderboardConfig
-## Overview
+
 Edits a leaderboard configuration, with support for tournament leaderboards.
 
 
@@ -17,6 +17,13 @@ tEnabled | Optional parameter to set whether tournaments are enabled (true) or n
 tTemplateOnly | Optional parameter to set whether leaderboard is a tournament template only (true) or not (false). Can only be true if tEnabled is true. Defaults to false.
 
 <PartialServop service_name="leaderboard" operation_name="SYS_EDIT_LEADERBOARD_CONFIG" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardId | ID uniquely identifying the leaderboard configuration to retrieve.
+dbVersion | The database version of the leaderboard config being edited. For any version, specify -1.
+configJson | Configuration changes for the leaderboard, specified as JSON object.
 
 ## Usage
 
@@ -159,12 +166,4 @@ var retVal = leaderboardProxy.sysEditLeaderboardConfig(
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | ID uniquely identifying the leaderboard configuration to retrieve.
-dbVersion | The database version of the leaderboard config being edited. For any version, specify -1.
-configJson | Configuration changes for the leaderboard, specified as JSON object.
-
 

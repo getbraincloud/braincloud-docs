@@ -1,8 +1,14 @@
 # StartSteamTransaction
-## Overview
+
 Initialize a Steam transaction.
 
 <PartialServop service_name="product" operation_name="START_STEAM_TRANSACTION" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+itemId | Items to purchase
+language | ISO 639-1 language code
 
 ## Usage
 
@@ -113,11 +119,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-itemId | Items to purchase
-language | ISO 639-1 language code
-
 

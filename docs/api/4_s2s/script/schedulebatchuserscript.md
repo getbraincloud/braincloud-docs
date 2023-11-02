@@ -1,8 +1,17 @@
 # ScheduleBatchUserScript
-## Overview
+
 Schedules a script to run on the server at a later date.
 
 <PartialServop service_name="script" operation_name="SCHEDULE_BATCH_USER_SCRIPT" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+scriptName | The name of the script with its path to be run. 
+scriptData | Data to be sent to the script in JSON format. 
+segmentIdList | List of target segments. 
+startDateUTC | If scheduling at a set time. The start date in UTC in Unix millis timestamp format. 
+minutesFromNow | If scheduling in minutes from the current time.  Number of minutes from now to run the script. 
 
 ## Usage
 
@@ -105,14 +114,4 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-scriptName | The name of the script with its path to be run. 
-scriptData | Data to be sent to the script in JSON format. 
-segmentIdList | List of target segments. 
-startDateUTC | If scheduling at a set time. The start date in UTC in Unix millis timestamp format. 
-minutesFromNow | If scheduling in minutes from the current time.  Number of minutes from now to run the script. 
-
 

@@ -1,8 +1,13 @@
 # ReadEntity
-## Overview
+
 Method reads an existing entity on the server. It must have public read access.
 
 <PartialServop service_name="globalEntity" operation_name="READ" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+entityId | The id of the entity to read. 
 
 ## Usage
 
@@ -113,10 +118,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityId | The id of the entity to read. 
-
 

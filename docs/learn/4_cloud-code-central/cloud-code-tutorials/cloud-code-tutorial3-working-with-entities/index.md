@@ -139,14 +139,14 @@ results;
 ```
 ## Step 2 - Test the Group Management scripts
 
-Once you've got the routines written, test them using the API Explorer. Remember, if you don't see any of the scripts, you probably don't have _Client Callable_ set to **TRU**E.
+Once you've got the routines written, test them using the API Explorer. Remember, if you don't see any of the scripts, you probably don't have _Client Callable_ set to **TRUE**.
 
 Once you've created a few entities with the scripts, take a moment to check out the data via our _Global Entities Viewer_.
 
 To use the viewer:
 
-- Click on the **Monitoring** tab
-- Choose **Global Monitoring | Global Entities**
+- Click on the **Global** menu
+- Choose **Global Data | Global Entities**
 - You can filter the list using the _Filter by Type_ drop-down box
 - You can _View/Edit_ an entity by clicking on the "eyeball"
 

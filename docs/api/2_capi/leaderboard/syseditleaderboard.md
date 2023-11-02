@@ -1,8 +1,19 @@
 # SysEditLeaderboard
-## Overview
+
 Edit a player or group entry leaderboard configuration.
 
 <PartialServop service_name="leaderboard" operation_name="SYS_EDIT_LEADERBOARD" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardId | Unique ID of the leaderboard configuration to create.
+leaderboardType | Type of leaderboard. Valid values: 'LAST_VALUE', 'HIGH_VALUE', 'LOW_VALUE', 'CUMULATIVE', 'ARCADE_HIGH', 'ARCADE_LOW'.
+rotationType | Type of rotation. Valid values: 'NEVER', 'DAILY', 'DAYS', 'WEEKLY', 'MONTHLY', 'YEARLY'.
+numDaysToRotate | Optional parameter. Required only if 'DAYS' rotation type; otherwise, null.
+rotationResetTimestampUtcMillis | UTC timestamp, in milliseconds, at which to rotate the leaderboard.
+retainedCount | The number of rotations (versions) of the leaderboard to retain.
+data | Optional parameter. Developer-defined data relevant to the created leaderboard.
 
 ## Usage
 
@@ -117,16 +128,4 @@ var retVal = leaderboardProxy.sysEditLeaderboard(
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | Unique ID of the leaderboard configuration to create.
-leaderboardType | Type of leaderboard. Valid values: 'LAST_VALUE', 'HIGH_VALUE', 'LOW_VALUE', 'CUMULATIVE', 'ARCADE_HIGH', 'ARCADE_LOW'.
-rotationType | Type of rotation. Valid values: 'NEVER', 'DAILY', 'DAYS', 'WEEKLY', 'MONTHLY', 'YEARLY'.
-numDaysToRotate | Optional parameter. Required only if 'DAYS' rotation type; otherwise, null.
-rotationResetTimestampUtcMillis | UTC timestamp, in milliseconds, at which to rotate the leaderboard.
-retainedCount | The number of rotations (versions) of the leaderboard to retain.
-data | Optional parameter. Developer-defined data relevant to the created leaderboard.
-
 

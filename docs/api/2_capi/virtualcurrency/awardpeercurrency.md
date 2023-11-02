@@ -1,8 +1,15 @@
 # AwardPeerCurrency
-## Overview
+
 Used to award Peer currency.
 
 <PartialServop service_name="virtualCurrency" operation_name="AWARD_PEER_VC" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+vcId | Type of currency (Ex. ticket, tokens)
+vcAmount | Currency amount to be awarded
+peer | Name of the peer
 
 ## Usage
 
@@ -118,12 +125,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-vcId | Type of currency (Ex. ticket, tokens)
-vcAmount | Currency amount to be awarded
-peer | Name of the peer
-
 
