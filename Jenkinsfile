@@ -20,6 +20,7 @@ pipeline {
                 sed -i -e 's/__DOCSURL__/docs-internal/g' docusaurus.config.js
                 sed -i -e 's/__APPID__/5T9F73JFG3/g' docusaurus.config.js
                 sed -i -e 's/__APIKEY__/6ba3774d7b707e915f0acb12fbfae506/g' docusaurus.config.js
+                sed -i -e 's/__GTAGID__/G-4GX8EQHRZL/g' docusaurus.config.js
                 npm run build
                 '''
             }
