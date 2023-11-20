@@ -1,15 +1,14 @@
-# AwardPeerCurrency
+# RevokePeerCurrency
+Revoke the specified amount of currency from the peer user. Peer user's balance can go negative.
 
-Used to award Peer currency.
-
-<PartialServop service_name="virtualCurrency" operation_name="AWARD_PEER_VC" />
+<PartialServop service_name="virtualCurrency" operation_name="REVOKE_PEER_VC" />
 
 ## Method Parameters
 Parameter | Description
 --------- | -----------
 vcId | Type of currency (Ex. ticket, tokens)
-vcAmount | Currency amount to be awarded
-peer | Name of the peer
+vcAmount | The amount of currency to be revoked.
+peerCode | The peer code of the peer.
 
 ## Usage
 
@@ -68,12 +67,9 @@ peer | Name of the peer
 var vcId = "tokens";
 var vcAmount = 1;
 var peerCode = "gameloot";
-var virtualCurrencyProxy = bridge.getVirtualCurrencyServiceProxy();
+var virtualCurrencyProxy = bridge.getVirtualcurrencyServiceProxy();
 
-var postResult = virtualCurrencyProxy.awardPeerCurrency(vcId, vcAmount, peerCode);
-if (postResult.status == 200) {
-    // Success!
-}
+var postResult = virtualCurrencyProxy.RevokePeerCurrency(vcId, vcAmount, peerCode);
 ```
 
 ```mdx-code-block
@@ -83,13 +79,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "virtualCurrency",
-	"operation": "AWARD_PEER_VC",
-	"data": {
-		"vcId": "coins",
-		"vcAmount": 1,
-        "peer": "gameloot"
-	}
+    "service":"virtualCurrency",
+    "operation":"REVOKE_PEER_VC",
+    "data":{
+        "vcId":"tokens",
+        "vcAmount":1,
+        "peerCode":"gameloot"
+    }
 }
 ```
 
@@ -98,31 +94,32 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
 <details>
 <summary>JSON Response</summary>
 
 ```json
 {
-    "status" : 200,
-    "data" :
-    {
-        "currencyMap": {
-            "gems": {
-                "purchased": 0,
-                "balance": 0,
-                "consumed": 0,
-                "awarded": 0
-            },
-            "gold": {
-                "purchased": 0,
-                "balance": 100,
-                "consumed": 0,
-                "awarded": 100
-            }
-        }
+  "data": {
+    "currencyMap": {
+      "peerVC1": {
+        "consumed": 0,
+        "balance": 9,
+        "purchased": 0,
+        "awarded": 10,
+        "revoked": 1
+      },
+      "peerVC2": {
+        "consumed": 0,
+        "balance": 0,
+        "purchased": 0,
+        "awarded": 0,
+        "revoked": 0
+      }
     }
+  },
+  "status": 200
 }
 ```
+
 </details>
 

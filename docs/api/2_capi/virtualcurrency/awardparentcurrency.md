@@ -81,15 +81,15 @@ if (postResult.status == 200) {
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var vcId = "coins";
-var vcAmount = 1;
-var levelName = "master";
-var virtualCurrencyProxy = bridge.getVirtualCurrencyServiceProxy();
-
-var postResult = virtualCurrencyProxy.awardParentCurrency(vcId, vcAmount, levelName);
-if (postResult.status == 200) {
-    // Success!
+```r
+{
+	"service": "virtualCurrency",
+	"operation": "AWARD_PARENT_VC",
+	"data": {
+		"vcId": "coins",
+		"vcAmount": 1,
+        "levelName": "master"
+	}
 }
 ```
 

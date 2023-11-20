@@ -1,15 +1,13 @@
-# AwardPeerCurrency
+# RevokeCurrency
+Revoke the specified amount of currency from the user. User's balance can go negative.
 
-Used to award Peer currency.
-
-<PartialServop service_name="virtualCurrency" operation_name="AWARD_PEER_VC" />
+<PartialServop service_name="virtualCurrency" operation_name="REVOKE_VC" />
 
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-vcId | Type of currency (Ex. ticket, tokens)
-vcAmount | Currency amount to be awarded
-peer | Name of the peer
+vcId | The currency type to revoke.
+vcAmount | The amount of currency to revoke.
 
 ## Usage
 
@@ -18,7 +16,6 @@ peer | Name of the peer
 <Tabs>
 <TabItem value="csharp" label="C#">
 ```
-
 ```csharp
 // Cloud Code only. To view example, switch to the Cloud Code tab
 ```
@@ -65,15 +62,11 @@ peer | Name of the peer
 ```
 
 ```cfscript
-var vcId = "tokens";
+var vcId = "coins";
 var vcAmount = 1;
-var peerCode = "gameloot";
-var virtualCurrencyProxy = bridge.getVirtualCurrencyServiceProxy();
+var virtualCurrencyProxy = bridge.getVirtualcurrencyServiceProxy();
 
-var postResult = virtualCurrencyProxy.awardPeerCurrency(vcId, vcAmount, peerCode);
-if (postResult.status == 200) {
-    // Success!
-}
+var postResult = virtualCurrencyProxy.RevokeCurrency(vcId, vcAmount);
 ```
 
 ```mdx-code-block
@@ -83,13 +76,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "virtualCurrency",
-	"operation": "AWARD_PEER_VC",
-	"data": {
-		"vcId": "coins",
-		"vcAmount": 1,
-        "peer": "gameloot"
-	}
+    "service":"virtualCurrency",
+    "operation":"REVOKE_VC",
+    "data":{
+        "vcId":"coins",
+        "vcAmount":1
+    }
 }
 ```
 
@@ -98,31 +90,32 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
 <details>
 <summary>JSON Response</summary>
 
 ```json
 {
-    "status" : 200,
-    "data" :
-    {
-        "currencyMap": {
-            "gems": {
-                "purchased": 0,
-                "balance": 0,
-                "consumed": 0,
-                "awarded": 0
-            },
-            "gold": {
-                "purchased": 0,
-                "balance": 100,
-                "consumed": 0,
-                "awarded": 100
-            }
-        }
+  "data": {
+    "currencyMap": {
+      "bar": {
+        "consumed": 0,
+        "balance": 32,
+        "purchased": 0,
+        "awarded": 32,
+        "revoked": 0
+      },
+      "coins": {
+        "consumed": 0,
+        "balance": 101,
+        "purchased": 0,
+        "awarded": 120,
+        "revoked": 19
+      }
     }
+  },
+  "status": 200
 }
 ```
+
 </details>
 
