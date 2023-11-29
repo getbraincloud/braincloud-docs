@@ -152,13 +152,15 @@ if (postResult.status == 200) {
                 "purchased": 0,
                 "balance": 0,
                 "consumed": 0,
-                "awarded": 0
+                "awarded": 0,
+                "revoked": 0
             },
             "gold": {
                 "purchased": 0,
                 "balance": 123,
                 "consumed": 0,
-                "awarded": 123
+                "awarded": 123,
+                "revoked": 0
             }
         }
     }

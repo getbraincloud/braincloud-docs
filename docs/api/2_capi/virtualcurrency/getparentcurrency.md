@@ -150,7 +150,8 @@ if (postResult.status == 200) {
             "consumed":20,
             "balance":180,
             "purchased":0,
-            "awarded":200
+            "awarded":200,
+            "revoked": 0
          }
       }
    }

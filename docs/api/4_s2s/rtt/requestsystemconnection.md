@@ -12,7 +12,7 @@ Request a system RTT connection.
 ```
 
 ```csharp
-// S2S call: to view example, switch to the Cloud Code or Raw tab.
+// S2S call: to view example, switch to the Raw tab.
 ```
 
 ```mdx-code-block
@@ -21,7 +21,7 @@ Request a system RTT connection.
 ```
 
 ```cpp
-// S2S call: to view example, switch to the Cloud Code or Raw tab.
+// S2S call: to view example, switch to the Raw tab.
 ```
 
 ```mdx-code-block
@@ -30,7 +30,7 @@ Request a system RTT connection.
 ```
 
 ```objectivec
-// S2S call: to view example, switch to the Cloud Code or Raw tab.
+// S2S call: to view example, switch to the Raw tab.
 ```
 
 ```mdx-code-block
@@ -39,7 +39,7 @@ Request a system RTT connection.
 ```
 
 ```java
-// S2S call: to view example, switch to the Cloud Code or Raw tab.
+// S2S call: to view example, switch to the Raw tab.
 ```
 
 ```mdx-code-block
@@ -48,7 +48,16 @@ Request a system RTT connection.
 ```
 
 ```javascript
-// S2S call: to view example, switch to the Cloud Code or Raw tab.
+// S2S call: to view example, switch to the Raw tab.
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="cfs" label="Cloud Code">
+```
+
+```cfscript
+// S2S call: to view example, switch to the Raw tab.
 ```
 
 ```mdx-code-block
