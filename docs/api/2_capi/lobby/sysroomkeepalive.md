@@ -1,15 +1,12 @@
-# AwardPeerCurrency
+# SysRoomKeepAlive
+Indicates that a room is still running and the associated lobby instance should be kept alive.
 
-Used to award Peer currency.
-
-<PartialServop service_name="virtualCurrency" operation_name="AWARD_PEER_VC" />
+<PartialServop service_name="lobby" operation_name="SYS_ROOM_KEEP_ALIVE" />
 
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-vcId | Type of currency (Ex. ticket, tokens)
-vcAmount | Currency amount to be awarded
-peer | Name of the peer
+lobbyId | The id of lobby that should be kept alive.
 
 ## Usage
 
@@ -65,15 +62,10 @@ peer | Name of the peer
 ```
 
 ```cfscript
-var vcId = "tokens";
-var vcAmount = 1;
-var peerCode = "gameloot";
-var virtualCurrencyProxy = bridge.getVirtualCurrencyServiceProxy();
+var lobbyId = "55555:4v4:19";
+var lobbyProxy = bridge.getLobbyServiceProxy();
 
-var postResult = virtualCurrencyProxy.awardPeerCurrency(vcId, vcAmount, peerCode);
-if (postResult.status == 200) {
-    // Success!
-}
+var postResult = lobbyProxy.SysRoomKeepAlive(lobbyId);
 ```
 
 ```mdx-code-block
@@ -83,13 +75,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "virtualCurrency",
-	"operation": "AWARD_PEER_VC",
-	"data": {
-		"vcId": "coins",
-		"vcAmount": 1,
-        "peer": "gameloot"
-	}
+    "service":"lobby",
+    "operation":"SYS_ROOM_KEEP_ALIVE",
+    "data":{
+        "lobbyId":"55555:4v4:19"
+    }
 }
 ```
 
@@ -98,33 +88,15 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
 <details>
 <summary>JSON Response</summary>
 
 ```json
 {
-    "status" : 200,
-    "data" :
-    {
-        "currencyMap": {
-            "gems": {
-                "purchased": 0,
-                "balance": 0,
-                "consumed": 0,
-                "awarded": 0,
-                "revoked": 0
-            },
-            "gold": {
-                "purchased": 0,
-                "balance": 100,
-                "consumed": 0,
-                "awarded": 100,
-                "revoked": 0
-            }
-        }
-    }
+  "status" : 200,
+  "data" : null
 }
 ```
+
 </details>
 

@@ -84,7 +84,7 @@ const config = {
           // editUrl: 'https://github.com/getbraincloud/braincloud-apiref/tree/develop/',
           versions: {
             current: {
-              label: '5.0.0',
+              label: '5.1.0',
             },
           },
           lastVersion: 'current',
@@ -106,6 +106,10 @@ const config = {
         // },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
+        },
+        gtag: {
+          trackingID: '__GTAGID__',
+          anonymizeIP: true,
         },
       }),
     ],
@@ -172,7 +176,7 @@ const config = {
       },
       announcementBar: {
         id: 'announcementBar-2', // Increment on change
-        content: `⭐️ Subscribe brainCloud service on <a target="_blank" rel="noopener noreferrer" href="https://portal.braincloudservers.com/login#/development">brainCloud portal</a>`,
+        content: `⭐️ Subscribe to brainCloud service on <a target="_blank" rel="noopener noreferrer" href="https://portal.braincloudservers.com/login#/development">brainCloud portal</a>`,
       },
       navbar: {
         // title: 'brainCloud Docs',

@@ -1,15 +1,14 @@
-# AwardPeerCurrency
+# RevokeParentCurrency
+Revoke the specified amount of currency from the parent user. Parent user's balance can go negative
 
-Used to award Peer currency.
-
-<PartialServop service_name="virtualCurrency" operation_name="AWARD_PEER_VC" />
+<PartialServop service_name="virtualCurrency" operation_name="REVOKE_PARENT_VC" />
 
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-vcId | Type of currency (Ex. ticket, tokens)
-vcAmount | Currency amount to be awarded
-peer | Name of the peer
+vcId | The currency type to revoke.
+vcAmount | The amount of currency to revoke.
+levelName | The name of the parent level.
 
 ## Usage
 
@@ -65,15 +64,12 @@ peer | Name of the peer
 ```
 
 ```cfscript
-var vcId = "tokens";
+var vcId = "coins";
 var vcAmount = 1;
-var peerCode = "gameloot";
-var virtualCurrencyProxy = bridge.getVirtualCurrencyServiceProxy();
+var levelName = "master";
+var virtualCurrencyProxy = bridge.getVirtualcurrencyServiceProxy();
 
-var postResult = virtualCurrencyProxy.awardPeerCurrency(vcId, vcAmount, peerCode);
-if (postResult.status == 200) {
-    // Success!
-}
+var postResult = virtualCurrencyProxy.RevokeParentCurrency(vcId, vcAmount, levelName);
 ```
 
 ```mdx-code-block
@@ -83,13 +79,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "virtualCurrency",
-	"operation": "AWARD_PEER_VC",
-	"data": {
-		"vcId": "coins",
-		"vcAmount": 1,
-        "peer": "gameloot"
-	}
+    "service":"virtualCurrency",
+    "operation":"REVOKE_PARENT_VC",
+    "data":{
+        "vcId":"coins",
+        "vcAmount":1,
+        "levelName":"master"
+    }
 }
 ```
 
@@ -98,33 +94,32 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
 <details>
 <summary>JSON Response</summary>
 
 ```json
 {
-    "status" : 200,
-    "data" :
-    {
-        "currencyMap": {
-            "gems": {
-                "purchased": 0,
-                "balance": 0,
-                "consumed": 0,
-                "awarded": 0,
-                "revoked": 0
-            },
-            "gold": {
-                "purchased": 0,
-                "balance": 100,
-                "consumed": 0,
-                "awarded": 100,
-                "revoked": 0
-            }
-        }
+  "data": {
+    "currencyMap": {
+      "parent2VC1": {
+        "consumed": 0,
+        "balance": 9,
+        "purchased": 0,
+        "awarded": 10,
+        "revoked": 1
+      },
+      "parent2VC2": {
+        "consumed": 0,
+        "balance": 0,
+        "purchased": 0,
+        "awarded": 0,
+        "revoked": 0
+      }
     }
+  },
+  "status": 200
 }
 ```
+
 </details>
 

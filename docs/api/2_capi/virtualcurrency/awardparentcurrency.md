@@ -81,15 +81,15 @@ if (postResult.status == 200) {
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var vcId = "coins";
-var vcAmount = 1;
-var levelName = "master";
-var virtualCurrencyProxy = bridge.getVirtualCurrencyServiceProxy();
-
-var postResult = virtualCurrencyProxy.awardParentCurrency(vcId, vcAmount, levelName);
-if (postResult.status == 200) {
-    // Success!
+```r
+{
+	"service": "virtualCurrency",
+	"operation": "AWARD_PARENT_VC",
+	"data": {
+		"vcId": "coins",
+		"vcAmount": 1,
+        "levelName": "master"
+	}
 }
 ```
 
@@ -112,13 +112,15 @@ if (postResult.status == 200) {
                 "purchased": 0,
                 "balance": 0,
                 "consumed": 0,
-                "awarded": 0
+                "awarded": 0,
+                "revoked": 0
             },
             "gold": {
                 "purchased": 0,
                 "balance": 100,
                 "consumed": 0,
-                "awarded": 100
+                "awarded": 100,
+                "revoked": 0
             }
         }
     }

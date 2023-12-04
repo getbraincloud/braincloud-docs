@@ -141,7 +141,8 @@ if (postResult.status == 200) {
 				"purchased": 0,
 				"balance": 12212,
 				"consumed": 133,
-				"awarded": 12345
+				"awarded": 12345,
+				"revoked": 0
 			}
 		},
 		"parentCurrency": {
@@ -150,7 +151,8 @@ if (postResult.status == 200) {
 					"purchased": 0,
 					"balance": 12212,
 					"consumed": 133,
-					"awarded": 12345
+					"awarded": 12345,
+					"revoked": 0
 				}
 			}
 		},
@@ -160,7 +162,8 @@ if (postResult.status == 200) {
 					"purchased": 0,
 					"balance": 12212,
 					"consumed": 133,
-					"awarded": 12345
+					"awarded": 12345,
+					"revoked": 0
 				}
 			}
 		}

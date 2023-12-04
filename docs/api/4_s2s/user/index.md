@@ -22,7 +22,7 @@ The **User** service, introduced in 4.3, can be used to iterate through the user
 * [SysGetUserInfo](/api/capi/user/sysgetuserinfo) - Retrieves user information for a single profile ID
 
 ##### Delete Users
-* [SysDeleteUser](#capi-user-sysdeleteuser) - Delete a user
+* [SysDeleteUser](/api/capi/user/sysdeleteuser) - Delete a user
 
 #### Paging
 * [SysGetPage](/api/capi/user/sysgetpage) - Get a page of users 

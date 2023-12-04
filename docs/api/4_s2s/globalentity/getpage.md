@@ -1,9 +1,5 @@
 # GetPage
 
-```json-doc
-// S2S call: to view example, switch to the Cloud Code or Raw tab.
-```
-
 Method uses a paging system to iterate through user entities.
 
 After retrieving a page of entities with this method use <code>[getPageOffset](/api/s2s/globalentity/getpageoffset)</code> to retrieve previous or next pages.
