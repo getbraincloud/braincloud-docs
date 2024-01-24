@@ -17,7 +17,7 @@ To enroll in a Subscription Plan, you'll need to create a billing account, and s
 
 brainCloud uses a secure, 3rd party billing system to maintain your payment info and handle monthly invoicing.
 
-[![brainCloud](images/brainCloud_dashboard_goLive.jpg)](images/brainCloud_dashboard_goLive.jpg)
+[![brainCloud](images/brainCloud_dashboard_goLive.png)](images/brainCloud_dashboard_goLive.png)
 
 To create your billing account:
 
@@ -59,9 +59,7 @@ To publish your app:
 - Within Basic and Plus plans, you can select **Lite**, **Standard** or **Business** tiers. _Note that in addition to a higher API count, the Business Plan offers additional enterprise and integration features, plus higher base API and storage/download amounts. For full details, see_ [_this page_](http://getbraincloud.com/pricing-overview/)_.)_
 - Select your preferred plan from the list, and click **[Choose Plan]**.
 
-![](images/Basic-Plans.jpg)
-
-![](images/Plus-Plans.jpg)
+![](images/Basic-Plans.png)
 
 The Apps page should refresh to reflect the updated status of your app.  If it doesn't, choose **Refresh** from the Action menu.
 
