@@ -152,6 +152,23 @@ interval|total time|frequency
 500ms  | 10.0s | 2
 timeout|too many packet lost
 
+### Custom Environment Variables
+
+The following environment variables are used by the relay server which can be configured via Relay server settings page in the dashboard.
+:::info
+All the timeout settings are in seconds.
+:::
+
+```json
+{
+  "PACKET_LOG_ENABLED": "true",
+  "CONNECTION_TIMEOUT": "240",
+  "MEMBER_TIMEOUT": "120",
+  "END_MATCH_TIMEOUT": "600",
+  "MAX_PLAYERS": "40",
+  "ALLOW_REJOIN_BY_PROFILE_ID": "true"
+}
+```
 
 ### Relay Flow
 
