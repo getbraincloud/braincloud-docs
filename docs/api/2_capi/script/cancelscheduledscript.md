@@ -114,13 +114,13 @@ if (postResult.status == 200) {
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var jobId = "idsfihihfuvhvuh";
-var scriptProxy = bridge.getScriptServiceProxy();
-
-var postResult = scriptProxy.cancelScheduledScript(jobId);
-if (postResult.status == 200) {
-    // Success!
+```r
+{
+    "service":"script",
+    "operation":"CANCEL_SCHEDULED_SCRIPT",
+    "data":{
+        "jobId":"idsfihihfuvhvuh"
+    }
 }
 ```
 

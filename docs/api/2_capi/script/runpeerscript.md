@@ -140,17 +140,17 @@ if (postResult.status == 200) {
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var scriptName = "path/to/script1";
-var scriptData = {
-    "parm": "value"
-};
-var peer = "serviceCode";
-var scriptProxy = bridge.getScriptServiceProxy();
-
-var postResult = scriptProxy.runPeerScript(scriptName, scriptData, peer);
-if (postResult.status == 200) {
-    // Success!
+```r
+{
+    "service":"script",
+    "operation":"RUN_PEER_SCRIPT",
+    "data":{
+        "scriptName": "path/to/script1",
+        "scriptData"  {
+            "parm": "value" 
+        },
+        "peer": "serviceCode"
+    }
 }
 ```
 

@@ -112,20 +112,12 @@ if ((result.status == 200) && (result.data !== null)) {
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var _script = bridge.getScriptServiceProxy();
-
-// Find currently running scripts
-var result = _script.getRunningOrQueuedCloudScripts();
-
-if ((result.status == 200) && (result.data !== null)) {
-    // Found some
-    for (var i = 0; i < result.data.runningOrQueuedJobs.length; i++) {
-        // take action
-
-    }
+```r
+{
+    "service":"script",
+    "operation":"GET_RUNNING_OR_QUEUED_CLOUD_SCRIPTS",
+    "data":{}
 }
-
 ```
 
 ```mdx-code-block

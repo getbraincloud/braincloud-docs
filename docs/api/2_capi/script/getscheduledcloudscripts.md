@@ -128,26 +128,14 @@ retVal;
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var _script = bridge.getScriptServiceProxy();
-
-// Find scheduled jobs matching given script name
-var dateTimeSixtyMinsFromNowInMillis = new Date().getTime() + (60 * 60 * 1000);
-var result = _script.getScheduledCloudScripts(dateTimeSixtyMinsFromNowInMillis);
-
-if ((result.status == 200) && (result.data !== null)) {
-    // Find those that match script name want
-    for (var i = 0; i < result.data.scheduledJobs.length; i++) {
-        // delete any that match
-        if (result.data.scheduledJobs[i].scriptName === "emptyScript") {
-            _script.cancelScheduledScript(result.data.scheduledJobs[i].jobId);
-         }
+```r
+{
+    "service":"script",
+    "operation":"GET_SCHEDULED_CLOUD_SCRIPTS",
+    "data":{
+        "startDateInUTC": 1437579786000
     }
 }
-
-// schedule single replacement 
-var retVal = _script.scheduleRunScriptMinutes("emptyScript", null, 60);
-retVal;
 ```
 
 ```mdx-code-block

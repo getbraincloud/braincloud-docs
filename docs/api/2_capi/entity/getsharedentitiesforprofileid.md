@@ -120,7 +120,7 @@ if (postResult.status == 200) {
 	"service": "entity",
 	"operation": "READ_SHARED",
 	"data": {
-		"targetProfileId": "profile1"
+		"targetPlayerId": "profile1"
 	}
 }
 ```

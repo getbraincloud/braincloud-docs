@@ -124,8 +124,18 @@ var startDateInUTC = 1437579786000;
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-// replaced with ScheduleRunScriptUTC() in cloud code script
+```r
+{
+    "service":"script",
+    "operation":"SCHEDULE_CLOUD_SCRIPT",
+    "data":{
+        "scriptName": "path/to/script1",
+        "scriptData"  {
+            "parm": "value" 
+        },
+        "startDateInUTC": 1437579786000
+    }
+}
 ```
 
 ```mdx-code-block

@@ -21,7 +21,7 @@ Via this page, you can:
 
 Developers can perform an operation on an app by clicking on the Action button and choosing the associated menu option.
 
-[![brainCloud](images/brainCloud_dashboard_appAdminActions.jpg)](images/brainCloud_dashboard_appAdminActions.jpg)
+[![brainCloud](images/brainCloud_dashboard_appAdminActions.png)](images/brainCloud_dashboard_appAdminActions.png)
 
 Important information displayed on this screen:
 

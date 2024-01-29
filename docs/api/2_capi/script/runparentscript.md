@@ -140,17 +140,17 @@ if (postResult.status == 200) {
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var scriptName = "path/to/script1";
-var scriptData = {
-    "parm": "value"
-};
-var parentLevelName = "Master";
-var scriptProxy = bridge.getScriptServiceProxy();
-
-var postResult = scriptProxy.runParentScript(scriptName, scriptData, parentLevelName);
-if (postResult.status == 200) {
-    // Success!
+```r
+{
+    "service":"script",
+    "operation":"RUN_PARENT_SCRIPT",
+    "data":{
+        "scriptName": "path/to/script1",
+        "scriptData"  {
+            "parm": "value" 
+        },
+        "parentLevel": "Master"
+    }
 }
 ```
 

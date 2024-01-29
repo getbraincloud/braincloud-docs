@@ -134,17 +134,17 @@ if (postResult.status == 200) {
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var scriptName = "path/to/script1";
-var scriptData = {
-    "parm": "value"
-};
-var minutesFromNow = 1;
-var scriptProxy = bridge.getScriptServiceProxy();
-
-var postResult = scriptProxy.scheduleRunScriptMinutes(scriptName, scriptData, minutesFromNow);
-if (postResult.status == 200) {
-    // Success!
+```r
+{
+    "service":"script",
+    "operation":"SCHEDULE_CLOUD_SCRIPT",
+    "data":{
+        "scriptName": "path/to/script1",
+        "scriptData"  {
+            "parm": "value" 
+        },
+        "minutesFromNow": 1
+    }
 }
 ```
 

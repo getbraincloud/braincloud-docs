@@ -3,7 +3,7 @@ title: "Finding a User"
 date: "2015-08-20"
 ---
 
-The first step is to get to the User Monitoring section. From the side navigation bar click on the Monitoring tab at the top, followed by the User Monitoring tab below.
+The first step is to get to the User section. From the side navigation bar click on the User Browser, followed by the options tabs below.
 
 [![](images/2.png)](images/2.png)
 
