@@ -55,6 +55,6 @@ After having created a product, you'll want to attach some prices to it so that
 
 The marketplace allows for multiple prices to be attached to a product. This allows you to put certain items on sale - say for instance a 50% sale. In fact, because multiple prices can be entered, your product could have a 25% and 75% off sale too!
 
-[![brainCloud](images/brainCloud_dashboard_addProduct7.jpg)](images/brainCloud_dashboard_addProduct7.jpg)
+[![brainCloud](images/brainCloud_dashboard_addProduct7.png)](images/brainCloud_dashboard_addProduct7.png)
 
 In order to add another price to your product, you can basically follow the steps above and then enter a different reference price and third party store id.

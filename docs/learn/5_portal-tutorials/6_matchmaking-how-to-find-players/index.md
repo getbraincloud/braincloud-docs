@@ -16,7 +16,7 @@ In order for players to be eligible for MatchMaking your app must do the follow
 - Click the Matchmaking page, under **Design | Multiplayer | Matchmaking**
 - Check the "Matchmaking Enabled" option
 
-[![](images/2018-06-20_19-47-01.png)](images/2018-06-20_19-47-01.png)
+[![](images/1.png)](images/1.png)
 
 ### BrainCloudClient API
 
@@ -74,7 +74,6 @@ brainCloud supports filtering players by custom cloud scripts. In order to filte
     - matchCandidate - The player object. This returns the same JSON as the MatchMaking.Read API call (see below).
     - extraParms - The JSON extraParms object sent in the GetOneWayPlayersFilter API method. This is defined by the API method caller and can be used to help drive the custom filter results.
 
-[![](images/2018-06-20_19-51-23.png)](images/2018-06-20_19-51-23.png)
 ```js
 var matchCandidate = data["matchCandidate"];
 var extraParms    = data["extraParms"];

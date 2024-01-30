@@ -19,15 +19,9 @@ brainCloud 2FA uses [Authy](https://www.authy.com), which gives the flexibility
 - Click the green **[Click to enable 2FA]** button
 - Follow the prompts!
 
-[![brainCloud](images/brainCloud_Dashboard_tfa2.jpg)](images/brainCloud_Dashboard_tfa2.jpg)
-
-[![brainCloud](images/brainCloud_Dashboard_tfa3.jpg)](images/brainCloud_Dashboard_tfa3.jpg)
-
 ## Logging in with 2FA
 
 Logging in with 2FA is pretty simple:
-
-[![brainCloud](images/Login_2FA.png)](images/Login_2FA.png)
 
 - Log into the brainCloud Portal with **email + password** just like normal
 - If it's your first time using this computer (or it's been more than 30 days since your last verification), you'll be prompted to enter a verification code (i.e. one-time password)
@@ -38,8 +32,6 @@ Logging in with 2FA is pretty simple:
 ## Disabling 2FA
 
 If you decide that you no longer want to use 2FA for your account, you can click the red **[Unlink]** button from the Edit Profile screen.
-
-[![brainCloud](images/brainCloud_Dashboard_tfa4.jpg)](images/brainCloud_Dashboard_tfa4.jpg)
 
 ## Frequently Asked Questions
 

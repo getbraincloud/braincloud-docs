@@ -9,8 +9,6 @@ The first step is to get to the User section. From the side navigation bar click
 
 From here you will be in the User Summary tab of the User Monitoring section.  If you haven't previously selected a user you will see the New Users page.  You can now click the Select User button to open the Select User popup, or select a user from the list of New Users below.
 
-[![](images/2018-06-20_20-03-13.png)](images/2018-06-20_20-03-13.png)
-
 Once the Select User popup is open you have a variety of options available to find the users you're looking for.  From the search tab you can perform a number of search types from the drop down to the left of the search bar (default is Name).
 
 - **Name** - This is the name that is set by calling the [UpdatePlayerName](/api/capi/playerstate/updateusername) function of the PlayerState service.  Sometimes referred to as Profile Name.

@@ -7,8 +7,6 @@ Another feature of the User Monitoring section is the ability to review the logs
 
 After finding and selecting a User the logs can be viewed by going to the Logs tab at the bottom of the sidebar.
 
-[![](images/2018-06-20_20-39-53.png)](images/2018-06-20_20-39-53.png)
-
 You can now see all the selected User's recent requests and responses sorted by most recent.
 
 - **Date/Time** - The time and date that the request was issued by the User.

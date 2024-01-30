@@ -13,6 +13,4 @@ Entities can be filtered using the **Filter by Type** drop down list. The list 
 
 The **Entity Data** popup allows you to view and edit the entity's data.  You can edit Entity Type, Entity Subtype, ACL, and the raw JSON data that makes up the entity.
 
-[![entitiesDataButtons](images/entitiesDataButtons.png)](images/entitiesDataButtons.png)
-
 The three buttons at the bottom of the popup are fairly self explanatory.  **Cancel** will close the popup without saving any changes, **Delete** will permanently delete the entity, and **Save** will save any changes made to the entity.
