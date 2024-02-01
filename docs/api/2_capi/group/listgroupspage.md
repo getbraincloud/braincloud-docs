@@ -199,17 +199,29 @@ if (postResult.status == 200) {
 ```json
 // Context example
 {
-    "pagination": {
-        "rowsPerPage": 50,
-        "pageNumber": 1
-    },
-    "searchCriteria": {
-        "groupType": "clan"
-    },
-    "sortCriteria": {
-        "createdAt": 1,
-        "updatedAt": -1
+  "data": {
+    "context": "eyJzZWFyY2hDcml0ZXJpYSI6eyJnYW1lSWQiOiIxMzIyOSJ9LCJzb3J0Q3JpdGVyaWEiOnt9LCJwYWdpbmF0aW9uIjp7InJvd3NQZXJQYWdlIjo1MCwicGFnZU51bWJlciI6MSwiZG9Db3VudCI6dHJ1ZSwic2tpcFJlY291bnQiOmZhbHNlfSwib3B0aW9ucyI6bnVsbCwicmVzdWx0Q291bnQiOjF9",
+    "results": {
+      "count": 1,
+      "page": 1,
+      "items": [
+        {
+          "groupType": "group11",
+          "groupId": "d373ff92-3327-4176-85ed-3565a09c43fa",
+          "memberCount": 2,
+          "name": "agroup",
+          "invitedPendingMemberCount": 0,
+          "requestingPendingMemberCount": 0,
+          "ownerId": "8bd564a7-3f91-4a98-a4b3-43cd7d266133",
+          "summaryData": {},
+          "isOpenGroup": true
+        }
+      ],
+      "moreAfter": false,
+      "moreBefore": false
     }
+  },
+  "status": 200
 }
 ```
 </details>
