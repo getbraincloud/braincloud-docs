@@ -9,4 +9,4 @@ brainCloud allows developers to write custom code in JavaScript, and call it fr
 
 More information on Cloud Code is available [here](/api/cc).
 
-[![brainCloud](images/brainCloud_dashboard_scriptEdit.jpg)](images/brainCloud_dashboard_scriptEdit.jpg)
+[![brainCloud](images/brainCloud_dashboard_scriptEdit.png)](images/brainCloud_dashboard_scriptEdit.png)
