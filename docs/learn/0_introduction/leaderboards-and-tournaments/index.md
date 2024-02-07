@@ -20,7 +20,7 @@ brainCloud also supports Pacers to make leaderboards more compelling for players
 
 For more information, check out the [Leaderboard API](/api/capi/leaderboard).
 
-[![brainCloud](images/brainCloud_dashboard_lbConfig.jpg)](images/brainCloud_dashboard_lbConfig.jpg)
+[![brainCloud](images/brainCloud_dashboard_lbConfig.png)](images/brainCloud_dashboard_lbConfig.png)
 
 ## Tournaments
 
