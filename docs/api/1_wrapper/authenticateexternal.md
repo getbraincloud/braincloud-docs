@@ -4,7 +4,7 @@ Authenticate the user via cloud code (which in turn validates the supplied crede
 This allows the developer to extend <%= data.branding.productName %> authentication to support other backend authentication systems.
 
 :::info
-Please refer to the following link for further details on [AuthenticateExternal](/learn/key-concepts/authentication/authenticate-external)
+Refer to the provided link for further information on the usage of [AuthenticateExternal](/learn/key-concepts/authentication/external-authentication/)
 :::
 
 :::caution
