@@ -1,7 +1,5 @@
 # UpdateCustomInfo
-
-Update the custom information for a redemption code.
-
+Update the custom information for a redemption code for a single-use ('personal') code type.
 
 <PartialServop service_name="redemptionCode" operation_name="UPDATE_CUSTOM_INFO" />
 
@@ -9,7 +7,7 @@ Update the custom information for a redemption code.
 Parameter | Description
 --------- | -----------
 scanCode | The scan code.
-codeType | The code type.
+codeType | The single-use ('personal') code type.
 version | Current version of the redemption code (for concurrency checking.)
 customCodeInfo | Optional custom information.
 
@@ -26,16 +24,17 @@ string scanCode = "the-scan-code";
 string codeType = "the-code-type";
 int version = 3;
 string customCodeInfo = "{}";
+
 SuccessCallback successCallback = (response, cbObject) =>
 {
-  Debug.Log(string.Format("Success | {0}", response));
+    Debug.Log(string.Format("Success | {0}", response));
 };
 FailureCallback failureCallback = (status, code, error, cbObject) =>
 {
-  Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
+    Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
 };
 
-<%= data.branding.codePrefix %>.RedemptionCodeService.UpdateCustomInfo(scanCode, codeType, version, customCodeInfo, successCallback, failureCallback);
+<%= data.branding.codePrefix %>.RedemptioncodeService.UpdateCustomInfo(scanCode, codeType, version, customCodeInfo, successCallback, failureCallback);
 ```
 
 ```mdx-code-block
@@ -48,8 +47,7 @@ const char *scanCode = "the-scan-code";
 const char *codeType = "the-code-type";
 int version = 3;
 const char *customCodeInfo = "{}";
-
-<%= data.branding.codePrefix %>->getRedemptionCodeService()->updateCustomInfo(scanCode, codeType, version, customCodeInfo, this);
+<%= data.branding.codePrefix %>.getRedemptioncodeService().updateCustomInfo(scanCode, codeType, version, customCodeInfo, this);
 ```
 
 ```mdx-code-block
@@ -61,17 +59,17 @@ const char *customCodeInfo = "{}";
 NSString *scanCode = @"the-scan-code";
 NSString *codeType = @"the-code-type";
 int version = 3;
-NSString *customCodeInfo = "{}";
-BCCompletionBlock successBlock;      // define callback
+NSString *customCodeInfo = @"{}";
+BCCompletionBlock successBlock; // define callback
 BCErrorCompletionBlock failureBlock; // define callback
-
-[[<%= data.branding.codePrefix %> redemptionCodeService] updateCustomInfo:scanCode
-                      codeType:codeType
-                       version:version
-                customCodeInfo:customCodeInfo
-               completionBlock:successBlock
-          errorCompletionBlock:failureBlock
-                      cbObject:nil];
+[[<%= data.branding.codePrefix %> redemptionCodeService] UpdateCustomInfo:
+                     scanCode:scanCode
+                     codeType:codeType
+                      version:version
+               customCodeInfo:customCodeInfo
+              completionBlock:successBlock
+         errorCompletionBlock:failureBlock
+                     cbObject:nil]
 ```
 
 ```mdx-code-block
@@ -85,17 +83,17 @@ String codeType = "the-code-type";
 int version = 3;
 String customCodeInfo = "{}";
 this; // implements IServerCallback
-
-<%= data.branding.codePrefix %>.getRedemptionCodeService().updateCustomInfo(scanCode, codeType, version, customCodeInfo, this);
+<%= data.branding.codePrefix %>.getRedemptioncodeService.UpdateCustomInfo(scanCode, codeType, version, customCodeInfo, this);
 
 public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
 {
-  System.out.print(String.format("Success | %s", jsonData.toString()));
+    System.out.print(String.format("Success | %s", jsonData.toString()));
 }
 public void serverError(ServiceName serviceName, ServiceOperation serviceOperation, int statusCode, int reasonCode, String jsonError)
 {
-  System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
+    System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
 }
+
 ```
 
 ```mdx-code-block
@@ -108,8 +106,7 @@ var scanCode = "the-scan-code";
 var codeType = "the-code-type";
 var version = 3;
 var customCodeInfo = {};
-
-<%= data.branding.codePrefix %>.redemptionCode.updateCustomInfo(scanCode, codeType, version, customCodeInfo, result =>
+<%= data.branding.codePrefix %>.redemptionCode.UpdateCustomInfo(scanCode, codeType, version, customCodeInfo, result =>
 {
   var status = result.status;
   console.log(status + " : " + JSON.stringify(result, null, 2));
@@ -126,12 +123,9 @@ var scanCode = "the-scan-code";
 var codeType = "the-code-type";
 var version = 3;
 var customCodeInfo = {};
-var redemptionCodeProxy = bridge.getRedemptionCodeServiceProxy();
+var redemptionCodeProxy = bridge.getRedemptioncodeServiceProxy();
 
-var postResult = redemptionCodeProxy.updateCustomInfo(scanCode, codeType, version, customCodeInfo);
-if (postResult.status == 200) {
-  // Success!
-}
+var postResult = redemptionCodeProxy.UpdateCustomInfo(scanCode, codeType, version, customCodeInfo);
 ```
 
 ```mdx-code-block
@@ -141,15 +135,14 @@ if (postResult.status == 200) {
 
 ```r
 {
-  "service": "redemptionCode",
-  "operation": "UPDATE_CUSTOM_INFO",
-  "data":
-  {
-    "scanCode": "the-scan-code",
-    "codeType": "the-code-type",
-    "version": 3,
-    "customCodeInfo": {}
-  }
+    "service":"redemptionCode",
+    "operation":"UPDATE_CUSTOM_INFO",
+    "data":{
+        "scanCode":"the-scan-code",
+        "codeType":"the-code-type",
+        "version":3,
+        "customCodeInfo":{}
+    }
 }
 ```
 
@@ -158,7 +151,6 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
 <details>
 <summary>JSON Response</summary>
 
@@ -202,5 +194,4 @@ Code | Name | Description
 40755 | REDEMPTION_CODE_TYPE_MISMATCH | Redemption code's code type does not match specified code type
 
 </details>
-
 

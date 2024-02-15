@@ -1,14 +1,12 @@
 # GenerateCodesInline
-
-Generates specified quantity of redemption codes inline.
-
+Generates specified quantity of redemption codes, for a single-use ('personal') code type, inline. Response indicates list of 'generatedScanCodes' on success.
 
 <PartialServop service_name="redemptionCode" operation_name="GENERATE_CODES_INLINE" />
 
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-codeType | The code type.
+codeType | The single-use ('personal') code type.
 codeState | Optional. Initial state of the redemption code: 'Inactive' or 'Available'. Defaults to 'Inactive'.
 quantity | The quantity of scan codes to be generated.
 customCodeInfo | Optional custom information, as JSON object.
@@ -31,17 +29,18 @@ int quantity = 10;
 string customCodeInfo = "{}";
 string prefix = "";
 string algorithmName = "FiveByFive";
-string algorithmDetailsJson = "{ \"includeCheck\": false }";
+string algorithmDetailsJson = "{\"includeCheck\": False}";
+
 SuccessCallback successCallback = (response, cbObject) =>
 {
-  Debug.Log(string.Format("Success | {0}", response));
+    Debug.Log(string.Format("Success | {0}", response));
 };
 FailureCallback failureCallback = (status, code, error, cbObject) =>
 {
-  Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
+    Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
 };
 
-<%= data.branding.codePrefix %>.RedemptionCodeService.GenerateCodesInline(codeType, codeState, quantity, customCodeInfo, prefix, algorithmName, algorithmDetailsJson, successCallback, failureCallback);
+<%= data.branding.codePrefix %>.RedemptioncodeService.GenerateCodesInline(codeType, codeState, quantity, customCodeInfo, prefix, algorithmName, algorithmDetailsJson, successCallback, failureCallback);
 ```
 
 ```mdx-code-block
@@ -56,9 +55,8 @@ int quantity = 10;
 const char *customCodeInfo = "{}";
 const char *prefix = "";
 const char *algorithmName = "FiveByFive";
-const char *algorithmDetailsJson = "{ \"includeCheck\": false }";
-
-<%= data.branding.codePrefix %>->getRedemptionCodeService()->generateCodesInline(codeType, codeState, quantity, customCodeInfo, prefix, algorithmName, algorithmDetailsJson, this);
+const char *algorithmDetailsJson = "{\"includeCheck\": False}";
+<%= data.branding.codePrefix %>.getRedemptioncodeService().generateCodesInline(codeType, codeState, quantity, customCodeInfo, prefix, algorithmName, algorithmDetailsJson, this);
 ```
 
 ```mdx-code-block
@@ -70,23 +68,23 @@ const char *algorithmDetailsJson = "{ \"includeCheck\": false }";
 NSString *codeType = @"the-code-type";
 NSString *codeState = @"Available";
 int quantity = 10;
-NSString *customCodeInfo = "{}";
+NSString *customCodeInfo = @"{}";
 NSString *prefix = @"";
 NSString *algorithmName = @"FiveByFive";
-NSString *algorithmDetailsJson = "{ \"includeCheck\": false }";
-BCCompletionBlock successBlock;      // define callback
+NSString *algorithmDetailsJson = @"{\"includeCheck\": False}";
+BCCompletionBlock successBlock; // define callback
 BCErrorCompletionBlock failureBlock; // define callback
-
-[[<%= data.branding.codePrefix %> redemptionCodeService] generateCodesInline:codeType
-                     codeState:codeState
-                      quantity:quantity
-                customCodeInfo:customCodeInfo
-                        prefix:prefix
-                 algorithmName:algorithmName
-          algorithmDetailsJson:algorithmDetailsJson
-               completionBlock:successBlock
-          errorCompletionBlock:failureBlock
-                      cbObject:nil];
+[[<%= data.branding.codePrefix %> redemptionCodeService] GenerateCodesInline:
+                     codeType:codeType
+                    codeState:codeState
+                     quantity:quantity
+               customCodeInfo:customCodeInfo
+                       prefix:prefix
+                algorithmName:algorithmName
+         algorithmDetailsJson:algorithmDetailsJson
+              completionBlock:successBlock
+         errorCompletionBlock:failureBlock
+                     cbObject:nil]
 ```
 
 ```mdx-code-block
@@ -101,19 +99,19 @@ int quantity = 10;
 String customCodeInfo = "{}";
 String prefix = "";
 String algorithmName = "FiveByFive";
-String algorithmDetailsJson = "{ \"includeCheck\": false }";
+String algorithmDetailsJson = "{\"includeCheck\": False}";
 this; // implements IServerCallback
-
-<%= data.branding.codePrefix %>.getRedemptionCodeService().generateCodesInline(codeType, codeState, quantity, customCodeInfo, prefix, algorithmName, algorithmDetailsJson, this);
+<%= data.branding.codePrefix %>.getRedemptioncodeService.GenerateCodesInline(codeType, codeState, quantity, customCodeInfo, prefix, algorithmName, algorithmDetailsJson, this);
 
 public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
 {
-  System.out.print(String.format("Success | %s", jsonData.toString()));
+    System.out.print(String.format("Success | %s", jsonData.toString()));
 }
 public void serverError(ServiceName serviceName, ServiceOperation serviceOperation, int statusCode, int reasonCode, String jsonError)
 {
-  System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
+    System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
 }
+
 ```
 
 ```mdx-code-block
@@ -129,10 +127,9 @@ var customCodeInfo = {};
 var prefix = "";
 var algorithmName = "FiveByFive";
 var algorithmDetailsJson = {
-  "includeCheck": false
+    "includeCheck": false
 };
-
-<%= data.branding.codePrefix %>.redemptionCode.generateCodesInline(codeType, codeState, quantity, customCodeInfo, prefix, algorithmName, algorithmDetailsJson, result =>
+<%= data.branding.codePrefix %>.redemptionCode.GenerateCodesInline(codeType, codeState, quantity, customCodeInfo, prefix, algorithmName, algorithmDetailsJson, result =>
 {
   var status = result.status;
   console.log(status + " : " + JSON.stringify(result, null, 2));
@@ -152,14 +149,11 @@ var customCodeInfo = {};
 var prefix = "";
 var algorithmName = "FiveByFive";
 var algorithmDetailsJson = {
-  "includeCheck": false
+    "includeCheck": false
 };
-var redemptionCodeProxy = bridge.getRedemptionCodeServiceProxy();
+var redemptionCodeProxy = bridge.getRedemptioncodeServiceProxy();
 
-var postResult = redemptionCodeProxy.generateCodesInline(codeType, codeState, quantity, customCodeInfo, prefix, algorithmName, algorithmDetailsJson);
-if (postResult.status == 200) {
-  // Success!
-}
+var postResult = redemptionCodeProxy.GenerateCodesInline(codeType, codeState, quantity, customCodeInfo, prefix, algorithmName, algorithmDetailsJson);
 ```
 
 ```mdx-code-block
@@ -169,20 +163,19 @@ if (postResult.status == 200) {
 
 ```r
 {
-  "service": "redemptionCode",
-  "operation": "GENERATE_CODES_INLINE",
-  "data":
-  {
-    "codeType": "the-code-type",
-    "codeState": "Available",
-    "quantity": 10,
-    "customCodeInfo": {},
-    "prefix": "",
-    "algorithmName": "FiveByFive",
-    "algorithmDetailsJson": {
-      "includeCheck": false
+    "service":"redemptionCode",
+    "operation":"GENERATE_CODES_INLINE",
+    "data":{
+        "codeType":"the-code-type",
+        "codeState":"Available",
+        "quantity":10,
+        "customCodeInfo":{},
+        "prefix":"",
+        "algorithmName":"FiveByFive",
+        "algorithmDetailsJson":{
+            "includeCheck":false
+        }
     }
-  }
 }
 ```
 
@@ -191,7 +184,6 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
 <details>
 <summary>JSON Response</summary>
 
@@ -228,5 +220,4 @@ Code | Name | Description
 40753 | REDEMPTION_CODE_TYPE_DISABLED | Invalid code. Redemption code type has been disabled
 
 </details>
-
 
