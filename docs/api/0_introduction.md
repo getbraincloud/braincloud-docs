@@ -25,4 +25,5 @@ There are custom <%= data.branding.productName %> libraries for several language
 <%= data.branding.productName %> supports the most popular gaming engines, including:
 
 - **Unity** – <%= data.branding.productName %> provides C# libraries, examples and tutorials for integration with Unity
-- **Unreal** – We have full support for Unreal Engine 4 including Blueprints and C++
+- **Unreal** – We have full support for Unreal Engine 5 including Blueprints and C++
+- **Godot** - brainCloud now supports Godot
