@@ -257,6 +257,7 @@ Code | Name | Description
 40207 | SWITCHING_PROFILES | Indicates that the identity credentials are valid, and the saved `profileId` is valid, but the identity is not associated with the provided `profileId`. This may indicate that the user wants to switch accounts in the app. Most often an app will pop-up a dialog confirming that the user wants to switch accounts, and then reset the stored `profileId` and call authenticate again.
 40208 | MISSING_PROFILE_ERROR | Returned when the identity cannot be located, no `profileId` is provided, and `forceCreate` is false. The normal response is to call Authenticate again with `forceCreate` set to `true`.
 40217 | UNKNOWN_AUTH_ERROR | An unknown error has occurred during authentication.
+40221 | EMAIL_NOT_VALID | The provided email address is not in the correct format.
 40307 | TOKEN_DOES_NOT_MATCH_USER | The user's password is incorrect.
 550022 | INVALID_PASSWORD_CONTENT | The password doesn't meet the minimum password requirements.
 
