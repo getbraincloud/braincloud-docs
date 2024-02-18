@@ -7,7 +7,7 @@ Invalidate a redemption code for a personal ('single-use') code type.
 Parameter | Description
 --------- | -----------
 scanCode | The scan code.
-codeType | The single-use ('personal') code type.
+codeType | The personal ('single-use') code type. Corresponds to the _Campaign Name_ in the Design Portal.
 invalidationReason | Optional custom information.
 
 ## Usage

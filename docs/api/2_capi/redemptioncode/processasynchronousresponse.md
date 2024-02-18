@@ -10,7 +10,7 @@ Parameter | Description
 --------- | -----------
 scanCode | The scan code being redeemed. Required.
 redemptionCodeId | The redemption code id of the redemption code being processed. Required.
-codeType | The type of the scan code. Optional.
+codeType | The type of the scan code. Optional. Corresponds to the _Campaign Name_ in the Design Portal.
 attempt | The applicable attempt number associated with the redemption attempt being processed. Required.
 asyncResponse | Required asynchronous response info, as JSON object, indicating status via success and complete flags, along with applicable, but optional, customRedemptionInfo (JSON object) and/or errorCode (Integer) and errorMsg (String).  Note: A timeout exception is thrown if the max asynchronous processing time (configured for the associated redemption code type) has been exceeded and processing is still in progress (complete: false).
 

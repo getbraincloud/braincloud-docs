@@ -6,8 +6,8 @@ Activate a redemption code for a personal ('single-use') code type. Optional par
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-scanCode | The scan code.
-codeType | The single-use ('personal') code type.
+scanCode | The scan code. Also referred to as a _Promo Code_ in the Design Portal.
+codeType | The single-use ('personal') code type. Corresponds to the _Campaign Name_ in the Design Portal.
 customCodeInfo | Optional custom information.
 
 ## Usage

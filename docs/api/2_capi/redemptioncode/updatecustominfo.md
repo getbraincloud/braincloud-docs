@@ -7,7 +7,7 @@ Update the custom information for a redemption code for a personal ('single-use'
 Parameter | Description
 --------- | -----------
 scanCode | The scan code.
-codeType | The single-use ('personal') code type.
+codeType | The personal ('single-use') code type. Corresponds to the _Campaign Name_ in the Design Portal.
 version | Current version of the redemption code (for concurrency checking.)
 customCodeInfo | Optional custom information.
 

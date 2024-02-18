@@ -6,7 +6,7 @@ Add a new, shared ('multi-use') redemption code type configuration
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-codeType | The unique code type.
+codeType | The unique code type. Corresponds to the _Campaign Name_ in the Design Portal.
 jsonOptions | The multi-use code type configuration options, as JSON object. Required options are 'scanCode', 'validStart', and 'validEnd'. The 'scanCode' option must be unique and not exceed 20 characters. A 'maxRedemptions' of null indicates no limit. The 'customCodeInfo' will be applied to the multi-use codes upon redemption processing. For custom redemption codes, set a valid 'redemptionCodeScriptId' or, if null, the 'redemptionCodeScriptFullPathName' will be checked and, if valid, used to set the applicable script id. The 'async', 'maxRetries' and 'timeout' (in seconds) are only applicable if a valid 'redemptionScriptId' is specified.
 
 ## Usage

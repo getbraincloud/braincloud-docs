@@ -6,7 +6,7 @@ Generates specified quantity of redemption codes for a personal ('single-use') c
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-codeType | The single-use ('personal') code type.
+codeType | The personal ('single-use') code type. Corresponds to the _Campaign Name_ in the Design Portal.
 codeState | Optional. Initial state of the redemption code: 'Inactive' or 'Available'. Defaults to 'Inactive'.
 quantity | The quantity of scan codes to be generated.
 customCodeInfo | Optional custom information, as JSON object.

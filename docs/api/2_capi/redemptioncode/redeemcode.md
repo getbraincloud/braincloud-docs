@@ -189,7 +189,7 @@ Code | Name | Description
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-scanCode | The code to redeem
-codeType | The type of code
+scanCode | The code to redeem. Sometimes referred to as the Promo Code in the Design Portal.
+codeType | The type of code. Corresponds to the _Campaign Name_ in the Design Portal.
 jsonCustomRedemptionInfo | Optional - A JSON string containing custom redemption data
 #
