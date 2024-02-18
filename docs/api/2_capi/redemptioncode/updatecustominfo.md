@@ -1,5 +1,5 @@
 # UpdateCustomInfo
-Update the custom information for a redemption code for a single-use ('personal') code type.
+Update the custom information for a redemption code for a personal ('single-use') code type.
 
 <PartialServop service_name="redemptionCode" operation_name="UPDATE_CUSTOM_INFO" />
 

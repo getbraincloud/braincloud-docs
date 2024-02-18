@@ -1,5 +1,5 @@
 # InvalidateCode
-Invalidate a redemption code for a single-use ('personal') code type.
+Invalidate a redemption code for a personal ('single-use') code type.
 
 <PartialServop service_name="redemptionCode" operation_name="INVALIDATE_CODE" />
 

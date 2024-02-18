@@ -1,5 +1,5 @@
 # ActivateCode
-Activate a redemption code for a single-use ('personal') code type. Optional parameters: customCodeInfo.
+Activate a redemption code for a personal ('single-use') code type. Optional parameters: customCodeInfo.
 
 <PartialServop service_name="redemptionCode" operation_name="ACTIVATE_CODE" />
 

@@ -1,5 +1,5 @@
 # GenerateCodesInline
-Generates specified quantity of redemption codes, for a single-use ('personal') code type, inline. Response indicates list of 'generatedScanCodes' on success.
+Generates specified quantity of redemption codes, for a personal ('single-use') code type, inline. Response indicates list of 'generatedScanCodes' on success.
 
 <PartialServop service_name="redemptionCode" operation_name="GENERATE_CODES_INLINE" />
 

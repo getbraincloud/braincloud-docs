@@ -1,5 +1,5 @@
 # GenerateCodes
-Generates specified quantity of redemption codes for a single-use ('personal') code type.
+Generates specified quantity of redemption codes for a personal ('single-use') code type.
 
 <PartialServop service_name="redemptionCode" operation_name="GENERATE_CODES" />
 

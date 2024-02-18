@@ -1,5 +1,5 @@
 # SysAddMultiUseCodeType
-Add a new, multi-use redemption code type configuration
+Add a new, shared ('multi-use') redemption code type configuration
 
 <PartialServop service_name="redemptionCode" operation_name="SYS_ADD_MULTI_USE_CODE_TYPE" />
 

@@ -1,5 +1,5 @@
 # AddCode
-Add a redemption code for a single-use ('personal') code type. Optional parameters: codeState and customCodeInfo.
+Add a redemption code for a personal ('single-use') code type. Optional parameters: codeState and customCodeInfo.
 
 <PartialServop service_name="redemptionCode" operation_name="ADD_CODE" />
 
