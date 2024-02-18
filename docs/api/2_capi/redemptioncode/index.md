@@ -17,7 +17,7 @@ Note that due to the history of this API - the concept of _Campaign_ in the Desi
 Shared Redemption Codes
 -----------------------
 
-Shared redemption code _types_ (referred to as _Campaigns_ in the portal) can be created via the Design Portal, or programmatically via the <code>[SysAddMultiUseCodeType](/api/capi/redemptioncode/sysaddmultiusercodetype)<code> API call.
+Shared redemption code _types_ (referred to as _Campaigns_ in the portal) can be created via the Design Portal, or programmatically via the <code>[SysAddMultiUseCodeType](/api/capi/redemptioncode/sysaddmultiusercodetype)</code> API call.
 
 Shared Redemption Codes go through a separate instance of the following state machine for each user that attempts to redeem them:
 
