@@ -78,7 +78,7 @@ NSString *algorithmDetailsJson = @"{\"includeCheck\": False}";
 NSString *emailAddress = @"name@domain";
 BCCompletionBlock successBlock; // define callback
 BCErrorCompletionBlock failureBlock; // define callback
-[[<%= data.branding.codePrefix %> redemptionCodeService] GenerateCodes:
+[[<%= data.branding.codePrefix %> redemptionCodeService] generateCodes:
                      codeType:codeType
                     codeState:codeState
                      quantity:quantity
@@ -107,7 +107,7 @@ String algorithmName = "FiveByFive";
 String algorithmDetailsJson = "{\"includeCheck\": False}";
 String emailAddress = "name@domain";
 this; // implements IServerCallback
-<%= data.branding.codePrefix %>.getRedemptioncodeService.GenerateCodes(codeType, codeState, quantity, customCodeInfo, prefix, algorithmName, algorithmDetailsJson, emailAddress, this);
+<%= data.branding.codePrefix %>.getRedemptioncodeService.generateCodes(codeType, codeState, quantity, customCodeInfo, prefix, algorithmName, algorithmDetailsJson, emailAddress, this);
 
 public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
 {
@@ -136,7 +136,7 @@ var algorithmDetailsJson = {
     "includeCheck": false
 };
 var emailAddress = "name@domain";
-<%= data.branding.codePrefix %>.redemptionCode.GenerateCodes(codeType, codeState, quantity, customCodeInfo, prefix, algorithmName, algorithmDetailsJson, emailAddress, result =>
+<%= data.branding.codePrefix %>.redemptionCode.generateCodes(codeType, codeState, quantity, customCodeInfo, prefix, algorithmName, algorithmDetailsJson, emailAddress, result =>
 {
   var status = result.status;
   console.log(status + " : " + JSON.stringify(result, null, 2));
@@ -161,7 +161,7 @@ var algorithmDetailsJson = {
 var emailAddress = "name@domain";
 var redemptionCodeProxy = bridge.getRedemptioncodeServiceProxy();
 
-var postResult = redemptionCodeProxy.GenerateCodes(codeType, codeState, quantity, customCodeInfo, prefix, algorithmName, algorithmDetailsJson, emailAddress);
+var postResult = redemptionCodeProxy.generateCodes(codeType, codeState, quantity, customCodeInfo, prefix, algorithmName, algorithmDetailsJson, emailAddress);
 ```
 
 ```mdx-code-block

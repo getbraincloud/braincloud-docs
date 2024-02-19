@@ -83,7 +83,7 @@ var context = {
 };
 var redemptionCodeProxy = bridge.getRedemptioncodeServiceProxy();
 
-var postResult = redemptionCodeProxy.SysGetCodeTypePage(context);
+var postResult = redemptionCodeProxy.sysGetCodeTypePage(context);
 ```
 
 ```mdx-code-block

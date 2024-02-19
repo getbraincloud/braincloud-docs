@@ -24,7 +24,7 @@ The brainCloud Docs are organized as follows:
 - [**Portal Tutorials**](/learn/portal-tutorials/) - how to use the Design Portal
 - [**SDK Tutorials**](/learn/sdk-tutorials/) - tutorials on various aspects of the API
 - **[Support](/learn/support/)** - answers to frequently asked questions
-- **[Release History](https://getbraincloud.com/apidocs/releases/)** - view the latest platform updates
+- **[Release History](https://updates.braincloudservers.com/)** - view the latest platform updates
 
 _We're continuously improving our documentation - so be sure to check back often.  And if you can't find what you're looking for - don't hesitate to reach out by clicking the green **Help** widget on any of our pages._
 

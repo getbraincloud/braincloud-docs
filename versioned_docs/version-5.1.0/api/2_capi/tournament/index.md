@@ -29,8 +29,6 @@ Once a Leaderboard has a Tournament attached its behavior changes (i.e., you nee
 
 At the end of a Tournament cycle (i.e. period), players are sent a `SYSTEM_TOURNAMENT_COMPLETE` event indicating that the tournament has completed. If there is a reward, the app should [claim it](/api/capi/tournament/claimtournamentreward).
 
-For more information on how *Global Tournaments* work, see [Introducing Global Tournaments](http://getbraincloud.com/apidocs/introducing-global-tournaments/).
-
 For more information on *Events*, see the [Events API](/api/capi/event).
 
 

@@ -74,7 +74,7 @@ NSString *algorithmName = @"FiveByFive";
 NSString *algorithmDetailsJson = @"{\"includeCheck\": False}";
 BCCompletionBlock successBlock; // define callback
 BCErrorCompletionBlock failureBlock; // define callback
-[[<%= data.branding.codePrefix %> redemptionCodeService] GenerateCodesInline:
+[[<%= data.branding.codePrefix %> redemptionCodeService] generateCodesInline:
                      codeType:codeType
                     codeState:codeState
                      quantity:quantity
@@ -101,7 +101,7 @@ String prefix = "";
 String algorithmName = "FiveByFive";
 String algorithmDetailsJson = "{\"includeCheck\": False}";
 this; // implements IServerCallback
-<%= data.branding.codePrefix %>.getRedemptioncodeService.GenerateCodesInline(codeType, codeState, quantity, customCodeInfo, prefix, algorithmName, algorithmDetailsJson, this);
+<%= data.branding.codePrefix %>.getRedemptioncodeService.generateCodesInline(codeType, codeState, quantity, customCodeInfo, prefix, algorithmName, algorithmDetailsJson, this);
 
 public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
 {
@@ -129,7 +129,7 @@ var algorithmName = "FiveByFive";
 var algorithmDetailsJson = {
     "includeCheck": false
 };
-<%= data.branding.codePrefix %>.redemptionCode.GenerateCodesInline(codeType, codeState, quantity, customCodeInfo, prefix, algorithmName, algorithmDetailsJson, result =>
+<%= data.branding.codePrefix %>.redemptionCode.generateCodesInline(codeType, codeState, quantity, customCodeInfo, prefix, algorithmName, algorithmDetailsJson, result =>
 {
   var status = result.status;
   console.log(status + " : " + JSON.stringify(result, null, 2));
@@ -153,7 +153,7 @@ var algorithmDetailsJson = {
 };
 var redemptionCodeProxy = bridge.getRedemptioncodeServiceProxy();
 
-var postResult = redemptionCodeProxy.GenerateCodesInline(codeType, codeState, quantity, customCodeInfo, prefix, algorithmName, algorithmDetailsJson);
+var postResult = redemptionCodeProxy.generateCodesInline(codeType, codeState, quantity, customCodeInfo, prefix, algorithmName, algorithmDetailsJson);
 ```
 
 ```mdx-code-block

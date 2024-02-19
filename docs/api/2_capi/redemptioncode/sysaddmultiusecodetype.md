@@ -80,7 +80,7 @@ var jsonOptions = {
 };
 var redemptionCodeProxy = bridge.getRedemptioncodeServiceProxy();
 
-var postResult = redemptionCodeProxy.SysAddMultiUseCodeType(codeType, jsonOptions);
+var postResult = redemptionCodeProxy.sysAddMultiUseCodeType(codeType, jsonOptions);
 ```
 
 ```mdx-code-block
