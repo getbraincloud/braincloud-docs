@@ -86,7 +86,7 @@ The Global Entity service contains a subset API for dealing with *System Entitie
 
 
 
-For more information on how <%= data.branding.productName %> organizes data, refer to the [Cloud Data Overview](http://getbraincloud.com/apidocs/api-modules/data/).
+For more information on how <%= data.branding.productName %> organizes data, refer to the [Cloud Data Overview](/learn/key-concepts/data/).
 
 
 

@@ -32,7 +32,7 @@ Existing GlobalEntities can be converted to SystemEntities using [MakeSystemEnti
 * [GetSystemEntityPageOffset](/api/s2s/globalentity/getsystementitypageoffset) - Gets the page of entities from the server based on the encoded context and specified page offset.
 
 
-For more information on how <%= data.branding.productName %> organizes data, refer to the [Cloud Data Overview](http://getbraincloud.com/apidocs/api-modules/data/).
+For more information on how <%= data.branding.productName %> organizes data, refer to the [Cloud Data Overview](/learn/key-concepts/data/).
 
 
 

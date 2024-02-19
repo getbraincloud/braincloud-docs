@@ -58,7 +58,7 @@ User Entity methods are organized into the following categories:
 * [GetSharedEntitiesListForProfileId](/api/capi/entity/getsharedentitieslistforprofileid)
 * [UpdateSharedEntity](/api/capi/entity/updatesharedentity)
 
-For more information on how <%= data.branding.productName %> organizes data, refer to the [Cloud Data Overview](http://getbraincloud.com/apidocs/api-modules/data/).
+For more information on how <%= data.branding.productName %> organizes data, refer to the [Cloud Data Overview](/learn/key-concepts/data/).
 
 
 
