@@ -67,7 +67,7 @@ var context = "eyJzZWFyY2hDcml0ZXJpYSI6eyJlbnRpdHlUeXBlIjp7IiRyZWdleCI6Ii4qaWxkL
 var pageOffset = 1;
 var redemptionCodeProxy = bridge.getRedemptioncodeServiceProxy();
 
-var postResult = redemptionCodeProxy.SysGetCodeTypePageOffset(context, pageOffset);
+var postResult = redemptionCodeProxy.sysGetCodeTypePageOffset(context, pageOffset);
 ```
 
 ```mdx-code-block

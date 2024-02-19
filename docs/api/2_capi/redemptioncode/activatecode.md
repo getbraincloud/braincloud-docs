@@ -58,7 +58,7 @@ NSString *codeType = @"the-code-type";
 NSString *customCodeInfo = @"{}";
 BCCompletionBlock successBlock; // define callback
 BCErrorCompletionBlock failureBlock; // define callback
-[[<%= data.branding.codePrefix %> redemptionCodeService] ActivateCode:
+[[<%= data.branding.codePrefix %> redemptionCodeService] activateCode:
                      scanCode:scanCode
                      codeType:codeType
                customCodeInfo:customCodeInfo
@@ -77,7 +77,7 @@ String scanCode = "the-scan-code";
 String codeType = "the-code-type";
 String customCodeInfo = "{}";
 this; // implements IServerCallback
-<%= data.branding.codePrefix %>.getRedemptioncodeService.ActivateCode(scanCode, codeType, customCodeInfo, this);
+<%= data.branding.codePrefix %>.getRedemptioncodeService.activateCode(scanCode, codeType, customCodeInfo, this);
 
 public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
 {
@@ -99,7 +99,7 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 var scanCode = "the-scan-code";
 var codeType = "the-code-type";
 var customCodeInfo = {};
-<%= data.branding.codePrefix %>.redemptionCode.ActivateCode(scanCode, codeType, customCodeInfo, result =>
+<%= data.branding.codePrefix %>.redemptionCode.activateCode(scanCode, codeType, customCodeInfo, result =>
 {
   var status = result.status;
   console.log(status + " : " + JSON.stringify(result, null, 2));
@@ -117,7 +117,7 @@ var codeType = "the-code-type";
 var customCodeInfo = {};
 var redemptionCodeProxy = bridge.getRedemptioncodeServiceProxy();
 
-var postResult = redemptionCodeProxy.ActivateCode(scanCode, codeType, customCodeInfo);
+var postResult = redemptionCodeProxy.activateCode(scanCode, codeType, customCodeInfo);
 ```
 
 ```mdx-code-block

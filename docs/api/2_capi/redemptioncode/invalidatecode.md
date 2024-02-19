@@ -58,7 +58,7 @@ NSString *codeType = @"the-code-type";
 NSString *invalidationReason = @"Redemption code no longer valid.";
 BCCompletionBlock successBlock; // define callback
 BCErrorCompletionBlock failureBlock; // define callback
-[[<%= data.branding.codePrefix %> redemptionCodeService] InvalidateCode:
+[[<%= data.branding.codePrefix %> redemptionCodeService] invalidateCode:
                      scanCode:scanCode
                      codeType:codeType
            invalidationReason:invalidationReason
@@ -77,7 +77,7 @@ String scanCode = "the-scan-code";
 String codeType = "the-code-type";
 String invalidationReason = "Redemption code no longer valid.";
 this; // implements IServerCallback
-<%= data.branding.codePrefix %>.getRedemptioncodeService.InvalidateCode(scanCode, codeType, invalidationReason, this);
+<%= data.branding.codePrefix %>.getRedemptioncodeService.invalidateCode(scanCode, codeType, invalidationReason, this);
 
 public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
 {
@@ -99,7 +99,7 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 var scanCode = "the-scan-code";
 var codeType = "the-code-type";
 var invalidationReason = "Redemption code no longer valid.";
-<%= data.branding.codePrefix %>.redemptionCode.InvalidateCode(scanCode, codeType, invalidationReason, result =>
+<%= data.branding.codePrefix %>.redemptionCode.invalidateCode(scanCode, codeType, invalidationReason, result =>
 {
   var status = result.status;
   console.log(status + " : " + JSON.stringify(result, null, 2));
@@ -117,7 +117,7 @@ var codeType = "the-code-type";
 var invalidationReason = "Redemption code no longer valid.";
 var redemptionCodeProxy = bridge.getRedemptioncodeServiceProxy();
 
-var postResult = redemptionCodeProxy.InvalidateCode(scanCode, codeType, invalidationReason);
+var postResult = redemptionCodeProxy.invalidateCode(scanCode, codeType, invalidationReason);
 ```
 
 ```mdx-code-block

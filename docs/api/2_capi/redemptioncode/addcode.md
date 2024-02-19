@@ -62,7 +62,7 @@ NSString *codeState = @"Available";
 NSString *customCodeInfo = @"{}";
 BCCompletionBlock successBlock; // define callback
 BCErrorCompletionBlock failureBlock; // define callback
-[[<%= data.branding.codePrefix %> redemptionCodeService] AddCode:
+[[<%= data.branding.codePrefix %> redemptionCodeService] addCode:
                      scanCode:scanCode
                      codeType:codeType
                     codeState:codeState
@@ -83,7 +83,7 @@ String codeType = "the_code_type";
 String codeState = "Available";
 String customCodeInfo = "{}";
 this; // implements IServerCallback
-<%= data.branding.codePrefix %>.getRedemptioncodeService.AddCode(scanCode, codeType, codeState, customCodeInfo, this);
+<%= data.branding.codePrefix %>.getRedemptioncodeService.addCode(scanCode, codeType, codeState, customCodeInfo, this);
 
 public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
 {
@@ -106,7 +106,7 @@ var scanCode = "a_scan_code";
 var codeType = "the_code_type";
 var codeState = "Available";
 var customCodeInfo = {};
-<%= data.branding.codePrefix %>.redemptionCode.AddCode(scanCode, codeType, codeState, customCodeInfo, result =>
+<%= data.branding.codePrefix %>.redemptionCode.addCode(scanCode, codeType, codeState, customCodeInfo, result =>
 {
   var status = result.status;
   console.log(status + " : " + JSON.stringify(result, null, 2));
@@ -125,7 +125,7 @@ var codeState = "Available";
 var customCodeInfo = {};
 var redemptionCodeProxy = bridge.getRedemptioncodeServiceProxy();
 
-var postResult = redemptionCodeProxy.AddCode(scanCode, codeType, codeState, customCodeInfo);
+var postResult = redemptionCodeProxy.addCode(scanCode, codeType, codeState, customCodeInfo);
 ```
 
 ```mdx-code-block
