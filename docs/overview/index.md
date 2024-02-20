@@ -15,8 +15,8 @@ brainCloud has a very broad feature-set, you can use as much or as little of it
 The brainCloud Docs are organized as follows:
 
 - [**Introduction**](/learn/introduction/) - introduces the key concepts that are important to understanding the workings and organization of the APIs
-- [**Key Concepts**](/learn/api-reference/) - key concepts that programmers will need to understand
-- [**API Reference**](/api/capi/authentication) - usage details for the API methods themselves (now in a separate [doc!](/api/introduction))
+- [**Key Concepts**](/learn/key-concepts/) - key concepts that programmers will need to understand
+- [**API Reference**](/api/introduction) - usage details for the API methods themselves <-- KEY DOC!
 - [**Client Libraries**](/learn/client-libraries/) - links to the client libs
 - [**Cloud Code Central**](/learn/cloud-code-central/) - cloud code tips and examples
 - [**Portal Tutorials**](/learn/portal-tutorials/) - how to use the Design Portal
