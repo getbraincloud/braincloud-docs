@@ -130,7 +130,7 @@ A JSON map with the following fields should be returned by the script.
 
 For the initial call of the script (with the "redeem" `operation`) the script should return these values in a map.
 
-For the subsequent calls of the script (with "async" `operation`) the script passes these results to the redemption code service via the `processAsynchronousResponse()` call.  The map is passed in as the `asynceResponse` parameter to the call.
+For the subsequent calls of the script (with "async" `operation`) the script passes these results to the redemption code service via the `processAsynchronousResponse()` call.  The map is passed in as the `asyncResponse` parameter to the call.
 
 Parameter | Description
 --------- | -----------
