@@ -1,6 +1,6 @@
 # Redemption Code
 
-A redemption is a special code that gives the user that redeems it additional benefits within an app.  Codes may be digital-only, or printed upon physical cards and sold separately at retail. A user redeems them by entering them on a special screen in the app.
+A Redemption Code is the alphanumeric code found on gift certificates, promotional coupons or other promotional offers that are used to obtain a benefit. Codes may be digital-only or printed upon physical cards and sold separately at retail. A user redeems them by entering the code into a special screen of the app.
 
 <%= data.branding.productName %>'s Redemption Code feature supports two very different mechanisms for redemption codes:
 
@@ -11,6 +11,13 @@ A redemption is a special code that gives the user that redeems it additional be
 ### Terminology
 
 Note that due to the history of this API - the concept of _Campaign_ in the Design Portal is referred to as `codeType` _field_ in the API. There is also a  `codeUseType` field that represents the difference between Personal campaigns (`codeUseType: "SINGLE"`) and Shared campaigns (`codeUseType: "MULTI"`).
+
+API Term | Portal Term
+-------- | -----------
+codeType | Campaign
+scanCode | Promo Code
+SINGLE codeUseType | Personal Code
+MULTI codeUseType | Shared Code
 
 
 ## Shared Redemption Codes
@@ -80,13 +87,15 @@ The following parameters are sent in the `data` map as parameters to _synchronou
 Parameter | Description
 --------- | -----------
 scanCode | The code being redeemed. Sometimes referred to as the Promo code.
-operation | Should always be "redeem" for asynchronous scripts. <- Can be used to confirm that things are configured correctly!
+operation | Should always be "redeem" for asynchronous scripts.
 attempt   | The 0-based counter of the current attempt. Will be zero unless retries are allowed. 
 async | Will be `false` for asynchronous scripts. <- Can be used to confirm that things are configured correctly!
 codeType | Corresponds to the _Campaign Name_ in the Design Portal.
 codeUseType | "MULTI" if this is a Shared (multi-use) Code, and "SINGLE" if it is a Personal (single-use) code
 customCodeInfo | The _Code Info JSON_ configured against the code. Normally contains the JSON data indicating what the rewards for redeeming this code should be.
 customRedemptionInfo | Information that is gathered as part of the process of redeeming the code. This is for the script to write. For aynchronous script, this field will contain what previous invocations of the script have placed there.
+
+#### Synchronous Script Return Values
 
 A JSON map with the following fields should be _returned_ by the script.
 
@@ -106,8 +115,8 @@ The following parameters are sent in the `data` map as parameters to _asynchrono
 Parameter | Description
 --------- | -----------
 scanCode | The code being redeemed. Sometimes referred to as the Promo code.
-redemptionCodeId | A unique internal id for the code being redeemed <-- Warning - currently not sent for Synchronous scripts!
-operation | Should always be "async" for asynchronous scripts. <- Can be used to confirm that things are configured correctly!
+operation | Will be "redeem" the first time the script is called - and "async" for each subsequent poll of the script. 
+redemptionCodeId | A unique internal id for the code being redeemed <-- Warning - only sent when the operation is "async"
 attempt   | The 0-based counter of the current attempt. Will be zero unless retries are allowed. 
 async | Will be `true` for asynchronous scripts. <- Can be used to confirm that things are configured correctly!
 codeType | Corresponds to the _Campaign Name_ in the Design Portal.
@@ -115,7 +124,13 @@ codeUseType | "MULTI" if this is a Shared (multi-use) Code, and "SINGLE" if it i
 customCodeInfo | The _Code Info JSON_ configured against the code. Normally contains the JSON data indicating what the rewards for redeeming this code should be.
 customRedemptionInfo | Information that is gathered as part of the process of redeeming the code. This is for the script to write. For aynchronous script, this field will contain what previous invocations of the script have placed there.
 
-A JSON map with the following fields should be returned by the script.
+#### Asynchronous Script Return Values
+
+A JSON map with the following fields should be returned by the script.  
+
+For the initial call of the script (with the "redeem" `operation`) the script should return these values in a map.
+
+For the subsequent calls of the script (with "async" `operation`) the script passes these results to the redemption code service via the `processAsynchronousResponse()` call.  The map is passed in as the `asynceResponse` parameter to the call.
 
 Parameter | Description
 --------- | -----------
