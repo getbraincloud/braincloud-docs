@@ -1,6 +1,6 @@
 # Introduction
 
-![bc tech stack](@site/docs/img/learn-img/BrainCloud-architecture-boxes.png)
+![bc tech stack](@site/docs/img/learn-img/braincloud-api-sets-2023.png)
 
 #### What is <%= data.branding.productName %>?
 
