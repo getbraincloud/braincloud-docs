@@ -176,7 +176,7 @@ const config = {
       },
       announcementBar: {
         id: 'announcementBar-2', // Increment on change
-        content: `⭐️ Subscribe to brainCloud service on <a target="_blank" rel="noopener noreferrer" href="https://portal.braincloudservers.com/login#/development">brainCloud portal</a>`,
+        content: `⭐️ Create a <a target="_blank" rel="noopener noreferrer" href="https://portalx.braincloudservers.com/?signup=true">free account</a> or log into your <a target="_blank" rel="noopener noreferrer" href="https://portalx.braincloudservers.com/">existing account</a>. ⭐️`,
       },
       navbar: {
         // title: 'brainCloud Docs',
