@@ -1,6 +1,8 @@
 # RedeemCode
 
-Redeem a code.
+Redeem a code. 
+
+_Note that if the optional `codeType` is not provided, the system assumes that codes <= 20 characters are shared ('multi-use') codes - while codes >= 25 characters are personal ('single-use') codes._
 
 <PartialServop service_name="redemptionCode" operation_name="REDEEM_CODE" />
 
@@ -187,7 +189,7 @@ Code | Name | Description
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-scanCode | The code to redeem
-codeType | The type of code
+scanCode | The code to redeem. Sometimes referred to as the Promo Code in the Design Portal.
+codeType | The type of code. Corresponds to the _Campaign Name_ in the Design Portal.
 jsonCustomRedemptionInfo | Optional - A JSON string containing custom redemption data
 #

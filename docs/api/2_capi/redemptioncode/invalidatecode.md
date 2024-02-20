@@ -1,7 +1,5 @@
 # InvalidateCode
-
-Invalidate a redemption code.
-
+Invalidate a redemption code for a personal ('single-use') code type.
 
 <PartialServop service_name="redemptionCode" operation_name="INVALIDATE_CODE" />
 
@@ -9,7 +7,7 @@ Invalidate a redemption code.
 Parameter | Description
 --------- | -----------
 scanCode | The scan code.
-codeType | The code type.
+codeType | The personal ('single-use') code type. Corresponds to the _Campaign Name_ in the Design Portal.
 invalidationReason | Optional custom information.
 
 ## Usage
@@ -24,16 +22,17 @@ invalidationReason | Optional custom information.
 string scanCode = "the-scan-code";
 string codeType = "the-code-type";
 string invalidationReason = "Redemption code no longer valid.";
+
 SuccessCallback successCallback = (response, cbObject) =>
 {
-  Debug.Log(string.Format("Success | {0}", response));
+    Debug.Log(string.Format("Success | {0}", response));
 };
 FailureCallback failureCallback = (status, code, error, cbObject) =>
 {
-  Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
+    Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
 };
 
-<%= data.branding.codePrefix %>.RedemptionCodeService.InvalidateCode(scanCode, codeType, invalidationReason, successCallback, failureCallback);
+<%= data.branding.codePrefix %>.RedemptioncodeService.InvalidateCode(scanCode, codeType, invalidationReason, successCallback, failureCallback);
 ```
 
 ```mdx-code-block
@@ -45,8 +44,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 const char *scanCode = "the-scan-code";
 const char *codeType = "the-code-type";
 const char *invalidationReason = "Redemption code no longer valid.";
-
-<%= data.branding.codePrefix %>->getRedemptionCodeService()->invalidateCode(scanCode, codeType, invalidationReason, this);
+<%= data.branding.codePrefix %>.getRedemptioncodeService().invalidateCode(scanCode, codeType, invalidationReason, this);
 ```
 
 ```mdx-code-block
@@ -58,15 +56,15 @@ const char *invalidationReason = "Redemption code no longer valid.";
 NSString *scanCode = @"the-scan-code";
 NSString *codeType = @"the-code-type";
 NSString *invalidationReason = @"Redemption code no longer valid.";
-BCCompletionBlock successBlock;      // define callback
+BCCompletionBlock successBlock; // define callback
 BCErrorCompletionBlock failureBlock; // define callback
-
-[[<%= data.branding.codePrefix %> redemptionCodeService] invalidateCode:scanCode
-                      codeType:codeType
-            invalidationReason:invalidationReason
-               completionBlock:successBlock
-          errorCompletionBlock:failureBlock
-                      cbObject:nil];
+[[<%= data.branding.codePrefix %> redemptionCodeService] invalidateCode:
+                     scanCode:scanCode
+                     codeType:codeType
+           invalidationReason:invalidationReason
+              completionBlock:successBlock
+         errorCompletionBlock:failureBlock
+                     cbObject:nil]
 ```
 
 ```mdx-code-block
@@ -79,17 +77,17 @@ String scanCode = "the-scan-code";
 String codeType = "the-code-type";
 String invalidationReason = "Redemption code no longer valid.";
 this; // implements IServerCallback
-
-<%= data.branding.codePrefix %>.getRedemptionCodeService().invalidateCode(scanCode, codeType, invalidationReason, this);
+<%= data.branding.codePrefix %>.getRedemptioncodeService.invalidateCode(scanCode, codeType, invalidationReason, this);
 
 public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
 {
-  System.out.print(String.format("Success | %s", jsonData.toString()));
+    System.out.print(String.format("Success | %s", jsonData.toString()));
 }
 public void serverError(ServiceName serviceName, ServiceOperation serviceOperation, int statusCode, int reasonCode, String jsonError)
 {
-  System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
+    System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
 }
+
 ```
 
 ```mdx-code-block
@@ -101,7 +99,6 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 var scanCode = "the-scan-code";
 var codeType = "the-code-type";
 var invalidationReason = "Redemption code no longer valid.";
-
 <%= data.branding.codePrefix %>.redemptionCode.invalidateCode(scanCode, codeType, invalidationReason, result =>
 {
   var status = result.status;
@@ -118,12 +115,9 @@ var invalidationReason = "Redemption code no longer valid.";
 var scanCode = "the-scan-code";
 var codeType = "the-code-type";
 var invalidationReason = "Redemption code no longer valid.";
-var redemptionCodeProxy = bridge.getRedemptionCodeServiceProxy();
+var redemptionCodeProxy = bridge.getRedemptioncodeServiceProxy();
 
 var postResult = redemptionCodeProxy.invalidateCode(scanCode, codeType, invalidationReason);
-if (postResult.status == 200) {
-  // Success!
-}
 ```
 
 ```mdx-code-block
@@ -133,14 +127,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-  "service": "redemptionCode",
-  "operation": "INVALIDATE_CODE",
-  "data":
-  {
-    "scanCode": "the-scan-code",
-    "codeType": "the-code-type",
-    "invalidationReason": "Redemption code no longer valid."
-  }
+    "service":"redemptionCode",
+    "operation":"INVALIDATE_CODE",
+    "data":{
+        "scanCode":"the-scan-code",
+        "codeType":"the-code-type",
+        "invalidationReason":"Redemption code no longer valid."
+    }
 }
 ```
 
@@ -149,7 +142,6 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
 <details>
 <summary>JSON Response</summary>
 
@@ -191,5 +183,4 @@ Code | Name | Description
 40755 | REDEMPTION_CODE_TYPE_MISMATCH | Redemption code's code type does not match specified code type
 
 </details>
-
 

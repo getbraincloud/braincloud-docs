@@ -3,7 +3,9 @@
 Authenticate the user via cloud code (which in turn validates the supplied credentials against an external system).
 This allows the developer to extend <%= data.branding.productName %> authentication to support other backend authentication systems.
 
-
+:::info
+Refer to the provided link for further information on the usage of [AuthenticateExternal](/learn/key-concepts/authentication/external-authentication/)
+:::
 
 :::caution
 Make sure you've initialized the <%= data.branding.productName %> wrapper before authenticating.

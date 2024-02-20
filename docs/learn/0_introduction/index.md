@@ -35,17 +35,16 @@ There are custom brainCloud libraries for:
 - **C#** - for Unity and .Net developers
 - **C++** - for platform-native apps, on iOS Android, Windows, etc.
 - **JS** - for web-based JavaScript apps
-- **AS3** - for Flash-based ActionScript apps
 - **Java** - for Java-based and native Android apps
-- **Objective-C** - for native Mac and iOS apps
+- **Objective-C** / **Swift** - for native Mac and iOS apps
 
 ## Engine Support
 
 brainCloud supports the most popular gaming engines, including:
 
 - **Unity** - brainCloud provides C# libraries, examples and tutorials for integration with Unity
-- **Unreal** - we have support for the latest versions of the Unreal Engine
-- **Cocos2d-x** - Cocos is supported natively using the C++ libraries
+- **Unreal** - brainCloud provides C++ and Blueprint libraries, examples and tutorials for the latest versions of the Unreal Engine
+- **Godot** - brainCloud now supports Godot via our C# libraries
 
 ## Understanding the APIs
 

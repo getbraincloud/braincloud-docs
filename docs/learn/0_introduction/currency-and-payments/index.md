@@ -10,4 +10,4 @@ brainCloud provides rich support for Free-to-Play Monetization, including:
 - **Pricing** - brainCloud supports multiple price-points per product, with linkages to the pricing entries in the various platform app stores. This allows for pricing across all platforms to be centrally controlled and changed with a "click".
 - **Promotions** - brainCloud also provides a robust Promotions API, which can allow product management to dynamically apply promotion pricing according to established schedules or via advanced targeting of player segments
 
-[![brainCloud](images/brainCloud_dashboard_product.jpg)](images/brainCloud_dashboard_product.jpg)
+[![brainCloud](images/brainCloud_dashboard_product.png)](images/brainCloud_dashboard_product.png)

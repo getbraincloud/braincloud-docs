@@ -26,6 +26,7 @@ Code | Description
 40215 | <font size="-1">DATABASE_ERROR </font><br/> The MongoDB database returned an error. This often indicates a problem with a developer-defined key being stored in JSON. Note that MongoDB does not allow $ in keys.  It is best to avoid periods (.) in keys as well.
 40216 | <font size="-1">PROPERTY_NOT_OVERRIDEABLE </font><br/>
 40217 | <font size="-1">UNKNOWN_AUTH_ERROR </font><br/> An unknown error occurred during authentication
+40221 | <font size="-1">EMAIL_NOT_VALID </font><br/> The email address is not in the correct format.
 40300 | <font size="-1">UNABLE_TO_GET_FRIENDS_FROM_FACEBOOK </font><br/> Unused
 40301 | <font size="-1">BAD_SIGNATURE </font><br/> The <%= data.branding.productName %> library was initialized with an incorrect secret.
 40302 | <font size="-1">UNABLE_TO_VALIDATE_USER </font><br/> Occurs when unable to validate user with a 3rd party server (e.g. Facebook)

@@ -1,15 +1,13 @@
 # AddCode
-
-Add a redemption code. Optional parameters: codeState and customCodeInfo.
-
+Add a redemption code for a personal ('single-use') code type. Optional parameters: codeState and customCodeInfo.
 
 <PartialServop service_name="redemptionCode" operation_name="ADD_CODE" />
 
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-scanCode | A scan code.
-codeType | The code type.
+scanCode | A scan code (also referred to as a _Promo Code_). Warning: If the scanCode added is less than 25 characters, the optional codeType must be specified in order to redeem it.
+codeType | The personal ('single-use') code type. Corresponds to the _Campaign Name_ in the Design Portal.
 codeState | Initial state of the redemption code.
 customCodeInfo | Optional custom information.
 
@@ -22,20 +20,21 @@ customCodeInfo | Optional custom information.
 ```
 
 ```csharp
-string scanCode = "a-scan-code";
-string codeType = "the-code-type";
+string scanCode = "a_scan_code";
+string codeType = "the_code_type";
 string codeState = "Available";
 string customCodeInfo = "{}";
+
 SuccessCallback successCallback = (response, cbObject) =>
 {
-  Debug.Log(string.Format("Success | {0}", response));
+    Debug.Log(string.Format("Success | {0}", response));
 };
 FailureCallback failureCallback = (status, code, error, cbObject) =>
 {
-  Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
+    Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
 };
 
-<%= data.branding.codePrefix %>.RedemptionCodeService.AddCode(scanCode, codeType, codeState, customCodeInfo, successCallback, failureCallback);
+<%= data.branding.codePrefix %>.RedemptioncodeService.AddCode(scanCode, codeType, codeState, customCodeInfo, successCallback, failureCallback);
 ```
 
 ```mdx-code-block
@@ -44,12 +43,11 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 ```
 
 ```cpp
-const char *scanCode = "a-scan-code";
-const char *codeType = "the-code-type";
+const char *scanCode = "a_scan_code";
+const char *codeType = "the_code_type";
 const char *codeState = "Available";
 const char *customCodeInfo = "{}";
-
-<%= data.branding.codePrefix %>->getRedemptionCodeService()->addCode(scanCode, codeType, codeState, customCodeInfo, this);
+<%= data.branding.codePrefix %>.getRedemptioncodeService().addCode(scanCode, codeType, codeState, customCodeInfo, this);
 ```
 
 ```mdx-code-block
@@ -58,20 +56,20 @@ const char *customCodeInfo = "{}";
 ```
 
 ```objectivec
-NSString *scanCode = @"a-scan-code";
-NSString *codeType = @"the-code-type";
+NSString *scanCode = @"a_scan_code";
+NSString *codeType = @"the_code_type";
 NSString *codeState = @"Available";
-NSString *customCodeInfo = "{}";
-BCCompletionBlock successBlock;      // define callback
+NSString *customCodeInfo = @"{}";
+BCCompletionBlock successBlock; // define callback
 BCErrorCompletionBlock failureBlock; // define callback
-
-[[<%= data.branding.codePrefix %> redemptionCodeService] addCode:scanCode
-                      codeType:codeType
-                     codeState:codeState
-                customCodeInfo:customCodeInfo
-               completionBlock:successBlock
-          errorCompletionBlock:failureBlock
-                      cbObject:nil];
+[[<%= data.branding.codePrefix %> redemptionCodeService] addCode:
+                     scanCode:scanCode
+                     codeType:codeType
+                    codeState:codeState
+               customCodeInfo:customCodeInfo
+              completionBlock:successBlock
+         errorCompletionBlock:failureBlock
+                     cbObject:nil]
 ```
 
 ```mdx-code-block
@@ -80,22 +78,22 @@ BCErrorCompletionBlock failureBlock; // define callback
 ```
 
 ```java
-String scanCode = "a-scan-code";
-String codeType = "the-code-type";
+String scanCode = "a_scan_code";
+String codeType = "the_code_type";
 String codeState = "Available";
 String customCodeInfo = "{}";
 this; // implements IServerCallback
-
-<%= data.branding.codePrefix %>.getRedemptionCodeService().addCode(scanCode, codeType, codeState, customCodeInfo, this);
+<%= data.branding.codePrefix %>.getRedemptioncodeService.addCode(scanCode, codeType, codeState, customCodeInfo, this);
 
 public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
 {
-  System.out.print(String.format("Success | %s", jsonData.toString()));
+    System.out.print(String.format("Success | %s", jsonData.toString()));
 }
 public void serverError(ServiceName serviceName, ServiceOperation serviceOperation, int statusCode, int reasonCode, String jsonError)
 {
-  System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
+    System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
 }
+
 ```
 
 ```mdx-code-block
@@ -104,11 +102,10 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 ```
 
 ```javascript
-var scanCode = "a-scan-code";
-var codeType = "the-code-type";
+var scanCode = "a_scan_code";
+var codeType = "the_code_type";
 var codeState = "Available";
 var customCodeInfo = {};
-
 <%= data.branding.codePrefix %>.redemptionCode.addCode(scanCode, codeType, codeState, customCodeInfo, result =>
 {
   var status = result.status;
@@ -122,16 +119,13 @@ var customCodeInfo = {};
 ```
 
 ```cfscript
-var scanCode = "a-scan-code";
-var codeType = "the-code-type";
+var scanCode = "a_scan_code";
+var codeType = "the_code_type";
 var codeState = "Available";
 var customCodeInfo = {};
-var redemptionCodeProxy = bridge.getRedemptionCodeServiceProxy();
+var redemptionCodeProxy = bridge.getRedemptioncodeServiceProxy();
 
 var postResult = redemptionCodeProxy.addCode(scanCode, codeType, codeState, customCodeInfo);
-if (postResult.status == 200) {
-  // Success!
-}
 ```
 
 ```mdx-code-block
@@ -141,15 +135,14 @@ if (postResult.status == 200) {
 
 ```r
 {
-  "service": "redemptionCode",
-  "operation": "ADD_CODE",
-  "data":
-  {
-    "scanCode": "a-scan-code",
-    "codeType": "the-code-type",
-    "codeState": "Available",
-    "customCodeInfo": {}
-  }
+    "service":"redemptionCode",
+    "operation":"ADD_CODE",
+    "data":{
+        "scanCode":"a_scan_code",
+        "codeType":"the_code_type",
+        "codeState":"Available",
+        "customCodeInfo":{}
+    }
 }
 ```
 
@@ -158,7 +151,6 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
 <details>
 <summary>JSON Response</summary>
 
@@ -197,5 +189,4 @@ Code | Name | Description
 40753 | REDEMPTION_CODE_TYPE_DISABLED | Invalid code. Redemption code type has been disabled
 
 </details>
-
 
