@@ -3,36 +3,66 @@ title: "Key Concepts"
 date: "2014-09-08"
 ---
 
-![brainCloud Architecture](images/BrainCloud-architecture-boxes.jpg)
+![brainCloud Architecture](images/braincloud-api-sets-2023.png)
 
-The API documentation is organized by topic:
+brainCloud has APIs for ~50 services. This section provides a quick overview of _important concepts_ - but certainly does not cover everything! 
 
+- [**Authentication**](/learn/key-concepts/authentication)
+- [**Cloud Code**](/learn/key-concepts/cloud-code)
+- [**Data**](/learn/key-concepts/data)
+- [**Gamification**](/learn/key-concepts/gamification)
+- [**Monetization**](/learn/key-concepts/monetization)
+- [**Multiplayer**](/learn/key-concepts/multiplayer)
+
+For the full details on each service (_see list below_), refer to the [**API Reference**](/api/introduction).
+
+- App Store
+- Async Match
 - Authentication
-- Player Statistics
+- Blockchain
+- Chat
+- Client
+- Custom Entity
+- Data Stream
+- Entity
+- Event
+- File
+- Friend
+- Gamification - includes XP, Achievements, Milestones, & Quests
+- Global App
+- Global Entity
+- Global File
 - Global Statistics
-- Deep Entity
-- Shared Data
-- Player XP
-- Achievements
-- Milestones
-- Leaderboards
-- Match-making
-- Async Turn-by-turn multiplayer
-- One-way Offline Multiplayer
-- Cloud Code
-- Events
+- Group
+- Group File
+- Identity
+- Item Catalog
+- Leaderboard
+- Lobby
+- Mail
+- Matchmaking
+- Messaging
+- One-Way Match
+- Playback Stream
+- Player State
+- Player Statistics
+- Player Statistics Event
+- Presence
+- Product
+- Product Management
+- Profanity
+- Promotions
 - Push Notifications
-- Virtual Currencies
-- Products and Payments  
-
-You'll find that each API has
-
-- C# - for C# examples that work from Unity
-- C++ - for C++ examples, relevant for platform-native and especially Cocos2d-x projects on iOS, Android, Windows, etc.
-- JS - for web-based JavaScript example code
-- AS - for Flash-based ActionScript API examples
-- Java - for Java-based versions of the API
-- CC - for Cloud Code versions fo the API
-
+- Redemption Code
+- Relay
+- RTT
+- S3 Handling
+- Script
+- Segment
+- Time
+- Tournament
+- User
+- User Items
+- Virtual Currency
 
 <DocCardList />
