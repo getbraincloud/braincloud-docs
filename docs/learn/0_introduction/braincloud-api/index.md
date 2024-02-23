@@ -3,11 +3,9 @@ title: "brainCloud API"
 date: "2015-02-06"
 ---
 
-[![brainCloud API Architecture](images/BrainCloud-architecture-boxes.jpg)](images/BrainCloud-architecture-boxes.jpg)
-
 The brainCloud API is implemented as a REST-like protocol for communicating with the brainCloud servers.
 
-brainCloud provides libraries, written in a number of languages, that hide the details of the REST mechanism as well as organize the API into separate functional modules. The libraries can be [downloaded](https://portal.braincloudservers.com/admin/dashboard#/support/libs) from the brainCloud Portal.
+brainCloud provides libraries, written in a number of languages, that hide the details of the REST mechanism as well as organize the API into separate functional modules. The libraries can be [downloaded](/learn/client-libraries) from the brainCloud website.
 
 While the client libraries provide a standard API in the form of classes and methods to make the server requests, the server responses are served up to callback objects passed into the methods as JSON formatted strings. These strings must be parsed by the client application code.
 
