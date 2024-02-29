@@ -16,7 +16,7 @@ Topics covered include:
 ```mdx-code-block
 <div className="video-container">
   <LiteYouTubeEmbed
-    id="YSpIewn7QCc"
+    id="G_gq61UseG0"
     params="autoplay=1&autohide=1&showinfo=0&rel=0"
     title="brainCloud bootcamp: Authentication overview"
     poster="maxresdefault"
