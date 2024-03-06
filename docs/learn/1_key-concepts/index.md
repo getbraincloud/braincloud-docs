@@ -3,7 +3,7 @@ title: "Key Concepts"
 date: "2014-09-08"
 ---
 
-![brainCloud Architecture](images/braincloud-api-sets-2023.png)
+![brainCloud Architecture](@site/docs/img/learn-img/braincloud-api-sets-2023.png)
 
 brainCloud has APIs for ~50 services. This section provides a quick overview of _important concepts_ - but certainly does not cover everything! 
 
