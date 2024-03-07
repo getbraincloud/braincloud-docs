@@ -178,8 +178,22 @@ var postResult = asyncMatchProxy.updateMatchStateCurrentTurn(ownerId, matchId, v
 
 ```json
 {
-  "status" : 200,
-  "data" : null
+  "data": {
+    "gameId": "23782",
+    "ownerId": "37627832-0b5d-4e6f-9a8c-a91a6455a109",
+    "matchId": "8e03f28c-06d0-4f9f-83c8-089965e9501b",
+    "version": 2,
+    "status": {
+      "status": "PENDING",
+      "currentPlayer": "c5ecdbda-5f91-41a9-96aa-174f412f7657"
+    },
+    "summary": {
+      "Address": "South Africa"
+    },
+    "createdAt": 1709832525081,
+    "updatedAt": 1709833092604
+  },
+  "status": 200
 }
 ```
 
