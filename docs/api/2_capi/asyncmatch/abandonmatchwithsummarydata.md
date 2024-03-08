@@ -15,7 +15,7 @@ Parameter | Description
 ownerId | The match owner id. 
 matchId | The match id. 
 pushContent | Optional push notification message to send to the other party. Refer to the Push Notification functions for the syntax required. 
-summary | Optional JSON string defining what the other player will see as a summary of the game when listing their games. 
+summary | Optional JSON object defining what the other player will see as a summary of the game when listing their games. 
 
 ## Usage
 

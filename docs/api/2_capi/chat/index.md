@@ -56,13 +56,14 @@ content | The content of the chat message. Contents are up to the developer - bu
 
 ### Channel Types
 
-<%= data.branding.productName %> currently supports two types of channels:
+<%= data.branding.productName %> currently supports four types of channels:
 
 Channel Type | Membership | Creation | Description
 ------------ | ---------- | --------- | -----------
 global | All users of the app | Via portal | All users of an app can access global channels. By default, an app can have up to 10 channels. Contact us with your use case for more. The global channel id is formed as `appId:gl:channelCode`.
 group | All members of a Group | Auto | A channel is automatically created for each group in the system. Any group member can access it. The group channel id is formed as `appId:gr:groupId`.
-system | Use for s2s system channel | Auto | A channel is designed for s2s connenction. The system channel id is formed as `appId:sy:channelCode`. 
+dynamic | All users of the app | Auto | Dynamic chat channels are special channels that any user can create and/or join. They exist only for as long as there is activity. Once the channel inactivity timeout expires (typically 30 days), the history (and the channel itself) are automatically deleted and cleaned up. The dynamic channel id is formed as `appId:gl:channelCode`.
+system | Use for s2s system channel | Auto | A channel is designed for s2s connenction. The system channel id is formed as `appId:sy:channelCode`.
 
 
 *Pro-tip - if you are interested in one-to-one chat, see our [Messaging](/api/capi/messaging) api...*
