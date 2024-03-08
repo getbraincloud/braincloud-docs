@@ -28,10 +28,10 @@ An example of this string would be:
 Parameter | Description
 --------- | -----------
 jsonOpponentIds | List of objects identifying the opponent platform and id for this match.
-jsonMatchState | JSON string blob provided by the caller
+jsonMatchState | JSON object provided by the caller
 pushNotificationMessage | Optional push notification message to send to the other party. Refer to the Push Notification functions for the syntax required.
 nextPlayer | Optionally, force the next player player to be a specific player
-jsonSummary | Optional JSON string defining what the other player will see as a summary of the game when listing their games
+jsonSummary | Optional JSON object defining what the other player will see as a summary of the game when listing their games
 
 ## Usage
 
