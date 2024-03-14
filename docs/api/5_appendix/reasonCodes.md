@@ -458,6 +458,11 @@ Code | Description
 40730 | <font size="-1">DUPLICATE_PACKET_ID </font><br/>
 40731 | <font size="-1">FEATURE_NOT_SUPPORTED_BY_BILLING_PLAN </font><br/>
 40732 | <font size="-1">FEATURE_CONFIGURATION_FAILURE </font><br/>
+40733 | <font size="-1">IMPORT_MISSING_ENTRY </font><br/>
+40734 | <font size="-1">PENDING_MEMBER_REQUEST_NOT_FOUND </font><br/>
+40735 | <font size="-1">EVENT_TO_PROFILE_IDS_SIZE_EXCEEDS_MAXIMUM </font><br/>
+40736 | <font size="-1">INVALID_CC_AND_BCC_EMAIL_ADDRESS </font><br/>
+
 40740 | <font size="-1">NO_FRIENDS_FOUND </font><br/>
 40741 | <font size="-1">PRODUCT_TRANSACTION_NOT_FOUND </font><br/>
 40742 | <font size="-1">ITEM_DEF_NOT_FOUND </font><br/>
@@ -491,6 +496,9 @@ Code | Description
 40771 | <font size="-1">DIVISION_SET_INSTANCE_LEADERBOARDS_STILL_EXIST </font><br/>
 40772 | <font size="-1">SINGLETON_ALREADY_EXISTS_FOR_USER </font><br/>
 40773 | <font size="-1">CUSTOM_ENTITY_INCREMENT_SINGLETON_DATA_ERROR </font><br/>
+40774 | <font size="-1">CUSTOM_ENTITY_COLLECTIONS_MAX_EXCEEDED </font><br/>
+40780 | <font size="-1">IMPORT_PRECONDITION_ERROR </font><br/>
+
 40801 | <font size="-1">REQUEST_FAILED </font><br/>
 40802 | <font size="-1">RESET_QUESTS_FAILED </font><br/>
 40803 | <font size="-1">RESET_ALL_QUESTS_AND_MILESTONES_FAILED </font><br/>
@@ -593,6 +601,11 @@ Code | Description
 60110 | <font size="-1">BUILDER_API_APP_SUSPENDED</font><br/>
 60111 | <font size="-1">BUILDER_API_CREATED_AT_MISMATCH</font><br/>
 60200 | <font size="-1">PLAYSTATION_NETWORK_ERROR</font><br/>
+60201 | <font size="-1">EMAIL_CC_MAX_SIZE_EXCEEDED</font><br/>
+60202 | <font size="-1">EMAIL_BCC_MAX_SIZE_EXCEEDED</font><br/>
+60203 | <font size="-1">INVALID_DATE_FORMAT</font><br/>
+60204 | <font size="-1">TEAM_USAGE_REPORT_ERROR</font><br/>
+60205 | <font size="-1">GLOBAL_PROPERTY_MAX_SIZE_EXCEEDED</font><br/>
 
 ## Usage
 
