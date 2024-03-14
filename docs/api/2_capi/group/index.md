@@ -50,6 +50,7 @@ To create a group you must first configure a Group Type on the [Group Types page
 * [UpdateGroupName](/api/capi/group/updategroupname) - update the name of the specified group
 * [UpdateGroupData](/api/capi/group/updategroupdata) - update the JSON data of the specified group
 * [UpdateGroupSummaryData](/api/capi/group/updategroupsummarydata) - update a group's summary data
+* [DeleteGroupJoinRequest](/api/capi/group/deletegroupjoinrequest) - Delete a request to join the group
 
 
 ### Group members

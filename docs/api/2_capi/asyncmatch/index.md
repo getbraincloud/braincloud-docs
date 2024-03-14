@@ -78,7 +78,7 @@ The Player entity represents the actual player. We are simply using the "lastLog
 * [UpdateMatchSummaryData](/api/capi/asyncmatch/updatematchsummarydata)
 * [FindMatches](/api/capi/asyncmatch/findmatches)
 * [FindCompleteMatches](/api/capi/asyncmatch/findcompletematches)
-
+* [UpdateMatchStateCurrentTurn](/api/capi/asyncmatch/updatematchstatecurrentturn))
 
 
 <DocCardList />
