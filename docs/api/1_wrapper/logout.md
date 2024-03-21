@@ -35,7 +35,13 @@ forgetUser | Boolean, whether to reset the stored profile id for the user.
 ```
 
 ```objectivec
-<%= data.branding.codePrefix %>.storedProfileId = @true;
+BCCompletionBlock successBlock;      // define callback
+BCErrorCompletionBlock failureBlock; // define callback
+
+[<%= data.branding.codePrefix %> logout:true
+                        completionBlock:successBlock
+                   errorCompletionBlock:failureBlock
+                               cbObject:nil];
 ```
 
 ```mdx-code-block
