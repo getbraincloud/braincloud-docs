@@ -22,8 +22,6 @@ bool allowSwitch = <%= data.branding.codePrefix %>.GetAlwaysAllowProfileSwitch()
 ```
 
 ```cpp
-<%= data.branding.intialize_step %>
-        
 bool alwaysAllow = <%= data.branding.codePrefix %>.AlwaysAllowProfileSwitch;
 
 <%= data.branding.codePrefix %>.AlwaysAllowProfileSwitch = false; // Disables profile switches.

@@ -16,8 +16,6 @@ profileId | The profile ID to set
 ```
 
 ```csharp
-<%= data.branding.intialize_step %>
-
 <%= data.branding.codePrefix %>.SetStoredProfileId("1234-1234-1234-1234");
 ```
 

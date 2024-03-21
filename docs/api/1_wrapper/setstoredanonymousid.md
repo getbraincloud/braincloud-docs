@@ -16,8 +16,6 @@ anonymousId | The anonymous ID to set
 ```
 
 ```csharp
-<%= data.branding.intialize_step %>
-
 <%= data.branding.codePrefix %>.SetStoredAnonymousId("1234-1234-1234-1234");
 ```
 

@@ -18,8 +18,6 @@ alwaysAllow | Controls whether the profile ID is passed in with non-anonymous au
 ```
 
 ```csharp
-<%= data.branding.intialize_step %>
-
 <%= data.branding.codePrefix %>.SetAlwaysAllowProfileSwitch(false);    // Default is true
 ```
 

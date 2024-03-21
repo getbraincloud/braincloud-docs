@@ -17,8 +17,6 @@ forgetUser | Boolean, whether to reset the stored profile id for the user.
 ```
 
 ```csharp
-<%= data.branding.intialize_step %>
-
 <%= data.branding.codePrefix %>.Logout(true);
 ```
 
