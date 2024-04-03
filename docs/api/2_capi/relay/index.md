@@ -155,6 +155,14 @@ timeout|too many packet lost
 ### Custom Environment Variables
 
 The following environment variables are used by the relay server which can be configured via Relay server settings page in the dashboard.
+
+- **PACKET_LOG_ENABLED**: Logs packets sent/received. Shouldn't be enabled for production (very spammy). Defaults to false.
+- **MAX_PLAYERS**: Maximum number of players allowed to connect to the server. Defaults to 40.
+- **ALLOW_REJOIN_BY_PROFILE_ID**: Allows players to reconnect to the server instance if their connection drops (even if they have a new RTT connection as well). Only applies for short-lived lobbies (i.e. where "Disband on start" is true). Defaults to false.
+- **CONNECTION_TIMEOUT**: Amount of time in seconds that a player is allowed to be connected to the server without sending a packet before being kicked. Defaults to 10 secs.
+- **MEMBER_TIMEOUT**: Amount of time to wait in seconds for a player to connect to the server before assuming they aren't coming at all. Defaults to 30 secs.
+- **END_MATCH_TIMEOUT**: Amount of time in seconds to stay up before exiting after receiving the END_MATCH packet. Defaults to 2 secs.
+
 :::info
 All the timeout settings are in seconds.
 :::
