@@ -7,9 +7,9 @@ Schedules a script to run at given UTC time.
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-scriptName | The name of the script with its path to be run.
+scriptName | The name of the script with its absolute path to be run.
 scriptData | Data to be sent to the script in JSON format.
-startDateInUTC | The start date. (date in millis UTC)
+startDateInUTC | The start date. (date in millis UTC).
 
 ## Usage
 

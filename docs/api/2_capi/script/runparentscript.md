@@ -13,9 +13,9 @@ Note that the data object will contain anything returned from the script
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-scriptName | The name of the script with its path to be run
-scriptData | Data to be sent to the script in json format
-parentLevel | The level name of the parent to run the script from
+scriptName | The name of the script with its absolute path to be run.
+scriptData | Data to be sent to the script in json format.
+parentLevel | The level name of the parent to run the script from.
 
 ## Usage
 
