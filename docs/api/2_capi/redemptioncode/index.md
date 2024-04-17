@@ -88,7 +88,8 @@ Parameter | Description
 --------- | -----------
 scanCode | The code being redeemed. Sometimes referred to as the Promo code.
 operation | Should always be "redeem" for asynchronous scripts.
-attempt   | The 0-based counter of the current attempt. Will be zero unless retries are allowed. 
+redemptionCodeId | The redemption code id of the redemption code being processed.
+attempt   | The 0-based counter of the current attempt. Will be zero unless retries are allowed.
 async | Will be `false` for asynchronous scripts. <- Can be used to confirm that things are configured correctly!
 codeType | Corresponds to the _Campaign Name_ in the Design Portal.
 codeUseType | "MULTI" if this is a Shared (multi-use) Code, and "SINGLE" if it is a Personal (single-use) code
@@ -105,8 +106,11 @@ success | `true` if the redemption succeeded, `false` otherwise.
 complete | Should always return `true` for synchronous fulfillment scripts
 customRedemptionInfo | Return an updated `customRedemptionInfo` JSON map. Will be saved to the redemption code entry for the user.
 errorCode | If `success` is false, return `errorCode` field with a numeric code indicating the failure
-errorMessage | If `success` is `false`, return `errorMessage` field with a textual error message describing what happened.
+errorMsg | If `success` is `false`, return `errorMsg` field with a textual error message describing what happened.
 
+#### Example: Synchronous Fulfillment Script
+
+Click [synchronousFulfillment_example.ccjs.zip](script/synchronousFulfillment_example.ccjs.zip) to download the file.
 
 ### Asynchronous Fulfillment Scripts
 
@@ -138,8 +142,7 @@ success | `true` if this step of processing was successful (though not necessari
 complete | Return `true` if fulfillment processing is now COMPLETE (whether it was successful or not). This means nothing else is still happening in the background.
 customRedemptionInfo | Return an updated `customRedemptionInfo` JSON map. Will be saved to the redemption code entry for the user.
 errorCode | If `success` is false, return `errorCode` field with a numeric code indicating the failure
-errorMessage | If `success` is `false`, return `errorMessage` field with a textual error message describing what happened.
-
+errorMsg | If `success` is `false`, return `errorMsg` field with a textual error message describing what happened.
 
 ## Management and Support Operations
 
