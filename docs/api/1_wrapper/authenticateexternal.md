@@ -173,12 +173,31 @@ var forceCreate = true;
     "status": 200,
     "data": {
         "vcPurchased": 0,
+        "experiencePoints": 100,
+        "refundCount": 0,
+        "playerSessionExpiry": 60,
+        "server_time": 1464621990155,
+        "experienceLevel": 0,
+        "currency": {
+            "credits": {
+                "purchased": 0,
+                "balance": 12211,
+                "consumed": 133,
+                "awarded": 12344
+            }
+        },
+        "abTestingId": 8,
+        "statistics": {
+            "gamesWon": 0
+        },
+        "id": "323e861-b749-4ce4-a57a-175232e21b5d",
+        "createdAt": 1459439058035,
+        "profileId": "323e861-b749-4ce4-a57a-175232e21b5d",
+        "newUser": "false",
         "xpCapped": false,
-        "experiencePoints": 230,
-        "sent_events": [
-        ],
-        "playerSessionExpiry": 1200,
-        "playerName": "Jimmy",
+        "sent_events": [],
+        "timeZoneOffset": -5,
+        "playerName": "",
         "vcClaimed": 0,
         "parentProfileId": null,
         "rewards": {
@@ -186,30 +205,16 @@ var forceCreate = true;
             "rewards": {},
             "currency": {}
         },
-        "loginCount": 23,
-        "server_time": 1445545791711,
-        "experienceLevel": 0,
-        "entities": [
-        ],
-        "incoming_events": [
-        ],
-        "currency": {
-            "gold": {
-                "purchased": 0,
-                "balance": 0,
-                "consumed": 0,
-                "awarded": 0
-            }
-        },
-        "statistics": {
-            "deaths": 0,
-            "kills": 0
-        },
-        "abTestingId": 78,
-        "id": "47037fc9-ca7b-4f61-a71f-e5a37b0e8a03",
-        "sessionId": "bg6qf38p2btl0o825s99385nd1",
-        "profileId": "47037fc9-ca7b-4f61-a71f-e5a37b0e8a03",
-        "newUser": "false"
+        "countryCode": "ca",
+        "loginCount": 16,
+        "emailAddress": "test@email.com",
+        "previousLogin": 1464621979514,
+        "incoming_events": [],
+        "lastLogin": 1464621990118,
+        "languageCode": "en",
+        "pictureUrl": null,
+        "sessionId": "v3grtg3ve0a089pekk8lneuk8k",
+        "amountSpent": 0
     }
 }
 ```
