@@ -204,52 +204,95 @@ var forceCreate = true;
 
 ```json
 {
-    "status": 200,
     "data": {
-        "vcPurchased": 0,
-        "experiencePoints": 100,
+        "abTestingId": 95,
+        "lastLogin": 1713973000159,
+        "server_time": 1713973000235,
         "refundCount": 0,
-        "playerSessionExpiry": 60,
-        "server_time": 1464621990155,
-        "experienceLevel": 0,
+        "timeZoneOffset": -5.0,
+        "experiencePoints": 0,
+        "maxBundleMsgs": 10,
+        "createdAt": 1713973000153,
+        "parentProfileId": null,
+        "emailAddress": "test@email.com",
+        "experienceLevel": 1,
+        "countryCode": null,
+        "vcClaimed": 0,
         "currency": {
-            "credits": {
+            "bar": {
+                "consumed": 0,
+                "balance": 0,
                 "purchased": 0,
-                "balance": 12211,
-                "consumed": 133,
-                "awarded": 12344
+                "awarded": 0,
+                "revoked": 0
+            },
+                "coins": {
+                "consumed": 0,
+                "balance": 8,
+                "purchased": 0,
+                "awarded": 8,
+                "revoked": 0
             }
         },
-        "abTestingId": 8,
-        "statistics": {
-            "gamesWon": 0
-        },
-        "id": "323e861-b749-4ce4-a57a-175232e21b5d",
-        "createdAt": 1459439058035,
-        "profileId": "323e861-b749-4ce4-a57a-175232e21b5d",
-        "newUser": "false",
-        "xpCapped": false,
-        "sent_events": [],
-        "timeZoneOffset": -5,
+        "id": "15e5ce33-2411-45f8-a29e-7f600880113a",
+        "compressIfLarger": 51200,
+        "amountSpent": 0,
+        "previousLogin": null,
         "playerName": "",
-        "vcClaimed": 0,
-        "parentProfileId": null,
-        "rewards": {
-            "rewardDetails": {},
-            "rewards": {},
-            "currency": {}
-        },
-        "countryCode": "ca",
-        "loginCount": 16,
-        "emailAddress": "test@email.com",
-        "previousLogin": 1464621979514,
-        "incoming_events": [],
-        "lastLogin": 1464621990118,
-        "languageCode": "en",
         "pictureUrl": null,
-        "sessionId": "v3grtg3ve0a089pekk8lneuk8k",
-        "amountSpent": 0
-    }
+        "incoming_events": [],
+        "sessionId": "gbgakmm4hmt15e2pobvmh7ptck",
+        "languageCode": "en",
+        "vcPurchased": 0,
+        "isTester": false,
+        "summaryFriendData": null,
+        "loginCount": 1,
+        "emailVerified": true,
+        "xpCapped": false,
+        "profileId": "15e5ce33-2411-45f8-a29e-7f600880113a",
+        "newUser": "true",
+        "playerSessionExpiry": 1200,
+        "sent_events": [],
+        "maxKillCount": 11,
+        "rewards": {
+            "rewardDetails": {
+                "xp": {
+                    "experienceLevels": [
+                        { 
+                            "level": 1, 
+                            "rewards": { 
+                                "currency": { 
+                                    "coins": 8 
+                                } 
+                            } 
+                        }
+                    ]
+                }
+            },
+            "currency": {
+                "bar": {
+                    "consumed": 0,
+                    "balance": 0,
+                    "purchased": 0,
+                    "awarded": 0,
+                    "revoked": 0
+                },
+                "coins": {
+                    "consumed": 0,
+                    "balance": 8,
+                    "purchased": 0,
+                    "awarded": 8,
+                    "revoked": 0
+                }
+            },
+            "rewards": {}
+        },
+        "statistics": {
+            "test": 0.99,
+            "HITLEVELNVEHICLE_000005": 0
+        }
+    },
+    "status": 200
 }
 ```
 </details>
