@@ -182,6 +182,32 @@ if (postResult.status == 200) {
             },
             "rawStringResp": "{\"response\":{\"result\":\"OK\",\"params\":{\"orderid\":100053,\"transid\":3041626742768452692}}}"
         },
+        "queryTxn": {
+            "response": {
+              "result": "OK",
+              "params": {
+                "orderid": "13795000000000000",
+                "transid": "3720612235425100000",
+                "steamid": "66561199055000000",
+                "status": "Succeeded",
+                "currency": "USD",
+                "time": "2022-04-06T17:58:32Z",
+                "country": "CA",
+                "usstate": "",
+                "timecreated": "2022-04-06T17:58:08Z",
+                "items": [
+                  {
+                    "itemid": 16,
+                    "qty": 1,
+                    "amount": 416,
+                    "vat": 83,
+                    "itemstatus": "Succeeded"
+                  }
+                ]
+              }
+            }
+          }
+        },
         "rewards": {
             "extra": null,
             "currency": {
