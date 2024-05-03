@@ -20,6 +20,8 @@ let options = {
     'data.branding.productNameCaptial %>': 'BrainCloud',
     'data.branding.productNameRTT %>': 'brainCloud RTT',
     'data.branding.companyName %>': 'bitHeads',
+    'data.example.email %>': 'email@bitheads.com',
+    'data.example.password %>': 'password',
   },
   prefix: '<%= ',
 }
