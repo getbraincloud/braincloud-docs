@@ -1,11 +1,5 @@
 # PostJsonResponseText
 
-<%# add json output information
-
-
-
-
-
 Posts a JSON document, expects a text response.
 
 <PartialServop service_name="httpClient" operation_name="POSRESPONSE_TEXT" / >
@@ -115,12 +109,11 @@ if (postResult.status == 200) {
 ```
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-serviceCode | Service code of the external service configured in the Cloud Code - Web Services section of the portal
-path | Path to append to the Base URL of the service
-query | Map of query parameters
-headers | Map of extra headers
-json | JSON formatted data to post
 
-
+| Parameter   | Description                                                                                            |
+| ----------- | ------------------------------------------------------------------------------------------------------ |
+| serviceCode | Service code of the external service configured in the Cloud Code - Web Services section of the portal |
+| path        | Path to append to the Base URL of the service                                                          |
+| query       | Map of query parameters                                                                                |
+| headers     | Map of extra headers                                                                                   |
+| json        | JSON formatted data to post                                                                            |
