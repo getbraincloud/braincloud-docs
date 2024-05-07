@@ -1,10 +1,18 @@
 # UpdateSystemEntity
 
-Updates a *System Entity*, regardless of the ACL permissions of the object. This method is very useful when dealing with read-only system entities - since otherwise because they do not have an owner, they would not be editable at all. *Note that for obvious security reasons, this API method is available via cloud-code only.*
+Updates a _System Entity_, regardless of the ACL permissions of the object. This method is very useful when dealing with read-only system entities - since otherwise because they do not have an owner, they would not be editable at all. _Note that for obvious security reasons, this API method is available via cloud-code only._
 
 This method is affected by versioning. See the [versioning documentation](/api/appendix/version) for more information.
 
 <PartialServop service_name="globalEntity" operation_name="UPDATE" />
+
+## Method Parameters
+
+| Parameter      | Description                                                                |
+| -------------- | -------------------------------------------------------------------------- |
+| entityId       | The id of the entity to update                                             |
+| version        | The version of the entity to update. Use -1 to indicate the newest version |
+| jsonEntityData | The entity's data object                                                   |
 
 ## Usage
 
@@ -22,7 +30,7 @@ This method is affected by versioning. See the [versioning documentation](/api/a
         "entityId": "14281c38-abf6-4ca2-8436-b2bdwas8d5a9a",
         "ownerId": "784cc6c6-4569-4d75-bd10-62dwa8ae0218",
         "entityType": "test",
-        "entityIndexedId" : "indexTest",
+        "entityIndexedId": "indexTest",
         "version": 1,
         "acl": {
             "other": 1
@@ -48,7 +56,7 @@ This method is affected by versioning. See the [versioning documentation](/api/a
         "entityId": "14281c38-abf6-4ca2-8436-b2bdwas8d5a9a",
         "ownerId": "784cc6c6-4569-4d75-bd10-62dwa8ae0218",
         "entityType": "test",
-        "entityIndexedId" : "indexTest",
+        "entityIndexedId": "indexTest",
         "version": 1,
         "acl": {
             "other": 1
@@ -74,7 +82,7 @@ This method is affected by versioning. See the [versioning documentation](/api/a
         "entityId": "14281c38-abf6-4ca2-8436-b2bdwas8d5a9a",
         "ownerId": "784cc6c6-4569-4d75-bd10-62dwa8ae0218",
         "entityType": "test",
-        "entityIndexedId" : "indexTest",
+        "entityIndexedId": "indexTest",
         "version": 1,
         "acl": {
             "other": 1
@@ -100,7 +108,7 @@ This method is affected by versioning. See the [versioning documentation](/api/a
         "entityId": "14281c38-abf6-4ca2-8436-b2bdwas8d5a9a",
         "ownerId": "784cc6c6-4569-4d75-bd10-62dwa8ae0218",
         "entityType": "test",
-        "entityIndexedId" : "indexTest",
+        "entityIndexedId": "indexTest",
         "version": 1,
         "acl": {
             "other": 1
@@ -126,7 +134,7 @@ This method is affected by versioning. See the [versioning documentation](/api/a
         "entityId": "14281c38-abf6-4ca2-8436-b2bdwas8d5a9a",
         "ownerId": "784cc6c6-4569-4d75-bd10-62dwa8ae0218",
         "entityType": "test",
-        "entityIndexedId" : "indexTest",
+        "entityIndexedId": "indexTest",
         "version": 1,
         "acl": {
             "other": 1
@@ -194,7 +202,7 @@ if (postResult.status == 200) {
         "entityId": "14281c38-abf6-4ca2-8436-b2bdwas8d5a9a",
         "ownerId": "784cc6c6-4569-4d75-bd10-62dwa8ae0218",
         "entityType": "test",
-        "entityIndexedId" : "indexTest",
+        "entityIndexedId": "indexTest",
         "version": 1,
         "acl": {
             "other": 1
@@ -206,23 +214,16 @@ if (postResult.status == 200) {
     }
 }
 ```
+
 </details>
 
 <details>
 <summary>Common Error Code</summary>
 
 ### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40344 | ENTITY_VERSION_MISMATCH | The version passed in does not match the version of the entity on the server
+
+| Code  | Name                    | Description                                                                  |
+| ----- | ----------------------- | ---------------------------------------------------------------------------- |
+| 40344 | ENTITY_VERSION_MISMATCH | The version passed in does not match the version of the entity on the server |
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityId | The id of the entity to update
-version | The version of the entity to update. Use -1 to indicate the newest version
-jsonEntityData | The entity's data object
-#
