@@ -48,7 +48,7 @@ const config = {
   //url: 'http://bcapidocs-dev.s3-website-us-east-1.amazonaws.com/',
   url: 'http://__DOCSURL__.braincloudservers.com/',
   baseUrl: '/', // for s3 bucket
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
 
