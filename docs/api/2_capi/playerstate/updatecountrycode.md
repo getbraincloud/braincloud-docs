@@ -1,12 +1,14 @@
 # UpdateCountryCode
+
 Update user's country code preference on their profile.
 
 <PartialServop service_name="playerState" operation_name="UPDATE_COUNTRY_CODE" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-countryCode | New country code
+
+| Parameter   | Description      |
+| ----------- | ---------------- |
+| countryCode | New country code |
 
 ## Usage
 
@@ -17,18 +19,7 @@ countryCode | New country code
 ```
 
 ```csharp
-string countryCode = "CA";
-
-SuccessCallback successCallback = (response, cbObject) =>
-{
-    Debug.Log(string.Format("Success | {0}", response));
-};
-FailureCallback failureCallback = (status, code, error, cbObject) =>
-{
-    Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
-};
-
-<%= data.branding.codePrefix %>.PlayerstateService.UpdateCountryCode(countryCode, successCallback, failureCallback);
+// Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block
@@ -37,8 +28,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 ```
 
 ```cpp
-const char *countryCode = "CA";
-<%= data.branding.codePrefix %>.getPlayerstateService().updateCountryCode(countryCode, this);
+// Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block
@@ -47,14 +37,7 @@ const char *countryCode = "CA";
 ```
 
 ```objectivec
-NSString *countryCode = @"CA";
-BCCompletionBlock successBlock; // define callback
-BCErrorCompletionBlock failureBlock; // define callback
-[[<%= data.branding.codePrefix %> playerStateService] updateCountryCode:
-                  countryCode:countryCode
-              completionBlock:successBlock
-         errorCompletionBlock:failureBlock
-                     cbObject:nil]
+// Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block
@@ -63,19 +46,7 @@ BCErrorCompletionBlock failureBlock; // define callback
 ```
 
 ```java
-String countryCode = "CA";
-this; // implements IServerCallback
-<%= data.branding.codePrefix %>.getPlayerstateService.updateCountryCode(countryCode, this);
-
-public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
-{
-    System.out.print(String.format("Success | %s", jsonData.toString()));
-}
-public void serverError(ServiceName serviceName, ServiceOperation serviceOperation, int statusCode, int reasonCode, String jsonError)
-{
-    System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
-}
-
+// Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block
@@ -84,12 +55,7 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 ```
 
 ```javascript
-var countryCode = "CA";
-<%= data.branding.codePrefix %>.playerState.updateCountryCode(countryCode, result =>
-{
-  var status = result.status;
-  console.log(status + " : " + JSON.stringify(result, null, 2));
-});
+// Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block
@@ -124,17 +90,17 @@ var postResult = playerStateProxy.updateCountryCode(countryCode);
 </Tabs>
 </BrowserWindow>
 ```
+
 <details>
 <summary>JSON Response</summary>
 
 ```json
 {
-  "data": {
-    "countryCode": "CA"
-  },
-  "status": 200
+    "data": {
+        "countryCode": "CA"
+    },
+    "status": 200
 }
 ```
 
 </details>
-
