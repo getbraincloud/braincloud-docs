@@ -5,11 +5,12 @@ Finalize a two-part purchase transaction. Currently only used for Steam purchase
 <PartialServop service_name="appStore" operation_name="FINALIZE_PURCHASE" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-storeId | Store type
-transactionId | id of transaction to finalize
-transactionData | Store-specific purchase data
+
+| Parameter       | Description                   |
+| --------------- | ----------------------------- |
+| storeId         | Store type                    |
+| transactionId   | id of transaction to finalize |
+| transactionData | Store-specific purchase data  |
 
 ## Usage
 
@@ -158,39 +159,64 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "data": {
-        "processed": true,
-        "itemId": "GoldWings",
-        "referencePrice": 199,
-        "promotions": null,
-        "resultCode": 0,
-        "currency": {
-            "goldWings": {
-                "consumed": 0,
-                "balance": 1,
-                "purchased": 1,
-                "awarded": 0
-            }
-        },
-        "serverTime": 1649252630210,
-        "store": "steam",
-        "transactionSummary": {
-            "result": "OK",
-            "params": {
-                "orderid": 100053,
-                "transid": 3041626742768452692
-            },
-            "rawStringResp": "{\"response\":{\"result\":\"OK\",\"params\":{\"orderid\":100053,\"transid\":3041626742768452692}}}"
-        },
-        "rewards": {
-            "extra": null,
-            "currency": {
-                "goldWings": 1
-            }
-        }
+  "data": {
+    "processed": true,
+    "itemId": "GoldWings",
+    "referencePrice": 199,
+    "promotions": null,
+    "resultCode": 0,
+    "currency": {
+      "goldWings": {
+        "consumed": 0,
+        "balance": 1,
+        "purchased": 1,
+        "awarded": 0
+      }
     },
-    "status": 200
+    "serverTime": 1649252630210,
+    "store": "steam",
+    "transactionSummary": {
+      "result": "OK",
+      "params": {
+        "orderid": 100053,
+        "transid": 3041626742768452692
+      },
+      "rawStringResp": "{\"response\":{\"result\":\"OK\",\"params\":{\"orderid\":100053,\"transid\":3041626742768452692}}}",
+      "queryTxn": {
+        "response": {
+          "result": "OK",
+          "params": {
+            "orderid": "13795000000000000",
+            "transid": "3720612235425100000",
+            "steamid": "66561199055000000",
+            "status": "Succeeded",
+            "currency": "USD",
+            "time": "2022-04-06T17:58:32Z",
+            "country": "CA",
+            "usstate": "",
+            "timecreated": "2022-04-06T17:58:08Z",
+            "items": [
+              {
+                "itemid": 16,
+                "qty": 1,
+                "amount": 416,
+                "vat": 83,
+                "itemstatus": "Succeeded"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "rewards": {
+      "extra": null,
+      "currency": {
+        "goldWings": 1
+      }
+    }
+  },
+  "status": 200
 }
 ```
-</details>
 
+</details>

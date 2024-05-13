@@ -6,6 +6,16 @@ This method is affected by versioning. See the [versioning documentation](/api/a
 
 <PartialServop service_name="entity" operation_name="UPDATE_SHARED" />
 
+## Method Parameters
+
+| Parameter       | Description                                                                |
+| --------------- | -------------------------------------------------------------------------- |
+| entityId        | The id of the entity to update                                             |
+| targetProfileId | The id of the entity's owner                                               |
+| entityType      | The entity type as defined by the user                                     |
+| data            | The entity's data object                                                   |
+| version         | The version of the entity to update. Use -1 to indicate the newest version |
+
 ## Usage
 
 ```mdx-code-block
@@ -169,42 +179,33 @@ if (postResult.status == 200) {
 
 ```json
 {
-	"status": 200,
-	"data": {
-		"entityId": "113db68a-48ad-4fc9-9f44-5fd36fc6445f",
-		"entityType": "person",
-		"version": 1,
-		"data": {
-			"name": "john",
-			"age": 30
-		},
-		"acl": {
-			"other": 0
-		},
-		"createdAt": 1395943044322,
-		"updatedAt": 1395943044322
-	}
+    "status": 200,
+    "data": {
+        "entityId": "113db68a-48ad-4fc9-9f44-5fd36fc6445f",
+        "entityType": "person",
+        "version": 1,
+        "data": {
+            "name": "john",
+            "age": 30
+        },
+        "acl": {
+            "other": 0
+        },
+        "createdAt": 1395943044322,
+        "updatedAt": 1395943044322
+    }
 }
 ```
+
 </details>
 
 <details>
 <summary>Common Error Code</summary>
 
 ### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40332 | UPDATE_FAILED | An update operation failed. Used for entities, global entities, and updates on the user.
+
+| Code  | Name          | Description                                                                              |
+| ----- | ------------- | ---------------------------------------------------------------------------------------- |
+| 40332 | UPDATE_FAILED | An update operation failed. Used for entities, global entities, and updates on the user. |
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityId | The id of the entity to update
-targetProfileId | The id of the entity's owner
-entityType | The entity type as defined by the user
-data | The entity's data object
-version | The version of the entity to update. Use -1 to indicate the newest version
-#

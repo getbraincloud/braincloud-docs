@@ -6,6 +6,14 @@ This method is affected by versioning. See the [versioning documentation](/api/a
 
 <PartialServop service_name="globalEntity" operation_name="UPDATE_TIME_TO_LIVE" />
 
+## Method Parameters
+
+| Parameter  | Description                                                                |
+| ---------- | -------------------------------------------------------------------------- |
+| entityId   | The id of the entity to update                                             |
+| version    | The version of the entity to update. Use -1 to indicate the newest version |
+| timeToLive | Sets expiry time for entity in milliseconds if > 0                         |
+
 ## Usage
 
 ```mdx-code-block
@@ -154,7 +162,7 @@ if (postResult.status == 200) {
         "entityId": "14281c38-abf6-4ca2-8436-b2bdwas8d5a9a",
         "ownerId": "784cc6c6-4569-4d75-bd10-62dwa8ae0218",
         "entityType": "test",
-        "entityIndexedId" : "indexTest",
+        "entityIndexedId": "indexTest",
         "version": 1,
         "data": {
             "testData": 1234
@@ -169,23 +177,16 @@ if (postResult.status == 200) {
     }
 }
 ```
+
 </details>
 
 <details>
 <summary>Common Error Code</summary>
 
 ### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40344 | ENTITY_VERSION_MISMATCH | The version passed in does not match the version of the entity on the server
+
+| Code  | Name                    | Description                                                                  |
+| ----- | ----------------------- | ---------------------------------------------------------------------------- |
+| 40344 | ENTITY_VERSION_MISMATCH | The version passed in does not match the version of the entity on the server |
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityId | The id of the entity to update
-version | The version of the entity to update. Use -1 to indicate the newest version
-timeToLive | Sets expiry time for entity in milliseconds if > 0
-#

@@ -198,47 +198,95 @@ var forceCreate = true;
 
 ```json
 {
-    "status": 200,
     "data": {
-        "vcPurchased": 0,
-        "xpCapped": false,
-        "experiencePoints": 230,
-        "sent_events": [
-        ],
-        "playerSessionExpiry": 1200,
-        "playerName": "Jimmy",
-        "vcClaimed": 0,
+        "abTestingId": 95,
+        "lastLogin": 1713973000159,
+        "server_time": 1713973000235,
+        "refundCount": 0,
+        "timeZoneOffset": -5.0,
+        "experiencePoints": 0,
+        "maxBundleMsgs": 10,
+        "createdAt": 1713973000153,
         "parentProfileId": null,
-        "rewards": {
-            "rewardDetails": {},
-            "rewards": {},
-            "currency": {}
-        },
-        "loginCount": 23,
-        "server_time": 1445545791711,
-        "experienceLevel": 0,
-        "entities": [
-        ],
-        "incoming_events": [
-        ],
+        "emailAddress": "test@email.com",
+        "experienceLevel": 1,
+        "countryCode": null,
+        "vcClaimed": 0,
         "currency": {
-            "gold": {
-                "purchased": 0,
-                "balance": 0,
+            "bar": {
                 "consumed": 0,
-                "awarded": 0
+                "balance": 0,
+                "purchased": 0,
+                "awarded": 0,
+                "revoked": 0
+            },
+                "coins": {
+                "consumed": 0,
+                "balance": 8,
+                "purchased": 0,
+                "awarded": 8,
+                "revoked": 0
             }
         },
-        "statistics": {
-            "deaths": 0,
-            "kills": 0
+        "id": "15e5ce33-2411-45f8-a29e-7f600880113a",
+        "compressIfLarger": 51200,
+        "amountSpent": 0,
+        "previousLogin": null,
+        "playerName": "",
+        "pictureUrl": null,
+        "incoming_events": [],
+        "sessionId": "gbgakmm4hmt15e2pobvmh7ptck",
+        "languageCode": "en",
+        "vcPurchased": 0,
+        "isTester": false,
+        "summaryFriendData": null,
+        "loginCount": 1,
+        "emailVerified": true,
+        "xpCapped": false,
+        "profileId": "15e5ce33-2411-45f8-a29e-7f600880113a",
+        "newUser": "true",
+        "playerSessionExpiry": 1200,
+        "sent_events": [],
+        "maxKillCount": 11,
+        "rewards": {
+            "rewardDetails": {
+                "xp": {
+                    "experienceLevels": [
+                        { 
+                            "level": 1, 
+                            "rewards": { 
+                                "currency": { 
+                                    "coins": 8 
+                                } 
+                            } 
+                        }
+                    ]
+                }
+            },
+            "currency": {
+                "bar": {
+                    "consumed": 0,
+                    "balance": 0,
+                    "purchased": 0,
+                    "awarded": 0,
+                    "revoked": 0
+                },
+                "coins": {
+                    "consumed": 0,
+                    "balance": 8,
+                    "purchased": 0,
+                    "awarded": 8,
+                    "revoked": 0
+                }
+            },
+            "rewards": {}
         },
-        "abTestingId": 78,
-        "id": "47037fc9-ca7b-4f61-a71f-e5a37b0e8a03",
-        "sessionId": "bg6qf38p2btl0o825s99385nd1",
-        "profileId": "47037fc9-ca7b-4f61-a71f-e5a37b0e8a03",
-        "newUser": "false"
-    }
+        "statistics": {
+            "test": 0.99,
+            "HITLEVELNVEHICLE_000005": 0
+        }
+    },
+    "status": 200
 }
 ```
 </details>

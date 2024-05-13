@@ -5,9 +5,10 @@ Update user's language code preference on their profile.
 <PartialServop service_name="playerState" operation_name="UPDATE_LANGUAGE_CODE" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-languageCode | A string-based language code
+
+| Parameter    | Description                  |
+| ------------ | ---------------------------- |
+| languageCode | A string-based language code |
 
 ## Usage
 
@@ -134,12 +135,11 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status":200,
-    "data":
-    {
+    "status": 200,
+    "data": {
         "languageCode": "fr"
     }
 }
 ```
-</details>
 
+</details>

@@ -20,6 +20,8 @@ let options = {
     'data.branding.productNameCaptial %>': 'BrainCloud',
     'data.branding.productNameRTT %>': 'brainCloud RTT',
     'data.branding.companyName %>': 'bitHeads',
+    'data.example.email %>': 'email@bitheads.com',
+    'data.example.password %>': 'password',
   },
   prefix: '<%= ',
 }
@@ -46,7 +48,7 @@ const config = {
   //url: 'http://bcapidocs-dev.s3-website-us-east-1.amazonaws.com/',
   url: 'http://__DOCSURL__.braincloudservers.com/',
   baseUrl: '/', // for s3 bucket
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
 
@@ -84,7 +86,7 @@ const config = {
           // editUrl: 'https://github.com/getbraincloud/braincloud-apiref/tree/develop/',
           versions: {
             current: {
-              label: '5.2.0',
+              label: '5.3.0',
             },
           },
           lastVersion: 'current',
