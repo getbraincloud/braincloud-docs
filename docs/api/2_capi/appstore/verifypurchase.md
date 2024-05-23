@@ -2,9 +2,6 @@
 
 Used to verify a purchase receipt for Apple AppStore, Google Play, Facebook or Windows. The contents passed into `receiptData` are store-specific. On success, the player will be awarded the associated currencies.
 
-
-
-
 ### ReceiptData formats
 
 ### Apple AppStore
@@ -12,6 +9,7 @@ Used to verify a purchase receipt for Apple AppStore, Google Play, Facebook or W
 Use `"itunes"` as the `storeId`.
 
 iTunes `receiptData` format:
+
 ```
 {
     "receipt": "ENCODED-RECEIPT-DATA",
@@ -23,9 +21,14 @@ iTunes `receiptData` format:
 
 Use `"googlePlay"` as the `storeId`.
 
+:::tip
+Ensure that the parameter `includeSubscriptionCheck` setting is set to `true` for Product Type as `Subscription`.
+:::
+
 Google Play `receiptData` format:
+
 ```
-{    
+{
     "productId" : "gems_pack_small",
     "orderId" : "GPA.0000-1111-2222-33333",
     "token" : "ENCODED_TOKEN_STRING",
@@ -39,6 +42,7 @@ Google Play `receiptData` format:
 Use `"facebook"` as the `storeId`.
 
 Facebook `receiptData` format:
+
 ```
 {
     "signedRequest": "string-of-signedRequest"
@@ -50,6 +54,7 @@ Facebook `receiptData` format:
 Use `"amazon"` as the `storeId`.
 
 Amazon `receiptData` format:
+
 ```
 {
     "receiptId": "a-receipt-id",
@@ -61,34 +66,33 @@ Amazon `receiptData` format:
 
 The following fields are included in the json response:
 
-Field | Description
------ | ------------
-resultCode | the overall status of the operation
-errorMessage | (optional) message describing non-zero result codes
-store | the store used for the purchase
-transactionSummary | the store-specific response details. Contents vary by store-type.
-rewards | the total currencies being rewarded as a result of the purchases(s). Includes subsections by currency scope.
-currency | currency balances. 
-parentCurrency | balances of parent currencies (if any)
-peerCurrency | balances of peer currencies (if any)
-server_time | utc time on the server (in millis)
+| Field              | Description                                                                                                  |
+| ------------------ | ------------------------------------------------------------------------------------------------------------ |
+| resultCode         | the overall status of the operation                                                                          |
+| errorMessage       | (optional) message describing non-zero result codes                                                          |
+| store              | the store used for the purchase                                                                              |
+| transactionSummary | the store-specific response details. Contents vary by store-type.                                            |
+| rewards            | the total currencies being rewarded as a result of the purchases(s). Includes subsections by currency scope. |
+| currency           | currency balances.                                                                                           |
+| parentCurrency     | balances of parent currencies (if any)                                                                       |
+| peerCurrency       | balances of peer currencies (if any)                                                                         |
+| server_time        | utc time on the server (in millis)                                                                           |
 
-
-###  VerifyPurchase responses
+### VerifyPurchase responses
 
 The key values of the return to evaluate include:
 
-* `processedCount` - number of transactions successfully processed. To be processed, a transaction receipt must be valid, the product must be found, and the transaction must not have been processed before.
-* `unprocessedCount` - the number of transactions that were rejected. See the `transactionStatus` code associated with the transaction for details.
-
+-   `processedCount` - number of transactions successfully processed. To be processed, a transaction receipt must be valid, the product must be found, and the transaction must not have been processed before.
+-   `unprocessedCount` - the number of transactions that were rejected. See the `transactionStatus` code associated with the transaction for details.
 
 <PartialServop service_name="appStore" operation_name="VERIFY_PURCHASE" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-storeId | The store type - "itunes", "googlePlay", "amazon", "facebook" or "windows"
-receiptData | A JSON object with data in the format for the specified store
+
+| Parameter   | Description                                                                |
+| ----------- | -------------------------------------------------------------------------- |
+| storeId     | The store type - "itunes", "googlePlay", "amazon", "facebook" or "windows" |
+| receiptData | A JSON object with data in the format for the specified store              |
 
 ## Usage
 
@@ -229,116 +233,116 @@ if (postResult.status == 200) {
 
 ```json
 {
-	"status": 200,
-	"data": {
-		"resultCode": 0,
-		"errorMessage": null,
-		"store": "itunes",
-		"transactionSummary": {
-			"processedCount": 1,
-			"unprocessedCount": 1,
-			"transactionDetails": [
-				{
-					"transactionId": "80000557199459",
-					"itemId": "barBundle1Imp",
-					"transactionResultCode": 0,
-					"processed": true,
-					"originalTransactionId": "80000557199459",
-					"quantity": 1,
-					"purchaseDateMs": 1550639146000,
-					"productId": "...coinBundle1Imp",
-					"purchaseDate": "2019-02-20 05:05:46 Etc/GMT",
-					"rewards": {
-						"extra": null,
-						"currency": {
-							"bar": 10,
-							"coinMultiplier": 1
-						}
-					}
-				},
-				{
-					"transactionId": "80000557201213",
-					"itemId": "coinBundle2Imp",
-					"transactionResultCode": 100,
-					"processed": false,
-					"originalTransactionId": "80000557201213",
-					"quantity": 1,
-					"purchaseDateMs": 1550639681000,
-					"productId": "...coinBundle2Imp",
-					"errorMessage": "Item already processed",
-					"purchaseDate": "2019-02-20 05:14:41 Etc/GMT"
-				}
-			],
-			"extra": {
-				"appleReceipt": "stringified json receipt data"
-			}
-		},
-		"rewards": {
-			"currency": {
-				"coins": 1000
-			},
-			"parentCurrency": {
-				"awesomeMaster": {
-					"rubies": 2000
-				}
-			},
-			"peerCurrency": {
-				"peerApp": {
-					"rogerCurrency": 30
-				}
-			}
-		},
-		"currency": {
-			"coins": {
-				"balance": 1000,
-				"purchased": 1000,
-				"awarded": 0,
-				"consumed": 0
-			}
-		},
+    "status": 200,
+    "data": {
+        "resultCode": 0,
+        "errorMessage": null,
+        "store": "itunes",
+        "transactionSummary": {
+            "processedCount": 1,
+            "unprocessedCount": 1,
+            "transactionDetails": [
+                {
+                    "transactionId": "80000557199459",
+                    "itemId": "barBundle1Imp",
+                    "transactionResultCode": 0,
+                    "processed": true,
+                    "originalTransactionId": "80000557199459",
+                    "quantity": 1,
+                    "purchaseDateMs": 1550639146000,
+                    "productId": "...coinBundle1Imp",
+                    "purchaseDate": "2019-02-20 05:05:46 Etc/GMT",
+                    "rewards": {
+                        "extra": null,
+                        "currency": {
+                            "bar": 10,
+                            "coinMultiplier": 1
+                        }
+                    }
+                },
+                {
+                    "transactionId": "80000557201213",
+                    "itemId": "coinBundle2Imp",
+                    "transactionResultCode": 100,
+                    "processed": false,
+                    "originalTransactionId": "80000557201213",
+                    "quantity": 1,
+                    "purchaseDateMs": 1550639681000,
+                    "productId": "...coinBundle2Imp",
+                    "errorMessage": "Item already processed",
+                    "purchaseDate": "2019-02-20 05:14:41 Etc/GMT"
+                }
+            ],
+            "extra": {
+                "appleReceipt": "stringified json receipt data"
+            }
+        },
+        "rewards": {
+            "currency": {
+                "coins": 1000
+            },
+            "parentCurrency": {
+                "awesomeMaster": {
+                    "rubies": 2000
+                }
+            },
+            "peerCurrency": {
+                "peerApp": {
+                    "rogerCurrency": 30
+                }
+            }
+        },
+        "currency": {
+            "coins": {
+                "balance": 1000,
+                "purchased": 1000,
+                "awarded": 0,
+                "consumed": 0
+            }
+        },
 
-		"parentCurrency": {
-			"awesomeMaster": {
-				"rubies": {
-					"balance": 2000,
-					"purchased": 2000,
-					"awarded": 0,
-					"consumed": 0
-				}
-			}
-		},
+        "parentCurrency": {
+            "awesomeMaster": {
+                "rubies": {
+                    "balance": 2000,
+                    "purchased": 2000,
+                    "awarded": 0,
+                    "consumed": 0
+                }
+            }
+        },
 
-		"peerCurrency": {
-			"peerApp": {
-				"rogerCurrency": {
-					"balance": 30,
-					"purchased": 30,
-					"awarded": 0,
-					"consumed": 0
-				}
-			}
-		},
+        "peerCurrency": {
+            "peerApp": {
+                "rogerCurrency": {
+                    "balance": 30,
+                    "purchased": 30,
+                    "awarded": 0,
+                    "consumed": 0
+                }
+            }
+        },
 
-		"server_time": 1473325588695
-	}
+        "server_time": 1473325588695
+    }
 }
 ```
+
 </details>
 
 <details>
 <summary>Common Error Code</summary>
 
 ### Status Codes
-Code | Name | Description
----- | ---- | -----------
-0 | RESULT_OK | Successfully verified, new currencies awarded.
-100 | RESULT_FAILED_ALREADY_PROCESSED | Already verified and awarded currencies.
-101 | RESULT_FAILED_APPSTORE_ERROR | Purchase error with the used app store. 
-102 | RESULT_FAILED_PRODUCT_NOT_FOUND | Cannot locate the product in <%= data.branding.productName %> Product Inventory. *This is likely a configuration error in the <%= data.branding.productName %> product - double-check the price settings for the product.**
-103 | RESULT_FAILED_UNKNOWN_ERROR | Unexpected error.
-104 | RESULT_FAILED_CONFIGURATION_ERROR | Configuration error on the used app store.
-105 | RESULT_FAILED_REQUEST_ERROR | Credential missing for used app store. Ensure Facebook or Stream credential is correct.
+
+| Code | Name                              | Description                                                                                                                                                                                                                    |
+| ---- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 0    | RESULT_OK                         | Successfully verified, new currencies awarded.                                                                                                                                                                                 |
+| 100  | RESULT_FAILED_ALREADY_PROCESSED   | Already verified and awarded currencies.                                                                                                                                                                                       |
+| 101  | RESULT_FAILED_APPSTORE_ERROR      | Purchase error with the used app store.                                                                                                                                                                                        |
+| 102  | RESULT_FAILED_PRODUCT_NOT_FOUND   | Cannot locate the product in <%= data.branding.productName %> Product Inventory. \*This is likely a configuration error in the <%= data.branding.productName %> product - double-check the price settings for the product.\*\* |
+| 103  | RESULT_FAILED_UNKNOWN_ERROR       | Unexpected error.                                                                                                                                                                                                              |
+| 104  | RESULT_FAILED_CONFIGURATION_ERROR | Configuration error on the used app store.                                                                                                                                                                                     |
+| 105  | RESULT_FAILED_REQUEST_ERROR       | Credential missing for used app store. Ensure Facebook or Stream credential is correct.                                                                                                                                        |
 
 </details>
-
-
