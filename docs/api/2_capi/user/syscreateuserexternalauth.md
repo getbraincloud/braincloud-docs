@@ -5,13 +5,14 @@ Manually creates a new user for the current app. Note that this API is normally 
 <PartialServop service_name="user" operation_name="SYS_CREATE_USER_EXTERNAL_AUTH" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-externalId | The email address of the user
-externalAuthType | The external auth type code
-username | The display or contact name of the user (stored in player state)
-contactEmail | The email address of the user
-notificationTemplateId | If specified, the user will be sent an email confirming that the account has been created
+
+| Parameter              | Description                                                                               |
+| ---------------------- | ----------------------------------------------------------------------------------------- |
+| externalId             | The email address of the user                                                             |
+| externalAuthType       | The external auth type code                                                               |
+| userName               | The display or contact name of the user (stored in player state)                          |
+| contactEmail           | The email address of the user                                                             |
+| notificationTemplateId | If specified, the user will be sent an email confirming that the account has been created |
 
 ## Usage
 
@@ -74,7 +75,7 @@ var postResult = userProxy.sysCreateUserExternalAuth(
   "corpdir",     // externalAuthType
   "R@b1n3gg",    // userName
   "Bats",        // contactEmail
-  "d-eb88215a71bb42e44xb5a35d75fcd6193" );   
+  "d-eb88215a71bb42e44xb5a35d75fcd6193" );
                  // notificationTemplateId
 
 if (postResult.status == 200) {
@@ -102,11 +103,11 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "status": 200,
-  "data": {
-    "profileId": "0b53155b-1fc8-4916-xxxx-298379efc67a"
-  }
+    "status": 200,
+    "data": {
+        "profileId": "0b53155b-1fc8-4916-xxxx-298379efc67a"
+    }
 }
 ```
-</details>
 
+</details>
