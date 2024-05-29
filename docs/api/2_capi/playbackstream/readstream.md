@@ -5,9 +5,10 @@ Reads a stream.
 <PartialServop service_name="playbackStream" operation_name="READ_STREAM" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-playbackStreamId | Identifies the stream to read
+
+| Parameter        | Description                   |
+| ---------------- | ----------------------------- |
+| playbackStreamId | Identifies the stream to read |
 
 ## Usage
 
@@ -135,41 +136,36 @@ if (postResult.status == 200) {
 
 ```json
 {
-   "data":{
-      "playbackStreamId":"6620a4e8-c4a8-4979-b827-0efa6a4a7435",
-      "gameId":"10228",
-      "initiatingPlayerId":"38ae8a44-1b24-4ad9-9bb4-a016bdfc6644",
-      "targetPlayerId":"38ae8a44-1b24-4ad9-9bb4-a016bdfc6644",
-      "status":"IN_PROGRESS",
-      "summary":{
-         "SUMMARY":"User moved back and spent coins on a potion.",
-         "POINTS":5
-      },
-      "initialSharedData":{
-         "entities":[
-
-         ],
-         "statistics":{
-
-         }
-      },
-      "events":[
-         {
-            "MOVE":"FORWARD",
-            "EVENT":"FOUND_COINS"
-         },
-         {
-            "MOVE":"BACK",
-            "EVENT":"SPENT_COINS",
-            "ITEM_AQUIRED":"POTION"
-         }
-      ],
-      "expiryTime":null,
-      "createdAt":1526580974204,
-      "updatedAt":1526581097133
-   },
-   "status":200
+    "data": {
+        "playbackStreamId": "6620a4e8-c4a8-4979-b827-0efa6a4a7435",
+        "initiatingPlayerId": "38ae8a44-1b24-4ad9-9bb4-a016bdfc6644",
+        "targetPlayerId": "38ae8a44-1b24-4ad9-9bb4-a016bdfc6644",
+        "status": "IN_PROGRESS",
+        "summary": {
+            "SUMMARY": "User moved back and spent coins on a potion.",
+            "POINTS": 5
+        },
+        "initialSharedData": {
+            "entities": [],
+            "statistics": {}
+        },
+        "events": [
+            {
+                "MOVE": "FORWARD",
+                "EVENT": "FOUND_COINS"
+            },
+            {
+                "MOVE": "BACK",
+                "EVENT": "SPENT_COINS",
+                "ITEM_AQUIRED": "POTION"
+            }
+        ],
+        "expiryTime": null,
+        "createdAt": 1526580974204,
+        "updatedAt": 1526581097133
+    },
+    "status": 200
 }
 ```
-</details>
 
+</details>

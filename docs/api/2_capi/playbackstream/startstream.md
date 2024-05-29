@@ -5,10 +5,11 @@ Starts a stream.
 <PartialServop service_name="playbackStream" operation_name="START_STREAM" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-targetPlayerId | The player to start a stream with
-includeSharedData | Whether to include shared data in the stream
+
+| Parameter         | Description                                  |
+| ----------------- | -------------------------------------------- |
+| targetPlayerId    | The player to start a stream with            |
+| includeSharedData | Whether to include shared data in the stream |
 
 ## Usage
 
@@ -146,7 +147,6 @@ if (postResult.status == 200) {
     "status": 200,
     "data": {
         "playbackStreamId": "b8da4619-2ddc-4184-b654-cd11d12a3275",
-        "gameId": "10000",
         "initiatingPlayerId": "198bcafcd-6e84-4c30-9f6e-3f9f016440c6",
         "targetPlayerId": "a6943c74-6655-4245-8b2b-13bb908d3f88",
         "status": "STARTED",
@@ -161,5 +161,5 @@ if (postResult.status == 200) {
     }
 }
 ```
-</details>
 
+</details>
