@@ -19,5 +19,3 @@ All the client APIs that the names beigin with <strong>"Sys"</strong> <em>are</e
 For the usages of the S2S playbackStream APIs (if they are not listed at this section),
 refer to <%= data.branding.productName %> client [playbackStream](/api/capi/playbackStream) APIs.
 :::
-
-<DocCardList />
