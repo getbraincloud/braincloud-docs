@@ -7,10 +7,11 @@ Does not require the calling user to be a friend of the other user.
 <PartialServop service_name="friend" operation_name="GET_PROFILE_INFO_FOR_CREDENTIAL" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-externalId | External identifier.
-authenticationType | Associated authentication type. Full list of types can be found [here](/api/appendix/authtypes).
+
+| Parameter          | Description                                                                                      |
+| ------------------ | ------------------------------------------------------------------------------------------------ |
+| externalId         | External identifier.                                                                             |
+| authenticationType | Associated authentication type. Full list of types can be found [here](/api/appendix/authtypes). |
 
 ## Usage
 
@@ -151,12 +152,12 @@ if (postResult.status == 200) {
     "data": {
         "playerName": "",
         "email": null,
-        "playerId": "bb05182d-ff0c-4740-ae65-482751e74949",
-        "playerSummaryData": {
+        "profileId": "bb05182d-ff0c-4740-ae65-482751e74949",
+        "summaryFriendData": {
             "LEVEL": 7
         }
     }
 }
 ```
-</details>
 
+</details>

@@ -30,18 +30,19 @@ Up to date and previous versions of Tic Tac Toe are available here. Tic Tac Toe,
 ## Enable RTT
 
 From the brainCloud Portal, select the app you wish to add RTT to. Select the Real-time Tech (RTT) Enabled checkbox from **Design | Core App Info | Advanced Settings**. [https://sharedprod.braincloudservers.com/admin/dashboard#/development/core-settings-advanced-settings](https://sharedprod.braincloudservers.com/admin/dashboard#/development/core-settings-advanced-settings)
+
 ```js
 // Enable RTT
 private void enableRTT()
 {
     // Only Enable RTT if it's not already started
-    if (!BcWrapper.Client.IsRTTEnabled())
+    if (_bc.RTTService.IsRTTEnabled())
     {
-        BcWrapper.Client.EnableRTT(eRTTConnectionType.WEBSOCKET, onRTTEnabled, onRTTFailure);
+        _bc.RTTService.EnableRTT(BrainCloud.RTTConnectionType.WEBSOCKET, onRTTEnabled, onRTTFailure);
     }
     else
     {
-        // its already started, let's call our success delegate 
+        // its already started, let's call our success delegate
         onRTTEnabled("", null);
     }
 }
@@ -50,12 +51,12 @@ private void enableRTT()
 private void onRTTEnabled(string responseData, object cbPostObject)
 {
     queryMatchState();
-    // LISTEN TO THE ASYNC CALLS, when we get one of these calls, let's just refresh 
+    // LISTEN TO THE ASYNC CALLS, when we get one of these calls, let's just refresh
     // match state
-    BcWrapper.Client.RegisterRTTAsyncMatchCallback(queryMatchStateRTT);
+    _bc_.RTTService.RegisterRTTAsyncMatchCallback(queryMatchStateRTT);
 }
 
-// the listener, can parse the json and request just the updated match 
+// the listener, can parse the json and request just the updated match
 // in this example, just re-request it all
 private void queryMatchStateRTT(string in_json)
 {
@@ -64,14 +65,15 @@ private void queryMatchStateRTT(string in_json)
 
 private void queryMatchState()
 {
-    BcWrapper.MatchMakingService.FindPlayers(RANGE_DELTA, NUMBER_OF_MATCHES, OnFindPlayers);
+    _bc.MatchMakingService.FindPlayers(RANGE_DELTA, NUMBER_OF_MATCHES, OnFindPlayers);
 }
 
 private void onRTTFailure(int status, int reasonCode, string responseData, object cbPostObject)
 {
     // TODO! Bring up a user dialog to inform of poor connection
-    // for now, try to auto connect 
+    // for now, try to auto connect
     Invoke("enableRTT", 5.0f);
 }
 ```
+
 Enabling RTT, and activating a listener for the Async Match Service, allows for real-time messages to be acted upon from within the client. `queryMatchState()` used to be controlled via user interaction. By connecting this to an RTT listener, we can provide the user with a SEAMLESS interaction into both a pure offline Async Match and its real-time updates.

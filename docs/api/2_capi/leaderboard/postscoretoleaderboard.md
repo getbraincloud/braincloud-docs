@@ -9,11 +9,12 @@ Note that the behavior of posting a score can be modified in the <%= data.brandi
 <PartialServop service_name="leaderboard" operation_name="POST_SCORE" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | The leaderboard to post to.
-score | The score to post.
-data | Optional user-defined data to post with the score.
+
+| Parameter     | Description                                                                                                                                                                       |
+| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| leaderboardId | The leaderboard to post to.                                                                                                                                                       |
+| score         | The score to post.                                                                                                                                                                |
+| data          | Optional user-defined data to post with the score. (As of 5.3, when updating an existing score, if the data argument is null, the currently stored data value will be preserved.) |
 
 ## Usage
 
@@ -166,5 +167,5 @@ if (postResult.status == 200) {
     "data": null
 }
 ```
-</details>
 
+</details>
