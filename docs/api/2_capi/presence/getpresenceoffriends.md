@@ -5,10 +5,11 @@ Gets the presence data for the given `platform`. Can be one of "all", "<%= data.
 <PartialServop service_name="presence" operation_name="GET_PRESENCE_OF_FRIENDS" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-platform | Gets a list of Presence entries for the specified platform or "all" for all platforms. 
-includeOffline | Should offline users be included in the response?
+
+| Parameter      | Description                                                                            |
+| -------------- | -------------------------------------------------------------------------------------- |
+| platform       | Gets a list of Presence entries for the specified platform or "all" for all platforms. |
+| includeOffline | Should offline users be included in the response?                                      |
 
 ## Usage
 
@@ -19,7 +20,7 @@ includeOffline | Should offline users be included in the response?
 ```
 
 ```csharp
-string platform = <%= data.example.platform %>;
+string platform = brainCloud;
 bool includeOffline = true;
 SuccessCallback successCallback = (response, cbObject) =>
 {
@@ -29,7 +30,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 {
     Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
 };
-    
+
 <%= data.branding.codePrefix %>.PresenceService.GetPresenceOfFriends(platform, includeOffline, successCallback, failureCallback);
 ```
 
@@ -39,7 +40,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 ```
 
 ```cpp
-const char* platform = <%= data.example.platform %>;
+const char* platform = brainCloud;
 bool includeOffline = true;
 
 <%= data.branding.codePrefix %>->getPresenceService()->getPresenceOfFriends(platform, includeOffline, this);
@@ -51,7 +52,7 @@ bool includeOffline = true;
 ```
 
 ```objectivec
-NSString* platform = @<%= data.example.platform %>;
+NSString* platform = @brainCloud;
 bool includeOffline = true;
 BCCompletionBlock successBlock;      // define callback
 BCErrorCompletionBlock failureBlock; // define callback
@@ -69,7 +70,7 @@ BCErrorCompletionBlock failureBlock; // define callback
 ```
 
 ```java
-String platform = <%= data.example.platform %>;
+String platform = brainCloud;
 boolean includeOffline = true;
 this; // implements IServerCallback
 
@@ -91,7 +92,7 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 ```
 
 ```javascript
-var platform = <%= data.example.platform %>;
+var platform = brainCloud;
 var includeOffline = true;
 
 <%= data.branding.codePrefix %>.presence.getPresenceOfFriends(platform, includeOffline, result =>
@@ -108,7 +109,7 @@ var includeOffline = true;
 
 ```cfscript
 var presenceProxy = bridge.getPresenceServiceProxy();
-var platform = <%= data.example.platform %>;
+var platform = brainCloud;
 var includeOffline = true;
 
 var postResult = presenceProxy.getPresenceOfFriends(platform, includeOffline);
@@ -167,5 +168,5 @@ if (postResult.status == 200) {
  "status": 200
 }
 ```
-</details>
 
+</details>

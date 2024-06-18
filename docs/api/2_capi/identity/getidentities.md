@@ -123,11 +123,11 @@ if (postResult.status == 200) {
     "status": 200,
     "data": {
         "identities": {
-            "facebook": "10015",
-            "twitter": "gertgertgetgte"
+            "Facebook": "1643467965855411",
+            "Twitter": "1540072657634435075"
         }
     }
 }
 ```
-</details>
 
+</details>
