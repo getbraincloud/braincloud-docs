@@ -12,7 +12,7 @@ Method returns a page of global leaderboard results. By using a non-current vers
 See GetGlobalLeaderboardVersions method to retrieve the version id.
 :::
 
-<PartialServop service_name="leaderboard" operation_name="GET_GLOBAL_LEADERBOARD_PAGE" />
+<PartialServop service_name="leaderboard" operation_name="GET_GLOBAL_LEADERBOARD_PAGE_IF_EXISTS" />
 
 ## Method Parameters
 
