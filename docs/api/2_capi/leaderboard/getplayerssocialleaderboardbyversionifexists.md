@@ -1,8 +1,8 @@
-# GetPlayersSocialLeaderboardByVersion
+# GetPlayersSocialLeaderboardByVersionIfExists
 
-Retrieve the social leaderboard by version, for a list of players.
+Retrieve a sorted, social leaderboard of the specified list of players by version, if leaderboard exists.
 
-<PartialServop service_name="leaderboard" operation_name="GET_PLAYERS_SOCIAL_LEADERBOARD" />
+<PartialServop service_name="leaderboard" operation_name="GET_PLAYERS_SOCIAL_LEADERBOARD_IF_EXISTS" />
 
 ## Method Parameters
 
@@ -33,7 +33,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
     Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
 };
 
-<%= data.branding.codePrefix %>.LeaderboardService.GetPlayersSocialLeaderboardByVersion(leaderboardId, profileIds, versionId, successCallback, failureCallback);
+<%= data.branding.codePrefix %>.LeaderboardService.GetPlayersSocialLeaderboardByVersionIfExists(leaderboardId, profileIds, versionId, successCallback, failureCallback);
 ```
 
 ```mdx-code-block
@@ -47,7 +47,7 @@ std::vector<std::string> profileIds;
 profileIds.push_back("profile-id");
 profileIds.push_back("another-profile-id");
 int versionId = 1;
-<%= data.branding.codePrefix %>->getLeaderboardService()->getPlayersSocialLeaderboardByVersion(leaderboardId, profileIds, versionId, this);
+<%= data.branding.codePrefix %>->getLeaderboardService()->getPlayersSocialLeaderboardByVersionIfExists(leaderboardId, profileIds, versionId, this);
 ```
 
 ```mdx-code-block
@@ -62,7 +62,7 @@ int versionId = 1;
 BCCompletionBlock successBlock;      // define callback
 BCErrorCompletionBlock failureBlock; // define callback
 
-[[<%= data.branding.codePrefix %> leaderboardService] getPlayersSocialLeaderboardByVersion:leaderboardId
+[[<%= data.branding.codePrefix %> leaderboardService] getPlayersSocialLeaderboardByVersionIfExists:leaderboardId
                  profileIds:profileIds
                   versionId:versionId
             completionBlock:successBlock
@@ -81,7 +81,7 @@ String[] profileIds = { "profile-id", "another-profile-id" };
 int versionId = 1;
 this; // implements IServerCallback
 
-<%= data.branding.codePrefix %>.getLeaderboardService().getPlayersSocialLeaderboardByVersion(leaderboardId, profileIds, versionId, this);
+<%= data.branding.codePrefix %>.getLeaderboardService().getPlayersSocialLeaderboardByVersionIfExists(leaderboardId, profileIds, versionId, this);
 
 public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
 {
@@ -103,7 +103,7 @@ var leaderboardId = "default";
 var profileIds = [ "profile-id", "another-profile-id" ];
 var versionId = 1;
 
-<%= data.branding.codePrefix %>.leaderboard.getPlayersSocialLeaderboardByVersion(leaderboardId, profileIds, versionId, result =>
+<%= data.branding.codePrefix %>.leaderboard.getPlayersSocialLeaderboardByVersionIfExists(leaderboardId, profileIds, versionId, result =>
 {
 	var status = result.status;
 	console.log(status + " : " + JSON.stringify(result, null, 2));
@@ -121,7 +121,7 @@ var profileIds = [ "profile-id", "another-profile-id" ];
 var versionId = 1;
 var leaderboardProxy = bridge.getLeaderboardServiceProxy();
 
-var postResult = leaderboardProxy.getPlayersSocialLeaderboardByVersion(leaderboardId, profileIds, versionId);
+var postResult = leaderboardProxy.getPlayersSocialLeaderboardByVersionIfExists(leaderboardId, profileIds, versionId);
 if (postResult.status == 200) {
     // Success!
 }
@@ -135,7 +135,7 @@ if (postResult.status == 200) {
 ```r
 {
 	"service": "leaderboard",
-	"operation": "GET_PLAYERS_SOCIAL_LEADERBOARD",
+	"operation": "GET_PLAYERS_SOCIAL_LEADERBOARD_IF_EXISTS",
 	"data": {
 		"leaderboardId": "default",
 		"profileIds": [

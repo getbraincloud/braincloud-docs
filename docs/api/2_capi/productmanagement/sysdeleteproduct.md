@@ -2,13 +2,18 @@
 
 Delete the product item.
 
+:::tip
+If any real purchases of the product exist, product deletion will be disallowed (error returned)
+:::
+
 <PartialServop service_name="productManagement" operation_name="SYS_DELETE_PRODUCT" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-itemId | The item id being deleted.
-version | The version being validated. Pass -1 to bypass version checking.
+
+| Parameter | Description                                                      |
+| --------- | ---------------------------------------------------------------- |
+| itemId    | The item id being deleted.                                       |
+| version   | The version being validated. Pass -1 to bypass version checking. |
 
 ## Usage
 
@@ -101,9 +106,9 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": null,
-  "status": 200
+    "data": null,
+    "status": 200
 }
 ```
-</details>
 
+</details>

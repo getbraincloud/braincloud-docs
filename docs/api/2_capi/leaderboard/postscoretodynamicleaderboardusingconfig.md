@@ -59,7 +59,7 @@ NSString *scoreData = @"{\"nickname\": \"batman\"}";
 NSString *configJson = @"{\"leaderboardType\": \"HIGH_VALUE\", \"rotationType\": \"DAYS\", \"numDaysToRotate\": 4, \"resetAt\": \"[[#ts+60000]]\", \"retainedCount\": 2, \"expireInMins\": None}";
 BCCompletionBlock successBlock; // define callback
 BCErrorCompletionBlock failureBlock; // define callback
-[[<%= data.branding.codePrefix %> leaderboardService] PostScoreToDynamicLeaderboardUsingConfig:
+[[<%= data.branding.codePrefix %> leaderboardService] postScoreToDynamicLeaderboardUsingConfig:
                 leaderboardId:leaderboardId
                         score:score
                     scoreData:scoreData
@@ -80,7 +80,7 @@ int score = 10;
 String scoreData = "{\"nickname\": \"batman\"}";
 String configJson = "{\"leaderboardType\": \"HIGH_VALUE\", \"rotationType\": \"DAYS\", \"numDaysToRotate\": 4, \"resetAt\": \"[[#ts+60000]]\", \"retainedCount\": 2, \"expireInMins\": None}";
 this; // implements IServerCallback
-<%= data.branding.codePrefix %>.getLeaderboardService.PostScoreToDynamicLeaderboardUsingConfig(leaderboardId, score, scoreData, configJson, this);
+<%= data.branding.codePrefix %>.getLeaderboardService.postScoreToDynamicLeaderboardUsingConfig(leaderboardId, score, scoreData, configJson, this);
 
 public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
 {
@@ -112,7 +112,7 @@ var configJson = {
     "retainedCount": 2,
     "expireInMins": null
 };
-<%= data.branding.codePrefix %>.leaderboard.PostScoreToDynamicLeaderboardUsingConfig(leaderboardId, score, scoreData, configJson, result =>
+<%= data.branding.codePrefix %>.leaderboard.postScoreToDynamicLeaderboardUsingConfig(leaderboardId, score, scoreData, configJson, result =>
 {
   var status = result.status;
   console.log(status + " : " + JSON.stringify(result, null, 2));
@@ -140,7 +140,7 @@ var configJson = {
 };
 var leaderboardProxy = bridge.getLeaderboardServiceProxy();
 
-var postResult = leaderboardProxy.PostScoreToDynamicLeaderboardUsingConfig(leaderboardId, score, scoreData, configJson);
+var postResult = leaderboardProxy.postScoreToDynamicLeaderboardUsingConfig(leaderboardId, score, scoreData, configJson);
 ```
 
 ```mdx-code-block

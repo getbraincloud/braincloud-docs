@@ -62,7 +62,7 @@ NSString *scoreData = @"{\"nickname\": \"batman\"}";
 NSString *configJson = @"{\"leaderboardType\": \"HIGH_VALUE\", \"rotationType\": \"DAYS\", \"numDaysToRotate\": 4, \"resetAt\": \"[[#ts+60000]]\", \"retainedCount\": 2, \"expireInMins\": None}";
 BCCompletionBlock successBlock; // define callback
 BCErrorCompletionBlock failureBlock; // define callback
-[[<%= data.branding.codePrefix %> leaderboardService] PostScoreToDynamicGroupLeaderboardUsingConfig:
+[[<%= data.branding.codePrefix %> leaderboardService] postScoreToDynamicGroupLeaderboardUsingConfig:
                 leaderboardId:leaderboardId
                       groupId:groupId
                         score:score
@@ -85,7 +85,7 @@ int score = 10;
 String scoreData = "{\"nickname\": \"batman\"}";
 String configJson = "{\"leaderboardType\": \"HIGH_VALUE\", \"rotationType\": \"DAYS\", \"numDaysToRotate\": 4, \"resetAt\": \"[[#ts+60000]]\", \"retainedCount\": 2, \"expireInMins\": None}";
 this; // implements IServerCallback
-<%= data.branding.codePrefix %>.getLeaderboardService.PostScoreToDynamicGroupLeaderboardUsingConfig(leaderboardId, groupId, score, scoreData, configJson, this);
+<%= data.branding.codePrefix %>.getLeaderboardService.postScoreToDynamicGroupLeaderboardUsingConfig(leaderboardId, groupId, score, scoreData, configJson, this);
 
 public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
 {
@@ -118,7 +118,7 @@ var configJson = {
     "retainedCount": 2,
     "expireInMins": null
 };
-<%= data.branding.codePrefix %>.leaderboard.PostScoreToDynamicGroupLeaderboardUsingConfig(leaderboardId, groupId, score, scoreData, configJson, result =>
+<%= data.branding.codePrefix %>.leaderboard.postScoreToDynamicGroupLeaderboardUsingConfig(leaderboardId, groupId, score, scoreData, configJson, result =>
 {
   var status = result.status;
   console.log(status + " : " + JSON.stringify(result, null, 2));
@@ -147,7 +147,7 @@ var configJson = {
 };
 var leaderboardProxy = bridge.getLeaderboardServiceProxy();
 
-var postResult = leaderboardProxy.PostScoreToDynamicGroupLeaderboardUsingConfig(leaderboardId, groupId, score, scoreData, configJson);
+var postResult = leaderboardProxy.postScoreToDynamicGroupLeaderboardUsingConfig(leaderboardId, groupId, score, scoreData, configJson);
 ```
 
 ```mdx-code-block

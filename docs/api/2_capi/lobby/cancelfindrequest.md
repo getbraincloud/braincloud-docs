@@ -5,10 +5,10 @@ Cancels any FindLobby or FindOrCreateLobby requests that have been previously su
 <PartialServop service_name="lobby" operation_name="CANCEL_FIND_REQUEST" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-cxId | RTT connection id. 
-lobbyType | Type of lobby being targeted. 
+
+| Parameter | Description                   |
+| --------- | ----------------------------- |
+| lobbyType | Type of lobby being targeted. |
 
 ## Usage
 
@@ -19,7 +19,6 @@ lobbyType | Type of lobby being targeted.
 ```
 
 ```csharp
-string cxId = "55555:aaa-bbb-ccc-ddd:asdfjkl";
 string lobbyType = "4v4";
 SuccessCallback successCallback = (response, cbObject) =>
 {
@@ -30,7 +29,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
     Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
 };
 
-<%= data.branding.codePrefix %>.LobbyService.CancelFindRequest(cxId, lobbyType, successCallback, failureCallback);
+<%= data.branding.codePrefix %>.LobbyService.CancelFindRequest(lobbyType, successCallback, failureCallback);
 ```
 
 ```mdx-code-block
@@ -39,9 +38,8 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 ```
 
 ```cpp
-const char *cxId = "55555:aaa-bbb-ccc-ddd:asdfjkl";
 const char *lobbyType = "4v4";
-<%= data.branding.codePrefix %>->getLobbyService()->cancelFindRequest(cxId, lobbyType, this);
+<%= data.branding.codePrefix %>->getLobbyService()->cancelFindRequest(lobbyType, this);
 ```
 
 ```mdx-code-block
@@ -59,11 +57,10 @@ const char *lobbyType = "4v4";
 ```
 
 ```java
-String cxId = "55555:aaa-bbb-ccc-ddd:asdfjkl";
 String lobbyType = "4v4";
 this; // implements IServerCallback
 
-<%= data.branding.codePrefix %>.getLobbyService().cancelFindRequest(cxId, lobbyType, this);
+<%= data.branding.codePrefix %>.getLobbyService().cancelFindRequest(lobbyType, this);
 
 public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
 {
@@ -81,10 +78,9 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 ```
 
 ```javascript
-var cxId = "55555:aaa-bbb-ccc-ddd:asdfjkl";
 var lobbyType = "4v4";
 
-<%= data.branding.codePrefix %>.lobby.cancelFindRequest(cxId, lobbyType, result =>
+<%= data.branding.codePrefix %>.lobby.cancelFindRequest(lobbyType, result =>
 {
 	var status = result.status;
 	console.log(status + " : " + JSON.stringify(result, null, 2));
@@ -97,11 +93,10 @@ var lobbyType = "4v4";
 ```
 
 ```cfscript
-var cxId = "55555:aaa-bbb-ccc-ddd:asdfjkl";
 var lobbyType = "4v4";
 var lobbyProxy = bridge.getLobbyServiceProxy();
 
-var postResult = lobbyProxy.cancelFindRequest(cxId, lobbyType);
+var postResult = lobbyProxy.cancelFindRequest(lobbyType);
 if (postResult.status == 200) {
     // Success!
 }
@@ -117,7 +112,6 @@ if (postResult.status == 200) {
 	"service": "lobby",
 	"operation": "CANCEL_FIND_REQUEST",
 	"data": {
-		"cxId": "55555:aaa-bbb-ccc-ddd:asdfjkl",
 		"lobbyType": "4v4"
 	}
 }
@@ -128,4 +122,3 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
