@@ -1,13 +1,14 @@
 # SysCancelScheduledScriptIfExists
 
-Cancels a previously scheduled script, if it exists and is still in Scheduled state.
+Cancels a previously scheduled script, if it exists and is still in Scheduled state. Silently fails, if job does not exist, just returns null and success, instead of an error.
 
 <PartialServop service_name="script" operation_name="SYS_CANCEL_SCHEDULED_SCRIPT_IF_EXISTS" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-jobId | The id of the job to cancel.
+
+| Parameter | Description                  |
+| --------- | ---------------------------- |
+| jobId     | The id of the job to cancel. |
 
 ## Usage
 
@@ -99,13 +100,13 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "cancelled": 1
-  },
-  "apiCount": 1,
-  "totalCount": 0,
-  "status": 200
+    "data": {
+        "cancelled": 1
+    },
+    "apiCount": 1,
+    "totalCount": 0,
+    "status": 200
 }
 ```
-</details>
 
+</details>

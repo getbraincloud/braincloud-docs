@@ -1,13 +1,14 @@
 # SysCancelUserScriptBatchIfExists
 
-Cancels a user script batch, if it exists and is in Scheduled, Queued or Running state.
+Cancels a user script batch, if it exists and is in Scheduled, Queued or Running state. Silently fails, if job does not exist, just returns null and success, instead of an error.
 
 <PartialServop service_name="script" operation_name="SYS_CANCEL_USER_SCRIPT_BATCH_IF_EXISTS" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-jobId | The id of the job to cancel.
+
+| Parameter | Description                  |
+| --------- | ---------------------------- |
+| jobId     | The id of the job to cancel. |
 
 ## Usage
 
@@ -99,13 +100,13 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "cancelled": 1
-  },
-  "apiCount": 1,
-  "totalCount": 0,
-  "status": 200
+    "data": {
+        "cancelled": 1
+    },
+    "apiCount": 1,
+    "totalCount": 0,
+    "status": 200
 }
 ```
-</details>
 
+</details>

@@ -1,6 +1,6 @@
 # GetSocialLeaderboardIfExists
 
-Retrieve the social leaderboard, if it exists. Optional parameters: replaceName.
+Retrieve the social leaderboard, if it exists. Optional parameters: replaceName. Silently fails, if leaderboard does not exist, just returns null and success, instead of an error.
 
 > Note that friend summary data is returned for each record in the leaderboard.
 

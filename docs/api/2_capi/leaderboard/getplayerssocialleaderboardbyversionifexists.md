@@ -1,8 +1,8 @@
 # GetPlayersSocialLeaderboardByVersionIfExists
 
-Retrieve a sorted, social leaderboard of the specified list of players by version, if leaderboard exists.
+Retrieve a sorted, social leaderboard of the specified list of players by version, if leaderboard exists. Silently fails, if leaderboard does not exist, just returns null and success, instead of an error.
 
-<PartialServop service_name="leaderboard" operation_name="GET_PLAYERS_SOCIAL_LEADERBOARD_IF_EXISTS" />
+<PartialServop service_name="leaderboard" operation_name="GET_PLAYERS_SOCIAL_LEADERBOARD_BY_VERSION_IF_EXISTS" />
 
 ## Method Parameters
 
@@ -135,7 +135,7 @@ if (postResult.status == 200) {
 ```r
 {
 	"service": "leaderboard",
-	"operation": "GET_PLAYERS_SOCIAL_LEADERBOARD_IF_EXISTS",
+	"operation": "GET_PLAYERS_SOCIAL_LEADERBOARD_BY_VERSION_IF_EXISTS",
 	"data": {
 		"leaderboardId": "default",
 		"profileIds": [
