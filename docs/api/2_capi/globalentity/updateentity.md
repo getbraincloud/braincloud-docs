@@ -169,9 +169,6 @@ if (postResult.status == 200) {
         "entityType": "test",
         "entityIndexedId": "indexTest",
         "version": 1,
-        "data": {
-            "testData": 1234
-        },
         "acl": {
             "other": 1
         },
