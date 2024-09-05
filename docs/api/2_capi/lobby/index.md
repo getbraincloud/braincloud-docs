@@ -52,7 +52,7 @@ _For more information on Lobby Concepts, see the [Lobby Overview](/learn/key-con
 }
 ```
 
-> `MEMBER_JOIN` event example (_click orange bar below to expand_)
+> `MEMBER_JOIN` event example
 
 ```json-doc
 {
@@ -246,6 +246,64 @@ _For more information on Lobby Concepts, see the [Lobby Overview](/learn/key-con
 
 ```
 
+> `ROOM_PROGRESS` event example
+
+```json-doc
+{
+    {
+    "service": "lobby",
+    "operation": "ROOM_PROGRESS",
+    "data": {
+      "lobbyId": "23649:CursorPartyV2:4186",
+      "curStep": 1,
+      "ofStep": 5,
+      "msg": "Host lookup",
+      "variation": "no-host-found"
+    }
+  },
+  {
+    "service": "lobby",
+    "operation": "ROOM_PROGRESS",
+    "data": {
+      "lobbyId": "23649:CursorPartyV2:4186",
+      "curStep": 2,
+      "ofStep": 5,
+      "msg": "New host started"
+    }
+  },
+  {
+    "service": "lobby",
+    "operation": "ROOM_PROGRESS",
+    "data": {
+      "lobbyId": "23649:CursorPartyV2:4186",
+      "curStep": 3,
+      "ofStep": 5,
+      "msg": "Host docker init"
+    }
+  },
+  {
+    "service": "lobby",
+    "operation": "ROOM_PROGRESS",
+    "data": {
+      "lobbyId": "23649:CursorPartyV2:4186",
+      "curStep": 4,
+      "ofStep": 5,
+      "msg": "Pulling container image"
+    }
+  },
+  {
+    "service": "lobby",
+    "operation": "ROOM_PROGRESS",
+    "data": {
+      "lobbyId": "23649:CursorPartyV2:4186",
+      "curStep": 5,
+      "ofStep": 5,
+      "msg": "Starting container"
+    }
+  }
+}
+```
+
 The Lobby Service provides APIs for _Online Matchmaking_, _Lobby Experience_ and _Room Server Integration_.
 
 ### Online Matchmaking
@@ -314,66 +372,11 @@ if (result.data.reason.code != this.bc.reasonCodes.RTT_ROOM_READY)
 }
 ```
 
-An example of ROOM_PROGRESS messages:
+An example of ROOM_PROGRESS messages when a host is found:
 
-```
-// no server with slots found:
+```json
 {
-    "service": "lobby",
-    "operation": "ROOM_PROGRESS",
-    "data": {
-      "lobbyId": "23649:CursorPartyV2:4186",
-      "curStep": 1,
-      "ofStep": 5,
-      "msg": "Host lookup",
-      "variation": "no-host-found"
-    }
-  },
   {
-    "service": "lobby",
-    "operation": "ROOM_PROGRESS",
-    "data": {
-      "lobbyId": "23649:CursorPartyV2:4186",
-      "curStep": 2,
-      "ofStep": 5,
-      "msg": "New host started"
-    }
-  },
-  {
-    "service": "lobby",
-    "operation": "ROOM_PROGRESS",
-    "data": {
-      "lobbyId": "23649:CursorPartyV2:4186",
-      "curStep": 3,
-      "ofStep": 5,
-      "msg": "Host docker init"
-    }
-  },
-  {
-    "service": "lobby",
-    "operation": "ROOM_PROGRESS",
-    "data": {
-      "lobbyId": "23649:CursorPartyV2:4186",
-      "curStep": 4,
-      "ofStep": 5,
-      "msg": "Pulling container image"
-    }
-  },
-  {
-    "service": "lobby",
-    "operation": "ROOM_PROGRESS",
-    "data": {
-      "lobbyId": "23649:CursorPartyV2:4186",
-      "curStep": 5,
-      "ofStep": 5,
-      "msg": "Starting container"
-    }
-  }
-```
-
-```
-// when a host is found
-{
     "service": "lobby",
     "operation": "ROOM_PROGRESS",
     "data": {
@@ -414,11 +417,12 @@ An example of ROOM_PROGRESS messages:
       "msg": "Starting container"
     }
   }
+}
 '''
 
 ```
 
-// acture "progress" events being sent out to lobby members
+// an example of the `acture "progress" events being sent out to lobby members
 {"service":"lobby","operation":"STARTING","data":{"lobbyId":"23649:CursorPartyV2:4186","lobby":{"state":"starting","settings":{},"version":1,"cRegions":[],"round":1,"isRoomReady":false,"keepAliveRateSeconds":72,"isAvailable":true,"ownerCxId":"23649:37e60799-468d-4440-8fce-5d8eabade18d:4s26gha7bhmiottrn3v38d8l0o","legacyLobbyOwnerEnabled":false,"numMembers":1,"members":[{"profileId":"37e60799-468d-4440-8fce-5d8eabade18d","name":"greg@bitheads.com","pic":"","rating":0,"team":"all","isReady":true,"extra":{"colorIndex":6,"presentSinceStart":false},"ipAddress":"184.148.127.43","cxId":"23649:37e60799-468d-4440-8fce-5d8eabade18d:4s26gha7bhmiottrn3v38d8l0o"}]}}}
 {"service":"lobby","operation":"ROOM_PROGRESS","data":{"lobbyId":"23649:CursorPartyV2:4186","curStep":1,"ofStep":5,"msg":"Host lookup","variation":"no-host-found"}}
 {"service":"lobby","operation":"ROOM_PROGRESS","data":{"lobbyId":"23649:CursorPartyV2:4186","curStep":2,"ofStep":5,"msg":"New host started"}}
