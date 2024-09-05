@@ -93,7 +93,7 @@ _For more information on Lobby Concepts, see the [Lobby Overview](/learn/key-con
 
 > `MEMBER_LEFT` event example
 
-```json-doc
+```json
 {
     "service": "lobby",
     "operation": "MEMBER_LEFT",
@@ -127,7 +127,7 @@ _For more information on Lobby Concepts, see the [Lobby Overview](/learn/key-con
 
 > `MEMBER_UPDATE` event example
 
-```json-doc
+```json
 {
     "service": "lobby",
     "operation": "MEMBER_UPDATE",
@@ -151,7 +151,7 @@ _For more information on Lobby Concepts, see the [Lobby Overview](/learn/key-con
 
 > `ROOM_ASSIGNED` event example
 
-```json-doc
+```json
 {
     "service": "lobby",
     "operation": "ROOM_ASSIGNED",
@@ -170,7 +170,7 @@ _For more information on Lobby Concepts, see the [Lobby Overview](/learn/key-con
 
 > `ROOM_READY` event example
 
-```json-doc
+```json
 {
     "service": "lobby",
     "operation": "ROOM_READY",
@@ -189,7 +189,7 @@ _For more information on Lobby Concepts, see the [Lobby Overview](/learn/key-con
 
 > `SETTINGS_UPDATE` event example
 
-```json-doc
+```json
 {
     "service": "lobby",
     "operation": "SETTINGS_UPDATE",
@@ -208,7 +208,7 @@ _For more information on Lobby Concepts, see the [Lobby Overview](/learn/key-con
 
 > `STARTING` event example
 
-```json-doc
+```json
 {
     "service": "lobby",
     "operation": "STARTING",
@@ -228,7 +228,7 @@ _For more information on Lobby Concepts, see the [Lobby Overview](/learn/key-con
 
 > `STATUS_UPDATE` event example
 
-```json-doc
+```json
 {
     "service": "lobby",
     "operation": "STATUS_UPDATE",
@@ -243,12 +243,11 @@ _For more information on Lobby Concepts, see the [Lobby Overview](/learn/key-con
         }
     }
 }
-
 ```
 
 > `ROOM_PROGRESS` event example
 
-```json-doc
+```json
 {
     {
     "service": "lobby",
@@ -418,10 +417,10 @@ An example of ROOM_PROGRESS messages when a host is found:
     }
   }
 }
-'''
 
 ```
 
+```json
 // an example of the `acture "progress" events being sent out to lobby members
 {"service":"lobby","operation":"STARTING","data":{"lobbyId":"23649:CursorPartyV2:4186","lobby":{"state":"starting","settings":{},"version":1,"cRegions":[],"round":1,"isRoomReady":false,"keepAliveRateSeconds":72,"isAvailable":true,"ownerCxId":"23649:37e60799-468d-4440-8fce-5d8eabade18d:4s26gha7bhmiottrn3v38d8l0o","legacyLobbyOwnerEnabled":false,"numMembers":1,"members":[{"profileId":"37e60799-468d-4440-8fce-5d8eabade18d","name":"greg@bitheads.com","pic":"","rating":0,"team":"all","isReady":true,"extra":{"colorIndex":6,"presentSinceStart":false},"ipAddress":"184.148.127.43","cxId":"23649:37e60799-468d-4440-8fce-5d8eabade18d:4s26gha7bhmiottrn3v38d8l0o"}]}}}
 {"service":"lobby","operation":"ROOM_PROGRESS","data":{"lobbyId":"23649:CursorPartyV2:4186","curStep":1,"ofStep":5,"msg":"Host lookup","variation":"no-host-found"}}
@@ -442,94 +441,88 @@ The following structures are common to multiple event types:
 
 The configured meta-data for the lobby type:
 
-```
-
+```json
 {
-lobbyTypeDef: {
-"roomConfig": null,
-"lobbyTypeId": "unranked",
-"teams": {
-"player1": {
-"minUsers": 1,
-"maxUsers": 1,
-"autoAssign": true,
-"code": "player1"
-},
-"player2": {
-"minUsers": 1,
-"maxUsers": 1,
-"autoAssign": true,
-"code": "player2"
+    "lobbyTypeDef": {
+        "roomConfig": null,
+        "lobbyTypeId": "unranked",
+        "teams": {
+            "player1": {
+                "minUsers": 1,
+                "maxUsers": 1,
+                "autoAssign": true,
+                "code": "player1"
+            },
+            "player2": {
+                "minUsers": 1,
+                "maxUsers": 1,
+                "autoAssign": true,
+                "code": "player2"
+            }
+        },
+        "rules": {
+            "allowEarlyStartWithoutMax": false,
+            "forceOnTimeStartWithoutReady": true,
+            "onTimeStartSecs": 90,
+            "everyReadyMinPercent": 100,
+            "everyReadyMinNum": 2,
+            "earliestStartSecs": 0,
+            "tooLateSecs": 180
+        },
+        "desc": "Unranked match"
+    }
 }
-},
-"rules": {
-"allowEarlyStartWithoutMax": false,
-"forceOnTimeStartWithoutReady": true,
-"onTimeStartSecs": 90,
-"everyReadyMinPercent": 100,
-"everyReadyMinNum": 2,
-"earliestStartSecs": 0,
-"tooLateSecs": 180
-},
-"desc": "Unranked match"
-}
-}
-
 ```
 
 ### `members`
 
 The list of members in the lobby, and their status:
 
-```
-
+```json
 {
-"members": [
-{
-"profileId": "f6fa3e0e-6aac-497a-84e1-c8db6f545c12",
-"name": "david",
-"pic": "",
-"rating": 0,
-"team": "player2",
-"isReady": true,
-"extra": {},
-"cxId": "22819:f6fa3e0e-6aac-497a-84e1-c8db6f545c12:vn0vnr7li5ll6t7gc0om18hksg"
-},
-{
-"profileId": "1dab1250-facb-419a-80cf-3d2de4e91e0b",
-"name": "david2",
-"pic": "",
-"rating": 0,
-"team": "player1",
-"isReady": true,
-"extra": {},
-"cxId": "22819:1dab1250-facb-419a-80cf-3d2de4e91e0b:bkr44a0ssbd0q3ae3r2i2refjh"
+    "members": [
+        {
+            "profileId": "f6fa3e0e-6aac-497a-84e1-c8db6f545c12",
+            "name": "david",
+            "pic": "",
+            "rating": 0,
+            "team": "player2",
+            "isReady": true,
+            "extra": {},
+            "cxId": "22819:f6fa3e0e-6aac-497a-84e1-c8db6f545c12:vn0vnr7li5ll6t7gc0om18hksg"
+        },
+        {
+            "profileId": "1dab1250-facb-419a-80cf-3d2de4e91e0b",
+            "name": "david2",
+            "pic": "",
+            "rating": 0,
+            "team": "player1",
+            "isReady": true,
+            "extra": {},
+            "cxId": "22819:1dab1250-facb-419a-80cf-3d2de4e91e0b:bkr44a0ssbd0q3ae3r2i2refjh"
+        }
+    ]
 }
-]
-}
-
 ```
 
 ### `settings`
 
 The developer-defined, dynamic settings for this lobby instance:
 
-```
-
+```json
 {
-"settings": {
-"gameTime": 300,
-"isPlaying": 0,
-"mapLayout": 0,
-"mapSize": 1,
-"gameName": "ste123's Room",
-"maxPlayers": 8,
-"lightPosition": 0,
-"minLevel": 0,
-"maxLevel": 50
+    "settings": {
+        "gameTime": 300,
+        "isPlaying": 0,
+        "mapLayout": 0,
+        "mapSize": 1,
+        "gameName": "ste123's Room",
+        "maxPlayers": 8,
+        "lightPosition": 0,
+        "minLevel": 0,
+        "maxLevel": 50
+    }
 }
-}
-
 ```
 
 _The json above is just an example - it can be whatever the developer decides._
@@ -542,42 +535,30 @@ When looking for a lobby.
 
 Ranges provided are interpreted as percentages to be applied to the user's rating for matchmaking.
 
-```
-
+```json
 {
-"rating" : 1200,
-"algo":{
-"strategy":"ranged-percent",
-"alignment":"center",
-"ranges":[
-10,
-20,
-80
-]
+    "rating": 1200,
+    "algo": {
+        "strategy": "ranged-percent",
+        "alignment": "center",
+        "ranges": [10, 20, 80]
+    }
 }
-}
-
 ```
 
 ### `ranged-absolute`
 
 Ranges provided are interpreted as absolute values to add/subtract from the user's rating when calculating the range for matchmaking
 
-```
-
+```json
 {
-"rating" : 76,
-"algo":{
-"strategy":"ranged-absolute",
-"alignment":"center",
-"ranges":[
-5,
-7.5,
-10
-]
+    "rating": 76,
+    "algo": {
+        "strategy": "ranged-absolute",
+        "alignment": "center",
+        "ranges": [5, 7.5, 10]
+    }
 }
-}
-
 ```
 
 ### `alignment`
