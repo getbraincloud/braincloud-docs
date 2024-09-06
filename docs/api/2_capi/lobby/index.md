@@ -417,7 +417,6 @@ An example of ROOM_PROGRESS messages when a host is found:
     }
   }
 }
-
 ```
 
 ```json
@@ -572,4 +571,3 @@ Ranges provided are interpreted as absolute values to add/subtract from the user
 | low       | 60  | 80  | Ensures that lobbies will have skill rating <= to the candidate. Subtracts 200% of the range from the rating to calculate min, and leaves max as the player rating. |
 
 <DocCardList />
-```
