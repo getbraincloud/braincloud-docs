@@ -429,7 +429,6 @@ An example of ROOM_PROGRESS messages when a host is found:
 {"service":"lobby","operation":"ROOM_PROGRESS","data":{"lobbyId":"23649:CursorPartyV2:4186","curStep":4,"ofStep":5,"msg":"Pulling container image"}}
 {"service":"lobby","operation":"ROOM_PROGRESS","data":{"lobbyId":"23649:CursorPartyV2:4186","curStep":5,"ofStep":5,"msg":"Starting container"}}
 {"service":"lobby","operation":"ROOM_READY","data":{"lobbyId":"23649:CursorPartyV2:4186","connectData":{"address":"3.96.222.126","ports":{"udp":9000,"tcp":9000,"ws":9001}},"passcode":"fda606"}}
-
 ```
 
 ### Common Event Structures
