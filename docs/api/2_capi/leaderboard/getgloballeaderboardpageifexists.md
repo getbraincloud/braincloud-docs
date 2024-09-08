@@ -1,6 +1,6 @@
 # GetGlobalLeaderboardPageIfExists
 
-Retrieve a page of the global leaderboard specified, if it exists, by the start and end indexes (0-based).
+Retrieve a page of the global leaderboard specified, if it exists, by the start and end indexes (0-based). Silently fails, if leaderboard does not exist, just returns null and success, instead of an error.
 
 > NOTE: The friend summary data is returned for each record in the leaderboard.
 

@@ -1,10 +1,10 @@
 # GetGlobalLeaderboardViewByVersionIfExists
 
-Method returns a view of global leaderboard results that centers on the current player, if the leaderboard exists. By using a non-current version id, the user can retrieve a historical leaderboard.
+Method returns a view of global leaderboard results that centers on the current player, if the leaderboard exists. By using a non-current version id, the user can retrieve a historical leaderboard. Silently fails, if leaderboard does not exist, just returns null and success, instead of an error.
 
 See GetGlobalLeaderboardVersions method to retrieve the version ID.
 
-<PartialServop service_name="leaderboard" operation_name="GET_GLOBAL_LEADERBOARD_VIEW_IF_EXISTS" />
+<PartialServop service_name="leaderboard" operation_name="GET_GLOBAL_LEADERBOARD_VIEW_BY_VERSION_IF_EXISTS" />
 
 ## Method Parameters
 
@@ -150,7 +150,7 @@ if (postResult.status == 200) {
 ```r
 {
 	"service": "leaderboard",
-	"operation": "GET_GLOBAL_LEADERBOARD_VIEW_IF_EXISTS",
+	"operation": "GET_GLOBAL_LEADERBOARD_VIEW_BY_VERSION_IF_EXISTS",
 	"data": {
 		"leaderboardId": "default",
 		"sort": "HIGH_TO_LOW",
