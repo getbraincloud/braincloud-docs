@@ -1,11 +1,5 @@
 # Lobby
 
-
-
-
-
-
-
 The **Lobby Service** works together with custom **Room Servers** to provide multi-user experiences (i.e. online games, shared streaming, etc.) to groups of participants.
 
 It is available to apps that have **<%= data.branding.productNameRTT %>** enabled.
@@ -18,12 +12,11 @@ You configure <em>Lobby Types</em> in the portal under <strong>Design | Multipla
 
 ![Online Multiplayer Process](@site/docs/img/api-img/online_multiplayer_process.png)
 
-*Lobbies* are used to gather up users prior to launching shared experiences via *Room Servers*. Users can be added to teams, indicate their ready status, and adjust personal and room settings before the experience starts.
+_Lobbies_ are used to gather up users prior to launching shared experiences via _Room Servers_. Users can be added to teams, indicate their ready status, and adjust personal and room settings before the experience starts.
 
-The *Lobby Service* also offers highly configurable *Online Matchmaking* - to quickly and efficiently pair users up together.
+The _Lobby Service_ also offers highly configurable _Online Matchmaking_ - to quickly and efficiently pair users up together.
 
-*For more information on Lobby Concepts, see the [Lobby Overview](/learn/key-concepts/multiplayer/lobbies/) page.*
-
+_For more information on Lobby Concepts, see the [Lobby Overview](/learn/key-concepts/multiplayer/lobbies/) page._
 
 ### API Summary
 
@@ -43,7 +36,6 @@ The *Lobby Service* also offers highly configurable *Online Matchmaking* - to qu
 }
 ```
 
-
 > `JOIN_FAIL` event example
 
 ```json-doc
@@ -60,8 +52,7 @@ The *Lobby Service* also offers highly configurable *Online Matchmaking* - to qu
 }
 ```
 
-
-> `MEMBER_JOIN` event example (_click orange bar below to expand_)
+> `MEMBER_JOIN` event example
 
 ```json-doc
 {
@@ -100,11 +91,9 @@ The *Lobby Service* also offers highly configurable *Online Matchmaking* - to qu
 }
 ```
 
-
-
 > `MEMBER_LEFT` event example
 
-```json-doc
+```json
 {
     "service": "lobby",
     "operation": "MEMBER_LEFT",
@@ -136,10 +125,9 @@ The *Lobby Service* also offers highly configurable *Online Matchmaking* - to qu
 }
 ```
 
-
 > `MEMBER_UPDATE` event example
 
-```json-doc
+```json
 {
     "service": "lobby",
     "operation": "MEMBER_UPDATE",
@@ -161,10 +149,9 @@ The *Lobby Service* also offers highly configurable *Online Matchmaking* - to qu
 }
 ```
 
-
 > `ROOM_ASSIGNED` event example
 
-```json-doc
+```json
 {
     "service": "lobby",
     "operation": "ROOM_ASSIGNED",
@@ -181,10 +168,9 @@ The *Lobby Service* also offers highly configurable *Online Matchmaking* - to qu
 }
 ```
 
-
 > `ROOM_READY` event example
 
-```json-doc
+```json
 {
     "service": "lobby",
     "operation": "ROOM_READY",
@@ -201,10 +187,9 @@ The *Lobby Service* also offers highly configurable *Online Matchmaking* - to qu
 }
 ```
 
-
 > `SETTINGS_UPDATE` event example
 
-```json-doc
+```json
 {
     "service": "lobby",
     "operation": "SETTINGS_UPDATE",
@@ -221,10 +206,9 @@ The *Lobby Service* also offers highly configurable *Online Matchmaking* - to qu
 }
 ```
 
-
 > `STARTING` event example
 
-```json-doc
+```json
 {
     "service": "lobby",
     "operation": "STARTING",
@@ -242,10 +226,9 @@ The *Lobby Service* also offers highly configurable *Online Matchmaking* - to qu
 }
 ```
 
-
 > `STATUS_UPDATE` event example
 
-```json-doc
+```json
 {
     "service": "lobby",
     "operation": "STATUS_UPDATE",
@@ -260,67 +243,123 @@ The *Lobby Service* also offers highly configurable *Online Matchmaking* - to qu
         }
     }
 }
-
 ```
 
+> `ROOM_PROGRESS` event example
 
-The Lobby Service provides APIs for *Online Matchmaking*, *Lobby Experience* and *Room Server Integration*.
+```json
+{
+    {
+    "service": "lobby",
+    "operation": "ROOM_PROGRESS",
+    "data": {
+      "lobbyId": "23649:CursorPartyV2:4186",
+      "curStep": 1,
+      "ofStep": 5,
+      "msg": "Host lookup",
+      "variation": "no-host-found"
+    }
+  },
+  {
+    "service": "lobby",
+    "operation": "ROOM_PROGRESS",
+    "data": {
+      "lobbyId": "23649:CursorPartyV2:4186",
+      "curStep": 2,
+      "ofStep": 5,
+      "msg": "New host started"
+    }
+  },
+  {
+    "service": "lobby",
+    "operation": "ROOM_PROGRESS",
+    "data": {
+      "lobbyId": "23649:CursorPartyV2:4186",
+      "curStep": 3,
+      "ofStep": 5,
+      "msg": "Host docker init"
+    }
+  },
+  {
+    "service": "lobby",
+    "operation": "ROOM_PROGRESS",
+    "data": {
+      "lobbyId": "23649:CursorPartyV2:4186",
+      "curStep": 4,
+      "ofStep": 5,
+      "msg": "Pulling container image"
+    }
+  },
+  {
+    "service": "lobby",
+    "operation": "ROOM_PROGRESS",
+    "data": {
+      "lobbyId": "23649:CursorPartyV2:4186",
+      "curStep": 5,
+      "ofStep": 5,
+      "msg": "Starting container"
+    }
+  }
+}
+```
+
+The Lobby Service provides APIs for _Online Matchmaking_, _Lobby Experience_ and _Room Server Integration_.
 
 ### Online Matchmaking
 
-The *Online Matchmaking* APIs allow users to find and/or create lobbies:
+The _Online Matchmaking_ APIs allow users to find and/or create lobbies:
 
-* [FindLobby](/api/capi/lobby/findlobby) - Find a lobby to meet the provided specs.
-* [CreateLobby](/api/capi/lobby/createlobby) - Create a lobby.
-* [FindOrCreateLobby](/api/capi/lobby/findorcreatelobby) - Search for lobby; create one if nothing suitable is found.
-* [JoinLobby](/api/capi/lobby/joinlobby) - Adds the caller to the given lobby instance.
+-   [FindLobby](/api/capi/lobby/findlobby) - Find a lobby to meet the provided specs.
+-   [CreateLobby](/api/capi/lobby/createlobby) - Create a lobby.
+-   [FindOrCreateLobby](/api/capi/lobby/findorcreatelobby) - Search for lobby; create one if nothing suitable is found.
+-   [JoinLobby](/api/capi/lobby/joinlobby) - Adds the caller to the given lobby instance.
 
-* [GetRegionsForLobbies](/api/capi/lobby/getregionsforlobbies) - Retrieves the region settings for each of the given lobby types.
-* [PingRegions](/api/capi/lobby/pingregions) - Retrieves associated PingData averages to be used with all associated WithPingData APIs.
+-   [GetRegionsForLobbies](/api/capi/lobby/getregionsforlobbies) - Retrieves the region settings for each of the given lobby types.
+-   [PingRegions](/api/capi/lobby/pingregions) - Retrieves associated PingData averages to be used with all associated WithPingData APIs.
 
-* [FindLobbyWithPingData](/api/capi/lobby/findlobbywithpingdata) - Adds the caller to the lobby entry queue.
-* [FindOrCreateLobbyPingData](/api/capi/lobby/createlobbywithpingdata) - Creates an instance of a lobby.
-* [FindOrCreateLobbyWithPingData](/api/capi/lobby/findorcreatelobbywithpingdata) - Adds the caller to the lobby entry queue and will create a lobby if none are found.
-* [JoinLobbyWithPingData](/api/capi/lobby/joinlobbywithpingdata) - Adds the caller to the given lobby instance.
+-   [FindLobbyWithPingData](/api/capi/lobby/findlobbywithpingdata) - Adds the caller to the lobby entry queue.
+-   [FindOrCreateLobbyPingData](/api/capi/lobby/createlobbywithpingdata) - Creates an instance of a lobby.
+-   [FindOrCreateLobbyWithPingData](/api/capi/lobby/findorcreatelobbywithpingdata) - Adds the caller to the lobby entry queue and will create a lobby if none are found.
+-   [JoinLobbyWithPingData](/api/capi/lobby/joinlobbywithpingdata) - Adds the caller to the given lobby instance.
 
 ### Lobby Experience
 
 The following APIs allow users to interact with lobby's once they have joined:
 
-* [GetLobbyData](/api/capi/lobby/getlobbydata) - request info about the lobby
-* [UpdateReady](/api/capi/lobby/updateready) - update the user's ready-status
-* [UpdateSettings](/api/capi/lobby/updatesettings) - update the lobby's setting data (owner only)
-* [SwitchTeam](/api/capi/lobby/switchteam) - switch teams
-* [SendSignal](/api/capi/lobby/sendsignal) - send an event to all other lobby members
-* [LeaveLobby](/api/capi/lobby/leavelobby) - leave the lobby
-* [RemoveMember](/api/capi/lobby/removemember) - kicks another member from the lobby
+-   [GetLobbyData](/api/capi/lobby/getlobbydata) - request info about the lobby
+-   [UpdateReady](/api/capi/lobby/updateready) - update the user's ready-status
+-   [UpdateSettings](/api/capi/lobby/updatesettings) - update the lobby's setting data (owner only)
+-   [SwitchTeam](/api/capi/lobby/switchteam) - switch teams
+-   [SendSignal](/api/capi/lobby/sendsignal) - send an event to all other lobby members
+-   [LeaveLobby](/api/capi/lobby/leavelobby) - leave the lobby
+-   [RemoveMember](/api/capi/lobby/removemember) - kicks another member from the lobby
 
 ### Room Service Integration
 
 The following APIs are called by Room Service providers:
 
-* [SysRoomReady](/api/capi/lobby/sysroomready) - the room experience is ready to launch
-* [SysRoomCancelled](/api/capi/lobby/sysroomcancelled) - the room server request cannot be fulfilled
+-   [SysRoomReady](/api/capi/lobby/sysroomready) - the room experience is ready to launch
+-   [SysRoomCancelled](/api/capi/lobby/sysroomcancelled) - the room server request cannot be fulfilled
 
 ### Lobby Events
 
 These APIs can result in the following events being sent to lobby members.
 
-
-| Event | Data | Description |
-|-------|------| -------|
-| MATCHMAKING_IN_PROGRESS | lobbyType, step, maxSteps, minRating, maxRating, lobbiesInRange | Start provisioning lobby. Sent to everyone as they are being processed for each marchmaking round. |
-| MEMBER_JOIN | lobbyId, currentTime, lobby, memeber | A new member has joined the lobby. Sent to everyone, including the user who joined. |
-| JOIN_FAIL | lobbyType, reason | Could not locate a lobby that satisfies the filter criteria in the specified timeframe. The returned `reason` is mapped with `code` (including `NO_LOBBIES_FOUND`, `FIND_REQUEST_CANCELLED`) and `desc`. |
-| MEMBER_LEFT | lobbyId, lobby, member, reason | A member has left the lobby. Sent to everyone, including the user who left. The returned `reason` is mapped with `code` (including `LEFT_BY_CHOICE`, `EVICTED`, `LOST_CONNECTION`) and `desc`. |
-| MEMBER_UPDATE | lobbyId, lobby,  member | A member has updated their data, which may include switching teams, thus why all of lobbyData is returned. |
-| SIGNAL | lobbyId, from (optional), signalData | This message allows players in lobbies to send messages to all other players. |
-| SETTINGS_UPDATE | lobbyId, currentTime, lobby | Changes to the settings that will be used to start the room. |
-| STATUS_UPDATE | lobbyId, lobby | The status of the overall lobby has changed. |
-| STARTING | lobbyId, lobby | This message is sent once all the hosted server launch conditions have been met and a server instance is being started. |
-| ROOM_ASSIGNED | lobbyId, connectData, passcode | A room has been allocated for this lobby. `connectData` is likely incompolete. Each lobby member receives a random alphanumeric passcode for use in connecting to the room server to guard against impersonation. |
-| ROOM_READY | lobbyId, connectData, passcode | Go connect to the specified room. Will normally be immediately followed by DISBANDED. The same passcode as sent in ROOM_ASSIGNED will be repeated here as well.  |
-| DISBANDED | lobbyId, reason, msg (optional)| The lobby has been terminated. The returned `reason` is mapped with `code` (including `TIMEOUT`, `ROOM_READY`, `ROOM_READY_TIMEOUT`, `ROOM_CANCELLED`, `ERROR_ASSIGNING_ROOM`, `ERROR_LAUNCHING_ROOM`, `HOSTING_NOT_ENABLED`, `SERVER_MAX_REACHED`, `BY_REQUEST`) and `desc`. |
+| Event                   | Data                                                            | Description                                                                                                                                                                                                                                                                                                                                                           |
+| ----------------------- | --------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| MATCHMAKING_IN_PROGRESS | lobbyType, step, maxSteps, minRating, maxRating, lobbiesInRange | Start provisioning lobby. Sent to everyone as they are being processed for each marchmaking round.                                                                                                                                                                                                                                                                    |
+| MEMBER_JOIN             | lobbyId, currentTime, lobby, memeber                            | A new member has joined the lobby. Sent to everyone, including the user who joined.                                                                                                                                                                                                                                                                                   |
+| JOIN_FAIL               | lobbyType, reason                                               | Could not locate a lobby that satisfies the filter criteria in the specified timeframe. The returned `reason` is mapped with `code` (including `NO_LOBBIES_FOUND`, `FIND_REQUEST_CANCELLED`) and `desc`.                                                                                                                                                              |
+| MEMBER_LEFT             | lobbyId, lobby, member, reason                                  | A member has left the lobby. Sent to everyone, including the user who left. The returned `reason` is mapped with `code` (including `LEFT_BY_CHOICE`, `EVICTED`, `LOST_CONNECTION`) and `desc`.                                                                                                                                                                        |
+| MEMBER_UPDATE           | lobbyId, lobby, member                                          | A member has updated their data, which may include switching teams, thus why all of lobbyData is returned.                                                                                                                                                                                                                                                            |
+| SIGNAL                  | lobbyId, from (optional), signalData                            | This message allows players in lobbies to send messages to all other players.                                                                                                                                                                                                                                                                                         |
+| SETTINGS_UPDATE         | lobbyId, currentTime, lobby                                     | Changes to the settings that will be used to start the room.                                                                                                                                                                                                                                                                                                          |
+| STATUS_UPDATE           | lobbyId, lobby                                                  | The status of the overall lobby has changed.                                                                                                                                                                                                                                                                                                                          |
+| STARTING                | lobbyId, lobby                                                  | This message is sent once all the hosted server launch conditions have been met and a server instance is being started.                                                                                                                                                                                                                                               |
+| ROOM_PROGRESS           | lobbyId, curStep, ofStep, msg                                   | The configurable Room-Progress messages are transmitted between the events of `STARTING` and `ROOM_READY`, serving to indicate the progress of the provisioning of the room server. In the case of a new host being initiated, there are a total of 5 progress steps, whereas if this is not the case, there are 4 steps. See the following example for more details. |
+| ROOM_ASSIGNED           | lobbyId, connectData, passcode                                  | A room has been allocated for this lobby. `connectData` is likely incompolete. Each lobby member receives a random alphanumeric passcode for use in connecting to the room server to guard against impersonation.                                                                                                                                                     |
+| ROOM_READY              | lobbyId, connectData, passcode                                  | Go connect to the specified room. Will normally be immediately followed by DISBANDED. The same passcode as sent in ROOM_ASSIGNED will be repeated here as well.                                                                                                                                                                                                       |
+| DISBANDED               | lobbyId, reason, msg (optional)                                 | The lobby has been terminated. The returned `reason` is mapped with `code` (including `TIMEOUT`, `ROOM_READY`, `ROOM_READY_TIMEOUT`, `ROOM_CANCELLED`, `ERROR_ASSIGNING_ROOM`, `ERROR_LAUNCHING_ROOM`, `HOSTING_NOT_ENABLED`, `SERVER_MAX_REACHED`, `BY_REQUEST`) and `desc`.                                                                                         |
 
 An example of using the returned `reason code` of DISBANDED:
 
@@ -332,6 +371,65 @@ if (result.data.reason.code != this.bc.reasonCodes.RTT_ROOM_READY)
 }
 ```
 
+An example of ROOM_PROGRESS messages when a host is found:
+
+```json
+{
+  {
+    "service": "lobby",
+    "operation": "ROOM_PROGRESS",
+    "data": {
+      "lobbyId": "23649:CursorPartyV2:4186",
+      "curStep": 1,
+      "ofStep": 4,
+      "msg": "Host lookup",
+      "variation": "host-found"
+    }
+  },
+  {
+    "service": "lobby",
+    "operation": "ROOM_PROGRESS",
+    "data": {
+      "lobbyId": "23649:CursorPartyV2:4186",
+      "curStep": 2,
+      "ofStep": 4,
+      "msg": "Host docker init"
+    }
+  },
+  {
+    "service": "lobby",
+    "operation": "ROOM_PROGRESS",
+    "data": {
+      "lobbyId": "23649:CursorPartyV2:4186",
+      "curStep": 3,
+      "ofStep": 4,
+      "msg": "Pulling container image"
+    }
+  },
+  {
+    "service": "lobby",
+    "operation": "ROOM_PROGRESS",
+    "data": {
+      "lobbyId": "23649:CursorPartyV2:4186",
+      "curStep": 4,
+      "ofStep": 4,
+      "msg": "Starting container"
+    }
+  }
+}
+```
+
+```json
+// an example of the `acture "progress" events being sent out to lobby members
+{"service":"lobby","operation":"STARTING","data":{"lobbyId":"23649:CursorPartyV2:4186","lobby":{"state":"starting","settings":{},"version":1,"cRegions":[],"round":1,"isRoomReady":false,"keepAliveRateSeconds":72,"isAvailable":true,"ownerCxId":"23649:37e60799-468d-4440-8fce-5d8eabade18d:4s26gha7bhmiottrn3v38d8l0o","legacyLobbyOwnerEnabled":false,"numMembers":1,"members":[{"profileId":"37e60799-468d-4440-8fce-5d8eabade18d","name":"greg@bitheads.com","pic":"","rating":0,"team":"all","isReady":true,"extra":{"colorIndex":6,"presentSinceStart":false},"ipAddress":"184.148.127.43","cxId":"23649:37e60799-468d-4440-8fce-5d8eabade18d:4s26gha7bhmiottrn3v38d8l0o"}]}}}
+{"service":"lobby","operation":"ROOM_PROGRESS","data":{"lobbyId":"23649:CursorPartyV2:4186","curStep":1,"ofStep":5,"msg":"Host lookup","variation":"no-host-found"}}
+{"service":"lobby","operation":"ROOM_PROGRESS","data":{"lobbyId":"23649:CursorPartyV2:4186","curStep":2,"ofStep":5,"msg":"New host started"}}
+{"service":"lobby","operation":"ROOM_PROGRESS","data":{"lobbyId":"23649:CursorPartyV2:4186","curStep":3,"ofStep":5,"msg":"Host docker init"}}
+{"service":"lobby","operation":"ROOM_ASSIGNED","data":{"lobbyId":"23649:CursorPartyV2:4186","connectData":{"address":"3.96.222.126","ports":{"udp":9000,"tcp":9000,"ws":9001}},"passcode":"fda606"}}
+{"service":"lobby","operation":"ROOM_PROGRESS","data":{"lobbyId":"23649:CursorPartyV2:4186","curStep":4,"ofStep":5,"msg":"Pulling container image"}}
+{"service":"lobby","operation":"ROOM_PROGRESS","data":{"lobbyId":"23649:CursorPartyV2:4186","curStep":5,"ofStep":5,"msg":"Starting container"}}
+{"service":"lobby","operation":"ROOM_READY","data":{"lobbyId":"23649:CursorPartyV2:4186","connectData":{"address":"3.96.222.126","ports":{"udp":9000,"tcp":9000,"ws":9001}},"passcode":"fda606"}}
+```
 
 ### Common Event Structures
 
@@ -341,9 +439,9 @@ The following structures are common to multiple event types:
 
 The configured meta-data for the lobby type:
 
-```
+```json
 {
-    lobbyTypeDef: {
+    "lobbyTypeDef": {
         "roomConfig": null,
         "lobbyTypeId": "unranked",
         "teams": {
@@ -378,7 +476,7 @@ The configured meta-data for the lobby type:
 
 The list of members in the lobby, and their status:
 
-```
+```json
 {
     "members": [
         {
@@ -409,7 +507,7 @@ The list of members in the lobby, and their status:
 
 The developer-defined, dynamic settings for this lobby instance:
 
-```
+```json
 {
     "settings": {
         "gameTime": 300,
@@ -425,9 +523,7 @@ The developer-defined, dynamic settings for this lobby instance:
 }
 ```
 
-*The json above is just an example - it can be whatever the developer decides.*
-
-
+_The json above is just an example - it can be whatever the developer decides._
 
 ### Search Algorithms
 
@@ -437,18 +533,14 @@ When looking for a lobby.
 
 Ranges provided are interpreted as percentages to be applied to the user's rating for matchmaking.
 
-```
+```json
 {
-   "rating" : 1200,
-   "algo":{  
-      "strategy":"ranged-percent",
-      "alignment":"center",
-      "ranges":[  
-         10,
-         20,
-         80
-      ]
-   }
+    "rating": 1200,
+    "algo": {
+        "strategy": "ranged-percent",
+        "alignment": "center",
+        "ranges": [10, 20, 80]
+    }
 }
 ```
 
@@ -456,30 +548,25 @@ Ranges provided are interpreted as percentages to be applied to the user's ratin
 
 Ranges provided are interpreted as absolute values to add/subtract from the user's rating when calculating the range for matchmaking
 
-```
-{ 
-   "rating" : 76, 
-   "algo":{  
-      "strategy":"ranged-absolute",
-      "alignment":"center",
-      "ranges":[  
-         5,
-         7.5,
-         10
-      ]
-   }
+```json
+{
+    "rating": 76,
+    "algo": {
+        "strategy": "ranged-absolute",
+        "alignment": "center",
+        "ranges": [5, 7.5, 10]
+    }
 }
 ```
 
 ### `alignment`
 
-Alignment | Min | Max | Description
---- | --- | --- | ---
-high | 80 | 100 | Ensures that lobbies must have skill rating >= to the candidate. Leaves the min equal to player rating, and adds 200% of the range to the max.
-mid-high | 75 | 95 | Subtracks 50% of the range for the min, and adds 150% of the range to the max.
-center | 70 | 90 | Centers the range around the candidiate's rating.
-mid-low | 65 | 85 | Subtracts 150% of the range for the min, and adds 50% of the range to the max.
-low | 60 | 80 | Ensures that lobbies will have skill rating <= to the candidate.  Subtracts 200% of the range from the rating to calculate min, and leaves max as the player rating.
-
+| Alignment | Min | Max | Description                                                                                                                                                         |
+| --------- | --- | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| high      | 80  | 100 | Ensures that lobbies must have skill rating >= to the candidate. Leaves the min equal to player rating, and adds 200% of the range to the max.                      |
+| mid-high  | 75  | 95  | Subtracks 50% of the range for the min, and adds 150% of the range to the max.                                                                                      |
+| center    | 70  | 90  | Centers the range around the candidiate's rating.                                                                                                                   |
+| mid-low   | 65  | 85  | Subtracts 150% of the range for the min, and adds 50% of the range to the max.                                                                                      |
+| low       | 60  | 80  | Ensures that lobbies will have skill rating <= to the candidate. Subtracts 200% of the range from the rating to calculate min, and leaves max as the player rating. |
 
 <DocCardList />

@@ -1,6 +1,6 @@
 # GetPlayersSocialLeaderboardIfExists
 
-Retrieve a sorted, social leaderboard of the specified list of players, if leaderboard exists.
+Retrieve a sorted, social leaderboard of the specified list of players, if leaderboard exists. Silently fails, if leaderboard does not exist, just returns null and success, instead of an error.
 
 <PartialServop service_name="leaderboard" operation_name="GET_PLAYERS_SOCIAL_LEADERBOARD_IF_EXISTS" />
 

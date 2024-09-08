@@ -2,22 +2,21 @@
 
 Finds a lobby matching the specified parameters. Asynchronous - returns 200 to indicate that matchmaking has started.
 
-
-
 <PartialServop service_name="lobby" operation_name="FIND_LOBBY" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-lobbyType | The type of lobby to look for. Lobby types are defined in the portal.
-rating | The skill rating to use for finding the lobby. Provided as a separate parameter because it may not exactly match the user's rating (especially in cases where parties are involved).
-maxSteps | The maximum number of steps to wait when looking for an applicable lobby. Each step is ~5 seconds.
-algo | The algorithm to use for increasing the search scope.
-filterJson | Used to help filter the list of rooms to consider. Passed to the matchmaking filter, if configured.
-otherUserCxIds | Array of other users (i.e. party members) to add to the lobby as well. Will constrain things so that only lobbies with room for all players will be considered.
-isReady | Initial ready-status of this user.
-extraJson | Initial extra-data about this user.
-teamCode | Preferred team for this user, if applicable. Send `""` or `null` for automatic assignment.
+
+| Parameter      | Description                                                                                                                                                                          |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| lobbyType      | The type of lobby to look for. Lobby types are defined in the portal.                                                                                                                |
+| rating         | The skill rating to use for finding the lobby. Provided as a separate parameter because it may not exactly match the user's rating (especially in cases where parties are involved). |
+| maxSteps       | The maximum number of steps to wait when looking for an applicable lobby. Each step is ~5 seconds.                                                                                   |
+| algo           | The algorithm to use for increasing the search scope.                                                                                                                                |
+| filterJson     | Used to help filter the list of rooms to consider. Passed to the matchmaking filter, if configured.                                                                                  |
+| otherUserCxIds | Array of other users (i.e. party members) to add to the lobby as well. Will constrain things so that only lobbies with room for all players will be considered.                      |
+| isReady        | Initial ready-status of this user.                                                                                                                                                   |
+| extraJson      | Initial extra-data about this user.                                                                                                                                                  |
+| teamCode       | Preferred team for this user, if applicable. Send `""` or `null` for automatic assignment.                                                                                           |
 
 ## Usage
 
@@ -242,19 +241,21 @@ if (postResult.status == 200) {
 ```json
 {
     "status": 200,
-    "data": {}
+    "data": {
+        "entryId": "7483a8-a27"
+    }
 }
 ```
+
 </details>
 
 <details>
 <summary>Common Error Code</summary>
 
 ### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
+
+| Code  | Name            | Description                          |
+| ----- | --------------- | ------------------------------------ |
+| 40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature |
 
 </details>
-
-

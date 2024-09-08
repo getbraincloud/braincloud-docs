@@ -3,9 +3,10 @@
 Registers the file upload callbacks.
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-fileUploadCallback | The file upload callback handler.
+
+| Parameter          | Description                       |
+| ------------------ | --------------------------------- |
+| fileUploadCallback | The file upload callback handler. |
 
 ## Usage
 
@@ -94,17 +95,15 @@ fileUploadFailedBlock = ^(NSString *fileUploadId, NSInteger status, NSInteger re
         "fileDetails": {
             "updatedAt": 1452616408147,
             "fileSize": 100,
-            "fileType": "User",
             "expiresAt": 1452702808146,
             "shareable": true,
-            "uploadId": "cf9a075c-587e-4bd1-af0b-eab1a79b958f",
             "createdAt": 1452616408147,
             "profileId": "bf8a1433-62d2-448e-b396-f3dbffff44",
             "gameId": "99999",
-            "path": "dir1/dir2",
-            "filename": "filename",
-            "replaceIfExists": true,
-            "cloudPath": "bc/g/99999/u/bf8a1433-62d2-448e-b396-f3dbffff44/f/dir1/dir2/filename"
+            "cloudFilename": "filename",
+            "cloudLocation": "bc/g/99999/u/bf8a1433-62d2-448e-b396-f3dbffff44/f/dir1/dir2/filename",
+            "downloadUrl": "https://api.braincloudservers.com/downloader/bc/g/99999/u/bf8a1433-62d2-448e-b396-f3dbffff44/f/dir1/dir2/filename",
+            "cloudPath": "dir1/dir2",
         }
     }
 }
@@ -117,5 +116,5 @@ fileUploadFailedBlock = ^(NSString *fileUploadId, NSInteger status, NSInteger re
 	"severity": "ERROR"
 }
 ```
-</details>
 
+</details>

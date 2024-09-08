@@ -1,8 +1,6 @@
 # GetGlobalLeaderboardViewIfExists
 
-Retrieve a view of the global leaderboard, if it exists, surrounding the current player.
-
-Method returns a view of global leaderboard results that centers on the current player.
+Retrieve a view of the global leaderboard, if it exists, surrounding the current player. Silently fails, if leaderboard does not exist, just returns null and success, instead of an error.
 
 Leaderboards entries contain the player's score and optionally, some user-defined data associated with the score.
 

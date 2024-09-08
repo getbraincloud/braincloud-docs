@@ -1,14 +1,15 @@
 # GetProfileInfoForExternalAuthIdIfExists
 
-Retrieves profile information for the specified user. Silently fails
+Retrieves profile information for the specified user. Silently fails, if profile does not exist, just returns null and success, instead of an error.
 
 <PartialServop service_name="friend" operation_name="GET_PROFILE_INFO_FOR_EXTERNAL_AUTH_ID_IF_EXISTS" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-externalId | The external id.
-externalAuthType | The name of the custom authentication type (linked to a cloud script that performs authentication.) Configured via the **Design &#124; Authentication &#124; External** page of the Design Portal.
+
+| Parameter        | Description                                                                                                                                                                                        |
+| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| externalId       | The external id.                                                                                                                                                                                   |
+| externalAuthType | The name of the custom authentication type (linked to a cloud script that performs authentication.) Configured via the **Design &#124; Authentication &#124; External** page of the Design Portal. |
 
 ## Usage
 
@@ -145,9 +146,9 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "status" : 200,
-  "data" : {}
+    "status": 200,
+    "data": {}
 }
 ```
-</details>
 
+</details>
