@@ -22,10 +22,10 @@ The example game shows off the following brainCloud features:
 
 All of the code that interacts with the brainCloud js library is located in cardGame.js.
 
-[Play the example Acey Deucey game](https://sharedprod.braincloudservers.com/s3/aceydeucey/cardGame.html)
+[Play the example Acey Deucey game](https://api.braincloudservers.com/s3/aceydeucey/cardGame.html)
 
 [Download the source code](https://github.com/getbraincloud/examples-javascript/tree/master/AceyDeucey)
 
-Check out Acey Deucey in action!  [Click to Play](https://sharedprod.braincloudservers.com/s3/aceydeucey/cardGame.html "Acey Deucey - JavaScript Example").
+Check out Acey Deucey in action!  [Click to Play](https://api.braincloudservers.com/s3/aceydeucey/cardGame.html "Acey Deucey - JavaScript Example").
 
-[![Acey Deucey](images/2015-03-02__11_21_AM.png)](https://sharedprod.braincloudservers.com/s3/aceydeucey/cardGame.html)
+[![Acey Deucey](images/2015-03-02__11_21_AM.png)](https://api.braincloudservers.com/s3/aceydeucey/cardGame.html)

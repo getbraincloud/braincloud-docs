@@ -7,16 +7,16 @@ This tutorial goes through the steps of installing the brainCloud Unreal plugin 
 
 ## Prerequisites
 
-- Unreal Engine 4.10.4 or newer
-- A Code or Blueprint only project
-- Created a [brainCloud Portal](https://sharedprod.braincloudservers.com/) account
-- The latest version of the brainCloud Unreal plugin. You can download after logging in to the [brainCloud Portal](https://sharedprod.braincloudservers.com/).
+-   Unreal Engine 4.10.4 or newer
+-   A Code or Blueprint only project
+-   Created a [brainCloud Portal](https://api.braincloudservers.com/) account
+-   The latest version of the brainCloud Unreal plugin. You can download after logging in to the [brainCloud Portal](https://api.braincloudservers.com/).
 
 ## Installing the Plugin
 
 Installing the brainCloud plugin is a very straightforward process.
 
-1. Open the root folder of your Unreal project (where the *.uproject file is)
+1. Open the root folder of your Unreal project (where the \*.uproject file is)
 2. Open the Plugins folder, or create it if it does not exist
 3. Copy the BCClient folder from the downloaded Unreal plugin archive into the Plugins folder
 4. If your project is NOT Blueprint only, be sure to regenerate your code project files now
@@ -43,7 +43,7 @@ You should now be able to include the BrainCloudClient.h and compile your C++ co
 
 By default, the brainCloud Online Subsystem is not enabled.  These steps are only necessary if you wish to use the Unreal Online Subsystem with brainCloud.
 
-1. Open the root folder of your Unreal project (where the *.uproject file is)
+1. Open the root folder of your Unreal project (where the \*.uproject file is)
 2. Open the Config folder
 3. Find the DefaultEngine.ini file and open it in a text editor
 4. Add the following lines to the file and save:

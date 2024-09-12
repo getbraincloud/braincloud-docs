@@ -7,10 +7,10 @@ This tutorial will introduce you to the basics of using brainCloud in Blueprints
 
 ### Prerequisites
 
-- Created a brainCloud Portal account
-- Created a game in the brainCloud Portal. If you need help with this step refer to the [Unity Tutorial #1 video](/learn/sdk-tutorials/unity-tutorials/unity-getting-started/).
-- An Unreal project with the brainCloud plugin installed as described [here](/learn/sdk-tutorials/unreal-tutorials/setting-up-the-braincloud-plugin/)
-- Basic experience with Blueprint, see the [Unreal documentation](https://docs.unrealengine.com/latest/INT/Engine/Blueprints/GettingStarted/index.html) for help
+-   Created a brainCloud Portal account
+-   Created a game in the brainCloud Portal. If you need help with this step refer to the [Unity Tutorial #1 video](/learn/sdk-tutorials/unity-tutorials/unity-getting-started/).
+-   An Unreal project with the brainCloud plugin installed as described [here](/learn/sdk-tutorials/unreal-tutorials/setting-up-the-braincloud-plugin/)
+-   Basic experience with Blueprint, see the [Unreal documentation](https://docs.unrealengine.com/latest/INT/Engine/Blueprints/GettingStarted/index.html) for help
 
 ### Initialization
 
@@ -24,10 +24,10 @@ Start by dragging off of the Event node and adding the Initialize function node.
 
 You should now have the Initialize node on the Graph.  The information you need to initialize comes from the Core App Info > Application IDs page in the brainCloud web portal.
 
-- **Server Url -** The URL (default value: https://sharedprod.braincloudservers.com/dispatcherv2) of the brainCloud server to connect to. You should not have to change this.
-- **Secret Key** - The **App Secret** for your application
-- **App Id** - The game (or in the portal page **App ID**) of your application
-- **Game Version** - The current version of your application
+-   **Server Url -** The URL (default value: https://api.braincloudservers.com/dispatcherv2) of the brainCloud server to connect to. You should not have to change this.
+-   **Secret Key** - The **App Secret** for your application
+-   **App Id** - The game (or in the portal page **App ID**) of your application
+-   **Game Version** - The current version of your application
 
 You should set the default values of these variables of secrect key, app id and game version in your blueprint, by doing that, you can use get-version to get their values respectively.
 
@@ -63,10 +63,10 @@ The next return parameter **Json Data** is a JSON-formatted string.  The retur
 
 Finally, there is the **Additional Data** struct. This contains extra information that may be useful depending on the situation. It contains:
 
-- **Service Name** - The name of the service the API call belongs to
-- **Service Operation** - The specific operation performed by the API call
-- **Status Code** - The status code returned by the call.
-- **Reason Code** - The reason code describes specific failures and is returned when an error is encountered. You can view the various reason codes [here](/api/appendix/reasoncodes).
+-   **Service Name** - The name of the service the API call belongs to
+-   **Service Operation** - The specific operation performed by the API call
+-   **Status Code** - The status code returned by the call.
+-   **Reason Code** - The reason code describes specific failures and is returned when an error is encountered. You can view the various reason codes [here](/api/appendix/reasoncodes).
 
 All brainCloud API calls that communicate with the brainCloud server will have this return structure.
 
