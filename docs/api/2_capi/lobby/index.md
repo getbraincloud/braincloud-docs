@@ -535,7 +535,6 @@ Ranges provided are interpreted as percentages to be applied to the user's ratin
 
 ```json
 {
-    "rating": 1200,
     "algo": {
         "strategy": "ranged-percent",
         "alignment": "center",
@@ -550,7 +549,6 @@ Ranges provided are interpreted as absolute values to add/subtract from the user
 
 ```json
 {
-    "rating": 76,
     "algo": {
         "strategy": "ranged-absolute",
         "alignment": "center",
@@ -559,14 +557,46 @@ Ranges provided are interpreted as absolute values to add/subtract from the user
 }
 ```
 
+### `compound`
+
+The compound algorithm allows multiple criteria to used as the matchmaking filter. This is the approach to use when doing geo-matchmaking using the `WithPingData()` calls.
+
+```json
+{
+  "strategy": "compound",
+  "algos" [
+    { "criteria": "ping", "strategy": "absolute", "alignment": "absolute" },
+    { "criteria": "rating", "strategy": "ranged-absolute", "alignment": "center" }
+  ], 
+  "compound-ranges": [
+    [ 30, [ 5, 10 ]],
+    [ 50, [ 10, 15 ]]
+  ]
+}
+```
+
+In the example above, matchmaking will look for matches as follows:
+
+- step 1: matches in regions with < 30ms ping and lobby rating within +/- 5 of player's rating
+- step 2: matches in regions with < 30ms ping and lobby rating within +/- 5 of player's rating
+- step 3: matches in regions with < 50ms ping and lobby rating within +/- 10 of player's rating
+- step 4: matches in regions with < 50ms ping and lobby rating within +/- 15 of player's rating
+
+
+
+ 
 ### `alignment`
+
+The following alignment options are available, and show how they would affect a range of +/- 10 range for a ranking of 80.
 
 | Alignment | Min | Max | Description                                                                                                                                                         |
 | --------- | --- | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | high      | 80  | 100 | Ensures that lobbies must have skill rating >= to the candidate. Leaves the min equal to player rating, and adds 200% of the range to the max.                      |
 | mid-high  | 75  | 95  | Subtracks 50% of the range for the min, and adds 150% of the range to the max.                                                                                      |
-| center    | 70  | 90  | Centers the range around the candidiate's rating.                                                                                                                   |
+| center    | 70  | 90  | Centers the range around the candidate's rating.                                                                                                                   |
 | mid-low   | 65  | 85  | Subtracts 150% of the range for the min, and adds 50% of the range to the max.                                                                                      |
 | low       | 60  | 80  | Ensures that lobbies will have skill rating <= to the candidate. Subtracts 200% of the range from the rating to calculate min, and leaves max as the player rating. |
+
+
 
 <DocCardList />
