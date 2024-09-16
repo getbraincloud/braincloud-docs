@@ -559,7 +559,7 @@ Ranges provided are interpreted as absolute values to add/subtract from the user
 
 ### `compound`
 
-The compound algorithm allows multiple criteria to used as the matchmaking filter. This is the approach to use when doing geo-matchmaking using the `WithPingData()` calls.
+The compound algorithm allows multiple criteria to be used as the matchmaking filter. This is the approach to use when doing geo-matchmaking using the `WithPingData()` calls.
 
 ```json
 {
