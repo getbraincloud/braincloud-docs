@@ -15,10 +15,11 @@ Use [PingRegions](/api/capi/lobby/pingregions) to generate the ping data.
 | maxSteps       | The maximum number of steps to wait when looking for an applicable lobby. Each step is ~5 seconds.                                                                                                     |
 | algo           | The algorithm to use for increasing the search scope.                                                                                                                                                  |
 | filterJson     | Used to help filter the list of rooms to consider. Passed to the matchmaking filter, if configured.                                                                                                    |
-| otherUserCxIds | Array of other users (i.e. party members) to add to the lobby as well. Will constrain things so that only lobbies with room for all players will be considered.                                        |
+| timeoutSecs    | The timeout setting in second for retrieving the lobby.                                                                                                                                                |
 | isReady        | Initial ready-status of this user.                                                                                                                                                                     |
 | extraJson      | Initial extra-data about this user.                                                                                                                                                                    |
 | teamCode       | Preferred team for this user, if applicable. Send `""` or `null` for automatic assignment.                                                                                                             |
+| otherUserCxIds | Array of other users (i.e. party members) to add to the lobby as well. Will constrain things so that only lobbies with room for all players will be considered.                                        |
 | pingData       | Ping times for each region available for this lobby type. Can use GET_REGIONS_FOR_LOBBIES to retreive the list of regions for a given lobby type. Ping data is automatically passed in on the clients. |
 
 ## Usage
@@ -33,8 +34,9 @@ Use [PingRegions](/api/capi/lobby/pingregions) to generate the ping data.
 string lobbyType = "4v4";
 int rating = 76;
 int maxSteps = 3;
-string algo = "{\"strategy\":\"ranged-absolute\",\"alignment\":\"center\",\"ranges\":[5,7.5,10]}";
+string algo = "{\"strategy": \"compound\",\"algos\": [{ \"criteria\": \"ping\", \"strategy\": \"absolute\", \"alignment\": \"absolute\" },{ \"criteria\": \"rating\", \"strategy\": \"ranged-absolute\", \"alignment\": \"center\" }],\"compound-ranges\": [[ 30, [ 5, 10 ]],[ 50, [ 10, 15 ]]]}";
 string filterJson = "{\"cheater\":false}";
+int timeoutSecs = 30;
 string[] otherUserCxIds = { "123456:aaa-bbb-ccc-ddd:asdfjkl" };
 bool isReady = false;
 string extraJson = "{}";
@@ -48,7 +50,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
     Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
 };
 
-<%= data.branding.codePrefix %>.LobbyService.FindLobbyWithPingData(lobbyType, rating, maxSteps, algo, filterJson, otherUserCxIds, isReady, extraJson, teamCode, successCallback, failureCallback);
+<%= data.branding.codePrefix %>.LobbyService.FindLobbyWithPingData(lobbyType, rating, maxSteps, algo, filterJson, timeoutSecs, otherUserCxIds, isReady, extraJson, teamCode, successCallback, failureCallback);
 ```
 
 ```mdx-code-block
@@ -60,14 +62,15 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 const char *lobbyType = "4v4";
 int rating = 76;
 int maxSteps = 3;
-const char *algo = "{\"strategy\":\"ranged-absolute\",\"alignment\":\"center\",\"ranges\":[5,7.5,10]}";
+const char *algo = "{\"strategy": \"compound\",\"algos\": [{ \"criteria\": \"ping\", \"strategy\": \"absolute\", \"alignment\": \"absolute\" },{ \"criteria\": \"rating\", \"strategy\": \"ranged-absolute\", \"alignment\": \"center\" }],\"compound-ranges\": [[ 30, [ 5, 10 ]],[ 50, [ 10, 15 ]]]}";
 const char *filterJson = "{\"cheater\":false}";
+int timeoutSecs = 30;
 std::vector<std::string> otherUserCxIds;
 otherUserCxIds.push_back("123456:aaa-bbb-ccc-ddd:asdfjkl");
 bool isReady = false;
 const char *extraJson = "{}";
 const char *teamCode = "blue";
-<%= data.branding.codePrefix %>->getLobbyService()->findLobbyWithPingData(lobbyType, rating, maxSteps, algo, filterJson, otherUserCxIds, isReady, extraJson, teamCode, this);
+<%= data.branding.codePrefix %>->getLobbyService()->findLobbyWithPingData(lobbyType, rating, maxSteps, algo, filterJson, timeoutSecs, otherUserCxIds, isReady, extraJson, teamCode, this);
 ```
 
 ```mdx-code-block
@@ -79,8 +82,9 @@ const char *teamCode = "blue";
 NSString *lobbyType = @"4v4";
 int rating = 76;
 int maxSteps = 3;
-NSString *algo = @"{\"strategy\":\"ranged-absolute\",\"alignment\":\"center\",\"ranges\":[5,7.5,10]}";
+NSString *algo = @"{\"strategy": \"compound\",\"algos\": [{ \"criteria\": \"ping\", \"strategy\": \"absolute\", \"alignment\": \"absolute\" },{ \"criteria\": \"rating\", \"strategy\": \"ranged-absolute\", \"alignment\": \"center\" }],\"compound-ranges\": [[ 30, [ 5, 10 ]],[ 50, [ 10, 15 ]]]}";
 NSString *filterJson = @"{\"cheater\":false}";
+int timeoutSecs = 30;
 NSArray *otherUserCxIds = @[ @"123456:aaa-bbb-ccc-ddd:asdfjkl" ];
 bool isReady = false;
 NSString *extraJson = @"{}";
@@ -111,15 +115,16 @@ BCErrorCompletionBlock failureBlock; // define callback
 String lobbyType = "4v4";
 int rating = 76;
 int maxSteps = 3;
-String algo = "{\"strategy\":\"ranged-absolute\",\"alignment\":\"center\",\"ranges\":[5,7.5,10]}";
+String algo = "{\"strategy": \"compound\",\"algos\": [{ \"criteria\": \"ping\", \"strategy\": \"absolute\", \"alignment\": \"absolute\" },{ \"criteria\": \"rating\", \"strategy\": \"ranged-absolute\", \"alignment\": \"center\" }],\"compound-ranges\": [[ 30, [ 5, 10 ]],[ 50, [ 10, 15 ]]]}";
 String filterJson = "{\"cheater\":false}";
+int timeoutSecs = 30;
 String[] otherUserCxIds = { "123456:aaa-bbb-ccc-ddd:asdfjkl" };
 boolean isReady = false;
 String extraJson = "{}";
 String teamCode = "blue";
 this; // implements IServerCallback
 
-<%= data.branding.codePrefix %>.getLobbyService().findLobbyWithPingData(lobbyType, rating, maxSteps, algo, filterJson, otherUserCxIds, isReady, extraJson, teamCode, this);
+<%= data.branding.codePrefix %>.getLobbyService().findLobbyWithPingData(lobbyType, rating, maxSteps, algo, filterJson, timeoutSecs, otherUserCxIds, isReady, extraJson, teamCode, this);
 
 public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
 {
@@ -141,23 +146,30 @@ var lobbyType = "4v4";
 var rating = 76;
 var maxSteps = 3;
 var algo = {
-    "strategy": "ranged-absolute",
-    "alignment": "center",
-    "ranges": [
-        5,
-        7.5,
-        10
+    "strategy": "compound",
+    "algos": [
+        { "criteria": "ping", "strategy": "absolute", "alignment": "absolute" },
+        {
+            "criteria": "rating",
+            "strategy": "ranged-absolute",
+            "alignment": "center"
+        }
+    ],
+    "compound-ranges": [
+        [30, [5, 10]],
+        [50, [10, 15]]
     ]
 };
 var filterJson = {
     "cheater": false
 };
+var timeoutSecs = 30;
 var otherUserCxIds = [ "123456:aaa-bbb-ccc-ddd:asdfjkl" ];
 var isReady = false;
 var extraJson = {};
 var teamCode = "blue";
 
-<%= data.branding.codePrefix %>.lobby.findLobbyWithPingData(lobbyType, rating, maxSteps, algo, filterJson, otherUserCxIds, isReady, extraJson, teamCode, result =>
+<%= data.branding.codePrefix %>.lobby.findLobbyWithPingData(lobbyType, rating, maxSteps, algo, filterJson, timeoutSecs, otherUserCxIds, isReady, extraJson, teamCode, result =>
 {
 	var status = result.status;
 	console.log(status + " : " + JSON.stringify(result, null, 2));
@@ -174,17 +186,24 @@ var lobbyType = "4v4";
 var rating = 76;
 var maxSteps = 3;
 var algo = {
-    "strategy": "ranged-absolute",
-    "alignment": "center",
-    "ranges": [
-        5,
-        7.5,
-        10
+    "strategy": "compound",
+    "algos": [
+        { "criteria": "ping", "strategy": "absolute", "alignment": "absolute" },
+        {
+            "criteria": "rating",
+            "strategy": "ranged-absolute",
+            "alignment": "center"
+        }
+    ],
+    "compound-ranges": [
+        [30, [5, 10]],
+        [50, [10, 15]]
     ]
 };
 var filterJson = {
     "cheater": false
 };
+var timeoutSecs = 30;
 var otherUserCxIds = [ "123456:aaa-bbb-ccc-ddd:asdfjkl" ];
 var isReady = false;
 var extraJson = {};
@@ -195,7 +214,7 @@ var pingData = {
 };
 var lobbyProxy = bridge.getLobbyServiceProxy();
 
-var postResult = lobbyProxy.findLobbyWithPingData(lobbyType, rating, maxSteps, algo, filterJson, otherUserCxIds, isReady, extraJson, teamCode, pingData);
+var postResult = lobbyProxy.findLobbyWithPingData(lobbyType, rating, maxSteps, algo, filterJson, timeoutSecs, otherUserCxIds, isReady, extraJson, teamCode, pingData);
 if (postResult.status == 200) {
     // Success!
 }
@@ -215,17 +234,24 @@ if (postResult.status == 200) {
 		"rating": 76,
 		"maxSteps": 3,
 		"algo": {
-			"strategy": "ranged-absolute",
-			"alignment": "center",
-			"ranges": [
-				5,
-				7.5,
-				10
-			]
-		},
+            "strategy": "compound",
+            "algos": [
+                { "criteria": "ping", "strategy": "absolute", "alignment": "absolute" },
+                {
+                    "criteria": "rating",
+                    "strategy": "ranged-absolute",
+                    "alignment": "center"
+                }
+            ],
+            "compound-ranges": [
+                [30, [5, 10]],
+                [50, [10, 15]]
+            ]
+        },
 		"filterJson": {
 			"cheater": false
 		},
+        "timeoutSecs": 30,
 		"otherUserCxIds": [
 			"55555:aaa-bbb-ccc-ddd:asdfjkl"
 		],
