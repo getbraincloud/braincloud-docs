@@ -1,12 +1,14 @@
 # ResetUniversalIdPassword
+
 Reset Universal ID password.
 
 <PartialServop service_name="authenticationV2" operation_name="RESET_UNIVERSAL_ID_PASSWORD" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-universalId | The universalId to send the reset email to.
+
+| Parameter   | Description                                 |
+| ----------- | ------------------------------------------- |
+| universalId | The universalId to send the reset email to. |
 
 ## Usage
 
@@ -98,10 +100,7 @@ var universalId = "universalId";
 ```
 
 ```cfscript
-var universalId = "universalId";
-var authenticationV2Proxy = bridge.getAuthenticationv2ServiceProxy();
-
-var postResult = authenticationV2Proxy.ResetUniversalIdPassword(universalId);
+// N/A
 ```
 
 ```mdx-code-block
@@ -125,15 +124,15 @@ var postResult = authenticationV2Proxy.ResetUniversalIdPassword(universalId);
 </Tabs>
 </BrowserWindow>
 ```
+
 <details>
 <summary>JSON Response</summary>
 
 ```json
 {
-  "status" : 200,
-  "data" : null
+    "status": 200,
+    "data": null
 }
 ```
 
 </details>
-

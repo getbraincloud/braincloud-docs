@@ -1,12 +1,14 @@
 # ResetEmailPassword
+
 Reset email password.
 
 <PartialServop service_name="authenticationV2" operation_name="RESET_EMAIL_PASSWORD" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-externalId | The email address to send the reset email to.
+
+| Parameter  | Description                                   |
+| ---------- | --------------------------------------------- |
+| externalId | The email address to send the reset email to. |
 
 ## Usage
 
@@ -98,10 +100,7 @@ var externalId = "email@email.com";
 ```
 
 ```cfscript
-var externalId = "email@email.com";
-var authenticationV2Proxy = bridge.getAuthenticationv2ServiceProxy();
-
-var postResult = authenticationV2Proxy.ResetEmailPassword(externalId);
+// N/A
 ```
 
 ```mdx-code-block
@@ -125,15 +124,15 @@ var postResult = authenticationV2Proxy.ResetEmailPassword(externalId);
 </Tabs>
 </BrowserWindow>
 ```
+
 <details>
 <summary>JSON Response</summary>
 
 ```json
 {
-  "status" : 200,
-  "data" : null
+    "status": 200,
+    "data": null
 }
 ```
 
 </details>
-

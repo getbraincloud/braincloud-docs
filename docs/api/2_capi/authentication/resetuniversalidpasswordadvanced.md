@@ -1,13 +1,15 @@
 # ResetUniversalIdPasswordAdvanced
+
 Advanced universalId password reset using templates.
 
 <PartialServop service_name="authenticationV2" operation_name="RESET_UNIVERSAL_ID_PASSWORD_ADVANCED" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-universalId | The universalId to send the reset email to.
-serviceParams | Set of parameters dependant on the mail service configured.
+
+| Parameter     | Description                                                 |
+| ------------- | ----------------------------------------------------------- |
+| universalId   | The universalId to send the reset email to.                 |
+| serviceParams | Set of parameters dependant on the mail service configured. |
 
 ## Usage
 
@@ -114,20 +116,7 @@ var serviceParams = {
 ```
 
 ```cfscript
-var universalId = "universalId";
-var serviceParams = {
-    "templateId": "d-template-id-guid",
-    "dynamicData": {
-        "aKey": "aValue"
-    },
-    "categories": [
-        "category1",
-        "category2"
-    ]
-};
-var authenticationV2Proxy = bridge.getAuthenticationv2ServiceProxy();
-
-var postResult = authenticationV2Proxy.ResetUniversalIdPasswordAdvanced (dynamic template)(universalId, serviceParams);
+// N/A
 ```
 
 ```mdx-code-block
@@ -161,15 +150,15 @@ var postResult = authenticationV2Proxy.ResetUniversalIdPasswordAdvanced (dynamic
 </Tabs>
 </BrowserWindow>
 ```
+
 <details>
 <summary>JSON Response</summary>
 
 ```json
 {
-  "status" : 200,
-  "data" : null
+    "status": 200,
+    "data": null
 }
 ```
 
 </details>
-
