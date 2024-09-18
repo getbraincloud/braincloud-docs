@@ -2,6 +2,8 @@
 
 Get server version.
 
+<PartialServop service_name="authenticationV2" operation_name="GET_SERVER_VERSION" />
+
 ## Usage
 
 ```mdx-code-block
