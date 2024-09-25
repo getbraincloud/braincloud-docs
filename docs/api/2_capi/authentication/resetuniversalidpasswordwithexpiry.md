@@ -5,10 +5,11 @@ Reset Universal ID password. Allows the developer to specify how long the URL is
 <PartialServop service_name="authenticationV2" operation_name="RESET_UNIVERSAL_ID_PASSWORD_WITH_EXPIRY" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-universalId | The universalId to send the reset email to.
-tokenTtlInMinutes | The time-to-live for the password reset url, in minutes.
+
+| Parameter         | Description                                              |
+| ----------------- | -------------------------------------------------------- |
+| universalId       | The universalId to send the reset email to.              |
+| tokenTtlInMinutes | The time-to-live for the password reset url, in minutes. |
 
 ## Usage
 
@@ -30,7 +31,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
     Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
 };
 
-<%= data.branding.codePrefix %>.Authenticate.ResetUniversalIdPasswordWithExpiry(universalId, resetUrlTTLMinutes, successCallback, failureCallback);
+<%= data.branding.codePrefix %>.AuthenticationService.ResetUniversalIdPasswordWithExpiry(universalId, resetUrlTTLMinutes, successCallback, failureCallback);
 ```
 
 ```mdx-code-block
@@ -133,5 +134,5 @@ var resetUrlTTLMinutes = 1440;
     "data": null
 }
 ```
-</details>
 
+</details>
