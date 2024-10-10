@@ -166,7 +166,7 @@ if (postResult.status == 200) {
 ```
 
 :::tip
-If the "settings" parameter is defined as shown below:
+If the "settings" parameter is specified during the creation of a lobby, as demonstrated below:
 
 ```json
 {
