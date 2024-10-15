@@ -2,6 +2,12 @@
 
 Logs an App Error message to the error log.
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+errorMessage | The error message.
+context | Additional string-format information to include with the message.
+
 ## Usage
 
 ```mdx-code-block
@@ -92,11 +98,4 @@ bridge.logError(errorMessage, context);
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-errorMessage | The error message.
-context | Additional string-format information to include with the message.
-
 

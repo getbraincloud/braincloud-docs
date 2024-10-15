@@ -2,6 +2,12 @@
 
 Logs an App Info message to the error log.
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+errorMessage | The error message.
+context | Additional JSON-format information to include with the message.  
+
 ## Usage
 
 ```mdx-code-block
@@ -92,11 +98,4 @@ bridge.logInfoJson(errorMessage, context);
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-errorMessage | The error message.
-context | Additional JSON-format information to include with the message.  
-
 

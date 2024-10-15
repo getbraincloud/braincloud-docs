@@ -5,6 +5,11 @@ Creates and returns a session for the profileId provided.
 This method is used for when you need a session for a user other than the one calling the script,
 or when a script does not have a user context by default (ex. S2S or Scheduled).
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+profileId | The profile Id
+
 ## Usage
 
 ```mdx-code-block
@@ -78,10 +83,4 @@ var session = bridge.getSessionForProfile(profileId);
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | The profile Id
-
 

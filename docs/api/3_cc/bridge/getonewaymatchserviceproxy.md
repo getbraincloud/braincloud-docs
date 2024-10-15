@@ -4,6 +4,11 @@ Retrieves a OnewayMatchService proxy object.
 
 Documentation for the service methods can be found [here](/api/capi/onewaymatch).
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+session | A optional parameter for when a script is executed without a session
+
 ## Usage
 
 ```mdx-code-block
@@ -75,10 +80,4 @@ var proxy = bridge.getOnewayMatchServiceProxy();
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-session | A optional parameter for when a script is executed without a session
-
 

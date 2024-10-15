@@ -6,9 +6,10 @@ Cancels any FindLobby or FindOrCreateLobby requests that have been previously su
 
 ## Method Parameters
 
-| Parameter | Description                   |
-| --------- | ----------------------------- |
-| lobbyType | Type of lobby being targeted. |
+| Parameter | Description                            |
+| --------- | -------------------------------------- |
+| lobbyType | Type of lobby being targeted.          |
+| entryId   | Specific entry id to cancel. Optional. |
 
 ## Usage
 
@@ -20,6 +21,7 @@ Cancels any FindLobby or FindOrCreateLobby requests that have been previously su
 
 ```csharp
 string lobbyType = "4v4";
+string entryId = "cxckfek-ir";
 SuccessCallback successCallback = (response, cbObject) =>
 {
     Debug.Log(string.Format("Success | {0}", response));
@@ -29,7 +31,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
     Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
 };
 
-<%= data.branding.codePrefix %>.LobbyService.CancelFindRequest(lobbyType, successCallback, failureCallback);
+<%= data.branding.codePrefix %>.LobbyService.CancelFindRequest(lobbyType, entryId, successCallback, failureCallback);
 ```
 
 ```mdx-code-block
@@ -39,7 +41,8 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 
 ```cpp
 const char *lobbyType = "4v4";
-<%= data.branding.codePrefix %>->getLobbyService()->cancelFindRequest(lobbyType, this);
+const char *entryId = "cxckfek-ir";
+<%= data.branding.codePrefix %>->getLobbyService()->cancelFindRequest(lobbyType, entryId, this);
 ```
 
 ```mdx-code-block
@@ -58,9 +61,10 @@ const char *lobbyType = "4v4";
 
 ```java
 String lobbyType = "4v4";
+String entryId = "cxckfek-ir";
 this; // implements IServerCallback
 
-<%= data.branding.codePrefix %>.getLobbyService().cancelFindRequest(lobbyType, this);
+<%= data.branding.codePrefix %>.getLobbyService().cancelFindRequest(lobbyType, entryId, this);
 
 public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
 {
@@ -79,8 +83,9 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 
 ```javascript
 var lobbyType = "4v4";
+var entryId = "cxckfek-ir";
 
-<%= data.branding.codePrefix %>.lobby.cancelFindRequest(lobbyType, result =>
+<%= data.branding.codePrefix %>.lobby.cancelFindRequest(lobbyType, entryId, result =>
 {
 	var status = result.status;
 	console.log(status + " : " + JSON.stringify(result, null, 2));
@@ -94,9 +99,10 @@ var lobbyType = "4v4";
 
 ```cfscript
 var lobbyType = "4v4";
+var entryId = "cxckfek-ir";
 var lobbyProxy = bridge.getLobbyServiceProxy();
 
-var postResult = lobbyProxy.cancelFindRequest(lobbyType);
+var postResult = lobbyProxy.cancelFindRequest(lobbyType, entryId);
 if (postResult.status == 200) {
     // Success!
 }
@@ -112,7 +118,8 @@ if (postResult.status == 200) {
 	"service": "lobby",
 	"operation": "CANCEL_FIND_REQUEST",
 	"data": {
-		"lobbyType": "4v4"
+		"lobbyType": "4v4",
+		"entryId": "cxckfek-ir"
 	}
 }
 ```

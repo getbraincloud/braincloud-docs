@@ -13,6 +13,15 @@ Parameter | Description
 
 <PartialServop service_name="httpClient" operation_name="POST_JSON_OFFBOARD" / >
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+serviceCode | Service code of the external service configured in the Cloud Code - Web Services section of the portal
+path | Path to append to the Base URL of the service
+query | Map of query parameters
+headers | Map of extra headers
+json | JSON formatted data to post
+
 ## Usage
 
 ```mdx-code-block
@@ -127,14 +136,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-serviceCode | Service code of the external service configured in the Cloud Code - Web Services section of the portal
-path | Path to append to the Base URL of the service
-query | Map of query parameters
-headers | Map of extra headers
-json | JSON formatted data to post
-
 

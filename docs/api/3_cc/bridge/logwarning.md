@@ -2,6 +2,12 @@
 
 Logs an App Warning message to the error log.
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+errorMessage | The error message.
+context | Additional string-format information to include with the message.
+
 ## Usage
 
 ```mdx-code-block
@@ -90,11 +96,4 @@ bridge.logWarning(errorMessage, context)
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-errorMessage | The error message.
-context | Additional string-format information to include with the message.
-
 

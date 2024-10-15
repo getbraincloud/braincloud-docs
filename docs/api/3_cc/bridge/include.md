@@ -10,6 +10,11 @@ bridge.include(“path/to/scriptname.ccjs”);
 If without specifying the script path in include operation, the system will only search the scripts in the same folder as the current script located in.
 :::
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+scriptName | The name of the script with its path (the relative path to the included script file).
+
 ## Usage
 
 ```mdx-code-block
@@ -115,10 +120,4 @@ main();
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-scriptName | The name of the script with its path (the relative path to the included script file).
-
 

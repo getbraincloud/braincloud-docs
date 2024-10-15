@@ -2,6 +2,12 @@
 
 Retrieves a session object based on the provided sessionId and profileId. Can be passed into the proxy service getter methods.
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+sessionId | String that identifies session. Session must be active.
+profileId | String that identifies profile. Must match session profile.
+
 ## Usage
 
 ```mdx-code-block
@@ -79,11 +85,4 @@ var session = bridge.getSessionForSessionIdAndProfileId(String sessionId, String
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-sessionId | String that identifies session. Session must be active.
-profileId | String that identifies profile. Must match session profile.
-
 

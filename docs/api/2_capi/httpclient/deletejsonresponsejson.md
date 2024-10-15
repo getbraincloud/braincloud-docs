@@ -1,8 +1,17 @@
-# Delete
+# DeleteJsonResponseJson
 
-Deletes a document.
+Deletes a document, passes a Json body, expects a Json response.
 
-<PartialServop service_name="httpClient" operation_name="DELETE" / >
+<PartialServop service_name="httpClient" operation_name="DELETE_JSON_RESPONSE_JSON" / >
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+serviceCode | Service code of the external service configured in the Cloud Code - Web Services section of the portal
+path | Path to append to the Base URL of the service
+query | Map of query parameters
+headers | Map of extra headers
+json | JSON formatted data to send
 
 ## Usage
 
@@ -71,7 +80,7 @@ var json = {
 };
 var httpClientProxy = bridge.getHttpClientServiceProxy();
 
-var postResult = httpClientProxy.delete(serviceCode, path, query, headers, json);
+var postResult = httpClientProxy.deleteJsonResponseJson(serviceCode, path, query, headers, json);
 if (postResult.status == 200) {
     // Success!
 }
@@ -96,7 +105,7 @@ var json = {
 };
 var httpClientProxy = bridge.getHttpClientServiceProxy();
 
-var postResult = httpClientProxy.delete(serviceCode, path, query, headers, json);
+var postResult = httpClientProxy.deleteJsonResponseJson(serviceCode, path, query, headers, json);
 if (postResult.status == 200) {
     // Success!
 }
@@ -114,21 +123,13 @@ if (postResult.status == 200) {
 ```json
 {
   "data": {
-    "text": "text message",
+    "json": {
+        "message": "value"
+    },
     "statusCode": 200
   },
   "status": 200
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-serviceCode | Service code of the external service configured in the Cloud Code - Web Services section of the portal
-path | Path to append to the Base URL of the service
-query | Map of query parameters
-headers | Map of extra headers
-json | JSON formatted data to send
-
 

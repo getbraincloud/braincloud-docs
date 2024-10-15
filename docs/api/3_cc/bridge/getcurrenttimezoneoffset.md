@@ -2,6 +2,11 @@
 
 Get the timezone offset from UTC.
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+timeZoneId | The timezone id to compare against UTC.
+
 ## Usage
 
 ```mdx-code-block
@@ -97,10 +102,4 @@ response;
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-timeZoneId | The timezone id to compare against UTC.
-
 
