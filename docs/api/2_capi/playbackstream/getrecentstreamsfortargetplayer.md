@@ -1,14 +1,15 @@
 # GetRecentStreamsForTargetPlayer
 
-Gets recent streams for initiating player.
+Get recent streams for target player, optional parameter: targetPlayerId.
 
 <PartialServop service_name="playbackStream" operation_name="GET_RECENT_STREAMS_FOR_TARGET_PLAYER" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-targetPlayerId | The player that received the stream
-maxNumStreams | The max number of stream to return in the response
+
+| Parameter      | Description                                        |
+| -------------- | -------------------------------------------------- |
+| targetPlayerId | The player that received the stream                |
+| maxNumStreams  | The max number of stream to return in the response |
 
 ## Usage
 
@@ -144,36 +145,36 @@ if (postResult.status == 200) {
 
 ```json
 {
- "data": {
-  "streams": [
-   {
-    "playbackStreamId": "6620a4e8-c4a8-4979-b827-0efa6a4a7435",
-    "gameId": "10228",
-    "initiatingPlayerId": "38ae8a44-1b24-4ad9-9bb4-a016bdfc6644",
-    "targetPlayerId": "38ae8a44-1b24-4ad9-9bb4-a016bdfc6644",
-    "status": "COMPLETE",
-    "summary": {
-     "total": 5
+    "data": {
+        "streams": [
+            {
+                "playbackStreamId": "6620a4e8-c4a8-4979-b827-0efa6a4a7435",
+                "gameId": "10228",
+                "initiatingPlayerId": "38ae8a44-1b24-4ad9-9bb4-a016bdfc6644",
+                "targetPlayerId": "38ae8a44-1b24-4ad9-9bb4-a016bdfc6644",
+                "status": "COMPLETE",
+                "summary": {
+                    "total": 5
+                },
+                "expiryTime": null,
+                "createdAt": 1526580974204,
+                "updatedAt": 1526582826462
+            },
+            {
+                "playbackStreamId": "90802401-806c-4621-afda-7e11ec910ec4",
+                "gameId": "10228",
+                "initiatingPlayerId": "38ae8a44-1b24-4ad9-9bb4-a016bdfc6644",
+                "targetPlayerId": "38ae8a44-1b24-4ad9-9bb4-a016bdfc6644",
+                "status": "COMPLETE",
+                "summary": {},
+                "expiryTime": null,
+                "createdAt": 1526578312706,
+                "updatedAt": 1526582826463
+            }
+        ]
     },
-    "expiryTime": null,
-    "createdAt": 1526580974204,
-    "updatedAt": 1526582826462
-   },
-   {
-    "playbackStreamId": "90802401-806c-4621-afda-7e11ec910ec4",
-    "gameId": "10228",
-    "initiatingPlayerId": "38ae8a44-1b24-4ad9-9bb4-a016bdfc6644",
-    "targetPlayerId": "38ae8a44-1b24-4ad9-9bb4-a016bdfc6644",
-    "status": "COMPLETE",
-    "summary": {},
-    "expiryTime": null,
-    "createdAt": 1526578312706,
-    "updatedAt": 1526582826463
-   }
-  ]
- },
- "status": 200
+    "status": 200
 }
 ```
-</details>
 
+</details>
