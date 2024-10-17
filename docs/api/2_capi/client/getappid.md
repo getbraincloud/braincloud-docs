@@ -55,8 +55,8 @@ var appId = <%= data.branding.codePrefix %>.getAppId();
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
-var appId = <%= data.branding.codePrefix %>.getAppId();
+```cfscript
+// N/A
 ```
 
 ```mdx-code-block
@@ -64,8 +64,8 @@ var appId = <%= data.branding.codePrefix %>.getAppId();
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
-var appId = <%= data.branding.codePrefix %>.getAppId();
+```r
+// N/A
 ```
 
 ```mdx-code-block
@@ -73,4 +73,3 @@ var appId = <%= data.branding.codePrefix %>.getAppId();
 </Tabs>
 </BrowserWindow>
 ```
-

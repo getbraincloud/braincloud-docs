@@ -9,9 +9,10 @@ This timeout method does not work on Unity mobile platforms.
 :::
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-timeoutSecs | The timeout in seconds
+
+| Parameter   | Description            |
+| ----------- | ---------------------- |
+| timeoutSecs | The timeout in seconds |
 
 ## Usage
 
@@ -69,7 +70,7 @@ int timeoutSecs = 60;
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
+```cfscript
 // N/A
 ```
 
@@ -78,7 +79,7 @@ int timeoutSecs = 60;
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
+```r
 // N/A
 ```
 
@@ -87,4 +88,3 @@ int timeoutSecs = 60;
 </Tabs>
 </BrowserWindow>
 ```
-

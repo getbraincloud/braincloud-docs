@@ -55,7 +55,7 @@ int timeout = [<%= data.branding.codePrefix %> getUploadLowTransferRateTimeout];
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
+```cfscript
 // N/A
 ```
 
@@ -64,7 +64,7 @@ int timeout = [<%= data.branding.codePrefix %> getUploadLowTransferRateTimeout];
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
+```r
 // N/A
 ```
 
@@ -73,4 +73,3 @@ int timeout = [<%= data.branding.codePrefix %> getUploadLowTransferRateTimeout];
 </Tabs>
 </BrowserWindow>
 ```
-

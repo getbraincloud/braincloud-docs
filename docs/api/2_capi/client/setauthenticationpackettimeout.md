@@ -6,9 +6,10 @@ wait to receive a reply to an authentication API call.
 By default this timeout is set to 15 seconds.
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-timeoutSecs | The timeout in seconds.
+
+| Parameter   | Description             |
+| ----------- | ----------------------- |
+| timeoutSecs | The timeout in seconds. |
 
 ## Usage
 
@@ -67,7 +68,7 @@ int timeoutInSeconds = 30;
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
+```cfscript
 // N/A
 ```
 
@@ -76,7 +77,7 @@ int timeoutInSeconds = 30;
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
+```r
 // N/A
 ```
 
@@ -85,4 +86,3 @@ int timeoutInSeconds = 30;
 </Tabs>
 </BrowserWindow>
 ```
-

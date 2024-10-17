@@ -9,9 +9,10 @@ Because of a Unity limitation country code cannot be detected automatically on a
 :::
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-countryCode | ISO 3166-1 two-letter country code
+
+| Parameter   | Description                        |
+| ----------- | ---------------------------------- |
+| countryCode | ISO 3166-1 two-letter country code |
 
 ## Usage
 
@@ -71,9 +72,8 @@ var countryCode = "CA";
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
-var countryCode = "CA";
-<%= data.branding.codePrefix %>.overrideCountryCode(countryCode);
+```cfscript
+// N/A
 ```
 
 ```mdx-code-block
@@ -81,9 +81,8 @@ var countryCode = "CA";
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
-var countryCode = "CA";
-<%= data.branding.codePrefix %>.overrideCountryCode(countryCode);
+```r
+// N/A
 ```
 
 ```mdx-code-block
@@ -91,4 +90,3 @@ var countryCode = "CA";
 </Tabs>
 </BrowserWindow>
 ```
-

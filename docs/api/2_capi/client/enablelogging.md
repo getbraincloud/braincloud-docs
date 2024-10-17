@@ -3,9 +3,10 @@
 Enables console logging of outgoing/incoming packets and other informational logs from the client.
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-enabled | True if logging should be enabled
+
+| Parameter | Description                       |
+| --------- | --------------------------------- |
+| enabled   | True if logging should be enabled |
 
 ## Usage
 
@@ -60,8 +61,8 @@ enabled | True if logging should be enabled
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
-<%= data.branding.codePrefix %>.enableLogging(true);
+```cfscript
+// N/A
 ```
 
 ```mdx-code-block
@@ -69,8 +70,8 @@ enabled | True if logging should be enabled
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
-<%= data.branding.codePrefix %>.enableLogging(true);
+```r
+// N/A
 ```
 
 ```mdx-code-block
@@ -78,4 +79,3 @@ enabled | True if logging should be enabled
 </Tabs>
 </BrowserWindow>
 ```
-

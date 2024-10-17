@@ -57,7 +57,7 @@ See RunCallbacks function for other platforms.
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
+```cfscript
 // N/A
 ```
 
@@ -66,7 +66,7 @@ See RunCallbacks function for other platforms.
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
+```r
 // N/A
 ```
 
@@ -75,4 +75,3 @@ See RunCallbacks function for other platforms.
 </Tabs>
 </BrowserWindow>
 ```
-

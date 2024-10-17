@@ -55,8 +55,8 @@ var appVersion = <%= data.branding.codePrefix %>.getAppVersion();
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
-var appVersion = <%= data.branding.codePrefix %>.getAppVersion();
+```cfscript
+// N/A
 ```
 
 ```mdx-code-block
@@ -64,8 +64,8 @@ var appVersion = <%= data.branding.codePrefix %>.getAppVersion();
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
-var appVersion = <%= data.branding.codePrefix %>.getAppVersion();
+```r
+// N/A
 ```
 
 ```mdx-code-block
@@ -73,4 +73,3 @@ var appVersion = <%= data.branding.codePrefix %>.getAppVersion();
 </Tabs>
 </BrowserWindow>
 ```
-

@@ -55,7 +55,7 @@ int bytesPerSecThreshold = [<%= data.branding.codePrefix %> getUploadLowTransfer
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
+```cfscript
 // N/A
 ```
 
@@ -64,7 +64,7 @@ int bytesPerSecThreshold = [<%= data.branding.codePrefix %> getUploadLowTransfer
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
+```r
 // N/A
 ```
 
@@ -73,4 +73,3 @@ int bytesPerSecThreshold = [<%= data.branding.codePrefix %> getUploadLowTransfer
 </Tabs>
 </BrowserWindow>
 ```
-

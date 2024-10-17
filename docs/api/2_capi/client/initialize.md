@@ -2,29 +2,20 @@
 
 > To initialize, use this code:
 
-
-
-
-
-
-
-
-
-
-
-This method initializes the <%= data.branding.productName %> client SDK.  The information required to initialize can be found on the [Application IDs page](https://portal.braincloudservers.com/admin/dashboard#/development/core-settings-information) of the portal.
+This method initializes the <%= data.branding.productName %> client SDK. The information required to initialize can be found on the [Application IDs page](https://portal.braincloudservers.com/admin/dashboard#/development/core-settings-information) of the portal.
 
 :::caution
 Initialize must be called before you can call any <%= data.branding.productName %> APIs.
 :::
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-serverUrl | The url of the <%= data.branding.productName %> server.
-secretKey | The secret key for your app found in the <%= data.branding.productName %> portal.
-appId | The id of your app found in the <%= data.branding.productName %> portal.
-appVersion | The version of your app. This can be used to prevent older versions of your app from logging into <%= data.branding.productName %>.
+
+| Parameter  | Description                                                                                                                         |
+| ---------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| serverUrl  | The url of the <%= data.branding.productName %> server.                                                                             |
+| secretKey  | The secret key for your app found in the <%= data.branding.productName %> portal.                                                   |
+| appId      | The id of your app found in the <%= data.branding.productName %> portal.                                                            |
+| appVersion | The version of your app. This can be used to prevent older versions of your app from logging into <%= data.branding.productName %>. |
 
 ## Usage
 
@@ -102,11 +93,8 @@ var appId = "123456";
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
-var secret = "1234-1234-1234-1234";
-var appId = "123456";
-
-<%= data.branding.codePrefix %>.initialize(appId, secret, "1.0.0");
+```cfscript
+// N/A
 ```
 
 ```mdx-code-block
@@ -114,11 +102,8 @@ var appId = "123456";
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
-var secret = "1234-1234-1234-1234";
-var appId = "123456";
-
-<%= data.branding.codePrefix %>.initialize(appId, secret, "1.0.0");
+```r
+// N/A
 ```
 
 ```mdx-code-block
@@ -126,4 +111,3 @@ var appId = "123456";
 </Tabs>
 </BrowserWindow>
 ```
-
