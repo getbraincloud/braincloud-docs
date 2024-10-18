@@ -86,10 +86,6 @@ eventBlock = ^(NSString *eventsJson) {  };
 </BrowserWindow>
 ```
 
-ow>
-
-````
-
 <details>
 <summary>JSON Response</summary>
 
@@ -109,6 +105,6 @@ ow>
         }
     ]
 }
-````
+```
 
 </details>
