@@ -61,15 +61,6 @@ Enables sending Gzip compressed packets of requests from client side. Which can 
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
-<%= data.branding.codePrefix %>.enableCompressedRequests(true);
-```
-
-```mdx-code-block
-</TabItem>
-<TabItem value="cfs" label="Cloud Code">
-```
-
 ```cfscript
 // N/A
 ```

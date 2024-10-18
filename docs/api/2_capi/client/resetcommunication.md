@@ -55,15 +55,6 @@ Clears any pending messages from communication library and clears all session in
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
-<%= data.branding.codePrefix %>.resetCommunication();
-```
-
-```mdx-code-block
-</TabItem>
-<TabItem value="cfs" label="Cloud Code">
-```
-
 ```cfscript
 // N/A
 ```
