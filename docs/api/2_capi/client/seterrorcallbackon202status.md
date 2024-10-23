@@ -7,9 +7,10 @@ This flag is only intended for backward compatibility and is NOT recommended to 
 :::
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-isError | If set to true, 202 is treated as an error
+
+| Parameter | Description                                |
+| --------- | ------------------------------------------ |
+| isError   | If set to true, 202 is treated as an error |
 
 ## Usage
 
@@ -64,7 +65,7 @@ isError | If set to true, 202 is treated as an error
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
+```cfscript
 // N/A
 ```
 
@@ -73,7 +74,7 @@ isError | If set to true, 202 is treated as an error
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
+```r
 // N/A
 ```
 
@@ -82,4 +83,3 @@ isError | If set to true, 202 is treated as an error
 </Tabs>
 </BrowserWindow>
 ```
-

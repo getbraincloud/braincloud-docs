@@ -1,15 +1,16 @@
 # RegisterEventCallback
 
 :::caution
-This method is now deprecated. For real-time events, you should use the RTT API method,  <strong>RegisterRTTEventCallback()</strong>, instead.
+This method is now deprecated. For real-time events, you should use the RTT API method, <strong>RegisterRTTEventCallback()</strong>, instead.
 :::
 
 Sets a callback handler for any out of band event messages that come from <%= data.branding.productName %>.
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-eventCallback | A function which takes a JSON string as it's only parameter.
+
+| Parameter     | Description                                                  |
+| ------------- | ------------------------------------------------------------ |
+| eventCallback | A function which takes a JSON string as it's only parameter. |
 
 ## Usage
 
@@ -66,8 +67,8 @@ eventBlock = ^(NSString *eventsJson) {  };
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
-<%= data.branding.codePrefix %>.registerEventCallback(eventCallback);
+```cfscript
+// N/A
 ```
 
 ```mdx-code-block
@@ -75,8 +76,8 @@ eventBlock = ^(NSString *eventsJson) {  };
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
-<%= data.branding.codePrefix %>.registerEventCallback(eventCallback);
+```r
+// N/A
 ```
 
 ```mdx-code-block
@@ -105,5 +106,5 @@ eventBlock = ^(NSString *eventsJson) {  };
     ]
 }
 ```
-</details>
 
+</details>

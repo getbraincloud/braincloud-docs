@@ -5,9 +5,10 @@ Sets the packet timeouts using a list of integers that represent timeout values 
 The number of entries in this array determines how many packet retries will occur. By default, the packet timeout array is {15, 20, 35, 50}
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-intervalInSeconds | The time between heartbeats in milliseconds
+
+| Parameter         | Description                                 |
+| ----------------- | ------------------------------------------- |
+| intervalInSeconds | The time between heartbeats in milliseconds |
 
 ## Usage
 
@@ -72,8 +73,8 @@ ArrayList<Integer> packetTimeouts = new ArrayList<Integer>(
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
-<%= data.branding.codePrefix %>.brainCloudManager._packetTimeouts = [15,20,35,50];
+```cfscript
+// N/A
 ```
 
 ```mdx-code-block
@@ -81,8 +82,8 @@ ArrayList<Integer> packetTimeouts = new ArrayList<Integer>(
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
-<%= data.branding.codePrefix %>.brainCloudManager._packetTimeouts = [15,20,35,50];
+```r
+// N/A
 ```
 
 ```mdx-code-block
@@ -90,4 +91,3 @@ ArrayList<Integer> packetTimeouts = new ArrayList<Integer>(
 </Tabs>
 </BrowserWindow>
 ```
-

@@ -1,13 +1,15 @@
 # ResetEmailPasswordAdvanced
+
 Advanced reset email password using templates.
 
 <PartialServop service_name="authenticationV2" operation_name="RESET_EMAIL_PASSWORD_ADVANCED" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-emailAddress | The email address to send the reset email to.
-serviceParams | Set of parameters dependant on the mail service configured.
+
+| Parameter     | Description                                                 |
+| ------------- | ----------------------------------------------------------- |
+| emailAddress  | The email address to send the reset email to.               |
+| serviceParams | Set of parameters dependant on the mail service configured. |
 
 ## Usage
 
@@ -30,7 +32,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
     Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
 };
 
-<%= data.branding.codePrefix %>.Authenticationv2Service.ResetEmailPasswordAdvanced (dynamic template)(emailAddress, serviceParams, successCallback, failureCallback);
+<%= data.branding.codePrefix %>.AuthenticationService.ResetEmailPasswordAdvanced (dynamic template)(emailAddress, serviceParams, successCallback, failureCallback);
 ```
 
 ```mdx-code-block
@@ -41,7 +43,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 ```cpp
 const char *emailAddress = "email@email.com";
 const char *serviceParams = "{\"templateId\": \"d-template-id-guid\", \"dynamicData\": {\"aKey\": \"aValue\"}, \"categories\": [\"category1\", \"category2\"]}";
-<%= data.branding.codePrefix %>.getAuthenticationv2Service().resetEmailPasswordAdvanced (dynamic template)(emailAddress, serviceParams, this);
+<%= data.branding.codePrefix %>.getAuthenticationService().resetEmailPasswordAdvanced (dynamic template)(emailAddress, serviceParams, this);
 ```
 
 ```mdx-code-block
@@ -54,7 +56,7 @@ NSString *emailAddress = @"email@email.com";
 NSString *serviceParams = @"{\"templateId\": \"d-template-id-guid\", \"dynamicData\": {\"aKey\": \"aValue\"}, \"categories\": [\"category1\", \"category2\"]}";
 BCCompletionBlock successBlock; // define callback
 BCErrorCompletionBlock failureBlock; // define callback
-[[<%= data.branding.codePrefix %> authenticationV2Service] ResetEmailPasswordAdvanced (dynamic template):
+[[<%= data.branding.codePrefix %> authenticationService] ResetEmailPasswordAdvanced (dynamic template):
                  emailAddress:emailAddress
                 serviceParams:serviceParams
               completionBlock:successBlock
@@ -71,7 +73,7 @@ BCErrorCompletionBlock failureBlock; // define callback
 String emailAddress = "email@email.com";
 String serviceParams = "{\"templateId\": \"d-template-id-guid\", \"dynamicData\": {\"aKey\": \"aValue\"}, \"categories\": [\"category1\", \"category2\"]}";
 this; // implements IServerCallback
-<%= data.branding.codePrefix %>.getAuthenticationv2Service.ResetEmailPasswordAdvanced (dynamic template)(emailAddress, serviceParams, this);
+<%= data.branding.codePrefix %>.getAuthenticationService.ResetEmailPasswordAdvanced (dynamic template)(emailAddress, serviceParams, this);
 
 public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
 {
@@ -101,7 +103,7 @@ var serviceParams = {
         "category2"
     ]
 };
-<%= data.branding.codePrefix %>.authenticationV2.ResetEmailPasswordAdvanced (dynamic template)(emailAddress, serviceParams, result =>
+<%= data.branding.codePrefix %>.authentication.ResetEmailPasswordAdvanced (dynamic template)(emailAddress, serviceParams, result =>
 {
   var status = result.status;
   console.log(status + " : " + JSON.stringify(result, null, 2));
@@ -114,20 +116,7 @@ var serviceParams = {
 ```
 
 ```cfscript
-var emailAddress = "email@email.com";
-var serviceParams = {
-    "templateId": "d-template-id-guid",
-    "dynamicData": {
-        "aKey": "aValue"
-    },
-    "categories": [
-        "category1",
-        "category2"
-    ]
-};
-var authenticationV2Proxy = bridge.getAuthenticationv2ServiceProxy();
-
-var postResult = authenticationV2Proxy.ResetEmailPasswordAdvanced (dynamic template)(emailAddress, serviceParams);
+// N/A
 ```
 
 ```mdx-code-block
@@ -161,15 +150,15 @@ var postResult = authenticationV2Proxy.ResetEmailPasswordAdvanced (dynamic templ
 </Tabs>
 </BrowserWindow>
 ```
+
 <details>
 <summary>JSON Response</summary>
 
 ```json
 {
-  "status" : 200,
-  "data" : null
+    "status": 200,
+    "data": null
 }
 ```
 
 </details>
-

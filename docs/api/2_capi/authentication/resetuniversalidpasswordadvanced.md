@@ -1,13 +1,15 @@
 # ResetUniversalIdPasswordAdvanced
+
 Advanced universalId password reset using templates.
 
 <PartialServop service_name="authenticationV2" operation_name="RESET_UNIVERSAL_ID_PASSWORD_ADVANCED" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-universalId | The universalId to send the reset email to.
-serviceParams | Set of parameters dependant on the mail service configured.
+
+| Parameter     | Description                                                 |
+| ------------- | ----------------------------------------------------------- |
+| universalId   | The universalId to send the reset email to.                 |
+| serviceParams | Set of parameters dependant on the mail service configured. |
 
 ## Usage
 
@@ -30,7 +32,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
     Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
 };
 
-<%= data.branding.codePrefix %>.Authenticationv2Service.ResetUniversalIdPasswordAdvanced (dynamic template)(universalId, serviceParams, successCallback, failureCallback);
+<%= data.branding.codePrefix %>.AuthenticationService.ResetUniversalIdPasswordAdvanced (dynamic template)(universalId, serviceParams, successCallback, failureCallback);
 ```
 
 ```mdx-code-block
@@ -41,7 +43,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 ```cpp
 const char *universalId = "universalId";
 const char *serviceParams = "{\"templateId\": \"d-template-id-guid\", \"dynamicData\": {\"aKey\": \"aValue\"}, \"categories\": [\"category1\", \"category2\"]}";
-<%= data.branding.codePrefix %>.getAuthenticationv2Service().resetUniversalIdPasswordAdvanced (dynamic template)(universalId, serviceParams, this);
+<%= data.branding.codePrefix %>.getAuthenticationService().resetUniversalIdPasswordAdvanced (dynamic template)(universalId, serviceParams, this);
 ```
 
 ```mdx-code-block
@@ -54,7 +56,7 @@ NSString *universalId = @"universalId";
 NSString *serviceParams = @"{\"templateId\": \"d-template-id-guid\", \"dynamicData\": {\"aKey\": \"aValue\"}, \"categories\": [\"category1\", \"category2\"]}";
 BCCompletionBlock successBlock; // define callback
 BCErrorCompletionBlock failureBlock; // define callback
-[[<%= data.branding.codePrefix %> authenticationV2Service] ResetUniversalIdPasswordAdvanced (dynamic template):
+[[<%= data.branding.codePrefix %> authenticationService] ResetUniversalIdPasswordAdvanced (dynamic template):
                   universalId:universalId
                 serviceParams:serviceParams
               completionBlock:successBlock
@@ -71,7 +73,7 @@ BCErrorCompletionBlock failureBlock; // define callback
 String universalId = "universalId";
 String serviceParams = "{\"templateId\": \"d-template-id-guid\", \"dynamicData\": {\"aKey\": \"aValue\"}, \"categories\": [\"category1\", \"category2\"]}";
 this; // implements IServerCallback
-<%= data.branding.codePrefix %>.getAuthenticationv2Service.ResetUniversalIdPasswordAdvanced (dynamic template)(universalId, serviceParams, this);
+<%= data.branding.codePrefix %>.getAuthenticationService.ResetUniversalIdPasswordAdvanced (dynamic template)(universalId, serviceParams, this);
 
 public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
 {
@@ -101,7 +103,7 @@ var serviceParams = {
         "category2"
     ]
 };
-<%= data.branding.codePrefix %>.authenticationV2.ResetUniversalIdPasswordAdvanced (dynamic template)(universalId, serviceParams, result =>
+<%= data.branding.codePrefix %>.authentication.ResetUniversalIdPasswordAdvanced (dynamic template)(universalId, serviceParams, result =>
 {
   var status = result.status;
   console.log(status + " : " + JSON.stringify(result, null, 2));
@@ -114,20 +116,7 @@ var serviceParams = {
 ```
 
 ```cfscript
-var universalId = "universalId";
-var serviceParams = {
-    "templateId": "d-template-id-guid",
-    "dynamicData": {
-        "aKey": "aValue"
-    },
-    "categories": [
-        "category1",
-        "category2"
-    ]
-};
-var authenticationV2Proxy = bridge.getAuthenticationv2ServiceProxy();
-
-var postResult = authenticationV2Proxy.ResetUniversalIdPasswordAdvanced (dynamic template)(universalId, serviceParams);
+// N/A
 ```
 
 ```mdx-code-block
@@ -161,15 +150,15 @@ var postResult = authenticationV2Proxy.ResetUniversalIdPasswordAdvanced (dynamic
 </Tabs>
 </BrowserWindow>
 ```
+
 <details>
 <summary>JSON Response</summary>
 
 ```json
 {
-  "status" : 200,
-  "data" : null
+    "status": 200,
+    "data": null
 }
 ```
 
 </details>
-

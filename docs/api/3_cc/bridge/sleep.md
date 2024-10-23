@@ -7,6 +7,11 @@ If you ask to sleep for longer than that, it automatically caps the sleep time t
 
 Wait for a current thread for a specified time. It makes the cloud code script sleep for the requested amount of time.
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+waitingTime | Time in millis.
+
 ## Usage
 
 ```mdx-code-block
@@ -82,10 +87,4 @@ bridge.sleep(waitingTime);
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-waitingTime | Time in millis.
-
 

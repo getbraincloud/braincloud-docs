@@ -29,7 +29,7 @@ Up to date and previous versions of Tic Tac Toe are available here. Tic Tac Toe,
 
 ## Enable RTT
 
-From the brainCloud Portal, select the app you wish to add RTT to. Select the Real-time Tech (RTT) Enabled checkbox from **Design | Core App Info | Advanced Settings**. [https://sharedprod.braincloudservers.com/admin/dashboard#/development/core-settings-advanced-settings](https://sharedprod.braincloudservers.com/admin/dashboard#/development/core-settings-advanced-settings)
+From the brainCloud Portal, select the app you wish to add RTT to. Select the Real-time Tech (RTT) Enabled checkbox from **Design | Core App Info | Advanced Settings**. [https://api.braincloudservers.com/admin/dashboard#/development/core-settings-advanced-settings](https://api.braincloudservers.com/admin/dashboard#/development/core-settings-advanced-settings)
 
 ```js
 // Enable RTT

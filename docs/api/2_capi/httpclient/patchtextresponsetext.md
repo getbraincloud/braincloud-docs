@@ -4,6 +4,15 @@ Patches a JSON document, expects a Json response.
 
 <PartialServop service_name="httpClient" operation_name="PATCH_TEXT_RESPONSE_TEXT" / >
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+serviceCode | Service code of the external service configured in the Cloud Code - Web Services section of the portal
+path | Path to append to the Base URL of the service
+query | Map of query parameters
+headers | Map of extra headers
+text | Text to patch
+
 ## Usage
 
 ```mdx-code-block
@@ -117,14 +126,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-serviceCode | Service code of the external service configured in the Cloud Code - Web Services section of the portal
-path | Path to append to the Base URL of the service
-query | Map of query parameters
-headers | Map of extra headers
-text | Text to patch
-
 

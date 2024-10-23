@@ -65,7 +65,7 @@ fileUploadFailedBlock = ^(NSString *fileUploadId, NSInteger status, NSInteger re
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
+```cfscript
 // N/A
 ```
 
@@ -74,7 +74,7 @@ fileUploadFailedBlock = ^(NSString *fileUploadId, NSInteger status, NSInteger re
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
+```r
 // N/A
 ```
 

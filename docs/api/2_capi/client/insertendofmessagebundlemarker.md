@@ -55,8 +55,8 @@ Inserts a marker which will tell the <%= data.branding.productName %> comms laye
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
-<%= data.branding.codePrefix %>.insertEndOfMessageBundleMarker();
+```cfscript
+// N/A
 ```
 
 ```mdx-code-block
@@ -64,8 +64,8 @@ Inserts a marker which will tell the <%= data.branding.productName %> comms laye
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
-<%= data.branding.codePrefix %>.insertEndOfMessageBundleMarker();
+```r
+// N/A
 ```
 
 ```mdx-code-block
@@ -73,4 +73,3 @@ Inserts a marker which will tell the <%= data.branding.productName %> comms laye
 </Tabs>
 </BrowserWindow>
 ```
-

@@ -10,10 +10,11 @@ InitializeIdentity must be called before you can authenticate a user anonymously
 :::
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | The profile id of the user
-anonymousId | The anonymous id of the user
+
+| Parameter   | Description                  |
+| ----------- | ---------------------------- |
+| profileId   | The profile id of the user   |
+| anonymousId | The anonymous id of the user |
 
 ## Usage
 
@@ -68,8 +69,8 @@ anonymousId | The anonymous id of the user
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
-<%= data.branding.codePrefix %>.initializeIdentity = function(profileId, anonymousId)
+```cfscript
+// N/A
 ```
 
 ```mdx-code-block
@@ -77,8 +78,8 @@ anonymousId | The anonymous id of the user
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
-<%= data.branding.codePrefix %>.initializeIdentity = function(profileId, anonymousId)
+```r
+// N/A
 ```
 
 ```mdx-code-block
@@ -86,4 +87,3 @@ anonymousId | The anonymous id of the user
 </Tabs>
 </BrowserWindow>
 ```
-

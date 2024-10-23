@@ -11,9 +11,10 @@ This timeout method does not work on Unity mobile platforms.
 :::
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-bytesPerSec | The low transfer rate threshold in bytes/sec
+
+| Parameter   | Description                                  |
+| ----------- | -------------------------------------------- |
+| bytesPerSec | The low transfer rate threshold in bytes/sec |
 
 ## Usage
 
@@ -71,7 +72,7 @@ int minTransferRate = 1500;
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
+```cfscript
 // N/A
 ```
 
@@ -80,7 +81,7 @@ int minTransferRate = 1500;
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
+```r
 // N/A
 ```
 
@@ -89,4 +90,3 @@ int minTransferRate = 1500;
 </Tabs>
 </BrowserWindow>
 ```
-

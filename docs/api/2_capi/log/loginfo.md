@@ -1,8 +1,14 @@
-# LogErrorJson
+# LogInfo
 
-Logs an App Error message to the error log.
+Logs an App Info message to the error log.
 
-<PartialServop service_name="log" operation_name="LOG_ERROR" / >
+<PartialServop service_name="log" operation_name="LOG_INFO" / >
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+errorMessage | The error message.
+context | Additional string-format information to include with the message.
 
 ## Usage
 
@@ -58,11 +64,11 @@ Logs an App Error message to the error log.
 ```
 
 ```cfscript
-var errorMessage = "Test error message";
-var context = { "example": "json" };
+var errorMessage = "Test info message";
+var context = "Test info context";
 var logProxy = bridge.getLogServiceProxy();
 
-logProxy.logErrorJson(errorMessage, context);
+logProxy.logInfo(errorMessage, context);
 
 ```
 
@@ -72,11 +78,11 @@ logProxy.logErrorJson(errorMessage, context);
 ```
 
 ```cfscript
-var errorMessage = "Test error message";
-var context = { "example": "json" };
+var errorMessage = "Test info message";
+var context = "Test info context";
 var logProxy = bridge.getLogServiceProxy();
 
-logProxy.logErrorJson(errorMessage, context);
+logProxy.logInfo(errorMessage, context);
 
 ```
 
@@ -96,11 +102,4 @@ logProxy.logErrorJson(errorMessage, context);
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-errorMessage | The error message.
-context | Additional JSON-format information to include with the message.  
-
 

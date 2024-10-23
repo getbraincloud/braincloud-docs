@@ -2,6 +2,12 @@
 
 Use this call to log messages to the API Explorer or Cloud Code Editor's log display only. It does not write to the persistant error logs. This method does nothing when calls from a cloud code script in normal execution circumstances.
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+errorMessage | The error message.
+context | Additional JSON-format information to include with the message.  
+
 ## Usage
 
 ```mdx-code-block
@@ -90,11 +96,4 @@ bridge.logDebugJson(errorMessage, context);
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-errorMessage | The error message.
-context | Additional JSON-format information to include with the message.  
-
 

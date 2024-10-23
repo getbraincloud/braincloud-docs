@@ -1,8 +1,17 @@
-# DeleteJsonResponseJson
+# PostTextResponseText
 
-Deletes a document, passes a Json body, expects a Json response.
+Posts text string via HTTP and expects a Text response.
 
-<PartialServop service_name="httpClient" operation_name="DELETE_JSON_RESPONSE_JSON" / >
+<PartialServop service_name="httpClient" operation_name="POST_TEXT_RESPONSE_TEXT" / >
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+serviceCode | Service code of the external service configured in the Cloud Code - Web Services section of the portal
+path | Path to append to the Base URL of the service
+query | Map of query parameters
+headers | Map of extra headers
+text | Text to post
 
 ## Usage
 
@@ -13,7 +22,7 @@ Deletes a document, passes a Json body, expects a Json response.
 ```
 
 ```csharp
-// Cloud Code only. To view example, switch to the Cloud Code tab
+//Switch to CC tab
 ```
 
 ```mdx-code-block
@@ -22,7 +31,7 @@ Deletes a document, passes a Json body, expects a Json response.
 ```
 
 ```cpp
-// Cloud Code only. To view example, switch to the Cloud Code tab
+//Switch to CC tab
 ```
 
 ```mdx-code-block
@@ -31,7 +40,7 @@ Deletes a document, passes a Json body, expects a Json response.
 ```
 
 ```objectivec
-// Cloud Code only. To view example, switch to the Cloud Code tab
+//Switch to CC tab
 ```
 
 ```mdx-code-block
@@ -40,7 +49,7 @@ Deletes a document, passes a Json body, expects a Json response.
 ```
 
 ```java
-// Cloud Code only. To view example, switch to the Cloud Code tab
+//Switch to CC tab
 ```
 
 ```mdx-code-block
@@ -49,7 +58,7 @@ Deletes a document, passes a Json body, expects a Json response.
 ```
 
 ```javascript
-// Cloud Code only. To view example, switch to the Cloud Code tab
+//Switch to CC tab
 ```
 
 ```mdx-code-block
@@ -66,12 +75,10 @@ var query = {
 var headers = {
     "headerName": "value"
 };
-var json = {
-    "key": "value"
-};
+var text = "text string";
 var httpClientProxy = bridge.getHttpClientServiceProxy();
 
-var postResult = httpClientProxy.deleteJsonResponseJson(serviceCode, path, query, headers, json);
+var postResult = httpClientProxy.postTextResponseText(serviceCode, path, query, headers, text);
 if (postResult.status == 200) {
     // Success!
 }
@@ -91,12 +98,10 @@ var query = {
 var headers = {
     "headerName": "value"
 };
-var json = {
-    "key": "value"
-};
+var text = "text string";
 var httpClientProxy = bridge.getHttpClientServiceProxy();
 
-var postResult = httpClientProxy.deleteJsonResponseJson(serviceCode, path, query, headers, json);
+var postResult = httpClientProxy.postTextResponseText(serviceCode, path, query, headers, text);
 if (postResult.status == 200) {
     // Success!
 }
@@ -113,24 +118,12 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "json": {
-        "message": "value"
-    },
-    "statusCode": 200
-  },
-  "status": 200
+    "status": 200,
+    "data": {
+        "statusCode": 200,
+        "text": "text string"
+    }
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-serviceCode | Service code of the external service configured in the Cloud Code - Web Services section of the portal
-path | Path to append to the Base URL of the service
-query | Map of query parameters
-headers | Map of extra headers
-json | JSON formatted data to send
-
 

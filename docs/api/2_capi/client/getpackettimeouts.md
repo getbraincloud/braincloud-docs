@@ -55,7 +55,7 @@ ArrayList<Integer> timeouts = <%= data.branding.codePrefix %>.getPacketTimeouts(
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
+```cfscript
 // N/A
 ```
 
@@ -64,7 +64,7 @@ ArrayList<Integer> timeouts = <%= data.branding.codePrefix %>.getPacketTimeouts(
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
+```r
 // N/A
 ```
 
@@ -73,4 +73,3 @@ ArrayList<Integer> timeouts = <%= data.branding.codePrefix %>.getPacketTimeouts(
 </Tabs>
 </BrowserWindow>
 ```
-

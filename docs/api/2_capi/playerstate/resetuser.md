@@ -1,11 +1,12 @@
 # ResetUser
 
-This method will delete *most* data for the currently logged in user.
+Deletes the data owned by the user but does not delete the user itself.
 
 Data which is not deleted includes:
-- currency
-- credentials
-- purchase transactions
+
+-   currency
+-   credentials
+-   purchase transactions
 
 ResetUser is different from DeleteUser in that the user record will continue to exist after the reset (so the user does not need to re-authenticate).
 
@@ -126,9 +127,9 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status" : 200,
-    "data" : null
+    "status": 200,
+    "data": null
 }
 ```
-</details>
 
+</details>

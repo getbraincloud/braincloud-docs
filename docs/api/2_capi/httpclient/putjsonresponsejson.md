@@ -1,8 +1,17 @@
-# GetResponseJson
+# PutJsonResponseJson
 
-Gets a JSON formatted document via HTTP.
+Puts a JSON document, expects a Json response.
 
-<PartialServop service_name="httpClient" operation_name="GET_RESPONSE_JSON" / >
+<PartialServop service_name="httpClient" operation_name="PUT_JSON_RESPONSE_JSON" / >
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+serviceCode | Service code of the external service configured in the Cloud Code - Web Services section of the portal
+path | Path to append to the Base URL of the service
+query | Map of query parameters
+headers | Map of extra headers
+json | JSON formatted data to post
 
 ## Usage
 
@@ -13,7 +22,7 @@ Gets a JSON formatted document via HTTP.
 ```
 
 ```csharp
-//Switch to CC tab
+// Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block
@@ -22,7 +31,7 @@ Gets a JSON formatted document via HTTP.
 ```
 
 ```cpp
-//Switch to CC tab
+// Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block
@@ -31,7 +40,7 @@ Gets a JSON formatted document via HTTP.
 ```
 
 ```objectivec
-//Switch to CC tab
+// Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block
@@ -40,7 +49,7 @@ Gets a JSON formatted document via HTTP.
 ```
 
 ```java
-//Switch to CC tab
+// Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block
@@ -49,7 +58,7 @@ Gets a JSON formatted document via HTTP.
 ```
 
 ```javascript
-//Switch to CC tab
+// Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block
@@ -66,9 +75,12 @@ var query = {
 var headers = {
     "headerName": "value"
 };
+var json = {
+    "key": "value"
+};
 var httpClientProxy = bridge.getHttpClientServiceProxy();
 
-var postResult = httpClientProxy.getResponseJson(serviceCode, path, query, headers);
+var postResult = httpClientProxy.putJsonResponseJson(serviceCode, path, query, headers, json);
 if (postResult.status == 200) {
     // Success!
 }
@@ -88,9 +100,12 @@ var query = {
 var headers = {
     "headerName": "value"
 };
+var json = {
+    "key": "value"
+};
 var httpClientProxy = bridge.getHttpClientServiceProxy();
 
-var postResult = httpClientProxy.getResponseJson(serviceCode, path, query, headers);
+var postResult = httpClientProxy.putJsonResponseJson(serviceCode, path, query, headers, json);
 if (postResult.status == 200) {
     // Success!
 }
@@ -107,23 +122,14 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
-    "data": {
-        "statusCode": 200,
-        "json": {
-            "key": "value"
-        }
-    }
+  "data": {
+    "json": {
+        "message": "value"
+    },
+    "statusCode": 200
+  },
+  "status": 200
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-serviceCode | Service code of the external service configured in the Cloud Code - Web Services section of the portal
-path | Path to append to the Base URL of the service
-query | Map of query parameters
-headers | Map of extra headers
-
 

@@ -1,8 +1,8 @@
-# Update
+# GetServerVersion
 
-Update method needs to be called regularly in order to process incoming and outgoing messages.
+Get server version.
 
-See RunCallbacks function for other platforms.
+<PartialServop service_name="authenticationV2" operation_name="GET_SERVER_VERSION" />
 
 ## Usage
 
@@ -13,7 +13,7 @@ See RunCallbacks function for other platforms.
 ```
 
 ```csharp
-<%= data.branding.codePrefix %>.Update();
+<%= data.branding.codePrefix %>.AuthenticationService.GetServerVersion();
 ```
 
 ```mdx-code-block
@@ -22,7 +22,7 @@ See RunCallbacks function for other platforms.
 ```
 
 ```cpp
-// See RunCallbacks
+<%= data.branding.codePrefix %>->getAuthenticationService()->getServerVersion();
 ```
 
 ```mdx-code-block
@@ -31,7 +31,7 @@ See RunCallbacks function for other platforms.
 ```
 
 ```objectivec
-// See RunCallbacks
+[[<%= data.branding.codePrefix %> authenticationService] getServerVersion];
 ```
 
 ```mdx-code-block
@@ -40,7 +40,7 @@ See RunCallbacks function for other platforms.
 ```
 
 ```java
-// See RunCallbacks
+public void getServerVersion();
 ```
 
 ```mdx-code-block
@@ -49,7 +49,7 @@ See RunCallbacks function for other platforms.
 ```
 
 ```javascript
-// N/A
+<%= data.branding.codePrefix %>.authentication.getServerVersion();
 ```
 
 ```mdx-code-block
@@ -66,7 +66,7 @@ See RunCallbacks function for other platforms.
 <TabItem value="r" label="Raw">
 ```
 
-```r
+```cfscript
 // N/A
 ```
 
@@ -75,3 +75,17 @@ See RunCallbacks function for other platforms.
 </Tabs>
 </BrowserWindow>
 ```
+
+<details>
+<summary>JSON Response</summary>
+
+```json
+{
+    "data": {
+        "serverVersion": "R5.4.0-1448"
+    },
+    "status": 200
+}
+```
+
+</details>

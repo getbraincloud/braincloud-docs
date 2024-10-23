@@ -3,9 +3,10 @@
 Sets a reward handler for any API call results that return rewards.
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-rewardCallback | The reward callback handler.
+
+| Parameter      | Description                  |
+| -------------- | ---------------------------- |
+| rewardCallback | The reward callback handler. |
 
 ## Usage
 
@@ -62,8 +63,8 @@ rewardBlock = ^(NSString *rewardsJson) {  };
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
-<%= data.branding.codePrefix %>.registerRewardCallback(rewardCallback);
+```cfscript
+// N/A
 ```
 
 ```mdx-code-block
@@ -71,8 +72,8 @@ rewardBlock = ^(NSString *rewardsJson) {  };
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
-<%= data.branding.codePrefix %>.registerRewardCallback(rewardCallback);
+```r
+// N/A
 ```
 
 ```mdx-code-block
@@ -86,17 +87,19 @@ rewardBlock = ^(NSString *rewardsJson) {  };
 
 ```json
 {
-	"status": 200,
-	"apiRewards": [{
-		"service": "authenticationV2",
-		"operation": "AUTHENTICATE",
-		"rewards": {
-			"rewardDetails": {
-				// the reward depending on type (see docs)
-			}
-		}
-	}]
+    "status": 200,
+    "apiRewards": [
+        {
+            "service": "authenticationV2",
+            "operation": "AUTHENTICATE",
+            "rewards": {
+                "rewardDetails": {
+                    // the reward depending on type (see docs)
+                }
+            }
+        }
+    ]
 }
 ```
-</details>
 
+</details>
