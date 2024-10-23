@@ -8,9 +8,10 @@ This flag is only intended for backward compatibility and is NOT recommended to 
 :::
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-enabled | If set to true, enable legacy error message format
+
+| Parameter | Description                                        |
+| --------- | -------------------------------------------------- |
+| enabled   | If set to true, enable legacy error message format |
 
 ## Usage
 
@@ -65,7 +66,7 @@ enabled | If set to true, enable legacy error message format
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
+```cfscript
 // N/A
 ```
 
@@ -74,7 +75,7 @@ enabled | If set to true, enable legacy error message format
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
+```r
 // N/A
 ```
 
@@ -83,4 +84,3 @@ enabled | If set to true, enable legacy error message format
 </Tabs>
 </BrowserWindow>
 ```
-

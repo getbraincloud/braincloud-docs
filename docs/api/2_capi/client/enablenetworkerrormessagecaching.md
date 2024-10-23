@@ -13,15 +13,16 @@ Between steps 2 & 3, the app can prompt the user to retry connecting to <%= data
 Note that if path 3a is followed, and another timeout is encountered, the process will begin all over again from step 1.
 
 :::caution
-The <%= data.branding.productName %> SDK will cache *all* API calls sent when a timeout is encountered if this mechanism is enabled.
+The <%= data.branding.productName %> SDK will cache _all_ API calls sent when a timeout is encountered if this mechanism is enabled.
 This effectively freezes all communication with <%= data.branding.productName %>. Apps must call either RetryCachedMessages() or FlushCachedMessages() for the <%= data.branding.productName %> SDK to resume sending messages.
 ResetCommunication() will also clear the message cache.
 :::
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-enabled | True if message should be cached on timeout
+
+| Parameter | Description                                 |
+| --------- | ------------------------------------------- |
+| enabled   | True if message should be cached on timeout |
 
 ## Usage
 
@@ -76,7 +77,7 @@ enabled | True if message should be cached on timeout
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
+```cfscript
 // N/A
 ```
 
@@ -85,7 +86,7 @@ enabled | True if message should be cached on timeout
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
+```r
 // N/A
 ```
 
@@ -94,4 +95,3 @@ enabled | True if message should be cached on timeout
 </Tabs>
 </BrowserWindow>
 ```
-

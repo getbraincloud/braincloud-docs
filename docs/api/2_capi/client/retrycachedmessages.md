@@ -55,7 +55,7 @@ Attempts to resend any cached messages. If no messages are in the cache, this me
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
+```cfscript
 // N/A
 ```
 
@@ -64,7 +64,7 @@ Attempts to resend any cached messages. If no messages are in the cache, this me
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
+```r
 // N/A
 ```
 
@@ -73,4 +73,3 @@ Attempts to resend any cached messages. If no messages are in the cache, this me
 </Tabs>
 </BrowserWindow>
 ```
-

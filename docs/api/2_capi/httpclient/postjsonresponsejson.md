@@ -1,8 +1,17 @@
-# ParseRequest
+# PostJsonResponseJson
 
-Makes a Parse HTTP get.
+Posts a JSON formatted document via HTTP and expects a JSON response.
 
-<PartialServop service_name="httpClient" operation_name="PARSE_REQUEST" / >
+<PartialServop service_name="httpClient" operation_name="POST_JSON_RESPONSE_JSON" / >
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+serviceCode | Service code of the external service configured in the Cloud Code - Web Services section of the portal
+path | Path to append to the Base URL of the service
+query | Map of query parameters
+headers | Map of extra headers
+json | JSON formatted data to post
 
 ## Usage
 
@@ -58,14 +67,20 @@ Makes a Parse HTTP get.
 ```
 
 ```cfscript
-var path = "1/users/";
+var serviceCode = "webService";
+var path = "resource/dir";
 var query = {
-    "where": "{\"email\":{\"$regex\":\"test.com$\"}}"
+    "parmName": "value"
 };
-var sessionToken = "r:jKjIHF8y9eDIKAixXpeaoUTlj";
+var headers = {
+    "headerName": "value"
+};
+var json = {
+    "key": "value"
+};
 var httpClientProxy = bridge.getHttpClientServiceProxy();
 
-var postResult = httpClientProxy.parseRequest(path, query, sessionToken);
+var postResult = httpClientProxy.postJsonResponseJson(serviceCode, path, query, headers, json);
 if (postResult.status == 200) {
     // Success!
 }
@@ -77,14 +92,20 @@ if (postResult.status == 200) {
 ```
 
 ```cfscript
-var path = "1/users/";
+var serviceCode = "webService";
+var path = "resource/dir";
 var query = {
-    "where": "{\"email\":{\"$regex\":\"test.com$\"}}"
+    "parmName": "value"
 };
-var sessionToken = "r:jKjIHF8y9eDIKAixXpeaoUTlj";
+var headers = {
+    "headerName": "value"
+};
+var json = {
+    "key": "value"
+};
 var httpClientProxy = bridge.getHttpClientServiceProxy();
 
-var postResult = httpClientProxy.parseRequest(path, query, sessionToken);
+var postResult = httpClientProxy.postJsonResponseJson(serviceCode, path, query, headers, json);
 if (postResult.status == 200) {
     // Success!
 }
@@ -111,12 +132,4 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-path | Path to append to the Base URL of the service
-query | Map of query parameters
-sessionToken | Parse session token
-
 

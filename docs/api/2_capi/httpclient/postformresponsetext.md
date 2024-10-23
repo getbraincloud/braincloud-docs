@@ -1,8 +1,17 @@
-# PostTextResponseText
+# PostFormResponseText
 
-Posts text string via HTTP and expects a Text response.
+Posts a form encoded document via HTTP and expects a Text response.
 
-<PartialServop service_name="httpClient" operation_name="POST_TEXT_RESPONSE_TEXT" / >
+<PartialServop service_name="httpClient" operation_name="POST_FORM_RESPONSE_TEXT" / >
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+serviceCode | Service code of the external service configured in the Cloud Code - Web Services section of the portal
+path | Path to append to the Base URL of the service
+query | Map of query parameters
+headers | Map of extra headers
+form | Map of form parameters
 
 ## Usage
 
@@ -66,10 +75,12 @@ var query = {
 var headers = {
     "headerName": "value"
 };
-var text = "text string";
+var form = {
+    "key": "value"
+};
 var httpClientProxy = bridge.getHttpClientServiceProxy();
 
-var postResult = httpClientProxy.postTextResponseText(serviceCode, path, query, headers, text);
+var postResult = httpClientProxy.postFormResponseText(serviceCode, path, query, headers, form);
 if (postResult.status == 200) {
     // Success!
 }
@@ -89,10 +100,12 @@ var query = {
 var headers = {
     "headerName": "value"
 };
-var text = "text string";
+var form = {
+    "key": "value"
+};
 var httpClientProxy = bridge.getHttpClientServiceProxy();
 
-var postResult = httpClientProxy.postTextResponseText(serviceCode, path, query, headers, text);
+var postResult = httpClientProxy.postFormResponseText(serviceCode, path, query, headers, form);
 if (postResult.status == 200) {
     // Success!
 }
@@ -112,19 +125,11 @@ if (postResult.status == 200) {
     "status": 200,
     "data": {
         "statusCode": 200,
-        "text": "text string"
+        "json": {
+            "key": "value"
+        }
     }
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-serviceCode | Service code of the external service configured in the Cloud Code - Web Services section of the portal
-path | Path to append to the Base URL of the service
-query | Map of query parameters
-headers | Map of extra headers
-text | Text to post
-
 

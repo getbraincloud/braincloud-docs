@@ -13,6 +13,7 @@ One-Way Matches use Playback Streams to track the events of the One-Way Match.
 -   [SysEndStream](/api/capi/playbackstream/sysendstream) - End a playback stream.
 -   [SysDeleteStream](/api/capi/playbackstream/sysdeletestream) - Delete a playback stream.
 -   [SysAddEvent](/api/capi/playbackstream/sysaddevent) - Add event to stream.
+-   [SysProtectStreamUntil](/api/capi/playbackstream/sysprotectstreamuntil) - Protects a playback stream from being purged (but not deleted) for the given number of days (from now). If the number of days given is less than the normal purge interval days (from createdAt), the longer protection date is applied.
 
 :::tip
 All the client APIs that the names beigin with <strong>"Sys"</strong> <em>are</em> also available to S2S.

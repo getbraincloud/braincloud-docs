@@ -4,6 +4,12 @@ Logs an App Info message to the error log.
 
 <PartialServop service_name="log" operation_name="LOG_INFO" / >
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+errorMessage | The error message.
+context | Additional JSON-format information to include with the message.  
+
 ## Usage
 
 ```mdx-code-block
@@ -96,11 +102,4 @@ logProxy.logInfoJson(errorMessage, context);
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-errorMessage | The error message.
-context | Additional JSON-format information to include with the message.  
-
 

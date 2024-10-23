@@ -1,8 +1,17 @@
-# PatchJsonResponseJson
+# PutTextResponseText
 
-Patches a JSON document, expects a Json response.
+Puts a text document, expects a Text response.
 
-<PartialServop service_name="httpClient" operation_name="PATCH_JSON_RESPONSE_JSON" / >
+<PartialServop service_name="httpClient" operation_name="PUT_TEXT_RESPONSE_TEXT" / >
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+serviceCode | Service code of the external service configured in the Cloud Code - Web Services section of the portal 
+path | Path to append to the Base URL of the service
+query | Map of query parameters
+headers | Map of extra headers
+text | Text to post
 
 ## Usage
 
@@ -66,12 +75,10 @@ var query = {
 var headers = {
     "headerName": "value"
 };
-var json = {
-    "key": "value"
-};
+var text = "text string";
 var httpClientProxy = bridge.getHttpClientServiceProxy();
 
-var postResult = httpClientProxy.patchJsonResponseJson(serviceCode, path, query, headers, json);
+var postResult = httpClientProxy.putTextResponseText(serviceCode, path, query, headers, text);
 if (postResult.status == 200) {
     // Success!
 }
@@ -91,12 +98,10 @@ var query = {
 var headers = {
     "headerName": "value"
 };
-var json = {
-    "key": "value"
-};
+var text = "text string";
 var httpClientProxy = bridge.getHttpClientServiceProxy();
 
-var postResult = httpClientProxy.patchJsonResponseJson(serviceCode, path, query, headers, json);
+var postResult = httpClientProxy.putTextResponseText(serviceCode, path, query, headers, text);
 if (postResult.status == 200) {
     // Success!
 }
@@ -114,23 +119,11 @@ if (postResult.status == 200) {
 ```json
 {
   "data": {
-    "json": {
-        "message": "value"
-    },
+    "text": "text message",
     "statusCode": 200
   },
   "status": 200
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-serviceCode | Service code of the external service configured in the Cloud Code - Web Services section of the portal
-path | Path to append to the Base URL of the service
-query | Map of query parameters
-headers | Map of extra headers
-json | JSON formatted data to patch
-
 

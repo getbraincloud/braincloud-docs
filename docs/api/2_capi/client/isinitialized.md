@@ -55,8 +55,8 @@ var isInitialized = <%= data.branding.codePrefix %>.isInitialized();
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
-var isInitialized = <%= data.branding.codePrefix %>.isInitialized();
+```cfscript
+// N/A
 ```
 
 ```mdx-code-block
@@ -64,8 +64,8 @@ var isInitialized = <%= data.branding.codePrefix %>.isInitialized();
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
-var isInitialized = <%= data.branding.codePrefix %>.isInitialized();
+```r
+// N/A
 ```
 
 ```mdx-code-block
@@ -73,4 +73,3 @@ var isInitialized = <%= data.branding.codePrefix %>.isInitialized();
 </Tabs>
 </BrowserWindow>
 ```
-

@@ -55,7 +55,7 @@ Shuts down all systems needed for BrainCloudClient, only call this from the main
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
+```cfscript
 // N/A
 ```
 
@@ -64,7 +64,7 @@ Shuts down all systems needed for BrainCloudClient, only call this from the main
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
+```r
 // N/A
 ```
 
@@ -73,4 +73,3 @@ Shuts down all systems needed for BrainCloudClient, only call this from the main
 </Tabs>
 </BrowserWindow>
 ```
-

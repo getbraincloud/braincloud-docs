@@ -2,6 +2,12 @@
 
 Given a piece of data and a shared secrect key, calculates an SHA-256 with HMAC signature for the data.
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+secrectKey | The shared secrect key used to generate the signature
+dataString | The data string to calculate the signature for
+
 ## Usage
 
 ```mdx-code-block
@@ -105,11 +111,4 @@ response;
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-secrectKey | The shared secrect key used to generate the signature
-dataString | The data string to calculate the signature for
-
 

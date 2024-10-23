@@ -55,8 +55,8 @@ Deregisters the event callback.
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
-<%= data.branding.codePrefix %>.deregisterEventCallback();
+```cfscript
+// N/A
 ```
 
 ```mdx-code-block
@@ -64,8 +64,8 @@ Deregisters the event callback.
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
-<%= data.branding.codePrefix %>.deregisterEventCallback();
+```r
+// N/A
 ```
 
 ```mdx-code-block
@@ -73,4 +73,3 @@ Deregisters the event callback.
 </Tabs>
 </BrowserWindow>
 ```
-

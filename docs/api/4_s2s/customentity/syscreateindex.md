@@ -4,6 +4,15 @@ Creates a new index on a custom entity collection.
 
 <PartialServop service_name="customEntity" operation_name="SYS_CREATE_INDEX" />
 
+## Method Parameters
+
+| Parameter     | Description                                                          |
+| ------------- | -------------------------------------------------------------------- |
+| entityType    | The entity type identifying the applicable custom entity collection. |
+| indexName     | The name to assign to the new index.                                 |
+| indexKeysJson | The field index keys, as JSON object.                                |
+| indexOptsJson | The index options, as JSON object.                                   |
+
 ## Usage
 
 ```mdx-code-block
@@ -101,13 +110,3 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-entityType | The entity type identifying the applicable custom entity collection. 
-indexName | The name to assign to the new index. 
-indexKeysJson | The field index keys, as JSON object. 
-indexOptsJson | The index options, as JSON object. 
-
-

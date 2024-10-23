@@ -5,9 +5,10 @@ Registers the Global Error callbacks.
 Useful for tracking and logging all errors.
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-failureCallback | The error callback handler.
+
+| Parameter       | Description                 |
+| --------------- | --------------------------- |
+| failureCallback | The error callback handler. |
 
 ## Usage
 
@@ -64,8 +65,8 @@ errorCompletionBlock  = ^(NSString *serviceName, NSString *serviceOperation, NSI
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
-<%= data.branding.codePrefix %>.setErrorCallback(errorCallback);
+```cfscript
+// N/A
 ```
 
 ```mdx-code-block
@@ -73,8 +74,8 @@ errorCompletionBlock  = ^(NSString *serviceName, NSString *serviceOperation, NSI
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
-<%= data.branding.codePrefix %>.setErrorCallback(errorCallback);
+```r
+// N/A
 ```
 
 ```mdx-code-block
@@ -89,11 +90,11 @@ errorCompletionBlock  = ^(NSString *serviceName, NSString *serviceOperation, NSI
 ```json
 // FAILURE JSON
 {
-	"status": 403,
-	"reason_code": 40300,
-	"status_message": "Message describing failure",
-	"severity": "ERROR"
+    "status": 403,
+    "reason_code": 40300,
+    "status_message": "Message describing failure",
+    "severity": "ERROR"
 }
 ```
-</details>
 
+</details>

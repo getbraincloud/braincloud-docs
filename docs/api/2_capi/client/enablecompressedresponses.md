@@ -3,9 +3,10 @@
 Enables receiving compressed packets of responses.
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-enabled | True if response packets should be compressed
+
+| Parameter | Description                                   |
+| --------- | --------------------------------------------- |
+| enabled   | True if response packets should be compressed |
 
 ## Usage
 
@@ -60,8 +61,8 @@ enabled | True if response packets should be compressed
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
-<%= data.branding.codePrefix %>.enableCompressedResponses(true);
+```cfscript
+// N/A
 ```
 
 ```mdx-code-block
@@ -69,8 +70,8 @@ enabled | True if response packets should be compressed
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
-<%= data.branding.codePrefix %>.enableCompressedResponses(true);
+```r
+// N/A
 ```
 
 ```mdx-code-block
@@ -78,4 +79,3 @@ enabled | True if response packets should be compressed
 </Tabs>
 </BrowserWindow>
 ```
-

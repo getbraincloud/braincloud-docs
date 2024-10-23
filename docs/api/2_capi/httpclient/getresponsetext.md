@@ -1,8 +1,16 @@
-# PostTextResponseJson
+# GetResponseText
 
-Posts text string via HTTP and expects a JSON response.
+Gets text document via HTTP.
 
-<PartialServop service_name="httpClient" operation_name="POST_TEXT_RESPONSE_JSON" / >
+<PartialServop service_name="httpClient" operation_name="GET_RESPONSE_TEXT" / >
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+serviceCode | Service code of the external service configured in the Cloud Code - Web Services section of the portal
+path | Path to append to the Base URL of the service
+query | Map of query parameters
+headers | Map of extra headers
 
 ## Usage
 
@@ -66,10 +74,9 @@ var query = {
 var headers = {
     "headerName": "value"
 };
-var text = "text string";
 var httpClientProxy = bridge.getHttpClientServiceProxy();
 
-var postResult = httpClientProxy.postTextResponseJson(serviceCode, path, query, headers, text);
+var postResult = httpClientProxy.getResponseText(serviceCode, path, query, headers);
 if (postResult.status == 200) {
     // Success!
 }
@@ -89,10 +96,9 @@ var query = {
 var headers = {
     "headerName": "value"
 };
-var text = "text string";
 var httpClientProxy = bridge.getHttpClientServiceProxy();
 
-var postResult = httpClientProxy.postTextResponseJson(serviceCode, path, query, headers, text);
+var postResult = httpClientProxy.getResponseText(serviceCode, path, query, headers);
 if (postResult.status == 200) {
     // Success!
 }
@@ -112,21 +118,9 @@ if (postResult.status == 200) {
     "status": 200,
     "data": {
         "statusCode": 200,
-        "json": {
-            "key": "value"
-        }
+        "text": "text string"
     }
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-serviceCode | Service code of the external service configured in the Cloud Code - Web Services section of the portal
-path | Path to append to the Base URL of the service
-query | Map of query parameters
-headers | Map of extra headers
-text | Text to post
-
 

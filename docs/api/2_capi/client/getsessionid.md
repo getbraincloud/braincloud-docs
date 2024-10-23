@@ -55,8 +55,8 @@ var sessionId = <%= data.branding.codePrefix %>.getSessionId();
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
-var sessionId = <%= data.branding.codePrefix %>.getSessionId();
+```cfscript
+// N/A
 ```
 
 ```mdx-code-block
@@ -64,8 +64,8 @@ var sessionId = <%= data.branding.codePrefix %>.getSessionId();
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
-var sessionId = <%= data.branding.codePrefix %>.getSessionId();
+```r
+// N/A
 ```
 
 ```mdx-code-block
@@ -73,4 +73,3 @@ var sessionId = <%= data.branding.codePrefix %>.getSessionId();
 </Tabs>
 </BrowserWindow>
 ```
-

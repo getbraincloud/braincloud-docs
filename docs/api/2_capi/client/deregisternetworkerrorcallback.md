@@ -55,7 +55,7 @@ Deregisters the network error callback.
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
+```cfscript
 // N/A
 ```
 
@@ -64,7 +64,7 @@ Deregisters the network error callback.
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
+```r
 // N/A
 ```
 
@@ -73,4 +73,3 @@ Deregisters the network error callback.
 </Tabs>
 </BrowserWindow>
 ```
-

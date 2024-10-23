@@ -1,15 +1,16 @@
 # OverrideLanguageCode
 
-Sets the language code sent to <%= data.branding.productName %> when a user authenticates. If the language is set to a non-ISO 639-1 standard value the app default will be used instead.  The supported languages and the default can be set on the [Localization](https://portal.braincloudservers.com/admin/dashboard#/development/core-settings-localization) page of the portal.
+Sets the language code sent to <%= data.branding.productName %> when a user authenticates. If the language is set to a non-ISO 639-1 standard value the app default will be used instead. The supported languages and the default can be set on the [Localization](https://portal.braincloudservers.com/admin/dashboard#/development/core-settings-localization) page of the portal.
 
 These methods should be called before authenticating so that they are sent to the server.
 
 Will override any auto detected language.
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-languageCode | ISO 639-1 two-letter language code
+
+| Parameter    | Description                        |
+| ------------ | ---------------------------------- |
+| languageCode | ISO 639-1 two-letter language code |
 
 ## Usage
 
@@ -69,9 +70,8 @@ var languageCode = "en";
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
-var languageCode = "en";
-<%= data.branding.codePrefix %>.overrideLanguageCode(languageCode);
+```cfscript
+// N/A
 ```
 
 ```mdx-code-block
@@ -79,9 +79,8 @@ var languageCode = "en";
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
-var languageCode = "en";
-<%= data.branding.codePrefix %>.overrideLanguageCode(languageCode);
+```r
+// N/A
 ```
 
 ```mdx-code-block
@@ -89,4 +88,3 @@ var languageCode = "en";
 </Tabs>
 </BrowserWindow>
 ```
-

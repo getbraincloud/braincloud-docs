@@ -3,9 +3,10 @@
 Flushes the cached messages to resume API call processing. This will dump all of the cached messages in the queue.
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-sendApiErrorCallbacks | If set to true API error callbacks will be called for every cached message with statusCode CLIENT_NETWORK_ERROR and reasonCode CLIENT_NETWORK_ERROR_TIMEOUT.
+
+| Parameter             | Description                                                                                                                                                  |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| sendApiErrorCallbacks | If set to true API error callbacks will be called for every cached message with statusCode CLIENT_NETWORK_ERROR and reasonCode CLIENT_NETWORK_ERROR_TIMEOUT. |
 
 ## Usage
 
@@ -60,7 +61,7 @@ sendApiErrorCallbacks | If set to true API error callbacks will be called for ev
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
+```cfscript
 // N/A
 ```
 
@@ -69,7 +70,7 @@ sendApiErrorCallbacks | If set to true API error callbacks will be called for ev
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
+```r
 // N/A
 ```
 
@@ -78,4 +79,3 @@ sendApiErrorCallbacks | If set to true API error callbacks will be called for ev
 </Tabs>
 </BrowserWindow>
 ```
-

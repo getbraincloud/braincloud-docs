@@ -1,8 +1,17 @@
-# PutTextResponseText
+# PostTextResponseJson
 
-Puts a text document, expects a Text response.
+Posts text string via HTTP and expects a JSON response.
 
-<PartialServop service_name="httpClient" operation_name="PUT_TEXT_RESPONSE_TEXT" / >
+<PartialServop service_name="httpClient" operation_name="POST_TEXT_RESPONSE_JSON" / >
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+serviceCode | Service code of the external service configured in the Cloud Code - Web Services section of the portal
+path | Path to append to the Base URL of the service
+query | Map of query parameters
+headers | Map of extra headers
+text | Text to post
 
 ## Usage
 
@@ -13,7 +22,7 @@ Puts a text document, expects a Text response.
 ```
 
 ```csharp
-// Cloud Code only. To view example, switch to the Cloud Code tab
+//Switch to CC tab
 ```
 
 ```mdx-code-block
@@ -22,7 +31,7 @@ Puts a text document, expects a Text response.
 ```
 
 ```cpp
-// Cloud Code only. To view example, switch to the Cloud Code tab
+//Switch to CC tab
 ```
 
 ```mdx-code-block
@@ -31,7 +40,7 @@ Puts a text document, expects a Text response.
 ```
 
 ```objectivec
-// Cloud Code only. To view example, switch to the Cloud Code tab
+//Switch to CC tab
 ```
 
 ```mdx-code-block
@@ -40,7 +49,7 @@ Puts a text document, expects a Text response.
 ```
 
 ```java
-// Cloud Code only. To view example, switch to the Cloud Code tab
+//Switch to CC tab
 ```
 
 ```mdx-code-block
@@ -49,7 +58,7 @@ Puts a text document, expects a Text response.
 ```
 
 ```javascript
-// Cloud Code only. To view example, switch to the Cloud Code tab
+//Switch to CC tab
 ```
 
 ```mdx-code-block
@@ -69,7 +78,7 @@ var headers = {
 var text = "text string";
 var httpClientProxy = bridge.getHttpClientServiceProxy();
 
-var postResult = httpClientProxy.putTextResponseText(serviceCode, path, query, headers, text);
+var postResult = httpClientProxy.postTextResponseJson(serviceCode, path, query, headers, text);
 if (postResult.status == 200) {
     // Success!
 }
@@ -92,7 +101,7 @@ var headers = {
 var text = "text string";
 var httpClientProxy = bridge.getHttpClientServiceProxy();
 
-var postResult = httpClientProxy.putTextResponseText(serviceCode, path, query, headers, text);
+var postResult = httpClientProxy.postTextResponseJson(serviceCode, path, query, headers, text);
 if (postResult.status == 200) {
     // Success!
 }
@@ -109,22 +118,14 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "text": "text message",
-    "statusCode": 200
-  },
-  "status": 200
+    "status": 200,
+    "data": {
+        "statusCode": 200,
+        "json": {
+            "key": "value"
+        }
+    }
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-serviceCode | Service code of the external service configured in the Cloud Code - Web Services section of the portal 
-path | Path to append to the Base URL of the service
-query | Map of query parameters
-headers | Map of extra headers
-text | Text to post
-
 

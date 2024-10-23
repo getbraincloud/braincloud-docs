@@ -1,12 +1,14 @@
 # ResetEmailPassword
+
 Reset email password.
 
 <PartialServop service_name="authenticationV2" operation_name="RESET_EMAIL_PASSWORD" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-externalId | The email address to send the reset email to.
+
+| Parameter  | Description                                   |
+| ---------- | --------------------------------------------- |
+| externalId | The email address to send the reset email to. |
 
 ## Usage
 
@@ -28,7 +30,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
     Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
 };
 
-<%= data.branding.codePrefix %>.Authenticationv2Service.ResetEmailPassword(externalId, successCallback, failureCallback);
+<%= data.branding.codePrefix %>.AuthenticationService.ResetEmailPassword(externalId, successCallback, failureCallback);
 ```
 
 ```mdx-code-block
@@ -38,7 +40,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 
 ```cpp
 const char *externalId = "email@email.com";
-<%= data.branding.codePrefix %>.getAuthenticationv2Service().resetEmailPassword(externalId, this);
+<%= data.branding.codePrefix %>.getAuthenticationService().resetEmailPassword(externalId, this);
 ```
 
 ```mdx-code-block
@@ -50,7 +52,7 @@ const char *externalId = "email@email.com";
 NSString *externalId = @"email@email.com";
 BCCompletionBlock successBlock; // define callback
 BCErrorCompletionBlock failureBlock; // define callback
-[[<%= data.branding.codePrefix %> authenticationV2Service] ResetEmailPassword:
+[[<%= data.branding.codePrefix %> authenticationService] ResetEmailPassword:
                    externalId:externalId
               completionBlock:successBlock
          errorCompletionBlock:failureBlock
@@ -65,7 +67,7 @@ BCErrorCompletionBlock failureBlock; // define callback
 ```java
 String externalId = "email@email.com";
 this; // implements IServerCallback
-<%= data.branding.codePrefix %>.getAuthenticationv2Service.ResetEmailPassword(externalId, this);
+<%= data.branding.codePrefix %>.getAuthenticationService.ResetEmailPassword(externalId, this);
 
 public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
 {
@@ -85,7 +87,7 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 
 ```javascript
 var externalId = "email@email.com";
-<%= data.branding.codePrefix %>.authenticationV2.ResetEmailPassword(externalId, result =>
+<%= data.branding.codePrefix %>.authentication.ResetEmailPassword(externalId, result =>
 {
   var status = result.status;
   console.log(status + " : " + JSON.stringify(result, null, 2));
@@ -98,10 +100,7 @@ var externalId = "email@email.com";
 ```
 
 ```cfscript
-var externalId = "email@email.com";
-var authenticationV2Proxy = bridge.getAuthenticationv2ServiceProxy();
-
-var postResult = authenticationV2Proxy.ResetEmailPassword(externalId);
+// N/A
 ```
 
 ```mdx-code-block
@@ -125,15 +124,15 @@ var postResult = authenticationV2Proxy.ResetEmailPassword(externalId);
 </Tabs>
 </BrowserWindow>
 ```
+
 <details>
 <summary>JSON Response</summary>
 
 ```json
 {
-  "status" : 200,
-  "data" : null
+    "status": 200,
+    "data": null
 }
 ```
 
 </details>
-

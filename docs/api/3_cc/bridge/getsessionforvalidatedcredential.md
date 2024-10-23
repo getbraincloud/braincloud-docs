@@ -5,6 +5,14 @@ Creates and returns a session for the credentials provided.
 This method is used for when you need a session for a user other than the one calling the script, or validate a crendential,
 or when a script does not have a user context by default (ex. S2S or Scheduled).
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+externalId | User ID for the given authenticationType
+authenticationType | Type of authentication. Full list of types can be found [here](/api/appendix/authtypes).
+externalAuthType | Optional parameter to specify the external authenticationType to use for the passed in credentials
+authenticationToken | Password or client side token
+
 ## Usage
 
 ```mdx-code-block
@@ -144,13 +152,4 @@ var session = bridge.getSessionForValidatedCredential(externalId, authentication
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-externalId | User ID for the given authenticationType
-authenticationType | Type of authentication. Full list of types can be found [here](/api/appendix/authtypes).
-externalAuthType | Optional parameter to specify the external authenticationType to use for the passed in credentials
-authenticationToken | Password or client side token
-
 

@@ -1,12 +1,14 @@
 # ResetUniversalIdPassword
+
 Reset Universal ID password.
 
 <PartialServop service_name="authenticationV2" operation_name="RESET_UNIVERSAL_ID_PASSWORD" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-universalId | The universalId to send the reset email to.
+
+| Parameter   | Description                                 |
+| ----------- | ------------------------------------------- |
+| universalId | The universalId to send the reset email to. |
 
 ## Usage
 
@@ -28,7 +30,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
     Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
 };
 
-<%= data.branding.codePrefix %>.Authenticationv2Service.ResetUniversalIdPassword(universalId, successCallback, failureCallback);
+<%= data.branding.codePrefix %>.AuthenticationService.ResetUniversalIdPassword(universalId, successCallback, failureCallback);
 ```
 
 ```mdx-code-block
@@ -38,7 +40,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 
 ```cpp
 const char *universalId = "universalId";
-<%= data.branding.codePrefix %>.getAuthenticationv2Service().resetUniversalIdPassword(universalId, this);
+<%= data.branding.codePrefix %>.getAuthenticationService().resetUniversalIdPassword(universalId, this);
 ```
 
 ```mdx-code-block
@@ -50,7 +52,7 @@ const char *universalId = "universalId";
 NSString *universalId = @"universalId";
 BCCompletionBlock successBlock; // define callback
 BCErrorCompletionBlock failureBlock; // define callback
-[[<%= data.branding.codePrefix %> authenticationV2Service] ResetUniversalIdPassword:
+[[<%= data.branding.codePrefix %> authenticationService] ResetUniversalIdPassword:
                   universalId:universalId
               completionBlock:successBlock
          errorCompletionBlock:failureBlock
@@ -65,7 +67,7 @@ BCErrorCompletionBlock failureBlock; // define callback
 ```java
 String universalId = "universalId";
 this; // implements IServerCallback
-<%= data.branding.codePrefix %>.getAuthenticationv2Service.ResetUniversalIdPassword(universalId, this);
+<%= data.branding.codePrefix %>.getAuthenticationService.ResetUniversalIdPassword(universalId, this);
 
 public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
 {
@@ -85,7 +87,7 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 
 ```javascript
 var universalId = "universalId";
-<%= data.branding.codePrefix %>.authenticationV2.ResetUniversalIdPassword(universalId, result =>
+<%= data.branding.codePrefix %>.authentication.ResetUniversalIdPassword(universalId, result =>
 {
   var status = result.status;
   console.log(status + " : " + JSON.stringify(result, null, 2));
@@ -98,10 +100,7 @@ var universalId = "universalId";
 ```
 
 ```cfscript
-var universalId = "universalId";
-var authenticationV2Proxy = bridge.getAuthenticationv2ServiceProxy();
-
-var postResult = authenticationV2Proxy.ResetUniversalIdPassword(universalId);
+// N/A
 ```
 
 ```mdx-code-block
@@ -125,15 +124,15 @@ var postResult = authenticationV2Proxy.ResetUniversalIdPassword(universalId);
 </Tabs>
 </BrowserWindow>
 ```
+
 <details>
 <summary>JSON Response</summary>
 
 ```json
 {
-  "status" : 200,
-  "data" : null
+    "status": 200,
+    "data": null
 }
 ```
 
 </details>
-

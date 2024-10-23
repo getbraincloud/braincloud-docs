@@ -55,7 +55,7 @@ Run callbacks, to be called once per frame from your main thread
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
+```cfscript
 // N/A
 ```
 
@@ -64,7 +64,7 @@ Run callbacks, to be called once per frame from your main thread
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
+```r
 // N/A
 ```
 
@@ -73,4 +73,3 @@ Run callbacks, to be called once per frame from your main thread
 </Tabs>
 </BrowserWindow>
 ```
-

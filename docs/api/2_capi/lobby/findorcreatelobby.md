@@ -14,6 +14,7 @@ Finds a lobby matching the specified parameters, or creates one. Asynchronous - 
 | algo           | The algorithm to use for increasing the search scope.                                                                                                                                |
 | filterJson     | Used to help filter the list of rooms to consider. Passed to the matchmaking filter, if configured.                                                                                  |
 | otherUserCxIds | Array of other users (i.e. party members) to add to the lobby as well. Will constrain things so that only lobbies with room for all players will be considered.                      |
+| settings       | Owner settings for this lobby.                                                                                                                                                       |
 | isReady        | Initial ready-status of this user.                                                                                                                                                   |
 | extraJson      | Initial extra-data about this user.                                                                                                                                                  |
 | teamCode       | Preferred team for this user, if applicable. Send `""` or `null` for automatic assignment.                                                                                           |

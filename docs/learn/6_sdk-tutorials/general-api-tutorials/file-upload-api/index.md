@@ -12,6 +12,7 @@ In order to list the uploaded files, make use of this API:
 [BrainCloudFile.ListUserFiles](/api/capi/file/listuserfiles)
 
 The API will return JSON similar to this:
+
 ```js
 {
   "status": 200,
@@ -27,13 +28,14 @@ The API will return JSON similar to this:
      "gameId": "99999",
      "path": "test2",
      "filename": "testup.dat",
-     "downloadUrl": "https://sharedprod.braincloudservers.com/s3/bc/g/99999/u/bf8a1433-62d2-448e-b396-f3dbffff44/f/test2/testup.dat",
+     "downloadUrl": "https://api.braincloudservers.com/s3/bc/g/99999/u/bf8a1433-62d2-448e-b396-f3dbffff44/f/test2/testup.dat",
      "cloudLocation": "bc/g/99999/u/bf8a1433-62d2-448e-b396-f3dbffff44/f/test2/testup.dat"
     }
    ]
   }
  }
 ```
+
 Notice that there is a "downloadUrl" parameter. This is the URL to download the file with one caveat: if you are downloading a private file (e.g. shareable set to false) then you need to append the sessionId to the URL as a query parameter like so:
 
 https://url-to-get-file?sessionId=1234
@@ -47,6 +49,7 @@ To start uploading a file use this API
 [BrainCloudFile.UploadFile](/api/capi/file/uploadfile,javascript)
 
 This method will send a request to the server to prepare for an upload. On success, the client SDK will begin to send the file. The preparation of an upload will return JSON similar to this:
+
 ```js
 {
   "status": 200,
@@ -69,6 +72,7 @@ This method will send a request to the server to prepare for an upload. On succe
   }
  }
 ```
+
 Note the uploadId parameter. While the file is being uploaded, you will need this uploadId string in order to retrieve statistics on the upload or cancel it.
 
 Again, this success callback only indicates that an upload is about to take place. To be notified when an upload has completed, you will need to register a handler.
@@ -87,8 +91,9 @@ Once you've registered your FileUploadCallback handler, you will receive notific
 
 Indicates a file has uploaded successfully. Parameters include:
 
-- fileUploadId - the upload id of the file uploaded
-- jsonResponse - the details of the uploaded file similar to this:
+-   fileUploadId - the upload id of the file uploaded
+-   jsonResponse - the details of the uploaded file similar to this:
+
 ```js
 {
  "status": 200,
@@ -104,21 +109,23 @@ Indicates a file has uploaded successfully. Parameters include:
       "gameId": "99999",
       "path": "test2",
       "filename": "testup.dat",
-      "downloadUrl": "https://sharedprod.braincloudservers.com/s3/bc/g/99999/u/bf8a1433-62d2-448e-b396-f3dbffff44/f/test2/testup.dat"
+      "downloadUrl": "https://api.braincloudservers.com/s3/bc/g/99999/u/bf8a1433-62d2-448e-b396-f3dbffff44/f/test2/testup.dat"
       "cloudLocation": "bc/g/99999/u/bf8a1433-62d2-448e-b396-f3dbffff44/f/test2/testup.dat"
      }
     ]
   }
 }
 ```
+
 #### 2) fileUploadFailed
 
 Indicates a file upload has failed. Parameters include:
 
-- fileUploadId - the upload id of the file uploaded
-- statusCode - The HTTP status of the error
-- reasonCode - The reason code of the error
-- jsonResponse - The JSON response from the server similar to the following:
+-   fileUploadId - the upload id of the file uploaded
+-   statusCode - The HTTP status of the error
+-   reasonCode - The reason code of the error
+-   jsonResponse - The JSON response from the server similar to the following:
+
 ```js
 {
   "status": 403,
@@ -127,6 +134,7 @@ Indicates a file upload has failed. Parameters include:
   "severity": "ERROR"
 }
 ```
+
 ### In Progress Upload Statistics
 
 While a file is being uploaded, you can query the BrainCloudFile API for the following information:
@@ -145,8 +153,8 @@ To cancel an upload in progress, you can use this BrainCloudFile API method:
 
 When an upload is canceled, the **fileUploadFailed** callback handler will be called with:
 
-- Http status of 900 (HTTP_CUSTOM)
-- Reason code of 90100 (CLIENT_UPLOAD_FILE_CANCELLED)
+-   Http status of 900 (HTTP_CUSTOM)
+-   Reason code of 90100 (CLIENT_UPLOAD_FILE_CANCELLED)
 
 ### Configure Upload Timeouts
 
@@ -158,8 +166,8 @@ There are also several methods on the BrainCloudClient class which allow you to 
 
 Note that if an upload times out you will receive a **fileUploadFailed** callback with:
 
-- Http status of 900 (HTTP_CUSTOM)
-- Reason code of 90101 (CLIENT_UPLOAD_FILE_TIMED_OUT)
+-   Http status of 900 (HTTP_CUSTOM)
+-   Reason code of 90101 (CLIENT_UPLOAD_FILE_TIMED_OUT)
 
 ### Deleting an Uploaded File
 

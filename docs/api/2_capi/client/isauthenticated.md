@@ -57,8 +57,8 @@ var isAuthenticated = <%= data.branding.codePrefix %>.isAuthenticated();
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
-var isAuthenticated = <%= data.branding.codePrefix %>.isAuthenticated();
+```cfscript
+// N/A
 ```
 
 ```mdx-code-block
@@ -66,8 +66,8 @@ var isAuthenticated = <%= data.branding.codePrefix %>.isAuthenticated();
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
-var isAuthenticated = <%= data.branding.codePrefix %>.isAuthenticated();
+```r
+// N/A
 ```
 
 ```mdx-code-block
@@ -75,4 +75,3 @@ var isAuthenticated = <%= data.branding.codePrefix %>.isAuthenticated();
 </Tabs>
 </BrowserWindow>
 ```
-

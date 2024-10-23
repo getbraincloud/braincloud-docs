@@ -3,9 +3,10 @@
 Enables sending Gzip compressed packets of requests from client side. Which can significantely decrease response time for requests with large body content.
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-enabled | True if request packets should be compressed
+
+| Parameter | Description                                  |
+| --------- | -------------------------------------------- |
+| enabled   | True if request packets should be compressed |
 
 ## Usage
 
@@ -60,8 +61,8 @@ enabled | True if request packets should be compressed
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
-<%= data.branding.codePrefix %>.enableCompressedRequests(true);
+```cfscript
+// N/A
 ```
 
 ```mdx-code-block
@@ -69,8 +70,8 @@ enabled | True if request packets should be compressed
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
-<%= data.branding.codePrefix %>.enableCompressedRequests(true);
+```r
+// N/A
 ```
 
 ```mdx-code-block
@@ -78,4 +79,3 @@ enabled | True if request packets should be compressed
 </Tabs>
 </BrowserWindow>
 ```
-

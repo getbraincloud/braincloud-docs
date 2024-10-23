@@ -1,8 +1,14 @@
-# LogWarning
+# LogError
 
-Logs an App Warning message to the error log.
+Logs an App Error message to the error log.
 
-<PartialServop service_name="log" operation_name="LOG_WARNING" / >
+<PartialServop service_name="log" operation_name="LOG_ERROR" / >
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+errorMessage | The error message.
+context | Additional string-format information to include with the message.
 
 ## Usage
 
@@ -58,11 +64,12 @@ Logs an App Warning message to the error log.
 ```
 
 ```cfscript
-var errorMessage = "Test warning message";
-var context = "Test warning context";
+var errorMessage = "Test error message";
+var context = "Test error context";
 var logProxy = bridge.getLogServiceProxy();
 
-logProxy.logWarning(errorMessage, context)
+logProxy.logError(errorMessage, context);
+
 ```
 
 ```mdx-code-block
@@ -71,11 +78,12 @@ logProxy.logWarning(errorMessage, context)
 ```
 
 ```cfscript
-var errorMessage = "Test warning message";
-var context = "Test warning context";
+var errorMessage = "Test error message";
+var context = "Test error context";
 var logProxy = bridge.getLogServiceProxy();
 
-logProxy.logWarning(errorMessage, context)
+logProxy.logError(errorMessage, context);
+
 ```
 
 ```mdx-code-block
@@ -94,11 +102,4 @@ logProxy.logWarning(errorMessage, context)
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-errorMessage | The error message.
-context | Additional string-format information to include with the message.
-
 

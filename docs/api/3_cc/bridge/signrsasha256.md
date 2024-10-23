@@ -4,6 +4,12 @@ Given a piece of data and a private key, calculates an SHA-256 with RSA (SHA256w
 
 *Note that the implementation supports both PKCS1 and PKCS8 RSA format private keys.*
 
+## Method Parameters
+Parameter | Description
+--------- | -----------
+privateKey | The private key used to generate the signature
+dataString | The data string to calculate the signature for
+
 ## Usage
 
 ```mdx-code-block
@@ -107,11 +113,4 @@ response;
 }
 ```
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-privateKey | The private key used to generate the signature
-dataString | The data string to calculate the signature for
-
 

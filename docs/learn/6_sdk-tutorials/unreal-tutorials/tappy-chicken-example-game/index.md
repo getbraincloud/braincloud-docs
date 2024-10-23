@@ -17,20 +17,20 @@ For this example, we've taken Epic's Tappy Chicken example project and integrate
 
 These features have been used to create this example project:
 
-- Email Authentication - Allows players to log in on any device and retrieve their progress
-- Achievements - All the existing Game Center / Google Play achievements configured in brainCloud for full cross-platform support
-- Leaderboards - Cross platform high score leaderboard
-- User Entities - Saves the player's egg collection progress to the cloud
+-   Email Authentication - Allows players to log in on any device and retrieve their progress
+-   Achievements - All the existing Game Center / Google Play achievements configured in brainCloud for full cross-platform support
+-   Leaderboards - Cross platform high score leaderboard
+-   User Entities - Saves the player's egg collection progress to the cloud
 
 ### Full Source Available
 
-The full source of brainCloud Tappy Chicken has been made available for our developers. Get the project [here](https://sharedprod.braincloudservers.com/s3/brainCloudExamples/unreal/BC_TappyChicken_1.0.0_168245.zip)!
+The full source of brainCloud Tappy Chicken has been made available for our developers. Get the project [here](https://api.braincloudservers.com/s3/brainCloudExamples/unreal/BC_TappyChicken_1.0.0_168245.zip)!
 
 ### Documentation
 
 For more information on how to use brainCloud in Unreal Engine 4 check out our Getting Started tutorials:
 
-- [Setting up the brainCloud plugin](/learn/sdk-tutorials/unreal-tutorials/setting-up-the-braincloud-plugin/)
-- [Getting Started With Blueprints](/learn/sdk-tutorials/unreal-tutorials/getting-started-with-blueprints/)
-- [Getting Started With C++](/learn/sdk-tutorials/unreal-tutorials/getting-started-with-cpp/)
-- [Getting Started With OnlineSubsystem](/learn/sdk-tutorials/unreal-tutorials/getting-started-with-the-online-subsystem/)
+-   [Setting up the brainCloud plugin](/learn/sdk-tutorials/unreal-tutorials/setting-up-the-braincloud-plugin/)
+-   [Getting Started With Blueprints](/learn/sdk-tutorials/unreal-tutorials/getting-started-with-blueprints/)
+-   [Getting Started With C++](/learn/sdk-tutorials/unreal-tutorials/getting-started-with-cpp/)
+-   [Getting Started With OnlineSubsystem](/learn/sdk-tutorials/unreal-tutorials/getting-started-with-the-online-subsystem/)
