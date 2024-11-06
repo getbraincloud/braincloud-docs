@@ -6,10 +6,10 @@ Cancels any FindLobby or FindOrCreateLobby requests that have been previously su
 
 ## Method Parameters
 
-| Parameter | Description                            |
-| --------- | -------------------------------------- |
-| lobbyType | Type of lobby being targeted.          |
-| entryId   | Specific entry id to cancel. Optional. |
+| Parameter | Description                   |
+| --------- | ----------------------------- |
+| lobbyType | Type of lobby being targeted. |
+| entryId   | Specific entry id to cancel.  |
 
 ## Usage
 
