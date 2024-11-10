@@ -2,26 +2,21 @@
 
 Given a json context object, returns a page of messages for this user. Note also returns an encoded context object that is used in the follow-up <code>[GetMessagesPageOffset](/api/capi/messaging/getmessagespageoffset)</code> api call.
 
-
-
-
-
-
-
 Some of the more useful fields for context queries are:
 
-| Field | Description |
-| ----- | ----------- |
-| msgbox | The messagbox the message is in |
-| mbCr | The date the message was sent / arrived |
-| message.from | Who the message is from |
-| message.to | Who the message is to |
+| Field        | Description                             |
+| ------------ | --------------------------------------- |
+| msgbox       | The messagbox the message is in         |
+| mbCr         | The date the message was sent / arrived |
+| message.from | Who the message is from                 |
+| message.to   | Who the message is to                   |
 
 ### Context example - search inbox
 
 This context searches for all messages in the "inbox", sorts them by creation (i.e. arrival time, newest first) and returns them using the default pagination.
 
-`{
+```json
+{
     "context": {
         "searchCriteria": {
             "msgbox": "inbox"
@@ -30,18 +25,20 @@ This context searches for all messages in the "inbox", sorts them by creation (i
             "mbCr": -1
         }
     }
-}`
+}
+```
 
 ### Context example - search by party
 
 This context searches for all messages sent to/from the specified profile, sorts them by creation time, and returns them in batches of 10.
 
-`{
+```json
+{
     "context": {
         "searchCriteria": {
             "$or": [
-               { "message.from": "aProfileId" },
-               { "message.to": "aProfileId" }
+                { "message.from.id": "aProfileId" },
+                { "message.to": { "$in": [ "aProfileId" ] }
             ]
         },
         "sortCriteria": {
@@ -52,15 +49,16 @@ This context searches for all messages sent to/from the specified profile, sorts
             "pageNumber": 1
         }
     }
-}`
-
+}
+```
 
 <PartialServop service_name="messaging" operation_name="GET_MESSAGES_PAGE" />
 
 ## Method Parameters
-Parameter | Description                         
---------- | ------------------------------------ 
-context | A context object that controls the searchCriteria, pagination and sorting of the results to be returned.
+
+| Parameter | Description                                                                                              |
+| --------- | -------------------------------------------------------------------------------------------------------- |
+| context   | A context object that controls the searchCriteria, pagination and sorting of the results to be returned. |
 
 ## Usage
 
@@ -197,8 +195,8 @@ if ( getResult.status == 200 ) {
             // Now do something with it!
 
         }
-    } 
-} 
+    }
+}
 ```
 
 ```mdx-code-block
@@ -240,72 +238,76 @@ if ( getResult.status == 200 ) {
 
 ```json
 {
-    "status": 200,
     "data": {
-        "context": "eyJzZWFyY2hDcml0ZXJpYSI6eyJwcm9maWxlSWQiOiIwMDRhN2QwYy00ZTk2LTQ3NGItOTcyYi03Nzk0ZTBlZWM4ZDUifSwic29ydENyaXRlcmlhIjp7Im1iQ3IiOjEsIm1iVXAiOi0xfSwicGFnaW5hdGlvbiI6eyJyb3dzUGVyUGFnZSI6MTAsInBhZ2VOdW1iZXIiOjF9LCJvcHRpb25zIjpudWxsfQ",
+        "context": "eyJzZWFyY2hDcml0ZXJpYSI6e30sInNvcnRDcml0ZXJpYSI6eyJtYkNyIjoxLCJtYlVwIjotMX0sInBhZ2luYXRpb24iOnsicm93c1BlclBhZ2UiOjEwLCJwYWdlTnVtYmVyIjoxLCJkb0NvdW50IjpmYWxzZSwic2tpcFJlY291bnQiOmZhbHNlfSwib3B0aW9ucyI6bnVsbCwicmVzdWx0Q291bnQiOjJ9",
         "results": {
             "count": 2,
             "page": 1,
             "items": [
                 {
-                    "msgbox": "sent",
-                    "msgId": "9bd20345-b274-4d20-912f-fb1c3cb5e458",
                     "mbVer": 1,
-                    "mbCr": 1530023195326,
-                    "mbUp": 1530023195326,
+                    "mbUp": 1731088457811,
                     "read": false,
+                    "msgCr": 1731088457661,
+                    "msgVer": 1,
+                    "mbCr": 1731088457811,
+                    "msgId": "3c0bec30-f384-42a0-a051-06ca3c9d57fa",
+                    "msgUp": 1731088457661,
                     "message": {
-                        "sentAt": 1530023195324,
-                        "to": [
-                            "004a7d0c-4e96-474b-972b-7794e0eec8d5"
-                        ],
+                        "from": {
+                            "id": "5940bea5-6b56-4766-8fb0-bf709b6da4ae",
+                            "name": "me"
+                        },
+                        "sentAt": 1731088457463,
+                        "to": ["004df8e8-a746-4162-94fb-8915583f6f6c"],
                         "content": {
-                            "subject": "Testing",
-                            "text": "Test message to me."
+                            "subject": "Chat and messaging features are here!",
+                            "text": "Check out the new chat and messaging features!"
                         }
                     },
-                    "msVer": 1,
-                    "msgCr": 1530023195325,
-                    "msgUp": 1530023195325
+                    "msgbox": "sent"
                 },
                 {
-                    "msgbox": "inbox",
-                    "msgId": "9bd20345-b274-4d20-912f-fb1c3cb5e458",
                     "mbVer": 1,
-                    "mbCr": 1530023195327,
-                    "mbUp": 1530023195327,
+                    "mbUp": 1731260617490,
                     "read": false,
+                    "msgCr": 1731260617419,
+                    "msgVer": 1,
+                    "mbCr": 1731260617490,
+                    "msgId": "582d81bc-2cc6-4773-a4fe-e94edd0952f4",
+                    "msgUp": 1731260617419,
                     "message": {
-                        "sentAt": 1530023195324,
-                        "to": [
-                            "004a7d0c-4e96-474b-972b-7794e0eec8d5"
-                        ],
+                        "from": {
+                            "id": "004df8e8-a746-4162-94fb-8915583f6f6c",
+                            "name": "other"
+                        },
+                        "sentAt": 1731260617404,
+                        "to": ["5940bea5-6b56-4766-8fb0-bf709b6da4ae"],
                         "content": {
-                            "subject": "Testing",
-                            "text": "Test message to me."
+                            "subject": "send message to me!",
+                            "text": "Check out the new chat and messaging features!"
                         }
                     },
-                    "msVer": 1,
-                    "msgCr": 1530023195325,
-                    "msgUp": 1530023195325
+                    "msgbox": "inbox"
                 }
             ],
             "moreAfter": false,
             "moreBefore": false
         }
-    }
+    },
+    "status": 200
 }
 ```
+
 </details>
 
 <details>
 <summary>Common Error Code</summary>
 
 ### Status Codes
-Code | Name | Description
----- | ---- | -----------
-| 40601 | FEATURE_NOT_ENABLED | Messaging feature is not enabled for app.
+
+| Code  | Name                | Description                               |
+| ----- | ------------------- | ----------------------------------------- |
+| 40601 | FEATURE_NOT_ENABLED | Messaging feature is not enabled for app. |
 
 </details>
-
-
