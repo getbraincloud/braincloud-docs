@@ -38,7 +38,7 @@ This context searches for all messages sent to/from the specified profile, sorts
         "searchCriteria": {
             "$or": [
                 { "message.from.id": "aProfileId" },
-                { "message.to": { "$in": [ "aProfileId" ] }
+                { "message.to": { "$in": ["aProfileId"] } }
             ]
         },
         "sortCriteria": {
