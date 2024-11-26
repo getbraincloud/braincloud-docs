@@ -113,6 +113,30 @@ var forceCreate = true;
 });
 ```
 
+
+```mdx-code-block
+</TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var ultraUsername = "ultraUsername";
+var ultraIdToken = "ultraIdToken";
+var forceCreate = true;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.authenticateUltra(
+    ultraUsername:ultraUsername, 
+    ultraIdToken:ultraIdToken, 
+    forceCreate:forceCreate);
+
+if (result.statusCode == 200) {
+    print("Success");    
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+
 ```mdx-code-block
 </TabItem>
 <TabItem value="cfs" label="Cloud Code">

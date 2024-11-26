@@ -52,13 +52,23 @@ Resets the profile ID to empty string.
 <%= data.branding.codePrefix %>.resetStoredProfileId();
 ```
 
+
+```mdx-code-block
+</TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+<%= data.branding.codePrefix %>.resetStoredProfileId();
+```
+
 ```mdx-code-block
 </TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
 ```javascript
-<%= data.branding.codePrefix %>.resetStoredProfileId();
+// N/A
 ```
 
 ```mdx-code-block
@@ -67,7 +77,7 @@ Resets the profile ID to empty string.
 ```
 
 ```javascript
-<%= data.branding.codePrefix %>.resetStoredProfileId();
+// N/A
 ```
 
 ```mdx-code-block

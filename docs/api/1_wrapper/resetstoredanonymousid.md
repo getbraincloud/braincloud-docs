@@ -52,6 +52,16 @@ Resets the anonymous ID to empty string.  When the anonymousId is empty a new on
 <%= data.branding.codePrefix %>.resetStoredAnonymousId();
 ```
 
+
+```mdx-code-block
+</TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+<%= data.branding.codePrefix %>.resetStoredAnonymousId();
+```
+
 ```mdx-code-block
 </TabItem>
 <TabItem value="cfs" label="Cloud Code">

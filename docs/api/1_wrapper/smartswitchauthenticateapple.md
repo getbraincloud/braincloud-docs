@@ -100,6 +100,27 @@ var forceCreate = true;
 	console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
+```mdx-code-block
+</TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var appleUserId = "1234500123.xxxxxxxx6789";
+var identityToken = "identityTokenFromApple";
+var forceCreate = true;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.smartSwitchAuthenticateApple(
+    appleUserId:appleUserId, 
+    identityToken:identityToken, 
+    forceCreate:forceCreate);
+
+if (result.statusCode == 200) {
+    print("Success");    
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
 
 ```mdx-code-block
 </TabItem>
@@ -107,15 +128,7 @@ var forceCreate = true;
 ```
 
 ```javascript
-var appleUserId = "123456789";
-var identityToken = "identityTokenFromApple";
-var forceCreate = true;
-
-<%= data.branding.codePrefix %>.smartSwitchAuthenticateApple(appleUserId, identityToken, forceCreate, result =>
-{
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
-});
+// N/A
 ```
 
 ```mdx-code-block
@@ -124,15 +137,7 @@ var forceCreate = true;
 ```
 
 ```javascript
-var appleUserId = "123456789";
-var identityToken = "identityTokenFromApple";
-var forceCreate = true;
-
-<%= data.branding.codePrefix %>.smartSwitchAuthenticateApple(appleUserId, identityToken, forceCreate, result =>
-{
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
-});
+// N/A
 ```
 
 ```mdx-code-block

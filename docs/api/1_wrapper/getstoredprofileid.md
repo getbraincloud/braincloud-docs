@@ -54,6 +54,15 @@ var profileId = <%= data.branding.codePrefix %>.getStoredProfileId();
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+String profileId = <%= data.branding.codePrefix %>.getStoredProfileId();
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

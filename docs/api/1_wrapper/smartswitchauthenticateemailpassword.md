@@ -22,8 +22,8 @@ forceCreate | Should a new profile be created for this user if the account does 
 ```
 
 ```csharp
-string email = <%= data.example.email %>;
-string password = <%= data.example.password %>;
+string email ="<%= data.example.email %>";
+string password = "<%= data.example.password %>";
 bool forceCreate = true;
     
 SuccessCallback successCallback = (response, cbObject) =>
@@ -44,8 +44,8 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 ```
 
 ```cpp
-const char* email = <%= data.example.email %>;
-const char* password = <%= data.example.password %>;
+const char* email ="<%= data.example.email %>";
+const char* password = "<%= data.example.password %>";
 bool forceCreate = true;
 
 <%= data.branding.codePrefix %>->smartSwitchAuthenticateEmailPassword(email, password, forceCreate, this);
@@ -57,8 +57,8 @@ bool forceCreate = true;
 ```
 
 ```objectivec
-NSString* email = @<%= data.example.email %>;
-NSString* password = @<%= data.example.password %>;
+NSString* email = @"<%= data.example.email %>";
+NSString* password = @"<%= data.example.password %>";
 bool forceCreate = true;
 BCCompletionBlock successBlock;      // define callback
 BCErrorCompletionBlock failureBlock; // define callback
@@ -77,8 +77,8 @@ BCErrorCompletionBlock failureBlock; // define callback
 ```
 
 ```java
-String email = <%= data.example.email %>;
-String password = <%= data.example.password %>;
+String email ="<%= data.example.email %>";
+String password = "<%= data.example.password %>";
 boolean forceCreate = true;
 
 <%= data.branding.codePrefix %>.smartSwitchAuthenticateEmailPassword(
@@ -94,8 +94,8 @@ boolean forceCreate = true;
 ```
 
 ```javascript
-var email = <%= data.example.email %>;
-var password = <%= data.example.password %>;
+var email ="<%= data.example.email %>";
+var password = "<%= data.example.password %>";
 var forceCreate = true;
 
 <%= data.branding.codePrefix %>.smartSwitchAuthenticateEmailPassword(email, password, forceCreate, result =>
@@ -103,6 +103,28 @@ var forceCreate = true;
 	var status = result.status;
 	console.log(status + " : " + JSON.stringify(result, null, 2));
 });
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var email = "<%= data.example.email %>";
+var password = "<%= data.example.password %>";
+var forceCreate = true;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.smartSwitchAuthenticateEmail(
+    email:email, 
+    password:password, 
+    forceCreate:forceCreate);
+
+if (result.statusCode == 200) {
+    print("Success");    
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
 ```
 
 ```mdx-code-block
@@ -111,15 +133,7 @@ var forceCreate = true;
 ```
 
 ```javascript
-var email = <%= data.example.email %>;
-var password = <%= data.example.password %>;
-var forceCreate = true;
-
-<%= data.branding.codePrefix %>.smartSwitchAuthenticateEmailPassword(email, password, forceCreate, result =>
-{
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
-});
+// N/A
 ```
 
 ```mdx-code-block
@@ -128,15 +142,7 @@ var forceCreate = true;
 ```
 
 ```javascript
-var email = <%= data.example.email %>;
-var password = <%= data.example.password %>;
-var forceCreate = true;
-
-<%= data.branding.codePrefix %>.smartSwitchAuthenticateEmailPassword(email, password, forceCreate, result =>
-{
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
-});
+// N/A
 ```
 
 ```mdx-code-block
@@ -149,8 +155,8 @@ var forceCreate = true;
 <summary>JSON Response</summary>
 
 ```javascript
-var email = <%= data.example.email %>;
-var password = <%= data.example.password %>;
+var email ="<%= data.example.email %>";
+var password = "<%= data.example.password %>";
 var forceCreate = true;
 
 <%= data.branding.codePrefix %>.smartSwitchAuthenticateEmailPassword(email, password, forceCreate, result =>

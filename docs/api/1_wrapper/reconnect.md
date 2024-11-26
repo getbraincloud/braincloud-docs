@@ -64,6 +64,20 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dar" label="Dart">
+```
+
+```javascript
+ServerResponse result = await <%= data.branding.codePrefix %>.reconnect();
+if (result.statusCode == 200) {
+    print("Success");    
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

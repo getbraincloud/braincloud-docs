@@ -93,6 +93,25 @@ var emailAddress = "email@email.com";
 });
 ```
 
+
+```mdx-code-block
+</TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var emailAddress = "email@email.com";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.resetEmailPassword(
+    emailAddress:emailAddress);
+
+if (result.statusCode == 200) {
+    print("Success");    
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
 ```mdx-code-block
 </TabItem>
 <TabItem value="cfs" label="Cloud Code">

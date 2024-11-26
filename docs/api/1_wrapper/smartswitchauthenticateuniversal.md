@@ -22,8 +22,8 @@ forceCreate | Should a new profile be created for this user if the account does 
 ```
 
 ```csharp
-string userId = <%= data.example.userId %>;
-string password = <%= data.example.password %>;
+string userId = "<%= data.example.userId %>";
+string password = "<%= data.example.password %>";
 bool forceCreate = true;
 SuccessCallback successCallback = (response, cbObject) =>
 {
@@ -43,8 +43,8 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 ```
 
 ```cpp
-const char* userId = <%= data.example.userId %>;
-const char* password = <%= data.example.password %>;
+const char* userId = "<%= data.example.userId %>";
+const char* password = "<%= data.example.password %>";
 bool forceCreate = true;
 
 <%= data.branding.codePrefix %>->smartSwitchAuthenticateUniversal(userId, password, forceCreate, this);
@@ -56,8 +56,8 @@ bool forceCreate = true;
 ```
 
 ```objectivec
-NSString* userId = @<%= data.example.userId %>;
-NSString* password = @<%= data.example.password %>;
+NSString* userId = @"<%= data.example.userId %>";
+NSString* password = @"<%= data.example.password %>";
 bool forceCreate = true;
 BCCompletionBlock successBlock;      // define callback
 BCErrorCompletionBlock failureBlock; // define callback
@@ -76,8 +76,8 @@ BCErrorCompletionBlock failureBlock; // define callback
 ```
 
 ```java
-String userId = <%= data.example.userId %>;
-String password = <%= data.example.password %>;
+String userId = ""<%= data.example.userId %>"";
+String password = "<%= data.example.password %>";
 boolean forceCreate = true;
 
 <%= data.branding.codePrefix %>.smartSwitchAuthenticateUniversal(userId, password, forceCreate, this);
@@ -89,8 +89,8 @@ boolean forceCreate = true;
 ```
 
 ```javascript
-var userId = <%= data.example.userId %>;
-var password = <%= data.example.password %>;
+var userId = "<%= data.example.userId %>";
+var password = "<%= data.example.password %>";
 var forceCreate = true;
 
 <%= data.branding.codePrefix %>.smartSwitchAuthenticateUniversal(userId, password, forceCreate, result =>
@@ -98,6 +98,28 @@ var forceCreate = true;
 	var status = result.status;
 	console.log(status + " : " + JSON.stringify(result, null, 2));
 });
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var userId = "<%= data.example.userId %>";
+var password = "<%= data.example.password %>";
+var forceCreate = true;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.smartSwitchAuthenticateUniversal(
+    username:userId, 
+    password:password, 
+    forceCreate:forceCreate);
+
+if (result.statusCode == 200) {
+    print("Success");    
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
 ```
 
 ```mdx-code-block
@@ -106,15 +128,7 @@ var forceCreate = true;
 ```
 
 ```javascript
-var userId = <%= data.example.userId %>;
-var password = <%= data.example.password %>;
-var forceCreate = true;
-
-<%= data.branding.codePrefix %>.smartSwitchAuthenticateUniversal(userId, password, forceCreate, result =>
-{
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
-});
+// N/A
 ```
 
 ```mdx-code-block
@@ -123,15 +137,7 @@ var forceCreate = true;
 ```
 
 ```javascript
-var userId = <%= data.example.userId %>;
-var password = <%= data.example.password %>;
-var forceCreate = true;
-
-<%= data.branding.codePrefix %>.smartSwitchAuthenticateUniversal(userId, password, forceCreate, result =>
-{
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
-});
+// N/A
 ```
 
 ```mdx-code-block
@@ -144,8 +150,8 @@ var forceCreate = true;
 <summary>JSON Response</summary>
 
 ```javascript
-var userId = <%= data.example.userId %>;
-var password = <%= data.example.password %>;
+var userId = "<%= data.example.userId %>";
+var password = "<%= data.example.password %>";
 var forceCreate = true;
 
 <%= data.branding.codePrefix %>.smartSwitchAuthenticateUniversal(userId, password, forceCreate, result =>

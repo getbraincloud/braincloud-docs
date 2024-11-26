@@ -59,6 +59,15 @@ alwaysAllow | Controls whether the profile ID is passed in with non-anonymous au
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+<%= data.branding.codePrefix %>.alwaysAllowProfileSwitch = true;
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

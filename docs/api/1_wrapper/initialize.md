@@ -108,14 +108,25 @@ appId = "123456";
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+```dart
+secret = "1234-1234-1234-1234";
+appId = "123456";
+
+<%= data.branding.codePrefix %>.init(secretKey: secret,appId: appId,version: "1.0.0",updateTick: 50));
+```
+:::note
+ If  **updateTick** is greater than `0` a built-in run loop timer is started and updates every **updateTick** ms . For application that already have a run loop, set to `0` and make to call **udpate()** from within your run loop.
+:::
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
 ```javascript
-secret = "1234-1234-1234-1234";
-appId = "123456";
-
-<%= data.branding.codePrefix %>.initialize(appId, secret, "1.0.0");
+// N/A
 ```
 
 ```mdx-code-block
@@ -124,10 +135,7 @@ appId = "123456";
 ```
 
 ```javascript
-secret = "1234-1234-1234-1234";
-appId = "123456";
-
-<%= data.branding.codePrefix %>.initialize(appId, secret, "1.0.0");
+// N/A
 ```
 
 ```mdx-code-block
@@ -140,10 +148,7 @@ appId = "123456";
 <summary>JSON Response</summary>
 
 ```javascript
-secret = "1234-1234-1234-1234";
-appId = "123456";
 
-<%= data.branding.codePrefix %>.initialize(appId, secret, "1.0.0");
 ```
 </details>
 

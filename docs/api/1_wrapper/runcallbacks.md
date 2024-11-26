@@ -16,6 +16,10 @@ Run callbacks, to be called once per frame from your main thread
 //          However, if you are not using Unity or not using the <%= data.branding.codeWrapper %> as a GameObject, call Update in your own update loop
 <%= data.branding.codePrefix %>.Update();
 ```
+:::note
+The <%= data.branding.productName %> Wrapper Updates itself using Unity MonoBehavior Update
+However, if you are not using Unity or not using the <%= data.branding.codeWrapper %> as a GameObject, call Update in your own update loop
+:::
 
 ```mdx-code-block
 </TabItem>
@@ -52,6 +56,18 @@ Run callbacks, to be called once per frame from your main thread
 ```javascript
 // N/A
 ```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+<%= data.branding.codePrefix %>.runCallbacks();
+```
+:::note
+ This is only needed if not using the built-in run loop. See [initialize](initialize)
+:::
 
 ```mdx-code-block
 </TabItem>

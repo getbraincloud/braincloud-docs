@@ -22,6 +22,7 @@ let options = {
     'data.branding.companyName %>': 'bitHeads',
     'data.example.email %>': 'email@bitheads.com',
     'data.example.password %>': 'password',
+    'data.example.userId %>': 'userName',
   },
   prefix: '<%= ',
 }
@@ -282,7 +283,7 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
-        additionalLanguages: ['csharp', 'cfscript', 'java', 'r'],
+        additionalLanguages: ['csharp', 'cfscript', 'java', 'r', 'dart'],
       },
     }),
 };

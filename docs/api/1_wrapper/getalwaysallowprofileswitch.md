@@ -54,6 +54,16 @@ bool allowSwitch = <%= data.branding.codePrefix %>.getAlwaysAllowProfileSwitch()
 var allowSwitch = <%= data.branding.codePrefix %>.getAlwaysAllowProfileSwitch();
 ```
 
+
+```mdx-code-block
+</TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+bool allowSwitch = <%= data.branding.codePrefix %>.alwaysAllowProfileSwitch;
+```
+
 ```mdx-code-block
 </TabItem>
 <TabItem value="cfs" label="Cloud Code">

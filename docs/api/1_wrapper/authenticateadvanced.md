@@ -121,7 +121,30 @@ var extraJson = {"key":"value"};
 	console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
+```mdx-code-block
+</TabItem>
+<TabItem value="dart" label="Dart">
+```
 
+
+```dart
+String externalId = "authAdvancedUser";
+String authenticationToken = "authAdvancedPass";
+String authenticationSubType = "";
+AuthenticationIds ids = AuthenticationIds(externalId,authenticationToken,authenticationSubType);
+
+ServerResponse result = await <%= data.branding.codePrefix %>.authenticateAdvanced(
+  authenticationType: AuthenticationType.universal,
+  ids: ids,
+  extraJson: {"key":"value"},
+  forceCreate: true);
+
+if (result.statusCode == 200) {
+    print("Success");    
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
 ```mdx-code-block
 </TabItem>
 <TabItem value="cfs" label="Cloud Code">
@@ -257,5 +280,4 @@ Code | Name | Description
 40307 | TOKEN_DOES_NOT_MATCH_USER | The user credentials are invalid (i.e. bad Facebook id / token). May also indicate that Facebook integration is not properly configured.
 
 </details>
-
 

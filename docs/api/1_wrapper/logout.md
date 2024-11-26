@@ -64,11 +64,21 @@ BCErrorCompletionBlock failureBlock; // define callback
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+<%= data.branding.codePrefix %>.logout(forgetUser:true);
+```
+
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
 ```javascript
-<%= data.branding.codePrefix %>.logout(true);
+
 ```
 
 ```mdx-code-block
@@ -77,7 +87,7 @@ BCErrorCompletionBlock failureBlock; // define callback
 ```
 
 ```javascript
-<%= data.branding.codePrefix %>.logout(true);
+
 ```
 
 ```mdx-code-block

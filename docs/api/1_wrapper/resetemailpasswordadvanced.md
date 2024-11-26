@@ -111,6 +111,34 @@ var serviceParams = {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var emailAddress = "email@email.com";
+var serviceParams = {
+    "templateId": "template-id-guid",
+    "substitutions": {
+        "aKey": "aValue"
+    },
+    "categories": [
+        "category1",
+        "category2"
+    ]
+};
+ServerResponse result = await <%= data.branding.codePrefix %>.resetEmailPasswordAdvanced(
+    emailAddress:emailAddress,
+    serviceParams:serviceParams);
+
+if (result.statusCode == 200) {
+    print("Success");    
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

@@ -128,6 +128,21 @@ var version = <%= data.example.appVersion %>;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+```dart
+
+secretMap = {"12345":"1234-1234-1234-1234","67890":"4321-4321-4321-4321"};
+appId = "123456";
+
+<%= data.branding.codePrefix %>.initWithApps(secretKey: secretMap,defaultAppId: appId,version: "1.0.0",updateTick: 50));
+```
+:::note
+If  **updateTick** is greater than `0` a built-in run loop timer is started and updates every **updateTick** ms . For application that already have a run loop, set to `0` and make to call **udpate()** from within your run loop.
+:::
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -172,16 +187,7 @@ var version = <%= data.example.appVersion %>;
 <summary>JSON Response</summary>
 
 ```javascript
-var secret = <%= data.example.appSecret %>;
-var appId = <%= data.example.appId %>;
-var childSecret = <%= data.example.appChildSecret %>;
-var childAppId = <%= data.example.appChildId %>;
-var secretMap = {};
-secretMap[appId] = secret;
-secretMap[childAppId] = childSecret;
-var version = <%= data.example.appVersion %>;
 
-<%= data.branding.codePrefix %>.initializeWithApps(appId, secretMap, version);
 ```
 </details>
 

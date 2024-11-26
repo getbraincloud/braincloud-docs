@@ -103,19 +103,33 @@ var forceCreate = true;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var googleUserId = "g123456789";
+var serverAuthCode = "authTokenFromGoogle";
+var forceCreate = true;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.smartSwitchAuthenticateGoogle(
+    googleUserId:googleUserId, 
+    serverAuthCode:serverAuthCode, 
+    forceCreate:forceCreate);
+
+if (result.statusCode == 200) {
+    print("Success");    
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
 ```javascript
-var googleId = "g123456789";
-var token = "authTokenFromGoogle";
-var forceCreate = true;
-
-<%= data.branding.codePrefix %>.smartSwitchAuthenticateGoogle(googleId, token, forceCreate, result =>
-{
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
-});
+// N/A
 ```
 
 ```mdx-code-block
@@ -124,15 +138,7 @@ var forceCreate = true;
 ```
 
 ```javascript
-var googleId = "g123456789";
-var token = "authTokenFromGoogle";
-var forceCreate = true;
-
-<%= data.branding.codePrefix %>.smartSwitchAuthenticateGoogle(googleId, token, forceCreate, result =>
-{
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
-});
+// N/A
 ```
 
 ```mdx-code-block

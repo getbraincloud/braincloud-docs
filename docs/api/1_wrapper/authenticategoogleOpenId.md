@@ -120,19 +120,34 @@ var forceCreate = true;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var googleUserAccountEmail = "example@gmail.com";
+var idToken = "authTokenFromGoogle";
+var forceCreate = true;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.authenticateGoogleOpenId(
+    googleUserAccountEmail:googleUserAccountEmail, 
+    idToken:idToken, 
+    forceCreate:forceCreate);
+
+if (result.statusCode == 200) {
+    print("Success");    
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
 ```javascript
-var googleUserAccountEmail = "example@gmail.com";
-var IdToken = "authTokenFromGoogle";
-var forceCreate = true;
-
-<%= data.branding.codePrefix %>.authenticateGoogleOpenId(googleUserAccountEmail, IdToken, forceCreate, result =>
-{
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
-});
+// N/A
 ```
 
 ```mdx-code-block
@@ -141,15 +156,7 @@ var forceCreate = true;
 ```
 
 ```javascript
-var googleUserAccountEmail = "example@gmail.com";
-var IdToken = "authTokenFromGoogle";
-var forceCreate = true;
-
-<%= data.branding.codePrefix %>.authenticateGoogleOpenId(googleUserAccountEmail, IdToken, forceCreate, result =>
-{
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
-});
+// N/A
 ```
 
 ```mdx-code-block

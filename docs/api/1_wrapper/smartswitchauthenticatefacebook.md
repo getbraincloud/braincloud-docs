@@ -100,6 +100,27 @@ var forceCreate = true;
 	console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
+```mdx-code-block
+</TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var facebookId = "userFacebookId";
+var token = "tokenFromFacebook";
+var forceCreate = true;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.smartSwitchAuthenticateFacebook(
+    fbUserId:facebookId, 
+    fbAuthToken:token, 
+    forceCreate:forceCreate);
+
+if (result.statusCode == 200) {
+    print("Success");    
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
 
 ```mdx-code-block
 </TabItem>
@@ -107,15 +128,7 @@ var forceCreate = true;
 ```
 
 ```javascript
-var facebookId = "userFacebookId";
-var token = "tokenFromFacebook";
-var forceCreate = true;
-
-<%= data.branding.codePrefix %>.smartSwitchAuthenticateFacebook(facebookId, token, forceCreate, result =>
-{
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
-});
+// N/A
 ```
 
 ```mdx-code-block
@@ -124,15 +137,7 @@ var forceCreate = true;
 ```
 
 ```javascript
-var facebookId = "userFacebookId";
-var token = "tokenFromFacebook";
-var forceCreate = true;
-
-<%= data.branding.codePrefix %>.smartSwitchAuthenticateFacebook(facebookId, token, forceCreate, result =>
-{
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
-});
+// N/A
 ```
 
 ```mdx-code-block

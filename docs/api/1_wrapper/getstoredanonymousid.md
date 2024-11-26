@@ -54,6 +54,15 @@ var anonymousId = <%= data.branding.codePrefix %>.getStoredAnonymousId();
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+String anonymousId = <%= data.branding.codePrefix %>.getStoredAnonymousId();
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

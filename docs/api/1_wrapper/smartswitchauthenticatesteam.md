@@ -103,19 +103,34 @@ var forceCreate = true;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var steamId = "userSteamId";
+var sessionTicket = "sessionTicketFromSteam";
+var forceCreate = true;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.smartSwitchAuthenticateSteam(
+    userid:steamId, 
+    sessionticket:sessionTicket, 
+    forceCreate:forceCreate);
+
+if (result.statusCode == 200) {
+    print("Success");    
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
 ```javascript
-var steamId = "userSteamId";
-var ticket = "sessionTicketFromSteam";
-var forceCreate = true;
-
-<%= data.branding.codePrefix %>.smartSwitchAuthenticateSteam(steamId, ticket, forceCreate, result =>
-{
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
-});
+// N/A
 ```
 
 ```mdx-code-block
@@ -124,15 +139,7 @@ var forceCreate = true;
 ```
 
 ```javascript
-var steamId = "userSteamId";
-var ticket = "sessionTicketFromSteam";
-var forceCreate = true;
-
-<%= data.branding.codePrefix %>.smartSwitchAuthenticateSteam(steamId, ticket, forceCreate, result =>
-{
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
-});
+// N/A
 ```
 
 ```mdx-code-block

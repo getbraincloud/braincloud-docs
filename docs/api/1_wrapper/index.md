@@ -85,6 +85,15 @@ public class BCConfig : MonoBehaviour {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+BrainCloudWrapper <%= data.branding.codePrefix %> = <%= data.branding.codeWrapper %>(wrapperName: "_mainWrapper");
+```
+
+```mdx-code-block
+</TabItem>
 </Tabs>
 </BrowserWindow>
 ```
@@ -95,7 +104,7 @@ public class BCConfig : MonoBehaviour {
 Parameter | Description
 --------- | -----------
 wrapperName | Distincts saved wrapper data. Use when using more than one instance of <%= data.branding.productName %>
-    
+
 
 
 <DocCardList />
