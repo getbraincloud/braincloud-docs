@@ -65,7 +65,7 @@ Read a playback stream.
 
 ```cfscript
 var playbackStreamId = "a-stream-id";
-var playbackStreamProxy = bridge.getPlaybackstreamServiceProxy();
+var playbackStreamProxy = bridge.getPlaybackStreamServiceProxy();
 
 var postResult = playbackStreamProxy.sysReadStream(playbackStreamId);
 ```

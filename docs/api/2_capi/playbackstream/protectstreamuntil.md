@@ -109,7 +109,7 @@ var numDays = 365;
 ```cfscript
 var playbackStreamId = "streamId";
 var numDays = 365;
-var playbackStreamProxy = bridge.getPlaybackstreamServiceProxy();
+var playbackStreamProxy = bridge.getPlaybackStreamServiceProxy();
 
 var postResult = playbackStreamProxy.protectStreamUntil(playbackStreamId, numDays);
 ```

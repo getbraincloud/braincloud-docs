@@ -1,13 +1,15 @@
 # SysEndStream
+
 End a playback stream.
 
 <PartialServop service_name="playbackStream" operation_name="SYS_END_STREAM" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | The player ending the stream.
-playbackStreamId | Identifies the stream to end.
+
+| Parameter        | Description                   |
+| ---------------- | ----------------------------- |
+| profileId        | The player ending the stream. |
+| playbackStreamId | Identifies the stream to end. |
 
 ## Usage
 
@@ -65,7 +67,7 @@ playbackStreamId | Identifies the stream to end.
 ```cfscript
 var profileId = "player";
 var playbackStreamId = "stream";
-var playbackStreamProxy = bridge.getPlaybackstreamServiceProxy();
+var playbackStreamProxy = bridge.getPlaybackStreamServiceProxy();
 
 var postResult = playbackStreamProxy.sysEndStream(profileId, playbackStreamId);
 ```
@@ -91,15 +93,15 @@ var postResult = playbackStreamProxy.sysEndStream(profileId, playbackStreamId);
 </Tabs>
 </BrowserWindow>
 ```
+
 <details>
 <summary>JSON Response</summary>
 
 ```json
 {
-  "status" : 200,
-  "data" : null
+    "status": 200,
+    "data": null
 }
 ```
 
 </details>
-

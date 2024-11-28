@@ -67,7 +67,7 @@ Protects a playback stream from being purged (but not deleted) for the given num
 ```cfscript
 var playbackStreamId = "streamId";
 var numDays = 365;
-var playbackStreamProxy = bridge.getPlaybackstreamServiceProxy();
+var playbackStreamProxy = bridge.getPlaybackStreamServiceProxy();
 
 var postResult = playbackStreamProxy.sysProtectStreamUntil(playbackStreamId, numDays);
 ```
