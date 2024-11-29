@@ -1,9 +1,5 @@
 # GetMessagesPageOffset
 
-:::caution
-This method is not yet available.
-:::
-
 Returns the next/prev set of messages. Takes the encoded-context from <code>[GetMessagesPage](/api/capi/messaging/getmessagespage)</code> as a parameter.
 
 <PartialServop service_name="messaging" operation_name="GET_MESSAGES_PAGE_OFFSET" />
