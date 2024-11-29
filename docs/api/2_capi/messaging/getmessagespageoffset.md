@@ -4,17 +4,16 @@
 This method is not yet available.
 :::
 
-
 Returns the next/prev set of messages. Takes the encoded-context from <code>[GetMessagesPage](/api/capi/messaging/getmessagespage)</code> as a parameter.
-
-
 
 <PartialServop service_name="messaging" operation_name="GET_MESSAGES_PAGE_OFFSET" />
 
 ## Method Parameters
-Parameter | Description                         
---------- | ------------------------------------
-channelId | The id of the channel to connect to.
+
+| Parameter  | Description                                                                                                                         |
+| ---------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| context    | The encoded context string returned from the server from a previous call to GetMessagesPage or GetMessagesPageOffset.               |
+| pageOffset | The positive or negative page offset to fetch. Uses the last page retrieved using the context string to determine a starting point. |
 
 ## Usage
 
@@ -149,21 +148,99 @@ if (postResult.status == 200) {
 
 ```json
 {
- "status": 200,    
- "data": {
- }
+    "data": {
+        "context": "eyJzZWFyY2hDcml0ZXJpYSI6eyJnYW1lSWQiOiIxMzIyOSJ9LCJzb3J0Q3JpdGVyaWEiOnsibWJDciI6MSwibWJVcCI6LTF9LCJwYWdpbmF0aW9uIjp7InJvd3NQZXJQYWdlIjoxMCwicGFnZU51bWJlciI6MSwiZG9Db3VudCI6ZmFsc2UsInNraXBSZWNvdW50IjpmYWxzZX0sIm9wdGlvbnMiOm51bGwsInJlc3VsdENvdW50IjozfQ",
+        "results": {
+            "count": 10,
+            "page": 2,
+            "items": [
+                {
+                    "mbVer": 1,
+                    "mbUp": 1731088159417,
+                    "read": false,
+                    "msgCr": 1731088159385,
+                    "msgVer": 1,
+                    "mbCr": 1731088159417,
+                    "msgId": "dbaedd3c-17d9-4b04-a0cb-d230d44b8ebc",
+                    "msgUp": 1731088159385,
+                    "message": {
+                        "from": {
+                            "id": "43c4f25e-cac5-4523-b124-ad05ccb9e7c3",
+                            "name": "test1@team12416.testinator.com"
+                        },
+                        "sentAt": 1731088159369,
+                        "to": ["ba0b372c-3c31-48aa-9577-37684abcfcdd"],
+                        "content": {
+                            "subject": "Chat and messaging features are here!",
+                            "text": "Check out the new chat and messaging features!"
+                        }
+                    },
+                    "msgbox": "sent"
+                },
+                {
+                    "mbVer": 1,
+                    "mbUp": 1732813809385,
+                    "read": false,
+                    "msgCr": 1732813809339,
+                    "msgVer": 1,
+                    "mbCr": 1732813809385,
+                    "msgId": "eaa69580-f95f-401d-9d9f-92fc0895cc4d",
+                    "msgUp": 1732813809339,
+                    "message": {
+                        "from": {
+                            "id": "43c4f25e-cac5-4523-b124-ad05ccb9e7c3",
+                            "name": "test1@team12416.testinator.com"
+                        },
+                        "sentAt": 1732813809323,
+                        "to": ["43c4f25e-cac5-4523-b124-ad05ccb9e7c3"],
+                        "content": {
+                            "subject": "Chat and messaging features are here!",
+                            "text": "Check out the new chat and messaging features!"
+                        }
+                    },
+                    "msgbox": "sent"
+                },
+                {
+                    "mbVer": 1,
+                    "mbUp": 1732813809419,
+                    "read": false,
+                    "msgCr": 1732813809339,
+                    "msgVer": 1,
+                    "mbCr": 1732813809419,
+                    "msgId": "eaa69580-f95f-401d-9d9f-92fc0895cc4d",
+                    "msgUp": 1732813809339,
+                    "message": {
+                        "from": {
+                            "id": "43c4f25e-cac5-4523-b124-ad05ccb9e7c3",
+                            "name": "test1@team12416.testinator.com"
+                        },
+                        "sentAt": 1732813809323,
+                        "to": ["43c4f25e-cac5-4523-b124-ad05ccb9e7c3"],
+                        "content": {
+                            "subject": "Chat and messaging features are here!",
+                            "text": "Check out the new chat and messaging features!"
+                        }
+                    },
+                    "msgbox": "inbox"
+                }
+            ],
+            "moreAfter": true,
+            "moreBefore": true
+        }
+    },
+    "status": 200
 }
 ```
+
 </details>
 
 <details>
 <summary>Common Error Code</summary>
 
 ### Status Codes
-Code | Name | Description                        
------ | ----------------------- | -----------------------------------
-40601 | FEATURE_NOT_ENABLED | Messaging feature is not enabled for app.
+
+| Code  | Name                | Description                               |
+| ----- | ------------------- | ----------------------------------------- |
+| 40601 | FEATURE_NOT_ENABLED | Messaging feature is not enabled for app. |
 
 </details>
-
-
