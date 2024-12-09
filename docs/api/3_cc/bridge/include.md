@@ -76,32 +76,6 @@ The path of the included script is a relative path, ff without specifying the sc
 ```
 
 ```cfscript
-// MathFunctions script
-
-function sumNums( num1, num2 ) {
-    return (num1 + num2);
-}
-
-
-// The script that includes MathFunctions script
-"use strict";
-
-bridge.include("path/to/MathFunctions.ccjs");
-
-function main() {
-    var response = {};
-    response.answer = sumNums(data.number1, data.number2);
-    return response;
-}
-main();
-```
-
-```mdx-code-block
-</TabItem>
-<TabItem value="r" label="Raw">
-```
-
-```cfscript
 // This is a script that includes MathFunctions script
 "use strict";
 
@@ -119,6 +93,15 @@ main();
 function sumNums( num1, num2 ) {
     return (num1 + num2);
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="r" label="Raw">
+```
+
+```r
+// Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block
