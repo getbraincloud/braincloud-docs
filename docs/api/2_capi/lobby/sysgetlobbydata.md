@@ -1,6 +1,6 @@
 # SysGetLobbyData
 
-Gets data for the given lobby instance <lobbyId>.
+Gets data for the given lobby instance `<lobbyId>`.
 
 <PartialServop service_name="lobby" operation_name="SYS_GET_LOBBY_DATA" />
 
