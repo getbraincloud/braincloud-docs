@@ -70,6 +70,35 @@ Updates the settings for the given lobby instance.
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="cfs" label="Cloud Code">
+```
+
+```cfscript
+var lobbyId = "55555:4v4:19";
+var settings = {};
+var lobbyProxy = bridge.getLobbyServiceProxy();
+
+var postResult = lobbyProxy.sysUpdateSettings(lobbyId, settings);
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="r" label="Raw">
+```
+
+```r
+{
+    "service":"lobby",
+    "operation":"SYS_UPDATE_SETTINGS",
+    "data":{
+        "lobbyId":"55555:4v4:19",
+        "settings":{}
+    }
+}
+```
+
+```mdx-code-block
+</TabItem>
 </Tabs>
 </BrowserWindow>
 ```

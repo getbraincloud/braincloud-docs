@@ -69,6 +69,33 @@ Gets data for the given lobby instance `<lobbyId>`.
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="cfs" label="Cloud Code">
+```
+
+```cfscript
+var lobbyId = "55555:4v4:19";
+var lobbyProxy = bridge.getLobbyServiceProxy();
+
+var postResult = lobbyProxy.sysGetLobbyData(lobbyId);
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="r" label="Raw">
+```
+
+```r
+{
+    "service":"lobby",
+    "operation":"SYS_GET_LOBBY_DATA",
+    "data":{
+        "lobbyId":"55555:4v4:19"
+    }
+}
+```
+
+```mdx-code-block
+</TabItem>
 </Tabs>
 </BrowserWindow>
 ```

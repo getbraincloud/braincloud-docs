@@ -77,6 +77,59 @@ Creates an instance of a lobby. Will return the newly created lobby id in the ev
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="cfs" label="Cloud Code">
+```
+
+```cfscript
+var ownerCxId = "55555:aaa-bbb-ccc-ddd:asdfasdfa";
+var lobbyType = "4v4";
+var rating = 76;
+var otherUserCxIds = [
+    "55555:aaa-bbb-ccc-eee:asdfjkl"
+];
+var settings = {};
+var isReady = False;
+var extraJson = {};
+var teamCode = "blue";
+var pingData = {
+    "ca-central-1": 98,
+    "us-west-1": 123
+};
+var lobbyProxy = bridge.getLobbyServiceProxy();
+
+var postResult = lobbyProxy.sysCreateLobbyWithPingData(ownerCxId, lobbyType, rating, otherUserCxIds, settings, isReady, extraJson, teamCode, pingData);
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="r" label="Raw">
+```
+
+```r
+{
+    "service":"lobby",
+    "operation":"SYS_CREATE_LOBBY_WITH_PING_DATA",
+    "data":{
+        "ownerCxId":"55555:aaa-bbb-ccc-ddd:asdfasdfa",
+        "lobbyType":"4v4",
+        "rating":76,
+        "otherUserCxIds":[
+            "55555:aaa-bbb-ccc-eee:asdfjkl"
+        ],
+        "settings":{},
+        "isReady":false,
+        "extraJson":{},
+        "teamCode":"blue",
+        "pingData":{
+            "ca-central-1":98,
+            "us-west-1":123
+        }
+    }
+}
+```
+
+```mdx-code-block
+</TabItem>
 </Tabs>
 </BrowserWindow>
 ```

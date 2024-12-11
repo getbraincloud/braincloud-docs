@@ -76,6 +76,51 @@ Creates an instance of a lobby. Will return the newly created lobby id in the ev
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="cfs" label="Cloud Code">
+```
+
+```cfscript
+var ownerCxId = "55555:aaa-bbb-ccc-ddd:asfasdf";
+var lobbyType = "4v4";
+var rating = 76;
+var otherUserCxIds = [
+    "55555:aaa-bbb-ccc-eee:asdfjkl"
+];
+var settings = {};
+var isReady = False;
+var extraJson = {};
+var teamCode = "blue";
+var lobbyProxy = bridge.getLobbyServiceProxy();
+
+var postResult = lobbyProxy.sysCreateLobby(ownerCxId, lobbyType, rating, otherUserCxIds, settings, isReady, extraJson, teamCode);
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="r" label="Raw">
+```
+
+```r
+{
+    "service":"lobby",
+    "operation":"SYS_CREATE_LOBBY",
+    "data":{
+        "ownerCxId":"55555:aaa-bbb-ccc-ddd:asfasdf",
+        "lobbyType":"4v4",
+        "rating":76,
+        "otherUserCxIds":[
+            "55555:aaa-bbb-ccc-eee:asdfjkl"
+        ],
+        "settings":{},
+        "isReady":false,
+        "extraJson":{},
+        "teamCode":"blue"
+    }
+}
+```
+
+```mdx-code-block
+</TabItem>
 </Tabs>
 </BrowserWindow>
 ```

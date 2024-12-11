@@ -70,6 +70,35 @@ Evicts the specified user from the specified lobby.
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="cfs" label="Cloud Code">
+```
+
+```cfscript
+var lobbyId = "55555:4v4:19";
+var cxId = "55555:aaa-bbb-ccc-ddd:asdfjkl";
+var lobbyProxy = bridge.getLobbyServiceProxy();
+
+var postResult = lobbyProxy.sysRemoveMember(lobbyId, cxId);
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="r" label="Raw">
+```
+
+```r
+{
+    "service":"lobby",
+    "operation":"SYS_REMOVE_MEMBER",
+    "data":{
+        "lobbyId":"55555:4v4:19",
+        "cxId":"55555:aaa-bbb-ccc-ddd:asdfjkl"
+    }
+}
+```
+
+```mdx-code-block
+</TabItem>
 </Tabs>
 </BrowserWindow>
 ```

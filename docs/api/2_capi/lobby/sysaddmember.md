@@ -74,6 +74,47 @@ Adds the given member to the given lobby instance.
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="cfs" label="Cloud Code">
+```
+
+```cfscript
+var memberCxId = "55555:aaa-bbb-ccc-ddd:ljljlj";
+var lobbyId = "55555:4v4:3";
+var otherUserCxIds = [
+    "55555:aaa-bbb-ccc-eee:asdfjkl"
+];
+var isReady = False;
+var extraJson = {};
+var teamCode = "blue";
+var lobbyProxy = bridge.getLobbyServiceProxy();
+
+var postResult = lobbyProxy.sysAddMember(memberCxId, lobbyId, otherUserCxIds, isReady, extraJson, teamCode);
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="r" label="Raw">
+```
+
+```r
+{
+    "service":"lobby",
+    "operation":"SYS_ADD_MEMBER",
+    "data":{
+        "memberCxId":"55555:aaa-bbb-ccc-ddd:ljljlj",
+        "lobbyId":"55555:4v4:3",
+        "otherUserCxIds":[
+            "55555:aaa-bbb-ccc-eee:asdfjkl"
+        ],
+        "isReady":false,
+        "extraJson":{},
+        "teamCode":"blue"
+    }
+}
+```
+
+```mdx-code-block
+</TabItem>
 </Tabs>
 </BrowserWindow>
 ```
