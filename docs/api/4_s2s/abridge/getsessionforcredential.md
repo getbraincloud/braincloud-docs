@@ -59,6 +59,15 @@ externalAuthType | Optional parameter to specify the external authenticationType
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+//Switch to CC tab
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

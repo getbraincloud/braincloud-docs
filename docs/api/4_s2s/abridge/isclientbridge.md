@@ -52,6 +52,15 @@ This returns true if the script context is client.
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
