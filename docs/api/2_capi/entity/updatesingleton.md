@@ -124,6 +124,30 @@ var version = -1;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  entityType = "settings";
+var  jsonEntityData = {
+    "difficulty": "normal"
+};
+var  jsonEntityAcl = {
+    "other": 0
+};
+var  version = -1;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.entityService.updateSingleton(entityType:entityType, jsonEntityData:jsonEntityData, jsonEntityAcl:jsonEntityAcl, version:version);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

@@ -13,7 +13,7 @@ Register callback for RelayServer system messages.
 ```csharp
 RSDataCallback rsDataCallback = (response) =>
 {
-    Debug.Log(string.Format("Success | {0}", response));  
+    Debug.Log(string.Format("Success | {0}", response));
 };
 
 <%= data.branding.codePrefix %>.RelayService.RegisterSystemCallback(rsDataCallback);
@@ -51,8 +51,28 @@ RSDataCallback rsDataCallback = (response) =>
 <TabItem value="js" label="JavaScript">
 ```
 
-```cpp
-<%= data.branding.codePrefix %>->getRelayService()->registerSystemCallback(this);
+```javascript
+<%= data.branding.codePrefix %>.relay.registerSystemCallback(result =>
+{
+	var status = result.status;
+	console.log(status + " : " + JSON.stringify(result, null, 2));
+});
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+
+ServerResponse result = await <%= data.branding.codePrefix %>.relayService.registerSystemCallback();
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
 ```
 
 ```mdx-code-block
@@ -78,4 +98,3 @@ RSDataCallback rsDataCallback = (response) =>
 </Tabs>
 </BrowserWindow>
 ```
-

@@ -104,6 +104,26 @@ var maxReturn = 20;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  where = {
+    "groupType": "BLUE"
+};
+var  maxReturn = 20;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.groupService.getRandomGroupsMatching(where:where, maxReturn:maxReturn);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

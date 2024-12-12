@@ -70,6 +70,15 @@ ArrayList<Integer> packetTimeouts = new ArrayList<Integer>(
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+<%= data.branding.codePrefix %>.brainCloudManager._packetTimeouts = [15,20,35,50];
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

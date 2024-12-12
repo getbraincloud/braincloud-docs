@@ -91,6 +91,23 @@ var base64EncReceiptData = "Sample iTunes Receipt";
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  base64EncReceiptData = "Sample iTunes Receipt";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.productService.verifyItunesReceipt(base64EncReceiptData:base64EncReceiptData);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

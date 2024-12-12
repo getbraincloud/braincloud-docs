@@ -109,6 +109,25 @@ var body = "This is the body of the email";
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  profileId = "f7144cc0-b996-440f-8459-21b0ecb91a10";
+var  subject = "Basic email subject";
+var  body = "This is the body of the email";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.mailService.sendBasicEmail(profileId:profileId, subject:subject, body:body);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

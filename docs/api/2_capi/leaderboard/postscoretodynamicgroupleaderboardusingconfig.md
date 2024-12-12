@@ -127,6 +127,36 @@ var configJson = {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  leaderboardId = "aLeaderboardId";
+var  groupId = "a-group-id";
+var  score = 10;
+var  scoreData = {
+    "nickname": "batman"
+};
+var  configJson = {
+    "leaderboardType": "HIGH_VALUE",
+    "rotationType": "DAYS",
+    "numDaysToRotate": 4,
+    "resetAt": "[[#ts+60000]]",
+    "retainedCount": 2,
+    "expireInMins": null
+};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.leaderboardService.postScoreToDynamicGroupLeaderboardUsingConfig(leaderboardId:leaderboardId, groupId:groupId, score:score, scoreData:scoreData, configJson:configJson);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

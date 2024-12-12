@@ -89,6 +89,22 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+
+ServerResponse result = await <%= data.branding.codePrefix %>.s3HandlingService.getFileList();
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

@@ -97,6 +97,23 @@ var lobbyTypes = [ "2v2", "4v4" ];
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  lobbyTypes = [ "2v2", "4v4" ];
+
+ServerResponse result = await <%= data.branding.codePrefix %>.lobbyService.getRegionsForLobbies(lobbyTypes:lobbyTypes);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

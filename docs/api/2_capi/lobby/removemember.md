@@ -105,6 +105,24 @@ var cxId = "55555:aaa-bbb-ccc-ddd:asdfjkl";
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  lobbyId = "55555:4v4:19";
+var  cxId = "55555:aaa-bbb-ccc-ddd:asdfjkl";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.lobbyService.removeMember(lobbyId:lobbyId, cxId:cxId);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

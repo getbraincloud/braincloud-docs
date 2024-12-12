@@ -102,6 +102,24 @@ var entityId = "aaaa-bbbb-cccc-dddd";
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  entityType = "athletes";
+var  entityId = "aaaa-bbbb-cccc-dddd";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.customEntityService.readEntity(entityType:entityType, entityId:entityId);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

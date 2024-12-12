@@ -99,6 +99,27 @@ var encodedText = new Blob(["hello, world!"], {type: 'text/plain'});
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  cloudPath = "";
+var  cloudName = "image.png";
+var  share = true;
+var  overwrite = true;
+var  encodedText = new Blob(["hello, world!"], {type: 'text/plain'});
+
+ServerResponse result = await <%= data.branding.codePrefix %>.fileService.UploadFileFromMemory(cloudPath:cloudPath, cloudName:cloudName, share:share, overwrite:overwrite, encodedText:encodedText);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

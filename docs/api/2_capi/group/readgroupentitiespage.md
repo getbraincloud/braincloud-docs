@@ -113,6 +113,36 @@ var context = {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  context = {
+    "pagination": {
+        "rowsPerPage": 50,
+        "pageNumber": 1
+    },
+    "searchCriteria": {
+        "groupId": "130745f4-df57-4162-8f90-d89214fc8512",
+        "entityType": "BLUE"
+    },
+    "sortCriteria": {
+        "createdAt": 1,
+        "updatedAt": -1
+    }
+};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.groupService.readGroupEntitiesPage(context:context);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

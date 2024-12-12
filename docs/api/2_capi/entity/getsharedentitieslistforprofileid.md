@@ -129,6 +129,31 @@ var maxReturn = 50;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  targetProfileId = "profile1";
+var  whereJson = {
+    "entityType": "address",
+    "data.street": "1309 Carling"
+};
+var  orderByJson = {
+    "data.street": 1
+};
+var  maxReturn = 50;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.entityService.getSharedEntitiesListForProfileId(targetProfileId:targetProfileId, whereJson:whereJson, orderByJson:orderByJson, maxReturn:maxReturn);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

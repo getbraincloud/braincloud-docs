@@ -1,15 +1,17 @@
 # SysAddEvent
+
 Add event to stream.
 
 <PartialServop service_name="playbackStream" operation_name="SYS_ADD_EVENT" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | The player adding an event.
-playbackStreamId | Identifies the stream to read.
-eventData | Describes the event.
-summary | Current summary data as of this event.
+
+| Parameter        | Description                            |
+| ---------------- | -------------------------------------- |
+| profileId        | The player adding an event.            |
+| playbackStreamId | Identifies the stream to read.         |
+| eventData        | Describes the event.                   |
+| summary          | Current summary data as of this event. |
 
 ## Usage
 
@@ -61,6 +63,15 @@ summary | Current summary data as of this event.
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -73,7 +84,7 @@ var eventData = {
 var summary = {
     "total": 5
 };
-var playbackStreamProxy = bridge.getPlaybackstreamServiceProxy();
+var playbackStreamProxy = bridge.getPlaybackStreamServiceProxy();
 
 var postResult = playbackStreamProxy.sysAddEvent(profileId, playbackStreamId, eventData, summary);
 ```
@@ -105,15 +116,15 @@ var postResult = playbackStreamProxy.sysAddEvent(profileId, playbackStreamId, ev
 </Tabs>
 </BrowserWindow>
 ```
+
 <details>
 <summary>JSON Response</summary>
 
 ```json
 {
-  "status" : 200,
-  "data" : null
+    "status": 200,
+    "data": null
 }
 ```
 
 </details>
-

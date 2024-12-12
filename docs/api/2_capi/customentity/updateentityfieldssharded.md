@@ -143,6 +143,46 @@ var shardKeyJson = {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  entityType = "athletes";
+var  entityId = "aaaa-bbbb-cccc-dddd";
+var  version = 1;
+var  fieldsJson = {
+  "stats.gamesPlayedTotal": 2,
+  "stats.goalsTotal": 2,
+  "games.played": [
+    {
+      "date": "2022-01-21",
+      "goals": 1,
+      "assists": 1,
+      "penalties": 0
+    },
+    {
+      "date": "2022-01-10",
+      "goals": 1,
+      "assists": 0,
+      "penalties": 1
+    }
+  ]
+};
+var  shardKeyJson = {
+  "ownerId": "profileIdOfEntityOwner"
+};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.customEntityService.updateEntityFieldsSharded(entityType:entityType, entityId:entityId, version:version, fieldsJson:fieldsJson, shardKeyJson:shardKeyJson);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

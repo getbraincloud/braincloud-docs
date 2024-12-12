@@ -102,6 +102,24 @@ var numMatches = 1;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  rangeDelta = 10;
+var  numMatches = 1;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.matchMakingService.findPlayers(rangeDelta:rangeDelta, numMatches:numMatches);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

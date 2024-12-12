@@ -116,6 +116,26 @@ var updateContactEmail = true;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  oldEmailAddress = "oldemail@email.com";
+var  authenticationToken = "password";
+var  newEmailAddress = "newemail@email.com";
+var  updateContactEmail = true;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.identityService.changeEmailIdentity(oldEmailAddress:oldEmailAddress, authenticationToken:authenticationToken, newEmailAddress:newEmailAddress, updateContactEmail:updateContactEmail);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

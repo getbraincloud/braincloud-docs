@@ -121,6 +121,32 @@ var hintJson = {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  where = {
+    "data.team": "Red",
+    "data.position": "Forward"
+};
+var  orderBy = {};
+var  maxReturn = 50;
+var  hintJson = {
+    "data.team": 1,
+    "data.position": 1
+};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.globalEntityService.GetSystemEntityListWithHint(where:where, orderBy:orderBy, maxReturn:maxReturn, hintJson:hintJson);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

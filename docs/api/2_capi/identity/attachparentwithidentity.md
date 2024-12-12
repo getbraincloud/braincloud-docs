@@ -123,6 +123,27 @@ var forceCreate = true;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  externalId = "email@email.com";
+var  authenticationToken = "email@email.com";
+var  authenticationType = "<%= data.branding.codePrefix %>.identity.authenticationType.email;
+var  externalAuthName = "";
+var  forceCreate = true;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.identityService.attachParentWithIdentity(externalId:externalId, authenticationToken:authenticationToken, authenticationType:authenticationType, externalAuthName:externalAuthName, forceCreate:forceCreate);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

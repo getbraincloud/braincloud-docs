@@ -66,6 +66,15 @@ InitializeIdentity must be called before you can authenticate a user anonymously
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+<%= data.branding.codePrefix %>.initializeIdentity = function(profileId, anonymousId)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

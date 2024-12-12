@@ -138,6 +138,36 @@ var timeToLive = null;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  entityType = "athletes";
+var  entityId = "aaaa-bbbb-cccc-dddd";
+var  version = 1;
+var  dataJson = {
+  "firstName": "Super",
+  "surName": "Star",
+  "position": "defense",
+  "goals": 3,
+  "assists": 5
+};
+var  acl = {
+  "other": 0
+};
+var  timeToLive = null;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.customEntityService.updateEntity(entityType:entityType, entityId:entityId, version:version, dataJson:dataJson, acl:acl, timeToLive:timeToLive);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

@@ -102,6 +102,24 @@ var deviceToken = "12345";
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  deviceType = "IOS";
+var  deviceToken = "12345";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.pushNotificationService.registerPushNotificationToken(deviceType:deviceType, deviceToken:deviceToken);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

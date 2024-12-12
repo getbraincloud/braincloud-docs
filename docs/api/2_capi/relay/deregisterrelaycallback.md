@@ -46,8 +46,17 @@ Deregisters callback for relay messages coming from peers.
 <TabItem value="js" label="JavaScript">
 ```
 
-```cpp
-<%= data.branding.codePrefix %>->getRelayService()->deregisterRelayCallback();
+```javascript
+<%= data.branding.codePrefix %>.relay.deregisterRelayCallback();
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+// Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block
@@ -73,4 +82,3 @@ Deregisters callback for relay messages coming from peers.
 </Tabs>
 </BrowserWindow>
 ```
-

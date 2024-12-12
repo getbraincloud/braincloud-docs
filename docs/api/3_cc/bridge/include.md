@@ -3,17 +3,24 @@
 Use for including a share script into the current script. The included script is pre-rendered and combined into the current script.
 
 ```
-bridge.include(“path/to/scriptname.ccjs”); 
+"use strict";
+bridge.include(“path/to/scriptname.ccjs”); // put the bridge.include()call as the first line in your script.
+...
 ```
 
+:::caution
+Make sure to put the bridge.include()call as the first line in your script. This is a necessary requirement, as any other lines preceding the bridge.include()call must be blank lines, //comments, or the ”use strict” declaration.
+:::
+
 :::tip
-If without specifying the script path in include operation, the system will only search the scripts in the same folder as the current script located in.
+The path of the included script is a relative path, ff without specifying the script path in include operation, the system will only search the scripts in the same folder as the current script located in.
 :::
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-scriptName | The name of the script with its path (the relative path to the included script file).
+
+| Parameter  | Description                                                                           |
+| ---------- | ------------------------------------------------------------------------------------- |
+| scriptName | The name of the script with its path (the relative path to the included script file). |
 
 ## Usage
 
@@ -65,18 +72,20 @@ scriptName | The name of the script with its path (the relative path to the incl
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
 ```cfscript
-// MathFunctions script
-
-function sumNums( num1, num2 ) {
-    return (num1 + num2);
-}
-
-
-// The script that includes MathFunctions script
+// This is a script that includes MathFunctions script
 "use strict";
 
 bridge.include("path/to/MathFunctions.ccjs");
@@ -87,6 +96,12 @@ function main() {
     return response;
 }
 main();
+
+
+// This is MathFunctions script which will be included from the script above.
+function sumNums( num1, num2 ) {
+    return (num1 + num2);
+}
 ```
 
 ```mdx-code-block
@@ -94,25 +109,8 @@ main();
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-// MathFunctions script
-
-function sumNums( num1, num2 ) {
-    return (num1 + num2);
-}
-
-
-// The script that includes MathFunctions script
-"use strict";
-
-bridge.include("path/to/MathFunctions.ccjs");
-
-function main() {
-    var response = {};
-    response.answer = sumNums(data.number1, data.number2);
-    return response;
-}
-main();
+```r
+// Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block
@@ -120,4 +118,3 @@ main();
 </Tabs>
 </BrowserWindow>
 ```
-

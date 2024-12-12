@@ -64,6 +64,15 @@ eventBlock = ^(NSString *eventsJson) {  };
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+<%= data.branding.codePrefix %>.registerEventCallback(eventCallback);
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

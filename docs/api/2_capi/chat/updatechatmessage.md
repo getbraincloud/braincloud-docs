@@ -124,6 +124,31 @@ var contentJson = {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  channelId = "55555:gl:bcDev";
+var  msgId = "123456789";
+var  version = 1;
+var  contentJson = {
+    "text": "New plain text message",
+    "custom": {
+        "somethingNew": "amazing"
+    }
+};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.chatService.updateChatMessage(channelId:channelId, msgId:msgId, version:version, contentJson:contentJson);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

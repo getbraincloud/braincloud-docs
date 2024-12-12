@@ -76,6 +76,23 @@ var receipt = "Receipt XML";
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  receipt = "Receipt XML";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.productService.verifyMicrosoftReceipt(receipt:receipt);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

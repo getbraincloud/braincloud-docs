@@ -159,6 +159,36 @@ var context = {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  context = {
+    "pagination": {
+        "rowsPerPage": 10,
+        "pageNumber": 1
+    },
+    "searchCriteria": {
+        "msgbox": "inbox",
+        "read": false
+    },
+    "sortCriteria": {
+        "mbCr": 1,
+        "mbUp": -1
+    }
+};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.messagingService.getMessagesPage(context:context);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

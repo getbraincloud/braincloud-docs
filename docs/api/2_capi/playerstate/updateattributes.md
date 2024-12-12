@@ -105,6 +105,27 @@ var wipeExisting = false;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  attributes = {
+    "key1": "value1",
+    "key2": "value2"
+};
+var  wipeExisting = false;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.playerStateService.updateAttributes(attributes:attributes, wipeExisting:wipeExisting);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

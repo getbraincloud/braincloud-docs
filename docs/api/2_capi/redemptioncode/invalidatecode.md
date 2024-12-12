@@ -108,6 +108,25 @@ var invalidationReason = "Redemption code no longer valid.";
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  scanCode = "the-scan-code";
+var  codeType = "the-code-type";
+var  invalidationReason = "Redemption code no longer valid.";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.redemptionCodeService.invalidateCode(scanCode:scanCode, codeType:codeType, invalidationReason:invalidationReason);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

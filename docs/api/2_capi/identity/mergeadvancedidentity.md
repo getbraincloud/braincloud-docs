@@ -115,6 +115,26 @@ var extraJson = {"key":"value"};
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  authenticationType = <%= data.branding.codePrefix %>.brainCloudClient.authentication.AUTHENTICATION_TYPE_UNIVERSAL;
+var  ids = {externalId: "authAdvancedUser", authenticationToken: "authAdvancedPass", authenticationSubType: ""};
+var  forceCreate = true;
+var  extraJson = {"key":"value"};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.identityService.mergeAdvancedIdentity(authenticationType:authenticationType, ids:ids, forceCreate:forceCreate, extraJson:extraJson);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

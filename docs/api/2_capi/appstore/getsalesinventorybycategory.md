@@ -121,6 +121,27 @@ var category = "subscriptions";
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  storeId = "itunes";
+var  userCurrency = {
+    "userCurrency": "USD"
+};
+var  category = "subscriptions";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.appStoreService.getSalesInventoryByCategory(storeId:storeId, userCurrency:userCurrency, category:category);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

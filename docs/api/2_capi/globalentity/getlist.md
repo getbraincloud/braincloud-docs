@@ -125,6 +125,29 @@ var maxReturn = 50;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  where = {
+    "entityType": "address"
+};
+var  orderBy = {
+    "data.address": 1
+};
+var  maxReturn = 50;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.globalEntityService.getList(where:where, orderBy:orderBy, maxReturn:maxReturn);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

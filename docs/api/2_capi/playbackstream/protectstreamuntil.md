@@ -103,13 +103,31 @@ var numDays = 365;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  playbackStreamId = "streamId";
+var  numDays = 365;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.playbackStreamService.protectStreamUntil(playbackStreamId:playbackStreamId, numDays:numDays);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
 ```cfscript
 var playbackStreamId = "streamId";
 var numDays = 365;
-var playbackStreamProxy = bridge.getPlaybackstreamServiceProxy();
+var playbackStreamProxy = bridge.getPlaybackStreamServiceProxy();
 
 var postResult = playbackStreamProxy.protectStreamUntil(playbackStreamId, numDays);
 ```

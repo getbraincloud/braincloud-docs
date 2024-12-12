@@ -131,6 +131,35 @@ var timeToLive = null;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  entityType = "athletes";
+var  version = 1;
+var  dataJson = {
+  "firstName": "Super",
+  "surName": "Star",
+  "position": "forward",
+  "goals": 3,
+  "assists": 5
+};
+var  acl = {
+  "other": 1
+};
+var  timeToLive = null;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.customEntityService.updateSingleton(entityType:entityType, version:version, dataJson:dataJson, acl:acl, timeToLive:timeToLive);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

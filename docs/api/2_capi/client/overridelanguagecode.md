@@ -67,6 +67,16 @@ var languageCode = "en";
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var languageCode = "en";
+<%= data.branding.codePrefix %>.overrideLanguageCode(languageCode);
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

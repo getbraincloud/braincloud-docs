@@ -170,6 +170,42 @@ var teamCode = "blue";
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  lobbyType = "4v4";
+var  rating = 76;
+var  maxSteps = 3;
+var  algo = {
+    "strategy": "ranged-absolute",
+    "alignment": "center",
+    "ranges": [
+        5,
+        7.5,
+        10
+    ]
+};
+var  filterJson = {
+    "cheater": false
+};
+var  otherUserCxIds = [ "55555:aaa-bbb-ccc-ddd:asdfjkl" ];
+var  settings = {};
+var  isReady = false;
+var  extraJson = {};
+var  teamCode = "blue";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.lobbyService.findOrCreateLobby(lobbyType:lobbyType, rating:rating, maxSteps:maxSteps, algo:algo, filterJson:filterJson, otherUserCxIds:otherUserCxIds, settings:settings, isReady:isReady, extraJson:extraJson, teamCode:teamCode);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

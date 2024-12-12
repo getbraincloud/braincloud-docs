@@ -111,6 +111,25 @@ var externalIds = [ "profileId1", "profileId2" ];
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  friendPlatform = "Facebook";
+var  mode = "ADD";
+var  externalIds = [ "profileId1", "profileId2" ];
+
+ServerResponse result = await <%= data.branding.codePrefix %>.friendService.addFriendsFromPlatform(friendPlatform:friendPlatform, mode:mode, externalIds:externalIds);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

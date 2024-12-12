@@ -136,6 +136,24 @@ var content = {text: "Looking to sell a couch for 105 gold coins.", SELL_ITEM: {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  channelId = "22817:gl:CHAT_TRADE";
+var  content = {text: "Looking to sell a couch for 105 gold coins.", SELL_ITEM: {ITEM_TYPE: "COUCH"}};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.chatService.postChatMessage(channelId:channelId, content:content);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

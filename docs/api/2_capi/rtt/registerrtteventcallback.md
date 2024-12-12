@@ -79,6 +79,15 @@ Coming soon!
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+<%= data.branding.codePrefix %>.rttService.registerRTTEventCallback(rttCallback);
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

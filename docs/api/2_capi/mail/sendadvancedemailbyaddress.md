@@ -133,6 +133,53 @@ var jsonServiceParams = {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  emailAddress = "test@email.com";
+var  jsonServiceParams = {
+    "fromAddress": "email@company.com",
+    "fromName": "Jane Doe",
+    "replyToAddress": "optional@company.com",
+    "replyToName": "Optional ReplyTo",
+    "cc": [
+        "xxx@company.com"
+    ],
+    "bcc": [
+        "yyy@company.com"
+    ],
+    "templateId": "d-www-xxx-yyy-zzz",
+    "dynamicData": {
+        "user": {
+            "firstName": "John",
+            "lastName": "Doe"
+        },
+        "resetLink": "www.dummuyLink.io"
+    },
+    "categories": [
+        "category1",
+        "category2"
+    ],
+    "attachments": [
+        {
+            "content": "VGhpcyBhdHRhY2htZW50IHRleHQ=",
+            "filename": "attachment.txt"
+        }
+    ]
+};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.mailService.sendAdvancedEmailByAddress(emailAddress:emailAddress, jsonServiceParams:jsonServiceParams);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

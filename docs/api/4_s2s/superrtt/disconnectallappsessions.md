@@ -52,6 +52,15 @@ Force a disconnect for all currently active RTT sessions for the app.
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+// S2S call: to view example, switch to the Raw tab.
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

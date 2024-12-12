@@ -109,6 +109,25 @@ var authenticationType = "Facebook";
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  externalId = "846557642688";
+var  authenticationToken = "ghbiuhgvbiuhbiunbuibgin";
+var  authenticationType = "Facebook";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.identityService.refreshIdentity(externalId:externalId, authenticationToken:authenticationToken, authenticationType:authenticationType);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

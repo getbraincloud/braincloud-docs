@@ -111,6 +111,25 @@ var extraJson = {};
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  lobbyId = "55555:4v4:19";
+var  isReady = true;
+var  extraJson = {};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.lobbyService.updateReady(lobbyId:lobbyId, isReady:isReady, extraJson:extraJson);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

@@ -122,6 +122,32 @@ var startTime = 1437579786000;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  profileId = "kjhkjhgfkjshgkjh";
+var  alertContentJson = {
+    "body": "content of message",
+    "title": "message title"
+};
+var  customDataJson = {
+    "field1": "value1",
+    "field2": "value2"
+};
+var  startTime = 1437579786000;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.pushNotificationService.scheduleNormalizedPushNotificationUTC(profileId:profileId, alertContentJson:alertContentJson, customDataJson:customDataJson, startTime:startTime);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

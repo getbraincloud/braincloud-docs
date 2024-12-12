@@ -75,6 +75,23 @@ var signedRequest = "Sample Facebook Receipt";
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  signedRequest = "Sample Facebook Receipt";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.productService.confirmFacebookPurchase(signedRequest:signedRequest);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

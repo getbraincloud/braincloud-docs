@@ -131,6 +131,32 @@ var jsonData = {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  groupId = "a-group-id";
+var  entityType = "myEntityType";
+var  isOwnedByGroupMember = false;
+var  acl = {
+    "member": 2,
+    "other": 1
+};
+var  jsonData = {
+    "aKey": "aValue"
+};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.groupService.createGroupEntity(groupId:groupId, entityType:entityType, isOwnedByGroupMember:isOwnedByGroupMember, acl:acl, jsonData:jsonData);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

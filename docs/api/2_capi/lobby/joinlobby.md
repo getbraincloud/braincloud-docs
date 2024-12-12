@@ -124,6 +124,27 @@ var teamCode = "blue";
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  lobbyId = "55555:4v4:3";
+var  otherUserCxIds = [ "55555:aaa-bbb-ccc-ddd:asdfjkl" ];
+var  isReady = false;
+var  extraJson = {};
+var  teamCode = "blue";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.lobbyService.joinLobby(lobbyId:lobbyId, otherUserCxIds:otherUserCxIds, isReady:isReady, extraJson:extraJson, teamCode:teamCode);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

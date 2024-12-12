@@ -123,6 +123,27 @@ var includeDef = true;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  itemId = "aaa-bbb-ccc-ddd";
+var  version = 1;
+var  quantity = 1;
+var  shopId = null;
+var  includeDef = true;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.userItemsService.sellUserItem(itemId:itemId, version:version, quantity:quantity, shopId:shopId, includeDef:includeDef);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

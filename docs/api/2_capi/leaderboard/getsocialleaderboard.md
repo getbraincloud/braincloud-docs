@@ -117,6 +117,24 @@ var replaceName = false;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  leaderboardId = "default";
+var  replaceName = false;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.leaderboardService.getSocialLeaderboard(leaderboardId:leaderboardId, replaceName:replaceName);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

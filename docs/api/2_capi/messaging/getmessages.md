@@ -113,6 +113,25 @@ var markAsRead = false;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  msgbox = "inbox";
+var  msgIds = [ "msgId1", "msgId2" ];
+var  markAsRead = false;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.messagingService.getMessages(msgbox:msgbox, msgIds:msgIds, markAsRead:markAsRead);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

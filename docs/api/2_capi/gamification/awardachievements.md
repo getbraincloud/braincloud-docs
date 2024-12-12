@@ -97,6 +97,23 @@ var achievements = [ "EGG_ACH09", "EGG_ACH10" ];
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  achievements = [ "EGG_ACH09", "EGG_ACH10" ];
+
+ServerResponse result = await <%= data.branding.codePrefix %>.gamificationService.awardAchievements(achievements:achievements);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

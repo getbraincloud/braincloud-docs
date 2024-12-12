@@ -1,13 +1,15 @@
 # SysDeleteStream
+
 Delete a playback stream.
 
 <PartialServop service_name="playbackStream" operation_name="SYS_DELETE_STREAM" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | The player deleting the stream.
-playbackStreamId | Identifies the stream to delete.
+
+| Parameter        | Description                      |
+| ---------------- | -------------------------------- |
+| profileId        | The player deleting the stream.  |
+| playbackStreamId | Identifies the stream to delete. |
 
 ## Usage
 
@@ -65,7 +67,7 @@ playbackStreamId | Identifies the stream to delete.
 ```cfscript
 var profileId = "player";
 var playbackStreamId = "stream";
-var playbackStreamProxy = bridge.getPlaybackstreamServiceProxy();
+var playbackStreamProxy = bridge.getPlaybackStreamServiceProxy();
 
 var postResult = playbackStreamProxy.sysDeleteStream(profileId, playbackStreamId);
 ```
@@ -91,15 +93,15 @@ var postResult = playbackStreamProxy.sysDeleteStream(profileId, playbackStreamId
 </Tabs>
 </BrowserWindow>
 ```
+
 <details>
 <summary>JSON Response</summary>
 
 ```json
 {
-  "status" : 200,
-  "data" : null
+    "status": 200,
+    "data": null
 }
 ```
 
 </details>
-

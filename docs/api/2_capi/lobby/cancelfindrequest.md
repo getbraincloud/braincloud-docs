@@ -94,6 +94,24 @@ var entryId = "cxckfek-ir";
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  lobbyType = "4v4";
+var  entryId = "cxckfek-ir";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.lobbyService.cancelFindRequest(lobbyType:lobbyType, entryId:entryId);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

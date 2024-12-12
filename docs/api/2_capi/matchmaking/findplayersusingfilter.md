@@ -111,6 +111,27 @@ var jsonExtraParams = {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  rangeDelta = 10;
+var  numMatches = 1;
+var  jsonExtraParams = {
+    "parm1": 10
+};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.matchMakingService.findPlayersUsingFilter(rangeDelta:rangeDelta, numMatches:numMatches, jsonExtraParams:jsonExtraParams);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

@@ -109,6 +109,25 @@ var details = {};
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  statusName = "a-status-name";
+var  additionalSecs = 1000;
+var  details = {};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.playerStateService.extendUserStatus(statusName:statusName, additionalSecs:additionalSecs, details:details);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

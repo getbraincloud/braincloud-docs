@@ -113,6 +113,27 @@ var jsonSummary = {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  ownerId = "internalPlayerId";
+var  matchId = "matchId";
+var  jsonSummary = {
+    "Address": "North America"
+};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.asyncMatchService.updateMatchSummaryData(ownerId:ownerId, matchId:matchId, version:version, jsonSummary:jsonSummary);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

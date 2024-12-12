@@ -118,6 +118,25 @@ var category = "collectables";
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  platform = "googlePlay";
+var  userCurrency = "credits";
+var  category = "collectables";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.productService.getSalesInventoryByCategory(platform:platform, userCurrency:userCurrency, category:category);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

@@ -54,6 +54,15 @@ var anonId = <%= data.branding.codePrefix %>.authentication.generateAnonymousId(
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var anonId = <%= data.branding.codePrefix %>.authentication.generateAnonymousId();
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

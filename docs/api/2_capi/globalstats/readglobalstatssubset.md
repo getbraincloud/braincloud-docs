@@ -97,6 +97,23 @@ var statistics = [ "ESTIMATE", "POINTS" ];
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  statistics = [ "ESTIMATE", "POINTS" ];
+
+ServerResponse result = await <%= data.branding.codePrefix %>.globalGameStatisticsService.readGlobalStatsSubset(statistics:statistics);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

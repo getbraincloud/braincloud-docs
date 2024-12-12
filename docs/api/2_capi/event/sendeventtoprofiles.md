@@ -113,6 +113,30 @@ var eventData = {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  toIds = [
+    "profileId1",
+    "profileId2"
+];
+var  eventType = "type1";
+var  eventData = {
+    "someMapAttribute": "someValue"
+};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.eventService.SendEventToProfiles(toIds:toIds, eventType:eventType, eventData:eventData);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

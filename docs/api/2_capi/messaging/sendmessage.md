@@ -109,6 +109,27 @@ var contentJson = {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  toProfileIds = [ "profileId1", "profileId2" ];
+var  contentJson = {
+    "subject": "Chat and messaging features are here!",
+    "text": "Check out the new chat and messaging features!"
+};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.messagingService.sendMessage(toProfileIds:toProfileIds, contentJson:contentJson);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

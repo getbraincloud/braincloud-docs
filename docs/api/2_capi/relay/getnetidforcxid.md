@@ -46,8 +46,17 @@ Returns the netId associated with a connection Id.
 <TabItem value="js" label="JavaScript">
 ```
 
-```cpp
-<%= data.branding.codePrefix %>->getRelayService()->getNetIdForCxId();
+```javascript
+<%= data.branding.codePrefix %>.relay.getNetIdForCxId();
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+// Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block
@@ -73,4 +82,3 @@ Returns the netId associated with a connection Id.
 </Tabs>
 </BrowserWindow>
 ```
-

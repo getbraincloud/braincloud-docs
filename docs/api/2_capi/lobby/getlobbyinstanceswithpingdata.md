@@ -126,6 +126,32 @@ var "criteriaJson" = {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  lobbyType = "Relay_lobbyT_v2";
+var  "criteriaJson" = {
+      "rating": {
+        "min": 10,
+        "max": 100
+      },
+      "ping", {
+        "max": 200
+      }
+    };
+
+ServerResponse result = await <%= data.branding.codePrefix %>.lobbyService.getLobbyInstancesWithPingData(lobbyType:lobbyType, criteriaJson:criteriaJson);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

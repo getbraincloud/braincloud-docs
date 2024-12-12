@@ -94,6 +94,23 @@ var jobId = "idsfihihfuvhvuh";
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  jobId = "idsfihihfuvhvuh";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.scriptService.CancelUserScriptBatch(jobId:jobId);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

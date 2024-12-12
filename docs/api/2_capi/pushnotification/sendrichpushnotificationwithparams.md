@@ -124,6 +124,28 @@ var substitutionJson = {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  toProfileId = "profile1";
+var  notificationTemplateId = 1;
+var  substitutionJson = {
+    "0": "value0",
+    "1": "value1"
+};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.pushNotificationService.sendRichPushNotificationWithParams(toProfileId:toProfileId, notificationTemplateId:notificationTemplateId, substitutionJson:substitutionJson);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

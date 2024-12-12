@@ -95,6 +95,23 @@ var userPictureUrl = "someURL";
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  userPictureUrl = "someURL";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.playerStateService.updateUserPictureUrl(userPictureUrl:userPictureUrl);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

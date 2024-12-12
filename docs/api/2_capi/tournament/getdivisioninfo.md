@@ -97,6 +97,23 @@ var divSetId = "exampleDivSetId";
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  divSetId = "exampleDivSetId";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.tournamentService.getDivisionInfo(divSetId:divSetId);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

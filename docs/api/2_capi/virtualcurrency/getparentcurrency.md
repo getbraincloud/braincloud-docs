@@ -102,6 +102,24 @@ var levelName = "master";
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  vcId = "coins";
+var  levelName = "master";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.virtualCurrencyService.getParentCurrency(vcId:vcId, levelName:levelName);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

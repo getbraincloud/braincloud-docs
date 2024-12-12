@@ -103,6 +103,23 @@ var channelId = "55555:gl:bcDev";
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  channelId = "55555:gl:bcDev";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.chatService.channelDisconnect(channelId:channelId);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

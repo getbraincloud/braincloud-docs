@@ -95,6 +95,24 @@ var continueAnon = true;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  facebookId = "someFacebookId";
+var  continueAnon = true;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.identityService.detachFacebookLimitedIdentity(facebookId:facebookId, continueAnon:continueAnon);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

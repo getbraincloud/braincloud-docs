@@ -142,6 +142,32 @@ var groupFileAcl = {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  userCloudPath = "dir1/dir2";
+var  userCloudFilename = "file";
+var  groupId = "dfsfsffsd";
+var  groupTreeId = "gpath";
+var  groupFilename = "gfile";
+var  overwriteIfPresent = true;
+var  groupFileAcl = {
+  "member": 2,
+  "other": 0
+};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.groupFileService.moveUserToGroupFile(userCloudPath:userCloudPath, userCloudFilename:userCloudFilename, groupId:groupId, groupTreeId:groupTreeId, groupFilename:groupFilename, overwriteIfPresent:overwriteIfPresent, groupFileAcl:groupFileAcl);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

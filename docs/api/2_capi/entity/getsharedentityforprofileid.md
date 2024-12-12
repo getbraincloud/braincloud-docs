@@ -104,6 +104,24 @@ var entityId = "someEntityId";
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  targetProfileId = "profile1";
+var  entityId = "someEntityId";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.entityService.getSharedEntityForProfileId(targetProfileId:targetProfileId, entityId:entityId);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

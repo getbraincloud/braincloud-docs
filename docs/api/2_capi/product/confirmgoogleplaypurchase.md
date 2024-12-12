@@ -104,6 +104,25 @@ var token = "Google Play purchase token";
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  orderId = "Google Play order ID";
+var  productId = "Google Play product ID";
+var  token = "Google Play purchase token";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.productService.confirmGooglePlayPurchase(orderId:orderId, productId:productId, token:token);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

@@ -60,8 +60,28 @@ static void relayCallback(byte[] data)
 <TabItem value="js" label="JavaScript">
 ```
 
-```cpp
-<%= data.branding.codePrefix %>->getRelayService()->RegisterRelayCallback(this);
+```javascript
+<%= data.branding.codePrefix %>.relay.RegisterRelayCallback(result =>
+{
+	var status = result.status;
+	console.log(status + " : " + JSON.stringify(result, null, 2));
+});
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+
+ServerResponse result = await <%= data.branding.codePrefix %>.relayService.RegisterRelayCallback();
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
 ```
 
 ```mdx-code-block
@@ -87,4 +107,3 @@ static void relayCallback(byte[] data)
 </Tabs>
 </BrowserWindow>
 ```
-

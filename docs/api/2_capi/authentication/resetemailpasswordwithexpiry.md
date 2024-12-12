@@ -103,6 +103,24 @@ var resetUrlTTLMinutes = 1440;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  emailAddress = "email@email.com";
+var  resetUrlTTLMinutes = 1440;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.authenticationV2Service.resetEmailPasswordWithExpiry(emailAddress:emailAddress, resetUrlTTLMinutes:resetUrlTTLMinutes);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

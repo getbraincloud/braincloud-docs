@@ -131,6 +131,30 @@ var statistics = {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  statistics = {
+    "DEAD_CATS": "RESET",
+    "LIVES_LEFT": "SET#9",
+    "MICE_KILLED": "INC#2",
+    "MICE_MULTIPLIER": "INC_TO_LIMIT#2#20",
+    "DOG_SCARE_BONUS_POINTS": "MAX#20",
+    "TREES_CLIMBED_REQ": "MIN#5"
+};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.playerStatisticsService.processStatistics(statistics:statistics);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

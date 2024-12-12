@@ -62,6 +62,15 @@ Start a playback stream.
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -69,7 +78,7 @@ Start a playback stream.
 var profileId = "player";
 var targetProfileId = "player";
 var includeSharedData = False;
-var playbackStreamProxy = bridge.getPlaybackstreamServiceProxy();
+var playbackStreamProxy = bridge.getPlaybackStreamServiceProxy();
 
 var postResult = playbackStreamProxy.sysStartStream(profileId, targetProfileId, includeSharedData);
 ```

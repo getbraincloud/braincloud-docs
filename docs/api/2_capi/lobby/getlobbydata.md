@@ -96,6 +96,23 @@ var lobbyId = "13229:Relay_lobbyT_v2:20";
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  lobbyId = "13229:Relay_lobbyT_v2:20";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.lobbyService.getLobbyData(lobbyId:lobbyId);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

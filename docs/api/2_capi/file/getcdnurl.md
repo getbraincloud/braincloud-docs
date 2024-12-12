@@ -102,6 +102,24 @@ var cloudFilename = "filename";
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  cloudPath = "dir1/dir2";
+var  cloudFilename = "filename";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.fileService.getCDNUrl(cloudPath:cloudPath, cloudFilename:cloudFilename);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

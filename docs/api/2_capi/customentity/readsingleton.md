@@ -95,6 +95,23 @@ var entityType = "athletes";
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  entityType = "athletes";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.customEntityService.readSingleton(entityType:entityType);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

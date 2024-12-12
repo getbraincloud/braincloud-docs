@@ -60,6 +60,15 @@ rewardBlock = ^(NSString *rewardsJson) {  };
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+<%= data.branding.codePrefix %>.registerRewardCallback(rewardCallback);
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

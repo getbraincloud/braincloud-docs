@@ -127,6 +127,32 @@ var summary = {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  ownerId = "the-owner-id";
+var  matchId = "the-match-id";
+var  pushContent = "An async-match has been abandoned!";
+var  summary = {
+  "abandonBy": {
+    "display": "Match abandoned by John Doe.",
+    "player": 2,
+    "reason": "forfeit"
+  }
+};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.asyncMatchService.abandonMatchWithSummaryData(ownerId:ownerId, matchId:matchId, pushContent:pushContent, summary:summary);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

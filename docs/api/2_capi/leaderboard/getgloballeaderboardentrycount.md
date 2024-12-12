@@ -95,6 +95,23 @@ var leaderboardId = "default";
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  leaderboardId = "default";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.leaderboardService.getGlobalLeaderboardEntryCount(leaderboardId:leaderboardId);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

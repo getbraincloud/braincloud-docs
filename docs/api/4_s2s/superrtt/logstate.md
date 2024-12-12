@@ -52,6 +52,15 @@ Initiate a state dump for diagnostic purposes on the given RTT servers. An empty
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+// S2S call: to view example, switch to the Raw tab.
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

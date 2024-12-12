@@ -109,6 +109,23 @@ var channelType = "all";
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  channelType = "all";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.chatService.getSubscribedChannels(channelType:channelType);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

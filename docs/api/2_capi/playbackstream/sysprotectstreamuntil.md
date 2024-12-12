@@ -61,13 +61,22 @@ Protects a playback stream from being purged (but not deleted) for the given num
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
 ```cfscript
 var playbackStreamId = "streamId";
 var numDays = 365;
-var playbackStreamProxy = bridge.getPlaybackstreamServiceProxy();
+var playbackStreamProxy = bridge.getPlaybackStreamServiceProxy();
 
 var postResult = playbackStreamProxy.sysProtectStreamUntil(playbackStreamId, numDays);
 ```

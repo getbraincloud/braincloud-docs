@@ -146,6 +146,32 @@ var retainedCount = 2;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  leaderboardId = "default";
+var  groupId = "actual_group_id";
+var  score = 10;
+var  data = {
+    "nickname": "batman"
+};
+var  leaderboardType = "HIGH_VALUE";
+var  rotationType = "WEEKLY";
+var  rotationResetTime = 158778236487;
+var  retainedCount = 2;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.leaderboardService.postScoreToGroupLeaderboardUTC(leaderboardId:leaderboardId, groupId:groupId, score:score, data:data, leaderboardType:leaderboardType, rotationType:rotationType, rotationResetTime:rotationResetTime, retainedCount:retainedCount);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

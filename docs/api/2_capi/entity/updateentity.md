@@ -130,6 +130,31 @@ var version = -1;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  entityId = "someEntityId";
+var  entityType = "address";
+var  jsonEntityData = {
+    "street": "1309 Carling Avenue, Ottawa, ON"
+};
+var  jsonEntityAcl = {
+    "other": 0
+};
+var  version = -1;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.entityService.updateEntity(entityId:entityId, entityType:entityType, jsonEntityData:jsonEntityData, jsonEntityAcl:jsonEntityAcl, version:version);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

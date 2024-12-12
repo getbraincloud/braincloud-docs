@@ -1,16 +1,15 @@
 # UpdateSettings
 
-Updates the settings for the given lobby instance.
-
-
+Updates the settings for the given lobby instance. The caller must be the owner of the lobby.
 
 <PartialServop service_name="lobby" operation_name="UPDATE_SETTINGS" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-lobbyId | Id of the specfified lobby.
-settings | Configuration data for the room.
+
+| Parameter | Description                      |
+| --------- | -------------------------------- |
+| lobbyId   | Id of the specified lobby.       |
+| settings  | Configuration data for the room. |
 
 ## Usage
 
@@ -104,6 +103,24 @@ var settings = {};
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  lobbyId = "55555:4v4:19";
+var  settings = {};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.lobbyService.updateSettings(lobbyId:lobbyId, settings:settings);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -149,16 +166,16 @@ if (postResult.status == 200) {
     "data": {}
 }
 ```
+
 </details>
 
 <details>
 <summary>Common Error Code</summary>
 
 ### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
+
+| Code  | Name            | Description                          |
+| ----- | --------------- | ------------------------------------ |
+| 40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature |
 
 </details>
-
-
