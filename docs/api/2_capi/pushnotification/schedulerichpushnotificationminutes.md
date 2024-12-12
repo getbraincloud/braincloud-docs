@@ -120,6 +120,29 @@ var minutesFromNow = 1;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  profileId = "kjhkjhgfkjshgkjh";
+var  notificationTemplateId = 1;
+var  substitutionJson = {
+    "0": "value0",
+    "1": "value1"
+};
+var  minutesFromNow = 1;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.pushNotificationService.scheduleRichPushNotificationMinutes(profileId:profileId, notificationTemplateId:notificationTemplateId, substitutionJson:substitutionJson, minutesFromNow:minutesFromNow);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

@@ -118,6 +118,28 @@ var data = {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  leaderboardId = "default";
+var  groupId = "actual_group_id";
+var  score = 10;
+var  data = {
+    "nickname": "batman"
+};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.leaderboardService.postScoreToGroupLeaderboard(leaderboardId:leaderboardId, groupId:groupId, score:score, data:data);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

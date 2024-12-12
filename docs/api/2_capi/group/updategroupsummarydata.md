@@ -109,6 +109,25 @@ var summaryData = { "faction": "warlords" };
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  groupId = "a-group-id";
+var  version = 3;
+var  summaryData = { "faction": "warlords" };
+
+ServerResponse result = await <%= data.branding.codePrefix %>.groupService.updateGroupSummaryData(groupId:groupId, version:version, summaryData:summaryData);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

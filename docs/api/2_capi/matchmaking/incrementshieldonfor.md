@@ -95,6 +95,23 @@ var minutes = 10;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  minutes = 10;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.matchMakingService.incrementShieldOnFor(minutes:minutes);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

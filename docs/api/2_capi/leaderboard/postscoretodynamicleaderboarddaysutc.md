@@ -149,6 +149,32 @@ var numDaysToRotate = 4;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  leaderboardId = "default";
+var  score = 10;
+var  jsonData = {
+    "nickname": "batman"
+};
+var  leaderboardType = "HIGH_VALUE";
+var  rotationType = "DAYS";
+var  rotationReset = Date.now();
+var  retainedCount = 2;
+var  numDaysToRotate = 4;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.leaderboardService.postScoreToDynamicLeaderboardDaysUTC(leaderboardId:leaderboardId, score:score, jsonData:jsonData, leaderboardType:leaderboardType, rotationType:rotationType, rotationReset:rotationReset, retainedCount:retainedCount, numDaysToRotate:numDaysToRotate);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

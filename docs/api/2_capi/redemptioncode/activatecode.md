@@ -108,6 +108,25 @@ var customCodeInfo = {};
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  scanCode = "the-scan-code";
+var  codeType = "the-code-type";
+var  customCodeInfo = {};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.redemptionCodeService.activateCode(scanCode:scanCode, codeType:codeType, customCodeInfo:customCodeInfo);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

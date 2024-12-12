@@ -105,6 +105,27 @@ var jsonEventProperties = {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  eventName = "customEvent";
+var  jsonEventProperties = {
+    "key1": "value",
+    "key2": "value"
+};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.dataStreamService.customPageEvent(eventName:eventName, jsonEventProperties:jsonEventProperties);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

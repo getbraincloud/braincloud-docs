@@ -54,6 +54,15 @@ var isAuthenticated = <%= data.branding.codePrefix %>.isAuthenticated();
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var isAuthenticated = <%= data.branding.codePrefix %>.isAuthenticated();
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

@@ -131,6 +131,35 @@ var isOwned = false;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  entityType = "athletes";
+var  dataJson = {
+  "firstName": "Super",
+  "surName": "Star",
+  "position": "forward",
+  "goals": 2,
+  "assists": 4
+};
+var  acl = {
+  "other": 1
+};
+var  timeToLive = null;
+var  isOwned = false;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.customEntityService.createEntity(entityType:entityType, dataJson:dataJson, acl:acl, timeToLive:timeToLive, isOwned:isOwned);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

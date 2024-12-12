@@ -127,6 +127,32 @@ var summary = {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  ownerId = "the-owner-id";
+var  matchId = "the-match-id";
+var  pushContent = "An async-match has been completed!";
+var  summary = {
+  "completedBy": {
+    "display": "John Doe wins!",
+    "player": 2,
+    "reason": "victory"
+  }
+};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.asyncMatchService.completeMatchWithSummaryData(ownerId:ownerId, matchId:matchId, pushContent:pushContent, summary:summary);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

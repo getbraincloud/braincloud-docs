@@ -172,6 +172,47 @@ var teamCode = "blue";
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  lobbyType = "4v4";
+var  rating = 76;
+var  maxSteps = 3;
+var  algo = {
+    "strategy": "compound",
+    "algos": [
+        { "criteria": "ping", "strategy": "absolute", "alignment": "absolute" },
+        {
+            "criteria": "rating",
+            "strategy": "ranged-absolute",
+            "alignment": "center"
+        }
+    ],
+    "compound-ranges": [
+        [30, [5, 10]],
+        [50, [10, 15]]
+    ]
+};
+var  filterJson = {
+    "cheater": false
+};
+var  otherUserCxIds = [ "123456:aaa-bbb-ccc-ddd:asdfjkl" ];
+var  isReady = false;
+var  extraJson = {};
+var  teamCode = "blue";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.lobbyService.findLobbyWithPingData(lobbyType:lobbyType, rating:rating, maxSteps:maxSteps, algo:algo, filterJson:filterJson, otherUserCxIds:otherUserCxIds, isReady:isReady, extraJson:extraJson, teamCode:teamCode);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

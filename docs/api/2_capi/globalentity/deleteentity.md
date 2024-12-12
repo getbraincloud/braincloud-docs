@@ -106,6 +106,24 @@ var version = 2;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  entityId = "a-entity-id";
+var  version = 2;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.globalEntityService.deleteEntity(entityId:entityId, version:version);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

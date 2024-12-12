@@ -104,6 +104,25 @@ var customRedemptionInfo = {};
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  scanCode = "a scan code";
+var  codeType = "a code type";
+var  customRedemptionInfo = {};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.redemptionCodeService.redeemCode(scanCode:scanCode, codeType:codeType, customRedemptionInfo:customRedemptionInfo);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

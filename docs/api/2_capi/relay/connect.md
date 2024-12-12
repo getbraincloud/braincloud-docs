@@ -1,12 +1,13 @@
 # Connect
 
-Start off a connection, based off connection type to <%= data.branding.productName %>'s Relay Servers.  Connect options come in from "ROOM_ASSIGNED" lobby callback
+Start off a connection, based off connection type to <%= data.branding.productName %>'s Relay Servers. Connect options come in from "ROOM_ASSIGNED" lobby callback
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-connectionType | The connection type. INVALID, WEBSOCKET, TCP, UDP, MAX
-options | Options sent in the connection
+
+| Parameter      | Description                                            |
+| -------------- | ------------------------------------------------------ |
+| connectionType | The connection type. INVALID, WEBSOCKET, TCP, UDP, MAX |
+| options        | Options sent in the connection                         |
 
 ## Usage
 
@@ -64,8 +65,28 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 <TabItem value="js" label="JavaScript">
 ```
 
-```cpp
-<%= data.branding.codePrefix %>->getRelayService()->connect(eRelayConnectionType.WEBSOCKET, server.host, port, server.passcode, server.lobbyId, this);
+```javascript
+<%= data.branding.codePrefix %>.relay.connect(eRelayConnectionType.WEBSOCKET, server.host, port, server.passcode, server.lobbyId, result =>
+{
+	var status = result.status;
+	console.log(status + " : " + JSON.stringify(result, null, 2));
+});
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+
+ServerResponse result = await <%= data.branding.codePrefix %>.relayService.connect(eRelayConnectionType.WEBSOCKET:eRelayConnectionType.WEBSOCKET, server.host:server.host, port:port, server.passcode:server.passcode, server.lobbyId:server.lobbyId);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
 ```
 
 ```mdx-code-block
@@ -91,4 +112,3 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 </Tabs>
 </BrowserWindow>
 ```
-

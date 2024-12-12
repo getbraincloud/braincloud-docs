@@ -109,6 +109,25 @@ var initialScore = 0;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  leaderboardId = "leaderboardId1";
+var  tournamentCode = "exampleTournamentCode1";
+var  initialScore = 0;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.tournamentService.joinTournament(leaderboardId:leaderboardId, tournamentCode:tournamentCode, initialScore:initialScore);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

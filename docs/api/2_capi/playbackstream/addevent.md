@@ -114,6 +114,29 @@ var jsonSummary = {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  playbackStreamId = "stream";
+var  jsonEventData = {
+    "value": 1
+};
+var  jsonSummary = {
+    "total": 5
+};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.playbackStreamService.addEvent(playbackStreamId:playbackStreamId, jsonEventData:jsonEventData, jsonSummary:jsonSummary);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

@@ -108,6 +108,25 @@ var recordInHistory = true;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  channelId = "22817:gl:CHAT_GROUPFINDER";
+var  chatMessage = "Hey, I am looking for new and experienced users to join our group.";
+var  recordInHistory = true;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.chatService.postChatMessageSimple(channelId:channelId, chatMessage:chatMessage, recordInHistory:recordInHistory);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

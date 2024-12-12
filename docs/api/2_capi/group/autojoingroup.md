@@ -117,6 +117,25 @@ var dataQueryJson = {};
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  groupType = "a-group-type-name";
+var  autoJoinStrategy = "JoinRandomGroup";
+var  dataQueryJson = {};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.groupService.autoJoinGroup(groupType:groupType, autoJoinStrategy:autoJoinStrategy, dataQueryJson:dataQueryJson);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

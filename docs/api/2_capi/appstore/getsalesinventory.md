@@ -114,6 +114,26 @@ var userCurrency = {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  storeId = "itunes";
+var  userCurrency = {
+    "userCurrency": "USD"
+};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.appStoreService.getSalesInventory(storeId:storeId, userCurrency:userCurrency);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

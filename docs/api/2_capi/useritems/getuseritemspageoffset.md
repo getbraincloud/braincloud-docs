@@ -109,6 +109,25 @@ var includeDef = true;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  context = "eyJzZWFyY2hDcml0ZXJpYSI6eyJlbnRpdHlUeXBlIjp7IiRyZWdleCI6Ii4qaWxkLioiLCIkb3B0";
+var  pageOffset = 1;
+var  includeDef = true;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.userItemsService.getUserItemsPageOffset(context:context, pageOffset:pageOffset, includeDef:includeDef);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

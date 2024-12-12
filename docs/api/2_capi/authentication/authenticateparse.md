@@ -111,6 +111,25 @@ var forceCreate = true;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  parseUserId = "someId1234";
+var  parseAuthToken = "authToken";
+var  forceCreate = true;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.authenticationV2Service.authenticateParse(googleId:googleId, googleToken:googleToken, forceCreate:forceCreate);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

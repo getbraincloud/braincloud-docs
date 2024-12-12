@@ -106,6 +106,24 @@ var text = "Chat and messaging features are here!";
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  toProfileIds = [ "profileId1", "profileId2" ];
+var  text = "Chat and messaging features are here!";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.messagingService.sendMessageSimple(toProfileIds:toProfileIds, text:text);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

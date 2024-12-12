@@ -154,6 +154,38 @@ var jsonSummary = {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  jsonOpponentIds = [
+    {
+        "platform": "BC",
+        "id": "profile ID-1"
+    },
+    {
+        "platform": "FB",
+        "id": "Facebook ID-1"
+    }
+];
+var  jsonMatchState = {};
+var  pushNotificationMessage = "You have been entered into an async-match!";
+var  nextPlayer = "Facebook ID-1";
+var  jsonSummary = {
+    "Address": "South Africa"
+};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.asyncMatchService.createMatchWithInitialTurn(jsonOpponentIds:jsonOpponentIds, jsonMatchState:jsonMatchState, pushNotificationMessage:pushNotificationMessage, nextPlayer:nextPlayer, jsonSummary:jsonSummary);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

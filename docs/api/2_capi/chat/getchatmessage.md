@@ -104,6 +104,24 @@ var msgId = "783820066133040";
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  channelId = "22817:gl:CHAT_GROUPFINDER";
+var  msgId = "783820066133040";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.chatService.getChatMessage(channelId:channelId, msgId:msgId);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

@@ -215,6 +215,36 @@ var context = {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  entityType = "athletes";
+var  context = {
+    "pagination": {
+        "rowsPerPage": 50,
+        "pageNumber": 1
+    },
+    "searchCriteria": {
+        "data.position": "defense"
+    },
+    "sortCriteria": {
+        "createdAt": 1,
+        "updatedAt": -1
+    }
+};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.customEntityService.getEntityPage(entityType:entityType, context:context);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

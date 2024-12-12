@@ -113,6 +113,35 @@ var fileDetails = [
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  category = "Tuning";
+var  fileDetails = [
+    {
+        "fileId": "hjvfsghguhuhrtghgh",
+        "shortName": "short",
+        "fileName": "fname",
+        "relativeUrl": "http://",
+        "absoluteUrl": "http://",
+        "category": "Tuning",
+        "date": 100000000000,
+        "md5Hash": "njf8ehg8tr7htgheguhh"
+    }
+];
+
+ServerResponse result = await <%= data.branding.codePrefix %>.s3HandlingService.getUpdatedFiles(category:category, fileDetails:fileDetails);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

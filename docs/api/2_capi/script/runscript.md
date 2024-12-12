@@ -116,6 +116,28 @@ var scriptData = {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  scriptName = "path/to/script1";
+var  scriptData = {
+    "arg1": 42,
+    "arg2": true,
+    "arg3": "example"
+};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.scriptService.runScript(scriptName:scriptName, scriptData:scriptData);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

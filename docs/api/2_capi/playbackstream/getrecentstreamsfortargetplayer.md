@@ -104,6 +104,24 @@ var maxNumStreams = 5;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  targetPlayerId = "player";
+var  maxNumStreams = 5;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.playbackStreamService.getRecentStreamsForTargetPlayer(targetPlayerId:targetPlayerId, maxNumStreams:maxNumStreams);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

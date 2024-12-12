@@ -102,6 +102,26 @@ var summaryFriendData = {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  summaryFriendData = {
+    "xp": 12,
+    "attributeName": "value"
+};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.playerStateService.updateSummaryFriendData(summaryFriendData:summaryFriendData);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

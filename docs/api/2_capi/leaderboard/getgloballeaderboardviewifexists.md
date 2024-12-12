@@ -123,6 +123,26 @@ var afterCount = 4;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  leaderboardId = "default";
+var  sortOrder = "HIGH_TO_LOW";
+var  beforeCount = 3;
+var  afterCount = 4;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.leaderboardService.getGlobalLeaderboardViewIfExists(leaderboardId:leaderboardId, sortOrder:sortOrder, beforeCount:beforeCount, afterCount:afterCount);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

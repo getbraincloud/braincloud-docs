@@ -103,6 +103,24 @@ var includeSharedData = false;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  targetPlayerId = "player";
+var  includeSharedData = false;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.playbackStreamService.startStream(targetPlayerId:targetPlayerId, includeSharedData:includeSharedData);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

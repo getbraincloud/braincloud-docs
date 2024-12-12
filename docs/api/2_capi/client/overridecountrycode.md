@@ -69,6 +69,16 @@ var countryCode = "CA";
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var countryCode = "CA";
+<%= data.branding.codePrefix %>.overrideCountryCode(countryCode);
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

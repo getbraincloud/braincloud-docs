@@ -113,6 +113,27 @@ var maxReturn = 2;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  entityType = "athletes";
+var  whereJson = {
+  "data.position": "forward"
+};
+var  maxReturn = 2;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.customEntityService.getRandomEntitiesMatching(entityType:entityType, whereJson:whereJson, maxReturn:maxReturn);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

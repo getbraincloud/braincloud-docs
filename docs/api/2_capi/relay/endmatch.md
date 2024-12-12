@@ -3,9 +3,10 @@
 Terminate the match instance by the owner.
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-payloadJson | payload data sent in JSON format. It will be relayed to other connnected players.
+
+| Parameter   | Description                                                                       |
+| ----------- | --------------------------------------------------------------------------------- |
+| payloadJson | payload data sent in JSON format. It will be relayed to other connnected players. |
 
 ## Usage
 
@@ -65,9 +66,30 @@ const char* payloadJson = "{\"key\":\"value\"}";
 <TabItem value="js" label="JavaScript">
 ```
 
-```cpp
-const char* payloadJson = "{\"key\":\"value\"}";
-<%= data.branding.codePrefix %>->getRelayService()->endMatch(payloadJson, this);
+```javascript
+var payloadJson = {"key":"value"};
+<%= data.branding.codePrefix %>.relay.endMatch(payloadJson, result =>
+{
+	var status = result.status;
+	console.log(status + " : " + JSON.stringify(result, null, 2));
+});
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  payloadJson = {"key":"value"};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.relayService.endMatch(payloadJson:payloadJson);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
 ```
 
 ```mdx-code-block
@@ -93,4 +115,3 @@ const char* payloadJson = "{\"key\":\"value\"}";
 </Tabs>
 </BrowserWindow>
 ```
-

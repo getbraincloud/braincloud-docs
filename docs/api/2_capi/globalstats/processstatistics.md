@@ -133,6 +133,31 @@ var statistics = {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  statistics = {
+    "INNING": "INC#1",
+    "INNINGSREM": "DEC#1",
+    "OUTS": "RESET",
+    "POINTS": "INC_TO_LIMIT#5#30",
+    "PLAYERS": "SET#8",
+    "HIGHESTHR": "MAX#3",
+    "ESTIMATE": "MIN#5"
+};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.globalGameStatisticsService.processStatistics(statistics:statistics);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

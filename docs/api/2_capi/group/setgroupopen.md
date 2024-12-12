@@ -103,6 +103,24 @@ var isOpenGroup = false;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  groupId = "a-group-id";
+var  isOpenGroup = false;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.groupService.setGroupOpen(groupId:groupId, isOpenGroup:isOpenGroup);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

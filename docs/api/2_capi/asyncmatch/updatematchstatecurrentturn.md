@@ -127,6 +127,31 @@ var statistics = {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  ownerId = "the-owner-id";
+var  matchId = "the-match-id";
+var  version = 1;
+var  matchState = {
+    "map": "level1"
+};
+var  statistics = {
+    "statsName": "statValue"
+};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.asyncMatchService.updateMatchStateCurrentTurn(ownerId:ownerId, matchId:matchId, version:version, matchState:matchState, statistics:statistics);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

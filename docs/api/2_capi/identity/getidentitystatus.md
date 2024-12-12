@@ -107,6 +107,24 @@ var externalAuthName = "";
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  authenticationType = "Facebook";
+var  externalAuthName = "";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.identityService.getIdentityStatus(authenticationType:authenticationType, externalAuthName:externalAuthName);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

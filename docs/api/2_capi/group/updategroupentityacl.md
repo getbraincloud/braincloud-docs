@@ -114,6 +114,28 @@ var acl = {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  groupId = "a-group-id";
+var  entityId = "a-group-entity-id";
+var  acl = {
+  "member": 1,
+  "other": 0
+};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.groupService.updateGroupEntityAcl(groupId:groupId, entityId:entityId, acl:acl);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

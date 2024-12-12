@@ -112,6 +112,28 @@ var fieldsJson = {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  entityType = "athletes";
+var  version = 1;
+var  fieldsJson = {
+  "goals": 3,
+  "assists": 5
+};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.customEntityService.updateSingletonFields(entityType:entityType, version:version, fieldsJson:fieldsJson);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

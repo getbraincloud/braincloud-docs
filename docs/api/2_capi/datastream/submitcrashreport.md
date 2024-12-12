@@ -148,6 +148,32 @@ var userSubmitted = false;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  crashType = "unknown";
+var  errorMsg = "Divide by zero error";
+var  crashJson = {
+  "dialog": 5
+};
+var  crashLog = "funcX(a,b,c)/ncalled by funcY(a,b,c)";
+var  userName = "";
+var  userEmail = "";
+var  userNotes = "";
+var  userSubmitted = false;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.dataStreamService.submitCrashReport(crashType:crashType, errorMsg:errorMsg, crashJson:crashJson, crashLog:crashLog, userName:userName, userEmail:userEmail, userNotes:userNotes, userSubmitted:userSubmitted);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

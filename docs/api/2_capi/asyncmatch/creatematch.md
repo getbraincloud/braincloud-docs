@@ -133,6 +133,37 @@ var pushNotificationMessage = "You have been entered into an async-match!";
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  jsonOpponentIds = [
+    {
+        "platform": "BC",
+        "id": "profile ID-1"
+    },
+    {
+        "platform": "FB",
+        "id": "Facebook ID-1"
+    },
+    {
+        "platform": "FB",
+        "id": "Facebook ID-2"
+    }
+];
+var  pushNotificationMessage = "You have been entered into an async-match!";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.asyncMatchService.createMatch(jsonOpponentIds:jsonOpponentIds, pushNotificationMessage:pushNotificationMessage);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

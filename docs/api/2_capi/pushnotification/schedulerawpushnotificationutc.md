@@ -145,6 +145,48 @@ var startTime = 1437579786000;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  profileId = "kjhkjhgfkjshgkjh";
+var  fcmContent = {
+    "notification": {
+        "body": "content of message",
+        "title": "message title"
+    },
+    "data": {
+        "customfield1": "customValue1",
+        "customfield2": "customValue2"
+    },
+    "priority": "normal"
+};
+var  iosContent = {
+    "aps": {
+        "alert": {
+            "body": "content of message",
+            "title": "message title"
+        },
+        "badge": 0,
+        "sound": "gggg"
+    }
+};
+var  facebookContent = {
+    "template": "content of message"
+};
+var  startTime = 1437579786000;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.pushNotificationService.scheduleRawPushNotificationUTC(profileId:profileId, fcmContent:fcmContent, iosContent:iosContent, facebookContent:facebookContent, startTime:startTime);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

@@ -114,6 +114,36 @@ var includeDef = true;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  context = {
+  "pagination": {
+    "rowsPerPage": 50,
+    "pageNumber": 1
+  },
+  "searchCriteria": {
+    "defId": "sword001"
+  },
+  "sortCriteria": {
+    "createdAt": 1,
+    "updatedAt": -1
+  }
+};
+var  includeDef = true;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.userItemsService.getUserItemsPage(context:context, includeDef:includeDef);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

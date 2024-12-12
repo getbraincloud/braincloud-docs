@@ -102,6 +102,24 @@ var rangeDelta = 10;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  playerId = "player";
+var  rangeDelta = 10;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.onewayMatchService.startMatch(playerId:playerId, rangeDelta:rangeDelta);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

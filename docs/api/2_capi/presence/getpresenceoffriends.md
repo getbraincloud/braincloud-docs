@@ -104,6 +104,24 @@ var includeOffline = true;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  platform = brainCloud;
+var  includeOffline = true;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.presenceService.getPresenceOfFriends(platform:platform, includeOffline:includeOffline);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

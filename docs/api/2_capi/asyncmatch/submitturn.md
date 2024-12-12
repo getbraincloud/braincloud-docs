@@ -143,6 +143,33 @@ var jsonStatistics = {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  ownerId = "internalPlayerId";
+var  matchId = "matchId";
+var  jsonMatchState = {};
+var  pushNotificationMessage = "You have been entered into an async-match!";
+var  nextPlayer = "player2Id";
+var  jsonSummary = {
+    "Address": "South Africa"
+};
+var  jsonStatistics = {
+    "statsName": "statValue"
+};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.asyncMatchService.submitTurn(ownerId:ownerId, matchId:matchId, version:version, jsonMatchState:jsonMatchState, pushNotificationMessage:pushNotificationMessage, nextPlayer:nextPlayer, jsonSummary:jsonSummary, jsonStatistics:jsonStatistics);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

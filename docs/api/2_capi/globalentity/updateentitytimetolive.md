@@ -113,6 +113,25 @@ var timeToLive = 120000;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  entityId = "a-entity-id";
+var  version = 2;
+var  timeToLive = 120000;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.globalEntityService.updateEntityTimeToLive(entityId:entityId, version:version, timeToLive:timeToLive);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

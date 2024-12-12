@@ -3,9 +3,10 @@
 Set the ping interval.
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-interval | Seconds inbetween pings.
+
+| Parameter | Description              |
+| --------- | ------------------------ |
+| interval  | Seconds inbetween pings. |
 
 ## Usage
 
@@ -52,8 +53,17 @@ float interval = 10;
 <TabItem value="js" label="JavaScript">
 ```
 
-```cpp
-<%= data.branding.codePrefix %>->getRelayService()->SetPingInterval(10);
+```javascript
+<%= data.branding.codePrefix %>.relay.setPingInterval(10);
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+// Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block
@@ -79,4 +89,3 @@ float interval = 10;
 </Tabs>
 </BrowserWindow>
 ```
-

@@ -62,6 +62,15 @@ errorCompletionBlock  = ^(NSString *serviceName, NSString *serviceOperation, NSI
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+<%= data.branding.codePrefix %>.setErrorCallback(errorCallback);
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

@@ -105,6 +105,24 @@ var authenticationType = "Facebook";
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  profileId = "profileId";
+var  authenticationType = "Facebook";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.friendService.getExternalIdForProfileId(profileId:profileId, authenticationType:authenticationType);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

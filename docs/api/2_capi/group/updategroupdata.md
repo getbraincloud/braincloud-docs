@@ -119,6 +119,27 @@ var jsonData = {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  groupId = "a-group-id";
+var  version = 3;
+var  jsonData = {
+    "indexedId": "a-group-index"
+};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.groupService.updateGroupData(groupId:groupId, version:version, jsonData:jsonData);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

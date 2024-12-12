@@ -93,6 +93,24 @@ var authenticationToken = "someFacebookAuthToken";
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  facebookId = "someFacebookId";
+var  authenticationToken = "someFacebookAuthToken";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.identityService.mergeFacebookLimitedIdentity(facebookId:facebookId, authenticationToken:authenticationToken);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

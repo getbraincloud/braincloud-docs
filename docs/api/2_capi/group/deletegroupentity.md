@@ -110,6 +110,25 @@ var version = 3;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  groupId = "a-group-id";
+var  entityId = "a-group-entity-id";
+var  version = 3;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.groupService.deleteGroupEntity(groupId:groupId, entityId:entityId, version:version);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

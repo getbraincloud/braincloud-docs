@@ -98,6 +98,23 @@ var activity = { "LOCATION": "POKER_TABLE", "STATUS": "PLAYING_GAME" };
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  activity = { "LOCATION": "POKER_TABLE", "STATUS": "PLAYING_GAME" };
+
+ServerResponse result = await <%= data.branding.codePrefix %>.presenceService.updateActivity(activity:activity);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

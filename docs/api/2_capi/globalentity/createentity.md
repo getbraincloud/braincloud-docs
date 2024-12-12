@@ -120,6 +120,30 @@ var jsonEntityData = {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  entityType = "address";
+var  timeToLive = -1;
+var  jsonEntityAcl = {
+    "other": 1
+};
+var  jsonEntityData = {
+    "street": "1309 Carling"
+};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.globalEntityService.createEntity(entityType:entityType, timeToLive:timeToLive, jsonEntityAcl:jsonEntityAcl, jsonEntityData:jsonEntityData);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

@@ -106,6 +106,24 @@ var channelSubId = "CHAT_TRADE";
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  channelType = "gl";
+var  channelSubId = "CHAT_TRADE";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.chatService.getChannelInfo(channelType:channelType, channelSubId:channelSubId);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

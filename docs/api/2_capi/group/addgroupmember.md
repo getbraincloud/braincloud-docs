@@ -116,6 +116,26 @@ var jsonAttributes = <%= data.example.jsonAttributes_js %>;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  groupId = <%= data.example.groupId %>;
+var  profileId = <%= data.example.profileId %>;
+var  role = "MEMBER";
+var  jsonAttributes = <%= data.example.jsonAttributes_js %>;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.groupService.addGroupMember(groupId:groupId, profileId:profileId, role:role, attributes:attributes);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

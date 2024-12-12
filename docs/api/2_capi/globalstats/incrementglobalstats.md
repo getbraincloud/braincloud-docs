@@ -110,6 +110,25 @@ var statistics = {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  statistics = {
+    "PLAYER_COUNT": 1
+};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.globalGameStatisticsService.incrementGlobalStats(statistics:statistics);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

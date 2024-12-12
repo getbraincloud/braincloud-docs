@@ -46,8 +46,17 @@ Get the lobby's owner profile Id.
 <TabItem value="js" label="JavaScript">
 ```
 
-```cpp
-<%= data.branding.codePrefix %>->getRelayService()->getOwnerProfileId();
+```javascript
+<%= data.branding.codePrefix %>.relay.getOwnerProfileId();
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+// Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block
@@ -73,4 +82,3 @@ Get the lobby's owner profile Id.
 </Tabs>
 </BrowserWindow>
 ```
-

@@ -106,6 +106,28 @@ var deleteCriteria = {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  entityType = "athletes";
+var  deleteCriteria = {
+    "entityId": { "$in":
+        ["aaaa-bbbb-cccc-dddd", "ffff-gggg-hhhh-iiii", "jjjj-kkkk-llll-mmmm"]
+    }
+};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.customEntityService.deleteEntities(entityType:entityType, deleteCriteria:deleteCriteria);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

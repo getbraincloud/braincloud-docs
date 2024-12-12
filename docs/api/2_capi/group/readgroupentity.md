@@ -103,6 +103,24 @@ var entityId = "a-group-entity-id";
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  groupId = "a-group-id";
+var  entityId = "a-group-entity-id";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.groupService.readGroupEntity(groupId:groupId, entityId:entityId);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

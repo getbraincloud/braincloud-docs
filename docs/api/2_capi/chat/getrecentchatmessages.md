@@ -121,6 +121,24 @@ var maxReturn = 25;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  channelId = "22817:gl:CHAT_TRADE";
+var  maxReturn = 25;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.chatService.getRecentChatMessages(channelId:channelId, maxReturn:maxReturn);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

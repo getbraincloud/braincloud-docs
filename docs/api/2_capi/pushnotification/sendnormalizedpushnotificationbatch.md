@@ -117,6 +117,31 @@ var customDataJson = {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  profileIds = [ "a-profile-id", "another-profile-id" ];
+var  alertContentJson = {
+    "body": "content of message",
+    "title": "message title"
+};
+var  customDataJson = {
+    "field1": "value1",
+    "field2": "value2"
+};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.pushNotificationService.sendNormalizedPushNotificationBatch(profileIds:profileIds, alertContentJson:alertContentJson, customDataJson:customDataJson);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

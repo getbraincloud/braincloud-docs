@@ -117,6 +117,26 @@ var filename = "gfile";
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  groupId = "dfsfsffsd";
+var  fileId = "xxxx";
+var  version = 1;
+var  filename = "gfile";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.groupFileService.deleteFile(groupId:groupId, fileId:fileId, version:version, filename:filename);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

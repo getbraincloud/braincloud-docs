@@ -149,6 +149,32 @@ var defaultMemberAttributes = {};
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  name = "myGroupName";
+var  groupType = "myGroupType";
+var  isOpenGroup = false;
+var  acl = {
+    "member": 2,
+    "other": 0
+};
+var  jsonData = {};
+var  ownerAttributes = {};
+var  defaultMemberAttributes = {};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.groupService.createGroup(name:name, groupType:groupType, isOpenGroup:isOpenGroup, acl:acl, jsonData:jsonData, ownerAttributes:ownerAttributes, defaultMemberAttributes:defaultMemberAttributes);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

@@ -101,6 +101,24 @@ var version = 1;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  itemId = "aaa-bbb-ccc-ddd";
+var  version = 1;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.userItemsService.RemoveUserItemFromBlockchain(itemId:itemId, version:version);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

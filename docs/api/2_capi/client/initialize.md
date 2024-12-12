@@ -90,6 +90,18 @@ var appId = "123456";
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var secret = "1234-1234-1234-1234";
+var appId = "123456";
+
+<%= data.branding.codePrefix %>.initialize(appId, secret, "1.0.0");
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

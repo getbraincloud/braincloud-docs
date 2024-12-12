@@ -95,6 +95,23 @@ var includeMetaData = false;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  includeMetaData = false;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.gamificationService.readCompletedQuests(includeMetaData:includeMetaData);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

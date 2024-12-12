@@ -46,8 +46,17 @@ Returns whether or not we have a successful connection with the relay server.
 <TabItem value="js" label="JavaScript">
 ```
 
-```cpp
-<%= data.branding.codePrefix %>->getRelayService()->isConnected();
+```javascript
+<%= data.branding.codePrefix %>.relay.isConnected();
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+// Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block
@@ -73,4 +82,3 @@ Returns whether or not we have a successful connection with the relay server.
 </Tabs>
 </BrowserWindow>
 ```
-

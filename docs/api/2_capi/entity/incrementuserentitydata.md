@@ -109,6 +109,31 @@ var jsonData = {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  entityId = "a-entity-id";
+var  jsonData = {
+    "field1": -1.5,
+    "field2": {
+        "field2-1": 6,
+        "field2-new": 63.6
+    },
+    "field3-new": 3
+};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.entityService.incrementUserEntityData(entityId:entityId, jsonData:jsonData);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

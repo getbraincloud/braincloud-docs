@@ -138,6 +138,29 @@ var overwriteIfPresent = true;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  groupId = "dfsfsffsd";
+var  fileId = "xxxx";
+var  version = 1;
+var  newTreeId = "guid";
+var  treeVersion = 1;
+var  newFilename = "gfile";
+var  overwriteIfPresent = true;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.groupFileService.copyFile(groupId:groupId, fileId:fileId, version:version, newTreeId:newTreeId, treeVersion:treeVersion, newFilename:newFilename, overwriteIfPresent:overwriteIfPresent);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

@@ -118,6 +118,27 @@ var parentLevelName = "Master";
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  scriptName = "path/to/script1";
+var  scriptData = {
+    "parm": "value"
+};
+var  parentLevelName = "Master";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.scriptService.runParentScript(scriptName:scriptName, scriptData:scriptData, parentLevelName:parentLevelName);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

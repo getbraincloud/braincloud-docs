@@ -149,6 +149,32 @@ var initialScore = 0;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  leaderboardId = "leaderboardId1";
+var  score = 0;
+var  jsonData = {
+    "nickname": "withResults"
+};
+var  roundStartedTime = Date.now();
+var  sortOrder = SortOrder.HIGH_TO_LOW;
+var  beforeCount = 3;
+var  afterCount = 4;
+var  initialScore = 0;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.tournamentService.postTournamentScoreWithResultsUTC(leaderboardId:leaderboardId, score:score, jsonData:jsonData, roundStartedTime:roundStartedTime, sortOrder:sortOrder, beforeCount:beforeCount, afterCount:afterCount, initialScore:initialScore);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

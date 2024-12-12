@@ -114,6 +114,27 @@ var flagUrls = false;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  text = "foul language";
+var  languages = "en,fr";
+var  flagEmail = false;
+var  flagPhone = false;
+var  flagUrls = false;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.profanityService.profanityCheck(text:text, languages:languages, flagEmail:flagEmail, flagPhone:flagPhone, flagUrls:flagUrls);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
