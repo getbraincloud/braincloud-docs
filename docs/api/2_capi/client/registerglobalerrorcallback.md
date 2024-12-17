@@ -66,6 +66,10 @@ errorCompletionBlock  = ^(NSString *serviceName, NSString *serviceOperation, NSI
 ```
 
 ```dart
+void errorCallback(String serviceName, String serviceOperation, int statusCode, int reasonCode, dynamic statusMessage) {
+  // ...
+}
+​
 <%= data.branding.codePrefix %>.setErrorCallback(errorCallback);
 ```
 

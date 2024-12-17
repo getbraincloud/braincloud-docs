@@ -56,7 +56,7 @@ Shuts down all systems needed for BrainCloudClient, only call this from the main
 ```
 
 ```dart
-// N/A
+<%= data.branding.codePrefix %>.shutDown();
 ```
 
 ```mdx-code-block

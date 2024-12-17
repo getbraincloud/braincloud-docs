@@ -56,7 +56,7 @@ ArrayList<Integer> timeouts = <%= data.branding.codePrefix %>.getPacketTimeouts(
 ```
 
 ```dart
-// N/A
+List<int> timeouts = <%= data.branding.codePrefix %>.getPacketTimeouts();
 ```
 
 ```mdx-code-block

@@ -73,7 +73,9 @@ int minTransferRate = 1500;
 ```
 
 ```dart
-// N/A
+int minTransferRate = 1500;
+
+<%= data.branding.codePrefix %>.setUploadLowTransferRateThreshold(minTransferRate:minTransferRate);
 ```
 
 ```mdx-code-block

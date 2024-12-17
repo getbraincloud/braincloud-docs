@@ -62,7 +62,7 @@ Flushes the cached messages to resume API call processing. This will dump all of
 ```
 
 ```dart
-// N/A
+<%= data.branding.codePrefix %>.flushCachedMessages(true);
 ```
 
 ```mdx-code-block

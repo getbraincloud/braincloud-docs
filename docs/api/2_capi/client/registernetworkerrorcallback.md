@@ -64,7 +64,11 @@ networkErrorBlock = ^() {  };
 ```
 
 ```dart
-// N/A
+void networkErrorCallback() {
+ // ...
+}
+​
+<%= data.branding.codePrefix %>.registerNetworkErrorCallback(networkErrorCallback);
 ```
 
 ```mdx-code-block

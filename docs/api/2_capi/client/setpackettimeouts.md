@@ -74,7 +74,7 @@ ArrayList<Integer> packetTimeouts = new ArrayList<Integer>(
 ```
 
 ```dart
-<%= data.branding.codePrefix %>.brainCloudManager._packetTimeouts = [15,20,35,50];
+<%= data.branding.codePrefix %>.setPacketTimeouts([15,20,35,50]);
 ```
 
 ```mdx-code-block

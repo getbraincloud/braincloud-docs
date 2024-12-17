@@ -58,7 +58,7 @@ int timeout = <%= data.branding.codePrefix %>.getAuthenticationPacketTimeout();
 ```
 
 ```dart
-// N/A
+var timeout = <%= data.branding.codePrefix %>.getAuthenticationPacketTimeout();
 ```
 
 ```mdx-code-block

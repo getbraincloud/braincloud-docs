@@ -2,16 +2,15 @@
 
 Sends a potentially richer member chat message. By convention, `content` should contain a field named `text` for plain-text content. Returns the id of the message created.
 
-
-
 <PartialServop service_name="chat" operation_name="POST_CHAT_MESSAGE" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-channelId | The chat channel to post to
-contentJson | The json content of the message. Split into chatMessage and jsonRich for plain text and json content respectively.
-recordInHistory | Set to `false` if the message shouldn't be recorded to history. Useful for sending non-conversational messages, like when users join a room, etc.
+
+| Parameter       | Description                                                                                                                                       |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| channelId       | The chat channel to post to                                                                                                                       |
+| contentJson     | The json content of the message. Split into chatMessage and jsonRich for plain text and json content respectively.                                |
+| recordInHistory | Set to `false` if the message shouldn't be recorded to history. Useful for sending non-conversational messages, like when users join a room, etc. |
 
 ## Usage
 
@@ -22,8 +21,6 @@ recordInHistory | Set to `false` if the message shouldn't be recorded to history
 ```
 
 ```csharp
-
-
 string channelId = "22817:gl:CHAT_TRADE"; // APP_ID:CHANNEL_TYPE:CHANNEL_ID
 string text = "Looking to sell a couch for 105 gold coins.";
 Dictionary<string, object> sellItem = new Dictionary<string, object>
@@ -102,11 +99,11 @@ BCErrorCompletionBlock failureBlock; // define callback
 
 ```java
 String channelId = "22817:gl:CHAT_TRADE"; // APP_ID:CHANNEL_TYPE:CHANNEL_ID
-String chatMessage = "Looking to sell a couch for 105 gold coins.";
-String jsonRich = "";
+String contentJson = "{\"text\":\"Hello world\",\"custom\":{\"somethingCustom\":\"wow\"}}";
+boolean recordInHistory = true;
 this; // implements IServerCallback
 
-<%= data.branding.codePrefix %>.getChatService().postChatMessage(channelId, chatMessage, jsonRich, this);
+<%= data.branding.codePrefix %>.getChatService().postChatMessage(channelId, contentJson, recordInHistory, this);
 
 public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
 {
@@ -125,9 +122,10 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 
 ```javascript
 var channelId = "22817:gl:CHAT_TRADE"; // APP_ID:CHANNEL_TYPE:CHANNEL_ID
-var content = {text: "Looking to sell a couch for 105 gold coins.", SELL_ITEM: {ITEM_TYPE: "COUCH"}};
+var contentJson = {text: "Looking to sell a couch for 105 gold coins.", SELL_ITEM: {ITEM_TYPE: "COUCH"}};
+var rnecordIHistory = true;
 
-<%= data.branding.codePrefix %>.chat.postChatMessage(channelId, content, result =>
+<%= data.branding.codePrefix %>.chat.postChatMessage(channelId, contentJson, recordInHistory, result =>
 {
 	var status = result.status;
 	console.log(status + " : " + JSON.stringify(result, null, 2));
@@ -141,9 +139,10 @@ var content = {text: "Looking to sell a couch for 105 gold coins.", SELL_ITEM: {
 
 ```dart
 var  channelId = "22817:gl:CHAT_TRADE";
-var  content = {text: "Looking to sell a couch for 105 gold coins.", SELL_ITEM: {ITEM_TYPE: "COUCH"}};
+var  contentJson = {text: "Looking to sell a couch for 105 gold coins.", SELL_ITEM: {ITEM_TYPE: "COUCH"}};
+var rnecordIHistory = true;
 
-ServerResponse result = await <%= data.branding.codePrefix %>.chatService.postChatMessage(channelId:channelId, content:content);
+ServerResponse result = await <%= data.branding.codePrefix %>.chatService.postChatMessage(channelId:channelId, contentJson:contentJson, rnecordIHistory:rnecordIHistory);
 
 if (result.statusCode == 200) {
     print("Success");
@@ -159,10 +158,11 @@ if (result.statusCode == 200) {
 
 ```cfscript
 var chatProxy = bridge.getChatServiceProxy();
-var content = {};
-content.text = "Hellooooo!";
+var contentJson = {};
+contentJson.text = "Hellooooo!";
+var rnecordIHistory = true;
 
-var postResult = chatProxy.postChatMessage( channelId, content, true );
+var postResult = chatProxy.postChatMessage( channelId, contentJson, rnecordIHistory);
 if (postResult.status == 200 ) {
     // Success!
 }
@@ -207,17 +207,17 @@ if (postResult.status == 200 ) {
     }
 }
 ```
+
 </details>
 
 <details>
 <summary>Common Error Code</summary>
 
 ### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
-40603 | CHAT_UNRECOGNIZED_CHANNEL | The specified channel is invalid
+
+| Code  | Name                      | Description                          |
+| ----- | ------------------------- | ------------------------------------ |
+| 40601 | RTT_NOT_ENABLED           | RTT must be enabled for this feature |
+| 40603 | CHAT_UNRECOGNIZED_CHANNEL | The specified channel is invalid     |
 
 </details>
-
-

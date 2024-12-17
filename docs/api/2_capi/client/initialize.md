@@ -82,6 +82,7 @@ String appId = "123456";
 ```
 
 ```javascript
+var serverUrl = "https://api.braincloudservers.com/dispatcherv2";
 var secret = "1234-1234-1234-1234";
 var appId = "123456";
 
@@ -94,10 +95,12 @@ var appId = "123456";
 ```
 
 ```dart
-var secret = "1234-1234-1234-1234";
+var serverUrl = "https://api.braincloudservers.com/dispatcherv2"; //Optional parameter
+var secretKey = "1234-1234-1234-1234";
 var appId = "123456";
+var appVersion = "1.0.0";
 
-<%= data.branding.codePrefix %>.initialize(appId, secret, "1.0.0");
+<%= data.branding.codePrefix %>.initialize(serverUrl:serverUrl, secretKey:secretKey, appId:appId, appVersion:appVersion);
 ```
 
 ```mdx-code-block

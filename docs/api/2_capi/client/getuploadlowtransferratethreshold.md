@@ -56,7 +56,7 @@ int bytesPerSecThreshold = [<%= data.branding.codePrefix %> getUploadLowTransfer
 ```
 
 ```dart
-// N/A
+int bytesPerSecThreshold = <%= data.branding.codePrefix %>.getUploadLowTransferRateThreshold();
 ```
 
 ```mdx-code-block

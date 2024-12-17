@@ -56,7 +56,7 @@ Deregisters the global error callback.
 ```
 
 ```dart
-// N/A
+<%= data.branding.codePrefix %>.deregisterGlobalErrorCallback();
 ```
 
 ```mdx-code-block

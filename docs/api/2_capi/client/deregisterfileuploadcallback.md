@@ -56,7 +56,7 @@ Deregisters the file upload callback
 ```
 
 ```dart
-// N/A
+<%= data.branding.codePrefix %>.deregisterFileUploadCallback();
 ```
 
 ```mdx-code-block

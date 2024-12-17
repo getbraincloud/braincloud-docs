@@ -56,7 +56,7 @@ int timeout = [<%= data.branding.codePrefix %> getUploadLowTransferRateTimeout];
 ```
 
 ```dart
-// N/A
+int timeout = <%= data.branding.codePrefix %>.getUploadLowTransferRateTimeout();
 ```
 
 ```mdx-code-block

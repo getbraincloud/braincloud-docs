@@ -68,6 +68,10 @@ eventBlock = ^(NSString *eventsJson) {  };
 ```
 
 ```dart
+void eventCallback(Map<String, dynamic>?  jsonResponse) {
+    //Your code
+};
+​
 <%= data.branding.codePrefix %>.registerEventCallback(eventCallback);
 ```
 

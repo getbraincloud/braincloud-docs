@@ -1,15 +1,14 @@
 # GetChannelInfo
 
-Returns *description info* and *activity stats* for the specified channel. Note that `numMembers`, `numListeners` and `listeners` are only returned for non-global groups. Only callable by members of the channel.
-
-
+Returns _description info_ and _activity stats_ for the specified channel. Note that `numMembers`, `numListeners` and `listeners` are only returned for non-global groups. Only callable by members of the channel.
 
 <PartialServop service_name="chat" operation_name="GET_CHANNEL_INFO" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-channelId | The id of the channel
+
+| Parameter | Description           |
+| --------- | --------------------- |
+| channelId | The id of the channel |
 
 ## Usage
 
@@ -29,7 +28,7 @@ SuccessCallback successCallback = (response, cbObject) =>
 	Dictionary<string, object> jsonData = (Dictionary<string, object>)jsonMessage["data"];
 	var name = jsonData["name"].ToString();
 	var desc = jsonData["desc"].ToString();
-	
+
 	string logMessage = string.Join(" | ", new [] {name, desc});
 	Debug.Log(logMessage); // Trade Chat | Trade items here.
 };
@@ -72,11 +71,10 @@ BCErrorCompletionBlock failureBlock; // define callback
 ```
 
 ```java
-String channelType = "gl";
-String channelSubId = "CHAT_TRADE";
+String channelId = "13229:gl:bcDev";
 this; // implements IServerCallback
 
-<%= data.branding.codePrefix %>.getChatService().getChannelInfo(channelType, channelSubId, this);
+<%= data.branding.codePrefix %>.getChatService().getChannelInfo(channelId, this);
 
 public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
 {
@@ -94,10 +92,9 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 ```
 
 ```javascript
-var channelType = "gl";
-var channelSubId = "CHAT_TRADE";
+var channelId = "13229:gl:bcDev";
 
-<%= data.branding.codePrefix %>.chat.getChannelInfo(channelType, channelSubId, result =>
+<%= data.branding.codePrefix %>.chat.getChannelInfo(channelId, result =>
 {
 	var status = result.status;
 	console.log(status + " : " + JSON.stringify(result, null, 2));
@@ -110,10 +107,9 @@ var channelSubId = "CHAT_TRADE";
 ```
 
 ```dart
-var  channelType = "gl";
-var  channelSubId = "CHAT_TRADE";
+var  channelId = "13229:gl:bcDev";
 
-ServerResponse result = await <%= data.branding.codePrefix %>.chatService.getChannelInfo(channelType:channelType, channelSubId:channelSubId);
+ServerResponse result = await <%= data.branding.codePrefix %>.chatService.getChannelInfo(channelId:channelId);
 
 if (result.statusCode == 200) {
     print("Success");
@@ -171,17 +167,17 @@ var infoResult = chatProxy.getChannelInfo(channelId);
     "status": 200
 }
 ```
+
 </details>
 
 <details>
 <summary>Common Error Code</summary>
 
 ### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40346 | CHAT_INVALID_CHANNEL_ID | The channel id provided is invalid.
-40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
+
+| Code  | Name                    | Description                          |
+| ----- | ----------------------- | ------------------------------------ |
+| 40346 | CHAT_INVALID_CHANNEL_ID | The channel id provided is invalid.  |
+| 40601 | RTT_NOT_ENABLED         | RTT must be enabled for this feature |
 
 </details>
-
-

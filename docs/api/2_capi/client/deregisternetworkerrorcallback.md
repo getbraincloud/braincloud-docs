@@ -56,7 +56,7 @@ Deregisters the network error callback.
 ```
 
 ```dart
-// N/A
+<%= data.branding.codePrefix %>.deregisterNetworkErrorCallback();
 ```
 
 ```mdx-code-block

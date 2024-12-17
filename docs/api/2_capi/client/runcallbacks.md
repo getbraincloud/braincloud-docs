@@ -56,7 +56,7 @@ Run callbacks, to be called once per frame from your main thread
 ```
 
 ```dart
-// N/A
+<%= data.branding.codePrefix %>.update();
 ```
 
 ```mdx-code-block

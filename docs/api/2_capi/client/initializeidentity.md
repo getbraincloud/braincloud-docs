@@ -61,7 +61,7 @@ InitializeIdentity must be called before you can authenticate a user anonymously
 ```
 
 ```javascript
-<%= data.branding.codePrefix %>.initializeIdentity = function(profileId, anonymousId)
+<%= data.branding.codePrefix %>.initializeIdentity(profileId, anonymousId)
 ```
 
 ```mdx-code-block
@@ -70,7 +70,7 @@ InitializeIdentity must be called before you can authenticate a user anonymously
 ```
 
 ```dart
-<%= data.branding.codePrefix %>.initializeIdentity = function(profileId, anonymousId)
+<%= data.branding.codePrefix %>.initializeIdentity( profileId:"myProfileId", anonymousId:"myAnonymousId");
 ```
 
 ```mdx-code-block

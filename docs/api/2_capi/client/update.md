@@ -58,7 +58,7 @@ See RunCallbacks function for other platforms.
 ```
 
 ```dart
-// N/A
+<%= data.branding.codePrefix %>.update();
 ```
 
 ```mdx-code-block

@@ -64,6 +64,10 @@ rewardBlock = ^(NSString *rewardsJson) {  };
 ```
 
 ```dart
+void rewardCallback(Map<String, dynamic>?  jsonResponse) {
+  // ...
+};
+
 <%= data.branding.codePrefix %>.registerRewardCallback(rewardCallback);
 ```
 

@@ -1,8 +1,16 @@
 # PostChatMessageSimple
 
-Sends a text-only member chat message on behalf of the user. *This method provides convenience by simplifying message construction.* Returns the id of the message that was created.
+Sends a text-only member chat message on behalf of the user. _This method provides convenience by simplifying message construction._ Returns the id of the message that was created.
 
 <PartialServop service_name="chat" operation_name="POST_CHAT_MESSAGE_SIMPLE" />
+
+## Method Parameters
+
+| Parameter       | Description                                                                                                                                       |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| channelId       | The chat channel to post to                                                                                                                       |
+| chatMessage     | Simple string content for the message. Will be placed inside of a `text` field of the `content` section.                                          |
+| recordInHistory | Set to `false` if the message shouldn't be recorded to history. Useful for sending non-conversational messages, like when users join a room, etc. |
 
 ## Usage
 
@@ -22,7 +30,7 @@ SuccessCallback successCallback = (response, cbObject) =>
 {
 	Dictionary<string, object> jsonMessage = (Dictionary<string, object>)JsonFx.Json.JsonReader.Deserialize(response);
 	Dictionary<string, object> jsonData = (Dictionary<string, object>)jsonMessage["data"];
-	
+
 	var msgId = jsonData["msgId"].ToString();
 	string logMessage = string.Join(" | ", new [] {msgId});
 	Debug.Log(logMessage); // 783733181125648
@@ -42,9 +50,9 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 
 ```cpp
 const char *channelId = "55555:gl:bcDev";
-const char *text = "Hello world";
+const char *chatMessage = "Hello world";
 bool recordInHistory = true;
-<%= data.branding.codePrefix %>->getChatService()->postChatMessageSimple(channelId, text, recordInHistory, this);
+<%= data.branding.codePrefix %>->getChatService()->postChatMessageSimple(channelId, chatMessage, recordInHistory, this);
 ```
 
 ```mdx-code-block
@@ -54,13 +62,13 @@ bool recordInHistory = true;
 
 ```objectivec
 NSString *channelId = @"55555:gl:bcDev";
-NSString *text = @"Hello world";
+NSString *chatMessage = @"Hello world";
 bool recordInHistory = true;
 BCCompletionBlock successBlock;      // define callback
 BCErrorCompletionBlock failureBlock; // define callback
 
 [[<%= data.branding.codePrefix %> chatService] postChatMessageSimple:channelId
-                       text:text
+                chatMessage:chatMessage
             recordInHistory:recordInHistory
             completionBlock:successBlock
        errorCompletionBlock:failureBlock
@@ -75,9 +83,10 @@ BCErrorCompletionBlock failureBlock; // define callback
 ```java
 String channelId = "22817:gl:CHAT_GROUPFINDER"; // APP_ID:CHANNEL_TYPE:CHANNEL_ID
 String chatMessage = "Hey, I am looking for new and experienced users to join our group.";
+boolean recordInHistory = true;
 this; // implements IServerCallback
 
-<%= data.branding.codePrefix %>.getChatService().postChatMessageSimple(channelId, this);
+<%= data.branding.codePrefix %>.getChatService().postChatMessageSimple(channelId, chatMessage, recordInHistory, this);
 
 public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
 {
@@ -99,7 +108,7 @@ var channelId = "22817:gl:CHAT_GROUPFINDER"; // APP_ID:CHANNEL_TYPE:CHANNEL_ID
 var chatMessage = "Hey, I am looking for new and experienced users to join our group.";
 var recordInHistory = true;
 
-<%= data.branding.codePrefix %>.chat.postChatMessageSimple(channelId, chatMessage,recordInHistory, result =>
+<%= data.branding.codePrefix %>.chat.postChatMessageSimple(channelId, chatMessage, recordInHistory, result =>
 {
 	var status = result.status;
 	console.log(status + " : " + JSON.stringify(result, null, 2));
@@ -173,24 +182,17 @@ if (postResult.status == 200 ) {
     }
 }
 ```
+
 </details>
 
 <details>
 <summary>Common Error Code</summary>
 
 ### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
-40603 | CHAT_UNRECOGNIZED_CHANNEL | The specified channel is invalid
+
+| Code  | Name                      | Description                          |
+| ----- | ------------------------- | ------------------------------------ |
+| 40601 | RTT_NOT_ENABLED           | RTT must be enabled for this feature |
+| 40603 | CHAT_UNRECOGNIZED_CHANNEL | The specified channel is invalid     |
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-channelId | The chat channel to post to
-contentString | Simple string content for the message. Will be placed inside of a `text` field of the `content` section.
-recordInHistory | Set to `false` if the message shouldn't be recorded to history. Useful for sending non-conversational messages, like when users join a room, etc.
-#

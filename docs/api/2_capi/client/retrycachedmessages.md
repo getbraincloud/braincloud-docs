@@ -56,7 +56,7 @@ Attempts to resend any cached messages. If no messages are in the cache, this me
 ```
 
 ```dart
-// N/A
+<%= data.branding.codePrefix %>.retryCachedMessages();
 ```
 
 ```mdx-code-block

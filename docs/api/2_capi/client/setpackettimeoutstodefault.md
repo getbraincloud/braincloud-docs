@@ -56,7 +56,7 @@ Sets the packet timeouts back to default.
 ```
 
 ```dart
-// N/A
+<%= data.branding.codePrefix %>.setPacketTimeoutsToDefault();
 ```
 
 ```mdx-code-block

@@ -71,7 +71,9 @@ int timeoutSecs = 60;
 ```
 
 ```dart
-// N/A
+int timeoutSecs = 60;
+
+<%= data.branding.codePrefix %>.setUploadLowTransferRateTimeout(timeoutSecs:timeoutSecs);
 ```
 
 ```mdx-code-block

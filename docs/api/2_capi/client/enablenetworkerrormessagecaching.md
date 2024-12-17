@@ -78,7 +78,7 @@ ResetCommunication() will also clear the message cache.
 ```
 
 ```dart
-// N/A
+<%= data.branding.codePrefix %>.enableNetworkErrorMessageCaching(true);
 ```
 
 ```mdx-code-block

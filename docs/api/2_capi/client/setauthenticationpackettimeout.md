@@ -69,7 +69,8 @@ int timeoutInSeconds = 30;
 ```
 
 ```dart
-// N/A
+int timeoutInSeconds = 30;
+<%= data.branding.codePrefix %>.setAuthenticationPacketTimeout(timeoutInSeconds:timeoutInSeconds);
 ```
 
 ```mdx-code-block

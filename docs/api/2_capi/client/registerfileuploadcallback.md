@@ -66,7 +66,13 @@ fileUploadFailedBlock = ^(NSString *fileUploadId, NSInteger status, NSInteger re
 ```
 
 ```dart
-// N/A
+void fileCallback(ServerResponse  response) {      
+    if (response.status == 200) {
+        // ...
+    }
+};
+​
+<%= data.branding.codePrefix %>.registerFileUploadCallback(fileCallback);
 ```
 
 ```mdx-code-block
