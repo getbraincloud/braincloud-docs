@@ -1,9 +1,5 @@
 # Relay
 
-
-
-
-
 ### Generic Relay Server
 
 <%= data.branding.productName %> Relay Server is updated to a new Version 2 Protocol in our 4.5.6 release -- which are more reliable, more feature-rich, and faster to launch than our original Relay Servers.
@@ -22,7 +18,7 @@ A client that wishes to talk to the relay server is required to follow the brain
 
 All the integer values in the following tables are unsigned and in network byte order (Big Endian).
 
-![Relay-Server Packets](@site/docs/img/api-img/packets_4_14_0.png)
+![Relay-Server Packets](@site/docs/img/api-img/packets_5_5_0.png)
 
 #### Ping
 
@@ -58,16 +54,16 @@ Normal procedure for match termination is to wait for all the participants to di
 
 #### UDP Reliables
 
-- 1 bit to specify if the packet is reliable.
-- 1 bit to specify if the packet should be in order.
-- 2 bit for channel id. 0-3.
+-   1 bit to specify if the packet is reliable.
+-   1 bit to specify if the packet should be in order.
+-   2 bit for channel id. 0-3.
 
 Channels are used to define retransmission speed of reliable packets. Also, each channel will have its own retransmission queue. Packet Ids are unique within a channel only. You can receive/send a packet with id=133 on channel 0, and also another one with the same id=133 but on channel 1.
 
-- **Channel 0**: fastest retransmission rate (Use for things like bullets)
-- **Channel 1**: fastest retransmission rate (Same, but offer the separated channel. So a dropped bullet packet, for example, wouldn't block something else important.)
-- **Channel 2**: medium retransmission rate (Game events that are important, but not crucial. Like player picked up a gun)
-- **Channel 3**: slow retransmission rate (Use for things like chat messages)
+-   **Channel 0**: fastest retransmission rate (Use for things like bullets)
+-   **Channel 1**: fastest retransmission rate (Same, but offer the separated channel. So a dropped bullet packet, for example, wouldn't block something else important.)
+-   **Channel 2**: medium retransmission rate (Game events that are important, but not crucial. Like player picked up a gun)
+-   **Channel 3**: slow retransmission rate (Use for things like chat messages)
 
 Channel is irrelevant for unreliable packets. Ordering is still relevant in that case, but it just means if a packet arrives out of order, it will be dropped.
 
@@ -121,47 +117,47 @@ static const auto RELIABLE_CHANNEL_LOW_PRIORITY         = 3;
 
 For each reliable packets, the resend rate slows down by 25% each time. This might be tweaked later. So for channel 1, resend at 50ms interface, it will go like this until timeout (10sec):
 
-interval|total time|frequency
--|-|-
-50ms  | 0.1s | 20
-62ms  | 0.1s | 16
-77ms  | 0.2s | 13
-96ms  | 0.3s | 10
-120ms  | 0.4s | 8
-150ms  | 0.5s | 7
-187ms  | 0.7s | 5
-233ms  | 1.0s | 4
-291ms  | 1.3s | 3
-363ms  | 1.6s | 3
-453ms  | 2.0s | 2
-500ms  | 2.5s | 2
-500ms  | 3.0s | 2
-500ms  | 3.5s | 2
-500ms  | 4.0s | 2
-500ms  | 4.5s | 2
-500ms  | 5.0s | 2
-500ms  | 5.5s | 2
-500ms  | 6.0s | 2
-500ms  | 6.5s | 2
-500ms  | 7.0s | 2
-500ms  | 7.5s | 2
-500ms  | 8.0s | 2
-500ms  | 8.5s | 2
-500ms  | 9.0s | 2
-500ms  | 9.5s | 2
-500ms  | 10.0s | 2
-timeout|too many packet lost
+| interval | total time           | frequency |
+| -------- | -------------------- | --------- |
+| 50ms     | 0.1s                 | 20        |
+| 62ms     | 0.1s                 | 16        |
+| 77ms     | 0.2s                 | 13        |
+| 96ms     | 0.3s                 | 10        |
+| 120ms    | 0.4s                 | 8         |
+| 150ms    | 0.5s                 | 7         |
+| 187ms    | 0.7s                 | 5         |
+| 233ms    | 1.0s                 | 4         |
+| 291ms    | 1.3s                 | 3         |
+| 363ms    | 1.6s                 | 3         |
+| 453ms    | 2.0s                 | 2         |
+| 500ms    | 2.5s                 | 2         |
+| 500ms    | 3.0s                 | 2         |
+| 500ms    | 3.5s                 | 2         |
+| 500ms    | 4.0s                 | 2         |
+| 500ms    | 4.5s                 | 2         |
+| 500ms    | 5.0s                 | 2         |
+| 500ms    | 5.5s                 | 2         |
+| 500ms    | 6.0s                 | 2         |
+| 500ms    | 6.5s                 | 2         |
+| 500ms    | 7.0s                 | 2         |
+| 500ms    | 7.5s                 | 2         |
+| 500ms    | 8.0s                 | 2         |
+| 500ms    | 8.5s                 | 2         |
+| 500ms    | 9.0s                 | 2         |
+| 500ms    | 9.5s                 | 2         |
+| 500ms    | 10.0s                | 2         |
+| timeout  | too many packet lost |
 
 ### Custom Environment Variables
 
 The following environment variables are used by the relay server which can be configured via Relay server settings page in the dashboard.
 
-- **PACKET_LOG_ENABLED**: Logs packets sent/received. Shouldn't be enabled for production (very spammy). Defaults to false.
-- **MAX_PLAYERS**: Maximum number of players allowed to connect to the server. Defaults to 40.
-- **ALLOW_REJOIN_BY_PROFILE_ID**: Allows players to reconnect to the server instance if their connection drops (even if they have a new RTT connection as well). Only applies for short-lived lobbies (i.e. where "Disband on start" is true). Defaults to false.
-- **CONNECTION_TIMEOUT**: Amount of time in seconds that a player is allowed to be connected to the server without sending a packet before being kicked. Defaults to 10 secs.
-- **MEMBER_TIMEOUT**: Amount of time to wait in seconds for a player to connect to the server before assuming they aren't coming at all. Defaults to 30 secs.
-- **END_MATCH_TIMEOUT**: Amount of time in seconds to stay up before exiting after receiving the END_MATCH packet. Defaults to 2 secs.
+-   **PACKET_LOG_ENABLED**: Logs packets sent/received. Shouldn't be enabled for production (very spammy). Defaults to false.
+-   **MAX_PLAYERS**: Maximum number of players allowed to connect to the server. Defaults to 40.
+-   **ALLOW_REJOIN_BY_PROFILE_ID**: Allows players to reconnect to the server instance if their connection drops (even if they have a new RTT connection as well). Only applies for short-lived lobbies (i.e. where "Disband on start" is true). Defaults to false.
+-   **CONNECTION_TIMEOUT**: Amount of time in seconds that a player is allowed to be connected to the server without sending a packet before being kicked. Defaults to 10 secs.
+-   **MEMBER_TIMEOUT**: Amount of time to wait in seconds for a player to connect to the server before assuming they aren't coming at all. Defaults to 30 secs.
+-   **END_MATCH_TIMEOUT**: Amount of time in seconds to stay up before exiting after receiving the END_MATCH packet. Defaults to 2 secs.
 
 :::info
 All the timeout settings are in seconds.
@@ -169,12 +165,12 @@ All the timeout settings are in seconds.
 
 ```json
 {
-  "PACKET_LOG_ENABLED": "true",
-  "CONNECTION_TIMEOUT": "240",
-  "MEMBER_TIMEOUT": "120",
-  "END_MATCH_TIMEOUT": "600",
-  "MAX_PLAYERS": "40",
-  "ALLOW_REJOIN_BY_PROFILE_ID": "true"
+    "PACKET_LOG_ENABLED": "true",
+    "CONNECTION_TIMEOUT": "240",
+    "MEMBER_TIMEOUT": "120",
+    "END_MATCH_TIMEOUT": "600",
+    "MAX_PLAYERS": "40",
+    "ALLOW_REJOIN_BY_PROFILE_ID": "true"
 }
 ```
 
@@ -189,28 +185,31 @@ All the timeout settings are in seconds.
 ### Client Receive Implementation
 
 ![Client Receive Implementation](@site/docs/img/api-img/client_receive_implementation.png)
+
 ### API Summary
 
 ### Relay
-* [Connect](/api/capi/relay/connect) - Connect to relay server.
-* [Disconnect](/api/capi/relay/disconnect) - Disconnect from the relay server.
-* [IsConnected](/api/capi/relay/isconnected) - Returns whether or not we have a successful connection with the relay server.
-* [GetPing](/api/capi/relay/getping) - Get the current ping for our user.
-* [SetPingInterval](/api/capi/relay/setpinginterval) - Set the ping interval. Ping allows to keep the connection alive, but also inform the player of his current ping.
-* [GetOwnerProfileId](/api/capi/relay/getownerprofileid) - Get the lobby's owner profile Id.
-* [GetOwnerCxId](/api/capi/relay/getownercxid) - Get the lobby's owner Connection Id.
-* [GetNetIdForProfileId](/api/capi/relay/getnetidforprofileid) - Returns the netId associated with a profileId.
-* [GetCxIdForNetId](/api/capi/relay/getcxidfornetid) - Returns the connection Id associated with a netId.
-* [GetNetIdForCxId](/api/capi/relay/getnetidforcxid) - Returns the netId associated with a connection Id.
-* [Send](/api/capi/relay/send) - Send a packet to peer(s).
-* [SendToPlayers](/api/capi/relay/sendtoplayers) - Send a packet to any players by using a mask.
-* [SendToAll](/api/capi/relay/sendtoall) - Send a packet to all except yourself.
-* [EndMatch](/api/capi/relay/endmatch) - Terminate the match instance by the owner.
+
+-   [Connect](/api/capi/relay/connect) - Connect to relay server.
+-   [Disconnect](/api/capi/relay/disconnect) - Disconnect from the relay server.
+-   [IsConnected](/api/capi/relay/isconnected) - Returns whether or not we have a successful connection with the relay server.
+-   [GetPing](/api/capi/relay/getping) - Get the current ping for our user.
+-   [SetPingInterval](/api/capi/relay/setpinginterval) - Set the ping interval. Ping allows to keep the connection alive, but also inform the player of his current ping.
+-   [GetOwnerProfileId](/api/capi/relay/getownerprofileid) - Get the lobby's owner profile Id.
+-   [GetOwnerCxId](/api/capi/relay/getownercxid) - Get the lobby's owner Connection Id.
+-   [GetNetIdForProfileId](/api/capi/relay/getnetidforprofileid) - Returns the netId associated with a profileId.
+-   [GetCxIdForNetId](/api/capi/relay/getcxidfornetid) - Returns the connection Id associated with a netId.
+-   [GetNetIdForCxId](/api/capi/relay/getnetidforcxid) - Returns the netId associated with a connection Id.
+-   [Send](/api/capi/relay/send) - Send a packet to peer(s).
+-   [SendToPlayers](/api/capi/relay/sendtoplayers) - Send a packet to any players by using a mask.
+-   [SendToAll](/api/capi/relay/sendtoall) - Send a packet to all except yourself.
+-   [EndMatch](/api/capi/relay/endmatch) - Terminate the match instance by the owner.
 
 ### Callbacks
-* [RegisterRelayCallback](/api/capi/relay/registerrelaycallback) - Register callback for relay messages coming from peers.
-* [DeregisterRelayCallback](/api/capi/relay/deregisterrelaycallback) - Deregisters callback for relay messages coming from peers.
-* [RegisterSystemCallback](/api/capi/relay/registersystemcallback) - Register callback for RelayServer system messages.
-* [DeregisterSystemCallback](/api/capi/relay/deregistersystemcallback) - Deregister callback for RelayServer system messages.
+
+-   [RegisterRelayCallback](/api/capi/relay/registerrelaycallback) - Register callback for relay messages coming from peers.
+-   [DeregisterRelayCallback](/api/capi/relay/deregisterrelaycallback) - Deregisters callback for relay messages coming from peers.
+-   [RegisterSystemCallback](/api/capi/relay/registersystemcallback) - Register callback for RelayServer system messages.
+-   [DeregisterSystemCallback](/api/capi/relay/deregistersystemcallback) - Deregister callback for RelayServer system messages.
 
 <DocCardList />
