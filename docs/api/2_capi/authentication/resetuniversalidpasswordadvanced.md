@@ -56,7 +56,7 @@ NSString *universalId = @"universalId";
 NSString *serviceParams = @"{\"templateId\": \"d-template-id-guid\", \"dynamicData\": {\"aKey\": \"aValue\"}, \"categories\": [\"category1\", \"category2\"]}";
 BCCompletionBlock successBlock; // define callback
 BCErrorCompletionBlock failureBlock; // define callback
-[[<%= data.branding.codePrefix %> authenticationService] ResetUniversalIdPasswordAdvanced (dynamic template):
+[[<%= data.branding.codePrefix %> authenticationService] resetUniversalIdPasswordAdvanced (dynamic template):
                   universalId:universalId
                 serviceParams:serviceParams
               completionBlock:successBlock
@@ -73,7 +73,7 @@ BCErrorCompletionBlock failureBlock; // define callback
 String universalId = "universalId";
 String serviceParams = "{\"templateId\": \"d-template-id-guid\", \"dynamicData\": {\"aKey\": \"aValue\"}, \"categories\": [\"category1\", \"category2\"]}";
 this; // implements IServerCallback
-<%= data.branding.codePrefix %>.getAuthenticationService.ResetUniversalIdPasswordAdvanced (dynamic template)(universalId, serviceParams, this);
+<%= data.branding.codePrefix %>.getAuthenticationService.resetUniversalIdPasswordAdvanced (dynamic template)(universalId, serviceParams, this);
 
 public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
 {
@@ -103,7 +103,7 @@ var serviceParams = {
         "category2"
     ]
 };
-<%= data.branding.codePrefix %>.authentication.ResetUniversalIdPasswordAdvanced (dynamic template)(universalId, serviceParams, result =>
+<%= data.branding.codePrefix %>.authentication.resetUniversalIdPasswordAdvanced (universalId, serviceParams, result =>
 {
   var status = result.status;
   console.log(status + " : " + JSON.stringify(result, null, 2));
@@ -116,7 +116,25 @@ var serviceParams = {
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+var universalId = "universalId";
+var serviceParams = {
+    "templateId": "d-template-id-guid",
+    "dynamicData": {
+        "aKey": "aValue"
+    },
+    "categories": [
+        "category1",
+        "category2"
+    ]
+};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.authenticationV2Service.resetUniversalIdPasswordAdvanced(universalId:universalId, serviceParams:serviceParams);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
 ```
 
 ```mdx-code-block

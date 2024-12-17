@@ -100,9 +100,9 @@ var externalId = "email@email.com";
 ```
 
 ```dart
-var  externalId = "email@email.com";
+var  emailAddress = "email@email.com";
 
-ServerResponse result = await <%= data.branding.codePrefix %>.authenticationV2Service.ResetEmailPassword(externalId:externalId);
+ServerResponse result = await <%= data.branding.codePrefix %>.authenticationV2Service.ResetEmailPassword(emailAddress:emailAddress);
 
 if (result.statusCode == 200) {
     print("Success");

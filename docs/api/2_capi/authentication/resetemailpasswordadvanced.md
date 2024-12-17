@@ -103,7 +103,7 @@ var serviceParams = {
         "category2"
     ]
 };
-<%= data.branding.codePrefix %>.authentication.ResetEmailPasswordAdvanced (dynamic template)(emailAddress, serviceParams, result =>
+<%= data.branding.codePrefix %>.authentication.ResetEmailPasswordAdvanced (emailAddress, serviceParams, result =>
 {
   var status = result.status;
   console.log(status + " : " + JSON.stringify(result, null, 2));
@@ -116,7 +116,25 @@ var serviceParams = {
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+var emailAddress = "email@email.com";
+var serviceParams = {
+    "templateId": "d-template-id-guid",
+    "dynamicData": {
+        "aKey": "aValue"
+    },
+    "categories": [
+        "category1",
+        "category2"
+    ]
+};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.authenticationV2Service.ResetEmailPasswordAdvanced(emailAddress:emailAddress, serviceParams:serviceParams);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
 ```
 
 ```mdx-code-block

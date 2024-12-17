@@ -2,8 +2,6 @@
 
 Authenticate the user using a Parse user ID and authentication token.
 
-
-
 :::caution
 Make sure you've initialized the <%= data.branding.productName %> library before authenticating.
 :::
@@ -11,11 +9,12 @@ Make sure you've initialized the <%= data.branding.productName %> library before
 <PartialServop service_name="authenticationV2" operation_name="AUTHENTICATE" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-parseId | String representation of Parse user ID
-parseToken | The authentication token from Parse
-forceCreate | Should a new profile be created for this user if the account does not exist?
+
+| Parameter   | Description                                                                  |
+| ----------- | ---------------------------------------------------------------------------- |
+| parseId     | String representation of Parse user ID                                       |
+| parseToken  | The authentication token from Parse                                          |
+| forceCreate | Should a new profile be created for this user if the account does not exist? |
 
 ## Usage
 
@@ -27,11 +26,11 @@ forceCreate | Should a new profile be created for this user if the account does 
 
 ```csharp
 string parseId = "someId1234";
-string token = "authToken";
+string parseToken = "authToken";
 bool forceCreate = true;
 
 <%= data.branding.codePrefix %>.AuthenticationService.AuthenticateParse(
-    parseId, token, forceCreate, SuccessCallback, FailureCallback);
+    parseId, parseToken, forceCreate, SuccessCallback, FailureCallback);
 ```
 
 ```mdx-code-block
@@ -41,11 +40,11 @@ bool forceCreate = true;
 
 ```cpp
 const char* parseId = "someId1234";
-const char* token = "authToken";
+const char* parseToken = "authToken";
 bool forceCreate = true;
 
 <%= data.branding.codePrefix %>->getAuthenticationService()->authenticateParse(
-    parseId, token, forceCreate, this);
+    parseId, parseToken, forceCreate, this);
 ```
 
 ```mdx-code-block
@@ -54,15 +53,15 @@ bool forceCreate = true;
 ```
 
 ```objectivec
-NSString * userID = @"someId1234";
-NSString * authToken = @"authToken";
+NSString * parseId = @"someId1234";
+NSString * parseToken = @"authToken";
 BOOL forceCreate = true;
 BCCompletionBlock successBlock;      // define callback
 BCErrorCompletionBlock failureBlock; // define callback
 
 [[<%= data.branding.codePrefix %> authenticationService]
-		  authenticateParse:userID
-		    	      token:authToken
+		  authenticateParse:parseId
+                 parseToken:parseToken
                 forceCreate:forceCreate
             completionBlock:successBlock
        errorCompletionBlock:failureBlock
@@ -75,12 +74,12 @@ BCErrorCompletionBlock failureBlock; // define callback
 ```
 
 ```java
-String parseUserId = "someId1234";
-String parseAuthToken = "authToken";
+String parseId = "someId1234";
+String parseToken = "authToken";
 boolean forceCreate = true;
 this; // implements IServerCallback
 
-<%= data.branding.codePrefix %>.getAuthenticationService().authenticateParse(googleId, googleToken, forceCreate, this);
+<%= data.branding.codePrefix %>.getAuthenticationService().authenticateParse(parseId, parseToken, forceCreate, this);
 
 public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
 {
@@ -98,11 +97,11 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 ```
 
 ```javascript
-var parseUserId = "someId1234";
-var parseAuthToken = "authToken";
+var parseId = "someId1234";
+var parseToken = "authToken";
 var forceCreate = true;
 
-<%= data.branding.codePrefix %>.authentication.authenticateParse(googleId, googleToken, forceCreate, result =>
+<%= data.branding.codePrefix %>.authentication.authenticateParse(parseId, parseToken, forceCreate, result =>
 {
 	var status = result.status;
 	console.log(status + " : " + JSON.stringify(result, null, 2));
@@ -115,11 +114,11 @@ var forceCreate = true;
 ```
 
 ```dart
-var  parseUserId = "someId1234";
-var  parseAuthToken = "authToken";
+var  parseId = "someId1234";
+var  parseToken = "authToken";
 var  forceCreate = true;
 
-ServerResponse result = await <%= data.branding.codePrefix %>.authenticationV2Service.authenticateParse(googleId:googleId, googleToken:googleToken, forceCreate:forceCreate);
+ServerResponse result = await <%= data.branding.codePrefix %>.authenticationV2Service.authenticateParse(parseId:parseId, parseToken:parseToken, forceCreate:forceCreate);
 
 if (result.statusCode == 200) {
     print("Success");
@@ -142,7 +141,7 @@ if (result.statusCode == 200) {
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
+```r
 // N/A
 ```
 
@@ -205,20 +204,20 @@ if (result.statusCode == 200) {
     }
 }
 ```
+
 </details>
 
 <details>
 <summary>Common Error Code</summary>
 
 ### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40206 | MISSING_IDENTITY_ERROR | The identity does not exist on the server and `forceCreate` was `false` [and a `profileId` was provided - otherwise 40208 would have been returned]. Will also occur when `forceCreate` is `true` and a saved [but un-associated] `profileId` is provided. The error handler should reset the stored profile id (if there is one) and re-authenticate, setting `forceCreate` to `true` to create a new account. **A common cause of this error is deleting the user's account via the Design Portal.**
-40207 | SWITCHING_PROFILES | Indicates that the identity credentials are valid, and the saved `profileId` is valid, but the identity is not associated with the provided `profileId`. This may indicate that the user wants to switch accounts in the app. Often an app will pop-up a dialog confirming that the user wants to switch accounts, and then reset the stored `profileId` and call authenticate again.
-40208 | MISSING_PROFILE_ERROR | Returned when the identity cannot be located, no `profileId` is provided, and `forceCreate` is false. The normal response is to call Authenticate again with `forceCreate` set to `true`.
-40217 | UNKNOWN_AUTH_ERROR | An unknown error has occurred during authentication.
-40307 | TOKEN_DOES_NOT_MATCH_USER | The user credentials are invalid (i.e. parseId and parseToken are invalid). May also indicate that Parse Integration is not properly configured.
+
+| Code  | Name                      | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| ----- | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 40206 | MISSING_IDENTITY_ERROR    | The identity does not exist on the server and `forceCreate` was `false` [and a `profileId` was provided - otherwise 40208 would have been returned]. Will also occur when `forceCreate` is `true` and a saved [but un-associated] `profileId` is provided. The error handler should reset the stored profile id (if there is one) and re-authenticate, setting `forceCreate` to `true` to create a new account. **A common cause of this error is deleting the user's account via the Design Portal.** |
+| 40207 | SWITCHING_PROFILES        | Indicates that the identity credentials are valid, and the saved `profileId` is valid, but the identity is not associated with the provided `profileId`. This may indicate that the user wants to switch accounts in the app. Often an app will pop-up a dialog confirming that the user wants to switch accounts, and then reset the stored `profileId` and call authenticate again.                                                                                                                  |
+| 40208 | MISSING_PROFILE_ERROR     | Returned when the identity cannot be located, no `profileId` is provided, and `forceCreate` is false. The normal response is to call Authenticate again with `forceCreate` set to `true`.                                                                                                                                                                                                                                                                                                              |
+| 40217 | UNKNOWN_AUTH_ERROR        | An unknown error has occurred during authentication.                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| 40307 | TOKEN_DOES_NOT_MATCH_USER | The user credentials are invalid (i.e. parseId and parseToken are invalid). May also indicate that Parse Integration is not properly configured.                                                                                                                                                                                                                                                                                                                                                       |
 
 </details>
-
-

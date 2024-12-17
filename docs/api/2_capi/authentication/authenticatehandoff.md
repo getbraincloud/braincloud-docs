@@ -1,8 +1,6 @@
 # AuthenticateHandoff
 
-Authenticate the user with a custom Authentication Handoff.  
-
-
+Authenticate the user with a custom Authentication Handoff.
 
 ## Error Handling Example
 
@@ -53,11 +51,11 @@ Make sure you've initialized the <%= data.branding.productName %> library before
 <PartialServop service_name="authenticationV2" operation_name="AUTHENTICATE" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-handoffId | The id for the given handoff 
-secruityToken | The secruity token used to verify the handoff
-forceCreate | Should a new profile be created for this user if the account does not exist?
+
+| Parameter     | Description                                   |
+| ------------- | --------------------------------------------- |
+| handoffId     | The id for the given handoff                  |
+| secruityToken | The secruity token used to verify the handoff |
 
 ## Usage
 
@@ -70,7 +68,6 @@ forceCreate | Should a new profile be created for this user if the account does 
 ```csharp
 string handoffId = "handoffId";
 string secruityToken = "secruityToken";
-bool forceCreate = true;
 SuccessCallback successCallback = (response, cbObject) =>
 {
     Debug.Log(string.Format("Success | {0}", response));
@@ -81,7 +78,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 };
 
 <%= data.branding.codePrefix %>.AuthenticationService.AuthenticateHandoff(
-    handoffId, secruityToken, forceCreate, successCallback, failureCallback);
+    handoffId, secruityToken, successCallback, failureCallback);
 ```
 
 ```mdx-code-block
@@ -92,12 +89,10 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 ```cpp
 const char* handoffId = "handoffId";
 const char* secruityToken = "secruityToken";
-bool forceCreate = true;
 
 <%= data.branding.codePrefix %>->getAuthenticationService()->authenticateHandoff(
     handoffId,
     secruityToken,
-    forceCreate,
     this);
 ```
 
@@ -109,14 +104,12 @@ bool forceCreate = true;
 ```objectivec
 NSString* handoffId = @"handoffId";
 NSString* secruityToken = @"secruityToken";
-BOOL forceCreate = true;
 BCCompletionBlock successBlock;      // define callback
 BCErrorCompletionBlock failureBlock; // define callback
 
 [[<%= data.branding.codePrefix %> authenticationService]
 		authenticateHandoff:handoffId
 		   	  secruityToken:secruityToken
-                forceCreate:forceCreate
             completionBlock:successBlock
        errorCompletionBlock:failureBlock
                    cbObject:nil];
@@ -130,10 +123,9 @@ BCErrorCompletionBlock failureBlock; // define callback
 ```java
 String handoffId = "handoffId";
 String secruityToken = "secruityToken";
-boolean forceCreate = true;
 this; // implements IServerCallback
 
-<%= data.branding.codePrefix %>.getAuthenticationService().authenticateHandoff(handoffId, secruityToken, forceCreate, this);
+<%= data.branding.codePrefix %>.getAuthenticationService().authenticateHandoff(handoffId, secruityToken, this);
 
 public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
 {
@@ -153,9 +145,8 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 ```javascript
 var handoffId = "handoffId";
 var secruityToken = "secruityToken";
-var forceCreate = true;
 
-<%= data.branding.codePrefix %>.authentication.authenticateHandoff(handoffId, secruityToken, forceCreate, result =>
+<%= data.branding.codePrefix %>.authentication.authenticateHandoff(handoffId, secruityToken, result =>
 {
 	var status = result.status;
 	console.log(status + " : " + JSON.stringify(result, null, 2));
@@ -170,9 +161,8 @@ var forceCreate = true;
 ```dart
 var  handoffId = "handoffId";
 var  secruityToken = "secruityToken";
-var  forceCreate = true;
 
-ServerResponse result = await <%= data.branding.codePrefix %>.authenticationV2Service.authenticateHandoff(handoffId:handoffId, secruityToken:secruityToken, forceCreate:forceCreate);
+ServerResponse result = await <%= data.branding.codePrefix %>.authenticationV2Service.authenticateHandoff(handoffId:handoffId, secruityToken:secruityToken);
 
 if (result.statusCode == 200) {
     print("Success");
@@ -258,20 +248,20 @@ if (result.statusCode == 200) {
     }
 }
 ```
+
 </details>
 
 <details>
 <summary>Common Error Code</summary>
 
 ### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40206 | MISSING_IDENTITY_ERROR | The identity does not exist on the server and `forceCreate` was `false` [and a `profileId` was provided - otherwise 40208 would have been returned]. Will also occur when `forceCreate` is `true` and a saved [but un-associated] `profileId` is provided. The error handler should reset the stored profile id (if there is one) and re-authenticate, setting `forceCreate` to `true` to create a new account. **A common cause of this error is deleting the user's account via the Design Portal.**
-40207 | SWITCHING_PROFILES | Indicates that the identity credentials are valid, and the saved `profileId` is valid, but the identity is not associated with the provided `profileId`. This may indicate that the user wants to switch accounts in the app. Most often an app will pop-up a dialog confirming that the user wants to switch accounts, and then reset the stored `profileId` and call authenticate again.
-40208 | MISSING_PROFILE_ERROR | Returned when the identity cannot be located, no `profileId` is provided, and `forceCreate` is false. The normal response is to call Authenticate again with `forceCreate` set to `true`.
-40217 | UNKNOWN_AUTH_ERROR | An unknown error has occurred during authentication.
-40307 | TOKEN_DOES_NOT_MATCH_USER | The user's password is incorrect.
+
+| Code  | Name                      | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| ----- | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 40206 | MISSING_IDENTITY_ERROR    | The identity does not exist on the server and `forceCreate` was `false` [and a `profileId` was provided - otherwise 40208 would have been returned]. Will also occur when `forceCreate` is `true` and a saved [but un-associated] `profileId` is provided. The error handler should reset the stored profile id (if there is one) and re-authenticate, setting `forceCreate` to `true` to create a new account. **A common cause of this error is deleting the user's account via the Design Portal.** |
+| 40207 | SWITCHING_PROFILES        | Indicates that the identity credentials are valid, and the saved `profileId` is valid, but the identity is not associated with the provided `profileId`. This may indicate that the user wants to switch accounts in the app. Most often an app will pop-up a dialog confirming that the user wants to switch accounts, and then reset the stored `profileId` and call authenticate again.                                                                                                             |
+| 40208 | MISSING_PROFILE_ERROR     | Returned when the identity cannot be located, no `profileId` is provided, and `forceCreate` is false. The normal response is to call Authenticate again with `forceCreate` set to `true`.                                                                                                                                                                                                                                                                                                              |
+| 40217 | UNKNOWN_AUTH_ERROR        | An unknown error has occurred during authentication.                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| 40307 | TOKEN_DOES_NOT_MATCH_USER | The user's password is incorrect.                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 
 </details>
-
-

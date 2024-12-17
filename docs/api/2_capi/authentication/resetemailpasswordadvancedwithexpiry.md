@@ -23,7 +23,7 @@ Advanced reset email password using templates. Allows the developer to specify h
 ```csharp
 string emailAddress = "email@email.com";
 string serviceParams = "{\"templateId\":\"template-id-guid\",\"substitutions\":{\"aKey\":\"aValue\"},\"categories\":[\"category1\",\"category2\"]}";
-int resetUrlTTLMinutes = 1440;
+int tokenTtlInMinutes = 1440;
 SuccessCallback successCallback = (response, cbObject) =>
 {
     Debug.Log(string.Format("Success | {0}", response));
@@ -33,7 +33,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
     Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
 };
 
-<%= data.branding.codePrefix %>.AuthenticationService.ResetEmailPasswordAdvancedWithExpiry(emailAddress, serviceParams, resetUrlTTLMinutes, successCallback, failureCallback);
+<%= data.branding.codePrefix %>.AuthenticationService.ResetEmailPasswordAdvancedWithExpiry(emailAddress, serviceParams, tokenTtlInMinutes, successCallback, failureCallback);
 ```
 
 ```mdx-code-block
@@ -44,8 +44,8 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 ```cpp
 const char *emailAddress = "email@email.com";
 const char *serviceParams = "{\"templateId\":\"template-id-guid\",\"substitutions\":{\"aKey\":\"aValue\"},\"categories\":[\"category1\",\"category2\"]}";
-int resetUrlTTLMinutes = 1440;
-<%= data.branding.codePrefix %>->getAuthenticationService()->resetEmailPasswordAdvancedWithExpiry(emailAddress, serviceParams, resetUrlTTLMinutes, this);
+int tokenTtlInMinutes = 1440;
+<%= data.branding.codePrefix %>->getAuthenticationService()->resetEmailPasswordAdvancedWithExpiry(emailAddress, serviceParams, tokenTtlInMinutes, this);
 ```
 
 ```mdx-code-block
@@ -56,13 +56,13 @@ int resetUrlTTLMinutes = 1440;
 ```objectivec
 NSString *emailAddress = @"email@email.com";
 NSString *serviceParams = @"{\"templateId\":\"template-id-guid\",\"substitutions\":{\"aKey\":\"aValue\"},\"categories\":[\"category1\",\"category2\"]}";
-int resetUrlTTLMinutes = 1440;
+int tokenTtlInMinutes = 1440;
 BCCompletionBlock successBlock;      // define callback
 BCErrorCompletionBlock failureBlock; // define callback
 
 [[<%= data.branding.codePrefix %> authenticateService] resetEmailPasswordAdvancedWithExpiry:emailAddress
               serviceParams:serviceParams
-          tokenTtlInMinutes:resetUrlTTLMinutes
+          tokenTtlInMinutes:tokenTtlInMinutes
             completionBlock:successBlock
        errorCompletionBlock:failureBlock
                    cbObject:nil];
@@ -76,10 +76,10 @@ BCErrorCompletionBlock failureBlock; // define callback
 ```java
 String emailAddress = "email@email.com";
 String serviceParams = "{\"templateId\":\"template-id-guid\",\"substitutions\":{\"aKey\":\"aValue\"},\"categories\":[\"category1\",\"category2\"]}";
-int resetUrlTTLMinutes = 1440;
+int tokenTtlInMinutes = 1440;
 this; // implements IServerCallback
 
-<%= data.branding.codePrefix %>.getAuthenticationService().resetEmailPasswordAdvancedWithExpiry(emailAddress, serviceParams, resetUrlTTLMinutes, this);
+<%= data.branding.codePrefix %>.getAuthenticationService().resetEmailPasswordAdvancedWithExpiry(emailAddress, serviceParams, tokenTtlInMinutes, this);
 
 public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
 {
@@ -108,9 +108,9 @@ var serviceParams = {
         "category2"
     ]
 };
-var resetUrlTTLMinutes = 1440;
+var tokenTtlInMinutes = 1440;
 
-<%= data.branding.codePrefix %>.authenticate.resetEmailPasswordAdvancedWithExpiry(emailAddress, serviceParams, resetUrlTTLMinutes, result =>
+<%= data.branding.codePrefix %>.authenticate.resetEmailPasswordAdvancedWithExpiry(emailAddress, serviceParams, tokenTtlInMinutes, result =>
 {
 	var status = result.status;
 	console.log(status + " : " + JSON.stringify(result, null, 2));
@@ -134,9 +134,9 @@ var  serviceParams = {
         "category2"
     ]
 };
-var  resetUrlTTLMinutes = 1440;
+var  tokenTtlInMinutes = 1440;
 
-ServerResponse result = await <%= data.branding.codePrefix %>.authenticationV2Service.resetEmailPasswordAdvancedWithExpiry(emailAddress:emailAddress, serviceParams:serviceParams, resetUrlTTLMinutes:resetUrlTTLMinutes);
+ServerResponse result = await <%= data.branding.codePrefix %>.authenticationV2Service.resetEmailPasswordAdvancedWithExpiry(emailAddress:emailAddress, serviceParams:serviceParams, tokenTtlInMinutes:tokenTtlInMinutes);
 
 if (result.statusCode == 200) {
     print("Success");

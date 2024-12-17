@@ -21,7 +21,7 @@ Sends a password reset email to the specified address. Allows the developer to s
 
 ```csharp
 string emailAddress = "email@email.com";
-int resetUrlTTLMinutes = 1440;
+int tokenTtlInMinutes = 1440;
 SuccessCallback successCallback = (response, cbObject) =>
 {
     Debug.Log(string.Format("Success | {0}", response));
@@ -31,7 +31,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
     Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
 };
 
-<%= data.branding.codePrefix %>.AuthenticationService.ResetEmailPasswordWithExpiry(emailAddress, resetUrlTTLMinutes, successCallback, failureCallback);
+<%= data.branding.codePrefix %>.AuthenticationService.ResetEmailPasswordWithExpiry(emailAddress, tokenTtlInMinutes, successCallback, failureCallback);
 ```
 
 ```mdx-code-block
@@ -41,8 +41,8 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 
 ```cpp
 const char *emailAddress = "email@email.com";
-int resetUrlTTLMinutes = 1440;
-<%= data.branding.codePrefix %>->getAuthenticationService()->resetEmailPasswordWithExpiry(emailAddress, resetUrlTTLMinutes, this);
+int tokenTtlInMinutes = 1440;
+<%= data.branding.codePrefix %>->getAuthenticationService()->resetEmailPasswordWithExpiry(emailAddress, tokenTtlInMinutes, this);
 ```
 
 ```mdx-code-block
@@ -52,12 +52,12 @@ int resetUrlTTLMinutes = 1440;
 
 ```objectivec
 NSString *emailAddress = @"email@email.com";
-int resetUrlTTLMinutes = 1440;
+int tokenTtlInMinutes = 1440;
 BCCompletionBlock successBlock;      // define callback
 BCErrorCompletionBlock failureBlock; // define callback
 
 [[<%= data.branding.codePrefix %> authenticateService] resetEmailPasswordWithExpiry:emailAddress
-          tokenTtlInMinutes:resetUrlTTLMinutes
+          tokenTtlInMinutes:tokenTtlInMinutes
             completionBlock:successBlock
        errorCompletionBlock:failureBlock
                    cbObject:nil];
@@ -70,10 +70,10 @@ BCErrorCompletionBlock failureBlock; // define callback
 
 ```java
 String emailAddress = "email@email.com";
-int resetUrlTTLMinutes = 1440;
+int tokenTtlInMinutes = 1440;
 this; // implements IServerCallback
 
-<%= data.branding.codePrefix %>.getAuthenticationService().resetEmailPasswordWithExpiry(emailAddress, resetUrlTTLMinutes, this);
+<%= data.branding.codePrefix %>.getAuthenticationService().resetEmailPasswordWithExpiry(emailAddress, tokenTtlInMinutes, this);
 
 public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
 {
@@ -92,9 +92,9 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 
 ```javascript
 var emailAddress = "email@email.com";
-var resetUrlTTLMinutes = 1440;
+var tokenTtlInMinutes = 1440;
 
-<%= data.branding.codePrefix %>.authenticate.resetEmailPasswordWithExpiry(emailAddress, resetUrlTTLMinutes, result =>
+<%= data.branding.codePrefix %>.authenticate.resetEmailPasswordWithExpiry(emailAddress, tokenTtlInMinutes, result =>
 {
 	var status = result.status;
 	console.log(status + " : " + JSON.stringify(result, null, 2));
@@ -108,9 +108,9 @@ var resetUrlTTLMinutes = 1440;
 
 ```dart
 var  emailAddress = "email@email.com";
-var  resetUrlTTLMinutes = 1440;
+var  tokenTtlInMinutes = 1440;
 
-ServerResponse result = await <%= data.branding.codePrefix %>.authenticationV2Service.resetEmailPasswordWithExpiry(emailAddress:emailAddress, resetUrlTTLMinutes:resetUrlTTLMinutes);
+ServerResponse result = await <%= data.branding.codePrefix %>.authenticationV2Service.resetEmailPasswordWithExpiry(emailAddress:emailAddress, tokenTtlInMinutes:tokenTtlInMinutes);
 
 if (result.statusCode == 200) {
     print("Success");

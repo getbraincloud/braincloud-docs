@@ -32,7 +32,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
     Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
 };
 
-<%= data.branding.codePrefix %>.AuthenticationService.ResetUniversalIdPasswordAdvancedWithExpiry(universalId, serviceParams, resetUrlTTLMinutes, successCallback, failureCallback);
+<%= data.branding.codePrefix %>.AuthenticationService.ResetUniversalIdPasswordAdvancedWithExpiry(universalId, serviceParams, tokenTtlInMinutes, successCallback, failureCallback);
 ```
 
 ```mdx-code-block
@@ -43,8 +43,8 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 ```cpp
 const char *universalId = "universalId";
 const char *serviceParams = "{\"templateId\":\"template-id-guid\",\"substitutions\":{\"aKey\":\"aValue\"},\"categories\":[\"category1\",\"category2\"]}";
-int resetUrlTTLMinutes = 1440;
-<%= data.branding.codePrefix %>->getAuthenticationService()->resetUniversalIdPasswordAdvancedWithExpiry(universalId, serviceParams, resetUrlTTLMinutes, this);
+int tokenTtlInMinutes = 1440;
+<%= data.branding.codePrefix %>->getAuthenticationService()->resetUniversalIdPasswordAdvancedWithExpiry(universalId, serviceParams, tokenTtlInMinutes, this);
 ```
 
 ```mdx-code-block
@@ -55,13 +55,13 @@ int resetUrlTTLMinutes = 1440;
 ```objectivec
 NSString *universalId = @"universalId";
 NSString *serviceParams = @"{\"templateId\":\"template-id-guid\",\"substitutions\":{\"aKey\":\"aValue\"},\"categories\":[\"category1\",\"category2\"]}";
-int resetUrlTTLMinutes = 1440;
+int tokenTtlInMinutes = 1440;
 BCCompletionBlock successBlock;      // define callback
 BCErrorCompletionBlock failureBlock; // define callback
 
 [[<%= data.branding.codePrefix %> authenticateService] resetUniversalIdPasswordAdvancedWithExpiry:universalId
               serviceParams:serviceParams
-          tokenTtlInMinutes:resetUrlTTLMinutes
+          tokenTtlInMinutes:tokenTtlInMinutes
             completionBlock:successBlock
        errorCompletionBlock:failureBlock
                    cbObject:nil];
@@ -77,7 +77,7 @@ String universalId = "universalId";
 String serviceParams = "{\"templateId\":\"template-id-guid\",\"substitutions\":{\"aKey\":\"aValue\"},\"categories\":[\"category1\",\"category2\"]}";
 this; // implements IServerCallback
 
-<%= data.branding.codePrefix %>.getAuthenticationService().resetUniversalIdPasswordAdvancedWithExpiry(universalId, serviceParams, resetUrlTTLMinutes, this);
+<%= data.branding.codePrefix %>.getAuthenticationService().resetUniversalIdPasswordAdvancedWithExpiry(universalId, serviceParams, tokenTtlInMinutes, this);
 
 public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
 {
@@ -106,9 +106,9 @@ var serviceParams = {
         "category2"
     ]
 };
-var resetUrlTTLMinutes = 1440;
+var tokenTtlInMinutes = 1440;
 
-<%= data.branding.codePrefix %>.authenticate.resetUniversalIdPasswordAdvancedWithExpiry(universalId, serviceParams, resetUrlTTLMinutes, result =>
+<%= data.branding.codePrefix %>.authenticate.resetUniversalIdPasswordAdvancedWithExpiry(universalId, serviceParams, tokenTtlInMinutes, result =>
 {
 	var status = result.status;
 	console.log(status + " : " + JSON.stringify(result, null, 2));
@@ -132,9 +132,9 @@ var  serviceParams = {
         "category2"
     ]
 };
-var  resetUrlTTLMinutes = 1440;
+var  tokenTtlInMinutes = 1440;
 
-ServerResponse result = await <%= data.branding.codePrefix %>.authenticationV2Service.resetUniversalIdPasswordAdvancedWithExpiry(universalId:universalId, serviceParams:serviceParams, resetUrlTTLMinutes:resetUrlTTLMinutes);
+ServerResponse result = await <%= data.branding.codePrefix %>.authenticationV2Service.resetUniversalIdPasswordAdvancedWithExpiry(universalId:universalId, serviceParams:serviceParams, tokenTtlInMinutes:tokenTtlInMinutes);
 
 if (result.statusCode == 200) {
     print("Success");

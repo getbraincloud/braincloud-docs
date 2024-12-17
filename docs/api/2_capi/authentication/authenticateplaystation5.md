@@ -2,8 +2,6 @@
 
 Authenticate the user with <%= data.branding.productName %> using their Playstation5 Credentials.
 
-
-
 :::caution
 Make sure you've initialized the <%= data.branding.productName %> library before authenticating.
 :::
@@ -11,11 +9,12 @@ Make sure you've initialized the <%= data.branding.productName %> library before
 <PartialServop service_name="authenticationV2" operation_name="AUTHENTICATE" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-accountId | The Playstation5 ID of the user
-authToken | The validated token from the Playstation5 SDK
-forceCreate | Should a new profile be created for this user if the account does not exist?
+
+| Parameter   | Description                                                                  |
+| ----------- | ---------------------------------------------------------------------------- |
+| accountId   | The Playstation5 ID of the user                                              |
+| authToken   | The validated token from the Playstation5 SDK                                |
+| forceCreate | Should a new profile be created for this user if the account does not exist? |
 
 ## Usage
 
@@ -84,7 +83,7 @@ bool forceCreate = true;
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// N/A
 ```
 
 ```mdx-code-block
@@ -164,20 +163,20 @@ bool forceCreate = true;
     }
 }
 ```
+
 </details>
 
 <details>
 <summary>Common Error Code</summary>
 
 ### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40206 | MISSING_IDENTITY_ERROR | The identity does not exist on the server and `forceCreate` was `false` [and a `profileId` was provided - otherwise 40208 would have been returned]. Will also occur when `forceCreate` is `true` and a saved [but un-associated] `profileId` is provided. The error handler should reset the stored profile id (if there is one) and re-authenticate, setting `forceCreate` to `true` to create a new account. **A common cause of this error is deleting the user's account via the Design Portal.**
-40207 | SWITCHING_PROFILES | Indicates that the identity credentials are valid, and the saved `profileId` is valid, but the identity is not associated with the provided `profileId`. This may indicate that the user wants to switch accounts in the app. Often an app will pop-up a dialog confirming that the user wants to switch accounts, and then reset the stored `profileId` and call authenticate again.
-40208 | MISSING_PROFILE_ERROR | Returned when the identity cannot be located, no `profileId` is provided, and `forceCreate` is false. The normal response is to call Authenticate again with `forceCreate` set to `true`.
-40217 | UNKNOWN_AUTH_ERROR | An unknown error has occurred during authentication.
-40307 | TOKEN_DOES_NOT_MATCH_USER | The user credentials are invalid (i.e. bad PlaystationNetwork id / token). May also indicate that PlaystationNetwork integration is not properly configured.
+
+| Code  | Name                      | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| ----- | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 40206 | MISSING_IDENTITY_ERROR    | The identity does not exist on the server and `forceCreate` was `false` [and a `profileId` was provided - otherwise 40208 would have been returned]. Will also occur when `forceCreate` is `true` and a saved [but un-associated] `profileId` is provided. The error handler should reset the stored profile id (if there is one) and re-authenticate, setting `forceCreate` to `true` to create a new account. **A common cause of this error is deleting the user's account via the Design Portal.** |
+| 40207 | SWITCHING_PROFILES        | Indicates that the identity credentials are valid, and the saved `profileId` is valid, but the identity is not associated with the provided `profileId`. This may indicate that the user wants to switch accounts in the app. Often an app will pop-up a dialog confirming that the user wants to switch accounts, and then reset the stored `profileId` and call authenticate again.                                                                                                                  |
+| 40208 | MISSING_PROFILE_ERROR     | Returned when the identity cannot be located, no `profileId` is provided, and `forceCreate` is false. The normal response is to call Authenticate again with `forceCreate` set to `true`.                                                                                                                                                                                                                                                                                                              |
+| 40217 | UNKNOWN_AUTH_ERROR        | An unknown error has occurred during authentication.                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| 40307 | TOKEN_DOES_NOT_MATCH_USER | The user credentials are invalid (i.e. bad PlaystationNetwork id / token). May also indicate that PlaystationNetwork integration is not properly configured.                                                                                                                                                                                                                                                                                                                                           |
 
 </details>
-
-

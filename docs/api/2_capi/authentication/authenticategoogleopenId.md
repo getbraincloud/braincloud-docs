@@ -2,8 +2,6 @@
 
 Authenticate the user using google's modern OpenId mechanism.
 
-
-
 :::caution
 Make sure you've initialized the <%= data.branding.productName %> library before authenticating.
 :::
@@ -11,11 +9,12 @@ Make sure you've initialized the <%= data.branding.productName %> library before
 <PartialServop service_name="authenticationV2" operation_name="AUTHENTICATE" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-googleUserAccountEmail | Either the user's google email, or their google userid (gXXX)
-IdToken | The id token of the google account. Can get with calls like requestIdToken
-forceCreate | Should a new profile be created for this user if the account does not exist?
+
+| Parameter              | Description                                                                  |
+| ---------------------- | ---------------------------------------------------------------------------- |
+| googleUserAccountEmail | Either the user's google email, or their google userid (gXXX)                |
+| idToken                | The id token of the google account. Can get with calls like requestIdToken   |
+| forceCreate            | Should a new profile be created for this user if the account does not exist? |
 
 ## Usage
 
@@ -27,11 +26,11 @@ forceCreate | Should a new profile be created for this user if the account does 
 
 ```csharp
 string googleUserAccountEmail = "example@gmail.com";
-string IdToken = "authTokenFromGoogle";
+string idToken = "authTokenFromGoogle";
 bool forceCreate = true;
 
 <%= data.branding.codePrefix %>.AuthenticationService.AuthenticateGoogleOpenId(
-    googleUserAccountEmail, IdToken, forceCreate, SuccessCallback, FailureCallback);
+    googleUserAccountEmail, idToken, forceCreate, SuccessCallback, FailureCallback);
 ```
 
 ```mdx-code-block
@@ -41,11 +40,11 @@ bool forceCreate = true;
 
 ```cpp
 const char* googleUserAccountEmail = "example@gmail.com";
-const char* IdToken = "authTokenFromGoogle";
+const char* idToken = "authTokenFromGoogle";
 bool forceCreate = true;
 
 <%= data.branding.codePrefix %>->getAuthenticationService()->authenticateGoogleOpenId(
-    googleUserAccountEmail, IdToken, forceCreate, this);
+    googleUserAccountEmail, idToken, forceCreate, this);
 ```
 
 ```mdx-code-block
@@ -55,14 +54,14 @@ bool forceCreate = true;
 
 ```objectivec
 NSString * googleUserAccountEmail = @"example@gmail.com";
-NSString * IdToken = @"authTokenFromGoogle";
+NSString * idToken = @"authTokenFromGoogle";
 BOOL forceCreate = true;
 BCCompletionBlock successBlock;      // define callback
 BCErrorCompletionBlock failureBlock; // define callback
 
 [[<%= data.branding.codePrefix %> authenticationService]
      googleUserAccountEmail:googleUserAccountEmail
-                    IdToken:IdToken
+                    idToken:idToken
                 forceCreate:forceCreate
             completionBlock:successBlock
        errorCompletionBlock:failureBlock
@@ -76,11 +75,11 @@ BCErrorCompletionBlock failureBlock; // define callback
 
 ```java
 String googleUserAccountEmail = "example@gmail.com";
-String IdToken = "authTokenFromGoogle";
+String idToken = "authTokenFromGoogle";
 boolean forceCreate = true;
 this; // implements IServerCallback
 
-<%= data.branding.codePrefix %>.getAuthenticationService().authenticateGoogleOpenId(googleUserAccountEmail, IdToken, forceCreate, this);
+<%= data.branding.codePrefix %>.getAuthenticationService().authenticateGoogleOpenId(googleUserAccountEmail, idToken, forceCreate, this);
 
 public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
 {
@@ -99,10 +98,10 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 
 ```javascript
 var googleUserAccountEmail = "example@gmail.com";
-var IdToken = "authTokenFromGoogle";
+var idToken = "authTokenFromGoogle";
 var forceCreate = true;
 
-<%= data.branding.codePrefix %>.authentication.authenticateGoogleOpenId(googleUserAccountEmail, IdToken, forceCreate, result =>
+<%= data.branding.codePrefix %>.authentication.authenticateGoogleOpenId(googleUserAccountEmail, idToken, forceCreate, result =>
 {
 	var status = result.status;
 	console.log(status + " : " + JSON.stringify(result, null, 2));
@@ -116,10 +115,10 @@ var forceCreate = true;
 
 ```dart
 var  googleUserAccountEmail = "example@gmail.com";
-var  IdToken = "authTokenFromGoogle";
+var  idToken = "authTokenFromGoogle";
 var  forceCreate = true;
 
-ServerResponse result = await <%= data.branding.codePrefix %>.authenticationV2Service.authenticateGoogleOpenId(googleUserAccountEmail:googleUserAccountEmail, IdToken:IdToken, forceCreate:forceCreate);
+ServerResponse result = await <%= data.branding.codePrefix %>.authenticationV2Service.authenticateGoogleOpenId(googleUserAccountEmail:googleUserAccountEmail, idToken:idToken, forceCreate:forceCreate);
 
 if (result.statusCode == 200) {
     print("Success");
@@ -205,20 +204,20 @@ if (result.statusCode == 200) {
     }
 }
 ```
+
 </details>
 
 <details>
 <summary>Common Error Code</summary>
 
 ### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40206 | MISSING_IDENTITY_ERROR | The identity does not exist on the server and `forceCreate` was `false` [and a `profileId` was provided - otherwise 40208 would have been returned]. Will also occur when `forceCreate` is `true` and a saved [but un-associated] `profileId` is provided. The error handler should reset the stored profile id (if there is one) and re-authenticate, setting `forceCreate` to `true` to create a new account. **A common cause of this error is deleting the user's account via the Design Portal.**
-40207 | SWITCHING_PROFILES | Indicates that the identity credentials are valid, and the saved `profileId` is valid, but the identity is not associated with the provided `profileId`. This may indicate that the user wants to switch accounts in the app. Often an app will pop-up a dialog confirming that the user wants to switch accounts, and then reset the stored `profileId` and call authenticate again.
-40208 | MISSING_PROFILE_ERROR | Returned when the identity cannot be located, no `profileId` is provided, and `forceCreate` is false. The normal response is to call Authenticate again with `forceCreate` set to `true`.
-40217 | UNKNOWN_AUTH_ERROR | An unknown error has occurred during authentication.
-40307 | TOKEN_DOES_NOT_MATCH_USER | The user credentials are invalid (i.e. googleUserAccountEmail and IdToken are invalid). May also indicate that Google Integration is not properly configured.
+
+| Code  | Name                      | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| ----- | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 40206 | MISSING_IDENTITY_ERROR    | The identity does not exist on the server and `forceCreate` was `false` [and a `profileId` was provided - otherwise 40208 would have been returned]. Will also occur when `forceCreate` is `true` and a saved [but un-associated] `profileId` is provided. The error handler should reset the stored profile id (if there is one) and re-authenticate, setting `forceCreate` to `true` to create a new account. **A common cause of this error is deleting the user's account via the Design Portal.** |
+| 40207 | SWITCHING_PROFILES        | Indicates that the identity credentials are valid, and the saved `profileId` is valid, but the identity is not associated with the provided `profileId`. This may indicate that the user wants to switch accounts in the app. Often an app will pop-up a dialog confirming that the user wants to switch accounts, and then reset the stored `profileId` and call authenticate again.                                                                                                                  |
+| 40208 | MISSING_PROFILE_ERROR     | Returned when the identity cannot be located, no `profileId` is provided, and `forceCreate` is false. The normal response is to call Authenticate again with `forceCreate` set to `true`.                                                                                                                                                                                                                                                                                                              |
+| 40217 | UNKNOWN_AUTH_ERROR        | An unknown error has occurred during authentication.                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| 40307 | TOKEN_DOES_NOT_MATCH_USER | The user credentials are invalid (i.e. googleUserAccountEmail and idToken are invalid). May also indicate that Google Integration is not properly configured.                                                                                                                                                                                                                                                                                                                                          |
 
 </details>
-
-

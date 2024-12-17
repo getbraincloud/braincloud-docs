@@ -2,23 +2,14 @@
 
 Method gets the active sales inventory for the passed-in currency type and platform.
 
-Valid platforms are:
-- itunes
-- facebook
-- appworld
-- steam
-- windows
-- windowsPhone
-- googlePlay
-- amazon
-
 <PartialServop service_name="appStore" operation_name="GET_INVENTORY" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-platform | The store platform.
-userCurrency | The currency to retrieve the sales inventory for. This is only used for Steam and Facebook stores.
+
+| Parameter    | Description                                                                                                  |
+| ------------ | ------------------------------------------------------------------------------------------------------------ |
+| storeId      | The store id. Refer to the current available store IDs [here](/api/appendix/platformIds#store-platform-ids). |
+| userCurrency | The currency to retrieve the sales inventory for. This is only used for Steam and Facebook stores.           |
 
 ## Usage
 
@@ -211,5 +202,5 @@ if (postResult.status == 200) {
     }
 }
 ```
-</details>
 
+</details>
