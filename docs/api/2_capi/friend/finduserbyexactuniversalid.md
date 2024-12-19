@@ -7,9 +7,10 @@ Does not require the calling user to be a friend of the retrieved users.
 <PartialServop service_name="friend" operation_name="FIND_PLAYER_BY_EXACT_UNIVERSAL_ID" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-searchText | The universalId to search for
+
+| Parameter  | Description                   |
+| ---------- | ----------------------------- |
+| searchText | The universalId to search for |
 
 ## Usage
 
@@ -101,9 +102,9 @@ var searchText = "someUniversalId";
 ```
 
 ```dart
-var  searchText = "someUniversalId";
+var  universalId = "someUniversalId";
 
-ServerResponse result = await <%= data.branding.codePrefix %>.friendService.findUserByExactUniversalId(searchText:searchText);
+ServerResponse result = await <%= data.branding.codePrefix %>.friendService.findUserByExactUniversalId(universalId:universalId);
 
 if (result.statusCode == 200) {
     print("Success");
@@ -134,7 +135,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-  "searchText": "someUniversalId"
+	"service": "friend",
+	"operation": "FIND_PLAYER_BY_EXACT_UNIVERSAL_ID",
+	"data": {
+        "searchText": "someUniversalId"
+	}
 }
 ```
 
@@ -148,20 +153,20 @@ if (postResult.status == 200) {
 <summary>JSON Response</summary>
 
 ```json
-{  
-   "status":200,
-   "data":{  
-      "matchedCount":1,
-      "matches":[  
-         {  
-            "profileId":"111-222-333",
-            "profileName":"UserA",
-            "summaryFriendData":null,
-            "pictureUrl":null
-         }
-      ]
-   }
+{
+    "status": 200,
+    "data": {
+        "matchedCount": 1,
+        "matches": [
+            {
+                "profileId": "111-222-333",
+                "profileName": "UserA",
+                "summaryFriendData": null,
+                "pictureUrl": null
+            }
+        ]
+    }
 }
 ```
-</details>
 
+</details>

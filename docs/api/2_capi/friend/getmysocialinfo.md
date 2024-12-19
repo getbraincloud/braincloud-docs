@@ -5,10 +5,11 @@ Retrieves the social information associated with the logged in user. Includes su
 <PartialServop service_name="friend" operation_name="GET_MY_SOCIAL_INFO" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-friendPlatform | Friend platform to query. Valid values are "Facebook", "<%= data.branding.productName %>" and "All".
-includeSummaryData | True if including summary data; false otherwise.
+
+| Parameter          | Description                                                                                          |
+| ------------------ | ---------------------------------------------------------------------------------------------------- |
+| friendPlatform     | Friend platform to query. Valid values are "Facebook", "<%= data.branding.productName %>" and "All". |
+| includeSummaryData | True if including summary data; false otherwise.                                                     |
 
 ## Usage
 
@@ -107,7 +108,7 @@ var includeSummaryData = true;
 ```
 
 ```dart
-var  friendPlatform = <%= data.branding.codePrefix %>.friend.friendPlatform.Facebook;
+var  friendPlatform = FriendPlatform.facebook;
 var  includeSummaryData = true;
 
 ServerResponse result = await <%= data.branding.codePrefix %>.friendService.getMySocialInfo(friendPlatform:friendPlatform, includeSummaryData:includeSummaryData);
@@ -162,22 +163,22 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "playerId": "caa0362c-03a8-4c92-8ef6-a19919a97e0a",
-    "name": "q2a4d5ba811-CAen",
-    "pictureUrl": "https://graph.facebook.com/v3.2/111234914143270/picture?",
-    "summaryFriendData": null,
-    "externalData": {
-      "Facebook": {
+    "data": {
+        "playerId": "caa0362c-03a8-4c92-8ef6-a19919a97e0a",
+        "name": "q2a4d5ba811-CAen",
         "pictureUrl": "https://graph.facebook.com/v3.2/111234914143270/picture?",
-        "name": "Tester Tester",
-        "externalId": "111234914143270"
-      }
+        "summaryFriendData": null,
+        "externalData": {
+            "Facebook": {
+                "pictureUrl": "https://graph.facebook.com/v3.2/111234914143270/picture?",
+                "name": "Tester Tester",
+                "externalId": "111234914143270"
+            }
+        },
+        "server_time": 1615573285941
     },
-    "server_time": 1615573285941
-  },
-  "status": 200
+    "status": 200
 }
 ```
-</details>
 
+</details>

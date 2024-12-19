@@ -5,11 +5,12 @@ Links the profiles for the specified externalIds for the given friend platform a
 <PartialServop service_name="friend" operation_name="ADD_FRIENDS_FROM_PLATFORM" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-friendPlatform | Friend platform to query. Valid values are "Facebook", "Steam", and "PlaystationNetwork"
-mode | "ADD" to add friends only, "SYNC" to delete any previously saved friends that are not in the externalIds list
-externalIds | The list of platform-specific external IDs of the friends to add
+
+| Parameter      | Description                                                                                                   |
+| -------------- | ------------------------------------------------------------------------------------------------------------- |
+| friendPlatform | Friend platform to query. Valid values are "Facebook", "Steam", and "PlaystationNetwork"                      |
+| mode           | "ADD" to add friends only, "SYNC" to delete any previously saved friends that are not in the externalIds list |
+| externalIds    | The list of platform-specific external IDs of the friends to add                                              |
 
 ## Usage
 
@@ -22,7 +23,7 @@ externalIds | The list of platform-specific external IDs of the friends to add
 ```csharp
 string friendPlatform = "Facebook";
 string mode = "ADD";
-string[] externalIds = { "profileId1", "profileId2" };
+string[] externalIds = { "external Id 1", "external Id 2" };
 SuccessCallback successCallback = (response, cbObject) =>
 {
     Debug.Log(string.Format("Success | {0}", response));
@@ -44,8 +45,8 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 const char *friendPlatform = "Facebook";
 const char *mode = "ADD";
 std::vector<std::string> externalIds;
-externalIds.push_back("profileId1");
-externalIds.push_back("profileId2");
+externalIds.push_back("external Id 1");
+externalIds.push_back("external Id 2");
 <%= data.branding.codePrefix %>->getFriendService()->addFriendsFromPlatform(friendPlatform, mode, externalIds, this);
 ```
 
@@ -57,7 +58,7 @@ externalIds.push_back("profileId2");
 ```objectivec
 NSString *friendPlatform = @"Facebook";
 NSString *mode = @"ADD";
-NSArray *externalIds = @[ @"profileId1", @"profileId2" ];
+NSArray *externalIds = @[ @"external Id 1", @"external Id 2" ];
 BCCompletionBlock successBlock;      // define callback
 BCErrorCompletionBlock failureBlock; // define callback
 
@@ -77,7 +78,7 @@ BCErrorCompletionBlock failureBlock; // define callback
 ```java
 String friendPlatform = "Facebook";
 String mode = "ADD";
-String[] externalIds = { "profileId1", "profileId2" };
+String[] externalIds = { "external Id 1", "external Id 2" };
 this; // implements IServerCallback
 
 <%= data.branding.codePrefix %>.getFriendService().addFriendsFromPlatform(friendPlatform, mode, externalIds, this);
@@ -100,7 +101,7 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 ```javascript
 var friendPlatform = "Facebook";
 var mode = "ADD";
-var externalIds = [ "profileId1", "profileId2" ];
+var externalIds = [ "external Id 1", "external Id 2" ];
 
 <%= data.branding.codePrefix %>.friend.addFriendsFromPlatform(friendPlatform, mode, externalIds, result =>
 {
@@ -115,9 +116,9 @@ var externalIds = [ "profileId1", "profileId2" ];
 ```
 
 ```dart
-var  friendPlatform = "Facebook";
+var  friendPlatform = FriendPlatform.facebook;
 var  mode = "ADD";
-var  externalIds = [ "profileId1", "profileId2" ];
+var  externalIds = [ "external Id 1", "external Id 2" ];
 
 ServerResponse result = await <%= data.branding.codePrefix %>.friendService.addFriendsFromPlatform(friendPlatform:friendPlatform, mode:mode, externalIds:externalIds);
 
@@ -136,7 +137,7 @@ if (result.statusCode == 200) {
 ```cfscript
 var friendPlatform = "Facebook";
 var mode = "ADD";
-var externalIds = [ "profileId1", "profileId2" ];
+var externalIds = [ "external Id 1", "external Id 2" ];
 var friendProxy = bridge.getFriendServiceProxy();
 
 var postResult = friendProxy.addFriendsFromPlatform(friendPlatform, mode, externalIds);
@@ -173,16 +174,16 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "server_time": 1623090934620,
-    "rejected": [],
-    "numRejected": 0,
-    "numNewAdded": 2,
-    "numDeleted": 0,
-    "numExisting": 0
-  },
-  "status": 200
+    "data": {
+        "server_time": 1623090934620,
+        "rejected": [],
+        "numRejected": 0,
+        "numNewAdded": 2,
+        "numDeleted": 0,
+        "numExisting": 0
+    },
+    "status": 200
 }
 ```
-</details>
 
+</details>

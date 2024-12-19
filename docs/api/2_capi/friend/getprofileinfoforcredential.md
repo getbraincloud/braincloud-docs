@@ -111,16 +111,7 @@ var authenticationType = "Facebook";
 ```
 
 ```dart
-var  externalId = "profileId";
-var  authenticationType = "Facebook";
-
-ServerResponse result = await <%= data.branding.codePrefix %>.friendService.getProfileInfoForCredential(externalId:externalId, authenticationType:authenticationType);
-
-if (result.statusCode == 200) {
-    print("Success");
-} else {
-    print("Failed ${result.error['status_message'] ?? result.error}");
-}
+// Use alternate method     GetProfileInfoForCredentialIfExists()
 ```
 
 ```mdx-code-block

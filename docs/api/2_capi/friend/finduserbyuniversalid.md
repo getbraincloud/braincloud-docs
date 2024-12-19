@@ -1,4 +1,5 @@
 # FindUserByUniversalId
+
 Retrieves user information for partially matched universal IDs. Optional parameter: maxResults.
 
 :::caution
@@ -8,10 +9,11 @@ This API is deprecated and will be removed in the future. Please use the [FindUs
 <PartialServop service_name="friend" operation_name="FIND_PLAYER_BY_UNIVERSAL_ID" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-searchText | The substring to search for. Minimum length of 3 characters.
-maxResults | Maximum number of results to return. If there are more the message.
+
+| Parameter  | Description                                                         |
+| ---------- | ------------------------------------------------------------------- |
+| searchText | The substring to search for. Minimum length of 3 characters.        |
+| maxResults | Maximum number of results to return. If there are more the message. |
 
 ## Usage
 
@@ -109,16 +111,7 @@ var maxResults = 5;
 ```
 
 ```dart
-var  searchText = "someText";
-var  maxResults = 5;
-
-ServerResponse result = await <%= data.branding.codePrefix %>.friendService.FindUserByUniversalId(searchText:searchText, maxResults:maxResults);
-
-if (result.statusCode == 200) {
-    print("Success");
-} else {
-    print("Failed ${result.error['status_message'] ?? result.error}");
-}
+// N/A
 ```
 
 ```mdx-code-block
@@ -155,25 +148,25 @@ var postResult = friendProxy.FindUserByUniversalId(searchText, maxResults);
 </Tabs>
 </BrowserWindow>
 ```
+
 <details>
 <summary>JSON Response</summary>
 
 ```json
-{  
-   "status":200,
-   "data":{  
-      "matchedCount":1,
-      "matches":[  
-         {  
-            "profileId":"111-222-333",
-            "profileName":"UserA",
-            "summaryFriendData":null,
-            "pictureUrl":null
-         }
-      ]
-   }
+{
+    "status": 200,
+    "data": {
+        "matchedCount": 1,
+        "matches": [
+            {
+                "profileId": "111-222-333",
+                "profileName": "UserA",
+                "summaryFriendData": null,
+                "pictureUrl": null
+            }
+        ]
+    }
 }
 ```
 
 </details>
-

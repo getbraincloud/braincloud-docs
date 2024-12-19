@@ -109,7 +109,7 @@ var authenticationType = "Facebook";
 
 ```dart
 var  externalId = "profileId";
-var  authenticationType = "Facebook";
+var  authenticationType = AuthenticationType.facebook;
 
 ServerResponse result = await <%= data.branding.codePrefix %>.friendService.getProfileInfoForCredentialIfExists(externalId:externalId, authenticationType:authenticationType);
 

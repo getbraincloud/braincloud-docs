@@ -7,10 +7,11 @@ Does not require the calling user to be a friend of the other user.
 <PartialServop service_name="friend" operation_name="GET_PROFILE_INFO_FOR_EXTERNAL_AUTH_ID" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-externalId | External identifier
-externalAuthType | The name of the custom authentication type (linked to a cloud script that performs authentication.) Configured via the **Design &#124; Authentication &#124; External** page of the Design Portal.
+
+| Parameter        | Description                                                                                                                                                                                        |
+| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| externalId       | External identifier                                                                                                                                                                                |
+| externalAuthType | The name of the custom authentication type (linked to a cloud script that performs authentication.) Configured via the **Design &#124; Authentication &#124; External** page of the Design Portal. |
 
 ## Usage
 
@@ -108,16 +109,7 @@ var externalAuthType = "OAuth";
 ```
 
 ```dart
-var  externalId = "username";
-var  externalAuthType = "OAuth";
-
-ServerResponse result = await <%= data.branding.codePrefix %>.friendService.getProfileInfoForExternalAuthId(externalId:externalId, externalAuthType:externalAuthType);
-
-if (result.statusCode == 200) {
-    print("Success");
-} else {
-    print("Failed ${result.error['status_message'] ?? result.error}");
-}
+// Use alternate method   GetProfileInfoForExternalAuthIdIfExists()
 ```
 
 ```mdx-code-block
@@ -174,5 +166,5 @@ if (postResult.status == 200) {
     }
 }
 ```
-</details>
 
+</details>

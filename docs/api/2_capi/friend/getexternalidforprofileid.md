@@ -7,10 +7,11 @@ Does not require the calling user to be a friend of the other user.
 <PartialServop service_name="friend" operation_name="GET_EXTERNAL_ID_FOR_PROFILE_ID" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | Profile (user) ID.
-authenticationType | Associated authentication type. Full list of types can be found [here](/api/appendix/authtypes).
+
+| Parameter          | Description                                                                                      |
+| ------------------ | ------------------------------------------------------------------------------------------------ |
+| profileId          | Profile (user) ID.                                                                               |
+| authenticationType | Associated authentication type. Full list of types can be found [here](/api/appendix/authtypes). |
 
 ## Usage
 
@@ -110,7 +111,7 @@ var authenticationType = "Facebook";
 
 ```dart
 var  profileId = "profileId";
-var  authenticationType = "Facebook";
+var  authenticationType = AuthenticationType.facebook;
 
 ServerResponse result = await <%= data.branding.codePrefix %>.friendService.getExternalIdForProfileId(profileId:profileId, authenticationType:authenticationType);
 
@@ -170,5 +171,5 @@ if (postResult.status == 200) {
     }
 }
 ```
-</details>
 
+</details>
