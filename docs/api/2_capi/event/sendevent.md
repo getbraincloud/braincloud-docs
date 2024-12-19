@@ -4,8 +4,6 @@ Sends an event to the designated profile id with the attached JSON data.
 
 Any events that have been sent to a user will show up in their incoming event queue.
 
-
-
 :::tip
 Note that the list of sent and incoming events for a user is also returned in the "ReadUserState" call (in the UserState module).
 :::
@@ -13,11 +11,12 @@ Note that the list of sent and incoming events for a user is also returned in th
 <PartialServop service_name="event" operation_name="SEND" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-toProfileId | The id of the player who is being sent the event
-eventType | The user-defined type of the event.
-eventData | The user-defined data for this event encoded in JSON.
+
+| Parameter   | Description                                           |
+| ----------- | ----------------------------------------------------- |
+| toProfileId | The id of the player who is being sent the event      |
+| eventType   | The user-defined type of the event.                   |
+| eventData   | The user-defined data for this event encoded in JSON. |
 
 ## Usage
 
@@ -123,13 +122,13 @@ var eventData = {
 ```
 
 ```dart
-var  toId = "profile1";
+var  toProfileId = "profile1";
 var  eventType = "type1";
 var  eventData = {
     "someMapAttribute": "someValue"
 };
 
-ServerResponse result = await <%= data.branding.codePrefix %>.eventService.sendEvent(toId:toId, eventType:eventType, eventData:eventData);
+ServerResponse result = await <%= data.branding.codePrefix %>.eventService.sendEvent(toProfileId:toProfileId, eventType:eventType, eventData:eventData);
 
 if (result.statusCode == 200) {
     print("Success");
@@ -187,11 +186,11 @@ if (postResult.status == 200) {
 
 ```json
 {
-	"status": 200,
-	"data": {
-		"evId": "1234-1234-1234-1234"
-	}
+    "status": 200,
+    "data": {
+        "evId": "1234-1234-1234-1234"
+    }
 }
 ```
-</details>
 
+</details>

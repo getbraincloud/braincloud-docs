@@ -58,7 +58,7 @@ public void getServerVersion();
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+<%= data.branding.codePrefix %>.authenticationV2Service.getServerVersion();
 ```
 
 ```mdx-code-block

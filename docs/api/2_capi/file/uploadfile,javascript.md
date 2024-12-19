@@ -2,23 +2,22 @@
 
 Method uploads the supplied file to the <%= data.branding.productName %> server. Note that you must call prepareUserUpload to retrieve the uploadId before calling this method. It is assumed that any methods required to monitor the file upload including progress, and completion are attached to the XMLHttpRequest xhr object's events such as:
 
-* xhr.upload.addEventListener("progress", uploadProgress);
-* xhr.addEventListener("load", transferComplete);
-* xhr.addEventListener("error", transferFailed);
-* xhr.addEventListener("abort", transferCanceled);
+-   xhr.upload.addEventListener("progress", uploadProgress);
+-   xhr.addEventListener("load", transferComplete);
+-   xhr.addEventListener("error", transferFailed);
+-   xhr.addEventListener("abort", transferCanceled);
 
 On a 200 http status, the JSON return is available from XMLHttpRequest.responseText
-
-
 
 <PartialServop service_name="file" operation_name="UPLOAD_FILE" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-xhr | The XMLHttpRequest object that the <%= data.branding.productName %> client will use to upload the file
-file | The file object
-uploadId | The upload id obtained via prepareFileUpload()
+
+| Parameter | Description                                                                                            |
+| --------- | ------------------------------------------------------------------------------------------------------ |
+| xhr       | The XMLHttpRequest object that the <%= data.branding.productName %> client will use to upload the file |
+| file      | The file object                                                                                        |
+| uploadId  | The upload id obtained via prepareFileUpload()                                                         |
 
 ## Usage
 
@@ -87,7 +86,7 @@ var fileSize = file.size;
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// N/A
 ```
 
 ```mdx-code-block
@@ -119,26 +118,27 @@ var fileSize = file.size;
 
 ```json
 {
-    "status":200,
-    "data":{
-        "fileDetails":{
-            "updatedAt":1452616408147,
-            "fileSize":100,
-            "fileType":"User",
-            "expiresAt":1452702808146,
-            "shareable":true,
-            "uploadId":"cf9a075c-587e-4bd1-af0b-eab1a79b958f",
-            "createdAt":1452616408147,
-            "profileId":"bf8a1433-62d2-448e-b396-f3dbffff44",
-            "gameId":"99999",
-            "path":"dir1/dir2",
-            "filename":"filename",
-            "replaceIfExists":true,
-            "cloudPath":"bc/g/99999/u/bf8a1433-62d2-448e-b396-f3dbffff44/f/dir1/dir2/filename"
+    "status": 200,
+    "data": {
+        "fileDetails": {
+            "updatedAt": 1452616408147,
+            "fileSize": 100,
+            "fileType": "User",
+            "expiresAt": 1452702808146,
+            "shareable": true,
+            "uploadId": "cf9a075c-587e-4bd1-af0b-eab1a79b958f",
+            "createdAt": 1452616408147,
+            "profileId": "bf8a1433-62d2-448e-b396-f3dbffff44",
+            "gameId": "99999",
+            "path": "dir1/dir2",
+            "filename": "filename",
+            "replaceIfExists": true,
+            "cloudPath": "bc/g/99999/u/bf8a1433-62d2-448e-b396-f3dbffff44/f/dir1/dir2/filename"
         }
     }
 }
 ```
+
 </details>
 
 <details>
@@ -149,5 +149,3 @@ var fileSize = file.size;
 The XMLHttpRequest object will return a 200 http status if the upload is successful.
 
 </details>
-
-

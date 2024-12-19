@@ -5,9 +5,10 @@ Delete a list of events out of the user's incoming mailbox.
 <PartialServop service_name="event" operation_name="DELETE_INCOMING_EVENTS" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-evIds | Collection of event ids
+
+| Parameter | Description             |
+| --------- | ----------------------- |
+| evIds     | Collection of event ids |
 
 ## Usage
 
@@ -86,7 +87,7 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 ```
 
 ```javascript
-var evIds = { "ev1", "ev2" };
+var evIds = ["ev1", "ev2"];
 <%= data.branding.codePrefix %>.event.deleteIncomingEvents(evIds, result =>
 {
 	var status = result.status;
@@ -100,7 +101,7 @@ var evIds = { "ev1", "ev2" };
 ```
 
 ```dart
-var  evIds = { "ev1", "ev2" };
+var  evIds = ["ev1", "ev2"];
 
 ServerResponse result = await <%= data.branding.codePrefix %>.eventService.deleteIncomingEvents(evIds:evIds);
 
@@ -152,12 +153,12 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "deleted": true,
-    "deletedCount": 2
-  },
-  "status": 200
+    "data": {
+        "deleted": true,
+        "deletedCount": 2
+    },
+    "status": 200
 }
 ```
-</details>
 
+</details>

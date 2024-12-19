@@ -4,6 +4,13 @@ Deletes multiple user files.
 
 <PartialServop service_name="file" operation_name="DELETE_USER_FILES" />
 
+## Method Parameters
+
+| Parameter | Description                             |
+| --------- | --------------------------------------- |
+| cloudPath | File path                               |
+| recurse   | Whether to recurse into sub-directories |
+
 ## Usage
 
 ```mdx-code-block
@@ -100,10 +107,10 @@ var recurse = true;
 ```
 
 ```dart
-var  path = "dir1/dir2";
+var  cloudPath = "dir1/dir2";
 var  recurse = true;
 
-ServerResponse result = await <%= data.branding.codePrefix %>.fileService.deleteUserFiles(path:path, recurse:recurse);
+ServerResponse result = await <%= data.branding.codePrefix %>.fileService.deleteUserFiles(cloudPath:cloudPath, recurse:recurse);
 
 if (result.statusCode == 200) {
     print("Success");
@@ -175,22 +182,16 @@ if (postResult.status == 200) {
     }
 }
 ```
+
 </details>
 
 <details>
 <summary>Common Error Code</summary>
 
 ### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40431 | CLOUD_STORAGE_SERVICE_ERROR | Cloud storage service error
+
+| Code  | Name                        | Description                 |
+| ----- | --------------------------- | --------------------------- |
+| 40431 | CLOUD_STORAGE_SERVICE_ERROR | Cloud storage service error |
 
 </details>
-
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-cloudPath | File path
-recurse | Whether to recurse into sub-directories
-#

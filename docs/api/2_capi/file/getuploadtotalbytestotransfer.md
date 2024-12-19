@@ -3,9 +3,10 @@
 Returns the total number of bytes that will be uploaded or -1 if upload not found.
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-uploadId | The id of the upload
+
+| Parameter | Description          |
+| --------- | -------------------- |
+| uploadId  | The id of the upload |
 
 ## Usage
 
@@ -50,7 +51,7 @@ NSString * myUploadId = @"1234-1234-1234-1234"; //From UploadFile return data
 ```
 
 ```java
-public void cancelUpload(String uploadId)
+public void getUploadTotalBytesToTransfer(String uploadId)
 ```
 
 ```mdx-code-block
@@ -68,7 +69,15 @@ public void cancelUpload(String uploadId)
 ```
 
 ```dart
-// N/A
+var  uploadId = "1234-1234-1234-1234";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.fileService.getUploadTotalBytesToTransfer(uploadId:uploadId);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
 ```
 
 ```mdx-code-block
@@ -85,7 +94,7 @@ public void cancelUpload(String uploadId)
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
+```r
 // N/A
 ```
 
@@ -94,4 +103,3 @@ public void cancelUpload(String uploadId)
 </Tabs>
 </BrowserWindow>
 ```
-

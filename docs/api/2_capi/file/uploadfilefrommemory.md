@@ -4,17 +4,17 @@ Upload screenshots from memory instead of local file storage. On success the fil
 
 This method allows uploads to happen in situations where local file access is not possible or convenient. For example, screenshots from Unity-based WebGL apps.
 
-
 <PartialServop service_name="file" operation_name="PREPARE_USER_UPLOAD" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-cloudPath | The desired cloud path of the file
-cloudFilename | The desired cloud fileName of the file
-shareable | True if the file is shareable
-replaceIfExists | Whether to replace file if it exists
-encodedText | The converted file data from memory in string format
+
+| Parameter       | Description                                          |
+| --------------- | ---------------------------------------------------- |
+| cloudPath       | The desired cloud path of the file                   |
+| cloudFilename   | The desired cloud fileName of the file               |
+| shareable       | True if the file is shareable                        |
+| replaceIfExists | Whether to replace file if it exists                 |
+| encodedText     | The converted file data from memory in string format |
 
 ## Usage
 
@@ -90,7 +90,7 @@ var share = true;
 var overwrite = true;
 var encodedText = new Blob(["hello, world!"], {type: 'text/plain'});
 
-<%= data.branding.codePrefix %>.file.UploadFileFromMemory(cloudPath, cloudName, share, overwrite, encodedText, result =>
+<%= data.branding.codePrefix %>.file.uploadFileFromMemory(cloudPath, cloudName, share, overwrite, encodedText, result =>
 {
 	var status = result.status;
 	console.log(status + " : " + JSON.stringify(result, null, 2));
@@ -107,9 +107,9 @@ var  cloudPath = "";
 var  cloudName = "image.png";
 var  share = true;
 var  overwrite = true;
-var  encodedText = new Blob(["hello, world!"], {type: 'text/plain'});
+var  encodedText = utf8.encode("hello, world!");
 
-ServerResponse result = await <%= data.branding.codePrefix %>.fileService.UploadFileFromMemory(cloudPath:cloudPath, cloudName:cloudName, share:share, overwrite:overwrite, encodedText:encodedText);
+ServerResponse result = await <%= data.branding.codePrefix %>.fileService.uploadFileFromMemory(cloudPath:cloudPath, cloudName:cloudName, share:share, overwrite:overwrite, encodedText:encodedText);
 
 if (result.statusCode == 200) {
     print("Success");
@@ -168,5 +168,5 @@ if (result.statusCode == 200) {
     }
 }
 ```
-</details>
 
+</details>

@@ -5,10 +5,11 @@ List all user files
 <PartialServop service_name="file" operation_name="LIST_USER_FILES" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-cloudPath | File path
-recurse | Whether to recurse into sub-directories
+
+| Parameter | Description                             |
+| --------- | --------------------------------------- |
+| cloudPath | File path                               |
+| recurse   | Whether to recurse into sub-directories |
 
 ## Usage
 
@@ -106,10 +107,10 @@ var recurse = true;
 ```
 
 ```dart
-var  path = "dir1/dir2";
+var  cloudPath = "dir1/dir2";
 var  recurse = true;
 
-ServerResponse result = await <%= data.branding.codePrefix %>.fileService.listUserFiles(path:path, recurse:recurse);
+ServerResponse result = await <%= data.branding.codePrefix %>.fileService.listUserFiles(cloudPath:cloudPath, recurse:recurse);
 
 if (result.statusCode == 200) {
     print("Success");
@@ -181,5 +182,5 @@ if (postResult.status == 200) {
     }
 }
 ```
-</details>
 
+</details>

@@ -22,25 +22,8 @@ This method is affected by versioning. See the [versioning documentation](/api/a
 <TabItem value="csharp" label="C#">
 ```
 
-```json
-{
-    "status": 200,
-    "data": {
-        "gameId": "123456",
-        "entityId": "14281c38-abf6-4ca2-8436-b2bdwas8d5a9a",
-        "ownerId": "784cc6c6-4569-4d75-bd10-62dwa8ae0218",
-        "entityType": "test",
-        "entityIndexedId": "indexTest",
-        "version": 1,
-        "acl": {
-            "other": 1
-        },
-        "expiresAt": 1449861422588,
-        "timeToLive": 34567,
-        "createdAt": 1449861388021,
-        "updatedAt": 1449861388021
-    }
-}
+```csharp
+// Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block
@@ -48,25 +31,8 @@ This method is affected by versioning. See the [versioning documentation](/api/a
 <TabItem value="cpp" label="C++">
 ```
 
-```json
-{
-    "status": 200,
-    "data": {
-        "gameId": "123456",
-        "entityId": "14281c38-abf6-4ca2-8436-b2bdwas8d5a9a",
-        "ownerId": "784cc6c6-4569-4d75-bd10-62dwa8ae0218",
-        "entityType": "test",
-        "entityIndexedId": "indexTest",
-        "version": 1,
-        "acl": {
-            "other": 1
-        },
-        "expiresAt": 1449861422588,
-        "timeToLive": 34567,
-        "createdAt": 1449861388021,
-        "updatedAt": 1449861388021
-    }
-}
+```cpp
+// Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block
@@ -74,25 +40,8 @@ This method is affected by versioning. See the [versioning documentation](/api/a
 <TabItem value="objectivec" label="Objective-C">
 ```
 
-```json
-{
-    "status": 200,
-    "data": {
-        "gameId": "123456",
-        "entityId": "14281c38-abf6-4ca2-8436-b2bdwas8d5a9a",
-        "ownerId": "784cc6c6-4569-4d75-bd10-62dwa8ae0218",
-        "entityType": "test",
-        "entityIndexedId": "indexTest",
-        "version": 1,
-        "acl": {
-            "other": 1
-        },
-        "expiresAt": 1449861422588,
-        "timeToLive": 34567,
-        "createdAt": 1449861388021,
-        "updatedAt": 1449861388021
-    }
-}
+```objectivec
+// Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block
@@ -100,25 +49,8 @@ This method is affected by versioning. See the [versioning documentation](/api/a
 <TabItem value="java" label="Java">
 ```
 
-```json
-{
-    "status": 200,
-    "data": {
-        "gameId": "123456",
-        "entityId": "14281c38-abf6-4ca2-8436-b2bdwas8d5a9a",
-        "ownerId": "784cc6c6-4569-4d75-bd10-62dwa8ae0218",
-        "entityType": "test",
-        "entityIndexedId": "indexTest",
-        "version": 1,
-        "acl": {
-            "other": 1
-        },
-        "expiresAt": 1449861422588,
-        "timeToLive": 34567,
-        "createdAt": 1449861388021,
-        "updatedAt": 1449861388021
-    }
-}
+```java
+// Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block
@@ -126,25 +58,8 @@ This method is affected by versioning. See the [versioning documentation](/api/a
 <TabItem value="js" label="JavaScript">
 ```
 
-```json
-{
-    "status": 200,
-    "data": {
-        "gameId": "123456",
-        "entityId": "14281c38-abf6-4ca2-8436-b2bdwas8d5a9a",
-        "ownerId": "784cc6c6-4569-4d75-bd10-62dwa8ae0218",
-        "entityType": "test",
-        "entityIndexedId": "indexTest",
-        "version": 1,
-        "acl": {
-            "other": 1
-        },
-        "expiresAt": 1449861422588,
-        "timeToLive": 34567,
-        "createdAt": 1449861388021,
-        "updatedAt": 1449861388021
-    }
-}
+```js
+// Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block

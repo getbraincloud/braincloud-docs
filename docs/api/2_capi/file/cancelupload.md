@@ -3,9 +3,10 @@
 Method cancels an upload. If a File Upload Callback has been registered with the <%= data.branding.codeClient %> class, the fileUploadFailed callback method will be called once the upload has been canceled.
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-uploadId | The id of the upload
+
+| Parameter | Description          |
+| --------- | -------------------- |
+| uploadId  | The id of the upload |
 
 ## Usage
 
@@ -67,7 +68,15 @@ NSString * myUploadId = @"1234-1234-1234-1234"; //From UploadFile return data
 ```
 
 ```dart
-// N/A
+var  uploadId = "1234-1234-1234-1234";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.fileService.cancelUpload(uploadId:uploadId);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
 ```
 
 ```mdx-code-block
@@ -93,4 +102,3 @@ NSString * myUploadId = @"1234-1234-1234-1234"; //From UploadFile return data
 </Tabs>
 </BrowserWindow>
 ```
-

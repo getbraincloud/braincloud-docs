@@ -7,9 +7,10 @@ This will always return the total bytes to transfer on Unity mobile platforms.
 :::
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-uploadId | The id of the upload
+
+| Parameter | Description          |
+| --------- | -------------------- |
+| uploadId  | The id of the upload |
 
 ## Usage
 
@@ -54,7 +55,7 @@ NSString * uploadId = @"1234-1234-1234-1234"; //From UploadFile return data
 ```
 
 ```java
-public void deleteUserFiles(String cloudPath, Boolean recurse, IServerCallback callback)
+public void getUploadBytesTransferred(String uploadId, IServerCallback callback)
 ```
 
 ```mdx-code-block
@@ -72,7 +73,15 @@ public void deleteUserFiles(String cloudPath, Boolean recurse, IServerCallback c
 ```
 
 ```dart
-// N/A
+var  uploadId = "1234-1234-1234-1234";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.fileService.getUploadBytesTransferred(uploadId:uploadId);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
 ```
 
 ```mdx-code-block
@@ -98,4 +107,3 @@ public void deleteUserFiles(String cloudPath, Boolean recurse, IServerCallback c
 </Tabs>
 </BrowserWindow>
 ```
-

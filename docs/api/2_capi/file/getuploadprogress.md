@@ -7,9 +7,10 @@ This will always return 1 on Unity mobile platforms.
 :::
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-uploadId | The id of the upload
+
+| Parameter | Description          |
+| --------- | -------------------- |
+| uploadId  | The id of the upload |
 
 ## Usage
 
@@ -71,7 +72,15 @@ public double getUploadProgress(String uploadId)
 ```
 
 ```dart
-// N/A
+var  uploadId = "1234-1234-1234-1234";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.fileService.getUploadProgress(uploadId:uploadId);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
 ```
 
 ```mdx-code-block
@@ -88,7 +97,7 @@ public double getUploadProgress(String uploadId)
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
+```r
 // N/A
 ```
 
@@ -97,4 +106,3 @@ public double getUploadProgress(String uploadId)
 </Tabs>
 </BrowserWindow>
 ```
-
