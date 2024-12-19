@@ -5,11 +5,12 @@ Increment elements for a group entity's data field.
 <PartialServop service_name="group" operation_name="INCREMENT_GROUP_ENTITY_DATA" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | ID of the group
-entityId | ID of the entity.
-jsonData | Partial data map with incremental values.
+
+| Parameter | Description                               |
+| --------- | ----------------------------------------- |
+| groupId   | ID of the group                           |
+| entityId  | ID of the entity.                         |
+| jsonData  | Partial data map with incremental values. |
 
 ## Usage
 
@@ -132,7 +133,7 @@ var  jsonData = {
     "field3-new": 3
 };
 
-ServerResponse result = await <%= data.branding.codePrefix %>.groupService.incrementGroupEntityData(groupId:groupId, entityId:entityId, jsonData:jsonData);
+ServerResponse result = await <%= data.branding.codePrefix %>.groupService.incrementGroupEntityData(groupId:groupId, entityId:entityId, data:jsonData);
 
 if (result.statusCode == 200) {
     print("Success");
@@ -204,5 +205,5 @@ if (postResult.status == 200) {
     "data": null
 }
 ```
-</details>
 
+</details>

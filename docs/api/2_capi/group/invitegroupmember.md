@@ -5,12 +5,13 @@ Invite a user to the group.
 <PartialServop service_name="group" operation_name="INVITE_MEMBER_TO_GROUP" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | ID of the group
-profileId | Profile ID of the member being added
-role | Role of the member being added
-jsonAttributes | Attributes of the member being added
+
+| Parameter      | Description                          |
+| -------------- | ------------------------------------ |
+| groupId        | ID of the group                      |
+| profileId      | Profile ID of the member being added |
+| role           | Role of the member being added       |
+| jsonAttributes | Attributes of the member being added |
 
 ## Usage
 
@@ -126,7 +127,7 @@ var  profileId = "a-profile-id";
 var  role = "MEMBER";
 var  jsonAttributes = {};
 
-ServerResponse result = await <%= data.branding.codePrefix %>.groupService.inviteGroupMember(groupId:groupId, profileId:profileId, role:role, jsonAttributes:jsonAttributes);
+ServerResponse result = await <%= data.branding.codePrefix %>.groupService.inviteGroupMember(groupId:groupId, profileId:profileId, role:role, attributes:jsonAttributes);
 
 if (result.statusCode == 200) {
     print("Success");
@@ -182,5 +183,5 @@ if (postResult.status == 200) {
     "data": null
 }
 ```
-</details>
 
+</details>

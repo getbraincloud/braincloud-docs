@@ -4,22 +4,23 @@ Create a group.
 
 The group ACL contains two elements defining access to the groups data for non-members (other) and members. Access is defined as:
 
-- None = 0,
-- ReadOnly = 1
-- ReadWrite = 2
+-   None = 0,
+-   ReadOnly = 1
+-   ReadWrite = 2
 
 <PartialServop service_name="group" operation_name="CREATE_GROUP" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-name | Name of the group
-groupType | Name of the type of group
-isOpenGroup | true if group is open; false if closed
-acl | The group's access control list. A null ACL implies default
-jsonOwnerAttributes | Attributes for the group owner (current user)
-jsonDefaultMemberAttributes | Default attributes for group members
-jsonData | Custom application data
+
+| Parameter                   | Description                                                 |
+| --------------------------- | ----------------------------------------------------------- |
+| name                        | Name of the group                                           |
+| groupType                   | Name of the type of group                                   |
+| isOpenGroup                 | true if group is open; false if closed                      |
+| acl                         | The group's access control list. A null ACL implies default |
+| jsonOwnerAttributes         | Attributes for the group owner (current user)               |
+| jsonDefaultMemberAttributes | Default attributes for group members                        |
+| jsonData                    | Custom application data                                     |
 
 ## Usage
 
@@ -160,11 +161,11 @@ var  acl = {
     "member": 2,
     "other": 0
 };
-var  jsonData = {};
+var  data = {};
 var  ownerAttributes = {};
 var  defaultMemberAttributes = {};
 
-ServerResponse result = await <%= data.branding.codePrefix %>.groupService.createGroup(name:name, groupType:groupType, isOpenGroup:isOpenGroup, acl:acl, jsonData:jsonData, ownerAttributes:ownerAttributes, defaultMemberAttributes:defaultMemberAttributes);
+ServerResponse result = await <%= data.branding.codePrefix %>.groupService.createGroup(name:name, groupType:groupType, isOpenGroup:isOpenGroup, acl:acl, data:data, ownerAttributes:ownerAttributes, defaultMemberAttributes:defaultMemberAttributes);
 
 if (result.statusCode == 200) {
     print("Success");
@@ -263,5 +264,5 @@ if (postResult.status == 200) {
     }
 }
 ```
-</details>
 
+</details>
