@@ -7,16 +7,17 @@ The passed in leaderboard config data is to dynamically create the leaderboard i
 <PartialServop service_name="leaderboard" operation_name="POST_SCORE_DYNAMIC" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | The leaderboard to post to
-score | The score to post
-data | Optional user-defined data to post with the score
-leaderboardType | Leaderboard type
-rotationType | Type of rotation
-rotationReset | Date to start the rotation (date in millis UTC)
-retainedCount | How many previous rotations to keep
-numDaysToRotate | How many days between each rotation
+
+| Parameter       | Description                                       |
+| --------------- | ------------------------------------------------- |
+| leaderboardId   | The leaderboard to post to                        |
+| score           | The score to post                                 |
+| data            | Optional user-defined data to post with the score |
+| leaderboardType | Leaderboard type                                  |
+| rotationType    | Type of rotation                                  |
+| rotationReset   | Date to start the rotation (date in millis UTC)   |
+| retainedCount   | How many previous rotations to keep               |
+| numDaysToRotate | How many days between each rotation               |
 
 ## Usage
 
@@ -31,7 +32,6 @@ string leaderboardId = "default";
 int score = 10;
 string jsonData = "{\"nickname\":\"batman\"}";
 string leaderboardType = "HIGH_VALUE";
-string rotationType = "DAYS";
 Int64 rotationReset = DateTime.Now;
 int retainedCount = 2;
 int numDaysToRotate = 4;
@@ -44,7 +44,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
     Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
 };
 
-<%= data.branding.codePrefix %>.LeaderboardService.PostScoreToDynamicLeaderboardDaysUTC(leaderboardId, score, jsonData, leaderboardType, rotationType, rotationReset, retainedCount, numDaysToRotate, successCallback, failureCallback);
+<%= data.branding.codePrefix %>.LeaderboardService.PostScoreToDynamicLeaderboardDaysUTC(leaderboardId, score, jsonData, leaderboardType, rotationReset, retainedCount, numDaysToRotate, successCallback, failureCallback);
 ```
 
 ```mdx-code-block
@@ -57,12 +57,11 @@ const char *leaderboardId = "default";
 int score = 10;
 const char *jsonData = "{\"nickname\":\"batman\"}";
 const char *leaderboardType = "HIGH_VALUE";
-const char *rotationType = "DAYS";
 time_t t = time(0);
 const struct *rotationReset = gmtime(&t);
 int retainedCount = 2;
 int numDaysToRotate = 4;
-<%= data.branding.codePrefix %>->getLeaderboardService()->postScoreToDynamicLeaderboardDaysUTC(leaderboardId, score, jsonData, leaderboardType, rotationType, rotationReset, retainedCount, numDaysToRotate, this);
+<%= data.branding.codePrefix %>->getLeaderboardService()->postScoreToDynamicLeaderboardDaysUTC(leaderboardId, score, jsonData, leaderboardType, rotationReset, retainedCount, numDaysToRotate, this);
 ```
 
 ```mdx-code-block
@@ -105,13 +104,12 @@ String leaderboardId = "default";
 int score = 10;
 String jsonData = "{\"nickname\":\"batman\"}";
 String leaderboardType = "HIGH_VALUE";
-String rotationType = "DAYS";
 Date rotationReset = new Date(System.currentTimeMillis());
 int retainedCount = 2;
 int numDaysToRotate = 4;
 this; // implements IServerCallback
 
-<%= data.branding.codePrefix %>.getLeaderboardService().postScoreToDynamicLeaderboardDaysUTC(leaderboardId, score, jsonData, leaderboardType, rotationType, rotationReset, retainedCount, numDaysToRotate, this);
+<%= data.branding.codePrefix %>.getLeaderboardService().postScoreToDynamicLeaderboardDaysUTC(leaderboardId, score, jsonData, leaderboardType, rotationReset, retainedCount, numDaysToRotate, this);
 
 public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
 {
@@ -135,12 +133,11 @@ var jsonData = {
     "nickname": "batman"
 };
 var leaderboardType = "HIGH_VALUE";
-var rotationType = "DAYS";
 var rotationReset = Date.now();
 var retainedCount = 2;
 var numDaysToRotate = 4;
 
-<%= data.branding.codePrefix %>.leaderboard.postScoreToDynamicLeaderboardDaysUTC(leaderboardId, score, jsonData, leaderboardType, rotationType, rotationReset, retainedCount, numDaysToRotate, result =>
+<%= data.branding.codePrefix %>.leaderboard.postScoreToDynamicLeaderboardDaysUTC(leaderboardId, score, jsonData, leaderboardType, rotationReset, retainedCount, numDaysToRotate, result =>
 {
 	var status = result.status;
 	console.log(status + " : " + JSON.stringify(result, null, 2));
@@ -155,16 +152,15 @@ var numDaysToRotate = 4;
 ```dart
 var  leaderboardId = "default";
 var  score = 10;
-var  jsonData = {
+var  data = {
     "nickname": "batman"
 };
-var  leaderboardType = "HIGH_VALUE";
-var  rotationType = "DAYS";
+var  leaderboardType = SocialLeaderboardType.HIGH_VALUE;
 var  rotationReset = Date.now();
 var  retainedCount = 2;
 var  numDaysToRotate = 4;
 
-ServerResponse result = await <%= data.branding.codePrefix %>.leaderboardService.postScoreToDynamicLeaderboardDaysUTC(leaderboardId:leaderboardId, score:score, jsonData:jsonData, leaderboardType:leaderboardType, rotationType:rotationType, rotationReset:rotationReset, retainedCount:retainedCount, numDaysToRotate:numDaysToRotate);
+ServerResponse result = await <%= data.branding.codePrefix %>.leaderboardService.postScoreToDynamicLeaderboardDaysUTC(leaderboardId:leaderboardId, score:score, data:data, leaderboardType:leaderboardType, rotationReset:rotationReset, retainedCount:retainedCount, numDaysToRotate:numDaysToRotate);
 
 if (result.statusCode == 200) {
     print("Success");
@@ -236,5 +232,5 @@ if (postResult.status == 200) {
     "data": null
 }
 ```
-</details>
 
+</details>

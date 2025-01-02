@@ -122,11 +122,11 @@ var jsonOtherData = {
 ```dart
 var  leaderboardId = "default";
 var  score = 10;
-var  jsonOtherData = {
+var  data = {
     "nickname": "batman"
 };
 
-ServerResponse result = await <%= data.branding.codePrefix %>.leaderboardService.postScoreToLeaderboard(leaderboardId:leaderboardId, score:score, jsonOtherData:jsonOtherData);
+ServerResponse result = await <%= data.branding.codePrefix %>.leaderboardService.postScoreToLeaderboard(leaderboardId:leaderboardId, score:score, data:data);
 
 if (result.statusCode == 200) {
     print("Success");

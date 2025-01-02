@@ -4,11 +4,7 @@
 
 > NOTE: "timeBeforeReset" is only returned when the requested version is also the active version.
 
-
-
 Method returns a page of global leaderboard results. By using a non-current version id, the user can retrieve a historical leaderboard.
-
-
 
 :::tip
 See GetGlobalLeaderboardVersions method to retrieve the version id.
@@ -17,13 +13,14 @@ See GetGlobalLeaderboardVersions method to retrieve the version id.
 <PartialServop service_name="leaderboard" operation_name="GET_GLOBAL_LEADERBOARD_PAGE" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | The id of the leaderboard
-sortOrder | Sort order of page. ("HIGH_TO_LOW" or "LOW_TO_HIGH")
-startIndex | The rank at which to start the page.
-endIndex | The rank at which to end the page.
-versionId | The historical version to retrieve.
+
+| Parameter     | Description                                          |
+| ------------- | ---------------------------------------------------- |
+| leaderboardId | The id of the leaderboard                            |
+| sortOrder     | Sort order of page. ("HIGH_TO_LOW" or "LOW_TO_HIGH") |
+| startIndex    | The rank at which to start the page.                 |
+| endIndex      | The rank at which to end the page.                   |
+| versionId     | The historical version to retrieve.                  |
 
 ## Usage
 
@@ -140,7 +137,7 @@ var versionId = -1;
 
 ```dart
 var  leaderboardId = "default";
-var  sortOrder = "HIGH_TO_LOW";
+var  sortOrder = SortOrder.HIGH_TO_LOW;
 var  startIndex = 0;
 var  endIndex = 9;
 var  versionId = -1;
@@ -216,7 +213,7 @@ if (postResult.status == 200) {
                 "rank": 1,
                 "name": "",
                 "summaryFriendData": null,
-        		"pictureUrl": null
+                "pictureUrl": null
             },
             {
                 "playerId": "7c107e9f-ab48-492d-a000-defec6237700",
@@ -229,16 +226,16 @@ if (postResult.status == 200) {
                 "rank": 2,
                 "name": "",
                 "summaryFriendData": null,
-        		"pictureUrl": null
+                "pictureUrl": null
             }
         ],
         "leaderboardSize": 31,
         "moreBefore": false,
         "moreAfter": true,
-        "timeBeforeReset" : 588182412,
+        "timeBeforeReset": 588182412,
         "server_time": 1395840957588
     }
 }
 ```
-</details>
 
+</details>

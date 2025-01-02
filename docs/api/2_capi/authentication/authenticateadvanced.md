@@ -2,8 +2,6 @@
 
 A generic Authenticate method that translates to the same as calling a specific one, except it takes an extraJson that will be passed along to pre- or post- hooks.
 
-
-
 :::caution
 Make sure you've initialized the <%= data.branding.productName %> library before authenticating.
 :::
@@ -11,12 +9,13 @@ Make sure you've initialized the <%= data.branding.productName %> library before
 <PartialServop service_name="authenticationV2" operation_name="AUTHENTICATE" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-authenticationType | Universal, Universal, Facebook, etc
-ids | Auth IDs structure
-forceCreate | Should a new profile be created for this user if the account does not exist?
-extraJson | Additional to piggyback along with the call, to be picked up by pre- or post- hooks. Leave empty string for no extraJson
+
+| Parameter          | Description                                                                                                              |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| authenticationType | Universal, Universal, Facebook, etc                                                                                      |
+| ids                | Auth IDs structure                                                                                                       |
+| forceCreate        | Should a new profile be created for this user if the account does not exist?                                             |
+| extraJson          | Additional to piggyback along with the call, to be picked up by pre- or post- hooks. Leave empty string for no extraJson |
 
 ## Usage
 
@@ -129,7 +128,7 @@ var extraJson = {"key":"value"};
 
 ```dart
 var  authenticationType = <%= data.branding.codePrefix %>.brainCloudClient.authentication.AUTHENTICATION_TYPE_UNIVERSAL;
-var  ids = {externalId: "authAdvancedUser", authenticationToken: "authAdvancedPass", authenticationSubType: ""};
+var  ids = AuthenticationIds("authAdvancedUser", "authAdvancedPass", "");  // id, token, externalAuthName
 var  forceCreate = true;
 var  extraJson = {"key":"value"};
 
@@ -219,21 +218,21 @@ if (result.statusCode == 200) {
     }
 }
 ```
+
 </details>
 
 <details>
 <summary>Common Error Code</summary>
 
 ### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40206 | MISSING_IDENTITY_ERROR | The identity does not exist on the server and `forceCreate` was `false` [and a `profileId` was provided - otherwise 40208 would have been returned]. Will also occur when `forceCreate` is `true` and a saved [but un-associated] `profileId` is provided. The error handler should reset the stored profile id (if there is one) and re-authenticate, setting `forceCreate` to `true` to create a new account. **A common cause of this error is deleting the user's account via the Design Portal.**
-40207 | SWITCHING_PROFILES | Indicates that the identity credentials are valid, and the saved `profileId` is valid, but the identity is not associated with the provided `profileId`. This may indicate that the user wants to switch accounts in the app. Often an app will pop-up a dialog confirming that the user wants to switch accounts, and then reset the stored `profileId` and call authenticate again.
-40208 | MISSING_PROFILE_ERROR | Returned when the identity cannot be located, no `profileId` is provided, and `forceCreate` is false. The normal response is to call Authenticate again with `forceCreate` set to `true`.
-40217 | UNKNOWN_AUTH_ERROR | An unknown error has occurred during authentication.
-40307 | TOKEN_DOES_NOT_MATCH_USER | The user credentials are invalid (i.e. bad Facebook id / token). May also indicate that Facebook integration is not properly configured.
-550022 | INVALID_PASSWORD_CONTENT | The password doesn't meet the minimum password requirements.
+
+| Code   | Name                      | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| ------ | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 40206  | MISSING_IDENTITY_ERROR    | The identity does not exist on the server and `forceCreate` was `false` [and a `profileId` was provided - otherwise 40208 would have been returned]. Will also occur when `forceCreate` is `true` and a saved [but un-associated] `profileId` is provided. The error handler should reset the stored profile id (if there is one) and re-authenticate, setting `forceCreate` to `true` to create a new account. **A common cause of this error is deleting the user's account via the Design Portal.** |
+| 40207  | SWITCHING_PROFILES        | Indicates that the identity credentials are valid, and the saved `profileId` is valid, but the identity is not associated with the provided `profileId`. This may indicate that the user wants to switch accounts in the app. Often an app will pop-up a dialog confirming that the user wants to switch accounts, and then reset the stored `profileId` and call authenticate again.                                                                                                                  |
+| 40208  | MISSING_PROFILE_ERROR     | Returned when the identity cannot be located, no `profileId` is provided, and `forceCreate` is false. The normal response is to call Authenticate again with `forceCreate` set to `true`.                                                                                                                                                                                                                                                                                                              |
+| 40217  | UNKNOWN_AUTH_ERROR        | An unknown error has occurred during authentication.                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| 40307  | TOKEN_DOES_NOT_MATCH_USER | The user credentials are invalid (i.e. bad Facebook id / token). May also indicate that Facebook integration is not properly configured.                                                                                                                                                                                                                                                                                                                                                               |
+| 550022 | INVALID_PASSWORD_CONTENT  | The password doesn't meet the minimum password requirements.                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 
 </details>
-
-

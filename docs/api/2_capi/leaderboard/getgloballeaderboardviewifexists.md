@@ -128,7 +128,7 @@ var afterCount = 4;
 
 ```dart
 var  leaderboardId = "default";
-var  sortOrder = "HIGH_TO_LOW";
+var  sortOrder = SortOrder.HIGH_TO_LOW;
 var  beforeCount = 3;
 var  afterCount = 4;
 

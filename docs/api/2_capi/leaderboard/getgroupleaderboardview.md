@@ -5,13 +5,14 @@ Retrieve a view of the group leaderboard surrounding the current group score.
 <PartialServop service_name="leaderboard" operation_name="GET_GROUP_LEADERBOARD_VIEW" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | The id of the leaderboard.
-groupId | The id of the group. 
-sort | Sort order of page. ("HIGH_TO_LOW" or "LOW_TO_HIGH")
-beforeCount | The count of number of players before the current player to include.
-afterCount | The count of number of players after the current player to include.
+
+| Parameter     | Description                                                          |
+| ------------- | -------------------------------------------------------------------- |
+| leaderboardId | The id of the leaderboard.                                           |
+| groupId       | The id of the group.                                                 |
+| sort          | Sort order of page. ("HIGH_TO_LOW" or "LOW_TO_HIGH")                 |
+| beforeCount   | The count of number of players before the current player to include. |
+| afterCount    | The count of number of players after the current player to include.  |
 
 ## Usage
 
@@ -129,11 +130,11 @@ var afterCount = 4;
 ```dart
 var  leaderboardId = "default";
 var  groupId = "actual_group_id";
-var  sort = "HIGH_TO_LOW";
+var  sortOrder = SortOrder.HIGH_TO_LOW;
 var  beforeCount = 3;
 var  afterCount = 4;
 
-ServerResponse result = await <%= data.branding.codePrefix %>.leaderboardService.getGroupLeaderboardView(leaderboardId:leaderboardId, groupId:groupId, sort:sort, beforeCount:beforeCount, afterCount:afterCount);
+ServerResponse result = await <%= data.branding.codePrefix %>.leaderboardService.getGroupLeaderboardView(leaderboardId:leaderboardId, groupId:groupId,  sortOrder: sortOrder, beforeCount:beforeCount, afterCount:afterCount);
 
 if (result.statusCode == 200) {
     print("Success");
@@ -186,4 +187,3 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-

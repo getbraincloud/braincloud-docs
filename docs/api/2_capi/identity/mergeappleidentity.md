@@ -4,15 +4,14 @@ Merge the profile associated with the provided Sigh in with Apple credentials wi
 
 NOTE: If using the <%= data.branding.codeWrapper %>, once the merge is complete you should call [<code>SetStoredProfileId</code>](/api/wrapper/setstoredprofileid) in the <%= data.branding.codeWrapper %> with the profileId returned in the Merge call.
 
-
-
 <PartialServop service_name="identity" operation_name="MERGE" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-appleId | The Apple ID of the user
-authenticationToken | The validated token from the Sign in with Apple SDK (that will be further validated when sent to the <%= data.branding.productName %> service)
+
+| Parameter           | Description                                                                                                                                    |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| appleId             | The Apple ID of the user                                                                                                                       |
+| authenticationToken | The validated token from the Sign in with Apple SDK (that will be further validated when sent to the <%= data.branding.productName %> service) |
 
 ## Usage
 
@@ -82,7 +81,16 @@ public void mergeAppleIdentity(String appleId, String authenticationToken, IServ
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+var  appleUserId = "someId";
+var  identityToken = "someToken";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.identityService.mergeAppleIdentity(appleUserId:appleUserId, identityToken:identityToken);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
 ```
 
 ```mdx-code-block
@@ -113,23 +121,23 @@ public void mergeAppleIdentity(String appleId, String authenticationToken, IServ
 <summary>JSON Response</summary>
 
 ```json
-{  
-   "data":{  
-      "profileId":"f94f7e2d-3cdd-4fd6-9c28-392f7875e9df"
-   },
-   "status":200
+{
+    "data": {
+        "profileId": "f94f7e2d-3cdd-4fd6-9c28-392f7875e9df"
+    },
+    "status": 200
 }
 ```
+
 </details>
 
 <details>
 <summary>Common Error Code</summary>
 
 ### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40211 | DUPLICATE_IDENTITY_TYPE | Returned when trying to attach an identity type that already exists for that profile. For instance you can have only one Sign in with Apple identity for a profile.
+
+| Code  | Name                    | Description                                                                                                                                                         |
+| ----- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 40211 | DUPLICATE_IDENTITY_TYPE | Returned when trying to attach an identity type that already exists for that profile. For instance you can have only one Sign in with Apple identity for a profile. |
 
 </details>
-
-

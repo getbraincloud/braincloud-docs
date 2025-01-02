@@ -2,17 +2,16 @@
 
 Detach the identity from this profile.
 
-
-
-
 <PartialServop service_name="identity" operation_name="DETACH" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-authenticationType | Universal, Universal, Facebook, etc
-ids | Auth IDs structure
-extraJson | Additional to piggyback along with the call, to be picked up by pre- or post- hooks. Leave empty string for no extraJson
+
+| Parameter          | Description                                                                                                              |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| authenticationType | Universal, Universal, Facebook, etc                                                                                      |
+| externalId         | User ID                                                                                                                  |
+| extraJson          | Additional to piggyback along with the call, to be picked up by pre- or post- hooks. Leave empty string for no extraJson |
+| continueAnon       | Proceed even if the profile will revert to anonymous                                                                     |
 
 ## Usage
 
@@ -24,15 +23,14 @@ extraJson | Additional to piggyback along with the call, to be picked up by pre-
 
 ```csharp
 AuthenticationType authenticationType = AuthenticationType.Universal;
-AuthenticationIds ids;
-ids.externalId = "authAdvancedUser";
-ids.authenticationToken = "authAdvancedPass";
-ids.authenticationSubType = "";
+string externalId = "externalId";
+bool continueAnon = true;
 string extraJson = "{\"key\":\"value\"}";
 
 <%= data.branding.codePrefix %>.IdentityService.DetachAdvancedIdentity(
     authenticationType,
-    ids,
+    externalId,
+    continueAnon,
     extraJson,
     SuccessCallback, FailureCallback);
 ```
@@ -44,11 +42,12 @@ string extraJson = "{\"key\":\"value\"}";
 
 ```cpp
 AuthenticationType authenticationType = AuthenticationType::Universal;
-AuthenticationIds ids = { "authAdvancedUser", "authAdvancedPass", "" };
+const char* externalId = "externalId";
+bool continueAnon = true;
 const char* extraJson = "{\"key\":\"value\"}";
 
 <%= data.branding.codePrefix %>->getIdentityService()->detachAdvancedIdentity(
-    authenticationType, ids, extraJson, this);
+    authenticationType, externalId, continueAnon, extraJson, this);
 ```
 
 ```mdx-code-block
@@ -58,17 +57,16 @@ const char* extraJson = "{\"key\":\"value\"}";
 
 ```objectivec
 AuthenticationType authenticationType = [AuthenticationTypeObjc Universal];
-AuthenticationIds *ids = [[AuthenticationIdsObjc alloc]init];
-ids.externalId = @"authAdvancedUser";
-ids.authenticationToken = @"authAdvancedPass";
-ids.authenticationSubType = @"";
+NSString * externalId = "externalId";
+BOOL continueAnon = true;
 NSString * extraJson = "{\"key\":\"value\"}";
 BCCompletionBlock successBlock;      // define callback
 BCErrorCompletionBlock failureBlock; // define callback
 
 [[<%= data.branding.codePrefix %> identityService]
        detachAdvancedIdentity:authenticationType
-                        ids:ids
+                 externalId:externalId
+               continueAnon:continueAnon
                   extraJson:extraJson
             completionBlock:successBlock
        errorCompletionBlock:failureBlock
@@ -82,11 +80,12 @@ BCErrorCompletionBlock failureBlock; // define callback
 
 ```java
 AuthenticationType authenticationType = AuthenticationType.Universal;
-AuthenticationIds ids = new AuthenticationIds ("authAdvancedUser", "authAdvancedPass", "");
-string extraJson = "{\"key\":\"value\"}";
+String externalId = "externalId";
+boolean continueAnon = true;
+String extraJson = "{\"key\":\"value\"}";
 this; // implements IServerCallback
 
-<%= data.branding.codePrefix %>.getIdentityService().detachAdvancedIdentity(authenticationType, ids, extraJson, this);
+<%= data.branding.codePrefix %>.getIdentityService().detachAdvancedIdentity(authenticationType, externalId, continueAnon, extraJson, this);
 
 public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
 {
@@ -105,11 +104,11 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 
 ```javascript
 var authenticationType = <%= data.branding.codePrefix %>.brainCloudClient.authentication.AUTHENTICATION_TYPE_UNIVERSAL;
-var ids = {externalId: "authAdvancedUser", authenticationToken: "authAdvancedPass", authenticationSubType: ""};
-var forceCreate = true;
+var externalId = "externalId";
+var continueAnon = true;
 var extraJson = {"key":"value"};
 
-<%= data.branding.codePrefix %>.identity.detachAdvancedIdentity(authenticationType, ids, forceCreate, extraJson, result =>
+<%= data.branding.codePrefix %>.identity.detachAdvancedIdentity(authenticationType, externalId, continueAnon, extraJson, result =>
 {
 	var status = result.status;
 	console.log(status + " : " + JSON.stringify(result, null, 2));
@@ -122,17 +121,17 @@ var extraJson = {"key":"value"};
 ```
 
 ```dart
-var  authenticationType = <%= data.branding.codePrefix %>.brainCloudClient.authentication.AUTHENTICATION_TYPE_UNIVERSAL;
-var  ids = {externalId: "authAdvancedUser", authenticationToken: "authAdvancedPass", authenticationSubType: ""};
-var  forceCreate = true;
-var  extraJson = {"key":"value"};
-
-ServerResponse result = await <%= data.branding.codePrefix %>.identityService.detachAdvancedIdentity(authenticationType:authenticationType, ids:ids, forceCreate:forceCreate, extraJson:extraJson);
-
+var  authenticationType = AuthenticationType.universal;
+var  externalId =  "someId";
+var  continueAnon = true;
+var  extraJson = {"key":"value"};
+​
+ServerResponse result = await <%= data.branding.codePrefix %>.identityService.detachAdvancedIdentity(authenticationType:authenticationType, externalId:externalId, continueAnon:continueAnon, extraJson:extraJson);
+​
 if (result.statusCode == 200) {
-    print("Success");
+    print("Success");
 } else {
-    print("Failed ${result.error['status_message'] ?? result.error}");
+    print("Failed ${result.error['status_message'] ?? result.error}");
 }
 ```
 
@@ -165,22 +164,22 @@ if (result.statusCode == 200) {
 
 ```json
 {
-    "status" : 200,
-    "data" : null
+    "status": 200,
+    "data": null
 }
 ```
+
 </details>
 
 <details>
 <summary>Common Error Code</summary>
 
 ### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40210 | DOWNGRADING_TO_ANONYMOUS_ERROR | Occurs when detaching the last non-anonymous identity from an account with continueAnon set to false.
-40206 | MISSING_IDENTITY_ERROR | A "profileId" was supplied in the authentication request submitted with new credentials. In other words the credentials record was not found in the <%= data.branding.productName %> database. The solution would be to provide known credentials or not supply a "profileId" if the user is actually new.
-40209 | SECURITY_ERROR | Returned if a security exception was encountered.
+
+| Code  | Name                           | Description                                                                                                                                                                                                                                                                                                |
+| ----- | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 40210 | DOWNGRADING_TO_ANONYMOUS_ERROR | Occurs when detaching the last non-anonymous identity from an account with continueAnon set to false.                                                                                                                                                                                                      |
+| 40206 | MISSING_IDENTITY_ERROR         | A "profileId" was supplied in the authentication request submitted with new credentials. In other words the credentials record was not found in the <%= data.branding.productName %> database. The solution would be to provide known credentials or not supply a "profileId" if the user is actually new. |
+| 40209 | SECURITY_ERROR                 | Returned if a security exception was encountered.                                                                                                                                                                                                                                                          |
 
 </details>
-
-

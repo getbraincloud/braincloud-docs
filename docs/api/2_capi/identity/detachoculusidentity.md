@@ -2,15 +2,14 @@
 
 Detach the Oculus identity from this profile.
 
-
-
 <PartialServop service_name="identity" operation_name="DETACH" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-userId | The Oculus id of the user
-continueAnon | Proceed even if the profile will revert to anonymous?
+
+| Parameter    | Description                                           |
+| ------------ | ----------------------------------------------------- |
+| userId       | The Oculus id of the user                             |
+| continueAnon | Proceed even if the profile will revert to anonymous? |
 
 ## Usage
 
@@ -86,7 +85,7 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// N/A
 ```
 
 ```mdx-code-block
@@ -103,7 +102,7 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
+```r
 // N/A
 ```
 
@@ -118,20 +117,20 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 
 ```json
 {
-    "status" : 200,
-    "data" : null
+    "status": 200,
+    "data": null
 }
 ```
+
 </details>
 
 <details>
 <summary>Common Error Code</summary>
 
 ### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40210 | DOWNGRADING_TO_ANONYMOUS_ERROR | Occurs when detaching the last non-anonymous identity from an account with continueAnon set to false.
+
+| Code  | Name                           | Description                                                                                           |
+| ----- | ------------------------------ | ----------------------------------------------------------------------------------------------------- |
+| 40210 | DOWNGRADING_TO_ANONYMOUS_ERROR | Occurs when detaching the last non-anonymous identity from an account with continueAnon set to false. |
 
 </details>
-
-

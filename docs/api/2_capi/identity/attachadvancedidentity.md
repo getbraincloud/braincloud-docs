@@ -2,17 +2,15 @@
 
 Attach the user's credentials to the current profile.
 
-
-
-
 <PartialServop service_name="identity" operation_name="ATTACH" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-authenticationType | Universal, Universal, Facebook, etc
-ids | Auth IDs structure
-extraJson | Additional to piggyback along with the call, to be picked up by pre- or post- hooks. Leave empty string for no extraJson
+
+| Parameter          | Description                                                                                                              |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| authenticationType | Universal, Universal, Facebook, etc                                                                                      |
+| ids                | Auth IDs structure                                                                                                       |
+| extraJson          | Additional to piggyback along with the call, to be picked up by pre- or post- hooks. Leave empty string for no extraJson |
 
 ## Usage
 
@@ -106,7 +104,6 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 ```javascript
 var authenticationType = <%= data.branding.codePrefix %>.brainCloudClient.authentication.AUTHENTICATION_TYPE_UNIVERSAL;
 var ids = {externalId: "authAdvancedUser", authenticationToken: "authAdvancedPass", authenticationSubType: ""};
-var forceCreate = true;
 var extraJson = {"key":"value"};
 
 <%= data.branding.codePrefix %>.identity.attachAdvancedIdentity(authenticationType, ids, forceCreate, extraJson, result =>
@@ -122,12 +119,11 @@ var extraJson = {"key":"value"};
 ```
 
 ```dart
-var  authenticationType = <%= data.branding.codePrefix %>.brainCloudClient.authentication.AUTHENTICATION_TYPE_UNIVERSAL;
-var  ids = {externalId: "authAdvancedUser", authenticationToken: "authAdvancedPass", authenticationSubType: ""};
-var  forceCreate = true;
+var  authenticationType = AuthenticationType.universal;
+var  ids = AuthenticationIds("authAdvancedUser", "authAdvancedPass", "");  // id, token, externalAuthName
 var  extraJson = {"key":"value"};
 
-ServerResponse result = await <%= data.branding.codePrefix %>.identityService.attachAdvancedIdentity(authenticationType:authenticationType, ids:ids, forceCreate:forceCreate, extraJson:extraJson);
+ServerResponse result = await <%= data.branding.codePrefix %>.identityService.attachAdvancedIdentity(authenticationType:authenticationType, ids:ids, extraJson:extraJson);
 
 if (result.statusCode == 200) {
     print("Success");
@@ -150,7 +146,7 @@ if (result.statusCode == 200) {
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
+```r
 // N/A
 ```
 
@@ -165,22 +161,22 @@ if (result.statusCode == 200) {
 
 ```json
 {
-    "status" : 200,
-    "data" : null
+    "status": 200,
+    "data": null
 }
 ```
+
 </details>
 
 <details>
 <summary>Common Error Code</summary>
 
 ### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40211 | DUPLICATE_IDENTITY_TYPE | Returned when trying to attach an identity type that already exists for that profile. For instance you can have only one Email identity for a profile.
-40212 | MERGE_PROFILES | Returned when trying to attach an identity type that would result in two profiles being merged into one (for instance an anonymous account and a Email account).
-550022 | INVALID_PASSWORD_CONTENT | The password doesn't meet the minimum password requirements.
+
+| Code   | Name                     | Description                                                                                                                                                      |
+| ------ | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 40211  | DUPLICATE_IDENTITY_TYPE  | Returned when trying to attach an identity type that already exists for that profile. For instance you can have only one Email identity for a profile.           |
+| 40212  | MERGE_PROFILES           | Returned when trying to attach an identity type that would result in two profiles being merged into one (for instance an anonymous account and a Email account). |
+| 550022 | INVALID_PASSWORD_CONTENT | The password doesn't meet the minimum password requirements.                                                                                                     |
 
 </details>
-
-

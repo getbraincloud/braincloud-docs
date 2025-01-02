@@ -9,10 +9,11 @@ Retrieves identity data for given identity type for this profile.
 <PartialServop service_name="identity" operation_name="GET_IDENTITY_DATA" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-authenticationType | Type of authentication.
-externalAuthName | The name of the external authentication mechanism (optional, used for custom authentication types)
+
+| Parameter          | Description                                                                                        |
+| ------------------ | -------------------------------------------------------------------------------------------------- |
+| authenticationType | Type of authentication.                                                                            |
+| externalAuthName   | The name of the external authentication mechanism (optional, used for custom authentication types) |
 
 ## Usage
 
@@ -68,7 +69,7 @@ externalAuthName | The name of the external authentication mechanism (optional, 
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+//cloud code only
 ```
 
 ```mdx-code-block
@@ -115,13 +116,13 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "identityData": {
-      "blockchain_id": "-a-blockchain-id-"
-    }
-  },
-  "status": 200
+    "data": {
+        "identityData": {
+            "blockchain_id": "-a-blockchain-id-"
+        }
+    },
+    "status": 200
 }
 ```
-</details>
 
+</details>

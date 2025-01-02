@@ -2,15 +2,14 @@
 
 Detach the Game Center identity from the current profile.
 
-
-
 <PartialServop service_name="identity" operation_name="DETACH" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-gameCenterId | The player's game center id  (use the playerID property from the local GKPlayer object)
-continueAnon | Proceed even if the profile will revert to anonymous?
+
+| Parameter    | Description                                                                            |
+| ------------ | -------------------------------------------------------------------------------------- |
+| gameCenterId | The player's game center id (use the playerID property from the local GKPlayer object) |
+| continueAnon | Proceed even if the profile will revert to anonymous?                                  |
 
 ## Usage
 
@@ -78,7 +77,16 @@ public void detachGameCenterIdentity(String gameCenterId, boolean continueAnon, 
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+var  gameCenterId = "someId";
+var  continueAnon = true;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.identityService.detachGameCenterIdentity(gameCenterId:gameCenterId, continueAnon:continueAnon);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
 ```
 
 ```mdx-code-block
@@ -95,7 +103,7 @@ public void detachGameCenterIdentity(String gameCenterId, boolean continueAnon, 
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
+```r
 // N/A
 ```
 
@@ -110,20 +118,20 @@ public void detachGameCenterIdentity(String gameCenterId, boolean continueAnon, 
 
 ```json
 {
-    "status" : 200,
-    "data" : null
+    "status": 200,
+    "data": null
 }
 ```
+
 </details>
 
 <details>
 <summary>Common Error Code</summary>
 
 ### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40210 | DOWNGRADING_TO_ANONYMOUS_ERROR | Occurs when detaching the last non-anonymous identity from an account with continueAnon set to false.
+
+| Code  | Name                           | Description                                                                                           |
+| ----- | ------------------------------ | ----------------------------------------------------------------------------------------------------- |
+| 40210 | DOWNGRADING_TO_ANONYMOUS_ERROR | Occurs when detaching the last non-anonymous identity from an account with continueAnon set to false. |
 
 </details>
-
-

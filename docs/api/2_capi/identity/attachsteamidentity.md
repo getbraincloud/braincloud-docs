@@ -2,15 +2,14 @@
 
 Attach a Steam (steam ID + steam session ticket) identity to the current profile.
 
-
-
 <PartialServop service_name="identity" operation_name="ATTACH" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-steamId | String representation of 64 bit steam id
-sessionTicket | The player's session ticket (hex encoded)
+
+| Parameter     | Description                               |
+| ------------- | ----------------------------------------- |
+| steamId       | String representation of 64 bit steam id  |
+| sessionTicket | The player's session ticket (hex encoded) |
 
 ## Usage
 
@@ -80,7 +79,16 @@ public void attachSteamIdentity(String steamId, String sessionTicket, IServerCal
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+var  steamId = "someId";
+var  sessionTicket = "someEncodedText";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.identityService.attachSteamIdentity(steamId:steamId, sessionTicket:sessionTicket);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
 ```
 
 ```mdx-code-block
@@ -97,7 +105,7 @@ public void attachSteamIdentity(String steamId, String sessionTicket, IServerCal
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
+```r
 // N/A
 ```
 
@@ -112,21 +120,21 @@ public void attachSteamIdentity(String steamId, String sessionTicket, IServerCal
 
 ```json
 {
-    "status" : 200,
-    "data" : null
+    "status": 200,
+    "data": null
 }
 ```
+
 </details>
 
 <details>
 <summary>Common Error Code</summary>
 
 ### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40211 | DUPLICATE_IDENTITY_TYPE | Returned when trying to attach an identity type that already exists for that profile. For instance you can have only one Steam identity for a profile.
-40212 | MERGE_PROFILES | Returned when trying to attach an identity type that would result in two profiles being merged into one (for instance an anonymous account and a Steam account).
+
+| Code  | Name                    | Description                                                                                                                                                      |
+| ----- | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 40211 | DUPLICATE_IDENTITY_TYPE | Returned when trying to attach an identity type that already exists for that profile. For instance you can have only one Steam identity for a profile.           |
+| 40212 | MERGE_PROFILES          | Returned when trying to attach an identity type that would result in two profiles being merged into one (for instance an anonymous account and a Steam account). |
 
 </details>
-
-

@@ -2,14 +2,13 @@
 
 Attach a Game Center identity to the current profile.
 
-
-
 <PartialServop service_name="identity" operation_name="ATTACH" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-gameCenterId | The player's game center id  (use the playerID property from the local GKPlayer object)
+
+| Parameter    | Description                                                                            |
+| ------------ | -------------------------------------------------------------------------------------- |
+| gameCenterId | The player's game center id (use the playerID property from the local GKPlayer object) |
 
 ## Usage
 
@@ -75,7 +74,15 @@ public void attachGameCenterIdentity(String gameCenterId, IServerCallback callba
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+var  gameCenterId = "someId";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.identityService.attachGameCenterIdentity(gameCenterId:gameCenterId);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
 ```
 
 ```mdx-code-block
@@ -92,7 +99,7 @@ public void attachGameCenterIdentity(String gameCenterId, IServerCallback callba
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
+```r
 // N/A
 ```
 
@@ -107,21 +114,21 @@ public void attachGameCenterIdentity(String gameCenterId, IServerCallback callba
 
 ```json
 {
-    "status" : 200,
-    "data" : null
+    "status": 200,
+    "data": null
 }
 ```
+
 </details>
 
 <details>
 <summary>Common Error Code</summary>
 
 ### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40211 | DUPLICATE_IDENTITY_TYPE | Returned when trying to attach an identity type that already exists for that profile. For instance you can have only one Game Center identity for a profile.
-40212 | MERGE_PROFILES | Returned when trying to attach an identity type that would result in two profiles being merged into one (for instance an anonymous account and a Game Center account).
+
+| Code  | Name                    | Description                                                                                                                                                            |
+| ----- | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 40211 | DUPLICATE_IDENTITY_TYPE | Returned when trying to attach an identity type that already exists for that profile. For instance you can have only one Game Center identity for a profile.           |
+| 40212 | MERGE_PROFILES          | Returned when trying to attach an identity type that would result in two profiles being merged into one (for instance an anonymous account and a Game Center account). |
 
 </details>
-
-

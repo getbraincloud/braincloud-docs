@@ -2,15 +2,14 @@
 
 Attach the user's Parse credentials to the current profile.
 
-
-
 <PartialServop service_name="identity" operation_name="ATTACH" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-parseId | The parse ID of the user
-authenticationToken | The validated token from Parse (that will be further validated when sent to the <%= data.branding.productName %> service)
+
+| Parameter           | Description                                                                                                               |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| parseId             | The parse ID of the user                                                                                                  |
+| authenticationToken | The validated token from Parse (that will be further validated when sent to the <%= data.branding.productName %> service) |
 
 ## Usage
 
@@ -80,7 +79,16 @@ public void attachParseIdentity(String parseId, String authenticationToken, ISer
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+var  parseId = "someId";
+var  authenticationToken = "someToken";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.identityService.attachParseIdentity(parseId:parseId, authenticationToken:authenticationToken);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
 ```
 
 ```mdx-code-block
@@ -112,21 +120,21 @@ public void attachParseIdentity(String parseId, String authenticationToken, ISer
 
 ```json
 {
-    "status" : 200,
-    "data" : null
+    "status": 200,
+    "data": null
 }
 ```
+
 </details>
 
 <details>
 <summary>Common Error Code</summary>
 
 ### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40211 | DUPLICATE_IDENTITY_TYPE | Returned when trying to attach an identity type that already exists for that profile. For instance you can have only one Parse identity for a profile.
-40212 | MERGE_PROFILES | Returned when trying to attach an identity type that would result in two profiles being merged into one (for instance an anonymous account and a Parse account).
+
+| Code  | Name                    | Description                                                                                                                                                      |
+| ----- | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 40211 | DUPLICATE_IDENTITY_TYPE | Returned when trying to attach an identity type that already exists for that profile. For instance you can have only one Parse identity for a profile.           |
+| 40212 | MERGE_PROFILES          | Returned when trying to attach an identity type that would result in two profiles being merged into one (for instance an anonymous account and a Parse account). |
 
 </details>
-
-

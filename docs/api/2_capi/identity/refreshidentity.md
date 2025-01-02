@@ -5,11 +5,12 @@ Refreshes an identity for this player
 <PartialServop service_name="identity" operation_name="REFRESH_IDENTITY" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-externalId | User ID
-authenticationToken | Password or client side token
-authenticationType | Type of authentication
+
+| Parameter           | Description                   |
+| ------------------- | ----------------------------- |
+| externalId          | User ID                       |
+| authenticationToken | Password or client side token |
+| authenticationType  | Type of authentication        |
 
 ## Usage
 
@@ -115,7 +116,7 @@ var authenticationType = "Facebook";
 ```dart
 var  externalId = "846557642688";
 var  authenticationToken = "ghbiuhgvbiuhbiunbuibgin";
-var  authenticationType = "Facebook";
+var  authenticationType = AuthenticationType.facebook;
 
 ServerResponse result = await <%= data.branding.codePrefix %>.identityService.refreshIdentity(externalId:externalId, authenticationToken:authenticationToken, authenticationType:authenticationType);
 
@@ -178,5 +179,5 @@ if (postResult.status == 200) {
     }
 }
 ```
-</details>
 
+</details>

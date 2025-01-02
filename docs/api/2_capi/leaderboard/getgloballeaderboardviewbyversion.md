@@ -7,13 +7,14 @@ See GetGlobalLeaderboardVersions method to retrieve the version ID.
 <PartialServop service_name="leaderboard" operation_name="GET_GLOBAL_LEADERBOARD_VIEW" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | The id of the leaderboard.
-sortOrder | Sort order of page. ("HIGH_TO_LOW" or "LOW_TO_HIGH")
-beforeCount | The count of number of players before the current player to include.
-afterCount | The count of number of players after the current player to include.
-versionId | The historical version to retrieve.
+
+| Parameter     | Description                                                          |
+| ------------- | -------------------------------------------------------------------- |
+| leaderboardId | The id of the leaderboard.                                           |
+| sortOrder     | Sort order of page. ("HIGH_TO_LOW" or "LOW_TO_HIGH")                 |
+| beforeCount   | The count of number of players before the current player to include. |
+| afterCount    | The count of number of players after the current player to include.  |
+| versionId     | The historical version to retrieve.                                  |
 
 ## Usage
 
@@ -130,7 +131,7 @@ var versionId = -1;
 
 ```dart
 var  leaderboardId = "default";
-var  sortOrder = "HIGH_TO_LOW";
+var  sortOrder = SortOrder.HIGH_TO_LOW;
 var  beforeCount = 3;
 var  afterCount = 4;
 var  versionId = -1;
@@ -235,5 +236,5 @@ if (postResult.status == 200) {
     }
 }
 ```
-</details>
 
+</details>

@@ -2,15 +2,14 @@
 
 Attach the user's PlaystationNetwork credentials to the current profile.
 
-
-
 <PartialServop service_name="identity" operation_name="ATTACH" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-accountId | The playstation5 id of the user
-authToken | The validated token from the Playstation5 SDK (that will be further validated when sent to the <%= data.branding.productName %> service)
+
+| Parameter | Description                                                                                                                              |
+| --------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| accountId | The playstation5 id of the user                                                                                                          |
+| authToken | The validated token from the Playstation5 SDK (that will be further validated when sent to the <%= data.branding.productName %> service) |
 
 ## Usage
 
@@ -76,7 +75,7 @@ const char * authToken = "somePlaystationNetworkAuthToken";
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// N/A
 ```
 
 ```mdx-code-block
@@ -108,21 +107,21 @@ const char * authToken = "somePlaystationNetworkAuthToken";
 
 ```json
 {
-    "status" : 200,
-    "data" : null
+    "status": 200,
+    "data": null
 }
 ```
+
 </details>
 
 <details>
 <summary>Common Error Code</summary>
 
 ### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40211 | DUPLICATE_IDENTITY_TYPE | Returned when trying to attach an identity type that already exists for that profile. For instance you can have only one PlaystationNetwork identity for a profile.
-40212 | MERGE_PROFILES | Returned when trying to attach an identity type that would result in two profiles being merged into one (for instance an anonymous account and a PlaystationNetwork account).
+
+| Code  | Name                    | Description                                                                                                                                                                   |
+| ----- | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 40211 | DUPLICATE_IDENTITY_TYPE | Returned when trying to attach an identity type that already exists for that profile. For instance you can have only one PlaystationNetwork identity for a profile.           |
+| 40212 | MERGE_PROFILES          | Returned when trying to attach an identity type that would result in two profiles being merged into one (for instance an anonymous account and a PlaystationNetwork account). |
 
 </details>
-
-

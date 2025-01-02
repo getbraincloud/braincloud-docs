@@ -5,11 +5,12 @@ Merge the profile associated with the provided credentials with the current prof
 <PartialServop service_name="identity" operation_name="MERGE" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-authenticationType | Universal, Universal, Facebook, etc
-ids | Auth IDs structure
-extraJson | Additional to piggyback along with the call, to be picked up by pre- or post- hooks. Leave empty string for no extraJson
+
+| Parameter          | Description                                                                                                              |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| authenticationType | Universal, Universal, Facebook, etc                                                                                      |
+| ids                | Auth IDs structure                                                                                                       |
+| extraJson          | Additional to piggyback along with the call, to be picked up by pre- or post- hooks. Leave empty string for no extraJson |
 
 ## Usage
 
@@ -103,10 +104,9 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 ```javascript
 var authenticationType = <%= data.branding.codePrefix %>.brainCloudClient.authentication.AUTHENTICATION_TYPE_UNIVERSAL;
 var ids = {externalId: "authAdvancedUser", authenticationToken: "authAdvancedPass", authenticationSubType: ""};
-var forceCreate = true;
 var extraJson = {"key":"value"};
 
-<%= data.branding.codePrefix %>.identity.mergeAdvancedIdentity(authenticationType, ids, forceCreate, extraJson, result =>
+<%= data.branding.codePrefix %>.identity.mergeAdvancedIdentity(authenticationType, ids, extraJson, result =>
 {
 	var status = result.status;
 	console.log(status + " : " + JSON.stringify(result, null, 2));
@@ -119,12 +119,11 @@ var extraJson = {"key":"value"};
 ```
 
 ```dart
-var  authenticationType = <%= data.branding.codePrefix %>.brainCloudClient.authentication.AUTHENTICATION_TYPE_UNIVERSAL;
-var  ids = {externalId: "authAdvancedUser", authenticationToken: "authAdvancedPass", authenticationSubType: ""};
-var  forceCreate = true;
+var  authenticationType = AuthenticationType.universal;
+var  ids = AuthenticationIds("authAdvancedUser", "authAdvancedPass", "");  // id, token, externalAuthName
 var  extraJson = {"key":"value"};
 
-ServerResponse result = await <%= data.branding.codePrefix %>.identityService.mergeAdvancedIdentity(authenticationType:authenticationType, ids:ids, forceCreate:forceCreate, extraJson:extraJson);
+ServerResponse result = await <%= data.branding.codePrefix %>.identityService.mergeAdvancedIdentity(authenticationType:authenticationType, ids:ids, extraJson:extraJson);
 
 if (result.statusCode == 200) {
     print("Success");
@@ -161,12 +160,12 @@ if (result.statusCode == 200) {
 <summary>JSON Response</summary>
 
 ```json
-{  
-   "data":{  
-      "profileId":"f94f7e2d-3cdd-4fd6-9c28-392f7875e9df"
-   },
-   "status":200
+{
+    "data": {
+        "profileId": "f94f7e2d-3cdd-4fd6-9c28-392f7875e9df"
+    },
+    "status": 200
 }
 ```
-</details>
 
+</details>

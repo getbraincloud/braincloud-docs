@@ -7,15 +7,16 @@ The passed in leaderboard config data is to dynamically create the leaderboard i
 <PartialServop service_name="leaderboard" operation_name="POST_SCORE_DYNAMIC" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | The leaderboard to post to
-score | The score to post
-data | Optional user-defined data to post with the score
-leaderboardType | Leaderboard type
-rotationType | Type of rotation
-rotationReset | Date to next rotate rotation (date in millis UTC)
-retainedCount | How many previous rotations to keep
+
+| Parameter       | Description                                       |
+| --------------- | ------------------------------------------------- |
+| leaderboardId   | The leaderboard to post to                        |
+| score           | The score to post                                 |
+| data            | Optional user-defined data to post with the score |
+| leaderboardType | Leaderboard type                                  |
+| rotationType    | Type of rotation                                  |
+| rotationReset   | Date to next rotate rotation (date in millis UTC) |
+| retainedCount   | How many previous rotations to keep               |
 
 ## Usage
 
@@ -148,15 +149,15 @@ var retainedCount = 2;
 ```dart
 var  leaderboardId = "default";
 var  score = 10;
-var  jsonData = {
+var  data = {
     "nickname": "batman"
 };
-var  leaderboardType = "HIGH_VALUE";
-var  rotationType = "DAILY";
-var  rotationReset = Date.now();
+var  leaderboardType = SocialLeaderboardType.HIGH_VALUE;
+var  rotationType = RotationType.DAILY;
+var  rotationReset = Date.now().add(Duration(days: 1)).millisecondsSinceEpoch;
 var  retainedCount = 2;
 
-ServerResponse result = await <%= data.branding.codePrefix %>.leaderboardService.postScoreToDynamicLeaderboardUTC(leaderboardId:leaderboardId, score:score, jsonData:jsonData, leaderboardType:leaderboardType, rotationType:rotationType, rotationReset:rotationReset, retainedCount:retainedCount);
+ServerResponse result = await <%= data.branding.codePrefix %>.leaderboardService.postScoreToDynamicLeaderboardUTC(leaderboardId:leaderboardId, score:score, data:data, leaderboardType:leaderboardType, rotationType:rotationType, rotationReset:rotationReset, retainedCount:retainedCount);
 
 if (result.statusCode == 200) {
     print("Success");
@@ -227,5 +228,5 @@ if (postResult.status == 200) {
     "data": null
 }
 ```
-</details>
 
+</details>

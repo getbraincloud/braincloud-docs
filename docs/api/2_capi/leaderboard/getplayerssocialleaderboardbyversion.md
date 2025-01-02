@@ -2,7 +2,7 @@
 
 Retrieve the social leaderboard by version, for a list of players.
 
-<PartialServop service_name="leaderboard" operation_name="GET_PLAYERS_SOCIAL_LEADERBOARD" />
+<PartialServop service_name="leaderboard" operation_name="GET_PLAYERS_SOCIAL_LEADERBOARD_BY_VERSION" />
 
 ## Method Parameters
 

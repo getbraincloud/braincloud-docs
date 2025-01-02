@@ -5,9 +5,10 @@ Switch to a Parent profile.
 <PartialServop service_name="identity" operation_name="SWITCH_TO_PARENT_PROFILE" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-parentLevelName | The level of the parent to switch to
+
+| Parameter       | Description                          |
+| --------------- | ------------------------------------ |
+| parentLevelName | The level of the parent to switch to |
 
 ## Usage
 
@@ -99,9 +100,9 @@ var levelName = "Master";
 ```
 
 ```dart
-var  levelName = "Master";
+var  parentLevelName = "Master";
 
-ServerResponse result = await <%= data.branding.codePrefix %>.identityService.switchToParentProfile(levelName:levelName);
+ServerResponse result = await <%= data.branding.codePrefix %>.identityService.switchToParentProfile(parentLevelName:parentLevelName);
 
 if (result.statusCode == 200) {
     print("Success");
@@ -150,14 +151,14 @@ if (postResult.status == 200) {
 <summary>JSON Response</summary>
 
 ```json
-{  
-   "data":{  
-      "gameId":"12335",
-      "profileId":"08ae9b33-3e9d-43d5-835e-7915e0da0fca",
-      "switchToAppId":"12335"
-   },
-   "status":200
+{
+    "data": {
+        "gameId": "12335",
+        "profileId": "08ae9b33-3e9d-43d5-835e-7915e0da0fca",
+        "switchToAppId": "12335"
+    },
+    "status": 200
 }
 ```
-</details>
 
+</details>

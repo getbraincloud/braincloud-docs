@@ -5,14 +5,15 @@ Attach a peer identity profile to the current profile. Create if necessary.
 <PartialServop service_name="identity" operation_name="ATTACH_PEER_PROFILE" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-peer | Identifies peer app
-externalId | User ID
-authenticationToken | Password or client side token
-authenticationType | Type of authentication. Full list of types can be found [here](/api/appendix/authtypes).
-externalAuthName | The name of the external authentication mechanism (optional, used for custom authentication types)
-forceCreate | Whether to create the profile if it does not exist
+
+| Parameter           | Description                                                                                        |
+| ------------------- | -------------------------------------------------------------------------------------------------- |
+| peer                | Identifies peer app                                                                                |
+| externalId          | User ID                                                                                            |
+| authenticationToken | Password or client side token                                                                      |
+| authenticationType  | Type of authentication. Full list of types can be found [here](/api/appendix/authtypes).           |
+| externalAuthName    | The name of the external authentication mechanism (optional, used for custom authentication types) |
+| forceCreate         | Whether to create the profile if it does not exist                                                 |
 
 ## Usage
 
@@ -117,7 +118,7 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 var peer = "test";
 var externalId = "email@email.com";
 var authenticationToken = "email@email.com";
-var authenticationType = "<%= data.branding.codePrefix %>.identity.authenticationType.email;
+var authenticationType = "<%= data.branding.codePrefix %>.identity.authenticationType.email";
 var externalAuthName = "";
 var forceCreate = true;
 
@@ -137,7 +138,7 @@ var forceCreate = true;
 var  peer = "test";
 var  externalId = "email@email.com";
 var  authenticationToken = "email@email.com";
-var  authenticationType = "<%= data.branding.codePrefix %>.identity.authenticationType.email;
+var  authenticationType = AuthenticationType.email;
 var  externalAuthName = "";
 var  forceCreate = true;
 
@@ -208,5 +209,5 @@ if (postResult.status == 200) {
     }
 }
 ```
-</details>
 
+</details>

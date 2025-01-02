@@ -2,16 +2,15 @@
 
 Attach the user's Twitter credentials to the current profile.
 
-
-
 <PartialServop service_name="identity" operation_name="ATTACH" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-twitterId | String representation of a Twitter user ID
-authenticationToken | The authentication token derived via the Twitter API
-secret | The secret given when attempting to link with Twitter
+
+| Parameter           | Description                                           |
+| ------------------- | ----------------------------------------------------- |
+| twitterId           | String representation of a Twitter user ID            |
+| authenticationToken | The authentication token derived via the Twitter API  |
+| secret              | The secret given when attempting to link with Twitter |
 
 ## Usage
 
@@ -89,7 +88,16 @@ public void attachTwitterIdentity(
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+var  twitterId = "someId";
+var  authenticationToken = "someToken";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.identityService.attachTwitterIdentity(twitterId:twitterId, authenticationToken:authenticationToken);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
 ```
 
 ```mdx-code-block
@@ -121,21 +129,21 @@ public void attachTwitterIdentity(
 
 ```json
 {
-    "status" : 200,
-    "data" : null
+    "status": 200,
+    "data": null
 }
 ```
+
 </details>
 
 <details>
 <summary>Common Error Code</summary>
 
 ### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40211 | DUPLICATE_IDENTITY_TYPE | Returned when trying to attach an identity type that already exists for that profile. For instance you can have only one Twitter identity for a profile.
-40212 | MERGE_PROFILES | Returned when trying to attach an identity type that would result in two profiles being merged into one (for instance an anonymous account and a Twitter account).
+
+| Code  | Name                    | Description                                                                                                                                                        |
+| ----- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 40211 | DUPLICATE_IDENTITY_TYPE | Returned when trying to attach an identity type that already exists for that profile. For instance you can have only one Twitter identity for a profile.           |
+| 40212 | MERGE_PROFILES          | Returned when trying to attach an identity type that would result in two profiles being merged into one (for instance an anonymous account and a Twitter account). |
 
 </details>
-
-

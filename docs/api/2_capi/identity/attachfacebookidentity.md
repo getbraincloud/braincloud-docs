@@ -2,15 +2,14 @@
 
 Attach the user's Facebook credentials to the current profile.
 
-
-
 <PartialServop service_name="identity" operation_name="ATTACH" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-facebookId | The facebook id of the user
-authenticationToken | The validated token from the Facebook SDK (that will be further validated when sent to the <%= data.branding.productName %> service)
+
+| Parameter           | Description                                                                                                                          |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| facebookId          | The facebook id of the user                                                                                                          |
+| authenticationToken | The validated token from the Facebook SDK (that will be further validated when sent to the <%= data.branding.productName %> service) |
 
 ## Usage
 
@@ -80,7 +79,16 @@ public void attachFacebookIdentity(String facebookId, String authenticationToken
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+var  facebookId = "someId";
+var  authenticationToken = "someToken";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.identityService.attachFacebookIdentity(facebookId:facebookId, authenticationToken:authenticationToken);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
 ```
 
 ```mdx-code-block
@@ -112,21 +120,21 @@ public void attachFacebookIdentity(String facebookId, String authenticationToken
 
 ```json
 {
-    "status" : 200,
-    "data" : null
+    "status": 200,
+    "data": null
 }
 ```
+
 </details>
 
 <details>
 <summary>Common Error Code</summary>
 
 ### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40211 | DUPLICATE_IDENTITY_TYPE | Returned when trying to attach an identity type that already exists for that profile. For instance you can have only one Facebook identity for a profile.
-40212 | MERGE_PROFILES | Returned when trying to attach an identity type that would result in two profiles being merged into one (for instance an anonymous account and a Facebook account).
+
+| Code  | Name                    | Description                                                                                                                                                         |
+| ----- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 40211 | DUPLICATE_IDENTITY_TYPE | Returned when trying to attach an identity type that already exists for that profile. For instance you can have only one Facebook identity for a profile.           |
+| 40212 | MERGE_PROFILES          | Returned when trying to attach an identity type that would result in two profiles being merged into one (for instance an anonymous account and a Facebook account). |
 
 </details>
-
-

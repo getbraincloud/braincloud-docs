@@ -2,8 +2,6 @@
 
 Detach the e-mail identity from the current profile
 
-
-
 ## Error Handling Example
 
 ```csharp
@@ -37,10 +35,11 @@ public void FailureCallback(int statusCode, int reasonCode, string statusMessage
 <PartialServop service_name="identity" operation_name="DETACH" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-email | The user's e-mail address
-continueAnon | Proceed even if the profile will revert to anonymous?
+
+| Parameter    | Description                                           |
+| ------------ | ----------------------------------------------------- |
+| email        | The user's e-mail address                             |
+| continueAnon | Proceed even if the profile will revert to anonymous? |
 
 ## Usage
 
@@ -108,7 +107,16 @@ public void detachEmailIdentity(String email, boolean continueAnon, IServerCallb
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+var  email = "email@domain.com";
+var  continueAnon = true;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.identityService.detachEmailIdentity(email:email, continueAnon:continueAnon);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
 ```
 
 ```mdx-code-block
@@ -140,22 +148,22 @@ public void detachEmailIdentity(String email, boolean continueAnon, IServerCallb
 
 ```json
 {
-    "status" : 200,
-    "data" : null
+    "status": 200,
+    "data": null
 }
 ```
+
 </details>
 
 <details>
 <summary>Common Error Code</summary>
 
 ### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40210 | DOWNGRADING_TO_ANONYMOUS_ERROR | Occurs when detaching the last non-anonymous identity from an account with continueAnon set to false.
-40206 | MISSING_IDENTITY_ERROR | A "profileId" was supplied in the authentication request submitted with new credentials. In other words the credentials record was not found in the <%= data.branding.productName %> database. The solution would be to provide known credentials or not supply a "profileId" if the user is actually new.
-40209 | SECURITY_ERROR | Returned if a security exception was encountered.
+
+| Code  | Name                           | Description                                                                                                                                                                                                                                                                                                |
+| ----- | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 40210 | DOWNGRADING_TO_ANONYMOUS_ERROR | Occurs when detaching the last non-anonymous identity from an account with continueAnon set to false.                                                                                                                                                                                                      |
+| 40206 | MISSING_IDENTITY_ERROR         | A "profileId" was supplied in the authentication request submitted with new credentials. In other words the credentials record was not found in the <%= data.branding.productName %> database. The solution would be to provide known credentials or not supply a "profileId" if the user is actually new. |
+| 40209 | SECURITY_ERROR                 | Returned if a security exception was encountered.                                                                                                                                                                                                                                                          |
 
 </details>
-
-

@@ -4,8 +4,6 @@ Merge the profile associated with the provided user ID with the current profile.
 
 NOTE: If using the <%= data.branding.codeWrapper %>, once the merge is complete you should call [<code>SetStoredProfileId</code>](/api/wrapper/setstoredprofileid) in the <%= data.branding.codeWrapper %> with the profileId returned in the Merge call.
 
-
-
 ## Error Handling Example
 
 ```csharp
@@ -39,10 +37,11 @@ public void FailureCallback(int statusCode, int reasonCode, string statusMessage
 <PartialServop service_name="identity" operation_name="MERGE" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-userId | The player's user ID
-password | The player's password
+
+| Parameter | Description           |
+| --------- | --------------------- |
+| userId    | The player's user ID  |
+| password  | The player's password |
 
 ## Usage
 
@@ -112,7 +111,16 @@ public void mergeUniversalIdentity(String userId, String password, IServerCallba
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+var  userId = "someId";
+var  password = "password";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.identityService.mergeUniversalIdentity(userId:userId, password:password);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
 ```
 
 ```mdx-code-block
@@ -143,24 +151,24 @@ public void mergeUniversalIdentity(String userId, String password, IServerCallba
 <summary>JSON Response</summary>
 
 ```json
-{  
-   "data":{  
-      "profileId":"f94f7e2d-3cdd-4fd6-9c28-392f7875e9df"
-   },
-   "status":200
+{
+    "data": {
+        "profileId": "f94f7e2d-3cdd-4fd6-9c28-392f7875e9df"
+    },
+    "status": 200
 }
 ```
+
 </details>
 
 <details>
 <summary>Common Error Code</summary>
 
 ### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40206 | MISSING_IDENTITY_ERROR | A "profileId" was supplied in the authentication request submitted with new credentials. In other words the credentials record was not found in the <%= data.branding.productName %> database. The solution would be to provide known credentials or not supply a "profileId" if the user is actually new.
-40211 | DUPLICATE_IDENTITY_TYPE | Returned when trying to attach an identity type that already exists for that profile. For instance you can have only one Universal identity for a profile.
+
+| Code  | Name                    | Description                                                                                                                                                                                                                                                                                                |
+| ----- | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 40206 | MISSING_IDENTITY_ERROR  | A "profileId" was supplied in the authentication request submitted with new credentials. In other words the credentials record was not found in the <%= data.branding.productName %> database. The solution would be to provide known credentials or not supply a "profileId" if the user is actually new. |
+| 40211 | DUPLICATE_IDENTITY_TYPE | Returned when trying to attach an identity type that already exists for that profile. For instance you can have only one Universal identity for a profile.                                                                                                                                                 |
 
 </details>
-
-

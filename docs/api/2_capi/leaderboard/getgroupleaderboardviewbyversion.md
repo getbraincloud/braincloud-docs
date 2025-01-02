@@ -5,14 +5,15 @@ Method returns a view of group leaderboard results that centers on the current g
 <PartialServop service_name="leaderboard" operation_name="GET_GROUP_LEADERBOARD_VIEW" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | The id of the leaderboard.
-groupId | The id of the group. 
-versionId | The historical version to retrieve.
-sort | Sort order of page. ("HIGH_TO_LOW" or "LOW_TO_HIGH")
-beforeCount | The count of number of players before the current player to include.
-afterCount | The count of number of players after the current player to include.
+
+| Parameter     | Description                                                          |
+| ------------- | -------------------------------------------------------------------- |
+| leaderboardId | The id of the leaderboard.                                           |
+| groupId       | The id of the group.                                                 |
+| versionId     | The historical version to retrieve.                                  |
+| sort          | Sort order of page. ("HIGH_TO_LOW" or "LOW_TO_HIGH")                 |
+| beforeCount   | The count of number of players before the current player to include. |
+| afterCount    | The count of number of players after the current player to include.  |
 
 ## Usage
 
@@ -137,11 +138,11 @@ var afterCount = 4;
 var  leaderboardId = "default";
 var  groupId = "actual_group_id";
 var  versionId = -1;
-var  sort = "HIGH_TO_LOW";
+var  sortOrder = SortOrder.HIGH_TO_LOW;
 var  beforeCount = 3;
 var  afterCount = 4;
 
-ServerResponse result = await <%= data.branding.codePrefix %>.leaderboardService.getGroupLeaderboardViewByVersion(leaderboardId:leaderboardId, groupId:groupId, versionId:versionId, sort:sort, beforeCount:beforeCount, afterCount:afterCount);
+ServerResponse result = await <%= data.branding.codePrefix %>.leaderboardService.getGroupLeaderboardViewByVersion(leaderboardId:leaderboardId, groupId:groupId, versionId:versionId,  sortOrder:sortOrder, beforeCount:beforeCount, afterCount:afterCount);
 
 if (result.statusCode == 200) {
     print("Success");
@@ -195,4 +196,3 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-

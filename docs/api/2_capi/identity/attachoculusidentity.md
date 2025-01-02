@@ -2,15 +2,14 @@
 
 Attach the user's Oculus credentials to the current profile.
 
-
-
 <PartialServop service_name="identity" operation_name="ATTACH" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-userId | The Oculus id of the user
-nonce | The returned nonce from the Oculus Platform SDK
+
+| Parameter | Description                                     |
+| --------- | ----------------------------------------------- |
+| userId    | The Oculus id of the user                       |
+| nonce     | The returned nonce from the Oculus Platform SDK |
 
 ## Usage
 
@@ -89,7 +88,7 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// N/A
 ```
 
 ```mdx-code-block
@@ -106,7 +105,7 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
+```r
 // N/A
 ```
 
@@ -121,21 +120,21 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 
 ```json
 {
-    "status" : 200,
-    "data" : null
+    "status": 200,
+    "data": null
 }
 ```
+
 </details>
 
 <details>
 <summary>Common Error Code</summary>
 
 ### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40211 | DUPLICATE_IDENTITY_TYPE | Returned when trying to attach an identity type that already exists for that profile. For instance you can have only one Oculus identity for a profile.
-40212 | MERGE_PROFILES | Returned when trying to attach an identity type that would result in two profiles being merged into one (for instance an anonymous account and a Oculus account).
+
+| Code  | Name                    | Description                                                                                                                                                       |
+| ----- | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 40211 | DUPLICATE_IDENTITY_TYPE | Returned when trying to attach an identity type that already exists for that profile. For instance you can have only one Oculus identity for a profile.           |
+| 40212 | MERGE_PROFILES          | Returned when trying to attach an identity type that would result in two profiles being merged into one (for instance an anonymous account and a Oculus account). |
 
 </details>
-
-
