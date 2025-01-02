@@ -29,17 +29,8 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 <TabItem value="cpp" label="C++">
 ```
 
-```csharp
-SuccessCallback successCallback = (response, cbObject) =>
-{
-    Debug.Log(string.Format("Success | {0}", response));
-};
-FailureCallback failureCallback = (status, code, error, cbObject) =>
-{
-    Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
-};
-
-<%= data.branding.codePrefix %>.LobbyService.PingRegions(successCallback, failureCallback);
+```cpp
+<%= data.branding.codePrefix %>->getLobbyService()->pingRegions(this);
 ```
 
 ```mdx-code-block
@@ -47,17 +38,13 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 <TabItem value="objectivec" label="Objective-C">
 ```
 
-```csharp
-SuccessCallback successCallback = (response, cbObject) =>
-{
-    Debug.Log(string.Format("Success | {0}", response));
-};
-FailureCallback failureCallback = (status, code, error, cbObject) =>
-{
-    Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
-};
+```objectivec
+BCCompletionBlock successBlock;      // define callback
+BCErrorCompletionBlock failureBlock; // define callback
 
-<%= data.branding.codePrefix %>.LobbyService.PingRegions(successCallback, failureCallback);
+[[<%= data.branding.codePrefix %> lobbyService] pingRegions:successBlock
+       errorCompletionBlock:failureBlock
+                   cbObject:nil];
 ```
 
 ```mdx-code-block
@@ -65,17 +52,19 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 <TabItem value="java" label="Java">
 ```
 
-```csharp
-SuccessCallback successCallback = (response, cbObject) =>
-{
-    Debug.Log(string.Format("Success | {0}", response));
-};
-FailureCallback failureCallback = (status, code, error, cbObject) =>
-{
-    Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
-};
+```java
+this; // implements IServerCallback
 
-<%= data.branding.codePrefix %>.LobbyService.PingRegions(successCallback, failureCallback);
+<%= data.branding.codePrefix %>.getLobbyService().pingRegions(this);
+
+public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
+{
+    System.out.print(String.format("Success | %s", jsonData.toString()));
+}
+public void serverError(ServiceName serviceName, ServiceOperation serviceOperation, int statusCode, int reasonCode, String jsonError)
+{
+    System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
+}
 ```
 
 ```mdx-code-block
@@ -83,17 +72,27 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 <TabItem value="js" label="JavaScript">
 ```
 
-```csharp
-SuccessCallback successCallback = (response, cbObject) =>
+```javascript
+<%= data.branding.codePrefix %>.lobby.pingRegions(result =>
 {
-    Debug.Log(string.Format("Success | {0}", response));
-};
-FailureCallback failureCallback = (status, code, error, cbObject) =>
-{
-    Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
-};
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
+});
+```
 
-<%= data.branding.codePrefix %>.LobbyService.PingRegions(successCallback, failureCallback);
+```mdx-code-block
+</TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+ServerResponse result = await <%= data.branding.codePrefix %>.lobbyService.pingRegions();
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
 ```
 
 ```mdx-code-block
@@ -101,17 +100,8 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```csharp
-SuccessCallback successCallback = (response, cbObject) =>
-{
-    Debug.Log(string.Format("Success | {0}", response));
-};
-FailureCallback failureCallback = (status, code, error, cbObject) =>
-{
-    Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
-};
-
-<%= data.branding.codePrefix %>.LobbyService.PingRegions(successCallback, failureCallback);
+```cfscript
+N/A
 ```
 
 ```mdx-code-block
@@ -119,17 +109,8 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 <TabItem value="r" label="Raw">
 ```
 
-```csharp
-SuccessCallback successCallback = (response, cbObject) =>
-{
-    Debug.Log(string.Format("Success | {0}", response));
-};
-FailureCallback failureCallback = (status, code, error, cbObject) =>
-{
-    Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
-};
-
-<%= data.branding.codePrefix %>.LobbyService.PingRegions(successCallback, failureCallback);
+```r
+N/A
 ```
 
 ```mdx-code-block
@@ -137,4 +118,3 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 </Tabs>
 </BrowserWindow>
 ```
-

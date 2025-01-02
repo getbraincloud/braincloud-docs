@@ -2,16 +2,14 @@
 
 Evicts the specified user from the specified lobby. The caller must be the owner of the lobby.
 
-
-
-
 <PartialServop service_name="lobby" operation_name="REMOVE_MEMBER" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-lobbyId | Id of chosen lobby.
-connectionID | RTT connection id of specified member to be removed from the lobby.
+
+| Parameter    | Description                                                         |
+| ------------ | ------------------------------------------------------------------- |
+| lobbyId      | Id of chosen lobby.                                                 |
+| connectionID | RTT connection id of specified member to be removed from the lobby. |
 
 ## Usage
 
@@ -110,9 +108,9 @@ var cxId = "55555:aaa-bbb-ccc-ddd:asdfjkl";
 
 ```dart
 var  lobbyId = "55555:4v4:19";
-var  cxId = "55555:aaa-bbb-ccc-ddd:asdfjkl";
+var  connectionId = "55555:aaa-bbb-ccc-ddd:asdfjkl";
 
-ServerResponse result = await <%= data.branding.codePrefix %>.lobbyService.removeMember(lobbyId:lobbyId, cxId:cxId);
+ServerResponse result = await <%= data.branding.codePrefix %>.lobbyService.removeMember(lobbyId:lobbyId, connectionId:connectionId);
 
 if (result.statusCode == 200) {
     print("Success");
@@ -168,16 +166,16 @@ if (postResult.status == 200) {
     "data": {}
 }
 ```
+
 </details>
 
 <details>
 <summary>Common Error Code</summary>
 
 ### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
+
+| Code  | Name            | Description                          |
+| ----- | --------------- | ------------------------------------ |
+| 40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature |
 
 </details>
-
-
