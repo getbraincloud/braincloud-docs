@@ -5,10 +5,11 @@ Starts a match.
 <PartialServop service_name="onewayMatch" operation_name="START_MATCH" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-otherPlayerId | The player to start a match with
-rangeDelta | The player rating range delta required for the match to start. If otherPlayerId has too high or low of a rating compared to the current player and range delta, a MATCH_RANGE_ERROR (40334) will be returned
+
+| Parameter  | Description                                                                                                                                                                                                  |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| playerId   | The player to start a match with                                                                                                                                                                             |
+| rangeDelta | The player rating range delta required for the match to start. If otherPlayerId has too high or low of a rating compared to the current player and range delta, a MATCH_RANGE_ERROR (40334) will be returned |
 
 ## Usage
 
@@ -179,5 +180,5 @@ if (postResult.status == 200) {
     }
 }
 ```
-</details>
 
+</details>
