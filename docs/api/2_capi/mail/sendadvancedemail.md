@@ -1,16 +1,17 @@
 # SendAdvancedEmail
 
-Sends an advanced email to the specified user.  The advanced API takes a set of parameters that are
+Sends an advanced email to the specified user. The advanced API takes a set of parameters that are
 dependant on the mail service configured in the <%= data.branding.productName %> Portal.
 For a list of all available parameters see the top of the Mail service documentation.
 
 <PartialServop service_name="mail" operation_name="SEND_ADVANCED_EMAIL" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | The user to send the email to
-serviceParams | Set of parameters dependant on the mail service configured
+
+| Parameter     | Description                                                |
+| ------------- | ---------------------------------------------------------- |
+| profileId     | The user to send the email to                              |
+| serviceParams | Set of parameters dependant on the mail service configured |
 
 ## Usage
 
@@ -157,7 +158,7 @@ var  jsonServiceParams = {
     ]
 };
 
-ServerResponse result = await <%= data.branding.codePrefix %>.mailService.sendAdvancedEmail(profileId:profileId, jsonServiceParams:jsonServiceParams);
+ServerResponse result = await <%= data.branding.codePrefix %>.mailService.sendAdvancedEmail(profileId:profileId, serviceParams:serviceParams);
 
 if (result.statusCode == 200) {
     print("Success");
@@ -210,37 +211,34 @@ if (postResult.status == 200) {
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var profileId = "f7144cc0-b996-440f-8459-21b0ecb91a10";
-var jsonServiceParams = {
-    "fromAddress": "email@company.com",
-    "fromName": "Jane Doe",
-    "replyToAddress": "optional@company.com",
-    "replyToName": "Optional ReplyTo",
-    "templateId": "d-www-xxx-yyy-zzz",
-    "dynamicData": {
-        "user": {
-            "firstName": "John",
-            "lastName": "Doe"
-        },
-        "resetLink": "www.dummuyLink.io"
-    },
-    "categories": [
-        "category1",
-        "category2"
-    ],
-    "attachments": [
-        {
-            "content": "VGhpcyBhdHRhY2htZW50IHRleHQ=",
-            "filename": "attachment.txt"
+```json
+{
+    "service": "mail",
+    "operation": "SEND_ADVANCED_EMAIL",
+    "data": {
+        "profileId": "f7144cc0-b996-440f-8459-21b0ecb91a10",
+        "serviceParams": {
+            "fromAddress": "email@company.com",
+            "fromName": "Jane Doe",
+            "replyToAddress": "optional@company.com",
+            "replyToName": "Optional ReplyTo",
+            "templateId": "d-www-xxx-yyy-zzz",
+            "dynamicData": {
+                "user": {
+                    "firstName": "John",
+                    "lastName": "Doe"
+                },
+                "resetLink": "www.dummuyLink.io"
+            },
+            "categories": ["category1", "category2"],
+            "attachments": [
+                {
+                    "content": "VGhpcyBhdHRhY2htZW50IHRleHQ=",
+                    "filename": "attachment.txt"
+                }
+            ]
         }
-    ]
-};
-var mailProxy = bridge.getMailServiceProxy();
-
-var postResult = mailProxy.sendAdvancedEmail(profileId, jsonServiceParams);
-if (postResult.status == 200) {
-    // Success!
+    }
 }
 ```
 
@@ -261,5 +259,5 @@ if (postResult.status == 200) {
     }
 }
 ```
-</details>
 
+</details>
