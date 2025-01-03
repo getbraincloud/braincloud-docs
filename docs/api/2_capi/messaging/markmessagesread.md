@@ -2,16 +2,14 @@
 
 Marks the specified message(s) as read.
 
-
-
-
 <PartialServop service_name="messaging" operation_name="MARK_MESSAGES_READ" />
 
 ## Method Parameters
-Parameter | Description
---------- | ------------------------------------
-msgbox | The box that the messages reside in.
-msgIds | An array of msgIds.
+
+| Parameter | Description                          |
+| --------- | ------------------------------------ |
+| msgbox    | The box that the messages reside in. |
+| msgIds    | An array of msgIds.                  |
 
 ## Usage
 
@@ -111,10 +109,10 @@ var msgIds = [ "msgId1", "msgId2" ];
 ```
 
 ```dart
-var  msgbox = "inbox";
+var  msgBox = "inbox";
 var  msgIds = [ "msgId1", "msgId2" ];
 
-ServerResponse result = await <%= data.branding.codePrefix %>.messagingService.markMessagesRead(msgbox:msgbox, msgIds:msgIds);
+ServerResponse result = await <%= data.branding.codePrefix %>.messagingService.markMessagesRead(msgBox:msgBox, msgIds:msgIds);
 
 if (result.statusCode == 200) {
     print("Success");
@@ -176,16 +174,16 @@ if (postResult.status == 200) {
     }
 }
 ```
+
 </details>
 
 <details>
 <summary>Common Error Code</summary>
 
 ### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40601 | FEATURE_NOT_ENABLED | Messaging feature is not enabled for app.
+
+| Code  | Name                | Description                               |
+| ----- | ------------------- | ----------------------------------------- |
+| 40601 | FEATURE_NOT_ENABLED | Messaging feature is not enabled for app. |
 
 </details>
-
-

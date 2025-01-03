@@ -2,15 +2,14 @@
 
 Sends a simple string-based message on behalf of the user.
 
-
-
 <PartialServop service_name="messaging" operation_name="SEND_MESSAGE_SIMPLE" />
 
 ## Method Parameters
-Parameter | Description                         
---------- | ------------------------------------
-toProfileIds | An array of recipients of the message.
-contentString | The text to send. 
+
+| Parameter    | Description                            |
+| ------------ | -------------------------------------- |
+| toProfileIds | An array of recipients of the message. |
+| text         | The text to send.                      |
 
 ## Usage
 
@@ -176,16 +175,16 @@ if (postResult.status == 200) {
     }
 }
 ```
+
 </details>
 
 <details>
 <summary>Common Error Code</summary>
 
 ### Status Codes
-Code | Name | Description                        
------ | ----------------------- | -----------------------------------
-40601 | FEATURE_NOT_ENABLED | Messaging feature is not enabled for app.
+
+| Code  | Name                | Description                               |
+| ----- | ------------------- | ----------------------------------------- |
+| 40601 | FEATURE_NOT_ENABLED | Messaging feature is not enabled for app. |
 
 </details>
-
-

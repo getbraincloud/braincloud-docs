@@ -2,16 +2,15 @@
 
 Return the content of the specified messages (if found).
 
-
-
 <PartialServop service_name="messaging" operation_name="GET_MESSAGES" />
 
 ## Method Parameters
-Parameter | Description |
---------- | ------------------------------------ |
-msgbox | The messagebox that the messages reside in |
-msgids | An array of message ids |
-markAsRead | Whether the messages should be marked as read once retrieved. |
+
+| Parameter  | Description                                                   |
+| ---------- | ------------------------------------------------------------- |
+| msgbox     | The messagebox that the messages reside in                    |
+| msgids     | An array of message ids                                       |
+| markAsRead | Whether the messages should be marked as read once retrieved. |
 
 ## Usage
 
@@ -117,11 +116,11 @@ var markAsRead = false;
 ```
 
 ```dart
-var  msgbox = "inbox";
+var  msgBox = "inbox";
 var  msgIds = [ "msgId1", "msgId2" ];
 var  markAsRead = false;
 
-ServerResponse result = await <%= data.branding.codePrefix %>.messagingService.getMessages(msgbox:msgbox, msgIds:msgIds, markAsRead:markAsRead);
+ServerResponse result = await <%= data.branding.codePrefix %>.messagingService.getMessages(msgBox:msgBox, msgIds:msgIds, markAsRead:markAsRead);
 
 if (result.statusCode == 200) {
     print("Success");
@@ -195,9 +194,7 @@ if (postResult.status == 200) {
                         "id": "c3a455de-27f5-4126-a051-0effb1c75fd3",
                         "name": ""
                     },
-                    "to": [
-                        "c3a455de-27f5-4126-a051-0effb1c75fd3"
-                    ],
+                    "to": ["c3a455de-27f5-4126-a051-0effb1c75fd3"],
                     "sentAt": 1530289175381,
                     "content": {
                         "subject": "Message 1",
@@ -217,9 +214,7 @@ if (postResult.status == 200) {
                         "id": "c3a455de-27f5-4126-a051-0effb1c75fd3",
                         "name": ""
                     },
-                    "to": [
-                        "c3a455de-27f5-4126-a051-0effb1c75fd3"
-                    ],
+                    "to": ["c3a455de-27f5-4126-a051-0effb1c75fd3"],
                     "sentAt": 1530289180520,
                     "content": {
                         "subject": "Message 2",
@@ -231,16 +226,16 @@ if (postResult.status == 200) {
     }
 }
 ```
+
 </details>
 
 <details>
 <summary>Common Error Code</summary>
 
 ### Status Codes
-| Code | Name | Description |
-| ----- | ----------------------- | ----------------------------------- |
+
+| Code  | Name                | Description                               |
+| ----- | ------------------- | ----------------------------------------- |
 | 40601 | FEATURE_NOT_ENABLED | Messaging feature is not enabled for app. |
 
 </details>
-
-
