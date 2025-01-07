@@ -5,12 +5,13 @@ Schedules a rich push notification to a user at a future absolute time.
 <PartialServop service_name="pushNotification" operation_name="SCHEDULE_RICH_NOTIFICATION" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | Identifies the user to send to
-notificationTemplateId | Id of the notification template
-substitutions | JSON defining the substitution params to use with the template
-startTime | Time to send notification (UTC)
+
+| Parameter              | Description                                                    |
+| ---------------------- | -------------------------------------------------------------- |
+| profileId              | Identifies the user to send to                                 |
+| notificationTemplateId | Id of the notification template                                |
+| substitutions          | JSON defining the substitution params to use with the template |
+| startTime              | Time to send notification (UTC)                                |
 
 ## Usage
 
@@ -132,7 +133,7 @@ var  substitutionJson = {
 };
 var  startTime = 1437579786000;
 
-ServerResponse result = await <%= data.branding.codePrefix %>.pushNotificationService.scheduleRichPushNotificationUTC(profileId:profileId, notificationTemplateId:notificationTemplateId, substitutionJson:substitutionJson, startTime:startTime);
+ServerResponse result = await <%= data.branding.codePrefix %>.pushNotificationService.scheduleRichPushNotificationUTC(profileId:profileId, notificationTemplateId:notificationTemplateId, substitution:substitutionJson, startTime:startTime);
 
 if (result.statusCode == 200) {
     print("Success");
@@ -188,4 +189,3 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-

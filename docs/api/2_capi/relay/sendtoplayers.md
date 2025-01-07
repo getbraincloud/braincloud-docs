@@ -72,7 +72,17 @@ RSDataCallback rsDataCallback = (response) =>
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+Uint8List bytes = utf8.encode("Some Data here");
+int mask = 0;
+// Send only to NetID 0, 2 and 5
+for (var netId in [0,2,5]) {
+  mask += (1 << netId);
+}
+​
+_bc.relayService.sendToPlayers(bytes, playerMask:mask,
+          reliable: true,
+          ordered: true,
+          channel: BrainCloudRelay.channelLowPriority);
 ```
 
 ```mdx-code-block

@@ -56,7 +56,7 @@ Get the lobby's owner profile Id.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+String cxId = _bc.relayService.getOwnerProfileId();
 ```
 
 ```mdx-code-block

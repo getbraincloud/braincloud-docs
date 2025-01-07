@@ -5,10 +5,11 @@ Sends a simple push notification based on the passed in message.
 <PartialServop service_name="pushNotification" operation_name="SEND_SIMPLE" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-toProfileId | The profileId of the user to receive the notification.
-message | The content of the message.
+
+| Parameter   | Description                                            |
+| ----------- | ------------------------------------------------------ |
+| toProfileId | The profileId of the user to receive the notification. |
+| message     | The content of the message.                            |
 
 ## Usage
 
@@ -109,7 +110,7 @@ var message = "Hello World";
 var  toProfileId = "profile1";
 var  message = "Hello World";
 
-ServerResponse result = await <%= data.branding.codePrefix %>.pushNotificationService.sendSimplePushNotification(toProfileId:toProfileId, message:message);
+ServerResponse result = await <%= data.branding.codePrefix %>.pushNotificationService.sendSimplePushNotification(profileId:toProfileId, message:message);
 
 if (result.statusCode == 200) {
     print("Success");
@@ -165,5 +166,5 @@ if (postResult.status == 200) {
     "data": null
 }
 ```
-</details>
 
+</details>

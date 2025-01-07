@@ -56,7 +56,9 @@ Returns the RTT connection Id associated with a netId.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+int aNetId = 2;
+​
+String cxId = _bc.relayService.getCxIdForNetId(aNetId);
 ```
 
 ```mdx-code-block

@@ -5,11 +5,12 @@ Sends a notification to a "group" of user consisting of alert content and custom
 <PartialServop service_name="pushNotification" operation_name="SEND_NORMALIZED_TO_GROUP" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | Target group ID
-alertContentJson | Body and title of alert
-customDataJson | Optional custom data
+
+| Parameter        | Description             |
+| ---------------- | ----------------------- |
+| groupId          | Target group ID         |
+| alertContentJson | Body and title of alert |
+| customDataJson   | Optional custom data    |
 
 ## Usage
 
@@ -129,7 +130,7 @@ var  customDataJson = {
     "field2": "value2"
 };
 
-ServerResponse result = await <%= data.branding.codePrefix %>.pushNotificationService.sendNormalizedPushNotificationToGroup(groupId:groupId, alertContentJson:alertContentJson, customDataJson:customDataJson);
+ServerResponse result = await <%= data.branding.codePrefix %>.pushNotificationService.sendNormalizedPushNotificationToGroup(groupId:groupId, alertContent:alertContentJson, customData:customDataJson);
 
 if (result.statusCode == 200) {
     print("Success");
@@ -199,5 +200,5 @@ if (postResult.status == 200) {
     "data": null
 }
 ```
-</details>
 
+</details>

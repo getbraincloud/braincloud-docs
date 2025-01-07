@@ -74,14 +74,11 @@ static void relayCallback(byte[] data)
 ```
 
 ```dart
-
-ServerResponse result = await <%= data.branding.codePrefix %>.relayService.RegisterRelayCallback();
-
-if (result.statusCode == 200) {
-    print("Success");
-} else {
-    print("Failed ${result.error['status_message'] ?? result.error}");
-}
+ void relayCallback(int netId, Uint8List data) {
+   // Your code
+ }
+​
+<%= data.branding.codePrefix %>.relayService.RegisterRelayCallback(relayCallback);
 ```
 
 ```mdx-code-block

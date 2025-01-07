@@ -5,10 +5,11 @@ Sends a notification to a user based on a <%= data.branding.productName %> porta
 <PartialServop service_name="pushNotification" operation_name="SEND_RICH" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-toId | The profileId of the user to receive the notification
-notificationTemplateId | Id of the notification template
+
+| Parameter              | Description                                           |
+| ---------------------- | ----------------------------------------------------- |
+| toId                   | The profileId of the user to receive the notification |
+| notificationTemplateId | Id of the notification template                       |
 
 ## Usage
 
@@ -109,7 +110,7 @@ var notificationTemplateId = 1;
 var  toProfileId = "profile1";
 var  notificationTemplateId = 1;
 
-ServerResponse result = await <%= data.branding.codePrefix %>.pushNotificationService.sendRichPushNotification(toProfileId:toProfileId, notificationTemplateId:notificationTemplateId);
+ServerResponse result = await <%= data.branding.codePrefix %>.pushNotificationService.sendRichPushNotification(profileId:toProfileId, notificationTemplateId:notificationTemplateId);
 
 if (result.statusCode == 200) {
     print("Success");
@@ -169,5 +170,5 @@ if (postResult.status == 200) {
     "data": null
 }
 ```
-</details>
 
+</details>

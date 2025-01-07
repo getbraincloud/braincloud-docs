@@ -17,11 +17,12 @@ The resulting string would be "Hello George Smith, welcome to the Poker Pirates 
 <PartialServop service_name="pushNotification" operation_name="SEND_RICH" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-toProfileId | The profileId of the user to receive the notification
-notificationTemplateId | Id of the notification template
-substitutionJson | JSON defining the substitution params to use with the template
+
+| Parameter              | Description                                                    |
+| ---------------------- | -------------------------------------------------------------- |
+| toProfileId            | The profileId of the user to receive the notification          |
+| notificationTemplateId | Id of the notification template                                |
+| substitutionJson       | JSON defining the substitution params to use with the template |
 
 ## Usage
 
@@ -135,7 +136,7 @@ var  substitutionJson = {
     "1": "value1"
 };
 
-ServerResponse result = await <%= data.branding.codePrefix %>.pushNotificationService.sendRichPushNotificationWithParams(toProfileId:toProfileId, notificationTemplateId:notificationTemplateId, substitutionJson:substitutionJson);
+ServerResponse result = await <%= data.branding.codePrefix %>.pushNotificationService.sendRichPushNotificationWithParams(profileId:toProfileId, notificationTemplateId:notificationTemplateId, substitution:substitutionJson);
 
 if (result.statusCode == 200) {
     print("Success");
@@ -199,5 +200,5 @@ if (postResult.status == 200) {
     "data": null
 }
 ```
-</details>
 
+</details>

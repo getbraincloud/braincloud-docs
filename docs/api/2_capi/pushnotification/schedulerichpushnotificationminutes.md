@@ -5,12 +5,13 @@ Schedules a rich push notification to a user at a future relative time.
 <PartialServop service_name="pushNotification" operation_name="SCHEDULE_RICH_NOTIFICATION" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | Identifies the user to send to
-notificationTemplateId | Id of the notification template
-substitutions | JSON defining the substitution params to use with the template
-minutesFromNow | Minutes in the future to send notification
+
+| Parameter              | Description                                                    |
+| ---------------------- | -------------------------------------------------------------- |
+| profileId              | Identifies the user to send to                                 |
+| notificationTemplateId | Id of the notification template                                |
+| substitutions          | JSON defining the substitution params to use with the template |
+| minutesFromNow         | Minutes in the future to send notification                     |
 
 ## Usage
 
@@ -132,7 +133,7 @@ var  substitutionJson = {
 };
 var  minutesFromNow = 1;
 
-ServerResponse result = await <%= data.branding.codePrefix %>.pushNotificationService.scheduleRichPushNotificationMinutes(profileId:profileId, notificationTemplateId:notificationTemplateId, substitutionJson:substitutionJson, minutesFromNow:minutesFromNow);
+ServerResponse result = await <%= data.branding.codePrefix %>.pushNotificationService.scheduleRichPushNotificationMinutes(profileId:profileId, notificationTemplateId:notificationTemplateId, substitution:substitutionJson, minutesFromNow:minutesFromNow);
 
 if (result.statusCode == 200) {
     print("Success");
@@ -188,4 +189,3 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-

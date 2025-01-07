@@ -5,10 +5,11 @@ Deregisters the given device token from the server to disable this device from r
 <PartialServop service_name="pushNotification" operation_name="DEREGISTER" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-device | The device platform being deregistered.
-token | The platform-dependant device token needed for push notifications.
+
+| Parameter | Description                                                        |
+| --------- | ------------------------------------------------------------------ |
+| device    | The device platform being deregistered.                            |
+| token     | The platform-dependant device token needed for push notifications. |
 
 ## Usage
 
@@ -106,10 +107,10 @@ var deviceToken = "12345";
 ```
 
 ```dart
-var  deviceType = "IOS";
-var  deviceToken = "12345";
-
-ServerResponse result = await <%= data.branding.codePrefix %>.pushNotificationService.deregisterPushNotificationDeviceToken(deviceType:deviceType, deviceToken:deviceToken);
+var  platform = PlatformID.iOS;
+var  deviceToken = "12345";
+​
+ServerResponse result = await _bc.pushNotificationService.deregisterPushNotificationDeviceToken(platform:platform, deviceToken:deviceToken);
 
 if (result.statusCode == 200) {
     print("Success");
@@ -165,5 +166,5 @@ if (postResult.status == 200) {
     "data": null
 }
 ```
-</details>
 
+</details>

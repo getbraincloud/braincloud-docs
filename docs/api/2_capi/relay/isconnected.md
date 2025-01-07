@@ -56,7 +56,7 @@ Returns whether or not we have a successful connection with the relay server.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+bool connected = _bc.relayService.isConnected();
 ```
 
 ```mdx-code-block

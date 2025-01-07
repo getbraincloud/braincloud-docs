@@ -5,12 +5,13 @@ Schedules a normalized push notification to a user at a future relative time.
 <PartialServop service_name="pushNotification" operation_name="SCHEDULE_NORMALIZED_NOTIFICATION" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | Identifies the user to send to
-alertContent | Body and title of alert
-customData | Optional custom data
-minutesFromNow | Minutes in the future to send notification
+
+| Parameter      | Description                                |
+| -------------- | ------------------------------------------ |
+| profileId      | Identifies the user to send to             |
+| alertContent   | Body and title of alert                    |
+| customData     | Optional custom data                       |
+| minutesFromNow | Minutes in the future to send notification |
 
 ## Usage
 
@@ -137,7 +138,7 @@ var  customDataJson = {
 };
 var  minutesFromNow = 1;
 
-ServerResponse result = await <%= data.branding.codePrefix %>.pushNotificationService.scheduleNormalizedPushNotificationMinutes(profileId:profileId, alertContentJson:alertContentJson, customDataJson:customDataJson, minutesFromNow:minutesFromNow);
+ServerResponse result = await <%= data.branding.codePrefix %>.pushNotificationService.scheduleNormalizedPushNotificationMinutes(profileId:profileId, alertConten:alertContentJson, customData:customDataJson, minutesFromNow:minutesFromNow);
 
 if (result.statusCode == 200) {
     print("Success");
@@ -199,4 +200,3 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-

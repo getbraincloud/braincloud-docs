@@ -56,7 +56,7 @@ Get the current ping for our user. Note: Pings are not distributed among other m
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+int pingTime = _bc.relayService.getPing();
 ```
 
 ```mdx-code-block

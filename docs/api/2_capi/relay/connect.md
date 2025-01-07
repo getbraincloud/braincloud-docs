@@ -79,14 +79,23 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 ```
 
 ```dart
-
-ServerResponse result = await <%= data.branding.codePrefix %>.relayService.connect(eRelayConnectionType.WEBSOCKET:eRelayConnectionType.WEBSOCKET, server.host:server.host, port:port, server.passcode:server.passcode, server.lobbyId:server.lobbyId);
-
-if (result.statusCode == 200) {
-    print("Success");
-} else {
-    print("Failed ${result.error['status_message'] ?? result.error}");
+void successCallback(Map<String, dynamic>?  jsonResponse) {
+    // Did connect.
+    // Your code
 }
+void failureCallback(Map<String, dynamic>?  jsonError) {
+  dynamic errorMap = (jsonError is String) ? json.decode(jsonError) : jsonError;
+  // Your code
+}
+// data is retrieved from the onLobby event ROOM_ASSIGNED here.
+RelayConnectOptions connectOptions = RelayConnectOptions(
+                  false,
+                  data["connectData"]["address"],
+                  data["connectData"]["ports"]["ws"],
+                  data["passcode"],
+                  data["lobbyId"]);
+​
+ServerResponse result = await _bc.relayService.connect(eRelayConnectionType:RelayConnectionType.WEBSOCKET, options:connectOptions, onSuccess:successCallback, onFailure:failureCallback);
 ```
 
 ```mdx-code-block

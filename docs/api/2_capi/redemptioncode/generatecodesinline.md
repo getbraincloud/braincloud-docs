@@ -1,18 +1,20 @@
 # GenerateCodesInline
+
 Generates specified quantity of redemption codes, for a personal ('single-use') code type, inline. Response indicates list of 'generatedScanCodes' on success.
 
 <PartialServop service_name="redemptionCode" operation_name="GENERATE_CODES_INLINE" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-codeType | The personal ('single-use') code type. Corresponds to the _Campaign Name_ in the Design Portal.
-codeState | Optional. Initial state of the redemption code: 'Inactive' or 'Available'. Defaults to 'Inactive'.
-quantity | The quantity of scan codes to be generated.
-customCodeInfo | Optional custom information, as JSON object.
-prefix | Prefix for all scan codes generate. Optional.
-algorithmName | Name of the algorithm to be used to generate the codes. Currently supporting 'StructuredGuid' and 'FiveByFive'.
-algorithmDetailsJson | Optional algorithm details, as JSON object.
+
+| Parameter            | Description                                                                                                     |
+| -------------------- | --------------------------------------------------------------------------------------------------------------- |
+| codeType             | The personal ('single-use') code type. Corresponds to the _Campaign Name_ in the Design Portal.                 |
+| codeState            | Optional. Initial state of the redemption code: 'Inactive' or 'Available'. Defaults to 'Inactive'.              |
+| quantity             | The quantity of scan codes to be generated.                                                                     |
+| customCodeInfo       | Optional custom information, as JSON object.                                                                    |
+| prefix               | Prefix for all scan codes generate. Optional.                                                                   |
+| algorithmName        | Name of the algorithm to be used to generate the codes. Currently supporting 'StructuredGuid' and 'FiveByFive'. |
+| algorithmDetailsJson | Optional algorithm details, as JSON object.                                                                     |
 
 ## Usage
 
@@ -23,24 +25,7 @@ algorithmDetailsJson | Optional algorithm details, as JSON object.
 ```
 
 ```csharp
-string codeType = "the-code-type";
-string codeState = "Available";
-int quantity = 10;
-string customCodeInfo = "{}";
-string prefix = "";
-string algorithmName = "FiveByFive";
-string algorithmDetailsJson = "{\"includeCheck\": False}";
-
-SuccessCallback successCallback = (response, cbObject) =>
-{
-    Debug.Log(string.Format("Success | {0}", response));
-};
-FailureCallback failureCallback = (status, code, error, cbObject) =>
-{
-    Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
-};
-
-<%= data.branding.codePrefix %>.RedemptioncodeService.GenerateCodesInline(codeType, codeState, quantity, customCodeInfo, prefix, algorithmName, algorithmDetailsJson, successCallback, failureCallback);
+// Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block
@@ -49,14 +34,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 ```
 
 ```cpp
-const char *codeType = "the-code-type";
-const char *codeState = "Available";
-int quantity = 10;
-const char *customCodeInfo = "{}";
-const char *prefix = "";
-const char *algorithmName = "FiveByFive";
-const char *algorithmDetailsJson = "{\"includeCheck\": False}";
-<%= data.branding.codePrefix %>.getRedemptioncodeService().generateCodesInline(codeType, codeState, quantity, customCodeInfo, prefix, algorithmName, algorithmDetailsJson, this);
+// Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block
@@ -65,26 +43,7 @@ const char *algorithmDetailsJson = "{\"includeCheck\": False}";
 ```
 
 ```objectivec
-NSString *codeType = @"the-code-type";
-NSString *codeState = @"Available";
-int quantity = 10;
-NSString *customCodeInfo = @"{}";
-NSString *prefix = @"";
-NSString *algorithmName = @"FiveByFive";
-NSString *algorithmDetailsJson = @"{\"includeCheck\": False}";
-BCCompletionBlock successBlock; // define callback
-BCErrorCompletionBlock failureBlock; // define callback
-[[<%= data.branding.codePrefix %> redemptionCodeService] generateCodesInline:
-                     codeType:codeType
-                    codeState:codeState
-                     quantity:quantity
-               customCodeInfo:customCodeInfo
-                       prefix:prefix
-                algorithmName:algorithmName
-         algorithmDetailsJson:algorithmDetailsJson
-              completionBlock:successBlock
-         errorCompletionBlock:failureBlock
-                     cbObject:nil]
+// Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block
@@ -93,25 +52,7 @@ BCErrorCompletionBlock failureBlock; // define callback
 ```
 
 ```java
-String codeType = "the-code-type";
-String codeState = "Available";
-int quantity = 10;
-String customCodeInfo = "{}";
-String prefix = "";
-String algorithmName = "FiveByFive";
-String algorithmDetailsJson = "{\"includeCheck\": False}";
-this; // implements IServerCallback
-<%= data.branding.codePrefix %>.getRedemptioncodeService.generateCodesInline(codeType, codeState, quantity, customCodeInfo, prefix, algorithmName, algorithmDetailsJson, this);
-
-public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
-{
-    System.out.print(String.format("Success | %s", jsonData.toString()));
-}
-public void serverError(ServiceName serviceName, ServiceOperation serviceOperation, int statusCode, int reasonCode, String jsonError)
-{
-    System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
-}
-
+// Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block
@@ -120,20 +61,7 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 ```
 
 ```javascript
-var codeType = "the-code-type";
-var codeState = "Available";
-var quantity = 10;
-var customCodeInfo = {};
-var prefix = "";
-var algorithmName = "FiveByFive";
-var algorithmDetailsJson = {
-    "includeCheck": false
-};
-<%= data.branding.codePrefix %>.redemptionCode.generateCodesInline(codeType, codeState, quantity, customCodeInfo, prefix, algorithmName, algorithmDetailsJson, result =>
-{
-  var status = result.status;
-  console.log(status + " : " + JSON.stringify(result, null, 2));
-});
+// Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block
@@ -142,23 +70,7 @@ var algorithmDetailsJson = {
 ```
 
 ```dart
-var  codeType = "the-code-type";
-var  codeState = "Available";
-var  quantity = 10;
-var  customCodeInfo = {};
-var  prefix = "";
-var  algorithmName = "FiveByFive";
-var  algorithmDetailsJson = {
-    "includeCheck": false
-};
-
-ServerResponse result = await <%= data.branding.codePrefix %>.redemptionCodeService.generateCodesInline(codeType:codeType, codeState:codeState, quantity:quantity, customCodeInfo:customCodeInfo, prefix:prefix, algorithmName:algorithmName, algorithmDetailsJson:algorithmDetailsJson);
-
-if (result.statusCode == 200) {
-    print("Success");
-} else {
-    print("Failed ${result.error['status_message'] ?? result.error}");
-}
+// Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block
@@ -209,40 +121,42 @@ var postResult = redemptionCodeProxy.generateCodesInline(codeType, codeState, qu
 </Tabs>
 </BrowserWindow>
 ```
+
 <details>
 <summary>JSON Response</summary>
 
 ```json
 {
-  "data": {
-    "generatedScanCodes": [
-      "vfaok-yu7gy-y4ida-jhibz-rtikc",
-      "umy5u-ok0hj-afsc9-cz0tc-1jkvw",
-      "poclc-f5bo1-f1jfr-bh2tm-cvuuf",
-      "ckqzl-ogn2x-isdyr-utgr4-azx7f",
-      "iivv8-2fjbo-mnvl4-hwvwc-axurj",
-      "zdgsq-tsywh-hbhnf-bt90z-bwzqs",
-      "qji29-hjk0a-lrk4v-yvll7-gd3or",
-      "yi0uu-fsxkv-tdz3o-ebds7-qbyhk",
-      "sbozv-tcp5x-4nzlg-hykok-zmk66",
-      "zuzis-l1qva-qixmz-e3n5f-5qax6"
-    ],
-    "message": "Generating 10 redemption codes using FiveByFive algorithm and options (includeCheck=false)"
-  },
-  "status": 200
+    "data": {
+        "generatedScanCodes": [
+            "vfaok-yu7gy-y4ida-jhibz-rtikc",
+            "umy5u-ok0hj-afsc9-cz0tc-1jkvw",
+            "poclc-f5bo1-f1jfr-bh2tm-cvuuf",
+            "ckqzl-ogn2x-isdyr-utgr4-azx7f",
+            "iivv8-2fjbo-mnvl4-hwvwc-axurj",
+            "zdgsq-tsywh-hbhnf-bt90z-bwzqs",
+            "qji29-hjk0a-lrk4v-yvll7-gd3or",
+            "yi0uu-fsxkv-tdz3o-ebds7-qbyhk",
+            "sbozv-tcp5x-4nzlg-hykok-zmk66",
+            "zuzis-l1qva-qixmz-e3n5f-5qax6"
+        ],
+        "message": "Generating 10 redemption codes using FiveByFive algorithm and options (includeCheck=false)"
+    },
+    "status": 200
 }
 ```
+
 </details>
 
 <details>
 <summary>Common Error Code</summary>
 
 ### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40399 | REDEMPTION_CODE_TYPE_NOT_FOUND | The specified code type was not found
-40660 | INVALID_PARAMETER_VALUE | Invalid quantity, cannot:exceed: 100
-40753 | REDEMPTION_CODE_TYPE_DISABLED | Invalid code. Redemption code type has been disabled
+
+| Code  | Name                           | Description                                          |
+| ----- | ------------------------------ | ---------------------------------------------------- |
+| 40399 | REDEMPTION_CODE_TYPE_NOT_FOUND | The specified code type was not found                |
+| 40660 | INVALID_PARAMETER_VALUE        | Invalid quantity, cannot:exceed: 100                 |
+| 40753 | REDEMPTION_CODE_TYPE_DISABLED  | Invalid code. Redemption code type has been disabled |
 
 </details>
-

@@ -83,7 +83,7 @@ var payloadJson = {"key":"value"};
 ```dart
 var  payloadJson = {"key":"value"};
 
-ServerResponse result = await <%= data.branding.codePrefix %>.relayService.endMatch(payloadJson:payloadJson);
+ServerResponse result = await <%= data.branding.codePrefix %>.relayService.endMatch(payload:payloadJson);
 
 if (result.statusCode == 200) {
     print("Success");

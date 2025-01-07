@@ -5,11 +5,12 @@ Sends a notification to a user consisting of alert content and custom data.
 <PartialServop service_name="pushNotification" operation_name="SEND_NORMALIZED" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-toProfileId | The profileId of the user to receive the notification
-alertContentJson | Body and title of alert
-customDataJson | Optional custom data
+
+| Parameter        | Description                                           |
+| ---------------- | ----------------------------------------------------- |
+| toProfileId      | The profileId of the user to receive the notification |
+| alertContentJson | Body and title of alert                               |
+| customDataJson   | Optional custom data                                  |
 
 ## Usage
 
@@ -129,7 +130,7 @@ var  customDataJson = {
     "field2": "value2"
 };
 
-ServerResponse result = await <%= data.branding.codePrefix %>.pushNotificationService.sendNormalizedPushNotification(toProfileId:toProfileId, alertContentJson:alertContentJson, customDataJson:customDataJson);
+ServerResponse result = await <%= data.branding.codePrefix %>.pushNotificationService.sendNormalizedPushNotification(profileId:toProfileId, alertContent:alertContentJson, customData:customDataJson);
 
 if (result.statusCode == 200) {
     print("Success");
@@ -199,5 +200,5 @@ if (postResult.status == 200) {
     "data": null
 }
 ```
-</details>
 
+</details>

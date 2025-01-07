@@ -1,14 +1,16 @@
 # InvalidateCode
+
 Invalidate a redemption code for a personal ('single-use') code type.
 
 <PartialServop service_name="redemptionCode" operation_name="INVALIDATE_CODE" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-scanCode | The scan code.
-codeType | The personal ('single-use') code type. Corresponds to the _Campaign Name_ in the Design Portal.
-invalidationReason | Optional custom information.
+
+| Parameter          | Description                                                                                     |
+| ------------------ | ----------------------------------------------------------------------------------------------- |
+| scanCode           | The scan code.                                                                                  |
+| codeType           | The personal ('single-use') code type. Corresponds to the _Campaign Name_ in the Design Portal. |
+| invalidationReason | Optional custom information.                                                                    |
 
 ## Usage
 
@@ -19,20 +21,7 @@ invalidationReason | Optional custom information.
 ```
 
 ```csharp
-string scanCode = "the-scan-code";
-string codeType = "the-code-type";
-string invalidationReason = "Redemption code no longer valid.";
-
-SuccessCallback successCallback = (response, cbObject) =>
-{
-    Debug.Log(string.Format("Success | {0}", response));
-};
-FailureCallback failureCallback = (status, code, error, cbObject) =>
-{
-    Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
-};
-
-<%= data.branding.codePrefix %>.RedemptioncodeService.InvalidateCode(scanCode, codeType, invalidationReason, successCallback, failureCallback);
+// Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block
@@ -41,10 +30,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 ```
 
 ```cpp
-const char *scanCode = "the-scan-code";
-const char *codeType = "the-code-type";
-const char *invalidationReason = "Redemption code no longer valid.";
-<%= data.branding.codePrefix %>.getRedemptioncodeService().invalidateCode(scanCode, codeType, invalidationReason, this);
+// Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block
@@ -53,18 +39,7 @@ const char *invalidationReason = "Redemption code no longer valid.";
 ```
 
 ```objectivec
-NSString *scanCode = @"the-scan-code";
-NSString *codeType = @"the-code-type";
-NSString *invalidationReason = @"Redemption code no longer valid.";
-BCCompletionBlock successBlock; // define callback
-BCErrorCompletionBlock failureBlock; // define callback
-[[<%= data.branding.codePrefix %> redemptionCodeService] invalidateCode:
-                     scanCode:scanCode
-                     codeType:codeType
-           invalidationReason:invalidationReason
-              completionBlock:successBlock
-         errorCompletionBlock:failureBlock
-                     cbObject:nil]
+// Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block
@@ -73,21 +48,7 @@ BCErrorCompletionBlock failureBlock; // define callback
 ```
 
 ```java
-String scanCode = "the-scan-code";
-String codeType = "the-code-type";
-String invalidationReason = "Redemption code no longer valid.";
-this; // implements IServerCallback
-<%= data.branding.codePrefix %>.getRedemptioncodeService.invalidateCode(scanCode, codeType, invalidationReason, this);
-
-public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
-{
-    System.out.print(String.format("Success | %s", jsonData.toString()));
-}
-public void serverError(ServiceName serviceName, ServiceOperation serviceOperation, int statusCode, int reasonCode, String jsonError)
-{
-    System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
-}
-
+// Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block
@@ -96,14 +57,7 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 ```
 
 ```javascript
-var scanCode = "the-scan-code";
-var codeType = "the-code-type";
-var invalidationReason = "Redemption code no longer valid.";
-<%= data.branding.codePrefix %>.redemptionCode.invalidateCode(scanCode, codeType, invalidationReason, result =>
-{
-  var status = result.status;
-  console.log(status + " : " + JSON.stringify(result, null, 2));
-});
+// Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block
@@ -112,17 +66,7 @@ var invalidationReason = "Redemption code no longer valid.";
 ```
 
 ```dart
-var  scanCode = "the-scan-code";
-var  codeType = "the-code-type";
-var  invalidationReason = "Redemption code no longer valid.";
-
-ServerResponse result = await <%= data.branding.codePrefix %>.redemptionCodeService.invalidateCode(scanCode:scanCode, codeType:codeType, invalidationReason:invalidationReason);
-
-if (result.statusCode == 200) {
-    print("Success");
-} else {
-    print("Failed ${result.error['status_message'] ?? result.error}");
-}
+// Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block
@@ -161,45 +105,47 @@ var postResult = redemptionCodeProxy.invalidateCode(scanCode, codeType, invalida
 </Tabs>
 </BrowserWindow>
 ```
+
 <details>
 <summary>JSON Response</summary>
 
 ```json
 {
-  "data": {
-    "gameId": "23782",
-    "scanCode": "hif4x-xgxgb-p7hei-x2jqy-jzrrk",
-    "codeType": "ct",
-    "redemptionCodeId": "1e73d56d-f043-4875-a347-1f06003bc7fd",
-    "version": 2,
-    "codeState": "Invalidated",
-    "customCodeInfo": {},
-    "customRedemptionInfo": {},
-    "redeemedByProfileId": null,
-    "redeemedByProfileName": null,
-    "invalidationReason": "Redemption code no longer valid.",
-    "createdAt": 1655498615494,
-    "activatedAt": 1655498615494,
-    "redeemedAt": null,
-    "invalidatedAt": 1655499571944,
-    "updatedAt": 1655498615494
-  },
-  "status": 200
+    "data": {
+        "gameId": "23782",
+        "scanCode": "hif4x-xgxgb-p7hei-x2jqy-jzrrk",
+        "codeType": "ct",
+        "redemptionCodeId": "1e73d56d-f043-4875-a347-1f06003bc7fd",
+        "version": 2,
+        "codeState": "Invalidated",
+        "customCodeInfo": {},
+        "customRedemptionInfo": {},
+        "redeemedByProfileId": null,
+        "redeemedByProfileName": null,
+        "invalidationReason": "Redemption code no longer valid.",
+        "createdAt": 1655498615494,
+        "activatedAt": 1655498615494,
+        "redeemedAt": null,
+        "invalidatedAt": 1655499571944,
+        "updatedAt": 1655498615494
+    },
+    "status": 200
 }
 ```
+
 </details>
 
 <details>
 <summary>Common Error Code</summary>
 
 ### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40395 | REDEMPTION_CODE_NOT_FOUND | The specified code was not found
-40399 | REDEMPTION_CODE_TYPE_NOT_FOUND | The specified code type was not found
-40400 | REDEMPTION_CODE_INVALID | Redemption code invalid
-40753 | REDEMPTION_CODE_TYPE_DISABLED | Invalid code. Redemption code type has been disabled
-40755 | REDEMPTION_CODE_TYPE_MISMATCH | Redemption code's code type does not match specified code type
+
+| Code  | Name                           | Description                                                    |
+| ----- | ------------------------------ | -------------------------------------------------------------- |
+| 40395 | REDEMPTION_CODE_NOT_FOUND      | The specified code was not found                               |
+| 40399 | REDEMPTION_CODE_TYPE_NOT_FOUND | The specified code type was not found                          |
+| 40400 | REDEMPTION_CODE_INVALID        | Redemption code invalid                                        |
+| 40753 | REDEMPTION_CODE_TYPE_DISABLED  | Invalid code. Redemption code type has been disabled           |
+| 40755 | REDEMPTION_CODE_TYPE_MISMATCH  | Redemption code's code type does not match specified code type |
 
 </details>
-

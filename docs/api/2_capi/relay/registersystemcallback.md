@@ -65,8 +65,11 @@ RSDataCallback rsDataCallback = (response) =>
 ```
 
 ```dart
-
-ServerResponse result = await <%= data.branding.codePrefix %>.relayService.registerSystemCallback();
+ void relayCallback(int netId, Uint8List data) {
+   // Your code
+ }
+​
+<%= data.branding.codePrefix %>.relayService.registerSystemCallback(relayCallback);
 
 if (result.statusCode == 200) {
     print("Success");

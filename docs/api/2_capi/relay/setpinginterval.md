@@ -63,7 +63,9 @@ float interval = 10;
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+int interval = 10;
+​
+<%= data.branding.codePrefix %>.relayService.setPingInterval(interval);
 ```
 
 ```mdx-code-block

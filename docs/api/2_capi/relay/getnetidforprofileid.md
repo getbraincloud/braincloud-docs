@@ -56,7 +56,9 @@ Returns the netId associated with a profileId.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+var profileId = "pppppp";
+​
+int netId = _bc.relayService.getNetIdForProfileId(profileId);
 ```
 
 ```mdx-code-block

@@ -5,10 +5,11 @@ Registers the given device token from the server to enable this device to receiv
 <PartialServop service_name="pushNotification" operation_name="REGISTER" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-platform | The device platform being registered.
-token | The platform-dependant device token needed for push notifications.
+
+| Parameter | Description                                                        |
+| --------- | ------------------------------------------------------------------ |
+| platform  | The device platform being registered.                              |
+| token     | The platform-dependant device token needed for push notifications. |
 
 ## Usage
 
@@ -106,10 +107,10 @@ var deviceToken = "12345";
 ```
 
 ```dart
-var  deviceType = "IOS";
-var  deviceToken = "12345";
-
-ServerResponse result = await <%= data.branding.codePrefix %>.pushNotificationService.registerPushNotificationToken(deviceType:deviceType, deviceToken:deviceToken);
+var  devicePlatform = PlatformID.iOS;
+var  deviceToken = "12345";
+​
+ServerResponse result = await _bc.pushNotificationService.registerPushNotificationToken(platform:devicePlatform, deviceToken:deviceToken);
 
 if (result.statusCode == 200) {
     print("Success");
@@ -165,5 +166,5 @@ if (postResult.status == 200) {
     "data": null
 }
 ```
-</details>
 
+</details>

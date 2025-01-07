@@ -5,12 +5,13 @@ Sends a push to users based on custom collection query and the profileIdField st
 <PartialServop service_name="pushNotification" operation_name="SEND_RAW_PUSH_TO_CUSTOM_QUERY" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-customEntityType | Entity type identifying the applicable custom collection.
-customQueryJson | JSON query to be applied to the custom collection.
-profileIdField | Name of field in custom collection that contains the user's <%= data.branding.productName %> profile Id. For owned custom collections, this would be `ownerId`, but for unowned custom collections this would be something like `data.bcProfileId`.
-contentJson | JSON containing applicable `fcmContent`, `iosContent` and/or `facebookContent`. At least one is required.
+
+| Parameter        | Description                                                                                                                                                                                                                                         |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| customEntityType | Entity type identifying the applicable custom collection.                                                                                                                                                                                           |
+| customQueryJson  | JSON query to be applied to the custom collection.                                                                                                                                                                                                  |
+| profileIdField   | Name of field in custom collection that contains the user's <%= data.branding.productName %> profile Id. For owned custom collections, this would be `ownerId`, but for unowned custom collections this would be something like `data.bcProfileId`. |
+| contentJson      | JSON containing applicable `fcmContent`, `iosContent` and/or `facebookContent`. At least one is required.                                                                                                                                           |
 
 ## Usage
 
@@ -21,20 +22,7 @@ contentJson | JSON containing applicable `fcmContent`, `iosContent` and/or `face
 ```
 
 ```csharp
-string customEntityType = "athletes";
-string customQueryJson = "{ \"data.totalGoals\": { \"$gte\": 10 } }";
-string profileIdField = "ownerId";
-string contentJson = "{ \"fcmContent\": { \"notification\": { \"body\": \"content of message\", \"title\": \"message title\" }, \"data\": { \"customfield1\": \"customValue1\", \"customfield2\": \"customValue2\" }, \"priority\": \"normal\" }, \"iosContent\": { \"aps\": { \"alert\": { \"body\": \"content of message\", \"title\": \"message title\" }, \"badge\": 0, \"sound\": \"gggg\" } }, \"facebookContent\": { \"template\": \"content of message\" } }";
-SuccessCallback successCallback = (response, cbObject) =>
-{
-  Debug.Log(string.Format("Success | {0}", response));
-};
-FailureCallback failureCallback = (status, code, error, cbObject) =>
-{
-  Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
-};
-
-<%= data.branding.codePrefix %>.PushNotificationService.SendRawPushToCustomQuery(customEntityType, customQueryJson, profileIdField, contentJson, successCallback, failureCallback);
+// Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block
@@ -43,12 +31,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 ```
 
 ```cpp
-const chat *customEntityType = "athletes";
-const chat *customQueryJson = "{ \"data.totalGoals\": { \"$gte\": 10 } }";
-const chat *profileIdField = "ownerId";
-const chat *contentJson = "{ \"fcmContent\": { \"notification\": { \"body\": \"content of message\", \"title\": \"message title\" }, \"data\": { \"customfield1\": \"customValue1\", \"customfield2\": \"customValue2\" }, \"priority\": \"normal\" }, \"iosContent\": { \"aps\": { \"alert\": { \"body\": \"content of message\", \"title\": \"message title\" }, \"badge\": 0, \"sound\": \"gggg\" } }, \"facebookContent\": { \"template\": \"content of message\" } }";
-
-<%= data.branding.codePrefix %>->getPushNotificationService()->sendRawPushToCustomQuery(customEntityType, customQueryJson, profileIdField, contentJson, this);
+// Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block
@@ -57,20 +40,7 @@ const chat *contentJson = "{ \"fcmContent\": { \"notification\": { \"body\": \"c
 ```
 
 ```objectivec
-NSString *customEntityType = @"athletes";
-NSString *customQueryJson = "{ \"data.totalGoals\": { \"$gte\": 10 } }";
-NSString *profileIdField = @"ownerId";
-NSString *contentJson = "{ \"fcmContent\": { \"notification\": { \"body\": \"content of message\", \"title\": \"message title\" }, \"data\": { \"customfield1\": \"customValue1\", \"customfield2\": \"customValue2\" }, \"priority\": \"normal\" }, \"iosContent\": { \"aps\": { \"alert\": { \"body\": \"content of message\", \"title\": \"message title\" }, \"badge\": 0, \"sound\": \"gggg\" } }, \"facebookContent\": { \"template\": \"content of message\" } }";
-BCCompletionBlock successBlock;      // define callback
-BCErrorCompletionBlock failureBlock; // define callback
-
-[[<%= data.branding.codePrefix %> pushNotificationService] sendRawPushToCustomQuery:customEntityType
-               customQueryJson:customQueryJson
-                profileIdField:profileIdField
-                   contentJson:contentJson
-               completionBlock:successBlock
-          errorCompletionBlock:failureBlock
-                      cbObject:nil];
+// Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block
@@ -79,22 +49,7 @@ BCErrorCompletionBlock failureBlock; // define callback
 ```
 
 ```java
-String customEntityType = "athletes";
-String customQueryJson = "{ \"data.totalGoals\": { \"$gte\": 10 } }";
-String profileIdField = "ownerId";
-String contentJson = "{ \"fcmContent\": { \"notification\": { \"body\": \"content of message\", \"title\": \"message title\" }, \"data\": { \"customfield1\": \"customValue1\", \"customfield2\": \"customValue2\" }, \"priority\": \"normal\" }, \"iosContent\": { \"aps\": { \"alert\": { \"body\": \"content of message\", \"title\": \"message title\" }, \"badge\": 0, \"sound\": \"gggg\" } }, \"facebookContent\": { \"template\": \"content of message\" } }";
-this; // implements IServerCallback
-
-<%= data.branding.codePrefix %>.getPushNotificationService().sendRawPushToCustomQuery(customEntityType, customQueryJson, profileIdField, contentJson, this);
-
-public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
-{
-  System.out.print(String.format("Success | %s", jsonData.toString()));
-}
-public void serverError(ServiceName serviceName, ServiceOperation serviceOperation, int statusCode, int reasonCode, String jsonError)
-{
-  System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
-}
+// Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block
@@ -103,45 +58,7 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 ```
 
 ```javascript
-var customEntityType = "athletes";
-var customQueryJson = {
-  "data.totalGoals": {
-    "$gte": 10
-  }
-};
-var profileIdField = "ownerId";
-var contentJson = {
-  "fcmContent": {
-    "notification": {
-      "body": "content of message",
-      "title": "message title"
-    },
-    "data": {
-      "customfield1": "customValue1",
-      "customfield2": "customValue2"
-    },
-    "priority": "normal"
-  },
-  "iosContent": {
-    "aps": {
-      "alert": {
-        "body": "content of message",
-        "title": "message title"
-      },
-      "badge": 0,
-      "sound": "gggg"
-    }
-  },
-  "facebookContent": {
-    "template": "content of message"
-  }
-};
-
-<%= data.branding.codePrefix %>.pushNotification.sendRawPushToCustomQuery(customEntityType, customQueryJson, profileIdField, contentJson, result =>
-{
-  var status = result.status;
-  console.log(status + " : " + JSON.stringify(result, null, 2));
-});
+// Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block
@@ -150,47 +67,7 @@ var contentJson = {
 ```
 
 ```dart
-var  customEntityType = "athletes";
-var  customQueryJson = {
-  "data.totalGoals": {
-    "$gte": 10
-  }
-};
-var  profileIdField = "ownerId";
-var  contentJson = {
-  "fcmContent": {
-    "notification": {
-      "body": "content of message",
-      "title": "message title"
-    },
-    "data": {
-      "customfield1": "customValue1",
-      "customfield2": "customValue2"
-    },
-    "priority": "normal"
-  },
-  "iosContent": {
-    "aps": {
-      "alert": {
-        "body": "content of message",
-        "title": "message title"
-      },
-      "badge": 0,
-      "sound": "gggg"
-    }
-  },
-  "facebookContent": {
-    "template": "content of message"
-  }
-};
-
-ServerResponse result = await <%= data.branding.codePrefix %>.pushNotificationService.sendRawPushToCustomQuery(customEntityType:customEntityType, customQueryJson:customQueryJson, profileIdField:profileIdField, contentJson:contentJson);
-
-if (result.statusCode == 200) {
-    print("Success");
-} else {
-    print("Failed ${result.error['status_message'] ?? result.error}");
-}
+// Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block
@@ -299,9 +176,9 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "status" : 200,
-  "data" : {}
+    "status": 200,
+    "data": {}
 }
 ```
-</details>
 
+</details>

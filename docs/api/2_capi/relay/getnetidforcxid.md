@@ -56,7 +56,9 @@ Returns the netId associated with a connection Id.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+String aCxId = "aaaaaaa";
+​
+int netId = _bc.relayService.getNetIdForCxId(aCxId);
 ```
 
 ```mdx-code-block
