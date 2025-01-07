@@ -5,10 +5,11 @@ Registers the caller for RTT presence updates from the members of the given `gro
 <PartialServop service_name="presence" operation_name="REGISTER_LISTENERS_FOR_GROUP" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | Target group ID.
-bidirectional | Should those profiles be mutually registered to listen to the current profile?
+
+| Parameter     | Description                                                                    |
+| ------------- | ------------------------------------------------------------------------------ |
+| groupId       | Target group ID.                                                               |
+| bidirectional | Should those profiles be mutually registered to listen to the current profile? |
 
 ## Usage
 
@@ -19,7 +20,7 @@ bidirectional | Should those profiles be mutually registered to listen to the cu
 ```
 
 ```csharp
-string groupId = <%= data.example.groupId %>;
+string groupId = "aaa-bbb-ccc-ddd";
 bool bidirectional = true;
 SuccessCallback successCallback = (response, cbObject) =>
 {
@@ -29,7 +30,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 {
     Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
 };
-    
+
 <%= data.branding.codePrefix %>.PresenceService.RegisterListenersForGroup(platform, bidirectional, successCallback, failureCallback);
 ```
 
@@ -39,7 +40,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 ```
 
 ```cpp
-const char* groupId = <%= data.example.groupId %>;
+const char* groupId = "aaa-bbb-ccc-ddd";
 bool bidirectional = true;
 
 <%= data.branding.codePrefix %>->getPresenceService()->registerListenersForGroup(platform, bidirectional, this);
@@ -51,7 +52,7 @@ bool bidirectional = true;
 ```
 
 ```objectivec
-NSString* groupId = @<%= data.example.groupId %>;
+NSString* groupId = @"aaa-bbb-ccc-ddd";
 bool bidirectional = true;
 BCCompletionBlock successBlock;      // define callback
 BCErrorCompletionBlock failureBlock; // define callback
@@ -69,7 +70,7 @@ BCErrorCompletionBlock failureBlock; // define callback
 ```
 
 ```java
-String groupId = <%= data.example.groupId %>;
+String groupId = "aaa-bbb-ccc-ddd";
 boolean bidirectional = true;
 this; // implements IServerCallback
 
@@ -91,7 +92,7 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 ```
 
 ```javascript
-var groupId = <%= data.example.groupId %>;
+var groupId = "aaa-bbb-ccc-ddd";
 var bidirectional = true;
 
 <%= data.branding.codePrefix %>.presence.registerListenersForGroup(platform, bidirectional, result =>
@@ -107,10 +108,10 @@ var bidirectional = true;
 ```
 
 ```dart
-var  groupId = <%= data.example.groupId %>;
+var  groupId = "aaa-bbb-ccc-ddd";
 var  bidirectional = true;
 
-ServerResponse result = await <%= data.branding.codePrefix %>.presenceService.registerListenersForGroup(platform:platform, bidirectional:bidirectional);
+ServerResponse result = await <%= data.branding.codePrefix %>.presenceService.registerListenersForGroup(groupId:groupId, bidirectional:bidirectional);
 
 if (result.statusCode == 200) {
     print("Success");
@@ -125,7 +126,7 @@ if (result.statusCode == 200) {
 ```
 
 ```cfscript
-var groupId = <%= data.example.groupId %>;
+var groupId = "aaa-bbb-ccc-ddd";
 var bidirectional = true;
 
 var postResult = presenceProxy.registerListenersForGroup(platform, bidirectional);
@@ -161,28 +162,28 @@ if (postResult.status == 200) {
 
 ```json
 {
- "data": {
-  "presence": [
-   {
-    "user": {
-     "id": <%= data.example.profileId %>,
-     "name": "",
-     "pic": null,
-     "cxs": [
-      "22284:fb416888-e76d-425d-a06d-a5529bdba8d9:"
-     ]
+    "data": {
+        "presence": [
+            {
+                "user": {
+                    "id": "aaa-bbb-ccc-ddd",
+                    "name": "",
+                    "pic": null,
+                    "cxs": [
+                        "22284:fb416888-e76d-425d-a06d-a5529bdba8d9:id58ohotujj893gomctos244al"
+                    ]
+                },
+                "online": true,
+                "summaryFriendData": {},
+                "activity": {
+                    "LOCATION": "POKER_TABLE",
+                    "STATUS": "PLAYING_GAME"
+                }
+            }
+        ]
     },
-    "online": true,
-    "summaryFriendData": {},
-    "activity": {
-     "LOCATION": "POKER_TABLE",
-     "STATUS": "PLAYING_GAME"
-    }
-   }
-  ]
- },
- "status": 200
+    "status": 200
 }
 ```
-</details>
 
+</details>

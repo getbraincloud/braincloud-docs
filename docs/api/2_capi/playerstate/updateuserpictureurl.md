@@ -5,9 +5,10 @@ Update User picture URL.
 <PartialServop service_name="playerState" operation_name="UPDATE_PICTURE_URL" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-pictureUrl | URL to apply
+
+| Parameter  | Description  |
+| ---------- | ------------ |
+| pictureUrl | URL to apply |
 
 ## Usage
 
@@ -99,9 +100,9 @@ var userPictureUrl = "someURL";
 ```
 
 ```dart
-var  userPictureUrl = "someURL";
+var  pictureUrl = "someURL";
 
-ServerResponse result = await <%= data.branding.codePrefix %>.playerStateService.updateUserPictureUrl(userPictureUrl:userPictureUrl);
+ServerResponse result = await <%= data.branding.codePrefix %>.playerStateService.updateUserPictureUrl(pictureUrl:pictureUrl);
 
 if (result.statusCode == 200) {
     print("Success");
@@ -157,5 +158,5 @@ if (postResult.status == 200) {
     }
 }
 ```
-</details>
 
+</details>

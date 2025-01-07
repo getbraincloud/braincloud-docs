@@ -4,22 +4,6 @@
 WARNING: This call, <code>AwardCurrency()</code>, is included in the client libraries for convenience and backwards compatibility, but for app security reasons we recommend it only be called server-side via Cloud Code. By default the <%= data.branding.productName %> servers will block any client-side invocations of currency altering methods. To enable client-side support (not recommended), you need to enable the [x] Allow Currency Calls from Client compatibility setting on the Design | Core App Info | Advanced Settings page of the portal.
 :::
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Award user the passed-in amount of currency. Returns an object representing the new currency values.
 
 Note: Awarding 0 or negative currency will return an error. Use ConsumeCurrency to remove currency values.
@@ -27,10 +11,11 @@ Note: Awarding 0 or negative currency will return an error. Use ConsumeCurrency 
 <PartialServop service_name="product" operation_name="AWARD_VC" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-currencyType | The currency type to award.
-amount | The amount of currency to award.
+
+| Parameter    | Description                      |
+| ------------ | -------------------------------- |
+| currencyType | The currency type to award.      |
+| amount       | The amount of currency to award. |
 
 ## Usage
 
@@ -128,16 +113,7 @@ var amount = 1;
 ```
 
 ```dart
-var  currencyType = "coins";
-var  amount = 1;
-
-ServerResponse result = await <%= data.branding.codePrefix %>.productService.awardCurrency(currencyType:currencyType, amount:amount);
-
-if (result.statusCode == 200) {
-    print("Success");
-} else {
-    print("Failed ${result.error['status_message'] ?? result.error}");
-}
+// N/A
 ```
 
 ```mdx-code-block
@@ -183,9 +159,8 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status" : 200,
-    "data" :
-    {
+    "status": 200,
+    "data": {
         "updatedAt": 1395693913234,
         "currencyMap": {
             "gems": {
@@ -206,5 +181,5 @@ if (postResult.status == 200) {
     }
 }
 ```
-</details>
 
+</details>

@@ -74,7 +74,6 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 ```
 
 ```javascript
-
 <%= data.branding.codePrefix %>.product.getEligiblePromotions(result =>
 {
 	var status = result.status;
@@ -88,14 +87,7 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 ```
 
 ```dart
-
-ServerResponse result = await <%= data.branding.codePrefix %>.productService.getEligiblePromotions();
-
-if (result.statusCode == 200) {
-    print("Success");
-} else {
-    print("Failed ${result.error['status_message'] ?? result.error}");
-}
+// N/A
 ```
 
 ```mdx-code-block
@@ -146,9 +138,7 @@ if (postResult.status == 200) {
                 "message": "test1",
                 "enabled": true,
                 "targetAllUsers": false,
-                "segments": [
-                    5
-                ],
+                "segments": [5],
                 "prices": [
                     {
                         "itemId": "regGems150",
@@ -170,5 +160,5 @@ if (postResult.status == 200) {
     }
 }
 ```
-</details>
 
+</details>

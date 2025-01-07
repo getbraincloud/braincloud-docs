@@ -5,9 +5,10 @@ Verify Microsoft Receipt. On success, the player will be awarded the associated 
 <PartialServop service_name="product" operation_name="VERIFY_MICROSOFT_RECEIPT" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-receipt | Receipt XML
+
+| Parameter | Description |
+| --------- | ----------- |
+| receipt   | Receipt XML |
 
 ## Usage
 
@@ -80,15 +81,7 @@ var receipt = "Receipt XML";
 ```
 
 ```dart
-var  receipt = "Receipt XML";
-
-ServerResponse result = await <%= data.branding.codePrefix %>.productService.verifyMicrosoftReceipt(receipt:receipt);
-
-if (result.statusCode == 200) {
-    print("Success");
-} else {
-    print("Failed ${result.error['status_message'] ?? result.error}");
-}
+// N/A
 ```
 
 ```mdx-code-block
@@ -138,5 +131,5 @@ if (postResult.status == 200) {
     }
 }
 ```
-</details>
 
+</details>

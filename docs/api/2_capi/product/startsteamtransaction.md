@@ -5,10 +5,11 @@ Initialize a Steam transaction.
 <PartialServop service_name="product" operation_name="START_STEAM_TRANSACTION" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-itemId | Items to purchase
-language | ISO 639-1 language code
+
+| Parameter | Description             |
+| --------- | ----------------------- |
+| itemId    | Items to purchase       |
+| language  | ISO 639-1 language code |
 
 ## Usage
 
@@ -77,7 +78,7 @@ const char *language = "en";
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// N/A
 ```
 
 ```mdx-code-block
@@ -127,5 +128,5 @@ if (postResult.status == 200) {
     "data": {}
 }
 ```
-</details>
 
+</details>

@@ -2,8 +2,6 @@
 
 Confirm Google Play purchase.
 
-
-
 :::caution
 WARNING: <code>ConfirmGooglePlayPurchase()</code> returns a 200 result even if the purchase was declined by Google. You must check the <code>data.result</code> value to see that it <strong>exists</strong> and is <code><strong>"OK"</strong></code> to confirm that a purchase was a success.
 :::
@@ -11,11 +9,12 @@ WARNING: <code>ConfirmGooglePlayPurchase()</code> returns a 200 result even if t
 <PartialServop service_name="product" operation_name="CONFIRM_GOOGLEPLAY_PURCHASE" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-orderId | Google Play `orderId` ("GPA.####-####-####-#####")
-productId | Google Play `productId` ("com.acme.runner.birdseed1")
-token | Google Play `purchaseToken` ("bhcmgnlflegpffpbcpeknjpi.AO-J1Oy_...")
+
+| Parameter | Description                                                           |
+| --------- | --------------------------------------------------------------------- |
+| orderId   | Google Play `orderId` ("GPA.####-####-####-#####")                    |
+| productId | Google Play `productId` ("com.acme.runner.birdseed1")                 |
+| token     | Google Play `purchaseToken` ("bhcmgnlflegpffpbcpeknjpi.AO-J1Oy\_...") |
 
 ## Usage
 
@@ -108,17 +107,7 @@ var token = "Google Play purchase token";
 ```
 
 ```dart
-var  orderId = "Google Play order ID";
-var  productId = "Google Play product ID";
-var  token = "Google Play purchase token";
-
-ServerResponse result = await <%= data.branding.codePrefix %>.productService.confirmGooglePlayPurchase(orderId:orderId, productId:productId, token:token);
-
-if (result.statusCode == 200) {
-    print("Success");
-} else {
-    print("Failed ${result.error['status_message'] ?? result.error}");
-}
+// N/A
 ```
 
 ```mdx-code-block
@@ -199,5 +188,5 @@ if (postResult.status == 200) {
     }
 }
 ```
-</details>
 
+</details>

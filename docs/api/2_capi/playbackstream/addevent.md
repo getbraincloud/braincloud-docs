@@ -5,11 +5,12 @@ Adds a stream event.
 <PartialServop service_name="playbackStream" operation_name="ADD_EVENT" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-playbackStreamId | Identifies the stream to read
-eventData | Describes the event
-summary | Current summary data as of this event
+
+| Parameter        | Description                           |
+| ---------------- | ------------------------------------- |
+| playbackStreamId | Identifies the stream to read         |
+| eventData        | Describes the event                   |
+| summary          | Current summary data as of this event |
 
 ## Usage
 
@@ -119,14 +120,14 @@ var jsonSummary = {
 
 ```dart
 var  playbackStreamId = "stream";
-var  jsonEventData = {
+var  eventData = {
     "value": 1
 };
-var  jsonSummary = {
+var  summary = {
     "total": 5
 };
 
-ServerResponse result = await <%= data.branding.codePrefix %>.playbackStreamService.addEvent(playbackStreamId:playbackStreamId, jsonEventData:jsonEventData, jsonSummary:jsonSummary);
+ServerResponse result = await <%= data.branding.codePrefix %>.playbackStreamService.addEvent(playbackStreamId:playbackStreamId, eventData:eventData, summary:summary);
 
 if (result.statusCode == 200) {
     print("Success");
@@ -188,9 +189,9 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status" : 200,
-    "data" : null
+    "status": 200,
+    "data": null
 }
 ```
-</details>
 
+</details>

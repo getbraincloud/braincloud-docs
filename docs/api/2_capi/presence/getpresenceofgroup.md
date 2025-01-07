@@ -5,10 +5,11 @@ Gets the presence data for the given `groupId`. Will not include offline profile
 <PartialServop service_name="presence" operation_name="GET_PRESENCE_OF_GROUP" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | Gets a list of Presence for the members of the specified group. The caller must be a member of the given group. 
-includeOffline | Should offline users be included in the response?
+
+| Parameter      | Description                                                                                                     |
+| -------------- | --------------------------------------------------------------------------------------------------------------- |
+| groupId        | Gets a list of Presence for the members of the specified group. The caller must be a member of the given group. |
+| includeOffline | Should offline users be included in the response?                                                               |
 
 ## Usage
 
@@ -19,7 +20,7 @@ includeOffline | Should offline users be included in the response?
 ```
 
 ```csharp
-string groupId = <%= data.example.groupId %>;
+string groupId = "aaa-bbb-ccc-ddd";
 bool includeOffline = true;
 SuccessCallback successCallback = (response, cbObject) =>
 {
@@ -29,7 +30,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 {
     Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
 };
-    
+
 <%= data.branding.codePrefix %>.PresenceService.GetPresenceOfGroup(groupId, includeOffline, successCallback, failureCallback);
 ```
 
@@ -39,7 +40,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 ```
 
 ```cpp
-const char* groupId = <%= data.example.groupId %>;
+const char* groupId = "aaa-bbb-ccc-ddd";
 bool includeOffline = true;
 
 <%= data.branding.codePrefix %>->getPresenceService()->getPresenceOfGroup(groupId, includeOffline, this);
@@ -51,7 +52,7 @@ bool includeOffline = true;
 ```
 
 ```objectivec
-NSString* groupId = @<%= data.example.groupId %>;
+NSString* groupId = @"aaa-bbb-ccc-ddd";
 BOOL includeOffline = true;
 BCCompletionBlock successBlock;      // define callback
 BCErrorCompletionBlock failureBlock; // define callback
@@ -69,7 +70,7 @@ BCErrorCompletionBlock failureBlock; // define callback
 ```
 
 ```java
-String groupId = <%= data.example.groupId %>;
+String groupId = "aaa-bbb-ccc-ddd";
 boolean includeOffline = true;
 this; // implements IServerCallback
 
@@ -91,7 +92,7 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 ```
 
 ```javascript
-var groupId = <%= data.example.groupId %>;
+var groupId = "aaa-bbb-ccc-ddd";
 var includeOffline = true;
 
 <%= data.branding.codePrefix %>.presence.getPresenceOfGroup(groupId, includeOffline, result =>
@@ -107,7 +108,7 @@ var includeOffline = true;
 ```
 
 ```dart
-var  groupId = <%= data.example.groupId %>;
+var  groupId = "aaa-bbb-ccc-ddd";
 var  includeOffline = true;
 
 ServerResponse result = await <%= data.branding.codePrefix %>.presenceService.getPresenceOfGroup(groupId:groupId, includeOffline:includeOffline);
@@ -125,7 +126,7 @@ if (result.statusCode == 200) {
 ```
 
 ```cfscript
-var groupId = <%= data.example.groupId %>;
+var groupId = "aaa-bbb-ccc-ddd";
 var includeOffline = true;
 
 var postResult = presenceProxy.getPresenceOfGroup(groupId, includeOffline);
@@ -161,28 +162,35 @@ if (postResult.status == 200) {
 
 ```json
 {
- "data": {
-  "presence": [
-   {
-    "user": {
-     "id": <%= data.example.profileId %>,
-     "name": <%= data.example.playerName %>,
-     "pic": null,
-     "cxs": [
-      "22284:fb416888-e76d-425d-a06d-a5529bdba8d9:id58ohotujj893gomctos244al"
-     ]
+    "data": {
+        "presence": [
+            {
+                "user": {
+                    "id": "a50a9aae-65fc-4171-b3f9-c0054b7e2d6b",
+                    "name": "",
+                    "pic": null,
+                    "cxs": [
+                        "13229:a50a9aae-65fc-4171-b3f9-c0054b7e2d6b:84uedu4cof8gvlj3r009cejcik"
+                    ]
+                },
+                "online": true,
+                "summaryFriendData": {},
+                "activity": {}
+            },
+            {
+                "user": {
+                    "id": "07ba7ab2-3505-4342-b91f-6500fa8f5585",
+                    "name": "",
+                    "pic": null
+                },
+                "online": false,
+                "summaryFriendData": {},
+                "activity": {}
+            }
+        ]
     },
-    "online": true,
-    "summaryFriendData": {},
-    "activity": {
-     "LOCATION": "POKER_TABLE",
-     "STATUS": "PLAYING_GAME"
-    }
-   }
-  ]
- },
- "status": 200
+    "status": 200
 }
 ```
-</details>
 
+</details>

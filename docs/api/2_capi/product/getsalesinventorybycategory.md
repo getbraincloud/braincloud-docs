@@ -3,22 +3,24 @@
 Method gets the active sales inventory for the passed-in currency type, platform, and category.
 
 Valid platforms are:
-- itunes
-- facebook
-- appworld
-- steam
-- windows
-- windowsPhone
-- googlePlay
+
+-   itunes
+-   facebook
+-   appworld
+-   steam
+-   windows
+-   windowsPhone
+-   googlePlay
 
 <PartialServop service_name="product" operation_name="GET_INVENTORY" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-platform | The store platform.
-userCurrency | The currency to retrieve the sales inventory for. This is only used for Steam and Facebook stores.
-category | The product category
+
+| Parameter    | Description                                                                                        |
+| ------------ | -------------------------------------------------------------------------------------------------- |
+| platform     | The store platform.                                                                                |
+| userCurrency | The currency to retrieve the sales inventory for. This is only used for Steam and Facebook stores. |
+| category     | The product category                                                                               |
 
 ## Usage
 
@@ -122,17 +124,7 @@ var category = "collectables";
 ```
 
 ```dart
-var  platform = "googlePlay";
-var  userCurrency = "credits";
-var  category = "collectables";
-
-ServerResponse result = await <%= data.branding.codePrefix %>.productService.getSalesInventoryByCategory(platform:platform, userCurrency:userCurrency, category:category);
-
-if (result.statusCode == 200) {
-    print("Success");
-} else {
-    print("Failed ${result.error['status_message'] ?? result.error}");
-}
+// N/A
 ```
 
 ```mdx-code-block
@@ -211,5 +203,5 @@ if (postResult.status == 200) {
     }
 }
 ```
-</details>
 
+</details>

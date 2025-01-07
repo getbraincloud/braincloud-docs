@@ -5,10 +5,11 @@ Gets the presence data for the given `profileIds`. Will not include offline prof
 <PartialServop service_name="presence" operation_name="GET_PRESENCE_OF_USERS" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-profileIds | Gets a list of Presence for the specified profile ids. 
-includeOffline | Should offline users be included in the response?
+
+| Parameter      | Description                                            |
+| -------------- | ------------------------------------------------------ |
+| profileIds     | Gets a list of Presence for the specified profile ids. |
+| includeOffline | Should offline users be included in the response?      |
 
 ## Usage
 
@@ -19,7 +20,7 @@ includeOffline | Should offline users be included in the response?
 ```
 
 ```csharp
-string[] profileIds = { <%= data.example.profileId %> };
+string[] profileIds = { "aaa-bbb-ccc-ddd" };
 bool includeOffline = true;
 SuccessCallback successCallback = (response, cbObject) =>
 {
@@ -29,7 +30,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 {
     Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
 };
-    
+
 <%= data.branding.codePrefix %>.PresenceService.GetPresenceOfUsers(profileIds, includeOffline, successCallback, failureCallback);
 ```
 
@@ -40,7 +41,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 
 ```cpp
 std::vector<std::string> profileIds;
-profileIds.push_back(<%= data.example.profileId %>);
+profileIds.push_back("aaa-bbb-ccc-ddd");
 
 bool includeOffline = true;
 
@@ -53,7 +54,7 @@ bool includeOffline = true;
 ```
 
 ```objectivec
-NSArray* profileIds = [NSArray arrayWithObjects: @<%= data.example.profileId %>];
+NSArray* profileIds = [NSArray arrayWithObjects: @"aaa-bbb-ccc-ddd"];
 bool includeOffline = true;
 BCCompletionBlock successBlock;      // define callback
 BCErrorCompletionBlock failureBlock; // define callback
@@ -71,7 +72,7 @@ BCErrorCompletionBlock failureBlock; // define callback
 ```
 
 ```java
-String[] profileIds = new String[] { <%= data.example.profileId %> };
+String[] profileIds = new String[] { "aaa-bbb-ccc-ddd" };
 boolean includeOffline = true;
 this; // implements IServerCallback
 
@@ -93,7 +94,7 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 ```
 
 ```javascript
-var profileIds = [<%= data.example.profileId %>];
+var profileIds = ["aaa-bbb-ccc-ddd"];
 var includeOffline = true;
 
 <%= data.branding.codePrefix %>.presence.getPresenceOfUsers(profileIds, includeOffline, result =>
@@ -109,7 +110,7 @@ var includeOffline = true;
 ```
 
 ```dart
-var  profileIds = [<%= data.example.profileId %>];
+var  profileIds = ["aaa-bbb-ccc-ddd"];
 var  includeOffline = true;
 
 ServerResponse result = await <%= data.branding.codePrefix %>.presenceService.getPresenceOfUsers(profileIds:profileIds, includeOffline:includeOffline);
@@ -127,7 +128,7 @@ if (result.statusCode == 200) {
 ```
 
 ```cfscript
-var profileIds = [<%= data.example.profileId %>];
+var profileIds = ["aaa-bbb-ccc-ddd"];
 var includeOffline = true;
 
 var postResult = presenceProxy.getPresenceOfUsers(profileIds, includeOffline);
@@ -166,28 +167,28 @@ if (postResult.status == 200) {
 
 ```json
 {
- "data": {
-  "presence": [
-   {
-    "user": {
-     "id": <%= data.example.profileId %>,
-     "name": <%= data.example.playerName %>,
-     "pic": null,
-     "cxs": [
-      "22284:fb416888-e76d-425d-a06d-a5529bdba8d9:id58ohotujj893gomctos244al"
-     ]
+    "data": {
+        "presence": [
+            {
+                "user": {
+                    "id": "aaa-bbb-ccc-ddd",
+                    "name": "player1",
+                    "pic": null,
+                    "cxs": [
+                        "22284:fb416888-e76d-425d-a06d-a5529bdba8d9:id58ohotujj893gomctos244al"
+                    ]
+                },
+                "online": true,
+                "summaryFriendData": {},
+                "activity": {
+                    "LOCATION": "POKER_TABLE",
+                    "STATUS": "PLAYING_GAME"
+                }
+            }
+        ]
     },
-    "online": true,
-    "summaryFriendData": {},
-    "activity": {
-     "LOCATION": "POKER_TABLE",
-     "STATUS": "PLAYING_GAME"
-    }
-   }
-  ]
- },
- "status": 200
+    "status": 200
 }
 ```
-</details>
 
+</details>

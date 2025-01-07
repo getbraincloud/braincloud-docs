@@ -5,9 +5,10 @@ Gets the player's currency for the given currency type **or** all currency types
 <PartialServop service_name="product" operation_name="GET_PLAYER_VC" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-currencyType | The currency type to retrieve or null if all currency types are being requested.
+
+| Parameter    | Description                                                                      |
+| ------------ | -------------------------------------------------------------------------------- |
+| currencyType | The currency type to retrieve or null if all currency types are being requested. |
 
 ## Usage
 
@@ -99,15 +100,7 @@ var currencyType = "coins";
 ```
 
 ```dart
-var  currencyType = "coins";
-
-ServerResponse result = await <%= data.branding.codePrefix %>.productService.getCurrency(currencyType:currencyType);
-
-if (result.statusCode == 200) {
-    print("Success");
-} else {
-    print("Failed ${result.error['status_message'] ?? result.error}");
-}
+// N/A
 ```
 
 ```mdx-code-block
@@ -151,41 +144,41 @@ if (postResult.status == 200) {
 
 ```json
 {
-	"status": 200,
-	"data": {
-		"updatedAt": 1479752110785,
-		"currencyMap": {
-			"gems": {
-				"purchased": 0,
-				"balance": 12212,
-				"consumed": 133,
-				"awarded": 12345
-			}
-		},
-		"parentCurrency": {
-			"Master": {
-				"credits": {
-					"purchased": 0,
-					"balance": 12212,
-					"consumed": 133,
-					"awarded": 12345
-				}
-			}
-		},
-		"peerCurrency": {
-			"gameLootPeer": {
-				"tickets": {
-					"purchased": 0,
-					"balance": 12212,
-					"consumed": 133,
-					"awarded": 12345
-				}
-			}
-		},
-		"playerId": "362ce861-b749-4ce4-a57a-175232e21b5d",
-		"createdAt": 1459439058040
-	}
+    "status": 200,
+    "data": {
+        "updatedAt": 1479752110785,
+        "currencyMap": {
+            "gems": {
+                "purchased": 0,
+                "balance": 12212,
+                "consumed": 133,
+                "awarded": 12345
+            }
+        },
+        "parentCurrency": {
+            "Master": {
+                "credits": {
+                    "purchased": 0,
+                    "balance": 12212,
+                    "consumed": 133,
+                    "awarded": 12345
+                }
+            }
+        },
+        "peerCurrency": {
+            "gameLootPeer": {
+                "tickets": {
+                    "purchased": 0,
+                    "balance": 12212,
+                    "consumed": 133,
+                    "awarded": 12345
+                }
+            }
+        },
+        "playerId": "362ce861-b749-4ce4-a57a-175232e21b5d",
+        "createdAt": 1459439058040
+    }
 }
 ```
-</details>
 
+</details>

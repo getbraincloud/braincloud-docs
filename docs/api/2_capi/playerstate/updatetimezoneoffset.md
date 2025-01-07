@@ -5,9 +5,10 @@ Sets the user's timezone offset.
 <PartialServop service_name="playerState" operation_name="UPDATE_TIMEZONE_OFFSET" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-timeZoneOffset | The numeric timezone offset of the user
+
+| Parameter      | Description                             |
+| -------------- | --------------------------------------- |
+| timeZoneOffset | The numeric timezone offset of the user |
 
 ## Usage
 
@@ -84,7 +85,7 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 ```
 
 ```javascript
-int timeZoneOffset = -2;
+var timeZoneOffset = -2;
 
 <%= data.branding.codePrefix %>.playerState.updateTimeZoneOffset(timeZoneOffset, result =>
 {
@@ -99,6 +100,7 @@ int timeZoneOffset = -2;
 ```
 
 ```dart
+var timeZoneOffset = -2;
 
 ServerResponse result = await <%= data.branding.codePrefix %>.playerStateService.updateTimeZoneOffset(timeZoneOffset:timeZoneOffset);
 
@@ -150,12 +152,11 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status":200,
-    "data":
-    {
+    "status": 200,
+    "data": {
         "timeZoneOffset": -2
     }
 }
 ```
-</details>
 
+</details>
