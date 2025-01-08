@@ -58,7 +58,7 @@ Coming soon!
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+<%= data.branding.codePrefix %>.rttService.disableRTT();
 ```
 
 ```mdx-code-block
@@ -84,4 +84,3 @@ Coming soon!
 </Tabs>
 </BrowserWindow>
 ```
-

@@ -3,9 +3,10 @@
 Registers a callback for RTT Message updates.
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-rttCallback | The RTT Chat callback handler.
+
+| Parameter   | Description                    |
+| ----------- | ------------------------------ |
+| rttCallback | The RTT Chat callback handler. |
 
 ## Usage
 
@@ -65,6 +66,9 @@ Coming soon!
 ```
 
 ```dart
+void rttCallBack(RTTCommandResponse jsonResponse) {
+  // your code
+}
 <%= data.branding.codePrefix %>.rttService.registerRTTMessagingCallback(rttCallback);
 ```
 
@@ -91,4 +95,3 @@ Coming soon!
 </Tabs>
 </BrowserWindow>
 ```
-

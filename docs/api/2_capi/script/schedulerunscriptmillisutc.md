@@ -5,11 +5,12 @@ Schedules a script to run at given UTC time.
 <PartialServop service_name="script" operation_name="SCHEDULE_CLOUD_SCRIPT" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-scriptName | The name of the script with its absolute path to be run.
-scriptData | Data to be sent to the script in JSON format.
-startDateInUTC | The start date. (date in millis UTC).
+
+| Parameter      | Description                                              |
+| -------------- | -------------------------------------------------------- |
+| scriptName     | The name of the script with its absolute path to be run. |
+| scriptData     | Data to be sent to the script in JSON format.            |
+| startDateInUTC | The start date. (date in millis UTC).                    |
 
 ## Usage
 
@@ -122,7 +123,7 @@ var  scriptData = {
 };
 var  startDateInUTC = 1437579786000;
 
-ServerResponse result = await <%= data.branding.codePrefix %>.scriptService.scheduleRunScriptMillisUTC(scriptName:scriptName, scriptData:scriptData, startDateInUTC:startDateInUTC);
+ServerResponse result = await <%= data.branding.codePrefix %>.scriptService.scheduleRunScriptMillisUTC(scriptName:scriptName, scriptData:scriptData, startDateUTC:startDateInUTC);
 
 if (result.statusCode == 200) {
     print("Success");
@@ -152,7 +153,7 @@ if (result.statusCode == 200) {
     "data":{
         "scriptName": "path/to/script1",
         "scriptData"  {
-            "parm": "value" 
+            "parm": "value"
         },
         "startDateInUTC": 1437579786000
     }
@@ -187,5 +188,5 @@ if (result.statusCode == 200) {
     }
 }
 ```
-</details>
 
+</details>

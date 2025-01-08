@@ -1,14 +1,15 @@
 # GetScheduledCloudScripts
 
-Retrieves list of scheduled cloud scripts having a scheduled start time 
+Retrieves list of scheduled cloud scripts having a scheduled start time
 less than or equal to the specified scheduledStartTime time (UTC time in milliseconds).
 
 <PartialServop service_name="script" operation_name="GET_SCHEDULED_CLOUD_SCRIPTS" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-startDateUTC | Return scripts that are scheduled to run before this specified time.
+
+| Parameter    | Description                                                          |
+| ------------ | -------------------------------------------------------------------- |
+| startDateUTC | Return scripts that are scheduled to run before this specified time. |
 
 ## Usage
 
@@ -89,8 +90,7 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 ```javascript
 var startDateInUTC = 1437579786000;
 
-_bc.script.getScheduledCloudScripts(startDateInUTC, result =>
-{
+_bc.script.getScheduledCloudScripts(startDateInUTC, (result) => {
     var status = result.status;
     console.log(status + " : " + JSON.stringify(result, null, 2));
 });
@@ -104,7 +104,7 @@ _bc.script.getScheduledCloudScripts(startDateInUTC, result =>
 ```dart
 var  startDateInUTC = 1437579786000;
 
-ServerResponse result = await <%= data.branding.codePrefix %>.scriptService.getScheduledCloudScripts(startDateInUTC:startDateInUTC);
+ServerResponse result = await <%= data.branding.codePrefix %>.scriptService.getScheduledCloudScripts(startDateUTC:startDateInUTC);
 
 if (result.statusCode == 200) {
     print("Success");
@@ -135,7 +135,7 @@ if ((result.status == 200) && (result.data !== null)) {
     }
 }
 
-// schedule single replacement 
+// schedule single replacement
 var retVal = _script.scheduleRunScriptMinutes("emptyScript", null, 60);
 retVal;
 ```
@@ -166,54 +166,54 @@ retVal;
 
 ```json
 {
- "data": {
-  "scheduledJobs": [
-   {
-    "gameId": "20005",
-    "description": null,
-    "jobId": "5fbc8729-5123-4dca-8644-d78edcb7f712",
-    "localTime": null,
-    "createdAt": 1512750600574,
-    "runStartTime": 0,
-    "playerSessionId": null,
-    "scheduledStartTime": 1512754200552,
-    "scriptName": "emptyScript",
-    "jobType": "CloudCode",
-    "parameters": null,
-    "updatedAt": 1512750600574
-   },
-   {
-    "gameId": "20005",
-    "description": null,
-    "jobId": "8267199b-5567-4771-91ca-c25b61f83ccd",
-    "localTime": null,
-    "createdAt": 1512750610258,
-    "runStartTime": 0,
-    "playerSessionId": null,
-    "scheduledStartTime": 1512754210258,
-    "scriptName": "emptyScript",
-    "jobType": "CloudCode",
-    "parameters": null,
-    "updatedAt": 1512750610258
-   },
-   {
-    "gameId": "20005",
-    "description": null,
-    "jobId": "4c9d06bf-48e4-4308-8734-9f74993f8e4f",
-    "localTime": null,
-    "createdAt": 1512750683157,
-    "runStartTime": 0,
-    "playerSessionId": null,
-    "scheduledStartTime": 1512754283157,
-    "scriptName": "emptyScript",
-    "jobType": "CloudCode",
-    "parameters": null,
-    "updatedAt": 1512750683157
-   }
-  ]
- },
- "status": 200
+    "data": {
+        "scheduledJobs": [
+            {
+                "gameId": "20005",
+                "description": null,
+                "jobId": "5fbc8729-5123-4dca-8644-d78edcb7f712",
+                "localTime": null,
+                "createdAt": 1512750600574,
+                "runStartTime": 0,
+                "playerSessionId": null,
+                "scheduledStartTime": 1512754200552,
+                "scriptName": "emptyScript",
+                "jobType": "CloudCode",
+                "parameters": null,
+                "updatedAt": 1512750600574
+            },
+            {
+                "gameId": "20005",
+                "description": null,
+                "jobId": "8267199b-5567-4771-91ca-c25b61f83ccd",
+                "localTime": null,
+                "createdAt": 1512750610258,
+                "runStartTime": 0,
+                "playerSessionId": null,
+                "scheduledStartTime": 1512754210258,
+                "scriptName": "emptyScript",
+                "jobType": "CloudCode",
+                "parameters": null,
+                "updatedAt": 1512750610258
+            },
+            {
+                "gameId": "20005",
+                "description": null,
+                "jobId": "4c9d06bf-48e4-4308-8734-9f74993f8e4f",
+                "localTime": null,
+                "createdAt": 1512750683157,
+                "runStartTime": 0,
+                "playerSessionId": null,
+                "scheduledStartTime": 1512754283157,
+                "scriptName": "emptyScript",
+                "jobType": "CloudCode",
+                "parameters": null,
+                "updatedAt": 1512750683157
+            }
+        ]
+    },
+    "status": 200
 }
 ```
-</details>
 
+</details>

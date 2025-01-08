@@ -5,10 +5,12 @@ Similar to <code>[LeaveTournament](/api/capi/tournament/leavetournament)</code>,
 <PartialServop service_name="tournament" operation_name="LEAVE_DIVISION_INSTANCE" />
 
 ## Method Parameters
+
 #### Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | Id of the division leaderboard the user is in.
+
+| Parameter     | Description                                    |
+| ------------- | ---------------------------------------------- |
+| leaderboardId | Id of the division leaderboard the user is in. |
 
 ## Usage
 
@@ -19,7 +21,7 @@ leaderboardId | Id of the division leaderboard the user is in.
 ```
 
 ```csharp
-string divSetId = "^D^exampleDivSetId^1";
+string divisionSetInstance = "^D^exampleDivSetId^1";
 SuccessCallback successCallback = (response, cbObject) =>
 {
     Debug.Log(string.Format("Success | {0}", response));
@@ -29,7 +31,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
     Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
 };
 
-<%= data.branding.codePrefix %>.TournamentService.LeaveDivisionInstance(divSetId, successCallback, failureCallback);
+<%= data.branding.codePrefix %>.TournamentService.LeaveDivisionInstance(divisionSetInstance, successCallback, failureCallback);
 ```
 
 ```mdx-code-block
@@ -38,8 +40,8 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 ```
 
 ```cpp
-const char *divSetId = "^D^exampleDivSetId^1";
-<%= data.branding.codePrefix %>->getTournamentService()->leaveDivisionInstance(divSetId, this);
+const char *divisionSetInstance = "^D^exampleDivSetId^1";
+<%= data.branding.codePrefix %>->getTournamentService()->leaveDivisionInstance(divisionSetInstance, this);
 ```
 
 ```mdx-code-block
@@ -48,11 +50,11 @@ const char *divSetId = "^D^exampleDivSetId^1";
 ```
 
 ```objectivec
-NSString *divSetId = @"^D^exampleDivSetId^1";
+NSString *divisionSetInstance = @"^D^exampleDivSetId^1";
 BCCompletionBlock successBlock;      // define callback
 BCErrorCompletionBlock failureBlock; // define callback
 
-[[<%= data.branding.codePrefix %> tournamentService] leaveDivisionInstance:divSetId
+[[<%= data.branding.codePrefix %> tournamentService] leaveDivisionInstance:divisionSetInstance
             completionBlock:successBlock
        errorCompletionBlock:failureBlock
                    cbObject:nil];
@@ -64,10 +66,10 @@ BCErrorCompletionBlock failureBlock; // define callback
 ```
 
 ```java
-String divSetId = "^D^exampleDivSetId^1";
+String divisionSetInstance = "^D^exampleDivSetId^1";
 this; // implements IServerCallback
 
-<%= data.branding.codePrefix %>.getTournamentService().leaveDivisionInstance(divSetId, this);
+<%= data.branding.codePrefix %>.getTournamentService().leaveDivisionInstance(divisionSetInstance, this);
 
 public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
 {
@@ -85,9 +87,9 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 ```
 
 ```javascript
-var divSetId = "^D^exampleDivSetId^1";
+var divisionSetInstance = "^D^exampleDivSetId^1";
 
-<%= data.branding.codePrefix %>.tournament.leaveDivisionInstance(divSetId, result =>
+<%= data.branding.codePrefix %>.tournament.leaveDivisionInstance(divisionSetInstance, result =>
 {
 	var status = result.status;
 	console.log(status + " : " + JSON.stringify(result, null, 2));
@@ -100,9 +102,9 @@ var divSetId = "^D^exampleDivSetId^1";
 ```
 
 ```dart
-var  divSetId = "^D^exampleDivSetId^1";
+var  divisionSetInstance = "^D^exampleDivSetId^1";
 
-ServerResponse result = await <%= data.branding.codePrefix %>.tournamentService.leaveDivisionInstance(divSetId:divSetId);
+ServerResponse result = await <%= data.branding.codePrefix %>.tournamentService.leaveDivisionInstance(divisionSetInstance:divisionSetInstance);
 
 if (result.statusCode == 200) {
     print("Success");
@@ -117,10 +119,10 @@ if (result.statusCode == 200) {
 ```
 
 ```cfscript
-var divSetId = "^D^exampleDivSetId^1";
+var divisionSetInstance = "^D^exampleDivSetId^1";
 var tournamentProxy = bridge.getTournamentServiceProxy();
 
-var postResult = tournamentProxy.leaveDivisionInstance(divSetId);
+var postResult = tournamentProxy.leaveDivisionInstance(divisionSetInstance);
 if (postResult.status == 200) {
     // Success!
 }
@@ -155,5 +157,5 @@ if (postResult.status == 200) {
     "numScoresRemoved": 1
 }
 ```
-</details>
 
+</details>

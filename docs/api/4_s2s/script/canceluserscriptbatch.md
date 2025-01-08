@@ -1,8 +1,8 @@
-# CancelScheduledScript
+# CancelUserScriptBatch
 
-Cancels a scheduled cloud code job.
+Cancels a running user script batch.
 
-<PartialServop service_name="script" operation_name="CANCEL_SCHEDULED_SCRIPT" />
+<PartialServop service_name="script" operation_name="CANCEL_USER_SCRIPT_BATCH" />
 
 ## Method Parameters
 
@@ -73,13 +73,10 @@ Cancels a scheduled cloud code job.
 ```
 
 ```cfscript
-var jobId = "the-job-id";
+var jobId = "idsfihihfuvhvuh";
 var scriptProxy = bridge.getScriptServiceProxy();
 
-var postResult = scriptProxy.cancelScheduledScript(jobId);
-if (postResult.status == 200) {
-    // Success!
-}
+var postResult = scriptProxy.CancelUserScriptBatch(jobId);
 ```
 
 ```mdx-code-block
@@ -89,11 +86,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "script",
-	"operation": "CANCEL_SCHEDULED_SCRIPT",
-	"data": {
-		"jobId": "the-job-id"
-	}
+    "service":"script",
+    "operation":"CANCEL_USER_SCRIPT_BATCH",
+    "data":{
+        "jobId":"idsfihihfuvhvuh"
+    }
 }
 ```
 
@@ -108,30 +105,25 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "packetId": 1,
-    "messageResponses": [
-        {
-            "status": 200,
-            "data": {
-                "result": {},
-                "jobType": "CloudCode",
-                "scriptName": "testScript",
-                "jobId": "3d3d4a7d-ad72-4bf1-9219-184f465e5c33",
-                "gameId": "20001",
-                "updatedAt": 1466579169118,
-                "runState": "Cancelled",
-                "description": null,
-                "createdAt": 1466579169118,
-                "runEndTime": 0,
-                "localTime": null,
-                "parameters": {
-                    "testParm1": 1
-                },
-                "scheduledStartTime": 1466582769118,
-                "runStartTime": 0
-            }
-        }
-    ]
+    "status": 200,
+    "data": {
+        "result": {},
+        "jobType": "CloudCode",
+        "scriptName": "testScript",
+        "jobId": "3d3d4a7d-ad72-4bf1-9219-184f465e5c33",
+        "gameId": "20001",
+        "updatedAt": 1466579169118,
+        "runState": "Cancelled",
+        "description": null,
+        "createdAt": 1466579169118,
+        "runEndTime": 0,
+        "localTime": null,
+        "parameters": {
+            "testParm1": 1
+        },
+        "scheduledStartTime": 1466582769118,
+        "runStartTime": 0
+    }
 }
 ```
 

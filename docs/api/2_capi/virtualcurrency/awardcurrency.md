@@ -2,15 +2,22 @@
 
 Award user the passed-in amount of currency. Returns an object representing the new currency values.
 
-Note: Awarding 0 or negative currency will return an error. Use <code>[ConsumeCurrency](/api/capi/virtualcurrency/consumecurrency)</code> to remove currency values.
+:::note
+Awarding 0 or negative currency will return an error. Use <code>[ConsumeCurrency](/api/capi/virtualcurrency/consumecurrency)</code> to remove currency values.
+:::
+
+:::caution
+For security reasons calling this API from the client is not recommended, and is rejected at the server by default. To over-ride, enable the 'Allow Currency Calls from Client' compatibility setting in the Design Portal.
+:::
 
 <PartialServop service_name="virtualCurrency" operation_name="AWARD_VC" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-vcId | The currency type to award. 
-vcAmount | The amount of currency to award. 
+
+| Parameter | Description                      |
+| --------- | -------------------------------- |
+| vcId      | The currency type to award.      |
+| vcAmount  | The amount of currency to award. |
 
 ## Usage
 
@@ -163,9 +170,8 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status" : 200,
-    "data" :
-    {
+    "status": 200,
+    "data": {
         "currencyMap": {
             "gems": {
                 "purchased": 0,
@@ -185,5 +191,5 @@ if (postResult.status == 200) {
     }
 }
 ```
-</details>
 
+</details>

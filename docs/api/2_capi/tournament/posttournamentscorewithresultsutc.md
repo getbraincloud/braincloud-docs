@@ -7,16 +7,17 @@ tRank will always be zero in the response of this API call. The value generates 
 <PartialServop service_name="tournament" operation_name="POST_TOURNAMENT_SCORE_WITH_RESULTS" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | The leaderboard for the tournament
-score | The score to post
-jsonData | Optional data attached to the leaderboard entry
-roundStartedTime | Time the user started the match resulting in the score being posted (in millis UTC)
-sort | Sort key Sort order of page.  ("HIGH_TO_LOW" or "LOW_TO_HIGH")
-beforeCount | The count of number of players before the current player to include.
-afterCount | The count of number of players after the current player to include.
-initialScore | The initial score for players first joining a tournament. Usually 0, unless leaderboard is LOW_VALUE.
+
+| Parameter        | Description                                                                                           |
+| ---------------- | ----------------------------------------------------------------------------------------------------- |
+| leaderboardId    | The leaderboard for the tournament                                                                    |
+| score            | The score to post                                                                                     |
+| jsonData         | Optional data attached to the leaderboard entry                                                       |
+| roundStartedTime | Time the user started the match resulting in the score being posted (in millis UTC)                   |
+| sort             | Sort key Sort order of page. ("HIGH_TO_LOW" or "LOW_TO_HIGH")                                         |
+| beforeCount      | The count of number of players before the current player to include.                                  |
+| afterCount       | The count of number of players after the current player to include.                                   |
+| initialScore     | The initial score for players first joining a tournament. Usually 0, unless leaderboard is LOW_VALUE. |
 
 ## Usage
 
@@ -158,13 +159,13 @@ var  score = 0;
 var  jsonData = {
     "nickname": "withResults"
 };
-var  roundStartedTime = Date.now();
+var  roundStartedTime = Date.now().millisecondsSinceEpoch;
 var  sortOrder = SortOrder.HIGH_TO_LOW;
 var  beforeCount = 3;
 var  afterCount = 4;
 var  initialScore = 0;
 
-ServerResponse result = await <%= data.branding.codePrefix %>.tournamentService.postTournamentScoreWithResultsUTC(leaderboardId:leaderboardId, score:score, jsonData:jsonData, roundStartedTime:roundStartedTime, sortOrder:sortOrder, beforeCount:beforeCount, afterCount:afterCount, initialScore:initialScore);
+ServerResponse result = await <%= data.branding.codePrefix %>.tournamentService.postTournamentScoreWithResultsUTC(leaderboardId:leaderboardId, score:score, data:jsonData, roundStartedTime:roundStartedTime, sortOrder:sortOrder, beforeCount:beforeCount, afterCount:afterCount, initialScore:initialScore);
 
 if (result.statusCode == 200) {
     print("Success");
@@ -232,58 +233,60 @@ if (postResult.status == 200) {
 
 ```json
 {
-	"status": 200,
-	"data": {
-		"postScore": {
-			"createdAt": 1484937347793,
-			"data": null,
-			"leaderboardId": "testTournamentLeaderboard",
-			"playerId": "d271327b-0c33-45cf-8f5f-a62904aae5fb",
-			"previousLeaderboard": {
-				"createdAt": 1484937347793,
-				"data": null,
-				"index": 0,
-				"name": "UserA_CPP_23167710",
-				"pictureUrl": "https://some.domain.com/mypicture.jpg",
-				"playerId": "d271327b-0c33-45cf-8f5f-a62904aae5fb",
-				"rank": 1,
-				"score": 100,
-				"summaryFriendData": {
-					"field": "value"
-				},
-				"tCode": "testTournament",
-				"tNotifiedAt": 0,
-				"tRank": 0,
-				"updatedAt": 1484937347793
-			},
-			"previousScore": 100,
-			"score": 100,
-			"tClaimedAt": 0,
-			"tCode": "testTournament",
-			"tNotifiedAt": 0,
-			"tRank": 0,
-			"updatedAt": 1484937348565,
-			"versionId": 18
-		},
-		"scores": [{
-			"createdAt": 1484937347793,
-			"data": null,
-			"index": 0,
-			"name": "UserA_CPP_23167710",
-			"pictureUrl": "https://some.domain.com/mypicture.jpg",
-			"playerId": "d271327b-0c33-45cf-8f5f-a62904aae5fb",
-			"rank": 1,
-			"score": 100,
-			"summaryFriendData": {
-				"field": "value"
-			},
-			"tCode": "testTournament",
-			"tNotifiedAt": 0,
-			"tRank": 0,
-			"updatedAt": 1484937348565
-		}]
-	}
+    "status": 200,
+    "data": {
+        "postScore": {
+            "createdAt": 1484937347793,
+            "data": null,
+            "leaderboardId": "testTournamentLeaderboard",
+            "playerId": "d271327b-0c33-45cf-8f5f-a62904aae5fb",
+            "previousLeaderboard": {
+                "createdAt": 1484937347793,
+                "data": null,
+                "index": 0,
+                "name": "UserA_CPP_23167710",
+                "pictureUrl": "https://some.domain.com/mypicture.jpg",
+                "playerId": "d271327b-0c33-45cf-8f5f-a62904aae5fb",
+                "rank": 1,
+                "score": 100,
+                "summaryFriendData": {
+                    "field": "value"
+                },
+                "tCode": "testTournament",
+                "tNotifiedAt": 0,
+                "tRank": 0,
+                "updatedAt": 1484937347793
+            },
+            "previousScore": 100,
+            "score": 100,
+            "tClaimedAt": 0,
+            "tCode": "testTournament",
+            "tNotifiedAt": 0,
+            "tRank": 0,
+            "updatedAt": 1484937348565,
+            "versionId": 18
+        },
+        "scores": [
+            {
+                "createdAt": 1484937347793,
+                "data": null,
+                "index": 0,
+                "name": "UserA_CPP_23167710",
+                "pictureUrl": "https://some.domain.com/mypicture.jpg",
+                "playerId": "d271327b-0c33-45cf-8f5f-a62904aae5fb",
+                "rank": 1,
+                "score": 100,
+                "summaryFriendData": {
+                    "field": "value"
+                },
+                "tCode": "testTournament",
+                "tNotifiedAt": 0,
+                "tRank": 0,
+                "updatedAt": 1484937348565
+            }
+        ]
+    }
 }
 ```
-</details>
 
+</details>

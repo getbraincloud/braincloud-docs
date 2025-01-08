@@ -2,8 +2,6 @@
 
 Run a cloud script in a parent app.
 
-
-
 :::tip
 Note that the data object will contain anything returned from the script
 :::
@@ -11,11 +9,12 @@ Note that the data object will contain anything returned from the script
 <PartialServop service_name="script" operation_name="RUN_PARENT_SCRIPT" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-scriptName | The name of the script with its absolute path to be run.
-scriptData | Data to be sent to the script in json format.
-parentLevel | The level name of the parent to run the script from.
+
+| Parameter   | Description                                              |
+| ----------- | -------------------------------------------------------- |
+| scriptName  | The name of the script with its absolute path to be run. |
+| scriptData  | Data to be sent to the script in json format.            |
+| parentLevel | The level name of the parent to run the script from.     |
 
 ## Usage
 
@@ -128,7 +127,7 @@ var  scriptData = {
 };
 var  parentLevelName = "Master";
 
-ServerResponse result = await <%= data.branding.codePrefix %>.scriptService.runParentScript(scriptName:scriptName, scriptData:scriptData, parentLevelName:parentLevelName);
+ServerResponse result = await <%= data.branding.codePrefix %>.scriptService.runParentScript(scriptName:scriptName, scriptData:scriptData, parentLevel:parentLevelName);
 
 if (result.statusCode == 200) {
     print("Success");
@@ -168,7 +167,7 @@ if (postResult.status == 200) {
     "data":{
         "scriptName": "path/to/script1",
         "scriptData"  {
-            "parm": "value" 
+            "parm": "value"
         },
         "parentLevel": "Master"
     }
@@ -192,5 +191,5 @@ if (postResult.status == 200) {
     }
 }
 ```
-</details>
 
+</details>

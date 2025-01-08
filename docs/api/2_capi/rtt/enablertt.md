@@ -1,17 +1,18 @@
 # EnableRTT
 
-Attempts to establish an RTT connection to the <%= data.branding.productName %> servers. 
+Attempts to establish an RTT connection to the <%= data.branding.productName %> servers.
 
-RTT must be enabled in the *Design Portal*, under **Design | Core App Info | Advanced Settings**.
+RTT must be enabled in the _Design Portal_, under **Design | Core App Info | Advanced Settings**.
 
-RTT is available to all *Plus* plan subscriptions.
+RTT is available to all _Plus_ plan subscriptions.
 
 <PartialServop service_name="rttRegistration" operation_name="REQUEST_CLIENT_CONNECTION" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-connectionType | Type of RTT connections being established. Examples: WebSocket, TCP.
+
+| Parameter      | Description                                                          |
+| -------------- | -------------------------------------------------------------------- |
+| connectionType | Type of RTT connections being established. Examples: WebSocket, TCP. |
 
 ## Usage
 
@@ -28,9 +29,9 @@ SuccessCallback successCallback = (response, cbObject) =>
 {
 	Dictionary<string, object> jsonMessage = (Dictionary<string, object>)JsonFx.Json.JsonReader.Deserialize(response);
 	Dictionary<string, object> jsonData = (Dictionary<string, object>)jsonMessage["data"];
-	
+
 	string heartbeatSeconds = jsonData["heartbeatSeconds"].ToString();
-	
+
 	string logMessage = string.Join(" | ", new [] {heartbeatSeconds});
 	Debug.Log(logMessage); // 30
 };
@@ -38,7 +39,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 {
 	Debug.Log(string.Format("[EnableRTT Failed] {0}  {1}  {2}", status, code, error));
 };
-<%= data.branding.codePrefix %>.RTTService.EnableRTT(rttConnectionType, successCallback, failureCallback);		
+<%= data.branding.codePrefix %>.RTTService.EnableRTT(rttConnectionType, successCallback, failureCallback);
 ```
 
 ```mdx-code-block
@@ -102,14 +103,16 @@ public void rttConnectFailure(String errorMessage)
 ```
 
 ```dart
-
-ServerResponse result = await <%= data.branding.codePrefix %>.rttRegistrationService.enableRTT();
-
-if (result.statusCode == 200) {
-    print("Success");
-} else {
-    print("Failed ${result.error['status_message'] ?? result.error}");
+void successCallback(RTTCommandResponse response) {
+    // Your code
 }
+void failureCallback(RTTCommandResponse response) {  
+  // Your code
+}
+​
+<%= data.branding.codePrefix %>.rttRegistrationService.enableRTT(
+  successCallback:successCallback,
+  failureCallback:failureCallback);
 ```
 
 ```mdx-code-block
@@ -148,5 +151,5 @@ if (result.statusCode == 200) {
     }
 }
 ```
-</details>
 
+</details>

@@ -55,7 +55,7 @@ Make sure you've initialized the <%= data.branding.productName %> library before
 | Parameter     | Description                                   |
 | ------------- | --------------------------------------------- |
 | handoffId     | The id for the given handoff                  |
-| secruityToken | The secruity token used to verify the handoff |
+| securityToken | The security token used to verify the handoff |
 
 ## Usage
 
@@ -67,7 +67,7 @@ Make sure you've initialized the <%= data.branding.productName %> library before
 
 ```csharp
 string handoffId = "handoffId";
-string secruityToken = "secruityToken";
+string securityToken = "securityToken";
 SuccessCallback successCallback = (response, cbObject) =>
 {
     Debug.Log(string.Format("Success | {0}", response));
@@ -78,7 +78,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 };
 
 <%= data.branding.codePrefix %>.AuthenticationService.AuthenticateHandoff(
-    handoffId, secruityToken, successCallback, failureCallback);
+    handoffId, securityToken, successCallback, failureCallback);
 ```
 
 ```mdx-code-block
@@ -88,11 +88,11 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 
 ```cpp
 const char* handoffId = "handoffId";
-const char* secruityToken = "secruityToken";
+const char* securityToken = "securityToken";
 
 <%= data.branding.codePrefix %>->getAuthenticationService()->authenticateHandoff(
     handoffId,
-    secruityToken,
+    securityToken,
     this);
 ```
 
@@ -103,13 +103,13 @@ const char* secruityToken = "secruityToken";
 
 ```objectivec
 NSString* handoffId = @"handoffId";
-NSString* secruityToken = @"secruityToken";
+NSString* securityToken = @"securityToken";
 BCCompletionBlock successBlock;      // define callback
 BCErrorCompletionBlock failureBlock; // define callback
 
 [[<%= data.branding.codePrefix %> authenticationService]
 		authenticateHandoff:handoffId
-		   	  secruityToken:secruityToken
+		   	  securityToken:securityToken
             completionBlock:successBlock
        errorCompletionBlock:failureBlock
                    cbObject:nil];
@@ -122,10 +122,10 @@ BCErrorCompletionBlock failureBlock; // define callback
 
 ```java
 String handoffId = "handoffId";
-String secruityToken = "secruityToken";
+String securityToken = "securityToken";
 this; // implements IServerCallback
 
-<%= data.branding.codePrefix %>.getAuthenticationService().authenticateHandoff(handoffId, secruityToken, this);
+<%= data.branding.codePrefix %>.getAuthenticationService().authenticateHandoff(handoffId, securityToken, this);
 
 public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
 {
@@ -144,9 +144,9 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 
 ```javascript
 var handoffId = "handoffId";
-var secruityToken = "secruityToken";
+var securityToken = "securityToken";
 
-<%= data.branding.codePrefix %>.authentication.authenticateHandoff(handoffId, secruityToken, result =>
+<%= data.branding.codePrefix %>.authentication.authenticateHandoff(handoffId, securityToken, result =>
 {
 	var status = result.status;
 	console.log(status + " : " + JSON.stringify(result, null, 2));
@@ -160,9 +160,9 @@ var secruityToken = "secruityToken";
 
 ```dart
 var  handoffId = "handoffId";
-var  secruityToken = "secruityToken";
+var  securityToken = "securityToken";
 
-ServerResponse result = await <%= data.branding.codePrefix %>.authenticationV2Service.authenticateHandoff(handoffId:handoffId, secruityToken:secruityToken);
+ServerResponse result = await <%= data.branding.codePrefix %>.authenticationV2Service.authenticateHandoff(handoffId:handoffId, securityToken:securityToken);
 
 if (result.statusCode == 200) {
     print("Success");

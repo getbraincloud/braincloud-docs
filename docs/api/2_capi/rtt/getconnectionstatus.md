@@ -58,7 +58,7 @@ Coming soon!
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+RTTConnectionStatus? response = _bc.rttService.getConnectionStatus();
 ```
 
 ```mdx-code-block
@@ -84,4 +84,3 @@ Coming soon!
 </Tabs>
 </BrowserWindow>
 ```
-

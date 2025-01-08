@@ -3,9 +3,10 @@
 Registers a callback for RTT blockchain updates.
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-rttCallback | The RTT blockchain callback handler.
+
+| Parameter   | Description                          |
+| ----------- | ------------------------------------ |
+| rttCallback | The RTT blockchain callback handler. |
 
 ## Usage
 
@@ -65,6 +66,9 @@ Coming soon!
 ```
 
 ```dart
+void rttCallBack(RTTCommandResponse jsonResponse) {
+  // your code
+}
 <%= data.branding.codePrefix %>.rttService.registerBlockchainCallback(rttCallback);
 ```
 
@@ -91,4 +95,3 @@ Coming soon!
 </Tabs>
 </BrowserWindow>
 ```
-

@@ -3,13 +3,14 @@
 Registers a real-time (RTT) callback for Events. Allows the standard [<code>SendEvent</code>](/api/capi/event/sendevent) call to push updates in real-time if the recipient is online.
 
 > **RTT Event Format**
+
 ```
 {
     "service": "event",
     "operation": "GET_EVENTS",
     "data": {
         "evId": "5b44f50fe3adc1594bb09c94",
-        "eventType": "testEvent",        
+        "eventType": "testEvent",
         "fromPlayerId": "c3a455de-27f5-4126-a051-0effb1c75fd3",
         "toPlayerId": "44afc271-4e7a-430d-91cc-bca38c76acd0",
         "createdAt": 1531245839578,
@@ -21,9 +22,10 @@ Registers a real-time (RTT) callback for Events. Allows the standard [<code>Send
 ```
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-rttCallback | The RTT Event callback handler.
+
+| Parameter   | Description                     |
+| ----------- | ------------------------------- |
+| rttCallback | The RTT Event callback handler. |
 
 ## Usage
 
@@ -83,6 +85,9 @@ Coming soon!
 ```
 
 ```dart
+void rttCallBack(RTTCommandResponse jsonResponse) {
+  // your code
+}
 <%= data.branding.codePrefix %>.rttService.registerRTTEventCallback(rttCallback);
 ```
 
@@ -109,4 +114,3 @@ Coming soon!
 </Tabs>
 </BrowserWindow>
 ```
-
