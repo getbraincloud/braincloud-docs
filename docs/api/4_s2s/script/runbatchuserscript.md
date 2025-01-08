@@ -5,11 +5,12 @@ Runs a script against the users targetted by the provided segments or all player
 <PartialServop service_name="script" operation_name="RUN_BATCH_USER_SCRIPT" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-scriptName | The name of the script with its path to be run. 
-scriptData | Data to be sent to the script in JSON format. 
-segmentIdList | List of target segments. Omit to send to all users. 
+
+| Parameter     | Description                                         |
+| ------------- | --------------------------------------------------- |
+| scriptName    | The name of the script with its path to be run.     |
+| scriptData    | Data to be sent to the script in JSON format.       |
+| segmentIdList | List of target segments. Omit to send to all users. |
 
 ## Usage
 
@@ -65,7 +66,7 @@ segmentIdList | List of target segments. Omit to send to all users.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -127,13 +128,14 @@ if (postResult.status == 200) {
 
 ```json
 {
-	"packetId": 1,
-	"messageResponses": [{
-		"status": 200,
-		"data": {
-		}
-	}]
+    "packetId": 1,
+    "messageResponses": [
+        {
+            "status": 200,
+            "data": {}
+        }
+    ]
 }
 ```
-</details>
 
+</details>

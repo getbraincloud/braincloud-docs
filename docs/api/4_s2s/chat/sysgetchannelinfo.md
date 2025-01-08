@@ -1,13 +1,14 @@
 # SysGetChannelInfo
 
-Returns *description info* and *activity stats* for the specified channel. Note that `numMembers`, `numListeners` and `listeners` are only returned for non-global groups. 
+Returns _description info_ and _activity stats_ for the specified channel. Note that `numMembers`, `numListeners` and `listeners` are only returned for non-global groups.
 
 <PartialServop service_name="chat" operation_name="SYS_GET_CHANNEL_INFO" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-channelId | The id of the channel. 
+
+| Parameter | Description            |
+| --------- | ---------------------- |
+| channelId | The id of the channel. |
 
 ## Usage
 
@@ -63,7 +64,7 @@ channelId | The id of the channel.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -120,18 +121,18 @@ if (postResult.status == 200) {
     }
 }
 ```
+
 </details>
 
 <details>
 <summary>Common Error Code</summary>
 
 ### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40346 | CHAT_INVALID_CHANNEL_ID | The channel id provided is invalid.
-40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
-40616 | CLOUD_CODE_ONLY | Method only available via cloud code
+
+| Code  | Name                    | Description                          |
+| ----- | ----------------------- | ------------------------------------ |
+| 40346 | CHAT_INVALID_CHANNEL_ID | The channel id provided is invalid.  |
+| 40601 | RTT_NOT_ENABLED         | RTT must be enabled for this feature |
+| 40616 | CLOUD_CODE_ONLY         | Method only available via cloud code |
 
 </details>
-
-

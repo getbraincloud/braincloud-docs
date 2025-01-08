@@ -28,15 +28,16 @@ Edits a existing leaderboard under the context of the current game. You can opti
 <PartialServop service_name="leaderboard" operation_name="EDIT_LEADERBOARD" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | The leaderboard to edit. 
-leaderboardType | Optional user-defined data relevant to the edited leaderboard. 
-rotationType | The leaderboard type. 
-rotationResetTime | Type of rotation. 
-retainedCount | Date to start the rotation (Date is in millis.) 
-numDaysToRotate | How many previous rotations to keep. 
-data | Optional parameter for use only with DAYS rotation type. 
+
+| Parameter         | Description                                                    |
+| ----------------- | -------------------------------------------------------------- |
+| leaderboardId     | The leaderboard to edit.                                       |
+| leaderboardType   | Optional user-defined data relevant to the edited leaderboard. |
+| rotationType      | The leaderboard type.                                          |
+| rotationResetTime | Type of rotation.                                              |
+| retainedCount     | Date to start the rotation (Date is in millis.)                |
+| numDaysToRotate   | How many previous rotations to keep.                           |
+| data              | Optional parameter for use only with DAYS rotation type.       |
 
 ## Usage
 
@@ -92,7 +93,7 @@ data | Optional parameter for use only with DAYS rotation type.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -183,5 +184,5 @@ var retVal = leaderboardProxy.editLeaderboard(
     ]
 }
 ```
-</details>
 
+</details>

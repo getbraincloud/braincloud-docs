@@ -2,24 +2,22 @@
 
 This operation sends a raw message to targetted segments.
 
-
-
-
-
 ### Results
-Name | Description
---------- | -----------
-estimatedTargets | Estimate number of targeted users
+
+| Name             | Description                       |
+| ---------------- | --------------------------------- |
+| estimatedTargets | Estimate number of targeted users |
 
 <PartialServop service_name="pushNotification" operation_name="SEND_RAW_TO_SEGMENTS" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-segmentIdList | List of target segments. Omit to send to all users. 
-fcmContent | FCM dependent message content. 
-iosContent | IOS dependent message content. 
-facebookContent | Facebook dependent message content. 
+
+| Parameter       | Description                                         |
+| --------------- | --------------------------------------------------- |
+| segmentIdList   | List of target segments. Omit to send to all users. |
+| fcmContent      | FCM dependent message content.                      |
+| iosContent      | IOS dependent message content.                      |
+| facebookContent | Facebook dependent message content.                 |
 
 ## Usage
 
@@ -75,7 +73,7 @@ facebookContent | Facebook dependent message content.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -184,5 +182,5 @@ if (postResult.status == 200) {
     ]
 }
 ```
-</details>
 
+</details>

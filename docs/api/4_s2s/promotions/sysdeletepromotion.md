@@ -5,10 +5,11 @@ Deletes the specified promotion from the server.
 <PartialServop service_name="promotions" operation_name="SYS_DELETE_PROMOTION" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-promotionId | ID uniquely identifying the promotion to update. Note: If promotionId is included in the promotionJson, it is ignored. The promotionId provided as a direct parameter takes priority.
-version | Version of the promotion to update. Can bypass version check by passing in -1.
+
+| Parameter   | Description                                                                                                                                                                           |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| promotionId | ID uniquely identifying the promotion to update. Note: If promotionId is included in the promotionJson, it is ignored. The promotionId provided as a direct parameter takes priority. |
+| version     | Version of the promotion to update. Can bypass version check by passing in -1.                                                                                                        |
 
 ## Usage
 
@@ -64,7 +65,7 @@ version | Version of the promotion to update. Can bypass version check by passin
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -110,9 +111,9 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": null,
-  "status": 200
+    "data": null,
+    "status": 200
 }
 ```
-</details>
 
+</details>

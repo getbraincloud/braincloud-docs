@@ -5,9 +5,10 @@ Method reads an existing system entity on the server. It cannot be an owned/glob
 <PartialServop service_name="globalEntity" operation_name="READ_SYSTEM_ENTITY" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-entityId | The id of the entity to read. 
+
+| Parameter | Description                   |
+| --------- | ----------------------------- |
+| entityId  | The id of the entity to read. |
 
 ## Usage
 
@@ -63,7 +64,7 @@ entityId | The id of the entity to read.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -115,7 +116,7 @@ if (postResult.status == 200) {
         "entityType": "address",
         "entityId": "4b2f1cba-cc52-4d3c-8663-ff540ee48a38",
         "acl": {
-        "other": 2
+            "other": 2
         },
         "ownerId": null,
         "version": 2,
@@ -126,5 +127,5 @@ if (postResult.status == 200) {
     "status": 200
 }
 ```
-</details>
 
+</details>

@@ -5,9 +5,10 @@ Returns the full configuration data of the specified promotion.
 <PartialServop service_name="promotions" operation_name="SYS_READ_PROMOTION" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-promotionId | ID uniquely identifying the promotion to read.
+
+| Parameter   | Description                                    |
+| ----------- | ---------------------------------------------- |
+| promotionId | ID uniquely identifying the promotion to read. |
 
 ## Usage
 
@@ -63,7 +64,7 @@ promotionId | ID uniquely identifying the promotion to read.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -107,40 +108,40 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "promotion": {
-      "promotionId": 1,
-      "type": "SCHEDULED",
-      "name": "Independence Day Sale",
-      "message": {
-        "en": "Happy 4th of July!"
-      },
-      "enabled": false,
-      "segments": [],
-      "prices": [
-        {
-          "itemId": "coinbundle10",
-          "priceId": 0
+    "data": {
+        "promotion": {
+            "promotionId": 1,
+            "type": "SCHEDULED",
+            "name": "Independence Day Sale",
+            "message": {
+                "en": "Happy 4th of July!"
+            },
+            "enabled": false,
+            "segments": [],
+            "prices": [
+                {
+                    "itemId": "coinbundle10",
+                    "priceId": 0
+                }
+            ],
+            "notifications": [
+                {
+                    "trigger": "ACTIVATED",
+                    "notificationTemplateId": 1
+                }
+            ],
+            "customJson": {
+                "key": "value"
+            },
+            "startAt": 1593781259911,
+            "endAt": 1594126859911,
+            "createdAt": 1592543345470,
+            "updatedAt": 1592543345470,
+            "version": 1
         }
-      ],
-      "notifications": [
-        {
-          "trigger": "ACTIVATED",
-          "notificationTemplateId": 1
-        }
-      ],
-      "customJson": {
-        "key": "value"
-      },
-      "startAt": 1593781259911,
-      "endAt": 1594126859911,
-      "createdAt": 1592543345470,
-      "updatedAt": 1592543345470,
-      "version": 1
-    }
-  },
-  "status": 200
+    },
+    "status": 200
 }
 ```
-</details>
 
+</details>

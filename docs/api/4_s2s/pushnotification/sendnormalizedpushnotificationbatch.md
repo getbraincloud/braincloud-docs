@@ -5,11 +5,12 @@ Sends a notification to a list of users consisting of alert content and custom d
 <PartialServop service_name="pushNotification" operation_name="SEND_NORMALIZED_BATCH" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-profileIds | Target list of users. 
-alertContent | Body and title of alert. 
-customData | Optional custom data. 
+
+| Parameter    | Description              |
+| ------------ | ------------------------ |
+| profileIds   | Target list of users.    |
+| alertContent | Body and title of alert. |
+| customData   | Optional custom data.    |
 
 ## Usage
 
@@ -65,7 +66,7 @@ customData | Optional custom data.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -137,5 +138,5 @@ if (postResult.status == 200) {
     ]
 }
 ```
-</details>
 
+</details>

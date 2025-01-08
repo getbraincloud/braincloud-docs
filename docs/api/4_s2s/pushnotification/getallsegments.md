@@ -5,12 +5,13 @@ Gets the end-user segments for your app.
 Segments are manually created on the <%= data.branding.productName %> portal, on the **Design | Segmentation | Segments** page.
 
 ### Results
-Name | Description
---------- | -----------
-segmentId | Unique id for the segmentId
-name | Readable name of the segmentId
-testersOnly | If segement only applies to end-users flagged as testersOnly
-description | Readable description of the segment
+
+| Name        | Description                                                  |
+| ----------- | ------------------------------------------------------------ |
+| segmentId   | Unique id for the segmentId                                  |
+| name        | Readable name of the segmentId                               |
+| testersOnly | If segement only applies to end-users flagged as testersOnly |
+| description | Readable description of the segment                          |
 
 <PartialServop service_name="pushNotification" operation_name="GET_ALL_SEGMENTS" />
 
@@ -68,7 +69,7 @@ description | Readable description of the segment
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -109,35 +110,35 @@ if (postResult.status == 200) {
 
 ```json
 {
-   "packetId":1,
-   "messageResponses":[
-      {
-         "data":{
-            "segments":[
-               {
-                  "segmentId":3,
-                  "name":"New End-Users",
-                  "testersOnly":false,
-                  "description":"People that was started in the last 10 days."
-               },
-               {
-                  "segmentId":4,
-                  "name":"Recurring End-Users",
-                  "testersOnly":false,
-                  "description":"People that have been active and have an account older than 10 days."
-               },
-               {
-                  "segmentId":5,
-                  "name":"In-Active End-Users",
-                  "testersOnly":false,
-                  "description":"People that have been in-active and have an account older than 10 days."
-               }
-            ]
-         },
-         "status":200
-      }
-   ]
+    "packetId": 1,
+    "messageResponses": [
+        {
+            "data": {
+                "segments": [
+                    {
+                        "segmentId": 3,
+                        "name": "New End-Users",
+                        "testersOnly": false,
+                        "description": "People that was started in the last 10 days."
+                    },
+                    {
+                        "segmentId": 4,
+                        "name": "Recurring End-Users",
+                        "testersOnly": false,
+                        "description": "People that have been active and have an account older than 10 days."
+                    },
+                    {
+                        "segmentId": 5,
+                        "name": "In-Active End-Users",
+                        "testersOnly": false,
+                        "description": "People that have been in-active and have an account older than 10 days."
+                    }
+                ]
+            },
+            "status": 200
+        }
+    ]
 }
 ```
-</details>
 
+</details>

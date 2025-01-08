@@ -5,9 +5,10 @@ Returns an array of the notification templates defined - with the text for the s
 <PartialServop service_name="pushNotification" operation_name="SYS_GET_NOTIFICATION_TEMPLATES" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-defaultLanguageCode | The language code (lowercase) to be used for returning the default message text.
+
+| Parameter           | Description                                                                      |
+| ------------------- | -------------------------------------------------------------------------------- |
+| defaultLanguageCode | The language code (lowercase) to be used for returning the default message text. |
 
 ## Usage
 
@@ -63,7 +64,7 @@ defaultLanguageCode | The language code (lowercase) to be used for returning the
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -109,25 +110,23 @@ if (postResult.status == 200) {
 ```json
 {
     "data": {
-        "pushTemplates": 
-        [
+        "pushTemplates": [
             {
-                "notificationTemplateId" : 1,
-                "name" : "awesomeSaleNotification",
-                "defaultMessage" : "This is english text!",
-                "updatedAt" : 1591730181151
+                "notificationTemplateId": 1,
+                "name": "awesomeSaleNotification",
+                "defaultMessage": "This is english text!",
+                "updatedAt": 1591730181151
             },
             {
-
-                "notificationTemplateId" : 2,
-                "name" : "anotherNotification",
-                "message" : "This is another notification",
-                "updatedAt" : 1591734121222
+                "notificationTemplateId": 2,
+                "name": "anotherNotification",
+                "message": "This is another notification",
+                "updatedAt": 1591734121222
             }
         ]
     },
     "status": 200
 }
 ```
-</details>
 
+</details>

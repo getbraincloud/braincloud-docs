@@ -4,21 +4,22 @@ Method gets a count of entities based on the where clause.
 
 Fields available for use in the 'where' clause are:
 
- - entityType
- - entityIndexedId
- - createdAt
- - updatedAt
- - ownerId
- - timeToLive
+-   entityType
+-   entityIndexedId
+-   createdAt
+-   updatedAt
+-   ownerId
+-   timeToLive
 
- Along with all custom data (using `data.`).  For more information on the query syntax see [here](/api/appendix/mongodbwherequeries).
+Along with all custom data (using `data.`). For more information on the query syntax see [here](/api/appendix/mongodbwherequeries).
 
 <PartialServop service_name="globalEntity" operation_name="GET_LIST_COUNT" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-where | A mongo style query string. 
+
+| Parameter | Description                 |
+| --------- | --------------------------- |
+| where     | A mongo style query string. |
 
 ## Usage
 
@@ -74,7 +75,7 @@ where | A mongo style query string.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -122,12 +123,11 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status":200,
-    "data":
-    {
-        "entityListCount":5
+    "status": 200,
+    "data": {
+        "entityListCount": 5
     }
 }
 ```
-</details>
 
+</details>

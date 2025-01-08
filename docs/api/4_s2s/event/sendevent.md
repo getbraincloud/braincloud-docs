@@ -2,22 +2,21 @@
 
 This service allows you to send events to specified players.
 
-
-
-
 ### Results
-Name | Description
---------- | -----------
-response | Includes evId of sent event
+
+| Name     | Description                 |
+| -------- | --------------------------- |
+| response | Includes evId of sent event |
 
 <PartialServop service_name="event" operation_name="SEND" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-toId | Profile Id of user to send event to. 
-eventType | User-defined event type (optional.) 
-eventData | User defined event data encoded in JSON. 
+
+| Parameter | Description                              |
+| --------- | ---------------------------------------- |
+| toId      | Profile Id of user to send event to.     |
+| eventType | User-defined event type (optional.)      |
+| eventData | User defined event data encoded in JSON. |
 
 ## Usage
 
@@ -73,7 +72,7 @@ eventData | User defined event data encoded in JSON.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -138,5 +137,5 @@ if (postResult.status == 200) {
     ]
 }
 ```
-</details>
 
+</details>

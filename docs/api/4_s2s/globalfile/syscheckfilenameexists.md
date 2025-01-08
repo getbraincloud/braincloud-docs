@@ -1,13 +1,15 @@
 # SysCheckFilenameExists
+
 Check if filename exists for provided path and name.
 
 <PartialServop service_name="globalFileV3" operation_name="SYS_CHECK_FILENAME_EXISTS" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-folderPath | The folder path.
-filename | The file name.
+
+| Parameter  | Description      |
+| ---------- | ---------------- |
+| folderPath | The folder path. |
+| filename   | The file name.   |
 
 ## Usage
 
@@ -63,7 +65,7 @@ filename | The file name.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -100,32 +102,32 @@ var postResult = globalFileV3Proxy.SysCheckFilenameExists(folderPath, filename);
 </Tabs>
 </BrowserWindow>
 ```
+
 <details>
 <summary>JSON Response</summary>
 
 ```json
 {
-  "data": {
-    "fileDetails": {
-      "treeId": "fb3431cd-6e2f-47f1-8100-8941abf6bb4f",
-      "fileName": "glogcopy.json",
-      "fileSize": 7051,
-      "dateUploaded": 1677521119000,
-      "etag": "a6f4cd3c065aed36227d3582adc5d952",
-      "acl": {
-        "member": 2,
-        "other": 0
-      },
-      "version": 2,
-      "url": "https://api.internal.braincloudservers.com/groupfiles/bc/g/23782/gr/2bf538d1-19ea-4e14-9862-f979215e09b7/fb3431cd-6e2f-47f1-8100-8941abf6bb4f/6d938c22-3b8c-4b99-a913-2edafed71a83/V2/glogcopy.json",
-      "fileId": "6d938c22-3b8c-4b99-a913-2edafed71a83"
+    "data": {
+        "fileDetails": {
+            "treeId": "fb3431cd-6e2f-47f1-8100-8941abf6bb4f",
+            "fileName": "glogcopy.json",
+            "fileSize": 7051,
+            "dateUploaded": 1677521119000,
+            "etag": "a6f4cd3c065aed36227d3582adc5d952",
+            "acl": {
+                "member": 2,
+                "other": 0
+            },
+            "version": 2,
+            "url": "https://api.internal.braincloudservers.com/groupfiles/bc/g/23782/gr/2bf538d1-19ea-4e14-9862-f979215e09b7/fb3431cd-6e2f-47f1-8100-8941abf6bb4f/6d938c22-3b8c-4b99-a913-2edafed71a83/V2/glogcopy.json",
+            "fileId": "6d938c22-3b8c-4b99-a913-2edafed71a83"
+        },
+        "groupId": "2bf538d1-19ea-4e14-9862-f979215e09b7",
+        "exists": true
     },
-    "groupId": "2bf538d1-19ea-4e14-9862-f979215e09b7",
-    "exists": true
-  },
-  "status": 200
+    "status": 200
 }
 ```
 
 </details>
-

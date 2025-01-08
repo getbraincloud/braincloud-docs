@@ -5,11 +5,12 @@ Sends a message on behalf of the system (i.e. app) to the specified users.
 <PartialServop service_name="messaging" operation_name="SYS_SEND_MESSAGE" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-toProfileIds | The array of recipients. 
-contentJson | The json content object to send in the message. 
-fromJson | Who the message is from. Should contain at least "name" field, and potential "pic" field as well. 
+
+| Parameter    | Description                                                                                       |
+| ------------ | ------------------------------------------------------------------------------------------------- |
+| toProfileIds | The array of recipients.                                                                          |
+| contentJson  | The json content object to send in the message.                                                   |
+| fromJson     | Who the message is from. Should contain at least "name" field, and potential "pic" field as well. |
 
 ## Usage
 
@@ -65,7 +66,7 @@ fromJson | Who the message is from. Should contain at least "name" field, and po
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -125,4 +126,3 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-

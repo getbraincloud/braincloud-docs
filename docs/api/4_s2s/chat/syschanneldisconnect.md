@@ -1,12 +1,14 @@
 # SysChannelDisconnect
+
 Disconnect from a chat channel.
 
 <PartialServop service_name="chat" operation_name="SYS_CHANNEL_DISCONNECT" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-channelId | The channel id to connect to.
+
+| Parameter | Description                   |
+| --------- | ----------------------------- |
+| channelId | The channel id to connect to. |
 
 ## Usage
 
@@ -62,7 +64,7 @@ channelId | The channel id to connect to.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -97,14 +99,14 @@ var postResult = chatProxy.SysChannelDisconnect(channelId);
 </Tabs>
 </BrowserWindow>
 ```
+
 <details>
 <summary>JSON Response</summary>
 
 ```json
 {
-  "status" : 200
+    "status": 200
 }
 ```
 
 </details>
-

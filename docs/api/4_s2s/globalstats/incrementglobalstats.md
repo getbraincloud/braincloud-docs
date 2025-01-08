@@ -17,9 +17,10 @@ which increments stat1 by 9 up to a limit of 30.
 <PartialServop service_name="globalGameStatistics" operation_name="UPDATE_INCREMENT" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-statistics | A collection containing the statistics to increment. 
+
+| Parameter  | Description                                          |
+| ---------- | ---------------------------------------------------- |
+| statistics | A collection containing the statistics to increment. |
 
 ## Usage
 
@@ -75,7 +76,7 @@ statistics | A collection containing the statistics to increment.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -131,5 +132,5 @@ if (postResult.status == 200) {
     }
 }
 ```
-</details>
 
+</details>

@@ -5,11 +5,12 @@ Sets the default (i.e. active) price for the given product item.
 <PartialServop service_name="productManagement" operation_name="SYS_SET_DEFAULT_PRODUCT_PRICE" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-itemId | The product item identifier.
-version | The product configuration version. The version being validated. Pass -1 to bypass version checking.
-priceId | The priceId being set as the default. Pass -1 to make a product item not-for-sale.
+
+| Parameter | Description                                                                                         |
+| --------- | --------------------------------------------------------------------------------------------------- |
+| itemId    | The product item identifier.                                                                        |
+| version   | The product configuration version. The version being validated. Pass -1 to bypass version checking. |
+| priceId   | The priceId being set as the default. Pass -1 to make a product item not-for-sale.                  |
 
 ## Usage
 
@@ -65,7 +66,7 @@ priceId | The priceId being set as the default. Pass -1 to make a product item n
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -114,133 +115,133 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "gameId": "23783",
-    "itemId": "gold_bars_10",
-    "type": "Consumable",
-    "iTunesSubscriptionType": null,
-    "category": "bars",
-    "title": "Bars (10)",
-    "description": "Bundle of 10 Bars.",
-    "imageUrl": "",
-    "currency": {
-      "bar": 10
-    },
-    "parentCurrency": {},
-    "peerCurrency": {
-      "deploypeer": {
-        "gems": 11
-      }
-    },
-    "defaultPriceId": 2,
-    "prices": [
-      {
-        "priceId": 0,
-        "referencePrice": 99,
-        "storeData": {
-          "amazon": {
-            "id": "amazoniapid"
-          },
-          "itunes": {
-            "ids": [
-              {
-                "appId": "iphone",
-                "itunesId": "appleiapid"
-              }
-            ]
-          },
-          "facebook": {
-            "currencyList": [
-              {
-                "currency": "USD",
-                "price": 0.99
-              },
-              {
-                "currency": "CAD",
-                "price": 1.29
-              }
-            ]
-          },
-          "googlePlay": {
-            "id": "googleiapid"
-          }
-        }
-      },
-      {
-        "priceId": 1,
-        "referencePrice": 999,
-        "storeData": {
-          "amazon": {
-            "id": "amazoniapid"
-          },
-          "itunes": {
-            "ids": [
-              {
-                "appId": "iphone",
-                "itunesId": "appleiapid"
-              }
-            ]
-          },
-          "facebook": {
-            "currencyList": [
-              {
-                "currency": "USD",
-                "price": 0.99
-              },
-              {
-                "currency": "CAD",
-                "price": 1.29
-              }
-            ]
-          },
-          "googlePlay": {
-            "id": "googleiapid"
-          }
-        }
-      },
-      {
-        "priceId": 2,
-        "referencePrice": 699,
-        "storeData": {
-          "amazon": {
-            "id": "amazoniapid"
-          },
-          "itunes": {
-            "ids": [
-              {
-                "appId": "iphone",
-                "itunesId": "appleiapid"
-              }
-            ]
-          },
-          "facebook": {
-            "currencyList": [
-              {
-                "currency": "USD",
-                "price": 0.99
-              },
-              {
-                "currency": "CAD",
-                "price": 1.29
-              }
-            ]
-          },
-          "googlePlay": {
-            "id": "googleiapid"
-          }
-        }
-      }
-    ],
     "data": {
-      "customAttr": "value"
+        "gameId": "23783",
+        "itemId": "gold_bars_10",
+        "type": "Consumable",
+        "iTunesSubscriptionType": null,
+        "category": "bars",
+        "title": "Bars (10)",
+        "description": "Bundle of 10 Bars.",
+        "imageUrl": "",
+        "currency": {
+            "bar": 10
+        },
+        "parentCurrency": {},
+        "peerCurrency": {
+            "deploypeer": {
+                "gems": 11
+            }
+        },
+        "defaultPriceId": 2,
+        "prices": [
+            {
+                "priceId": 0,
+                "referencePrice": 99,
+                "storeData": {
+                    "amazon": {
+                        "id": "amazoniapid"
+                    },
+                    "itunes": {
+                        "ids": [
+                            {
+                                "appId": "iphone",
+                                "itunesId": "appleiapid"
+                            }
+                        ]
+                    },
+                    "facebook": {
+                        "currencyList": [
+                            {
+                                "currency": "USD",
+                                "price": 0.99
+                            },
+                            {
+                                "currency": "CAD",
+                                "price": 1.29
+                            }
+                        ]
+                    },
+                    "googlePlay": {
+                        "id": "googleiapid"
+                    }
+                }
+            },
+            {
+                "priceId": 1,
+                "referencePrice": 999,
+                "storeData": {
+                    "amazon": {
+                        "id": "amazoniapid"
+                    },
+                    "itunes": {
+                        "ids": [
+                            {
+                                "appId": "iphone",
+                                "itunesId": "appleiapid"
+                            }
+                        ]
+                    },
+                    "facebook": {
+                        "currencyList": [
+                            {
+                                "currency": "USD",
+                                "price": 0.99
+                            },
+                            {
+                                "currency": "CAD",
+                                "price": 1.29
+                            }
+                        ]
+                    },
+                    "googlePlay": {
+                        "id": "googleiapid"
+                    }
+                }
+            },
+            {
+                "priceId": 2,
+                "referencePrice": 699,
+                "storeData": {
+                    "amazon": {
+                        "id": "amazoniapid"
+                    },
+                    "itunes": {
+                        "ids": [
+                            {
+                                "appId": "iphone",
+                                "itunesId": "appleiapid"
+                            }
+                        ]
+                    },
+                    "facebook": {
+                        "currencyList": [
+                            {
+                                "currency": "USD",
+                                "price": 0.99
+                            },
+                            {
+                                "currency": "CAD",
+                                "price": 1.29
+                            }
+                        ]
+                    },
+                    "googlePlay": {
+                        "id": "googleiapid"
+                    }
+                }
+            }
+        ],
+        "data": {
+            "customAttr": "value"
+        },
+        "createdAt": 1592928409270,
+        "updatedAt": 1592931088568,
+        "version": 2,
+        "absoluteImageUrl": "https://api.braincloudservers.com/files/portal/g/23783"
     },
-    "createdAt": 1592928409270,
-    "updatedAt": 1592931088568,
-    "version": 2,
-    "absoluteImageUrl": "https://api.braincloudservers.com/files/portal/g/23783"
-  },
-  "status": 200
+    "status": 200
 }
 ```
-</details>
 
+</details>

@@ -2,8 +2,6 @@
 
 This service allows you to send no-op packets to the server to keep the session alive. The default session will expire after 20 minutes.
 
-
-
 ```
 {
     "packetId": 1,
@@ -33,7 +31,7 @@ This service allows you to send no-op packets to the server to keep the session 
     "messageResponses": [
         {
             "status": 200,
-            "data": null            
+            "data": null
         }
     ]
 }
@@ -50,7 +48,7 @@ This service allows you to send no-op packets to the server to keep the session 
     "messageResponses": [
         {
             "status": 200,
-            "data": null            
+            "data": null
         }
     ]
 }
@@ -67,7 +65,7 @@ This service allows you to send no-op packets to the server to keep the session 
     "messageResponses": [
         {
             "status": 200,
-            "data": null            
+            "data": null
         }
     ]
 }
@@ -84,7 +82,7 @@ This service allows you to send no-op packets to the server to keep the session 
     "messageResponses": [
         {
             "status": 200,
-            "data": null            
+            "data": null
         }
     ]
 }
@@ -101,7 +99,7 @@ This service allows you to send no-op packets to the server to keep the session 
     "messageResponses": [
         {
             "status": 200,
-            "data": null            
+            "data": null
         }
     ]
 }
@@ -113,7 +111,7 @@ This service allows you to send no-op packets to the server to keep the session 
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -127,7 +125,7 @@ This service allows you to send no-op packets to the server to keep the session 
     "messageResponses": [
         {
             "status": 200,
-            "data": null            
+            "data": null
         }
     ]
 }
@@ -144,7 +142,7 @@ This service allows you to send no-op packets to the server to keep the session 
     "messageResponses": [
         {
             "status": 200,
-            "data": null            
+            "data": null
         }
     ]
 }
@@ -165,10 +163,10 @@ This service allows you to send no-op packets to the server to keep the session 
     "messageResponses": [
         {
             "status": 200,
-            "data": null            
+            "data": null
         }
     ]
 }
 ```
-</details>
 
+</details>

@@ -2,23 +2,21 @@
 
 This operation sends a normalized message to multiple user targets.
 
-
-
-
-
 ### Results
-Name | Description
---------- | -----------
-estimatedTargets | Estimate number of targeted users
+
+| Name             | Description                       |
+| ---------------- | --------------------------------- |
+| estimatedTargets | Estimate number of targeted users |
 
 <PartialServop service_name="pushNotification" operation_name="SEND_NORMALIZED_TO_SEGMENTS" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-alertContent | Body and title of message in JSON format. 
-customData | Custom parameters to include in message. 
-segmentIdList | List of target segments. Omit to send to all users. 
+
+| Parameter     | Description                                         |
+| ------------- | --------------------------------------------------- |
+| alertContent  | Body and title of message in JSON format.           |
+| customData    | Custom parameters to include in message.            |
+| segmentIdList | List of target segments. Omit to send to all users. |
 
 ## Usage
 
@@ -74,7 +72,7 @@ segmentIdList | List of target segments. Omit to send to all users.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -151,5 +149,5 @@ if (postResult.status == 200) {
     ]
 }
 ```
-</details>
 
+</details>

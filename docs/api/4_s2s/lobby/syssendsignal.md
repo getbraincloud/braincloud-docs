@@ -5,11 +5,12 @@ Send the given data to all members of the given lobby.
 <PartialServop service_name="lobby" operation_name="SYS_SEND_SIGNAL" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-lobbyId | Id of chosen lobby. 
-signalData | Signal data to be sent. 
-from | Optional 'from' data to be sent. 
+
+| Parameter  | Description                      |
+| ---------- | -------------------------------- |
+| lobbyId    | Id of chosen lobby.              |
+| signalData | Signal data to be sent.          |
+| from       | Optional 'from' data to be sent. |
 
 ## Usage
 
@@ -65,7 +66,7 @@ from | Optional 'from' data to be sent.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -107,4 +108,3 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-

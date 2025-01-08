@@ -5,14 +5,15 @@ Move or rename the specified file.
 <PartialServop service_name="globalFileV3" operation_name="SYS_MOVE_GLOBAL_FILE" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-fileId | File ID
-version | File version
-newTreeId | Id of the new location for the file
-treeVersion | Current tree version (used to prevent concurrency errors)
-newFilename | New name for the file
-overwriteIfPresent | If a file of that name already exists at that location, overwrite it?
+
+| Parameter          | Description                                                           |
+| ------------------ | --------------------------------------------------------------------- |
+| fileId             | File ID                                                               |
+| version            | File version                                                          |
+| newTreeId          | Id of the new location for the file                                   |
+| treeVersion        | Current tree version (used to prevent concurrency errors)             |
+| newFilename        | New name for the file                                                 |
+| overwriteIfPresent | If a file of that name already exists at that location, overwrite it? |
 
 ## Usage
 
@@ -68,7 +69,7 @@ overwriteIfPresent | If a file of that name already exists at that location, ove
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -139,5 +140,5 @@ if (postResult.status == 200) {
     }
 }
 ```
-</details>
 
+</details>

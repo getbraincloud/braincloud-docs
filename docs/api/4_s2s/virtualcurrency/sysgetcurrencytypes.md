@@ -58,7 +58,7 @@ Retrieves the virtual currency types defined for the current app.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -100,12 +100,10 @@ if (postResult.status == 200) {
 ```json
 {
     "data": {
-        "currencies": [
-          "gems"
-        ]
-      },
+        "currencies": ["gems"]
+    },
     "status": 200
 }
 ```
-</details>
 
+</details>

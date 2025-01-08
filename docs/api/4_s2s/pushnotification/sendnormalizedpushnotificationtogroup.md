@@ -7,12 +7,13 @@ See the Portal documentation for more info.
 <PartialServop service_name="pushNotification" operation_name="SEND_NORMALIZED_TO_GROUP" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | The target group. 
-senderId | Optional id of sender. 
-alertContent | Body and title of alert. 
-customData | Optional custom data. 
+
+| Parameter    | Description              |
+| ------------ | ------------------------ |
+| groupId      | The target group.        |
+| senderId     | Optional id of sender.   |
+| alertContent | Body and title of alert. |
+| customData   | Optional custom data.    |
 
 ## Usage
 
@@ -68,7 +69,7 @@ customData | Optional custom data.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -139,5 +140,5 @@ if (postResult.status == 200) {
     ]
 }
 ```
-</details>
 
+</details>

@@ -58,7 +58,7 @@ Retrieves the virtual currency types inherited from the parent app(s).
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -99,20 +99,14 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "parentCurrencies": {
-      "parent1": [
-        "parent1VC2",
-        "parent1VC1"
-      ],
-      "parent2": [
-        "parent2VC1",
-        "parent2VC2"
-      ]
-    }
-  },
-  "status": 200
+    "data": {
+        "parentCurrencies": {
+            "parent1": ["parent1VC2", "parent1VC1"],
+            "parent2": ["parent2VC1", "parent2VC2"]
+        }
+    },
+    "status": 200
 }
 ```
-</details>
 
+</details>

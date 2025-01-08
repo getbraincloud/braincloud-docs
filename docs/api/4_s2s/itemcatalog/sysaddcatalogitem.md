@@ -5,10 +5,11 @@ Create a new catalog item on the server.
 <PartialServop service_name="itemCatalog" operation_name="SYS_ADD_CATALOG_ITEM" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-defId | Unique ID for new catalog item. Required. 
-itemDefData | The data defining the catalog item. 
+
+| Parameter   | Description                               |
+| ----------- | ----------------------------------------- |
+| defId       | Unique ID for new catalog item. Required. |
+| itemDefData | The data defining the catalog item.       |
 
 ## Usage
 
@@ -64,7 +65,7 @@ itemDefData | The data defining the catalog item.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -194,58 +195,55 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "defId": "sword001",
-    "name": {
-      "en": "Crimson Sword"
+    "data": {
+        "defId": "sword001",
+        "name": {
+            "en": "Crimson Sword"
+        },
+        "desc": {
+            "en": "A sword whose blade was forged in Cherry Kool-aid!"
+        },
+        "type": "ITEM",
+        "category": "sword",
+        "tags": ["weapon", "pointy"],
+        "buyPrice": {
+            "coins": 200
+        },
+        "sellPrice": {
+            "coins": 150
+        },
+        "image": "//xxx.jpg",
+        "resourceGroup": "equipment.asset",
+        "resourceTag": "sword001",
+        "meta": {
+            "speed": 85,
+            "damage": 12,
+            "accuracy": 80,
+            "range": 5
+        },
+        "initData": {
+            "condition": 100,
+            "bonus": 0
+        },
+        "pState": "DRAFT",
+        "publishedAt": 0,
+        "createdAt": 1567192113061,
+        "updatedAt": 1567192113061,
+        "version": 1,
+        "stackable": false,
+        "consumable": false,
+        "uses": null,
+        "coolDownSecs": 0,
+        "recoverySecs": 0,
+        "activatable": false,
+        "statusName": null,
+        "activeSecs": null,
+        "tradable": false,
+        "blockchain": false,
+        "blockchainDefId": null
     },
-    "desc": {
-      "en": "A sword whose blade was forged in Cherry Kool-aid!"
-    },
-    "type": "ITEM",
-    "category": "sword",
-    "tags": [
-      "weapon",
-      "pointy"
-    ],
-    "buyPrice": {
-      "coins": 200
-    },
-    "sellPrice": {
-      "coins": 150
-    },
-    "image": "//xxx.jpg",
-    "resourceGroup": "equipment.asset",
-    "resourceTag": "sword001",
-    "meta": {
-      "speed": 85,
-      "damage": 12,
-      "accuracy": 80,
-      "range": 5
-    },
-    "initData": {
-      "condition": 100,
-      "bonus": 0
-    },
-    "pState": "DRAFT",
-    "publishedAt": 0,
-    "createdAt": 1567192113061,
-    "updatedAt": 1567192113061,
-    "version": 1,
-    "stackable": false,
-    "consumable": false,
-    "uses": null,
-    "coolDownSecs": 0,
-    "recoverySecs": 0,
-    "activatable": false,
-    "statusName": null,
-    "activeSecs": null,
-    "tradable": false,
-    "blockchain": false,
-    "blockchainDefId": null
-  },
-  "status": 200
+    "status": 200
 }
 ```
-</details>
 
+</details>

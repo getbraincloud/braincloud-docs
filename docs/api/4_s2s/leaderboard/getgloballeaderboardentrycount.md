@@ -5,10 +5,11 @@ Method returns the number of entries in a global leaderboard.
 <PartialServop service_name="leaderboard" operation_name="GET_GLOBAL_LEADERBOARD_ENTRY_COUNT" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | The id of the leaderboard. 
-versionId | The version of the leaderboard. Use -1 to specify the currently active leaderboard version. 
+
+| Parameter     | Description                                                                                 |
+| ------------- | ------------------------------------------------------------------------------------------- |
+| leaderboardId | The id of the leaderboard.                                                                  |
+| versionId     | The version of the leaderboard. Use -1 to specify the currently active leaderboard version. |
 
 ## Usage
 
@@ -64,7 +65,7 @@ versionId | The version of the leaderboard. Use -1 to specify the currently acti
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -115,5 +116,5 @@ if (postResult.status == 200) {
     }
 }
 ```
-</details>
 
+</details>

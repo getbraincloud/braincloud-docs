@@ -5,10 +5,11 @@ Method to retrieve previous or next pages after having called the GetSystemEntit
 <PartialServop service_name="globalEntity" operation_name="GET_SYSTEM_ENTITY_PAGE_BY_OFFSET" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-context | The context string returned from the server from a previous call to GetPage or GetPageOffset. 
-pageOffset | The positive or negative page offset to fetch. Uses the last page retrieved using the context string to determine a starting point. 
+
+| Parameter  | Description                                                                                                                         |
+| ---------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| context    | The context string returned from the server from a previous call to GetPage or GetPageOffset.                                       |
+| pageOffset | The positive or negative page offset to fetch. Uses the last page retrieved using the context string to determine a starting point. |
 
 ## Usage
 
@@ -64,7 +65,7 @@ pageOffset | The positive or negative page offset to fetch. Uses the last page r
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -110,36 +111,38 @@ if (postResult.status == 200) {
 
 ```json
 {
-	"status": 200,
-	"data": {
-		"_serverTime": 1637946319239,
-		"results": {
-			"moreBefore": false,
-			"count": 200,
-			"items": [{
-				"gameId": "123456",
-				"entityId": "14281c38-abf6-4ca2-8436-b2bdwas8d5a9a",
-				"ownerId": "784cc6c6-4569-4d75-bd10-62dwa8ae0218",
-				"entityType": "test",
-				"entityIndexedId": "indexTest",
-				"version": 1,
-				"data": {
-					"testData": 1234
-				},
-				"acl": {
-					"other": 1
-				},
-				"expiresAt": 1449861422588,
-				"timeToLive": 0,
-				"createdAt": 1449861388021,
-				"updatedAt": 1449861388021
-			}],
-			"page": 2,
-			"moreAfter": false
-		},
-		"context": "eyJzZWFyY2hDcml0ZXJpYSI6eyJlbnRpdHlUeXBlIjoiYnVpbGRpbmciLCJnY"
-	}
+    "status": 200,
+    "data": {
+        "_serverTime": 1637946319239,
+        "results": {
+            "moreBefore": false,
+            "count": 200,
+            "items": [
+                {
+                    "gameId": "123456",
+                    "entityId": "14281c38-abf6-4ca2-8436-b2bdwas8d5a9a",
+                    "ownerId": "784cc6c6-4569-4d75-bd10-62dwa8ae0218",
+                    "entityType": "test",
+                    "entityIndexedId": "indexTest",
+                    "version": 1,
+                    "data": {
+                        "testData": 1234
+                    },
+                    "acl": {
+                        "other": 1
+                    },
+                    "expiresAt": 1449861422588,
+                    "timeToLive": 0,
+                    "createdAt": 1449861388021,
+                    "updatedAt": 1449861388021
+                }
+            ],
+            "page": 2,
+            "moreAfter": false
+        },
+        "context": "eyJzZWFyY2hDcml0ZXJpYSI6eyJlbnRpdHlUeXBlIjoiYnVpbGRpbmciLCJnY"
+    }
 }
 ```
-</details>
 
+</details>

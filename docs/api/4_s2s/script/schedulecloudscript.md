@@ -1,18 +1,19 @@
 # ScheduleCloudScript
 
-Schedules a scheduled cloud code job.  Can be scheduled minutes from the current time or at a set time.
+Schedules a scheduled cloud code job. Can be scheduled minutes from the current time or at a set time.
 
-*Note - <%= data.branding.productName %> checks for schedule cloud code scripts every minute, so it is not recommended to run jobs that require only a 1-60 second delay.*
+_Note - <%= data.branding.productName %> checks for schedule cloud code scripts every minute, so it is not recommended to run jobs that require only a 1-60 second delay._
 
 <PartialServop service_name="script" operation_name="SCHEDULE_CLOUD_SCRIPT" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-scriptName | The name of the script with its path to be run. 
-scriptData | Data to be sent to the script in JSON format. 
-startDateUTC | If scheduling at a set time. The start date in UTC in Unix millis timestamp format. 
-minutesFromNow | If scheduling in minutes from the current time.  Number of minutes from now to run the script. 
+
+| Parameter      | Description                                                                                   |
+| -------------- | --------------------------------------------------------------------------------------------- |
+| scriptName     | The name of the script with its path to be run.                                               |
+| scriptData     | Data to be sent to the script in JSON format.                                                 |
+| startDateUTC   | If scheduling at a set time. The start date in UTC in Unix millis timestamp format.           |
+| minutesFromNow | If scheduling in minutes from the current time. Number of minutes from now to run the script. |
 
 ## Usage
 
@@ -68,7 +69,7 @@ minutesFromNow | If scheduling in minutes from the current time.  Number of minu
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -122,25 +123,27 @@ if (postResult.status == 200) {
 
 ```json
 {
-	"packetId": 1,
-	"messageResponses": [{
-		"status": 200,
-		"data": {
-			"result": {},
-			"scriptName": "testScript",
-			"jobId": "48266b95-d197-464d-bb6b-da70aa1e22a9",
-			"runState": "Scheduled",
-			"description": null,
-			"gameId": "10170",
-			"runEndTime": 0,
-			"parameters": {
-				"testParm1": 1
-			},
-			"runStartTime": 0,
-			"scheduledStartTime": 1437576422378
-		}
-	}]
+    "packetId": 1,
+    "messageResponses": [
+        {
+            "status": 200,
+            "data": {
+                "result": {},
+                "scriptName": "testScript",
+                "jobId": "48266b95-d197-464d-bb6b-da70aa1e22a9",
+                "runState": "Scheduled",
+                "description": null,
+                "gameId": "10170",
+                "runEndTime": 0,
+                "parameters": {
+                    "testParm1": 1
+                },
+                "runStartTime": 0,
+                "scheduledStartTime": 1437576422378
+            }
+        }
+    ]
 }
 ```
-</details>
 
+</details>

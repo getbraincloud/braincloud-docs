@@ -5,10 +5,11 @@ Get a list of entities from the server base on indexed id.
 <PartialServop service_name="globalEntity" operation_name="GET_LIST_BY_INDEXED_ID" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-entityIndexedId | The entity indexed Id. 
-maxReturn | The maximum number of entities to return. 
+
+| Parameter       | Description                               |
+| --------------- | ----------------------------------------- |
+| entityIndexedId | The entity indexed Id.                    |
+| maxReturn       | The maximum number of entities to return. |
 
 ## Usage
 
@@ -64,7 +65,7 @@ maxReturn | The maximum number of entities to return.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -104,4 +105,3 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-

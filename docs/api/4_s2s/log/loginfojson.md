@@ -5,10 +5,11 @@ Logs an App Info message to the error log.
 <PartialServop service_name="log" operation_name="LOG_INFO" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-errorMessage | The error message. 
-jsonContext | JSON formatted string that will display via the context icon click. 
+
+| Parameter    | Description                                                         |
+| ------------ | ------------------------------------------------------------------- |
+| errorMessage | The error message.                                                  |
+| jsonContext  | JSON formatted string that will display via the context icon click. |
 
 ## Usage
 
@@ -64,7 +65,7 @@ jsonContext | JSON formatted string that will display via the context icon click
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -118,5 +119,5 @@ if (postResult.status == 200) {
     "data": null
 }
 ```
-</details>
 
+</details>

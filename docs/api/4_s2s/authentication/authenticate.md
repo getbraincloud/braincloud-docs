@@ -2,21 +2,21 @@
 
 This service is used to authenticate the server request for the session based protocol.
 
-
-
 ### Results
-Name | Description
---------- | -----------
-sessionId | String to pass in with subsequent requests
+
+| Name      | Description                                |
+| --------- | ------------------------------------------ |
+| sessionId | String to pass in with subsequent requests |
 
 <PartialServop service_name="authenticationV2" operation_name="AUTHENTICATE" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-gameId | Same usage as for simple request
-serverName | Same usage as for simple request
-gameSecret | Same usage as for simple request
+
+| Parameter  | Description                      |
+| ---------- | -------------------------------- |
+| gameId     | Same usage as for simple request |
+| serverName | Same usage as for simple request |
+| gameSecret | Same usage as for simple request |
 
 ## Usage
 
@@ -26,22 +26,8 @@ gameSecret | Same usage as for simple request
 <TabItem value="csharp" label="C#">
 ```
 
-```json
-{
-    "packetId": 0,
-    "messageResponses": [
-        {
-            "reasonCode": 0,
-            "errorResponse": false,
-            "data": {
-                "heartbeatSeconds": 1890,
-                "sessionId": "57s9trm73b9qeqlmnnvij8l2fn"
-            },
-            "statusCode": 200,
-            "statusMessage": null
-        }
-    ]
-}
+```csharp
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -49,22 +35,8 @@ gameSecret | Same usage as for simple request
 <TabItem value="cpp" label="C++">
 ```
 
-```json
-{
-    "packetId": 0,
-    "messageResponses": [
-        {
-            "reasonCode": 0,
-            "errorResponse": false,
-            "data": {
-                "heartbeatSeconds": 1890,
-                "sessionId": "57s9trm73b9qeqlmnnvij8l2fn"
-            },
-            "statusCode": 200,
-            "statusMessage": null
-        }
-    ]
-}
+```cpp
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -72,22 +44,8 @@ gameSecret | Same usage as for simple request
 <TabItem value="objectivec" label="Objective-C">
 ```
 
-```json
-{
-    "packetId": 0,
-    "messageResponses": [
-        {
-            "reasonCode": 0,
-            "errorResponse": false,
-            "data": {
-                "heartbeatSeconds": 1890,
-                "sessionId": "57s9trm73b9qeqlmnnvij8l2fn"
-            },
-            "statusCode": 200,
-            "statusMessage": null
-        }
-    ]
-}
+```objectivec
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -95,22 +53,8 @@ gameSecret | Same usage as for simple request
 <TabItem value="java" label="Java">
 ```
 
-```json
-{
-    "packetId": 0,
-    "messageResponses": [
-        {
-            "reasonCode": 0,
-            "errorResponse": false,
-            "data": {
-                "heartbeatSeconds": 1890,
-                "sessionId": "57s9trm73b9qeqlmnnvij8l2fn"
-            },
-            "statusCode": 200,
-            "statusMessage": null
-        }
-    ]
-}
+```java
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -118,22 +62,8 @@ gameSecret | Same usage as for simple request
 <TabItem value="js" label="JavaScript">
 ```
 
-```json
-{
-    "packetId": 0,
-    "messageResponses": [
-        {
-            "reasonCode": 0,
-            "errorResponse": false,
-            "data": {
-                "heartbeatSeconds": 1890,
-                "sessionId": "57s9trm73b9qeqlmnnvij8l2fn"
-            },
-            "statusCode": 200,
-            "statusMessage": null
-        }
-    ]
-}
+```javascript
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -142,7 +72,7 @@ gameSecret | Same usage as for simple request
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -150,22 +80,8 @@ gameSecret | Same usage as for simple request
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```json
-{
-    "packetId": 0,
-    "messageResponses": [
-        {
-            "reasonCode": 0,
-            "errorResponse": false,
-            "data": {
-                "heartbeatSeconds": 1890,
-                "sessionId": "57s9trm73b9qeqlmnnvij8l2fn"
-            },
-            "statusCode": 200,
-            "statusMessage": null
-        }
-    ]
-}
+```cfscript
+// S2S call: to view example, switch to Raw tab.
 ```
 
 ```mdx-code-block
@@ -214,5 +130,5 @@ gameSecret | Same usage as for simple request
     ]
 }
 ```
-</details>
 
+</details>

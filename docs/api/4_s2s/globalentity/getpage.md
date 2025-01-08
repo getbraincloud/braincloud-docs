@@ -9,9 +9,10 @@ See the [Generic Paged Queries](/api/appendix/genericpagedqueries) documentation
 <PartialServop service_name="globalEntity" operation_name="GET_PAGE" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-context | The json context for the page request. 
+
+| Parameter | Description                            |
+| --------- | -------------------------------------- |
+| context   | The json context for the page request. |
 
 ## Usage
 
@@ -67,7 +68,7 @@ context | The json context for the page request.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -135,36 +136,38 @@ if (postResult.status == 200) {
 
 ```json
 {
-	"status": 200,
-	"data": {
-		"_serverTime": 1637946319239,
-		"results": {
-			"moreBefore": false,
-			"count": 200,
-			"items": [{
-				"gameId": "123456",
-				"entityId": "14281c38-abf6-4ca2-8436-b2bdwas8d5a9a",
-				"ownerId": "784cc6c6-4569-4d75-bd10-62dwa8ae0218",
-				"entityType": "test",
-				"entityIndexedId": "indexTest",
-				"version": 1,
-				"data": {
-					"testData": 1234
-				},
-				"acl": {
-					"other": 1
-				},
-				"expiresAt": 1449861422588,
-				"timeToLive": 0,
-				"createdAt": 1449861388021,
-				"updatedAt": 1449861388021
-			}],
-			"page": 1,
-			"moreAfter": true
-		},
-		"context": "eyJzZWFyY2hDcml0ZXJpYSI6eyJlbnRpdHlUeXBlIjoiYnVpbGRpbmciLCJnY"
-	}
+    "status": 200,
+    "data": {
+        "_serverTime": 1637946319239,
+        "results": {
+            "moreBefore": false,
+            "count": 200,
+            "items": [
+                {
+                    "gameId": "123456",
+                    "entityId": "14281c38-abf6-4ca2-8436-b2bdwas8d5a9a",
+                    "ownerId": "784cc6c6-4569-4d75-bd10-62dwa8ae0218",
+                    "entityType": "test",
+                    "entityIndexedId": "indexTest",
+                    "version": 1,
+                    "data": {
+                        "testData": 1234
+                    },
+                    "acl": {
+                        "other": 1
+                    },
+                    "expiresAt": 1449861422588,
+                    "timeToLive": 0,
+                    "createdAt": 1449861388021,
+                    "updatedAt": 1449861388021
+                }
+            ],
+            "page": 1,
+            "moreAfter": true
+        },
+        "context": "eyJzZWFyY2hDcml0ZXJpYSI6eyJlbnRpdHlUeXBlIjoiYnVpbGRpbmciLCJnY"
+    }
 }
 ```
-</details>
 
+</details>

@@ -5,9 +5,10 @@ Retrieves list of specified system messages.
 <PartialServop service_name="messaging" operation_name="SYS_GET_MESSAGES" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-msgIds | An array of the ids of messages to retrieve. 
+
+| Parameter | Description                                  |
+| --------- | -------------------------------------------- |
+| msgIds    | An array of the ids of messages to retrieve. |
 
 ## Usage
 
@@ -63,7 +64,7 @@ msgIds | An array of the ids of messages to retrieve.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -107,4 +108,3 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-

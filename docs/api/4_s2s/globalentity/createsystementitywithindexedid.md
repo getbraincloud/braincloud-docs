@@ -5,13 +5,14 @@ Create a new system entity on the server with an indexed id.
 <PartialServop service_name="globalEntity" operation_name="CREATE_SYSTEM_ENTITY_WITH_INDEXED_ID" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-entityType | The entity type as defined by the user. 
-entityIndexedId | Id used to index the entity. 
-timeToLive | Sets expiry time for entity in milliseconds if > 0. 
-acl | The entity's Access Control List as an object. A null ACL implies default permissions which make the entity readable/writeable by only the owner. 
-data | The entity's data object. 
+
+| Parameter       | Description                                                                                                                                       |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| entityType      | The entity type as defined by the user.                                                                                                           |
+| entityIndexedId | Id used to index the entity.                                                                                                                      |
+| timeToLive      | Sets expiry time for entity in milliseconds if > 0.                                                                                               |
+| acl             | The entity's Access Control List as an object. A null ACL implies default permissions which make the entity readable/writeable by only the owner. |
+| data            | The entity's data object.                                                                                                                         |
 
 ## Usage
 
@@ -67,7 +68,7 @@ data | The entity's data object.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -126,24 +127,24 @@ if (postResult.status == 200) {
 <summary>JSON Response</summary>
 
 ```json
-{  
-   "data":{  
-      "gameId":"12270",
-      "entityId":"b2a2bbdf-084b-41c8-802a-05de9c37b20c",
-      "ownerId":null,
-      "entityType":"address",
-      "entityIndexedId":"entityId1",
-      "version":1,
-      "acl":{  
-         "other":1
-      },
-      "expiresAt":9223372036854776000,
-      "timeToLive":-1,
-      "createdAt":1550852309251,
-      "updatedAt":1550852309251
-   },
-   "status":200
+{
+    "data": {
+        "gameId": "12270",
+        "entityId": "b2a2bbdf-084b-41c8-802a-05de9c37b20c",
+        "ownerId": null,
+        "entityType": "address",
+        "entityIndexedId": "entityId1",
+        "version": 1,
+        "acl": {
+            "other": 1
+        },
+        "expiresAt": 9223372036854776000,
+        "timeToLive": -1,
+        "createdAt": 1550852309251,
+        "updatedAt": 1550852309251
+    },
+    "status": 200
 }
 ```
-</details>
 
+</details>

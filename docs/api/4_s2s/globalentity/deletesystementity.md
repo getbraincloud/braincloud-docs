@@ -5,10 +5,11 @@ Method deletes an exisiting system entity on the server.
 <PartialServop service_name="globalEntity" operation_name="DELETE_SYSTEM_ENTITY" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-entityId | The id of the entity to update. 
-version | The version of the entity to update. Use -1 to indicate the newest version. 
+
+| Parameter | Description                                                                 |
+| --------- | --------------------------------------------------------------------------- |
+| entityId  | The id of the entity to update.                                             |
+| version   | The version of the entity to update. Use -1 to indicate the newest version. |
 
 ## Usage
 
@@ -64,7 +65,7 @@ version | The version of the entity to update. Use -1 to indicate the newest ver
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -110,15 +111,15 @@ if (postResult.status == 200) {
 
 ```json
 {
- "data": {
-  "response": {
-   "data": null,
-   "status": 200
-  },
-  "success": true
- },
- "status": 200
+    "data": {
+        "response": {
+            "data": null,
+            "status": 200
+        },
+        "success": true
+    },
+    "status": 200
 }
 ```
-</details>
 
+</details>

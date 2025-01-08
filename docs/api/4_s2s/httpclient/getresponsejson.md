@@ -26,23 +26,22 @@
 
 This operation retrieves a JSON document from an external web site.
 
-
-
-
 ### Results
-Name | Description
---------- | -----------
-response | JSON formatted response
+
+| Name     | Description             |
+| -------- | ----------------------- |
+| response | JSON formatted response |
 
 <PartialServop service_name="httpClient" operation_name="GET_RESPONSE_JSON" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-serviceCode | Service code of the external service configured in the Cloud Code - Web Services section of the portal. 
-path | Path to append to the Base URL of the service. 
-query | Optional map of query values. 
-headers | Optional map of extra headers. 
+
+| Parameter   | Description                                                                                             |
+| ----------- | ------------------------------------------------------------------------------------------------------- |
+| serviceCode | Service code of the external service configured in the Cloud Code - Web Services section of the portal. |
+| path        | Path to append to the Base URL of the service.                                                          |
+| query       | Optional map of query values.                                                                           |
+| headers     | Optional map of extra headers.                                                                          |
 
 ## Usage
 
@@ -98,7 +97,7 @@ headers | Optional map of extra headers.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -169,5 +168,5 @@ if (postResult.status == 200) {
     ]
 }
 ```
-</details>
 
+</details>

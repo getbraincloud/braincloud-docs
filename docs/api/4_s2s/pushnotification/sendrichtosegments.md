@@ -8,23 +8,21 @@ Message could be `You have won a {2} for entering the {1} contest`.
 
 Substitutions parameter would be `{ "1" : "User Appreciation", "2", "User Appreciation Prize" }`
 
-
-
-
-
 ### Results
-Name | Description
---------- | -----------
-estimatedTargets | Estimate number of targeted users
+
+| Name             | Description                       |
+| ---------------- | --------------------------------- |
+| estimatedTargets | Estimate number of targeted users |
 
 <PartialServop service_name="pushNotification" operation_name="SEND_RICH_TO_SEGMENTS" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-notificationTemplateId | Identifies the template that will determine the message content. 
-segmentIdList | List of target segements. Omit to send to all users. 
-substitutions | Positional message substitution values. 
+
+| Parameter              | Description                                                      |
+| ---------------------- | ---------------------------------------------------------------- |
+| notificationTemplateId | Identifies the template that will determine the message content. |
+| segmentIdList          | List of target segements. Omit to send to all users.             |
+| substitutions          | Positional message substitution values.                          |
 
 ## Usage
 
@@ -80,7 +78,7 @@ substitutions | Positional message substitution values.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -151,5 +149,5 @@ if (postResult.status == 200) {
     ]
 }
 ```
-</details>
 
+</details>

@@ -5,9 +5,10 @@ Retrieve the full product meta-data for the specified product.
 <PartialServop service_name="productManagement" operation_name="SYS_READ_PRODUCT" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-itemId | The item id being requested.
+
+| Parameter | Description                  |
+| --------- | ---------------------------- |
+| itemId    | The item id being requested. |
 
 ## Usage
 
@@ -63,7 +64,7 @@ itemId | The item id being requested.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -107,64 +108,64 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "productDetails": {
-      "gameId": "23783",
-      "itemId": "gold_bars_10",
-      "type": "Consumable",
-      "iTunesSubscriptionType": null,
-      "category": "gold",
-      "title": "product",
-      "description": "gold_bars_10",
-      "imageUrl": null,
-      "currency": {},
-      "parentCurrency": {},
-      "peerCurrency": {
-        "deploypeer": {
-          "gems": 1
-        }
-      },
-      "defaultPriceId": 0,
-      "prices": [
-        {
-          "priceId": 0,
-          "referencePrice": 400,
-          "storeData": {
-            "amazon": {
-              "id": "com.amazon.cunsumable.gold.v1"
-            },
-            "facebook": {
-              "currencyList": [
-                {
-                  "currency": "USD",
-                  "price": 6
+    "data": {
+        "productDetails": {
+            "gameId": "23783",
+            "itemId": "gold_bars_10",
+            "type": "Consumable",
+            "iTunesSubscriptionType": null,
+            "category": "gold",
+            "title": "product",
+            "description": "gold_bars_10",
+            "imageUrl": null,
+            "currency": {},
+            "parentCurrency": {},
+            "peerCurrency": {
+                "deploypeer": {
+                    "gems": 1
                 }
-              ]
             },
-            "googlePlay": {
-              "id": "3"
-            }
-          }
-        },
-        {
-          "priceId": 1,
-          "referencePrice": 500,
-          "storeData": {
-            "amazon": {
-              "id": "a"
-            }
-          }
+            "defaultPriceId": 0,
+            "prices": [
+                {
+                    "priceId": 0,
+                    "referencePrice": 400,
+                    "storeData": {
+                        "amazon": {
+                            "id": "com.amazon.cunsumable.gold.v1"
+                        },
+                        "facebook": {
+                            "currencyList": [
+                                {
+                                    "currency": "USD",
+                                    "price": 6
+                                }
+                            ]
+                        },
+                        "googlePlay": {
+                            "id": "3"
+                        }
+                    }
+                },
+                {
+                    "priceId": 1,
+                    "referencePrice": 500,
+                    "storeData": {
+                        "amazon": {
+                            "id": "a"
+                        }
+                    }
+                }
+            ],
+            "data": null,
+            "createdAt": 1592542611282,
+            "updatedAt": 1592543124830,
+            "version": 7,
+            "absoluteImageUrl": null
         }
-      ],
-      "data": null,
-      "createdAt": 1592542611282,
-      "updatedAt": 1592543124830,
-      "version": 7,
-      "absoluteImageUrl": null
-    }
-  },
-  "status": 200
+    },
+    "status": 200
 }
 ```
-</details>
 
+</details>

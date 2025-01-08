@@ -5,12 +5,13 @@ Delete the specified folder (and optionally child files and subfolders). Return 
 <PartialServop service_name="globalFileV3" operation_name="SYS_DELETE_FOLDER" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-treeId | Tree location of the folder to delete
-folderPath | Path of that tree location (as an intention check)
-treeVersion | Current tree version
-recurse | Delete files and subfolders if not empty?
+
+| Parameter   | Description                                        |
+| ----------- | -------------------------------------------------- |
+| treeId      | Tree location of the folder to delete              |
+| folderPath  | Path of that tree location (as an intention check) |
+| treeVersion | Current tree version                               |
+| recurse     | Delete files and subfolders if not empty?          |
 
 ## Usage
 
@@ -66,7 +67,7 @@ recurse | Delete files and subfolders if not empty?
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -143,5 +144,5 @@ if (postResult.status == 200) {
     }
 }
 ```
-</details>
 
+</details>

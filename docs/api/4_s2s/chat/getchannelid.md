@@ -5,10 +5,11 @@ Retrieves a channel id given the specified lookup parameters.
 <PartialServop service_name="chat" operation_name="GET_CHANNEL_ID" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-channelType | The channel type - ‘gl’ for global, ‘gr’ for groups, ‘dy’ for dynamic. 
-channelSubId | The type-specific sub id. 
+
+| Parameter    | Description                                                            |
+| ------------ | ---------------------------------------------------------------------- |
+| channelType  | The channel type - ‘gl’ for global, ‘gr’ for groups, ‘dy’ for dynamic. |
+| channelSubId | The type-specific sub id.                                              |
 
 ## Usage
 
@@ -64,7 +65,7 @@ channelSubId | The type-specific sub id.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -116,17 +117,17 @@ if (postResult.status == 200) {
     }
 }
 ```
+
 </details>
 
 <details>
 <summary>Common Error Code</summary>
 
 ### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
-40603 | CHAT_UNRECOGNIZED_CHANNEL | The sub id for the channel type is not recognized
+
+| Code  | Name                      | Description                                       |
+| ----- | ------------------------- | ------------------------------------------------- |
+| 40601 | RTT_NOT_ENABLED           | RTT must be enabled for this feature              |
+| 40603 | CHAT_UNRECOGNIZED_CHANNEL | The sub id for the channel type is not recognized |
 
 </details>
-
-

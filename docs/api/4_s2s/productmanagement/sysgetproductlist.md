@@ -5,9 +5,10 @@ Returns the list of products (summary details only) for the specified category (
 <PartialServop service_name="productManagement" operation_name="SYS_GET_PRODUCT_LIST" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-category | Optional. The product item category to filter on. Leave blank or null to retrieve all products.
+
+| Parameter | Description                                                                                     |
+| --------- | ----------------------------------------------------------------------------------------------- |
+| category  | Optional. The product item category to filter on. Leave blank or null to retrieve all products. |
 
 ## Usage
 
@@ -63,7 +64,7 @@ category | Optional. The product item category to filter on. Leave blank or null
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -107,25 +108,25 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "products": [
-      {
-        "itemId": "barBundle1Imp12peer",
-        "defaultReferencePrice": -1,
-        "iTunesSubscriptionType": "Free",
-        "data": {
-          "customAttr": "value"
-        },
-        "imageUrl": "",
-        "description": "Bundle of 10 Bars.",
-        "title": "Bars (10)",
-        "category": "bars",
-        "type": "Subscription"
-      }
-    ]
-  },
-  "status": 200
+    "data": {
+        "products": [
+            {
+                "itemId": "barBundle1Imp12peer",
+                "defaultReferencePrice": -1,
+                "iTunesSubscriptionType": "Free",
+                "data": {
+                    "customAttr": "value"
+                },
+                "imageUrl": "",
+                "description": "Bundle of 10 Bars.",
+                "title": "Bars (10)",
+                "category": "bars",
+                "type": "Subscription"
+            }
+        ]
+    },
+    "status": 200
 }
 ```
-</details>
 
+</details>

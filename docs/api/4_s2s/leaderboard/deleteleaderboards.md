@@ -23,9 +23,10 @@ Deletes the specified leaderboards from <%= data.branding.productName %> server.
 <PartialServop service_name="leaderboard" operation_name="DELETE_LEADERBOARDS" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardIds | A collection of leaderboards to delete. 
+
+| Parameter      | Description                             |
+| -------------- | --------------------------------------- |
+| leaderboardIds | A collection of leaderboards to delete. |
 
 ## Usage
 
@@ -81,7 +82,7 @@ leaderboardIds | A collection of leaderboards to delete.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -143,5 +144,5 @@ if (postResult.status == 200) {
     ]
 }
 ```
-</details>
 
+</details>

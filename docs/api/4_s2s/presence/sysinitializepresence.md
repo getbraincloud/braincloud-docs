@@ -5,12 +5,13 @@ Creates or updates the presence of \<profileId\>. \<visible\> is optional (defau
 <PartialServop service_name="presence" operation_name="SYS_INITIALIZE_PRESENCE" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | Target profile id. 
-visible | Should user appear in presence? True by default. 
-activity | Presence activity record json. Size of the given activity must be equal to or less than the *Max content size (bytes)* app setting (see Messaging > Presence in the portal.) 
-expirySecs | Number of seconds before expiry. 
+
+| Parameter  | Description                                                                                                                                                                  |
+| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| profileId  | Target profile id.                                                                                                                                                           |
+| visible    | Should user appear in presence? True by default.                                                                                                                             |
+| activity   | Presence activity record json. Size of the given activity must be equal to or less than the _Max content size (bytes)_ app setting (see Messaging > Presence in the portal.) |
+| expirySecs | Number of seconds before expiry.                                                                                                                                             |
 
 ## Usage
 
@@ -66,7 +67,7 @@ expirySecs | Number of seconds before expiry.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -110,4 +111,3 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-

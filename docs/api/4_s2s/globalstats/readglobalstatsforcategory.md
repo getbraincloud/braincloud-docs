@@ -5,9 +5,10 @@ Method retrieves the global statistics for the given category.
 <PartialServop service_name="globalGameStatistics" operation_name="READ_FOR_CATEGORY" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-category | The global statistics category. 
+
+| Parameter | Description                     |
+| --------- | ------------------------------- |
+| category  | The global statistics category. |
 
 ## Usage
 
@@ -63,7 +64,7 @@ category | The global statistics category.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -107,24 +108,24 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "statistics": {
-      "ESTIMATE": 5,
-      "HIGHESTHR": 4,
-      "INNING": 2,
-      "INNINGSREM": 0,
-      "INNINGnew": 1,
-      "OUTS": 0,
-      "PLAYERS": 8,
-      "PLAYER_COUNT": 4,
-      "PLAYER_COUNTa": 1,
-      "POINT": 1,
-      "POINTS": 11,
-      "otherstat": 0
-    }
-  },
-  "status": 200
+    "data": {
+        "statistics": {
+            "ESTIMATE": 5,
+            "HIGHESTHR": 4,
+            "INNING": 2,
+            "INNINGSREM": 0,
+            "INNINGnew": 1,
+            "OUTS": 0,
+            "PLAYERS": 8,
+            "PLAYER_COUNT": 4,
+            "PLAYER_COUNTa": 1,
+            "POINT": 1,
+            "POINTS": 11,
+            "otherstat": 0
+        }
+    },
+    "status": 200
 }
 ```
-</details>
 
+</details>

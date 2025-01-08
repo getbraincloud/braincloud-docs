@@ -5,13 +5,14 @@ Post score to another player's score.
 <PartialServop service_name="leaderboard" operation_name="POST_SCORE_TO_LEADERBOARD_ON_BEHALF_OF" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | The profileId of the player to post on behalf of. 
-leaderboardId | The id of the leaderboard. 
-score | The score to post. 
-data | Optional user-defined data to post with the score. 
-forceCreate | Should a new score be created? When false, the call can only modify a currently existing score. 
+
+| Parameter     | Description                                                                                     |
+| ------------- | ----------------------------------------------------------------------------------------------- |
+| profileId     | The profileId of the player to post on behalf of.                                               |
+| leaderboardId | The id of the leaderboard.                                                                      |
+| score         | The score to post.                                                                              |
+| data          | Optional user-defined data to post with the score.                                              |
+| forceCreate   | Should a new score be created? When false, the call can only modify a currently existing score. |
 
 ## Usage
 
@@ -67,7 +68,7 @@ forceCreate | Should a new score be created? When false, the call can only modif
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -117,4 +118,3 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-

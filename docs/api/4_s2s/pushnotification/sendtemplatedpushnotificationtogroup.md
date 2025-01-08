@@ -13,12 +13,13 @@ Substitutions parameter would be `{ "1" : "User Appreciation", "2", "User Apprec
 <PartialServop service_name="pushNotification" operation_name="SEND_TEMPLATED_TO_GROUP" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | The target group. 
-senderId | Optional id of sender. 
-notificationTemplateId | The template to use. 
-substitutions | Map of substitution positions to strings. 
+
+| Parameter              | Description                               |
+| ---------------------- | ----------------------------------------- |
+| groupId                | The target group.                         |
+| senderId               | Optional id of sender.                    |
+| notificationTemplateId | The template to use.                      |
+| substitutions          | Map of substitution positions to strings. |
 
 ## Usage
 
@@ -74,7 +75,7 @@ substitutions | Map of substitution positions to strings.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -139,5 +140,5 @@ if (postResult.status == 200) {
     ]
 }
 ```
-</details>
 
+</details>

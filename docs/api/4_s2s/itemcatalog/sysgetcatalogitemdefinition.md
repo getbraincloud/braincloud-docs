@@ -5,9 +5,10 @@ Reads an existing item definition from the server, with full language fields map
 <PartialServop service_name="itemCatalog" operation_name="SYS_GET_CATALOG_ITEM_DEFINITION" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-defId | The unique id of the item definition. 
+
+| Parameter | Description                           |
+| --------- | ------------------------------------- |
+| defId     | The unique id of the item definition. |
 
 ## Usage
 
@@ -63,7 +64,7 @@ defId | The unique id of the item definition.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -107,43 +108,43 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "defId": "boost_rapidfire",
-    "name": "Rapid Fire",
-    "desc": "Rapid fire for the next match.",
-    "type": "ITEM",
-    "category": "boost",
-    "tags": null,
-    "buyPrice": {
-      "coins": 200
+    "data": {
+        "defId": "boost_rapidfire",
+        "name": "Rapid Fire",
+        "desc": "Rapid fire for the next match.",
+        "type": "ITEM",
+        "category": "boost",
+        "tags": null,
+        "buyPrice": {
+            "coins": 200
+        },
+        "sellPrice": {
+            "coins": 400
+        },
+        "image": null,
+        "resourceGroup": null,
+        "resourceTag": null,
+        "meta": {},
+        "initData": {},
+        "pState": "PUBLISHED",
+        "publishedAt": 1566850042148,
+        "createdAt": 1566849704195,
+        "updatedAt": 1566850232538,
+        "version": 4,
+        "stackable": false,
+        "consumable": false,
+        "uses": null,
+        "coolDownSecs": 0,
+        "recoverySecs": 0,
+        "activatable": true,
+        "statusName": "boosted",
+        "activeSecs": 900000,
+        "tradable": true,
+        "blockchain": false,
+        "blockchainDefId": null
     },
-    "sellPrice": {
-      "coins": 400
-    },
-    "image": null,
-    "resourceGroup": null,
-    "resourceTag": null,
-    "meta": {},
-    "initData": {},
-    "pState": "PUBLISHED",
-    "publishedAt": 1566850042148,
-    "createdAt": 1566849704195,
-    "updatedAt": 1566850232538,
-    "version": 4,
-    "stackable": false,
-    "consumable": false,
-    "uses": null,
-    "coolDownSecs": 0,
-    "recoverySecs": 0,
-    "activatable": true,
-    "statusName": "boosted",
-    "activeSecs": 900000,
-    "tradable": true,
-    "blockchain": false,
-    "blockchainDefId": null
-  },
-  "status": 200
+    "status": 200
 }
 ```
-</details>
 
+</details>

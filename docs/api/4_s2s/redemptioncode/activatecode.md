@@ -2,23 +2,21 @@
 
 This operation activates the specified redemption code.
 
-
-
-
-
 ### Results
-Name | Description
---------- | -----------
-response | Newly updated redemption code object.
+
+| Name     | Description                           |
+| -------- | ------------------------------------- |
+| response | Newly updated redemption code object. |
 
 <PartialServop service_name="redemptionCode" operation_name="ACTIVATE_CODE" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-scanCode | The scan code. 
-codeType | The code type. 
-customCodeInfo | Optional custom information. 
+
+| Parameter      | Description                  |
+| -------------- | ---------------------------- |
+| scanCode       | The scan code.               |
+| codeType       | The code type.               |
+| customCodeInfo | Optional custom information. |
 
 ## Usage
 
@@ -74,7 +72,7 @@ customCodeInfo | Optional custom information.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -150,5 +148,5 @@ if (postResult.status == 200) {
     ]
 }
 ```
-</details>
 
+</details>

@@ -1,4 +1,5 @@
 # RequestSystemConnection
+
 Request a system RTT connection.
 
 <PartialServop service_name="rttRegistration" operation_name="REQUEST_SYSTEM_CONNECTION" />
@@ -57,7 +58,7 @@ Request a system RTT connection.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -86,29 +87,29 @@ Request a system RTT connection.
 </Tabs>
 </BrowserWindow>
 ```
+
 <details>
 <summary>JSON Response</summary>
 
 ```json
 {
-  "data": {
-    "endpoints": [
-      {
-        "protocol": "ws",
-        "port": 443,
-        "host": "evsweba-baas.braincloudservers.com",
-        "ssl": true,
-        "ca": "GoDaddy"
-      }
-    ],
-    "auth": {
-      "X-APPID": "13229",
-      "X-RTT-SECRET": "N@n@n@N@n@n@N@n@n@N@n@n@B@tm@n!"
-    }
-  },
-  "status": 200
+    "data": {
+        "endpoints": [
+            {
+                "protocol": "ws",
+                "port": 443,
+                "host": "evsweba-baas.braincloudservers.com",
+                "ssl": true,
+                "ca": "GoDaddy"
+            }
+        ],
+        "auth": {
+            "X-APPID": "13229",
+            "X-RTT-SECRET": "N@n@n@N@n@n@N@n@n@N@n@n@B@tm@n!"
+        }
+    },
+    "status": 200
 }
 ```
 
 </details>
-

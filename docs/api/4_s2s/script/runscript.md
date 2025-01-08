@@ -5,10 +5,11 @@ Run a service script.
 <PartialServop service_name="script" operation_name="RUN" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-scriptName | The name of the script with its path to be run
-scriptData | Data to be sent to the script in JSON format
+
+| Parameter  | Description                                    |
+| ---------- | ---------------------------------------------- |
+| scriptName | The name of the script with its path to be run |
+| scriptData | Data to be sent to the script in JSON format   |
 
 ## Usage
 
@@ -64,7 +65,7 @@ scriptData | Data to be sent to the script in JSON format
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -122,5 +123,5 @@ if (postResult.status == 200) {
     }
 }
 ```
-</details>
 
+</details>

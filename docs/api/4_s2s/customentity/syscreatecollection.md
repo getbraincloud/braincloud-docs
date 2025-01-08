@@ -5,10 +5,11 @@ Creates configuration for new custom entity collection.
 <PartialServop service_name="customEntity" operation_name="SYS_CREATE_COLLECTION" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-entityType | The type of custom entity collection to be created. 
-collectionOptsJson | The collection options, as JSON object. 
+
+| Parameter          | Description                                         |
+| ------------------ | --------------------------------------------------- |
+| entityType         | The type of custom entity collection to be created. |
+| collectionOptsJson | The collection options, as JSON object.             |
 
 ## Usage
 
@@ -64,7 +65,7 @@ collectionOptsJson | The collection options, as JSON object.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -132,26 +133,26 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "collection": {
-      "options": {
-        "isOwned": false,
-        "migrate": true,
-        "identifier": "playerName",
-        "dataTemplateJson": {
-          "playerName": "Randy Traywick",
-          "playerId": 123456,
-          "teamName": "Super Stars",
-          "jerseyNum": 44
-        },
-        "dataTemplateText": "**Important** notes go here..."
-      },
-      "name": "athletes",
-      "customIndexes": {}
-    }
-  },
-  "status": 200
+    "data": {
+        "collection": {
+            "options": {
+                "isOwned": false,
+                "migrate": true,
+                "identifier": "playerName",
+                "dataTemplateJson": {
+                    "playerName": "Randy Traywick",
+                    "playerId": 123456,
+                    "teamName": "Super Stars",
+                    "jerseyNum": 44
+                },
+                "dataTemplateText": "**Important** notes go here..."
+            },
+            "name": "athletes",
+            "customIndexes": {}
+        }
+    },
+    "status": 200
 }
 ```
-</details>
 
+</details>

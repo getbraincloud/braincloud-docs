@@ -5,9 +5,10 @@ Creates a new product with the specifed values.
 <PartialServop service_name="productManagement" operation_name="SYS_CREATE_PRODUCT" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-productJson | The product details.
+
+| Parameter   | Description          |
+| ----------- | -------------------- |
+| productJson | The product details. |
 
 ## Usage
 
@@ -63,7 +64,7 @@ productJson | The product details.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -112,7 +113,7 @@ if (postResult.status == 200) {
 	"service": "productManagement",
 	"operation": "SYS_CREATE_PRODUCT",
 	"data": {
-    "productJson": { 
+    "productJson": {
       "itemId": "barBundle1Imp12peer",
       "type": "Subscription",
       "iTunesSubscriptionType": "Free",
@@ -148,36 +149,36 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "gameId": "23783",
-    "itemId": "barBundle1Imp12peer",
-    "type": "Subscription",
-    "iTunesSubscriptionType": "Free",
-    "category": "bars",
-    "title": "Bars (10)",
-    "description": "Bundle of 10 Bars.",
-    "imageUrl": "",
-    "currency": {
-      "bar": 10
-    },
-    "parentCurrency": {},
-    "peerCurrency": {
-      "deploypeer": {
-        "gems": 15
-      }
-    },
-    "defaultPriceId": -1,
-    "prices": [],
     "data": {
-      "customAttr": "value"
+        "gameId": "23783",
+        "itemId": "barBundle1Imp12peer",
+        "type": "Subscription",
+        "iTunesSubscriptionType": "Free",
+        "category": "bars",
+        "title": "Bars (10)",
+        "description": "Bundle of 10 Bars.",
+        "imageUrl": "",
+        "currency": {
+            "bar": 10
+        },
+        "parentCurrency": {},
+        "peerCurrency": {
+            "deploypeer": {
+                "gems": 15
+            }
+        },
+        "defaultPriceId": -1,
+        "prices": [],
+        "data": {
+            "customAttr": "value"
+        },
+        "createdAt": 1592594992376,
+        "updatedAt": 1592594992376,
+        "version": 1,
+        "absoluteImageUrl": "https://api.braincloudservers.com/files/portal/g/23783"
     },
-    "createdAt": 1592594992376,
-    "updatedAt": 1592594992376,
-    "version": 1,
-    "absoluteImageUrl": "https://api.braincloudservers.com/files/portal/g/23783"
-  },
-  "status": 200
+    "status": 200
 }
 ```
-</details>
 
+</details>

@@ -5,13 +5,14 @@ Creates a new Global File folder. Returns the updated directory tree and version
 <PartialServop service_name="globalFileV3" operation_name="SYS_CREATE_FOLDER" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-folderPath | Parent directory path. Can include additional directories in path to quickly build a nested structure.
-treeVersion | Current tree version
-name | Name of the new directory
-desc | Directory description; will be displayed in Design Portal UI (when available)
-createInterimDirectories | Allows for creating multiple levels of a tree at once
+
+| Parameter                | Description                                                                                            |
+| ------------------------ | ------------------------------------------------------------------------------------------------------ |
+| folderPath               | Parent directory path. Can include additional directories in path to quickly build a nested structure. |
+| treeVersion              | Current tree version                                                                                   |
+| name                     | Name of the new directory                                                                              |
+| desc                     | Directory description; will be displayed in Design Portal UI (when available)                          |
+| createInterimDirectories | Allows for creating multiple levels of a tree at once                                                  |
 
 ## Usage
 
@@ -67,7 +68,7 @@ createInterimDirectories | Allows for creating multiple levels of a tree at once
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -146,5 +147,5 @@ if (postResult.status == 200) {
     }
 }
 ```
-</details>
 
+</details>

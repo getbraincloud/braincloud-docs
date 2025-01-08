@@ -5,10 +5,11 @@ Retrieves the list of global files stored at the specified directory location.
 <PartialServop service_name="globalFileV3" operation_name="SYS_GET_GLOBAL_FILE_LIST" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-folderPath | Directory location of the files. Use empty string or "/" for root.
-recurse | Whether to recurse into subdirectories
+
+| Parameter  | Description                                                        |
+| ---------- | ------------------------------------------------------------------ |
+| folderPath | Directory location of the files. Use empty string or "/" for root. |
+| recurse    | Whether to recurse into subdirectories                             |
 
 ## Usage
 
@@ -64,7 +65,7 @@ recurse | Whether to recurse into subdirectories
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -146,12 +147,11 @@ if (postResult.status == 200) {
                     "fileSize": 1214,
                     "version": 1,
                     "url": "https://api.braincloudservers.com/files/bc/g/21774/f/b2175eae-5b7a-4813-93d3-527600db7d73/V1/testFile1.txt"
-
                 }
             }
         }
     }
 }
 ```
-</details>
 
+</details>

@@ -5,9 +5,10 @@ Gets the page of system messages from the server based on the encoded context.
 <PartialServop service_name="messaging" operation_name="SYS_GET_MESSAGES_PAGE" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-context | The search and paging criteria. 
+
+| Parameter | Description                     |
+| --------- | ------------------------------- |
+| context   | The search and paging criteria. |
 
 ## Usage
 
@@ -63,7 +64,7 @@ context | The search and paging criteria.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -125,4 +126,3 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-

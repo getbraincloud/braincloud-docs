@@ -5,10 +5,11 @@ Initializes a dynamic or system chat channel. Returns the channelId. Channel typ
 <PartialServop service_name="chat" operation_name="SYS_CREATE_CHANNEL" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-channelType | The channel type - currently 'dy' and 'sy' are supported. 
-channelSubId | An app-defined channel sub id. Only letters, numbers, dashes, and underscores are allowed. 
+
+| Parameter    | Description                                                                                |
+| ------------ | ------------------------------------------------------------------------------------------ |
+| channelType  | The channel type - currently 'dy' and 'sy' are supported.                                  |
+| channelSubId | An app-defined channel sub id. Only letters, numbers, dashes, and underscores are allowed. |
 
 ## Usage
 
@@ -64,7 +65,7 @@ channelSubId | An app-defined channel sub id. Only letters, numbers, dashes, and
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -104,4 +105,3 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-

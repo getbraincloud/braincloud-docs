@@ -2,9 +2,10 @@
 
 Apply statistics grammar to a partial set of statistics. Global statistics are defined through the <%= data.branding.productName %> portal.
 
-The operations available are much richer than the standard *increment* operation available via `IncrementGlobalStats()`.
+The operations available are much richer than the standard _increment_ operation available via `IncrementGlobalStats()`.
 
 For example:
+
 ```
 {
     "INNING": "INC#1",              // Increment by one
@@ -20,23 +21,24 @@ For example:
 
 The above example would:
 
-* Increment `INNING` by `1`
-* Decrement `INNINGSREM` by `1`
-* Reset `OUTS` to its pre-defined initial value
-* Increment `POINTS` by `5`, but to a maximum of `30`
-* Set `PLAYERS` to `8`
-* Set `HIGHESTHR` to `3`, or remain at current higher value
-* Set `ESTIMATE` to `5`, or remain at current lower value
-* Increment `GAME` by `5`
+-   Increment `INNING` by `1`
+-   Decrement `INNINGSREM` by `1`
+-   Reset `OUTS` to its pre-defined initial value
+-   Increment `POINTS` by `5`, but to a maximum of `30`
+-   Set `PLAYERS` to `8`
+-   Set `HIGHESTHR` to `3`, or remain at current higher value
+-   Set `ESTIMATE` to `5`, or remain at current lower value
+-   Increment `GAME` by `5`
 
 For the full statistics grammar see the [statistics grammar section](/api/appendix/statisticsgrammar).
 
 <PartialServop service_name="globalGameStatistics" operation_name="PROCESS_STATISTICS" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-statistics | A collection containing the statistics to process. 
+
+| Parameter  | Description                                        |
+| ---------- | -------------------------------------------------- |
+| statistics | A collection containing the statistics to process. |
 
 ## Usage
 
@@ -92,7 +94,7 @@ statistics | A collection containing the statistics to process.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -152,22 +154,22 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "statisticsExceptions": {
-      "INNINGSREM": "minApplied"
+    "data": {
+        "statisticsExceptions": {
+            "INNINGSREM": "minApplied"
+        },
+        "statistics": {
+            "OUTS": 0,
+            "HIGHESTHR": 4,
+            "PLAYERS": 8,
+            "INNINGSREM": 0,
+            "INNING": 2,
+            "POINTS": 11,
+            "ESTIMATE": 5
+        }
     },
-    "statistics": {
-      "OUTS": 0,
-      "HIGHESTHR": 4,
-      "PLAYERS": 8,
-      "INNINGSREM": 0,
-      "INNING": 2,
-      "POINTS": 11,
-      "ESTIMATE": 5
-    }
-  },
-  "status": 200
+    "status": 200
 }
 ```
-</details>
 
+</details>

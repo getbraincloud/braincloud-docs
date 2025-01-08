@@ -58,7 +58,7 @@ Lists the custom entity collections configured for the application.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -93,4 +93,3 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-

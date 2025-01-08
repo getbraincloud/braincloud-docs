@@ -5,10 +5,11 @@ Extends the presence TTL for \<profileId\> by \<seconds\>.
 <PartialServop service_name="presence" operation_name="SYS_EXTEND_PX_EXPIRY" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | Target profile id. 
-seconds | Number of seconds to extend the px expiry. 
+
+| Parameter | Description                                |
+| --------- | ------------------------------------------ |
+| profileId | Target profile id.                         |
+| seconds   | Number of seconds to extend the px expiry. |
 
 ## Usage
 
@@ -64,7 +65,7 @@ seconds | Number of seconds to extend the px expiry.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -104,4 +105,3 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-

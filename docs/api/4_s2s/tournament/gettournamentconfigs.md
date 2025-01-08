@@ -21,10 +21,11 @@ Get tournament configs associated with a leaderboard.
 <PartialServop service_name="tournament" operation_name="GET_TOURNAMENT_CONFIGS" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | The leaderboard to retrieve tournament info from. 
-leaderboardVersionId | The version of the leaderboard to retrieve tournament info from.  Use -1 for current version. 
+
+| Parameter            | Description                                                                                  |
+| -------------------- | -------------------------------------------------------------------------------------------- |
+| leaderboardId        | The leaderboard to retrieve tournament info from.                                            |
+| leaderboardVersionId | The version of the leaderboard to retrieve tournament info from. Use -1 for current version. |
 
 ## Usage
 
@@ -80,7 +81,7 @@ leaderboardVersionId | The version of the leaderboard to retrieve tournament inf
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -126,75 +127,82 @@ if (postResult.status == 200) {
 
 ```json
 {
-	"packetId": 1,
-	"messageResponses": [{
-		"status": 200,
-		"data": {
-			"tournamentConfigsCount": 1,
-			"tournamentConfigs": [{
-				"version": 8,
-				"gameId": "123456",
-				"tournamentCode": "testTournament",
-				"description": {
-					"name": {
-						"en": "Test Tournament"
-					},
-					"desc": {
-						"en": "Test Tournament"
-					}
-				},
-				"notifications": {
-					"startingSoon": {
-						"enabled": false,
-						"pushId": null,
-						"mail": null
-					},
-					"start": {
-						"enabled": false,
-						"pushId": null,
-						"mail": {}
-					},
-					"scorePassed": {
-						"enabled": false,
-						"pushId": null,
-						"mail": {}
-					},
-					"endingSoon": {
-						"enabled": false,
-						"pushId": null,
-						"mail": {}
-					},
-					"complete": {
-						"enabled": false,
-						"pushId": null,
-						"mail": {}
-					}
-				},
-				"calcScript": "",
-				"postScript": "",
-				"customJson": {},
-				"payoutRules": [{
-					"reward": {
-						"currency": {
-							"credits": 1
-						}
-					},
-					"rank": {
-						"rankAbs": 1
-					}
-				}, {
-					"reward": {},
-					"rank": {
-						"rankRemainder": -1
-					}
-				}],
-				"entryFee": {},
-				"createdAt": 1483479902614,
-				"updatedAt": 1483560895428
-			}]
-		}
-	}]
+    "packetId": 1,
+    "messageResponses": [
+        {
+            "status": 200,
+            "data": {
+                "tournamentConfigsCount": 1,
+                "tournamentConfigs": [
+                    {
+                        "version": 8,
+                        "gameId": "123456",
+                        "tournamentCode": "testTournament",
+                        "description": {
+                            "name": {
+                                "en": "Test Tournament"
+                            },
+                            "desc": {
+                                "en": "Test Tournament"
+                            }
+                        },
+                        "notifications": {
+                            "startingSoon": {
+                                "enabled": false,
+                                "pushId": null,
+                                "mail": null
+                            },
+                            "start": {
+                                "enabled": false,
+                                "pushId": null,
+                                "mail": {}
+                            },
+                            "scorePassed": {
+                                "enabled": false,
+                                "pushId": null,
+                                "mail": {}
+                            },
+                            "endingSoon": {
+                                "enabled": false,
+                                "pushId": null,
+                                "mail": {}
+                            },
+                            "complete": {
+                                "enabled": false,
+                                "pushId": null,
+                                "mail": {}
+                            }
+                        },
+                        "calcScript": "",
+                        "postScript": "",
+                        "customJson": {},
+                        "payoutRules": [
+                            {
+                                "reward": {
+                                    "currency": {
+                                        "credits": 1
+                                    }
+                                },
+                                "rank": {
+                                    "rankAbs": 1
+                                }
+                            },
+                            {
+                                "reward": {},
+                                "rank": {
+                                    "rankRemainder": -1
+                                }
+                            }
+                        ],
+                        "entryFee": {},
+                        "createdAt": 1483479902614,
+                        "updatedAt": 1483560895428
+                    }
+                ]
+            }
+        }
+    ]
 }
 ```
-</details>
 
+</details>

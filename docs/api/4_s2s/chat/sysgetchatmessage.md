@@ -5,10 +5,11 @@ Retrieves a chat message object from history. If the message cannot be found, th
 <PartialServop service_name="chat" operation_name="SYS_GET_CHAT_MESSAGE" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-channelId | The channel id of the message. 
-msgId | The message id. 
+
+| Parameter | Description                    |
+| --------- | ------------------------------ |
+| channelId | The channel id of the message. |
+| msgId     | The message id.                |
 
 ## Usage
 
@@ -64,7 +65,7 @@ msgId | The message id.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -130,18 +131,18 @@ if (postResult.status == 200) {
     }
 }
 ```
+
 </details>
 
 <details>
 <summary>Common Error Code</summary>
 
 ### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
-40603 | CHAT_UNRECOGNIZED_CHANNEL | The specified channel is invalid
-40616 | CLOUD_CODE_ONLY | Method only available via cloud code
+
+| Code  | Name                      | Description                          |
+| ----- | ------------------------- | ------------------------------------ |
+| 40601 | RTT_NOT_ENABLED           | RTT must be enabled for this feature |
+| 40603 | CHAT_UNRECOGNIZED_CHANNEL | The specified channel is invalid     |
+| 40616 | CLOUD_CODE_ONLY           | Method only available via cloud code |
 
 </details>
-
-

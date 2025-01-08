@@ -2,27 +2,25 @@
 
 Schedules raw notifications based on user local time.
 
-
-
-
-
 ### Results
-Name | Description
---------- | -----------
-notificationJobs | Number of notification jobs/time zones targeted
+
+| Name             | Description                                     |
+| ---------------- | ----------------------------------------------- |
+| notificationJobs | Number of notification jobs/time zones targeted |
 
 <PartialServop service_name="pushNotification" operation_name="SCHEDULE_RAW_NOTIFICATIONS" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-fcmContent | FCM dependent message content. 
-iosContent | IOS dependent message content. 
-facebookContent | Facebook dependent message content. 
-segmentIdList | List of target segments. Omit to send to all users. 
-localTime | The scheduled local arrival time. 
-minimizeJobs | Optional flag to cause the server to scan players time zones to reduce scope. 
-startDateUTC | Optional base date for local time calculation. 
+
+| Parameter       | Description                                                                   |
+| --------------- | ----------------------------------------------------------------------------- |
+| fcmContent      | FCM dependent message content.                                                |
+| iosContent      | IOS dependent message content.                                                |
+| facebookContent | Facebook dependent message content.                                           |
+| segmentIdList   | List of target segments. Omit to send to all users.                           |
+| localTime       | The scheduled local arrival time.                                             |
+| minimizeJobs    | Optional flag to cause the server to scan players time zones to reduce scope. |
+| startDateUTC    | Optional base date for local time calculation.                                |
 
 ## Usage
 
@@ -78,7 +76,7 @@ startDateUTC | Optional base date for local time calculation.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -193,5 +191,5 @@ if (postResult.status == 200) {
     ]
 }
 ```
-</details>
 
+</details>

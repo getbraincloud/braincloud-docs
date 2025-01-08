@@ -5,11 +5,12 @@ Deletes all applicable custom entities from the server based on the custom entit
 <PartialServop service_name="customEntity" operation_name="SYS_DELETE_ENTITIES" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-entityType | The type of custom entity being deleted. 
-deleteCriteria | The delete criteria to be applied. 
-acrossAllUsers | Boolean indicating whether delete is to be applied to all users (true) or not (false), when custom entities are owned.
+
+| Parameter      | Description                                                                                                            |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| entityType     | The type of custom entity being deleted.                                                                               |
+| deleteCriteria | The delete criteria to be applied.                                                                                     |
+| acrossAllUsers | Boolean indicating whether delete is to be applied to all users (true) or not (false), when custom entities are owned. |
 
 ## Usage
 
@@ -65,7 +66,7 @@ acrossAllUsers | Boolean indicating whether delete is to be applied to all users
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -123,11 +124,11 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "deletedCount": 3
-  },
-  "status": 200
+    "data": {
+        "deletedCount": 3
+    },
+    "status": 200
 }
 ```
-</details>
 
+</details>

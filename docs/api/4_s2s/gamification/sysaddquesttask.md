@@ -4,9 +4,8 @@ Adds a new task to the specified quest. The id of the newly added task will be r
 
 _Note that tasks are essentially milestones that are embedded within a quest._
 
-
-
 An example taskJson object:
+
 ```
 {
     "title": "Egg Crusher",
@@ -57,13 +56,13 @@ An example taskJson object:
 <PartialServop service_name="gamification" operation_name="SYS_ADD_QUEST_TASK" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-questId | The quest to add to
-version | The current revision of the quest
-taskJson | The data defining the task
-beforeTaskId | The id of the task to insert before. Pass in null to add to end
- 
+
+| Parameter    | Description                                                     |
+| ------------ | --------------------------------------------------------------- |
+| questId      | The quest to add to                                             |
+| version      | The current revision of the quest                               |
+| taskJson     | The data defining the task                                      |
+| beforeTaskId | The id of the task to insert before. Pass in null to add to end |
 
 ## Usage
 
@@ -74,7 +73,7 @@ beforeTaskId | The id of the task to insert before. Pass in null to add to end
 ```
 
 ```csharp
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -83,7 +82,7 @@ beforeTaskId | The id of the task to insert before. Pass in null to add to end
 ```
 
 ```cpp
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -92,7 +91,7 @@ beforeTaskId | The id of the task to insert before. Pass in null to add to end
 ```
 
 ```objectivec
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -101,7 +100,7 @@ beforeTaskId | The id of the task to insert before. Pass in null to add to end
 ```
 
 ```java
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -110,7 +109,7 @@ beforeTaskId | The id of the task to insert before. Pass in null to add to end
 ```
 
 ```javascript
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -119,7 +118,7 @@ beforeTaskId | The id of the task to insert before. Pass in null to add to end
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -166,7 +165,7 @@ if (postResult.status == 200) {
 ```
 
 ```r
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -180,57 +179,55 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "status": 200,
-  "data": {
-    "quest": {
-      "questId": "QUEST_CRUSH52",
-      "questType": "unorderedMinimal",
-      "questData": "0",
-      "title": "Crush 50 Eggs",
-      "description": "This is an updated description",
-      "category": "mission",
-      "extraData": {
-        "difficulty": 1
-      },
-      "rewards": {
-        "experiencePoints": 1000
-      },
-      "createdAt": 1574802052796,
-      "updatedAt": 1574820663145,
-      "version": 3,
-      "tasks": [
-        "17"
-      ]
-    },
-    "newTask": "17",
-    "tasks": {
-      "17": {
-        "questId": "QUEST_CRUSH52",
-        "title": "Winner Winner",
-        "description": "Get 50 wins",
-        "category": "loyalty",
-        "extraData": {
-          "secretMission": false,
-          "actionIndex": 4
+    "status": 200,
+    "data": {
+        "quest": {
+            "questId": "QUEST_CRUSH52",
+            "questType": "unorderedMinimal",
+            "questData": "0",
+            "title": "Crush 50 Eggs",
+            "description": "This is an updated description",
+            "category": "mission",
+            "extraData": {
+                "difficulty": 1
+            },
+            "rewards": {
+                "experiencePoints": 1000
+            },
+            "createdAt": 1574802052796,
+            "updatedAt": 1574820663145,
+            "version": 3,
+            "tasks": ["17"]
         },
-        "rewards": {
-          "experiencePoints": 1000
-        },
-        "thresholds": {
-          "playerStatistics": {
-            "statistics": {
-              "wins": 50
+        "newTask": "17",
+        "tasks": {
+            "17": {
+                "questId": "QUEST_CRUSH52",
+                "title": "Winner Winner",
+                "description": "Get 50 wins",
+                "category": "loyalty",
+                "extraData": {
+                    "secretMission": false,
+                    "actionIndex": 4
+                },
+                "rewards": {
+                    "experiencePoints": 1000
+                },
+                "thresholds": {
+                    "playerStatistics": {
+                        "statistics": {
+                            "wins": 50
+                        }
+                    }
+                },
+                "createdAt": 1574820663140,
+                "updatedAt": 1574820663140,
+                "version": 1,
+                "taskId": "17"
             }
-          }
-        },
-        "createdAt": 1574820663140,
-        "updatedAt": 1574820663140,
-        "version": 1,
-        "taskId": "17"
-      }
+        }
     }
-  }
 }
 ```
-</details>
 
+</details>

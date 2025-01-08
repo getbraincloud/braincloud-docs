@@ -5,11 +5,12 @@ Sends a simple text email to the given user.
 <PartialServop service_name="mail" operation_name="SEND_BASIC_EMAIL" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | The user to send the email to. 
-subject | Subject of the email. 
-body | Body of the email. 
+
+| Parameter | Description                    |
+| --------- | ------------------------------ |
+| profileId | The user to send the email to. |
+| subject   | Subject of the email.          |
+| body      | Body of the email.             |
 
 ## Usage
 
@@ -65,7 +66,7 @@ body | Body of the email.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -107,4 +108,3 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-

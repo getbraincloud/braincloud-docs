@@ -2,23 +2,22 @@
 
 This operation adds a code to your inventory.
 
-
-
-
 ### Results
-Name | Description
---------- | -----------
-response | Newly created redemption code object.
+
+| Name     | Description                           |
+| -------- | ------------------------------------- |
+| response | Newly created redemption code object. |
 
 <PartialServop service_name="redemptionCode" operation_name="ADD_CODE" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-scanCode | A scan code. 
-codeType | The code type. 
-codeState | Initial state of the redemption code. 
-customCodeInfo | Optional custom information. 
+
+| Parameter      | Description                           |
+| -------------- | ------------------------------------- |
+| scanCode       | A scan code.                          |
+| codeType       | The code type.                        |
+| codeState      | Initial state of the redemption code. |
+| customCodeInfo | Optional custom information.          |
 
 ## Usage
 
@@ -74,7 +73,7 @@ customCodeInfo | Optional custom information.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -152,5 +151,5 @@ if (postResult.status == 200) {
     ]
 }
 ```
-</details>
 
+</details>

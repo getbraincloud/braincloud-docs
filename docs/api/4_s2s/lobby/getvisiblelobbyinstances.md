@@ -5,11 +5,12 @@ Gets a map keyed by rating of the visible lobby instances matching the given typ
 <PartialServop service_name="lobby" operation_name="GET_VISIBLE_LOBBY_INSTANCES" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-lobbyType | The type of lobby to look for. Lobby types are defined in the portal.
-minRating | The minimum skill rating to use for finding the lobbies.
-maxRating | The maximum skill rating to use for finding the lobbies.
+
+| Parameter | Description                                                           |
+| --------- | --------------------------------------------------------------------- |
+| lobbyType | The type of lobby to look for. Lobby types are defined in the portal. |
+| minRating | The minimum skill rating to use for finding the lobbies.              |
+| maxRating | The maximum skill rating to use for finding the lobbies.              |
 
 ## Usage
 
@@ -65,7 +66,7 @@ maxRating | The maximum skill rating to use for finding the lobbies.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -113,30 +114,30 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "lobbiesByRating": {
-      "20.0": [
-        {
-          "id": "23782:Relay_lobbyT_v2:2",
-          "lobbyType": "Relay_lobbyT_v2",
-          "state": "setup",
-          "rating": 20,
-          "desc": "starts as soon as 1 player is ready",
-          "owner": {
-            "profileId": "10b6d6fa-0aa6-43b0-a7b3-48aff2d13312",
-            "name": "",
-            "rating": 0,
-            "pic": null,
-            "cxId": "23782:10b6d6fa-0aa6-43b0-a7b3-48aff2d13312:52kc0h19k0pnnjhnrp8pug7udd"
-          },
-          "numMembers": 1,
-          "maxMembers": 8
+    "data": {
+        "lobbiesByRating": {
+            "20.0": [
+                {
+                    "id": "23782:Relay_lobbyT_v2:2",
+                    "lobbyType": "Relay_lobbyT_v2",
+                    "state": "setup",
+                    "rating": 20,
+                    "desc": "starts as soon as 1 player is ready",
+                    "owner": {
+                        "profileId": "10b6d6fa-0aa6-43b0-a7b3-48aff2d13312",
+                        "name": "",
+                        "rating": 0,
+                        "pic": null,
+                        "cxId": "23782:10b6d6fa-0aa6-43b0-a7b3-48aff2d13312:52kc0h19k0pnnjhnrp8pug7udd"
+                    },
+                    "numMembers": 1,
+                    "maxMembers": 8
+                }
+            ]
         }
-      ]
-    }
-  },
-  "status": 200
+    },
+    "status": 200
 }
 ```
-</details>
 
+</details>

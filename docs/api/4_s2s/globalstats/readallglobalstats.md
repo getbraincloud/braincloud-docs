@@ -58,7 +58,7 @@ Method returns all of the global statistics.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -99,14 +99,14 @@ if (postResult.status == 200) {
 
 ```json
 {
-	"status": 200,
-	"data": {
-		"statistics": {
-			"TotalXpEarned": 0,
-			"_GAME_LOGINS": 805
-		}
-	}
+    "status": 200,
+    "data": {
+        "statistics": {
+            "TotalXpEarned": 0,
+            "_GAME_LOGINS": 805
+        }
+    }
 }
 ```
-</details>
 
+</details>

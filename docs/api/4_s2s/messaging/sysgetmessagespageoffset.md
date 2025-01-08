@@ -5,10 +5,11 @@ Gets the page of system messages from the server based on the encoded context an
 <PartialServop service_name="messaging" operation_name="SYS_GET_MESSAGES_PAGE_OFFSET" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-context | The search and paging criteria. 
-pageOffset | Number of pages to go forward or back. 
+
+| Parameter  | Description                            |
+| ---------- | -------------------------------------- |
+| context    | The search and paging criteria.        |
+| pageOffset | Number of pages to go forward or back. |
 
 ## Usage
 
@@ -64,7 +65,7 @@ pageOffset | Number of pages to go forward or back.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -104,4 +105,3 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-

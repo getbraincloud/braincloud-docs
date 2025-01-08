@@ -5,9 +5,10 @@ Method returns version information about the global leaderboard and some configu
 <PartialServop service_name="leaderboard" operation_name="GET_GLOBAL_LEADERBOARD_VERSIONS" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | The id of the leaderboard. 
+
+| Parameter     | Description                |
+| ------------- | -------------------------- |
+| leaderboardId | The id of the leaderboard. |
 
 ## Usage
 
@@ -63,7 +64,7 @@ leaderboardId | The id of the leaderboard.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -109,10 +110,10 @@ if (postResult.status == 200) {
 {
     "status": 200,
     "data": {
-        "leaderboardId" : "L1",
-        "leaderboardType" : "HIGH_VALUE",
-        "rotationType" : "WEEKLY",
-        "retainedCount" : 2,
+        "leaderboardId": "L1",
+        "leaderboardType": "HIGH_VALUE",
+        "rotationType": "WEEKLY",
+        "retainedCount": 2,
         "versions": [
             {
                 "versionId": 27,
@@ -128,5 +129,5 @@ if (postResult.status == 200) {
     }
 }
 ```
-</details>
 
+</details>

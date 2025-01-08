@@ -2,24 +2,22 @@
 
 Posts a JSON document to an offboard service. Send and forget.
 
-
-
-
-
 ### Error reason codes
-Parameter | Description
---------- | -----------
-40443 | Processing exception (message): Invalid service code. Ensure the Web Service has been configured
+
+| Parameter | Description                                                                                      |
+| --------- | ------------------------------------------------------------------------------------------------ |
+| 40443     | Processing exception (message): Invalid service code. Ensure the Web Service has been configured |
 
 <PartialServop service_name="httpClient" operation_name="POST_JSON_OFFBOARD" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-serviceCode | Service code of the external service configured in the Cloud Code - Web Services section of the portal. 
-path | Path to append to the Base URL of the service. 
-headers | A map of extra headers. 
-json | JSON formatted data to post. 
+
+| Parameter   | Description                                                                                             |
+| ----------- | ------------------------------------------------------------------------------------------------------- |
+| serviceCode | Service code of the external service configured in the Cloud Code - Web Services section of the portal. |
+| path        | Path to append to the Base URL of the service.                                                          |
+| headers     | A map of extra headers.                                                                                 |
+| json        | JSON formatted data to post.                                                                            |
 
 ## Usage
 
@@ -75,7 +73,7 @@ json | JSON formatted data to post.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -127,4 +125,3 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-

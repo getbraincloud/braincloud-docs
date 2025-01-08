@@ -5,9 +5,10 @@ Terminates the presence of \<profileId\>.
 <PartialServop service_name="presence" operation_name="SYS_TERMINATE_PRESENCE" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | Target profile id. 
+
+| Parameter | Description        |
+| --------- | ------------------ |
+| profileId | Target profile id. |
 
 ## Usage
 
@@ -63,7 +64,7 @@ profileId | Target profile id.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -101,4 +102,3 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-

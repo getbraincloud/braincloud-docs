@@ -5,10 +5,11 @@ Change the groupType of a given group.
 <PartialServop service_name="group" operation_name="SYS_CHANGE_GROUP_TYPE" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-groupId | Id of a group. 
-groupType | A group type. 
+
+| Parameter | Description    |
+| --------- | -------------- |
+| groupId   | Id of a group. |
+| groupType | A group type.  |
 
 ## Usage
 
@@ -64,7 +65,7 @@ groupType | A group type.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -104,4 +105,3 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-

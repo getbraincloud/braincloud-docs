@@ -1,15 +1,16 @@
 # SendAdvancedEmail
 
-Sends a advanced email to the given user. 
- See the documentation for contents of 'serviceParams'.
+Sends a advanced email to the given user.
+See the documentation for contents of 'serviceParams'.
 
 <PartialServop service_name="mail" operation_name="SEND_ADVANCED_EMAIL" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | The user to send the email to. 
-serviceParams | Set of parameters dependant on the mail service configured. 
+
+| Parameter     | Description                                                 |
+| ------------- | ----------------------------------------------------------- |
+| profileId     | The user to send the email to.                              |
+| serviceParams | Set of parameters dependant on the mail service configured. |
 
 ## Usage
 
@@ -65,7 +66,7 @@ serviceParams | Set of parameters dependant on the mail service configured.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -139,4 +140,3 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-

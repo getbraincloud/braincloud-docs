@@ -1,13 +1,15 @@
 # SysChannelConnect
+
 Connect to a chat channel.
 
 <PartialServop service_name="chat" operation_name="SYS_CHANNEL_CONNECT" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-channelId | The channel id to connect to.
-maxReturn | Max channel messages to return.
+
+| Parameter | Description                     |
+| --------- | ------------------------------- |
+| channelId | The channel id to connect to.   |
+| maxReturn | Max channel messages to return. |
 
 ## Usage
 
@@ -63,7 +65,7 @@ maxReturn | Max channel messages to return.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -100,37 +102,37 @@ var postResult = chatProxy.SysChannelConnect(channelId, maxReturn);
 </Tabs>
 </BrowserWindow>
 ```
+
 <details>
 <summary>JSON Response</summary>
 
 ```json
 {
-  "data": {
-    "messages": [
-      {
-        "date": 1698765119868,
-        "ver": 1,
-        "msgId": "869767741372417",
-        "from": {
-          "name": "Homer",
-          "pic": "http://www.simpsons.test/homer.jpg",
-          "id": ""
-        },
-        "content": {
-          "text": "Hello world",
-          "custom": {
-            "somethingCustom": "wow"
-          }
-        },
-        "expiresAt": 1701357119868,
-        "chId": "55555:sy:mysyschannel",
-        "updatedAt": 1698765119868
-      }
-    ]
-  },
-  "status": 200
+    "data": {
+        "messages": [
+            {
+                "date": 1698765119868,
+                "ver": 1,
+                "msgId": "869767741372417",
+                "from": {
+                    "name": "Homer",
+                    "pic": "http://www.simpsons.test/homer.jpg",
+                    "id": ""
+                },
+                "content": {
+                    "text": "Hello world",
+                    "custom": {
+                        "somethingCustom": "wow"
+                    }
+                },
+                "expiresAt": 1701357119868,
+                "chId": "55555:sy:mysyschannel",
+                "updatedAt": 1698765119868
+            }
+        ]
+    },
+    "status": 200
 }
 ```
 
 </details>
-

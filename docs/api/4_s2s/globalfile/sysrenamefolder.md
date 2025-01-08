@@ -5,11 +5,12 @@ Rename the specified folder.
 <PartialServop service_name="globalFileV3" operation_name="SYS_RENAME_FOLDER" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-treeId | The id of the folder to rename
-treeVersion | The current tree version
-updatedName | The updated name of the folder
+
+| Parameter   | Description                    |
+| ----------- | ------------------------------ |
+| treeId      | The id of the folder to rename |
+| treeVersion | The current tree version       |
+| updatedName | The updated name of the folder |
 
 ## Usage
 
@@ -65,7 +66,7 @@ updatedName | The updated name of the folder
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -171,5 +172,5 @@ if (postResult.status == 200) {
     }
 }
 ```
-</details>
 
+</details>

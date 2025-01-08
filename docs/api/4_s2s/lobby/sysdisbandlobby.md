@@ -5,11 +5,12 @@ Disbands the given lobby. `msg` and `details` are optional values.
 <PartialServop service_name="lobby" operation_name="SYS_DISBAND_LOBBY" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-lobbyId | The id of lobby that this room server is associated with. 
-msg | Optional message to send to lobby members. 
-details | Optional data to send to lobby members. 
+
+| Parameter | Description                                               |
+| --------- | --------------------------------------------------------- |
+| lobbyId   | The id of lobby that this room server is associated with. |
+| msg       | Optional message to send to lobby members.                |
+| details   | Optional data to send to lobby members.                   |
 
 ## Usage
 
@@ -65,7 +66,7 @@ details | Optional data to send to lobby members.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -107,4 +108,3 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-

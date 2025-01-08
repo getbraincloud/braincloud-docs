@@ -4,23 +4,24 @@ Method gets list of system entities from the server base on type and/or where cl
 
 Fields available for use in the 'where' clause are:
 
- - entityType
- - entityIndexedId
- - createdAt
- - updatedAt
- - ownerId
- - timeToLive
+-   entityType
+-   entityIndexedId
+-   createdAt
+-   updatedAt
+-   ownerId
+-   timeToLive
 
- Along with all custom data (using `data.`).  For more information on the query syntax see [here](/api/appendix/mongodbwherequeries).
+Along with all custom data (using `data.`). For more information on the query syntax see [here](/api/appendix/mongodbwherequeries).
 
 <PartialServop service_name="globalEntity" operation_name="GET_SYSTEM_ENTITY_LIST" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-where | A mongo style query string. 
-orderBy | Specifies the order in which the query returns matching documents. The sort parameter consists of a field followed by an ascending(1)/descending flag(-1). eg. `{ "name" : 1}` sorts by name in ascending order. 
-maxReturn | The maximum number of entities to return. 
+
+| Parameter | Description                                                                                                                                                                                                      |
+| --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| where     | A mongo style query string.                                                                                                                                                                                      |
+| orderBy   | Specifies the order in which the query returns matching documents. The sort parameter consists of a field followed by an ascending(1)/descending flag(-1). eg. `{ "name" : 1}` sorts by name in ascending order. |
+| maxReturn | The maximum number of entities to return.                                                                                                                                                                        |
 
 ## Usage
 
@@ -76,7 +77,7 @@ maxReturn | The maximum number of entities to return.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -159,5 +160,5 @@ if (postResult.status == 200) {
     }
 }
 ```
-</details>
 
+</details>

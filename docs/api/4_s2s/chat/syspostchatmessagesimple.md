@@ -9,12 +9,13 @@ Sends a potentially richer member chat message. By convention, content should co
 <PartialServop service_name="chat" operation_name="SYS_POST_CHAT_MESSAGE_SIMPLE" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-channelId | The chat channel to post to. 
-text | A simple message. 
-recordInHistory | Should the message be recorded in history? Using 'false' is useful for sending non-conversational messages, like when users join a room, etc. 
-from | Details of the user posting the message. 
+
+| Parameter       | Description                                                                                                                                   |
+| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| channelId       | The chat channel to post to.                                                                                                                  |
+| text            | A simple message.                                                                                                                             |
+| recordInHistory | Should the message be recorded in history? Using 'false' is useful for sending non-conversational messages, like when users join a room, etc. |
+| from            | Details of the user posting the message.                                                                                                      |
 
 ## Usage
 
@@ -70,7 +71,7 @@ from | Details of the user posting the message.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -132,18 +133,18 @@ if (postResult.status == 200) {
     }
 }
 ```
+
 </details>
 
 <details>
 <summary>Common Error Code</summary>
 
 ### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
-40603 | CHAT_UNRECOGNIZED_CHANNEL | The specified channel is invalid
-40616 | CLOUD_CODE_ONLY | Method only available via cloud code
+
+| Code  | Name                      | Description                          |
+| ----- | ------------------------- | ------------------------------------ |
+| 40601 | RTT_NOT_ENABLED           | RTT must be enabled for this feature |
+| 40603 | CHAT_UNRECOGNIZED_CHANNEL | The specified channel is invalid     |
+| 40616 | CLOUD_CODE_ONLY           | Method only available via cloud code |
 
 </details>
-
-

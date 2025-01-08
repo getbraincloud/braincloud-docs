@@ -5,9 +5,10 @@ Returns the treeId for the specified folder.
 <PartialServop service_name="globalFileV3" operation_name="SYS_LOOKUP_FOLDER" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-fullFolderPath | Fully folder path to lookup
+
+| Parameter      | Description                 |
+| -------------- | --------------------------- |
+| fullFolderPath | Fully folder path to lookup |
 
 ## Usage
 
@@ -63,7 +64,7 @@ fullFolderPath | Fully folder path to lookup
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -116,5 +117,5 @@ if (postResult.status == 200) {
     }
 }
 ```
-</details>
 
+</details>

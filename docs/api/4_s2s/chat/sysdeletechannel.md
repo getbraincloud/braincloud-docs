@@ -5,9 +5,10 @@ Deletes a dynamic chat channel. Channel type must be "dy". This will delete the 
 <PartialServop service_name="chat" operation_name="SYS_DELETE_CHANNEL" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-channelId | The channel id - must be of type 'dy'. 
+
+| Parameter | Description                            |
+| --------- | -------------------------------------- |
+| channelId | The channel id - must be of type 'dy'. |
 
 ## Usage
 
@@ -63,7 +64,7 @@ channelId | The channel id - must be of type 'dy'.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -101,4 +102,3 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-

@@ -7,11 +7,12 @@ Returns the number of messages that were deleted. Since the history rolls over, 
 <PartialServop service_name="chat" operation_name="SYS_DELETE_CHAT_MESSAGE" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-channelId | The channel id of the message. 
-msgId | The id of the message to delete. 
-version | The version of the message. Pass it -1 to bypass version checking. 
+
+| Parameter | Description                                                        |
+| --------- | ------------------------------------------------------------------ |
+| channelId | The channel id of the message.                                     |
+| msgId     | The id of the message to delete.                                   |
+| version   | The version of the message. Pass it -1 to bypass version checking. |
 
 ## Usage
 
@@ -67,7 +68,7 @@ version | The version of the message. Pass it -1 to bypass version checking.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -121,18 +122,18 @@ if (postResult.status == 200) {
     }
 }
 ```
+
 </details>
 
 <details>
 <summary>Common Error Code</summary>
 
 ### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40346 | CHAT_INVALID_CHANNEL_ID | The channel id provided is invalid.
-40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
-40616 | CLOUD_CODE_ONLY | Method only available via cloud code
+
+| Code  | Name                    | Description                          |
+| ----- | ----------------------- | ------------------------------------ |
+| 40346 | CHAT_INVALID_CHANNEL_ID | The channel id provided is invalid.  |
+| 40601 | RTT_NOT_ENABLED         | RTT must be enabled for this feature |
+| 40616 | CLOUD_CODE_ONLY         | Method only available via cloud code |
 
 </details>
-
-

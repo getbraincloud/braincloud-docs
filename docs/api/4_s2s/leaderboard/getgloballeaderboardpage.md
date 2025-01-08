@@ -5,12 +5,13 @@ Retrieve a page of the global leaderboard specified by the start and end indexes
 <PartialServop service_name="leaderboard" operation_name="GET_GLOBAL_LEADERBOARD_PAGE" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | The id of the leaderboard. 
-sort | Sort order of page. ("HIGH_TO_LOW" or "LOW_TO_HIGH") 
-startIndex | The rank at which to start the page. 
-endIndex | The rank at which to end the page. 
+
+| Parameter     | Description                                          |
+| ------------- | ---------------------------------------------------- |
+| leaderboardId | The id of the leaderboard.                           |
+| sort          | Sort order of page. ("HIGH_TO_LOW" or "LOW_TO_HIGH") |
+| startIndex    | The rank at which to start the page.                 |
+| endIndex      | The rank at which to end the page.                   |
 
 ## Usage
 
@@ -66,7 +67,7 @@ endIndex | The rank at which to end the page.
 ```
 
 ```dart
-// Cloud Code only. To view example, switch to the Cloud Code tab
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -110,4 +111,3 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
