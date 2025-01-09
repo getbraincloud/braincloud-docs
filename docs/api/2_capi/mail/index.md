@@ -1,19 +1,13 @@
 # Mail
 
-
-
-
 The Mail service allows you to send emails though <%= data.branding.productName %> using the mail service provider you have configured on the [Manage Integrations page](https://portal.braincloudservers.com/admin/dashboard#/development/integrations-manage-integrations) of the <%= data.branding.productName %> portal.
 
 ### Advanced Parameters
 
-Using the SendAdvancedEmail method you can specify service-specific parameters to use when sending an email.  Things like tags, categories, templates, and substitutions.
+Using the SendAdvancedEmail method you can specify service-specific parameters to use when sending an email. Things like tags, categories, templates, and substitutions.
 The available parameters will depend on the mail service provider you have enabled.
 
-
-
 ### SendGrid
-
 
 > Example of dynamic templated SendGrid email parameters:
 
@@ -50,48 +44,51 @@ The available parameters will depend on the mail service provider you have enabl
 }
 ```
 
-
 Mail template formats sent into SendGrid.
 
 Information on setting up SendGrid can be found [here](/learn/portal-tutorials/email-integration-sendgrid/).
 
-
-
 ### General Template Parameters
-Parameter | Description
------------------- | -----------
-fromAddress | An alternate from address.
-fromName | An alternate from name.
-replyToAddress | An alternate reply-to address.
-replyToName | An alternate reply-to name.
-cc | Array of email addresses to cc.
-bcc | Array of email addresses to bcc.
-templateId | The templateId of the SendGrid template to use for this message.
-categories | Additional category tags for this email.
-attachments | File attachments.
+
+| Parameter      | Description                                                      |
+| -------------- | ---------------------------------------------------------------- |
+| fromAddress    | An alternate from address.                                       |
+| fromName       | An alternate from name.                                          |
+| replyToAddress | An alternate reply-to address.                                   |
+| replyToName    | An alternate reply-to name.                                      |
+| cc             | Array of email addresses to cc.                                  |
+| bcc            | Array of email addresses to bcc.                                 |
+| templateId     | The templateId of the SendGrid template to use for this message. |
+| categories     | Additional category tags for this email.                         |
+| attachments    | File attachments.                                                |
 
 ### Dyanmic Template Parameters
-Parameter | Description
---------- | -----------
-dynamicData | Dynamic email data.
+
+| Parameter   | Description         |
+| ----------- | ------------------- |
+| dynamicData | Dynamic email data. |
 
 ### HTML/plain-text Template Parameters
-Parameter | Description
---------- | -----------
-useHtml | Should display email contents in html.
-subject | The email subject
-body | The email body
+
+| Parameter | Description                            |
+| --------- | -------------------------------------- |
+| useHtml   | Should display email contents in html. |
+| subject   | The email subject                      |
+| body      | The email body                         |
 
 ### Legacy Template Parameters
-Parameter | Description
---------- | -----------
-substitutions | Substitutions to use in the specified template. Only valid if template is used.
+
+| Parameter     | Description                                                                     |
+| ------------- | ------------------------------------------------------------------------------- |
+| substitutions | Substitutions to use in the specified template. Only valid if template is used. |
+
 ### API Summary
 
 ### Send Mail
 
-* [SendBasicEmail](/api/capi/mail/sendbasicemail) - simplified send an email to a profile id
-* [SendAdvancedEmail](/api/capi/mail/sendadvancedemail) - send an email with to a profile id
-* [SendAdvancedEmailByAddress](/api/capi/mail/sendadvancedemailbyaddress) - send an email to an email address
+-   [SendBasicEmail](/api/capi/mail/sendbasicemail) - simplified send an email to a profile id.
+-   [SendAdvancedEmail](/api/capi/mail/sendadvancedemail) - send an email with to a profile id.
+-   [SendAdvancedEmailByAddress](/api/capi/mail/sendadvancedemailbyaddress) - send an email to an email address.
+-   [SendAdvancedEmailByAddresses](/api/capi/mail/sendadvancedemailbyaddresses) - send an advanced email to the address specified.
 
 <DocCardList />

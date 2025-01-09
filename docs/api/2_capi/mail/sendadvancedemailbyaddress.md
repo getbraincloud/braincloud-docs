@@ -1,8 +1,12 @@
 # SendAdvancedEmailByAddress
 
-Sends an advanced email to the specified email address. The advanced API takes a set of parameters that are
+Sends an advanced email to the specified email address.
+
+:::tip
+The advanced API takes a set of parameters that are
 dependant on the mail service configured in the <%= data.branding.productName %> Portal.
 For a list of all available parameters see the top of the Mail service documentation.
+:::
 
 <PartialServop service_name="mail" operation_name="SEND_ADVANCED_EMAIL_BY_ADDRESS" />
 
