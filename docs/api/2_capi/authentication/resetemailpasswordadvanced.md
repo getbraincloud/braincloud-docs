@@ -56,7 +56,7 @@ NSString *emailAddress = @"email@email.com";
 NSString *serviceParams = @"{\"templateId\": \"d-template-id-guid\", \"dynamicData\": {\"aKey\": \"aValue\"}, \"categories\": [\"category1\", \"category2\"]}";
 BCCompletionBlock successBlock; // define callback
 BCErrorCompletionBlock failureBlock; // define callback
-[[<%= data.branding.codePrefix %> authenticationService] ResetEmailPasswordAdvanced (dynamic template):
+[[<%= data.branding.codePrefix %> authenticationService] resetEmailPasswordAdvanced (dynamic template):
                  emailAddress:emailAddress
                 serviceParams:serviceParams
               completionBlock:successBlock
@@ -73,7 +73,7 @@ BCErrorCompletionBlock failureBlock; // define callback
 String emailAddress = "email@email.com";
 String serviceParams = "{\"templateId\": \"d-template-id-guid\", \"dynamicData\": {\"aKey\": \"aValue\"}, \"categories\": [\"category1\", \"category2\"]}";
 this; // implements IServerCallback
-<%= data.branding.codePrefix %>.getAuthenticationService.ResetEmailPasswordAdvanced (dynamic template)(emailAddress, serviceParams, this);
+<%= data.branding.codePrefix %>.getAuthenticationService.resetEmailPasswordAdvanced (dynamic template)(emailAddress, serviceParams, this);
 
 public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
 {
@@ -103,7 +103,7 @@ var serviceParams = {
         "category2"
     ]
 };
-<%= data.branding.codePrefix %>.authentication.ResetEmailPasswordAdvanced (emailAddress, serviceParams, result =>
+<%= data.branding.codePrefix %>.authentication.resetEmailPasswordAdvanced (emailAddress, serviceParams, result =>
 {
   var status = result.status;
   console.log(status + " : " + JSON.stringify(result, null, 2));
@@ -128,7 +128,7 @@ var serviceParams = {
     ]
 };
 
-ServerResponse result = await <%= data.branding.codePrefix %>.authenticationV2Service.ResetEmailPasswordAdvanced(emailAddress:emailAddress, serviceParams:serviceParams);
+ServerResponse result = await <%= data.branding.codePrefix %>.authenticationV2Service.resetEmailPasswordAdvanced(emailAddress:emailAddress, serviceParams:serviceParams);
 
 if (result.statusCode == 200) {
     print("Success");
@@ -143,7 +143,23 @@ if (result.statusCode == 200) {
 ```
 
 ```cfscript
-// N/A
+var emailAddress = "email@email.com";
+var serviceParams = {
+    "templateId": "d-template-id-guid",
+    "dynamicData": {
+        "aKey": "aValue"
+    },
+    "categories": [
+        "category1",
+        "category2"
+    ]
+};
+var authenticationProxy = bridge.getAuthenticationServiceProxy();
+
+var postResult = authenticationProxy.resetEmailPasswordAdvanced(emailAddress, serviceParams);
+if (postResult.status == 200) {
+    // Success!
+}
 ```
 
 ```mdx-code-block
@@ -156,7 +172,6 @@ if (result.statusCode == 200) {
     "service":"authenticationV2",
     "operation":"RESET_EMAIL_PASSWORD_ADVANCED",
     "data":{
-        "appId":"$gameId",
         "emailAddress":"email@email.com",
         "serviceParams":{
             "templateId":"d-template-id-guid",

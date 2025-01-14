@@ -149,7 +149,24 @@ if (result.statusCode == 200) {
 ```
 
 ```cfscript
-// N/A
+var universalId = "universalId";
+var serviceParams = {
+    "templateId": "d-template-id-guid",
+    "dynamicData": {
+        "aKey": "aValue"
+    },
+    "categories": [
+        "category1",
+        "category2"
+    ]
+};
+var tokenTtlInMinutes = 1440;
+var authenticationProxy = bridge.getAuthenticationServiceProxy();
+
+var postResult = authenticationProxy.resetUniversalIdPasswordAdvancedWithExpiry(universalId, serviceParams, tokenTtlInMinutes);
+if (postResult.status == 200) {
+    // Success!
+}
 ```
 
 ```mdx-code-block
@@ -157,8 +174,25 @@ if (result.statusCode == 200) {
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-// N/A
+```r
+{
+    "service":"authenticationV2",
+    "operation":"RESET_UNIVERSAL_ID_PASSWORD_ADVANCED_WITH_EXPIRY",
+    "data":{
+        "universalId":"universalId",
+        "serviceParams":{
+            "templateId":"d-template-id-guid",
+            "dynamicData":{
+                "aKey":"aValue"
+            },
+            "categories":[
+                "category1",
+                "category2"
+            ]
+        },
+        "tokenTtlInMinutes": 5
+    }
+}
 ```
 
 ```mdx-code-block

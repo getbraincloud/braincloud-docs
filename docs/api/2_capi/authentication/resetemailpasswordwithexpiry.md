@@ -125,7 +125,14 @@ if (result.statusCode == 200) {
 ```
 
 ```cfscript
-// N/A
+var emailAddress = "email@email.com";
+var  tokenTtlInMinutes = 1440;
+var authenticationProxy = bridge.getAuthenticationServiceProxy();
+
+var postResult = authenticationProxy.resetEmailPasswordWithExpiry(emailAddress, tokenTtlInMinutes);
+if (postResult.status == 200) {
+    // Success!
+}
 ```
 
 ```mdx-code-block
@@ -133,8 +140,15 @@ if (result.statusCode == 200) {
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-// N/A
+```r
+{
+    "service":"authenticationV2",
+    "operation":"RESET_EMAIL_PASSWORD_WITH_EXPIRY",
+    "data":{
+        "emailAddress":"email@email.com",
+        "tokenTtlInMinutes": 5
+    }
+}
 ```
 
 ```mdx-code-block

@@ -143,7 +143,23 @@ if (result.statusCode == 200) {
 ```
 
 ```cfscript
-// N/A
+var universalId = "universalId";
+var serviceParams = {
+    "templateId": "d-template-id-guid",
+    "dynamicData": {
+        "aKey": "aValue"
+    },
+    "categories": [
+        "category1",
+        "category2"
+    ]
+};
+var authenticationProxy = bridge.getAuthenticationServiceProxy();
+
+var postResult = authenticationProxy.resetUniversalIdPasswordAdvanced(universalId, serviceParams);
+if (postResult.status == 200) {
+    // Success!
+}
 ```
 
 ```mdx-code-block
@@ -156,7 +172,6 @@ if (result.statusCode == 200) {
     "service":"authenticationV2",
     "operation":"RESET_UNIVERSAL_ID_PASSWORD_ADVANCED",
     "data":{
-        "appId":"$gameId",
         "universalId":"universalId",
         "serviceParams":{
             "templateId":"d-template-id-guid",
