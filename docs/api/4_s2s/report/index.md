@@ -4,8 +4,6 @@
 
 ### API Summary
 
-### Report
-
 -   [SysGetLatestReport](/api/capi/report/sysgetlatestreport) - Returns the latest report for the given criteria.
 -   [SysGetReportForStartDate](/api/capi/report/sysgetreportforstartdate) - Returns the report matching given subject, recurrence and startDate criteria, if it exists.
 
