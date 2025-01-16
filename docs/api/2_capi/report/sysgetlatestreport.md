@@ -114,7 +114,7 @@ var postResult = reportProxy.sysGetLatestReport(subject, recurrence);
         "updatedAt": 1736381720687,
         "expireAtIso": 1737245720687,
         "subject": "retention",
-        "recurrence": ["weekly"],
+        "recurrence": ["daily"],
         "startDate": "2024-12-09",
         "endDate": "2025-01-09",
         "genTitle": {
