@@ -12,10 +12,10 @@ For a list of all available parameters see the top of the Mail service documenta
 
 ## Method Parameters
 
-| Parameter        | Description                                                |
-| ---------------- | ---------------------------------------------------------- |
-| emailAddresseses | The list of addresses to send the email to                 |
-| serviceParams    | Set of parameters dependant on the mail service configured |
+| Parameter      | Description                                                |
+| -------------- | ---------------------------------------------------------- |
+| emailAddresses | The list of addresses to send the email to                 |
+| serviceParams  | Set of parameters dependant on the mail service configured |
 
 ## Usage
 
@@ -26,7 +26,7 @@ For a list of all available parameters see the top of the Mail service documenta
 ```
 
 ```csharp
-string[] emailAddresseses = {"test@email.com", "anothertest@email.com"};
+string[] emailAddresses = {"test@email.com", "anothertest@email.com"};
 string jsonServiceParams = "{\"fromAddress\":\"email@company.com\",\"fromName\":\"Jane Doe\",\"replyToAddress\":\"optional@company.com\",\"replyToName\":\"Optional ReplyTo\",\"templateId\":\"d-www-xxx-yyy-zzz\",\"dynamicData\":{\"user\":{\"firstName\":\"John\",\"lastName\":\"Doe\"},\"resetLink\":\"www.dummuyLink.io\"},\"categories\":[\"category1\",\"category2\"],\"attachments\":[{\"content\":\"VGhpcyBhdHRhY2htZW50IHRleHQ=\",\"filename\":\"attachment.txt\"}]}";
 SuccessCallback successCallback = (response, cbObject) =>
 {
@@ -46,9 +46,9 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 ```
 
 ```cpp
-std::vector<std::string> emailAddresseses;
-emailAddresseses.push_back("test@email.com");
-emailAddresseses.push_back("anothertest@email.com");
+std::vector<std::string> emailAddresses;
+emailAddresses.push_back("test@email.com");
+emailAddresses.push_back("anothertest@email.com");
 const char *jsonServiceParams = "{\"fromAddress\":\"email@company.com\",\"fromName\":\"Jane Doe\",\"replyToAddress\":\"optional@company.com\",\"replyToName\":\"Optional ReplyTo\",\"templateId\":\"d-www-xxx-yyy-zzz\",\"dynamicData\":{\"user\":{\"firstName\":\"John\",\"lastName\":\"Doe\"},\"resetLink\":\"www.dummuyLink.io\"},\"categories\":[\"category1\",\"category2\"],\"attachments\":[{\"content\":\"VGhpcyBhdHRhY2htZW50IHRleHQ=\",\"filename\":\"attachment.txt\"}]}";
 <%= data.branding.codePrefix %>->getMailService()->sendAdvancedEmailByAddresses(emailAddresses, jsonServiceParams, this);
 ```
@@ -77,7 +77,7 @@ BCErrorCompletionBlock failureBlock; // define callback
 ```
 
 ```java
-String[] emailAddresseses = {"test@email.com", "anothertest@email.com"};
+String[] emailAddresses = {"test@email.com", "anothertest@email.com"};
 String jsonServiceParams = "{\"fromAddress\":\"email@company.com\",\"fromName\":\"Jane Doe\",\"replyToAddress\":\"optional@company.com\",\"replyToName\":\"Optional ReplyTo\",\"templateId\":\"d-www-xxx-yyy-zzz\",\"dynamicData\":{\"user\":{\"firstName\":\"John\",\"lastName\":\"Doe\"},\"resetLink\":\"www.dummuyLink.io\"},\"categories\":[\"category1\",\"category2\"],\"attachments\":[{\"content\":\"VGhpcyBhdHRhY2htZW50IHRleHQ=\",\"filename\":\"attachment.txt\"}]}";
 this; // implements IServerCallback
 
