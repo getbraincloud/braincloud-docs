@@ -8,6 +8,26 @@ Post the player's score to the given social leaderboard, dynamically creating th
 This new API call has been added to provide increased flexibility compared to the previous methods. It enables the developer to set a parameter of <strong>expireInMins</strong>, which queues the leaderboard for deletion after the designated number of minutes.
 :::
 
+## Method Parameters
+
+| Parameter     | Description                                                                                                                                                                       |
+| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| leaderboardId | The leaderboard to post to.                                                                                                                                                       |
+| score         | A score to post.                                                                                                                                                                  |
+| scoreData     | Optional user-defined data to post with the score.                                                                                                                                |
+| configJson    | Configuration for the leaderboard if it does not exist yet, specified as JSON object. The supporting configuration fields are listed in the following table of configJson fields. |
+
+### configJson fields
+
+| Parameter       | Description                                                                                                                         |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| leaderboardType | Required. Type of leaderboard. Valid values are 'LAST_VALUE', 'HIGH_VALUE', 'LOW_VALUE', 'CUMULATIVE', 'ARCADE_HIGH', 'ARCADE_LOW'; |
+| rotationType    | Required. Type of rotation. Valid values are 'NEVER', 'DAILY', 'DAYS', 'WEEKLY', 'MONTHLY', 'YEARLY';                               |
+| numDaysToRotate | Required if 'DAYS' rotation type, with valid values between 2 and 14; otherwise, null;                                              |
+| resetAt         | UTC timestamp, in milliseconds, at which to rotate the period. Always null if 'NEVER' rotation type;                                |
+| retainedCount   | Required. Number of rotations (versions) of the leaderboard to retain;                                                              |
+| expireInMins    | Optional. Duration, in minutes, before the leaderboard is to automatically expire.                                                  |
+
 ## Usage
 
 ```mdx-code-block
@@ -20,7 +40,7 @@ This new API call has been added to provide increased flexibility compared to th
 string leaderboardId = "aLeaderboardId";
 int score = 10;
 string scoreData = "{\"nickname\": \"batman\"}";
-string configJson = "{\"leaderboardType\": \"HIGH_VALUE\", \"rotationType\": \"DAYS\", \"numDaysToRotate\": 4, \"resetAt\": \"[[#ts+60000]]\", \"retainedCount\": 2, \"expireInMins\": None}";
+string configJson = "{\"leaderboardType\": \"HIGH_VALUE\", \"rotationType\": \"DAYS\", \"numDaysToRotate\": 4, \"resetAt\": \"[[#ts+60000]]\", \"retainedCount\": 2, \"expireInMins\": \"None\"}";
 
 SuccessCallback successCallback = (response, cbObject) =>
 {
@@ -43,7 +63,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 const char *leaderboardId = "aLeaderboardId";
 int score = 10;
 const char *scoreData = "{\"nickname\": \"batman\"}";
-const char *configJson = "{\"leaderboardType\": \"HIGH_VALUE\", \"rotationType\": \"DAYS\", \"numDaysToRotate\": 4, \"resetAt\": \"[[#ts+60000]]\", \"retainedCount\": 2, \"expireInMins\": None}";
+const char *configJson = "{\"leaderboardType\": \"HIGH_VALUE\", \"rotationType\": \"DAYS\", \"numDaysToRotate\": 4, \"resetAt\": \"[[#ts+60000]]\", \"retainedCount\": 2, \"expireInMins\": \"None\"}";
 <%= data.branding.codePrefix %>.getLeaderboardService().postScoreToDynamicLeaderboardUsingConfig(leaderboardId, score, scoreData, configJson, this);
 ```
 
@@ -56,7 +76,7 @@ const char *configJson = "{\"leaderboardType\": \"HIGH_VALUE\", \"rotationType\"
 NSString *leaderboardId = @"aLeaderboardId";
 int score = 10;
 NSString *scoreData = @"{\"nickname\": \"batman\"}";
-NSString *configJson = @"{\"leaderboardType\": \"HIGH_VALUE\", \"rotationType\": \"DAYS\", \"numDaysToRotate\": 4, \"resetAt\": \"[[#ts+60000]]\", \"retainedCount\": 2, \"expireInMins\": None}";
+NSString *configJson = @"{\"leaderboardType\": \"HIGH_VALUE\", \"rotationType\": \"DAYS\", \"numDaysToRotate\": 4, \"resetAt\": \"[[#ts+60000]]\", \"retainedCount\": 2, \"expireInMins\": \"None\"}";
 BCCompletionBlock successBlock; // define callback
 BCErrorCompletionBlock failureBlock; // define callback
 [[<%= data.branding.codePrefix %> leaderboardService] postScoreToDynamicLeaderboardUsingConfig:
@@ -78,7 +98,7 @@ BCErrorCompletionBlock failureBlock; // define callback
 String leaderboardId = "aLeaderboardId";
 int score = 10;
 String scoreData = "{\"nickname\": \"batman\"}";
-String configJson = "{\"leaderboardType\": \"HIGH_VALUE\", \"rotationType\": \"DAYS\", \"numDaysToRotate\": 4, \"resetAt\": \"[[#ts+60000]]\", \"retainedCount\": 2, \"expireInMins\": None}";
+String configJson = "{\"leaderboardType\": \"HIGH_VALUE\", \"rotationType\": \"DAYS\", \"numDaysToRotate\": 4, \"resetAt\": \"[[#ts+60000]]\", \"retainedCount\": 2, \"expireInMins\": \"None\"}";
 this; // implements IServerCallback
 <%= data.branding.codePrefix %>.getLeaderboardService.postScoreToDynamicLeaderboardUsingConfig(leaderboardId, score, scoreData, configJson, this);
 
@@ -204,22 +224,15 @@ var postResult = leaderboardProxy.postScoreToDynamicLeaderboardUsingConfig(leade
 </Tabs>
 </BrowserWindow>
 ```
+
 <details>
 <summary>JSON Response</summary>
 
 ```json
 {
-  "status" : 200,
-  "data" : null
+    "status": 200,
+    "data": null
 }
 ```
 
 </details>
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | The leaderboard to post to.
-score | A score to post.
-scoreData | Optional user-defined data to post with the score.
-configJson | Configuration for the leaderboard if it does not exist yet, specified as JSON object. Configuration fields supported are: leaderboardType': Required. Type of leaderboard. Valid values are 'LAST_VALUE', 'HIGH_VALUE', 'LOW_VALUE', 'CUMULATIVE', 'ARCADE_HIGH', 'ARCADE_LOW';  'rotationType': Required. Type of rotation. Valid values are 'NEVER', 'DAILY', 'DAYS', 'WEEKLY', 'MONTHLY', 'YEARLY';  'numDaysToRotate': Required if 'DAYS' rotation type, with valid values between 2 and 14; otherwise, null;  'resetAt': UTC timestamp, in milliseconds, at which to rotate the period. Always null if 'NEVER' rotation type;  'retainedCount': Required. Number of rotations (versions) of the leaderboard to retain; 'expireInMins': Optional. Duration, in minutes, before the leaderboard is to automatically expire.
