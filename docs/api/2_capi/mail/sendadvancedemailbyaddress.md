@@ -1,16 +1,21 @@
 # SendAdvancedEmailByAddress
 
-Sends an advanced email to the specified email address.  The advanced API takes a set of parameters that are
+Sends an advanced email to the specified email address.
+
+:::tip
+The advanced API takes a set of parameters that are
 dependant on the mail service configured in the <%= data.branding.productName %> Portal.
 For a list of all available parameters see the top of the Mail service documentation.
+:::
 
 <PartialServop service_name="mail" operation_name="SEND_ADVANCED_EMAIL_BY_ADDRESS" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-emailAddress | The address to send the email to
-serviceParams | Set of parameters dependant on the mail service configured
+
+| Parameter     | Description                                                |
+| ------------- | ---------------------------------------------------------- |
+| emailAddress  | The address to send the email to                           |
+| serviceParams | Set of parameters dependant on the mail service configured |
 
 ## Usage
 
@@ -133,6 +138,53 @@ var jsonServiceParams = {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  emailAddress = "test@email.com";
+var  serviceParams = {
+    "fromAddress": "email@company.com",
+    "fromName": "Jane Doe",
+    "replyToAddress": "optional@company.com",
+    "replyToName": "Optional ReplyTo",
+    "cc": [
+        "xxx@company.com"
+    ],
+    "bcc": [
+        "yyy@company.com"
+    ],
+    "templateId": "d-www-xxx-yyy-zzz",
+    "dynamicData": {
+        "user": {
+            "firstName": "John",
+            "lastName": "Doe"
+        },
+        "resetLink": "www.dummuyLink.io"
+    },
+    "categories": [
+        "category1",
+        "category2"
+    ],
+    "attachments": [
+        {
+            "content": "VGhpcyBhdHRhY2htZW50IHRleHQ=",
+            "filename": "attachment.txt"
+        }
+    ]
+};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.mailService.sendAdvancedEmailByAddress(emailAddress:emailAddress, serviceParams:serviceParams);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -181,37 +233,34 @@ if (postResult.status == 200) {
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var emailAddress = "test@email.com";
-var jsonServiceParams = {
-    "fromAddress": "email@company.com",
-    "fromName": "Jane Doe",
-    "replyToAddress": "optional@company.com",
-    "replyToName": "Optional ReplyTo",
-    "templateId": "d-www-xxx-yyy-zzz",
-    "dynamicData": {
-        "user": {
-            "firstName": "John",
-            "lastName": "Doe"
-        },
-        "resetLink": "www.dummuyLink.io"
-    },
-    "categories": [
-        "category1",
-        "category2"
-    ],
-    "attachments": [
-        {
-            "content": "VGhpcyBhdHRhY2htZW50IHRleHQ=",
-            "filename": "attachment.txt"
+```json
+{
+    "service": "mail",
+    "operation": "SEND_ADVANCED_EMAIL_BY_ADDRESS",
+    "data": {
+        "emailAddress": "test@email.com",
+        "serviceParams": {
+            "fromAddress": "email@company.com",
+            "fromName": "Jane Doe",
+            "replyToAddress": "optional@company.com",
+            "replyToName": "Optional ReplyTo",
+            "templateId": "d-www-xxx-yyy-zzz",
+            "dynamicData": {
+                "user": {
+                    "firstName": "John",
+                    "lastName": "Doe"
+                },
+                "resetLink": "www.dummuyLink.io"
+            },
+            "categories": ["category1", "category2"],
+            "attachments": [
+                {
+                    "content": "VGhpcyBhdHRhY2htZW50IHRleHQ=",
+                    "filename": "attachment.txt"
+                }
+            ]
         }
-    ]
-};
-var mailProxy = bridge.getMailServiceProxy();
-
-var postResult = mailProxy.sendAdvancedEmailByAddress(emailAddress, jsonServiceParams);
-if (postResult.status == 200) {
-    // Success!
+    }
 }
 ```
 
@@ -232,5 +281,5 @@ if (postResult.status == 200) {
     }
 }
 ```
-</details>
 
+</details>

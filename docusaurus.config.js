@@ -22,6 +22,7 @@ let options = {
     'data.branding.companyName %>': 'bitHeads',
     'data.example.email %>': 'email@bitheads.com',
     'data.example.password %>': 'password',
+    'data.example.userId %>': 'userName',
   },
   prefix: '<%= ',
 }
@@ -86,7 +87,7 @@ const config = {
           // editUrl: 'https://github.com/getbraincloud/braincloud-apiref/tree/develop/',
           versions: {
             current: {
-              label: '5.4.0',
+              label: '5.5.0',
             },
           },
           lastVersion: 'current',
@@ -282,7 +283,7 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
-        additionalLanguages: ['csharp', 'cfscript', 'java', 'r'],
+        additionalLanguages: ['csharp', 'cfscript', 'java', 'r', 'dart'],
       },
     }),
 };

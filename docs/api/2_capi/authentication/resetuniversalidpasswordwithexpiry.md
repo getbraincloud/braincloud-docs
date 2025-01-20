@@ -21,7 +21,7 @@ Reset Universal ID password. Allows the developer to specify how long the URL is
 
 ```csharp
 string universalId = "universalId";
-int resetUrlTTLMinutes = 1440;
+int tokenTtlInMinutes = 1440;
 SuccessCallback successCallback = (response, cbObject) =>
 {
     Debug.Log(string.Format("Success | {0}", response));
@@ -31,7 +31,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
     Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
 };
 
-<%= data.branding.codePrefix %>.AuthenticationService.ResetUniversalIdPasswordWithExpiry(universalId, resetUrlTTLMinutes, successCallback, failureCallback);
+<%= data.branding.codePrefix %>.AuthenticationService.ResetUniversalIdPasswordWithExpiry(universalId, tokenTtlInMinutes, successCallback, failureCallback);
 ```
 
 ```mdx-code-block
@@ -41,8 +41,8 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 
 ```cpp
 const char *universalId = "universalId";
-int resetUrlTTLMinutes = 1440;
-<%= data.branding.codePrefix %>->getAuthenticationService()->resetUniversalIdPasswordWithExpiry(universalId, resetUrlTTLMinutes, this);
+int tokenTtlInMinutes = 1440;
+<%= data.branding.codePrefix %>->getAuthenticationService()->resetUniversalIdPasswordWithExpiry(universalId, tokenTtlInMinutes, this);
 ```
 
 ```mdx-code-block
@@ -52,12 +52,12 @@ int resetUrlTTLMinutes = 1440;
 
 ```objectivec
 NSString *universalId = @"universalId";
-int resetUrlTTLMinutes = 1440;
+int tokenTtlInMinutes = 1440;
 BCCompletionBlock successBlock;      // define callback
 BCErrorCompletionBlock failureBlock; // define callback
 
 [[<%= data.branding.codePrefix %> authenticateService] resetUniversalIdPasswordWithExpiry:universalId
-          tokenTtlInMinutes:resetUrlTTLMinutes
+          tokenTtlInMinutes:tokenTtlInMinutes
             completionBlock:successBlock
        errorCompletionBlock:failureBlock
                    cbObject:nil];
@@ -70,10 +70,10 @@ BCErrorCompletionBlock failureBlock; // define callback
 
 ```java
 String universalId = "universalId";
-int resetUrlTTLMinutes = 1440;
+int tokenTtlInMinutes = 1440;
 this; // implements IServerCallback
 
-<%= data.branding.codePrefix %>.getAuthenticationService().resetUniversalIdPasswordWithExpiry(universalId, resetUrlTTLMinutes, this);
+<%= data.branding.codePrefix %>.getAuthenticationService().resetUniversalIdPasswordWithExpiry(universalId, tokenTtlInMinutes, this);
 
 public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
 {
@@ -92,9 +92,9 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 
 ```javascript
 var universalId = "universalId";
-var resetUrlTTLMinutes = 1440;
+var tokenTtlInMinutes = 1440;
 
-<%= data.branding.codePrefix %>.authenticate.resetUniversalIdPasswordWithExpiry(universalId, resetUrlTTLMinutes, result =>
+<%= data.branding.codePrefix %>.authenticate.resetUniversalIdPasswordWithExpiry(universalId, tokenTtlInMinutes, result =>
 {
 	var status = result.status;
 	console.log(status + " : " + JSON.stringify(result, null, 2));
@@ -103,11 +103,36 @@ var resetUrlTTLMinutes = 1440;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  universalId = "universalId";
+var  tokenTtlInMinutes = 1440;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.authenticationV2Service.resetUniversalIdPasswordWithExpiry(universalId:universalId, tokenTtlInMinutes:tokenTtlInMinutes);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
 ```cfscript
-// N/A
+var universalId = "universalId";
+var tokenTtlInMinutes = 1440;
+var authenticationProxy = bridge.getAuthenticationServiceProxy();
+
+var postResult = authenticationProxy.resetUniversalIdPasswordWithExpiry(universalId, tokenTtlInMinutes);
+if (postResult.status == 200) {
+    // Success!
+}
 ```
 
 ```mdx-code-block
@@ -115,8 +140,15 @@ var resetUrlTTLMinutes = 1440;
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-// N/A
+```r
+{
+    "service":"authenticationV2",
+    "operation":"RESET_UNIVERSAL_ID_PASSWORD_WITH_EXPIRY",
+    "data":{
+        "universalId":"universalId",
+        "tokenTtlInMinutes": 5
+    }
+}
 ```
 
 ```mdx-code-block

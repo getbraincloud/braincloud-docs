@@ -52,7 +52,7 @@ const char *externalId = "email@email.com";
 NSString *externalId = @"email@email.com";
 BCCompletionBlock successBlock; // define callback
 BCErrorCompletionBlock failureBlock; // define callback
-[[<%= data.branding.codePrefix %> authenticationService] ResetEmailPassword:
+[[<%= data.branding.codePrefix %> authenticationService] resetEmailPassword:
                    externalId:externalId
               completionBlock:successBlock
          errorCompletionBlock:failureBlock
@@ -67,7 +67,7 @@ BCErrorCompletionBlock failureBlock; // define callback
 ```java
 String externalId = "email@email.com";
 this; // implements IServerCallback
-<%= data.branding.codePrefix %>.getAuthenticationService.ResetEmailPassword(externalId, this);
+<%= data.branding.codePrefix %>.getAuthenticationService.resetEmailPassword(externalId, this);
 
 public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
 {
@@ -87,7 +87,7 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 
 ```javascript
 var externalId = "email@email.com";
-<%= data.branding.codePrefix %>.authentication.ResetEmailPassword(externalId, result =>
+<%= data.branding.codePrefix %>.authentication.resetEmailPassword(externalId, result =>
 {
   var status = result.status;
   console.log(status + " : " + JSON.stringify(result, null, 2));
@@ -96,11 +96,34 @@ var externalId = "email@email.com";
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  emailAddress = "email@email.com";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.authenticationV2Service.resetEmailPassword(emailAddress:emailAddress);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
 ```cfscript
-// N/A
+var emailAddress = "email@email.com";
+var authenticationProxy = bridge.getAuthenticationServiceProxy();
+
+var postResult = authenticationProxy.resetEmailPassword(emailAddress);
+if (postResult.status == 200) {
+    // Success!
+}
 ```
 
 ```mdx-code-block
@@ -113,7 +136,6 @@ var externalId = "email@email.com";
     "service":"authenticationV2",
     "operation":"RESET_EMAIL_PASSWORD",
     "data":{
-        "appId":"$gameId",
         "externalId":"email@email.com"
     }
 }

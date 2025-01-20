@@ -2,28 +2,28 @@
 
 Edits a leaderboard configuration, with support for tournament leaderboards.
 
-
-
-#### Configuration fields of **configJson**
-Parameter | Description
---------- | -----------
-leaderboardType | Required. Type of leaderboard. Valid values are 'LAST_VALUE', 'HIGH_VALUE', 'LOW_VALUE', 'CUMULATIVE', 'ARCADE_HIGH', 'ARCADE_LOW'.
-rotationType | Required. Type of rotation. Valid values are 'NEVER', 'DAILY', 'DAYS', 'WEEKLY', 'MONTHLY', 'YEARLY'.
-numDaysToRotate | Required if 'DAYS' rotation type, with valid values between 2 and 14, otherwise null.
-resetAt | UTC timestamp, in milliseconds, at which to rotate the period. Always null if 'NEVER' rotation type.
-retainedCount | Required. Number of rotations (versions) of the leaderboard to retain.
-data | Optional parameter for data.
-tEnabled | Optional parameter to set whether tournaments are enabled (true) or not (false). Can only be true for recurring rotation types (not NEVER or ADHOC). Defaults to false.
-tTemplateOnly | Optional parameter to set whether leaderboard is a tournament template only (true) or not (false). Can only be true if tEnabled is true. Defaults to false.
-
 <PartialServop service_name="leaderboard" operation_name="SYS_EDIT_LEADERBOARD_CONFIG" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-leaderboardId | ID uniquely identifying the leaderboard configuration to retrieve.
-dbVersion | The database version of the leaderboard config being edited. For any version, specify -1.
-configJson | Configuration changes for the leaderboard, specified as JSON object.
+
+| Parameter     | Description                                                                               |
+| ------------- | ----------------------------------------------------------------------------------------- |
+| leaderboardId | ID uniquely identifying the leaderboard configuration to retrieve.                        |
+| dbVersion     | The database version of the leaderboard config being edited. For any version, specify -1. |
+| configJson    | Configuration changes for the leaderboard, specified as JSON object.                      |
+
+#### Configuration fields of **configJson**
+
+| Parameter       | Description                                                                                                                                                             |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| leaderboardType | Required. Type of leaderboard. Valid values are 'LAST_VALUE', 'HIGH_VALUE', 'LOW_VALUE', 'CUMULATIVE', 'ARCADE_HIGH', 'ARCADE_LOW'.                                     |
+| rotationType    | Required. Type of rotation. Valid values are 'NEVER', 'DAILY', 'DAYS', 'WEEKLY', 'MONTHLY', 'YEARLY'.                                                                   |
+| numDaysToRotate | Required if 'DAYS' rotation type, with valid values between 2 and 14, otherwise null.                                                                                   |
+| resetAt         | UTC timestamp, in milliseconds, at which to rotate the period. Always null if 'NEVER' rotation type.                                                                    |
+| retainedCount   | Required. Number of rotations (versions) of the leaderboard to retain.                                                                                                  |
+| data            | Optional parameter for data.                                                                                                                                            |
+| tEnabled        | Optional parameter to set whether tournaments are enabled (true) or not (false). Can only be true for recurring rotation types (not NEVER or ADHOC). Defaults to false. |
+| tTemplateOnly   | Optional parameter to set whether leaderboard is a tournament template only (true) or not (false). Can only be true if tEnabled is true. Defaults to false.             |
 
 ## Usage
 
@@ -71,6 +71,15 @@ configJson | Configuration changes for the leaderboard, specified as JSON object
 
 ```javascript
 //cloud code only
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+// Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block
@@ -137,33 +146,33 @@ var retVal = leaderboardProxy.sysEditLeaderboardConfig(
 
 ```json
 {
-  "data": {
-    "aLeaderboardId2": {
-      "leaderboardId": "aLeaderboardId",
-      "dbVersion": 5,
-      "resetAt": 1633692744000,
-      "leaderboardType": "HIGH_VALUE",
-      "rotationType": "DAYS",
-      "retainedCount": 5,
-      "data": {
-        "info": "Adding tournament to encourage play."
-      },
-      "numDaysToRotate": 4,
-      "entryType": "PLAYER",
-      "tEnabled": true,
-      "tTemplateOnly": false,
-      "currentVersionId": 1,
-      "currentPeriod": {
-        "versionId": 1,
-        "startingAt": 1632752317162,
-        "endingAt": 1633692744000,
-        "rotationType": "DAYS",
-        "numDaysToRotate": 4
-      }
-    }
-  },
-  "status": 200
+    "data": {
+        "aLeaderboardId2": {
+            "leaderboardId": "aLeaderboardId",
+            "dbVersion": 5,
+            "resetAt": 1633692744000,
+            "leaderboardType": "HIGH_VALUE",
+            "rotationType": "DAYS",
+            "retainedCount": 5,
+            "data": {
+                "info": "Adding tournament to encourage play."
+            },
+            "numDaysToRotate": 4,
+            "entryType": "PLAYER",
+            "tEnabled": true,
+            "tTemplateOnly": false,
+            "currentVersionId": 1,
+            "currentPeriod": {
+                "versionId": 1,
+                "startingAt": 1632752317162,
+                "endingAt": 1633692744000,
+                "rotationType": "DAYS",
+                "numDaysToRotate": 4
+            }
+        }
+    },
+    "status": 200
 }
 ```
-</details>
 
+</details>

@@ -52,7 +52,7 @@ const char *universalId = "universalId";
 NSString *universalId = @"universalId";
 BCCompletionBlock successBlock; // define callback
 BCErrorCompletionBlock failureBlock; // define callback
-[[<%= data.branding.codePrefix %> authenticationService] ResetUniversalIdPassword:
+[[<%= data.branding.codePrefix %> authenticationService] resetUniversalIdPassword:
                   universalId:universalId
               completionBlock:successBlock
          errorCompletionBlock:failureBlock
@@ -67,7 +67,7 @@ BCErrorCompletionBlock failureBlock; // define callback
 ```java
 String universalId = "universalId";
 this; // implements IServerCallback
-<%= data.branding.codePrefix %>.getAuthenticationService.ResetUniversalIdPassword(universalId, this);
+<%= data.branding.codePrefix %>.getAuthenticationService.resetUniversalIdPassword(universalId, this);
 
 public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
 {
@@ -87,7 +87,7 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 
 ```javascript
 var universalId = "universalId";
-<%= data.branding.codePrefix %>.authentication.ResetUniversalIdPassword(universalId, result =>
+<%= data.branding.codePrefix %>.authentication.resetUniversalIdPassword(universalId, result =>
 {
   var status = result.status;
   console.log(status + " : " + JSON.stringify(result, null, 2));
@@ -96,11 +96,34 @@ var universalId = "universalId";
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  universalId = "universalId";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.authenticationV2Service.resetUniversalIdPassword(universalId:universalId);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
 ```cfscript
-// N/A
+var universalId = "universalId";
+var authenticationProxy = bridge.getAuthenticationServiceProxy();
+
+var postResult = authenticationProxy.resetUniversalIdPassword(universalId);
+if (postResult.status == 200) {
+    // Success!
+}
 ```
 
 ```mdx-code-block
@@ -113,7 +136,6 @@ var universalId = "universalId";
     "service":"authenticationV2",
     "operation":"RESET_UNIVERSAL_ID_PASSWORD",
     "data":{
-        "appId":"$gameId",
         "universalId":"universalId"
     }
 }

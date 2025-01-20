@@ -69,7 +69,7 @@ Start a playback stream.
 var profileId = "player";
 var targetProfileId = "player";
 var includeSharedData = False;
-var playbackStreamProxy = bridge.getPlaybackstreamServiceProxy();
+var playbackStreamProxy = bridge.getPlaybackStreamServiceProxy();
 
 var postResult = playbackStreamProxy.sysStartStream(profileId, targetProfileId, includeSharedData);
 ```

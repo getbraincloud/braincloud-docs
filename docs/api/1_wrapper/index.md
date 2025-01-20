@@ -5,8 +5,14 @@ The <%= data.branding.codeWrapper %> class provides an easier way for developers
 By using the wrapper authentication methods, the anonymous and profile IDs will be automatically persisted upon successful authentication. When authenticating, any stored anonymous/profile IDs will be sent to the server. This strategy is useful when using Anonymous authentication.
 
 :::tip
-*Note - you should [initialize the wrapper](/api/wrapper/initialize) before using it. It will in turn initialize the <%= data.branding.productName %> client for you* - **don't do both!**
+_Note - you should [initialize the wrapper](/api/wrapper/initialize) before using it. It will in turn initialize the <%= data.branding.productName %> client for you_ - **don't do both!**
 :::
+
+### Method Parameters
+
+| Parameter   | Description                                                                                             |
+| ----------- | ------------------------------------------------------------------------------------------------------- |
+| wrapperName | Distincts saved wrapper data. Use when using more than one instance of <%= data.branding.productName %> |
 
 ### Usage
 
@@ -30,15 +36,15 @@ public class BCConfig : MonoBehaviour {
 	public <%= data.branding.codeWrapper %> Get()
 	{
 		return <%= data.branding.codePrefix %>;
-	}	
-	
+	}
+
 	void Awake ()
 	{
 		DontDestroyOnLoad(gameObject);
 		<%= data.branding.codePrefix %> = gameObject.AddComponent<<%= data.branding.codeWrapper %>>();
-		
+
 		<%= data.branding.codePrefix %>.WrapperName = gameObject.name;    // Optional: Set a wrapper name
-		<%= data.branding.codePrefix %>.Init();      // Init data is taken from the <%= data.branding.productName %> Unity Plugin		
+		<%= data.branding.codePrefix %>.Init();      // Init data is taken from the <%= data.branding.productName %> Unity Plugin
 	}
 }
 
@@ -85,17 +91,17 @@ public class BCConfig : MonoBehaviour {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+BrainCloudWrapper <%= data.branding.codePrefix %> = <%= data.branding.codeWrapper %>(wrapperName: "_mainWrapper");
+```
+
+```mdx-code-block
+</TabItem>
 </Tabs>
 </BrowserWindow>
 ```
-
-
-
-### Method Parameters
-Parameter | Description
---------- | -----------
-wrapperName | Distincts saved wrapper data. Use when using more than one instance of <%= data.branding.productName %>
-    
-
 
 <DocCardList />
