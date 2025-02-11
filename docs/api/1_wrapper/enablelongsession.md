@@ -1,12 +1,12 @@
-# Logout
+# EnableLongSession
 
-Logs user out of server. It's basically just a wrapper version for `logout` method of `playerState` service and `ResetStoredProfileId` method
+Maintains the user's session alive by calling the reconnect method upon detecting the expiration of the user's session.
 
 ## Method Parameters
 
-| Parameter  | Description                                                   |
-| ---------- | ------------------------------------------------------------- |
-| forgetUser | Boolean, whether to reset the stored profile id for the user. |
+| Parameter | Description                           |
+| --------- | ------------------------------------- |
+| enabled   | True if long-sesson should be enabled |
 
 ## Usage
 
@@ -17,7 +17,7 @@ Logs user out of server. It's basically just a wrapper version for `logout` meth
 ```
 
 ```csharp
-<%= data.branding.codePrefix %>.Logout(true);
+<%= data.branding.codePrefix %>.EnableLongSession(true);
 ```
 
 ```mdx-code-block
@@ -26,7 +26,7 @@ Logs user out of server. It's basically just a wrapper version for `logout` meth
 ```
 
 ```cpp
-<%= data.branding.codePrefix %>->logout(true);
+<%= data.branding.codePrefix %>->enableLongSession(true);
 ```
 
 ```mdx-code-block
@@ -38,7 +38,7 @@ Logs user out of server. It's basically just a wrapper version for `logout` meth
 BCCompletionBlock successBlock;      // define callback
 BCErrorCompletionBlock failureBlock; // define callback
 
-[<%= data.branding.codePrefix %> logout:true
+[<%= data.branding.codePrefix %> enableLongSession:true
                         completionBlock:successBlock
                    errorCompletionBlock:failureBlock
                                cbObject:nil];
@@ -50,7 +50,7 @@ BCErrorCompletionBlock failureBlock; // define callback
 ```
 
 ```java
-<%= data.branding.codePrefix %>.logout(true);
+<%= data.branding.codePrefix %>.enableLongSession(true);
 ```
 
 ```mdx-code-block
@@ -59,7 +59,7 @@ BCErrorCompletionBlock failureBlock; // define callback
 ```
 
 ```javascript
-<%= data.branding.codePrefix %>.logout(true);
+<%= data.branding.codePrefix %>.enableLongSession(true);
 ```
 
 ```mdx-code-block
@@ -68,7 +68,7 @@ BCErrorCompletionBlock failureBlock; // define callback
 ```
 
 ```dart
-<%= data.branding.codePrefix %>.logout(forgetUser:true);
+<%= data.branding.codePrefix %>.enableLongSession(true);
 ```
 
 ```mdx-code-block
