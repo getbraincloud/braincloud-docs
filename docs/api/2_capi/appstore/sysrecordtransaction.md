@@ -14,6 +14,7 @@ Records a manual transaction. Useful for stores that are not yet directly suppor
 | promotionId   | Optional ID of any promotion that applies.             |
 | dataJson      | Transaction details from the store's perspective.      |
 | receiptData   | Receipt information.                                   |
+| transactionId | Unique id identifying this transaction in the store. Uniqueness enforced across the app. |
 | price         | Price in hundredths of the app's currency (e.g. cents) |
 | processAwards | Whether to deliver rewards/items.                      |
 | sandbox       | Whether purchase is sandbox.                           |
@@ -88,12 +89,13 @@ var itemId = "product_item_id";
 var promotionId = 5;
 var dataJson = {'quantity': 1};
 var receiptData = {'receipt': 'receipt_String'};
+var transactionId = "<aUniqueId>";
 var priceInCents = 999;
 var processAwards = true;
 var sandbox = False;
 var appStoreProxy = bridge.getAppstoreServiceProxy();
 
-var postResult = appStoreProxy.sysRecordTransaction(storeId, profileId, itemId, promotionId, dataJson, receiptData, priceInCents, processAwards, sandbox);
+var postResult = appStoreProxy.sysRecordTransaction(storeId, profileId, itemId, promotionId, dataJson, receiptData, transactionId, priceInCents, processAwards, sandbox);
 ```
 
 ```mdx-code-block
