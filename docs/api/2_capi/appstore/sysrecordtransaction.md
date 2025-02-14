@@ -1,22 +1,23 @@
 # SysRecordTransaction
 
-Records a manual transaction for stores which we don't directly support
+Records a manual transaction. Useful for stores that are not yet directly supported -- or for apps that doing purchases via other means - but still want to record them in brainCloud for reporting purposes.
 
 <PartialServop service_name="appStore" operation_name="SYS_RECORD_TRANSACTION" />
 
 ## Method Parameters
 
-| Parameter     | Description                                        |
-| ------------- | -------------------------------------------------- |
-| storeId       | Identifies the store type.                         |
-| profileId     | Profile ID of the user.                            |
-| itemId        | Item ID of the product transaction to be recorded. |
-| promotionId   | Optional ID of any promotion that applies.         |
-| dataJson      | Transaction details from the store's perspective.  |
-| receiptData   | Receipt information.                               |
-| price         | Price in cents.                                    |
-| processAwards | Whether to deliver rewards/items.                  |
-| sandbox       | Whether purchase is sandbox.                       |
+| Parameter     | Description                                            |
+| ------------- | ------------------------------------------------------ |
+| storeId       | Identifies the store type.  See the [appendix](/appendix/platformIds) for Store Ids.  Use "_<id>" for custom ids. |
+| profileId     | Profile ID of the user.                                |
+| itemId        | Item ID of the product transaction to be recorded.     |
+| promotionId   | Optional ID of any promotion that applies.             |
+| dataJson      | Transaction details from the store's perspective.      |
+| receiptData   | Receipt information.                                   |
+| price         | Price in hundredths of the app's currency (e.g. cents) |
+| processAwards | Whether to deliver rewards/items.                      |
+| sandbox       | Whether purchase is sandbox.                           |
+
 
 ## Usage
 
@@ -87,12 +88,12 @@ var itemId = "product_item_id";
 var promotionId = 5;
 var dataJson = {'quantity': 1};
 var receiptData = {'receipt': 'receipt_String'};
-var price = 999;
-var processAwards = True;
+var priceInCents = 999;
+var processAwards = true;
 var sandbox = False;
 var appStoreProxy = bridge.getAppstoreServiceProxy();
 
-var postResult = appStoreProxy.sysRecordTransaction(storeId, profileId, itemId, promotionId, dataJson, receiptData, price, processAwards, sandbox);
+var postResult = appStoreProxy.sysRecordTransaction(storeId, profileId, itemId, promotionId, dataJson, receiptData, priceInCents, processAwards, sandbox);
 ```
 
 ```mdx-code-block
