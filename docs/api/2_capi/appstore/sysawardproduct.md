@@ -76,7 +76,7 @@ Awards the current user the product item rewards without requiring a purchase (f
 ```cfscript
 var itemId = "product_item_id";
 var quantity = 1;
-var appStoreProxy = bridge.getAppstoreServiceProxy();
+var appStoreProxy = bridge.getAppStoreServiceProxy();
 
 var postResult = appStoreProxy.sysAwardProduct(itemId, quantity);
 ```
