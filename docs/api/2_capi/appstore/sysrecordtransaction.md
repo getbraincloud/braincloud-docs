@@ -6,19 +6,19 @@ Records a manual transaction. Useful for stores that are not yet directly suppor
 
 ## Method Parameters
 
-| Parameter     | Description                                                                                                                                                                                 |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| profileId     | Profile ID of the user.                                                                                                                                                                     |
-| storeId       | Identifies the store type. See the [appendix](/api/capi/appendix/platformIds) for Store Ids. Use "\_id" for custom ids.                                                                     |
-| itemId        | Item ID of the product transaction to be recorded.                                                                                                                                          |
-| dataJson      | Transaction details from the store's perspective.                                                                                                                                           |
-| receiptData   | Receipt information.                                                                                                                                                                        |
-| promotionId   | Optional ID of any promotion that applies.                                                                                                                                                  |
-| processAwards | Whether to deliver rewards/items.                                                                                                                                                           |
-| transactionId | Unique id identifying this transaction in the store. Uniqueness enforced across the app.                                                                                                    |
-| price         | Price in hundredths of the app's currency (e.g. cents)                                                                                                                                      |
-| sandbox       | Whether purchase is sandbox.                                                                                                                                                                |
-| platform      | Platform of the store, platform is only used for sending offboard events to downstream systesm. Can be empty string - or use value from platform ids [here](/api/capi/appendix/platformIds) |
+| Parameter     | Description                                                                                                                                                                            |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| profileId     | Profile ID of the user.                                                                                                                                                                |
+| storeId       | Identifies the store type. See the [appendix](/api/appendix/platformIds#store-ids) for Store Ids. Use "\_id" (prefix with an underscore) for custom ids.                               |
+| itemId        | Item ID of the product transaction to be recorded.                                                                                                                                     |
+| dataJson      | Transaction details from the store's perspective.                                                                                                                                      |
+| receiptData   | Receipt information.                                                                                                                                                                   |
+| promotionId   | Optional ID of any promotion that applies.                                                                                                                                             |
+| processAwards | Whether to deliver rewards/items.                                                                                                                                                      |
+| transactionId | Unique id identifying this transaction in the store. Uniqueness enforced across the app.                                                                                               |
+| price         | Price in hundredths of the app's currency (e.g. cents)                                                                                                                                 |
+| sandbox       | Whether purchase is sandbox.                                                                                                                                                           |
+| platform      | Platform of the store, platform is only used for sending offboard events to downstream systesm. Can be empty string - or use value from platform ids [here](/api/appendix/platformIds) |
 
 ## Usage
 
