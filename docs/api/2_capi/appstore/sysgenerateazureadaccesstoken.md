@@ -74,7 +74,7 @@ Generates an Azure AD access token.
 
 ```cfscript
 var resource = "https://onestore.microsoft.com";
-var appStoreProxy = bridge.getAppstoreServiceProxy();
+var appStoreProxy = bridge.getAppStoreServiceProxy();
 
 var postResult = appStoreProxy.sysGenerateAzureADAccessToken(resource);
 ```
