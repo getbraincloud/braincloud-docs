@@ -32,11 +32,11 @@ Xbox One | "XBOX_ONE"
 Note that the client libraries contain a `Platform` class or enum that represents the platform strings. You can use these classes directly when calling API methods which require a platform to be passed in.
 
 
-## Store Platform IDs
+## Store IDs
 
 Below are the Store Platform IDs. These values are used within the Product module for identifying the third party store that you are integrating with.
 
-Platform | ID
+Store | ID
 -------- | ---
 Amazon Store | "amazon"
 Apple iTunes | "itunes"
@@ -46,4 +46,13 @@ Google Play | "googlePlay"
 Steam | "steam"
 Windows Store | "windows"
 Windows Phone | "windowsPhone"
+
+In addition, the following IDs are accepted by [SysRecordTransaction](/api/capi/appstore/sysrecordtransaction).
+
+Store | ID
+-------- | ---
+Meta | "meta"
+Playstation | "psn"
+Switch | "switch"
+Xbox | "xbox"
 
