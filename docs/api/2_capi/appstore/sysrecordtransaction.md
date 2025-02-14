@@ -83,7 +83,6 @@ Records a manual transaction. Useful for stores that are not yet directly suppor
 ```
 
 ```cfscript
-
 var profileId = "user_profile_id";
 var storeId = "store_id";
 var itemId = "product_item_id";
@@ -94,7 +93,7 @@ var processAwards = true;
 var transactionId = "transaction_id";
 var priceInCents = 999;
 var sandbox = False;
-var platform = "platform_id";
+var platform = "IOS";
 
 var appStoreProxy = bridge.getAppStoreServiceProxy();
 
