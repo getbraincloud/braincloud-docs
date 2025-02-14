@@ -84,15 +84,15 @@ Records a manual transaction. Useful for stores that are not yet directly suppor
 
 ```cfscript
 var storeId = "store_id";
-var profileId = "user_profile_id";
+var profileId = bridge.getProfileId();
 var itemId = "product_item_id";
-var promotionId = 5;
+var promotionId = null;
 var dataJson = {'quantity': 1};
 var receiptData = {'receipt': 'receipt_String'};
 var transactionId = "<aUniqueId>";
-var priceInCents = 999;
+var priceInCents = 99;
 var processAwards = true;
-var sandbox = False;
+var sandbox = false;
 var appStoreProxy = bridge.getAppstoreServiceProxy();
 
 var postResult = appStoreProxy.sysRecordTransaction(storeId, profileId, itemId, promotionId, dataJson, receiptData, transactionId, priceInCents, processAwards, sandbox);
