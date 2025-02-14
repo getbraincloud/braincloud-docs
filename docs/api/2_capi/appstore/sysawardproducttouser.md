@@ -78,7 +78,7 @@ Awards the specified user the product item rewards without requiring a purchase 
 var profileId = "user_profile_id";
 var itemId = "product_item_id";
 var quantity = 1;
-var appStoreProxy = bridge.getAppstoreServiceProxy();
+var appStoreProxy = bridge.getAppStoreServiceProxy();
 
 var postResult = appStoreProxy.sysAwardProductToUser(profileId, itemId, quantity);
 ```

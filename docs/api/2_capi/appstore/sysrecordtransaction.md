@@ -6,19 +6,19 @@ Records a manual transaction. Useful for stores that are not yet directly suppor
 
 ## Method Parameters
 
-| Parameter     | Description                                            |
-| ------------- | ------------------------------------------------------ |
-| storeId       | Identifies the store type.  See the [appendix](/appendix/platformIds) for Store Ids.  Use "_<id>" for custom ids. |
-| profileId     | Profile ID of the user.                                |
-| itemId        | Item ID of the product transaction to be recorded.     |
-| promotionId   | Optional ID of any promotion that applies.             |
-| dataJson      | Transaction details from the store's perspective.      |
-| receiptData   | Receipt information.                                   |
-| transactionId | Unique id identifying this transaction in the store. Uniqueness enforced across the app. |
-| price         | Price in hundredths of the app's currency (e.g. cents) |
-| processAwards | Whether to deliver rewards/items.                      |
-| sandbox       | Whether purchase is sandbox.                           |
-
+| Parameter     | Description                                                                                                                                                                                 |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| profileId     | Profile ID of the user.                                                                                                                                                                     |
+| storeId       | Identifies the store type. See the [appendix](/api/capi/appendix/platformIds) for Store Ids. Use "\_id" for custom ids.                                                                     |
+| itemId        | Item ID of the product transaction to be recorded.                                                                                                                                          |
+| dataJson      | Transaction details from the store's perspective.                                                                                                                                           |
+| receiptData   | Receipt information.                                                                                                                                                                        |
+| promotionId   | Optional ID of any promotion that applies.                                                                                                                                                  |
+| processAwards | Whether to deliver rewards/items.                                                                                                                                                           |
+| transactionId | Unique id identifying this transaction in the store. Uniqueness enforced across the app.                                                                                                    |
+| price         | Price in hundredths of the app's currency (e.g. cents)                                                                                                                                      |
+| sandbox       | Whether purchase is sandbox.                                                                                                                                                                |
+| platform      | Platform of the store, platform is only used for sending offboard events to downstream systesm. Can be empty string - or use value from platform ids [here](/api/capi/appendix/platformIds) |
 
 ## Usage
 
@@ -89,13 +89,17 @@ var itemId = "product_item_id";
 var promotionId = null;
 var dataJson = {'quantity': 1};
 var receiptData = {'receipt': 'receipt_String'};
-var transactionId = "<aUniqueId>";
+var promotionId = 5;
 var priceInCents = 99;
 var processAwards = true;
+var transactionId = "transaction_id";
+var priceInCents = 999;
 var sandbox = false;
-var appStoreProxy = bridge.getAppstoreServiceProxy();
+var platform = "";
 
-var postResult = appStoreProxy.sysRecordTransaction(storeId, profileId, itemId, promotionId, dataJson, receiptData, transactionId, priceInCents, processAwards, sandbox);
+var appStoreProxy = bridge.getAppStoreServiceProxy();
+
+var postResult = appStoreProxy.sysRecordTransaction(profileId, storeId, itemId, dataJson, receiptData, promotionId, processAwards, transactionId, priceInCents, sandbox, platform);
 ```
 
 ```mdx-code-block
@@ -108,20 +112,21 @@ var postResult = appStoreProxy.sysRecordTransaction(storeId, profileId, itemId, 
     "service":"appStore",
     "operation":"SYS_RECORD_TRANSACTION",
     "data":{
-        "storeId":"store_id",
-        "profileId":"user_profile_id",
-        "itemId":"product_item_id",
-        "transactionId":"transaction_id",
-        "promotionId":5,
-        "dataJson":{
-            "quantity":1
+        "profileId": "user_profile_id",
+        "storeId": "store_id",
+        "itemId": "product_item_id",
+        "dataJson" : {
+            "quantity": 1
         },
-        "receiptData":{
-            "receipt":"receipt_String"
+        "receiptData" : {
+            "receipt": "receipt_String"
         },
-        "price":999,
-        "processAwards":true,
-        "sandbox":false
+        "promotionId" : 5,
+        "processAwards" : true,
+        "transactionId" : "transaction_id",
+        "price" : 999,
+        "sandbox" : false,
+        "platform" : "IOS"
     }
 }
 ```
