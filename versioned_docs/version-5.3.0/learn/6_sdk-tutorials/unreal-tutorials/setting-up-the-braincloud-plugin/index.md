@@ -9,8 +9,8 @@ This tutorial goes through the steps of installing the brainCloud Unreal plugin 
 
 - Unreal Engine 4.10.4 or newer
 - A Code or Blueprint only project
-- Created a [brainCloud Portal](https://sharedprod.braincloudservers.com/) account
-- The latest version of the brainCloud Unreal plugin. You can download after logging in to the [brainCloud Portal](https://sharedprod.braincloudservers.com/).
+- Created a [brainCloud Portal](https://api.braincloudservers.com/) account
+- The latest version of the brainCloud Unreal plugin. You can download after logging in to the [brainCloud Portal](https://api.braincloudservers.com/).
 
 ## Installing the Plugin
 

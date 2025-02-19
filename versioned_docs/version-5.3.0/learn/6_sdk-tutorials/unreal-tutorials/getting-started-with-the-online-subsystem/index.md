@@ -22,7 +22,7 @@ The first step is to create the BrainCloudConfig.ini file that the Subsystem wi
 4. Enter the following into the file, replacing the Secret and App ID and version with those of your App:
 
 [BrainCloud.Client]
-ServerURL = "https://sharedprod.braincloudservers.com/dispatcherv2"
+ServerURL = "https://api.braincloudservers.com/dispatcherv2"
 Secret = YOUR-APP-SECRET-HERE
 AppID = YOUR-APP-ID-HERE
 Version = 1.0.0

@@ -26,7 +26,7 @@ Bombers is a fun multiplayer game with the following features:
 ## **Play Now!**
 
 - [Web Demo](http://apps.braincloudservers.com/bombersrtt-live/index.html) - bombers Unity/WebGL example
-- **[MacOS Demo](https://sharedprod.braincloudservers.com/s3/brainCloudExamples/unity/bombersUnet/brainCloudBombersUNET_OSX_1.0.0.zip)** - bombers MacOS example (not yet Catalina-ready).
+- **[MacOS Demo](https://api.braincloudservers.com/s3/brainCloudExamples/unity/bombersUnet/brainCloudBombersUNET_OSX_1.0.0.zip)** - bombers MacOS example (not yet Catalina-ready).
 
 ## Full Source Available
 

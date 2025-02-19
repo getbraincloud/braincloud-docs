@@ -24,7 +24,7 @@ Start by dragging off of the Event node and adding the Initialize function node.
 
 You should now have the Initialize node on the Graph.  The information you need to initialize comes from the Core App Info > Application IDs page in the brainCloud web portal.
 
-- **Server Url -** The URL (default value: https://sharedprod.braincloudservers.com/dispatcherv2) of the brainCloud server to connect to. You should not have to change this.
+- **Server Url -** The URL (default value: https://api.braincloudservers.com/dispatcherv2) of the brainCloud server to connect to. You should not have to change this.
 - **Secret Key** - The **App Secret** for your application
 - **App Id** - The game (or in the portal page **App ID**) of your application
 - **Game Version** - The current version of your application

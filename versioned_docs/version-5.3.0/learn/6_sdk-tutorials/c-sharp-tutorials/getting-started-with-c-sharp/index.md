@@ -14,7 +14,7 @@ All of brainCloud's features are accessible through the BrainCloudClient class. 
 Before you can do anything with brainCloud the BrainCloudClient must be initialized.  This is accomplished by providing your App’s details to the Client via the Initialize function.
 ```js
 BrainCloudClient.Instance.Initialize(
-    "https://sharedprod.braincloudservers.com/dispatcherv2",
+    "https://api.braincloudservers.com/dispatcherv2",
     "49e1d5ad-12345-4144-ac59-6e02c64f1b12",
     "123456",
     "1.0.0");

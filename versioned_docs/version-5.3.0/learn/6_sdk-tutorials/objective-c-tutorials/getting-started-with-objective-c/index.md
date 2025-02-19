@@ -84,7 +84,7 @@ Before you make any API calls to brainCloud you need to initialize the library. 
 BrainCloudClient * client = [BrainCloudClient defaultClient];
 
 [client
-	initialize:@"https://sharedprod.braincloudservers.com/dispatcherv2"
+	initialize:@"https://api.braincloudservers.com/dispatcherv2"
 	secretKey:@"your_secret" // replace me!
 	gameId:@"your_gameid" // replace me!
 	gameVersion:@"1.0"

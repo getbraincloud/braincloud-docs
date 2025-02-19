@@ -51,7 +51,7 @@ _Your script and server should now be visible in the S2S Explorer._
 - Let's try calling it from Postman!  (If you don't already have it, you can download it from [here](https://www.getpostman.com).)
 - Launch Postman, and configure a new request.
 - Set the _request type_ to "POST"
-- Set the _request URL_ to "https://sharedprod.braincloudservers.com/s2sdispatcher"
+- Set the _request URL_ to "https://api.braincloudservers.com/s2sdispatcher"
 - Send the following in the body (setting a type of "raw", sub-type "JSON"), replacing the:
     - _gameId_ with your appId
     - _serverName_ with the name of the server that you configured above in _step 2_

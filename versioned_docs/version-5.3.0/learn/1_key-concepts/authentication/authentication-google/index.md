@@ -7,7 +7,7 @@ This tutorial outlines how to set up Google authentication with the new Google P
 
 ### Configure Google IDs
 
-Navigate to the [Application IDs page](https://sharedprod.braincloudservers.com/admin/dashboard#/development/core-settings-information) for your app in the brainCloud portal. Under Configure Platforms select Google.  There are four new application IDs required to handle Google’s updated authentication paradigm.  
+Navigate to the [Application IDs page](https://api.braincloudservers.com/admin/dashboard#/development/core-settings-information) for your app in the brainCloud portal. Under Configure Platforms select Google.  There are four new application IDs required to handle Google’s updated authentication paradigm.  
 
 To retrieve them go to Google Play Developer Portal.  Navigate to Games Services.  Select Linked Apps.  At the bottom under Authorization are two values for the new application IDs.  
 

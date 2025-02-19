@@ -45,7 +45,7 @@ void ABrainCloudTestActor::BeginPlay()
 {
     Super::BeginPlay();
     _bc.initialize(
-        "https://sharedprod.braincloudservers.com/dispatcherv2", 
+        "https://api.braincloudservers.com/dispatcherv2", 
         "91c3a097-4697-4787-ba1c-fakeSecret", 
         "123456", 
         "1.0.0");
@@ -235,7 +235,7 @@ void ABrainCloudTestActor::BeginPlay()
 {
     Super::BeginPlay();
     _bc.initialize(
-        "https://sharedprod.braincloudservers.com/dispatcherv2", 
+        "https://api.braincloudservers.com/dispatcherv2", 
         "91c3a097-4697-4787-ba1c-fakeSecret", 
         "123456", 
         "1.0.0");
