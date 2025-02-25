@@ -24,7 +24,7 @@ These features have been used to create this example project:
 
 ### Full Source Available
 
-The full source of brainCloud Tappy Chicken has been made available for our developers. Get the project [here](https://sharedprod.braincloudservers.com/s3/brainCloudExamples/unreal/BC_TappyChicken_1.0.0_168245.zip)!
+The full source of brainCloud Tappy Chicken has been made available for our developers. Get the project [here](https://api.braincloudservers.com/s3/brainCloudExamples/unreal/BC_TappyChicken_1.0.0_168245.zip)!
 
 ### Documentation
 

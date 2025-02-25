@@ -52,7 +52,7 @@ _To simulate a session-less server request with Postman:_
 - Launch Postman
 - Add a new Request
 - Set the request type to **POST**
-- Set the request URL to: "[https://sharedprod.braincloudservers.com/s2sdispatcher](https://sharedprod.braincloudservers.com/s2sdispatcher)"
+- Set the request URL to: "[https://api.braincloudservers.com/s2sdispatcher](https://api.braincloudservers.com/s2sdispatcher)"
 - In the **Body** section of the request, choose **raw** and set the type to **_JSON (application/json)_**
 - Copy this JSON into the body, setting the `appId`, `serverName` and `serverSecret` appropriately for your app
 
@@ -84,7 +84,7 @@ _First, we need to Authenticate to get a SessionId_
 
 - From Postman, Add a new Request
 - Set the request type to **POST**
-- Use the same request URL: "[https://sharedprod.braincloudservers.com/s2sdispatcher](https://sharedprod.braincloudservers.com/s2sdispatcher)"
+- Use the same request URL: "[https://api.braincloudservers.com/s2sdispatcher](https://api.braincloudservers.com/s2sdispatcher)"
 - In the **Body** tab of the request, choose **raw** and set the type to  **_JSON (application/json)_**
 - Copy this JSON into the body, setting the `appId`, `serverName` and `serverSecret` appropriately for your app
 - **(in both places!)**

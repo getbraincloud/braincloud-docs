@@ -29,9 +29,9 @@ Bombers is a fun multiplayer game with the following features:
 
 ## **Play Now!**
 
-- **[Bombers UNET version (Mac)](https://sharedprod.braincloudservers.com/s3/brainCloudExamples/unity/bombersUnet/brainCloudBombersUNET_OSX_1.0.0.zip)** - download and install to play
-- **[Bombers UNET version (PC)](https://sharedprod.braincloudservers.com/s3/brainCloudExamples/unity/bombersUnet/brainCloudBombersUNET_Windows_1.0.0.zip)** - download and install to play
-- **[Bombers Photon version (Web)](http://sharedprod.braincloudservers.com/s3/brainCloudExamples/unity/bombers/brainCloudBombers.html)** - uses the Unity Web Player, so be sure to use a compatible browser!
+- **[Bombers UNET version (Mac)](https://api.braincloudservers.com/s3/brainCloudExamples/unity/bombersUnet/brainCloudBombersUNET_OSX_1.0.0.zip)** - download and install to play
+- **[Bombers UNET version (PC)](https://api.braincloudservers.com/s3/brainCloudExamples/unity/bombersUnet/brainCloudBombersUNET_Windows_1.0.0.zip)** - download and install to play
+- **[Bombers Photon version (Web)](http://api.braincloudservers.com/s3/brainCloudExamples/unity/bombers/brainCloudBombers.html)** - uses the Unity Web Player, so be sure to use a compatible browser!
 
 ## Full Source Available
 
