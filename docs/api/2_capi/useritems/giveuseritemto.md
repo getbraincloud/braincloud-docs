@@ -5,13 +5,14 @@ Gifts item to the specified player.
 <PartialServop service_name="userItems" operation_name="GIVE_USER_ITEM_TO" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | The ID of the recipient's user profile. 
-itemId | The ID uniquely identifying the user item to be transferred. 
-version | The version of the user item being transferred. 
-quantity | The quantity of the user item to transfer. 
-immediate | Flag set to true if item is to be immediately transferred, otherwise false to have the sender sents an event and transfers item(s) only when recipient calls receiveUserItemFrom. 
+
+| Parameter | Description                                                                                                                                                                       |
+| --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| profileId | The ID of the recipient's user profile.                                                                                                                                           |
+| itemId    | The ID uniquely identifying the user item to be transferred.                                                                                                                      |
+| version   | The version of the user item being transferred.                                                                                                                                   |
+| quantity  | The quantity of the user item to transfer.                                                                                                                                        |
+| immediate | Flag set to true if item is to be immediately transferred, otherwise false to have the sender sents an event and transfers item(s) only when recipient calls receiveUserItemFrom. |
 
 ## Usage
 
@@ -191,30 +192,50 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "item": {
-      "itemId": "2f100f95-60cd-436e-b973-e33cbc6b3728",
-      "defId": "medal_bronze_2",
-      "quantity": 1,
-      "usesLeft": null,
-      "coolDownStart": -1,
-      "recoveryStart": -1,
-      "itemData": {},
-      "giftedTo": "74516a07-4d56-4f0a-82b9-df941d451318",
-      "giftedFrom": "8ce6e475-35a9-42f6-ba08-206bd07650ca",
-      "blockId": null,
-      "createdAt": 1566849320462,
-      "updatedAt": 1566849606132,
-      "version": 2,
-      "maxUses": null,
-      "coolDownUntil": -1,
-      "recoveryUntil": -1,
-      "itemDef": {}
+    "data": {
+        "item": {
+            "itemId": "2f100f95-60cd-436e-b973-e33cbc6b3728",
+            "defId": "medal_bronze_2",
+            "quantity": 1,
+            "usesLeft": null,
+            "coolDownStart": -1,
+            "recoveryStart": -1,
+            "itemData": {},
+            "giftedTo": "74516a07-4d56-4f0a-82b9-df941d451318",
+            "giftedFrom": "8ce6e475-35a9-42f6-ba08-206bd07650ca",
+            "blockId": null,
+            "createdAt": 1566849320462,
+            "updatedAt": 1566849606132,
+            "version": 2,
+            "maxUses": null,
+            "coolDownUntil": -1,
+            "recoveryUntil": -1,
+            "itemDef": {}
+        },
+        "giftItemId": "b303c738-82bd-4ab2-9688-544d45104a85"
     },
-    "giftItemId": "b303c738-82bd-4ab2-9688-544d45104a85"
-  },
-  "status": 200
+    "status": 200
 }
 ```
-</details>
 
+</details>
+:::tip
+
+For **immediate**: _true_ gifting:
+
+-   if the item was stackable and the sender has more quantity left, the “item” info in the response will indicate the status of that item (remaining quantity, etc.) after immediate gifting
+-   but if the senders item was deleted (not stackable or stackable and 0 quantity left) on the gifting, the “item” info will be empty to indicate this.
+
+For **immediate**: _false_ gifting (can't be stackable):
+
+-   the giftedTo field on the sender’s item would indicate the receiver’s profileId
+
+:::
+
+:::note
+
+-   If new item created — so for immediate and non-stackable — then the newly created item for the receiver would have the giftedFrom: **sendersProfileId** set.
+
+-   If stackable item that receiver already has, just the receiver’s quantity of that stackable item will be incremented (no new user item created)
+
+:::
