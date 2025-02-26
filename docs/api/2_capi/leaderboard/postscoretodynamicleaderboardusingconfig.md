@@ -19,14 +19,14 @@ This new API call has been added to provide increased flexibility compared to th
 
 ### configJson fields
 
-| Parameter       | Description                                                                                                                         |
-| --------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| leaderboardType | Required. Type of leaderboard. Valid values are 'LAST_VALUE', 'HIGH_VALUE', 'LOW_VALUE', 'CUMULATIVE', 'ARCADE_HIGH', 'ARCADE_LOW'; |
-| rotationType    | Required. Type of rotation. Valid values are 'NEVER', 'DAILY', 'DAYS', 'WEEKLY', 'MONTHLY', 'YEARLY';                               |
-| numDaysToRotate | Required if 'DAYS' rotation type, with valid values between 2 and 14; otherwise, null;                                              |
-| resetAt         | UTC timestamp, in milliseconds, at which to rotate the period. Always null if 'NEVER' rotation type;                                |
-| retainedCount   | Required. Number of rotations (versions) of the leaderboard to retain;                                                              |
-| expireInMins    | Optional. Duration, in minutes, before the leaderboard is to automatically expire.                                                  |
+| Parameter       | Description                                                                                                                                                                                                     |
+| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| leaderboardType | Required. Type of leaderboard. Valid values are 'LAST_VALUE', 'HIGH_VALUE', 'LOW_VALUE', 'CUMULATIVE', 'ARCADE_HIGH', 'ARCADE_LOW';                                                                             |
+| rotationType    | Required. Type of rotation. Valid values are 'NEVER', 'DAILY', 'DAYS', 'WEEKLY', 'MONTHLY', 'YEARLY';                                                                                                           |
+| numDaysToRotate | Required if 'DAYS' rotation type, with valid values between 2 and 14; otherwise, null;                                                                                                                          |
+| resetAt         | UTC timestamp, in milliseconds, at which to rotate the period. Always null if 'NEVER' rotation type;                                                                                                            |
+| retainedCount   | Required. Number of rotations (versions) of the leaderboard to retain;                                                                                                                                          |
+| expireInMins    | Optional (but highly recommended). Duration, in minutes, before the leaderboard is to automatically expire. This ensures that the leaderboards are automatically cleaned up after the specified amount of time. |
 
 ## Usage
 

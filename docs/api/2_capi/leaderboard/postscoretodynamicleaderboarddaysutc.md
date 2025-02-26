@@ -6,6 +6,10 @@ The passed in leaderboard config data is to dynamically create the leaderboard i
 
 <PartialServop service_name="leaderboard" operation_name="POST_SCORE_DYNAMIC" />
 
+:::caution
+This API is deprecated. Please use [PostScoreToDynamicLeaderboardUsingConfig](/api/capi/leaderboard/postscoretodynamicleaderboardusingconfig) instead.
+:::
+
 ## Method Parameters
 
 | Parameter       | Description                                       |

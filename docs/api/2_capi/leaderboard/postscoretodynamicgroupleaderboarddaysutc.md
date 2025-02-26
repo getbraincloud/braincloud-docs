@@ -4,6 +4,10 @@ Post the group score to the given group leaderboard with a rotation type of DAYS
 
 <PartialServop service_name="leaderboard" operation_name="POST_GROUP_SCORE_DYNAMIC" />
 
+:::caution
+This API is deprecated. Please use [PostScoreToDynamicGroupLeaderboardUsingConfig](/api/capi/leaderboard/postscoretodynamicgroupleaderboardusingconfig) instead.
+:::
+
 ## Method Parameters
 
 | Parameter         | Description                                        |

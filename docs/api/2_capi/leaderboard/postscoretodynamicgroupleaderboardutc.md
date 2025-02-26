@@ -4,6 +4,10 @@ Post the group score to the given group leaderboard and dynamically create if ne
 
 <PartialServop service_name="leaderboard" operation_name="POST_GROUP_SCORE" />
 
+:::caution
+This API is deprecated. Please use [PostScoreToDynamicGroupLeaderboardUsingConfig](/api/capi/leaderboard/postscoretodynamicgroupleaderboardusingconfig) instead.
+:::
+
 ## Method Parameters
 
 | Parameter         | Description                                        |
