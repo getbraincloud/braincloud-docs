@@ -158,6 +158,8 @@ The following environment variables are used by the relay server which can be co
 -   **CONNECTION_TIMEOUT**: Amount of time in seconds that a player is allowed to be connected to the server without sending a packet before being kicked. Defaults to 10 secs.
 -   **MEMBER_TIMEOUT**: Amount of time to wait in seconds for a player to connect to the server before assuming they aren't coming at all. Defaults to 30 secs.
 -   **END_MATCH_TIMEOUT**: Amount of time in seconds to stay up before exiting after receiving the END_MATCH packet. Defaults to 2 secs.
+-   **PACKET_LOG_ENABLED_WITH_MD5**: Allows for an MD5 hash logging of incoming and outgoing relay packet payloads.
+-   **PAYLOAD_LOG_AS_HEX**: Logs the incoming packet payload as a hex dump rather than an ASCII string.
 
 :::info
 All the timeout settings are in seconds.
@@ -170,7 +172,9 @@ All the timeout settings are in seconds.
     "MEMBER_TIMEOUT": "120",
     "END_MATCH_TIMEOUT": "600",
     "MAX_PLAYERS": "40",
-    "ALLOW_REJOIN_BY_PROFILE_ID": "true"
+    "ALLOW_REJOIN_BY_PROFILE_ID": "true",
+    "PACKET_LOG_ENABLED_WITH_MD5": "true",
+    "PAYLOAD_LOG_AS_HEX": "true"
 }
 ```
 
