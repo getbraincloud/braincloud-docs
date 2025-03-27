@@ -102,7 +102,7 @@ static const int ACK_ID_BYTES_SIZE = 8;
 ```
 
 :::info
-We've slightly modified the relay server behaviour when a player disconnects in replay protocol version v3. We now send the leaver a DISCONNECT (i.e. RS2CL_DISCONNECT) message and everybody else gets a SYSTEM DISCONNECT (i.e. RS2CL_RSMG) message. In v2, everybody got the 2nd one (i.e. RS2CL_RSMG).
+We've slightly modified the relay server behaviour when a player disconnects in protocol version v3. We now send the leaver a DISCONNECT (i.e. RS2CL_DISCONNECT) message and everybody else gets a SYSTEM DISCONNECT (i.e. RS2CL_RSMG) message. In v2, everybody got the 2nd one (i.e. RS2CL_RSMG).
 :::
 
 And here are the channel resend intervals:
