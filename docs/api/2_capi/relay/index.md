@@ -58,6 +58,8 @@ Normal procedure for match termination is to wait for all the participants to di
 -   1 bit to specify if the packet should be in order.
 -   2 bit for channel id. 0-3.
 
+The combination of those 4 bits creates what we call a channel idx. Each combination of reliable/ordered, times the 4 channels gives us 16 channels total.
+
 Channels are used to define retransmission speed of reliable packets. Also, each channel will have its own retransmission queue. Packet Ids are unique within a channel only. You can receive/send a packet with id=133 on channel 0, and also another one with the same id=133 but on channel 1.
 
 -   **Channel 0**: fastest retransmission rate (Use for things like bullets)
@@ -99,7 +101,11 @@ static const uint8_t RS2CL_PONG         = 4; // CL2RS_PING
 static const int ACK_ID_BYTES_SIZE = 8;
 ```
 
-And channel resends the intervals:
+:::info
+We've slightly modified the relay server behaviour when a player disconnects in protocol version v3. We now send the leaver a DISCONNECT (i.e. RS2CL_DISCONNECT) message and everybody else gets a SYSTEM DISCONNECT (i.e. RS2CL_RSMG) message. In v2, everybody got the 2nd one (i.e. RS2CL_RSMG).
+:::
+
+And here are the channel resend intervals:
 
 ```
 static const Duration RELIABLE_RESEND_INTERVALS[] = {
@@ -117,36 +123,36 @@ static const auto RELIABLE_CHANNEL_LOW_PRIORITY         = 3;
 
 For each reliable packets, the resend rate slows down by 25% each time. This might be tweaked later. So for channel 1, resend at 50ms interface, it will go like this until timeout (10sec):
 
-| interval | total time           | frequency |
-| -------- | -------------------- | --------- |
-| 50ms     | 0.1s                 | 20        |
-| 62ms     | 0.1s                 | 16        |
-| 77ms     | 0.2s                 | 13        |
-| 96ms     | 0.3s                 | 10        |
-| 120ms    | 0.4s                 | 8         |
-| 150ms    | 0.5s                 | 7         |
-| 187ms    | 0.7s                 | 5         |
-| 233ms    | 1.0s                 | 4         |
-| 291ms    | 1.3s                 | 3         |
-| 363ms    | 1.6s                 | 3         |
-| 453ms    | 2.0s                 | 2         |
-| 500ms    | 2.5s                 | 2         |
-| 500ms    | 3.0s                 | 2         |
-| 500ms    | 3.5s                 | 2         |
-| 500ms    | 4.0s                 | 2         |
-| 500ms    | 4.5s                 | 2         |
-| 500ms    | 5.0s                 | 2         |
-| 500ms    | 5.5s                 | 2         |
-| 500ms    | 6.0s                 | 2         |
-| 500ms    | 6.5s                 | 2         |
-| 500ms    | 7.0s                 | 2         |
-| 500ms    | 7.5s                 | 2         |
-| 500ms    | 8.0s                 | 2         |
-| 500ms    | 8.5s                 | 2         |
-| 500ms    | 9.0s                 | 2         |
-| 500ms    | 9.5s                 | 2         |
-| 500ms    | 10.0s                | 2         |
-| timeout  | too many packet lost |
+| interval | total time            | frequency |
+| -------- | --------------------- | --------- |
+| 50ms     | 0.1s                  | 20        |
+| 62ms     | 0.1s                  | 16        |
+| 77ms     | 0.2s                  | 13        |
+| 96ms     | 0.3s                  | 10        |
+| 120ms    | 0.4s                  | 8         |
+| 150ms    | 0.5s                  | 7         |
+| 187ms    | 0.7s                  | 5         |
+| 233ms    | 1.0s                  | 4         |
+| 291ms    | 1.3s                  | 3         |
+| 363ms    | 1.6s                  | 3         |
+| 453ms    | 2.0s                  | 2         |
+| 500ms    | 2.5s                  | 2         |
+| 500ms    | 3.0s                  | 2         |
+| 500ms    | 3.5s                  | 2         |
+| 500ms    | 4.0s                  | 2         |
+| 500ms    | 4.5s                  | 2         |
+| 500ms    | 5.0s                  | 2         |
+| 500ms    | 5.5s                  | 2         |
+| 500ms    | 6.0s                  | 2         |
+| 500ms    | 6.5s                  | 2         |
+| 500ms    | 7.0s                  | 2         |
+| 500ms    | 7.5s                  | 2         |
+| 500ms    | 8.0s                  | 2         |
+| 500ms    | 8.5s                  | 2         |
+| 500ms    | 9.0s                  | 2         |
+| 500ms    | 9.5s                  | 2         |
+| 500ms    | 10.0s                 | 2         |
+| timeout  | too many packets lost |
 
 ### Custom Environment Variables
 
@@ -158,6 +164,8 @@ The following environment variables are used by the relay server which can be co
 -   **CONNECTION_TIMEOUT**: Amount of time in seconds that a player is allowed to be connected to the server without sending a packet before being kicked. Defaults to 10 secs.
 -   **MEMBER_TIMEOUT**: Amount of time to wait in seconds for a player to connect to the server before assuming they aren't coming at all. Defaults to 30 secs.
 -   **END_MATCH_TIMEOUT**: Amount of time in seconds to stay up before exiting after receiving the END_MATCH packet. Defaults to 2 secs.
+-   **PACKET_LOG_ENABLED_WITH_MD5**: Allows for an MD5 hash logging of incoming and outgoing relay packet payloads.
+-   **PAYLOAD_LOG_AS_HEX**: Logs the incoming packet payload as a hex dump rather than an ASCII string.
 
 :::info
 All the timeout settings are in seconds.
@@ -170,7 +178,9 @@ All the timeout settings are in seconds.
     "MEMBER_TIMEOUT": "120",
     "END_MATCH_TIMEOUT": "600",
     "MAX_PLAYERS": "40",
-    "ALLOW_REJOIN_BY_PROFILE_ID": "true"
+    "ALLOW_REJOIN_BY_PROFILE_ID": "true",
+    "PACKET_LOG_ENABLED_WITH_MD5": "true",
+    "PAYLOAD_LOG_AS_HEX": "true"
 }
 ```
 
@@ -185,6 +195,25 @@ All the timeout settings are in seconds.
 ### Client Receive Implementation
 
 ![Client Receive Implementation](@site/docs/img/api-img/client_receive_implementation.png)
+
+### Exit Codes
+
+The following table describes the known exit codes for the relay server.
+
+| Code | Description                                           |
+| ---- | ----------------------------------------------------- |
+| 0    | Exited cleanly                                        |
+| 1    | Failed to initiliaze GameLift (GameLift only)         |
+| 2    | Unused                                                |
+| 3    | Missing expected environment variables                |
+| 4    | Failed to initialize S2S context                      |
+| 5    | Missing expected lobby instance configuration         |
+| 6    | Failed to retrieve lobby instance configuration       |
+| 7    | Failed to process lobby instance configuration        |
+| 8    | Failed to initialize websocket server                 |
+| 9    | Failed to initialize TCP server                       |
+| 10   | Failed to initialize UDP server                       |
+| 11   | No players connected before MEMBER_TIMEOUT is reached |
 
 ### API Summary
 
