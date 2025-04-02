@@ -1,85 +1,6 @@
 # SysGetMilestonePage
 
-```json-doc
-{
-  "status": 200,
-  "data": {
-    "context": "eyJzZWFyY2hDcml0ZXJpYSI6ey...",
-    "results": {
-      "count": 3,
-      "page": 1,
-      "items": [
-        {
-          "milestoneId": "1",
-          "questId": null,
-          "title": "Egg Crusher",
-          "description": "Crushing Eggs lifetime milestone",
-          "category": "mission",
-          "extraData": {
-            "secretMission": false,
-            "actionIndex": 4
-          },
-          "rewards": {
-            "experiencePoints": 30,
-            "achievement": "ACH001",
-            "currency": {
-              "coins": 5
-            },
-            "globalStatistics": {
-              "globalxp": 30
-            },
-            "statistics": {
-              "a3": 1,
-              "secretMissions": 1
-            }
-          },
-          "thresholds": {
-            "playerStatistics": {
-              "experienceLevel": 1,
-              "experiencePoints": 10,
-              "statistics": {
-                "returningDay": 7
-              }
-            }
-          },
-          "unlockThresholds": {
-            "playerStatistics": {
-              "experienceLevel": 2,
-              "experiencePoints": 10,
-              "statistics": {
-                "foodc": 5
-              }
-            },
-            "globalStatistics": {
-              "food_unlock": 1
-            }
-          },
-          "createdAt": 1574792720983,
-          "updatedAt": 1574792720983,
-          "version": 1
-        },
-        {
-          "milestoneId": "2",
-          "questId": null,
-          "title": "Another milestone",
-          "description": "Not yet fully defined",
-          "category": "mission",
-          "extraData": null,
-          "createdAt": 1574111511152,
-          "updatedAt": 1574111511152,
-          "version": 1
-        }
-      ],
-      "moreAfter": true,
-      "moreBefore": false
-    }
-  }
-}
-```
-
-
-
-Retrieves the first page of milestones. 
+Retrieves the first page of milestones.
 
 _Note that this call does not return milestones (i.e. tasks) that are embedded within Quests. Use the Quests API for those._
 
@@ -87,23 +8,21 @@ After retrieving a page of milestones with this method use [sysGetMilestonePageO
 
 See the [Generic Paged Queries](/api/appendix/genericpagedqueries) documentation for creating the context object.
 
-
-
-
 Supported `searchCriteria` fields include:
 
-* `milestoneId`
-* `title`
-* `description`
-* `category`
-* and `extraData` fields (must be prefixed by `extraData`) - i.e. `extraData.actionIndex`
+-   `milestoneId`
+-   `title`
+-   `description`
+-   `category`
+-   and `extraData` fields (must be prefixed by `extraData`) - i.e. `extraData.actionIndex`
 
 <PartialServop service_name="gamification" operation_name="SYS_GET_MILESTONE_PAGE" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-context | The json context for the page request.
+
+| Parameter | Description                            |
+| --------- | -------------------------------------- |
+| context   | The json context for the page request. |
 
 ## Usage
 
@@ -214,7 +133,80 @@ var milestonePage = gameficationProxy.sysGetMilestonePage(context);
 <summary>JSON Response</summary>
 
 ```json
-// Cloud Code only. To view example, switch to the Cloud Code tab
+{
+    "status": 200,
+    "data": {
+        "context": "eyJzZWFyY2hDcml0ZXJpYSI6ey...",
+        "results": {
+            "count": 3,
+            "page": 1,
+            "items": [
+                {
+                    "milestoneId": "1",
+                    "questId": null,
+                    "title": "Egg Crusher",
+                    "description": "Crushing Eggs lifetime milestone",
+                    "category": "mission",
+                    "extraData": {
+                        "secretMission": false,
+                        "actionIndex": 4
+                    },
+                    "rewards": {
+                        "experiencePoints": 30,
+                        "achievement": "ACH001",
+                        "currency": {
+                            "coins": 5
+                        },
+                        "globalStatistics": {
+                            "globalxp": 30
+                        },
+                        "statistics": {
+                            "a3": 1,
+                            "secretMissions": 1
+                        }
+                    },
+                    "thresholds": {
+                        "playerStatistics": {
+                            "experienceLevel": 1,
+                            "experiencePoints": 10,
+                            "statistics": {
+                                "returningDay": 7
+                            }
+                        }
+                    },
+                    "unlockThresholds": {
+                        "playerStatistics": {
+                            "experienceLevel": 2,
+                            "experiencePoints": 10,
+                            "statistics": {
+                                "foodc": 5
+                            }
+                        },
+                        "globalStatistics": {
+                            "food_unlock": 1
+                        }
+                    },
+                    "createdAt": 1574792720983,
+                    "updatedAt": 1574792720983,
+                    "version": 1
+                },
+                {
+                    "milestoneId": "2",
+                    "questId": null,
+                    "title": "Another milestone",
+                    "description": "Not yet fully defined",
+                    "category": "mission",
+                    "extraData": null,
+                    "createdAt": 1574111511152,
+                    "updatedAt": 1574111511152,
+                    "version": 1
+                }
+            ],
+            "moreAfter": true,
+            "moreBefore": false
+        }
+    }
+}
 ```
-</details>
 
+</details>
