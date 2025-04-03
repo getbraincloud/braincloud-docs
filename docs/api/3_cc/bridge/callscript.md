@@ -9,10 +9,12 @@ var proxy = bridge.getScriptServiceProxy();
 var res = proxy.runScript("scriptName", scriptdata);
 ```
 
-Field | Description
--------------- | -----------
-scriptname | The name of the script to call
-scriptdata | The json parameters to send to the script
+## Method Parameters
+
+| Parameter  | Description                               |
+| ---------- | ----------------------------------------- |
+| scriptname | The name of the script to call            |
+| scriptdata | The json parameters to send to the script |
 
 ## Usage
 
@@ -104,4 +106,3 @@ var res = bridge.callScript("PostToAllLeaderboards", scriptdata);
 </Tabs>
 </BrowserWindow>
 ```
-

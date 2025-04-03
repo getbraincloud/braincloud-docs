@@ -2,13 +2,15 @@
 
 A generic method for calling client API services. Useful in some circumstances.
 
-Field | Description
--------------- | -----------
-service | The name of the service
-operation | The name of the operation to call on the service
-serviceData | The parameters to send to the operation
+## Method Parameters
 
-*Note - the API Explorer is a great reference to determine the JSON format of the parameters.*
+| Parameter   | Description                                      |
+| ----------- | ------------------------------------------------ |
+| service     | The name of the service                          |
+| operation   | The name of the operation to call on the service |
+| serviceData | The parameters to send to the operation          |
+
+_Note - the API Explorer is a great reference to determine the JSON format of the parameters._
 
 ## Usage
 
@@ -106,4 +108,3 @@ var res = bridge.callAPI("leaderboard", "POST_SCORE", serviceData);
 </Tabs>
 </BrowserWindow>
 ```
-
