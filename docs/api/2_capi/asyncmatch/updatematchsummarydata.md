@@ -5,12 +5,13 @@ Allows the current player (only) to update Summary data without having to submit
 <PartialServop service_name="asyncMatch" operation_name="UPDATE_SUMMARY" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-ownerId | Match owner identifier
-matchId | Match identifier
-version | Game state version to ensure turns are submitted once and in order
-jsonSummary | JSON object provided by the caller that other players will see as a summary of the game when listing their games
+
+| Parameter   | Description                                                                                                      |
+| ----------- | ---------------------------------------------------------------------------------------------------------------- |
+| ownerId     | Match owner identifier                                                                                           |
+| matchId     | Match identifier                                                                                                 |
+| version     | Game state version to ensure turns are submitted once and in order                                               |
+| jsonSummary | JSON object provided by the caller that other players will see as a summary of the game when listing their games |
 
 ## Usage
 
@@ -23,6 +24,7 @@ jsonSummary | JSON object provided by the caller that other players will see as 
 ```csharp
 string ownerId = "internalPlayerId";
 string matchId = "matchId";
+int version = 1;
 string jsonSummary = "{\"Address\":\"North America\"}";
 SuccessCallback successCallback = (response, cbObject) =>
 {
@@ -44,6 +46,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 ```cpp
 const char *ownerId = "internalPlayerId";
 const char *matchId = "matchId";
+int version = 1;
 const char *jsonSummary = "{\"Address\":\"North America\"}";
 <%= data.branding.codePrefix %>->getAsyncMatchService()->updateMatchSummaryData(ownerId, matchId, version, jsonSummary, this);
 ```
@@ -56,6 +59,7 @@ const char *jsonSummary = "{\"Address\":\"North America\"}";
 ```objectivec
 NSString *ownerId = @"internalPlayerId";
 NSString *matchId = @"matchId";
+int version = 1;
 NSString *jsonSummary = @"{\"Address\":\"North America\"}";
 BCCompletionBlock successBlock;      // define callback
 BCErrorCompletionBlock failureBlock; // define callback
@@ -77,6 +81,7 @@ BCErrorCompletionBlock failureBlock; // define callback
 ```java
 String ownerId = "internalPlayerId";
 String matchId = "matchId";
+int version = 1;
 String jsonSummary = "{\"Address\":\"North America\"}";
 this; // implements IServerCallback
 
@@ -100,6 +105,7 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 ```javascript
 var ownerId = "internalPlayerId";
 var matchId = "matchId";
+var version = 1;
 var jsonSummary = {
     "Address": "North America"
 };
@@ -119,6 +125,7 @@ var jsonSummary = {
 ```dart
 var  ownerId = "internalPlayerId";
 var  matchId = "matchId";
+var  version = 1;
 var  jsonSummary = {
     "Address": "North America"
 };
@@ -140,6 +147,7 @@ if (result.statusCode == 200) {
 ```cfscript
 var ownerId = "internalPlayerId";
 var matchId = "matchId";
+var version = 1;
 var jsonSummary = {
     "Address": "North America"
 };
@@ -215,5 +223,5 @@ if (postResult.status == 200) {
     }
 }
 ```
-</details>
 
+</details>
