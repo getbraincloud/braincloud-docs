@@ -73,7 +73,7 @@ var optionsJson = {
 };
 var userProxy = bridge.getUserServiceProxy();
 
-var postResult = userProxy.SysDeleteUser(profileId, optionsJson);
+var postResult = userProxy.sysDeleteUser(profileId, optionsJson);
 ```
 
 ```mdx-code-block
@@ -99,20 +99,22 @@ var postResult = userProxy.SysDeleteUser(profileId, optionsJson);
 </Tabs>
 </BrowserWindow>
 ```
+
 <details>
 <summary>JSON Response</summary>
 
 ```json
 {
-  "status" : 200,
-  "data" : {}
+    "status": 200,
+    "data": {}
 }
 ```
 
 </details>
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-profileId | Profile ID of the user.
-optionsJson | Additional options, including 'deleteChildren' flag to also delete children of the user. Defaults to false if not specified.
+
+| Parameter   | Description                                                                                                                  |
+| ----------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| profileId   | Profile ID of the user.                                                                                                      |
+| optionsJson | Additional options, including 'deleteChildren' flag to also delete children of the user. Defaults to false if not specified. |
