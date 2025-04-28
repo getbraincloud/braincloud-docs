@@ -2,6 +2,15 @@
 
 Creates a leaderboard configuration, with support for tournament leaderboards.
 
+<PartialServop service_name="leaderboard" operation_name="SYS_CREATE_LEADERBOARD_CONFIG" />
+
+## Method Parameters
+
+| Parameter     | Description                                                        |
+| ------------- | ------------------------------------------------------------------ |
+| leaderboardId | ID uniquely identifying the leaderboard configuration to retrieve. |
+| configJson    | Configuration for the leaderboard, specified as JSON object.       |
+
 #### Configuration fields of **configJson**
 
 | Parameter       | Description                                                                                                                                                                                             |
@@ -16,15 +25,6 @@ Creates a leaderboard configuration, with support for tournament leaderboards.
 | data            | Optional parameter for data.                                                                                                                                                                            |
 | tEnabled        | Optional parameter to set whether tournaments are enabled (true) or not (false). Must be false for NEVER. Must be true for ADHOC. Can be true or false for recurring rotation types. Defaults to false. |
 | tTemplateOnly   | Optional parameter to set whether leaderboard is a tournament template only (true) or not (false). Can only be true if tEnabled is true. Defaults to false.                                             |
-
-<PartialServop service_name="leaderboard" operation_name="SYS_CREATE_LEADERBOARD_CONFIG" />
-
-## Method Parameters
-
-| Parameter     | Description                                                        |
-| ------------- | ------------------------------------------------------------------ |
-| leaderboardId | ID uniquely identifying the leaderboard configuration to retrieve. |
-| configJson    | Configuration for the leaderboard, specified as JSON object.       |
 
 ## Usage
 
