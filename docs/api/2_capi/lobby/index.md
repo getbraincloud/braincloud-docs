@@ -22,7 +22,7 @@ _For more information on Lobby Concepts, see the [Lobby Overview](/learn/key-con
 
 > `DISBANDED` event example
 
-```json-doc
+```json
 {
     "service": "lobby",
     "operation": "DISBANDED",
@@ -38,7 +38,7 @@ _For more information on Lobby Concepts, see the [Lobby Overview](/learn/key-con
 
 > `JOIN_FAIL` event example
 
-```json-doc
+```json
 {
     "service": "lobby",
     "operation": "JOIN_FAIL",
@@ -54,7 +54,7 @@ _For more information on Lobby Concepts, see the [Lobby Overview](/learn/key-con
 
 > `MEMBER_JOIN` event example
 
-```json-doc
+```json
 {
     "service": "lobby",
     "operation": "MEMBER_JOIN",

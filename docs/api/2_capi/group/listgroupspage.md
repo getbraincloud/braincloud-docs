@@ -1,40 +1,14 @@
 # ListGroupsPage
 
-```json-doc
-{
-    "status": 200,
-    "data": {
-        "results": {
-            "moreBefore": false,
-            "count": 1,
-            "items": [
-                {
-                    "groupType": "test",
-                    "groupId": "1d1abb61-8825-4374-a52a-d8186f336775",
-                    "isOpenGroup": false,
-                    "requestingPendingMemberCount": 0,
-                    "invitedPendingMemberCount": 0,
-                    "ownerId": "29696ee1-82f6-4d6e-86de-b68c3a5c347e",
-                    "name": "test",
-                    "memberCount": 1
-                }
-            ],
-            "page": 1,
-            "moreAfter": false
-        },
-        "context": "eyJzZWFyY2hDcml0ZXJpYSI6eyJncm91cFR5cGUiOiJ0ZXN0IiwiZ2FtZUlk"
-    }
-}
-```
-
 Retrieve a page of group summary information based on the specified context.
 
 <PartialServop service_name="group" operation_name="LIST_GROUPS_PAGE" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-context | The JSON context for the page request
+
+| Parameter | Description                           |
+| --------- | ------------------------------------- |
+| context   | The JSON context for the page request |
 
 ## Usage
 
@@ -228,30 +202,30 @@ if (postResult.status == 200) {
 ```json
 // Context example
 {
-  "data": {
-    "context": "eyJzZWFyY2hDcml0ZXJpYSI6eyJnYW1lSWQiOiIxMzIyOSJ9LCJzb3J0Q3JpdGVyaWEiOnt9LCJwYWdpbmF0aW9uIjp7InJvd3NQZXJQYWdlIjo1MCwicGFnZU51bWJlciI6MSwiZG9Db3VudCI6dHJ1ZSwic2tpcFJlY291bnQiOmZhbHNlfSwib3B0aW9ucyI6bnVsbCwicmVzdWx0Q291bnQiOjF9",
-    "results": {
-      "count": 1,
-      "page": 1,
-      "items": [
-        {
-          "groupType": "group11",
-          "groupId": "d373ff92-3327-4176-85ed-3565a09c43fa",
-          "memberCount": 2,
-          "name": "agroup",
-          "invitedPendingMemberCount": 0,
-          "requestingPendingMemberCount": 0,
-          "ownerId": "8bd564a7-3f91-4a98-a4b3-43cd7d266133",
-          "summaryData": {},
-          "isOpenGroup": true
+    "data": {
+        "context": "eyJzZWFyY2hDcml0ZXJpYSI6eyJnYW1lSWQiOiIxMzIyOSJ9LCJzb3J0Q3JpdGVyaWEiOnt9LCJwYWdpbmF0aW9uIjp7InJvd3NQZXJQYWdlIjo1MCwicGFnZU51bWJlciI6MSwiZG9Db3VudCI6dHJ1ZSwic2tpcFJlY291bnQiOmZhbHNlfSwib3B0aW9ucyI6bnVsbCwicmVzdWx0Q291bnQiOjF9",
+        "results": {
+            "count": 1,
+            "page": 1,
+            "items": [
+                {
+                    "groupType": "group11",
+                    "groupId": "d373ff92-3327-4176-85ed-3565a09c43fa",
+                    "memberCount": 2,
+                    "name": "agroup",
+                    "invitedPendingMemberCount": 0,
+                    "requestingPendingMemberCount": 0,
+                    "ownerId": "8bd564a7-3f91-4a98-a4b3-43cd7d266133",
+                    "summaryData": {},
+                    "isOpenGroup": true
+                }
+            ],
+            "moreAfter": false,
+            "moreBefore": false
         }
-      ],
-      "moreAfter": false,
-      "moreBefore": false
-    }
-  },
-  "status": 200
+    },
+    "status": 200
 }
 ```
-</details>
 
+</details>

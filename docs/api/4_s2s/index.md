@@ -1,21 +1,18 @@
 # Server to Server (S2S)
 
-
-
-
 ### API Specification
 
 <%= data.branding.productName %> includes a Server to Server (S2S) interface for access from client-operated servers.
 
 Uses for this sort of interface include:
 
-- Secure submission of score data from dedicated multiplayer servers (i.e. prevents cheating)
-- Creation of custom administrative tools
-- Etc.
+-   Secure submission of score data from dedicated multiplayer servers (i.e. prevents cheating)
+-   Creation of custom administrative tools
+-   Etc.
 
 > Standard Protocol - example request:
 
-```json-doc
+```json
 {
     "appId": "10000",
     "serverName": "serverX",
@@ -30,7 +27,7 @@ Uses for this sort of interface include:
 
 > Standard Protocol - example response:
 
-```json-doc
+```json
 {
     "entityListCount": 2
 }
@@ -38,32 +35,28 @@ Uses for this sort of interface include:
 
 Security for the interface is implemented via a separate S2S secret and the ability to configure valid source IP addresses. It allows for multiple server configurations to be configured per app.
 
-The interface is implemented as a REST servlet that accepts JSON string POSTs and returns JSON responses. It is similar to the regular client REST interface in that the target API is based on selecting a *service* and *operation*. 
+The interface is implemented as a REST servlet that accepts JSON string POSTs and returns JSON responses. It is similar to the regular client REST interface in that the target API is based on selecting a _service_ and _operation_.
 
 The name of the S2S servlet is "s2sdispatcher" so the URL required for the REST call is `https://api.braincloudservers.com/s2sdispatcher`.
 
 Unlike client-callable cloud scripts, S2S scripts are run in the context of an app rather than a particular user profile – thus no user authentication is required (and hence the need + recommendation for the additional ip-based security).
 
-
-
 The schema for the JSON request is as follows:
 
-- `appId` – <%= data.branding.productName %> assigned id when game/app is created.
-- `serverName` – Name of the server configured in the <%= data.branding.productName %> portal.
-- `serverSecret` – Secret assigned to that particular server configuration.
-- `service` – Identifies the service category of the REST call. (Currently only "script" is implemented.)
-- `operation` – Identifies the operation within the service to executed. (Currently only "RUN" is implemented.)
-- `data` – Service/Operation dependent data parameters.
+-   `appId` – <%= data.branding.productName %> assigned id when game/app is created.
+-   `serverName` – Name of the server configured in the <%= data.branding.productName %> portal.
+-   `serverSecret` – Secret assigned to that particular server configuration.
+-   `service` – Identifies the service category of the REST call. (Currently only "script" is implemented.)
+-   `operation` – Identifies the operation within the service to executed. (Currently only "RUN" is implemented.)
+-   `data` – Service/Operation dependent data parameters.
 
 The JSON response returns the result of the service/operation call.
-
-<div></div>
 
 ### Advanced Protocol
 
 > Advanced Protocol - Authentication request
 
-```json-doc
+```json
 {
     "packetId": 0,
     "messages": [
@@ -83,15 +76,12 @@ The JSON response returns the result of the service/operation call.
 In addition to the above mentioned standard simple REST protocol, <%= data.branding.productName %> also implements a more complex packet/session based protocol. This protocol is similar to the one used on the normal client interface. It also includes the ability to bundle multiple messages into one REST request.
 
 :::tip
-<strong>Why use the advanced S2S protocol?</strong> <p></p>Because it is faster *and* less expensive! Every standard S2S call requires our servers to first *authenticate* your request (using the appId, serverId and secret), and then process the request. This takes time - and we charge you an extra API count for it. With the advanced protocol, the authentication only happens once - so you save an API count for each request that follows! And get faster response times to boot!
+<strong>Why use the advanced S2S protocol?</strong> <p></p>Because it is faster _and_ less expensive! Every standard S2S call requires our servers to first _authenticate_ your request (using the appId, serverId and secret), and then process the request. This takes time - and we charge you an extra API count for it. With the advanced protocol, the authentication only happens once - so you save an API count for each request that follows! And get faster response times to boot!
 :::
-
 
 Notice the addition of the `packetId` sequence number and array/bundle of messages. The typical response to the above packet:
 
-<div></div>
-
-```json-doc
+```json
 {
     "packetId": 0,
     "messageResponses": [
@@ -107,12 +97,11 @@ Notice the addition of the `packetId` sequence number and array/bundle of messag
 
 Notice the `packetId` and `sessionId` in the response.
 
-<div></div>
 Subsequently you could send:
 
 > Follow-up request, with pre-authenticated session included:
 
-```json-doc
+```json
 {
     "packetId": 1,
     "sessionId": "vrunikbkgmu3m9gkeqt78vvkb2",
@@ -132,10 +121,9 @@ Subsequently you could send:
 }
 ```
 
-Notice the incremented `packetId` and the `sessionId` returned in the previous request.  In this simple case we are only sending one request (i.e. a "messages" array of 1). You can append more requests to this array to perform more than one request. The typical response would be:
-<div></div>
+Notice the incremented `packetId` and the `sessionId` returned in the previous request. In this simple case we are only sending one request (i.e. a "messages" array of 1). You can append more requests to this array to perform more than one request. The typical response would be:
 
-```json-doc
+```json
 {
     "packetId": 1,
     "messageResponses": [

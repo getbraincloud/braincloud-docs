@@ -2,14 +2,16 @@
 
 This is a generic method for calling client API services with a player session context.
 
-Field | Description
--------------- | -----------
-session | The sessionId to make the call in the context of
-service | The name of the service
-operation | The name of the operation to call on the service
-serviceData | The parameters to send to the operation
+## Method Parameters
 
-*Note - the API Explorer is a great reference to determine the JSON format of the parameters.*
+| Parameter   | Description                                      |
+| ----------- | ------------------------------------------------ |
+| session     | The sessionId to make the call in the context of |
+| service     | The name of the service                          |
+| operation   | The name of the operation to call on the service |
+| serviceData | The parameters to send to the operation          |
+
+_Note - the API Explorer is a great reference to determine the JSON format of the parameters._
 
 ## Usage
 
@@ -113,4 +115,3 @@ var res = bridge.callAPIForSession(session, "event", "SEND", serviceData);
 </Tabs>
 </BrowserWindow>
 ```
-

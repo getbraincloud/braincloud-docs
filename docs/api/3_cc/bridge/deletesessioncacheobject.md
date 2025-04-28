@@ -2,9 +2,11 @@
 
 Deletes the named JSON object from the session cache.
 
-| Field | Description                  |
-| ----- | ---------------------------- |
-| key   | The name of object to delete |
+## Method Parameters
+
+| Parameter | Description                  |
+| --------- | ---------------------------- |
+| key       | The name of object to delete |
 
 ## Usage
 

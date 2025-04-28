@@ -11,18 +11,14 @@ The available parameters will depend on the mail service provider you have enabl
 
 > Example of dynamic templated SendGrid email parameters:
 
-```json-doc
+```json
 {
     "fromAddress": "email@company.com",
     "fromName": "Jane Doe",
     "replyToAddress": "optional@company.com",
     "replyToName": "Optional ReplyTo",
-    "cc": [
-        "xxx@company.com"
-    ],
-    "bcc": [
-        "yyy@company.com"
-    ],
+    "cc": ["xxx@company.com"],
+    "bcc": ["yyy@company.com"],
     "templateId": "d-www-xxx-yyy-zzz",
     "dynamicData": {
         "user": {
@@ -31,10 +27,7 @@ The available parameters will depend on the mail service provider you have enabl
         },
         "resetLink": "www.dummuyLink.io"
     },
-    "categories": [
-        "category1",
-        "category2"
-    ],
+    "categories": ["category1", "category2"],
     "attachments": [
         {
             "content": "VGhpcyBhdHRhY2htZW50IHRleHQ=",
