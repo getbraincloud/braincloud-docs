@@ -5,9 +5,10 @@ Resets the specified milestones' statuses.
 <PartialServop service_name="gamification" operation_name="RESET_MILESTONES" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-milestones | A list of milestones to reset
+
+| Parameter  | Description                        |
+| ---------- | ---------------------------------- |
+| milestones | A list of milestones' IDs to reset |
 
 ## Usage
 
@@ -72,7 +73,7 @@ milestones | A list of milestones to reset
 ```
 
 ```cfscript
-var milestones = [ "EGG_MIL01" ];
+var milestones = [ "1" ];
 var gamificationProxy = bridge.getGamificationServiceProxy();
 
 var postResult = gamificationProxy.resetMilestones(milestones);
@@ -101,9 +102,9 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status":200,
-    "data":null
+    "status": 200,
+    "data": null
 }
 ```
-</details>
 
+</details>

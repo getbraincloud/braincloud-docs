@@ -2,9 +2,11 @@
 
 Retrieves the named JSON object from the session cache. Returns `null` if the object cannot be found.
 
-Field | Description
--------------- | -----------
-key | The name of object to retrieve
+## Method Parameters
+
+| Parameter | Description                    |
+| --------- | ------------------------------ |
+| key       | The name of object to retrieve |
 
 ## Usage
 
@@ -86,4 +88,3 @@ var myAddressObject = bridge.getSessionCacheObject("address");
 </Tabs>
 </BrowserWindow>
 ```
-

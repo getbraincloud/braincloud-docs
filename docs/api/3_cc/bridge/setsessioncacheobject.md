@@ -2,13 +2,15 @@
 
 Stores a JSON object temporarily within the current session. Note that the data will be lost when the session expires.
 
-Field | Description
--------------- | -----------
-key            | The storage-name for the object
-cacheObject    | The JSON object to store
+## Method Parameters
+
+| Parameter   | Description                     |
+| ----------- | ------------------------------- |
+| key         | The storage-name for the object |
+| cacheObject | The JSON object to store        |
 
 :::tip
-*Apps are limited to 5 cached objects per session, with each restricted to 512 characters of stringified JSON data.*
+_Apps are limited to 5 cached objects per session, with each restricted to 512 characters of stringified JSON data._
 :::
 
 ## Usage
@@ -101,4 +103,3 @@ bridge.setSessionCacheObject( "address", addressJson );
 </Tabs>
 </BrowserWindow>
 ```
-
