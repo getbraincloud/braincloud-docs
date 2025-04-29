@@ -3,6 +3,7 @@
 ## Code Description
 
 | Code  | Description  |
+| ----- | ------------ |
 | 0     | <font size="-1">NO_REASON_CODE </font><br/> No error|
 | 20200 | <font size="-1">INVALID_NOTIFICATION </font><br/> Invalid notification request|
 | 40001 | <font size="-1">INVALID_REQUEST </font><br/> Occurs if an invalid request is made to <%= data.branding.productName %> (for instance appId or secret is invalid)|
