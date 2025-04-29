@@ -524,7 +524,7 @@
 | 40821 | <font size="-1">VERSION_MISMATCH </font><br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | 40822 | <font size="-1">UNSUPPORTED_CRITERIA_FOR_SHARDED_COLLECTIONS </font><br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
-| 40823 | <font size="-1">USER_RATE_LIMIT_EXCEEDED <font><br/>It's returned when the user exceeds the user rate limit... (i.e. sends in more than 20 requests / second for an extended period of time) |
+| 40823 | <font size="-1">USER_RATE_LIMIT_EXCEEDED </font><br/>It's returned when the user exceeds the user rate limit... (i.e. sends in more than 20 requests / second for an extended period of time) |
 
 | 40830 | <font size="-1">STEAM_ERROR </font><br/> |
 | 40831 | <font size="-1">AZURE_AD_NOT_CONFIGURED </font><br/> |
