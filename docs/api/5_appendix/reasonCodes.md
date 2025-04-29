@@ -37,6 +37,7 @@
 | 40310 | <font size="-1">NOT_FRIENDS </font><br/> An API was called that required the user and target user to be friends. They are not.|
 | 40311 | <font size="-1">VC_BALANCE_CANNOT_BE_SPECIFIED </font><br/> Unused|
 | 40312 | <font size="-1">VC_LIMIT_EXCEEDED </font><br/> Unused|
+| 40313 | <font size="-1">UNABLE_TO_GET_MY_DATA_FROM_FACEBOOK </font><br/> Unused|
 | 40314 | <font size="-1">TLS_VERSION_INVALID </font><br/> The endpoint that the client library is connecting to does not support the minimum TLS version configured for this app.|
 | 40315 | <font size="-1">INVALID_AUTHENTICATION_TYPE </font><br/> An invalid authentication type was supplied in the authentication request. See the authentication API for valid types.|
 | 40316 | <font size="-1">INVALID_APP_ID </font><br/> An invalid "appId" was provided in the authentication request. The valid "appId" for your the app can be retrieved from "App ID" field on the "Core App Info – Application IDs" tab of the portal.|
@@ -55,6 +56,7 @@
 | 40330 | <font size="-1">DISABLED_APP </font><br/> The app has been disabled via the "Core App Info – Advanced Settings" tab in the portal.|
 | 40331 | <font size="-1">MATCH_MAKING_DISABLED </font><br/> The Matchmaking feature is disabled. Enable it in the <%= data.branding.productName %> portal.|
 | 40332 | <font size="-1">UPDATE_FAILED </font><br/> An update operation failed. Used for entities, global entities, and updates on the user.|
+| 40333 | <font size="-1">INVALID_OPERATION </font><br/> The specified <%= data.branding.productName %> API does not exist.|
 | 40334 | <font size="-1">MATCH_RANGE_ERROR </font><br/> A start match was attempted a player who is outside the player rating range delta.|
 | 40335 | <font size="-1">PLAYER_IN_MATCH </font><br/> A start match was attempted with a player who is already in a match.|
 | 40336 | <font size="-1">MATCH_PLAYER_SHIELDED </font><br/> A start match was attempted with a player who has a shield.|
@@ -62,6 +64,7 @@
 | 40338 | <font size="-1">MATCH_PLAYER_LOGGED_IN </font><br/> A start match was attempted with a player who is online. This behaviour can be changed in the <%= data.branding.productName %> portal under Matchmaking.|
 | 40339 | <font size="-1">INVALID_ITEM_ID </font><br/> A product purchase was attempted with an invalid item id. Applies to AppWorld, GooglePlay and Steam stores.|
 | 40340 | <font size="-1">MISSING_PRICE </font><br/> A product purchase was attempted but the price for that product is missing. Applies to Steam store.|
+| 40341 | <font size="-1">MISSING_USER_INFO </font><br/> A product purchase was attempted but the user info is missing. Applies to Steam store.|
 | 40342 | <font size="-1">MISSING_STEAM_RESPONSE </font><br/> A product purchase was attempted but the steam backend response is missing. Applies to Steam store.|
 | 40343 | <font size="-1">MISSING_STEAM_TRANSACTION </font><br/> A product purchase was attempted but the steam transaction is missing. Applies to Steam store.|
 | 40344 | <font size="-1">ENTITY_VERSION_MISMATCH </font><br/> An update was made to an entity but the clientsupplied version does not match the version on the server. Refetch the object and reexecute the update call (or do not pass a version to overwrite the newer data).|
@@ -74,6 +77,7 @@
 | 40351 | <font size="-1">INVALID_ATTRIBUTES </font><br/>|
 | 40352 | <font size="-1">IMPORT_MISSING_APP_DATA </font><br/>|
 | 40353 | <font size="-1">IMPORT_SCHEMA_VERSION_TOO_OLD </font><br/>|
+| 40354 | <font size="-1">IMPORT_MISSING_DIVISION_SETS </font><br/>|
 | 40355 | <font size="-1">IMPORT_SCHEMA_VERSION_INVALID </font><br/>|
 | 40356 | <font size="-1">USER_SESSION_LOGGED_OUT </font><br/> The session was invalidated by another login of the user. When the maximum sessions is exceeded, <%= data.branding.productName %> always invalidates the oldest session. You can set the maximum number of concurrent sessions for a user via the Maximum Concurrent Sessions Per User setting on the Design > Core App Info > Advanced Settings page.|
 | 40357 | <font size="-1">API_HOOK_SCRIPT_ERROR </font><br/>|
@@ -128,6 +132,8 @@
 | 40405 | <font size="-1">ITUNES_COMMUNICATION_ERROR </font><br/>|
 | 40406 | <font size="-1">ITUNES_NO_RESPONSE </font><br/>|
 | 40407 | <font size="-1">ITUNES_RESPONSE_NOT_OK </font><br/>|
+| 40408 | <font size="-1">JSON_PARSING_ERROR </font><br/>|
+| 40409 | <font size="-1">ITUNES_NULL_RESPONSE </font><br/>|
 | 40410 | <font size="-1">ITUNES_RESPONSE_WITH_NULL_STATUS </font><br/>|
 | 40411 | <font size="-1">ITUNES_STATUS_BAD_JSON_RECEIPT </font><br/>|
 | 40412 | <font size="-1">ITUNES_STATUS_BAD_RECEIPT </font><br/>|
@@ -149,6 +155,7 @@
 | 40428 | <font size="-1">GOOGLE_IAP_NOT_CONFIGURED </font><br/>|
 | 40429 | <font size="-1">UPLOAD_FILE_TOO_LARGE </font><br/>|
 | 40430 | <font size="-1">FILE_ALREADY_EXISTS </font><br/>|
+| 40431 | <font size="-1">CLOUD_STORAGE_SERVICE_ERROR </font><br/>|
 | 40432 | <font size="-1">FILE_DOES_NOT_EXIST </font><br/>|
 | 40433 | <font size="-1">UPLOAD_ID_MISSING </font><br/>|
 | 40434 | <font size="-1">UPLOAD_JOB_MISSING </font><br/>|
@@ -187,6 +194,7 @@
 | 40467 | <font size="-1">GROUP_TYPE_NOT_FOUND </font><br/>|
 | 40468 | <font size="-1">MATCHING_GROUPS_NOT_FOUND </font><br/>|
 | 40469 | <font size="-1">GENERATE_CDN_URL_ERROR </font><br/>|
+| 40470 | <font size="-1">INVALID_PROFILE_IDS </font><br/>|
 | 40471 | <font size="-1">MAX_PROFILE_IDS_EXCEEDED </font><br/>|
 | 40472 | <font size="-1">PROFILE_ID_MISMATCH </font><br/>|
 | 40473 | <font size="-1">LEADERBOARD_DOESNOT_EXIST </font><br/>|
@@ -444,18 +452,24 @@
 | 40726 | <font size="-1">REFRESH_INTERRUPTED </font><br/>|
 | 40727 | <font size="-1">GAMELIFT_ERROR </font><br/>|
 | 40728 | <font size="-1">GAMELIFT_LAUNCH_ERROR </font><br/>|
+| 40729 | <font size="-1">MAX_HOSTED_SERVERS_REACHED </font><br/>|
 | 40730 | <font size="-1">DUPLICATE_PACKET_ID </font><br/>|
 | 40731 | <font size="-1">FEATURE_NOT_SUPPORTED_BY_BILLING_PLAN </font><br/>|
 | 40732 | <font size="-1">FEATURE_CONFIGURATION_FAILURE </font><br/>|
 | 40733 | <font size="-1">IMPORT_MISSING_ENTRY </font><br/>|
 | 40734 | <font size="-1">PENDING_MEMBER_REQUEST_NOT_FOUND </font><br/>|
+| 40735 | <font size="-1">EVENT_TO_PROFILE_IDS_SIZE_EXCEEDS_MAXIMUM </font><br/>|
 | 40736 | <font size="-1">INVALID_CC_AND_BCC_EMAIL_ADDRESS </font><br/>|
+| 40737 | <font size="-1">ROOM_SERVER_RATE_LIMIT </font><br/>|
+| 40738 | <font size="-1">EDGEGAP_ERROR </font><br/>|
+| 40739 | <font size="-1">PORTAL_SESSION_EXPIRED </font><br/>|
 | 40740 | <font size="-1">NO_FRIENDS_FOUND </font><br/>|
 | 40741 | <font size="-1">PRODUCT_TRANSACTION_NOT_FOUND </font><br/>|
 | 40742 | <font size="-1">ITEM_DEF_NOT_FOUND </font><br/>|
 | 40743 | <font size="-1">ITEM_DEF_HAS_DEPENDENCIES </font><br/>|
 | 40744 | <font size="-1">TRANSFER_JOB_IDLE_TIMEOUT </font><br/>|
 | 40745 | <font size="-1">GROUP_MEMBER_ACL_MORE_RESTRICTIVE_THAN_OTHER </font><br/>|
+| 40746 | <font size="-1">GROUP_MEMBER_ACL_MUST_BE_READ_WRITE_FOR_UNOWNED_ENTITY </font><br/>|
 | 40747 | <font size="-1">GROUP_MEMBER_ACL_REQUIRED </font><br/>|
 | 40748 | <font size="-1">GROUP_TYPE_MAX_MEMBERS_EXCEEDED </font><br/>|
 | 40749 | <font size="-1">GROUP_ADD_MEMBER_EXISTS_DIFF_ROLE_ATTRIBS </font><br/>|
@@ -467,6 +481,7 @@
 | 40755 | <font size="-1">REDEMPTION_CODE_TYPE_MISMATCH </font><br/>|
 | 40756 | <font size="-1">REDEMPTION_CODE_SCRIPT_FAILURE </font><br/>|
 | 40757 | <font size="-1">REDEMPTION_OF_CUSTOM_CODE_FAILED </font><br/>|
+| 40758 | <font size="-1">REDEMPTION_CODE_NOT_IN_PROGRESS </font><br/>|
 | 40759 | <font size="-1">REDEMPTION_CODE_ATTEMPT_ERROR </font><br/>|
 | 40760 | <font size="-1">REDEMPTION_CODE_ATTEMPT_MISMATCH </font><br/>|
 | 40761 | <font size="-1">REDEMPTION_CODE_ASYNC_BAD_RESPONSE </font><br/>|
@@ -477,11 +492,17 @@
 | 40766 | <font size="-1">REDEMPTION_CODE_BLOCKCHAIN_PROXY_ERROR </font><br/>|
 | 40767 | <font size="-1">REDEMPTION_CODE_TYPE_NOT_ASYNC </font><br/>|
 | 40768 | <font size="-1">REDEMPTION_CODE_ASYNC_PROCESSING_TIMEOUT </font><br/>|
+| 40769 | <font size="-1">CODE_TYPE_SCAN_CODE_MISMATCH_FOR_MULTI_USE_CODE </font><br/>|
 | 40770 | <font size="-1">DUPLICATE_DIVISION_SET_CONFIG </font><br/>|
 | 40771 | <font size="-1">DIVISION_SET_INSTANCE_LEADERBOARDS_STILL_EXIST </font><br/>|
 | 40772 | <font size="-1">SINGLETON_ALREADY_EXISTS_FOR_USER </font><br/>|
 | 40773 | <font size="-1">CUSTOM_ENTITY_INCREMENT_SINGLETON_DATA_ERROR </font><br/>|
 | 40774 | <font size="-1">CUSTOM_ENTITY_COLLECTIONS_MAX_EXCEEDED </font><br/>|
+| 40775 | <font size="-1">REDEMPTION_CODE_TYPE_CODE_USE_ERROR </font><br/>|
+| 40776 | <font size="-1">MULTI_USE_CODE_REDEMPTION_ATTEMPTED_BEFORE_START </font><br/>|
+| 40777 | <font size="-1">MULTI_USE_CODE_REDEMPTION_ATTEMPTED_AFTER_END </font><br/>|
+| 40778 | <font size="-1">MULTI_USE_CODE_MAX_REDEMPTIONS_REACHED </font><br/>|
+| 40779 | <font size="-1">REDEMPTION_CODE_TYPE_MUST_BE_SINGLE_USE </font><br/>|
 | 40780 | <font size="-1">IMPORT_PRECONDITION_ERROR </font><br/>|
 | 40801 | <font size="-1">REQUEST_FAILED </font><br/>|
 | 40802 | <font size="-1">RESET_QUESTS_FAILED </font><br/>|
@@ -499,6 +520,8 @@
 | 40814 | <font size="-1">QUEST_ADD_MILESTONE_ERROR </font><br/>|
 | 40815 | <font size="-1">QUEST_DELETE_MILESTONE_ERROR </font><br/>|
 | 40816 | <font size="-1">QUEST_REORDER_MILESTONES_ERROR </font><br/>|
+| 40817 | <font size="-1">MILESTONE_HAS_DEPENDENCIES </font><br/>|
+| 40818 | <font size="-1">ACHIEVEMENT_HAS_DEPENDENCIES </font><br/>|
 | 40820 | <font size="-1">PROMOTION_NOT_FOUND </font><br/>|
 | 40821 | <font size="-1">VERSION_MISMATCH </font><br/>|
 | 40822 | <font size="-1">UNSUPPORTED_CRITERIA_FOR_SHARDED_COLLECTIONS </font><br/>|
