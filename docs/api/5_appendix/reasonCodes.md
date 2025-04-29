@@ -1,6 +1,6 @@
 # Reason Codes
 
-## Error Handling Example
+## Code Description
 
 | Code  | Description  |
 | 0     | <font size="-1">NO_REASON_CODE </font><br/> No error|
@@ -626,7 +626,7 @@
 | 60204 | <font size="-1">TEAM_USAGE_REPORT_ERROR</font><br/> |
 | 60205 | <font size="-1">GLOBAL_PROPERTY_MAX_SIZE_EXCEEDED</font><br/> |
 
-## Usage
+## Error Handling Example
 
 ```mdx-code-block
 <BrowserWindow>
@@ -635,6 +635,7 @@
 ```
 
 ```csharp
+// Here is a possible implementation of this functionality in C#:
 public void FailureCallback(int statusCode, int reasonCode, string statusMessage, object cbObject) {
         // Shared reasonCode Error Handling
         switch (reasonCode) {
@@ -692,57 +693,7 @@ public void FailureCallback(int statusCode, int reasonCode, string statusMessage
 <TabItem value="cpp" label="C++">
 ```
 
-```csharp
-public void FailureCallback(int statusCode, int reasonCode, string statusMessage, object cbObject) {
-        // Shared reasonCode Error Handling
-        switch (reasonCode) {
-            case ReasonCodes.NO_SESSION: { // User session has expired, or they have no session
-                /**
-                 * Display a dialog informing the user to re-authenticate before
-                 * performing futher actions
-                 */
-                break;
-            }
-            case ReasonCodes.PLATFORM_NOT_SUPPORTED: { // User is using an unsupported platform
-                /**
-                 * Inform the user that their current platform is not supported,
-                 * and indicate which platforms are
-                 *
-                 * Note: If the platform is meant to be supported, it needs to be enabled via
-                 * 'Core App Info - Platforms' on the <%= data.branding.productName %> dashboard.
-                 * Otherwise, inform the user of the error
-                 */
-                break;
-            }
-            case ReasonCodes.APP_VERSION_NOT_SUPPORTED: { // User's app version is out of date
-                /**
-                 * Inform the user to update their app to the
-                 * latest version you have supplied
-                 *
-                 *
-                 * Note: This version number is set in the 'Core App Info - Platforms'
-                 * on the <%= data.branding.productName %> dashboard
-                 * And is compared locally against App Version value set in the
-                 * BrainCloudSettings config
-                 */
-                break;
-            }
-            case ReasonCodes.CLIENT_NETWORK_ERROR_TIMEOUT: { // User cannot connect to <%= data.branding.productName %>
-                /**
-                 * Display a connection error, and ask them if they wish to try
-                 * again now or later
-                 */
-                break;
-            }
-            default: { // Uncaught reasonCode
-                /**
-                 * Log the unexpected reasonCode to your own internal logs,
-                 * to implement needed error handling later
-                 */
-                break;
-            }
-        }
-    }
+```cpp
 ```
 
 ```mdx-code-block
@@ -750,57 +701,7 @@ public void FailureCallback(int statusCode, int reasonCode, string statusMessage
 <TabItem value="objectivec" label="Objective-C">
 ```
 
-```csharp
-public void FailureCallback(int statusCode, int reasonCode, string statusMessage, object cbObject) {
-        // Shared reasonCode Error Handling
-        switch (reasonCode) {
-            case ReasonCodes.NO_SESSION: { // User session has expired, or they have no session
-                /**
-                 * Display a dialog informing the user to re-authenticate before
-                 * performing futher actions
-                 */
-                break;
-            }
-            case ReasonCodes.PLATFORM_NOT_SUPPORTED: { // User is using an unsupported platform
-                /**
-                 * Inform the user that their current platform is not supported,
-                 * and indicate which platforms are
-                 *
-                 * Note: If the platform is meant to be supported, it needs to be enabled via
-                 * 'Core App Info - Platforms' on the <%= data.branding.productName %> dashboard.
-                 * Otherwise, inform the user of the error
-                 */
-                break;
-            }
-            case ReasonCodes.APP_VERSION_NOT_SUPPORTED: { // User's app version is out of date
-                /**
-                 * Inform the user to update their app to the
-                 * latest version you have supplied
-                 *
-                 *
-                 * Note: This version number is set in the 'Core App Info - Platforms'
-                 * on the <%= data.branding.productName %> dashboard
-                 * And is compared locally against App Version value set in the
-                 * BrainCloudSettings config
-                 */
-                break;
-            }
-            case ReasonCodes.CLIENT_NETWORK_ERROR_TIMEOUT: { // User cannot connect to <%= data.branding.productName %>
-                /**
-                 * Display a connection error, and ask them if they wish to try
-                 * again now or later
-                 */
-                break;
-            }
-            default: { // Uncaught reasonCode
-                /**
-                 * Log the unexpected reasonCode to your own internal logs,
-                 * to implement needed error handling later
-                 */
-                break;
-            }
-        }
-    }
+```objectivec
 ```
 
 ```mdx-code-block
@@ -808,57 +709,7 @@ public void FailureCallback(int statusCode, int reasonCode, string statusMessage
 <TabItem value="java" label="Java">
 ```
 
-```csharp
-public void FailureCallback(int statusCode, int reasonCode, string statusMessage, object cbObject) {
-        // Shared reasonCode Error Handling
-        switch (reasonCode) {
-            case ReasonCodes.NO_SESSION: { // User session has expired, or they have no session
-                /**
-                 * Display a dialog informing the user to re-authenticate before
-                 * performing futher actions
-                 */
-                break;
-            }
-            case ReasonCodes.PLATFORM_NOT_SUPPORTED: { // User is using an unsupported platform
-                /**
-                 * Inform the user that their current platform is not supported,
-                 * and indicate which platforms are
-                 *
-                 * Note: If the platform is meant to be supported, it needs to be enabled via
-                 * 'Core App Info - Platforms' on the <%= data.branding.productName %> dashboard.
-                 * Otherwise, inform the user of the error
-                 */
-                break;
-            }
-            case ReasonCodes.APP_VERSION_NOT_SUPPORTED: { // User's app version is out of date
-                /**
-                 * Inform the user to update their app to the
-                 * latest version you have supplied
-                 *
-                 *
-                 * Note: This version number is set in the 'Core App Info - Platforms'
-                 * on the <%= data.branding.productName %> dashboard
-                 * And is compared locally against App Version value set in the
-                 * BrainCloudSettings config
-                 */
-                break;
-            }
-            case ReasonCodes.CLIENT_NETWORK_ERROR_TIMEOUT: { // User cannot connect to <%= data.branding.productName %>
-                /**
-                 * Display a connection error, and ask them if they wish to try
-                 * again now or later
-                 */
-                break;
-            }
-            default: { // Uncaught reasonCode
-                /**
-                 * Log the unexpected reasonCode to your own internal logs,
-                 * to implement needed error handling later
-                 */
-                break;
-            }
-        }
-    }
+```java
 ```
 
 ```mdx-code-block
@@ -866,57 +717,15 @@ public void FailureCallback(int statusCode, int reasonCode, string statusMessage
 <TabItem value="js" label="JavaScript">
 ```
 
-```csharp
-public void FailureCallback(int statusCode, int reasonCode, string statusMessage, object cbObject) {
-        // Shared reasonCode Error Handling
-        switch (reasonCode) {
-            case ReasonCodes.NO_SESSION: { // User session has expired, or they have no session
-                /**
-                 * Display a dialog informing the user to re-authenticate before
-                 * performing futher actions
-                 */
-                break;
-            }
-            case ReasonCodes.PLATFORM_NOT_SUPPORTED: { // User is using an unsupported platform
-                /**
-                 * Inform the user that their current platform is not supported,
-                 * and indicate which platforms are
-                 *
-                 * Note: If the platform is meant to be supported, it needs to be enabled via
-                 * 'Core App Info - Platforms' on the <%= data.branding.productName %> dashboard.
-                 * Otherwise, inform the user of the error
-                 */
-                break;
-            }
-            case ReasonCodes.APP_VERSION_NOT_SUPPORTED: { // User's app version is out of date
-                /**
-                 * Inform the user to update their app to the
-                 * latest version you have supplied
-                 *
-                 *
-                 * Note: This version number is set in the 'Core App Info - Platforms'
-                 * on the <%= data.branding.productName %> dashboard
-                 * And is compared locally against App Version value set in the
-                 * BrainCloudSettings config
-                 */
-                break;
-            }
-            case ReasonCodes.CLIENT_NETWORK_ERROR_TIMEOUT: { // User cannot connect to <%= data.branding.productName %>
-                /**
-                 * Display a connection error, and ask them if they wish to try
-                 * again now or later
-                 */
-                break;
-            }
-            default: { // Uncaught reasonCode
-                /**
-                 * Log the unexpected reasonCode to your own internal logs,
-                 * to implement needed error handling later
-                 */
-                break;
-            }
-        }
-    }
+```javascript
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
 ```
 
 ```mdx-code-block
@@ -924,57 +733,7 @@ public void FailureCallback(int statusCode, int reasonCode, string statusMessage
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```csharp
-public void FailureCallback(int statusCode, int reasonCode, string statusMessage, object cbObject) {
-        // Shared reasonCode Error Handling
-        switch (reasonCode) {
-            case ReasonCodes.NO_SESSION: { // User session has expired, or they have no session
-                /**
-                 * Display a dialog informing the user to re-authenticate before
-                 * performing futher actions
-                 */
-                break;
-            }
-            case ReasonCodes.PLATFORM_NOT_SUPPORTED: { // User is using an unsupported platform
-                /**
-                 * Inform the user that their current platform is not supported,
-                 * and indicate which platforms are
-                 *
-                 * Note: If the platform is meant to be supported, it needs to be enabled via
-                 * 'Core App Info - Platforms' on the <%= data.branding.productName %> dashboard.
-                 * Otherwise, inform the user of the error
-                 */
-                break;
-            }
-            case ReasonCodes.APP_VERSION_NOT_SUPPORTED: { // User's app version is out of date
-                /**
-                 * Inform the user to update their app to the
-                 * latest version you have supplied
-                 *
-                 *
-                 * Note: This version number is set in the 'Core App Info - Platforms'
-                 * on the <%= data.branding.productName %> dashboard
-                 * And is compared locally against App Version value set in the
-                 * BrainCloudSettings config
-                 */
-                break;
-            }
-            case ReasonCodes.CLIENT_NETWORK_ERROR_TIMEOUT: { // User cannot connect to <%= data.branding.productName %>
-                /**
-                 * Display a connection error, and ask them if they wish to try
-                 * again now or later
-                 */
-                break;
-            }
-            default: { // Uncaught reasonCode
-                /**
-                 * Log the unexpected reasonCode to your own internal logs,
-                 * to implement needed error handling later
-                 */
-                break;
-            }
-        }
-    }
+```cfscript
 ```
 
 ```mdx-code-block
@@ -982,57 +741,7 @@ public void FailureCallback(int statusCode, int reasonCode, string statusMessage
 <TabItem value="r" label="Raw">
 ```
 
-```csharp
-public void FailureCallback(int statusCode, int reasonCode, string statusMessage, object cbObject) {
-        // Shared reasonCode Error Handling
-        switch (reasonCode) {
-            case ReasonCodes.NO_SESSION: { // User session has expired, or they have no session
-                /**
-                 * Display a dialog informing the user to re-authenticate before
-                 * performing futher actions
-                 */
-                break;
-            }
-            case ReasonCodes.PLATFORM_NOT_SUPPORTED: { // User is using an unsupported platform
-                /**
-                 * Inform the user that their current platform is not supported,
-                 * and indicate which platforms are
-                 *
-                 * Note: If the platform is meant to be supported, it needs to be enabled via
-                 * 'Core App Info - Platforms' on the <%= data.branding.productName %> dashboard.
-                 * Otherwise, inform the user of the error
-                 */
-                break;
-            }
-            case ReasonCodes.APP_VERSION_NOT_SUPPORTED: { // User's app version is out of date
-                /**
-                 * Inform the user to update their app to the
-                 * latest version you have supplied
-                 *
-                 *
-                 * Note: This version number is set in the 'Core App Info - Platforms'
-                 * on the <%= data.branding.productName %> dashboard
-                 * And is compared locally against App Version value set in the
-                 * BrainCloudSettings config
-                 */
-                break;
-            }
-            case ReasonCodes.CLIENT_NETWORK_ERROR_TIMEOUT: { // User cannot connect to <%= data.branding.productName %>
-                /**
-                 * Display a connection error, and ask them if they wish to try
-                 * again now or later
-                 */
-                break;
-            }
-            default: { // Uncaught reasonCode
-                /**
-                 * Log the unexpected reasonCode to your own internal logs,
-                 * to implement needed error handling later
-                 */
-                break;
-            }
-        }
-    }
+```r
 ```
 
 ```mdx-code-block
@@ -1040,61 +749,3 @@ public void FailureCallback(int statusCode, int reasonCode, string statusMessage
 </Tabs>
 </BrowserWindow>
 ```
-
-<details>
-<summary>JSON Response</summary>
-
-```csharp
-public void FailureCallback(int statusCode, int reasonCode, string statusMessage, object cbObject) {
-        // Shared reasonCode Error Handling
-        switch (reasonCode) {
-            case ReasonCodes.NO_SESSION: { // User session has expired, or they have no session
-                /**
-                 * Display a dialog informing the user to re-authenticate before
-                 * performing futher actions
-                 */
-                break;
-            }
-            case ReasonCodes.PLATFORM_NOT_SUPPORTED: { // User is using an unsupported platform
-                /**
-                 * Inform the user that their current platform is not supported,
-                 * and indicate which platforms are
-                 *
-                 * Note: If the platform is meant to be supported, it needs to be enabled via
-                 * 'Core App Info - Platforms' on the <%= data.branding.productName %> dashboard.
-                 * Otherwise, inform the user of the error
-                 */
-                break;
-            }
-            case ReasonCodes.APP_VERSION_NOT_SUPPORTED: { // User's app version is out of date
-                /**
-                 * Inform the user to update their app to the
-                 * latest version you have supplied
-                 *
-                 *
-                 * Note: This version number is set in the 'Core App Info - Platforms'
-                 * on the <%= data.branding.productName %> dashboard
-                 * And is compared locally against App Version value set in the
-                 * BrainCloudSettings config
-                 */
-                break;
-            }
-            case ReasonCodes.CLIENT_NETWORK_ERROR_TIMEOUT: { // User cannot connect to <%= data.branding.productName %>
-                /**
-                 * Display a connection error, and ask them if they wish to try
-                 * again now or later
-                 */
-                break;
-            }
-            default: { // Uncaught reasonCode
-                /**
-                 * Log the unexpected reasonCode to your own internal logs,
-                 * to implement needed error handling later
-                 */
-                break;
-            }
-        }
-    }
-```
-
-</details>
