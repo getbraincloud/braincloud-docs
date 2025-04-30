@@ -123,7 +123,7 @@ var  appleUserId = "00123.xxxxxxxx";
 var  identityToken = "identityTokenFromApple";
 var  forceCreate = true;
 
-ServerResponse result = await <%= data.branding.codePrefix %>.authenticationV2Service.AuthenticateApple(appleUserId:appleUserId, identityToken:identityToken, forceCreate:forceCreate);
+ServerResponse result = await <%= data.branding.codePrefix %>.authenticationService.AuthenticateApple(appleUserId:appleUserId, identityToken:identityToken, forceCreate:forceCreate);
 
 if (result.statusCode == 200) {
     print("Success");

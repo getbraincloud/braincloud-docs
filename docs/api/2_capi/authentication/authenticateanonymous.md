@@ -181,7 +181,7 @@ var forceCreate = true;
 ```dart
 var  forceCreate = true;
 
-ServerResponse result = await <%= data.branding.codePrefix %>.authenticationV2Service.authenticateAnonymous(forceCreate:forceCreate);
+ServerResponse result = await <%= data.branding.codePrefix %>.authenticationService.authenticateAnonymous(forceCreate:forceCreate);
 
 if (result.statusCode == 200) {
     print("Success");

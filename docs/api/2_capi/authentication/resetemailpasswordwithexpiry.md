@@ -110,7 +110,7 @@ var tokenTtlInMinutes = 1440;
 var  emailAddress = "email@email.com";
 var  tokenTtlInMinutes = 1440;
 
-ServerResponse result = await <%= data.branding.codePrefix %>.authenticationV2Service.resetEmailPasswordWithExpiry(emailAddress:emailAddress, tokenTtlInMinutes:tokenTtlInMinutes);
+ServerResponse result = await <%= data.branding.codePrefix %>.authenticationService.resetEmailPasswordWithExpiry(emailAddress:emailAddress, tokenTtlInMinutes:tokenTtlInMinutes);
 
 if (result.statusCode == 200) {
     print("Success");

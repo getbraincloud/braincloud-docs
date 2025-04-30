@@ -118,7 +118,7 @@ var  googleUserAccountEmail = "example@gmail.com";
 var  idToken = "authTokenFromGoogle";
 var  forceCreate = true;
 
-ServerResponse result = await <%= data.branding.codePrefix %>.authenticationV2Service.authenticateGoogleOpenId(googleUserAccountEmail:googleUserAccountEmail, idToken:idToken, forceCreate:forceCreate);
+ServerResponse result = await <%= data.branding.codePrefix %>.authenticationService.authenticateGoogleOpenId(googleUserAccountEmail:googleUserAccountEmail, idToken:idToken, forceCreate:forceCreate);
 
 if (result.statusCode == 200) {
     print("Success");

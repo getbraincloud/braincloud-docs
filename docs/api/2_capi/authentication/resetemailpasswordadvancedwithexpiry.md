@@ -136,7 +136,7 @@ var  serviceParams = {
 };
 var  tokenTtlInMinutes = 1440;
 
-ServerResponse result = await <%= data.branding.codePrefix %>.authenticationV2Service.resetEmailPasswordAdvancedWithExpiry(emailAddress:emailAddress, serviceParams:serviceParams, tokenTtlInMinutes:tokenTtlInMinutes);
+ServerResponse result = await <%= data.branding.codePrefix %>.authenticationService.resetEmailPasswordAdvancedWithExpiry(emailAddress:emailAddress, serviceParams:serviceParams, tokenTtlInMinutes:tokenTtlInMinutes);
 
 if (result.statusCode == 200) {
     print("Success");

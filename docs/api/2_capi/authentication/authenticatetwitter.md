@@ -136,7 +136,7 @@ var  token = "userAuthToken";
 var  secret = "secretFromTwitterApi";
 var  forceCreate = true;
 
-ServerResponse result = await <%= data.branding.codePrefix %>.authenticationV2Service.authenticateTwitter(twitterId:twitterId, token:token, secret:secret, forceCreate:forceCreate);
+ServerResponse result = await <%= data.branding.codePrefix %>.authenticationService.authenticateTwitter(twitterId:twitterId, token:token, secret:secret, forceCreate:forceCreate);
 
 if (result.statusCode == 200) {
     print("Success");

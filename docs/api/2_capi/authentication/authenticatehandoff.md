@@ -162,7 +162,7 @@ var securityToken = "securityToken";
 var  handoffId = "handoffId";
 var  securityToken = "securityToken";
 
-ServerResponse result = await <%= data.branding.codePrefix %>.authenticationV2Service.authenticateHandoff(handoffId:handoffId, securityToken:securityToken);
+ServerResponse result = await <%= data.branding.codePrefix %>.authenticationService.authenticateHandoff(handoffId:handoffId, securityToken:securityToken);
 
 if (result.statusCode == 200) {
     print("Success");

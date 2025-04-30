@@ -143,7 +143,7 @@ var  token = "externalTokenOrPassword";
 var  externalAuthName = "nameOfExternalAuthService";
 var  forceCreate = true;
 
-ServerResponse result = await <%= data.branding.codePrefix %>.authenticationV2Service.authenticateExternal(userID:userID, token:token, externalAuthName:externalAuthName, forceCreate:forceCreate);
+ServerResponse result = await <%= data.branding.codePrefix %>.authenticationService.authenticateExternal(userID:userID, token:token, externalAuthName:externalAuthName, forceCreate:forceCreate);
 
 if (result.statusCode == 200) {
     print("Success");

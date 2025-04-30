@@ -124,7 +124,7 @@ var  ultraUsername = "ultraUsername";
 var  ultraIdToken = "ultraIdToken";
 var  forceCreate = true;
 
-ServerResponse result = await <%= data.branding.codePrefix %>.authenticationV2Service.authenticateUltra(ultraUsername:ultraUsername, ultraIdToken:ultraIdToken, forceCreate:forceCreate);
+ServerResponse result = await <%= data.branding.codePrefix %>.authenticationService.authenticateUltra(ultraUsername:ultraUsername, ultraIdToken:ultraIdToken, forceCreate:forceCreate);
 
 if (result.statusCode == 200) {
     print("Success");

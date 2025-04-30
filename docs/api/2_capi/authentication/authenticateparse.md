@@ -118,7 +118,7 @@ var  parseId = "someId1234";
 var  parseToken = "authToken";
 var  forceCreate = true;
 
-ServerResponse result = await <%= data.branding.codePrefix %>.authenticationV2Service.authenticateParse(parseId:parseId, parseToken:parseToken, forceCreate:forceCreate);
+ServerResponse result = await <%= data.branding.codePrefix %>.authenticationService.authenticateParse(parseId:parseId, parseToken:parseToken, forceCreate:forceCreate);
 
 if (result.statusCode == 200) {
     print("Success");

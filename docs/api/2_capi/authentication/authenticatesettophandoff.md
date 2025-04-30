@@ -113,7 +113,7 @@ var handoffCode = "handoffCode";
 ```dart
 var  handoffCode = "handoffCode";
 
-ServerResponse result = await <%= data.branding.codePrefix %>.authenticationV2Service.authenticateSettopHandoff(handoffCode:handoffCode);
+ServerResponse result = await <%= data.branding.codePrefix %>.authenticationService.authenticateSettopHandoff(handoffCode:handoffCode);
 
 if (result.statusCode == 200) {
     print("Success");

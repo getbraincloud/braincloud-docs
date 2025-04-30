@@ -122,7 +122,7 @@ var  facebookId = "userFacebookId";
 var  token = "tokenFromFacebook";
 var  forceCreate = true;
 
-ServerResponse result = await <%= data.branding.codePrefix %>.authenticationV2Service.authenticateFacebookLimited(facebookId:facebookId, token:token, forceCreate:forceCreate);
+ServerResponse result = await <%= data.branding.codePrefix %>.authenticationService.authenticateFacebookLimited(facebookId:facebookId, token:token, forceCreate:forceCreate);
 
 if (result.statusCode == 200) {
     print("Success");

@@ -102,7 +102,7 @@ var universalId = "universalId";
 ```dart
 var  universalId = "universalId";
 
-ServerResponse result = await <%= data.branding.codePrefix %>.authenticationV2Service.resetUniversalIdPassword(universalId:universalId);
+ServerResponse result = await <%= data.branding.codePrefix %>.authenticationService.resetUniversalIdPassword(universalId:universalId);
 
 if (result.statusCode == 200) {
     print("Success");

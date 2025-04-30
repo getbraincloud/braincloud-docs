@@ -58,7 +58,7 @@ public void getServerVersion();
 ```
 
 ```dart
-<%= data.branding.codePrefix %>.authenticationV2Service.getServerVersion();
+<%= data.branding.codePrefix %>.authenticationService.getServerVersion();
 ```
 
 ```mdx-code-block

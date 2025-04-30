@@ -132,7 +132,7 @@ var  ids = AuthenticationIds("authAdvancedUser", "authAdvancedPass", "");  // 
 var  forceCreate = true;
 var  extraJson = {"key":"value"};
 
-ServerResponse result = await <%= data.branding.codePrefix %>.authenticationV2Service.authenticateAdvanced(authenticationType:authenticationType, ids:ids, forceCreate:forceCreate, extraJson:extraJson);
+ServerResponse result = await <%= data.branding.codePrefix %>.authenticationService.authenticateAdvanced(authenticationType:authenticationType, ids:ids, forceCreate:forceCreate, extraJson:extraJson);
 
 if (result.statusCode == 200) {
     print("Success");

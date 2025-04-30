@@ -119,7 +119,7 @@ var  googleUserId = "g123456789";
 var  serverAuthCode = "authTokenFromGoogle";
 var  forceCreate = true;
 
-ServerResponse result = await <%= data.branding.codePrefix %>.authenticationV2Service.authenticateGoogle(googleUserId:googleUserId, serverAuthCode:serverAuthCode, forceCreate:forceCreate);
+ServerResponse result = await <%= data.branding.codePrefix %>.authenticationService.authenticateGoogle(googleUserId:googleUserId, serverAuthCode:serverAuthCode, forceCreate:forceCreate);
 
 if (result.statusCode == 200) {
     print("Success");

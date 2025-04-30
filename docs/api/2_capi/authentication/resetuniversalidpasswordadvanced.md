@@ -128,7 +128,7 @@ var serviceParams = {
     ]
 };
 
-ServerResponse result = await <%= data.branding.codePrefix %>.authenticationV2Service.resetUniversalIdPasswordAdvanced(universalId:universalId, serviceParams:serviceParams);
+ServerResponse result = await <%= data.branding.codePrefix %>.authenticationService.resetUniversalIdPasswordAdvanced(universalId:universalId, serviceParams:serviceParams);
 
 if (result.statusCode == 200) {
     print("Success");

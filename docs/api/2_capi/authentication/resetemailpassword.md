@@ -102,7 +102,7 @@ var externalId = "email@email.com";
 ```dart
 var  emailAddress = "email@email.com";
 
-ServerResponse result = await <%= data.branding.codePrefix %>.authenticationV2Service.resetEmailPassword(emailAddress:emailAddress);
+ServerResponse result = await <%= data.branding.codePrefix %>.authenticationService.resetEmailPassword(emailAddress:emailAddress);
 
 if (result.statusCode == 200) {
     print("Success");

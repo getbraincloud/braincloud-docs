@@ -110,7 +110,7 @@ var tokenTtlInMinutes = 1440;
 var  universalId = "universalId";
 var  tokenTtlInMinutes = 1440;
 
-ServerResponse result = await <%= data.branding.codePrefix %>.authenticationV2Service.resetUniversalIdPasswordWithExpiry(universalId:universalId, tokenTtlInMinutes:tokenTtlInMinutes);
+ServerResponse result = await <%= data.branding.codePrefix %>.authenticationService.resetUniversalIdPasswordWithExpiry(universalId:universalId, tokenTtlInMinutes:tokenTtlInMinutes);
 
 if (result.statusCode == 200) {
     print("Success");

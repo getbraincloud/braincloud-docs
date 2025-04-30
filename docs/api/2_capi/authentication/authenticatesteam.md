@@ -127,7 +127,7 @@ var  steamId = "userSteamId";
 var  sessionTicket = "sessionTicketFromSteam";
 var  forceCreate = true;
 
-ServerResponse result = await <%= data.branding.codePrefix %>.authenticationV2Service.authenticateSteam(steamId:steamId, sessionTicket:sessionTicket, forceCreate:forceCreate);
+ServerResponse result = await <%= data.branding.codePrefix %>.authenticationService.authenticateSteam(steamId:steamId, sessionTicket:sessionTicket, forceCreate:forceCreate);
 
 if (result.statusCode == 200) {
     print("Success");

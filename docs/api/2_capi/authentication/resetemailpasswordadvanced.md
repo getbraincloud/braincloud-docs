@@ -128,7 +128,7 @@ var serviceParams = {
     ]
 };
 
-ServerResponse result = await <%= data.branding.codePrefix %>.authenticationV2Service.resetEmailPasswordAdvanced(emailAddress:emailAddress, serviceParams:serviceParams);
+ServerResponse result = await <%= data.branding.codePrefix %>.authenticationService.resetEmailPasswordAdvanced(emailAddress:emailAddress, serviceParams:serviceParams);
 
 if (result.statusCode == 200) {
     print("Success");

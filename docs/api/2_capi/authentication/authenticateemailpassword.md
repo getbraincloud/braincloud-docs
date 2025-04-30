@@ -178,7 +178,7 @@ var  email = "someEmail@somedomain.com";
 var  password = "userPassword";
 var  forceCreate = true;
 
-ServerResponse result = await <%= data.branding.codePrefix %>.authenticationV2Service.authenticateEmailPassword(email:email, password:password, forceCreate:forceCreate);
+ServerResponse result = await <%= data.branding.codePrefix %>.authenticationService.authenticateEmailPassword(email:email, password:password, forceCreate:forceCreate);
 
 if (result.statusCode == 200) {
     print("Success");

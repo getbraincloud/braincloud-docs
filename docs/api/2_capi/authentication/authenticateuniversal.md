@@ -169,7 +169,7 @@ var  userId = "UserId";
 var  password = "password";
 var  forceCreate = true;
 
-ServerResponse result = await <%= data.branding.codePrefix %>.authenticationV2Service.authenticateUniversal(userId:userId, password:password, forceCreate:forceCreate);
+ServerResponse result = await <%= data.branding.codePrefix %>.authenticationService.authenticateUniversal(userId:userId, password:password, forceCreate:forceCreate);
 
 if (result.statusCode == 200) {
     print("Success");
