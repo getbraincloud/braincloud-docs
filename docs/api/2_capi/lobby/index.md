@@ -59,33 +59,79 @@ _For more information on Lobby Concepts, see the [Lobby Overview](/learn/key-con
     "service": "lobby",
     "operation": "MEMBER_JOIN",
     "data": {
-        "lobbyId": "22819:unranked:406",
-        "currentTime": 1549658965234,
+        "lobbyId": "13469:CustomGame:11",
+        "currentTime": 1747412422839,
         "lobby": {
             "state": "setup",
-            "owner": "f6fa3e0e-6aac-497a-84e1-c8db6f545c12",
             "rating": 0,
-            "lobbyTypeDef": {},
+            "ownerCxId": "13469:48844593-6e01-464f-bc13-565ee536a46b:1kslkorpivpa68bhf21q1avi9q",
+            "lobbyTypeDef": {
+                "roomConfig": null,
+                "lobbyTypeId": "CustomGame",
+                "teams": {
+                    "all": {
+                        "minUsers": 1,
+                        "maxUsers": 8,
+                        "autoAssign": true,
+                        "code": "all"
+                    }
+                },
+                "rules": {
+                    "allowEarlyStartWithoutMax": false,
+                    "forceOnTimeStartWithoutReady": true,
+                    "allowJoinInProgress": false,
+                    "onTimeStartSecs": 1,
+                    "disbandOnStart": true,
+                    "everyReadyMinPercent": 50,
+                    "everyReadyMinNum": 1,
+                    "earliestStartSecs": 1,
+                    "tooLateSecs": 300
+                },
+                "desc": "for example -- custom multiplayer server with unity"
+            },
             "settings": {},
             "version": 1,
             "timetable": {
-                "createdAt": 1549658965234,
-                "early": 1549658965234,
-                "onTime": 1549659055234,
-                "tooLate": 1549659145234
+                "createdAt": 1747412422839,
+                "early": 1747412423839,
+                "onTime": 1747412423839,
+                "tooLate": 1747412722839,
+                "dropDead": 1747413322839,
+                "ignoreDropDeadUntil": 0
             },
+            "cRegions": [],
+            "round": 1,
+            "isRoomReady": false,
+            "keepAliveRateSeconds": 0,
+            "isAvailable": true,
+            "shardId": 0,
+            "legacyLobbyOwnerEnabled": true,
+            "owner": "48844593-6e01-464f-bc13-565ee536a46b",
             "numMembers": 1,
-            "members": []
+            "members": [
+                {
+                    "profileId": "48844593-6e01-464f-bc13-565ee536a46b",
+                    "name": "",
+                    "pic": "",
+                    "rating": 0,
+                    "team": "all",
+                    "isReady": true,
+                    "extra": {},
+                    "ipAddress": "174.112.74.185",
+                    "cxId": "13469:48844593-6e01-464f-bc13-565ee536a46b:1kslkorpivpa68bhf21q1avi9q"
+                }
+            ]
         },
         "member": {
-            "profileId": "f6fa3e0e-6aac-497a-84e1-c8db6f545c12",
-            "name": "David",
+            "profileId": "48844593-6e01-464f-bc13-565ee536a46b",
+            "name": "",
             "pic": "",
             "rating": 0,
-            "team": "player1",
+            "team": "all",
             "isReady": true,
             "extra": {},
-            "cxId": "22819:f6fa3e0e-6aac-497a-84e1-c8db6f545c12:bvm2ga9aelaigkbdrojp3ifjrp"
+            "ipAddress": "174.112.74.185",
+            "cxId": "13469:48844593-6e01-464f-bc13-565ee536a46b:1kslkorpivpa68bhf21q1avi9q"
         }
     }
 }
