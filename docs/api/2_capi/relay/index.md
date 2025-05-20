@@ -184,6 +184,31 @@ All the timeout settings are in seconds.
 }
 ```
 
+```info
+Note: brainCloud will pass these environment variables by default for any room/relay server it spins up. Below is an example list of environment variables from a launched server.
+<code>
+// passed by default from brainCloud
+APP_ID = 13469
+CONTAINER_EXPOSED_PORTS = 7777/tcp,7777/udp
+EXTERNAL_IP = 3.99.186.192
+EXTERNAL_PORTS = 9001/tcp,9001/udp
+HOSTNAME = 029ec2d7bc98
+LOBBY_ID = 13469:CustomGame:15
+SERVER_NAME = CMSU
+SERVER_HOST = api.braincloudservers.com
+SERVER_PORT = 443
+SERVER_SECRET = 99ef5e85-9a99-4140-8b0d-292b4b13807d
+
+// from server itself
+HOME = /root
+PATH = /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+// from brainCloud server settings of portal server page
+PACKET_LOG_ENABLED = true
+CONNECTION_TIMEOUT = 240
+</code>
+```
+
 ### Relay Flow
 
 ![Relay Flow](@site/docs/img/api-img/relay_flow.png)
