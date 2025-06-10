@@ -1,15 +1,6 @@
 # User
 
-
-
-
-
-
-
-
-The **User** service, introduced in 4.3, can be used to iterate through the users of an app. It can also be used to create new users. Note that this service is only available via cloud-code.
-
-
+The **User** service, introduced in version 4.3, supports basic user CRUD operations and allows iteration over all users in an app. Note that this service is only accessible via Cloud Code.
 
 ### API Summary
 
@@ -38,6 +29,9 @@ The **User** service, introduced in 4.3, can be used to iterate through the user
 * [SysSendPasswordResetUniversalIdWithExpiry](/api/capi/user/syssendpasswordresetuniversalidwithexpiry) - Reset the password associated with the users universalId login
 * [SysSendPasswordResetUniversalIdAdvancedWithExpiry](/api/capi/user/syssendpasswordresetuniversalidadvancedwithexpiry) - Reset the password associated with the users universalId login _using a custom email template_
 * [SysSetPasswordUniversalId](/api/capi/user/syssetpassworduniversalid) - Set the password associated with the universal id of the given profile.
+
+#### Self Service Delete Account
+* [SysCreateSelfServiceDeletionUrlForUser](/api/capi/user/syscreateselfservicedeletionurlforuser) - Returns self-service delete account URL that can be used to delete the specified user.
 
 :::tip
 All the client APIs that the names beigin with <strong>"Sys"</strong> <em>are</em> also available to S2S. 

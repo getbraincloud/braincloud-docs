@@ -34,4 +34,29 @@ The following substitutions are available when creating templates:
 - {{userEmail}} the user's email
 - {{userCountryCode}} the user's country code, as detected from their device
 - {{userLanguage}} the user's language, as detected from their device
-- {{webUrl}} a web-url passed into the message. For example - for email verification or password reset
+- {{webUrl}} a web-url passed into the message. For example - for email verification or password reset
+- {{icon}} – The player’s braincloud Icon, if any exists.
+- {{appIcon}} - the app icon in braincloud , if any
+- {{accountCreated}} - The date that this user’s account was created
+- {{lastLogin}} – - time stamp of last login
+- {{loginCount}} - Number of times this account logged in
+- {{XPLevel}} - The braincloud XP level of this account
+- {{XPPoints}} - The exact number of XP points for this account in braincloud.
+- {{amountSpent}} - Amount in USD that braincloud has stored as the user’s total spent.
+- {{virtualCurrency_Yadda}} - the amount for the given virtual currency, where Yadda is exactly equal to the Virtual Currency Name in Braincloud (case sensitive) , no spaces.
+  - For example, if you have a virtual currency called “Coins”, you would use {{virtualCurrency_Coins}}. There can be multiple of these. eg.
+    - {{virtualCurrency_Coins}}
+    - {{virtualCurrency_Bars}}
+    - {{virtualCurrency_Gems}}
+- {{homepageUrl}} - The Homepage url, if configured in Self-service Branding
+- {{feedbackUrl}} - The Feedback url, if configured in Self-service Branding
+- {{exitSurveyUrl}} - The Exit Survey url, if configured in Self-service Branding
+- {{customerServiceUrl}} - The customer service mailto/url, if configured in Self-service Branding
+- {{termsAndConditionsUrl}} - The Terms & Conditions url, if configured in Self-service Branding
+- {{privacyUrl}} - The Privacy Policy url, if configured in Self-service Branding
+- {{address}} - The business address, if configured in Self-service Branding
+- {{city}} - The business city, if configured in Self-service Branding
+- {{state}} - The business State or Province, if configured in Self-service Branding
+- {{country}} - The business Country, if configured in Self-service Branding
+- {{zip}} - The business Zip or Postal Code, if configured in Self-service Branding
+- {{unSubUrl}} - unsubscribe from all emails

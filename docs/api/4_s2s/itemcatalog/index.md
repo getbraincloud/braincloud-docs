@@ -28,6 +28,8 @@ This service is primarily used to retrieve lists of items from the catalog for d
 #### Edit
 * [SysEditCatalogItem](/api/s2s/itemcatalog/syseditcatalogitem) - Update a catalog item on the server.
 * [SysDeleteCatalogItem](/api/capi/itemcatalog/sysdeletecatalogitem) - Delete an exsiting catalog item catalog.
+* [SysCopyItemImageFromUserFile](/api/capi/itemcatalog/syscopyitemimagefromuserfile) - Copy item image from global file.
+* [SysCopyItemImageFromGlobalFile](/api/capi/itemcatalog/syscopyitemimagefromglobalfile) - Copy item image from global file.
 
 #### Life Cycle
 * [SysPublishCatalogItem](/api/s2s/itemcatalog/syspublishcatalogitem) - Publish the specified catalog item on the server.

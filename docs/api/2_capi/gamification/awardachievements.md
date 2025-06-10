@@ -1,13 +1,14 @@
 # AwardAchievements
 
-Method will award the achievements specified. On success, this will call AwardThirdPartyAchievement to hook into the client-side Achievement service (ie GameCentre, Facebook etc).
+Method will award the achievements specified.
 
 <PartialServop service_name="gamification" operation_name="AWARD_ACHIEVEMENTS" />
 
 ## Method Parameters
-Parameter | Description
---------- | -----------
-achievementIds | A list of achievement ids to award
+
+| Parameter      | Description                        |
+| -------------- | ---------------------------------- |
+| achievementIds | A list of achievement ids to award |
 
 ## Usage
 
@@ -162,5 +163,5 @@ if (postResult.status == 200) {
     "data": null
 }
 ```
-</details>
 
+</details>
