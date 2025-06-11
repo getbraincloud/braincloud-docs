@@ -18,3 +18,7 @@ The following brainCloud client libraries are available:
 
 
 _Click on a link to go to the associated Github repository or tutorial._
+
+:::info
+Visit [github.com/getbraincloud](https://github.com/getbraincloud) for all libraries and examples, including Server-to-Server (S2S) libraries.
+:::
