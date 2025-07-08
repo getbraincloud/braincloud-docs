@@ -26,8 +26,10 @@ Topics covered include:
 ```
 <br />
 
-You can download the SpaceShooter example from [here](https://github.com/getbraincloud/UnityExamples)
+You can download the SpaceShooter example from [here](https://github.com/getbraincloud/bootcamp-unity)
 
-The brainCloud Unity stand-alone library can be found [here](https://github.com/getbraincloud/Unity-Csharp)
+You can also find our other great Unity examples from [here](https://github.com/getbraincloud/examples-unity)
+
+The brainCloud Unity stand-alone library can be found [here](https://github.com/getbraincloud/braincloud-csharp)
 
 Stay tuned for more tutorial videos!
