@@ -11,7 +11,7 @@ A game exemplifying this feature set is, Wargroove. Wargroove allows offline mat
 
 ## Required Materials
 
-### brainCloud 4.0
+### Latest brainCloud
 
 [https://github.com/getbraincloud/braincloud-csharp](https://github.com/getbraincloud/braincloud-csharp)
 
@@ -38,7 +38,7 @@ private void enableRTT()
     // Only Enable RTT if it's not already started
     if (_bc.RTTService.IsRTTEnabled())
     {
-        _bc.RTTService.EnableRTT(BrainCloud.RTTConnectionType.WEBSOCKET, onRTTEnabled, onRTTFailure);
+        _bc.RTTService.EnableRTT(onRTTEnabled, onRTTFailure);
     }
     else
     {
