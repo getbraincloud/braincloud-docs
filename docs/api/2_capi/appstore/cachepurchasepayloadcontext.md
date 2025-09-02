@@ -7,8 +7,8 @@ Caches a payload context to retreive as fallback if the store API cannot provide
 Parameter | Description
 --------- | -----------
 storeId | The store platform.
-iapId | In-app product id.
-payload | The payload string to cache.
+iapId | The app store's IAP ID.
+payload | The payload string to cache. Send in the payload associated with the product being purchased, as returned by the [GetSalesInventory()](/api/capi/appstore/getsalesinventory) call...
 
 ## Usage
 

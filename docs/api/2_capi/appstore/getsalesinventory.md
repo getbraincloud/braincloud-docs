@@ -195,6 +195,7 @@ if (postResult.status == 200) {
                         }
                     ]
                 },
+                "payload": "__bc:[1,itemid,0,199,-1]",
                 "title": "Bars"
             }
         ],
