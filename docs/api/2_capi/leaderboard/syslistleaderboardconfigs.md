@@ -7,7 +7,13 @@ Returns list of applicable leaderboards, with summary leaderboard configuration 
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-optionsJson | Supports filtering of returned list of leaderboard configs. Option 'filterType' defaults to 'standard' if not specified. Valid filterType values include 'all', 'standard', 'tournament', 'divisions' and 'templates'. If 'tournament' is specified, returned list will include leaderboards configured for tournaments, but excludes division set instances and templates. If 'division', returned list will include division set tournament leaderboard instances. If 'templates', returned list will include leaderboards flagged as division template only.
+optionsJson | Supports filtering of returned list of leaderboard configs.
+
+### Fields of optionsJson
+Parameter | Description
+--------- | -----------
+filterType | Optional. Defaults to 'standard' if not specified. Valid filterType values include 'all', 'standard', 'tournament', 'divisions' and 'templates'. If 'tournament' is specified, returned list will include leaderboards configured for tournaments, but excludes division set instances and templates. If 'division', returned list will include division set tournament leaderboard instances. If 'templates', returned list will include leaderboards flagged as division template only.
+divisionSetId | Optional (only suitable if filterType is set to `divison`). If specified, returned the active division set instances specific to a given division set.
 
 ## Usage
 
