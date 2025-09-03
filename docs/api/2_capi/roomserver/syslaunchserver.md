@@ -7,7 +7,7 @@ Launch a hosted server directly. Allows for the bypassing of brainCloud lobby ma
 Parameter | Description
 --------- | -----------
 serverName | The type of server to launch as defined in App > Design > Servers > My Servers .
-scriptName | The cloud code script name to invoke for all hosted server launch events.
+scriptName | The name of the cloud code script to invoke for all hosted server launch events. Should be the whole path to the script.
 scriptData | Optional JSON object that will be sent as input to the associated cloud code script.
 regionId | Optional region id to target for the hosted server launch.
 
