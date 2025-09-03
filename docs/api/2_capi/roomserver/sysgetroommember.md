@@ -120,7 +120,9 @@ var postResult = roomServerProxy.sysGetRoomMember(member, brainCloudContext);
 ```json
 {
   "status" : 200,
-  "data" : {}
+  "data" : {
+    "answer": "NaN"
+  }
 }
 ```
 
