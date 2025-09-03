@@ -183,3 +183,4 @@ Beginning with Release 4.2, External Authentication scripts have been enhanced t
 -   `useProfileId`: "string" (optional) - tells the system to use the specified `profileId` to look up the user's account. If specified, the external identity will not be persisted against the user's account
 -   `authPayload`: JSON map - allows the auth script to return additional information to the client for _successful_ logins
 -   `extraErrorJson`: JSON map - allows the auth script to return additional error context to the client for _unsuccessful_ logins
+-   `identityData`: JSON map - allows the auth script to set user's identity data, If `identityData` exists in the response, set it for that authentication type; if it exists but is empty, clear it; and if it’s not specified, preserve the existing values.
