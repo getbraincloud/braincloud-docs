@@ -87,7 +87,7 @@ const config = {
           // editUrl: 'https://github.com/getbraincloud/braincloud-apiref/tree/develop/',
           versions: {
             current: {
-              label: '5.7.0',
+              label: '5.8.0',
             },
           },
           lastVersion: 'current',

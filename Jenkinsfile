@@ -1,7 +1,7 @@
 pipeline {
     agent { 
         node {
-            label 'linux_41'
+            label 'flutter&&linux'
             }
         }
     stages {

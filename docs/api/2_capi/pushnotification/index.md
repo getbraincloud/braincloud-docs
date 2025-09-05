@@ -1,8 +1,5 @@
 # Push Notification
 
-
-
-
 The Push Notification service handles registering device tokens from a user's device and sending push notifications to users.
 
 You will need to correctly configure your push notification settings from the
@@ -12,9 +9,7 @@ Templated or normalized push notifications (pre-defined messages with substituti
 the [Notification Templates](https://portal.braincloudservers.com/admin/dashboard#/development/notifications) page of the <%= data.branding.productName %> portal.
 
 :::tip
-It is possible to send a push notification to oneself.
+It is possible to send a push notification to oneself. But for group push notification calls, the sender will not receive the notification they sent.
 :::
-
-
 
 <DocCardList />
