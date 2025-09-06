@@ -1,8 +1,8 @@
-# Data Stream
+# DataStream
 
 
 
-The data stream service allows you to send information about your users and their activity to <%= data.branding.productName %>.
+The datastream service allows you to send information about your users and their activity to <%= data.branding.productName %>.
 
 Combined with Integrations configured in the <%= data.branding.productName %> portal you can pipe this data to hundreds of tools for analytics, marketing, and data warehousing.
 
