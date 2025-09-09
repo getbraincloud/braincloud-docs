@@ -1,6 +1,6 @@
 # GetScriptName
 
-This returns the name of the currently running script.
+This returns the name (including path) of the currently running script.
 
 ## Usage
 
