@@ -18,7 +18,7 @@ Parameter | Description
 --------- | -----------
 userId | The userId
 token | The user token (password etc)
-externalAuthName | The name of the cloud script to call for external authentication
+externalAuthName | This is the external auth identity name set up in the portal
 forceCreate | Should a new profile be created for this user if the account does not exist?
 
 ## Usage

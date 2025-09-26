@@ -7,7 +7,8 @@ Indicates that the given server instance has ended.
 Parameter | Description
 --------- | -----------
 serverId | The room server instance id.
-serverContext | JSON object containing server context data.
+serverContext | JSON object containing server context data. Note that serverContext must contain an entry for SERVER_TYPE (currently only 'Hosted' or 'EdgeGap' are supported) and a CONTAINER_KEY entry (provided via the SERVER_CONTEXT env variable when the server instance is launched).
+
 
 ## Usage
 
