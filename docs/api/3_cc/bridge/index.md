@@ -55,7 +55,7 @@ App configuration:
 * [GetAppVersion](/api/cc/bridge/getappversion) - returns the version of the client app
 * [GetEnvironmentName](/api/cc/bridge/getenvironmentname) - returns the name of the deployment environment that the app is running within
 * [GetGlobalProperty](/api/cc/bridge/getglobalproperty) - retrieve a global property
-* [GetScriptName](/api/cc/bridge/getscriptname) - returns the name of the currently running script
+* [GetScriptName](/api/cc/bridge/getscriptname) - returns the name (including path) of the currently running script
 
 Information about the current user:
 
