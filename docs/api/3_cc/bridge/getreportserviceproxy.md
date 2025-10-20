@@ -1,8 +1,8 @@
-# GetHttpClientServiceProxy
+# GetReportServiceProxy
 
-Retrieves an HttpClientService proxy object.
+Retrieves an ReportService proxy object.
 
-Documentation for the service methods can be found [here](/api/capi/httpclient).
+Documentation for the service methods can be found [here](/api/capi/report).
 
 ## Method Parameters
 Parameter | Description
@@ -72,7 +72,7 @@ session | A optional parameter for when a script is executed without a session
 ```
 
 ```cfscript
-var proxy = bridge.getHttpClientServiceProxy();
+var proxy = bridge.getReportServiceProxy();
 ```
 
 ```mdx-code-block
@@ -80,7 +80,7 @@ var proxy = bridge.getHttpClientServiceProxy();
 <TabItem value="r" label="Raw">
 ```
 
-```r
+```cfscript
 // Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 

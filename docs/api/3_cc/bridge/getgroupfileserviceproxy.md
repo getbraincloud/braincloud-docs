@@ -1,8 +1,8 @@
-# GetHttpClientServiceProxy
+# GetGroupFileServiceProxy
 
-Retrieves an HttpClientService proxy object.
+Retrieves an GroupFileService proxy object.
 
-Documentation for the service methods can be found [here](/api/capi/httpclient).
+Documentation for the service methods can be found [here](/api/capi/groupfile).
 
 ## Method Parameters
 Parameter | Description
@@ -72,7 +72,7 @@ session | A optional parameter for when a script is executed without a session
 ```
 
 ```cfscript
-var proxy = bridge.getHttpClientServiceProxy();
+var proxy = bridge.getGroupFileServiceProxy();
 ```
 
 ```mdx-code-block
