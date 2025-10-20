@@ -4,6 +4,11 @@ Post score to another player's score.
 
 <PartialServop service_name="leaderboard" operation_name="POST_SCORE_TO_LEADERBOARD_ON_BEHALF_OF" />
 
+:::note
+This call can be used to create a voting-style leaderboard, where players can vote for another player’s score (i.e., cast a vote for that person).
+To set it up, create the leaderboard as a **Cumulative** type, and have each vote increase the target player’s score by +1.
+:::
+
 ## Method Parameters
 Parameter | Description
 --------- | -----------

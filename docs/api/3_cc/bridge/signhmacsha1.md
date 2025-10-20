@@ -1,13 +1,11 @@
-# SignRSASha256
+# SignHMACSha1
 
-Given a piece of data and a private key, calculates an SHA-256 with RSA (SHA256withRSA) signature for the data. Encoded as a base64 string. This signature can then be verified as authentic by a receiver with access to an associated public key.
-
-*Note that the implementation supports both PKCS1 and PKCS8 RSA format private keys.*
+Given a piece of data and a shared secrect key, calculates an SHA-1 with HMAC signature for the data. Encoded as a base64 string.
 
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-privateKey | The private key used to generate the signature
+secrectKey | The shared secrect key used to generate the signature
 dataString | The data string to calculate the signature for
 
 ## Usage
@@ -73,11 +71,11 @@ dataString | The data string to calculate the signature for
 ```
 
 ```cfscript
-var privateKey = "aPrivateKey";
+var secrectKey = "aSecrectKey";
 var dataString = "String to sign";
 var response = {};
 
-response.signature = bridge.utils().signRSASha256( privateKey, dataString );
+response.signature = bridge.utils().signHMACSha1( secrectKey, dataString );
 
 // Return the result
 response;
@@ -90,11 +88,11 @@ response;
 ```
 
 ```cfscript
-var privateKey = "aPrivateKey";
+var secrectKey = "aSecrectKey";
 var dataString = "String to sign";
 var response = {};
 
-response.signature = bridge.utils().signRSASha256( privateKey, dataString );
+response.signature = bridge.utils().signHMACSha1( secrectKey, dataString );
 
 // Return the result
 response;
@@ -114,7 +112,7 @@ response;
 {
  "data": {
   "response": {
-   "signature": "V3iD/yE3G9s4vgB6TeF+HOCKEb9CmF8iPSE+dK3MAS991U0NXDIwJzyuzFxiJWIt2W8WtKfQJqpOITsMPmgxY0Ttj0yfG0uS7jjRr5/vtC3/ZNWrzmyXSiunDmPwmJ36PVuPjyVxLtZzkr4qw/l/7lAKcNz8515Dgjs2RQHC1EtRrmHpaMpWL32Ya8CKtmjkNdHI2Ng9MrvVp+aaIPCPGoLPWis+zD+ZxNr+i6c0BP8RQVqigS4Bnt/YBeLE+ZuAD/0puC6Kc2/AO1Sqgo6g927VUjGOVM7JqVAq0JZY8XG9K+OgL6VJuBfKCDaQ2HUV+MWhaxFA3vageIqG+6eIOA=="
+   "signature": "wk+UqlrHO+vePXYZsZKvye/q4cA="
   },
   "success": true
  },
