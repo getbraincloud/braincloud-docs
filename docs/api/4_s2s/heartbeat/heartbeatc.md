@@ -1,6 +1,6 @@
-# Client Heartbeat
+# S2S Heartbeat
 
-This service allows you to send no-op packets to the server to keep the session alive. The default session will expire after 20 minutes.
+This service allows you to send no-op packets to the server to keep the session alive. The default session will expire after 30 minutes.
 
 <PartialServop service_name="heartbeat" operation_name="HEARTBEAT" />
 
