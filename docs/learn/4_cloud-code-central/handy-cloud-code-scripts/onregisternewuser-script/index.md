@@ -22,3 +22,7 @@ To configure this script, simply import it into your app.
 The script assumes any authenticate call made with forceCreate set to false is a login attempt. And any authenticate call made with forceCreate set to true is a registration attempt.
 
 You can have the script run on every authenticate call by setting it as a [Post API Hook](/learn/cloud-code-central/cloud-code-tutorials/cloud-code-tutorial4-pre-and-post-hooks/) on Authenticate.
+
+:::caution
+This cloud code script isn't called from the client. Instead, it needs to be added as a post API Hook on Authenticate.
+:::
