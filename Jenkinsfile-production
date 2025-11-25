@@ -46,7 +46,9 @@ pipeline {
         stage('Record Node Name') {
             steps {
                 script {
-                    sh "echo ${NODE_NAME} > upstream_node.txt"
+                    sh '''
+                    echo ${NODE_NAME} > upstream_node.txt
+                    '''
                 }
                 archiveArtifacts artifacts: 'upstream_node.txt', fingerprint: true
                 echo "this job ran on node: ${NODE_NAME}"
