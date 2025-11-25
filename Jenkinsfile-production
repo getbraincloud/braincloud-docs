@@ -48,7 +48,7 @@ pipeline {
                 script {
                     sh "echo ${NODE_NAME} > upstream_node.txt"
                 }
-                archiveArtifacts artifacts: 'upstream_node.txt', overwrite: true
+                archiveArtifacts artifacts: 'upstream_node.txt', fingerprint: true
                 echo "this job ran on node: ${NODE_NAME}"
             }
         }
