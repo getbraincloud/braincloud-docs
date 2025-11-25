@@ -43,5 +43,16 @@ pipeline {
                 '''
             }
         }
+        stage('Trigger Downstream Job') {
+            steps {
+                script {
+                    echo "Triggering JobB on node: ${env.NODE_NAME}"
+                    build job: 'JobB',
+                          parameters: [
+                              string(name: 'UPSTREAM_NODE', value: env.NODE_NAME)
+                          ]
+                }
+            }
+        }
     }
 }
