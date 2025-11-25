@@ -43,15 +43,13 @@ pipeline {
                 '''
             }
         }
-        stage('Trigger Downstream Job') {
+        stage('Record Node Name') {
             steps {
                 script {
-                    echo "Triggering JobB on node: ${env.NODE_NAME}"
-                    build job: 'JobB',
-                          parameters: [
-                              string(name: 'UPSTREAM_NODE', value: env.NODE_NAME)
-                          ]
+                    sh "echo ${NODE_NAME} > upstream_node.txt"
                 }
+                archiveArtifacts artifacts: 'upstream_node.txt', overwrite: true
+                echo "this job ran on node: ${NODE_NAME}"
             }
         }
     }
