@@ -55,4 +55,16 @@ pipeline {
             }
         }
     }
+
+    post {
+        success {
+            echo "Triggering index job with node: ${env.NODE_NAME}"
+
+            build job: 'node_bcdocs_main_index',
+                  wait: false,
+                  parameters: [
+                      string(name: 'UPSTREAM_NODE', value: env.NODE_NAME)
+                  ]
+        }
+    }
 }
