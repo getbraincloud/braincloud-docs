@@ -155,7 +155,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "fileDetails": {
             "updatedAt": 1452616408147,
@@ -172,7 +171,8 @@ if (postResult.status == 200) {
             "replaceIfExists": true,
             "cloudPath": "bc/g/99999/u/bf8a1433-62d2-448e-b396-f3dbffff44/f/dir1/dir2/filename"
         }
-    }
+    },
+    "status": 200
 }
 ```
 </details>

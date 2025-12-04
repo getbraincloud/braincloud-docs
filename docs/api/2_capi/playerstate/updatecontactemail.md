@@ -157,10 +157,10 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "contactEmail": "someName@somedomain.com"
-    }
+    },
+    "status": 200
 }
 ```
 </details>

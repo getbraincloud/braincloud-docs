@@ -172,7 +172,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "experiencePoints": 2,
         "xpCapped": false,
@@ -183,7 +182,8 @@ if (postResult.status == 200) {
             "LIVES": 8
         },
         "currency": {}
-    }
+    },
+    "status": 200
 }
 ```
 </details>

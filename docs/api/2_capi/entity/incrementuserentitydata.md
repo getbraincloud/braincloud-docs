@@ -189,7 +189,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "acl": {
             "other": 0
@@ -204,7 +203,8 @@ if (postResult.status == 200) {
         "playerId": "6a63c968-c102-4a5a-8336-68b2150f369f",
         "updatedAt": 1467014334065,
         "version": 2
-    }
+    },
+    "status": 200
 }
 ```
 </details>

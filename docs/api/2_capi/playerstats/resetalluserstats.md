@@ -135,7 +135,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-	"status": 200,
 	"data": {
 		"milestones": {
 			"1": "UNLOCKED",
@@ -155,7 +154,8 @@ if (postResult.status == 200) {
 			"DifficultyChanges": 0,
 			"RoundsFinished": 0
 		}
-	}
+	},
+	"status": 200
 }
 ```
 </details>

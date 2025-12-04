@@ -210,7 +210,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "entityId": "113db68a-48ad-4fc9-9f44-5fd36fc6445f",
         "entityType": "person",
@@ -224,7 +223,8 @@ if (postResult.status == 200) {
         },
         "createdAt": 1395943044322,
         "updatedAt": 1395943044322
-    }
+    },
+    "status": 200
 }
 ```
 

@@ -153,12 +153,12 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "statistics": {
             "LIVES": 7
         }
-    }
+    },
+    "status": 200
 }
 ```
 </details>

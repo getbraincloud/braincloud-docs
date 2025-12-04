@@ -113,7 +113,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "status": 200,
   "data": {
     "_serverTime": 1637946319239,
     "context": "eyJzZWFyY2hDcml0ZXJpYSI6e30sInNvcnRDcml0ZXJpYSI6eyJjcmVhdGVkQXQiOjF9LCJwYWdpbmF0aW9uIjp7InJvd3NQZXJQYWdlIjoyMCwicGFnZU51bWJlciI6MSwiZG9DbXXXXXXXmFsc2V9LCJvcHRpb25zIjpudWxsfQ",
@@ -138,7 +137,8 @@ if (postResult.status == 200) {
         }
       ]
     }
-  }
+  },
+  "status": 200
 }
 ```
 </details>

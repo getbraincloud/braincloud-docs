@@ -162,7 +162,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "fileList": [
             {
@@ -179,7 +178,8 @@ if (postResult.status == 200) {
                 "cloudLocation": "bc/g/99999/u/bf8f44/f/test2/testup.dat"
             }
         ]
-    }
+    },
+    "status": 200
 }
 ```
 

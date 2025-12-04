@@ -152,14 +152,18 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "statisticsExceptions": {},
-    "milestones": {},
-    "experiencePoints": 110,
-    "quests": {},
-    "experienceLevel": 1,
-    "statistics": {
-        "LIVES": 7
-    }
+    "data": {
+        "experiencePoints": 2,
+        "xpCapped": false,
+        "rewardDetails": {},
+        "rewards": {},
+        "experienceLevel": 0,
+        "statistics": {
+            "LIVES": 8
+        },
+        "currency": {}
+    },
+    "status": 200
 }
 ```
 </details>

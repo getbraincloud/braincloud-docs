@@ -137,7 +137,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-	"status": 200,
 	"data": {
 		"vcPurchased": 0,
 		"experiencePoints": 100,
@@ -191,7 +190,8 @@ if (postResult.status == 200) {
 		"languageCode": "en",
 		"pictureUrl": null,
 		"amountSpent": 0
-	}
+	},
+	"status": 200
 }
 ```
 </details>

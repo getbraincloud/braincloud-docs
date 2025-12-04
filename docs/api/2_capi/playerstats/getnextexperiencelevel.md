@@ -135,7 +135,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status" : 200,
     "data" :
     {
         "xp_level":{
@@ -160,7 +159,8 @@ if (postResult.status == 200) {
                 "primaryKey":true
             }
         }
-    }
+    },
+    "status" : 200
 }
 ```
 </details>
