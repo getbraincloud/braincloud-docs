@@ -232,7 +232,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status" : 200,
     "data" :
     {
         "gameId": "com.dnadpk.football",
@@ -260,7 +259,8 @@ if (postResult.status == 200) {
         "summary": null,
         "createdAt": 1415641372974,
         "updatedAt": 1415641372974
-    }
+    },
+    "status" : 200
 }
 ```
 </details>

@@ -161,7 +161,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-	"status": 200,
 	"data": {
 		"gameId": "11004",
 		"ownerId": "35e8698f-b14d-48ae-a37c-4b2962308b8d",
@@ -189,7 +188,8 @@ if (postResult.status == 200) {
 		},
 		"createdAt": 1472293357985,
 		"updatedAt": 1472293357996
-	}
+	},
+	"status": 200
 }
 ```
 </details>
