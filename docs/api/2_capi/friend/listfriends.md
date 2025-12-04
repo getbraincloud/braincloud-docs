@@ -162,7 +162,6 @@ if (postResult.status == 200) {
 <summary>JSON Response</summary>
 
 ```json
-// Example 1: for friendPlatform = All
 {
     "status": 200,
     "data": {
@@ -199,46 +198,6 @@ if (postResult.status == 200) {
                     "LEVEL": 1
                 },
                 "pictureUrl": "www.exampleurl.com"
-            }
-        ],
-        "server_time": 1458224807855
-    }
-}
-
-// Example 2: for friendPlatform = Facebook
-{
-    "status": 200,
-    "data": {
-        "friends": [
-            {
-                "externalData": {
-                    "Facebook": {
-                        "pictureUrl": "https://scontent.xx.fbcdn.net/hprofile-xfp1/v/t1.0-1/p50x50/XXX.jpg?oh=YYY&oe=ZZZ",
-                        "name": "scientist at large",
-                        "externalId": "100003668521730"
-                    }
-                },
-                "friendPlatforms" : ["Facebook"],
-                "playerId": "1aa3428c-5877-4624-a909-f2b1af931f00",
-                "name": "Mr. Peabody",
-                "summaryFriendData": {
-                    "LEVEL": -4
-                }
-            },
-            {
-                "externalData": {
-                    "Facebook": {
-                        "pictureUrl": "https://scontent.xx.fbcdn.net/hprofile-xfa1/v/t1.0-1/c0.11.50.50/p50x50/3AAA.jpg?oh=BBBa&oe=CCC",
-                        "name": "Aquaman",
-                        "externalId": "100003509724516"
-                    }
-                },
-                "friendPlatforms" : ["Facebook"],
-                "playerId": "1598c5b6-1b09-431b-96bc-9c2c928cad3b",
-                "name": null,
-                "summaryFriendData": {
-                    "LEVEL": 1
-                }
             }
         ],
         "server_time": 1458224807855

@@ -165,7 +165,7 @@ if (postResult.status == 200) {
 		},
 		"createdAt": 1395943044322,
 		"updatedAt": 1395943044322,
-		"_serverTime": 1637946319239,
+		"_serverTime": 1637946319239
 	}
 }
 ```

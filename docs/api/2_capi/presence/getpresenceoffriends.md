@@ -166,13 +166,14 @@ if (postResult.status == 200) {
  "data": {
   "presence": [
    {
-    "user": {
-     "id": <%= data.example.profileId %>,
-     "name": <%= data.example.playerName %>,
-     "pic": null,
-     "cxs": [
-      "22284:fb416888-e76d-425d-a06d-a5529bdba8d9:id58ohotujj893gomctos244al"
-     ]
+        "user": {
+        "id": "7630f98e-1236-4ead-88ee-27ce63b2db2c",
+        "name": "brainCloud",
+        "pic": null,
+        "cxs": [
+            "22284:fb416888-e76d-425d-a06d-a5529bdba8d9:id58ohotujj893gomctos244al",
+            "22284:a50a9aae-65fc-4171-b3f9-c0054b7e2d6b:84uedu4cof8gvlj3r009cejcik"
+        ]
     },
     "online": true,
     "summaryFriendData": {},

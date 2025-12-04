@@ -183,18 +183,16 @@ if (postResult.status == 200) {
 ```json
 {
     "status": 200,
-    {
      "data": {
-     "groupType": "test",
-     "groupId": "972e245c-38e8-4ccb-84db-8be5f530a27a",
-     "memberCount": 3,
-     "name": "Test2",
-     "invitedPendingMemberCount": 0,
-     "requestingPendingMemberCount": 0,
-     "ownerId": "1b8c0719-6f2e-44a0-95a2-bae46a4c5278",
-     "summaryData": null,
-     "isOpenGroup": true
-    },
+        "groupType": "test",
+        "groupId": "972e245c-38e8-4ccb-84db-8be5f530a27a",
+        "memberCount": 3,
+        "name": "Test2",
+        "invitedPendingMemberCount": 0,
+        "requestingPendingMemberCount": 0,
+        "ownerId": "1b8c0719-6f2e-44a0-95a2-bae46a4c5278",
+        "summaryData": null,
+        "isOpenGroup": true
     }
 }
 ```
