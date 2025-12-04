@@ -153,7 +153,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "pictureUrl": "https://scontent.xx.fbcdn.net/hprofile-frc1/v/t1.0-1/p50x50/1066&oe=57812708",
         "email": null,
@@ -162,7 +161,8 @@ if (postResult.status == 200) {
             "LEVEL": 0
         },
         "profileName": "Test User"
-    }
+    },
+    "status": 200
 }
 ```
 </details>

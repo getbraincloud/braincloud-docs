@@ -165,10 +165,10 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "externalId": "19e1c0cf-9a2d-4d5c-9a71-1b0f6b309b4b"
-    }
+    },
+    "status": 200
 }
 ```
 

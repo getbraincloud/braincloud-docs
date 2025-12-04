@@ -123,7 +123,6 @@ var retVal = friendProxy.findUsersByUserSummary(where, maxResults);
 
 ```json
 {
-    "status": 200,
     "data": {
         "matches": [
             {
@@ -140,7 +139,8 @@ var retVal = friendProxy.findUsersByUserSummary(where, maxResults);
             }
         ],
         "matchedCount": 2
-    }
+    },
+    "status": 200
 }
 ```
 </details>

@@ -152,7 +152,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "vcPurchased": 0,
         "xpCapped": false,
@@ -193,7 +192,8 @@ if (postResult.status == 200) {
         "abTestingId": 70,
         "id": "bb05182d-ff0c-4740-ae65-482751e74949",
         "profileId": "bb05182d-ff0c-4740-ae65-482751e74949"
-    }
+    },
+    "status": 200
 }
 ```
 </details>

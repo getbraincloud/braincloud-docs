@@ -154,7 +154,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "matchedCount": 1,
         "matches": [
@@ -165,7 +164,8 @@ if (postResult.status == 200) {
                 "pictureUrl": null
             }
         ]
-    }
+    },
+    "status": 200
 }
 ```
 

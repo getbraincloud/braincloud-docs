@@ -168,10 +168,10 @@ if (idResult.status == 200 ) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "channelId": "22817:gl:CHAT_TRADE"
-    }
+    },
+    "status": 200
 }
 ```
 </details>

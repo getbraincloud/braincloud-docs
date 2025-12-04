@@ -133,10 +133,10 @@ if (postResult.status == 200 ) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "msgId": "783347769003570"
-    }
+    },
+    "status": 200
 }
 ```
 </details>

@@ -158,7 +158,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "onlineStatus": [
             {
@@ -167,7 +166,8 @@ if (postResult.status == 200) {
                 "userValid": true
             }
         ]
-    }
+    },
+    "status": 200
 }
 ```
 </details>
