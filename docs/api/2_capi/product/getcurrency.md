@@ -144,7 +144,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "updatedAt": 1479752110785,
         "currencyMap": {
@@ -177,7 +176,8 @@ if (postResult.status == 200) {
         },
         "playerId": "362ce861-b749-4ce4-a57a-175232e21b5d",
         "createdAt": 1459439058040
-    }
+    },
+    "status": 200
 }
 ```
 

@@ -167,12 +167,12 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "actual": 1,
         "requested": 1,
         "msgId": "cf56f676-1f8e-40f7-9546-1efd7746f940"
-    }
+    },
+    "status": 200
 }
 ```
 

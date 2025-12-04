@@ -135,11 +135,11 @@ if (postResult.status == 200) {
     "packetId": 1,
     "messageResponses": [
         {
-            "status": 200,
             "data": {
                 "deletedLeaderboardCount": 2,
                 "message": "2 record(s) deleted successfully."
-            }
+            },
+            "status": 200
         }
     ]
 }

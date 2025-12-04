@@ -116,7 +116,6 @@ if (postResult.status == 200) {
     "packetId": 1,
     "messageResponses": [
         {
-            "status": 200,
             "data": {
                 "leaderboardListCount": 3,
                 "leaderboardList": [
@@ -143,7 +142,8 @@ if (postResult.status == 200) {
                         }
                     }
                 ]
-            }
+            },
+            "status": 200
         }
     ]
 }

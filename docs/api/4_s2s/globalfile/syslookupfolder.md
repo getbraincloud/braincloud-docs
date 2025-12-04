@@ -109,12 +109,12 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "treeId": "56b1c593-92d2-4e49-a997-0e493111d7b2",
         "folderPath": "audio/xxx/tempdir",
         "treeVersion": 3
-    }
+    },
+    "status": 200
 }
 ```
 

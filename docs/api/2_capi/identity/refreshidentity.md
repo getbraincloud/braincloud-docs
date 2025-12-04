@@ -172,11 +172,11 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "externalId": "758945465505",
         "authenticationType": "Facebook"
-    }
+    },
+    "status": 200
 }
 ```
 

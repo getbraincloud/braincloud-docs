@@ -155,7 +155,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "result": "OK",
         "status": {
@@ -185,7 +184,8 @@ if (postResult.status == 200) {
             "createdAt": 1464373318154
         },
         "server_time": 1464789275522
-    }
+    },
+    "status": 200
 }
 ```
 

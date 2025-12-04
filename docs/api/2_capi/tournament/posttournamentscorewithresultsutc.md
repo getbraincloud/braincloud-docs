@@ -233,7 +233,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "postScore": {
             "createdAt": 1484937347793,
@@ -285,7 +284,8 @@ if (postResult.status == 200) {
                 "updatedAt": 1484937348565
             }
         ]
-    }
+    },
+    "status": 200
 }
 ```
 

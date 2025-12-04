@@ -133,7 +133,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "entityList": [
             {
@@ -157,7 +156,8 @@ if (postResult.status == 200) {
         ],
         "_serverTime": 1637946319239,
         "entityListCount": 1
-    }
+    },
+    "status": 200
 }
 ```
 

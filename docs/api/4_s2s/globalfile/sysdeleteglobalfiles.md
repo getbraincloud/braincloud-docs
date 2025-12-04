@@ -124,7 +124,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "deletedFiles": [
             {
@@ -146,7 +145,8 @@ if (postResult.status == 200) {
                 "fileId": "ed126aaa-27de-48c7-b650-18e7af52ccb9"
             }
         ]
-    }
+    },
+    "status": 200
 }
 ```
 

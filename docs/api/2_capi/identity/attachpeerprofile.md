@@ -202,11 +202,11 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "profileId": "1234-1234-1234-1234",
         "newUser": false
-    }
+    },
+    "status": 200
 }
 ```
 

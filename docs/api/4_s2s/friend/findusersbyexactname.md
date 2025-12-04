@@ -115,7 +115,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "matches": [
             {
@@ -126,7 +125,8 @@ if (postResult.status == 200) {
             }
         ],
         "matchedCount": 1
-    }
+    },
+    "status": 200
 }
 ```
 

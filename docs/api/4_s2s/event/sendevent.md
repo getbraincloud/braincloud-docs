@@ -127,12 +127,12 @@ if (postResult.status == 200) {
     "packetId": 1,
     "messageResponses": [
         {
-            "status": 200,
             "data": {
                 "response": {
                     "evId": "9789273589757"
                 }
-            }
+            },
+            "status": 200
         }
     ]
 }

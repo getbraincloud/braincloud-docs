@@ -137,7 +137,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "status": 0,
         "playerCurrency": {
@@ -170,7 +169,8 @@ if (postResult.status == 200) {
             ]
         },
         "server_time": 1473325588695
-    }
+    },
+    "status": 200
 }
 ```
 

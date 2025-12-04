@@ -136,7 +136,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "_serverTime": 1637946319239,
         "results": {
@@ -166,7 +165,8 @@ if (postResult.status == 200) {
             "moreAfter": true
         },
         "context": "eyJzZWFyY2hDcml0ZXJpYSI6eyJlbnRpdHlUeXBlIjoiYnVpbGRpbmciLCJnY"
-    }
+    },
+    "status": 200
 }
 ```
 

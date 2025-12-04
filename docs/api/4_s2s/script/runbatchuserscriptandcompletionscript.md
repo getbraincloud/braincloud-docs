@@ -121,8 +121,8 @@ if (postResult.status == 200) {
     "packetId": 1,
     "messageResponses": [
         {
-            "status": 200,
-            "data": {}
+            "data": {},
+            "status": 200
         }
     ]
 }

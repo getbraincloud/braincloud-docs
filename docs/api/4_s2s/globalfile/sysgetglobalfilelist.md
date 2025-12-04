@@ -109,7 +109,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "treeVersion": 2,
         "fileList": {
@@ -150,7 +149,8 @@ if (postResult.status == 200) {
                 }
             }
         }
-    }
+    },
+    "status": 200
 }
 ```
 

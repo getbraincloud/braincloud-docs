@@ -240,8 +240,8 @@ var postResult = leaderboardProxy.postScoreToDynamicGroupLeaderboardUsingConfig(
 
 ```json
 {
-    "status": 200,
-    "data": null
+    "data": null,
+    "status": 200
 }
 ```
 

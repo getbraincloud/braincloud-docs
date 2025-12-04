@@ -159,7 +159,6 @@ if ( questPage.status == 200 ) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "context": "eyJzZWFyY2hDcml0ZXJpY...",
         "results": {
@@ -201,7 +200,8 @@ if ( questPage.status == 200 ) {
             "moreAfter": true,
             "moreBefore": true
         }
-    }
+    },
+    "status": 200
 }
 ```
 

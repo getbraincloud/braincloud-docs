@@ -111,10 +111,10 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "channelId": "55555:gl:<%= data.branding.productName %>Dev"
-    }
+    },
+    "status": 200
 }
 ```
 

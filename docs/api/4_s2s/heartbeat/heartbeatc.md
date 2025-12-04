@@ -102,8 +102,8 @@ This service allows you to send no-op packets to the server to keep the session 
     "packetId": 1,
     "messageResponses": [
         {
-            "status": 200,
-            "data": null
+            "data": null,
+            "status": 200
         }
     ]
 }

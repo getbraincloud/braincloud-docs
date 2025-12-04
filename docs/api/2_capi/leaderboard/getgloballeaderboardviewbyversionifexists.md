@@ -193,7 +193,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "leaderboardId": "abc",
         "moreBefore": false,
@@ -233,7 +232,8 @@ if (postResult.status == 200) {
         ],
         "server_time": 1433864314004,
         "moreAfter": false
-    }
+    },
+    "status": 200
 }
 ```
 

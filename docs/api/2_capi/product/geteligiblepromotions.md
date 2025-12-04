@@ -127,7 +127,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "promotions": [
             {
@@ -157,7 +156,8 @@ if (postResult.status == 200) {
                 "updatedAt": 1415729753294
             }
         ]
-    }
+    },
+    "status": 200
 }
 ```
 

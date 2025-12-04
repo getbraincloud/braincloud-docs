@@ -123,10 +123,10 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "entityListCount": 5
-    }
+    },
+    "status": 200
 }
 ```
 

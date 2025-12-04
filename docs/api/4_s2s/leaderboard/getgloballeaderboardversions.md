@@ -108,7 +108,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "leaderboardId": "L1",
         "leaderboardType": "HIGH_VALUE",
@@ -126,7 +125,8 @@ if (postResult.status == 200) {
                 "endingAt": 1434499200000
             }
         ]
-    }
+    },
+    "status": 200
 }
 ```
 

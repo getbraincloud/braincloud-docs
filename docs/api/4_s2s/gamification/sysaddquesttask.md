@@ -179,7 +179,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "quest": {
             "questId": "QUEST_CRUSH52",
@@ -226,7 +225,8 @@ if (postResult.status == 200) {
                 "taskId": "17"
             }
         }
-    }
+    },
+    "status": 200
 }
 ```
 

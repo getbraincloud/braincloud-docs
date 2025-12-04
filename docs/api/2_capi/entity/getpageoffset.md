@@ -155,7 +155,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-	"status": 200,
 	"data": {
 		"_serverTime": 1637946319239,
 		"results": {
@@ -178,7 +177,8 @@ if (postResult.status == 200) {
 			"moreAfter": false
         },
 		"context": "eyJzZWFyY2hDcml0ZXJpYSI6eyJlbnRpdHlUeXBlIjoiYnVpbGRpbmciLCJnYW1lSWQiOiIxMDI4NyIsIiRvciI6W3sib3duZXJJZCI6Ijk5MjM4ZmFiLTkxYTItNDdiYy1iMDExLWJjMThhN2IyOWY3NiJ9LHsiYWNsLm90aGVyIjp7IiRuZSI6MH19XX0sInNvcnRDcml0ZXJpYSI6eyJjcmVhdGVkQXQiOjEsInVwZGF0ZWRBdCI6LTF9LCJwYWdpbmF0aW9uIjp7InJvd3NQZXJQYWdlIjo1MCwicGFnZU51bWJlciI6NH0sIm9wdGlvbnMiOm51bGx9"
-	}
+	},
+	"status": 200
 }
 ```
 </details>

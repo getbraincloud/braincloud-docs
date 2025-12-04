@@ -123,7 +123,6 @@ if (postResult.status == 200) {
     "packetId": 1,
     "messageResponses": [
         {
-            "status": 200,
             "data": {
                 "response": {
                     "gameId": "1234556",
@@ -143,7 +142,8 @@ if (postResult.status == 200) {
                     "redeemedAt": null,
                     "invalidatedAt": null
                 }
-            }
+            },
+            "status": 200
         }
     ]
 }

@@ -111,7 +111,6 @@ if (postResult.status == 200) {
     "packetId": 1,
     "messageResponses": [
         {
-            "status": 200,
             "data": {
                 "result": {},
                 "jobType": "CloudCode",
@@ -129,7 +128,8 @@ if (postResult.status == 200) {
                 },
                 "scheduledStartTime": 1466582769118,
                 "runStartTime": 0
-            }
+            },
+            "status": 200
         }
     ]
 }

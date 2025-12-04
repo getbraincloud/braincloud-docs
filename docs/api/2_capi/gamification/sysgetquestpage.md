@@ -132,7 +132,6 @@ var questPage = gameficationProxy.sysGetQuestPage(context);
 
 ```json
 {
-    "status": 200,
     "data": {
         "context": "eyJzZWFyY2hDcml0ZXJpYSI6ey...",
         "results": {
@@ -225,7 +224,8 @@ var questPage = gameficationProxy.sysGetQuestPage(context);
             "moreAfter": true,
             "moreBefore": false
         }
-    }
+    },
+    "status": 200
 }
 ```
 

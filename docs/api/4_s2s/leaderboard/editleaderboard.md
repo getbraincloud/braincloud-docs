@@ -178,8 +178,8 @@ var retVal = leaderboardProxy.editLeaderboard(
     "packetId": 1,
     "messageResponses": [
         {
-            "status": 200,
-            "data": null
+            "data": null,
+            "status": 200
         }
     ]
 }

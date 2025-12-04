@@ -152,10 +152,10 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "timeZoneOffset": -2
-    }
+    },
+    "status": 200
 }
 ```
 

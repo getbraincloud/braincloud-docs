@@ -151,7 +151,6 @@ if (result.statusCode == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
       "abTestingId": 48,
       "lastLogin": 1572446599748,
@@ -217,7 +216,8 @@ if (result.statusCode == 200) {
         "TestStat2": 0,
         "gamesWon": 0
       }
-    }
+    },
+    "status": 200
 }
 ```
 </details>

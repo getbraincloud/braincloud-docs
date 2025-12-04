@@ -117,8 +117,8 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 
 ```json
 {
-    "status": 200,
-    "data": null
+    "data": null,
+    "status": 200
 }
 ```
 

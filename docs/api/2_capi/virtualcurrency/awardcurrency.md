@@ -170,7 +170,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "currencyMap": {
             "gems": {
@@ -188,7 +187,8 @@ if (postResult.status == 200) {
                 "revoked": 0
             }
         }
-    }
+    },
+    "status": 200
 }
 ```
 

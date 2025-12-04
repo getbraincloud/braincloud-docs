@@ -163,7 +163,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "friends": [
             {
@@ -201,7 +200,8 @@ if (postResult.status == 200) {
             }
         ],
         "server_time": 1458224807855
-    }
+    },
+    "status": 200
 }
 ```
 
