@@ -103,7 +103,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "status": 200,
   "data": {
     "options": {
       "isOwned": false,
@@ -111,7 +110,8 @@ if (postResult.status == 200) {
     },
     "name": "athletes",
     "customIndexes": {}
-  }
+  },
+  "status": 200
 }
 ```
 </details>
