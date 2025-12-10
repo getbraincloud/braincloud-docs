@@ -17,7 +17,7 @@ Key concepts:
 * [GetUserItem](/api/capi/useritems/getuseritem) - Retrieves the identified user item from the server.
 * [GetUserItemsPage](/api/capi/useritems/getuseritemspage) - Retrieves the page of user's items from the server based on the context. 
 * [GetUserItemsPageOffset](/api/capi/useritems/getuseritemspageoffset) - Retrieves the page of user's items from the server based on the encoded context. 
-* [GetItemPromotionalDetails](/api/capi/useritems/getitempromotionaldetails)] - Returns list of promotional details for the specified item definition, for promotions available to the current user.
+* [GetItemPromotionDetails](/api/capi/useritems/getitempromotiondetails)] - Returns list of promotional details for the specified item definition, for promotions available to the current user.
 * [GetItemsOnPromotion](/api/capi/useritems/getitemsonpromotion) - Returns list of promotional details for the specified item definition, for promotions available to the current user.
 
 #### Affect Item Owner

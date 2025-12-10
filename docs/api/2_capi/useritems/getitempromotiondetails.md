@@ -1,7 +1,7 @@
-# GetItemPromotionalDetails
+# GetItemPromotionDetails
 Returns list of promotional details for the specified item definition, for promotions available to the current user.
 
-<PartialServop service_name="userItems" operation_name="GET_ITEM_PROMOTIONAL_DETAILS" />
+<PartialServop service_name="userItems" operation_name="GET_ITEM_PROMOTION_DETAILS" />
 
 ## Method Parameters
 Parameter | Description
@@ -9,6 +9,7 @@ Parameter | Description
 defId | The unique id of the item definition to check.
 shopId | The id identifying the store the item is from, if applicable.
 includeDef | If true, the associated item definition will be included in the response.
+includePromotionDetails | If true, the promotion details will be included in the response.
 
 ## Usage
 
@@ -22,6 +23,7 @@ includeDef | If true, the associated item definition will be included in the res
 string defId = "sword001";
 string shopId = "None";
 bool includeDef = True;
+bool includePromotionDetails = True;
 
 SuccessCallback successCallback = (response, cbObject) =>
 {
@@ -32,7 +34,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
     Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
 };
 
-<%= data.branding.codePrefix %>.UseritemsService.GetItemPromotionalDetails(defId, shopId, includeDef, successCallback, failureCallback);
+<%= data.branding.codePrefix %>.UseritemsService.GetItemPromotionDetails(defId, shopId, includeDef, includePromotionDetails, successCallback, failureCallback);
 ```
 
 ```mdx-code-block
@@ -44,7 +46,8 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 const char *defId = "sword001";
 const char *shopId = "None";
 bool includeDef = True;
-<%= data.branding.codePrefix %>.getUseritemsService().getItemPromotionalDetails(defId, shopId, includeDef, this);
+bool includePromotionDetails = True;
+<%= data.branding.codePrefix %>.getUseritemsService().getItemPromotionDetails(defId, shopId, includeDef, includePromotionDetails, this);
 ```
 
 ```mdx-code-block
@@ -56,12 +59,14 @@ bool includeDef = True;
 NSString *defId = @"sword001";
 NSString *shopId = @"None";
 BOOL includeDef = True;
+BOOL includePromotionDetails = True;
 BCCompletionBlock successBlock; // define callback
 BCErrorCompletionBlock failureBlock; // define callback
-[[<%= data.branding.codePrefix %> userItemsService] getItemPromotionalDetails:
+[[<%= data.branding.codePrefix %> userItemsService] getItemPromotionDetails:
                         defId:defId
                        shopId:shopId
                    includeDef:includeDef
+      includePromotionDetails:includePromotionDetails
               completionBlock:successBlock
          errorCompletionBlock:failureBlock
                      cbObject:nil]
@@ -76,8 +81,9 @@ BCErrorCompletionBlock failureBlock; // define callback
 String defId = "sword001";
 String shopId = "None";
 bool includeDef = True;
+bool includePromotionDetails = True;
 this; // implements IServerCallback
-<%= data.branding.codePrefix %>.getUseritemsService.getItemPromotionalDetails(defId, shopId, includeDef, this);
+<%= data.branding.codePrefix %>.getUseritemsService.getItemPromotionDetails(defId, shopId, includeDef, includePromotionDetails, this);
 
 public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
 {
@@ -98,7 +104,8 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 var defId = "sword001";
 var shopId = "None";
 var includeDef = True;
-<%= data.branding.codePrefix %>.userItems.getItemPromotionalDetails(defId, shopId, includeDef, result =>
+var includePromotionDetails = True;
+<%= data.branding.codePrefix %>.userItems.getItemPromotionDetails(defId, shopId, includeDef, includePromotionDetails, result =>
 {
   var status = result.status;
   console.log(status + " : " + JSON.stringify(result, null, 2));
@@ -114,7 +121,8 @@ var includeDef = True;
 var defId = "sword001";
 var shopId = "None";
 var includeDef = True;
-ServerResponse result = await <%= data.branding.codePrefix %>.userItemsService.getItemPromotionalDetails(defId:defId, shopId:shopId, includeDef:includeDef);
+var includePromotionDetails = True;
+ServerResponse result = await <%= data.branding.codePrefix %>.userItemsService.getItemPromotionDetails(defId:defId, shopId:shopId, includeDef:includeDef, includePromotionDetails:includePromotionDetails);
 
 if (result.statusCode == 200) {
     print("Success");    
@@ -132,9 +140,10 @@ if (result.statusCode == 200) {
 var defId = "sword001";
 var shopId = "None";
 var includeDef = True;
+var includePromotionDetails = True;
 var userItemsProxy = bridge.getUseritemsServiceProxy();
 
-var postResult = userItemsProxy.getItemPromotionalDetails(defId, shopId, includeDef);
+var postResult = userItemsProxy.getItemPromotionDetails(defId, shopId, includeDef, includePromotionDetails);
 ```
 
 ```mdx-code-block
@@ -145,11 +154,12 @@ var postResult = userItemsProxy.getItemPromotionalDetails(defId, shopId, include
 ```r
 {
     "service":"userItems",
-    "operation":"GET_ITEM_PROMOTIONAL_DETAILS",
+    "operation":"GET_ITEM_PROMOTION_DETAILS",
     "data":{
         "defId":"sword001",
         "shopId":null,
-        "includeDef":true
+        "includeDef":true,
+        "includePromotionDetails":true
     }
 }
 ```
