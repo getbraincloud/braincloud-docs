@@ -9,16 +9,16 @@ Note that apps still have to make the purchase directly with the Amazon Appstore
 
 ## brainCloud Portal Setup
 
-Here are the steps to configure brainCloud for Amazon Appstore purchases.
+Here are the steps to configure brainCloud for Amazon Appstore purchases.
 
 Prerequisites
 
-- You should have set up your products in the brainCloud marketplace. Please refer to the [Marketplace Configuration](/learn/portal-tutorials/marketplace-configuration/) guide.
+- You should have set up your products in the brainCloud marketplace. Please refer to the [Marketplace Configuration](/learn/portal-tutorials/marketplace-configuration/) guide.
 - You should have created the Amazon Appstore In-App products(items) as per the [Amazon Appstore Developer documentation](https://developer.amazon.com/docs/in-app-purchasing/iap-overview.html). (Refer to our Unity example [here](https://github.com/getbraincloud/examples-unity/tree/develop/BCAmazonIAP).)
 
-### Associate Amazon In-App Items with brainCloud Products
+### Associate Amazon In-App Items with brainCloud Products
 
-After setting up your products in the brainCloud marketplace, you’ll want to associate them with the Amazon In-App product SKU. In particular, we will be grabbing the product SKU from the Amazon developer site and entering them into the appropriate brainCloud products.
+After setting up your products in the brainCloud marketplace, you’ll want to associate them with the Amazon In-App product SKU. In particular, we will be grabbing the product SKU from the Amazon developer site and entering them into the appropriate brainCloud products.
 
 - Log into the [Amazon Developer](https://developer.amazon.com/) site and go to the [Developer Console](https://developer.amazon.com/dashboard) dashboard.
 
@@ -36,7 +36,7 @@ After setting up your products in the brainCloud marketplace, you’ll want to a
 
 ![](images/image-4-1024x318.png)
 
-(for this tutorial we'll assume that the product(item) SKU is _bitheads.brainCloud.aiaptest.pc1_)
+(for this tutorial we'll assume that the product(item) SKU is _bitheads.brainCloud.aiaptest.pc1_)
 
 :::warning
 
@@ -61,7 +61,7 @@ If you skip registering your Amazon product(item) SKU to the brainCloud portal, 
 
 ![](images/image-7.png)
 
-- In the Edit Price dialog, click the + icon to add an entry for Amazon
+- In the Edit Price dialog, click the + icon to add an entry for Amazon
 
 ![](images/image-11.png)
 
@@ -155,7 +155,7 @@ Notice your test status became **Processing** once submit your test, then **Publ
 
 ### Confirming the purchase Client Side
 
-After making a purchase client-side, Amazon Appstore will return a receipt with a receiptId, SKU, itemType, purchaseDate and userId such info, we will need receiptId and userId that are used by the [VerifyPurchase](/api/capi/product/confirmgoogleplaypurchase) API call.
+After making a purchase client-side, Amazon Appstore will return a receipt with a receiptId, SKU, itemType, purchaseDate and userId such info, we will need receiptId and userId that are used by the [VerifyPurchase](/api/capi/product/confirmgoogleplaypurchase) API call.
 
 - If your using Amazon IAP Plugin for Unity, some of your code may look like this:
 ```js

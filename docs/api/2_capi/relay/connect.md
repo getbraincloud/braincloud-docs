@@ -79,21 +79,21 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 ```
 
 ```dart
-void successCallback(Map<String, dynamic>?  jsonResponse) {
+void successCallback(Map<String, dynamic>?  jsonResponse) {
     // Did connect.
-    // Your code
+    // Your code
 }
-void failureCallback(Map<String, dynamic>?  jsonError) {
-  dynamic errorMap = (jsonError is String) ? json.decode(jsonError) : jsonError;
-  // Your code
+void failureCallback(Map<String, dynamic>?  jsonError) {
+  dynamic errorMap = (jsonError is String) ? json.decode(jsonError) : jsonError;
+  // Your code
 }
 // data is retrieved from the onLobby event ROOM_ASSIGNED here.
 RelayConnectOptions connectOptions = RelayConnectOptions(
-                  false,
-                  data["connectData"]["address"],
-                  data["connectData"]["ports"]["ws"],
-                  data["passcode"],
-                  data["lobbyId"]);
+                  false,
+                  data["connectData"]["address"],
+                  data["connectData"]["ports"]["ws"],
+                  data["passcode"],
+                  data["lobbyId"]);
 ​
 ServerResponse result = await _bc.relayService.connect(eRelayConnectionType:RelayConnectionType.WEBSOCKET, options:connectOptions, onSuccess:successCallback, onFailure:failureCallback);
 ```

@@ -90,7 +90,7 @@ scanCode | The code being redeemed. Sometimes referred to as the Promo code.
 operation | Should always be "redeem" for asynchronous scripts.
 redemptionCodeId | The redemption code id of the redemption code being processed.
 attempt   | The 0-based counter of the current attempt. Will be zero unless retries are allowed.
-async | Will be `false` for asynchronous scripts. <- Can be used to confirm that things are configured correctly!
+async | Will be `false` for asynchronous scripts. &lt;- Can be used to confirm that things are configured correctly!
 codeType | Corresponds to the _Campaign Name_ in the Design Portal.
 codeUseType | "MULTI" if this is a Shared (multi-use) Code, and "SINGLE" if it is a Personal (single-use) code
 customCodeInfo | The _Code Info JSON_ configured against the code. Normally contains the JSON data indicating what the rewards for redeeming this code should be.
@@ -120,9 +120,9 @@ Parameter | Description
 --------- | -----------
 scanCode | The code being redeemed. Sometimes referred to as the Promo code.
 operation | Will be "redeem" the first time the script is called - and "async" for each subsequent poll of the script. 
-redemptionCodeId | A unique internal id for the code being redeemed <-- Warning - only sent when the operation is "async"
+redemptionCodeId | A unique internal id for the code being redeemed &lt;-- Warning - only sent when the operation is "async"
 attempt   | The 0-based counter of the current attempt. Will be zero unless retries are allowed. 
-async | Will be `true` for asynchronous scripts. <- Can be used to confirm that things are configured correctly!
+async | Will be `true` for asynchronous scripts. &lt;- Can be used to confirm that things are configured correctly!
 codeType | Corresponds to the _Campaign Name_ in the Design Portal.
 codeUseType | "MULTI" if this is a Shared (multi-use) Code, and "SINGLE" if it is a Personal (single-use) code
 customCodeInfo | The _Code Info JSON_ configured against the code. Normally contains the JSON data indicating what the rewards for redeeming this code should be.

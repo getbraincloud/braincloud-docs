@@ -1,6 +1,6 @@
 # Initialize
 
-Method initializes both `<%= data.branding.codeWrapper %>` and `<%= data.branding.codeClient %>`.
+Method initializes both ``<%= data.branding.codeWrapper %>`` and ``<%= data.branding.codeClient %>``.
 
 The parameters for this method vary by client (for example the Unity client takes none at all, as all data is pulled from the <%= data.branding.productName %> editor menu data).
 

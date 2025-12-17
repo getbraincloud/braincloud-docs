@@ -5,7 +5,7 @@ date: "2014-09-08"
 
 ## Leaderboards
 
-brainCloud provides support for both _global_ and _social_ leaderboards.
+brainCloud provides support for both _global_ and _social_ leaderboards.
 
 brainCloud leaderboards support the following:
 
@@ -14,9 +14,9 @@ brainCloud leaderboards support the following:
 - Supported score types include "High Value", "Low Value", "Cumulative" and "Last Entry"
 - Leaderboard entries can include additional "developer-defined" data
 - Leaderboards can be configured to automatically reset daily, weekly, monthly or yearly
-- brainCloud provides rich APIs for dynamically creating leaderboards, retrieving data for social maps, and more
+- brainCloud provides rich APIs for dynamically creating leaderboards, retrieving data for social maps, and more
 
-brainCloud also supports Pacers to make leaderboards more compelling for players that are not connected to social networks.  Pacers are "canned" score entries that are automatically populated on a leaderboard with set score values.  These can be used to give the player a crew of game-provided avatars to compete against.
+brainCloud also supports Pacers to make leaderboards more compelling for players that are not connected to social networks.  Pacers are "canned" score entries that are automatically populated on a leaderboard with set score values.  These can be used to give the player a crew of game-provided avatars to compete against.
 
 For more information, check out the [Leaderboard API](/api/capi/leaderboard).
 
@@ -39,4 +39,4 @@ The power of brainCloud’s tournament system comes from how flexible they are, 
 - New Tournaments API – for fine control of displaying tournament information, handling player enrollment, recording player scores, and claiming awarded prizes
 - And of course, you can use brainCloud Global Tournament features as building blocks for more advanced tournament variations – for example, tournaments brackets.
 
-For more information on Global Tournaments, check out our [Tournament API](/api/capi/tournament).
+For more information on Global Tournaments, check out our [Tournament API](/api/capi/tournament).

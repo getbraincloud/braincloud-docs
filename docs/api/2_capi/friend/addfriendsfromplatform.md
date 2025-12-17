@@ -116,7 +116,7 @@ var externalIds = [ "external Id 1", "external Id 2" ];
 ```
 
 ```dart
-var  friendPlatform = FriendPlatform.facebook;
+var  friendPlatform = FriendPlatform.facebook;
 var  mode = "ADD";
 var  externalIds = [ "external Id 1", "external Id 2" ];
 

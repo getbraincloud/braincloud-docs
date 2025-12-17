@@ -8,7 +8,7 @@ Send a packet to any players by using a mask.
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | data       | Byte array for the data to send                                                                                                                                                                                                                                                       |
 | size       | Size of data in bytes                                                                                                                                                                                                                                                                 |
-| playerMask | Mask of the players to send to. 0001 = netId 0, 0010 = netId 1, etc. If you pass ALL_PLAYER_MASK you will be included and you will get an echo for your message. Use sendToAll instead, you will be filtered out. You can manually filter out by : ALL_PLAYER_MASK &= ~(1 << myNetId) |
+| playerMask | Mask of the players to send to. 0001 = netId 0, 0010 = netId 1, etc. If you pass ALL_PLAYER_MASK you will be included and you will get an echo for your message. Use sendToAll instead, you will be filtered out. You can manually filter out by : ALL_PLAYER_MASK &= ~(1 &lt;&lt; myNetId) |
 | reliable   | Send this reliably or not                                                                                                                                                                                                                                                             |
 | ordered    | Received this ordered or not                                                                                                                                                                                                                                                          |
 | channel    | One of: (CHANNEL_HIGH_PRIORITY_1, CHANNEL_HIGH_PRIORITY_2, CHANNEL_NORMAL_PRIORITY, CHANNEL_LOW_PRIORITY)                                                                                                                                                                             |
@@ -80,9 +80,9 @@ for (var netId in [0,2,5]) {
 }
 ​
 _bc.relayService.sendToPlayers(bytes, playerMask:mask,
-          reliable: true,
-          ordered: true,
-          channel: BrainCloudRelay.channelLowPriority);
+          reliable: true,
+          ordered: true,
+          channel: BrainCloudRelay.channelLowPriority);
 ```
 
 ```mdx-code-block

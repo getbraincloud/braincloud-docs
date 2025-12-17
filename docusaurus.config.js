@@ -12,33 +12,35 @@ let options = {
   replacements: {
     PRODUCT: 'brainCloud',
     COPYRIGHT: `Copyright ${new Date().getFullYear()} bitHeads, Inc`,
-    'data.branding.codePrefix %>': '_bc',
-    'data.branding.codeWrapper %>': 'BrainCloudWrapper',
-    'data.branding.codeClient %>': 'BrainCloudClient',
-    'data.branding.serverUrl %>': 'https://api.braincloudservers.com/dispatcherv2',
-    'data.branding.productName %>': 'brainCloud',
-    'data.branding.productNameCaptial %>': 'BrainCloud',
-    'data.branding.productNameRTT %>': 'brainCloud RTT',
-    'data.branding.companyName %>': 'bitHeads',
-    'data.example.email %>': 'email@bitheads.com',
-    'data.example.password %>': 'password',
-    'data.example.userId %>': 'userName',
+    'data.branding.codePrefix': '_bc',
+    'data.branding.codeWrapper': 'BrainCloudWrapper',
+    'data.branding.codeClient': 'BrainCloudClient',
+    'data.branding.serverUrl': 'https://api.braincloudservers.com/dispatcherv2',
+    'data.branding.productName': 'brainCloud',
+    'data.branding.productNameCaptial': 'BrainCloud',
+    'data.branding.productNameRTT': 'brainCloud RTT',
+    'data.branding.companyName': 'bitHeads',
+    'data.example.email': 'email@bitheads.com',
+    'data.example.password': 'password',
+    'data.example.userId': 'userName',
   },
-  prefix: '<%= ',
+  // Support legacy placeholders like: <%= PRODUCT %> / <%= data.branding.productName %>
+  prefix: '<%=',
+  suffix: '%>',
 }
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  webpack: {
-    jsLoader: (isServer) => ({
-      loader: require.resolve('esbuild-loader'),
-      options: {
-        loader: 'tsx',
-        format: isServer ? 'cjs' : undefined,
-        target: isServer ? 'node12' : 'es2017',
-      },
-    }),
-  },
+  // webpack: {
+  //   jsLoader: (isServer) => ({
+  //     loader: require.resolve('esbuild-loader'),
+  //     options: {
+  //       loader: 'tsx',
+  //       format: isServer ? 'cjs' : undefined,
+  //       target: isServer ? 'node20' : 'es2017',
+  //     },
+  //   }),
+  // },
   //title: 'brainCloud docs',
   title: '__DOCSNAME__',
   tagline: 'BaaS',
@@ -50,8 +52,25 @@ const config = {
   url: 'http://__DOCSURL__.braincloudservers.com/',
   baseUrl: '/', // for s3 bucket
   onBrokenLinks: 'ignore',
-  onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
+  markdown: {
+    // Preprocess MD/MDX content *before* MDX parsing so legacy `<%= ... %>` doesn't
+    // crash MDX 3 (it tries to parse `<%` as JSX).
+    preprocessor: ({ fileContent }) => {
+      const replacements = options?.replacements ?? {};
+      return fileContent.replace(/<%=\s*([^%]+?)\s*%>/g, (match, rawKey) => {
+        const key = String(rawKey).trim();
+        if (Object.prototype.hasOwnProperty.call(replacements, key)) {
+          return String(replacements[key]);
+        }
+        // Unknown placeholders: escape them so MDX doesn't treat them as JSX.
+        return '`' + match + '`';
+      });
+    },
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
 
   organizationName: 'getbraincloud', // Usually your GitHub org/user name.
   projectName: 'braincloud-apiref', // Usually your repo name.

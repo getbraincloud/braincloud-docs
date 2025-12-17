@@ -2,7 +2,7 @@
 
 Redeem a code. 
 
-_Note that if the optional `codeType` is not provided, the system assumes that codes <= 20 characters are shared ('multi-use') codes - while codes >= 25 characters are personal ('single-use') codes._
+_Note that if the optional `codeType` is not provided, the system assumes that codes `<=` 20 characters are shared ('multi-use') codes - while codes `>=` 25 characters are personal ('single-use') codes._
 
 <PartialServop service_name="redemptionCode" operation_name="REDEEM_CODE" />
 

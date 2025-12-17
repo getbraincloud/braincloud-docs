@@ -119,8 +119,8 @@ var extraJson = {"key":"value"};
 ```
 
 ```dart
-var  authenticationType = AuthenticationType.universal;
-var  ids = AuthenticationIds("authAdvancedUser", "authAdvancedPass", "");  // id, token, externalAuthName
+var  authenticationType = AuthenticationType.universal;
+var  ids = AuthenticationIds("authAdvancedUser", "authAdvancedPass", "");  // id, token, externalAuthName
 var  extraJson = {"key":"value"};
 
 ServerResponse result = await <%= data.branding.codePrefix %>.identityService.mergeAdvancedIdentity(authenticationType:authenticationType, ids:ids, extraJson:extraJson);

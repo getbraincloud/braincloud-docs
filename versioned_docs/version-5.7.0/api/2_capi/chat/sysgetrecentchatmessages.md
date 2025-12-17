@@ -4,7 +4,7 @@
 This method is available in Cloud Code scripts only.
 :::
 
-Returns a list of max \<n\> messages from history.
+Returns a list of max \`n` messages from history.
 
 
 

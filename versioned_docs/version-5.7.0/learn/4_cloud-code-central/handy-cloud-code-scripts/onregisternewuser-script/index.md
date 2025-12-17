@@ -5,7 +5,7 @@ date: "2018-08-28"
 
 ### Purpose
 
-This script enforces any registration attempts made to brainCloud will fail if the account already exists.
+This script enforces any registration attempts made to brainCloud will fail if the account already exists.
 
 Use this to enforce a proper signup/login flow, so a user cannot attempt to register multiple times with the same account.
 

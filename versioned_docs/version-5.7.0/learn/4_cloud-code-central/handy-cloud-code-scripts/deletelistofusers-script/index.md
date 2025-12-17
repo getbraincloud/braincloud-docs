@@ -5,7 +5,7 @@ date: "2019-09-12"
 
 ### Purpose
 
-This script deletes a list of users based on a provided list of profileIds and universalIds.
+This script deletes a list of users based on a provided list of profileIds and universalIds.
 
 ### Script
 
@@ -13,10 +13,10 @@ Click [DeleteListOfUsers.ccjs.zip](script/DeleteListOfUsers.ccjs.zip) to downloa
 
 ### Usage / Setup
 
-To configure this script, simply import it into your app.  
-Compile a list of users you wish to delete and pass it into the script.  
+To configure this script, simply import it into your app.  
+Compile a list of users you wish to delete and pass it into the script.  
 
-_Example script parameters_
+_Example script parameters_
 ```js
 {
 	"profileIds": ["the-profile-id", "a8d86270-c95b-4ea7-a545-46bf27e7f94e"],

@@ -3,7 +3,7 @@ title: "CC Tutorial1 - Your First Script"
 date: "2016-02-16"
 ---
 
-In this tutorial, we'll go through the basics of creating a Cloud Code script, and teach you how to pass parameters to/from a script.
+In this tutorial, we'll go through the basics of creating a Cloud Code script, and teach you how to pass parameters to/from a script.
 
 ## Step 1 - Create the Script
 
@@ -12,7 +12,7 @@ To create our first script, perform the following steps:
 - Log into the brainCloud **Design Portal** (if you haven't already)
 - Choose your app, and go to **Design | Cloud Code | Scripts**
 - Click the **[+]** in the top right-hand corner to create a new script
-- Give your script a name - for example, _"Tut1_AddTwoNumbers"_, make it **_Client Callable_**, and set its _**Test Parameters**_ to:
+- Give your script a name - for example, _"Tut1_AddTwoNumbers"_, make it **_Client Callable_**, and set its _**Test Parameters**_ to:
 
 Test Parameters
 ```js
@@ -21,7 +21,7 @@ Test Parameters
     "num2": 2 
 } 
 ```
-- Then switch to the **Editor** tab, and copy and paste the following script.
+- Then switch to the **Editor** tab, and copy and paste the following script.
 
 Script
 ```js
@@ -40,10 +40,10 @@ c;
 
 ## Step 2 - Run the Script
 
-Okay, let's see if it works. To run the script:
+Okay, let's see if it works. To run the script:
 
 - Switch to the **API Explorer** by choosing **Design | Cloud Code | API Explorer** from the side menu
-- The API Explorer attempts to simulate a client application accessing the brainCloud servers. Thus, just like any brainCloud client, you must first authenticate.  To do so, choose the **Authenticate** _Service_ and the **Authenticate** _Operation_ from the drop-downs, and then click the green **RUN** button.
+- The API Explorer attempts to simulate a client application accessing the brainCloud servers. Thus, just like any brainCloud client, you must first authenticate.  To do so, choose the **Authenticate** _Service_ and the **Authenticate** _Operation_ from the drop-downs, and then click the green **RUN** button.
 - Next, we'll run the script. Choose **Script** from the _Service_ drop-down and Run Script "Tut1_AddTwoNumbers" from the Operation drop-down. _If you don't see your script you probably forgot to make it Client Callable - go to its definition in the Scripts screen, and then come back._
 - You'll notice that the default parameters that you set are displayed in the _Parameters_ section of the API Explorer. Edit them if you wish. Then click the RUN button to run the script and see the results.
 
@@ -74,7 +74,7 @@ Results
 
 ## Step 4 - Calling the Script from your client app
 
-Calling scripts from client apps is straight-forward - you simply call the [RunScript()](/api/capi/script/runscript) method, passing in the name of the script, and any required parameters.
+Calling scripts from client apps is straight-forward - you simply call the [RunScript()](/api/capi/script/runscript) method, passing in the name of the script, and any required parameters.
 
 Calling the script from a Unity C# app would look like the following:
 ```js

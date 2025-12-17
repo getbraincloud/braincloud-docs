@@ -130,7 +130,7 @@ var forceCreate = true;
 ```dart
 var  externalId = "email@email.com";
 var  authenticationToken = "email@email.com";
-var  authenticationType = AuthenticationType.email;
+var  authenticationType = AuthenticationType.email;
 var  externalAuthName = "";
 var  forceCreate = true;
 

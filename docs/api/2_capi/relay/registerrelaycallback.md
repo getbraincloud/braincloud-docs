@@ -75,7 +75,7 @@ static void relayCallback(byte[] data)
 
 ```dart
  void relayCallback(int netId, Uint8List data) {
-   // Your code
+   // Your code
  }
 ​
 <%= data.branding.codePrefix %>.relayService.RegisterRelayCallback(relayCallback);

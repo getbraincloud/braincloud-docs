@@ -128,7 +128,7 @@ var extraJson = {"key":"value"};
 
 ```dart
 var  authenticationType = <%= data.branding.codePrefix %>.brainCloudClient.authentication.AUTHENTICATION_TYPE_UNIVERSAL;
-var  ids = AuthenticationIds("authAdvancedUser", "authAdvancedPass", "");  // id, token, externalAuthName
+var  ids = AuthenticationIds("authAdvancedUser", "authAdvancedPass", "");  // id, token, externalAuthName
 var  forceCreate = true;
 var  extraJson = {"key":"value"};
 

@@ -27,7 +27,7 @@ Enter in the Steam App Id and Steam Publisher Key into the brainCloud Design Por
 
 **Steam App Id** - Retrievable via Steam’s partner network.
 
-**Steam Publisher Key** - Also referred to as WEB API key within Steam.  From the Steam partner network, Users & Permissions.  Select the correct group, and select “Create WepAPI Key” from the right panel.  
+**Steam Publisher Key** - Also referred to as WEB API key within Steam.  From the Steam partner network, Users & Permissions.  Select the correct group, and select “Create WepAPI Key” from the right panel.  
 
 # Configure Steamworks.Net
 
@@ -153,7 +153,7 @@ private void OnTransactionResponse(MicroTxnAuthorizationResponse_t pCallback)
 ```
 # More Info
 
-- Often times the Steam Overlay does not render/show up during editor or developer standalone builds.  You will need to upload a build using the steam SDK content uploader, to ensure the overlay is properly rendered over Unity’s engine.  
+- Often times the Steam Overlay does not render/show up during editor or developer standalone builds.  You will need to upload a build using the steam SDK content uploader, to ensure the overlay is properly rendered over Unity’s engine.  
       
     
-- All Steam purchases by default are in sandbox mode, to help initial integration and testing, prior to release.  Visit the brainCloud design portal Navigate to **Design -> Core App Info -> Advanced Settings**.  At the bottom is a check mark to distinguish if Steam Store purchases should be in sandbox mode or not.  Ensure this is unselected before going to the marketplace.
+- All Steam purchases by default are in sandbox mode, to help initial integration and testing, prior to release.  Visit the brainCloud design portal Navigate to **Design -> Core App Info -> Advanced Settings**.  At the bottom is a check mark to distinguish if Steam Store purchases should be in sandbox mode or not.  Ensure this is unselected before going to the marketplace.

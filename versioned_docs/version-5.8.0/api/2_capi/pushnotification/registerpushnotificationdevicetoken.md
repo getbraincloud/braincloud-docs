@@ -107,8 +107,8 @@ var deviceToken = "12345";
 ```
 
 ```dart
-var  devicePlatform = PlatformID.iOS;
-var  deviceToken = "12345";
+var  devicePlatform = PlatformID.iOS;
+var  deviceToken = "12345";
 ​
 ServerResponse result = await _bc.pushNotificationService.registerPushNotificationToken(platform:devicePlatform, deviceToken:deviceToken);
 

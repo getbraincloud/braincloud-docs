@@ -162,7 +162,7 @@ var  score = 10;
 var  data = {
     "nickname": "batman"
 };
-var  leaderboardType = SocialLeaderboardType.HIGH_VALUE;
+var  leaderboardType = SocialLeaderboardType.HIGH_VALUE;
 var  rotationResetTime = 158778236487;
 var  retainedCount = 2;
 var  numDaysToRotate = 4;

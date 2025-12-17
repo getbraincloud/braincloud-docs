@@ -7,20 +7,20 @@ In this tutorial, we'll explain how to make brainCloud API calls from within Clo
 
 ## Example Background
 
-For this example, we'll imagine that the developer wants to write to two leaderboards upon completion of a game round.
+For this example, we'll imagine that the developer wants to write to two leaderboards upon completion of a game round.
 
-She has decided to combine these two operations into a single cloud code script to reap the following benefits:
+She has decided to combine these two operations into a single cloud code script to reap the following benefits:
 
-- _More responsive app_ - fewer client/server calls means a more responsive app
-- _Cost savings_ - it costs 1 API count to call a script, but the first 2 API calls called from within a script are free (and the rest cost only 1/2 count each). The result is she can write to two leaderboards for a single API count combined, half the cost otherwise.
+- _More responsive app_ - fewer client/server calls means a more responsive app
+- _Cost savings_ - it costs 1 API count to call a script, but the first 2 API calls called from within a script are free (and the rest cost only 1/2 count each). The result is she can write to two leaderboards for a single API count combined, half the cost otherwise.
 
 _Note that for this example we'll use the dynamic leaderboard calls so that we don't have to set up the leaderboard metadata ahead-of-time._
 
-## Step 1 - Write the Script
+## Step 1 - Write the Script
 
 We'll enter the script following the same steps as the last tutorial.
 
-First of all, create the script by going to **Design | Cloud Code | Script**, hitting the **[+]**, setting _Script Name_ to **"Tut2_WriteToLeaderboards"**, ensuring _Client Callable_ is **TRUE**, and entering the following for the _Test Parameters_:
+First of all, create the script by going to **Design | Cloud Code | Script**, hitting the **[+]**, setting _Script Name_ to **"Tut2_WriteToLeaderboards"**, ensuring _Client Callable_ is **TRUE**, and entering the following for the _Test Parameters_:
 
 Test Parameters
 ```js
@@ -84,8 +84,8 @@ results;
 ```
 The important things to note from this example:
 
-- **Before you can make an API call, you must request the appropriate _service proxy_ from the bridge.**  Note that there are separate bridges for [Client API](/api/cc/bridge) and [S2S API](/api/s2s/) calls - consult the appropriate one for the available proxies.
-- **You then invoke the API call upon the _service proxy_ itself.**
+- **Before you can make an API call, you must request the appropriate _service proxy_ from the bridge.**  Note that there are separate bridges for [Client API](/api/cc/bridge) and [S2S API](/api/s2s/) calls - consult the appropriate one for the available proxies.
+- **You then invoke the API call upon the _service proxy_ itself.**
 
 * * *
 
@@ -107,7 +107,7 @@ Results
  }
 }
 ```
-For fun, check out the leaderboards from our Monitoring section. Go to **Monitoring | Global Monitoring | Leaderboards** By default you'll see the "killsLeaderboard" - but you can switch to the "scoreLeaderboard" via the combo box.
+For fun, check out the leaderboards from our Monitoring section. Go to **Monitoring | Global Monitoring | Leaderboards** By default you'll see the "killsLeaderboard" - but you can switch to the "scoreLeaderboard" via the combo box.
 
 * * *
 

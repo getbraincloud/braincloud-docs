@@ -68,7 +68,7 @@ brainCloud supports two architectural strategies for room services:
 Important things to understand about Room Experiences:
 
 - Room Experiences are given all lobby data upon start. Thus they have access to the list of members, team allotments, the static lobby config, and dynamic lobby settings data.
-    - Room Server Managers receive this data when brainCloud calls the <rsm-url\>/<rsm-endpoint\>/assign-room.
+    - Room Server Managers receive this data when brainCloud calls the `rsm-url`/`rsm-endpoint`/assign-room.
     - Peer-provided services have access to the data via the `lobby` data present in the
 - Room Experiences should validate participants as they join. Have them provide their profile ids and sessionIds and check them against the member data provided
 - Be advised that the lobby is destroyed once the `ROOM_READY` event has been sent to the participants

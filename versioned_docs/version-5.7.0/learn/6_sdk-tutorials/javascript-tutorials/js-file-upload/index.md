@@ -5,7 +5,7 @@ date: "2016-04-14"
 
 ## Overview
 
-The Javascript File Upload API works a bit differently than other clients. When working within Javascript, you have access to built-in classes to handle uploading a file as well as determining the status of that upload - specifically the XMLHttpRequest object. As a result, we've geared the brainCloud upload implementation to make use of these built-in classes and methods.
+The Javascript File Upload API works a bit differently than other clients. When working within Javascript, you have access to built-in classes to handle uploading a file as well as determining the status of that upload - specifically the XMLHttpRequest object. As a result, we've geared the brainCloud upload implementation to make use of these built-in classes and methods.
 
 ## Create the Form
 
@@ -28,7 +28,7 @@ The first thing you'll want to set up is a form for selecting a file. Note that 
 ```
 ## Upload the File
 
-Here are the functions defined to select a file and upload it. Note that fileSelected simply populates the divs defined in the form with information about the selected file. The uploadFile method creates the XMLHttpRequest object and, registers callback methods for various events. It then calls the [brainCloudClient.file.prepareFileUpload()](/api/capi/file/prepareuserupload/) method with various details about the file being uploaded. The callback of this method will then (on success) start the upload of the file to the brainCloud server using the [brainCloudClient.file.uploadFile()](/api/capi/file/uploadfile,javascript) method. and starts the upload of the file with brainCloud.
+Here are the functions defined to select a file and upload it. Note that fileSelected simply populates the divs defined in the form with information about the selected file. The uploadFile method creates the XMLHttpRequest object and, registers callback methods for various events. It then calls the [brainCloudClient.file.prepareFileUpload()](/api/capi/file/prepareuserupload/) method with various details about the file being uploaded. The callback of this method will then (on success) start the upload of the file to the brainCloud server using the [brainCloudClient.file.uploadFile()](/api/capi/file/uploadfile,javascript) method. and starts the upload of the file with brainCloud.
 ```js
 function fileSelected() {
   var file = document.getElementById('fileToUpload').files[0];
@@ -72,7 +72,7 @@ function uploadFile() {
 Here are the registered event listeners. Of interest, uploadProgress is called periodically by the XMLHttpRequest object to indicate the progress of the file upload. You can attach your progress bar to this event listener.
 ```js
 function updateProgress(progress) {
-  progress = progress >= 0 ? (progress <= 100 ? progress : 100) : 0;
+  progress = progress `>=` 0 ? (progress `<=` 100 ? progress : 100) : 0;
   document.getElementById('progress').innerHTML = "Progress: " + progress + "%";
 }
 	

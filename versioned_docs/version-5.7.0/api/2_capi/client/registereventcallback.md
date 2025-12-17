@@ -68,7 +68,7 @@ eventBlock = ^(NSString *eventsJson) {  };
 ```
 
 ```dart
-void eventCallback(Map<String, dynamic>?  jsonResponse) {
+void eventCallback(Map<String, dynamic>?  jsonResponse) {
     //Your code
 };
 ​

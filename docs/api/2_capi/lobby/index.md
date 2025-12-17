@@ -638,10 +638,10 @@ The following alignment options are available, and show how they would affect a 
 
 | Alignment | Min | Max | Description                                                                                                                                                         |
 | --------- | --- | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| high      | 80  | 100 | Ensures that lobbies must have skill rating >= to the candidate. Leaves the min equal to player rating, and adds 200% of the range to the max.                      |
-| mid-high  | 75  | 95  | Subtracks 50% of the range for the min, and adds 150% of the range to the max.                                                                                      |
-| center    | 70  | 90  | Centers the range around the candidate's rating.                                                                                                                    |
-| mid-low   | 65  | 85  | Subtracts 150% of the range for the min, and adds 50% of the range to the max.                                                                                      |
-| low       | 60  | 80  | Ensures that lobbies will have skill rating <= to the candidate. Subtracts 200% of the range from the rating to calculate min, and leaves max as the player rating. |
+| high      | 80  | 100 | Ensures that lobbies must have skill rating &gt;= to the candidate. Leaves the min equal to player rating, and adds 200% of the range to the max. |
+| mid-high  | 75  | 95  | Subtracks 50% of the range for the min, and adds 150% of the range to the max. |
+| center    | 70  | 90  | Centers the range around the candidate's rating. |
+| mid-low   | 65  | 85  | Subtracts 150% of the range for the min, and adds 50% of the range to the max. |
+| low       | 60  | 80  | Ensures that lobbies will have skill rating &lt;= to the candidate. Subtracts 200% of the range from the rating to calculate min, and leaves max as the player rating. |
 
 <DocCardList />

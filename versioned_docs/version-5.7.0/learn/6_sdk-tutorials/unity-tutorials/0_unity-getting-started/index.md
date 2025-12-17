@@ -3,7 +3,7 @@ title: "Getting started with Unity (Video)"
 date: "2014-10-29"
 ---
 
-In this tutorial, it describes how to quickly get your Unity project working with brainCloud.
+In this tutorial, it describes how to quickly get your Unity project working with brainCloud.
 
 Topics covered include:
 

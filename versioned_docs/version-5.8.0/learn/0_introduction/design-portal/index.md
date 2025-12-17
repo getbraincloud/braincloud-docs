@@ -5,10 +5,10 @@ date: "2014-11-26"
 
 The brainCloud Design Portal is 4 powerful tools in one:
 
-1. **Design Tool** – it’s a design tool that allows you to create, configure and define your applications.
-2. **API Explorer** – it includes an expansive API Explorer that allows you to query your configured application dynamically without writing code!  Super handy for debugging and exploring the brainCloud API
-3. **Monitoring Tool** – the monitoring features provide easy debugging of global and user data – and are also very useful in supporting your app once it goes live.
-4. **Reporting** – brainCloud’s reporting features provide cross-platform analytics, as well as an API usage report that is useful for understanding the usage and performance of your application.
+1. **Design Tool** – it’s a design tool that allows you to create, configure and define your applications.
+2. **API Explorer** – it includes an expansive API Explorer that allows you to query your configured application dynamically without writing code!  Super handy for debugging and exploring the brainCloud API
+3. **Monitoring Tool** – the monitoring features provide easy debugging of global and user data – and are also very useful in supporting your app once it goes live.
+4. **Reporting** – brainCloud’s reporting features provide cross-platform analytics, as well as an API usage report that is useful for understanding the usage and performance of your application.
 
 [![brainCloud Dashboard](images/brainCloud_Dashboard_portal_2.jpg)](images/brainCloud_Dashboard_portal_2.jpg)
 

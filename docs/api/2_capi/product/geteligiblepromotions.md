@@ -133,7 +133,7 @@ if (postResult.status == 200) {
                 "gameId": "10019",
                 "promotionId": 9,
                 "type": "SCHEDULED",
-                "name": "session >= 2",
+                "name": "session `>=` 2",
                 "message": "test1",
                 "enabled": true,
                 "targetAllUsers": false,

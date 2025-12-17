@@ -1,6 +1,6 @@
 # GetPresenceOfUsers
 
-Gets the presence data for the given \<profileIds\>. Will not include offline profiles unless \<includeOffline\> is set to true.
+Gets the presence data for the given \`profileIds`. Will not include offline profiles unless \`includeOffline` is set to true.
 
 <PartialServop service_name="presence" operation_name="GET_PRESENCE_OF_USERS" />
 

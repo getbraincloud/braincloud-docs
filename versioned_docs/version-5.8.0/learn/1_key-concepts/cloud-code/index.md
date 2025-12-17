@@ -3,7 +3,7 @@ title: "Cloud Code"
 date: "2014-09-09"
 ---
 
-brainCloud allows developers to write custom [Cloud Code](/api/cc) routines in JavaScript, that reside and run on the brainCloud servers, allowing execution of code more securely and efficiently than if it were run client-side.
+brainCloud allows developers to write custom [Cloud Code](/api/cc) routines in JavaScript, that reside and run on the brainCloud servers, allowing execution of code more securely and efficiently than if it were run client-side.
 
 Advantages of Cloud Code scripts include:
 
@@ -16,9 +16,9 @@ Advantages of Cloud Code scripts include:
 
 Cloud Code scripts can be called from:
 
-- client apps - via the [Script Service](/api/capi/script) APIs
-- developer-operated servers - via the [Server-to-Server](/api/s2s) API
-- third-party services - via brainCloud's [WebHooks](/api/cc/writingscripts/webhooks) interface
+- client apps - via the [Script Service](/api/capi/script) APIs
+- developer-operated servers - via the [Server-to-Server](/api/s2s) API
+- third-party services - via brainCloud's [WebHooks](/api/cc/writingscripts/webhooks) interface
 - triggered via other operations ([API Hooks](/api/cc/writingscripts/apihooks)) - scripts can be configured to be triggered automatically as pre- or post- conditions for other API operations
 - scheduled - scripts [scheduled](/api/cc/writingscripts/scheduledscripts) to execute in the future
 
@@ -26,5 +26,5 @@ Cloud Code scripts are written using brainCloud's web-based script editor, locat
 
 For more information, check out:
 
-- [Writing Scripts](/api/cc/writingscripts) section of the API Reference
-- [Cloud Code Tutorials](/learn/cloud-code-central/cloud-code-tutorials/) section of SDK Tutorials
+- [Writing Scripts](/api/cc/writingscripts) section of the API Reference
+- [Cloud Code Tutorials](/learn/cloud-code-central/cloud-code-tutorials/) section of SDK Tutorials

@@ -11,7 +11,7 @@ For this example, we've taken Epic's Tappy Chicken example project and integrate
 
 [![BC_TappyChicken_Game](images/BC_TappyChicken_Game.png)](images/BC_TappyChicken_Game.png)
 
-**Description from Epic:** _Tappy to flappy! Avoid the posts to collect your eggs. Epic’s app for the flap showcases the ease of use and flexibility of Unreal Engine 4. Built by a single artist with no traditional programming skills, Tappy Chicken is a lightweight app with support for Game Center leaderboards, achievements, and the iAd Network._
+**Description from Epic:** _Tappy to flappy! Avoid the posts to collect your eggs. Epic’s app for the flap showcases the ease of use and flexibility of Unreal Engine 4. Built by a single artist with no traditional programming skills, Tappy Chicken is a lightweight app with support for Game Center leaderboards, achievements, and the iAd Network._
 
 ### brainCloud Features
 
@@ -28,7 +28,7 @@ The full source of brainCloud Tappy Chicken has been made available for our deve
 
 ### Documentation
 
-For more information on how to use brainCloud in Unreal Engine 4 check out our Getting Started tutorials:
+For more information on how to use brainCloud in Unreal Engine 4 check out our Getting Started tutorials:
 
 -   [Setting up the brainCloud plugin](/learn/sdk-tutorials/unreal-tutorials/setting-up-the-braincloud-plugin/)
 -   [Getting Started With Blueprints](/learn/sdk-tutorials/unreal-tutorials/getting-started-with-blueprints/)

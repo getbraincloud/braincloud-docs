@@ -121,17 +121,17 @@ var extraJson = {"key":"value"};
 ```
 
 ```dart
-var  authenticationType = AuthenticationType.universal;
-var  externalId =  "someId";
+var  authenticationType = AuthenticationType.universal;
+var  externalId =  "someId";
 var  continueAnon = true;
-var  extraJson = {"key":"value"};
+var  extraJson = {"key":"value"};
 ​
 ServerResponse result = await <%= data.branding.codePrefix %>.identityService.detachAdvancedIdentity(authenticationType:authenticationType, externalId:externalId, continueAnon:continueAnon, extraJson:extraJson);
 ​
 if (result.statusCode == 200) {
-    print("Success");
+    print("Success");
 } else {
-    print("Failed ${result.error['status_message'] ?? result.error}");
+    print("Failed ${result.error['status_message'] ?? result.error}");
 }
 ```
 

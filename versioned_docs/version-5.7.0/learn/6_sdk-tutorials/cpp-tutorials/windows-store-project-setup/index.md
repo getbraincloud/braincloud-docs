@@ -3,7 +3,7 @@ title: "Windows Store Project Setup"
 date: "2016-05-25"
 ---
 
-Follow these steps to set up your project with the Windows Store brainCloud C++ SDK.
+Follow these steps to set up your project with the Windows Store brainCloud C++ SDK.
 
 Note that Microsoft also refers to this as a WinRT build. This will target Windows Store Apps using the WinRT libraries on Tablets, Windows Phone, and Windows Desktop.
 
@@ -18,13 +18,13 @@ Note that Microsoft also refers to this as a WinRT build. This will target Windo
     - brainCloudClient.lib;cpprest120_2_0.lib
     - Note that you should do this for all configurations and all platforms
 - Under Configuration Properties > Linker > General > Additional Library Directories, enter the following path:
-    - $(ProjectDir)\..\bc\lib\win8.1\x64\debug  <--- for X64 | Debug
-    - Note you will need to enter a unique path for each platform and configuration. Here is the matrix for Windows 8.1 RT. For Windows Phone 8.0 and 8.1, replace the "win8.1" part of the path with "winPhone8.0" or "winPhone8.1" respectively.
-        - ARM | Debug:  $(ProjectDir)\..\bc\lib\win8.1\arm\debug
-        - ARM | Release:  $(ProjectDir)\..\bc\lib\win8.1\arm\release
-        - X64 | Debug:  $(ProjectDir)\..\bc\lib\win8.1\x64\debug
-        - X64 | Release:  $(ProjectDir)\..\bc\lib\win8.1\x64\release
-        - Win32 | Debug:  $(ProjectDir)\..\bc\lib\win8.1\win32\debug
-        - Win32 | Release:  $(ProjectDir)\..\bc\lib\win8.1\win32\release
+    - $(ProjectDir)\..\bc\lib\win8.1\x64\debug  **(Note: for X64 | Debug)**
+    - Note you will need to enter a unique path for each platform and configuration. Here is the matrix for Windows 8.1 RT. For Windows Phone 8.0 and 8.1, replace the "win8.1" part of the path with "winPhone8.0" or "winPhone8.1" respectively.
+        - ARM | Debug:  $(ProjectDir)\..\bc\lib\win8.1\arm\debug
+        - ARM | Release:  $(ProjectDir)\..\bc\lib\win8.1\arm\release
+        - X64 | Debug:  $(ProjectDir)\..\bc\lib\win8.1\x64\debug
+        - X64 | Release:  $(ProjectDir)\..\bc\lib\win8.1\x64\release
+        - Win32 | Debug:  $(ProjectDir)\..\bc\lib\win8.1\win32\debug
+        - Win32 | Release:  $(ProjectDir)\..\bc\lib\win8.1\win32\release
 
 Done!

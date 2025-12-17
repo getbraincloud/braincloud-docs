@@ -16,9 +16,9 @@ brainCloud also provides customizable _offline matchmaking_ support (perfect for
 
 ## Online Multiplayer via RTT
 
-brainCloud RTT adds support for _Online Matchmaking_ and _Lobbies,_ and the development of custom _Room Experiences_ to meet the needs for today's most competitive online experiences.
+brainCloud RTT adds support for _Online Matchmaking_ and _Lobbies,_ and the development of custom _Room Experiences_ to meet the needs for today's most competitive online experiences.
 
-For more information, see the [Lobby Concepts](/learn/key-concepts/multiplayer/lobbies/) page.
+For more information, see the [Lobby Concepts](/learn/key-concepts/multiplayer/lobbies/) page.
 
 ## Third Party Multiplayer
 

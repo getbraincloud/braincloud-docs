@@ -134,7 +134,7 @@ var endIndex = 9;
 
 ```dart
 var  leaderboardId = "default";
-var  sortOrder = SortOrder.HIGH_TO_LOW;
+var  sortOrder = SortOrder.HIGH_TO_LOW;
 var  startIndex = 0;
 var  endIndex = 9;
 

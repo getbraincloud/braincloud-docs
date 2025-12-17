@@ -75,9 +75,9 @@ int aNetId = 2;
 Uint8List bytes = utf8.encode("Some Data here");
 ​
 _bc.relayService.sendToAll(bytes,
-          reliable: true,
-          ordered: true,
-          channel: BrainCloudRelay.channelHighPriority_1);
+          reliable: true,
+          ordered: true,
+          channel: BrainCloudRelay.channelHighPriority_1);
 ```
 
 ```mdx-code-block

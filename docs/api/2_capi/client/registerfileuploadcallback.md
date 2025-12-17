@@ -66,7 +66,7 @@ fileUploadFailedBlock = ^(NSString *fileUploadId, NSInteger status, NSInteger re
 ```
 
 ```dart
-void fileCallback(ServerResponse  response) {      
+void fileCallback(ServerResponse  response) {      
     if (response.status == 200) {
         // ...
     }

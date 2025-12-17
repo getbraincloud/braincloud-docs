@@ -46,9 +46,9 @@ The example above allows calls to:
 
 - "entity" service, "READ" operation only
 - "globalEntitity" service, "GET_LIST" and "GET_LIST_COUNT" operations
-- "heartbeat" service, "READ" operation only <- important - heartbeats are used to keep your client sessions alive!
+- "heartbeat" service, "READ" operation only (Important - heartbeats are used to keep your client sessions alive!)
 - "playerState" service - any operation
-- "script" service - any operation... <- note, individual script permissions still apply
+- "script" service - any operation... (Note, individual script permissions still apply)
 
 ## Notes
 

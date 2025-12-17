@@ -86,7 +86,7 @@ Coming soon!
 
 ```dart
 void rttCallBack(RTTCommandResponse jsonResponse) {
-  // your code
+  // your code
 }
 <%= data.branding.codePrefix %>.rttService.registerRTTEventCallback(rttCallback);
 ```

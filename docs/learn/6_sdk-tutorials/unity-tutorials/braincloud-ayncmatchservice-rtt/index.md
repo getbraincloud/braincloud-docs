@@ -29,7 +29,7 @@ Up to date and previous versions of Tic Tac Toe are available here. Tic Tac Toe,
 
 ## Enable RTT
 
-From the brainCloud Portal, select the app you wish to add RTT to. Select the Real-time Tech (RTT) Enabled checkbox from **Design | Core App Info | Advanced Settings**. [https://api.braincloudservers.com/admin/dashboard#/development/core-settings-advanced-settings](https://api.braincloudservers.com/admin/dashboard#/development/core-settings-advanced-settings)
+From the brainCloud Portal, select the app you wish to add RTT to. Select the Real-time Tech (RTT) Enabled checkbox from **Design | Core App Info | Advanced Settings**. [https://api.braincloudservers.com/admin/dashboard#/development/core-settings-advanced-settings](https://api.braincloudservers.com/admin/dashboard#/development/core-settings-advanced-settings)
 
 ```js
 // Enable RTT
@@ -76,4 +76,4 @@ private void onRTTFailure(int status, int reasonCode, string responseData, objec
 }
 ```
 
-Enabling RTT, and activating a listener for the Async Match Service, allows for real-time messages to be acted upon from within the client. `queryMatchState()` used to be controlled via user interaction. By connecting this to an RTT listener, we can provide the user with a SEAMLESS interaction into both a pure offline Async Match and its real-time updates.
+Enabling RTT, and activating a listener for the Async Match Service, allows for real-time messages to be acted upon from within the client. `queryMatchState()` used to be controlled via user interaction. By connecting this to an RTT listener, we can provide the user with a SEAMLESS interaction into both a pure offline Async Match and its real-time updates.

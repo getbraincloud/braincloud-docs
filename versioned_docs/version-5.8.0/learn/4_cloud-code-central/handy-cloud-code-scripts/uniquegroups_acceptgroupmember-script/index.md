@@ -37,7 +37,7 @@ _Example script parameters:_
 ```
 ### Debug
 
-Click [UTest_UniqueGroups_AcceptGroupMember.ccjs](script/UTest_UniqueGroups_AcceptGroupMember.ccjs) to view the optional debug script. Right-click to download it.
+Click [UTest_UniqueGroups_AcceptGroupMember.ccjs](script/UTest_UniqueGroups_AcceptGroupMember.ccjs) to view the optional debug script. Right-click to download it.
 
 #### Example success response
 ```js

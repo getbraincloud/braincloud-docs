@@ -9,7 +9,7 @@ This script gives an app a way to validate the user's contact email when registe
 
 ## Script
 
-Click [validateContactEmail](script/ValidateContactEmail.ccjs.zip) to download the file.
+Click [validateContactEmail](script/ValidateContactEmail.ccjs.zip) to download the file.
 
 ## Usage/Setup
 
@@ -22,7 +22,7 @@ You can test calling the script using a browser, [Postman](https://www.getpostma
 
 Test SendContactEmailVerification script from **Design | Cloud Code | Cloud Code**, or call it from your app. (make sure your email integration is set up properly since this script will send email to currently logged in user at the contact email address.)
 
-Of course, if you want to view the results of responses, go to **Monitoring| Recent Errors**:
+Of course, if you want to view the results of responses, go to **Monitoring| Recent Errors**:
 
 - _change the filter to show info messages_ - enable the [x] checkbox by the **green "i"** and hit **[Refresh]**
 

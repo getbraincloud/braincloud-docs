@@ -161,8 +161,8 @@ var  score = 10;
 var  data = {
     "nickname": "batman"
 };
-var  leaderboardType = SocialLeaderboardType.HIGH_VALUE;
-var  rotationType = RotationType.WEEKLY;
+var  leaderboardType = SocialLeaderboardType.HIGH_VALUE;
+var  rotationType = RotationType.WEEKLY;
 var  rotationResetTime = 158778236487;
 var  retainedCount = 2;
 

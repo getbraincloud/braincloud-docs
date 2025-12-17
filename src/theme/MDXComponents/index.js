@@ -1,5 +1,5 @@
 import React from 'react';
-import MDXHead from '@theme/MDXComponents/Head';
+// import MDXHead from '@theme/MDXComponents/Head';
 import MDXCode from '@theme/MDXComponents/Code';
 import MDXA from '@theme/MDXComponents/A';
 import MDXPre from '@theme/MDXComponents/Pre';
@@ -18,11 +18,12 @@ import DocCardList from '@theme/DocCardList';
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 const MDXComponents = {
-  head: MDXHead,
+  // head: MDXHead,
   code: MDXCode,
   a: MDXA,
   pre: MDXPre,
   details: MDXDetails,
+  Details: MDXDetails,
   ul: MDXUl,
   img: MDXImg,
   h1: (props) => <MDXHeading as="h1" {...props} />,

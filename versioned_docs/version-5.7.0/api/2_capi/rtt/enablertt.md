@@ -104,15 +104,15 @@ public void rttConnectFailure(String errorMessage)
 
 ```dart
 void successCallback(RTTCommandResponse response) {
-    // Your code
+    // Your code
 }
-void failureCallback(RTTCommandResponse response) {  
-  // Your code
+void failureCallback(RTTCommandResponse response) {  
+  // Your code
 }
 ​
 <%= data.branding.codePrefix %>.rttRegistrationService.enableRTT(
-  successCallback:successCallback,
-  failureCallback:failureCallback);
+  successCallback:successCallback,
+  failureCallback:failureCallback);
 ```
 
 ```mdx-code-block

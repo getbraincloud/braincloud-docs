@@ -6,17 +6,17 @@ date: "2015-06-09"
 When using brainCloud, your app will need to handle certain error conditions. There are two main types of errors that can occur while using the brainCloud client library:
 
 1. Network errors - A network error indicates that a packet was sent to brainCloud but no response was received.
-2. API call errors - A packet was sent to (and received by) brainCloud but resulted in a non-200 HTTP response
+2. API call errors - A packet was sent to (and received by) brainCloud but resulted in a non-200 HTTP response
 
 In order to effectively respond to these error conditions, developers need to implement error handlers. A list of error reason codes returned by brainCloud can be found here:
 
 [Reason Codes Appendix](/api/appendix/reasoncodes)
 
-Below are the specifics for implementing error handlers for the various supported brainCloud client platforms.
+Below are the specifics for implementing error handlers for the various supported brainCloud client platforms.
 
 ### Unity/C# library
 
-All API calls have two callback delegates as parameters, one for success and one for failure:
+All API calls have two callback delegates as parameters, one for success and one for failure:
 ```js
 /// <summary>
 /// Success callback for an API method.
@@ -42,7 +42,7 @@ If authentication succeeds, the success callback function will be called with th
 
 If authentication fails, the HTTP status code, a reason code, and a json response describing the error will be returned. In order to handle the error effectively, you can refer to the [Reason Code Appendix](/api/appendix/reasoncodes).
 
-### C++ library
+### C++ library
 
 The C++ library has a slightly different mechanism for dealing with callbacks. Specifically, all API methods take in an "IServerCallback" pointer. This interface declares the following methods:
 ```js
@@ -75,7 +75,7 @@ For example, the AuthenticateUniversal method is defined as follows:
 ```js
 void authenticateUniversal(const char * in_userid, const char * in_password, bool in_forceCreate, IServerCallback * in_callback);
 ```
-### Java library
+### Java library
 
 The Java library is similar to C++ in that there is an IServerCallback interface that can be supplied to any API call. This interface declares the following methods:
 ```js
@@ -108,7 +108,7 @@ For example, the AuthenticateUniversal method is defined as follows:
 ```js
 public void authenticateUniversal(String userId, String userPassword, boolean forceCreate, IServerCallback callback);
 ```
-### Javascript library
+### Javascript library
 
 Coming soon!
 

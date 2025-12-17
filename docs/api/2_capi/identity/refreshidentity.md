@@ -116,7 +116,7 @@ var authenticationType = "Facebook";
 ```dart
 var  externalId = "846557642688";
 var  authenticationToken = "ghbiuhgvbiuhbiunbuibgin";
-var  authenticationType = AuthenticationType.facebook;
+var  authenticationType = AuthenticationType.facebook;
 
 ServerResponse result = await <%= data.branding.codePrefix %>.identityService.refreshIdentity(externalId:externalId, authenticationToken:authenticationToken, authenticationType:authenticationType);
 

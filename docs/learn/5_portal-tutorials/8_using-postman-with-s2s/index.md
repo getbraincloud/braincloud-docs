@@ -24,7 +24,7 @@ Overall, the session-based S2S protocol is recommended for production applicatio
 
 To install Postman, simply:
 
--   Download from [https://www.getpostman.com/](https://www.getpostman.com/)
+-   Download from [https://www.getpostman.com/](https://www.getpostman.com/)
 -   Choose your platform, and complete the installation process
 
 ---
@@ -34,7 +34,7 @@ To install Postman, simply:
 Incoming servers must be configured (i.e. declared) in the brainCloud dashboard before making S2S calls. This allows brainCloud to confirm that the requests are coming from a server that you own and aren't malicious.
 
 -   Launch the [brainCloud Portal](https://portal.braincloudservers.com)
--   Navigate to the **Design | Cloud Code | My Servers** page. Click  the **[+New Server]** button
+-   Navigate to the **Design | Cloud Code | My Servers** page. Click  the **[+New Server]** button
 -   Give your server a name, like "EXAMPLE_SERVER"
 -   Entering IP ranges restricts access to requests coming from the specified network addresses. This is highly recommended for production apps! For now, you can leave the ranges blank. This will make all IP ranges acceptable.
 -   Hit **[Save]**, and note your _server secret_ - you will use it later.
@@ -54,8 +54,9 @@ _To simulate a session-less server request with Postman:_
 -   Set the request type to **POST**
 -   Set the request URL to: "[https://api.braincloudservers.com/s2sdispatcher](https://api.braincloudservers.com/s2sdispatcher)"
 -   In the **Body** section of the request, choose **raw** and set the type to **_JSON (application/json)_**
--   Copy this JSON into the body, setting the `appId`, `serverName` and `serverSecret` appropriately for your app
+-   Copy this JSON into the body, setting the `appId`, `serverName` and `serverSecret` appropriately for your app
 
+```json
 {  
  "appId":"12142",
 "serverName":"EXAMPLE_SERVER",
@@ -66,32 +67,34 @@ _To simulate a session-less server request with Postman:_
 
 }
 }
+```
 
 -   Select **[Send]**
 -   View the Response
 
 Unless you have added some properties, you will see an empty JSON response.
 
-To change this, go to the **Design | Custom Config | Global Properties** page of the brainCloud Portal and configure a property or two - then run this request again. Voila!
+To change this, go to the **Design | Custom Config | Global Properties** page of the brainCloud Portal and configure a property or two - then run this request again. Voila!
 
 ---
 
 ## Session-based S2S Requests
 
-Session-based requests require you to first request a `sessionId` to use via the Authenticate operation. You then reference that `sessionId` in subsequent requests, along with an incrementing `packetId`.
+Session-based requests require you to first request a `sessionId` to use via the Authenticate operation. You then reference that `sessionId` in subsequent requests, along with an incrementing `packetId`.
 
 _First, we need to Authenticate to get a SessionId_
 
 -   From Postman, Add a new Request
 -   Set the request type to **POST**
 -   Use the same request URL: "[https://api.braincloudservers.com/s2sdispatcher](https://api.braincloudservers.com/s2sdispatcher)"
--   In the **Body** tab of the request, choose **raw** and set the type to  **_JSON (application/json)_**
--   Copy this JSON into the body, setting the `appId`, `serverName` and `serverSecret` appropriately for your app
+-   In the **Body** tab of the request, choose **raw** and set the type to  **_JSON (application/json)_**
+-   Copy this JSON into the body, setting the `appId`, `serverName` and `serverSecret` appropriately for your app
 -   **(in both places!)**
 -   View the response, and save the `sessionId` that is returned.
--   Now, make a second request, using that `sessionId` and setting the `packetId` to `1`
+-   Now, make a second request, using that `sessionId` and setting the `packetId` to `1`
 -   For each subsequent request, be sure to increment the `packetId`. Try this one:
 
+```json
 {  
  "packetId":0,
 "messages":[
@@ -107,10 +110,12 @@ _First, we need to Authenticate to get a SessionId_
 }
 ]
 }
+```
 
 -   View the response, and save the sessionId that is returned.
--   Now, make a second request, using that sessionId and setting the packedId to 1
+-   Now, make a second request, using that sessionId and setting the packedId to 1
 
+```json
 {
 "sessionId":"df5gelac0mhrpht31ffgtgatoe",
 "packetId":1,
@@ -131,9 +136,11 @@ _First, we need to Authenticate to get a SessionId_
 }
 ]
 }
+```
 
 -   For each subsequent request, be sure to increment the `packetId`. Try this one:
 
+```json
 {  
  "sessionId":"df5gelac0mhrpht31ffgtgatoe",
 "packetId":2,
@@ -154,12 +161,13 @@ _First, we need to Authenticate to get a SessionId_
 
 ]
 }
+```
 
 So, you get the idea.
 
 Important things to remember:
 
--   _Always_ increment the `packetId` - _except for identical retries_. If you're retrying the same request because of a communications failure, you should keep the `packetId` the same (it helps the server to prevent duplicate operations from happening). If you got a response from the server though, successful or not, you should increment the packetId for you next request.
+-   _Always_ increment the `packetId` - _except for identical retries_. If you're retrying the same request because of a communications failure, you should keep the `packetId` the same (it helps the server to prevent duplicate operations from happening). If you got a response from the server though, successful or not, you should increment the packetId for you next request.
 
 ---
 
@@ -167,7 +175,7 @@ Important things to remember:
 
 The API calls documented in the API Ref ([/api/s2s](/api/s2s)) are mapped to discrete _Services_ and _Operations_ on the server.
 
-The codes, together with operation-specific parameters (specified in the JSON `data` object) are used to send commands to the server.
+The codes, together with operation-specific parameters (specified in the JSON `data` object) are used to send commands to the server.
 
 [![](images/APIRef.png)](images/APIRef.png)
 

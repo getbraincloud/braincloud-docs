@@ -23,21 +23,21 @@ To create your billing account:
 
 - Select the **Team** tab from the top menu
 - Select **Manage** from the side menu to view the management page choices
-- Select the **Team Info** page
-- Go to the _Billing Information_ section at the bottom of the page, and click the **[Edit Billing]** button
-- _An e-mail will be sent to you_, with a link to click to create your billing account.  _Click the link._
-- _Follow the instructions_ to create a billing account userid and password  
+- Select the **Team Info** page
+- Go to the _Billing Information_ section at the bottom of the page, and click the **[Edit Billing]** button
+- _An e-mail will be sent to you_, with a link to click to create your billing account.  _Click the link._
+- _Follow the instructions_ to create a billing account userid and password  
     (Note - this is separate from the brainCloud portal account, and keeps your credit card information private)
-- Enter your contact info on the **[Customer Information]** tab
+- Enter your contact info on the **[Customer Information]** tab
 - Enter your payment info on the **[Payment Method]** tab
 
 [![brainCloud](images/Billing_Payment_Method-1024x630.png)](images/Billing_Payment_Method-1024x630.png)
 
 When you're done entering the information in the billing portal:
 
-- Return to the brainCloud portal, returning to the **Team | Manage  |** **Team Info** page
-- Review your _Account Status_ displayed at the bottom of the page under _Billing Info_
-- This section should say "Ready to go live".  
+- Return to the brainCloud portal, returning to the **Team | Manage  |** **Team Info** page
+- Review your _Account Status_ displayed at the bottom of the page under _Billing Info_
+- This section should say "Ready to go live".  
 - If it doesn't, hit the **[Refresh Billing]** button to update it
 
 You're now all set to publish your app.
@@ -46,7 +46,7 @@ You're now all set to publish your app.
 
 ## Publish Your App
 
-Once your billing info is set up, publishing an app is very straightforward.
+Once your billing info is set up, publishing an app is very straightforward.
 
 To publish your app:
 
@@ -61,6 +61,6 @@ To publish your app:
 
 ![](images/Basic-Plans.png)
 
-The Apps page should refresh to reflect the updated status of your app.  If it doesn't, choose **Refresh** from the Action menu.
+The Apps page should refresh to reflect the updated status of your app.  If it doesn't, choose **Refresh** from the Action menu.
 
 Your app is now live - your first monthly payment will be processed at the end of the month. Note that the flat fee associated with your subscription plan (i.e. the $30 flat fee associated with the Standard plan) will be pro-rated according to how many days are left in the month.

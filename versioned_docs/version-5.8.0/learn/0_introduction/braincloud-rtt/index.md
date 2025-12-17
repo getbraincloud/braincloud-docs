@@ -7,7 +7,7 @@ date: "2018-07-15"
 
 **RTT** is the _Real-Time Technology_ extension of brainCloud.
 
-RTT adds a real-time channel to the brainCloud client libraries. This channel allows clients to _listen for_ and _react to_ real-time events – without polling.
+RTT adds a real-time channel to the brainCloud client libraries. This channel allows clients to _listen for_ and _react to_ real-time events – without polling.
 
 This opens up a slew of new features:
 

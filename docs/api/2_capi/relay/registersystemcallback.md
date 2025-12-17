@@ -66,7 +66,7 @@ RSDataCallback rsDataCallback = (response) =>
 
 ```dart
  void relayCallback(int netId, Uint8List data) {
-   // Your code
+   // Your code
  }
 ​
 <%= data.branding.codePrefix %>.relayService.registerSystemCallback(relayCallback);

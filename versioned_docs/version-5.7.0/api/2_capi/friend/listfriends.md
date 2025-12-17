@@ -108,7 +108,7 @@ var includeSummaryData = true;
 ```
 
 ```dart
-var  friendPlatform = FriendPlatform.facebook;
+var  friendPlatform = FriendPlatform.facebook;
 var  includeSummaryData = true;
 
 ServerResponse result = await <%= data.branding.codePrefix %>.friendService.listFriends(friendPlatform:friendPlatform, includeSummaryData:includeSummaryData);
