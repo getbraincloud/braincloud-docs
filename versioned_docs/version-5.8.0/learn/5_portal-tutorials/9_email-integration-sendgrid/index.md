@@ -104,7 +104,7 @@ To reset your password please click on the link below (or copy and paste the lin
 
 If you did not forget your password, please ignore this e-mail.
 
-{{webUrl}}
+<code>&#123;&#123;webUrl&#125;&#125;</code>
 
 For the confirmation app, the suggested text is totally up to you. Just thank them for registering for your app, and tell them where to get more info!
 

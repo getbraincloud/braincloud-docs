@@ -28,35 +28,35 @@ brainCloud allows you to configure the presentation of the emails to be sent to 
 
 The following substitutions are available when creating templates:
 
-- {{appName}} the name of the app, as data filled in brainCloud
-- {{profileId}} the profile id of the user
-- {{userName}} the name of the end-user (note - not available at the beginning of account creation, so not useful for use in email verification templates)
-- {{userEmail}} the user's email
-- {{userCountryCode}} the user's country code, as detected from their device
-- {{userLanguage}} the user's language, as detected from their device
-- {{webUrl}} a web-url passed into the message. For example - for email verification or password reset
-- {{icon}} – The player’s braincloud Icon, if any exists.
-- {{appIcon}} - the app icon in braincloud , if any
-- {{accountCreated}} - The date that this user’s account was created
-- {{lastLogin}} – - time stamp of last login
-- {{loginCount}} - Number of times this account logged in
-- {{XPLevel}} - The braincloud XP level of this account
-- {{XPPoints}} - The exact number of XP points for this account in braincloud.
-- {{amountSpent}} - Amount in USD that braincloud has stored as the user’s total spent.
-- {{virtualCurrency_Yadda}} - the amount for the given virtual currency, where Yadda is exactly equal to the Virtual Currency Name in Braincloud (case sensitive) , no spaces.
-  - For example, if you have a virtual currency called “Coins”, you would use {{virtualCurrency_Coins}}. There can be multiple of these. eg.
-    - {{virtualCurrency_Coins}}
-    - {{virtualCurrency_Bars}}
-    - {{virtualCurrency_Gems}}
-- {{homepageUrl}} - The Homepage url, if configured in Self-service Branding
-- {{feedbackUrl}} - The Feedback url, if configured in Self-service Branding
-- {{exitSurveyUrl}} - The Exit Survey url, if configured in Self-service Branding
-- {{customerServiceUrl}} - The customer service mailto/url, if configured in Self-service Branding
-- {{termsAndConditionsUrl}} - The Terms & Conditions url, if configured in Self-service Branding
-- {{privacyUrl}} - The Privacy Policy url, if configured in Self-service Branding
-- {{address}} - The business address, if configured in Self-service Branding
-- {{city}} - The business city, if configured in Self-service Branding
-- {{state}} - The business State or Province, if configured in Self-service Branding
-- {{country}} - The business Country, if configured in Self-service Branding
-- {{zip}} - The business Zip or Postal Code, if configured in Self-service Branding
-- {{unSubUrl}} - unsubscribe from all emails
+- <code>&#123;&#123;appName&#125;&#125;</code> the name of the app, as data filled in brainCloud
+- <code>&#123;&#123;profileId&#125;&#125;</code> the profile id of the user
+- <code>&#123;&#123;userName&#125;&#125;</code> the name of the end-user (note - not available at the beginning of account creation, so not useful for use in email verification templates)
+- <code>&#123;&#123;userEmail&#125;&#125;</code> the user's email
+- <code>&#123;&#123;userCountryCode&#125;&#125;</code> the user's country code, as detected from their device
+- <code>&#123;&#123;userLanguage&#125;&#125;</code> the user's language, as detected from their device
+- <code>&#123;&#123;webUrl&#125;&#125;</code> a web-url passed into the message. For example - for email verification or password reset
+- <code>&#123;&#123;icon&#125;&#125;</code> – The player’s braincloud Icon, if any exists.
+- <code>&#123;&#123;appIcon&#125;&#125;</code> - the app icon in braincloud , if any
+- <code>&#123;&#123;accountCreated&#125;&#125;</code> - The date that this user’s account was created
+- <code>&#123;&#123;lastLogin&#125;&#125;</code> – - time stamp of last login
+- <code>&#123;&#123;loginCount&#125;&#125;</code> - Number of times this account logged in
+- <code>&#123;&#123;XPLevel&#125;&#125;</code> - The braincloud XP level of this account
+- <code>&#123;&#123;XPPoints&#125;&#125;</code> - The exact number of XP points for this account in braincloud.
+- <code>&#123;&#123;amountSpent&#125;&#125;</code> - Amount in USD that braincloud has stored as the user’s total spent.
+- <code>&#123;&#123;virtualCurrency_Yadda&#125;&#125;</code> - the amount for the given virtual currency, where Yadda is exactly equal to the Virtual Currency Name in Braincloud (case sensitive) , no spaces.
+  - For example, if you have a virtual currency called “Coins”, you would use <code>&#123;&#123;virtualCurrency_Coins&#125;&#125;</code>. There can be multiple of these. eg.
+    - <code>&#123;&#123;virtualCurrency_Coins&#125;&#125;</code>
+    - <code>&#123;&#123;virtualCurrency_Bars&#125;&#125;</code>
+    - <code>&#123;&#123;virtualCurrency_Gems&#125;&#125;</code>
+- <code>&#123;&#123;homepageUrl&#125;&#125;</code> - The Homepage url, if configured in Self-service Branding
+- <code>&#123;&#123;feedbackUrl&#125;&#125;</code> - The Feedback url, if configured in Self-service Branding
+- <code>&#123;&#123;exitSurveyUrl&#125;&#125;</code> - The Exit Survey url, if configured in Self-service Branding
+- <code>&#123;&#123;customerServiceUrl&#125;&#125;</code> - The customer service mailto/url, if configured in Self-service Branding
+- <code>&#123;&#123;termsAndConditionsUrl&#125;&#125;</code> - The Terms & Conditions url, if configured in Self-service Branding
+- <code>&#123;&#123;privacyUrl&#125;&#125;</code> - The Privacy Policy url, if configured in Self-service Branding
+- <code>&#123;&#123;address&#125;&#125;</code> - The business address, if configured in Self-service Branding
+- <code>&#123;&#123;city&#125;&#125;</code> - The business city, if configured in Self-service Branding
+- <code>&#123;&#123;state&#125;&#125;</code> - The business State or Province, if configured in Self-service Branding
+- <code>&#123;&#123;country&#125;&#125;</code> - The business Country, if configured in Self-service Branding
+- <code>&#123;&#123;zip&#125;&#125;</code> - The business Zip or Postal Code, if configured in Self-service Branding
+- <code>&#123;&#123;unSubUrl&#125;&#125;</code> - unsubscribe from all emails
