@@ -19,7 +19,7 @@ pipeline {
                 sed -i -e 's/__DOCSNAME__/brainCloud Docs (DEV)/g' docusaurus.config.js
                 sed -i -e 's/__DOCSURL__/docs-internal/g' docusaurus.config.js
                 sed -i -e 's/__APPID__/5T9F73JFG3/g' docusaurus.config.js
-                sed -i -e 's/__APIKEY__/6ba3774d7b707e915f0acb12fbfae506/g' docusaurus.config.js
+                sed -i -e 's/__APIKEY__/354bad2824c5323a9db6ca13b5f1cd9c/g' docusaurus.config.js
                 sed -i -e 's/__GTAGID__/G-4GX8EQHRZL/g' docusaurus.config.js
                 npm run build
                 '''
