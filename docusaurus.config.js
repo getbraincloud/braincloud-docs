@@ -141,6 +141,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      metadata: [{ name: 'algolia-site-verification', content: '56D4C3F27FE5F830' }],
       // typesense: {
       //   // typesenseCollectionName: 'braincloud_1673113845', // typesense cloud
       //   // typesenseCollectionName: 'braincloud_1673465514', // typesense local
