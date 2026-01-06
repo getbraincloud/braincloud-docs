@@ -75,6 +75,7 @@ itemDefData | The data defining the catalog item.
 ```cfscript
 var defId = "sword001";
 var itemDefData = {
+  "type": "ITEM",
   "name": {
     "en": "Crimson Sword"
   },
@@ -137,6 +138,7 @@ if (postResult.status == 200) {
 	"data": {
 		"defId": "sword001",
 		"itemDefData": {
+      "type": "ITEM",
 			"name": {
 				"en": "Crimson Sword"
 			},
