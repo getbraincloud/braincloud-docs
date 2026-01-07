@@ -161,7 +161,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-   "status":200,
    "data":{
       "matchedCount":2,
       "message":"Result count exceeds maximum.",
@@ -179,7 +178,8 @@ if (postResult.status == 200) {
             "pictureUrl":null
          }
       ]
-   }
+   },
+   "status":200
 }
 ```
 </details>

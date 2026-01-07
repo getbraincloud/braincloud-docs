@@ -134,7 +134,6 @@ var milestonePage = gameficationProxy.sysGetMilestonePage(context);
 
 ```json
 {
-    "status": 200,
     "data": {
         "context": "eyJzZWFyY2hDcml0ZXJpYSI6ey...",
         "results": {
@@ -205,7 +204,8 @@ var milestonePage = gameficationProxy.sysGetMilestonePage(context);
             "moreAfter": true,
             "moreBefore": false
         }
-    }
+    },
+    "status": 200
 }
 ```
 

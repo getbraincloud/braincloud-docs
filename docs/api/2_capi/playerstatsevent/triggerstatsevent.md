@@ -10,7 +10,7 @@ This mechanism supersedes the [<code>PlayerStatisticsService</code>](/api/capi/p
 Parameter | Description
 --------- | -----------
 eventName | The name of the event configured through the <%= data.branding.productName %> portal
-multiplier | The multiplier to apply to the event
+multiplier | The multiplier applied to the event. This must be an integer — if a float is provided, the decimal portion will be truncated by the intValue() method.
 
 ## Usage
 

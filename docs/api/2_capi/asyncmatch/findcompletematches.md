@@ -135,7 +135,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "results": [
             {
@@ -166,7 +165,8 @@ if (postResult.status == 200) {
                 "updatedAt": 1442586374787
             }
         ]
-    }
+    },
+    "status": 200
 }
 ```
 </details>

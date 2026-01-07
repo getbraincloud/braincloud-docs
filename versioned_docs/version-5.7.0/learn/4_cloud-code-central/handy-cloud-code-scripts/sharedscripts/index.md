@@ -11,19 +11,19 @@ Script shows how you can use brainCloud properties to share scripts between clou
 
 This has been tested with up to 30k bytes of code.
 
-That said, isn't an officially sanctioned approach. We don't recommend putting more than **20-25kb** in the shared code string.
+That said, isn't an officially sanctioned approach. We don't recommend putting more than **20-25kb** in the shared code string.
 
 ## Script
 
-Click [TestSharedFunctions.ccjs.zip](script/TestSharedFunctions.ccjs.zip) to download the file.
+Click [TestSharedFunctions.ccjs.zip](script/TestSharedFunctions.ccjs.zip) to download the file.
 
 ## Usage / Setup
 
 Add a Global Property with the scripts you want to share.
 
-Properties can be set on the **Design | Custom Config | [Global Properties](https://portal.braincloudservers.com/admin/dashboard#/development/global-properties)** page.
+Properties can be set on the **Design | Custom Config | [Global Properties](https://portal.braincloudservers.com/admin/dashboard#/development/global-properties)** page.
 
-The example test script assumes a `getFuzz` and `addTwoNums` functions exist.
+The example test script assumes a `getFuzz` and `addTwoNums` functions exist.
 ```js
 function getFuzz() {
     return 'Fuzz';

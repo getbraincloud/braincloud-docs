@@ -10,7 +10,7 @@ brainCloud supports push notifications across _iOS_, _Android_ and _Facebook_ - 
 brainCloud's advanced notifications features include:
 
 - **Localization** - deliver the push notification in the user's native language
-- **Segments** - organize your users into segments based on the criteria you specify - and send push notifications accordingly
+- **Segments** - organize your users into segments based on the criteria you specify - and send push notifications accordingly
 - **Promotions** - automatically send notifications to indicate the start of new promotions
 - **Scheduled** - schedule notifications to happen at a later date - even specific to timezone
 - **Groups** - send notifications to specific user Groups

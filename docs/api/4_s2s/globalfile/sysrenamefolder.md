@@ -117,7 +117,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "globalTree": {
             "tree": [
@@ -169,7 +168,8 @@ if (postResult.status == 200) {
             ],
             "treeVersion": 6
         }
-    }
+    },
+    "status": 200
 }
 ```
 

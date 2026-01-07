@@ -5,49 +5,49 @@ date: "2016-09-02"
 
 _This example describes an approach for implementing a Clash of Clans, Boom Beach, etc. type of game._
 
-There are many ways to solve this functionality, but in the following example, the player creates **Read Only** User Entities to define their defense information.  All player data manipulation is done on the server via Cloud Code.  In this tutorial, we represent the entire map in just one entity, but the same theory would apply if you represented each defense _in a separate entity (which would definitely be more efficient for larger maps)._
+There are many ways to solve this functionality, but in the following example, the player creates **Read Only** User Entities to define their defense information.  All player data manipulation is done on the server via Cloud Code.  In this tutorial, we represent the entire map in just one entity, but the same theory would apply if you represented each defense _in a separate entity (which would definitely be more efficient for larger maps)._
 
 ## Shared Entity Data
 
-The following is an example of the type of data that might be created and shared in a One Way match.  It defines a grid of defenses set up beforehand by the defender that will be constructed for the attacking player to attempt to defeat.  This data is created and managed via the [User Entity APIs](/api/capi/entity).
+The following is an example of the type of data that might be created and shared in a One Way match.  It defines a grid of defenses set up beforehand by the defender that will be constructed for the attacking player to attempt to defeat.  This data is created and managed via the [User Entity APIs](/api/capi/entity).
 
-Note that this data has an ACL of Read-Only.  This ensures that it cannot be edited by anyone except the owner of the data (in this case the defender).  This is not necessary but recommended to increase the security of the data.
+Note that this data has an ACL of Read-Only.  This ensures that it cannot be edited by anyone except the owner of the data (in this case the defender).  This is not necessary but recommended to increase the security of the data.
 
 The example below is the data portion of the shared user entity.
 ```js
 {
-    "grid": {
-        "gridType": "field",
-        "dimesionX": 14,
-        "dimensionY": 10,
-        "background": "image.png"
-    },
-    "defenses": [
-        {
-            "type": "Turret",
-            "x": 3,
-            "y": 3,
-            "dmg": 3.5,
-            "hp": 100,
-            "state": "active"
-        }, {
-            "type": "Catapult",
-            "x": 9,
-            "y": 9,
-            "dmg": 7,
-            "hp": 215,
-            "state": "active"
-        }
-    ]
+    "grid": {
+        "gridType": "field",
+        "dimesionX": 14,
+        "dimensionY": 10,
+        "background": "image.png"
+    },
+    "defenses": [
+        {
+            "type": "Turret",
+            "x": 3,
+            "y": 3,
+            "dmg": 3.5,
+            "hp": 100,
+            "state": "active"
+        }, {
+            "type": "Catapult",
+            "x": 9,
+            "y": 9,
+            "dmg": 7,
+            "hp": 215,
+            "state": "active"
+        }
+    ]
 }
 ```
 ## Match Lifecycle
 
-To start a match all that is required is the target player's profileId to call [StartMatch()](/api/capi/onewaymatch/startmatch) with.
+To start a match all that is required is the target player's profileId to call [StartMatch()](/api/capi/onewaymatch/startmatch) with.
 
-All read-only and read-write data shared by the opponent will be returned within the “entities” section of the StartMatch response.  In this case, our example entity from above would be returned, so that the attacker can set up the defense that they are about to attack.
+All read-only and read-write data shared by the opponent will be returned within the “entities” section of the StartMatch response.  In this case, our example entity from above would be returned, so that the attacker can set up the defense that they are about to attack.
 
-It is important at this time to store the `playbackStreamId` returned from `StartMatch` as you will need it to add events as the attack occurs.
+It is important at this time to store the `playbackStreamId` returned from `StartMatch` as you will need it to add events as the attack occurs.
 
 Here is an example response to StartMatch:
 ```js
@@ -109,9 +109,9 @@ Here is an example response to StartMatch:
     }
 }
 ```
-Now that the match has started its time to update the Playback Stream of the match with the events that occur while the attacker is playing.  This is done via the [Playback Stream APIs](/api/capi/playbackstream).
+Now that the match has started its time to update the Playback Stream of the match with the events that occur while the attacker is playing.  This is done via the [Playback Stream APIs](/api/capi/playbackstream).
 
-Use the [AddEvent()](/api/capi/playbackstream/addevent) API to save events like _Initial Attackers_, _Unit Attacked_, _User Tapped_, _Boost Used_, _Match Complete_, etc.  Data for the event being added should go in `eventData`, whereas the summary data should be used to store information about the completion of the attack, so that we can modify items in the cloud script on completion of the match.
+Use the [AddEvent()](/api/capi/playbackstream/addevent) API to save events like _Initial Attackers_, _Unit Attacked_, _User Tapped_, _Boost Used_, _Match Complete_, etc.  Data for the event being added should go in `eventData`, whereas the summary data should be used to store information about the completion of the attack, so that we can modify items in the cloud script on completion of the match.
 
 Here is an example of an `AddEvent()` call's summary data:
 ```js
@@ -124,7 +124,7 @@ Here is an example of an `AddEvent()` call's summary data:
     "ratingChange": 5
 }
 ```
-Once the attack is complete its time to finalize the match result with [CompleteMatch()](/api/capi/onewaymatch/completematch).  We will do this using a cloud code script to limit how much control the App has over sensitive data.
+Once the attack is complete its time to finalize the match result with [CompleteMatch()](/api/capi/onewaymatch/completematch).  We will do this using a cloud code script to limit how much control the App has over sensitive data.
 
 Since we were keeping our Playback Stream updated all we need to pass our Cloud Code script is the `playbackStreamId` and it can retrieve all the data it needs.
 

@@ -3,13 +3,13 @@ title: "Unreal Tutorials"
 date: "2015-11-05"
 ---
 
-The brainCloud Unreal plugin has been designed to integrate seamlessly with both native C++ and the new Blueprints visual scripting system.
+The brainCloud Unreal plugin has been designed to integrate seamlessly with both native C++ and the new Blueprints visual scripting system.
 
-As part of our Unreal package we include:
+As part of our Unreal package we include:
 
-- Unreal Engine 4 C++ libraries
-- Full support for the Blueprints Visual Scripting system
-- Support for the Online Subsystem interface (in-development)
+- Unreal Engine 4 C++ libraries
+- Full support for the Blueprints Visual Scripting system
+- Support for the Online Subsystem interface (in-development)
 
 The following tutorials are available:
 

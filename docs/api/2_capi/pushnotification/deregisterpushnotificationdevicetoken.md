@@ -108,7 +108,7 @@ var deviceToken = "12345";
 
 ```dart
 var  platform = PlatformID.iOS;
-var  deviceToken = "12345";
+var  deviceToken = "12345";
 ​
 ServerResponse result = await _bc.pushNotificationService.deregisterPushNotificationDeviceToken(platform:platform, deviceToken:deviceToken);
 
@@ -162,8 +162,8 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
-    "data": null
+    "data": null,
+    "status": 200
 }
 ```
 

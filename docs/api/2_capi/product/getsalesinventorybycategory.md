@@ -172,7 +172,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "product_inventory": [
             {
@@ -200,7 +199,8 @@ if (postResult.status == 200) {
             }
         ],
         "server_time": 1395952561266
-    }
+    },
+    "status": 200
 }
 ```
 

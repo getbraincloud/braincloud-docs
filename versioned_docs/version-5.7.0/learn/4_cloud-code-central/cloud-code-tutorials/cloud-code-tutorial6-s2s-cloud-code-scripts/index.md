@@ -9,22 +9,22 @@ In this tutorial, we will take you through the process of creating a simple S2S 
 
 ### Step 1 - Create the S2S Script (AddNumbers)
 
--   Go to the brainCloud Portal and open the **Design | Cloud Code | Scripts** page
+-   Go to the brainCloud Portal and open the **Design | Cloud Code | Scripts** page
 
 -   Click the **[+]** Plus icon to start adding a new Script
 
 [![](images/S2S-Details.png)](images/S2S-Details.png)
 
 -   Give the Script a _name_ and _description_. Also, ensure the _[x] S2S_ checkbox is checked.  
-     _Note: Client callable is optional, but it's a good idea to disable it if the script will never be used client side._
+     _Note: Client callable is optional, but it's a good idea to disable it if the script will never be used client side._
 
 -   Create some Test Parameters to use. For this tutorial, enter:  
-     _{ "a": 4, "b": 3 }_
+     _\{ "a": 4, "b": 3 \}_
 
--   You're done in the **Details** tab, click on the **Editor** tab. Here, enter the following:
+-   You're done in the **Details** tab, click on the **Editor** tab. Here, enter the following:
 
 var response = {};
-response.answer = data.a + data.b;
+response.answer = data.a + data.b;
 response;
 
 _Note: The last line is always what will be returned in the response._
@@ -32,15 +32,15 @@ _Note: The last line is always what will be returned in the response._
 -   You should have something that looks like this after.
 
 -   The last tab is the **Run** tab. Here, you can do a **[Quick Authenticate]**, and **[Run]** your new script to view the return!  
-     (**[Save]** and **[Close]** when you are done editing and testing your script)
+     (**[Save]** and **[Close]** when you are done editing and testing your script)
 
 [![](images/S2S-RunScript.png)](images/S2S-RunScript.png)
 
 ### Step 2 - Configure an S2S Server to call it from
 
--   Now go to the brainCloud Portal and open the **Design | Cloud Code | My Servers** page, and click **[New Server]**
--   Enter a name for your server, such as APP_SERVER, and click save. This will generate a secret for your server  
-     Note: You can also limit the IP ranges for your server. This is highly recommended for production deployments.
+-   Now go to the brainCloud Portal and open the **Design | Cloud Code | My Servers** page, and click **[New Server]**
+-   Enter a name for your server, such as APP_SERVER, and click save. This will generate a secret for your server  
+     Note: You can also limit the IP ranges for your server. This is highly recommended for production deployments.
 
 _Your script and server should now be visible in the S2S Explorer._
 
@@ -48,7 +48,7 @@ _Your script and server should now be visible in the S2S Explorer._
 
 ### Step 3 - Call it!
 
--   Let's try calling it from Postman!  (If you don't already have it, you can download it from [here](https://www.getpostman.com).)
+-   Let's try calling it from Postman!  (If you don't already have it, you can download it from [here](https://www.getpostman.com).)
 -   Launch Postman, and configure a new request.
 -   Set the _request type_ to "POST"
 -   Set the _request URL_ to "https://api.braincloudservers.com/s2sdispatcher"
@@ -59,18 +59,18 @@ _Your script and server should now be visible in the S2S Explorer._
 
 ```js
 {
-    "gameId": "11549",
-    "serverName": "APP_SERVER",
-    "gameSecret": "97e1d95d-69f4-472e-904f-39f372777aee",
-    "service": "script",
-    "operation": "RUN",
-    "data": {
-        "scriptName": "AddNums",
-        "scriptData": {
-            "a": 3,
-            "b": 4
-        }
-    }
+    "gameId": "11549",
+    "serverName": "APP_SERVER",
+    "gameSecret": "97e1d95d-69f4-472e-904f-39f372777aee",
+    "service": "script",
+    "operation": "RUN",
+    "data": {
+        "scriptName": "AddNums",
+        "scriptData": {
+            "a": 3,
+            "b": 4
+        }
+    }
 }
 ```
 
@@ -80,16 +80,16 @@ _Your script and server should now be visible in the S2S Explorer._
 
 ```js
 {
-    "response": {
-        "answer": 7
-    },
-    "success": true
+    "response": {
+        "answer": 7
+    },
+    "success": true
 }
 ```
 
 ### Step 4 - Experiment!
 
-That's cool, but let's try exercising the brainCloud API?  Try creating and executing the following script:
+That's cool, but let's try exercising the brainCloud API?  Try creating and executing the following script:
 
 ```js
 var profileId = "";

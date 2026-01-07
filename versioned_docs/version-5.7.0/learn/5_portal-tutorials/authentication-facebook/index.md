@@ -3,7 +3,7 @@ title: "Authentication - Facebook"
 date: "2015-08-07"
 ---
 
-In order for your app to connect with Facebook, you will need to do the steps below.
+In order for your app to connect with Facebook, you will need to do the steps below.
 
 ### Facebook Authentication
 
@@ -34,4 +34,4 @@ In order for your app to connect with Facebook, you will need to do the steps b
     
     [![brainCloud](images/brainCloud_fbAuth_5.jpg)](images/brainCloud_fbAuth_5.jpg)
     
-- You should now be able to use Facebook Authentication in your app. For further information in regard to implementing Facebook Authentication, refer to [this linked article](http://help.getbraincloud.com/en/articles/4668095-authenticate-facebook) in our knowledge base help center.
+- You should now be able to use Facebook Authentication in your app. For further information in regard to implementing Facebook Authentication, refer to [this linked article](http://help.getbraincloud.com/en/articles/4668095-authenticate-facebook) in our knowledge base help center.

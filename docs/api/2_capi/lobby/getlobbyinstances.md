@@ -244,6 +244,6 @@ A new field named "publicSettings" will be returned in the response.
     },
     "status": 200
 }
-````
+```
 
 </details>

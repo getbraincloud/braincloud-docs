@@ -126,7 +126,6 @@ if (postResult.status == 200) {
     "packetId": 1,
     "messageResponses": [
         {
-            "status": 200,
             "data": {
                 "result": {},
                 "scriptName": "testScript",
@@ -140,7 +139,8 @@ if (postResult.status == 200) {
                 },
                 "runStartTime": 0,
                 "scheduledStartTime": 1437576422378
-            }
+            },
+            "status": 200
         }
     ]
 }

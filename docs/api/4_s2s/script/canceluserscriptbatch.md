@@ -105,7 +105,6 @@ var postResult = scriptProxy.CancelUserScriptBatch(jobId);
 
 ```json
 {
-    "status": 200,
     "data": {
         "result": {},
         "jobType": "CloudCode",
@@ -123,7 +122,8 @@ var postResult = scriptProxy.CancelUserScriptBatch(jobId);
         },
         "scheduledStartTime": 1466582769118,
         "runStartTime": 0
-    }
+    },
+    "status": 200
 }
 ```
 

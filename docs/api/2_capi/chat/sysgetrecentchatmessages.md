@@ -4,7 +4,7 @@
 This method is available in Cloud Code scripts only.
 :::
 
-Returns a list of max \<n\> messages from history.
+Returns a list of max \`n` messages from history.
 
 
 
@@ -116,7 +116,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "messages": [
             {
@@ -148,7 +147,8 @@ if (postResult.status == 200) {
                 }
             }
         ]
-    }
+    },
+    "status": 200
 }
 ```
 </details>

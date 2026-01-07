@@ -199,7 +199,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-	"status": 200,
 	"data": {
 		"_serverTime": 1637946319239,
 		"entityListCount": 1,
@@ -218,7 +217,8 @@ if (postResult.status == 200) {
 			"createdAt": 1449870753354,
 			"updatedAt": 1449870753354
 		}]
-	}
+	},
+	"status": 200
 }
 ```
 </details>

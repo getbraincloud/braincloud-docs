@@ -8,13 +8,13 @@ date: "2014-09-09"
 
 ## What is brainCloud?
 
-**brainCloud** is a ready-made **back-end platform** for the development of feature-rich **mobile+social games** and **gamified apps**. brainCloud provides the features you need - along with **comprehensive tools** to support your team during development, testing, and user support.
+**brainCloud** is a ready-made **back-end platform** for the development of feature-rich **mobile+social games** and **gamified apps**. brainCloud provides the features you need - along with **comprehensive tools** to support your team during development, testing, and user support.
 
 brainCloud consists of:
 
-- **Cloud Service** - an advanced, Backend-as-a-Service (BaaS)
+- **Cloud Service** - an advanced, Backend-as-a-Service (BaaS)
 - **Client Libraries** - local client libraries (SDKs)
-- **Design Portal** - a portal that allows you to design and debug your apps
+- **Design Portal** - a portal that allows you to design and debug your apps
 
 ```mdx-code-block
 <div className="video-container">
@@ -33,14 +33,14 @@ brainCloud consists of:
 There are custom brainCloud libraries for:
 
 - **C#** - for Unity and .Net developers
-- **C++** - for platform-native apps, on iOS Android, Windows, etc.
-- **JS** - for web-based JavaScript apps
-- **Java** - for Java-based and native Android apps
-- **Objective-C** / **Swift** - for native Mac and iOS apps
+- **C++** - for platform-native apps, on iOS Android, Windows, etc.
+- **JS** - for web-based JavaScript apps
+- **Java** - for Java-based and native Android apps
+- **Objective-C** / **Swift** - for native Mac and iOS apps
 
 ## Engine Support
 
-brainCloud supports the most popular gaming engines, including:
+brainCloud supports the most popular gaming engines, including:
 
 - **Unity** - brainCloud provides C# libraries, examples and tutorials for integration with Unity
 - **Unreal** - brainCloud provides C++ and Blueprint libraries, examples and tutorials for the latest versions of the Unreal Engine
@@ -54,10 +54,10 @@ This section gives some background on how the brainCloud APIs work, in terms of 
 
 This introduction is organized into the following sections:
 
-- **[Design Portal](/learn/introduction/design-portal/)** -  getting started in the system
+- **[Design Portal](/learn/introduction/design-portal/)** -  getting started in the system
 - **[brainCloud API](/learn/introduction/braincloud-api/)** -  connecting your app to brainCloud
 - **[brainCloud RTT](/learn/introduction/braincloud-rtt/)** -  listen and react to events in real-time
-- **[Profiles and Identity](/learn/introduction/profiles-and-identity/)** - how brainCloud identifies end-users
+- **[Profiles and Identity](/learn/introduction/profiles-and-identity/)** - how brainCloud identifies end-users
 - **[Cloud Data](/learn/introduction/cloud-data/)** - overview of the brainCloud data APIs
 - **[Gamification](/learn/introduction/gamification/)** - discussion of the brainCloud gamification features
 - **[Multiplayer](/learn/introduction/multiplayer/)** - overview of brainCloud's multiplayer capabilities

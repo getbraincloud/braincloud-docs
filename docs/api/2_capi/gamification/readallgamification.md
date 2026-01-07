@@ -151,7 +151,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "milestones": [
             {
@@ -202,7 +201,8 @@ if (postResult.status == 200) {
             },
             "experienceLevel": 0
         }
-    }
+    },
+    "status": 200
 }
 ```
 </details>

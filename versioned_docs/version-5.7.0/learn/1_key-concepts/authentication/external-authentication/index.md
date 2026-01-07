@@ -3,11 +3,11 @@ title: "External Authentication"
 date: "2015-05-06"
 ---
 
-brainCloud provides support for authenticating users via an external directory. This is done by implementing a custom script that acts as the integration _glue_ between brainCloud and the external directory.
+brainCloud provides support for authenticating users via an external directory. This is done by implementing a custom script that acts as the integration _glue_ between brainCloud and the external directory.
 
 #### Creating the Script
 
-The first thing to do is write the script. This is done via the Cloud Code/Edit Scripts tab of the portal. The script must not be client callable. The parameter names for script data input are "externalId" and "authenticationToken". These parameters will be passed to the script by the client API authentication method. The script must return a boolean true or false to indicate success or failure.
+The first thing to do is write the script. This is done via the Cloud Code/Edit Scripts tab of the portal. The script must not be client callable. The parameter names for script data input are "externalId" and "authenticationToken". These parameters will be passed to the script by the client API authentication method. The script must return a boolean true or false to indicate success or failure.
 
 Here's an example:
 
@@ -166,9 +166,9 @@ main();
 
 #### Portal Configuration
 
-The script to run for a particular external authentication type must be configured via Authentication/External tab in the portal. You must use this area to associate an external authentication name with a script.  The previously created script name should appear in the drop-down on this page when you add an entry.
+The script to run for a particular external authentication type must be configured via Authentication/External tab in the portal. You must use this area to associate an external authentication name with a script.  The previously created script name should appear in the drop-down on this page when you add an entry.
 
-You must also configure the url you want to access in the script via the Cloud Code/Web Services tab in the portal.
+You must also configure the url you want to access in the script via the Cloud Code/Web Services tab in the portal.
 
 #### Client Call
 

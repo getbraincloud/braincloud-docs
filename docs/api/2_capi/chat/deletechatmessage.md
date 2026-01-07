@@ -175,10 +175,10 @@ var result = chatProxy.deleteChatMessage( channelId, msgId, ver );
 
 ```json
 {
-    "status": 200,
     "data": {
         "deleted": 1
-    }
+    },
+    "status": 200
 }
 ```
 </details>

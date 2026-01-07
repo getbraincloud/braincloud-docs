@@ -108,7 +108,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "fileDetails": {
             "fileId": "4d0b8945-41f8-4a2b-a2f5-e9c0b2482bc6",
@@ -121,7 +120,8 @@ if (postResult.status == 200) {
             "version": 1,
             "url": "https://api.braincloudservers.com/files/bc/g/23302/f/xxxx-xxx-xxx-xxx/yyy-yyy-yyy-yyy/V1/sub12file1"
         }
-    }
+    },
+    "status": 200
 }
 ```
 

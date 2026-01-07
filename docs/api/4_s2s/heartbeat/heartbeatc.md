@@ -1,19 +1,6 @@
-# Client Heartbeat
+# S2S Heartbeat
 
-This service allows you to send no-op packets to the server to keep the session alive. The default session will expire after 20 minutes.
-
-```
-{
-    "packetId": 1,
-    "messages": [
-        {
-            "service": "heartbeat",
-            "operation": "HEARTBEAT",
-            "data": null
-        }
-    ]
-}
-```
+This service allows you to send no-op packets to the server to keep the session alive. The default session will expire after 30 minutes.
 
 <PartialServop service_name="heartbeat" operation_name="HEARTBEAT" />
 
@@ -25,16 +12,8 @@ This service allows you to send no-op packets to the server to keep the session 
 <TabItem value="csharp" label="C#">
 ```
 
-```json
-{
-    "packetId": 1,
-    "messageResponses": [
-        {
-            "status": 200,
-            "data": null
-        }
-    ]
-}
+```csharp
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -42,16 +21,8 @@ This service allows you to send no-op packets to the server to keep the session 
 <TabItem value="cpp" label="C++">
 ```
 
-```json
-{
-    "packetId": 1,
-    "messageResponses": [
-        {
-            "status": 200,
-            "data": null
-        }
-    ]
-}
+```cpp
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -59,16 +30,8 @@ This service allows you to send no-op packets to the server to keep the session 
 <TabItem value="objectivec" label="Objective-C">
 ```
 
-```json
-{
-    "packetId": 1,
-    "messageResponses": [
-        {
-            "status": 200,
-            "data": null
-        }
-    ]
-}
+```objectivec
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -76,16 +39,8 @@ This service allows you to send no-op packets to the server to keep the session 
 <TabItem value="java" label="Java">
 ```
 
-```json
-{
-    "packetId": 1,
-    "messageResponses": [
-        {
-            "status": 200,
-            "data": null
-        }
-    ]
-}
+```java
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -93,16 +48,8 @@ This service allows you to send no-op packets to the server to keep the session 
 <TabItem value="js" label="JavaScript">
 ```
 
-```json
-{
-    "packetId": 1,
-    "messageResponses": [
-        {
-            "status": 200,
-            "data": null
-        }
-    ]
-}
+```javascript
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -119,16 +66,8 @@ This service allows you to send no-op packets to the server to keep the session 
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```json
-{
-    "packetId": 1,
-    "messageResponses": [
-        {
-            "status": 200,
-            "data": null
-        }
-    ]
-}
+```cfscript
+// S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block
@@ -136,12 +75,13 @@ This service allows you to send no-op packets to the server to keep the session 
 <TabItem value="r" label="Raw">
 ```
 
-```json
+```r
 {
     "packetId": 1,
-    "messageResponses": [
+    "messages": [
         {
-            "status": 200,
+            "service": "heartbeat",
+            "operation": "HEARTBEAT",
             "data": null
         }
     ]
@@ -162,8 +102,8 @@ This service allows you to send no-op packets to the server to keep the session 
     "packetId": 1,
     "messageResponses": [
         {
-            "status": 200,
-            "data": null
+            "data": null,
+            "status": 200
         }
     ]
 }

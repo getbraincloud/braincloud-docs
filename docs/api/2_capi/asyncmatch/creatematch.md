@@ -11,14 +11,16 @@ Opponents is a JSON array containing objects with a Platform and player ID. Plat
 
 An example of this string would be:
 
-`[{
+```json
+[{
   "platform":"BC",
   "id": "some-braincloud-profile"
 },
 {
   "platform":"FB",
   "id": "some-facebook-id"
-}]`
+}]
+```
 
 <PartialServop service_name="asyncMatch" operation_name="CREATE" />
 
@@ -232,7 +234,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status" : 200,
     "data" :
     {
         "gameId": "com.dnadpk.football",
@@ -260,7 +261,8 @@ if (postResult.status == 200) {
         "summary": null,
         "createdAt": 1415641372974,
         "updatedAt": 1415641372974
-    }
+    },
+    "status" : 200
 }
 ```
 </details>

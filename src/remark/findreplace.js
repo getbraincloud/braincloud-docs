@@ -1,12 +1,8 @@
-const visit = require('unist-util-visit');
-const escapeStringRegexp = require('escape-string-regexp');
-
-let replacements = {
+// Default replacements - these will be overridden by options from docusaurus.config.js
+let defaultReplacements = {
     COMPANY: 'My Company',
     COPYRIGHT: `Copyright ${new Date().getFullYear()} My Company`,
 }
-
-let prefix = '%'
 
 
 // let options = {
@@ -24,24 +20,27 @@ let prefix = '%'
 
 const plugin = (options) => {
     const transformer = async (ast) => {
-        // Attaches prefix to the start of the string.
-        const attachPrefix = str => (options.prefix || '') + str
+        // Dynamic import for ES modules (unist-util-visit v5 and escape-string-regexp v5 are ES module only)
+        const {visit} = await import('unist-util-visit');
+        const escapeStringRegexpModule = await import('escape-string-regexp');
+        const escapeStringRegexp = escapeStringRegexpModule.default || escapeStringRegexpModule;
+        const prefix = typeof options?.prefix === 'string' ? options.prefix : '<%=';
+        const suffix = typeof options?.suffix === 'string' ? options.suffix : '%>';
 
-        // Removes prefix from the start of the string.
-        const stripPrefix = str =>
-            options.prefix ? str.replace(RegExp(`^${options.prefix}`), '') : str
+        // Match full legacy tokens: <%= KEY %>
+        const replacements = options?.replacements ?? {};
+        // Merge with defaults if no options provided
+        const allReplacements = Object.keys(replacements).length > 0 ? replacements : defaultReplacements;
+        const keys = Object.keys(allReplacements);
+        if (keys.length === 0) return;
 
-        // RegExp to find any replacement keys.
-        const regexp = RegExp(
-            '(' +
-            Object.keys(options.replacements)
-                .map(key => escapeStringRegexp(attachPrefix(key)))
-                .join('|') +
-            ')',
-            'g',
-        )
+        const keysPattern = keys.map((k) => escapeStringRegexp(k)).join('|');
+        const regexp = new RegExp(
+          `${escapeStringRegexp(prefix)}\\s*(${keysPattern})\\s*${escapeStringRegexp(suffix)}`,
+          'g',
+        );
 
-        const replacer = (_match, name) => options.replacements[stripPrefix(name)]
+        const replacer = (_match, key) => allReplacements[key];
 
         // Go through all text, html, code, inline code, and links.
         visit(ast, ['text', 'html', 'code', 'inlineCode', 'link'], (node) => {

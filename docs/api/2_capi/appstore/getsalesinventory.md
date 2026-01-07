@@ -8,7 +8,7 @@ Method gets the active sales inventory for the passed-in currency type and platf
 
 | Parameter    | Description                                                                                                  |
 | ------------ | ------------------------------------------------------------------------------------------------------------ |
-| storeId      | The store id. Refer to the current available store IDs [here](/api/appendix/platformIds#store-platform-ids). |
+| storeId      | The store id. Refer to the current available store IDs [here](/api/appendix/platformIds#store-ids). |
 | userCurrency | The currency to retrieve the sales inventory for. This is only used for Steam and Facebook stores.           |
 
 ## Usage
@@ -171,7 +171,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "productInventory": [
             {
@@ -200,7 +199,8 @@ if (postResult.status == 200) {
             }
         ],
         "serverTime": 1395952561266
-    }
+    },
+    "status": 200
 }
 ```
 

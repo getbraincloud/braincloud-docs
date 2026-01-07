@@ -9,11 +9,11 @@ date: "2015-02-19"
 -   Lose - if your card is outside the range of the two faceup cards
 -   Lose twice your bet - if your card is the same as either of the two faceup cards (hitting the post)
 
-Further information about the card game can be found on [wikipedia](http://en.wikipedia.org/wiki/Acey_Deucey_%28card_game%29).
+Further information about the card game can be found on [wikipedia](http://en.wikipedia.org/wiki/Acey_Deucey_%28card_game%29).
 
 The example game shows off the following brainCloud features:
 
--   Email authentication - the user must authenticate using the [BrainCloudAuthentication](/api/capi/authentication "BrainCloudAuthentication") AuthenticateEmailPassword API.
+-   Email authentication - the user must authenticate using the [BrainCloudAuthentication](/api/capi/authentication "BrainCloudAuthentication") AuthenticateEmailPassword API.
 -   Email verification - the user is sent an email to verify that they own the account (although this does not prevent you from playing the game)
 -   Player Name - the user's name is stored using the [BrainCloudPlayerState](/api/capi/playerstate "BrainCloudPlayerState") UpdatePlayerName API.
 -   Player Statistics - the user's wins/losses are tracked using the [BrainCloudPlayerStatistics](/api/capi/playerstats "BrainCloudPlayerStatistics") APIs.
@@ -26,6 +26,6 @@ All of the code that interacts with the brainCloud js library is located in card
 
 [Download the source code](https://github.com/getbraincloud/examples-javascript/tree/master/AceyDeucey)
 
-Check out Acey Deucey in action!  [Click to Play](https://api.braincloudservers.com/s3/aceydeucey/cardGame.html "Acey Deucey - JavaScript Example").
+Check out Acey Deucey in action!  [Click to Play](https://api.braincloudservers.com/s3/aceydeucey/cardGame.html "Acey Deucey - JavaScript Example").
 
 [![Acey Deucey](images/2015-03-02__11_21_AM.png)](https://api.braincloudservers.com/s3/aceydeucey/cardGame.html)

@@ -310,7 +310,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "status": 200,
   "data": {
     "_serverTime": 1637946319239,
     "context": "lciI6MSwiZG9Db3VudCI6dHJ...",
@@ -360,7 +359,8 @@ if (postResult.status == 200) {
       "moreAfter": true,
       "moreBefore": false
     }
-  }
+  },
+  "status": 200
 }
 ```
 </details>

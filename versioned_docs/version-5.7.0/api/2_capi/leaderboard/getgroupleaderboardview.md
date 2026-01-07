@@ -130,11 +130,11 @@ var afterCount = 4;
 ```dart
 var  leaderboardId = "default";
 var  groupId = "actual_group_id";
-var  sortOrder = SortOrder.HIGH_TO_LOW;
+var  sortOrder = SortOrder.HIGH_TO_LOW;
 var  beforeCount = 3;
 var  afterCount = 4;
 
-ServerResponse result = await <%= data.branding.codePrefix %>.leaderboardService.getGroupLeaderboardView(leaderboardId:leaderboardId, groupId:groupId,  sortOrder: sortOrder, beforeCount:beforeCount, afterCount:afterCount);
+ServerResponse result = await <%= data.branding.codePrefix %>.leaderboardService.getGroupLeaderboardView(leaderboardId:leaderboardId, groupId:groupId,  sortOrder: sortOrder, beforeCount:beforeCount, afterCount:afterCount);
 
 if (result.statusCode == 200) {
     print("Success");

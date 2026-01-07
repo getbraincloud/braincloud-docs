@@ -111,7 +111,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "date": 1529978814276,
         "ver": 1,
@@ -128,7 +127,8 @@ if (postResult.status == 200) {
                 "somethingCustom": "wow"
             }
         }
-    }
+    },
+    "status": 200
 }
 ```
 

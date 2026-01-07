@@ -130,7 +130,6 @@ if (postResult.status == 200) {
     "packetId": 1,
     "messageResponses": [
         {
-            "status": 200,
             "data": {
                 "tournamentConfigsCount": 1,
                 "tournamentConfigs": [
@@ -199,7 +198,8 @@ if (postResult.status == 200) {
                         "updatedAt": 1483560895428
                     }
                 ]
-            }
+            },
+            "status": 200
         }
     ]
 }

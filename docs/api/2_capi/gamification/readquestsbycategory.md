@@ -161,11 +161,11 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status" : 200,
     "data" :
     {
         "quests": []
-    }
+    },
+    "status" : 200
 }
 ```
 </details>

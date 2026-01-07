@@ -253,7 +253,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "resultCode": 0,
         "errorMessage": null,
@@ -347,7 +346,8 @@ if (postResult.status == 200) {
         },
 
         "server_time": 1473325588695
-    }
+    },
+    "status": 200
 }
 ```
 

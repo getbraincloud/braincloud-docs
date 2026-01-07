@@ -154,7 +154,6 @@ var postResult = friendProxy.FindUserByUniversalId(searchText, maxResults);
 
 ```json
 {
-    "status": 200,
     "data": {
         "matchedCount": 1,
         "matches": [
@@ -165,7 +164,8 @@ var postResult = friendProxy.FindUserByUniversalId(searchText, maxResults);
                 "pictureUrl": null
             }
         ]
-    }
+    },
+    "status": 200
 }
 ```
 

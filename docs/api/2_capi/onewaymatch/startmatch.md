@@ -162,7 +162,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "playbackStreamId": "860e3009-c7e7-4fd1-8c5c-cc932fd4ec4a",
         "initiatingPlayerId": "b67b2d73-1e8c-42e9-9be5-9c1879a48555",
@@ -177,7 +176,8 @@ if (postResult.status == 200) {
         "expiryTime": 1472743059453,
         "createdAt": 1472742459459,
         "updatedAt": 1472742459459
-    }
+    },
+    "status": 200
 }
 ```
 

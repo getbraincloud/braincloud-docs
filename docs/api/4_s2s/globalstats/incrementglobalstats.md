@@ -124,12 +124,12 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "statistics": {
             "PLAYER_COUNT": 16
         }
-    }
+    },
+    "status": 200
 }
 ```
 

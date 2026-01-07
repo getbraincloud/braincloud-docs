@@ -171,7 +171,6 @@ if (result.statusCode == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "result": {},
         "scriptName": "testScript",
@@ -185,7 +184,8 @@ if (result.statusCode == 200) {
         },
         "runStartTime": 0,
         "scheduledStartTime": 1437576422378
-    }
+    },
+    "status": 200
 }
 ```
 

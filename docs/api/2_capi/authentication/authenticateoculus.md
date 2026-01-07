@@ -129,7 +129,6 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 
 ```json
 {
-    "status": 200,
     "data": {
         "vcPurchased": 0,
         "experiencePoints": 100,
@@ -174,7 +173,8 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
         "pictureUrl": null,
         "sessionId": "v3grtg3ve0a089pekk8lneuk8k",
         "amountSpent": 0
-    }
+    },
+    "status": 200
 }
 ```
 

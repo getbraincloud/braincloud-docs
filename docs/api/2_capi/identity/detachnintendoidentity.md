@@ -105,8 +105,8 @@ const char* nintendoAccountId = "nsaid";  // Network Services Account ID
 
 ```json
 {
-    "status": 200,
-    "data": null
+    "data": null,
+    "status": 200
 }
 ```
 

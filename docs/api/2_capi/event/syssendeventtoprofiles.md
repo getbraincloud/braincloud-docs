@@ -114,12 +114,12 @@ var postResult = eventProxy.SysSendEventToProfiles(toIds, eventType, eventData, 
 
 ```json
 {
-    "status": 200,
     "data": {
         "errorProfiles": [],
         "errorCount": 0,
         "sentCount": 2
-    }
+    },
+    "status": 200
 }
 ```
 

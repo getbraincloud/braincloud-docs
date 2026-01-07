@@ -128,7 +128,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "leaderboard": [
             {
@@ -160,7 +159,8 @@ if (postResult.status == 200) {
         "moreAfter": true,
         "timeBeforeReset": 588182412,
         "server_time": 1395840957588
-    }
+    },
+    "status": 200
 }
 ```
 

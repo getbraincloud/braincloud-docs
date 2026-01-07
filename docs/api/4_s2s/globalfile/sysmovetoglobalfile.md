@@ -126,7 +126,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "fileId": "34abacc5-c048-4bcc-a3ce-8eb751a718a6",
         "treeId": "",
@@ -137,7 +136,8 @@ if (postResult.status == 200) {
         "etag": "da69907799c0394869a6d7a3d467f9c0",
         "version": 1,
         "url": "https://api.braincloudservers.com/files/bc/g/21774/f/34abacc5-c048-4bcc-a3ce-8eb751a718a6/V1/testFile3.txt"
-    }
+    },
+    "status": 200
 }
 ```
 

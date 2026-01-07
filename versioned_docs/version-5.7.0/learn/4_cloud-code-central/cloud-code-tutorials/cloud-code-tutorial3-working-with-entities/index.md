@@ -3,15 +3,15 @@ title: "CC Tutorial3 - Working with Entities"
 date: "2016-02-25"
 ---
 
-This tutorial uses brainCloud's **Global** and **User Entity** features.
+This tutorial uses brainCloud's **Global** and **User Entity** features.
 
-_Global Entities_ are json objects that are available globally to _all users_ of a system (subject to the specified ACL of the object). _User Entities_ are local to a single user, and thus largely private (though there are mechanisms in place to share them). _For more information on brainCloud data features, see the [Cloud Data](/learn/key-concepts/data/) section of the brainCloud documentation._
+_Global Entities_ are json objects that are available globally to _all users_ of a system (subject to the specified ACL of the object). _User Entities_ are local to a single user, and thus largely private (though there are mechanisms in place to share them). _For more information on brainCloud data features, see the [Cloud Data](/learn/key-concepts/data/) section of the brainCloud documentation._
 
 The combination of Cloud Code working together with Global and User Entities is very powerful in brainCloud.
 
 ## Background
 
-This example uses a combination of _Cloud Code_, _Global Entities_ and _User Entities_ to build a **Group (or Clan)** feature that represents a collection of end-users. The operations that we will support include:
+This example uses a combination of _Cloud Code_, _Global Entities_ and _User Entities_ to build a **Group (or Clan)** feature that represents a collection of end-users. The operations that we will support include:
 
 - CreateGroup()
 - DeleteGroup()
@@ -23,12 +23,12 @@ This example uses a combination of _Cloud Code_, _Global Entities_ and _User Ent
 
 We'll start with the overall group management methods - Tut3_CreateGroup(), Tut3_DeleteGroup() and Tut3_ListGroups(). Create methods using the listings below.
 
-### CreateGroup() Script
+### CreateGroup() Script
 
 Parameters for Tut3_CreateGroup()
 ```js
 {
-     "groupName": "The Tater Tots"
+     "groupName": "The Tater Tots"
 }
 ```
 Tut3_CreateGroup script
@@ -70,7 +70,7 @@ else
 }
 results;
 ```
-### DeleteGroup() Script
+### DeleteGroup() Script
 
 Parameters for Tut3_DeleteGroup()
 ```js
@@ -137,13 +137,13 @@ if (searchResults.data.entityList.length > 0)
 }
 results;
 ```
-## Step 2 - Test the Group Management scripts
+## Step 2 - Test the Group Management scripts
 
 Once you've got the routines written, test them using the API Explorer. Remember, if you don't see any of the scripts, you probably don't have _Client Callable_ set to **TRUE**.
 
 Once you've created a few entities with the scripts, take a moment to check out the data via our _Global Entities Viewer_.
 
-To use the viewer:
+To use the viewer:
 
 - Click on the **Global** menu
 - Choose **Global Data | Global Entities**
@@ -154,7 +154,7 @@ To use the viewer:
 
 ## Step 3 - Manage Members
 
-Now that we've got the groups being created, lets put the code in place to manage the members.
+Now that we've got the groups being created, lets put the code in place to manage the members.
 
 We'll start by adding a JoinGroup() method.
 

@@ -159,7 +159,7 @@ var  score = 10;
 var  data = {
     "nickname": "batman"
 };
-var  leaderboardType = SocialLeaderboardType.HIGH_VALUE;
+var  leaderboardType = SocialLeaderboardType.HIGH_VALUE;
 var  rotationReset = Date.now();
 var  retainedCount = 2;
 var  numDaysToRotate = 4;
@@ -232,8 +232,8 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
-    "data": null
+    "data": null,
+    "status": 200
 }
 ```
 

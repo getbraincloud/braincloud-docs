@@ -193,19 +193,23 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "status": 200,
   "data": {
-      "leaderboardId": <%= data.example.leaderboardId %>,
-      "versionId": <%= data.example.returnedVersionId %>,
-      "playerId": <%= data.example.playerId %>,
-      "score": <%= data.example.score %>,
-      "data": <%= data.example.leaderboardExtraData_js %>,
-      "createdAt": <%= data.example.createdAt %>,
-      "updatedAt": <%= data.example.updatedAt %>,
-      "tCode": <%= data.example.tournamentCode %>,
-      "tRank": 0,
-      "tClaimedAt": 0
-  }
+    "leaderboardId": "^D^div6^2",
+    "versionId": 1,
+    "playerId": "c5ecdbda-5f91-41a9-96aa-174f412f7657",
+    "score": 100,
+    "data": {
+      "nickname": "batman"
+    },
+    "createdAt": 1647877630346,
+    "updatedAt": 1647877788048,
+    "tCode": "tcode1",
+    "tRank": 0,
+    "tClaimedAt": 0,
+    "tNotifiedAt": 0,
+    "previousScore": 50
+  },
+  "status": 200
 }
 ```
 

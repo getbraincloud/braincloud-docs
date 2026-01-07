@@ -105,8 +105,8 @@ var postResult = userProxy.sysDeleteUser(profileId, optionsJson);
 
 ```json
 {
-    "status": 200,
-    "data": {}
+    "data": {},
+    "status": 200
 }
 ```
 

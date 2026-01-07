@@ -177,7 +177,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "requested": 2,
         "actual": 2,
@@ -223,7 +222,8 @@ if (postResult.status == 200) {
                 }
             }
         ]
-    }
+    },
+    "status": 200
 }
 ```
 

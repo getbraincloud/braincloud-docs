@@ -138,7 +138,7 @@ var forceCreate = true;
 var  peer = "test";
 var  externalId = "email@email.com";
 var  authenticationToken = "email@email.com";
-var  authenticationType = AuthenticationType.email;
+var  authenticationType = AuthenticationType.email;
 var  externalAuthName = "";
 var  forceCreate = true;
 
@@ -202,11 +202,11 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "profileId": "1234-1234-1234-1234",
         "newUser": false
-    }
+    },
+    "status": 200
 }
 ```
 

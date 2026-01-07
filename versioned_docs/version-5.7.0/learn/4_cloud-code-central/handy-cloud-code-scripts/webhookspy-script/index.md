@@ -14,7 +14,7 @@ The script simply:
 
 ## Script
 
-Click [WebHookSpy.ccjs.zip](script/WebHookSpy.ccjs.zip) to download the file.
+Click [WebHookSpy.ccjs.zip](script/WebHookSpy.ccjs.zip) to download the file.
 
 ## Usage / Setup
 
@@ -27,7 +27,7 @@ You can test calling the script using a browser, [Postman](https://www.getpostma
 
 You will then to go to the external system (the one that is calling the webhook), and do whatever is required to get it to invoke the webhook.
 
-Finally, go to **Quick | Recent Errors** to view the results of invocation:
+Finally, go to **Quick | Recent Errors** to view the results of invocation:
 
 - _change the filter to show info messages_ - enable the [x] checkbox by the **green "i"** and hit **[Refresh]**
 - click on a log line to view the details. The parameters will be displayed in the _Context_ field, which you can expand by dragging the bottom-right corner of the dialog

@@ -152,10 +152,10 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "playerPictureUrl": "https://some.domain.com/mypicture.jpg"
-    }
+    },
+    "status": 200
 }
 ```
 

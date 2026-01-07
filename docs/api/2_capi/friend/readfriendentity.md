@@ -161,7 +161,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "entityId": "a3abc2ad-13ee-47a8-86a5-9c0a83f90314",
         "entityType": "PlayerData",
@@ -176,7 +175,8 @@ if (postResult.status == 200) {
         },
         "createdAt": 1372901559406,
         "updatedAt": 1372901559406
-    }
+    },
+    "status": 200
 }
 ```
 </details>

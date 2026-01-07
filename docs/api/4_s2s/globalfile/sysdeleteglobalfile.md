@@ -115,7 +115,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "fileDetails": {
             "treeId": "",
@@ -123,7 +122,8 @@ if (postResult.status == 200) {
             "version": 1,
             "fileId": "8d2e30b0-6308-4aeb-ac6a-68e4a458365b"
         }
-    }
+    },
+    "status": 200
 }
 ```
 

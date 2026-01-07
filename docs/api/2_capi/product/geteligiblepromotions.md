@@ -127,14 +127,13 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "promotions": [
             {
                 "gameId": "10019",
                 "promotionId": 9,
                 "type": "SCHEDULED",
-                "name": "session >= 2",
+                "name": "session `>=` 2",
                 "message": "test1",
                 "enabled": true,
                 "targetAllUsers": false,
@@ -157,7 +156,8 @@ if (postResult.status == 200) {
                 "updatedAt": 1415729753294
             }
         ]
-    }
+    },
+    "status": 200
 }
 ```
 

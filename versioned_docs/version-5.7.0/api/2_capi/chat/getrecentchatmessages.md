@@ -1,6 +1,6 @@
 # GetRecentChatMessages
 
-Returns a list of max \<n\> messages from history.
+Returns a list of max \`n` messages from history.
 
 
 

@@ -201,11 +201,11 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "entityType": "test",
-        "version": 1  // Note - `version` will only be returned if not null or -1 in the update call
-    }
+        "version": 1
+    },
+    "status": 200
 }
 ```
 </details>

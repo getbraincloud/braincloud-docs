@@ -7,7 +7,7 @@ This tutorial will walk you through the steps to configure Firebase Cloud Messag
 
 ### Prerequisites
 
--   Must have created an app on the [Firebase console](https://console.firebase.google.com/)
+-   Must have created an app on the [Firebase console](https://console.firebase.google.com/)
 
 ### Step1: Configure FCM cloud messaging server-key to brainCloud
 

@@ -108,11 +108,11 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "appServerUrl": "https://api.braincloudservers.com/...f434b1db538b/f/uploadsimplefile.txt",
         "cdnUrl": "https://d2b6zwnvr1nyug.cloudfront.net/bc/g/20001/u/107b3aa9-0d9f-4e90-af..."
-    }
+    },
+    "status": 200
 }
 ```
 

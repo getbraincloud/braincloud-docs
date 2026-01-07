@@ -200,7 +200,6 @@ if (result.statusCode == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "vcPurchased": 0,
         "experiencePoints": 100,
@@ -245,7 +244,8 @@ if (result.statusCode == 200) {
         "pictureUrl": null,
         "sessionId": "v3grtg3ve0a089pekk8lneuk8k",
         "amountSpent": 0
-    }
+    },
+    "status": 200
 }
 ```
 

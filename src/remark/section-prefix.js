@@ -1,7 +1,7 @@
-const visit = require('unist-util-visit');
-
 const plugin = (options) => {
     const transformer = async (ast) => {
+        // Dynamic import for ES modules (unist-util-visit v5 is ES module only)
+        const {visit} = await import('unist-util-visit');
         let number = 1;
         visit(ast, 'heading', (node) => {
             if (node.depth === 2 && node.children.length > 0) {

@@ -124,7 +124,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "status": 200,
   "data": {
     "entityId": "8469e360-0b24-4c87-xxxx-89fd0e3ee436",
     "version": 1,
@@ -136,7 +135,8 @@ if (postResult.status == 200) {
     "timeToLive": null,
     "createdAt": 1573532801958,
     "updatedAt": 1573532801958
-  }
+  },
+  "status": 200
 }
 ```
 </details>

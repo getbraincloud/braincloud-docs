@@ -151,7 +151,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-	"status": 200,
 	"data": {
 		"achievements": [{
 			"fbEnabled": false,
@@ -170,7 +169,8 @@ if (postResult.status == 200) {
 			"description": "Test description.",
 			"appleAchievementId": null
 		}]
-	}
+	},
+	"status": 200
 }
 ```
 </details>

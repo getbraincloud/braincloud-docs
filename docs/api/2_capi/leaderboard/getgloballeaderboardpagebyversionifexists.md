@@ -139,7 +139,7 @@ var versionId = -1;
 
 ```dart
 var  leaderboardId = "default";
-var  sortOrder = SortOrder.HIGH_TO_LOW;
+var  sortOrder = SortOrder.HIGH_TO_LOW;
 var  startIndex = 0;
 var  endIndex = 9;
 var  versionId = -1;
@@ -202,7 +202,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "leaderboard": [
             {
@@ -236,7 +235,8 @@ if (postResult.status == 200) {
         "moreAfter": true,
         "timeBeforeReset": 588182412,
         "server_time": 1395840957588
-    }
+    },
+    "status": 200
 }
 ```
 

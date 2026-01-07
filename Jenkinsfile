@@ -19,7 +19,7 @@ pipeline {
                 sed -i -e 's/__DOCSNAME__/brainCloud Docs (DEV)/g' docusaurus.config.js
                 sed -i -e 's/__DOCSURL__/docs-internal/g' docusaurus.config.js
                 sed -i -e 's/__APPID__/5T9F73JFG3/g' docusaurus.config.js
-                sed -i -e 's/__APIKEY__/6ba3774d7b707e915f0acb12fbfae506/g' docusaurus.config.js
+                sed -i -e 's/__APIKEY__/354bad2824c5323a9db6ca13b5f1cd9c/g' docusaurus.config.js
                 sed -i -e 's/__GTAGID__/G-4GX8EQHRZL/g' docusaurus.config.js
                 npm run build
                 '''
@@ -42,6 +42,29 @@ pipeline {
                 zip -r "bcdoc-${BUILD_ID}.zip" build
                 '''
             }
+        }
+        stage('Record Node Name') {
+            steps {
+                script {
+                    sh '''
+                    echo ${NODE_NAME} > upstream_node.txt
+                    '''
+                }
+                archiveArtifacts artifacts: 'upstream_node.txt', fingerprint: true
+                echo "this job ran on node: ${NODE_NAME}"
+            }
+        }
+    }
+
+    post {
+        success {
+            echo "Triggering index job with node: ${env.NODE_NAME}"
+
+            build job: 'node_bcdocs_develop_index',
+                  wait: false,
+                  parameters: [
+                      string(name: 'UPSTREAM_NODE', value: env.NODE_NAME)
+                  ]
         }
     }
 }

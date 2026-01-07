@@ -71,7 +71,7 @@ new CountDownTimer(10000, 1000) {
 ```
 #### Running update on a separate thread
 
-An alternative method is to call the update method on a separate thread. This has the advantage that the  UI will never hang if a callback takes a long time. The downside is that interactions with the UI of your app will need to be marshaled to the main application thread.
+An alternative method is to call the update method on a separate thread. This has the advantage that the  UI will never hang if a callback takes a long time. The downside is that interactions with the UI of your app will need to be marshaled to the main application thread.
 ```java
 // Set up the brainCloud callback handler.
 // Callbacks will execute on this thread.

@@ -108,7 +108,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "id": "55555:gl:<%= data.branding.productName %>Dev",
         "type": "gl",
@@ -118,7 +117,8 @@ if (postResult.status == 200) {
         "stats": {
             "messageCount": 25
         }
-    }
+    },
+    "status": 200
 }
 ```
 

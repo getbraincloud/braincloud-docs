@@ -9,7 +9,7 @@ brainCloud is not an e-commerce platform itself - but it integrates with the var
 
 ## Products
 
-brainCloud's monetization support centers around the purchase of products.  Products are the IAP purchases that a user may make in your app.  For example, in Clash of Clans, the products would be the bundles of coins, elixir, and gems that the user purchases for real money in the store -- not the Cannons and Archer Towers that can be purchased with those products.
+brainCloud's monetization support centers around the purchase of products.  Products are the IAP purchases that a user may make in your app.  For example, in Clash of Clans, the products would be the bundles of coins, elixir, and gems that the user purchases for real money in the store -- not the Cannons and Archer Towers that can be purchased with those products.
 
 Products are often associated with Virtual Currencies, which brainCloud also provides support for -- but they don't have to be.
 
@@ -17,20 +17,20 @@ Products are often associated with Virtual Currencies, which brainCloud also pro
 
 ## Pricing
 
-Products in brainCloud can have multiple price points (called Price Entries) - just like in a physical retail store.  The regular or default price is called the **List Price**, while the other prices are defined and available for use in **Promotional Sales**.
+Products in brainCloud can have multiple price points (called Price Entries) - just like in a physical retail store.  The regular or default price is called the **List Price**, while the other prices are defined and available for use in **Promotional Sales**.
 
-Price Entries are used to tie brainCloud Products to the product/pricing info of the Platform Stores (like the iOS App Store).
+Price Entries are used to tie brainCloud Products to the product/pricing info of the Platform Stores (like the iOS App Store).
 
 [![](images/brainCloud_Dashboard_prodPriceEdit.jpg)](images/brainCloud_Dashboard_prodPriceEdit.jpg)
 
 [![Price entry details in iTunes Connect](images/iTunes_Connect.png)](images/iTunes_Connect.png)
 
   
-Each AppStore works differently - in iOS, all price points must be defined ahead of time in iTunes Connect.  Google Play and Windows Store work this way too.  In Facebook and Steam, however, the product prices are controlled directly by brainCloud and provided to the store upon request.  Although the exact details vary by store - brainCloud allows you to manage the pricing of your products centrally across all platforms.
+Each AppStore works differently - in iOS, all price points must be defined ahead of time in iTunes Connect.  Google Play and Windows Store work this way too.  In Facebook and Steam, however, the product prices are controlled directly by brainCloud and provided to the store upon request.  Although the exact details vary by store - brainCloud allows you to manage the pricing of your products centrally across all platforms.
 
 ## Promotions
 
-Building upon Products and Pricing are the Promotions features - which allow you to present your users with "special offers" of preferred pricing of products, or even exclusive products that aren't normally available.
+Building upon Products and Pricing are the Promotions features - which allow you to present your users with "special offers" of preferred pricing of products, or even exclusive products that aren't normally available.
 
 brainCloud provides two forms of promotions:
 

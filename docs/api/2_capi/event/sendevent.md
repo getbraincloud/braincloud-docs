@@ -186,10 +186,10 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "evId": "1234-1234-1234-1234"
-    }
+    },
+    "status": 200
 }
 ```
 

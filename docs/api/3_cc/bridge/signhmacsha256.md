@@ -1,6 +1,6 @@
 # SignHMACSha256
 
-Given a piece of data and a shared secrect key, calculates an SHA-256 with HMAC signature for the data.
+Given a piece of data and a shared secrect key, calculates an SHA-256 with HMAC signature for the data. Encoded as a base64 string.
 
 ## Method Parameters
 Parameter | Description

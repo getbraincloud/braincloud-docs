@@ -166,11 +166,11 @@ if (postResult.status == 200) {
   "presence": [
    {
     "user": {
-     "id": <%= data.example.profileId %>,
+     "id": "7630f98e-1236-4ead-88ee-27ce63b2db2c",
      "name": "",
      "pic": null,
      "cxs": [
-      "22284:fb416888-e76d-425d-a06d-a5529bdba8d9:"
+      "22284:fb416888-e76d-425d-a06d-a5529bdba8d9:id58ohotujj893gomctos244al"
      ]
     },
     "online": true,

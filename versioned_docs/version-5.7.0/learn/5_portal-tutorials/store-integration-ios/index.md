@@ -9,14 +9,14 @@ Note that apps still have to make the purchase directly with iTunes. For more in
 
 ## Purchase Flow
 
-In general terms, the transaction flow of a purchase is as follows:
+In general terms, the transaction flow of a purchase is as follows:
 
 [![iTunes Purchase Sequence Diagram](images/iTunes-Purchase-Sequence-Diagram1.jpg)](images/iTunes-Purchase-Sequence-Diagram1.jpg)
 
 - The App requests the "itunes" product inventory from brainCloud which returns a list of products, their reference prices (as configured in the brainCloud portal) and their iTunes ids.
 - For the iTunes products returned from brainCloud, the App requests their real prices (in the user's currency) from iTunes.
 - The user selects an item to purchase
-- The App sends a request to iTunes to addPayment which brings up the iTunes purchase dialogs in your app. Eventually, a receipt is returned from iTunes assuming the user goes through with the purchase.
+- The App sends a request to iTunes to addPayment which brings up the iTunes purchase dialogs in your app. Eventually, a receipt is returned from iTunes assuming the user goes through with the purchase.
 - The App asks brainCloud to verify the iTunes receipt that was received from the iTunes store. Assuming this is a valid receipt, brainCloud will award any virtual currencies attached to this product.
 - The App finishes the transaction with iTunes to signify that the product has been awarded.
 
@@ -26,7 +26,7 @@ Here are the steps to configure brainCloud for iTunes purchases.
 
 ### Prerequisites
 
-- You should have set up your products in the brainCloud marketplace. Please refer to the [Marketplace Configuration](/learn/portal-tutorials/marketplace-configuration/) guide.
+- You should have set up your products in the brainCloud marketplace. Please refer to the [Marketplace Configuration](/learn/portal-tutorials/marketplace-configuration/) guide.
 - You should have created the iTunes In-App products per the Apple Developer documentation
 
 ### Associate iTunes Products with brainCloud Products
@@ -56,7 +56,7 @@ After setting up your products in the brainCloud marketplace, you'll want to ass
     
     [![2015-08-11_12-48-07](images/2015-08-11_12-48-07.png)](images/2015-08-11_12-48-07.png)
     
-- In the Edit Price dialog, click the + icon to add an entry for Apple  
+- In the Edit Price dialog, click the + icon to add an entry for Apple  
     
     [![2015-08-11_12-49-42](images/2015-08-11_12-49-42.png)](images/2015-08-11_12-49-42.png)
     
@@ -88,7 +88,7 @@ If you are using auto-renewable subscriptions, you will need to add your iTunes 
     [![2015-08-11_10-28-15](images/2015-08-11_10-28-151.png)](images/2015-08-11_10-28-151.png)
     
 - Log into the [brainCloud Portal](https://portal.braincloudservers.com/)
-- Go to the "Core App Info | Application IDs" page in the Design tab for your app  
+- Go to the "Core App Info | Application IDs" page in the Design tab for your app  
     
     [![2015-08-07_14-05-15](images/2015-08-07_14-05-15.png)](images/2015-08-07_14-05-15.png)
     

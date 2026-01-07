@@ -3,7 +3,7 @@ title: "brainCloud API"
 date: "2015-02-06"
 ---
 
-The brainCloud API is implemented as a REST-like protocol for communicating with the brainCloud servers.
+The brainCloud API is implemented as a REST-like protocol for communicating with the brainCloud servers.
 
 brainCloud provides libraries, written in a number of languages, that hide the details of the REST mechanism as well as organize the API into separate functional modules. The libraries can be [downloaded](/learn/client-libraries) from the brainCloud website.
 
@@ -50,5 +50,5 @@ Here is an example of a successful response:
 ```
 Success and failures:
 
-- The Status field indicates the overall success or failure of the operation - 200 is success
+- The Status field indicates the overall success or failure of the operation - 200 is success
 - Non-success (!= 200) return values will include a [reason code](/api/appendix/reasoncodes "Processing Exception Reason Codes") and message

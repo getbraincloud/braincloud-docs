@@ -131,7 +131,6 @@ var retVal = fileProxy.prepareUserUpload(cloudPath, cloudName, shareable, replac
 
 ```json
 {
-    "status":200,
     "data":{
         "fileDetails":{
             "updatedAt":1452616408147,
@@ -148,7 +147,8 @@ var retVal = fileProxy.prepareUserUpload(cloudPath, cloudName, shareable, replac
             "replaceIfExists":true,
             "cloudPath":"bc/g/99999/u/bf8a1433-62d2-448e-b396-f3dbffff44/f/dir1/dir2/filename"
         }
-    }
+    },
+    "status":200
 }
 ```
 </details>

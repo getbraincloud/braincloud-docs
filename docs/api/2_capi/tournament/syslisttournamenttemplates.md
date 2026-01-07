@@ -121,6 +121,7 @@ if (postResult.status == 200) {
           },
           "desc": {
             "en": ""
+          }
         },
         "notifications": {
           "startingSoon": {

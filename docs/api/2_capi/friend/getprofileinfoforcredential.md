@@ -157,7 +157,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "playerName": "",
         "email": null,
@@ -165,7 +164,8 @@ if (postResult.status == 200) {
         "summaryFriendData": {
             "LEVEL": 7
         }
-    }
+    },
+    "status": 200
 }
 ```
 

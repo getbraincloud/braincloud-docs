@@ -161,7 +161,6 @@ if ( milestonePage.status == 200 ) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "context": "eyJzZWFyY2hDcml0ZXa...",
         "results": {
@@ -220,7 +219,8 @@ if ( milestonePage.status == 200 ) {
             "moreAfter": false,
             "moreBefore": true
         }
-    }
+    },
+    "status": 200
 }
 ```
 

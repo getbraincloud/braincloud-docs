@@ -128,7 +128,7 @@ var afterCount = 4;
 
 ```dart
 var  leaderboardId = "default";
-var  sortOrder = SortOrder.HIGH_TO_LOW;
+var  sortOrder = SortOrder.HIGH_TO_LOW;
 var  beforeCount = 3;
 var  afterCount = 4;
 
@@ -189,7 +189,6 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
     "data": {
         "leaderboardId": "abc",
         "moreBefore": false,
@@ -229,7 +228,8 @@ if (postResult.status == 200) {
         ],
         "server_time": 1433864314004,
         "moreAfter": false
-    }
+    },
+    "status": 200
 }
 ```
 

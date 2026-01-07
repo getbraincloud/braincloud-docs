@@ -2,7 +2,7 @@
 
 Retrieves an HttpClientService proxy object.
 
-Documentation for the service methods can be found [here](/api/cc/httpclient).
+Documentation for the service methods can be found [here](/api/capi/httpclient).
 
 ## Method Parameters
 Parameter | Description
@@ -80,8 +80,8 @@ var proxy = bridge.getHttpClientServiceProxy();
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var proxy = bridge.getHttpClientServiceProxy();
+```r
+// Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block

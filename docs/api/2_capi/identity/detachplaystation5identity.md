@@ -105,8 +105,8 @@ const char * accountId = "somePlaystationNetworkId";
 
 ```json
 {
-    "status": 200,
-    "data": null
+    "data": null,
+    "status": 200
 }
 ```
 

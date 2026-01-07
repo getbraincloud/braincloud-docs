@@ -156,9 +156,9 @@ var  score = 10;
 var  data = {
     "nickname": "batman"
 };
-var  leaderboardType = SocialLeaderboardType.HIGH_VALUE;
-var  rotationType = RotationType.DAILY;
-var  rotationReset = Date.now().add(Duration(days: 1)).millisecondsSinceEpoch;
+var  leaderboardType = SocialLeaderboardType.HIGH_VALUE;
+var  rotationType = RotationType.DAILY;
+var  rotationReset = Date.now().add(Duration(days: 1)).millisecondsSinceEpoch;
 var  retainedCount = 2;
 
 ServerResponse result = await <%= data.branding.codePrefix %>.leaderboardService.postScoreToDynamicLeaderboardUTC(leaderboardId:leaderboardId, score:score, data:data, leaderboardType:leaderboardType, rotationType:rotationType, rotationReset:rotationReset, retainedCount:retainedCount);
@@ -228,8 +228,8 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status": 200,
-    "data": null
+    "data": null,
+    "status": 200
 }
 ```
 

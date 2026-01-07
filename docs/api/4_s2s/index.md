@@ -86,10 +86,10 @@ Notice the addition of the `packetId` sequence number and array/bundle of messag
     "packetId": 0,
     "messageResponses": [
         {
-            "status": 200,
             "data": {
                 "sessionId": "vrunikbkgmu3m9gkeqt78vvkb2"
-            }
+            },
+            "status": 200
         }
     ]
 }
@@ -128,10 +128,10 @@ Notice the incremented `packetId` and the `sessionId` returned in the previous r
     "packetId": 1,
     "messageResponses": [
         {
-            "status": 200,
             "data": {
                 "response": 10
-            }
+            },
+            "status": 200
         }
     ]
 }

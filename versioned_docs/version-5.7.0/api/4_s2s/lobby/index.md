@@ -20,7 +20,7 @@ For a full overview of the Lobby Service, see the [Lobby Service Client API](/ap
 -   [SysAddMemberWithPingData](/api/capi/lobby/sysaddmemberwithpingdata) - Adds the given member to the given lobby instance.
 -   [SysCreateLobby](/api/capi/lobby/syscreatelobby) - Creates an instance of a lobby. Will return the newly created lobby id in the event of a successful creation.
 -   [SysCreateLobbyWithPingData](/api/capi/lobby/syscreatelobbywithpingdata) - Creates an instance of a lobby. Will return the newly created lobby id in the event of a successful creation.
--   [SysGetLobbyData](/api/capi/lobby/sysgetlobbydata) - Gets data for the given lobby instance `<lobbyId>`.
+-   [SysGetLobbyData](/api/capi/lobby/sysgetlobbydata) - Gets data for the given lobby instance ``<lobbyId>``.
 -   [SysRemoveMember](/api/capi/lobby/sysremovemember) - Evicts the specified user from the specified lobby.
 -   [SysUpdateSettings](/api/capi/lobby/sysupdatesettings) - Updates the settings for the given lobby instance.
 
