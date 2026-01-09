@@ -162,6 +162,7 @@ if (postResult.status == 200) {
                 "requestingPendingMemberCount": 0,
                 "invitedPendingMemberCount": 0,
                 "ownerId": "b67b2d73-1e8c-42e9-9be5-9c1879a48555",
+                "version": 2,
                 "name": "test22",
                 "memberCount": 1
             }
