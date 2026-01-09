@@ -2,18 +2,31 @@
 
 Used to verify a purchase receipt for Apple AppStore, Google Play, Facebook or Windows. The contents passed into `receiptData` are store-specific. On success, the player will be awarded the associated currencies.
 
-### ReceiptData formats
+## ReceiptData formats
 
 ### Apple AppStore
 
 Use `"itunes"` as the `storeId`.
 
-iTunes `receiptData` format:
+#### StoreKit 2 receiptData format
 
+```json
+{
+    "transactionId": "TRANSACTION-ID",
+    "excludeOldTransactions": false
+}
 ```
+
+:::tip
+Note: This would be the TransactionID you receive in your App Store receipts, not to be confused with OriginalTransactionID.
+:::
+
+#### Legacy receipts `receiptData` format
+
+```json
 {
     "receipt": "ENCODED-RECEIPT-DATA",
-	"excludeOldTransactions": false
+    "excludeOldTransactions": false
 }
 ```
 
@@ -27,7 +40,7 @@ Ensure that the parameter `includeSubscriptionCheck` setting is set to `true` fo
 
 Google Play `receiptData` format:
 
-```
+```json
 {
     "productId" : "gems_pack_small",
     "orderId" : "GPA.0000-1111-2222-33333",
@@ -43,7 +56,7 @@ Use `"facebook"` as the `storeId`.
 
 Facebook `receiptData` format:
 
-```
+```json
 {
     "signedRequest": "string-of-signedRequest"
 }
@@ -55,12 +68,31 @@ Use `"amazon"` as the `storeId`.
 
 Amazon `receiptData` format:
 
-```
+```json
 {
     "receiptId": "a-receipt-id",
     "userId": "a-user-id"
 }
 ```
+
+### Meta Horizon Store
+
+Use `"metaHorizon"` as the `storeId`.
+
+Meta Horizon receiptData format:
+
+```json
+{
+    "userId": "META-USER-ID",
+    "sku": "PURCHASE-SKU",
+    "transactionId": "PURCHASE-TRANSACTION-ID",
+    "consumeOnVerify": true
+}
+```
+
+:::tip
+Note: `consumeOnVerify` will consume `CONSUMABLE` items server-side which we recommend to prevent accidental extra item consumptions from the user.
+:::
 
 ### Response fields
 
@@ -91,7 +123,7 @@ The key values of the return to evaluate include:
 
 | Parameter   | Description                                                                |
 | ----------- | -------------------------------------------------------------------------- |
-| storeId     | The store type - "itunes", "googlePlay", "amazon", "facebook" or "windows" |
+| storeId     | The store type - "itunes", "googlePlay", "amazon", "facebook", "metaHorizon" or "windows" |
 | receiptData | A JSON object with data in the format for the specified store              |
 
 ## Usage

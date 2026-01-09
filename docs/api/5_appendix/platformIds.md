@@ -45,12 +45,12 @@ Below are the Store Platform IDs. These values are used within the Product modul
 | Steam               | "steam"        |
 | Windows Store       | "windows"      |
 | Windows Phone       | "windowsPhone" |
+| Meta Horizon        | "metaHorizon"  |
 
 In addition, the following IDs are accepted by [SysRecordTransaction](/api/capi/appstore/sysrecordtransaction).
 
 | Store       | ID       |
 | ----------- | -------- |
-| Meta        | "meta"   |
 | Playstation | "psn"    |
 | Switch      | "switch" |
 | Xbox        | "xbox"   |
