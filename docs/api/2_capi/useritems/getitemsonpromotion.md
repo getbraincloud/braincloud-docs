@@ -1,5 +1,5 @@
 # GetItemsOnPromotion
-Returns list of promotional details for the specified item definition, for promotions available to the current user.
+Returns all catalog items for which the current user has an eligible promotion, with optional support to filter on a specific 'category'. For each item, the most recently started promotion is considered the 'winning' promotion, if more than one promotion is active at the same time with a promotional price for same item. Optionally include the catalog item definition for each item and the promotion details for all 'winning' promotions.
 
 <PartialServop service_name="userItems" operation_name="GET_ITEMS_ON_PROMOTION" />
 
@@ -9,6 +9,7 @@ Parameter | Description
 shopId | The id identifying the store the item is from, if applicable.
 includeDef | If true, the associated item definition info of the promotional items will be included in the response.
 includePromotionDetails | If true, the promotion details of the eligible promotions will be included in the response.
+optionsJson | Optional support for specifying additional options. Currently supporting option 'category' to include only catalog items configured with the specified category, if desired.
 
 ## Usage
 
@@ -22,6 +23,7 @@ includePromotionDetails | If true, the promotion details of the eligible promoti
 string shopId = "None";
 bool includeDef = True;
 bool includePromotionDetails = True;
+string optionsJson = "{\"category\": \"Equipment\"}";
 
 SuccessCallback successCallback = (response, cbObject) =>
 {
@@ -32,7 +34,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
     Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
 };
 
-<%= data.branding.codePrefix %>.UseritemsService.GetItemsOnPromotion(shopId, includeDef, includePromotionDetails, successCallback, failureCallback);
+<%= data.branding.codePrefix %>.UseritemsService.GetItemsOnPromotion(shopId, includeDef, includePromotionDetails, optionsJson, successCallback, failureCallback);
 ```
 
 ```mdx-code-block
@@ -44,7 +46,8 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 const char *shopId = "None";
 bool includeDef = True;
 bool includePromotionDetails = True;
-<%= data.branding.codePrefix %>.getUseritemsService().getItemsOnPromotion(shopId, includeDef, includePromotionDetails, this);
+const char *optionsJson = "{\"category\": \"Equipment\"}";
+<%= data.branding.codePrefix %>.getUseritemsService().getItemsOnPromotion(shopId, includeDef, includePromotionDetails, optionsJson, this);
 ```
 
 ```mdx-code-block
@@ -56,12 +59,14 @@ bool includePromotionDetails = True;
 NSString *shopId = @"None";
 BOOL includeDef = True;
 BOOL includePromotionDetails = True;
+NSString *optionsJson = @"{\"category\": \"Equipment\"}";
 BCCompletionBlock successBlock; // define callback
 BCErrorCompletionBlock failureBlock; // define callback
 [[<%= data.branding.codePrefix %> userItemsService] getItemsOnPromotion:
                        shopId:shopId
                    includeDef:includeDef
       includePromotionDetails:includePromotionDetails
+                  optionsJson:optionsJson
               completionBlock:successBlock
          errorCompletionBlock:failureBlock
                      cbObject:nil]
@@ -76,8 +81,9 @@ BCErrorCompletionBlock failureBlock; // define callback
 String shopId = "None";
 bool includeDef = True;
 bool includePromotionDetails = True;
+String optionsJson = "{\"category\": \"Equipment\"}";
 this; // implements IServerCallback
-<%= data.branding.codePrefix %>.getUseritemsService.getItemsOnPromotion(shopId, includeDef, includePromotionDetails, this);
+<%= data.branding.codePrefix %>.getUseritemsService.getItemsOnPromotion(shopId, includeDef, includePromotionDetails, optionsJson, this);
 
 public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
 {
@@ -98,7 +104,10 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 var shopId = "None";
 var includeDef = True;
 var includePromotionDetails = True;
-<%= data.branding.codePrefix %>.userItems.getItemsOnPromotion(shopId, includeDef, includePromotionDetails, result =>
+var optionsJson = {
+    "category": "Equipment"
+};
+<%= data.branding.codePrefix %>.userItems.getItemsOnPromotion(shopId, includeDef, includePromotionDetails, optionsJson, result =>
 {
   var status = result.status;
   console.log(status + " : " + JSON.stringify(result, null, 2));
@@ -114,7 +123,10 @@ var includePromotionDetails = True;
 var shopId = "None";
 var includeDef = True;
 var includePromotionDetails = True;
-ServerResponse result = await <%= data.branding.codePrefix %>.userItemsService.getItemsOnPromotion(shopId:shopId, includeDef:includeDef, includePromotionDetails:includePromotionDetails);
+var optionsJson = {
+    "category": "Equipment"
+};
+ServerResponse result = await <%= data.branding.codePrefix %>.userItemsService.getItemsOnPromotion(shopId:shopId, includeDef:includeDef, includePromotionDetails:includePromotionDetails, optionsJson:optionsJson);
 
 if (result.statusCode == 200) {
     print("Success");    
@@ -132,9 +144,12 @@ if (result.statusCode == 200) {
 var shopId = "None";
 var includeDef = True;
 var includePromotionDetails = True;
+var optionsJson = {
+    "category": "Equipment"
+};
 var userItemsProxy = bridge.getUseritemsServiceProxy();
 
-var postResult = userItemsProxy.getItemsOnPromotion(shopId, includeDef, includePromotionDetails);
+var postResult = userItemsProxy.getItemsOnPromotion(shopId, includeDef, includePromotionDetails, optionsJson);
 ```
 
 ```mdx-code-block
@@ -149,7 +164,10 @@ var postResult = userItemsProxy.getItemsOnPromotion(shopId, includeDef, includeP
     "data":{
         "shopId":null,
         "includeDef":true,
-        "includePromotionDetails":true
+        "includePromotionDetails":true,
+        "optionsJson":{
+            "category":"Equipment"
+        }
     }
 }
 ```
@@ -159,6 +177,7 @@ var postResult = userItemsProxy.getItemsOnPromotion(shopId, includeDef, includeP
 </Tabs>
 </BrowserWindow>
 ```
+
 <details>
 <summary>JSON Response</summary>
 
