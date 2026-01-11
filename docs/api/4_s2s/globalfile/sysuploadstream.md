@@ -113,13 +113,13 @@ var postResult = globalFileV3Proxy.sysUploadStream(treeId, filename, overwriteIf
 {
   "fileDetails": {
     "contentMd5": "\"83252e036cd096de9198039e3d19a121\"",
-    "treeId": "_root_",
+    "treeId": "b6fb0efe-2d15-4a25-b43b-72684d7c788f",
     "fileName": "cloudfilename.txt",
     "fileSize": 36,
     "dateUploaded": 1768152547000,
     "etag": "\"83252e036cd096de9198039e3d19a121\"",
     "version": 1,
-    "url": "https://api.internal.braincloudservers.com/files/bc/g/23782/f/_root_/559a430c-078e-4107-9e37-2a74ba2c2fa5/V1/cloudfilename.txt",
+    "url": "https://api.braincloudservers.com/files/bc/g/23782/f/b6fb0efe-2d15-4a25-b43b-72684d7c788f/559a430c-078e-4107-9e37-2a74ba2c2fa5/V1/cloudfilename.txt",
     "fileId": "559a430c-078e-4107-9e37-2a74ba2c2fa5"
   }
 }
