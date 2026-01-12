@@ -143,14 +143,16 @@ if (postResult.status == 200) {
         "invited": [],
         "groups": [
             {
-                "groupType": "test",
-                "groupId": "89044e44-e66c-479d-bb7c-a5c1af177728",
-                "isOpenGroup": false,
-                "requestingPendingMemberCount": 0,
-                "invitedPendingMemberCount": 0,
-                "ownerId": "b67b2d73-1e8c-42e9-9be5-9c1879a48555",
+                "groupType": "group1",
+                "groupId": "55e701b7-6230-4536-9dfb-47f74524a09e",
+                "memberCount": 2,
                 "name": "myGroupName",
-                "memberCount": 1
+                "invitedPendingMemberCount": 0,
+                "requestingPendingMemberCount": 0,
+                "ownerId": "d6c6c182-1e10-48c8-8484-f1e6b1b8c519",
+                "version": 2,
+                "summaryData": {},
+                "isOpenGroup": true
             }
         ]
     }
