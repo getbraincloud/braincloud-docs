@@ -215,6 +215,7 @@ if (postResult.status == 200) {
                     "invitedPendingMemberCount": 0,
                     "requestingPendingMemberCount": 0,
                     "ownerId": "8bd564a7-3f91-4a98-a4b3-43cd7d266133",
+                    "version": 2,
                     "summaryData": {},
                     "isOpenGroup": true
                 }

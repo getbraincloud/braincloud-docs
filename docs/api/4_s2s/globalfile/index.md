@@ -1,10 +1,5 @@
 # Global File
 
-
-
-
-
-
 The new Global File API is used to access V3 of our Global Files Service. The V3 API brings new features to global files:
 
 * Ability to organize files into sub-directories
@@ -20,7 +15,7 @@ Important notes:
 To access the files uploaded into the [Custom Config | Files](https://portal.braincloudservers.com/admin/dashboard#/development/files) section of the portal, you need to use the legacy [S3 Handling](/api/capi/s3handling) service. 
 
 
-### API Summary
+## API Summary
 
 ### System File Retrieval APIs
 
@@ -40,6 +35,8 @@ To access the files uploaded into the [Custom Config | Files](https://portal.bra
 * [SysMoveGlobalFile()](/api/s2s/globalfile/sysmoveglobalfile) - move (or rename) a file 
 * [SysDeleteGlobalFile()](/api/s2s/globalfile/sysdeleteglobalfile) - delete a file
 * [SysDeleteGlobalFiles()](/api/s2s/globalfile/sysdeleteglobalfiles) - delete the contents of a directory
+* [SysPrepareUpload](/api/s2s/globalfile/sysprepareupload) - prepare for the uploading of a global file
+* [SysUploadStream](/api/s2s/globalfile/sysuploadstream) - upload a global file directly
 
 ### Folder Management ###
 
@@ -48,13 +45,5 @@ To access the files uploaded into the [Custom Config | Files](https://portal.bra
 * [SysMoveFolder](/api/s2s/globalfile/sysmovefolder) - move a folder
 * [SysRenameFolder](/api/s2s/globalfile/sysrenamefolder) - rename a folder
 * [SysDeleteFolder](/api/s2s/globalfile/sysdeletefolder) - delete a folder
-
-
-
-
-
-
-
-
 
 <DocCardList />

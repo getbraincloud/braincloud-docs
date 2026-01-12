@@ -123,6 +123,7 @@ if (postResult.status == 200) {
                     "requestingPendingMemberCount": 0,
                     "invitedPendingMemberCount": 0,
                     "ownerId": "29696ee1-82f6-4d6e-86de-b68c3a5c347e",
+                    "version": 2,
                     "name": "test",
                     "memberCount": 1
                 }
