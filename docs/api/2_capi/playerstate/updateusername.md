@@ -28,7 +28,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
     Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
 };
 
-<%= data.branding.codePrefix %>.PlayerStateService.UpdateUserName(userName, successCallback, failureCallback);
+<%= data.branding.codePrefix %>.PlayerStateService.UpdateName(userName, successCallback, failureCallback);
 ```
 
 ```mdx-code-block
