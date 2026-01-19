@@ -25,7 +25,6 @@ The Client API is organized into the following services:
 -   [Group](/api/capi/group)
 -   [Group File](/api/capi/groupfile)
 -   [HTTP Client](/api/capi/httpclient)
--   [Item](/api/capi/item)
 -   [Identity](/api/capi/identity)
 -   [Item Catalog](/api/capi/itemcatalog)
 -   [Leaderboard](/api/capi/leaderboard)
