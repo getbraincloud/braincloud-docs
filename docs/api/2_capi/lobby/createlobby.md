@@ -16,11 +16,13 @@ Parameter | Description
 --------- | -----------
 lobbyType | The type of lobby to look for. Lobby types are defined in the portal.
 rating | The skill rating to use for finding the lobby. Provided as a separate parameter because it may not exactly match the user's rating (especially in cases where parties are involved).
-otherUserCxIds | Array of other users (i.e. party members) to add to the lobby as well. Will constrain things so that only lobbies with room for all players will be considered.
-settings | Owner settings for this lobby.
 isReady | Initial ready-status of this user.
 extraJson | Initial extra-data about this user.
 teamCode | Preferred team for this user, if applicable. Send `""` or `null` for automatic assignment.
+settings | Owner settings for this lobby.
+otherUserCxIds | Array of other users (i.e. party members) to add to the lobby as well. Will constrain things so that only lobbies with room for all players will be considered.
+
+
 
 ## Usage
 
@@ -33,11 +35,11 @@ teamCode | Preferred team for this user, if applicable. Send `""` or `null` for 
 ```csharp
 string lobbyType = "4v4";
 int rating = 76;
-string[] otherUserCxIds = { "55555:aaa-bbb-ccc-ddd:asdfjkl" };
-string settings = "{}";
 bool isReady = false;
 string extraJson = "{}";
 string teamCode = "blue";
+string settings = "{}";
+string[] otherUserCxIds = { "55555:aaa-bbb-ccc-ddd:asdfjkl" };
 SuccessCallback successCallback = (response, cbObject) =>
 {
     Debug.Log(string.Format("Success | {0}", response));
@@ -47,7 +49,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
     Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
 };
 
-<%= data.branding.codePrefix %>.LobbyService.CreateLobby(lobbyType, rating, otherUserCxIds, settings, isReady, extraJson, teamCode, successCallback, failureCallback);
+<%= data.branding.codePrefix %>.LobbyService.CreateLobby(lobbyType, rating, isReady, extraJson, teamCode, settings, otherUserCxIds, successCallback, failureCallback);
 ```
 
 ```mdx-code-block
