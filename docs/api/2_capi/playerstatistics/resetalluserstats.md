@@ -149,10 +149,10 @@ if (postResult.status == 200) {
 		"playerAchievements": [],
 		"experienceLevel": 0,
 		"statistics": {
-			"RoundsWon": 0,
-			"RoundsLost": 0,
-			"DifficultyChanges": 0,
-			"RoundsFinished": 0
+			"cus_RoundsWon": 0,
+			"cus_RoundsLost": 0,
+			"cus_DifficultyChanges": 0,
+			"cus_RoundsFinished": 0
 		}
 	},
 	"status": 200

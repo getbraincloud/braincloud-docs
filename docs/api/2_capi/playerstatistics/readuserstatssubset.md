@@ -155,7 +155,7 @@ if (postResult.status == 200) {
 {
     "data": {
         "statistics": {
-            "LIVES": 7
+            "cus_LIVES": 7
         }
     },
     "status": 200

@@ -173,7 +173,7 @@ if (postResult.status == 200) {
     "pendingMembers": {},
     "version": 5,
     "data": {
-      "indexedId": "groupblue"
+      "cus_indexedId": "groupblue"
     },
     "summaryData": {},
     "isOpenGroup": true,
