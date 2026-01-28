@@ -150,11 +150,11 @@ var postResult = appStoreProxy.sysRecordTransaction(profileId, storeId, itemId, 
             }
         },
         "extra": {
-            "customAttr": "value"
+            "cus_customAttr": "value"
         },
         "rewards": {
             "extra": {
-                "customAttr": "value"
+                "cus_customAttr": "value"
             },
             "currency": {
                 "cus_bar": 10
