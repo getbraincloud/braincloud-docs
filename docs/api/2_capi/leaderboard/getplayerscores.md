@@ -176,7 +176,7 @@ if (postResult.status == 200) {
       {
         "score": 10101,
         "data": {
-          "nickname": "batman"
+          "cus_nickname": "batman"
         },
         "createdAt": 1613678944374,
         "updatedAt": 1613678944374
@@ -184,7 +184,7 @@ if (postResult.status == 200) {
       {
         "score": 101,
         "data": {
-          "nickname": "batman"
+          "cus_nickname": "batman"
         },
         "createdAt": 1613678939147,
         "updatedAt": 1613678939147
@@ -192,7 +192,7 @@ if (postResult.status == 200) {
       {
         "score": 10,
         "data": {
-          "nickname": "batman"
+          "cus_nickname": "batman"
         },
         "createdAt": 1613678933679,
         "updatedAt": 1613678933679

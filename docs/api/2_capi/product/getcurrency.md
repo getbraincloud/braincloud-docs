@@ -156,7 +156,7 @@ if (postResult.status == 200) {
         },
         "parentCurrency": {
             "Master": {
-                "credits": {
+                "cus_credits": {
                     "purchased": 0,
                     "balance": 12212,
                     "consumed": 133,

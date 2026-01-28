@@ -202,7 +202,7 @@ if (postResult.status == 200) {
                 "playerId": "8c86f306-73ea-4536-9c92-aba086064d2c",
                 "score": 10,
                 "data": {
-                    "nickname": "batman"
+                    "cus_nickname": "batman"
                 },
                 "createdAt": 1433863814394,
                 "updatedAt": 1433863814394,
@@ -219,7 +219,7 @@ if (postResult.status == 200) {
                 "playerId": "ab21c0af-9d3e-4a81-b3c8-ddc1fb77d9a1",
                 "score": 8,
                 "data": {
-                    "nickname": "robin"
+                    "cus_nickname": "robin"
                 },
                 "createdAt": 1433864253221,
                 "updatedAt": 1433864253221,

@@ -114,7 +114,7 @@ if (postResult.status == 200) {
    "data":{
       "createdAt":1507311971256,
       "currencyMap":{
-         "credits":{
+         "cus_credits":{
             "consumed":20,
             "balance":180,
             "purchased":0,

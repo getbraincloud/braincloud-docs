@@ -166,9 +166,9 @@ if (postResult.status == 200) {
         "entityType": "PlayerData",
         "version": 1,
         "data": {
-            "ACCOUNT_CREATION_TIME": 1353011574029,
-            "ALL_TIME_SCORE": 1090560,
-            "FIRST_PLAY_TIME": 1372781536842
+            "cus_ACCOUNT_CREATION_TIME": 1353011574029,
+            "cus_ALL_TIME_SCORE": 1090560,
+            "cus_FIRST_PLAY_TIME": 1372781536842
         },
         "acl": {
             "other": 1

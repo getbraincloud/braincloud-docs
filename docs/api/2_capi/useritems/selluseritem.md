@@ -194,12 +194,12 @@ if (postResult.status == 200) {
   "data": {
     "item": {},
     "currencyRefunded": {
-      "coins": 400
+      "cus_coins": 400
     },
     "currencyBalances": {
       "createdAt": 1566850026783,
       "currencyMap": {
-        "coins": {
+        "cus_coins": {
           "consumed": 200,
           "balance": 3000200,
           "purchased": 0,

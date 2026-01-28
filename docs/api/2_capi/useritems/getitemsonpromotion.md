@@ -195,7 +195,7 @@ var postResult = userItemsProxy.getItemsOnPromotion(shopId, includeDef, includeP
           "recoverySecs": 0,
           "statusName": null,
           "buyPrice": {
-            "bar": 88
+            "cus_bar": 88
           },
           "image": null,
           "stackable": true,
@@ -228,7 +228,7 @@ var postResult = userItemsProxy.getItemsOnPromotion(shopId, includeDef, includeP
         "promotionPrices": [
           {
             "promotionPrice": {
-              "bar": 44
+              "cus_bar": 44
             },
             "name": "test",
             "type": "AUTOMATED",

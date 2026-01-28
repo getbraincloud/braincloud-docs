@@ -210,7 +210,7 @@ if (postResult.status == 200) {
 {
     "data": {
         "statistics": {
-            "TestStat": 162
+            "cus_TestStat": 162
         }
     },
     "status": 200

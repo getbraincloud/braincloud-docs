@@ -151,10 +151,10 @@ if (postResult.status == 200) {
 				"pointy"
 			],
 			"buyPrice": {
-				"coins": 200
+				"cus_coins": 200
 			},
 			"sellPrice": {
-				"coins": 150
+				"cus_coins": 150
 			},
 			"image": "//xxx.jpg",
 			"resourceGroup": "equipment.asset",
@@ -211,10 +211,10 @@ if (postResult.status == 200) {
       "pointy"
     ],
     "buyPrice": {
-      "coins": 200
+      "cus_coins": 200
     },
     "sellPrice": {
-      "coins": 150
+      "cus_coins": 150
     },
     "image": "//xxx.jpg",
     "resourceGroup": "equipment.asset",

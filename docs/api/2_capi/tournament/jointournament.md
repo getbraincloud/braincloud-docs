@@ -175,13 +175,13 @@ if (postResult.status == 200) {
 	"data": {
 		"balance": {
 			"currency": {
-				"test": {
+				"cus_test": {
 					"purchased": 0,
 					"balance": 0,
 					"consumed": 0,
 					"awarded": 0
 				},
-				"credits": {
+				"cus_credits": {
 					"purchased": 0,
 					"balance": 2434,
 					"consumed": 0,

@@ -218,7 +218,7 @@ if (postResult.status == 200) {
                     "authenticationType": null,
                     "score": 10,
                     "data": {
-                        "nickname": "batman"
+                        "cus_nickname": "batman"
                     },
                     "createdAt": 1445952060607,
                     "updatedAt": 1445952060607,

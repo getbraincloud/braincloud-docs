@@ -179,7 +179,7 @@ if (postResult.status == 200) {
             }
         ],
         "currency": {
-            "coin": {
+            "cus_coin": {
                 "purchased": 9975000,
                 "balance": 9968735,
                 "consumed": 43500,

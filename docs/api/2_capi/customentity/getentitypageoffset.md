@@ -189,8 +189,8 @@ if (postResult.status == 200) {
           "createdAt": 1573534287525,
           "updatedAt": 1573534287525,
           "data": {
-            "level1": "complete",
-            "level2": "incomplete"
+            "cus_level1": "complete",
+            "cus_level2": "incomplete"
           }
         }
       ]

@@ -216,8 +216,8 @@ if (postResult.status == 200) {
                 "entityType": "publicInfo",
                 "version": 1,
                 "data": {
-                    "name": "john",
-                    "age": 30
+                    "cus_name": "john",
+                    "cus_age": 30
                 },
                 "acl": {
                     "other": 1

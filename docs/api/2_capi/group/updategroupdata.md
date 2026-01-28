@@ -170,7 +170,7 @@ if (postResult.status == 200) {
 		"groupId": "a-group-id",
 		"version": 3,
 		"data": {
-            "indexedId": "a-group-index"
+            "cus_indexedId": "a-group-index"
         }
 	}
 }

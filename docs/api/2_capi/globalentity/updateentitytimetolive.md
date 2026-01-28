@@ -184,7 +184,7 @@ if (postResult.status == 200) {
         "entityIndexedId": "indexTest",
         "version": 1,
         "data": {
-            "testData": 1234
+            "cus_testData": 1234
         },
         "acl": {
             "other": 1

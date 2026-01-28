@@ -226,7 +226,7 @@ if (postResult.status == 200) {
             "reward": {
               "experiencePoints": 10,
               "currency": {
-                "coins": 100
+                "cus_coins": 100
               }
             }
           },
@@ -237,7 +237,7 @@ if (postResult.status == 200) {
             "reward": {
               "experiencePoints": 5,
               "currency": {
-                "coins": 50
+                "cus_coins": 50
               }
             }
           },
@@ -248,7 +248,7 @@ if (postResult.status == 200) {
             "reward": {
               "experiencePoints": 1,
               "currency": {
-                "coins": 5
+                "cus_coins": 5
               }
             }
           }

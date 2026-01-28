@@ -172,11 +172,11 @@ if (postResult.status == 200) {
           "createdAt": 1573540122600,
           "updatedAt": 1573540445332,
           "data": {
-            "firstName": "Super",
-            "surName": "Star",
-            "position": "defense",
-            "goals": 3,
-            "assists": 5
+            "cus_firstName": "Super",
+            "cus_surName": "Star",
+            "cus_position": "defense",
+            "cus_goals": 3,
+            "cus_assists": 5
           }
         }
       ],

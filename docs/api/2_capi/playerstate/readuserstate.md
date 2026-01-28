@@ -144,7 +144,7 @@ if (postResult.status == 200) {
 		"server_time": 1484932358724,
 		"experienceLevel": 0,
 		"currency": {
-			"credits": {
+			"cus_credits": {
 				"purchased": 0,
 				"balance": 12212,
 				"consumed": 133,
@@ -152,8 +152,8 @@ if (postResult.status == 200) {
 			}
 		},
 		"statistics": {
-			"TestStat": 0,
-			"TestStat2": 0
+			"cus_TestStat": 0,
+			"cus_TestStat2": 0
 		},
 		"abTestingId": 8,
 		"id": "323ce861-b749-4ce4-a57a-175232e21b5d",

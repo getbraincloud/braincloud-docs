@@ -106,14 +106,14 @@ var postResult = virtualCurrencyProxy.RevokeCurrency(vcId, vcAmount);
 {
   "data": {
     "currencyMap": {
-      "bar": {
+      "cus_bar": {
         "consumed": 0,
         "balance": 32,
         "purchased": 0,
         "awarded": 32,
         "revoked": 0
       },
-      "coins": {
+      "cus_coins": {
         "consumed": 0,
         "balance": 101,
         "purchased": 0,

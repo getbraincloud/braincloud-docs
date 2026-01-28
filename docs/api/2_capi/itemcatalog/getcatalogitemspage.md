@@ -215,10 +215,10 @@ if (postResult.status == 200) {
             "medal"
           ],
           "buyPrice": {
-            "coins": 2000
+            "cus_coins": 2000
           },
           "sellPrice": {
-            "coins": 200
+            "cus_coins": 200
           },
           "image": "https://api.braincloudservers.com/files/portal/g/23403/metadata/itemDefinitions/medal_bronze_1.png",
           "resourceGroup": null,

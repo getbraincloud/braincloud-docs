@@ -209,7 +209,7 @@ if (postResult.status == 200) {
 			"entityType": "address",
 			"version": 1,
 			"data": {
-				"street": "123 Ave"
+				"cus_street": "123 Ave"
 			},
 			"acl": {
 				"other": 1

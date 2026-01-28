@@ -229,10 +229,10 @@ if (postResult.status == 200) {
         "category": "boost",
         "tags": null,
         "buyPrice": {
-          "coins": 200
+          "cus_coins": 200
         },
         "sellPrice": {
-          "coins": 400
+          "cus_coins": 400
         },
         "image": null,
         "resourceGroup": null,

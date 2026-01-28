@@ -136,8 +136,8 @@ if (postResult.status == 200) {
     "createdAt": 1586047449214,
     "updatedAt": 1591290232477,
     "data": {
-        "goals": 3, 
-        "assists": 5 
+      "cus_goals": 3, 
+      "cus_assists": 5 
     },
     "entityType": "athletes"
   },

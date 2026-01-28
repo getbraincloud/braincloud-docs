@@ -195,8 +195,8 @@ var postResult = userItemsProxy.openBundle(itemId, version, quantity, includeDef
   "data": {
     "quantity": 1,
     "itemsNotAwarded": {
-      "s001": 6,
-      "sword001": 8
+      "cus_s001": 6,
+      "cus_sword001": 8
     },
     "itemDef": {
       "defId": "s001b",
@@ -222,11 +222,11 @@ var postResult = userItemsProxy.openBundle(itemId, version, quantity, includeDef
       "blockchain": false,
       "autoOpen": false,
       "items": {
-        "s001": {
+        "cus_s001": {
           "defId": "s001",
           "quantity": 1
         },
-        "sword001": {
+        "cus_sword001": {
           "defId": "sword001",
           "quantity": 1
         }

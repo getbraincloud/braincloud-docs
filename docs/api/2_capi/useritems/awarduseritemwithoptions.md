@@ -214,10 +214,10 @@ var postResult = userItemsProxy.awardUserItemWithOptions(defId, quantity, includ
           ],
           "buyPriceDisabled": false,
           "buyPrice": {
-            "coins": 200
+            "cus_coins": 200
           },
           "sellPrice": {
-            "coins": 200
+            "cus_coins": 200
           },
           "image": null,
           "resourceGroup": "equipment.asset",

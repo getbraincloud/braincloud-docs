@@ -136,7 +136,7 @@ if (postResult.status == 200) {
         "rewards": {
             "extra": null,
             "currency": {
-                "coins": 10
+                "cus_coins": 10
             }
         },
         "userItemRewards": null,

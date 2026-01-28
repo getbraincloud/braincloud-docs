@@ -170,7 +170,7 @@ if (postResult.status == 200) {
         "defaultPriceId": -1,
         "prices": [],
         "data": {
-            "customAttr": "value"
+            "cus_customAttr": "value"
         },
         "createdAt": 1592594992376,
         "updatedAt": 1592594992376,

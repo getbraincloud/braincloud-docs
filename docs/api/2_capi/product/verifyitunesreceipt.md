@@ -142,7 +142,7 @@ if (postResult.status == 200) {
         "playerCurrency": {
             "updatedAt": 1473060489422,
             "currencyMap": {
-                "Coin": {
+                "cus_Coin": {
                     "purchased": 0,
                     "balance": 1000,
                     "consumed": 0,

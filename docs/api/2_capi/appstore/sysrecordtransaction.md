@@ -142,7 +142,7 @@ var postResult = appStoreProxy.sysRecordTransaction(profileId, storeId, itemId, 
 {
     "data": {
         "userItemRewards": {
-            "sword001": {
+            "cus_sword001": {
                 "fac9e483-c958-46b9-a478-06c97a85e74a": {
                     "itemId": "fac9e483-c958-46b9-a478-06c97a85e74a",
                     "quantity": 1
@@ -157,10 +157,10 @@ var postResult = appStoreProxy.sysRecordTransaction(profileId, storeId, itemId, 
                 "customAttr": "value"
             },
             "currency": {
-                "bar": 10
+                "cus_bar": 10
             },
             "items": {
-                "sword001": {
+                "cus_sword001": {
                     "defId": "sword001",
                     "quantity": 1
                 }
@@ -168,14 +168,14 @@ var postResult = appStoreProxy.sysRecordTransaction(profileId, storeId, itemId, 
         },
         "currencies": {
             "currency": {
-                "bar": {
+                "cus_bar": {
                     "consumed": 0,
                     "balance": 30,
                     "purchased": 10,
                     "awarded": 20,
                     "revoked": 0
                 },
-                "coins": {
+                "cus_coins": {
                     "consumed": 0,
                     "balance": 24,
                     "purchased": 0,
