@@ -7,7 +7,6 @@ User Stats must be pre-defined from the [Statistics Rules - User Statistics page
 
 ### API Summary
 
-* [SysResetExperiencePointsAndLevel](/api/capi/playerstatistics/sysresetexperiencepointsandlevel) - System call (cloud code only if from client) to reset the experience points for the session user to a given value. The user's experienceLevel will remain unchanged unless recalculateXPLevel is true, in which case the user's experienceLevel will also be reset to the applicable level (to be used with caution). If the XP points value to be reset is HIGHER than the user's current experiencePoints, an error is returned unless skipResetIfUserXPPointsAlreadyLower is true.
 * [SysResetExperiencePointsAndLevelForUser](/api/capi/playerstatistics/sysresetexperiencepointsandlevelforuser) - System call (cloud code only from client) to reset the experience points for the specified user to a given value. The user's experienceLevel will remain unchanged unless recalculateXPLevel is true, in which case the user's experienceLevel will also be reset to the applicable level (to be used with caution). If the XP points value to be reset is HIGHER than the user's current experiencePoints, an error is returned unless skipResetIfUserXPPointsAlreadyLower is true.
 
 :::tip
