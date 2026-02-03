@@ -11,7 +11,7 @@ The brainCloud backend performs server-to-server verification directly with Appl
 
 When `bc.AppStore.VerifyPurchase(receipt)` is invoked, brainCloud executes the following operations:
 
-1. Extracts StoreKit 2 JWS (JSON Web Signature) from receipt data
+1. Extracts StoreKit 2 JWS (JSON Web Signature)
 2. Validates Apple's cryptographic signature
 3. Authenticates transaction integrity
 4. Confirms environment context (Sandbox vs. Production)
@@ -33,6 +33,6 @@ The backend becomes the single source of truth for user entitlements, managing c
 
 ## Implementation
 
-For detailed integration steps, refer to the official documentation:
+For detailed integration steps, refer to the documentation:
 [`Store Integration - iOS`](https://help.getbraincloud.com/en/articles/13586894-store-integration-ios)
 
