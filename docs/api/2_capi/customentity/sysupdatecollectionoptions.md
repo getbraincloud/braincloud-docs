@@ -123,10 +123,10 @@ if (postResult.status == 200) {
       "migrate": true,
       "identifier": "playerName",
       "dataTemplateJson": {
-        "cus_playerName": "Randy Traywick",
-        "cus_playerId": 123456,
-        "cus_teamName": "Super Stars",
-        "cus_jerseyNum": 44
+        "playerName": "Randy Traywick",
+        "playerId": 123456,
+        "teamName": "Super Stars",
+        "jerseyNum": 44
       },
       "dataTemplateText": "**Important** notes go here..."
     },
