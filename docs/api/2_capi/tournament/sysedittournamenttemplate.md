@@ -331,18 +331,18 @@ if (postResult.status == 200) {
         "reward": {
           "experiencePoints": 5,
           "currency": {
-            \"cus_coins\": 50
+            "cus_coins": 50
           }
         }
       },
       {
-        \"rank\": {
-          \"rankToPercent\": 10
+        "rank": {
+          "rankToPercent": 10
         },
-        \"reward\": {
-          \"experiencePoints\": 1,
-          \"currency\": {
-            \"cus_coins\": 5
+        "reward": {
+          "experiencePoints": 1,
+          "currency": {
+            "cus_coins": 5
           }
         }
       }
