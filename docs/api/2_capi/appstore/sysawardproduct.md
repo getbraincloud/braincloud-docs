@@ -118,7 +118,7 @@ var postResult = appStoreProxy.sysAwardProduct(itemId, quantity);
             }
         },
         "extra": {
-            "cus_customAttr": "value"
+            "customAttr": "value"
         },
         "currency": {
             "cus_bar": {
@@ -139,7 +139,7 @@ var postResult = appStoreProxy.sysAwardProduct(itemId, quantity);
         "serverTime": 1739486770269,
         "rewards": {
             "extra": {
-                "cus_customAttr": "value"
+                "customAttr": "value"
             },
             "currency": {
                 "cus_bar": 10

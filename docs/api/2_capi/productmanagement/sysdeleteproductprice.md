@@ -199,7 +199,7 @@ if (postResult.status == 200) {
       }
     ],
     "data": {
-      "cus_customAttr": "value"
+      "customAttr": "value"
     },
     "createdAt": 1592928409270,
     "updatedAt": 1592930578072,

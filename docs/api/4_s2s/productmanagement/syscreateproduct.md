@@ -91,7 +91,7 @@ var productJson = {
       }
   },
   "data": {
-    "cus_customAttr": "value"
+    "customAttr": "value"
   }
 };
 var productManagementProxy = bridge.getProductManagementServiceProxy();
@@ -131,7 +131,7 @@ if (postResult.status == 200) {
           }
       },
       "data": {
-        "cus_customAttr": "value"
+        "customAttr": "value"
       }
     }
   }

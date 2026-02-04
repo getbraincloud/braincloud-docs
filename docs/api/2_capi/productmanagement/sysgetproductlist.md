@@ -114,7 +114,7 @@ if (postResult.status == 200) {
         "defaultReferencePrice": -1,
         "iTunesSubscriptionType": "Free",
         "data": {
-          "cus_customAttr": "value"
+          "customAttr": "value"
         },
         "imageUrl": "",
         "description": "Bundle of 10 Bars.",
