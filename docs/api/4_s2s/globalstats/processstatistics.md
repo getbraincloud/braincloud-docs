@@ -159,13 +159,13 @@ if (postResult.status == 200) {
             "INNINGSREM": "minApplied"
         },
         "statistics": {
-            "cus_OUTS": 0,
-            "cus_HIGHESTHR": 4,
-            "cus_PLAYERS": 8,
-            "cus_INNINGSREM": 0,
-            "cus_INNING": 2,
-            "cus_POINTS": 11,
-            "cus_ESTIMATE": 5
+            "OUTS": 0,
+            "HIGHESTHR": 4,
+            "PLAYERS": 8,
+            "INNINGSREM": 0,
+            "INNING": 2,
+            "POINTS": 11,
+            "ESTIMATE": 5
         }
     },
     "status": 200

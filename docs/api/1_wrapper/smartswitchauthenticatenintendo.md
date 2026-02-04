@@ -133,7 +133,7 @@ bool forceCreate = true;
         },
         "abTestingId": 8,
         "statistics": {
-            "cus_gamesWon": 0
+            "gamesWon": 0
         },
         "id": "323e861-b749-4ce4-a57a-175232e21b5d",
         "createdAt": 1459439058035,

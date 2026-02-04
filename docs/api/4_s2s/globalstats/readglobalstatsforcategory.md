@@ -110,18 +110,18 @@ if (postResult.status == 200) {
 {
     "data": {
         "statistics": {
-            "cus_ESTIMATE": 5,
-            "cus_HIGHESTHR": 4,
-            "cus_INNING": 2,
-            "cus_INNINGSREM": 0,
-            "cus_INNINGnew": 1,
-            "cus_OUTS": 0,
-            "cus_PLAYERS": 8,
-            "cus_PLAYER_COUNT": 4,
-            "cus_PLAYER_COUNTa": 1,
-            "cus_POINT": 1,
-            "cus_POINTS": 11,
-            "cus_otherstat": 0
+            "ESTIMATE": 5,
+            "HIGHESTHR": 4,
+            "INNING": 2,
+            "INNINGSREM": 0,
+            "INNINGnew": 1,
+            "OUTS": 0,
+            "PLAYERS": 8,
+            "PLAYER_COUNT": 4,
+            "PLAYER_COUNTa": 1,
+            "POINT": 1,
+            "POINTS": 11,
+            "otherstat": 0
         }
     },
     "status": 200

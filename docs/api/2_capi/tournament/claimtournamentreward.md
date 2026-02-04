@@ -165,12 +165,8 @@ if (postResult.status == 200) {
 	"data": {
 		"rewards": {
 			"experiencePoints": 1000,
-			"experienceLevels": [
-				2
-			],
-			"playerAchievements": [
-				"achievement1"
-			],
+			"experienceLevels": [2],
+			"playerAchievements": ["achievement1"],
 			"globalStatistics": {
 				"allWorldMissions": 1
 			},
@@ -182,33 +178,31 @@ if (postResult.status == 200) {
 			}
 		},
 		"rewardDetails": {
-			"tournaments": [
-				{
-					"leaderboardId": "xxx",
-					"leaderboardVersion": 5,
-					"tCode": "basic",
-					"tCVersion": 3,
-					"updatedAt": 1480371160082,
-					"tRank": 5,
-					"tClaimed": 1480437028561,
-					"createdAt": 1480357557197,
-					"data": {},
-					"score": 818178,
-					"rewards": {
-						"experiencePoints": 1000,
-						"achievement": "achievement1",
-						"currency": {
-							"cus_coins": 500
-						},
-						"globalStatistics": {
-							"allWorldMissions": 1
-						},
-						"statistics": {
-							"missions": 1
-						}
+			"tournaments": [{
+				"leaderboardId": "xxx",
+				"leaderboardVersion": 5,
+				"tCode": "basic",
+				"tCVersion": 3,
+				"updatedAt": 1480371160082,
+				"tRank": 5,
+				"tClaimed": 1480437028561,
+				"createdAt": 1480357557197,
+				"data": {},
+				"score": 818178,
+				"rewards": {
+					"experiencePoints": 1000,
+					"achievement": "achievement1",
+					"currency": {
+						"cus_coins": 500
+					},
+					"globalStatistics": {
+						"allWorldMissions": 1
+					},
+					"statistics": {
+						"missions": 1
 					}
 				}
-			],
+			}],
 			"milestones": [],
 			"xp": {}
 		},
@@ -226,8 +220,8 @@ if (postResult.status == 200) {
 		"parentCurrency": {},
 		"peerCurrency": {},
 		"statistics": {
-			"cus_missions": 1,
-			"cus_kills": 1
+			"missions": 1,
+			"kills": 1
 		}
 	}
 }

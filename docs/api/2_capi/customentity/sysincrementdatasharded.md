@@ -131,8 +131,8 @@ if (postResult.status == 200) {
     "timeToLive": null,
     "createdAt": 1659108750204,
     "data": {
-      "cus_goals": 6,
-      "cus_assists": 10
+      "goals": 6,
+      "assists": 10
     },
     "entityType": "athletes3",
     "entityId": "d40569f4-c3b6-4d9e-89b2-ad5dbe4ba580",

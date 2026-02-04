@@ -159,7 +159,7 @@ if (postResult.status == 200) {
         "rewards": {},
         "experienceLevel": 0,
         "statistics": {
-            "cus_LIVES": 8
+            "LIVES": 8
         },
         "currency": {}
     },

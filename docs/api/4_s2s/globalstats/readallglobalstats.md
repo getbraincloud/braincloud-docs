@@ -101,8 +101,8 @@ if (postResult.status == 200) {
 {
     "data": {
         "statistics": {
-            "cus_TotalXpEarned": 0,
-            "cus__GAME_LOGINS": 805
+            "TotalXpEarned": 0,
+            "_GAME_LOGINS": 805
         }
     },
     "status": 200

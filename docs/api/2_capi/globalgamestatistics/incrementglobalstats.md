@@ -175,7 +175,7 @@ if (postResult.status == 200) {
     "status": 200,
     "data": {
         "statistics": {
-            "cus_PLAYER_COUNT": 16
+            "PLAYER_COUNT": 16
         }
     }
 }

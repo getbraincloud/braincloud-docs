@@ -199,7 +199,7 @@ if (postResult.status == 200) {
     "playerId": "c5ecdbda-5f91-41a9-96aa-174f412f7657",
     "score": 100,
     "data": {
-      "cus_nickname": "batman"
+      "nickname": "batman"
     },
     "createdAt": 1647877630346,
     "updatedAt": 1647877788048,

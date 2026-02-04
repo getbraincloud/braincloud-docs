@@ -187,7 +187,7 @@ if (postResult.status == 200) {
             }
         },
         "statistics": {
-            "cus_SCORE_STREAK_COUNT": 2
+            "SCORE_STREAK_COUNT": 2
         },
         "abTestingId": 70,
         "id": "bb05182d-ff0c-4740-ae65-482751e74949",
