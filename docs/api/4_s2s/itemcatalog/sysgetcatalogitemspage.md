@@ -146,10 +146,10 @@ if (postResult.status == 200) {
                     "category": "collectable",
                     "tags": ["medal"],
                     "buyPrice": {
-                        "cus_coins": 2000
+                        "coins": 2000
                     },
                     "sellPrice": {
-                        "cus_coins": 200
+                        "coins": 200
                     },
                     "image": "https://api.braincloudservers.com/files/portal/g/23403/metadata/itemDefinitions/medal_bronze_1.png",
                     "resourceGroup": null,

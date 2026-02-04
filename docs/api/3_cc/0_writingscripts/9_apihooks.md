@@ -83,8 +83,8 @@ result;
             "other": 0
         },
         "data": {
-            "cus_firstName": "Bruce",
-            "cus_lastName": "Wayne"
+            "firstName": "Bruce",
+            "lastName": "Wayne"
         }
     },
     "parms": {
@@ -168,7 +168,7 @@ result;
         "entityType": "contact",
         "version": 1,
         "data": {
-            "cus_lastName": "Wayneo",
+            "lastName": "Wayneo",
             "firstName": "Bruce"
         },
         "acl": {

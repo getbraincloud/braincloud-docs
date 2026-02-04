@@ -180,7 +180,7 @@ if (postResult.status == 200) {
                         "reward": {
                             "experiencePoints": 100,
                             "currency": {
-                                "cus_coin": 1000
+                                "coin": 1000
                             }
                         },
                         "rank": {
@@ -191,7 +191,7 @@ if (postResult.status == 200) {
                         "reward": {
                             "experiencePoints": 50,
                             "currency": {
-                                "cus_coin": 500
+                                "coin": 500
                             }
                         },
                         "rank": {
@@ -202,7 +202,7 @@ if (postResult.status == 200) {
                         "reward": {
                             "experiencePoints": 25,
                             "currency": {
-                                "cus_coin": 250
+                                "coin": 250
                             }
                         },
                         "rank": {
@@ -213,7 +213,7 @@ if (postResult.status == 200) {
                         "reward": {
                             "experiencePoints": 5,
                             "currency": {
-                                "cus_coin": 50
+                                "coin": 50
                             }
                         },
                         "rank": {

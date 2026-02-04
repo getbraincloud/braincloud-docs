@@ -135,7 +135,7 @@ if (postResult.status == 200) {
                         "entityType": "address",
                         "version": 1,
                         "data": {
-                            "cus_street": "1309 Carling"
+                            "street": "1309 Carling"
                         },
                         "acl": {
                             "other": 0
@@ -148,7 +148,7 @@ if (postResult.status == 200) {
                         "entityType": "address1",
                         "version": 1,
                         "data": {
-                            "cus_street": "1310 Carling"
+                            "street": "1310 Carling"
                         },
                         "acl": {
                             "other": 0
@@ -175,7 +175,7 @@ if (postResult.status == 200) {
                         "versionId": 31,
                         "score": 10,
                         "data": {
-                            "cus_nickname": "batman"
+                            "nickname": "batman"
                         },
                         "createdAt": 1634748477272,
                         "updatedAt": 1634748477272
@@ -185,7 +185,7 @@ if (postResult.status == 200) {
                         "versionId": 31,
                         "score": 10,
                         "data": {
-                            "cus_nickname": "batman"
+                            "nickname": "batman"
                         },
                         "createdAt": 1634748537457,
                         "updatedAt": 1634748537457

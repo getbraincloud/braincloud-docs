@@ -184,7 +184,7 @@ var postResult = userItemsProxy.getItemPromotionDetails(defId, shopId, includeDe
       "tags": null,
       "buyPriceDisabled": false,
       "buyPrice": {
-        "cus_bar": 88
+        "bar": 88
       },
       "sellPrice": {},
       "image": null,
@@ -257,7 +257,7 @@ var postResult = userItemsProxy.getItemPromotionDetails(defId, shopId, includeDe
           "s001": {
             "defId": "s001",
             "buyPrice": {
-              "cus_bar": 44
+              "bar": 44
             }
           }
         },

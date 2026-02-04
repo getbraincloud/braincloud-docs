@@ -164,7 +164,7 @@ if (postResult.status == 200) {
    "status":200,
    "data":{
       "currencyMap":{
-         "cus_credits":{
+         "credits":{
             "consumed":20,
             "balance":180,
             "purchased":0,

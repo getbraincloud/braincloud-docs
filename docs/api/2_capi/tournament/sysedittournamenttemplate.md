@@ -122,7 +122,7 @@ var configJson = {
               "reward": {
                 "experiencePoints": 10,
                 "currency": {
-                    "cus_coins": 100
+                    "coins": 100
                 }
               },
               "rank": {
@@ -221,7 +221,7 @@ if (postResult.status == 200) {
             "reward": {
               "experiencePoints": 10,
               "currency": {
-                  "cus_coins": 100
+                  "coins": 100
               }
             },
             "rank": {
@@ -320,7 +320,7 @@ if (postResult.status == 200) {
         "reward": {
           "experiencePoints": 10,
           "currency": {
-            "cus_coins": 100
+            "coins": 100
           }
         }
       },
@@ -331,7 +331,7 @@ if (postResult.status == 200) {
         "reward": {
           "experiencePoints": 5,
           "currency": {
-            "cus_coins": 50
+            "coins": 50
           }
         }
       },
@@ -342,7 +342,8 @@ if (postResult.status == 200) {
         "reward": {
           "experiencePoints": 1,
           "currency": {
-            "cus_coins": 5
+            "coins": 5
+          }
           }
         }
       }

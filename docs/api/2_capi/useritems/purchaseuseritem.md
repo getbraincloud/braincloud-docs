@@ -208,7 +208,7 @@ if (postResult.status == 200) {
           "category": "boost",
           "tags": null,
           "buyPrice": {
-            "cus_coins": 200
+            "coins": 200
           },
           "sellPrice": {},
           "image": null,
@@ -232,12 +232,12 @@ if (postResult.status == 200) {
       }
     },
     "currencySpent": {
-      "cus_coins": 200
+      "coins": 200
     },
     "currencyBalances": {
       "createdAt": 1566850026783,
       "currencyMap": {
-        "cus_coins": {
+        "coins": {
           "consumed": 200,
           "balance": 2999800,
           "purchased": 0,

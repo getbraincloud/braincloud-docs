@@ -217,7 +217,7 @@ var postResult = leaderboardProxy.SysGetLeaderboardConfigsPageOffset(context, pa
           "tTemplateOnly": false,
           "numDaysToRotate": 5,
           "data": {
-            "cus_street": "1309 Carling"
+            "street": "1309 Carling"
           },
           "resetAt": 1700724306479,
           "currentVersionId": 63,

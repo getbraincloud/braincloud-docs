@@ -123,10 +123,10 @@ if (postResult.status == 200) {
       "cherry"
     ],
     "buyPrice": {
-      "cus_coins": 250
+      "coins": 250
     },
     "sellPrice": {
-      "cus_coins": 180
+      "coins": 180
     },
     "image": "//cherrySword.jpg",
     "resourceGroup": "equipment.asset",

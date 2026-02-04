@@ -309,8 +309,8 @@ if (postResult.status == 200) {
                     "rewards": {
                         "extra": null,
                         "currency": {
-                            "cus_bar": 10,
-                            "cus_coinMultiplier": 1
+                            "bar": 10,
+                            "coinMultiplier": 1
                         }
                     }
                 },
@@ -333,7 +333,7 @@ if (postResult.status == 200) {
         },
         "rewards": {
             "currency": {
-                "cus_coins": 1000
+                "coins": 1000
             },
             "parentCurrency": {
                 "awesomeMaster": {
@@ -347,7 +347,7 @@ if (postResult.status == 200) {
             }
         },
         "currency": {
-            "cus_coins": {
+            "coins": {
                 "balance": 1000,
                 "purchased": 1000,
                 "awarded": 0,

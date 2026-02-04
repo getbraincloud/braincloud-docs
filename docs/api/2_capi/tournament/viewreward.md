@@ -168,7 +168,7 @@ if (postResult.status == 200) {
 		"createdAt": 1483719066661,
 		"rewards": {
 			"currency": {
-				"cus_credits": 100
+				"credits": 100
 			}
 		},
 		"tCode": "testTournament",

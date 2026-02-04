@@ -190,7 +190,7 @@ if (result.statusCode == 200) {
         "server_time": 1464621990155,
         "experienceLevel": 0,
         "currency": {
-            "cus_credits": {
+            "credits": {
                 "purchased": 0,
                 "balance": 12211,
                 "consumed": 133,

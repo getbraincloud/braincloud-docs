@@ -125,7 +125,7 @@ if (postResult.status == 200) {
         "description": "Bundle of 10 Bars.",
         "imageUrl": "",
         "currency": {
-            "cus_bar": 10
+            "bar": 10
         },
         "parentCurrency": {},
         "peerCurrency": {
@@ -233,7 +233,7 @@ if (postResult.status == 200) {
             }
         ],
         "data": {
-            "cus_customAttr": "value"
+            "customAttr": "value"
         },
         "createdAt": 1592928409270,
         "updatedAt": 1592931088568,

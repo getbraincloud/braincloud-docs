@@ -167,13 +167,13 @@ if (result.statusCode == 200) {
       "countryCode": "CA",
       "vcClaimed": 0,
       "currency": {
-        "cus_test": {
+        "test": {
           "consumed": 0,
           "balance": 0,
           "purchased": 0,
           "awarded": 0
         },
-        "cus_credits": {
+        "credits": {
           "consumed": 0,
           "balance": 0,
           "purchased": 0,
@@ -209,12 +209,12 @@ if (result.statusCode == 200) {
         "gamesLost": 0,
         "stat2": 0,
         "gamesPlayed": 0,
-        "cus_TestStat": 0,
+        "TestStat": 0,
         "highestScore": 0,
         "currency": 0,
         "losses": 0,
-        "cus_TestStat2": 0,
-        "cus_gamesWon": 0
+        "TestStat2": 0,
+        "gamesWon": 0
       }
     },
     "status": 200

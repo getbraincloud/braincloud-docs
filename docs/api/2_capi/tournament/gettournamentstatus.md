@@ -187,7 +187,7 @@ if (postResult.status == 200) {
 			"payoutRules": [{
 				"reward": {
 					"currency": {
-						"cus_credits": 1
+						"credits": 1
 					}
 				},
 				"rank": {

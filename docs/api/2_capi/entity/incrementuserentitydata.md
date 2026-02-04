@@ -195,7 +195,7 @@ if (postResult.status == 200) {
         },
         "createdAt": 1467014334065,
         "data": {
-            "cus_test": 2466
+            "test": 2466
         },
         "entityId": "ffa29930-4a33-420e-9beb-fdfdd0190750",
         "entityType": "Test",

@@ -164,11 +164,11 @@ if (postResult.status == 200) {
     "updatedAt": 1591815136870,
     "entityType": "athletes",
     "data": {
-        "cus_firstName": "Super", 
-        "cus_surName": "Star", 
-        "cus_position" : "forward", 
-        "cus_goals": 2, 
-        "cus_assists": 4 
+        "firstName": "Super", 
+        "surName": "Star", 
+        "position" : "forward", 
+        "goals": 2, 
+        "assists": 4 
     },
     "_serverTime": 1637946319239
   },

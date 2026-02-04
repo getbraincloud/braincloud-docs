@@ -110,7 +110,7 @@ if (postResult.status == 200) {
     "status": 200,
     "data": {
         "data": {
-            "cus_testInc": 123
+            "testInc": 123
         }
     }
 }

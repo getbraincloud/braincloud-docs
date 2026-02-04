@@ -179,7 +179,7 @@ if (postResult.status == 200) {
                             {
                                 "reward": {
                                     "currency": {
-                                        "cus_credits": 1
+                                        "credits": 1
                                     }
                                 },
                                 "rank": {

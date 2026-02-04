@@ -188,14 +188,14 @@ v// N/A
         "countryCode": null,
         "vcClaimed": 0,
         "currency": {
-            "cus_bar": {
+            "bar": {
                 "consumed": 0,
                 "balance": 0,
                 "purchased": 0,
                 "awarded": 0,
                 "revoked": 0
             },
-            "cus_coins": {
+                "coins": {
                 "consumed": 0,
                 "balance": 8,
                 "purchased": 0,
@@ -231,7 +231,7 @@ v// N/A
                             "level": 1, 
                             "rewards": { 
                                 "currency": { 
-                                    "cus_coins": 8 
+                                    "coins": 8 
                                 } 
                             } 
                         }
@@ -239,14 +239,14 @@ v// N/A
                 }
             },
             "currency": {
-                "cus_bar": {
+                "bar": {
                     "consumed": 0,
                     "balance": 0,
                     "purchased": 0,
                     "awarded": 0,
                     "revoked": 0
                 },
-                "cus_coins": {
+                "coins": {
                     "consumed": 0,
                     "balance": 8,
                     "purchased": 0,
@@ -257,8 +257,8 @@ v// N/A
             "rewards": {}
         },
         "statistics": {
-            "cus_test": 0.99,
-            "cus_HITLEVELNVEHICLE_000005": 0
+            "test": 0.99,
+            "HITLEVELNVEHICLE_000005": 0
         }
     },
     "status": 200

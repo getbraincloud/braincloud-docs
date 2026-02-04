@@ -146,7 +146,7 @@ var retVal = globalEntityProxy.getSystemEntityPage(context);
           "entityIndexedId": "config",
           "version": 23,
           "data": {
-            "cus_Rock5": {
+            "Rock5": {
               "isSpell": false,
               "Name": "Pebble",
               "Art": "Pebble",
@@ -177,7 +177,7 @@ var retVal = globalEntityProxy.getSystemEntityPage(context);
           "entityIndexedId": "config",
           "version": 10,
           "data": {
-            "cus_Deck1": {
+            "Deck1": {
               "Name": "Standard",
               "Description": "",
               "PlayerHPBonus": 0,

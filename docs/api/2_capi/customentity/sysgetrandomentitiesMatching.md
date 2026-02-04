@@ -132,11 +132,11 @@ if (postResult.status == 200) {
         "updatedAt": 1602700646415,
         "entityType": "athletes",
         "data": {
-          "cus_firstName": "Super",
-          "cus_surName": "Star",
-          "cus_position": "forward",
-          "cus_goals": 2,
-          "cus_assists": 4
+          "firstName": "Super",
+          "surName": "Star",
+          "position": "forward",
+          "goals": 2,
+          "assists": 4
         }
       },
       {
@@ -152,11 +152,11 @@ if (postResult.status == 200) {
         "updatedAt": 1602700650242,
         "entityType": "athletes",
         "data": {
-          "cus_firstName": "Super",
-          "cus_surName": "Star",
-          "cus_position": "forward",
-          "cus_goals": 2,
-          "cus_assists": 4
+          "firstName": "Super",
+          "surName": "Star",
+          "position": "forward",
+          "goals": 2,
+          "assists": 4
         }
       }
     ],

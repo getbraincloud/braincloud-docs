@@ -176,7 +176,7 @@ if (postResult.status == 200) {
         "product_inventory": [
             {
                 "currency": {
-                    "cus_bar": 50
+                    "bar": 50
                 },
                 "description": "Bundle of 50 Bars.",
                 "fbUrl": "https://dev.braincloudservers.com/fbproductservice?gameId=eggies&itemId=barBundle2Imp",

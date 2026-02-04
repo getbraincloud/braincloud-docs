@@ -176,13 +176,13 @@ if (postResult.status == 200) {
 {
     "data": {
         "currency": {
-            "cus_credits": {
+            "credits": {
                 "awarded": 10000,
                 "balance": 10000,
                 "consumed": 0,
                 "purchased": 0
             },
-            "cus_test": {
+            "test": {
                 "awarded": 0,
                 "balance": 0,
                 "consumed": 0,
@@ -192,7 +192,7 @@ if (postResult.status == 200) {
         "rewardDetails": {},
         "rewards": {
             "currency": {
-                "cus_credits": 10000
+                "credits": 10000
             }
         }
     },

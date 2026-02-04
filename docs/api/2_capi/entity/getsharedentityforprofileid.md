@@ -169,8 +169,8 @@ if (postResult.status == 200) {
         "_serverTime": 1637946319239,
         "version": 1,
         "data": {
-            "cus_name": "john",
-            "cus_age": 30
+            "name": "john",
+            "age": 30
         },
         "acl": {
             "other": 1

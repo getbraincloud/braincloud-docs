@@ -195,7 +195,7 @@ var postResult = userItemsProxy.purchaseUserItemWithOptions(defId, quantity, sho
   "data": {
     "quantity": -7,
     "itemsNotAwarded": {
-      "cus_sword001": 8
+      "sword001": 8
     },
     "items": {
       "3f980b72-e9b0-421c-a23b-09f4a297432f": {
@@ -228,10 +228,10 @@ var postResult = userItemsProxy.purchaseUserItemWithOptions(defId, quantity, sho
           ],
           "buyPriceDisabled": false,
           "buyPrice": {
-            "cus_coins": 200
+            "coins": 200
           },
           "sellPrice": {
-            "cus_coins": 200
+            "coins": 200
           },
           "image": null,
           "resourceGroup": "equipment.asset",
@@ -257,12 +257,12 @@ var postResult = userItemsProxy.purchaseUserItemWithOptions(defId, quantity, sho
     },
     "currencies": {},
     "currencySpent": {
-      "cus_coins": -1400
+      "coins": -1400
     },
     "currencyBalances": {
       "createdAt": 1761045719074,
       "currencyMap": {
-        "cus_bar": {
+        "bar": {
           "consumed": 0,
           "balance": 220,
           "purchased": 0,
@@ -283,7 +283,7 @@ var postResult = userItemsProxy.purchaseUserItemWithOptions(defId, quantity, sho
           "awarded": 0,
           "revoked": 0
         },
-        "cus_coins": {
+        "coins": {
           "consumed": 0,
           "balance": 1400,
           "purchased": 0,

@@ -156,8 +156,8 @@ if (postResult.status == 200) {
 		"entityType": "person",
 		"version": 1,
 		"data": {
-			"cus_name": "john",
-			"cus_age": 30
+			"name": "john",
+			"age": 30
 		},
 		"acl": {
 			"other": 0

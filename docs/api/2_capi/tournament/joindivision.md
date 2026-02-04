@@ -179,7 +179,7 @@ if (postResult.status == 200) {
         "createdAt": 1654717860000,
         "balance": {
             "currency": {
-                "cus_coin": {
+                "coin": {
                     "consumed": 0,
                     "balance": 25000,
                     "purchased": 25000,

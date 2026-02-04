@@ -113,7 +113,7 @@ var postResult = appStoreProxy.sysAwardProductToUser(profileId, itemId, quantity
 {
     "data": {
         "userItemRewards": {
-            "cus_sword001": {
+            "sword001": {
                 "17311754-f610-4a20-9934-3c9d255874e3": {
                     "itemId": "17311754-f610-4a20-9934-3c9d255874e3",
                     "quantity": 1
@@ -124,14 +124,14 @@ var postResult = appStoreProxy.sysAwardProductToUser(profileId, itemId, quantity
             "customAttr": "value"
         },
         "currency": {
-            "cus_bar": {
+            "bar": {
                 "consumed": 0,
                 "balance": 10,
                 "purchased": 0,
                 "awarded": 10,
                 "revoked": 0
             },
-            "cus_coins": {
+            "coins": {
                 "consumed": 0,
                 "balance": 24,
                 "purchased": 0,
@@ -145,10 +145,10 @@ var postResult = appStoreProxy.sysAwardProductToUser(profileId, itemId, quantity
                 "customAttr": "value"
             },
             "currency": {
-                "cus_bar": 10
+                "bar": 10
             },
             "items": {
-                "cus_sword001": {
+                "sword001": {
                     "defId": "sword001",
                     "quantity": 1
                 }

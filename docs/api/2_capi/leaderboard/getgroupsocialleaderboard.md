@@ -172,7 +172,7 @@ if (postResult.status == 200) {
 			"playerId": "ee8cad26-16f2-4ef8-9045-3aab84ce6362",
 			"createdAt": 1462825797845,
 			"data": {
-				"cus_nickname": "pete"
+				"nickname": "pete"
 			},
 			"score": 100,
 			"summaryFriendData": null
@@ -183,7 +183,7 @@ if (postResult.status == 200) {
 			"playerId": "295c510f-507f-4bcf-80e1-ebc73708ec3c",
 			"createdAt": 1462825730011,
 			"data": {
-				"cus_nickname": "bill"
+				"nickname": "bill"
 			},
 			"score": 10,
 			"summaryFriendData": null

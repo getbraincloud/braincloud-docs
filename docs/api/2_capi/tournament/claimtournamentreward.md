@@ -174,7 +174,7 @@ if (postResult.status == 200) {
 				"missions": 1
 			},
 			"currency": {
-				"cus_coin": 10000
+				"coin": 10000
 			}
 		},
 		"rewardDetails": {
@@ -193,7 +193,7 @@ if (postResult.status == 200) {
 					"experiencePoints": 1000,
 					"achievement": "achievement1",
 					"currency": {
-						"cus_coins": 500
+						"coins": 500
 					},
 					"globalStatistics": {
 						"allWorldMissions": 1
@@ -210,7 +210,7 @@ if (postResult.status == 200) {
 		"experienceLevel": 2,
 		"xpCapped": false,
 		"currency": {
-			"cus_coin": {
+			"coin": {
 				"purchased": 0,
 				"balance": 64805,
 				"consumed": 38655,

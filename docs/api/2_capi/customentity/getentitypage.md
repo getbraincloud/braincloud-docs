@@ -329,11 +329,11 @@ if (postResult.status == 200) {
           "createdAt": 1573537595505,
           "updatedAt": 1573537595505,
           "data": {
-            "cus_firstName": "Super",
-            "cus_surName": "Star",
-            "cus_position": "defense",
-            "cus_goals": 2,
-            "cus_assists": 4
+            "firstName": "Super",
+            "surName": "Star",
+            "position": "defense",
+            "goals": 2,
+            "assists": 4
           }
         },
         {
@@ -348,11 +348,11 @@ if (postResult.status == 200) {
           "createdAt": 1573540122600,
           "updatedAt": 1573540445332,
           "data": {
-            "cus_firstName": "Super",
-            "cus_surName": "Star2",
-            "cus_position": "defense",
-            "cus_goals": 3,
-            "cus_assists": 5
+            "firstName": "Super",
+            "surName": "Star2",
+            "position": "defense",
+            "goals": 3,
+            "assists": 5
           }
         }
       ],

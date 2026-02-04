@@ -165,7 +165,7 @@ if (result.statusCode == 200) {
         "server_time": 1464621990155,
         "experienceLevel": 0,
         "currency": {
-            "cus_credits": {
+            "credits": {
                 "purchased": 0,
                 "balance": 12211,
                 "consumed": 133,
@@ -174,7 +174,7 @@ if (result.statusCode == 200) {
         },
         "abTestingId": 8,
         "statistics": {
-            "cus_gamesWon": 0
+            "gamesWon": 0
         },
         "id": "323e861-b749-4ce4-a57a-175232e21b5d",
         "createdAt": 1459439058035,
