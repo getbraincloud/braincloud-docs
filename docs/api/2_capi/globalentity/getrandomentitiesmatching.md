@@ -170,49 +170,49 @@ if (postResult.status == 200) {
 
 ```json
 {
- "data": {
-  "entityList": [
-   {
-    "gameId": "22459",
-    "entityId": "007ce17c-7bc0-4c4e-b08a-0f267517778a",
-    "ownerId": "ef26173d-a736-478c-aa00-5a5cea9962d1",
-    "entityType": "address",
-    "entityIndexedId": null,
-    "version": 1,
     "data": {
-     "street": "1309 Carling"
+        "entityList": [
+            {
+                "gameId": "22459",
+                "entityId": "007ce17c-7bc0-4c4e-b08a-0f267517778a",
+                "ownerId": "ef26173d-a736-478c-aa00-5a5cea9962d1",
+                "entityType": "address",
+                "entityIndexedId": null,
+                "version": 1,
+                "data": {
+                    "street": "1309 Carling"
+                },
+                "acl": {
+                    "other": 1
+                },
+                "expiresAt": 9223372036854776000,
+                "timeToLive": null,
+                "createdAt": 1507580373566,
+                "updatedAt": 1507580373566
+            },
+            {
+                "gameId": "22459",
+                "entityId": "9bc36964-08e5-453c-ac71-142a3b66ca22",
+                "ownerId": "ef26173d-a736-478c-aa00-5a5cea9962d1",
+                "entityType": "address",
+                "entityIndexedId": null,
+                "version": 1,
+                "data": {
+                    "street": "1309 Carling"
+                },
+                "acl": {
+                    "other": 1
+                },
+                "expiresAt": 9223372036854776000,
+                "timeToLive": null,
+                "createdAt": 1507580372711,
+                "updatedAt": 1507580372711
+            }
+        ],
+        "_serverTime": 1637946319239,
+        "entityListCount": 2
     },
-    "acl": {
-     "other": 1
-    },
-    "expiresAt": 9223372036854776000,
-    "timeToLive": null,
-    "createdAt": 1507580373566,
-    "updatedAt": 1507580373566
-   },
-   {
-    "gameId": "22459",
-    "entityId": "9bc36964-08e5-453c-ac71-142a3b66ca22",
-    "ownerId": "ef26173d-a736-478c-aa00-5a5cea9962d1",
-    "entityType": "address",
-    "entityIndexedId": null,
-    "version": 1,
-    "data": {
-     "street": "1309 Carling"
-    },
-    "acl": {
-     "other": 1
-    },
-    "expiresAt": 9223372036854776000,
-    "timeToLive": null,
-    "createdAt": 1507580372711,
-    "updatedAt": 1507580372711
-   }
-  ],
-  "_serverTime": 1637946319239,
-  "entityListCount": 2
- },
- "status": 200
+    "status": 200
 }
 ```
 </details>

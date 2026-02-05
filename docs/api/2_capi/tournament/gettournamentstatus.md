@@ -161,56 +161,61 @@ if (postResult.status == 200) {
 
 ```json
 {
-	"status": 200,
-	"data": {
-		"enrolled": true,
-		"versionId": 4,
-		"server_time": 1483719062011,
-		"tournamentTimetable": {
-			"tRegistrationStart": 1483704035003,
-			"tRegistrationEnd": 1483790435003,
-			"tState": "ACTIVE",
-			"tPlayEnd": 1483790435003,
-			"tPlayStart": 1483704035003
-		},
-		"tournamentConfigs": [{
-			"tournamentCode": "testTournament",
-			"description": {
-				"name": {
-					"en": "Test Tournament"
-				},
-				"desc": {
-					"en": "Test Tournament"
-				}
-			},
-			"customJson": {},
-			"payoutRules": [{
-				"reward": {
-					"currency": {
-						"credits": 1
-					}
-				},
-				"rank": {
-					"rankAbs": 1
-				}
-			}, {
-				"reward": {},
-				"rank": {
-					"rankRemainder": -1
-				}
-			}],
-			"entryFee": {}
-		}],
-		"leaderboardEnrollment": {
-			"score": 989,
-			"data": null,
-			"createdAt": 1483719061830,
-			"updatedAt": 1483719061830,
-			"tCode": "testTournament",
-			"tRank": 0,
-			"tClaimedAt": 0
-		}
-	}
+    "status": 200,
+    "data": {
+        "enrolled": true,
+        "versionId": 4,
+        "server_time": 1483719062011,
+        "tournamentTimetable": {
+            "tRegistrationStart": 1483704035003,
+            "tRegistrationEnd": 1483790435003,
+            "tState": "ACTIVE",
+            "tPlayEnd": 1483790435003,
+            "tPlayStart": 1483704035003
+        },
+        "tournamentConfigs": [
+            {
+                "tournamentCode": "testTournament",
+                "description": {
+                    "name": {
+                        "en": "Test Tournament"
+                    },
+                    "desc": {
+                        "en": "Test Tournament"
+                    }
+                },
+                "customJson": {},
+                "payoutRules": [
+                    {
+                        "reward": {
+                            "currency": {
+                                "credits": 1
+                            }
+                        },
+                        "rank": {
+                            "rankAbs": 1
+                        }
+                    },
+                    {
+                        "reward": {},
+                        "rank": {
+                            "rankRemainder": -1
+                        }
+                    }
+                ],
+                "entryFee": {}
+            }
+        ],
+        "leaderboardEnrollment": {
+            "score": 989,
+            "data": null,
+            "createdAt": 1483719061830,
+            "updatedAt": 1483719061830,
+            "tCode": "testTournament",
+            "tRank": 0,
+            "tClaimedAt": 0
+        }
+    }
 }
 ```
 </details>

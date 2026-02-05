@@ -161,69 +161,75 @@ if (postResult.status == 200) {
 
 ```json
 {
-	"status": 200,
-	"data": {
-		"rewards": {
-			"experiencePoints": 1000,
-			"experienceLevels": [2],
-			"playerAchievements": ["achievement1"],
-			"globalStatistics": {
-				"allWorldMissions": 1
-			},
-			"statistics": {
-				"missions": 1
-			},
-			"currency": {
-				"coin": 10000
-			}
-		},
-		"rewardDetails": {
-			"tournaments": [{
-				"leaderboardId": "xxx",
-				"leaderboardVersion": 5,
-				"tCode": "basic",
-				"tCVersion": 3,
-				"updatedAt": 1480371160082,
-				"tRank": 5,
-				"tClaimed": 1480437028561,
-				"createdAt": 1480357557197,
-				"data": {},
-				"score": 818178,
-				"rewards": {
-					"experiencePoints": 1000,
-					"achievement": "achievement1",
-					"currency": {
-						"coins": 500
-					},
-					"globalStatistics": {
-						"allWorldMissions": 1
-					},
-					"statistics": {
-						"missions": 1
-					}
-				}
-			}],
-			"milestones": [],
-			"xp": {}
-		},
-		"experiencePoints": 1001,
-		"experienceLevel": 2,
-		"xpCapped": false,
-		"currency": {
-			"coin": {
-				"purchased": 0,
-				"balance": 64805,
-				"consumed": 38655,
-				"awarded": 103460
-			}
-		},
-		"parentCurrency": {},
-		"peerCurrency": {},
-		"statistics": {
-			"missions": 1,
-			"kills": 1
-		}
-	}
+    "status": 200,
+    "data": {
+        "rewards": {
+            "experiencePoints": 1000,
+            "experienceLevels": [
+                2
+            ],
+            "playerAchievements": [
+                "achievement1"
+            ],
+            "globalStatistics": {
+                "allWorldMissions": 1
+            },
+            "statistics": {
+                "missions": 1
+            },
+            "currency": {
+                "coin": 10000
+            }
+        },
+        "rewardDetails": {
+            "tournaments": [
+                {
+                    "leaderboardId": "xxx",
+                    "leaderboardVersion": 5,
+                    "tCode": "basic",
+                    "tCVersion": 3,
+                    "updatedAt": 1480371160082,
+                    "tRank": 5,
+                    "tClaimed": 1480437028561,
+                    "createdAt": 1480357557197,
+                    "data": {},
+                    "score": 818178,
+                    "rewards": {
+                        "experiencePoints": 1000,
+                        "achievement": "achievement1",
+                        "currency": {
+                            "coins": 500
+                        },
+                        "globalStatistics": {
+                            "allWorldMissions": 1
+                        },
+                        "statistics": {
+                            "missions": 1
+                        }
+                    }
+                }
+            ],
+            "milestones": [],
+            "xp": {}
+        },
+        "experiencePoints": 1001,
+        "experienceLevel": 2,
+        "xpCapped": false,
+        "currency": {
+            "coin": {
+                "purchased": 0,
+                "balance": 64805,
+                "consumed": 38655,
+                "awarded": 103460
+            }
+        },
+        "parentCurrency": {},
+        "peerCurrency": {},
+        "statistics": {
+            "missions": 1,
+            "kills": 1
+        }
+    }
 }
 ```
 </details>

@@ -156,26 +156,29 @@ if (postResult.status == 200) {
 
 ```json
 {
-	"status": 200,
-	"data": {
-		"scores": [{
-			"score": 100,
-			"data": {
-				"test": "testdata"
-			},
-			"createdAt": 1484933569566,
-			"updatedAt": 1484933569566,
-			"leaderboardId": "testLeaderboard",
-			"versionId": 150
-		}, {
-			"score": 10,
-			"data": null,
-			"createdAt": 1484933681216,
-			"updatedAt": 1484933681216,
-			"leaderboardId": "testLeaderboard2",
-			"versionId": 3
-		}]
-	}
+    "status": 200,
+    "data": {
+        "scores": [
+            {
+                "score": 100,
+                "data": {
+                    "test": "testdata"
+                },
+                "createdAt": 1484933569566,
+                "updatedAt": 1484933569566,
+                "leaderboardId": "testLeaderboard",
+                "versionId": 150
+            },
+            {
+                "score": 10,
+                "data": null,
+                "createdAt": 1484933681216,
+                "updatedAt": 1484933681216,
+                "leaderboardId": "testLeaderboard2",
+                "versionId": 3
+            }
+        ]
+    }
 }
 ```
 </details>

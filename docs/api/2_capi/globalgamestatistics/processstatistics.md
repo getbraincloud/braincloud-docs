@@ -213,21 +213,21 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "statisticsExceptions": {
-      "INNINGSREM": "minApplied"
+    "data": {
+        "statisticsExceptions": {
+            "INNINGSREM": "minApplied"
+        },
+        "statistics": {
+            "OUTS": 0,
+            "HIGHESTHR": 4,
+            "PLAYERS": 8,
+            "INNINGSREM": 0,
+            "INNING": 2,
+            "POINTS": 11,
+            "ESTIMATE": 5
+        }
     },
-    "statistics": {
-      "OUTS": 0,
-      "HIGHESTHR": 4,
-      "PLAYERS": 8,
-      "INNINGSREM": 0,
-      "INNING": 2,
-      "POINTS": 11,
-      "ESTIMATE": 5
-    }
-  },
-  "status": 200
+    "status": 200
 }
 ```
 </details>

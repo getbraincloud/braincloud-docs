@@ -171,13 +171,13 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "activeStart": 1567537263623,
-    "statusName": "rapidFire",
-    "details": {},
-    "activeUntil": 1567538323623
-  },
-  "status": 200
+    "data": {
+        "activeStart": 1567537263623,
+        "statusName": "rapidFire",
+        "details": {},
+        "activeUntil": 1567538323623
+    },
+    "status": 200
 }
 ```
 </details>

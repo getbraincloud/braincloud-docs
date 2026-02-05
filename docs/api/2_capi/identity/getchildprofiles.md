@@ -151,20 +151,23 @@ if (postResult.status == 200) {
 
 ```json
 {
-	"status": 200,
-	"data": {
-		"children": [{
-			"appId": "123456",
-			"profileId": "b7h32751-befd-4a89-b6da-cd55hs3b2a86",
-			"profileName": "Child1",
-			"summaryFriendData": null
-		}, {
-			"appId": "123457",
-			"profileId": "a17b3432-195b-45hf-b1e7-5f78g3462310",
-			"profileName": "Child2",
-			"summaryFriendData": null
-		}]
-	}
+    "status": 200,
+    "data": {
+        "children": [
+            {
+                "appId": "123456",
+                "profileId": "b7h32751-befd-4a89-b6da-cd55hs3b2a86",
+                "profileName": "Child1",
+                "summaryFriendData": null
+            },
+            {
+                "appId": "123457",
+                "profileId": "a17b3432-195b-45hf-b1e7-5f78g3462310",
+                "profileName": "Child2",
+                "summaryFriendData": null
+            }
+        ]
+    }
 }
 ```
 </details>

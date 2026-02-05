@@ -99,8 +99,8 @@ Initiate a state dump for diagnostic purposes on the given RTT servers. An empty
 
 ```json
 {
-  "status" : 200,
-  "data" : {}
+    "status": 200,
+    "data": {}
 }
 ```
 </details>

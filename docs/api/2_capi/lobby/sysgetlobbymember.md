@@ -110,18 +110,18 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "profileId": "c394230e-53c0-4ba3-8eed-90963e58de9c",
-    "name": "",
-    "pic": "",
-    "rating": 1200,
-    "team": "all",
-    "isReady": true,
-    "extra": {},
-    "passcode": "8ebbd5",
-    "cxId": "13229:c394230e-53c0-4ba3-8eed-90963e58de9c:il6dpch4c8g4jm6p3o5vc85ssq"
-  },
-  "status": 200
+    "data": {
+        "profileId": "c394230e-53c0-4ba3-8eed-90963e58de9c",
+        "name": "",
+        "pic": "",
+        "rating": 1200,
+        "team": "all",
+        "isReady": true,
+        "extra": {},
+        "passcode": "8ebbd5",
+        "cxId": "13229:c394230e-53c0-4ba3-8eed-90963e58de9c:il6dpch4c8g4jm6p3o5vc85ssq"
+    },
+    "status": 200
 }
 ```
 </details>

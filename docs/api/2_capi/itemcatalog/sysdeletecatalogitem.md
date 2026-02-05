@@ -102,8 +102,8 @@ var postResult = itemCatalogProxy.SysDeleteCatalogItem(defId, version, forceDele
 
 ```json
 {
-  "status" : 200,
-  "data" : null
+    "status": 200,
+    "data": null
 }
 ```
 

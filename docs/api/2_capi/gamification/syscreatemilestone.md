@@ -171,31 +171,31 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "status": 200,
-  "data": {
-    "milestoneId": "15",
-    "questId": null,
-    "title": "Winner Winner",
-    "description": "Get 50 wins",
-    "category": "loyalty",
-    "extraData": {
-      "secretMission": false,
-      "actionIndex": 4
-    },
-    "rewards": {
-      "experiencePoints": 1000
-    },
-    "thresholds": {
-      "playerStatistics": {
-        "statistics": {
-          "wins": 50
-        }
-      }
-    },
-    "createdAt": 1574793309304,
-    "updatedAt": 1574793309304,
-    "version": 1
-  }
+    "status": 200,
+    "data": {
+        "milestoneId": "15",
+        "questId": null,
+        "title": "Winner Winner",
+        "description": "Get 50 wins",
+        "category": "loyalty",
+        "extraData": {
+            "secretMission": false,
+            "actionIndex": 4
+        },
+        "rewards": {
+            "experiencePoints": 1000
+        },
+        "thresholds": {
+            "playerStatistics": {
+                "statistics": {
+                    "wins": 50
+                }
+            }
+        },
+        "createdAt": 1574793309304,
+        "updatedAt": 1574793309304,
+        "version": 1
+    }
 }
 ```
 </details>

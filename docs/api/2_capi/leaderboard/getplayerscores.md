@@ -170,37 +170,37 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "versionId": 1,
-    "scores": [
-      {
-        "score": 10101,
-        "data": {
-          "nickname": "batman"
-        },
-        "createdAt": 1613678944374,
-        "updatedAt": 1613678944374
-      },
-      {
-        "score": 101,
-        "data": {
-          "nickname": "batman"
-        },
-        "createdAt": 1613678939147,
-        "updatedAt": 1613678939147
-      },
-      {
-        "score": 10,
-        "data": {
-          "nickname": "batman"
-        },
-        "createdAt": 1613678933679,
-        "updatedAt": 1613678933679
-      }
-    ],
-    "leaderboardId": "anArcadeLeaderboardId"
-  },
-  "status": 200
+    "data": {
+        "versionId": 1,
+        "scores": [
+            {
+                "score": 10101,
+                "data": {
+                    "nickname": "batman"
+                },
+                "createdAt": 1613678944374,
+                "updatedAt": 1613678944374
+            },
+            {
+                "score": 101,
+                "data": {
+                    "nickname": "batman"
+                },
+                "createdAt": 1613678939147,
+                "updatedAt": 1613678939147
+            },
+            {
+                "score": 10,
+                "data": {
+                    "nickname": "batman"
+                },
+                "createdAt": 1613678933679,
+                "updatedAt": 1613678933679
+            }
+        ],
+        "leaderboardId": "anArcadeLeaderboardId"
+    },
+    "status": 200
 }
 ```
 </details>

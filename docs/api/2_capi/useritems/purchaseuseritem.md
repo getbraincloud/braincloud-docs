@@ -181,74 +181,74 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "items": {
-      "8e12e907-3f54-4971-b84a-b685ce50b684": {
-        "itemId": "8e12e907-3f54-4971-b84a-b685ce50b684",
-        "defId": "boost_rapidfire",
-        "quantity": 1,
-        "usesLeft": null,
-        "coolDownStart": -1,
-        "recoveryStart": -1,
-        "itemData": {},
-        "giftedTo": null,
-        "giftedFrom": null,
-        "blockId": null,
-        "createdAt": 1566850132554,
-        "updatedAt": 1566850132554,
-        "version": 1,
-        "maxUses": null,
-        "coolDownUntil": -1,
-        "recoveryUntil": -1,
-        "itemDef": {
-          "defId": "boost_rapidfire",
-          "name": "Rapid Fire",
-          "desc": "Rapid fire for the next match.",
-          "type": "ITEM",
-          "category": "boost",
-          "tags": null,
-          "buyPrice": {
+    "data": {
+        "items": {
+            "8e12e907-3f54-4971-b84a-b685ce50b684": {
+                "itemId": "8e12e907-3f54-4971-b84a-b685ce50b684",
+                "defId": "boost_rapidfire",
+                "quantity": 1,
+                "usesLeft": null,
+                "coolDownStart": -1,
+                "recoveryStart": -1,
+                "itemData": {},
+                "giftedTo": null,
+                "giftedFrom": null,
+                "blockId": null,
+                "createdAt": 1566850132554,
+                "updatedAt": 1566850132554,
+                "version": 1,
+                "maxUses": null,
+                "coolDownUntil": -1,
+                "recoveryUntil": -1,
+                "itemDef": {
+                    "defId": "boost_rapidfire",
+                    "name": "Rapid Fire",
+                    "desc": "Rapid fire for the next match.",
+                    "type": "ITEM",
+                    "category": "boost",
+                    "tags": null,
+                    "buyPrice": {
+                        "coins": 200
+                    },
+                    "sellPrice": {},
+                    "image": null,
+                    "resourceGroup": null,
+                    "resourceTag": null,
+                    "meta": {},
+                    "pState": "PUBLISHED",
+                    "publishedAt": 1566850042148,
+                    "stackable": false,
+                    "consumable": false,
+                    "uses": null,
+                    "coolDownSecs": 0,
+                    "recoverySecs": 0,
+                    "activatable": true,
+                    "statusName": "boosted",
+                    "activeSecs": 900000,
+                    "tradable": false,
+                    "blockchain": false,
+                    "blockchainDefId": null
+                }
+            }
+        },
+        "currencySpent": {
             "coins": 200
-          },
-          "sellPrice": {},
-          "image": null,
-          "resourceGroup": null,
-          "resourceTag": null,
-          "meta": {},
-          "pState": "PUBLISHED",
-          "publishedAt": 1566850042148,
-          "stackable": false,
-          "consumable": false,
-          "uses": null,
-          "coolDownSecs": 0,
-          "recoverySecs": 0,
-          "activatable": true,
-          "statusName": "boosted",
-          "activeSecs": 900000,
-          "tradable": false,
-          "blockchain": false,
-          "blockchainDefId": null
+        },
+        "currencyBalances": {
+            "createdAt": 1566850026783,
+            "currencyMap": {
+                "coins": {
+                    "consumed": 200,
+                    "balance": 2999800,
+                    "purchased": 0,
+                    "awarded": 3000000
+                }
+            },
+            "playerId": "55ffc16e-f92b-44f3-98b0-68a7a4f24106",
+            "updatedAt": 1566850132552
         }
-      }
     },
-    "currencySpent": {
-      "coins": 200
-    },
-    "currencyBalances": {
-      "createdAt": 1566850026783,
-      "currencyMap": {
-        "coins": {
-          "consumed": 200,
-          "balance": 2999800,
-          "purchased": 0,
-          "awarded": 3000000
-        }
-      },
-      "playerId": "55ffc16e-f92b-44f3-98b0-68a7a4f24106",
-      "updatedAt": 1566850132552
-    }
-  },
-  "status": 200
+    "status": 200
 }
 ```
 </details>

@@ -151,28 +151,28 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "entityId": "12a57791-2600-47dc-ad3c-96a54c461a58",
-    "version": 1,
-    "acl": {
-      "other": 0
-    },
-    "ownerId": "cde6c0b2-e9e4-40e4-8c8a-91ebba5a2291",
-    "expiresAt": null,
-    "timeToLive": null,
-    "createdAt": 1590264448888,
-    "updatedAt": 1591815136870,
-    "entityType": "athletes",
     "data": {
-        "firstName": "Super", 
-        "surName": "Star", 
-        "position" : "forward", 
-        "goals": 2, 
-        "assists": 4 
+        "entityId": "12a57791-2600-47dc-ad3c-96a54c461a58",
+        "version": 1,
+        "acl": {
+            "other": 0
+        },
+        "ownerId": "cde6c0b2-e9e4-40e4-8c8a-91ebba5a2291",
+        "expiresAt": null,
+        "timeToLive": null,
+        "createdAt": 1590264448888,
+        "updatedAt": 1591815136870,
+        "entityType": "athletes",
+        "data": {
+            "firstName": "Super",
+            "surName": "Star",
+            "position": "forward",
+            "goals": 2,
+            "assists": 4
+        },
+        "_serverTime": 1637946319239
     },
-    "_serverTime": 1637946319239
-  },
-  "status": 200
+    "status": 200
 }
 ```
 </details>

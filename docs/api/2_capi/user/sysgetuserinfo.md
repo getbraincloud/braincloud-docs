@@ -103,15 +103,15 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "emailAddress": "someemail@somedomain.com",
-    "playerName": "email guest1",
-    "profileId": "d296efe9-e5bf-42d1-95ec-fea0527d8276",
-    "countryCode": "US",
-    "timeZoneOffset": -4,
-    "summaryFriendData": null
-  },
-  "status": 200
+    "data": {
+        "emailAddress": "someemail@somedomain.com",
+        "playerName": "email guest1",
+        "profileId": "d296efe9-e5bf-42d1-95ec-fea0527d8276",
+        "countryCode": "US",
+        "timeZoneOffset": -4,
+        "summaryFriendData": null
+    },
+    "status": 200
 }
 ```
 </details>

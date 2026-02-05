@@ -151,40 +151,40 @@ if (postResult.status == 200) {
 
 ```json
 {
-	"status": 200,
-	"data": {
-		"currencyMap": {
-			"gems": {
-				"purchased": 0,
-				"balance": 12212,
-				"consumed": 133,
-				"awarded": 12345,
-				"revoked": 0
-			}
-		},
-		"parentCurrency": {
-			"Master": {
-				"credits": {
-					"purchased": 0,
-					"balance": 12212,
-					"consumed": 133,
-					"awarded": 12345,
-					"revoked": 0
-				}
-			}
-		},
-		"peerCurrency": {
-			"gameLootPeer": {
-				"tickets": {
-					"purchased": 0,
-					"balance": 12212,
-					"consumed": 133,
-					"awarded": 12345,
-					"revoked": 0
-				}
-			}
-		}
-	}
+    "status": 200,
+    "data": {
+        "currencyMap": {
+            "gems": {
+                "purchased": 0,
+                "balance": 12212,
+                "consumed": 133,
+                "awarded": 12345,
+                "revoked": 0
+            }
+        },
+        "parentCurrency": {
+            "Master": {
+                "credits": {
+                    "purchased": 0,
+                    "balance": 12212,
+                    "consumed": 133,
+                    "awarded": 12345,
+                    "revoked": 0
+                }
+            }
+        },
+        "peerCurrency": {
+            "gameLootPeer": {
+                "tickets": {
+                    "purchased": 0,
+                    "balance": 12212,
+                    "consumed": 133,
+                    "awarded": 12345,
+                    "revoked": 0
+                }
+            }
+        }
+    }
 }
 ```
 </details>

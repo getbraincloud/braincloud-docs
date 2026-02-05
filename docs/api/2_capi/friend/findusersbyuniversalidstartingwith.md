@@ -161,25 +161,25 @@ if (postResult.status == 200) {
 
 ```json
 {
-   "data":{
-      "matchedCount":2,
-      "message":"Result count exceeds maximum.",
-      "matches":[
-         {
-            "profileId":"111-222-333",
-            "profileName":"UserA",
-            "summaryFriendData":null,
-            "pictureUrl":null
-         },
-         {
-            "profileId":"aaa-bbb-ccc",
-            "profileName":"UserB",
-            "summaryFriendData":null,
-            "pictureUrl":null
-         }
-      ]
-   },
-   "status":200
+    "data": {
+        "matchedCount": 2,
+        "message": "Result count exceeds maximum.",
+        "matches": [
+            {
+                "profileId": "111-222-333",
+                "profileName": "UserA",
+                "summaryFriendData": null,
+                "pictureUrl": null
+            },
+            {
+                "profileId": "aaa-bbb-ccc",
+                "profileName": "UserB",
+                "summaryFriendData": null,
+                "pictureUrl": null
+            }
+        ]
+    },
+    "status": 200
 }
 ```
 </details>

@@ -199,26 +199,28 @@ if (postResult.status == 200) {
 
 ```json
 {
-	"data": {
-		"_serverTime": 1637946319239,
-		"entityListCount": 1,
-		"entityList": [{
-			"gameId": "123455",
-			"entityId": "a3def0eb-3993-4a95-8fef-27f50a6d0f69",
-			"ownerId": "11c9dd4d-9ed1-416d-bd04-5228c1efafac",
-			"entityType": "address",
-			"version": 1,
-			"data": {
-				"street": "123 Ave"
-			},
-			"acl": {
-				"other": 1
-			},
-			"createdAt": 1449870753354,
-			"updatedAt": 1449870753354
-		}]
-	},
-	"status": 200
+    "data": {
+        "_serverTime": 1637946319239,
+        "entityListCount": 1,
+        "entityList": [
+            {
+                "gameId": "123455",
+                "entityId": "a3def0eb-3993-4a95-8fef-27f50a6d0f69",
+                "ownerId": "11c9dd4d-9ed1-416d-bd04-5228c1efafac",
+                "entityType": "address",
+                "version": 1,
+                "data": {
+                    "street": "123 Ave"
+                },
+                "acl": {
+                    "other": 1
+                },
+                "createdAt": 1449870753354,
+                "updatedAt": 1449870753354
+            }
+        ]
+    },
+    "status": 200
 }
 ```
 </details>

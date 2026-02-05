@@ -120,22 +120,22 @@ var postResult = globalFileV3Proxy.sysPrepareUpload(treeId, filename, fileSize, 
 
 ```json
 {
-  "fileDetails": {
-    "gameId": "23782",
-    "shareable": false,
-    "uploadId": "4848d54f-c8f9-4c7e-9ab4-8c68c040cf95",
-    "replaceIfExists": true,
-    "cloudPath": "_root_",
-    "expiresAt": 1768671291708,
-    "createdAt": 1768066491708,
-    "uploadUrl": "/s2suploader/globalfile/upload?gameId=23782&uploadId=4848d54f-c8f9-4c7e-9ab4-8c68c040cf95&filename=before.json&overwriteIfPresent=true&fileSize=352",
-    "fileSize": 352,
-    "profileId": "_S2S_",
-    "localPath": null,
-    "cloudFilename": "before.json",
-    "fileType": "Global",
-    "updatedAt": 1768066491708
-  }
+    "fileDetails": {
+        "gameId": "23782",
+        "shareable": false,
+        "uploadId": "4848d54f-c8f9-4c7e-9ab4-8c68c040cf95",
+        "replaceIfExists": true,
+        "cloudPath": "_root_",
+        "expiresAt": 1768671291708,
+        "createdAt": 1768066491708,
+        "uploadUrl": "/s2suploader/globalfile/upload?gameId=23782&uploadId=4848d54f-c8f9-4c7e-9ab4-8c68c040cf95&filename=before.json&overwriteIfPresent=true&fileSize=352",
+        "fileSize": 352,
+        "profileId": "_S2S_",
+        "localPath": null,
+        "cloudFilename": "before.json",
+        "fileType": "Global",
+        "updatedAt": 1768066491708
+    }
 }
 ```
 

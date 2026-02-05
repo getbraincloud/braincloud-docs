@@ -110,10 +110,10 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "exists": true
-  },
-  "status": 200
+    "data": {
+        "exists": true
+    },
+    "status": 200
 }
 ```
 </details>

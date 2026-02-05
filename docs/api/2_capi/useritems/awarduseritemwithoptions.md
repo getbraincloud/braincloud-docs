@@ -182,67 +182,67 @@ var postResult = userItemsProxy.awardUserItemWithOptions(defId, quantity, includ
 
 ```json
 {
-  "data": {
-    "items": {
-      "3f980b72-e9b0-421c-a23b-09f4a297432f": {
-        "itemId": "3f980b72-e9b0-421c-a23b-09f4a297432f",
-        "defId": "sword001",
-        "type": "ITEM",
-        "quantity": 1,
-        "itemData": {},
-        "giftedTo": null,
-        "giftedFrom": null,
-        "createdAt": 1763999328116,
-        "updatedAt": 1763999328116,
-        "version": 1,
-        "usesLeft": null,
-        "coolDownStart": -1,
-        "recoveryStart": -1,
-        "maxUses": null,
-        "coolDownUntil": -1,
-        "recoveryUntil": -1,
-        "itemDef": {
-          "defId": "sword001",
-          "name": "crimson sword",
-          "desc": "a sword whose blade is forged in...",
-          "type": "ITEM",
-          "category": "sword",
-          "tags": [
-            "sword",
-            "crimson",
-            "pointy"
-          ],
-          "buyPriceDisabled": false,
-          "buyPrice": {
-            "coins": 200
-          },
-          "sellPrice": {
-            "coins": 200
-          },
-          "image": null,
-          "resourceGroup": "equipment.asset",
-          "resourceTag": "sword001",
-          "meta": null,
-          "pState": "PUBLISHED",
-          "publishedAt": 1763999316395,
-          "stackable": true,
-          "maxStackable": null,
-          "tradable": false,
-          "blockchain": false,
-          "consumable": false,
-          "uses": null,
-          "coolDownSecs": 0,
-          "recoverySecs": 0,
-          "activatable": false,
-          "statusName": null,
-          "activeSecs": null,
-          "maxActiveSecs": null,
-          "statusBehaviour": null
+    "data": {
+        "items": {
+            "3f980b72-e9b0-421c-a23b-09f4a297432f": {
+                "itemId": "3f980b72-e9b0-421c-a23b-09f4a297432f",
+                "defId": "sword001",
+                "type": "ITEM",
+                "quantity": 1,
+                "itemData": {},
+                "giftedTo": null,
+                "giftedFrom": null,
+                "createdAt": 1763999328116,
+                "updatedAt": 1763999328116,
+                "version": 1,
+                "usesLeft": null,
+                "coolDownStart": -1,
+                "recoveryStart": -1,
+                "maxUses": null,
+                "coolDownUntil": -1,
+                "recoveryUntil": -1,
+                "itemDef": {
+                    "defId": "sword001",
+                    "name": "crimson sword",
+                    "desc": "a sword whose blade is forged in...",
+                    "type": "ITEM",
+                    "category": "sword",
+                    "tags": [
+                        "sword",
+                        "crimson",
+                        "pointy"
+                    ],
+                    "buyPriceDisabled": false,
+                    "buyPrice": {
+                        "coins": 200
+                    },
+                    "sellPrice": {
+                        "coins": 200
+                    },
+                    "image": null,
+                    "resourceGroup": "equipment.asset",
+                    "resourceTag": "sword001",
+                    "meta": null,
+                    "pState": "PUBLISHED",
+                    "publishedAt": 1763999316395,
+                    "stackable": true,
+                    "maxStackable": null,
+                    "tradable": false,
+                    "blockchain": false,
+                    "consumable": false,
+                    "uses": null,
+                    "coolDownSecs": 0,
+                    "recoverySecs": 0,
+                    "activatable": false,
+                    "statusName": null,
+                    "activeSecs": null,
+                    "maxActiveSecs": null,
+                    "statusBehaviour": null
+                }
+            }
         }
-      }
-    }
-  },
-  "status": 200
+    },
+    "status": 200
 }
 ```
 

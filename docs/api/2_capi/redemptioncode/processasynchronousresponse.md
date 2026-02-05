@@ -133,47 +133,47 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "gameId": "23713",
-    "scanCode": "fdjsl-zh5h2-mwdw1-no0ua-x40ci",
-    "codeType": "test22",
-    "redemptionCodeId": "b75e0c13-08d2-41d1-9cf6-ff4a72356d2f",
-    "version": 3,
-    "codeState": "InProgress",
-    "customCodeInfo": {
-      "factoryId": 22
-    },
-    "customRedemptionInfo": {
-      "transaction_id": "9d3936f686fccd646669f67f332440e54a48f5c05a562c89a6637dc1125654eb"
-    },
-    "redeemedByProfileId": null,
-    "redeemedByProfileName": null,
-    "invalidationReason": null,
-    "createdAt": 1655818588627,
-    "activatedAt": 1655818588627,
-    "redeemedAt": null,
-    "invalidatedAt": null,
-    "updatedAt": 1655818611860,
-    "currentAttempt": 0,
-    "status": {
-      "attempt": 0,
-      "attemptedAt": 1655818605849,
-      "attemptedBy": "c14caf2b-6c72-4c8e-9280-54356f7d56c2",
-      "scriptId": "2f944060-9eff-40c4-bdc3-ab7d00f83f35",
-      "scriptVersion": 38,
-      "attemptState": "IN_PROGRESS",
-      "response": {
-        "success": true,
-        "complete": false,
-        "customRedemptionInfo": {
-          "transaction_id": "9d3936f686fccd646669f67f332440e54a48f5c05a562c89a6637dc1125654eb"
+    "data": {
+        "gameId": "23713",
+        "scanCode": "fdjsl-zh5h2-mwdw1-no0ua-x40ci",
+        "codeType": "test22",
+        "redemptionCodeId": "b75e0c13-08d2-41d1-9cf6-ff4a72356d2f",
+        "version": 3,
+        "codeState": "InProgress",
+        "customCodeInfo": {
+            "factoryId": 22
         },
-        "errorCode": null,
-        "errorMsg": null
-      }
-    }
-  },
-  "status": 200
+        "customRedemptionInfo": {
+            "transaction_id": "9d3936f686fccd646669f67f332440e54a48f5c05a562c89a6637dc1125654eb"
+        },
+        "redeemedByProfileId": null,
+        "redeemedByProfileName": null,
+        "invalidationReason": null,
+        "createdAt": 1655818588627,
+        "activatedAt": 1655818588627,
+        "redeemedAt": null,
+        "invalidatedAt": null,
+        "updatedAt": 1655818611860,
+        "currentAttempt": 0,
+        "status": {
+            "attempt": 0,
+            "attemptedAt": 1655818605849,
+            "attemptedBy": "c14caf2b-6c72-4c8e-9280-54356f7d56c2",
+            "scriptId": "2f944060-9eff-40c4-bdc3-ab7d00f83f35",
+            "scriptVersion": 38,
+            "attemptState": "IN_PROGRESS",
+            "response": {
+                "success": true,
+                "complete": false,
+                "customRedemptionInfo": {
+                    "transaction_id": "9d3936f686fccd646669f67f332440e54a48f5c05a562c89a6637dc1125654eb"
+                },
+                "errorCode": null,
+                "errorMsg": null
+            }
+        }
+    },
+    "status": 200
 }
 ```
 </details>

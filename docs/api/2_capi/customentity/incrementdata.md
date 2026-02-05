@@ -188,24 +188,24 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "entityId": "aaaa-bbbb-cccc-dddd",
-    "version": 2,
-    "acl": {
-      "other": 2
-    },
-    "ownerId": null,
-    "expiresAt": null,
-    "timeToLive": null,
-    "createdAt": 1586047449214,
-    "updatedAt": 1591290232477,
     "data": {
-        "goals": 3, 
-        "assists": 5 
+        "entityId": "aaaa-bbbb-cccc-dddd",
+        "version": 2,
+        "acl": {
+            "other": 2
+        },
+        "ownerId": null,
+        "expiresAt": null,
+        "timeToLive": null,
+        "createdAt": 1586047449214,
+        "updatedAt": 1591290232477,
+        "data": {
+            "goals": 3,
+            "assists": 5
+        },
+        "entityType": "athletes"
     },
-    "entityType": "athletes"
-  },
-  "status": 200
+    "status": 200
 }
 ```
 </details>

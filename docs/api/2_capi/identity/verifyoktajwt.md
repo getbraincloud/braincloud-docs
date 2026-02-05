@@ -134,34 +134,34 @@ hasPermission;
 
 ```json
 {
-  "data": {
-    "claims": {
-      "sub": "00u1caz4q626WtuOc555",
-      "name": "John Snow",
-      "email": "johns@xxx.com",
-      "ver": 1,
-      "iss": "https://dev-5555555.okta.com/oauth2/default",
-      "aud": "0oa1k21u00qBbTwaz555",
-      "iat": 1573052062,
-      "exp": 1573055662,
-      "jti": "ID.HntoaUAOrMR4XXXswVCAV8Vi2eU_gplsbx4xgW4BhgM",
-      "amr": [
-        "pwd"
-      ],
-      "idp": "00o1caT4n2FS01065357",
-      "nonce": "a81b30479be55fe98fda915525acf2da",
-      "preferred_username": "johns@xxx.com",
-      "auth_time": 1573052055,
-      "at_hash": "n_bRbPka--WLaLKWEKEDUZXXXXXX",
-      "groups": [
-        "Everyone",
-        "BrainCloudUsers"
-      ]
+    "data": {
+        "claims": {
+            "sub": "00u1caz4q626WtuOc555",
+            "name": "John Snow",
+            "email": "johns@xxx.com",
+            "ver": 1,
+            "iss": "https://dev-5555555.okta.com/oauth2/default",
+            "aud": "0oa1k21u00qBbTwaz555",
+            "iat": 1573052062,
+            "exp": 1573055662,
+            "jti": "ID.HntoaUAOrMR4XXXswVCAV8Vi2eU_gplsbx4xgW4BhgM",
+            "amr": [
+                "pwd"
+            ],
+            "idp": "00o1caT4n2FS01065357",
+            "nonce": "a81b30479be55fe98fda915525acf2da",
+            "preferred_username": "johns@xxx.com",
+            "auth_time": 1573052055,
+            "at_hash": "n_bRbPka--WLaLKWEKEDUZXXXXXX",
+            "groups": [
+                "Everyone",
+                "BrainCloudUsers"
+            ]
+        },
+        "issuedAt": 1573052067000,
+        "expiresAt": 1573055667000
     },
-    "issuedAt": 1573052067000,
-    "expiresAt": 1573055667000
-  },
-  "status": 200
+    "status": 200
 }
 ```
 </details>

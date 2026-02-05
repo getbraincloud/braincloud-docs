@@ -152,35 +152,35 @@ if (postResult.status == 200) {
 ```json
 {
     "data": {
-     "milestones": [
-      {
-       "gameId": "11549",
-       "questId": null,
-       "thresholds": {
-        "playerStatistics": {
-         "experienceLevel": 1
-        }
-       },
-       "extraData": null,
-       "unlockThresholds": {
-        "playerStatistics": {
-         "statistics": {
-          "Levels_Completed": 5
-         }
-        }
-       },
-       "description": "Awarded when you get to player level 1",
-       "id": "3",
-       "title": "Level 1 milestone",
-       "category": "Level_Milestones",
-       "rewards": {
-        "currency": {
-         "Gems": 10
-        }
-       },
-       "status": "IN_PROGRESS"
-      }
-     ]
+        "milestones": [
+            {
+                "gameId": "11549",
+                "questId": null,
+                "thresholds": {
+                    "playerStatistics": {
+                        "experienceLevel": 1
+                    }
+                },
+                "extraData": null,
+                "unlockThresholds": {
+                    "playerStatistics": {
+                        "statistics": {
+                            "Levels_Completed": 5
+                        }
+                    }
+                },
+                "description": "Awarded when you get to player level 1",
+                "id": "3",
+                "title": "Level 1 milestone",
+                "category": "Level_Milestones",
+                "rewards": {
+                    "currency": {
+                        "Gems": 10
+                    }
+                },
+                "status": "IN_PROGRESS"
+            }
+        ]
     },
     "status": 200
 }

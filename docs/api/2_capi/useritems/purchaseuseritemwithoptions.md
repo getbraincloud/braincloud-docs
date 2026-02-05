@@ -192,110 +192,110 @@ var postResult = userItemsProxy.purchaseUserItemWithOptions(defId, quantity, sho
 
 ```json
 {
-  "data": {
-    "quantity": -7,
-    "itemsNotAwarded": {
-      "sword001": 8
-    },
-    "items": {
-      "3f980b72-e9b0-421c-a23b-09f4a297432f": {
-        "itemId": "3f980b72-e9b0-421c-a23b-09f4a297432f",
-        "defId": "sword001",
-        "type": "ITEM",
-        "quantity": 2,
-        "itemData": {},
-        "giftedTo": null,
-        "giftedFrom": null,
-        "createdAt": 1763999328116,
-        "updatedAt": 1764001716414,
-        "version": 10,
-        "usesLeft": null,
-        "coolDownStart": -1,
-        "recoveryStart": -1,
-        "maxUses": null,
-        "coolDownUntil": -1,
-        "recoveryUntil": -1,
-        "itemDef": {
-          "defId": "sword001",
-          "name": "crimson sword",
-          "desc": "a sword whose blade is forged in...",
-          "type": "ITEM",
-          "category": "sword",
-          "tags": [
-            "sword",
-            "crimson",
-            "pointy"
-          ],
-          "buyPriceDisabled": false,
-          "buyPrice": {
-            "coins": 200
-          },
-          "sellPrice": {
-            "coins": 200
-          },
-          "image": null,
-          "resourceGroup": "equipment.asset",
-          "resourceTag": "sword001",
-          "meta": null,
-          "pState": "PUBLISHED",
-          "publishedAt": 1763999316395,
-          "stackable": true,
-          "maxStackable": 2,
-          "tradable": false,
-          "blockchain": false,
-          "consumable": false,
-          "uses": null,
-          "coolDownSecs": 0,
-          "recoverySecs": 0,
-          "activatable": false,
-          "statusName": null,
-          "activeSecs": null,
-          "maxActiveSecs": null,
-          "statusBehaviour": null
+    "data": {
+        "quantity": -7,
+        "itemsNotAwarded": {
+            "sword001": 8
+        },
+        "items": {
+            "3f980b72-e9b0-421c-a23b-09f4a297432f": {
+                "itemId": "3f980b72-e9b0-421c-a23b-09f4a297432f",
+                "defId": "sword001",
+                "type": "ITEM",
+                "quantity": 2,
+                "itemData": {},
+                "giftedTo": null,
+                "giftedFrom": null,
+                "createdAt": 1763999328116,
+                "updatedAt": 1764001716414,
+                "version": 10,
+                "usesLeft": null,
+                "coolDownStart": -1,
+                "recoveryStart": -1,
+                "maxUses": null,
+                "coolDownUntil": -1,
+                "recoveryUntil": -1,
+                "itemDef": {
+                    "defId": "sword001",
+                    "name": "crimson sword",
+                    "desc": "a sword whose blade is forged in...",
+                    "type": "ITEM",
+                    "category": "sword",
+                    "tags": [
+                        "sword",
+                        "crimson",
+                        "pointy"
+                    ],
+                    "buyPriceDisabled": false,
+                    "buyPrice": {
+                        "coins": 200
+                    },
+                    "sellPrice": {
+                        "coins": 200
+                    },
+                    "image": null,
+                    "resourceGroup": "equipment.asset",
+                    "resourceTag": "sword001",
+                    "meta": null,
+                    "pState": "PUBLISHED",
+                    "publishedAt": 1763999316395,
+                    "stackable": true,
+                    "maxStackable": 2,
+                    "tradable": false,
+                    "blockchain": false,
+                    "consumable": false,
+                    "uses": null,
+                    "coolDownSecs": 0,
+                    "recoverySecs": 0,
+                    "activatable": false,
+                    "statusName": null,
+                    "activeSecs": null,
+                    "maxActiveSecs": null,
+                    "statusBehaviour": null
+                }
+            }
+        },
+        "currencies": {},
+        "currencySpent": {
+            "coins": -1400
+        },
+        "currencyBalances": {
+            "createdAt": 1761045719074,
+            "currencyMap": {
+                "bar": {
+                    "consumed": 0,
+                    "balance": 220,
+                    "purchased": 0,
+                    "awarded": 0,
+                    "revoked": 0
+                },
+                "bucks": {
+                    "consumed": 0,
+                    "balance": 0,
+                    "purchased": 0,
+                    "awarded": 0,
+                    "revoked": 0
+                },
+                "gems": {
+                    "consumed": 0,
+                    "balance": 0,
+                    "purchased": 0,
+                    "awarded": 0,
+                    "revoked": 0
+                },
+                "coins": {
+                    "consumed": 0,
+                    "balance": 1400,
+                    "purchased": 0,
+                    "awarded": 0,
+                    "revoked": 0
+                }
+            },
+            "playerId": "bbe26c21-02ab-4eb8-a7f0-13d09434cd1b",
+            "updatedAt": 1764001716408
         }
-      }
     },
-    "currencies": {},
-    "currencySpent": {
-      "coins": -1400
-    },
-    "currencyBalances": {
-      "createdAt": 1761045719074,
-      "currencyMap": {
-        "bar": {
-          "consumed": 0,
-          "balance": 220,
-          "purchased": 0,
-          "awarded": 0,
-          "revoked": 0
-        },
-        "bucks": {
-          "consumed": 0,
-          "balance": 0,
-          "purchased": 0,
-          "awarded": 0,
-          "revoked": 0
-        },
-        "gems": {
-          "consumed": 0,
-          "balance": 0,
-          "purchased": 0,
-          "awarded": 0,
-          "revoked": 0
-        },
-        "coins": {
-          "consumed": 0,
-          "balance": 1400,
-          "purchased": 0,
-          "awarded": 0,
-          "revoked": 0
-        }
-      },
-      "playerId": "bbe26c21-02ab-4eb8-a7f0-13d09434cd1b",
-      "updatedAt": 1764001716408
-    }
-  },
-  "status": 200
+    "status": 200
 }
 ```
 

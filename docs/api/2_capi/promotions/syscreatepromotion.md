@@ -157,38 +157,38 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "gameId": "23783",
-    "promotionId": 3,
-    "type": "SCHEDULED",
-    "name": "Independence Day Sale",
-    "message": {
-      "en": "Happy 4th of July!"
+    "data": {
+        "gameId": "23783",
+        "promotionId": 3,
+        "type": "SCHEDULED",
+        "name": "Independence Day Sale",
+        "message": {
+            "en": "Happy 4th of July!"
+        },
+        "enabled": false,
+        "segments": [],
+        "prices": [
+            {
+                "itemId": "coinbundle10",
+                "priceId": 0
+            }
+        ],
+        "notifications": [
+            {
+                "trigger": "ACTIVATED",
+                "notificationTemplateId": 1
+            }
+        ],
+        "customJson": {
+            "key": "value"
+        },
+        "startAt": 1593781259911,
+        "endAt": 1594126859911,
+        "createdAt": 1592544049481,
+        "updatedAt": 1592544049481,
+        "version": 1
     },
-    "enabled": false,
-    "segments": [],
-    "prices": [
-      {
-        "itemId": "coinbundle10",
-        "priceId": 0
-      }
-    ],
-    "notifications": [
-      {
-        "trigger": "ACTIVATED",
-        "notificationTemplateId": 1
-      }
-    ],
-    "customJson": {
-      "key": "value"
-    },
-    "startAt": 1593781259911,
-    "endAt": 1594126859911,
-    "createdAt": 1592544049481,
-    "updatedAt": 1592544049481,
-    "version": 1
-  },
-  "status": 200
+    "status": 200
 }
 ```
 </details>

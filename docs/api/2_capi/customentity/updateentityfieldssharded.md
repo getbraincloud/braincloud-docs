@@ -269,20 +269,20 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "timeToLive": null,
-    "createdAt": 1643144091464,
-    "entityType": "athletes",
-    "entityId": "bc7ea530-c6bd-4a27-bb5d-ced287991c87",
-    "acl": {
-      "other": 2
+    "data": {
+        "timeToLive": null,
+        "createdAt": 1643144091464,
+        "entityType": "athletes",
+        "entityId": "bc7ea530-c6bd-4a27-bb5d-ced287991c87",
+        "acl": {
+            "other": 2
+        },
+        "ownerId": "b85f195e-b65f-4220-b84f-260e42b01c5b",
+        "version": 4,
+        "expiresAt": null,
+        "updatedAt": 1643213839419
     },
-    "ownerId": "b85f195e-b65f-4220-b84f-260e42b01c5b",
-    "version": 4,
-    "expiresAt": null,
-    "updatedAt": 1643213839419
-  },
-  "status": 200
+    "status": 200
 }
 ```
 </details>

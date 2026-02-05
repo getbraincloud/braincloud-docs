@@ -171,35 +171,38 @@ if (postResult.status == 200) {
 
 ```json
 {
-	"status": 200,
-	"data": {
-		"leaderboardId": "general",
-		"timeBeforeReset": 3358262,
-		"leaderboard": [{
-			"updatedAt": 1462825797845,
-			"pictureUrl": null,
-			"playerName": "Peter",
-			"playerId": "ee8cad26-16f2-4ef8-9045-3aab84ce6362",
-			"createdAt": 1462825797845,
-			"data": {
-				"nickname": "pete"
-			},
-			"score": 100,
-			"summaryFriendData": null
-		}, {
-			"updatedAt": 1462825730011,
-			"pictureUrl": null,
-			"playerName": "Billy",
-			"playerId": "295c510f-507f-4bcf-80e1-ebc73708ec3c",
-			"createdAt": 1462825730011,
-			"data": {
-				"nickname": "bill"
-			},
-			"score": 10,
-			"summaryFriendData": null
-		}],
-		"server_time": 1462825845567
-	}
+    "status": 200,
+    "data": {
+        "leaderboardId": "general",
+        "timeBeforeReset": 3358262,
+        "leaderboard": [
+            {
+                "updatedAt": 1462825797845,
+                "pictureUrl": null,
+                "playerName": "Peter",
+                "playerId": "ee8cad26-16f2-4ef8-9045-3aab84ce6362",
+                "createdAt": 1462825797845,
+                "data": {
+                    "nickname": "pete"
+                },
+                "score": 100,
+                "summaryFriendData": null
+            },
+            {
+                "updatedAt": 1462825730011,
+                "pictureUrl": null,
+                "playerName": "Billy",
+                "playerId": "295c510f-507f-4bcf-80e1-ebc73708ec3c",
+                "createdAt": 1462825730011,
+                "data": {
+                    "nickname": "bill"
+                },
+                "score": 10,
+                "summaryFriendData": null
+            }
+        ],
+        "server_time": 1462825845567
+    }
 }
 ```
 </details>

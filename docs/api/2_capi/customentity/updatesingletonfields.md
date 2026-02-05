@@ -183,11 +183,11 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "version": 2,
-    "updatedAt": 1591821018374
-  },
-  "status": 200
+    "data": {
+        "version": 2,
+        "updatedAt": 1591821018374
+    },
+    "status": 200
 }
 ```
 </details>

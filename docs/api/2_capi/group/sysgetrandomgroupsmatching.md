@@ -115,50 +115,50 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "count": 1,
-    "groups": [
-      {
-        "gameId": "23782",
-        "groupId": "2bf538d1-19ea-4e14-9862-f979215e09b7",
-        "ownerId": "7f06ee4d-bc40-48ea-aa27-d3b73059491b",
-        "name": "gname1",
-        "groupType": "group1",
-        "createdAt": 1594906094270,
-        "updatedAt": 1594906094270,
-        "members": {
-          "10b6d6fa-0aa6-43b0-a7b3-48aff2d13312": {
-            "role": "MEMBER",
-            "attributes": {}
-          },
-          "7f06ee4d-bc40-48ea-aa27-d3b73059491b": {
-            "role": "OWNER",
-            "attributes": {}
-          }
-        },
-        "pendingMembers": {
-          "10b6d6fa-0aa6-43b0-a7b3-48aff2d13312": {
-            "role": "MEMBER",
-            "attributes": {},
-            "pendingReason": "INVITED_TO_JOIN"
-          }
-        },
-        "version": 1,
-        "data": {},
-        "summaryData": {},
-        "isOpenGroup": true,
-        "defaultMemberAttributes": {},
-        "memberCount": 2,
-        "invitedPendingMemberCount": 1,
-        "requestingPendingMemberCount": 0,
-        "acl": {
-          "member": 2,
-          "other": 2
-        }
-      }
-    ]
-  },
-  "status": 200
+    "data": {
+        "count": 1,
+        "groups": [
+            {
+                "gameId": "23782",
+                "groupId": "2bf538d1-19ea-4e14-9862-f979215e09b7",
+                "ownerId": "7f06ee4d-bc40-48ea-aa27-d3b73059491b",
+                "name": "gname1",
+                "groupType": "group1",
+                "createdAt": 1594906094270,
+                "updatedAt": 1594906094270,
+                "members": {
+                    "10b6d6fa-0aa6-43b0-a7b3-48aff2d13312": {
+                        "role": "MEMBER",
+                        "attributes": {}
+                    },
+                    "7f06ee4d-bc40-48ea-aa27-d3b73059491b": {
+                        "role": "OWNER",
+                        "attributes": {}
+                    }
+                },
+                "pendingMembers": {
+                    "10b6d6fa-0aa6-43b0-a7b3-48aff2d13312": {
+                        "role": "MEMBER",
+                        "attributes": {},
+                        "pendingReason": "INVITED_TO_JOIN"
+                    }
+                },
+                "version": 1,
+                "data": {},
+                "summaryData": {},
+                "isOpenGroup": true,
+                "defaultMemberAttributes": {},
+                "memberCount": 2,
+                "invitedPendingMemberCount": 1,
+                "requestingPendingMemberCount": 0,
+                "acl": {
+                    "member": 2,
+                    "other": 2
+                }
+            }
+        ]
+    },
+    "status": 200
 }
 ```
 </details>

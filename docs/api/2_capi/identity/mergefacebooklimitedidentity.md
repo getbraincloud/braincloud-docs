@@ -137,11 +137,11 @@ if (result.statusCode == 200) {
 <summary>JSON Response</summary>
 
 ```json
-{  
-   "data":{  
-      "profileId":"f94f7e2d-3cdd-4fd6-9c28-392f7875e9df"
-   },
-   "status":200
+{
+    "data": {
+        "profileId": "f94f7e2d-3cdd-4fd6-9c28-392f7875e9df"
+    },
+    "status": 200
 }
 ```
 </details>

@@ -192,49 +192,49 @@ var postResult = userItemsProxy.openBundle(itemId, version, quantity, includeDef
 
 ```json
 {
-  "data": {
-    "quantity": 1,
-    "itemsNotAwarded": {
-      "s001": 6,
-      "sword001": 8
-    },
-    "itemDef": {
-      "defId": "s001b",
-      "name": "s001b",
-      "desc": "desp",
-      "type": "BUNDLE",
-      "category": "weapon",
-      "tags": [
-        "sword"
-      ],
-      "buyPriceDisabled": false,
-      "buyPrice": {},
-      "sellPrice": {},
-      "image": null,
-      "resourceGroup": null,
-      "resourceTag": null,
-      "meta": null,
-      "pState": "PUBLISHED",
-      "publishedAt": 1764001437452,
-      "stackable": false,
-      "maxStackable": null,
-      "tradable": false,
-      "blockchain": false,
-      "autoOpen": false,
-      "items": {
-        "s001": {
-          "defId": "s001",
-          "quantity": 1
+    "data": {
+        "quantity": 1,
+        "itemsNotAwarded": {
+            "s001": 6,
+            "sword001": 8
         },
-        "sword001": {
-          "defId": "sword001",
-          "quantity": 1
-        }
-      }
+        "itemDef": {
+            "defId": "s001b",
+            "name": "s001b",
+            "desc": "desp",
+            "type": "BUNDLE",
+            "category": "weapon",
+            "tags": [
+                "sword"
+            ],
+            "buyPriceDisabled": false,
+            "buyPrice": {},
+            "sellPrice": {},
+            "image": null,
+            "resourceGroup": null,
+            "resourceTag": null,
+            "meta": null,
+            "pState": "PUBLISHED",
+            "publishedAt": 1764001437452,
+            "stackable": false,
+            "maxStackable": null,
+            "tradable": false,
+            "blockchain": false,
+            "autoOpen": false,
+            "items": {
+                "s001": {
+                    "defId": "s001",
+                    "quantity": 1
+                },
+                "sword001": {
+                    "defId": "sword001",
+                    "quantity": 1
+                }
+            }
+        },
+        "items": {}
     },
-    "items": {}
-  },
-  "status": 200
+    "status": 200
 }
 ```
 

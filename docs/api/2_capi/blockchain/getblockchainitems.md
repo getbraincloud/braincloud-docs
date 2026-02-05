@@ -164,24 +164,24 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "success": true,
-    "response": {
-      "items": [
-        {
-          "key": "...........m2",
-          "payer": "eosio.nftram",
-          "json": {
-            "id": 290,
-            "mint_date": "2022-10-19T13:03:10",
-            "serial_number": 17,
-            "token_factory_id": 22
-          }
+    "data": {
+        "success": true,
+        "response": {
+            "items": [
+                {
+                    "key": "...........m2",
+                    "payer": "eosio.nftram",
+                    "json": {
+                        "id": 290,
+                        "mint_date": "2022-10-19T13:03:10",
+                        "serial_number": 17,
+                        "token_factory_id": 22
+                    }
+                }
+            ]
         }
-      ]
-    }
-  },
-  "status": 200
+    },
+    "status": 200
 }
 ```
 </details>

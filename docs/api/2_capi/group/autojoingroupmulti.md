@@ -182,7 +182,7 @@ if (postResult.status == 200) {
 
 ```json
 {
-     "data": {
+    "data": {
         "groupType": "test",
         "groupId": "972e245c-38e8-4ccb-84db-8be5f530a27a",
         "memberCount": 3,

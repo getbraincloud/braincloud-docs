@@ -166,25 +166,25 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "gameId": "23782",
-    "scanCode": "vfaok-yu7gy-y4ida-jhibz-rtikc",
-    "codeType": "ct",
-    "redemptionCodeId": "ea2db0da-ef7b-4390-b747-df2eafaba2a3",
-    "version": 2,
-    "codeState": "Redeemed",
-    "customCodeInfo": {},
-    "customRedemptionInfo": {},
-    "redeemedByProfileId": "c5ecdbda-5f91-41a9-96aa-174f412f7657",
-    "redeemedByProfileName": "",
-    "invalidationReason": null,
-    "createdAt": 1655757623392,
-    "activatedAt": 1655757623392,
-    "redeemedAt": 1655758430895,
-    "invalidatedAt": null,
-    "updatedAt": 1655757623392
-  },
-  "status": 200
+    "data": {
+        "gameId": "23782",
+        "scanCode": "vfaok-yu7gy-y4ida-jhibz-rtikc",
+        "codeType": "ct",
+        "redemptionCodeId": "ea2db0da-ef7b-4390-b747-df2eafaba2a3",
+        "version": 2,
+        "codeState": "Redeemed",
+        "customCodeInfo": {},
+        "customRedemptionInfo": {},
+        "redeemedByProfileId": "c5ecdbda-5f91-41a9-96aa-174f412f7657",
+        "redeemedByProfileName": "",
+        "invalidationReason": null,
+        "createdAt": 1655757623392,
+        "activatedAt": 1655757623392,
+        "redeemedAt": 1655758430895,
+        "invalidatedAt": null,
+        "updatedAt": 1655757623392
+    },
+    "status": 200
 }
 ```
 </details>

@@ -177,10 +177,10 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "deletedCount": 2
-  },
-  "status": 200
+    "data": {
+        "deletedCount": 2
+    },
+    "status": 200
 }
 ```
 </details>

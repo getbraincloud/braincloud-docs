@@ -171,22 +171,22 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "gameId": "123456",
-    "entityId": "218d19d1-cda9-48a7-a918-a796281219f1",
-    "ownerId": "77ce8889-20b7-4d01-b248-e0beb747f1b4",
-    "entityType": "address",
-    "entityIndexedId": "entityId1",
-    "version": 4,
-    "acl": {
-      "other": 1
+    "data": {
+        "gameId": "123456",
+        "entityId": "218d19d1-cda9-48a7-a918-a796281219f1",
+        "ownerId": "77ce8889-20b7-4d01-b248-e0beb747f1b4",
+        "entityType": "address",
+        "entityIndexedId": "entityId1",
+        "version": 4,
+        "acl": {
+            "other": 1
+        },
+        "expiresAt": 9223372036854776000,
+        "timeToLive": -1,
+        "createdAt": 1557939144108,
+        "updatedAt": 1557939241957
     },
-    "expiresAt": 9223372036854776000,
-    "timeToLive": -1,
-    "createdAt": 1557939144108,
-    "updatedAt": 1557939241957
-  },
-  "status": 200
+    "status": 200
 }
 ```
 </details>

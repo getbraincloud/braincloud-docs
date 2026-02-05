@@ -109,8 +109,8 @@ var postResult = roomServerProxy.sysRoomSessionStarted(serverId, serverContext);
 
 ```json
 {
-  "status" : 200,
-  "data" : {}
+    "status": 200,
+    "data": {}
 }
 ```
 

@@ -193,68 +193,68 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "used": true,
-    "statusEffects": {
-      "activeStart": 1566851245914,
-      "statusName": "boosted",
-      "details": {},
-      "activeUntil": 1567751245914
+    "data": {
+        "used": true,
+        "statusEffects": {
+            "activeStart": 1566851245914,
+            "statusName": "boosted",
+            "details": {},
+            "activeUntil": 1567751245914
+        },
+        "item": {
+            "itemId": "6ff179ce-6689-4fad-9d97-f94df35ea287",
+            "defId": "boost_rapidfire",
+            "quantity": 1,
+            "usesLeft": null,
+            "coolDownStart": -1,
+            "recoveryStart": -1,
+            "itemData": {
+                "condition": 77,
+                "bonus": 1
+            },
+            "giftedTo": null,
+            "giftedFrom": null,
+            "blockId": null,
+            "createdAt": 1566851211540,
+            "updatedAt": 1566851245917,
+            "version": 2,
+            "maxUses": null,
+            "coolDownUntil": -1,
+            "recoveryUntil": -1,
+            "itemDef": {
+                "defId": "boost_rapidfire",
+                "name": "Rapid Fire",
+                "desc": "Rapid fire for the next match.",
+                "type": "ITEM",
+                "category": "boost",
+                "tags": null,
+                "buyPrice": {
+                    "coins": 200
+                },
+                "sellPrice": {
+                    "coins": 400
+                },
+                "image": null,
+                "resourceGroup": null,
+                "resourceTag": null,
+                "meta": {},
+                "pState": "PUBLISHED",
+                "publishedAt": 1566850042148,
+                "stackable": false,
+                "consumable": false,
+                "uses": null,
+                "coolDownSecs": 0,
+                "recoverySecs": 0,
+                "activatable": true,
+                "statusName": "boosted",
+                "activeSecs": 900000,
+                "tradable": true,
+                "blockchain": false,
+                "blockchainDefId": null
+            }
+        }
     },
-    "item": {
-      "itemId": "6ff179ce-6689-4fad-9d97-f94df35ea287",
-      "defId": "boost_rapidfire",
-      "quantity": 1,
-      "usesLeft": null,
-      "coolDownStart": -1,
-      "recoveryStart": -1,
-      "itemData": {
-        "condition": 77,
-        "bonus": 1
-      },
-      "giftedTo": null,
-      "giftedFrom": null,
-      "blockId": null,
-      "createdAt": 1566851211540,
-      "updatedAt": 1566851245917,
-      "version": 2,
-      "maxUses": null,
-      "coolDownUntil": -1,
-      "recoveryUntil": -1,
-      "itemDef": {
-        "defId": "boost_rapidfire",
-        "name": "Rapid Fire",
-        "desc": "Rapid fire for the next match.",
-        "type": "ITEM",
-        "category": "boost",
-        "tags": null,
-        "buyPrice": {
-          "coins": 200
-        },
-        "sellPrice": {
-          "coins": 400
-        },
-        "image": null,
-        "resourceGroup": null,
-        "resourceTag": null,
-        "meta": {},
-        "pState": "PUBLISHED",
-        "publishedAt": 1566850042148,
-        "stackable": false,
-        "consumable": false,
-        "uses": null,
-        "coolDownSecs": 0,
-        "recoverySecs": 0,
-        "activatable": true,
-        "statusName": "boosted",
-        "activeSecs": 900000,
-        "tradable": true,
-        "blockchain": false,
-        "blockchainDefId": null
-      }
-    }
-  },
-  "status": 200
+    "status": 200
 }
 ```
 </details>

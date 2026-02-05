@@ -217,29 +217,29 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "lobbiesByRating": {
-      "20.0": [
-        {
-          "id": "23782:Relay_lobbyT_v2:2",
-          "lobbyType": "Relay_lobbyT_v2",
-          "state": "setup",
-          "rating": 20,
-          "desc": "starts as soon as 1 player is ready",
-          "owner": {
-            "profileId": "10b6d6fa-0aa6-43b0-a7b3-48aff2d13312",
-            "name": "",
-            "rating": 0,
-            "pic": null,
-            "cxId": "23782:10b6d6fa-0aa6-43b0-a7b3-48aff2d13312:52kc0h19k0pnnjhnrp8pug7udd"
-          },
-          "numMembers": 1,
-          "maxMembers": 8
+    "data": {
+        "lobbiesByRating": {
+            "20.0": [
+                {
+                    "id": "23782:Relay_lobbyT_v2:2",
+                    "lobbyType": "Relay_lobbyT_v2",
+                    "state": "setup",
+                    "rating": 20,
+                    "desc": "starts as soon as 1 player is ready",
+                    "owner": {
+                        "profileId": "10b6d6fa-0aa6-43b0-a7b3-48aff2d13312",
+                        "name": "",
+                        "rating": 0,
+                        "pic": null,
+                        "cxId": "23782:10b6d6fa-0aa6-43b0-a7b3-48aff2d13312:52kc0h19k0pnnjhnrp8pug7udd"
+                    },
+                    "numMembers": 1,
+                    "maxMembers": 8
+                }
+            ]
         }
-      ]
-    }
-  },
-  "status": 200
+    },
+    "status": 200
 }
 ```
 </details>

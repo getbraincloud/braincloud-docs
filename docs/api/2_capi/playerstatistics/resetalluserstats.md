@@ -135,27 +135,27 @@ if (postResult.status == 200) {
 
 ```json
 {
-	"data": {
-		"milestones": {
-			"1": "UNLOCKED",
-			"2": "UNLOCKED"
-		},
-		"xpCapped": false,
-		"experiencePoints": 0,
-		"quests": {
-			"Test Quest 2": "UNLOCKED",
-			"Test Quest 1": "UNLOCKED"
-		},
-		"playerAchievements": [],
-		"experienceLevel": 0,
-		"statistics": {
-			"RoundsWon": 0,
-			"RoundsLost": 0,
-			"DifficultyChanges": 0,
-			"RoundsFinished": 0
-		}
-	},
-	"status": 200
+    "data": {
+        "milestones": {
+            "1": "UNLOCKED",
+            "2": "UNLOCKED"
+        },
+        "xpCapped": false,
+        "experiencePoints": 0,
+        "quests": {
+            "Test Quest 2": "UNLOCKED",
+            "Test Quest 1": "UNLOCKED"
+        },
+        "playerAchievements": [],
+        "experienceLevel": 0,
+        "statistics": {
+            "RoundsWon": 0,
+            "RoundsLost": 0,
+            "DifficultyChanges": 0,
+            "RoundsFinished": 0
+        }
+    },
+    "status": 200
 }
 ```
 </details>

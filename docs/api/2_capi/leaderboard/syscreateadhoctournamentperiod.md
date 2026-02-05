@@ -177,56 +177,56 @@ var retVal = leaderboardProxy.sysCreateAdhocTournamentPeriod(
 
 ```json
 {
-  "data": {
-    "aLeaderboardIdC": {
-      "leaderboardId": "aLeaderboardId",
-      "dbVersion": 3,
-      "resetAt": 1635895835000,
-      "leaderboardType": "HIGH_VALUE",
-      "rotationType": "ADHOC",
-      "retainedCount": 5,
-      "data": {},
-      "numDaysToRotate": 0,
-      "entryType": "PLAYER",
-      "tEnabled": true,
-      "tScheduled": [
-        {
-          "startingAt": 1635895835000,
-          "endingAt": 1636068635000,
-          "tConfigs": {
-            "silverLevel": {
-              "activeUpUntil": -1,
-              "tConfigCode": "silverLevel"
-            },
-            "goldLevel": {
-              "activeUpUntil": -1,
-              "tConfigCode": "goldLevel"
+    "data": {
+        "aLeaderboardIdC": {
+            "leaderboardId": "aLeaderboardId",
+            "dbVersion": 3,
+            "resetAt": 1635895835000,
+            "leaderboardType": "HIGH_VALUE",
+            "rotationType": "ADHOC",
+            "retainedCount": 5,
+            "data": {},
+            "numDaysToRotate": 0,
+            "entryType": "PLAYER",
+            "tEnabled": true,
+            "tScheduled": [
+                {
+                    "startingAt": 1635895835000,
+                    "endingAt": 1636068635000,
+                    "tConfigs": {
+                        "silverLevel": {
+                            "activeUpUntil": -1,
+                            "tConfigCode": "silverLevel"
+                        },
+                        "goldLevel": {
+                            "activeUpUntil": -1,
+                            "tConfigCode": "goldLevel"
+                        }
+                    },
+                    "tStates": {
+                        "enrolMins": 60,
+                        "disallowMins": 0,
+                        "minMins": 2865,
+                        "compMins": 2795,
+                        "bufferMins": 10,
+                        "announcementMins": 15
+                    },
+                    "tAutoJoin": false,
+                    "tAutoClaim": false
+                }
+            ],
+            "tTemplateOnly": false,
+            "currentVersionId": 1,
+            "currentPeriod": {
+                "versionId": 1,
+                "startingAt": 1632253445307,
+                "endingAt": 1635895835000,
+                "rotationType": "ADHOC",
+                "numDaysToRotate": 0
             }
-          },
-          "tStates": {
-            "enrolMins": 60,
-            "disallowMins": 0,
-            "minMins": 2865,
-            "compMins": 2795,
-            "bufferMins": 10,
-            "announcementMins": 15
-          },
-          "tAutoJoin": false,
-          "tAutoClaim": false
         }
-      ],
-      "tTemplateOnly": false,
-      "currentVersionId": 1,
-      "currentPeriod": {
-        "versionId": 1,
-        "startingAt": 1632253445307,
-        "endingAt": 1635895835000,
-        "rotationType": "ADHOC",
-        "numDaysToRotate": 0
-      }
-    }
-  },
-  "status": 200
+    },
+    "status": 200
 }
 ```
 </details>

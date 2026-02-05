@@ -165,42 +165,42 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "promotion": {
-      "promotionId": 1,
-      "type": "SCHEDULED",
-      "name": "Independence Day Sale",
-      "message": {
-        "en": "Happy 4th of July!",
-        "fr": "Joyeux 4 juillet!"
-      },
-      "enabled": true,
-      "segments": [
-        1
-      ],
-      "prices": [
-        {
-          "itemId": "coinbundle10",
-          "priceId": 1
+    "data": {
+        "promotion": {
+            "promotionId": 1,
+            "type": "SCHEDULED",
+            "name": "Independence Day Sale",
+            "message": {
+                "en": "Happy 4th of July!",
+                "fr": "Joyeux 4 juillet!"
+            },
+            "enabled": true,
+            "segments": [
+                1
+            ],
+            "prices": [
+                {
+                    "itemId": "coinbundle10",
+                    "priceId": 1
+                }
+            ],
+            "notifications": [
+                {
+                    "trigger": "ACTIVATED",
+                    "notificationTemplateId": 1
+                }
+            ],
+            "customJson": {
+                "key": "value"
+            },
+            "startAt": 1593781140000,
+            "endAt": 1594126859999,
+            "createdAt": 1592543345470,
+            "updatedAt": 1592589083592,
+            "version": 2
         }
-      ],
-      "notifications": [
-        {
-          "trigger": "ACTIVATED",
-          "notificationTemplateId": 1
-        }
-      ],
-      "customJson": {
-        "key": "value"
-      },
-      "startAt": 1593781140000,
-      "endAt": 1594126859999,
-      "createdAt": 1592543345470,
-      "updatedAt": 1592589083592,
-      "version": 2
-    }
-  },
-  "status": 200
+    },
+    "status": 200
 }
 ```
 </details>

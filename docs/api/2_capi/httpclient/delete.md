@@ -131,11 +131,11 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "text": "text message",
-    "statusCode": 200
-  },
-  "status": 200
+    "data": {
+        "text": "text message",
+        "statusCode": 200
+    },
+    "status": 200
 }
 ```
 </details>

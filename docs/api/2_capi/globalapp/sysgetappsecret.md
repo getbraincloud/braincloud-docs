@@ -95,10 +95,10 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "secret": "883089a3-9dd0-4c53-8278-7f8ae5a9adab"
-  },
-  "status": 200
+    "data": {
+        "secret": "883089a3-9dd0-4c53-8278-7f8ae5a9adab"
+    },
+    "status": 200
 }
 ```
 </details>

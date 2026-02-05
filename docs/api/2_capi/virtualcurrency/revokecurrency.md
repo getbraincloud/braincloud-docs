@@ -104,25 +104,25 @@ var postResult = virtualCurrencyProxy.RevokeCurrency(vcId, vcAmount);
 
 ```json
 {
-  "data": {
-    "currencyMap": {
-      "bar": {
-        "consumed": 0,
-        "balance": 32,
-        "purchased": 0,
-        "awarded": 32,
-        "revoked": 0
-      },
-      "coins": {
-        "consumed": 0,
-        "balance": 101,
-        "purchased": 0,
-        "awarded": 120,
-        "revoked": 19
-      }
-    }
-  },
-  "status": 200
+    "data": {
+        "currencyMap": {
+            "bar": {
+                "consumed": 0,
+                "balance": 32,
+                "purchased": 0,
+                "awarded": 32,
+                "revoked": 0
+            },
+            "coins": {
+                "consumed": 0,
+                "balance": 101,
+                "purchased": 0,
+                "awarded": 120,
+                "revoked": 19
+            }
+        }
+    },
+    "status": 200
 }
 ```
 

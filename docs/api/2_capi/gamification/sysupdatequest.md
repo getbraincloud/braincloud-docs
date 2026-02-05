@@ -116,72 +116,72 @@ if (readResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "quest": {
-      "questId": "test",
-      "questType": "unorderedMinimal",
-      "questData": "0",
-      "title": "Crush 50 Eggs",
-      "description": "Crush 50 Eggs of same colour",
-      "category": "mission",
-      "extraData": {
-        "secretMission": false,
-        "difficulty": 1
-      },
-      "rewards": {
-        "experiencePoints": 30,
-        "achievement": "ACH001",
-        "currency": {
-          "gumdrops": 8
+    "data": {
+        "quest": {
+            "questId": "test",
+            "questType": "unorderedMinimal",
+            "questData": "0",
+            "title": "Crush 50 Eggs",
+            "description": "Crush 50 Eggs of same colour",
+            "category": "mission",
+            "extraData": {
+                "secretMission": false,
+                "difficulty": 1
+            },
+            "rewards": {
+                "experiencePoints": 30,
+                "achievement": "ACH001",
+                "currency": {
+                    "gumdrops": 8
+                },
+                "globalStatistics": {
+                    "globalxp": 40
+                },
+                "statistics": {
+                    "a3": 1,
+                    "secretMissions": 1
+                }
+            },
+            "unlockThresholds": {
+                "playerStatistics": {
+                    "experienceLevel": 2,
+                    "experiencePoints": 15
+                }
+            },
+            "createdAt": 1647609902645,
+            "updatedAt": 1770163638116,
+            "version": 4,
+            "tasks": [
+                "13"
+            ]
         },
-        "globalStatistics": {
-          "globalxp": 40
-        },
-        "statistics": {
-          "a3": 1,
-          "secretMissions": 1
-        }
-      },
-      "unlockThresholds": {
-        "playerStatistics": {
-          "experienceLevel": 2,
-          "experiencePoints": 15
-        }
-      },
-      "createdAt": 1647609902645,
-      "updatedAt": 1770163638116,
-      "version": 4,
-      "tasks": [
-        "13"
-      ]
-    },
-    "tasks": {
-      "13": {
-        "createdAt": 1647868845428,
-        "thresholds": {
-          "playerStatistics": {
-            "statistics": {
-              "a3": 50
+        "tasks": {
+            "13": {
+                "createdAt": 1647868845428,
+                "thresholds": {
+                    "playerStatistics": {
+                        "statistics": {
+                            "a3": 50
+                        }
+                    }
+                },
+                "extraData": {
+                    "secretMission": false,
+                    "actionIndex": 4
+                },
+                "description": "Get 50 wins",
+                "title": "Winner Winner",
+                "category": "loyalty",
+                "version": 1,
+                "rewards": {
+                    "experiencePoints": 1000
+                },
+                "taskId": "13",
+                "updatedAt": 1647868845428
             }
-          }
-        },
-        "extraData": {
-          "secretMission": false,
-          "actionIndex": 4
-        },
-        "description": "Get 50 wins",
-        "title": "Winner Winner",
-        "category": "loyalty",
-        "version": 1,
-        "rewards": {
-          "experiencePoints": 1000
-        },
-        "taskId": "13",
-        "updatedAt": 1647868845428
-      }
-    }
-  },
-  "status": 200
+        }
+    },
+    "status": 200
 }
 ```
 </details>

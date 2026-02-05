@@ -124,28 +124,28 @@ if (postResult.status == 200) {
 
 ```json
 {
- "data": {
-  "response": {
-   "data": {
-    "gameId": "22232",
-    "entityIndexedId": null,
-    "timeToLive": -1,
-    "createdAt": 1499276273151,
-    "entityType": "address",
-    "entityId": "5ae3644f-5306-4b24-8134-29b0c1fdf713",
-    "acl": {
-     "other": 2
+    "data": {
+        "response": {
+            "data": {
+                "gameId": "22232",
+                "entityIndexedId": null,
+                "timeToLive": -1,
+                "createdAt": 1499276273151,
+                "entityType": "address",
+                "entityId": "5ae3644f-5306-4b24-8134-29b0c1fdf713",
+                "acl": {
+                    "other": 2
+                },
+                "ownerId": null,
+                "version": 1,
+                "expiresAt": 9223372036854776000,
+                "updatedAt": 1499276273151
+            },
+            "status": 200
+        },
+        "success": true
     },
-    "ownerId": null,
-    "version": 1,
-    "expiresAt": 9223372036854776000,
-    "updatedAt": 1499276273151
-   },
-   "status": 200
-  },
-  "success": true
- },
- "status": 200
+    "status": 200
 }
 ```
 </details>

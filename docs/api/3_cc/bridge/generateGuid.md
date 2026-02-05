@@ -94,13 +94,13 @@ response;
 
 ```json
 {
- "data": {
-  "response": {
-   "guid": "81a2c41d-ab0d-4057-adb8-d79bc819ee01"
-  },
-  "success": true
- },
- "status": 200
+    "data": {
+        "response": {
+            "guid": "81a2c41d-ab0d-4057-adb8-d79bc819ee01"
+        },
+        "success": true
+    },
+    "status": 200
 }
 ```
 </details>

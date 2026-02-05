@@ -161,35 +161,38 @@ if (postResult.status == 200) {
 
 ```json
 {
-	"data": {
-		"gameId": "11004",
-		"ownerId": "35e8698f-b14d-48ae-a37c-4b2962308b8d",
-		"matchId": "cfa752d6-d408-4671-9603-b22bf55d5379",
-		"version": 1,
-		"players": [{
-			"playerId": "35e8698f-b14d-48ae-a37c-4b2962308b8d",
-			"playerName": "",
-			"pictureUrl": null,
-			"summaryFriendData": null
-		}, {
-			"playerId": "e84c16ea-bd62-4307-83f9-d32f8ac18bca",
-			"playerName": "",
-			"pictureUrl": null,
-			"summaryFriendData": null
-		}],
-		"status": {
-			"status": "PENDING",
-			"currentPlayer": "e84c16ea-bd62-4307-83f9-d32f8ac18bca"
-		},
-		"summary": null,
-		"statistics": {},
-		"matchState": {
-			"testKey": "testValue"
-		},
-		"createdAt": 1472293357985,
-		"updatedAt": 1472293357996
-	},
-	"status": 200
+    "data": {
+        "gameId": "11004",
+        "ownerId": "35e8698f-b14d-48ae-a37c-4b2962308b8d",
+        "matchId": "cfa752d6-d408-4671-9603-b22bf55d5379",
+        "version": 1,
+        "players": [
+            {
+                "playerId": "35e8698f-b14d-48ae-a37c-4b2962308b8d",
+                "playerName": "",
+                "pictureUrl": null,
+                "summaryFriendData": null
+            },
+            {
+                "playerId": "e84c16ea-bd62-4307-83f9-d32f8ac18bca",
+                "playerName": "",
+                "pictureUrl": null,
+                "summaryFriendData": null
+            }
+        ],
+        "status": {
+            "status": "PENDING",
+            "currentPlayer": "e84c16ea-bd62-4307-83f9-d32f8ac18bca"
+        },
+        "summary": null,
+        "statistics": {},
+        "matchState": {
+            "testKey": "testValue"
+        },
+        "createdAt": 1472293357985,
+        "updatedAt": 1472293357996
+    },
+    "status": 200
 }
 ```
 </details>

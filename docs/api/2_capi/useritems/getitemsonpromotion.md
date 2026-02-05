@@ -183,96 +183,96 @@ var postResult = userItemsProxy.getItemsOnPromotion(shopId, includeDef, includeP
 
 ```json
 {
-  "data": {
-    "items": [
-      {
-        "defId": "s001",
-        "itemDef": {
-          "resourceGroup": null,
-          "sellPrice": {},
-          "type": "ITEM",
-          "coolDownSecs": 0,
-          "recoverySecs": 0,
-          "statusName": null,
-          "buyPrice": {
-            "bar": 88
-          },
-          "image": null,
-          "stackable": true,
-          "publishedAt": 1713324249793,
-          "pState": "PUBLISHED",
-          "activatable": false,
-          "tags": null,
-          "defId": "s001",
-          "maxStackable": 1,
-          "blockchain": false,
-          "meta": null,
-          "consumable": false,
-          "name": {
-            "en": "Sword"
-          },
-          "tradable": false,
-          "resourceTag": null,
-          "uses": null,
-          "_id": {
-            "timestamp": 1711508420,
-            "date": 1711508420000
-          },
-          "activeSecs": null,
-          "category": "weapon",
-          "desc": {
-            "en": "weapon"
-          }
-        },
-        "winningPromotionId": 1,
-        "promotionPrices": [
-          {
-            "promotionPrice": {
-              "bar": 44
-            },
-            "name": "test",
-            "type": "AUTOMATED",
-            "promotionId": 1
-          }
-        ]
-      }
-    ],
-    "promotionDetails": [
-      {
-        "promotionId": 1,
-        "type": "AUTOMATED",
-        "name": "test",
-        "duration": 10,
-        "customJson": {
-          "priority": 100,
-          "itemIds": {
-            "barBundle1Imp": {
-              "currency": {
-                "bars": 12
-              },
-              "extra": {
-                "specialItemReward": "bonusItemA"
-              }
-            },
-            "gemcollection": {
-              "currency": {
-                "gems": 7
-              },
-              "extra": {
-                "specialItemReward": "bonusItemA"
-              }
+    "data": {
+        "items": [
+            {
+                "defId": "s001",
+                "itemDef": {
+                    "resourceGroup": null,
+                    "sellPrice": {},
+                    "type": "ITEM",
+                    "coolDownSecs": 0,
+                    "recoverySecs": 0,
+                    "statusName": null,
+                    "buyPrice": {
+                        "bar": 88
+                    },
+                    "image": null,
+                    "stackable": true,
+                    "publishedAt": 1713324249793,
+                    "pState": "PUBLISHED",
+                    "activatable": false,
+                    "tags": null,
+                    "defId": "s001",
+                    "maxStackable": 1,
+                    "blockchain": false,
+                    "meta": null,
+                    "consumable": false,
+                    "name": {
+                        "en": "Sword"
+                    },
+                    "tradable": false,
+                    "resourceTag": null,
+                    "uses": null,
+                    "_id": {
+                        "timestamp": 1711508420,
+                        "date": 1711508420000
+                    },
+                    "activeSecs": null,
+                    "category": "weapon",
+                    "desc": {
+                        "en": "weapon"
+                    }
+                },
+                "winningPromotionId": 1,
+                "promotionPrices": [
+                    {
+                        "promotionPrice": {
+                            "bar": 44
+                        },
+                        "name": "test",
+                        "type": "AUTOMATED",
+                        "promotionId": 1
+                    }
+                ]
             }
-          }
-        },
-        "isRetriggerable": true,
-        "maxRetriggers": null,
-        "maxPurchases": null,
-        "triggeredForUserAt": 1764353888374,
-        "expiresForUserAt": 1764389888374
-      }
-    ]
-  },
-  "status": 200
+        ],
+        "promotionDetails": [
+            {
+                "promotionId": 1,
+                "type": "AUTOMATED",
+                "name": "test",
+                "duration": 10,
+                "customJson": {
+                    "priority": 100,
+                    "itemIds": {
+                        "barBundle1Imp": {
+                            "currency": {
+                                "bars": 12
+                            },
+                            "extra": {
+                                "specialItemReward": "bonusItemA"
+                            }
+                        },
+                        "gemcollection": {
+                            "currency": {
+                                "gems": 7
+                            },
+                            "extra": {
+                                "specialItemReward": "bonusItemA"
+                            }
+                        }
+                    }
+                },
+                "isRetriggerable": true,
+                "maxRetriggers": null,
+                "maxPurchases": null,
+                "triggeredForUserAt": 1764353888374,
+                "expiresForUserAt": 1764389888374
+            }
+        ]
+    },
+    "status": 200
 }
 ```
 

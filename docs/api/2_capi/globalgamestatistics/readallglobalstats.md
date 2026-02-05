@@ -138,13 +138,13 @@ if (postResult.status == 200) {
 
 ```json
 {
-	"status": 200,
-	"data": {
-		"statistics": {
-			"TotalXpEarned": 0,
-			"_GAME_LOGINS": 805
-		}
-	}
+    "status": 200,
+    "data": {
+        "statistics": {
+            "TotalXpEarned": 0,
+            "_GAME_LOGINS": 805
+        }
+    }
 }
 ```
 </details>

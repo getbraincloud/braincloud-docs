@@ -131,23 +131,23 @@ var postResult = redemptionCodeProxy.sysAddMultiUseCodeType(codeType, jsonOption
 
 ```json
 {
-  "data": {
-    "codeType": "unique_campaign_name",
-    "description": "Codes to give away for promotion",
-    "version": 1,
-    "createdAt": 1708035413954,
-    "updatedAt": 1708035413954,
-    "async": false,
-    "maxRetries": 0,
-    "isDisabled": false,
-    "customCodeInfo": {},
-    "validStart": 1708035331008,
-    "validEnd": 1708640131008,
-    "codeUseType": "MULTI",
-    "scanCode": "FREE100",
-    "maxRedemptions": 100
-  },
-  "status": 200
+    "data": {
+        "codeType": "unique_campaign_name",
+        "description": "Codes to give away for promotion",
+        "version": 1,
+        "createdAt": 1708035413954,
+        "updatedAt": 1708035413954,
+        "async": false,
+        "maxRetries": 0,
+        "isDisabled": false,
+        "customCodeInfo": {},
+        "validStart": 1708035331008,
+        "validEnd": 1708640131008,
+        "codeUseType": "MULTI",
+        "scanCode": "FREE100",
+        "maxRedemptions": 100
+    },
+    "status": 200
 }
 ```
 
