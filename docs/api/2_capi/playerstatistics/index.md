@@ -14,20 +14,20 @@ of the <%= data.branding.productName %> portal.  If instead you need to create t
 
 The following operations are for user statistics:
 
-* [ReadAllUserStats](/api/capi/playerstats/readalluserstats) - returns the complete list of user stats
-* [ReadUserStatsSubset](/api/capi/playerstats/readuserstatssubset) - returns a specified stats to the client
-* [ReadUserStatsForCategory](/api/capi/playerstats/readuserstatsforcategory) - returns the specified category of stats to the client
-* [IncrementUserStats](/api/capi/playerstats/incrementuserstats) - perform increment/decrement operations on the statistics
-* [ProcessStatistics](/api/capi/playerstats/processstatistics) - perform operations on the statistics according to the [stats grammar](/api/appendix/statisticsgrammar).
-* [ResetAllUserStats](/api/capi/playerstats/resetalluserstats) - resets all user statistics to their initial values (as defined by their rules).  Useful for debugging.
+* [ReadAllUserStats](/api/capi/playerstatistics/readalluserstats) - returns the complete list of user stats
+* [ReadUserStatsSubset](/api/capi/playerstatistics/readuserstatssubset) - returns a specified stats to the client
+* [ReadUserStatsForCategory](/api/capi/playerstatistics/readuserstatsforcategory) - returns the specified category of stats to the client
+* [IncrementUserStats](/api/capi/playerstatistics/incrementuserstats) - perform increment/decrement operations on the statistics
+* [ProcessStatistics](/api/capi/playerstatistics/processstatistics) - perform operations on the statistics according to the [stats grammar](/api/appendix/statisticsgrammar).
+* [ResetAllUserStats](/api/capi/playerstatistics/resetalluserstats) - resets all user statistics to their initial values (as defined by their rules).  Useful for debugging.
 
 The following operations are specific to the XP system:
 
-* [IncrementExperiencePoints](/api/capi/playerstats/incrementexperiencepoints) – award XP to the user
-* [GetNextExperienceLevel](/api/capi/playerstats/getnextexperiencelevel) – returns information about the next experience level, including associated rewards
-* [SetExperiencePoints](/api/capi/playerstats/setexperiencepoints) - used to specifically set XP (useful for debugging).  Does not generate any associated rewards for levelling-up
-* [SysResetExperiencePointsAndLevel](/api/capi/playerstats/sysresetexperiencepointsandlevel) - System call (cloud code only if from client) to reset the experience points for the session user to a given value. The user's experienceLevel will remain unchanged unless recalculateXPLevel is true, in which case the user's experienceLevel will also be reset to the applicable level (to be used with caution). If the XP points value to be reset is HIGHER than the user's current experiencePoints, an error is returned unless skipResetIfUserXPPointsAlreadyLower is true.
-* [SysResetExperiencePointsAndLevelForUser](/api/capi/playerstats/sysresetexperiencepointsandlevelforuser) - System call (cloud code only from client) to reset the experience points for the specified user to a given value. The user's experienceLevel will remain unchanged unless recalculateXPLevel is true, in which case the user's experienceLevel will also be reset to the applicable level (to be used with caution). If the XP points value to be reset is HIGHER than the user's current experiencePoints, an error is returned unless skipResetIfUserXPPointsAlreadyLower is true.
+* [IncrementExperiencePoints](/api/capi/playerstatistics/incrementexperiencepoints) – award XP to the user
+* [GetNextExperienceLevel](/api/capi/playerstatistics/getnextexperiencelevel) – returns information about the next experience level, including associated rewards
+* [SetExperiencePoints](/api/capi/playerstatistics/setexperiencepoints) - used to specifically set XP (useful for debugging).  Does not generate any associated rewards for levelling-up
+* [SysResetExperiencePointsAndLevel](/api/capi/playerstatistics/sysresetexperiencepointsandlevel) - System call (cloud code only if from client) to reset the experience points for the session user to a given value. The user's experienceLevel will remain unchanged unless recalculateXPLevel is true, in which case the user's experienceLevel will also be reset to the applicable level (to be used with caution). If the XP points value to be reset is HIGHER than the user's current experiencePoints, an error is returned unless skipResetIfUserXPPointsAlreadyLower is true.
+* [SysResetExperiencePointsAndLevelForUser](/api/capi/playerstatistics/sysresetexperiencepointsandlevelforuser) - System call (cloud code only from client) to reset the experience points for the specified user to a given value. The user's experienceLevel will remain unchanged unless recalculateXPLevel is true, in which case the user's experienceLevel will also be reset to the applicable level (to be used with caution). If the XP points value to be reset is HIGHER than the user's current experiencePoints, an error is returned unless skipResetIfUserXPPointsAlreadyLower is true.
 
 
 
