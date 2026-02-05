@@ -151,26 +151,28 @@ if (postResult.status == 200) {
 
 ```json
 {
-	"data": {
-		"achievements": [{
-			"fbEnabled": false,
-			"imageUrl": "https://api.braincloudservers.com/s3/portal/g/123456/metadata/achievements/testAchievement01.png",
-			"status": "NOT_AWARDED",
-			"gameId": "20001",
-			"steamEnabled": false,
-			"extraData": null,
-			"achievementId": "testAchievement01",
-			"invisibleUntilEarned": false,
-			"steamAchievementId": null,
-			"id": "testAchievement01",
-			"appleEnabled": false,
-			"title": "Test Achievement 1",
-			"fbGamePoints": null,
-			"description": "Test description.",
-			"appleAchievementId": null
-		}]
-	},
-	"status": 200
+    "data": {
+        "achievements": [
+            {
+                "fbEnabled": false,
+                "imageUrl": "https://api.braincloudservers.com/s3/portal/g/123456/metadata/achievements/testAchievement01.png",
+                "status": "NOT_AWARDED",
+                "gameId": "20001",
+                "steamEnabled": false,
+                "extraData": null,
+                "achievementId": "testAchievement01",
+                "invisibleUntilEarned": false,
+                "steamAchievementId": null,
+                "id": "testAchievement01",
+                "appleEnabled": false,
+                "title": "Test Achievement 1",
+                "fbGamePoints": null,
+                "description": "Test description.",
+                "appleAchievementId": null
+            }
+        ]
+    },
+    "status": 200
 }
 ```
 </details>

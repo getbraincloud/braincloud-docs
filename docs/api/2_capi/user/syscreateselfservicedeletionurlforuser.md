@@ -104,10 +104,10 @@ var postResult = userProxy.sysCreateSelfServiceDeletionUrlForUser(profileId);
 
 ```json
 {
-  "data": {
-    "url": "https://api.braincloudservers.com/self-service/delete-account?appId=13229&deletionToken=45b66a3b-84b1-4a81-9d18-ff14d9e97f8d&profileId=93293c42-7a8e-47b4-954e-553916193687"
-  },
-  "status": 200
+    "data": {
+        "url": "https://api.braincloudservers.com/self-service/delete-account?appId=13229&deletionToken=45b66a3b-84b1-4a81-9d18-ff14d9e97f8d&profileId=93293c42-7a8e-47b4-954e-553916193687"
+    },
+    "status": 200
 }
 ```
 

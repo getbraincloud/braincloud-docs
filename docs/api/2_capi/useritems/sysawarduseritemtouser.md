@@ -118,60 +118,60 @@ var postResult = userItemsProxy.sysAwardUserItemToUser(profileId, defId, quantit
 
 ```json
 {
-  "data": {
-    "quantity": 1,
-    "items": {
-      "ad2a0f81-1efc-4c76-a8f4-608c6efb488d": {
-        "itemId": "ad2a0f81-1efc-4c76-a8f4-608c6efb488d",
-        "defId": "aa",
-        "type": "ITEM",
+    "data": {
         "quantity": 1,
-        "itemData": {},
-        "giftedTo": null,
-        "giftedFrom": null,
-        "createdAt": 1764002065367,
-        "updatedAt": 1764002065367,
-        "version": 1,
-        "usesLeft": null,
-        "coolDownStart": -1,
-        "recoveryStart": -1,
-        "maxUses": null,
-        "coolDownUntil": -1,
-        "recoveryUntil": -1,
-        "itemDef": {
-          "defId": "aa",
-          "name": "apple",
-          "desc": null,
-          "type": "ITEM",
-          "category": "fruit",
-          "tags": null,
-          "buyPriceDisabled": false,
-          "buyPrice": {},
-          "sellPrice": {},
-          "image": "https://api.braincloudservers.com/files/portal/g/23782/metadata/itemDefinitions/aa.png",
-          "resourceGroup": null,
-          "resourceTag": null,
-          "meta": {},
-          "pState": "PUBLISHED",
-          "publishedAt": 1603486352114,
-          "stackable": false,
-          "maxStackable": null,
-          "tradable": false,
-          "blockchain": false,
-          "consumable": false,
-          "uses": null,
-          "coolDownSecs": 0,
-          "recoverySecs": 0,
-          "activatable": false,
-          "statusName": null,
-          "activeSecs": null,
-          "maxActiveSecs": null,
-          "statusBehaviour": null
+        "items": {
+            "ad2a0f81-1efc-4c76-a8f4-608c6efb488d": {
+                "itemId": "ad2a0f81-1efc-4c76-a8f4-608c6efb488d",
+                "defId": "aa",
+                "type": "ITEM",
+                "quantity": 1,
+                "itemData": {},
+                "giftedTo": null,
+                "giftedFrom": null,
+                "createdAt": 1764002065367,
+                "updatedAt": 1764002065367,
+                "version": 1,
+                "usesLeft": null,
+                "coolDownStart": -1,
+                "recoveryStart": -1,
+                "maxUses": null,
+                "coolDownUntil": -1,
+                "recoveryUntil": -1,
+                "itemDef": {
+                    "defId": "aa",
+                    "name": "apple",
+                    "desc": null,
+                    "type": "ITEM",
+                    "category": "fruit",
+                    "tags": null,
+                    "buyPriceDisabled": false,
+                    "buyPrice": {},
+                    "sellPrice": {},
+                    "image": "https://api.braincloudservers.com/files/portal/g/23782/metadata/itemDefinitions/aa.png",
+                    "resourceGroup": null,
+                    "resourceTag": null,
+                    "meta": {},
+                    "pState": "PUBLISHED",
+                    "publishedAt": 1603486352114,
+                    "stackable": false,
+                    "maxStackable": null,
+                    "tradable": false,
+                    "blockchain": false,
+                    "consumable": false,
+                    "uses": null,
+                    "coolDownSecs": 0,
+                    "recoverySecs": 0,
+                    "activatable": false,
+                    "statusName": null,
+                    "activeSecs": null,
+                    "maxActiveSecs": null,
+                    "statusBehaviour": null
+                }
+            }
         }
-      }
-    }
-  },
-  "status": 200
+    },
+    "status": 200
 }
 ```
 

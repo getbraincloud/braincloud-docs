@@ -114,30 +114,30 @@ var retVal = leaderboardProxy.sysDeleteAdhocTournamentPeriod(
 
 ```json
 {
-  "data": {
-    "aLeaderboardIdC": {
-      "leaderboardId": "aLeaderboardId",
-      "dbVersion": 6,
-      "resetAt": null,
-      "leaderboardType": "HIGH_VALUE",
-      "rotationType": "ADHOC",
-      "retainedCount": 5,
-      "data": {},
-      "numDaysToRotate": 0,
-      "entryType": "PLAYER",
-      "tEnabled": true,
-      "tTemplateOnly": false,
-      "currentVersionId": 1,
-      "currentPeriod": {
-        "versionId": 1,
-        "startingAt": 1632253445307,
-        "endingAt": null,
-        "rotationType": "ADHOC",
-        "numDaysToRotate": 0
-      }
-    }
-  },
-  "status": 200
+    "data": {
+        "aLeaderboardIdC": {
+            "leaderboardId": "aLeaderboardId",
+            "dbVersion": 6,
+            "resetAt": null,
+            "leaderboardType": "HIGH_VALUE",
+            "rotationType": "ADHOC",
+            "retainedCount": 5,
+            "data": {},
+            "numDaysToRotate": 0,
+            "entryType": "PLAYER",
+            "tEnabled": true,
+            "tTemplateOnly": false,
+            "currentVersionId": 1,
+            "currentPeriod": {
+                "versionId": 1,
+                "startingAt": 1632253445307,
+                "endingAt": null,
+                "rotationType": "ADHOC",
+                "numDaysToRotate": 0
+            }
+        }
+    },
+    "status": 200
 }
 ```
 </details>

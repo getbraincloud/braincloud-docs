@@ -152,70 +152,72 @@ if (result.statusCode == 200) {
 ```json
 {
     "data": {
-      "abTestingId": 48,
-      "lastLogin": 1572446599748,
-      "server_time": 1572446599779,
-      "refundCount": 0,
-      "timeZoneOffset": -5,
-      "experiencePoints": 0,
-      "maxBundleMsgs": 12,
-      "createdAt": 1572446599168,
-      "parentProfileId": null,
-      "emailAddress": null,
-      "experienceLevel": 0,
-      "handoffJson": {"key": "value"},
-      "countryCode": "CA",
-      "vcClaimed": 0,
-      "currency": {
-        "test": {
-          "consumed": 0,
-          "balance": 0,
-          "purchased": 0,
-          "awarded": 0
+        "abTestingId": 48,
+        "lastLogin": 1572446599748,
+        "server_time": 1572446599779,
+        "refundCount": 0,
+        "timeZoneOffset": -5,
+        "experiencePoints": 0,
+        "maxBundleMsgs": 12,
+        "createdAt": 1572446599168,
+        "parentProfileId": null,
+        "emailAddress": null,
+        "experienceLevel": 0,
+        "handoffJson": {
+            "key": "value"
         },
-        "credits": {
-          "consumed": 0,
-          "balance": 0,
-          "purchased": 0,
-          "awarded": 0
+        "countryCode": "CA",
+        "vcClaimed": 0,
+        "currency": {
+            "test": {
+                "consumed": 0,
+                "balance": 0,
+                "purchased": 0,
+                "awarded": 0
+            },
+            "credits": {
+                "consumed": 0,
+                "balance": 0,
+                "purchased": 0,
+                "awarded": 0
+            }
+        },
+        "id": "5e04aa28-4c1f-45c2-b32c-3f52c59cfb49",
+        "compressIfLarger": 0,
+        "amountSpent": 0,
+        "previousLogin": 1572446599171,
+        "playerName": "",
+        "pictureUrl": null,
+        "incoming_events": [],
+        "sessionId": "b9rr6j32ragmhnp5aajbi8vn82",
+        "languageCode": "en",
+        "vcPurchased": 0,
+        "isTester": false,
+        "summaryFriendData": null,
+        "loginCount": 2,
+        "xpCapped": false,
+        "profileId": "5e04aa28-4c1f-45c2-b32c-3f52c59cfb49",
+        "newUser": "false",
+        "playerSessionExpiry": 60,
+        "sent_events": [],
+        "maxKillCount": 11,
+        "rewards": {
+            "rewardDetails": {},
+            "currency": {},
+            "rewards": {}
+        },
+        "statistics": {
+            "wins": 0,
+            "gamesLost": 0,
+            "stat2": 0,
+            "gamesPlayed": 0,
+            "TestStat": 0,
+            "highestScore": 0,
+            "currency": 0,
+            "losses": 0,
+            "TestStat2": 0,
+            "gamesWon": 0
         }
-      },
-      "id": "5e04aa28-4c1f-45c2-b32c-3f52c59cfb49",
-      "compressIfLarger": 0,
-      "amountSpent": 0,
-      "previousLogin": 1572446599171,
-      "playerName": "",
-      "pictureUrl": null,
-      "incoming_events": [],
-      "sessionId": "b9rr6j32ragmhnp5aajbi8vn82",
-      "languageCode": "en",
-      "vcPurchased": 0,
-      "isTester": false,
-      "summaryFriendData": null,
-      "loginCount": 2,
-      "xpCapped": false,
-      "profileId": "5e04aa28-4c1f-45c2-b32c-3f52c59cfb49",
-      "newUser": "false",
-      "playerSessionExpiry": 60,
-      "sent_events": [],
-      "maxKillCount": 11,
-      "rewards": {
-        "rewardDetails": {},
-        "currency": {},
-        "rewards": {}
-      },
-      "statistics": {
-        "wins": 0,
-        "gamesLost": 0,
-        "stat2": 0,
-        "gamesPlayed": 0,
-        "TestStat": 0,
-        "highestScore": 0,
-        "currency": 0,
-        "losses": 0,
-        "TestStat2": 0,
-        "gamesWon": 0
-      }
     },
     "status": 200
 }

@@ -222,19 +222,19 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "entityId": "8469e360-0b24-4c87-xxxx-89fd0e3ee436",
-    "version": 1,
-    "acl": {
-      "other": 1
+    "data": {
+        "entityId": "8469e360-0b24-4c87-xxxx-89fd0e3ee436",
+        "version": 1,
+        "acl": {
+            "other": 1
+        },
+        "ownerId": null,
+        "expiresAt": null,
+        "timeToLive": null,
+        "createdAt": 1573532801958,
+        "updatedAt": 1573532801958
     },
-    "ownerId": null,
-    "expiresAt": null,
-    "timeToLive": null,
-    "createdAt": 1573532801958,
-    "updatedAt": 1573532801958
-  },
-  "status": 200
+    "status": 200
 }
 ```
 </details>

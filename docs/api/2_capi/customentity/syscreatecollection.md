@@ -132,25 +132,25 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "collection": {
-      "options": {
-        "isOwned": false,
-        "migrate": true,
-        "identifier": "playerName",
-        "dataTemplateJson": {
-          "playerName": "Randy Traywick",
-          "playerId": 123456,
-          "teamName": "Super Stars",
-          "jerseyNum": 44
-        },
-        "dataTemplateText": "**Important** notes go here..."
-      },
-      "name": "athletes",
-      "customIndexes": {}
-    }
-  },
-  "status": 200
+    "data": {
+        "collection": {
+            "options": {
+                "isOwned": false,
+                "migrate": true,
+                "identifier": "playerName",
+                "dataTemplateJson": {
+                    "playerName": "Randy Traywick",
+                    "playerId": 123456,
+                    "teamName": "Super Stars",
+                    "jerseyNum": 44
+                },
+                "dataTemplateText": "**Important** notes go here..."
+            },
+            "name": "athletes",
+            "customIndexes": {}
+        }
+    },
+    "status": 200
 }
 ```
 </details>

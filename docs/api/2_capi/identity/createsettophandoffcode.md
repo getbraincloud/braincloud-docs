@@ -112,10 +112,10 @@ if (postResult.status == 200) {
 
 ```json
 {
- "data": {
-  "handoffCode": "105175"
- },
- "status": 200
+    "data": {
+        "handoffCode": "105175"
+    },
+    "status": 200
 }
 ```
 </details>

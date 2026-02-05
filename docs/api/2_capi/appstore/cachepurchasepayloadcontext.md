@@ -164,8 +164,8 @@ var postResult = appStoreProxy.cachePurchasePayloadContext(storeId, iapId, paylo
 
 ```json
 {
-  "data" : {},
-  "status" : 200
+    "data": {},
+    "status": 200
 }
 ```
 

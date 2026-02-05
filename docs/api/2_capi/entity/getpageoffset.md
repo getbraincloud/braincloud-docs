@@ -155,30 +155,32 @@ if (postResult.status == 200) {
 
 ```json
 {
-	"data": {
-		"_serverTime": 1637946319239,
-		"results": {
-			"moreBefore": false,
-			"count": 200,
-			"items": [{
-				"entityId": "00edfd8e-5028-45d5-95d4-b1869cf2afaa",
-				"entityType": "testEntity",
-				"version": 1,
-				"data": {
-					"testName": "Test Name 01"
-				},
-				"acl": {
-					"other": 2
-				},
-				"createdAt": 1437505537168,
-				"updatedAt": 1437505537168
-			}],
-			"page": 2,
-			"moreAfter": false
+    "data": {
+        "_serverTime": 1637946319239,
+        "results": {
+            "moreBefore": false,
+            "count": 200,
+            "items": [
+                {
+                    "entityId": "00edfd8e-5028-45d5-95d4-b1869cf2afaa",
+                    "entityType": "testEntity",
+                    "version": 1,
+                    "data": {
+                        "testName": "Test Name 01"
+                    },
+                    "acl": {
+                        "other": 2
+                    },
+                    "createdAt": 1437505537168,
+                    "updatedAt": 1437505537168
+                }
+            ],
+            "page": 2,
+            "moreAfter": false
         },
-		"context": "eyJzZWFyY2hDcml0ZXJpYSI6eyJlbnRpdHlUeXBlIjoiYnVpbGRpbmciLCJnYW1lSWQiOiIxMDI4NyIsIiRvciI6W3sib3duZXJJZCI6Ijk5MjM4ZmFiLTkxYTItNDdiYy1iMDExLWJjMThhN2IyOWY3NiJ9LHsiYWNsLm90aGVyIjp7IiRuZSI6MH19XX0sInNvcnRDcml0ZXJpYSI6eyJjcmVhdGVkQXQiOjEsInVwZGF0ZWRBdCI6LTF9LCJwYWdpbmF0aW9uIjp7InJvd3NQZXJQYWdlIjo1MCwicGFnZU51bWJlciI6NH0sIm9wdGlvbnMiOm51bGx9"
-	},
-	"status": 200
+        "context": "eyJzZWFyY2hDcml0ZXJpYSI6eyJlbnRpdHlUeXBlIjoiYnVpbGRpbmciLCJnYW1lSWQiOiIxMDI4NyIsIiRvciI6W3sib3duZXJJZCI6Ijk5MjM4ZmFiLTkxYTItNDdiYy1iMDExLWJjMThhN2IyOWY3NiJ9LHsiYWNsLm90aGVyIjp7IiRuZSI6MH19XX0sInNvcnRDcml0ZXJpYSI6eyJjcmVhdGVkQXQiOjEsInVwZGF0ZWRBdCI6LTF9LCJwYWdpbmF0aW9uIjp7InJvd3NQZXJQYWdlIjo1MCwicGFnZU51bWJlciI6NH0sIm9wdGlvbnMiOm51bGx9"
+    },
+    "status": 200
 }
 ```
 </details>

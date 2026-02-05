@@ -181,60 +181,60 @@ var retVal = leaderboardProxy.sysEditAdhocTournamentPeriod(
 
 ```json
 {
-  "data": {
-    "aLeaderboardIdC": {
-      "leaderboardId": "aLeaderboardId",
-      "dbVersion": 4,
-      "resetAt": 1635895835000,
-      "leaderboardType": "HIGH_VALUE",
-      "rotationType": "ADHOC",
-      "retainedCount": 5,
-      "data": {},
-      "numDaysToRotate": 0,
-      "entryType": "PLAYER",
-      "tEnabled": true,
-      "tScheduled": [
-        {
-          "startingAt": 1635895835000,
-          "endingAt": 1636155035000,
-          "tConfigs": {
-            "bronzeLevel": {
-              "activeUpUntil": -1,
-              "tConfigCode": "bronzeLevel"
-            },
-            "silverLevel": {
-              "activeUpUntil": -1,
-              "tConfigCode": "silverLevel"
-            },
-            "goldLevel": {
-              "activeUpUntil": -1,
-              "tConfigCode": "goldLevel"
+    "data": {
+        "aLeaderboardIdC": {
+            "leaderboardId": "aLeaderboardId",
+            "dbVersion": 4,
+            "resetAt": 1635895835000,
+            "leaderboardType": "HIGH_VALUE",
+            "rotationType": "ADHOC",
+            "retainedCount": 5,
+            "data": {},
+            "numDaysToRotate": 0,
+            "entryType": "PLAYER",
+            "tEnabled": true,
+            "tScheduled": [
+                {
+                    "startingAt": 1635895835000,
+                    "endingAt": 1636155035000,
+                    "tConfigs": {
+                        "bronzeLevel": {
+                            "activeUpUntil": -1,
+                            "tConfigCode": "bronzeLevel"
+                        },
+                        "silverLevel": {
+                            "activeUpUntil": -1,
+                            "tConfigCode": "silverLevel"
+                        },
+                        "goldLevel": {
+                            "activeUpUntil": -1,
+                            "tConfigCode": "goldLevel"
+                        }
+                    },
+                    "tStates": {
+                        "enrolMins": 60,
+                        "disallowMins": 30,
+                        "minMins": 4305,
+                        "compMins": 4235,
+                        "bufferMins": 10,
+                        "announcementMins": 15
+                    },
+                    "tAutoJoin": false,
+                    "tAutoClaim": false
+                }
+            ],
+            "tTemplateOnly": false,
+            "currentVersionId": 1,
+            "currentPeriod": {
+                "versionId": 1,
+                "startingAt": 1632253445307,
+                "endingAt": 1635895835000,
+                "rotationType": "ADHOC",
+                "numDaysToRotate": 0
             }
-          },
-          "tStates": {
-            "enrolMins": 60,
-            "disallowMins": 30,
-            "minMins": 4305,
-            "compMins": 4235,
-            "bufferMins": 10,
-            "announcementMins": 15
-          },
-          "tAutoJoin": false,
-          "tAutoClaim": false
         }
-      ],
-      "tTemplateOnly": false,
-      "currentVersionId": 1,
-      "currentPeriod": {
-        "versionId": 1,
-        "startingAt": 1632253445307,
-        "endingAt": 1635895835000,
-        "rotationType": "ADHOC",
-        "numDaysToRotate": 0
-      }
-    }
-  },
-  "status": 200
+    },
+    "status": 200
 }
 ```
 </details>

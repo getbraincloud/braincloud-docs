@@ -110,13 +110,13 @@ response;
 
 ```json
 {
- "data": {
-  "response": {
-   "signature": "wk+UqlrHO+vePXYZsZKvye/q4cA="
-  },
-  "success": true
- },
- "status": 200
+    "data": {
+        "response": {
+            "signature": "wk+UqlrHO+vePXYZsZKvye/q4cA="
+        },
+        "success": true
+    },
+    "status": 200
 }
 ```
 </details>

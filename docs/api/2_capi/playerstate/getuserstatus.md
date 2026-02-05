@@ -151,15 +151,15 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "rapidFire": {
-      "activeStart": 1567537263623,
-      "statusName": "rapidFire",
-      "details": {},
-      "activeUntil": 1567537323623
-    }
-  },
-  "status": 200
+    "data": {
+        "rapidFire": {
+            "activeStart": 1567537263623,
+            "statusName": "rapidFire",
+            "details": {},
+            "activeUntil": 1567537323623
+        }
+    },
+    "status": 200
 }
 ```
 </details>

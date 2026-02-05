@@ -171,27 +171,27 @@ if (postResult.status == 200) {
 
 ```json
 {
-	"status": 200,
-	"data": {
-		"balance": {
-			"currency": {
-				"test": {
-					"purchased": 0,
-					"balance": 0,
-					"consumed": 0,
-					"awarded": 0
-				},
-				"credits": {
-					"purchased": 0,
-					"balance": 2434,
-					"consumed": 0,
-					"awarded": 2434
-				}
-			}
-		},
-		"enrolled": true,
-		"entryFee": {}
-	}
+    "status": 200,
+    "data": {
+        "balance": {
+            "currency": {
+                "test": {
+                    "purchased": 0,
+                    "balance": 0,
+                    "consumed": 0,
+                    "awarded": 0
+                },
+                "credits": {
+                    "purchased": 0,
+                    "balance": 2434,
+                    "consumed": 0,
+                    "awarded": 2434
+                }
+            }
+        },
+        "enrolled": true,
+        "entryFee": {}
+    }
 }
 ```
 </details>

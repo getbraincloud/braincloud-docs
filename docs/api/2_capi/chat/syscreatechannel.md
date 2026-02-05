@@ -110,10 +110,10 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "channelId": "12345:dy:myChatRoom"
-  },
-  "status": 200
+    "data": {
+        "channelId": "12345:dy:myChatRoom"
+    },
+    "status": 200
 }
 ```
 </details>

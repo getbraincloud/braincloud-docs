@@ -152,23 +152,23 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "statistics": {
-      "ESTIMATE": 5,
-      "HIGHESTHR": 4,
-      "INNING": 2,
-      "INNINGSREM": 0,
-      "INNINGnew": 1,
-      "OUTS": 0,
-      "PLAYERS": 8,
-      "PLAYER_COUNT": 4,
-      "PLAYER_COUNTa": 1,
-      "POINT": 1,
-      "POINTS": 11,
-      "otherstat": 0
-    }
-  },
-  "status": 200
+    "data": {
+        "statistics": {
+            "ESTIMATE": 5,
+            "HIGHESTHR": 4,
+            "INNING": 2,
+            "INNINGSREM": 0,
+            "INNINGnew": 1,
+            "OUTS": 0,
+            "PLAYERS": 8,
+            "PLAYER_COUNT": 4,
+            "PLAYER_COUNTa": 1,
+            "POINT": 1,
+            "POINTS": 11,
+            "otherstat": 0
+        }
+    },
+    "status": 200
 }
 ```
 </details>

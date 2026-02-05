@@ -135,15 +135,15 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "attributes": {
-      "avatarId": "123",
-      "validatedContactEmail": "bitheads@gmail.com",
-      "address": "1309 Carling Ave.",
-      "numberOfGamePlayed": "2"
-    }
-  },
-  "status": 200
+    "data": {
+        "attributes": {
+            "avatarId": "123",
+            "validatedContactEmail": "bitheads@gmail.com",
+            "address": "1309 Carling Ave.",
+            "numberOfGamePlayed": "2"
+        }
+    },
+    "status": 200
 }
 ```
 </details>

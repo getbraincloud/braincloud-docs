@@ -126,23 +126,23 @@ if (postResult.status == 200) {
 <summary>JSON Response</summary>
 
 ```json
-{  
-   "data":{  
-      "gameId":"12270",
-      "entityId":"b2a2bbdf-084b-41c8-802a-05de9c37b20c",
-      "ownerId":null,
-      "entityType":"address",
-      "entityIndexedId":"entityId1",
-      "version":1,
-      "acl":{  
-         "other":1
-      },
-      "expiresAt":9223372036854776000,
-      "timeToLive":-1,
-      "createdAt":1550852309251,
-      "updatedAt":1550852309251
-   },
-   "status":200
+{
+    "data": {
+        "gameId": "12270",
+        "entityId": "b2a2bbdf-084b-41c8-802a-05de9c37b20c",
+        "ownerId": null,
+        "entityType": "address",
+        "entityIndexedId": "entityId1",
+        "version": 1,
+        "acl": {
+            "other": 1
+        },
+        "expiresAt": 9223372036854776000,
+        "timeToLive": -1,
+        "createdAt": 1550852309251,
+        "updatedAt": 1550852309251
+    },
+    "status": 200
 }
 ```
 </details>

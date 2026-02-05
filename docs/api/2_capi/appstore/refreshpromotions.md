@@ -143,49 +143,49 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "promotionsRefreshed": false,
-    "promotions": [
-      {
-        "gameId": "24591",
-        "promotionId": 13,
-        "type": "AUTOMATED",
-        "name": "adtestidunder50",
-        "message": "",
-        "enabled": true,
-        "segments": [
-          3
-        ],
-        "prices": [
-          {
-            "itemId": "barBundle1Imp",
-            "priceId": 0
-          },
-          {
-            "itemId": "gemcollection",
-            "priceId": 3
-          }
-        ],
-        "notifications": [
-          {
-            "trigger": "ACTIVATED",
-            "notificationTemplateId": 1
-          }
-        ],
-        "duration": 5,
-        "customJson": null,
-        "isRetriggerable": true,
-        "maxRetriggers": null,
-        "maxPurchases": 1,
-        "createdAt": 1619802897824,
-        "updatedAt": 1619802981253,
-        "version": 2,
-        "triggeredForUserAt": 1619802981350,
-        "expiresForUserAt": 1619820981350
-      }
-    ]
-  },
-  "status": 200
+    "data": {
+        "promotionsRefreshed": false,
+        "promotions": [
+            {
+                "gameId": "24591",
+                "promotionId": 13,
+                "type": "AUTOMATED",
+                "name": "adtestidunder50",
+                "message": "",
+                "enabled": true,
+                "segments": [
+                    3
+                ],
+                "prices": [
+                    {
+                        "itemId": "barBundle1Imp",
+                        "priceId": 0
+                    },
+                    {
+                        "itemId": "gemcollection",
+                        "priceId": 3
+                    }
+                ],
+                "notifications": [
+                    {
+                        "trigger": "ACTIVATED",
+                        "notificationTemplateId": 1
+                    }
+                ],
+                "duration": 5,
+                "customJson": null,
+                "isRetriggerable": true,
+                "maxRetriggers": null,
+                "maxPurchases": 1,
+                "createdAt": 1619802897824,
+                "updatedAt": 1619802981253,
+                "version": 2,
+                "triggeredForUserAt": 1619802981350,
+                "expiresForUserAt": 1619820981350
+            }
+        ]
+    },
+    "status": 200
 }
 ```
 </details>

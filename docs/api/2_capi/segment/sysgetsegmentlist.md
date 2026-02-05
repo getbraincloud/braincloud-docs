@@ -99,29 +99,29 @@ if (postResult.status == 200) {
 
 ```json
 {
-	"data": {
-		"segments": [
-		  {
-			"segmentId": 1,
-			"name": "segmentname",
-			"description": "a/b test id less than 30",
-			"testersOnly": false,
-			"createdAt": 1591891097875,
-			"updatedAt": 1591891108642,
-			"version": 2
-		  },
-		  {
-			"segmentId": 2,
-			"name": "another segment",
-			"description": "xp level great than 2",
-			"testersOnly": false,
-			"createdAt": 1591891221983,
-			"updatedAt": 1591891227208,
-			"version": 2
-		  }
-		]
-	  },
-	  "status": 200
+    "data": {
+        "segments": [
+            {
+                "segmentId": 1,
+                "name": "segmentname",
+                "description": "a/b test id less than 30",
+                "testersOnly": false,
+                "createdAt": 1591891097875,
+                "updatedAt": 1591891108642,
+                "version": 2
+            },
+            {
+                "segmentId": 2,
+                "name": "another segment",
+                "description": "xp level great than 2",
+                "testersOnly": false,
+                "createdAt": 1591891221983,
+                "updatedAt": 1591891227208,
+                "version": 2
+            }
+        ]
+    },
+    "status": 200
 }
 ```
 </details>

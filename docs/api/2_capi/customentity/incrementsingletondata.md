@@ -175,24 +175,24 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "timeToLive": null,
-    "createdAt": 1663079696618,
     "data": {
-      "goals": 5,
-      "assists": 9
+        "timeToLive": null,
+        "createdAt": 1663079696618,
+        "data": {
+            "goals": 5,
+            "assists": 9
+        },
+        "entityType": "athletes",
+        "entityId": "aab8cc93-0f7b-4f42-9072-2437fc12737f",
+        "acl": {
+            "other": 1
+        },
+        "ownerId": "f5a6f67b-efa8-494f-b17e-d0f7f4b1e71e",
+        "version": 2,
+        "expiresAt": null,
+        "updatedAt": 1663079731601
     },
-    "entityType": "athletes",
-    "entityId": "aab8cc93-0f7b-4f42-9072-2437fc12737f",
-    "acl": {
-      "other": 1
-    },
-    "ownerId": "f5a6f67b-efa8-494f-b17e-d0f7f4b1e71e",
-    "version": 2,
-    "expiresAt": null,
-    "updatedAt": 1663079731601
-  },
-  "status": 200
+    "status": 200
 }
 ```
 </details>

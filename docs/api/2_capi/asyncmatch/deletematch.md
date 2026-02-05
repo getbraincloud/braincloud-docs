@@ -167,8 +167,8 @@ if (postResult.status == 200) {
 
 ```json
 {
- "data": null,
- "status": 200
+    "data": null,
+    "status": 200
 }
 ```
 </details>

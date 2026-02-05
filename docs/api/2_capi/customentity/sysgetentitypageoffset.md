@@ -113,32 +113,32 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "_serverTime": 1637946319239,
-    "context": "eyJzZWFyY2hDcml0ZXJpYSI6e30sInNvcnRDcml0ZXJpYSI6eyJjcmVhdGVkQXQiOjF9LCJwYWdpbmF0aW9uIjp7InJvd3NQZXJQYWdlIjoyMCwicGFnZU51bWJlciI6MSwiZG9DbXXXXXXXmFsc2V9LCJvcHRpb25zIjpudWxsfQ",
-    "results": {
-      "page": 1,
-      "items": [
-        {
-          "entityId": "781a5f97-1fa8-41e5-xxxx-7f648af19414",
-          "version": 1,
-          "acl": {
-            "other": 1
-          },
-          "ownerId": "b7e7116e-749d-444f-xxxx-13f1101512a3",
-          "expiresAt": null,
-          "timeToLive": null,
-          "createdAt": 1573534287525,
-          "updatedAt": 1573534287525,
-          "data": {
-            "level1": "complete",
-            "level2": "incomplete"
-          }
+    "data": {
+        "_serverTime": 1637946319239,
+        "context": "eyJzZWFyY2hDcml0ZXJpYSI6e30sInNvcnRDcml0ZXJpYSI6eyJjcmVhdGVkQXQiOjF9LCJwYWdpbmF0aW9uIjp7InJvd3NQZXJQYWdlIjoyMCwicGFnZU51bWJlciI6MSwiZG9DbXXXXXXXmFsc2V9LCJvcHRpb25zIjpudWxsfQ",
+        "results": {
+            "page": 1,
+            "items": [
+                {
+                    "entityId": "781a5f97-1fa8-41e5-xxxx-7f648af19414",
+                    "version": 1,
+                    "acl": {
+                        "other": 1
+                    },
+                    "ownerId": "b7e7116e-749d-444f-xxxx-13f1101512a3",
+                    "expiresAt": null,
+                    "timeToLive": null,
+                    "createdAt": 1573534287525,
+                    "updatedAt": 1573534287525,
+                    "data": {
+                        "level1": "complete",
+                        "level2": "incomplete"
+                    }
+                }
+            ]
         }
-      ]
-    }
-  },
-  "status": 200
+    },
+    "status": 200
 }
 ```
 </details>

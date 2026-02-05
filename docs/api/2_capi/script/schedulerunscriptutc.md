@@ -117,26 +117,26 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "gameId": "13229",
-    "description": null,
-    "result": {},
-    "jobId": "8a39b713-afbe-499b-9b03-e135031582fc",
-    "localTime": null,
-    "createdAt": 1624990277998,
-    "runStartTime": 0,
-    "runEndTime": 0,
-    "playerSessionId": null,
-    "scheduledStartTime": 1624990337998,
-    "scriptName": "folder/getProperties",
-    "jobType": "CloudCode",
-    "runState": "Scheduled",
-    "parameters": {
-      "parm": "value"
+    "data": {
+        "gameId": "13229",
+        "description": null,
+        "result": {},
+        "jobId": "8a39b713-afbe-499b-9b03-e135031582fc",
+        "localTime": null,
+        "createdAt": 1624990277998,
+        "runStartTime": 0,
+        "runEndTime": 0,
+        "playerSessionId": null,
+        "scheduledStartTime": 1624990337998,
+        "scriptName": "folder/getProperties",
+        "jobType": "CloudCode",
+        "runState": "Scheduled",
+        "parameters": {
+            "parm": "value"
+        },
+        "updatedAt": 1624990277998
     },
-    "updatedAt": 1624990277998
-  },
-  "status": 200
+    "status": 200
 }
 ```
 </details>

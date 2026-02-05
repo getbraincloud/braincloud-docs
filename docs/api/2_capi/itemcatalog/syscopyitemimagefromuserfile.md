@@ -120,10 +120,10 @@ var postResult = itemCatalogProxy.sysCopyItemImageFromUserFile(defId, version, u
 
 ```json
 {
-  "data": {
-    "image": "https://api.braincloudservers.com/files/portal/g/23782/metadata/itemDefinitions/sword001.png"
-  },
-  "status": 200
+    "data": {
+        "image": "https://api.braincloudservers.com/files/portal/g/23782/metadata/itemDefinitions/sword001.png"
+    },
+    "status": 200
 }
 ```
 

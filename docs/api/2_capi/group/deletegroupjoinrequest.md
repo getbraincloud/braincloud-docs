@@ -146,8 +146,8 @@ var postResult = groupProxy.deleteGroupJoinRequest(groupId);
 
 ```json
 {
-  "status" : 200,
-  "data" : null
+    "status": 200,
+    "data": null
 }
 ```
 

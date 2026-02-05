@@ -113,43 +113,43 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "context": "eyJzZWFyY2hDcml0ZXJpYSI6e30sInNvcnRDcml0ZXJpYSI6eyJtYkNyIjoxLCJtYlVwIjotMX0sInBhZ2luYXRpb24iOnsicm93c1BlclBhZ2UiOjEwLCJwYWdlTnVtYmVyIjoxLCJkb0NvdW50IjpmYWxzZSwic2tpcFJlY291bnQiOmZhbHNlfSwib3B0aW9ucyI6bnVsbCwicmVzdWx0Q291bnQiOjF9",
-    "results": {
-      "count": 20,
-      "page": 2,
-      "items": [
-        {
-          "mbVer": 1,
-          "mbUp": 1623349641504,
-          "read": false,
-          "msgCr": 1623349641498,
-          "msgVer": 1,
-          "mbCr": 1623349641504,
-          "msgId": "f6631ba6-c11e-4fea-bd65-181b16ec9335",
-          "msgUp": 1623349641498,
-          "message": {
-            "from": {
-              "id": "a687ba2f-cc66-463a-8b3c-db900eba7e94",
-              "name": "Rookie"
-            },
-            "sentAt": 1623349641498,
-            "to": [
-              "493dd9ad-5196-4494-aab1-02fbffa4c7af"
+    "data": {
+        "context": "eyJzZWFyY2hDcml0ZXJpYSI6e30sInNvcnRDcml0ZXJpYSI6eyJtYkNyIjoxLCJtYlVwIjotMX0sInBhZ2luYXRpb24iOnsicm93c1BlclBhZ2UiOjEwLCJwYWdlTnVtYmVyIjoxLCJkb0NvdW50IjpmYWxzZSwic2tpcFJlY291bnQiOmZhbHNlfSwib3B0aW9ucyI6bnVsbCwicmVzdWx0Q291bnQiOjF9",
+        "results": {
+            "count": 20,
+            "page": 2,
+            "items": [
+                {
+                    "mbVer": 1,
+                    "mbUp": 1623349641504,
+                    "read": false,
+                    "msgCr": 1623349641498,
+                    "msgVer": 1,
+                    "mbCr": 1623349641504,
+                    "msgId": "f6631ba6-c11e-4fea-bd65-181b16ec9335",
+                    "msgUp": 1623349641498,
+                    "message": {
+                        "from": {
+                            "id": "a687ba2f-cc66-463a-8b3c-db900eba7e94",
+                            "name": "Rookie"
+                        },
+                        "sentAt": 1623349641498,
+                        "to": [
+                            "493dd9ad-5196-4494-aab1-02fbffa4c7af"
+                        ],
+                        "content": {
+                            "subject": "new",
+                            "text": "test"
+                        }
+                    },
+                    "msgbox": "inbox"
+                }
             ],
-            "content": {
-              "subject": "new",
-              "text": "test"
-            }
-          },
-          "msgbox": "inbox"
+            "moreAfter": false,
+            "moreBefore": false
         }
-      ],
-      "moreAfter": false,
-      "moreBefore": false
-    }
-  },
-  "status": 200
+    },
+    "status": 200
 }
 ```
 </details>

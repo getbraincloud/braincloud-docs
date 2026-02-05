@@ -107,57 +107,57 @@ var session = bridge.getSessionForValidatedCredential(externalId, authentication
 
 ```json
 {
-  "data": {
-    "json": {
-      "response": {
-        "session": {
-          "cacheObjects": {},
-          "systemCreated": true,
-          "packetSequenceInvalid": false,
-          "languageCode": null,
-          "sharedPlayers": {
-            "24667": "82cbbbf2-ee44-4279-b5a0-3e9bf04edf25"
-          },
-          "apiVersion": "VERSION_1_5",
-          "playerId": "82cbbbf2-ee44-4279-b5a0-3e9bf04edf25",
-          "gameId": "24667",
-          "cacheExpiry": 1200,
-          "lastPacketReceived": -1,
-          "clientLib": null,
-          "clientLibVersion": null,
-          "gameVersion": null,
-          "countryCode": null,
-          "loggedOut": false,
-          "gameIdSave": "24667",
-          "secret": null,
-          "platform": null,
-          "readTimestamp": null,
-          "invalidated": false,
-          "lastUploadHTTPCode": 0,
-          "lastUploadResponse": null,
-          "peerGameId": null,
-          "peerClientGameId": null,
-          "peerSponsored": null,
-          "gameIdOverridden": false,
-          "parentLevel": null,
-          "eventUpdateTimestamp": null,
-          "rttServerId": null,
-          "sharedDataSyncedIds": {},
-          "dynamicChatChannels": null,
-          "lastPacketProcessed": -1,
-          "lastPacketResponse": null,
-          "sessionId": "scriptSession_7bca7ed1-6b83-4402-98e8-793d046d1a6a",
-          "key": {
-            "sessionId": "scriptSession_7bca7ed1-6b83-4402-98e8-793d046d1a6a",
-            "primaryKey": true
-          }
-        }
-      },
-      "success": true
+    "data": {
+        "json": {
+            "response": {
+                "session": {
+                    "cacheObjects": {},
+                    "systemCreated": true,
+                    "packetSequenceInvalid": false,
+                    "languageCode": null,
+                    "sharedPlayers": {
+                        "24667": "82cbbbf2-ee44-4279-b5a0-3e9bf04edf25"
+                    },
+                    "apiVersion": "VERSION_1_5",
+                    "playerId": "82cbbbf2-ee44-4279-b5a0-3e9bf04edf25",
+                    "gameId": "24667",
+                    "cacheExpiry": 1200,
+                    "lastPacketReceived": -1,
+                    "clientLib": null,
+                    "clientLibVersion": null,
+                    "gameVersion": null,
+                    "countryCode": null,
+                    "loggedOut": false,
+                    "gameIdSave": "24667",
+                    "secret": null,
+                    "platform": null,
+                    "readTimestamp": null,
+                    "invalidated": false,
+                    "lastUploadHTTPCode": 0,
+                    "lastUploadResponse": null,
+                    "peerGameId": null,
+                    "peerClientGameId": null,
+                    "peerSponsored": null,
+                    "gameIdOverridden": false,
+                    "parentLevel": null,
+                    "eventUpdateTimestamp": null,
+                    "rttServerId": null,
+                    "sharedDataSyncedIds": {},
+                    "dynamicChatChannels": null,
+                    "lastPacketProcessed": -1,
+                    "lastPacketResponse": null,
+                    "sessionId": "scriptSession_7bca7ed1-6b83-4402-98e8-793d046d1a6a",
+                    "key": {
+                        "sessionId": "scriptSession_7bca7ed1-6b83-4402-98e8-793d046d1a6a",
+                        "primaryKey": true
+                    }
+                }
+            },
+            "success": true
+        },
+        "statusCode": 200
     },
-    "statusCode": 200
-  },
-  "status": 200
+    "status": 200
 }
 ```
 </details>

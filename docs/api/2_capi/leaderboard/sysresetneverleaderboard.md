@@ -106,14 +106,14 @@ var retVal = leaderboardProxy.sysResetNeverLeaderboard(leaderboardId);
 {
     "status": 200,
     "data": {
-    	"leaderboardId": "aLeaderboardId",
-    	"leaderboardType": "HIGH_VALUE",
-    	"entryType": "PLAYER",
-    	"rotationType": "NEVER",
-    	"numDaysToRotate": 0,
-    	"retainedCount": 2,
-    	"versionId": 2
-  	}
+        "leaderboardId": "aLeaderboardId",
+        "leaderboardType": "HIGH_VALUE",
+        "entryType": "PLAYER",
+        "rotationType": "NEVER",
+        "numDaysToRotate": 0,
+        "retainedCount": 2,
+        "versionId": 2
+    }
 }
 ```
 </details>

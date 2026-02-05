@@ -191,26 +191,26 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "item": {},
-    "currencyRefunded": {
-      "coins": 400
-    },
-    "currencyBalances": {
-      "createdAt": 1566850026783,
-      "currencyMap": {
-        "coins": {
-          "consumed": 200,
-          "balance": 3000200,
-          "purchased": 0,
-          "awarded": 3000400
+    "data": {
+        "item": {},
+        "currencyRefunded": {
+            "coins": 400
+        },
+        "currencyBalances": {
+            "createdAt": 1566850026783,
+            "currencyMap": {
+                "coins": {
+                    "consumed": 200,
+                    "balance": 3000200,
+                    "purchased": 0,
+                    "awarded": 3000400
+                }
+            },
+            "playerId": "55ffc16e-f92b-44f3-98b0-68a7a4f24106",
+            "updatedAt": 1566850242013
         }
-      },
-      "playerId": "55ffc16e-f92b-44f3-98b0-68a7a4f24106",
-      "updatedAt": 1566850242013
-    }
-  },
-  "status": 200
+    },
+    "status": 200
 }
 ```
 </details>

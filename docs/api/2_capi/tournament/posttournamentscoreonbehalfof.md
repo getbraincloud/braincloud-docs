@@ -126,23 +126,23 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "leaderboardId": "^D^div6^2",
-    "versionId": 1,
-    "playerId": "c5ecdbda-5f91-41a9-96aa-174f412f7657",
-    "score": 100,
     "data": {
-      "nickname": "batman"
+        "leaderboardId": "^D^div6^2",
+        "versionId": 1,
+        "playerId": "c5ecdbda-5f91-41a9-96aa-174f412f7657",
+        "score": 100,
+        "data": {
+            "nickname": "batman"
+        },
+        "createdAt": 1647877630346,
+        "updatedAt": 1647877788048,
+        "tCode": "tcode1",
+        "tRank": 0,
+        "tClaimedAt": 0,
+        "tNotifiedAt": 0,
+        "previousScore": 50
     },
-    "createdAt": 1647877630346,
-    "updatedAt": 1647877788048,
-    "tCode": "tcode1",
-    "tRank": 0,
-    "tClaimedAt": 0,
-    "tNotifiedAt": 0,
-    "previousScore": 50
-  },
-  "status": 200
+    "status": 200
 }
 ```
 </details>

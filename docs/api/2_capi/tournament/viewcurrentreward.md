@@ -151,21 +151,21 @@ if (postResult.status == 200) {
 
 ```json
 {
-	"status": 200,
-	"data": {
-		"updatedAt": 1483719066661,
-		"tRank": 1,
-		"createdAt": 1483719066661,
-		"rewards": {
-			"currency": {
-				"credits": 100
-			}
-		},
-		"tCode": "testTournament",
-		"data": null,
-		"score": 879,
-		"tClaimedAt": 0
-	}
+    "status": 200,
+    "data": {
+        "updatedAt": 1483719066661,
+        "tRank": 1,
+        "createdAt": 1483719066661,
+        "rewards": {
+            "currency": {
+                "credits": 100
+            }
+        },
+        "tCode": "testTournament",
+        "data": null,
+        "score": 879,
+        "tClaimedAt": 0
+    }
 }
 ```
 </details>

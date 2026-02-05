@@ -260,88 +260,88 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "gameId": "23782",
-    "tournamentCode": "uniqueTournamentCode",
-    "version": 1,
-    "description": {
-      "name": {
-        "en": "tFree"
-      },
-      "desc": {
-        "en": "Free tournament. Pays out for rankings: 1st, 2nd and top 10%. Push notifications for start and complete."
-      }
+    "data": {
+        "gameId": "23782",
+        "tournamentCode": "uniqueTournamentCode",
+        "version": 1,
+        "description": {
+            "name": {
+                "en": "tFree"
+            },
+            "desc": {
+                "en": "Free tournament. Pays out for rankings: 1st, 2nd and top 10%. Push notifications for start and complete."
+            }
+        },
+        "notifications": {
+            "startingSoon": {
+                "enabled": false,
+                "pushId": null,
+                "mail": {}
+            },
+            "start": {
+                "enabled": true,
+                "pushId": 2,
+                "mail": {}
+            },
+            "scorePassed": {
+                "enabled": false,
+                "pushId": null,
+                "mail": {}
+            },
+            "endingSoon": {
+                "enabled": false,
+                "pushId": null,
+                "mail": {}
+            },
+            "complete": {
+                "enabled": true,
+                "pushId": 3,
+                "mail": {}
+            }
+        },
+        "calcScript": "",
+        "postScript": "",
+        "customJson": {},
+        "payoutRules": [
+            {
+                "rank": {
+                    "rankAbs": 1
+                },
+                "reward": {
+                    "experiencePoints": 10,
+                    "currency": {
+                        "coins": 100
+                    }
+                }
+            },
+            {
+                "rank": {
+                    "rankAbs": 2
+                },
+                "reward": {
+                    "experiencePoints": 5,
+                    "currency": {
+                        "coins": 50
+                    }
+                }
+            },
+            {
+                "rank": {
+                    "rankToPercent": 10
+                },
+                "reward": {
+                    "experiencePoints": 1,
+                    "currency": {
+                        "coins": 5
+                    }
+                }
+            }
+        ],
+        "entryFee": {},
+        "createdAt": 1632511327924,
+        "updatedAt": 1632511327924
     },
-    "notifications": {
-      "startingSoon": {
-        "enabled": false,
-        "pushId": null,
-        "mail": {}
-      },
-      "start": {
-        "enabled": true,
-        "pushId": 2,
-        "mail": {}
-      },
-      "scorePassed": {
-        "enabled": false,
-        "pushId": null,
-        "mail": {}
-      },
-      "endingSoon": {
-        "enabled": false,
-        "pushId": null,
-        "mail": {}
-      },
-      "complete": {
-        "enabled": true,
-        "pushId": 3,
-        "mail": {}
-      }
-    },
-    "calcScript": "",
-    "postScript": "",
-    "customJson": {},
-    "payoutRules": [
-      {
-        "rank": {
-          "rankAbs": 1
-        },
-        "reward": {
-          "experiencePoints": 10,
-          "currency": {
-            "coins": 100
-          }
-        }
-      },
-      {
-        "rank": {
-          "rankAbs": 2
-        },
-        "reward": {
-          "experiencePoints": 5,
-          "currency": {
-            "coins": 50
-          }
-        }
-      },
-      {
-        "rank": {
-          "rankToPercent": 10
-        },
-        "reward": {
-          "experiencePoints": 1,
-          "currency": {
-            "coins": 5
-          }
-        }
-      }
-    ],
-    "entryFee": {},
-    "createdAt": 1632511327924,
-    "updatedAt": 1632511327924
-  },
-  "status": 200
+    "status": 200
 }
 ```
 </details>

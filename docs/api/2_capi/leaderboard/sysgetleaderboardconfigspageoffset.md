@@ -105,147 +105,147 @@ var postResult = leaderboardProxy.SysGetLeaderboardConfigsPageOffset(context, pa
 
 ```json
 {
-  "data": {
-    "context": "eyJzZWFyY2hDcml0ZXJpYSI6eyJnYW1lSWQiOiIyMzc4MiJ9LCJzb3J0Q3JpdGVyaWEiOnt9LCJwYWdpbmF0aW9uIjp7InJvd3NQZXJQYWdlIjoxMCwicGFnZU51bWJlciI6MiwiZG9Db3VudCI6ZmFsc2UsInNraXBSZWNvdW50Ijp0cnVlfSwib3B0aW9ucyI6bnVsbCwicmVzdWx0Q291bnQiOjIxfQ",
-    "results": {
-      "count": 21,
-      "page": 2,
-      "items": [
-        {
-          "entryType": "PLAYER",
-          "tTemplateOnly": false,
-          "numDaysToRotate": 0,
-          "data": {},
-          "currentVersionId": 3,
-          "rotationType": "ADHOC",
-          "leaderboardType": "HIGH_VALUE",
-          "leaderboardId": "l7",
-          "tEnabled": true
-        },
-        {
-          "entryType": "PLAYER",
-          "tTemplateOnly": false,
-          "numDaysToRotate": 0,
-          "data": {},
-          "resetAt": 1700600940000,
-          "currentVersionId": 347,
-          "rotationType": "DAILY",
-          "leaderboardType": "HIGH_VALUE",
-          "leaderboardId": "daily",
-          "tEnabled": false
-        },
-        {
-          "entryType": "PLAYER",
-          "tTemplateOnly": false,
-          "numDaysToRotate": 0,
-          "data": {},
-          "resetAt": 1700772300000,
-          "currentVersionId": 87,
-          "rotationType": "WEEKLY",
-          "leaderboardType": "HIGH_VALUE",
-          "leaderboardId": "weekly",
-          "tEnabled": false
-        },
-        {
-          "entryType": "PLAYER",
-          "tTemplateOnly": false,
-          "numDaysToRotate": 0,
-          "data": {},
-          "resetAt": 1700600820000,
-          "currentVersionId": 342,
-          "rotationType": "DAILY",
-          "leaderboardType": "ARCADE_HIGH",
-          "leaderboardId": "arcadelb1",
-          "tEnabled": false
-        },
-        {
-          "entryType": "PLAYER",
-          "tTemplateOnly": false,
-          "numDaysToRotate": 0,
-          "data": {
-            "info": "Adding tournament to encourage play."
-          },
-          "resetAt": 1707765544000,
-          "currentVersionId": 879,
-          "rotationType": "DAILY",
-          "leaderboardType": "HIGH_VALUE",
-          "leaderboardId": "aLeaderboardId",
-          "tEnabled": true
-        },
-        {
-          "entryType": "PLAYER",
-          "tTemplateOnly": false,
-          "numDaysToRotate": 4,
-          "data": {
-            "info": "Adding tournament to encourage play."
-          },
-          "resetAt": 1700739144000,
-          "currentVersionId": 101,
-          "rotationType": "DAYS",
-          "leaderboardType": "HIGH_VALUE",
-          "leaderboardId": "aLeaderboardId2",
-          "tEnabled": true
-        },
-        {
-          "entryType": "PLAYER",
-          "tTemplateOnly": true,
-          "numDaysToRotate": 4,
-          "data": {
-            "info": "Adding tournament to encourage play."
-          },
-          "resetAt": 1700675944000,
-          "currentVersionId": 109,
-          "rotationType": "DAYS",
-          "leaderboardType": "HIGH_VALUE",
-          "leaderboardId": "aLeaderboardIdb",
-          "tEnabled": true
-        },
-        {
-          "entryType": "GROUP",
-          "tTemplateOnly": false,
-          "numDaysToRotate": 0,
-          "data": {},
-          "resetAt": 1700666400000,
-          "currentVersionId": 120,
-          "rotationType": "DAILY",
-          "leaderboardType": "HIGH_VALUE",
-          "leaderboardId": "lbg",
-          "tEnabled": false
-        },
-        {
-          "entryType": "PLAYER",
-          "tTemplateOnly": false,
-          "numDaysToRotate": 5,
-          "data": {
-            "street": "1309 Carling"
-          },
-          "resetAt": 1700724306479,
-          "currentVersionId": 63,
-          "rotationType": "DAYS",
-          "leaderboardType": "HIGH_VALUE",
-          "leaderboardId": "default1",
-          "tEnabled": false
-        },
-        {
-          "entryType": "PLAYER",
-          "tTemplateOnly": true,
-          "numDaysToRotate": 4,
-          "data": {
-            "info": "Adding tournament to encourage play."
-          },
-          "resetAt": 1700675944000,
-          "currentVersionId": 100,
-          "rotationType": "DAYS",
-          "leaderboardType": "HIGH_VALUE",
-          "leaderboardId": "aLeaderboardIda",
-          "tEnabled": true
+    "data": {
+        "context": "eyJzZWFyY2hDcml0ZXJpYSI6eyJnYW1lSWQiOiIyMzc4MiJ9LCJzb3J0Q3JpdGVyaWEiOnt9LCJwYWdpbmF0aW9uIjp7InJvd3NQZXJQYWdlIjoxMCwicGFnZU51bWJlciI6MiwiZG9Db3VudCI6ZmFsc2UsInNraXBSZWNvdW50Ijp0cnVlfSwib3B0aW9ucyI6bnVsbCwicmVzdWx0Q291bnQiOjIxfQ",
+        "results": {
+            "count": 21,
+            "page": 2,
+            "items": [
+                {
+                    "entryType": "PLAYER",
+                    "tTemplateOnly": false,
+                    "numDaysToRotate": 0,
+                    "data": {},
+                    "currentVersionId": 3,
+                    "rotationType": "ADHOC",
+                    "leaderboardType": "HIGH_VALUE",
+                    "leaderboardId": "l7",
+                    "tEnabled": true
+                },
+                {
+                    "entryType": "PLAYER",
+                    "tTemplateOnly": false,
+                    "numDaysToRotate": 0,
+                    "data": {},
+                    "resetAt": 1700600940000,
+                    "currentVersionId": 347,
+                    "rotationType": "DAILY",
+                    "leaderboardType": "HIGH_VALUE",
+                    "leaderboardId": "daily",
+                    "tEnabled": false
+                },
+                {
+                    "entryType": "PLAYER",
+                    "tTemplateOnly": false,
+                    "numDaysToRotate": 0,
+                    "data": {},
+                    "resetAt": 1700772300000,
+                    "currentVersionId": 87,
+                    "rotationType": "WEEKLY",
+                    "leaderboardType": "HIGH_VALUE",
+                    "leaderboardId": "weekly",
+                    "tEnabled": false
+                },
+                {
+                    "entryType": "PLAYER",
+                    "tTemplateOnly": false,
+                    "numDaysToRotate": 0,
+                    "data": {},
+                    "resetAt": 1700600820000,
+                    "currentVersionId": 342,
+                    "rotationType": "DAILY",
+                    "leaderboardType": "ARCADE_HIGH",
+                    "leaderboardId": "arcadelb1",
+                    "tEnabled": false
+                },
+                {
+                    "entryType": "PLAYER",
+                    "tTemplateOnly": false,
+                    "numDaysToRotate": 0,
+                    "data": {
+                        "info": "Adding tournament to encourage play."
+                    },
+                    "resetAt": 1707765544000,
+                    "currentVersionId": 879,
+                    "rotationType": "DAILY",
+                    "leaderboardType": "HIGH_VALUE",
+                    "leaderboardId": "aLeaderboardId",
+                    "tEnabled": true
+                },
+                {
+                    "entryType": "PLAYER",
+                    "tTemplateOnly": false,
+                    "numDaysToRotate": 4,
+                    "data": {
+                        "info": "Adding tournament to encourage play."
+                    },
+                    "resetAt": 1700739144000,
+                    "currentVersionId": 101,
+                    "rotationType": "DAYS",
+                    "leaderboardType": "HIGH_VALUE",
+                    "leaderboardId": "aLeaderboardId2",
+                    "tEnabled": true
+                },
+                {
+                    "entryType": "PLAYER",
+                    "tTemplateOnly": true,
+                    "numDaysToRotate": 4,
+                    "data": {
+                        "info": "Adding tournament to encourage play."
+                    },
+                    "resetAt": 1700675944000,
+                    "currentVersionId": 109,
+                    "rotationType": "DAYS",
+                    "leaderboardType": "HIGH_VALUE",
+                    "leaderboardId": "aLeaderboardIdb",
+                    "tEnabled": true
+                },
+                {
+                    "entryType": "GROUP",
+                    "tTemplateOnly": false,
+                    "numDaysToRotate": 0,
+                    "data": {},
+                    "resetAt": 1700666400000,
+                    "currentVersionId": 120,
+                    "rotationType": "DAILY",
+                    "leaderboardType": "HIGH_VALUE",
+                    "leaderboardId": "lbg",
+                    "tEnabled": false
+                },
+                {
+                    "entryType": "PLAYER",
+                    "tTemplateOnly": false,
+                    "numDaysToRotate": 5,
+                    "data": {
+                        "street": "1309 Carling"
+                    },
+                    "resetAt": 1700724306479,
+                    "currentVersionId": 63,
+                    "rotationType": "DAYS",
+                    "leaderboardType": "HIGH_VALUE",
+                    "leaderboardId": "default1",
+                    "tEnabled": false
+                },
+                {
+                    "entryType": "PLAYER",
+                    "tTemplateOnly": true,
+                    "numDaysToRotate": 4,
+                    "data": {
+                        "info": "Adding tournament to encourage play."
+                    },
+                    "resetAt": 1700675944000,
+                    "currentVersionId": 100,
+                    "rotationType": "DAYS",
+                    "leaderboardType": "HIGH_VALUE",
+                    "leaderboardId": "aLeaderboardIda",
+                    "tEnabled": true
+                }
+            ],
+            "moreAfter": true,
+            "moreBefore": true
         }
-      ],
-      "moreAfter": true,
-      "moreBefore": true
-    }
-  },
-  "status": 200
+    },
+    "status": 200
 }
 ```
 

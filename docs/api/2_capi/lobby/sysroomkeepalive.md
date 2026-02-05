@@ -102,8 +102,8 @@ var postResult = lobbyProxy.SysRoomKeepAlive(lobbyId);
 
 ```json
 {
-  "status" : 200,
-  "data" : null
+    "status": 200,
+    "data": null
 }
 ```
 

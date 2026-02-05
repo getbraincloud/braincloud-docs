@@ -108,18 +108,18 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "f76698c7-bb0c-439a-a46d-44b5f6ca6e15": {
-      "isActive": true,
-      "notes": "This is a note about the player.",
-      "updatedAt": 1666991622419,
-      "profileId": "f76698c7-bb0c-439a-a46d-44b5f6ca6e15",
-      "playerName": "",
-      "summaryFriendData": null,
-      "pictureUrl": null
-    }
-  },
-  "status": 200
+    "data": {
+        "f76698c7-bb0c-439a-a46d-44b5f6ca6e15": {
+            "isActive": true,
+            "notes": "This is a note about the player.",
+            "updatedAt": 1666991622419,
+            "profileId": "f76698c7-bb0c-439a-a46d-44b5f6ca6e15",
+            "playerName": "",
+            "summaryFriendData": null,
+            "pictureUrl": null
+        }
+    },
+    "status": 200
 }
 ```
 </details>

@@ -107,22 +107,22 @@ if (postResult.status == 200) {
 
 ```json
 {
-   "data": {
+    "data": {
         "entityIndexedId": null,
         "timeToLive": 0,
         "createdAt": 1498850247510,
         "entityType": "address",
         "entityId": "4b2f1cba-cc52-4d3c-8663-ff540ee48a38",
         "acl": {
-        "other": 2
+            "other": 2
         },
         "ownerId": null,
         "version": 2,
         "expiresAt": 9223372036854776000,
         "updatedAt": 1498850536733,
         "_serverTime": 1637946319239
-   },
-   "status": 200
+    },
+    "status": 200
 }
 ```
 </details>

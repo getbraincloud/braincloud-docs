@@ -95,11 +95,11 @@ if (postResult.status == 200) {
 
 ```json
 {
- "data": {
-  "securityToken": "9XRVaE",
-  "handoffId": "a30dcdf8-88ed-4b16-b313-59c8ee3feb06"
- },
- "status": 200
+    "data": {
+        "securityToken": "9XRVaE",
+        "handoffId": "a30dcdf8-88ed-4b16-b313-59c8ee3feb06"
+    },
+    "status": 200
 }
 ```
 </details>

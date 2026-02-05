@@ -310,57 +310,57 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "_serverTime": 1637946319239,
-    "context": "lciI6MSwiZG9Db3VudCI6dHJ...",
-    "results": {
-      "count": 4,
-      "page": 1,
-      "items": [
-        {
-          "entityId": "f9d91cda-3ece-447c-bf81-046fa026520c",
-          "version": 1,
-          "acl": {
-            "other": 1
-          },
-          "ownerId": null,
-          "expiresAt": null,
-          "timeToLive": null,
-          "createdAt": 1573537595505,
-          "updatedAt": 1573537595505,
-          "data": {
-            "firstName": "Super",
-            "surName": "Star",
-            "position": "defense",
-            "goals": 2,
-            "assists": 4
-          }
-        },
-        {
-          "entityId": "1497cc7e-66cb-4682-9eac-c755523369a8",
-          "version": 3,
-          "acl": {
-            "other": 1
-          },
-          "ownerId": null,
-          "expiresAt": null,
-          "timeToLive": null,
-          "createdAt": 1573540122600,
-          "updatedAt": 1573540445332,
-          "data": {
-            "firstName": "Super",
-            "surName": "Star2",
-            "position": "defense",
-            "goals": 3,
-            "assists": 5
-          }
+    "data": {
+        "_serverTime": 1637946319239,
+        "context": "lciI6MSwiZG9Db3VudCI6dHJ...",
+        "results": {
+            "count": 4,
+            "page": 1,
+            "items": [
+                {
+                    "entityId": "f9d91cda-3ece-447c-bf81-046fa026520c",
+                    "version": 1,
+                    "acl": {
+                        "other": 1
+                    },
+                    "ownerId": null,
+                    "expiresAt": null,
+                    "timeToLive": null,
+                    "createdAt": 1573537595505,
+                    "updatedAt": 1573537595505,
+                    "data": {
+                        "firstName": "Super",
+                        "surName": "Star",
+                        "position": "defense",
+                        "goals": 2,
+                        "assists": 4
+                    }
+                },
+                {
+                    "entityId": "1497cc7e-66cb-4682-9eac-c755523369a8",
+                    "version": 3,
+                    "acl": {
+                        "other": 1
+                    },
+                    "ownerId": null,
+                    "expiresAt": null,
+                    "timeToLive": null,
+                    "createdAt": 1573540122600,
+                    "updatedAt": 1573540445332,
+                    "data": {
+                        "firstName": "Super",
+                        "surName": "Star2",
+                        "position": "defense",
+                        "goals": 3,
+                        "assists": 5
+                    }
+                }
+            ],
+            "moreAfter": true,
+            "moreBefore": false
         }
-      ],
-      "moreAfter": true,
-      "moreBefore": false
-    }
-  },
-  "status": 200
+    },
+    "status": 200
 }
 ```
 </details>

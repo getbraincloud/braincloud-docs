@@ -161,19 +161,19 @@ if (postResult.status == 200) {
 
 ```json
 {
-	"status": 200,
-	"data": {
-		"score": {
-			"score": 100,
-			"data": {
-				"test": "testdata"
-			},
-			"createdAt": 1484933569566,
-			"updatedAt": 1484933569566,
-			"leaderboardId": "testLeaderboard",
-			"versionId": 150
-		}
-	}
+    "status": 200,
+    "data": {
+        "score": {
+            "score": 100,
+            "data": {
+                "test": "testdata"
+            },
+            "createdAt": 1484933569566,
+            "updatedAt": 1484933569566,
+            "leaderboardId": "testLeaderboard",
+            "versionId": 150
+        }
+    }
 }
 ```
 </details>

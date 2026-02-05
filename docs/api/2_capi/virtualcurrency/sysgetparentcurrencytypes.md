@@ -99,19 +99,19 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "parentCurrencies": {
-      "parent1": [
-        "parent1VC2",
-        "parent1VC1"
-      ],
-      "parent2": [
-        "parent2VC1",
-        "parent2VC2"
-      ]
-    }
-  },
-  "status": 200
+    "data": {
+        "parentCurrencies": {
+            "parent1": [
+                "parent1VC2",
+                "parent1VC1"
+            ],
+            "parent2": [
+                "parent2VC1",
+                "parent2VC2"
+            ]
+        }
+    },
+    "status": 200
 }
 ```
 </details>

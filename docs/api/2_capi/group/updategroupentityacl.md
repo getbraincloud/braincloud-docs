@@ -186,20 +186,20 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "createdAt": 1666994425075,
-    "entityType": "myEntityType",
-    "groupId": "2bf538d1-19ea-4e14-9862-f979215e09b7",
-    "entityId": "e62dfe16-e6ec-4ebf-b044-2bb3626027e8",
-    "acl": {
-      "member": 1,
-      "other": 0
+    "data": {
+        "createdAt": 1666994425075,
+        "entityType": "myEntityType",
+        "groupId": "2bf538d1-19ea-4e14-9862-f979215e09b7",
+        "entityId": "e62dfe16-e6ec-4ebf-b044-2bb3626027e8",
+        "acl": {
+            "member": 1,
+            "other": 0
+        },
+        "ownerId": null,
+        "version": 2,
+        "updatedAt": 1666994963444
     },
-    "ownerId": null,
-    "version": 2,
-    "updatedAt": 1666994963444
-  },
-  "status": 200
+    "status": 200
 }
 ```
 </details>
