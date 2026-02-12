@@ -16,11 +16,11 @@ Global (or App) Statistics are similar to User Stats, except that they are store
 
 ### Global Statistics
 
-* [ReadAllGlobalStats](/api/capi/globalstats/readallglobalstats) - Returns all of the global statistics.
-* [ReadGlobalStatsForCategory](/api/capi/globalstats/readglobalstatsforcategory) - Reads a subset of global statistics belonging to the specified category (all if omitted).
-* [ReadGlobalStatsSubset](/api/capi/globalstats/readglobalstatssubset) - Reads a subset of global statistics as defined by the input JSON.
-* [IncrementGlobalStats](/api/capi/globalstats/incrementglobalstats) - Atomically increment (or decrement) global statistics.
-* [ProcessStatistics](/api/capi/globalstats/processstatistics) - Apply statistics grammar to a partial set of statistics.
+* [ReadAllGlobalStats](/api/capi/globalstatistics/readallglobalstats) - Returns all of the global statistics.
+* [ReadGlobalStatsForCategory](/api/capi/globalstatistics/readglobalstatsforcategory) - Reads a subset of global statistics belonging to the specified category (all if omitted).
+* [ReadGlobalStatsSubset](/api/capi/globalstatistics/readglobalstatssubset) - Reads a subset of global statistics as defined by the input JSON.
+* [IncrementGlobalStats](/api/capi/globalstatistics/incrementglobalstats) - Atomically increment (or decrement) global statistics.
+* [ProcessStatistics](/api/capi/globalstatistics/processstatistics) - Apply statistics grammar to a partial set of statistics.
 
 
 <DocCardList />
