@@ -65,10 +65,10 @@ The Authentication app also features the following brainCloud functionality:
 
 - [User Entities](/api/capi/entity)
 - [Custom Entities](/api/capi/customentity)
-- [Player XP and Player Leveling](/api/capi/playerstats)
+- [Player XP and Player Leveling](/api/capi/playerstatistics)
 - [Virtual Currencies](/api/capi/virtualcurrency)
-- [Player Stats](/api/capi/playerstats)
-- [Global Stats](/api/capi/globalstats)
+- [Player Stats](/api/capi/playerstatistics)
+- [Global Stats](/api/capi/globalgamestatistics)
 - [Cloud Code scripting](/api/capi/script) 
 - [Identity Attaching / Merging](/api/capi/identity)
 
