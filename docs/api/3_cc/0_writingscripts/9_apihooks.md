@@ -10,7 +10,7 @@ the "errorData" to the script rather than "message".
 
 ## Configuring API Hooks
 
-API Hooks are configured in the Design Portal, from the **Design | Cloud Code | API Hooks** screen.
+API Hooks are configured in the Design Portal, from the **App `>` Design `>` Cloud Code `>` API Hooks** screen.
 
 When configuring an API Hook you need to specify:
 
@@ -75,8 +75,8 @@ result;
 
 ```json
 {
-    "service": "Entity",
-    "operation": "CreateEntity",
+    "service": "entity",
+    "operation": "CREATE",
     "message": {
         "entityType": "contact",
         "acl": {
