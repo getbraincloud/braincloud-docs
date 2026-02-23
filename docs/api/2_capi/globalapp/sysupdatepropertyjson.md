@@ -4,6 +4,10 @@ Updates the named global property with the given json value. Note that the prope
 
 <PartialServop service_name="globalApp" operation_name="SYS_UPDATE_PROPERTY_JSON" />
 
+:::caution
+Note - dynamically updating a global property causes the application cache to refresh across all apiservers. Thus global properties are better suited for more static values - i.e. thing tuning properties, remote config, etc. - If your value needs to update often throughout the day, it is recommended that you use Global/System Entities or Unowned Custom Entities instead.
+:::
+
 ## Method Parameters
 Parameter | Description
 --------- | -----------
