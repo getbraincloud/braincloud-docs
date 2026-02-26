@@ -117,52 +117,52 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "entityList": [
-      {
-        "entityId": "8b34a18b-5846-45d4-a7b8-e65775ca1973",
-        "version": 1,
-        "acl": {
-          "other": 2
-        },
-        "ownerId": null,
-        "expiresAt": null,
-        "timeToLive": null,
-        "createdAt": 1602700646415,
-        "updatedAt": 1602700646415,
-        "entityType": "athletes",
-        "data": {
-          "firstName": "Super",
-          "surName": "Star",
-          "position": "forward",
-          "goals": 2,
-          "assists": 4
-        }
-      },
-      {
-        "entityId": "e3ea0e05-032f-4b46-86cf-0423f5a9da24",
-        "version": 1,
-        "acl": {
-          "other": 2
-        },
-        "ownerId": null,
-        "expiresAt": null,
-        "timeToLive": null,
-        "createdAt": 1602700650242,
-        "updatedAt": 1602700650242,
-        "entityType": "athletes",
-        "data": {
-          "firstName": "Super",
-          "surName": "Star",
-          "position": "forward",
-          "goals": 2,
-          "assists": 4
-        }
-      }
-    ],
-    "entityListCount": 2
-  },
-  "status": 200
+    "data": {
+        "entityList": [
+            {
+                "entityId": "8b34a18b-5846-45d4-a7b8-e65775ca1973",
+                "version": 1,
+                "acl": {
+                    "other": 2
+                },
+                "ownerId": null,
+                "expiresAt": null,
+                "timeToLive": null,
+                "createdAt": 1602700646415,
+                "updatedAt": 1602700646415,
+                "entityType": "athletes",
+                "data": {
+                    "firstName": "Super",
+                    "surName": "Star",
+                    "position": "forward",
+                    "goals": 2,
+                    "assists": 4
+                }
+            },
+            {
+                "entityId": "e3ea0e05-032f-4b46-86cf-0423f5a9da24",
+                "version": 1,
+                "acl": {
+                    "other": 2
+                },
+                "ownerId": null,
+                "expiresAt": null,
+                "timeToLive": null,
+                "createdAt": 1602700650242,
+                "updatedAt": 1602700650242,
+                "entityType": "athletes",
+                "data": {
+                    "firstName": "Super",
+                    "surName": "Star",
+                    "position": "forward",
+                    "goals": 2,
+                    "assists": 4
+                }
+            }
+        ],
+        "entityListCount": 2
+    },
+    "status": 200
 }
 ```
 </details>

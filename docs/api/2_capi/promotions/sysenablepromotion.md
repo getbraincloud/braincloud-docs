@@ -113,36 +113,36 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "promotion": {
-      "promotionId": 1,
-      "type": "SCHEDULED",
-      "name": "Independence Day Sale",
-      "message": {
-        "en": "Happy 4th of July!"
-      },
-      "enabled": true,
-      "segments": [],
-      "prices": [
-        {
-          "itemId": "coinbundle10",
-          "priceId": 0
+    "data": {
+        "promotion": {
+            "promotionId": 1,
+            "type": "SCHEDULED",
+            "name": "Independence Day Sale",
+            "message": {
+                "en": "Happy 4th of July!"
+            },
+            "enabled": true,
+            "segments": [],
+            "prices": [
+                {
+                    "itemId": "coinbundle10",
+                    "priceId": 0
+                }
+            ],
+            "notifications": [
+                {
+                    "trigger": "ACTIVATED",
+                    "notificationTemplateId": 1
+                }
+            ],
+            "startAt": 1593781259911,
+            "endAt": 1594126859911,
+            "createdAt": 1592543866698,
+            "updatedAt": 1592590019283,
+            "version": 2
         }
-      ],
-      "notifications": [
-        {
-          "trigger": "ACTIVATED",
-          "notificationTemplateId": 1
-        }
-      ],
-      "startAt": 1593781259911,
-      "endAt": 1594126859911,
-      "createdAt": 1592543866698,
-      "updatedAt": 1592590019283,
-      "version": 2
-    }
-  },
-  "status": 200
+    },
+    "status": 200
 }
 ```
 </details>

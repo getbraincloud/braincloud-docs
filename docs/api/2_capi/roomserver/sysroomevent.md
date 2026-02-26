@@ -119,8 +119,8 @@ var postResult = roomServerProxy.sysRoomEvent(event, brainCloudContext);
 
 ```json
 {
-  "status" : 200,
-  "data" : {}
+    "status": 200,
+    "data": {}
 }
 ```
 

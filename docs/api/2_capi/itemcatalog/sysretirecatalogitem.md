@@ -110,55 +110,55 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "defId": "sword001",
-    "name": "Cherry Sword",
-    "desc": "A crimson sword whose blade was forged in Cherry Kool-aid!",
-    "type": "ITEM",
-    "category": "sword",
-    "tags": [
-      "weapon",
-      "pointy",
-      "crimson",
-      "cherry"
-    ],
-    "buyPrice": {
-      "coins": 250
+    "data": {
+        "defId": "sword001",
+        "name": "Cherry Sword",
+        "desc": "A crimson sword whose blade was forged in Cherry Kool-aid!",
+        "type": "ITEM",
+        "category": "sword",
+        "tags": [
+            "weapon",
+            "pointy",
+            "crimson",
+            "cherry"
+        ],
+        "buyPrice": {
+            "coins": 250
+        },
+        "sellPrice": {
+            "coins": 180
+        },
+        "image": "//cherrySword.jpg",
+        "resourceGroup": "equipment.asset",
+        "resourceTag": "sword001",
+        "meta": {
+            "speed": 80,
+            "damage": 10,
+            "accuracy": 85,
+            "range": 7
+        },
+        "initData": {
+            "condition": 100,
+            "bonus": 0
+        },
+        "pState": "RETIRED",
+        "publishedAt": 1567192243524,
+        "createdAt": 1567192113061,
+        "updatedAt": 1567192275046,
+        "version": 5,
+        "stackable": false,
+        "consumable": false,
+        "uses": null,
+        "coolDownSecs": 0,
+        "recoverySecs": 0,
+        "activatable": false,
+        "statusName": null,
+        "activeSecs": null,
+        "tradable": false,
+        "blockchain": false,
+        "blockchainDefId": null
     },
-    "sellPrice": {
-      "coins": 180
-    },
-    "image": "//cherrySword.jpg",
-    "resourceGroup": "equipment.asset",
-    "resourceTag": "sword001",
-    "meta": {
-      "speed": 80,
-      "damage": 10,
-      "accuracy": 85,
-      "range": 7
-    },
-    "initData": {
-      "condition": 100,
-      "bonus": 0
-    },
-    "pState": "RETIRED",
-    "publishedAt": 1567192243524,
-    "createdAt": 1567192113061,
-    "updatedAt": 1567192275046,
-    "version": 5,
-    "stackable": false,
-    "consumable": false,
-    "uses": null,
-    "coolDownSecs": 0,
-    "recoverySecs": 0,
-    "activatable": false,
-    "statusName": null,
-    "activeSecs": null,
-    "tradable": false,
-    "blockchain": false,
-    "blockchainDefId": null
-  },
-  "status": 200
+    "status": 200
 }
 ```
 </details>

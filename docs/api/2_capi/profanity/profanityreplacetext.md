@@ -191,11 +191,11 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "foundCount": "1",
-    "replacedString": "**** language"
-  },
-  "status": 200
+    "data": {
+        "foundCount": "1",
+        "replacedString": "**** language"
+    },
+    "status": 200
 }
 ```
 </details>

@@ -180,63 +180,63 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "processed": true,
-    "itemId": "GoldWings",
-    "referencePrice": 199,
-    "promotions": null,
-    "resultCode": 0,
-    "currency": {
-      "goldWings": {
-        "consumed": 0,
-        "balance": 1,
-        "purchased": 1,
-        "awarded": 0
-      }
-    },
-    "serverTime": 1649252630210,
-    "store": "steam",
-    "transactionSummary": {
-      "result": "OK",
-      "params": {
-        "orderid": 100053,
-        "transid": 3041626742768452692
-      },
-      "rawStringResp": "{\"response\":{\"result\":\"OK\",\"params\":{\"orderid\":100053,\"transid\":3041626742768452692}}}",
-      "queryTxn": {
-        "response": {
-          "result": "OK",
-          "params": {
-            "orderid": "13795000000000000",
-            "transid": "3720612235425100000",
-            "steamid": "66561199055000000",
-            "status": "Succeeded",
-            "currency": "USD",
-            "time": "2022-04-06T17:58:32Z",
-            "country": "CA",
-            "usstate": "",
-            "timecreated": "2022-04-06T17:58:08Z",
-            "items": [
-              {
-                "itemid": 16,
-                "qty": 1,
-                "amount": 416,
-                "vat": 83,
-                "itemstatus": "Succeeded"
-              }
-            ]
-          }
+    "data": {
+        "processed": true,
+        "itemId": "GoldWings",
+        "referencePrice": 199,
+        "promotions": null,
+        "resultCode": 0,
+        "currency": {
+            "goldWings": {
+                "consumed": 0,
+                "balance": 1,
+                "purchased": 1,
+                "awarded": 0
+            }
+        },
+        "serverTime": 1649252630210,
+        "store": "steam",
+        "transactionSummary": {
+            "result": "OK",
+            "params": {
+                "orderid": 100053,
+                "transid": 3041626742768452692
+            },
+            "rawStringResp": "{\"response\":{\"result\":\"OK\",\"params\":{\"orderid\":100053,\"transid\":3041626742768452692}}}",
+            "queryTxn": {
+                "response": {
+                    "result": "OK",
+                    "params": {
+                        "orderid": "13795000000000000",
+                        "transid": "3720612235425100000",
+                        "steamid": "66561199055000000",
+                        "status": "Succeeded",
+                        "currency": "USD",
+                        "time": "2022-04-06T17:58:32Z",
+                        "country": "CA",
+                        "usstate": "",
+                        "timecreated": "2022-04-06T17:58:08Z",
+                        "items": [
+                            {
+                                "itemid": 16,
+                                "qty": 1,
+                                "amount": 416,
+                                "vat": 83,
+                                "itemstatus": "Succeeded"
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "rewards": {
+            "extra": null,
+            "currency": {
+                "goldWings": 1
+            }
         }
-      }
     },
-    "rewards": {
-      "extra": null,
-      "currency": {
-        "goldWings": 1
-      }
-    }
-  },
-  "status": 200
+    "status": 200
 }
 ```
 

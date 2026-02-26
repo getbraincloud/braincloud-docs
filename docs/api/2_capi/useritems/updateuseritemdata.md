@@ -183,31 +183,31 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "item": {
-      "itemId": "bf74cc8a-3987-4bf7-8e35-683917e14ab8",
-      "defId": "medal_bronze_1",
-      "quantity": 1,
-      "usesLeft": null,
-      "coolDownStart": -1,
-      "recoveryStart": -1,
-      "itemData": {
-        "condition": 77,
-        "bonus": 1
-      },
-      "giftedTo": null,
-      "giftedFrom": null,
-      "blockId": null,
-      "createdAt": 1566851160771,
-      "updatedAt": 1566851174886,
-      "version": 2,
-      "maxUses": null,
-      "coolDownUntil": -1,
-      "recoveryUntil": -1,
-      "itemDef": {}
-    }
-  },
-  "status": 200
+    "data": {
+        "item": {
+            "itemId": "bf74cc8a-3987-4bf7-8e35-683917e14ab8",
+            "defId": "medal_bronze_1",
+            "quantity": 1,
+            "usesLeft": null,
+            "coolDownStart": -1,
+            "recoveryStart": -1,
+            "itemData": {
+                "condition": 77,
+                "bonus": 1
+            },
+            "giftedTo": null,
+            "giftedFrom": null,
+            "blockId": null,
+            "createdAt": 1566851160771,
+            "updatedAt": 1566851174886,
+            "version": 2,
+            "maxUses": null,
+            "coolDownUntil": -1,
+            "recoveryUntil": -1,
+            "itemDef": {}
+        }
+    },
+    "status": 200
 }
 ```
 </details>

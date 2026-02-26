@@ -120,19 +120,19 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "status": 200,
-  "data": {
-    "entityId": "1497cc7e-66cb-4682-9eac-c755523369a8",
-    "version": 2,
-    "acl": {
-      "other": 1
-    },
-    "ownerId": "www-xxx-yyy-zzz2",
-    "expiresAt": null,
-    "timeToLive": null,
-    "createdAt": 1573540122600,
-    "updatedAt": 1573540142928
-  }
+    "status": 200,
+    "data": {
+        "entityId": "1497cc7e-66cb-4682-9eac-c755523369a8",
+        "version": 2,
+        "acl": {
+            "other": 1
+        },
+        "ownerId": "www-xxx-yyy-zzz2",
+        "expiresAt": null,
+        "timeToLive": null,
+        "createdAt": 1573540122600,
+        "updatedAt": 1573540142928
+    }
 }
 ```
 </details>

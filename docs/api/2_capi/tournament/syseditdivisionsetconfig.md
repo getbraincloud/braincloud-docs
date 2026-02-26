@@ -126,19 +126,19 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "gameId": "23782",
-    "divSetId": "uniqueDivSetId",
-    "desc": "Gold division updated",
-    "scheduleType": "Sync",
-    "lbTemplate": "l4",
-    "max": 80,
-    "expiryDays": 15,
-    "createdAt": 1654004481428,
-    "updatedAt": 1654004783858,
-    "version": 2
-  },
-  "status": 200
+    "data": {
+        "gameId": "23782",
+        "divSetId": "uniqueDivSetId",
+        "desc": "Gold division updated",
+        "scheduleType": "Sync",
+        "lbTemplate": "l4",
+        "max": 80,
+        "expiryDays": 15,
+        "createdAt": 1654004481428,
+        "updatedAt": 1654004783858,
+        "version": 2
+    },
+    "status": 200
 }
 ```
 </details>

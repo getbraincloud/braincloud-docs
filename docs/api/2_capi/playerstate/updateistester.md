@@ -108,8 +108,8 @@ if (postResult.status == 200) {
 ```json
 {
     "data": {
-      "isTester": false
-     },
+        "isTester": false
+    },
     "status": 200
 }
 ```

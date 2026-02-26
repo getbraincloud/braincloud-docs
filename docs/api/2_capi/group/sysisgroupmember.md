@@ -110,12 +110,12 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "isGroupMember": true,
-    "role": "MEMBER",
-    "attributes": {}
-  },
-  "status": 200
+    "data": {
+        "isGroupMember": true,
+        "role": "MEMBER",
+        "attributes": {}
+    },
+    "status": 200
 }
 ```
 </details>

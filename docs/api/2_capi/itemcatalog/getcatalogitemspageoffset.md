@@ -161,56 +161,56 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "context": "eyJzZWFyY2hDcml0ZXJpYSI6eyJnYW1lSWQiOiIyMzQwMyJ9LCJzb3J0Q3JpdGVyaWEiOnsiY3JlYXRlZEF0IjoxLCJ1cGRhdGVkQXQiOi0xfSwicGFnaW5hdGlvbiI6eyJyb3dzUGVyUGFnZSI6MSwicGFnZU51bWJlciI6MiwiZG9Db3VudCI6dHJ1ZX0sIm9wdGlvbnMiOm51bGx9",
-    "results": {
-      "count": 7,
-      "page": 2,
-      "items": [
-        {
-          "gameId": "23403",
-          "defId": "medal_bronze_2",
-          "name": {
-            "en": "Medium Bronze Medal"
-          },
-          "desc": {
-            "en": ""
-          },
-          "type": "ITEM",
-          "category": "collectable",
-          "tags": [
-            "medal"
-          ],
-          "buyPrice": {},
-          "sellPrice": {},
-          "image": null,
-          "resourceGroup": null,
-          "resourceTag": null,
-          "meta": {},
-          "initData": {},
-          "pState": "PUBLISHED",
-          "publishedAt": 1566585957049,
-          "createdAt": 1566585954652,
-          "updatedAt": 1566585957049,
-          "version": 2,
-          "stackable": false,
-          "consumable": false,
-          "uses": null,
-          "coolDownSecs": 0,
-          "recoverySecs": 0,
-          "activatable": false,
-          "statusName": null,
-          "activeSecs": null,
-          "tradable": false,
-          "blockchain": false,
-          "blockchainDefId": null
+    "data": {
+        "context": "eyJzZWFyY2hDcml0ZXJpYSI6eyJnYW1lSWQiOiIyMzQwMyJ9LCJzb3J0Q3JpdGVyaWEiOnsiY3JlYXRlZEF0IjoxLCJ1cGRhdGVkQXQiOi0xfSwicGFnaW5hdGlvbiI6eyJyb3dzUGVyUGFnZSI6MSwicGFnZU51bWJlciI6MiwiZG9Db3VudCI6dHJ1ZX0sIm9wdGlvbnMiOm51bGx9",
+        "results": {
+            "count": 7,
+            "page": 2,
+            "items": [
+                {
+                    "gameId": "23403",
+                    "defId": "medal_bronze_2",
+                    "name": {
+                        "en": "Medium Bronze Medal"
+                    },
+                    "desc": {
+                        "en": ""
+                    },
+                    "type": "ITEM",
+                    "category": "collectable",
+                    "tags": [
+                        "medal"
+                    ],
+                    "buyPrice": {},
+                    "sellPrice": {},
+                    "image": null,
+                    "resourceGroup": null,
+                    "resourceTag": null,
+                    "meta": {},
+                    "initData": {},
+                    "pState": "PUBLISHED",
+                    "publishedAt": 1566585957049,
+                    "createdAt": 1566585954652,
+                    "updatedAt": 1566585957049,
+                    "version": 2,
+                    "stackable": false,
+                    "consumable": false,
+                    "uses": null,
+                    "coolDownSecs": 0,
+                    "recoverySecs": 0,
+                    "activatable": false,
+                    "statusName": null,
+                    "activeSecs": null,
+                    "tradable": false,
+                    "blockchain": false,
+                    "blockchainDefId": null
+                }
+            ],
+            "moreAfter": true,
+            "moreBefore": true
         }
-      ],
-      "moreAfter": true,
-      "moreBefore": true
-    }
-  },
-  "status": 200
+    },
+    "status": 200
 }
 ```
 </details>

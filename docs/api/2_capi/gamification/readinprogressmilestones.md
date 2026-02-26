@@ -150,29 +150,29 @@ if (postResult.status == 200) {
 <summary>JSON Response</summary>
 
 ```json
-{  
-   "data":{  
-      "milestones":[  
-         {  
-            "gameId":"11549",
-            "questId":null,
-            "thresholds":{  
-               "playerStatistics":{  
-                  "statistics":{  
-                     "Plane_Shot_Down":50
-                  }
-               }
-            },
-            "extraData":null,
-            "description":"Awarded for shooting down 50 enemy planes.",
-            "id":"6",
-            "title":"Sky Ace",
-            "category":"Game_Milestones",
-            "status":"IN_PROGRESS"
-         }
-      ]
-   },
-   "status":200
+{
+    "data": {
+        "milestones": [
+            {
+                "gameId": "11549",
+                "questId": null,
+                "thresholds": {
+                    "playerStatistics": {
+                        "statistics": {
+                            "Plane_Shot_Down": 50
+                        }
+                    }
+                },
+                "extraData": null,
+                "description": "Awarded for shooting down 50 enemy planes.",
+                "id": "6",
+                "title": "Sky Ace",
+                "category": "Game_Milestones",
+                "status": "IN_PROGRESS"
+            }
+        ]
+    },
+    "status": 200
 }
 ```
 </details>

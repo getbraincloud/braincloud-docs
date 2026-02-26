@@ -265,8 +265,20 @@ _For more information on Lobby Concepts, see the [Lobby Overview](/learn/key-con
             "owner": "f6fa3e0e-6aac-497a-84e1-c8db6f545c12",
             "settings": {},
             "version": 1,
-            "numMembers": 2,
-            "members": []
+            "numMembers": 1,
+            "members": [
+                {
+                    "profileId": "48844593-6e01-464f-bc13-565ee536a46b",
+                    "name": "",
+                    "pic": "",
+                    "rating": 0,
+                    "team": "all",
+                    "isReady": true,
+                    "extra": {},
+                    "ipAddress": "174.112.74.185",
+                    "cxId": "13469:48844593-6e01-464f-bc13-565ee536a46b:1kslkorpivpa68bhf21q1avi9q"
+                }
+            ]
         }
     }
 }
@@ -284,8 +296,20 @@ _For more information on Lobby Concepts, see the [Lobby Overview](/learn/key-con
             "state": "early",
             "owner": "f6fa3e0e-6aac-497a-84e1-c8db6f545c12",
             "version": 1,
-            "numMembers": 2,
-            "members": []
+            "numMembers": 1,
+            "members": [
+                {
+                    "profileId": "48844593-6e01-464f-bc13-565ee536a46b",
+                    "name": "",
+                    "pic": "",
+                    "rating": 0,
+                    "team": "all",
+                    "isReady": true,
+                    "extra": {},
+                    "ipAddress": "174.112.74.185",
+                    "cxId": "13469:48844593-6e01-464f-bc13-565ee536a46b:1kslkorpivpa68bhf21q1avi9q"
+                }
+            ]
         }
     }
 }
@@ -466,7 +490,7 @@ An example of ROOM_PROGRESS messages when a host is found:
 ```
 
 ```json
-// an example of the `acture "progress" events being sent out to lobby members
+// an example of the "progress" events being sent out to lobby members
 {"service":"lobby","operation":"STARTING","data":{"lobbyId":"23649:CursorPartyV2:4186","lobby":{"state":"starting","settings":{},"version":1,"cRegions":[],"round":1,"isRoomReady":false,"keepAliveRateSeconds":72,"isAvailable":true,"ownerCxId":"23649:37e60799-468d-4440-8fce-5d8eabade18d:4s26gha7bhmiottrn3v38d8l0o","legacyLobbyOwnerEnabled":false,"numMembers":1,"members":[{"profileId":"37e60799-468d-4440-8fce-5d8eabade18d","name":"greg@bitheads.com","pic":"","rating":0,"team":"all","isReady":true,"extra":{"colorIndex":6,"presentSinceStart":false},"ipAddress":"184.148.127.43","cxId":"23649:37e60799-468d-4440-8fce-5d8eabade18d:4s26gha7bhmiottrn3v38d8l0o"}]}}}
 {"service":"lobby","operation":"ROOM_PROGRESS","data":{"lobbyId":"23649:CursorPartyV2:4186","curStep":1,"ofStep":5,"msg":"Host lookup","variation":"no-host-found"}}
 {"service":"lobby","operation":"ROOM_PROGRESS","data":{"lobbyId":"23649:CursorPartyV2:4186","curStep":2,"ofStep":5,"msg":"New host started"}}

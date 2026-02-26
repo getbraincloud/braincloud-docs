@@ -8,7 +8,7 @@ Parameter | Description
 --------- | -----------
 storeId | The store platform.
 iapId | The app store's IAP ID.
-payload | The payload string to cache. Send in the payload associated with the product being purchased, as returned by the [GetSalesInventory()](/api/capi/appstore/getsalesinventory) call...
+payload | The payload string to cache. Send in the payload associated with the product being purchased, as returned by the [GetSalesInventory()](/api/capi/appstore/getsalesinventory) call. ( formatted as `__bc: [versionId, itemId, priceId, referencePrice, promotionId]`)
 
 ## Usage
 
@@ -164,8 +164,8 @@ var postResult = appStoreProxy.cachePurchasePayloadContext(storeId, iapId, paylo
 
 ```json
 {
-  "data" : {},
-  "status" : 200
+    "data": {},
+    "status": 200
 }
 ```
 

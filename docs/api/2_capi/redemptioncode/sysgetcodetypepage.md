@@ -138,36 +138,36 @@ var postResult = redemptionCodeProxy.sysGetCodeTypePage(context);
 
 ```json
 {
-  "data": {
-    "_serverTime": 1708035466493,
-    "context": "eyJzZWFyY2hDcml0ZXJpYSI6eyJnYW1lSWQiOiIyMzc4MiIsImNvZGVVc2VUeXBlIjoiTVVMVEkiLCJ2YWxpZFN0YXJ0Ijp7IiRsdGUiOjE3MDgwMzU0NTU2MjV9LCJ2YWxpZEVuZCI6eyIkZ3QiOjE3MDgwMzU1MTU2MjV9LCJpc0Rpc2FibGVkIjp7IiRuZSI6dHJ1ZX19LCJzb3J0Q3JpdGVyaWEiOnt9LCJwYWdpbmF0aW9uIjp7InJvd3NQZXJQYWdlIjo1MCwicGFnZU51bWJlciI6MSwiZG9Db3VudCI6dHJ1ZSwic2tpcFJlY291bnQiOnRydWV9LCJvcHRpb25zIjpudWxsLCJyZXN1bHRDb3VudCI6MX0",
-    "results": {
-      "count": 1,
-      "page": 1,
-      "items": [
-        {
-          "gameId": "23782",
-          "codeType": "unique_campaign_name",
-          "description": "Codes to give away for promotion",
-          "version": 1,
-          "createdAt": 1708035413954,
-          "updatedAt": 1708035413954,
-          "async": false,
-          "maxRetries": 0,
-          "isDisabled": false,
-          "customCodeInfo": {},
-          "validStart": 1708035331008,
-          "validEnd": 1708640131008,
-          "codeUseType": "MULTI",
-          "scanCode": "FREE100",
-          "maxRedemptions": 100
+    "data": {
+        "_serverTime": 1708035466493,
+        "context": "eyJzZWFyY2hDcml0ZXJpYSI6eyJnYW1lSWQiOiIyMzc4MiIsImNvZGVVc2VUeXBlIjoiTVVMVEkiLCJ2YWxpZFN0YXJ0Ijp7IiRsdGUiOjE3MDgwMzU0NTU2MjV9LCJ2YWxpZEVuZCI6eyIkZ3QiOjE3MDgwMzU1MTU2MjV9LCJpc0Rpc2FibGVkIjp7IiRuZSI6dHJ1ZX19LCJzb3J0Q3JpdGVyaWEiOnt9LCJwYWdpbmF0aW9uIjp7InJvd3NQZXJQYWdlIjo1MCwicGFnZU51bWJlciI6MSwiZG9Db3VudCI6dHJ1ZSwic2tpcFJlY291bnQiOnRydWV9LCJvcHRpb25zIjpudWxsLCJyZXN1bHRDb3VudCI6MX0",
+        "results": {
+            "count": 1,
+            "page": 1,
+            "items": [
+                {
+                    "gameId": "23782",
+                    "codeType": "unique_campaign_name",
+                    "description": "Codes to give away for promotion",
+                    "version": 1,
+                    "createdAt": 1708035413954,
+                    "updatedAt": 1708035413954,
+                    "async": false,
+                    "maxRetries": 0,
+                    "isDisabled": false,
+                    "customCodeInfo": {},
+                    "validStart": 1708035331008,
+                    "validEnd": 1708640131008,
+                    "codeUseType": "MULTI",
+                    "scanCode": "FREE100",
+                    "maxRedemptions": 100
+                }
+            ],
+            "moreAfter": false,
+            "moreBefore": false
         }
-      ],
-      "moreAfter": false,
-      "moreBefore": false
-    }
-  },
-  "status": 200
+    },
+    "status": 200
 }
 ```
 

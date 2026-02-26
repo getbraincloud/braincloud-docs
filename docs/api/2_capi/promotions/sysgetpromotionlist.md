@@ -107,35 +107,35 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "promotions": [
-      {
-        "promotionId": 1,
-        "type": "SCHEDULED",
-        "name": "Independence Day Sale",
-        "enabled": false,
-        "segments": [],
-        "startAt": 1593781259911,
-        "endAt": 1594126859911,
-        "createdAt": 1592543345470,
-        "updatedAt": 1592543345470,
-        "version": 1
-      },
-      {
-        "promotionId": 2,
-        "type": "SCHEDULED",
-        "name": "Good Friday Day Sale",
-        "enabled": false,
-        "segments": [],
-        "startAt": 1593781259911,
-        "endAt": 1594126859911,
-        "createdAt": 1592572610332,
-        "updatedAt": 1592572610332,
-        "version": 1
-      }
-    ]
-  },
-  "status": 200
+    "data": {
+        "promotions": [
+            {
+                "promotionId": 1,
+                "type": "SCHEDULED",
+                "name": "Independence Day Sale",
+                "enabled": false,
+                "segments": [],
+                "startAt": 1593781259911,
+                "endAt": 1594126859911,
+                "createdAt": 1592543345470,
+                "updatedAt": 1592543345470,
+                "version": 1
+            },
+            {
+                "promotionId": 2,
+                "type": "SCHEDULED",
+                "name": "Good Friday Day Sale",
+                "enabled": false,
+                "segments": [],
+                "startAt": 1593781259911,
+                "endAt": 1594126859911,
+                "createdAt": 1592572610332,
+                "updatedAt": 1592572610332,
+                "version": 1
+            }
+        ]
+    },
+    "status": 200
 }
 ```
 </details>

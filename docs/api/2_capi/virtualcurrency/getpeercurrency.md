@@ -161,18 +161,18 @@ if (postResult.status == 200) {
 
 ```json
 {
-   "status":200,
-   "data":{
-      "currencyMap":{
-         "credits":{
-            "consumed":20,
-            "balance":180,
-            "purchased":0,
-            "awarded":200,
-            "revoked": 0
-         }
-      }
-   }
+    "status": 200,
+    "data": {
+        "currencyMap": {
+            "credits": {
+                "consumed": 20,
+                "balance": 180,
+                "purchased": 0,
+                "awarded": 200,
+                "revoked": 0
+            }
+        }
+    }
 }
 ```
 </details>

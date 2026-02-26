@@ -121,31 +121,31 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "gameId": "23783",
-    "itemId": "barBundle1Imp",
-    "type": "Subscription",
-    "iTunesSubscriptionType": "Free",
-    "category": "bars",
-    "title": "Bars (10)",
-    "description": "The new bundle of 10 Bars.",
-    "imageUrl": "",
-    "currency": {
-      "bar": 10
-    },
-    "parentCurrency": {},
-    "peerCurrency": {},
-    "defaultPriceId": -1,
-    "prices": [],
     "data": {
-      "customAttr": "value"
+        "gameId": "23783",
+        "itemId": "barBundle1Imp",
+        "type": "Subscription",
+        "iTunesSubscriptionType": "Free",
+        "category": "bars",
+        "title": "Bars (10)",
+        "description": "The new bundle of 10 Bars.",
+        "imageUrl": "",
+        "currency": {
+            "bar": 10
+        },
+        "parentCurrency": {},
+        "peerCurrency": {},
+        "defaultPriceId": -1,
+        "prices": [],
+        "data": {
+            "customAttr": "value"
+        },
+        "createdAt": 1592594640577,
+        "updatedAt": 1592596878019,
+        "version": 2,
+        "absoluteImageUrl": "https://api.braincloudservers.com/files/portal/g/23783"
     },
-    "createdAt": 1592594640577,
-    "updatedAt": 1592596878019,
-    "version": 2,
-    "absoluteImageUrl": "https://api.braincloudservers.com/files/portal/g/23783"
-  },
-  "status": 200
+    "status": 200
 }
 ```
 </details>

@@ -101,9 +101,9 @@ if (postResult.status == 200) {
 {
     "data": {
         "currencies": [
-          "gems"
+            "gems"
         ]
-      },
+    },
     "status": 200
 }
 ```

@@ -152,15 +152,15 @@ if (postResult.status == 200) {
 
 ```json
 {
-	"data": {
-		"statistics": {
-			"RoundsWon": 0,
-			"RoundsLost": 0,
-			"DifficultyChanges": 0,
-			"RoundsFinished": 0
-		}
-	},
-	"status": 200
+    "data": {
+        "statistics": {
+            "RoundsWon": 0,
+            "RoundsLost": 0,
+            "DifficultyChanges": 0,
+            "RoundsFinished": 0
+        }
+    },
+    "status": 200
 }
 ```
 </details>

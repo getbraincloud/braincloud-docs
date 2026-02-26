@@ -109,55 +109,55 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "status": 200,
-  "data": {
-    "quest": {
-      "questId": "QUEST_CRUSH52",
-      "questType": "unorderedMinimal",
-      "questData": "0",
-      "title": "Crush 50 Eggs",
-      "description": "This is an updated description",
-      "category": "mission",
-      "extraData": {
-        "difficulty": 1
-      },
-      "rewards": {
-        "experiencePoints": 1000
-      },
-      "createdAt": 1574802052796,
-      "updatedAt": 1574863558897,
-      "version": 4,
-      "tasks": [
-        "17"
-      ]
-    },
-    "updatedTask": "17",
-    "tasks": {
-      "17": {
-        "title": "Winner Winner",
-        "description": "An updated task description",
-        "category": "loyalty",
-        "extraData": {
-          "secretMission": false,
-          "actionIndex": 4
+    "status": 200,
+    "data": {
+        "quest": {
+            "questId": "QUEST_CRUSH52",
+            "questType": "unorderedMinimal",
+            "questData": "0",
+            "title": "Crush 50 Eggs",
+            "description": "This is an updated description",
+            "category": "mission",
+            "extraData": {
+                "difficulty": 1
+            },
+            "rewards": {
+                "experiencePoints": 1000
+            },
+            "createdAt": 1574802052796,
+            "updatedAt": 1574863558897,
+            "version": 4,
+            "tasks": [
+                "17"
+            ]
         },
-        "rewards": {
-          "experiencePoints": 1000
-        },
-        "thresholds": {
-          "playerStatistics": {
-            "statistics": {
-              "wins": 50
+        "updatedTask": "17",
+        "tasks": {
+            "17": {
+                "title": "Winner Winner",
+                "description": "An updated task description",
+                "category": "loyalty",
+                "extraData": {
+                    "secretMission": false,
+                    "actionIndex": 4
+                },
+                "rewards": {
+                    "experiencePoints": 1000
+                },
+                "thresholds": {
+                    "playerStatistics": {
+                        "statistics": {
+                            "wins": 50
+                        }
+                    }
+                },
+                "createdAt": 1574820663140,
+                "updatedAt": 1574863558901,
+                "version": 2,
+                "taskId": "17"
             }
-          }
-        },
-        "createdAt": 1574820663140,
-        "updatedAt": 1574863558901,
-        "version": 2,
-        "taskId": "17"
-      }
+        }
     }
-  }
 }
 ```
 </details>

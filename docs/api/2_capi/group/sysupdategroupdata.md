@@ -124,64 +124,64 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "gameId": "13229",
-    "groupId": "d373ff92-3327-4176-85ed-3565a09c43fa",
-    "ownerId": "ec52d988-3515-4032-a8fd-acc48e985792",
-    "name": "agroup",
-    "groupType": "group11",
-    "createdAt": 1605155742940,
-    "updatedAt": 1671123804120,
-    "members": {
-      "79ab573d-459e-42ce-ac65-c2fe8e81a3ae": {
-        "role": "MEMBER",
-        "attributes": {
-          "groupatt": "groupattvalue"
+    "data": {
+        "gameId": "13229",
+        "groupId": "d373ff92-3327-4176-85ed-3565a09c43fa",
+        "ownerId": "ec52d988-3515-4032-a8fd-acc48e985792",
+        "name": "agroup",
+        "groupType": "group11",
+        "createdAt": 1605155742940,
+        "updatedAt": 1671123804120,
+        "members": {
+            "79ab573d-459e-42ce-ac65-c2fe8e81a3ae": {
+                "role": "MEMBER",
+                "attributes": {
+                    "groupatt": "groupattvalue"
+                }
+            },
+            "32902825-37a1-43e2-89b7-47e849b1ec4b": {
+                "role": "MEMBER",
+                "attributes": {}
+            },
+            "ec52d988-3515-4032-a8fd-acc48e985792": {
+                "role": "OWNER",
+                "attributes": {}
+            },
+            "cd0356bd-ab7f-4fd7-bc58-9422cd3a2a59": {
+                "role": "MEMBER",
+                "attributes": {}
+            },
+            "8f9f8269-ad3e-4e3d-bc2a-3dd31afb0b17": {
+                "role": "MEMBER",
+                "attributes": {}
+            },
+            "8bd564a7-3f91-4a98-a4b3-43cd7d266133": {
+                "role": "MEMBER",
+                "attributes": {}
+            },
+            "336f36be-da11-4457-bda6-ccecd47b63e3": {
+                "role": "MEMBER",
+                "attributes": {}
+            },
+            "1e8c17bf-ede9-4976-b147-b44bd2da6817": {
+                "role": "MEMBER",
+                "attributes": {}
+            }
+        },
+        "pendingMembers": {},
+        "version": 5,
+        "summaryData": {},
+        "isOpenGroup": true,
+        "defaultMemberAttributes": {},
+        "memberCount": 8,
+        "invitedPendingMemberCount": 0,
+        "requestingPendingMemberCount": 0,
+        "acl": {
+            "member": 2,
+            "other": 0
         }
-      },
-      "32902825-37a1-43e2-89b7-47e849b1ec4b": {
-        "role": "MEMBER",
-        "attributes": {}
-      },
-      "ec52d988-3515-4032-a8fd-acc48e985792": {
-        "role": "OWNER",
-        "attributes": {}
-      },
-      "cd0356bd-ab7f-4fd7-bc58-9422cd3a2a59": {
-        "role": "MEMBER",
-        "attributes": {}
-      },
-      "8f9f8269-ad3e-4e3d-bc2a-3dd31afb0b17": {
-        "role": "MEMBER",
-        "attributes": {}
-      },
-      "8bd564a7-3f91-4a98-a4b3-43cd7d266133": {
-        "role": "MEMBER",
-        "attributes": {}
-      },
-      "336f36be-da11-4457-bda6-ccecd47b63e3": {
-        "role": "MEMBER",
-        "attributes": {}
-      },
-      "1e8c17bf-ede9-4976-b147-b44bd2da6817": {
-        "role": "MEMBER",
-        "attributes": {}
-      }
     },
-    "pendingMembers": {},
-    "version": 5,
-    "summaryData": {},
-    "isOpenGroup": true,
-    "defaultMemberAttributes": {},
-    "memberCount": 8,
-    "invitedPendingMemberCount": 0,
-    "requestingPendingMemberCount": 0,
-    "acl": {
-      "member": 2,
-      "other": 0
-    }
-  },
-  "status": 200
+    "status": 200
 }
 ```
 </details>

@@ -111,12 +111,12 @@ var postResult = playerStatisticsProxy.sysResetExperiencePointsAndLevelForUser(p
 
 ```json
 {
-  "data": {
-    "xpCapped": false,
-    "experienceLevel": 1,
-    "experiencePoints": 100
-  },
-  "status": 200
+    "data": {
+        "xpCapped": false,
+        "experienceLevel": 1,
+        "experiencePoints": 100
+    },
+    "status": 200
 }
 ```
 

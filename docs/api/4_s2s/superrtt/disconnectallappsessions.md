@@ -91,10 +91,10 @@ Force a disconnect for all currently active RTT sessions for the app.
 
 ```json
 {
-  "data": {
-    "processed": 1
-  },
-  "status": 200
+    "data": {
+        "processed": 1
+    },
+    "status": 200
 }
 ```
 </details>

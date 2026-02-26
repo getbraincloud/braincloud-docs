@@ -23,6 +23,7 @@ For a full overview of the Lobby Service, see the [Lobby Service Client API](/ap
 -   [SysGetLobbyData](/api/capi/lobby/sysgetlobbydata) - Gets data for the given lobby instance ``<lobbyId>``.
 -   [SysRemoveMember](/api/capi/lobby/sysremovemember) - Evicts the specified user from the specified lobby.
 -   [SysUpdateSettings](/api/capi/lobby/sysupdatesettings) - Updates the settings for the given lobby instance.
+-   [SysRoomKeepAlive](/api/capi/lobby/sysroomkeepalive) - Indicates that a room is still running and the associated lobby instance should be kept alive.
 
 :::tip
 All the client APIs that the names beigin with <strong>"Sys"</strong> <em>are</em> also available to S2S.

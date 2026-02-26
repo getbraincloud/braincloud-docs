@@ -102,28 +102,28 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "status": 200,
-  "data": {
-    "quest": {
-      "questId": "QUEST_CRUSH52",
-      "questType": "unorderedMinimal",
-      "questData": "0",
-      "title": "Crush 50 Eggs",
-      "description": "Crush 50 Eggs quest",
-      "category": "mission",
-      "extraData": {
-        "difficulty": 1
-      },
-      "rewards": {
-        "experiencePoints": 1000
-      },
-      "createdAt": 1574801519979,
-      "updatedAt": 1574801519979,
-      "version": 1,
-      "tasks": []
-    },
-    "tasks": {}
-  }
+    "status": 200,
+    "data": {
+        "quest": {
+            "questId": "QUEST_CRUSH52",
+            "questType": "unorderedMinimal",
+            "questData": "0",
+            "title": "Crush 50 Eggs",
+            "description": "Crush 50 Eggs quest",
+            "category": "mission",
+            "extraData": {
+                "difficulty": 1
+            },
+            "rewards": {
+                "experiencePoints": 1000
+            },
+            "createdAt": 1574801519979,
+            "updatedAt": 1574801519979,
+            "version": 1,
+            "tasks": []
+        },
+        "tasks": {}
+    }
 }
 ```
 </details>

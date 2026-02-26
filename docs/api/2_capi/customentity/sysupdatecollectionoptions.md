@@ -117,51 +117,51 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "options": {
-      "isOwned": false,
-      "migrate": true,
-      "identifier": "playerName",
-      "dataTemplateJson": {
-        "playerName": "Randy Traywick",
-        "playerId": 123456,
-        "teamName": "Super Stars",
-        "jerseyNum": 44
-      },
-      "dataTemplateText": "**Important** notes go here..."
+    "data": {
+        "options": {
+            "isOwned": false,
+            "migrate": true,
+            "identifier": "playerName",
+            "dataTemplateJson": {
+                "playerName": "Randy Traywick",
+                "playerId": 123456,
+                "teamName": "Super Stars",
+                "jerseyNum": 44
+            },
+            "dataTemplateText": "**Important** notes go here..."
+        },
+        "name": "athletes",
+        "customIndexes": {
+            "jerseyNum": {
+                "name": "jerseyNum",
+                "keysJson": "{\n    \"data.jerseyNum\":1\n}",
+                "optionsJson": "{\"name\":\"jerseyNum\",\"background\":true}",
+                "options": {
+                    "name": "jerseyNum",
+                    "background": true
+                }
+            },
+            "playerName": {
+                "name": "playerName",
+                "keysJson": "{\n    \"data.playerName\": \"text\"\n}",
+                "optionsJson": "{\"name\":\"playerName\",\"background\":true}",
+                "options": {
+                    "name": "playerName",
+                    "background": true
+                }
+            },
+            "playernameindex": {
+                "name": "playernameindex",
+                "keysJson": "{\"data.playerName\":1.0}",
+                "optionsJson": "{\"name\":\"playernameindex\",\"background\":true}",
+                "options": {
+                    "name": "playernameindex",
+                    "background": true
+                }
+            }
+        }
     },
-    "name": "athletes",
-    "customIndexes": {
-      "jerseyNum": {
-        "name": "jerseyNum",
-        "keysJson": "{\n    \"data.jerseyNum\":1\n}",
-        "optionsJson": "{\"name\":\"jerseyNum\",\"background\":true}",
-        "options": {
-          "name": "jerseyNum",
-          "background": true
-        }
-      },
-      "playerName": {
-        "name": "playerName",
-        "keysJson": "{\n    \"data.playerName\": \"text\"\n}",
-        "optionsJson": "{\"name\":\"playerName\",\"background\":true}",
-        "options": {
-          "name": "playerName",
-          "background": true
-        }
-      },
-      "playernameindex": {
-        "name": "playernameindex",
-        "keysJson": "{\"data.playerName\":1.0}",
-        "optionsJson": "{\"name\":\"playernameindex\",\"background\":true}",
-        "options": {
-          "name": "playernameindex",
-          "background": true
-        }
-      }
-    }
-  },
-  "status": 200
+    "status": 200
 }
 ```
 </details>

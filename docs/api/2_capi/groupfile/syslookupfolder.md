@@ -111,13 +111,13 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "folderPath": "foldername/subfoldername",
-    "treeId": "625ab492-fad9-4aa6-b174-50ac4344de81",
-    "treeVersion": 5,
-    "groupId": "2bf538d1-19ea-4e14-9862-f979215e09b7"
-  },
-  "status": 200
+    "data": {
+        "folderPath": "foldername/subfoldername",
+        "treeId": "625ab492-fad9-4aa6-b174-50ac4344de81",
+        "treeVersion": 5,
+        "groupId": "2bf538d1-19ea-4e14-9862-f979215e09b7"
+    },
+    "status": 200
 }
 ```
 </details>

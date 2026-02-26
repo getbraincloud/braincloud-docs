@@ -143,34 +143,34 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "gameId": "23782",
-    "groupId": "1c532e52-6a6c-4a34-bcad-a133a0448480",
-    "ownerId": "7f06ee4d-bc40-48ea-aa27-d3b73059491b",
-    "name": "groupName",
-    "groupType": "group1",
-    "createdAt": 1602706932034,
-    "updatedAt": 1602706932034,
-    "members": {
-      "7f06ee4d-bc40-48ea-aa27-d3b73059491b": {
-        "role": "OWNER",
-        "attributes": {}
-      }
+    "data": {
+        "gameId": "23782",
+        "groupId": "1c532e52-6a6c-4a34-bcad-a133a0448480",
+        "ownerId": "7f06ee4d-bc40-48ea-aa27-d3b73059491b",
+        "name": "groupName",
+        "groupType": "group1",
+        "createdAt": 1602706932034,
+        "updatedAt": 1602706932034,
+        "members": {
+            "7f06ee4d-bc40-48ea-aa27-d3b73059491b": {
+                "role": "OWNER",
+                "attributes": {}
+            }
+        },
+        "pendingMembers": {},
+        "version": 1,
+        "summaryData": {},
+        "isOpenGroup": true,
+        "defaultMemberAttributes": {},
+        "memberCount": 1,
+        "invitedPendingMemberCount": 0,
+        "requestingPendingMemberCount": 0,
+        "acl": {
+            "member": 2,
+            "other": 0
+        }
     },
-    "pendingMembers": {},
-    "version": 1,
-    "summaryData": {},
-    "isOpenGroup": true,
-    "defaultMemberAttributes": {},
-    "memberCount": 1,
-    "invitedPendingMemberCount": 0,
-    "requestingPendingMemberCount": 0,
-    "acl": {
-      "member": 2,
-      "other": 0
-    }
-  },
-  "status": 200
+    "status": 200
 }
 ```
 </details>

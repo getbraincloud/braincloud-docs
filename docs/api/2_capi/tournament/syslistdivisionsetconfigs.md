@@ -112,34 +112,34 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "count": 7,
-    "divSetConfigs": [
-      {
-        "divSetId": "div1",
-        "desc": "A division to the player",
-        "scheduleType": "Sync",
-        "lbTemplate": "lcon",
-        "max": 100,
-        "expiryDays": 15,
-        "createdAt": 1593703109596,
-        "updatedAt": 1594670543542,
-        "version": 1
-      },
-      {
-        "divSetId": "uniqueDivSetId",
-        "desc": "Gold division",
-        "scheduleType": "Sync",
-        "lbTemplate": "l4",
-        "max": 100,
-        "expiryDays": 15,
-        "createdAt": 1654004481428,
-        "updatedAt": 1654004481428,
-        "version": 1
-      }
-    ]
-  },
-  "status": 200
+    "data": {
+        "count": 7,
+        "divSetConfigs": [
+            {
+                "divSetId": "div1",
+                "desc": "A division to the player",
+                "scheduleType": "Sync",
+                "lbTemplate": "lcon",
+                "max": 100,
+                "expiryDays": 15,
+                "createdAt": 1593703109596,
+                "updatedAt": 1594670543542,
+                "version": 1
+            },
+            {
+                "divSetId": "uniqueDivSetId",
+                "desc": "Gold division",
+                "scheduleType": "Sync",
+                "lbTemplate": "l4",
+                "max": 100,
+                "expiryDays": 15,
+                "createdAt": 1654004481428,
+                "updatedAt": 1654004481428,
+                "version": 1
+            }
+        ]
+    },
+    "status": 200
 }
 ```
 </details>

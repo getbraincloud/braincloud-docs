@@ -103,15 +103,15 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "options": {
-      "isOwned": false,
-      "migrate": true
+    "data": {
+        "options": {
+            "isOwned": false,
+            "migrate": true
+        },
+        "name": "athletes",
+        "customIndexes": {}
     },
-    "name": "athletes",
-    "customIndexes": {}
-  },
-  "status": 200
+    "status": 200
 }
 ```
 </details>

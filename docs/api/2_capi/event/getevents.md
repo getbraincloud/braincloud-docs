@@ -136,31 +136,31 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "incoming_events": [
-      {
-        "eventData": {
-          "someMapAttribute": "someValue"
-        },
-        "createdAt": 1619578092346,
-        "fromPlayerId": "7801e422-bd36-4324-b479-968d35621190",
-        "toPlayerId": "79087465-5ca5-41a1-9d46-85ad23bc6efd",
-        "eventType": "type1",
-        "evId": "6088ccec1ba05d6b77062a98"
-      },
-      {
-        "eventData": {
-          "mapattr": "someValueNew"
-        },
-        "createdAt": 1619578154201,
-        "fromPlayerId": "a3f127fc-378e-44e9-8761-96ca904e1bce",
-        "toPlayerId": "79087465-5ca5-41a1-9d46-85ad23bc6efd",
-        "eventType": "type2",
-        "evId": "6088cd2a1ba05d6b77064095"
-      }
-    ]
-  },
-  "status": 200
+    "data": {
+        "incoming_events": [
+            {
+                "eventData": {
+                    "someMapAttribute": "someValue"
+                },
+                "createdAt": 1619578092346,
+                "fromPlayerId": "7801e422-bd36-4324-b479-968d35621190",
+                "toPlayerId": "79087465-5ca5-41a1-9d46-85ad23bc6efd",
+                "eventType": "type1",
+                "evId": "6088ccec1ba05d6b77062a98"
+            },
+            {
+                "eventData": {
+                    "mapattr": "someValueNew"
+                },
+                "createdAt": 1619578154201,
+                "fromPlayerId": "a3f127fc-378e-44e9-8761-96ca904e1bce",
+                "toPlayerId": "79087465-5ca5-41a1-9d46-85ad23bc6efd",
+                "eventType": "type2",
+                "evId": "6088cd2a1ba05d6b77064095"
+            }
+        ]
+    },
+    "status": 200
 }
 ```
 </details>

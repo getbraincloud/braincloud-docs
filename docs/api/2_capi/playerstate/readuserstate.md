@@ -137,61 +137,61 @@ if (postResult.status == 200) {
 
 ```json
 {
-	"data": {
-		"vcPurchased": 0,
-		"experiencePoints": 100,
-		"refundCount": 0,
-		"server_time": 1484932358724,
-		"experienceLevel": 0,
-		"currency": {
-			"credits": {
-				"purchased": 0,
-				"balance": 12212,
-				"consumed": 133,
-				"awarded": 12345
-			}
-		},
-		"statistics": {
-			"TestStat": 0,
-			"TestStat2": 0
-		},
-		"abTestingId": 8,
-		"id": "323ce861-b749-4ce4-a57a-175232e21b5d",
-		"createdAt": 1459439058035,
-		"profileId": "323ce861-b749-4ce4-a57a-175232e21b5d",
-		"isTester": false,
-		"xpCapped": false,
-		"sent_events": [],
-		"timeZoneOffset": -5,
-		"playerName": "",
-		"vcClaimed": 0,
-		"parentProfileId": null,
-		"countryCode": "CA",
-		"loginCount": 107,
-		"emailAddress": "bradleyh@bitheads.com",
-		"peerProfileIds": {
-			"peerapp": {
-				"profileId": "65fad6a7-1bb7-4ac1-8b8b-59671a81a9ce"
-			}
-		},
-		"previousLogin": 1484061296282,
-		"incoming_events": [],
-		"peerCurrency": {
-			"peerapp": {
-				"gold": {
-					"purchased": 0,
-					"balance": 343,
-					"consumed": 0,
-					"awarded": 343
-				}
-			}
-		},
-		"lastLogin": 1484932342834,
-		"languageCode": "en",
-		"pictureUrl": null,
-		"amountSpent": 0
-	},
-	"status": 200
+    "data": {
+        "vcPurchased": 0,
+        "experiencePoints": 100,
+        "refundCount": 0,
+        "server_time": 1484932358724,
+        "experienceLevel": 0,
+        "currency": {
+            "credits": {
+                "purchased": 0,
+                "balance": 12212,
+                "consumed": 133,
+                "awarded": 12345
+            }
+        },
+        "statistics": {
+            "TestStat": 0,
+            "TestStat2": 0
+        },
+        "abTestingId": 8,
+        "id": "323ce861-b749-4ce4-a57a-175232e21b5d",
+        "createdAt": 1459439058035,
+        "profileId": "323ce861-b749-4ce4-a57a-175232e21b5d",
+        "isTester": false,
+        "xpCapped": false,
+        "sent_events": [],
+        "timeZoneOffset": -5,
+        "playerName": "",
+        "vcClaimed": 0,
+        "parentProfileId": null,
+        "countryCode": "CA",
+        "loginCount": 107,
+        "emailAddress": "bradleyh@bitheads.com",
+        "peerProfileIds": {
+            "peerapp": {
+                "profileId": "65fad6a7-1bb7-4ac1-8b8b-59671a81a9ce"
+            }
+        },
+        "previousLogin": 1484061296282,
+        "incoming_events": [],
+        "peerCurrency": {
+            "peerapp": {
+                "gold": {
+                    "purchased": 0,
+                    "balance": 343,
+                    "consumed": 0,
+                    "awarded": 343
+                }
+            }
+        },
+        "lastLogin": 1484932342834,
+        "languageCode": "en",
+        "pictureUrl": null,
+        "amountSpent": 0
+    },
+    "status": 200
 }
 ```
 </details>

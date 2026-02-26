@@ -156,20 +156,20 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "lobbyTypeRegions": {
-      "Relay_lobbyT_v2": [
-        "ca-central-1"
-      ]
+    "data": {
+        "lobbyTypeRegions": {
+            "Relay_lobbyT_v2": [
+                "ca-central-1"
+            ]
+        },
+        "regionPingData": {
+            "ca-central-1": {
+                "type": "PING",
+                "target": "dynamodb.ca-central-1.amazonaws.com"
+            }
+        }
     },
-    "regionPingData": {
-      "ca-central-1": {
-        "type": "PING",
-        "target": "dynamodb.ca-central-1.amazonaws.com"
-      }
-    }
-  },
-  "status": 200
+    "status": 200
 }
 ```
 </details>

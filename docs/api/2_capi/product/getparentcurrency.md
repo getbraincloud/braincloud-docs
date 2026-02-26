@@ -110,20 +110,20 @@ if (postResult.status == 200) {
 
 ```json
 {
-   "status":200,
-   "data":{
-      "createdAt":1507311971256,
-      "currencyMap":{
-         "credits":{
-            "consumed":20,
-            "balance":180,
-            "purchased":0,
-            "awarded":200
-         }
-      },
-      "playerId":"dc129e18-af4c-439b-9b1d-e4b567fab38b",
-      "updatedAt":1521049401784
-   }
+    "status": 200,
+    "data": {
+        "createdAt": 1507311971256,
+        "currencyMap": {
+            "credits": {
+                "consumed": 20,
+                "balance": 180,
+                "purchased": 0,
+                "awarded": 200
+            }
+        },
+        "playerId": "dc129e18-af4c-439b-9b1d-e4b567fab38b",
+        "updatedAt": 1521049401784
+    }
 }
 ```
 </details>

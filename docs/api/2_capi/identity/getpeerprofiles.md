@@ -136,12 +136,12 @@ if (postResult.status == 200) {
 
 ```json
 {
-	"status": 200,
-	"data": {
-		"mypeer": {
-			"profileId": "b7h32751-befd-4a89-b6da-cd55hs3b2a86"
-		}
-	}
+    "status": 200,
+    "data": {
+        "mypeer": {
+            "profileId": "b7h32751-befd-4a89-b6da-cd55hs3b2a86"
+        }
+    }
 }
 ```
 </details>

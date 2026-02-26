@@ -130,92 +130,92 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "success": true,
-    "response": {
-      "transaction_id": "__a_transaction_id__",
-      "processed": {
-        "id": "3f42fe4f892b04cda087247f0296b3bf93d16972ceff7a1509f9a6c8268e7df5",
-        "block_num": 12345678,
-        "block_time": "2022-05-10T15:29:27.500",
-        "producer_block_id": null,
-        "receipt": {
-          "status": "executed",
-          "cpu_usage_us": 648,
-          "net_usage_words": 425
-        },
-        "elapsed": 648,
-        "net_usage": 3400,
-        "scheduled": false,
-        "action_traces": [
-          {
-            "action_ordinal": 1,
-            "creator_action_ordinal": 0,
-            "closest_unnotified_ancestor_action_ordinal": 0,
-            "receipt": {
-              "receiver": "eosio.nft.ft",
-              "act_digest": "aaaabbbbccccdddd",
-              "global_sequence": 35962179,
-              "recv_sequence": 599,
-              "auth_sequence": [
-                [
-                  "ultra.nft.ft",
-                  444
-                ]
-              ],
-              "code_sequence": 1,
-              "abi_sequence": 1
-            },
-            "receiver": "eosio.nft.ft",
-            "act": {
-              "account": "eosio.nft.ft",
-              "name": "issue",
-              "authorization": [
-                {
-                  "actor": "ultra.nft.ft",
-                  "permission": "issue"
-                }
-              ],
-              "data": {
-                "issue": {
-                  "to": "vh1to2ko3wp4",
-                  "token_configs": [
+    "data": {
+        "success": true,
+        "response": {
+            "transaction_id": "__a_transaction_id__",
+            "processed": {
+                "id": "3f42fe4f892b04cda087247f0296b3bf93d16972ceff7a1509f9a6c8268e7df5",
+                "block_num": 12345678,
+                "block_time": "2022-05-10T15:29:27.500",
+                "producer_block_id": null,
+                "receipt": {
+                    "status": "executed",
+                    "cpu_usage_us": 648,
+                    "net_usage_words": 425
+                },
+                "elapsed": 648,
+                "net_usage": 3400,
+                "scheduled": false,
+                "action_traces": [
                     {
-                      "token_factory_id": 4,
-                      "amount": 1,
-                      "custom_data": "my custom data string"
+                        "action_ordinal": 1,
+                        "creator_action_ordinal": 0,
+                        "closest_unnotified_ancestor_action_ordinal": 0,
+                        "receipt": {
+                            "receiver": "eosio.nft.ft",
+                            "act_digest": "aaaabbbbccccdddd",
+                            "global_sequence": 35962179,
+                            "recv_sequence": 599,
+                            "auth_sequence": [
+                                [
+                                    "ultra.nft.ft",
+                                    444
+                                ]
+                            ],
+                            "code_sequence": 1,
+                            "abi_sequence": 1
+                        },
+                        "receiver": "eosio.nft.ft",
+                        "act": {
+                            "account": "eosio.nft.ft",
+                            "name": "issue",
+                            "authorization": [
+                                {
+                                    "actor": "ultra.nft.ft",
+                                    "permission": "issue"
+                                }
+                            ],
+                            "data": {
+                                "issue": {
+                                    "to": "vh1to2ko3wp4",
+                                    "token_configs": [
+                                        {
+                                            "token_factory_id": 4,
+                                            "amount": 1,
+                                            "custom_data": "my custom data string"
+                                        }
+                                    ],
+                                    "memo": "23713|a-redemptioncode-id|1|my-code-type"
+                                }
+                            },
+                            "hex_data": "012345555012344"
+                        },
+                        "context_free": false,
+                        "elapsed": 292,
+                        "console": "",
+                        "trx_id": "__a_transaction_id__",
+                        "block_num": 12345678,
+                        "block_time": "2022-05-10T15:29:27.500",
+                        "producer_block_id": null,
+                        "account_ram_deltas": [
+                            {
+                                "account": "eosio.nft.ft",
+                                "delta": 136
+                            }
+                        ],
+                        "except": null,
+                        "error_code": null,
+                        "inline_traces": []
                     }
-                  ],
-                  "memo": "23713|a-redemptioncode-id|1|my-code-type"
-                }
-              },
-              "hex_data": "012345555012344"
-            },
-            "context_free": false,
-            "elapsed": 292,
-            "console": "",
-            "trx_id": "__a_transaction_id__",
-            "block_num": 12345678,
-            "block_time": "2022-05-10T15:29:27.500",
-            "producer_block_id": null,
-            "account_ram_deltas": [
-              {
-                "account": "eosio.nft.ft",
-                "delta": 136
-              }
-            ],
-            "except": null,
-            "error_code": null,
-            "inline_traces": []
-          }
-        ],
-        "account_ram_delta": null,
-        "except": null,
-        "error_code": null
-      }
-    }
-  },
-  "status": 200
+                ],
+                "account_ram_delta": null,
+                "except": null,
+                "error_code": null
+            }
+        }
+    },
+    "status": 200
 }
 ```
 </details>

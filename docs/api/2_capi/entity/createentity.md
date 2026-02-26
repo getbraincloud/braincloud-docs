@@ -187,17 +187,17 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "createdAt": 1582645074383,
-    "entityType": "address",
-    "entityId": "6a3d791b-c6c9-416a-8b00-a95b17ea630f",
-    "acl": {
-      "other": 0
+    "data": {
+        "createdAt": 1582645074383,
+        "entityType": "address",
+        "entityId": "6a3d791b-c6c9-416a-8b00-a95b17ea630f",
+        "acl": {
+            "other": 0
+        },
+        "version": 1,
+        "updatedAt": 1582645074383
     },
-    "version": 1,
-    "updatedAt": 1582645074383
-  },
-  "status": 200
+    "status": 200
 }
 ```
 </details>

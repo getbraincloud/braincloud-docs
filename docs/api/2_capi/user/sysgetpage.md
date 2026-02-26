@@ -117,28 +117,28 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "status": 200,
-  "data": {
-    "context": "eyJzZWFyY2hDcml0ZXJpYSI6eyJnYW1lSWQiOiIyMTc3NCxxx...",
-    "results": {
-      "count": 1,
-      "page": 1,
-      "items": [
-        {
-          "profileId": "0b53155b-1fc8-4916-XXXX-298379efc67a",
-          "playerName": "Bats",
-          "countryCode": "CA",
-          "timeZoneOffset": -5,
-          "summaryFriendData": {
-            "favColor": "black"
-          },
-          "emailAddress": "bruce@wayneent.com"
+    "status": 200,
+    "data": {
+        "context": "eyJzZWFyY2hDcml0ZXJpYSI6eyJnYW1lSWQiOiIyMTc3NCxxx...",
+        "results": {
+            "count": 1,
+            "page": 1,
+            "items": [
+                {
+                    "profileId": "0b53155b-1fc8-4916-XXXX-298379efc67a",
+                    "playerName": "Bats",
+                    "countryCode": "CA",
+                    "timeZoneOffset": -5,
+                    "summaryFriendData": {
+                        "favColor": "black"
+                    },
+                    "emailAddress": "bruce@wayneent.com"
+                }
+            ],
+            "moreAfter": false,
+            "moreBefore": false
         }
-      ],
-      "moreAfter": false,
-      "moreBefore": false
     }
-  }
 }
 ```
 </details>

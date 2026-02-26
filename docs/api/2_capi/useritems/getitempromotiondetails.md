@@ -174,99 +174,99 @@ var postResult = userItemsProxy.getItemPromotionDetails(defId, shopId, includeDe
 
 ```json
 {
-  "data": {
-    "itemDef": {
-      "defId": "s001",
-      "name": "Sword",
-      "desc": "weapon",
-      "type": "ITEM",
-      "category": "weapon",
-      "tags": null,
-      "buyPriceDisabled": false,
-      "buyPrice": {
-        "bar": 88
-      },
-      "sellPrice": {},
-      "image": null,
-      "resourceGroup": null,
-      "resourceTag": null,
-      "meta": null,
-      "pState": "PUBLISHED",
-      "publishedAt": 1713324249793,
-      "stackable": true,
-      "maxStackable": 1,
-      "tradable": false,
-      "blockchain": false,
-      "consumable": false,
-      "uses": null,
-      "coolDownSecs": 0,
-      "recoverySecs": 0,
-      "activatable": false,
-      "statusName": null,
-      "activeSecs": null,
-      "maxActiveSecs": null,
-      "statusBehaviour": null
-    },
-    "promotions": [
-      {
-        "gameId": "23782",
-        "promotionId": 1,
-        "type": "AUTOMATED",
-        "name": "test",
-        "message": "test",
-        "enabled": true,
-        "segments": [
-          1
-        ],
-        "prices": [
-          {
-            "itemId": "comearmarkcpeappunlimited",
-            "priceId": 0
-          }
-        ],
-        "notifications": [],
-        "duration": 10,
-        "customJson": {
-          "priority": 100,
-          "itemIds": {
-            "barBundle1Imp": {
-              "currency": {
-                "bars": 12
-              },
-              "extra": {
-                "specialItemReward": "bonusItemA"
-              }
-            },
-            "gemcollection": {
-              "currency": {
-                "gems": 7
-              },
-              "extra": {
-                "specialItemReward": "bonusItemA"
-              }
-            }
-          }
-        },
-        "isRetriggerable": true,
-        "maxRetriggers": null,
-        "maxPurchases": null,
-        "createdAt": 1612991666850,
-        "updatedAt": 1764000936099,
-        "version": 8,
-        "items": {
-          "s001": {
+    "data": {
+        "itemDef": {
             "defId": "s001",
+            "name": "Sword",
+            "desc": "weapon",
+            "type": "ITEM",
+            "category": "weapon",
+            "tags": null,
+            "buyPriceDisabled": false,
             "buyPrice": {
-              "bar": 44
-            }
-          }
+                "bar": 88
+            },
+            "sellPrice": {},
+            "image": null,
+            "resourceGroup": null,
+            "resourceTag": null,
+            "meta": null,
+            "pState": "PUBLISHED",
+            "publishedAt": 1713324249793,
+            "stackable": true,
+            "maxStackable": 1,
+            "tradable": false,
+            "blockchain": false,
+            "consumable": false,
+            "uses": null,
+            "coolDownSecs": 0,
+            "recoverySecs": 0,
+            "activatable": false,
+            "statusName": null,
+            "activeSecs": null,
+            "maxActiveSecs": null,
+            "statusBehaviour": null
         },
-        "triggeredForUserAt": 1764000265580,
-        "expiresForUserAt": 1764036265580
-      }
-    ]
-  },
-  "status": 200
+        "promotions": [
+            {
+                "gameId": "23782",
+                "promotionId": 1,
+                "type": "AUTOMATED",
+                "name": "test",
+                "message": "test",
+                "enabled": true,
+                "segments": [
+                    1
+                ],
+                "prices": [
+                    {
+                        "itemId": "comearmarkcpeappunlimited",
+                        "priceId": 0
+                    }
+                ],
+                "notifications": [],
+                "duration": 10,
+                "customJson": {
+                    "priority": 100,
+                    "itemIds": {
+                        "barBundle1Imp": {
+                            "currency": {
+                                "bars": 12
+                            },
+                            "extra": {
+                                "specialItemReward": "bonusItemA"
+                            }
+                        },
+                        "gemcollection": {
+                            "currency": {
+                                "gems": 7
+                            },
+                            "extra": {
+                                "specialItemReward": "bonusItemA"
+                            }
+                        }
+                    }
+                },
+                "isRetriggerable": true,
+                "maxRetriggers": null,
+                "maxPurchases": null,
+                "createdAt": 1612991666850,
+                "updatedAt": 1764000936099,
+                "version": 8,
+                "items": {
+                    "s001": {
+                        "defId": "s001",
+                        "buyPrice": {
+                            "bar": 44
+                        }
+                    }
+                },
+                "triggeredForUserAt": 1764000265580,
+                "expiresForUserAt": 1764036265580
+            }
+        ]
+    },
+    "status": 200
 }
 ```
 

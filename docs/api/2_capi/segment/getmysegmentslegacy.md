@@ -99,19 +99,19 @@ if (postResult.status == 200) {
 
 ```json
 {
-	"data": {
-		"segments": [
-		  {
-			"segmentId": 1,
-			"name": "segmentname"
-		  },
-		  {
-			"segmentId": 2,
-			"name": "another segment"
-		  }
-		]
-	  },
-	  "status": 200
+    "data": {
+        "segments": [
+            {
+                "segmentId": 1,
+                "name": "segmentname"
+            },
+            {
+                "segmentId": 2,
+                "name": "another segment"
+            }
+        ]
+    },
+    "status": 200
 }
 ```
 </details>

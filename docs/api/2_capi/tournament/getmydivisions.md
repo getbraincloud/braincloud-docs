@@ -136,17 +136,17 @@ if (postResult.status == 200) {
 
 ```json
 {
- "data": {
-  "ACTIVE": {
-   "weekly": [
-    "^D^weekly^2"
-   ]
-  },
-  "PENDING": {},
-  "CLAIMABLE": {},
-  "COMPLETE": {}
- },
- "status": 200
+    "data": {
+        "ACTIVE": {
+            "weekly": [
+                "^D^weekly^2"
+            ]
+        },
+        "PENDING": {},
+        "CLAIMABLE": {},
+        "COMPLETE": {}
+    },
+    "status": 200
 }
 ```
 </details>

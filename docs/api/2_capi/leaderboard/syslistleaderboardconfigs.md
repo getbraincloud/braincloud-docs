@@ -114,84 +114,84 @@ var retVal = leaderboardProxy.sysListLeaderboardConfigs(optionsJson);
 
 ```json
 {
-  "data": {
-    "leaderboardList": [
-      {
-        "entryType": "PLAYER",
-        "numDaysToRotate": 0,
-        "data": {
-          "street": "1309 Carling"
-        },
-        "resetAt": 1631822069172,
-        "currentVersionId": 2,
-        "rotationType": "DAILY",
-        "leaderboardType": "HIGH_VALUE",
-        "leaderboardId": "aLeaderboardId"
-      },
-      {
-        "entryType": "PLAYER",
-        "numDaysToRotate": 0,
-        "data": {},
-        "resetAt": 1631740020000,
-        "currentVersionId": 210,
-        "rotationType": "DAILY",
-        "leaderboardType": "ARCADE_HIGH",
-        "leaderboardId": "arcadelb1"
-      },
-      {
-        "entryType": "PLAYER",
-        "numDaysToRotate": 0,
-        "data": {},
-        "resetAt": 1631740140000,
-        "currentVersionId": 216,
-        "rotationType": "DAILY",
-        "leaderboardType": "HIGH_VALUE",
-        "leaderboardId": "daily"
-      },
-      {
-        "entryType": "PLAYER",
-        "numDaysToRotate": 0,
-        "data": {},
-        "resetAt": null,
-        "currentVersionId": 3,
-        "rotationType": "ADHOC",
-        "leaderboardType": "HIGH_VALUE",
-        "leaderboardId": "l1"
-      },
-      {
-        "entryType": "PLAYER",
-        "numDaysToRotate": 0,
-        "data": {},
-        "resetAt": null,
-        "currentVersionId": 2,
-        "rotationType": "ADHOC",
-        "leaderboardType": "HIGH_VALUE",
-        "leaderboardId": "l2"
-      },
-      {
-        "entryType": "PLAYER",
-        "numDaysToRotate": 0,
-        "data": {},
-        "resetAt": null,
-        "currentVersionId": 1,
-        "rotationType": "ADHOC",
-        "leaderboardType": "HIGH_VALUE",
-        "leaderboardId": "l3"
-      },
-      {
-        "entryType": "PLAYER",
-        "numDaysToRotate": 0,
-        "data": {},
-        "resetAt": 1631825100000,
-        "currentVersionId": 31,
-        "rotationType": "WEEKLY",
-        "leaderboardType": "HIGH_VALUE",
-        "leaderboardId": "weekly"
-      }
-    ],
-    "leaderboardListCount": 10
-  },
-  "status": 200
+    "data": {
+        "leaderboardList": [
+            {
+                "entryType": "PLAYER",
+                "numDaysToRotate": 0,
+                "data": {
+                    "street": "1309 Carling"
+                },
+                "resetAt": 1631822069172,
+                "currentVersionId": 2,
+                "rotationType": "DAILY",
+                "leaderboardType": "HIGH_VALUE",
+                "leaderboardId": "aLeaderboardId"
+            },
+            {
+                "entryType": "PLAYER",
+                "numDaysToRotate": 0,
+                "data": {},
+                "resetAt": 1631740020000,
+                "currentVersionId": 210,
+                "rotationType": "DAILY",
+                "leaderboardType": "ARCADE_HIGH",
+                "leaderboardId": "arcadelb1"
+            },
+            {
+                "entryType": "PLAYER",
+                "numDaysToRotate": 0,
+                "data": {},
+                "resetAt": 1631740140000,
+                "currentVersionId": 216,
+                "rotationType": "DAILY",
+                "leaderboardType": "HIGH_VALUE",
+                "leaderboardId": "daily"
+            },
+            {
+                "entryType": "PLAYER",
+                "numDaysToRotate": 0,
+                "data": {},
+                "resetAt": null,
+                "currentVersionId": 3,
+                "rotationType": "ADHOC",
+                "leaderboardType": "HIGH_VALUE",
+                "leaderboardId": "l1"
+            },
+            {
+                "entryType": "PLAYER",
+                "numDaysToRotate": 0,
+                "data": {},
+                "resetAt": null,
+                "currentVersionId": 2,
+                "rotationType": "ADHOC",
+                "leaderboardType": "HIGH_VALUE",
+                "leaderboardId": "l2"
+            },
+            {
+                "entryType": "PLAYER",
+                "numDaysToRotate": 0,
+                "data": {},
+                "resetAt": null,
+                "currentVersionId": 1,
+                "rotationType": "ADHOC",
+                "leaderboardType": "HIGH_VALUE",
+                "leaderboardId": "l3"
+            },
+            {
+                "entryType": "PLAYER",
+                "numDaysToRotate": 0,
+                "data": {},
+                "resetAt": 1631825100000,
+                "currentVersionId": 31,
+                "rotationType": "WEEKLY",
+                "leaderboardType": "HIGH_VALUE",
+                "leaderboardId": "weekly"
+            }
+        ],
+        "leaderboardListCount": 10
+    },
+    "status": 200
 }
 ```
 </details>

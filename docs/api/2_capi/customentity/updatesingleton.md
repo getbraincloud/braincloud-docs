@@ -223,13 +223,13 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "timeToLive": null,
-    "version": 2,
-    "expiresAt": null,
-    "updatedAt": 1591820239028
-  },
-  "status": 200
+    "data": {
+        "timeToLive": null,
+        "version": 2,
+        "expiresAt": null,
+        "updatedAt": 1591820239028
+    },
+    "status": 200
 }
 ```
 </details>

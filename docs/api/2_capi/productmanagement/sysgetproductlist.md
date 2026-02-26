@@ -107,24 +107,24 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "products": [
-      {
-        "itemId": "barBundle1Imp12peer",
-        "defaultReferencePrice": -1,
-        "iTunesSubscriptionType": "Free",
-        "data": {
-          "customAttr": "value"
-        },
-        "imageUrl": "",
-        "description": "Bundle of 10 Bars.",
-        "title": "Bars (10)",
-        "category": "bars",
-        "type": "Subscription"
-      }
-    ]
-  },
-  "status": 200
+    "data": {
+        "products": [
+            {
+                "itemId": "barBundle1Imp12peer",
+                "defaultReferencePrice": -1,
+                "iTunesSubscriptionType": "Free",
+                "data": {
+                    "customAttr": "value"
+                },
+                "imageUrl": "",
+                "description": "Bundle of 10 Bars.",
+                "title": "Bars (10)",
+                "category": "bars",
+                "type": "Subscription"
+            }
+        ]
+    },
+    "status": 200
 }
 ```
 </details>

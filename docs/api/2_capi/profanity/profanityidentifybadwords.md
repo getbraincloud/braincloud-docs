@@ -182,11 +182,13 @@ if (postResult.status == 200) {
 
 ```json
 {
-    "status" : 200,
-    "data" :
-    {
-         "foundCount": "2",
-         "foundList" : [ "bubby", "poop" ]
+    "status": 200,
+    "data": {
+        "foundCount": "2",
+        "foundList": [
+            "bubby",
+            "poop"
+        ]
     }
 }
 ```

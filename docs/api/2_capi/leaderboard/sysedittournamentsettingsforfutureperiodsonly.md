@@ -171,81 +171,81 @@ var retVal = leaderboardProxy.SysEditTournamentSettingsForFuturePeriodsOnly(lead
 
 ```json
 {
-  "data": {
-    "aLeaderboardId": {
-      "leaderboardId": "aLeaderboardId",
-      "dbVersion": 13,
-      "resetAt": 1631992744000,
-      "leaderboardType": "HIGH_VALUE",
-      "rotationType": "DAILY",
-      "retainedCount": 5,
-      "data": {
-        "info": "Adding tournament to encourage play."
-      },
-      "numDaysToRotate": 0,
-      "entryType": "PLAYER",
-      "tConfigs": {
-        "bronzeLevel": {
-          "activeUpUntil": -1,
-          "tConfigCode": "bronzeLevel"
-        },
-        "silverLevel": {
-          "activeUpUntil": -1,
-          "tConfigCode": "silverLevel"
-        },
-        "goldLevel": {
-          "activeUpUntil": -1,
-          "tConfigCode": "goldLevel"
+    "data": {
+        "aLeaderboardId": {
+            "leaderboardId": "aLeaderboardId",
+            "dbVersion": 13,
+            "resetAt": 1631992744000,
+            "leaderboardType": "HIGH_VALUE",
+            "rotationType": "DAILY",
+            "retainedCount": 5,
+            "data": {
+                "info": "Adding tournament to encourage play."
+            },
+            "numDaysToRotate": 0,
+            "entryType": "PLAYER",
+            "tConfigs": {
+                "bronzeLevel": {
+                    "activeUpUntil": -1,
+                    "tConfigCode": "bronzeLevel"
+                },
+                "silverLevel": {
+                    "activeUpUntil": -1,
+                    "tConfigCode": "silverLevel"
+                },
+                "goldLevel": {
+                    "activeUpUntil": -1,
+                    "tConfigCode": "goldLevel"
+                }
+            },
+            "tStates": {
+                "enrolMins": 60,
+                "disallowMins": 30,
+                "minMins": 1425,
+                "compMins": 1355,
+                "bufferMins": 10,
+                "announcementMins": 15
+            },
+            "tAutoJoin": false,
+            "tAutoClaim": false,
+            "tEnabled": true,
+            "tTemplateOnly": false,
+            "currentVersionId": 2,
+            "currentPeriod": {
+                "versionId": 2,
+                "startingAt": 1631735669172,
+                "endingAt": 1631992744000,
+                "rotationType": "DAILY",
+                "numDaysToRotate": 0,
+                "tConfigVers": {
+                    "bronzeLevel": 1,
+                    "silverLevel": 1,
+                    "goldLevel": 1
+                },
+                "tState": "ACTIVE",
+                "tAutoJoin": false,
+                "tAutoClaim": false,
+                "tRegistrationStart": 1631907244000,
+                "tRegistrationEnd": 1631990344000,
+                "tPlayStart": 1631910844000,
+                "tPlayEnd": 1631992144000,
+                "tProcessingStartAt": 1631992924000,
+                "tProcessingJobId": "7708a6b3-9d71-4d04-bf90-ac12cc46ada5",
+                "tRegistrationStartJobId": "129287e3-aedc-451e-b83c-bed08b3d0b7c",
+                "tPlayStartJobId": "11ec518e-9193-4546-9d1e-ed5b08648095",
+                "tPlayEndJobId": "10c9d7c8-039c-436f-b6c0-a4480bd1c0d1",
+                "tStates": {
+                    "enrolMins": 60,
+                    "disallowMins": 30,
+                    "minMins": 1425,
+                    "compMins": 1355,
+                    "bufferMins": 10,
+                    "announcementMins": 15
+                }
+            }
         }
-      },
-      "tStates": {
-        "enrolMins": 60,
-        "disallowMins": 30,
-        "minMins": 1425,
-        "compMins": 1355,
-        "bufferMins": 10,
-        "announcementMins": 15
-      },
-      "tAutoJoin": false,
-      "tAutoClaim": false,
-      "tEnabled": true,
-      "tTemplateOnly": false,
-      "currentVersionId": 2,
-      "currentPeriod": {
-        "versionId": 2,
-        "startingAt": 1631735669172,
-        "endingAt": 1631992744000,
-        "rotationType": "DAILY",
-        "numDaysToRotate": 0,
-        "tConfigVers": {
-          "bronzeLevel": 1,
-          "silverLevel": 1,
-          "goldLevel": 1
-        },
-        "tState": "ACTIVE",
-        "tAutoJoin": false,
-        "tAutoClaim": false,
-        "tRegistrationStart": 1631907244000,
-        "tRegistrationEnd": 1631990344000,
-        "tPlayStart": 1631910844000,
-        "tPlayEnd": 1631992144000,
-        "tProcessingStartAt": 1631992924000,
-        "tProcessingJobId": "7708a6b3-9d71-4d04-bf90-ac12cc46ada5",
-        "tRegistrationStartJobId": "129287e3-aedc-451e-b83c-bed08b3d0b7c",
-        "tPlayStartJobId": "11ec518e-9193-4546-9d1e-ed5b08648095",
-        "tPlayEndJobId": "10c9d7c8-039c-436f-b6c0-a4480bd1c0d1",
-        "tStates": {
-          "enrolMins": 60,
-          "disallowMins": 30,
-          "minMins": 1425,
-          "compMins": 1355,
-          "bufferMins": 10,
-          "announcementMins": 15
-        }
-      }
-    }
-  },
-  "status": 200
+    },
+    "status": 200
 }
 ```
 </details>

@@ -183,16 +183,16 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "fileDetails": {
-      "treeId": "fb3431cd-6e2f-47f1-8100-8941abf6bb4f",
-      "fileName": "glogcopy.json",
-      "version": 1,
-      "fileId": "0554430e-51a1-44d4-b6f4-bffae67185dc"
+    "data": {
+        "fileDetails": {
+            "treeId": "fb3431cd-6e2f-47f1-8100-8941abf6bb4f",
+            "fileName": "glogcopy.json",
+            "version": 1,
+            "fileId": "0554430e-51a1-44d4-b6f4-bffae67185dc"
+        },
+        "groupId": "2bf538d1-19ea-4e14-9862-f979215e09b7"
     },
-    "groupId": "2bf538d1-19ea-4e14-9862-f979215e09b7"
-  },
-  "status": 200
+    "status": 200
 }
 ```
 </details>

@@ -110,8 +110,8 @@ var postResult = roomServerProxy.sysRoomSessionEnded(serverId, serverContext);
 
 ```json
 {
-  "data" : {},
-  "status" : 200
+    "data": {},
+    "status": 200
 }
 ```
 

@@ -213,24 +213,24 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "fileDetails": {
-      "treeId": "fb3431cd-6e2f-47f1-8100-8941abf6bb4f",
-      "fileName": "glogcopy.json",
-      "fileSize": 7051,
-      "dateUploaded": 1677519200000,
-      "etag": "173c2ac6f302869af8890ee32a8ccb90",
-      "acl": {
-        "member": 2,
-        "other": 0
-      },
-      "version": 1,
-      "url": "https://api.internal.braincloudservers.com/groupfiles/bc/g/23782/gr/2bf538d1-19ea-4e14-9862-f979215e09b7/fb3431cd-6e2f-47f1-8100-8941abf6bb4f/0554430e-51a1-44d4-b6f4-bffae67185dc/V1/glogcopy.json",
-      "fileId": "0554430e-51a1-44d4-b6f4-bffae67185dc"
+    "data": {
+        "fileDetails": {
+            "treeId": "fb3431cd-6e2f-47f1-8100-8941abf6bb4f",
+            "fileName": "glogcopy.json",
+            "fileSize": 7051,
+            "dateUploaded": 1677519200000,
+            "etag": "173c2ac6f302869af8890ee32a8ccb90",
+            "acl": {
+                "member": 2,
+                "other": 0
+            },
+            "version": 1,
+            "url": "https://api.internal.braincloudservers.com/groupfiles/bc/g/23782/gr/2bf538d1-19ea-4e14-9862-f979215e09b7/fb3431cd-6e2f-47f1-8100-8941abf6bb4f/0554430e-51a1-44d4-b6f4-bffae67185dc/V1/glogcopy.json",
+            "fileId": "0554430e-51a1-44d4-b6f4-bffae67185dc"
+        },
+        "groupId": "2bf538d1-19ea-4e14-9862-f979215e09b7"
     },
-    "groupId": "2bf538d1-19ea-4e14-9862-f979215e09b7"
-  },
-  "status": 200
+    "status": 200
 }
 ```
 </details>

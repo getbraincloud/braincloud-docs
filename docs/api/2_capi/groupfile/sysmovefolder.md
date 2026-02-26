@@ -123,94 +123,94 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "groupId": "2bf538d1-19ea-4e14-9862-f979215e09b7",
-    "groupFileTree": {
-      "treeVersion": 7,
-      "tree": [
-        {
-          "treeId": "59533e64-abc0-4f04-976b-8f395073ea2e",
-          "children": [
-            {
-              "treeId": "d9e937cc-750f-4414-962c-838f1af3f34a",
-              "children": null,
-              "name": "gpath",
-              "acl": {
+    "data": {
+        "groupId": "2bf538d1-19ea-4e14-9862-f979215e09b7",
+        "groupFileTree": {
+            "treeVersion": 7,
+            "tree": [
+                {
+                    "treeId": "59533e64-abc0-4f04-976b-8f395073ea2e",
+                    "children": [
+                        {
+                            "treeId": "d9e937cc-750f-4414-962c-838f1af3f34a",
+                            "children": null,
+                            "name": "gpath",
+                            "acl": {
+                                "member": 2,
+                                "other": 0
+                            },
+                            "type": "Folder",
+                            "ownerId": null,
+                            "desc": "desc"
+                        }
+                    ],
+                    "name": "gpath",
+                    "acl": {
+                        "member": 2,
+                        "other": 0
+                    },
+                    "type": "Folder",
+                    "ownerId": null,
+                    "desc": ""
+                },
+                {
+                    "treeId": "97446e50-4e02-49f6-8c86-807137620249",
+                    "children": [
+                        {
+                            "treeId": "625ab492-fad9-4aa6-b174-50ac4344de81",
+                            "children": null,
+                            "name": "subfoldername",
+                            "acl": {
+                                "member": 2,
+                                "other": 0
+                            },
+                            "type": "Folder",
+                            "ownerId": null,
+                            "desc": "subfolderdesc"
+                        }
+                    ],
+                    "name": "foldername",
+                    "acl": {
+                        "member": 2,
+                        "other": 0
+                    },
+                    "type": "Folder",
+                    "ownerId": null,
+                    "desc": "folderdesc"
+                },
+                {
+                    "treeId": "4baff7ed-c5ce-4058-b4d9-2ef04a662ceb",
+                    "children": [
+                        {
+                            "treeId": "40479c72-b46b-4c05-902c-239ada116acd",
+                            "children": null,
+                            "name": "movedfolder",
+                            "acl": {
+                                "member": 2,
+                                "other": 0
+                            },
+                            "type": "Folder",
+                            "ownerId": null,
+                            "desc": ""
+                        }
+                    ],
+                    "name": "subfoldername",
+                    "acl": {
+                        "member": 2,
+                        "other": 0
+                    },
+                    "type": "Folder",
+                    "ownerId": null,
+                    "desc": ""
+                }
+            ],
+            "acl": {
                 "member": 2,
                 "other": 0
-              },
-              "type": "Folder",
-              "ownerId": null,
-              "desc": "desc"
             }
-          ],
-          "name": "gpath",
-          "acl": {
-            "member": 2,
-            "other": 0
-          },
-          "type": "Folder",
-          "ownerId": null,
-          "desc": ""
-        },
-        {
-          "treeId": "97446e50-4e02-49f6-8c86-807137620249",
-          "children": [
-            {
-              "treeId": "625ab492-fad9-4aa6-b174-50ac4344de81",
-              "children": null,
-              "name": "subfoldername",
-              "acl": {
-                "member": 2,
-                "other": 0
-              },
-              "type": "Folder",
-              "ownerId": null,
-              "desc": "subfolderdesc"
-            }
-          ],
-          "name": "foldername",
-          "acl": {
-            "member": 2,
-            "other": 0
-          },
-          "type": "Folder",
-          "ownerId": null,
-          "desc": "folderdesc"
-        },
-        {
-          "treeId": "4baff7ed-c5ce-4058-b4d9-2ef04a662ceb",
-          "children": [
-            {
-              "treeId": "40479c72-b46b-4c05-902c-239ada116acd",
-              "children": null,
-              "name": "movedfolder",
-              "acl": {
-                "member": 2,
-                "other": 0
-              },
-              "type": "Folder",
-              "ownerId": null,
-              "desc": ""
-            }
-          ],
-          "name": "subfoldername",
-          "acl": {
-            "member": 2,
-            "other": 0
-          },
-          "type": "Folder",
-          "ownerId": null,
-          "desc": ""
         }
-      ],
-      "acl": {
-        "member": 2,
-        "other": 0
-      }
-    }
-  },
-  "status": 200
+    },
+    "status": 200
 }
 ```
 </details>

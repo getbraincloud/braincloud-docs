@@ -108,25 +108,25 @@ var postResult = virtualCurrencyProxy.RevokePeerCurrency(vcId, vcAmount, peerCod
 
 ```json
 {
-  "data": {
-    "currencyMap": {
-      "peerVC1": {
-        "consumed": 0,
-        "balance": 9,
-        "purchased": 0,
-        "awarded": 10,
-        "revoked": 1
-      },
-      "peerVC2": {
-        "consumed": 0,
-        "balance": 0,
-        "purchased": 0,
-        "awarded": 0,
-        "revoked": 0
-      }
-    }
-  },
-  "status": 200
+    "data": {
+        "currencyMap": {
+            "peerVC1": {
+                "consumed": 0,
+                "balance": 9,
+                "purchased": 0,
+                "awarded": 10,
+                "revoked": 1
+            },
+            "peerVC2": {
+                "consumed": 0,
+                "balance": 0,
+                "purchased": 0,
+                "awarded": 0,
+                "revoked": 0
+            }
+        }
+    },
+    "status": 200
 }
 ```
 

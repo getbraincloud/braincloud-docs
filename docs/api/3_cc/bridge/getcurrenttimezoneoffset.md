@@ -101,13 +101,13 @@ response;
 
 ```json
 {
- "data": {
-  "response": {
-   "time": -12
-  },
-  "success": true
- },
- "status": 200
+    "data": {
+        "response": {
+            "time": -12
+        },
+        "success": true
+    },
+    "status": 200
 }
 ```
 </details>

@@ -156,8 +156,8 @@ var postResult = userItemsProxy.RemoveUserItemFromBlockchain(itemId, version);
 
 ```json
 {
-  "status" : 200,
-  "data" : null
+    "status": 200,
+    "data": null
 }
 ```
 

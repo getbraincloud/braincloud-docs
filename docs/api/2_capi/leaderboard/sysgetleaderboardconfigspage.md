@@ -120,77 +120,77 @@ var postResult = leaderboardProxy.SysGetLeaderboardConfigsPage(context);
 
 ```json
 {
-  "data": {
-    "context": "eyJzZWFyY2hDcml0ZXJpYSI6eyJnYW1lSWQiOiIyMzc4MiJ9LCJzb3J0Q3JpdGVyaWEiOnt9LCJwYWdpbmF0aW9uIjp7InJvd3NQZXJQYWdlIjo1MCwicGFnZU51bWJlciI6MSwiZG9Db3VudCI6dHJ1ZSwic2tpcFJlY291bnQiOnRydWV9LCJvcHRpb25zIjpudWxsLCJyZXN1bHRDb3VudCI6MjF9",
-    "results": {
-      "count": 5,
-      "page": 1,
-      "items": [
-        {
-          "entryType": "PLAYER",
-          "tTemplateOnly": false,
-          "numDaysToRotate": 0,
-          "data": {},
-          "currentVersionId": 1,
-          "rotationType": "ADHOC",
-          "leaderboardType": "HIGH_VALUE",
-          "leaderboardId": "l3",
-          "tEnabled": true
-        },
-        {
-          "entryType": "PLAYER",
-          "tTemplateOnly": true,
-          "numDaysToRotate": 0,
-          "data": {},
-          "resetAt": 1707774960000,
-          "currentVersionId": 1310,
-          "rotationType": "DAILY",
-          "leaderboardType": "HIGH_VALUE",
-          "leaderboardId": "l6",
-          "tEnabled": true
-        },
-        {
-          "entryType": "PLAYER",
-          "tTemplateOnly": false,
-          "numDaysToRotate": 0,
-          "data": {},
-          "resetAt": 1700772300000,
-          "currentVersionId": 87,
-          "rotationType": "WEEKLY",
-          "leaderboardType": "HIGH_VALUE",
-          "leaderboardId": "weekly",
-          "tEnabled": false
-        },
-        {
-          "entryType": "PLAYER",
-          "tTemplateOnly": false,
-          "numDaysToRotate": 0,
-          "data": {},
-          "resetAt": 1700600820000,
-          "currentVersionId": 342,
-          "rotationType": "DAILY",
-          "leaderboardType": "ARCADE_HIGH",
-          "leaderboardId": "arcadelb1",
-          "tEnabled": false
-        },
-        {
-          "entryType": "GROUP",
-          "tTemplateOnly": false,
-          "numDaysToRotate": 0,
-          "data": {},
-          "resetAt": 1700666400000,
-          "currentVersionId": 120,
-          "rotationType": "DAILY",
-          "leaderboardType": "HIGH_VALUE",
-          "leaderboardId": "lbg",
-          "tEnabled": false
+    "data": {
+        "context": "eyJzZWFyY2hDcml0ZXJpYSI6eyJnYW1lSWQiOiIyMzc4MiJ9LCJzb3J0Q3JpdGVyaWEiOnt9LCJwYWdpbmF0aW9uIjp7InJvd3NQZXJQYWdlIjo1MCwicGFnZU51bWJlciI6MSwiZG9Db3VudCI6dHJ1ZSwic2tpcFJlY291bnQiOnRydWV9LCJvcHRpb25zIjpudWxsLCJyZXN1bHRDb3VudCI6MjF9",
+        "results": {
+            "count": 5,
+            "page": 1,
+            "items": [
+                {
+                    "entryType": "PLAYER",
+                    "tTemplateOnly": false,
+                    "numDaysToRotate": 0,
+                    "data": {},
+                    "currentVersionId": 1,
+                    "rotationType": "ADHOC",
+                    "leaderboardType": "HIGH_VALUE",
+                    "leaderboardId": "l3",
+                    "tEnabled": true
+                },
+                {
+                    "entryType": "PLAYER",
+                    "tTemplateOnly": true,
+                    "numDaysToRotate": 0,
+                    "data": {},
+                    "resetAt": 1707774960000,
+                    "currentVersionId": 1310,
+                    "rotationType": "DAILY",
+                    "leaderboardType": "HIGH_VALUE",
+                    "leaderboardId": "l6",
+                    "tEnabled": true
+                },
+                {
+                    "entryType": "PLAYER",
+                    "tTemplateOnly": false,
+                    "numDaysToRotate": 0,
+                    "data": {},
+                    "resetAt": 1700772300000,
+                    "currentVersionId": 87,
+                    "rotationType": "WEEKLY",
+                    "leaderboardType": "HIGH_VALUE",
+                    "leaderboardId": "weekly",
+                    "tEnabled": false
+                },
+                {
+                    "entryType": "PLAYER",
+                    "tTemplateOnly": false,
+                    "numDaysToRotate": 0,
+                    "data": {},
+                    "resetAt": 1700600820000,
+                    "currentVersionId": 342,
+                    "rotationType": "DAILY",
+                    "leaderboardType": "ARCADE_HIGH",
+                    "leaderboardId": "arcadelb1",
+                    "tEnabled": false
+                },
+                {
+                    "entryType": "GROUP",
+                    "tTemplateOnly": false,
+                    "numDaysToRotate": 0,
+                    "data": {},
+                    "resetAt": 1700666400000,
+                    "currentVersionId": 120,
+                    "rotationType": "DAILY",
+                    "leaderboardType": "HIGH_VALUE",
+                    "leaderboardId": "lbg",
+                    "tEnabled": false
+                }
+            ],
+            "moreAfter": false,
+            "moreBefore": false
         }
-      ],
-      "moreAfter": false,
-      "moreBefore": false
-    }
-  },
-  "status": 200
+    },
+    "status": 200
 }
 ```
 

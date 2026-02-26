@@ -108,25 +108,25 @@ var postResult = virtualCurrencyProxy.RevokeParentCurrency(vcId, vcAmount, level
 
 ```json
 {
-  "data": {
-    "currencyMap": {
-      "parent2VC1": {
-        "consumed": 0,
-        "balance": 9,
-        "purchased": 0,
-        "awarded": 10,
-        "revoked": 1
-      },
-      "parent2VC2": {
-        "consumed": 0,
-        "balance": 0,
-        "purchased": 0,
-        "awarded": 0,
-        "revoked": 0
-      }
-    }
-  },
-  "status": 200
+    "data": {
+        "currencyMap": {
+            "parent2VC1": {
+                "consumed": 0,
+                "balance": 9,
+                "purchased": 0,
+                "awarded": 10,
+                "revoked": 1
+            },
+            "parent2VC2": {
+                "consumed": 0,
+                "balance": 0,
+                "purchased": 0,
+                "awarded": 0,
+                "revoked": 0
+            }
+        }
+    },
+    "status": 200
 }
 ```
 

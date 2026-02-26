@@ -130,15 +130,15 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "name": "my_property",
-    "description": "this is a description",
-    "category": "my-category",
-    "value": "{\"a\":1,\"b\":\"two\"}",
-    "type": "JSON",
-    "preserveValue": true
-  },
-  "status": 200
+    "data": {
+        "name": "my_property",
+        "description": "this is a description",
+        "category": "my-category",
+        "value": "{\"a\":1,\"b\":\"two\"}",
+        "type": "JSON",
+        "preserveValue": true
+    },
+    "status": 200
 }
 ```
 </details>

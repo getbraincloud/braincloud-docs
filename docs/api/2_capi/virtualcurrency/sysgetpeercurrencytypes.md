@@ -99,14 +99,14 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "peerCurrencies": {
-      "deploypeer": [
-        "gems"
-      ]
-    }
-  },
-  "status": 200
+    "data": {
+        "peerCurrencies": {
+            "deploypeer": [
+                "gems"
+            ]
+        }
+    },
+    "status": 200
 }
 ```
 </details>

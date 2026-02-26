@@ -153,38 +153,38 @@ if (postResult.status == 200) {
 
 ```json
 {
-  "data": {
-    "_serverTime": 1637946319239,
-    "context": "eyJzZWFyY2hDcml0ZXJpYS...",
-    "results": {
-      "count": 1,
-      "page": 1,
-      "items": [
-        {
-          "entityId": "1497cc7e-66cb-4682-9eac-c755523369a8",
-          "version": 3,
-          "acl": {
-            "other": 1
-          },
-          "ownerId": null,
-          "expiresAt": null,
-          "timeToLive": null,
-          "createdAt": 1573540122600,
-          "updatedAt": 1573540445332,
-          "data": {
-            "firstName": "Super",
-            "surName": "Star",
-            "position": "defense",
-            "goals": 3,
-            "assists": 5
-          }
+    "data": {
+        "_serverTime": 1637946319239,
+        "context": "eyJzZWFyY2hDcml0ZXJpYS...",
+        "results": {
+            "count": 1,
+            "page": 1,
+            "items": [
+                {
+                    "entityId": "1497cc7e-66cb-4682-9eac-c755523369a8",
+                    "version": 3,
+                    "acl": {
+                        "other": 1
+                    },
+                    "ownerId": null,
+                    "expiresAt": null,
+                    "timeToLive": null,
+                    "createdAt": 1573540122600,
+                    "updatedAt": 1573540445332,
+                    "data": {
+                        "firstName": "Super",
+                        "surName": "Star",
+                        "position": "defense",
+                        "goals": 3,
+                        "assists": 5
+                    }
+                }
+            ],
+            "moreAfter": false,
+            "moreBefore": false
         }
-      ],
-      "moreAfter": false,
-      "moreBefore": false
-    }
-  },
-  "status": 200
+    },
+    "status": 200
 }
 ```
 </details>

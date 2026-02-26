@@ -112,13 +112,13 @@ response;
 
 ```json
 {
- "data": {
-  "response": {
-   "signature": "V3iD/yE3G9s4vgB6TeF+HOCKEb9CmF8iPSE+dK3MAS991U0NXDIwJzyuzFxiJWIt2W8WtKfQJqpOITsMPmgxY0Ttj0yfG0uS7jjRr5/vtC3/ZNWrzmyXSiunDmPwmJ36PVuPjyVxLtZzkr4qw/l/7lAKcNz8515Dgjs2RQHC1EtRrmHpaMpWL32Ya8CKtmjkNdHI2Ng9MrvVp+aaIPCPGoLPWis+zD+ZxNr+i6c0BP8RQVqigS4Bnt/YBeLE+ZuAD/0puC6Kc2/AO1Sqgo6g927VUjGOVM7JqVAq0JZY8XG9K+OgL6VJuBfKCDaQ2HUV+MWhaxFA3vageIqG+6eIOA=="
-  },
-  "success": true
- },
- "status": 200
+    "data": {
+        "response": {
+            "signature": "V3iD/yE3G9s4vgB6TeF+HOCKEb9CmF8iPSE+dK3MAS991U0NXDIwJzyuzFxiJWIt2W8WtKfQJqpOITsMPmgxY0Ttj0yfG0uS7jjRr5/vtC3/ZNWrzmyXSiunDmPwmJ36PVuPjyVxLtZzkr4qw/l/7lAKcNz8515Dgjs2RQHC1EtRrmHpaMpWL32Ya8CKtmjkNdHI2Ng9MrvVp+aaIPCPGoLPWis+zD+ZxNr+i6c0BP8RQVqigS4Bnt/YBeLE+ZuAD/0puC6Kc2/AO1Sqgo6g927VUjGOVM7JqVAq0JZY8XG9K+OgL6VJuBfKCDaQ2HUV+MWhaxFA3vageIqG+6eIOA=="
+        },
+        "success": true
+    },
+    "status": 200
 }
 ```
 </details>

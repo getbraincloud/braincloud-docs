@@ -94,8 +94,8 @@ var teamInfo = bridge.getTeamInfo();
 
 ```json
 {
-  "teamName": "deployteam",
-  "teamId": "b35d984b-7c88-4a00-a632-49c207053dab"
+    "teamName": "deployteam",
+    "teamId": "b35d984b-7c88-4a00-a632-49c207053dab"
 }
 ```
 </details>
