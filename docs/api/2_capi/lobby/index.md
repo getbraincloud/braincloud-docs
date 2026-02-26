@@ -265,8 +265,20 @@ _For more information on Lobby Concepts, see the [Lobby Overview](/learn/key-con
             "owner": "f6fa3e0e-6aac-497a-84e1-c8db6f545c12",
             "settings": {},
             "version": 1,
-            "numMembers": 2,
-            "members": []
+            "numMembers": 1,
+            "members": [
+                {
+                    "profileId": "48844593-6e01-464f-bc13-565ee536a46b",
+                    "name": "",
+                    "pic": "",
+                    "rating": 0,
+                    "team": "all",
+                    "isReady": true,
+                    "extra": {},
+                    "ipAddress": "174.112.74.185",
+                    "cxId": "13469:48844593-6e01-464f-bc13-565ee536a46b:1kslkorpivpa68bhf21q1avi9q"
+                }
+            ]
         }
     }
 }
@@ -284,8 +296,20 @@ _For more information on Lobby Concepts, see the [Lobby Overview](/learn/key-con
             "state": "early",
             "owner": "f6fa3e0e-6aac-497a-84e1-c8db6f545c12",
             "version": 1,
-            "numMembers": 2,
-            "members": []
+            "numMembers": 1,
+            "members": [
+                {
+                    "profileId": "48844593-6e01-464f-bc13-565ee536a46b",
+                    "name": "",
+                    "pic": "",
+                    "rating": 0,
+                    "team": "all",
+                    "isReady": true,
+                    "extra": {},
+                    "ipAddress": "174.112.74.185",
+                    "cxId": "13469:48844593-6e01-464f-bc13-565ee536a46b:1kslkorpivpa68bhf21q1avi9q"
+                }
+            ]
         }
     }
 }
