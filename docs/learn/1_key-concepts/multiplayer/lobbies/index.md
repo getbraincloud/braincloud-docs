@@ -39,7 +39,7 @@ The following features are supported:
 
 Once in a lobby, brainCloud prepares the users for the _room experience_ according to the rules configured for the lobby type in the Design Portal.
 
-[![](images/Lobby-Lifecycle-simple.png)](images/Lobby-Lifecycle-simple.png)
+[![](images/brainCloud-lobby-states-02-2026.png)](images/brainCloud-lobby-states-02-2026.png)
 
 The lobby lifecycle involves the following states:
 
