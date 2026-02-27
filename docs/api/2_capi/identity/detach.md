@@ -11,7 +11,7 @@ Parameter | Description
 --------- | -----------
 externalId | User ID
 authenticationType | Type of authentication. Full list of types can be found [here](/api/appendix/authtypes).
-confirmAnonymous | If false will generate an error when downgrading to anonymous (null is false)
+continueAnon | If false will generate an error when downgrading to anonymous (null is false)
 
 ## Usage
 
@@ -78,10 +78,10 @@ confirmAnonymous | If false will generate an error when downgrading to anonymous
 ```cfscript
 var externalId = "email@email.com";
 var authenticationType = "Email";
-var confirmAnonymous = false;
+var continueAnon = false;
 var identityProxy = bridge.getIdentityServiceProxy();
 
-var postResult = identityProxy.detach(externalId, authenticationType, confirmAnonymous);
+var postResult = identityProxy.detach(externalId, authenticationType, continueAnon);
 if (postResult.status == 200) {
     // Success!
 }
@@ -99,7 +99,7 @@ if (postResult.status == 200) {
 	"data": {
 		"externalId": "email@email.com",
 		"authenticationType": "Email",
-		"confirmAnonymous": false
+		"continueAnon": false
 	}
 }
 ```
