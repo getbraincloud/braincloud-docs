@@ -168,6 +168,34 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local userCloudPath = "dir1/dir2"
+local userCloudFilename = "file"
+local groupId = "dfsfsffsd"
+local groupTreeId = "gpath"
+local groupFilename = "gfile"
+local overwriteIfPresent = true
+local groupFileAcl = {
+  "member": 2,
+  "other": 0
+}
+
+local callback = function(result)
+	if result.statusCode == 200 then
+		print("Success")
+	else
+		print("Failed | " .. tostring(result.status))
+	end
+end
+
+<%= data.branding.codePrefix %>:getGroupFileService():moveUserToGroupFile(userCloudPath, userCloudFilename, groupId, groupTreeId, groupFilename, overwriteIfPresent, groupFileAcl, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

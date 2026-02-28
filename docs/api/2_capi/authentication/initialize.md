@@ -78,6 +78,15 @@ String anonymousID = "anonId";
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+<%= data.branding.codePrefix %>:getAuthenticationService():initialize(profileId, anonymousId)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

@@ -73,6 +73,15 @@ Manually creates a new user for the current app. Note that this API is normally 
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

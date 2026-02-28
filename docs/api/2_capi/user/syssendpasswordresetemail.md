@@ -68,6 +68,15 @@ profileId | The profileId of the user to send the password reset email to
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

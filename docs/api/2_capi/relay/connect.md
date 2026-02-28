@@ -100,6 +100,40 @@ ServerResponse result = await _bc.relayService.connect(eRelayConnectionType:Rela
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+void successCallback(Map<String, dynamic>?  jsonResponse) {
+    // Did connect.
+    // Your code
+}
+void failureCallback(Map<String, dynamic>?  jsonError) {
+  dynamic errorMap = (jsonError is String) ? json.decode(jsonError) : jsonError
+  // Your code
+}
+// data is retrieved from the onLobby event ROOM_ASSIGNED here.
+local connectOptions = {
+                  false,
+                  data{ "connectData" }{ "address" },
+                  data{ "connectData" }{ "ports" }{ "ws" },
+                  data{ "passcode" },
+                  data{ "lobbyId" }}
+​
+
+local callback = function(result)
+	if result.statusCode == 200 then
+		print("Success")
+	else
+		print("Failed | " .. tostring(result.status))
+	end
+end
+
+<%= data.branding.codePrefix %>:getRelayService():connect(RelayConnectionType.WEBSOCKET, connectOptions, successCallback, failureCallback, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

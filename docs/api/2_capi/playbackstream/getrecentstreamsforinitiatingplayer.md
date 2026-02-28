@@ -122,6 +122,26 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local initiatingPlayerId = "player"
+local maxNumStreams = 5
+
+local callback = function(result)
+	if result.statusCode == 200 then
+		print("Success")
+	else
+		print("Failed | " .. tostring(result.status))
+	end
+end
+
+<%= data.branding.codePrefix %>:getPlaybackStreamService():getRecentStreamsForInitiatingPlayer(initiatingPlayerId, maxNumStreams, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

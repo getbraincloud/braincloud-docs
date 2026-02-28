@@ -61,6 +61,15 @@ Deregisters the event callback.
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+<%= data.branding.codePrefix %>:deregisterRewardCallback()
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

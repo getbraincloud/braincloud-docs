@@ -61,6 +61,15 @@ Coming soon!
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+<%= data.branding.codePrefix %>:getRttService():isRTTEnabled()
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

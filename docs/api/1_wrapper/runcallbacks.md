@@ -71,6 +71,15 @@ However, if you are not using Unity or not using the <%= data.branding.codeWrapp
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+<%= data.branding.codePrefix %>:runCallbacks()
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

@@ -121,6 +121,26 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local platform = "<%= data.branding.productName %>"
+local bidirectional = true
+
+local callback = function(result)
+	if result.statusCode == 200 then
+		print("Success")
+	else
+		print("Failed | " .. tostring(result.status))
+	end
+end
+
+<%= data.branding.codePrefix %>:getPresenceService():registerListenersForFriends(platform, bidirectional, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

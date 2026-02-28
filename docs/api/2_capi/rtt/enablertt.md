@@ -117,6 +117,22 @@ void failureCallback(RTTCommandResponse response) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local successCallback = function(jsonResponse)
+	-- Your code
+end
+local failureCallback = function(jsonResponse)
+	-- Your code
+end
+
+<%= data.branding.codePrefix %>:getRttRegistrationService():enableRTT(successCallback, failureCallback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

@@ -122,6 +122,17 @@ appId = "123456";
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local secret = "1234-1234-1234-1234"
+local appId = "123456"
+<%= data.branding.codePrefix %>:init(secret, appId, "1.0.0", 50)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

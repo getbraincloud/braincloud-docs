@@ -61,6 +61,15 @@ int pingTime = _bc.relayService.getPing();
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local pingTime = <%= data.branding.codePrefix %>:getRelayService():getPing()
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

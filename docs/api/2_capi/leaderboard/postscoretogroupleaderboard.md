@@ -140,6 +140,30 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local leaderboardId = "default"
+local groupId = "actual_group_id"
+local score = 10
+local data = {
+    "nickname": "batman"
+}
+
+local callback = function(result)
+	if result.statusCode == 200 then
+		print("Success")
+	else
+		print("Failed | " .. tostring(result.status))
+	end
+end
+
+<%= data.branding.codePrefix %>:getLeaderboardService():postScoreToGroupLeaderboard(leaderboardId, groupId, score, data, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

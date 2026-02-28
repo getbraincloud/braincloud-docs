@@ -105,6 +105,19 @@ var appVersion = "1.0.0";
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local serverUrl = "https://api.braincloudservers.com/dispatcherv2"; //Optional parameter
+local secretKey = "1234-1234-1234-1234"
+local appId = "123456"
+local appVersion = "1.0.0"
+<%= data.branding.codePrefix %>:initialize(serverUrl, secretKey, appId, appVersion)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

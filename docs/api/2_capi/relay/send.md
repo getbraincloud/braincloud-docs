@@ -83,6 +83,18 @@ _bc.relayService.send(bytes, aNetId,
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local aNetId = 2
+local bytes = "Some Data here"  -- byte encoded
+
+<%= data.branding.codePrefix %>:getRelayService():send(bytes, aNetId, true, true, BrainCloudRelay.channelHighPriority_1)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

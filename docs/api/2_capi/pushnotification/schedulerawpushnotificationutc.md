@@ -187,6 +187,50 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local profileId = "kjhkjhgfkjshgkjh"
+local fcmContent = {
+    "notification": {
+        "body": "content of message",
+        "title": "message title"
+    },
+    "data": {
+        "customfield1": "customValue1",
+        "customfield2": "customValue2"
+    },
+    "priority": "normal"
+}
+local iosContent = {
+    "aps": {
+        "alert": {
+            "body": "content of message",
+            "title": "message title"
+        },
+        "badge": 0,
+        "sound": "gggg"
+    }
+}
+local facebookContent = {
+    "template": "content of message"
+}
+local startTime = 1437579786000
+
+local callback = function(result)
+	if result.statusCode == 200 then
+		print("Success")
+	else
+		print("Failed | " .. tostring(result.status))
+	end
+end
+
+<%= data.branding.codePrefix %>:getPushNotificationService():scheduleRawPushNotificationUTC(profileId, fcmContent, iosContent, facebookContent, startTime, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

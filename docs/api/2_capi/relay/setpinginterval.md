@@ -70,6 +70,17 @@ int interval = 10;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local interval = 10
+
+<%= data.branding.codePrefix %>:getRelayService():setPingInterval(interval)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

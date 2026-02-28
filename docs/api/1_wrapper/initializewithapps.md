@@ -143,6 +143,17 @@ If  **updateTick** is greater than `0` a built-in run loop timer is started and 
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local secretMap = {"12345":"1234-1234-1234-1234","67890":"4321-4321-4321-4321"}
+local appId = "123456"
+<%= data.branding.codePrefix %>:initWithApps(secretMap, appId, "1.0.0", 50)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

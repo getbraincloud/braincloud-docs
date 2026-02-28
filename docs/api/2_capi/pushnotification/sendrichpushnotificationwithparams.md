@@ -147,6 +147,30 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local toProfileId = "profile1"
+local notificationTemplateId = 1
+local substitutionJson = {
+    "0": "value0",
+    "1": "value1"
+}
+
+local callback = function(result)
+	if result.statusCode == 200 then
+		print("Success")
+	else
+		print("Failed | " .. tostring(result.status))
+	end
+end
+
+<%= data.branding.codePrefix %>:getPushNotificationService():sendRichPushNotificationWithParams(toProfileId, notificationTemplateId, substitutionJson, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

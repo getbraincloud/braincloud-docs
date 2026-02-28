@@ -80,6 +80,19 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local relayCallback = function(jsonResponse)
+	-- Your code
+end
+
+<%= data.branding.codePrefix %>:getRelayService():registerSystemCallback(relayCallback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

@@ -153,6 +153,34 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local ownerId = "the-owner-id"
+local matchId = "the-match-id"
+local pushContent = "An async-match has been abandoned!"
+local summary = {
+  "abandonBy": {
+    "display": "Match abandoned by John Doe.",
+    "player": 2,
+    "reason": "forfeit"
+  }
+}
+
+local callback = function(result)
+	if result.statusCode == 200 then
+		print("Success")
+	else
+		print("Failed | " .. tostring(result.status))
+	end
+end
+
+<%= data.branding.codePrefix %>:getAsyncMatchService():abandonMatchWithSummaryData(ownerId, matchId, pushContent, summary, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

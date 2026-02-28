@@ -63,6 +63,15 @@ var anonId = <%= data.branding.codePrefix %>.authentication.generateAnonymousId(
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local anonId = <%= data.branding.codePrefix %>:getAuthenticationService():generateAnonymousId()
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

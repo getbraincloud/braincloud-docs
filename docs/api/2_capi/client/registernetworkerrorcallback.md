@@ -73,6 +73,19 @@ void networkErrorCallback() {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+void networkErrorCallback() {
+ // ...
+}
+​
+<%= data.branding.codePrefix %>:registerNetworkErrorCallback(networkErrorCallback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

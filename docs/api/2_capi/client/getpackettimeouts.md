@@ -61,6 +61,15 @@ List<int> timeouts = <%= data.branding.codePrefix %>.getPacketTimeouts();
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+<%= data.branding.codePrefix %>:getPacketTimeouts()
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

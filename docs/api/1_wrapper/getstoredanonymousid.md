@@ -63,6 +63,15 @@ String anonymousId = <%= data.branding.codePrefix %>.getStoredAnonymousId();
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local anonymousId = <%= data.branding.codePrefix %>:getStoredAnonymousId()
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

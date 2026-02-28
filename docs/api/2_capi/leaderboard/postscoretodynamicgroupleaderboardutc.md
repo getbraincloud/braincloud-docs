@@ -177,6 +177,34 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local leaderboardId = "default"
+local groupId = "actual_group_id"
+local score = 10
+local data = {
+    "nickname": "batman"
+}
+local leaderboardType = SocialLeaderboardType.HIGH_VALUE
+local rotationType = RotationType.WEEKLY
+local rotationResetTime = 158778236487
+local retainedCount = 2
+
+local callback = function(result)
+	if result.statusCode == 200 then
+		print("Success")
+	else
+		print("Failed | " .. tostring(result.status))
+	end
+end
+
+<%= data.branding.codePrefix %>:getLeaderboardService():postScoreToGroupLeaderboardUTC(leaderboardId, groupId, score, data, leaderboardType, rotationType, rotationResetTime, retainedCount, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

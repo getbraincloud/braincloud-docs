@@ -61,6 +61,15 @@ int bytesPerSecThreshold = <%= data.branding.codePrefix %>.getUploadLowTransferR
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local bytesPerSecThreshold = <%= data.branding.codePrefix %>:getUploadLowTransferRateThreshold()
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

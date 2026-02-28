@@ -152,6 +152,33 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local entityType = "address"
+local indexedId = "entityId1"
+local timeToLive = -1
+local jsonEntityAcl = {
+    "other": 1
+}
+local jsonEntityData = {
+    "street": "1309 Carling"
+}
+
+local callback = function(result)
+	if result.statusCode == 200 then
+		print("Success")
+	else
+		print("Failed | " .. tostring(result.status))
+	end
+end
+
+<%= data.branding.codePrefix %>:getGlobalEntityService():createEntityWithIndexedId(entityType, indexedId, timeToLive, jsonEntityAcl, jsonEntityData, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

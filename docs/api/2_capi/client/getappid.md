@@ -61,6 +61,15 @@ var appId = <%= data.branding.codePrefix %>.getAppId();
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local appId = <%= data.branding.codePrefix %>:getAppId()
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

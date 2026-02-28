@@ -161,6 +161,31 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local groupId = "dfsfsffsd"
+local fileId = "xxxx"
+local version = 1
+local newTreeId = "guid"
+local treeVersion = 1
+local newFilename = "gfile"
+local overwriteIfPresent = true
+
+local callback = function(result)
+	if result.statusCode == 200 then
+		print("Success")
+	else
+		print("Failed | " .. tostring(result.status))
+	end
+end
+
+<%= data.branding.codePrefix %>:getGroupFileService():copyFile(groupId, fileId, version, newTreeId, treeVersion, newFilename, overwriteIfPresent, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

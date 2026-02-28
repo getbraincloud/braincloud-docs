@@ -155,6 +155,32 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local statistics = {
+    "DEAD_CATS": "RESET",
+    "LIVES_LEFT": "SET#9",
+    "MICE_KILLED": "INC#2",
+    "MICE_MULTIPLIER": "INC_TO_LIMIT#2#20",
+    "DOG_SCARE_BONUS_POINTS": "MAX#20",
+    "TREES_CLIMBED_REQ": "MIN#5"
+}
+
+local callback = function(result)
+	if result.statusCode == 200 then
+		print("Success")
+	else
+		print("Failed | " .. tostring(result.status))
+	end
+end
+
+<%= data.branding.codePrefix %>:getPlayerStatisticsService():processStatistics(statistics, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

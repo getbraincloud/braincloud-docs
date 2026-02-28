@@ -73,6 +73,18 @@ void rewardCallback(Map<String, dynamic>?  jsonResponse) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+void rewardCallback(Map<String, dynamic>?  jsonResponse) {
+  // ...
+}
+<%= data.branding.codePrefix %>:registerRewardCallback(rewardCallback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

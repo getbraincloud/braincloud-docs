@@ -74,6 +74,19 @@ void rttCallBack(RTTCommandResponse jsonResponse) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local rttCallBack = function(jsonResponse)
+	-- your code
+end
+
+<%= data.branding.codePrefix %>:getRttService():registerRTTPresenceCallback(rttCallback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

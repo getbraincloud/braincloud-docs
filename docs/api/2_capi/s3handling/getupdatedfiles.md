@@ -142,6 +142,37 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local category = "Tuning"
+local fileDetails = [
+    {
+        "fileId": "hjvfsghguhuhrtghgh",
+        "shortName": "short",
+        "fileName": "fname",
+        "relativeUrl": "http://",
+        "absoluteUrl": "http://",
+        "category": "Tuning",
+        "date": 100000000000,
+        "md5Hash": "njf8ehg8tr7htgheguhh"
+    }
+]
+
+local callback = function(result)
+	if result.statusCode == 200 then
+		print("Success")
+	else
+		print("Failed | " .. tostring(result.status))
+	end
+end
+
+<%= data.branding.codePrefix %>:getS3HandlingService():getUpdatedFiles(category, fileDetails, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

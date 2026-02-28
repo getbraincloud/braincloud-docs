@@ -136,6 +136,28 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local oldEmailAddress = "oldemail@email.com"
+local authenticationToken = "password"
+local newEmailAddress = "newemail@email.com"
+local updateContactEmail = true
+
+local callback = function(result)
+	if result.statusCode == 200 then
+		print("Success")
+	else
+		print("Failed | " .. tostring(result.status))
+	end
+end
+
+<%= data.branding.codePrefix %>:getIdentityService():changeEmailIdentity(oldEmailAddress, authenticationToken, newEmailAddress, updateContactEmail, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

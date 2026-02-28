@@ -75,6 +75,16 @@ int timeoutInSeconds = 30;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local timeoutInSeconds = 30
+<%= data.branding.codePrefix %>:setAuthenticationPacketTimeout(timeoutInSeconds)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

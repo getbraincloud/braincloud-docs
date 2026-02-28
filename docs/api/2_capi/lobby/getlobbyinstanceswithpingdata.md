@@ -152,6 +152,34 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local lobbyType = "Relay_lobbyT_v2"
+var  "criteriaJson" = {
+      "rating": {
+        "min": 10,
+        "max": 100
+      },
+      "ping", {
+        "max": 200
+      }
+    }
+
+local callback = function(result)
+	if result.statusCode == 200 then
+		print("Success")
+	else
+		print("Failed | " .. tostring(result.status))
+	end
+end
+
+<%= data.branding.codePrefix %>:getLobbyService():getLobbyInstancesWithPingData(lobbyType, criteriaJson, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

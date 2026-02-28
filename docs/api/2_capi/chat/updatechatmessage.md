@@ -149,6 +149,33 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local channelId = "55555:gl:bcDev"
+local msgId = "123456789"
+local version = 1
+local contentJson = {
+    "text": "New plain text message",
+    "custom": {
+        "somethingNew": "amazing"
+    }
+}
+
+local callback = function(result)
+	if result.statusCode == 200 then
+		print("Success")
+	else
+		print("Failed | " .. tostring(result.status))
+	end
+end
+
+<%= data.branding.codePrefix %>:getChatService():updateChatMessage(channelId, msgId, version, contentJson, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

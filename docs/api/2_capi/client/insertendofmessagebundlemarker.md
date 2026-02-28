@@ -61,6 +61,15 @@ Inserts a marker which will tell the <%= data.branding.productName %> comms laye
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+<%= data.branding.codePrefix %>:insertEndOfMessageBundleMarker()
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

@@ -176,6 +176,34 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local leaderboardId = "leaderboardId1"
+local score = 0
+local jsonData = {
+    "nickname": "withResults"
+}
+local roundStartedTime = Date.now().millisecondsSinceEpoch
+local sortOrder = SortOrder.HIGH_TO_LOW
+local beforeCount = 3
+local afterCount = 4
+local initialScore = 0
+
+local callback = function(result)
+	if result.statusCode == 200 then
+		print("Success")
+	else
+		print("Failed | " .. tostring(result.status))
+	end
+end
+
+<%= data.branding.codePrefix %>:getTournamentService():postTournamentScoreWithResultsUTC(leaderboardId, score, jsonData, roundStartedTime, sortOrder, beforeCount, afterCount, initialScore, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

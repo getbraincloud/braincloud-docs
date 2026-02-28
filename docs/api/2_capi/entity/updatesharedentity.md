@@ -151,6 +151,31 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local entityId = "someEntityId"
+local targetProfileId = "someProfileId"
+local entityType = "address"
+local jsonEntityData = {
+    "street": "1309 Carling Avenue, Ottawa, ON"
+}
+local version = -1
+
+local callback = function(result)
+	if result.statusCode == 200 then
+		print("Success")
+	else
+		print("Failed | " .. tostring(result.status))
+	end
+end
+
+<%= data.branding.codePrefix %>:getEntityService():updateSharedEntity(entityId, targetProfileId, entityType, jsonEntityData, version, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

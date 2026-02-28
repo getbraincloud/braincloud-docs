@@ -126,6 +126,27 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local googleUserAccountEmail = "example@gmail.com"
+local idToken = "authTokenFromGoogle"
+local forceCreate = true
+
+local callback = function(result)
+	if result.statusCode == 200 then
+		print("Success")
+	else
+		print("Failed | " .. tostring(result.status))
+	end
+end
+
+<%= data.branding.codePrefix %>:smartSwitchAuthenticateGoogleOpenId(googleUserAccountEmail, idToken, forceCreate, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

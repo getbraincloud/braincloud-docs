@@ -77,6 +77,19 @@ void eventCallback(Map<String, dynamic>?  jsonResponse) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+void eventCallback(Map<String, dynamic>?  jsonResponse) {
+    //Your code
+}
+​
+<%= data.branding.codePrefix %>:registerEventCallback(eventCallback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

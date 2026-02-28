@@ -63,6 +63,17 @@ int netId = _bc.relayService.getNetIdForCxId(aCxId);
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local aCxId = "aaaaaaa"
+
+local netId = <%= data.branding.codePrefix %>:getRelayService():getNetIdForCxId(aCxId)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

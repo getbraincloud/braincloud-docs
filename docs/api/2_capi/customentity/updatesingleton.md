@@ -160,6 +160,37 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local entityType = "athletes"
+local version = 1
+local dataJson = {
+  "firstName": "Super",
+  "surName": "Star",
+  "position": "forward",
+  "goals": 3,
+  "assists": 5
+}
+local acl = {
+  "other": 1
+}
+local timeToLive = null
+
+local callback = function(result)
+	if result.statusCode == 200 then
+		print("Success")
+	else
+		print("Failed | " .. tostring(result.status))
+	end
+end
+
+<%= data.branding.codePrefix %>:getCustomEntityService():updateSingleton(entityType, version, dataJson, acl, timeToLive, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

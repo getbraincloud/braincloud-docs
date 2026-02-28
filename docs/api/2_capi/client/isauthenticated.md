@@ -63,6 +63,15 @@ var isAuthenticated = <%= data.branding.codePrefix %>.isAuthenticated();
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local isAuthenticated = <%= data.branding.codePrefix %>:isAuthenticated()
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

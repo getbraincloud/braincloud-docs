@@ -136,6 +136,27 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local channelId = "22817:gl:CHAT_GROUPFINDER"
+local chatMessage = "Hey, I am looking for new and experienced users to join our group."
+local recordInHistory = true
+
+local callback = function(result)
+	if result.statusCode == 200 then
+		print("Success")
+	else
+		print("Failed | " .. tostring(result.status))
+	end
+end
+
+<%= data.branding.codePrefix %>:getChatService():postChatMessageSimple(channelId, chatMessage, recordInHistory, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

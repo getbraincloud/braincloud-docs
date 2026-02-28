@@ -61,6 +61,15 @@ var sessionId = <%= data.branding.codePrefix %>.getSessionId();
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local sessionId = <%= data.branding.codePrefix %>:getSessionId()
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

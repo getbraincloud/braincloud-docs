@@ -170,6 +170,35 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local ownerId = "internalPlayerId"
+local matchId = "matchId"
+local jsonMatchState = {}
+local pushNotificationMessage = "You have been entered into an async-match!"
+local nextPlayer = "player2Id"
+local jsonSummary = {
+    "Address": "South Africa"
+}
+local jsonStatistics = {
+    "statsName": "statValue"
+}
+
+local callback = function(result)
+	if result.statusCode == 200 then
+		print("Success")
+	else
+		print("Failed | " .. tostring(result.status))
+	end
+end
+
+<%= data.branding.codePrefix %>:getAsyncMatchService():submitTurn(ownerId, matchId, version, jsonMatchState, pushNotificationMessage, nextPlayer, jsonSummary, jsonStatistics, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

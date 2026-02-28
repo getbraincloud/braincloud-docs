@@ -87,6 +87,22 @@ _bc.relayService.sendToPlayers(bytes, playerMask:mask,
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local bytes = "Some Data here"  -- byte encoded
+local mask = 0
+-- Send only to NetID 0, 2 and 5
+for _, netId in ipairs({0, 2, 5}) do
+	mask = mask + (1 << netId)
+end
+
+<%= data.branding.codePrefix %>:getRelayService():sendToPlayers(bytes, mask, true, true, BrainCloudRelay.channelLowPriority)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

@@ -80,6 +80,16 @@ int minTransferRate = 1500;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local minTransferRate = 1500
+<%= data.branding.codePrefix %>:setUploadLowTransferRateThreshold(minTransferRate)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

@@ -75,6 +75,15 @@ InitializeIdentity must be called before you can authenticate a user anonymously
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+<%= data.branding.codePrefix %>:initializeIdentity("myProfileId", "myAnonymousId")
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

@@ -170,6 +170,31 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local lobbyType = "4v4"
+local rating = 76
+local otherUserCxIds = { "55555:aaa-bbb-ccc-ddd:asdfjkl" }
+local settings = {}
+local isReady = false
+local extraJson = {}
+local teamCode = "blue"
+
+local callback = function(result)
+	if result.statusCode == 200 then
+		print("Success")
+	else
+		print("Failed | " .. tostring(result.status))
+	end
+end
+
+<%= data.branding.codePrefix %>:getLobbyService():createLobby(lobbyType, rating, otherUserCxIds, settings, isReady, extraJson, teamCode, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

@@ -112,7 +112,6 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 ```
 
 ```dart
-
 ServerResponse result = await _bc.authenticateAnonymous();
 
 if (result.statusCode == 200) {
@@ -120,6 +119,23 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local callback = function(result)
+	if result.statusCode == 200 then
+		print("Success")
+	else
+		print("Failed | " .. tostring(result.status))
+	end
+end
+
+<%= data.branding.codePrefix %>:authenticateAnonymous(callback)
 ```
 
 ```mdx-code-block

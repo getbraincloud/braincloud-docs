@@ -145,6 +145,36 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local universalId = "universalId"
+local serviceParams = {
+    "templateId": "template-id-guid",
+    "substitutions": {
+        "aKey": "aValue"
+    },
+    "categories": [
+        "category1",
+        "category2"
+    ]
+}
+local tokenTtlInMinutes = 1440
+
+local callback = function(result)
+	if result.statusCode == 200 then
+		print("Success")
+	else
+		print("Failed | " .. tostring(result.status))
+	end
+end
+
+<%= data.branding.codePrefix %>:getAuthenticationService():resetUniversalIdPasswordAdvancedWithExpiry(universalId, serviceParams, tokenTtlInMinutes, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

@@ -77,6 +77,21 @@ void fileCallback(ServerResponse  response) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+void fileCallback(ServerResponse  response) {      
+    if (response.status == 200) {
+        // ...
+    }
+}
+​
+<%= data.branding.codePrefix %>:registerFileUploadCallback(fileCallback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

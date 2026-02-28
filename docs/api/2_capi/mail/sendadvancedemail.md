@@ -173,6 +173,49 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local profileId = "f7144cc0-b996-440f-8459-21b0ecb91a10"
+local jsonServiceParams = {
+    "fromAddress": "email@company.com",
+    "fromName": "Jane Doe",
+    "replyToAddress": "optional@company.com",
+    "replyToName": "Optional ReplyTo",
+    "templateId": "d-www-xxx-yyy-zzz",
+    "dynamicData": {
+        "user": {
+            "firstName": "John",
+            "lastName": "Doe"
+        },
+        "resetLink": "www.dummuyLink.io"
+    },
+    "categories": [
+        "category1",
+        "category2"
+    ],
+    "attachments": [
+        {
+            "content": "VGhpcyBhdHRhY2htZW50IHRleHQ=",
+            "filename": "attachment.txt"
+        }
+    ]
+}
+
+local callback = function(result)
+	if result.statusCode == 200 then
+		print("Success")
+	else
+		print("Failed | " .. tostring(result.status))
+	end
+end
+
+<%= data.branding.codePrefix %>:getMailService():sendAdvancedEmail(profileId, serviceParams, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
