@@ -145,7 +145,7 @@ if (result.statusCode == 200) {
 ```lua
 local scriptName = "path/to/script1"
 local scriptData = {
-    "parm": "value"
+    parm = "value"
 }
 local peer = "serviceCode"
 

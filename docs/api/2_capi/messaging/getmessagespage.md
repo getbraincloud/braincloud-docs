@@ -194,17 +194,17 @@ if (result.statusCode == 200) {
 
 ```lua
 local context = {
-    "pagination": {
-        "rowsPerPage": 10,
-        "pageNumber": 1
+    pagination = {
+        rowsPerPage = 10,
+        pageNumber = 1
     },
-    "searchCriteria": {
-        "msgbox": "inbox",
-        "read": false
+    searchCriteria = {
+        msgbox = "inbox",
+        read = false
     },
-    "sortCriteria": {
-        "mbCr": 1,
-        "mbUp": -1
+    sortCriteria = {
+        mbCr = 1,
+        mbUp = -1
     }
 }
 

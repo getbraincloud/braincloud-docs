@@ -153,10 +153,10 @@ if (result.statusCode == 200) {
 
 ```lua
 local where = {
-    "entityType": "address"
+    entityType = "address"
 }
 local orderBy = {
-    "data.address": 1
+    ["data.address"] = 1
 }
 local maxReturn = 50
 

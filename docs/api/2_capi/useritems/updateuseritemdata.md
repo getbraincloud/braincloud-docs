@@ -141,8 +141,8 @@ if (result.statusCode == 200) {
 local itemId = "aaa-bbb-ccc-ddd"
 local version = 1
 local newItemData = {
-  "condition": 77,
-  "bonus": 1
+  condition = 77,
+  bonus = 1
 }
 
 local callback = function(result)

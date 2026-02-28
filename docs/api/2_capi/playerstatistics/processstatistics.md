@@ -160,12 +160,12 @@ if (result.statusCode == 200) {
 
 ```lua
 local statistics = {
-    "DEAD_CATS": "RESET",
-    "LIVES_LEFT": "SET#9",
-    "MICE_KILLED": "INC#2",
-    "MICE_MULTIPLIER": "INC_TO_LIMIT#2#20",
-    "DOG_SCARE_BONUS_POINTS": "MAX#20",
-    "TREES_CLIMBED_REQ": "MIN#5"
+    DEAD_CATS = "RESET",
+    LIVES_LEFT = "SET#9",
+    MICE_KILLED = "INC#2",
+    MICE_MULTIPLIER = "INC_TO_LIMIT#2#20",
+    DOG_SCARE_BONUS_POINTS = "MAX#20",
+    TREES_CLIMBED_REQ = "MIN#5"
 }
 
 local callback = function(result)

@@ -98,7 +98,7 @@ if (result.statusCode == 200) {
 ```
 
 ```lua
-local payloadJson = {"key":"value"}
+local payloadJson = {key = "value"}
 
 local callback = function(result)
 	if result.statusCode == 200 then

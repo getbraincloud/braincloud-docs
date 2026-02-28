@@ -127,8 +127,8 @@ if (result.statusCode == 200) {
 
 ```lua
 local summaryFriendData = {
-    "xp": 12,
-    "attributeName": "value"
+    xp = 12,
+    attributeName = "value"
 }
 
 local callback = function(result)

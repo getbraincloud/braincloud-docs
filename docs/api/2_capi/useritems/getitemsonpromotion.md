@@ -145,7 +145,7 @@ local shopId = "None"
 local includeDef = True
 local includePromotionDetails = True
 local optionsJson = {
-    "category": "Equipment"
+    category = "Equipment"
 }
 
 local callback = function(result)

@@ -184,8 +184,8 @@ local name = "myGroupName"
 local groupType = "myGroupType"
 local isOpenGroup = false
 local acl = {
-    "member": 2,
-    "other": 0
+    member = 2,
+    other = 0
 }
 local data = {}
 local ownerAttributes = {}

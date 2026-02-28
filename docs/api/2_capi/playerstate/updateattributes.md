@@ -131,8 +131,8 @@ if (result.statusCode == 200) {
 
 ```lua
 local attributes = {
-    "key1": "value1",
-    "key2": "value2"
+    key1 = "value1",
+    key2 = "value2"
 }
 local wipeExisting = false
 

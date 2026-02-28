@@ -159,7 +159,7 @@ local entityId = "someEntityId"
 local targetProfileId = "someProfileId"
 local entityType = "address"
 local jsonEntityData = {
-    "street": "1309 Carling Avenue, Ottawa, ON"
+    street = "1309 Carling Avenue, Ottawa, ON"
 }
 local version = -1
 

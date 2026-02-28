@@ -147,7 +147,7 @@ if (result.statusCode == 200) {
 local groupId = "a-group-id"
 local version = 3
 local jsonData = {
-    "indexedId": "a-group-index"
+    indexedId = "a-group-index"
 }
 
 local callback = function(result)

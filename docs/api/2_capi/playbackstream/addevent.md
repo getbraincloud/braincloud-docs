@@ -144,10 +144,10 @@ if (result.statusCode == 200) {
 ```lua
 local playbackStreamId = "stream"
 local eventData = {
-    "value": 1
+    value = 1
 }
 local summary = {
-    "total": 5
+    total = 5
 }
 
 local callback = function(result)

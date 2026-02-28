@@ -140,7 +140,7 @@ if (result.statusCode == 200) {
 ```lua
 local entityType = "athletes"
 local whereJson = {
-  "data.position": "forward"
+  ["data.position"] = "forward"
 }
 local maxReturn = 2
 

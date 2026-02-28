@@ -179,26 +179,26 @@ if (result.statusCode == 200) {
 ```lua
 local profileId = "f7144cc0-b996-440f-8459-21b0ecb91a10"
 local jsonServiceParams = {
-    "fromAddress": "email@company.com",
-    "fromName": "Jane Doe",
-    "replyToAddress": "optional@company.com",
-    "replyToName": "Optional ReplyTo",
-    "templateId": "d-www-xxx-yyy-zzz",
-    "dynamicData": {
-        "user": {
-            "firstName": "John",
-            "lastName": "Doe"
+    fromAddress = "email@company.com",
+    fromName = "Jane Doe",
+    replyToAddress = "optional@company.com",
+    replyToName = "Optional ReplyTo",
+    templateId = "d-www-xxx-yyy-zzz",
+    dynamicData = {
+        user = {
+            firstName = "John",
+            lastName = "Doe"
         },
-        "resetLink": "www.dummuyLink.io"
+        resetLink = "www.dummuyLink.io"
     },
-    "categories": [
+    categories = [
         "category1",
         "category2"
     ],
-    "attachments": [
+    attachments = [
         {
-            "content": "VGhpcyBhdHRhY2htZW50IHRleHQ=",
-            "filename": "attachment.txt"
+            content = "VGhpcyBhdHRhY2htZW50IHRleHQ=",
+            filename = "attachment.txt"
         }
     ]
 }

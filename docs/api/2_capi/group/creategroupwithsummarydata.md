@@ -181,8 +181,8 @@ local name = "myGroupName"
 local groupType = "myGroupType"
 local isOpenGroup = true
 local acl = {
-  "member": 2,
-  "other": 0
+  member = 2,
+  other = 0
 }
 local ownerAttributes = {}
 local defaultMemberAttributes = {}

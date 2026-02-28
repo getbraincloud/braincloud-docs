@@ -150,7 +150,7 @@ if (result.statusCode == 200) {
 local authenticationType = <%= data.branding.codePrefix %>.brainCloudClient.authentication.AUTHENTICATION_TYPE_UNIVERSAL
 local ids = AuthenticationIds("authAdvancedUser", "authAdvancedPass", "");  // id, token, externalAuthName
 local forceCreate = true
-local extraJson = {"key":"value"}
+local extraJson = {key = "value"}
 
 local callback = function(result)
 	if result.statusCode == 200 then

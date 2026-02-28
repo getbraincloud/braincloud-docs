@@ -144,7 +144,7 @@ if (result.statusCode == 200) {
 local authenticationType = AuthenticationType.universal
 local externalId =  "someId"
 local continueAnon = true
-local extraJson = {"key":"value"}
+local extraJson = {key = "value"}
 ​
 
 local callback = function(result)

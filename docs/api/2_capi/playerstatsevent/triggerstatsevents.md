@@ -131,8 +131,8 @@ if (result.statusCode == 200) {
 ```lua
 local events = [
     {
-        "eventName": "GrantExperience",
-        "eventMultiplier": 100
+        eventName = "GrantExperience",
+        eventMultiplier = 100
     }
 ]
 

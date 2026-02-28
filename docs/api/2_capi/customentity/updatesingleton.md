@@ -167,14 +167,14 @@ if (result.statusCode == 200) {
 local entityType = "athletes"
 local version = 1
 local dataJson = {
-  "firstName": "Super",
-  "surName": "Star",
-  "position": "forward",
-  "goals": 3,
-  "assists": 5
+  firstName = "Super",
+  surName = "Star",
+  position = "forward",
+  goals = 3,
+  assists = 5
 }
 local acl = {
-  "other": 1
+  other = 1
 }
 local timeToLive = null
 

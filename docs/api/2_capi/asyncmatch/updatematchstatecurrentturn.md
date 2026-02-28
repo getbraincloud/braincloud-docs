@@ -160,10 +160,10 @@ local ownerId = "the-owner-id"
 local matchId = "the-match-id"
 local version = 1
 local matchState = {
-    "map": "level1"
+    map = "level1"
 }
 local statistics = {
-    "statsName": "statValue"
+    statsName = "statValue"
 }
 
 local callback = function(result)

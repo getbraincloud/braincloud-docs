@@ -179,8 +179,8 @@ local groupTreeId = "gpath"
 local groupFilename = "gfile"
 local overwriteIfPresent = true
 local groupFileAcl = {
-  "member": 2,
-  "other": 0
+  member = 2,
+  other = 0
 }
 
 local callback = function(result)

@@ -151,8 +151,8 @@ if (result.statusCode == 200) {
 local profileId = "kjhkjhgfkjshgkjh"
 local notificationTemplateId = 1
 local substitutionJson = {
-    "0": "value0",
-    "1": "value1"
+    ["0"] = "value0",
+    ["1"] = "value1"
 }
 local startTime = 1437579786000
 

@@ -151,10 +151,10 @@ if (result.statusCode == 200) {
 local entityType = "address"
 local timeToLive = -1
 local jsonEntityAcl = {
-    "other": 1
+    other = 1
 }
 local jsonEntityData = {
-    "street": "1309 Carling"
+    street = "1309 Carling"
 }
 
 local callback = function(result)

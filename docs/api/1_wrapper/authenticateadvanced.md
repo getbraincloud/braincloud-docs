@@ -154,7 +154,11 @@ if (result.statusCode == 200) {
 local externalId = "authAdvancedUser"
 local authenticationToken = "authAdvancedPass"
 local authenticationSubType = ""
-local ids = {externalId,authenticationToken,authenticationSubType}
+local ids = {
+	externalId = externalId,
+	authenticationToken = authenticationToken,
+	authenticationSubType = authenticationSubType
+}
 
 local callback = function(result)
 	if result.statusCode == 200 then
@@ -164,7 +168,7 @@ local callback = function(result)
 	end
 end
 
-<%= data.branding.codePrefix %>:authenticateAdvanced(AuthenticationType.universal, ids, {"key":"value"}, true, callback)
+<%= data.branding.codePrefix %>:authenticateAdvanced(AuthenticationType.universal, ids, {key = "value"}, true, callback)
 ```
 
 ```mdx-code-block

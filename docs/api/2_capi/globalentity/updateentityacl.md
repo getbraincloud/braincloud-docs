@@ -143,7 +143,7 @@ if (result.statusCode == 200) {
 local entityId = "a-entity-id"
 local version = 2
 local jsonEntityAcl = {
-    "other": 1
+    other = 1
 }
 
 local callback = function(result)

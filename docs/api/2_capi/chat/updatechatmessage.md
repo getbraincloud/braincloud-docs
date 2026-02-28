@@ -157,9 +157,9 @@ local channelId = "55555:gl:bcDev"
 local msgId = "123456789"
 local version = 1
 local contentJson = {
-    "text": "New plain text message",
-    "custom": {
-        "somethingNew": "amazing"
+    text = "New plain text message",
+    custom = {
+        somethingNew = "amazing"
     }
 }
 

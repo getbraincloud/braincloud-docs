@@ -139,7 +139,7 @@ if (result.statusCode == 200) {
 local rangeDelta = 10
 local numMatches = 1
 local jsonAttributes = {
-    "key": "value"
+    key = "value"
 }
 
 local callback = function(result)

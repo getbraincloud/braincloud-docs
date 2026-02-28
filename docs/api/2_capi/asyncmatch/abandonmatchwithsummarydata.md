@@ -161,10 +161,10 @@ local ownerId = "the-owner-id"
 local matchId = "the-match-id"
 local pushContent = "An async-match has been abandoned!"
 local summary = {
-  "abandonBy": {
-    "display": "Match abandoned by John Doe.",
-    "player": 2,
-    "reason": "forfeit"
+  abandonBy = {
+    display = "Match abandoned by John Doe.",
+    player = 2,
+    reason = "forfeit"
   }
 }
 

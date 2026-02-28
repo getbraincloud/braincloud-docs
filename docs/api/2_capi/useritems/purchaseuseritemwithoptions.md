@@ -154,7 +154,7 @@ local quantity = 1
 local shopId = "None"
 local includeDef = True
 local optionsJson = {
-    "blockIfExceedItemMaxStackable": false
+    blockIfExceedItemMaxStackable = false
 }
 
 local callback = function(result)

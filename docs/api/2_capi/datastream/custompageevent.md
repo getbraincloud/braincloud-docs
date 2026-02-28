@@ -132,8 +132,8 @@ if (result.statusCode == 200) {
 ```lua
 local eventName = "customEvent"
 local jsonEventProperties = {
-    "key1": "value",
-    "key2": "value"
+    key1 = "value",
+    key2 = "value"
 }
 
 local callback = function(result)

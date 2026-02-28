@@ -140,7 +140,7 @@ if (result.statusCode == 200) {
 local storeId = "steam"
 local transactionId = "12345677890123456789"
 local transactionData = {
-    "transId": "12345677890123456789"
+    transId = "12345677890123456789"
 }
 
 local callback = function(result)

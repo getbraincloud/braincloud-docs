@@ -149,7 +149,7 @@ local ownerId = "internalPlayerId"
 local matchId = "matchId"
 local version = 1
 local jsonSummary = {
-    "Address": "North America"
+    Address = "North America"
 }
 
 local callback = function(result)

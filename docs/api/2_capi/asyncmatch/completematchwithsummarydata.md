@@ -161,10 +161,10 @@ local ownerId = "the-owner-id"
 local matchId = "the-match-id"
 local pushContent = "An async-match has been completed!"
 local summary = {
-  "completedBy": {
-    "display": "John Doe wins!",
-    "player": 2,
-    "reason": "victory"
+  completedBy = {
+    display = "John Doe wins!",
+    player = 2,
+    reason = "victory"
   }
 }
 

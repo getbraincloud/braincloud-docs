@@ -132,8 +132,8 @@ if (result.statusCode == 200) {
 ```lua
 local storeId = "steam"
 local purchaseData = {
-    "itemId": "3555",
-    "language": "en"
+    itemId = "3555",
+    language = "en"
 }
 
 local callback = function(result)

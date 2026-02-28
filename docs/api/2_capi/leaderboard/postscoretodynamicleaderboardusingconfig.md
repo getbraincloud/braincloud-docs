@@ -177,15 +177,15 @@ if (result.statusCode == 200) {
 local leaderboardId = "aLeaderboardId"
 local score = 10
 local scoreData = {
-    "nickname": "batman"
+    nickname = "batman"
 }
 local configJson = {
-    "leaderboardType": "HIGH_VALUE",
-    "rotationType": "DAYS",
-    "numDaysToRotate": 4,
-    "resetAt": "{ [#ts+60000 }]",
-    "retainedCount": 2,
-    "expireInMins": null
+    leaderboardType = "HIGH_VALUE",
+    rotationType = "DAYS",
+    numDaysToRotate = 4,
+    resetAt = "{ [#ts+60000 }]",
+    retainedCount = 2,
+    expireInMins = null
 }
 
 local callback = function(result)

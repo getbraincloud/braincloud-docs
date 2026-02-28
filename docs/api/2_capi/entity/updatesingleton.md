@@ -154,10 +154,10 @@ if (result.statusCode == 200) {
 ```lua
 local entityType = "settings"
 local jsonEntityData = {
-    "difficulty": "normal"
+    difficulty = "normal"
 }
 local jsonEntityAcl = {
-    "other": 0
+    other = 0
 }
 local version = -1
 

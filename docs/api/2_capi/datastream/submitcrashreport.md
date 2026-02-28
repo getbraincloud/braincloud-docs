@@ -181,7 +181,7 @@ if (result.statusCode == 200) {
 local crashType = "unknown"
 local errorMsg = "Divide by zero error"
 local crashJson = {
-  "dialog": 5
+  dialog = 5
 }
 local crashLog = "funcX(a,b,c)/ncalled by funcY(a,b,c)"
 local userName = ""

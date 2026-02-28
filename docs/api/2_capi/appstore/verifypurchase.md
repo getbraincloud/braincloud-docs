@@ -246,7 +246,7 @@ if (result.statusCode == 200) {
 ```lua
 local storeId = "hghghsgfh"
 local receiptData = {
-    "productId": "ugfhffhgj"
+    productId = "ugfhffhgj"
 }
 
 local callback = function(result)

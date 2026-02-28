@@ -151,7 +151,7 @@ if (result.statusCode == 200) {
 local leaderboardId = "leaderboardId1"
 local score = 0
 local jsonData = {
-    "nickname": "batman"
+    nickname = "batman"
 }
 local roundStartedTime = Date.now().millisecondsSinceEpoch
 

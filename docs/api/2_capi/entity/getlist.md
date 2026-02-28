@@ -151,11 +151,11 @@ if (result.statusCode == 200) {
 
 ```lua
 local whereJson = {
-    "entityType": "address",
-    "data.street": "1309 Carling"
+    entityType = "address",
+    ["data.street"] = "1309 Carling"
 }
 local orderByJson = {
-    "data.street": 1
+    ["data.street"] = 1
 }
 local maxReturn = 50
 

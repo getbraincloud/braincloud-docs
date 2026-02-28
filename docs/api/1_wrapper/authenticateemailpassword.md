@@ -181,7 +181,7 @@ if (result.statusCode == 200) {
 ```
 
 ```lua
-local email ="<%= data.example.email %>"
+local email = "<%= data.example.email %>"
 local password = "<%= data.example.password %>"
 local forceCreate = true
 

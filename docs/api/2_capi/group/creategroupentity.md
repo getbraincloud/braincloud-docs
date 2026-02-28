@@ -166,11 +166,11 @@ local groupId = "a-group-id"
 local entityType = "myEntityType"
 local isOwnedByGroupMember = false
 local acl = {
-    "member": 2,
-    "other": 1
+    member = 2,
+    other = 1
 }
 local jsonData = {
-    "aKey": "aValue"
+    aKey = "aValue"
 }
 
 local callback = function(result)

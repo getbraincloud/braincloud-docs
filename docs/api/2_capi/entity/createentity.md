@@ -142,10 +142,10 @@ if (result.statusCode == 200) {
 ```lua
 local entityType = "address"
 local jsonEntityData = {
-    "street": "1309 Carling"
+    street = "1309 Carling"
 }
 local jsonEntityAcl = {
-    "other": 0
+    other = 0
 }
 
 local callback = function(result)

@@ -152,7 +152,7 @@ local entityId = "a-entity-id"
 local version = 2
 local ownerId = "sdjhghfhgsdjkkfjg"
 local jsonEntityAcl = {
-    "other": 1
+    other = 1
 }
 
 local callback = function(result)

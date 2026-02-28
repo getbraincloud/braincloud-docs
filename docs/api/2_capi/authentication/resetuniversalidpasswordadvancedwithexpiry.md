@@ -151,11 +151,11 @@ if (result.statusCode == 200) {
 ```lua
 local universalId = "universalId"
 local serviceParams = {
-    "templateId": "template-id-guid",
-    "substitutions": {
-        "aKey": "aValue"
+    templateId = "template-id-guid",
+    substitutions = {
+        aKey = "aValue"
     },
-    "categories": [
+    categories = [
         "category1",
         "category2"
     ]

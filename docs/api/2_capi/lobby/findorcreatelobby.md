@@ -214,16 +214,16 @@ local lobbyType = "4v4"
 local rating = 76
 local maxSteps = 3
 local algo = {
-    "strategy": "ranged-absolute",
-    "alignment": "center",
-    "ranges": [
+    strategy = "ranged-absolute",
+    alignment = "center",
+    ranges = [
         5,
         7.5,
         10
     ]
 }
 local filterJson = {
-    "cheater": false
+    cheater = false
 }
 local otherUserCxIds = { "55555:aaa-bbb-ccc-ddd:asdfjkl" }
 local settings = {}

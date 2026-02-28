@@ -130,7 +130,7 @@ if (result.statusCode == 200) {
 ```lua
 local entityType = "athletes"
 local whereJson = {
-  "data.position": "defense"
+  ["data.position"] = "defense"
 }
 
 local callback = function(result)

@@ -131,8 +131,8 @@ if (result.statusCode == 200) {
 ```lua
 local groupId = "a-group-id"
 local acl = {
-    "member": 2,
-    "other": 0
+    member = 2,
+    other = 0
 }
 
 local callback = function(result)

@@ -140,7 +140,7 @@ if (result.statusCode == 200) {
 ```lua
 local authenticationType = AuthenticationType.universal
 local ids = AuthenticationIds("authAdvancedUser", "authAdvancedPass", "");  // id, token, externalAuthName
-local extraJson = {"key":"value"}
+local extraJson = {key = "value"}
 
 local callback = function(result)
 	if result.statusCode == 200 then

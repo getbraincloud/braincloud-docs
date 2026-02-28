@@ -179,7 +179,7 @@ if (result.statusCode == 200) {
 local leaderboardId = "default"
 local score = 10
 local data = {
-    "nickname": "batman"
+    nickname = "batman"
 }
 local leaderboardType = SocialLeaderboardType.HIGH_VALUE
 local rotationType = RotationType.DAILY

@@ -158,12 +158,12 @@ if (result.statusCode == 200) {
 ```lua
 local lobbyType = "Relay_lobbyT_v2"
 var  "criteriaJson" = {
-      "rating": {
-        "min": 10,
-        "max": 100
+      rating = {
+        min = 10,
+        max = 100
       },
       "ping", {
-        "max": 200
+        max = 200
       }
     }
 

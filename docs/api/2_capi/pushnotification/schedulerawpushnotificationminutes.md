@@ -193,28 +193,28 @@ if (result.statusCode == 200) {
 ```lua
 local profileId = "kjhkjhgfkjshgkjh"
 local fcmContent = {
-    "notification": {
-        "body": "content of message",
-        "title": "message title"
+    notification = {
+        body = "content of message",
+        title = "message title"
     },
-    "data": {
-        "customfield1": "customValue1",
-        "customfield2": "customValue2"
+    data = {
+        customfield1 = "customValue1",
+        customfield2 = "customValue2"
     },
-    "priority": "normal"
+    priority = "normal"
 }
 local iosContent = {
-    "aps": {
-        "alert": {
-            "body": "content of message",
-            "title": "message title"
+    aps = {
+        alert = {
+            body = "content of message",
+            title = "message title"
         },
-        "badge": 0,
-        "sound": "gggg"
+        badge = 0,
+        sound = "gggg"
     }
 }
 local facebookContent = {
-    "template": "content of message"
+    template = "content of message"
 }
 local minutesFromNow = 1
 

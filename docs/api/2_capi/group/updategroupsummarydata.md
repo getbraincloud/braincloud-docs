@@ -134,7 +134,7 @@ if (result.statusCode == 200) {
 ```lua
 local groupId = "a-group-id"
 local version = 3
-local summaryData = { "faction": "warlords" }
+local summaryData = { faction = "warlords" }
 
 local callback = function(result)
 	if result.statusCode == 200 then

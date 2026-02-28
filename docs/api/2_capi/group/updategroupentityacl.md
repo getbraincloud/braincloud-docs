@@ -143,8 +143,8 @@ if (result.statusCode == 200) {
 local groupId = "a-group-id"
 local entityId = "a-group-entity-id"
 local acl = {
-  "member": 1,
-  "other": 0
+  member = 1,
+  other = 0
 }
 
 local callback = function(result)

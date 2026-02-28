@@ -141,8 +141,8 @@ if (result.statusCode == 200) {
 local entityType = "athletes"
 local version = 1
 local fieldsJson = {
-  "goals": 3,
-  "assists": 5
+  goals = 3,
+  assists = 5
 }
 
 local callback = function(result)

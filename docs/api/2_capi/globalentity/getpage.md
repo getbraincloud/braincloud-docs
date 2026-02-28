@@ -163,16 +163,16 @@ if (result.statusCode == 200) {
 
 ```lua
 local context = {
-    "pagination": {
-        "rowsPerPage": 50,
-        "pageNumber": 1
+    pagination = {
+        rowsPerPage = 50,
+        pageNumber = 1
     },
-    "searchCriteria": {
-        "entityType": "address"
+    searchCriteria = {
+        entityType = "address"
     },
-    "sortCriteria": {
-        "createdAt": 1,
-        "updatedAt": -1
+    sortCriteria = {
+        createdAt = 1,
+        updatedAt = -1
     }
 }
 

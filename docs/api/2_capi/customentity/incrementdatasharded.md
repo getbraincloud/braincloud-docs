@@ -155,11 +155,11 @@ if (result.statusCode == 200) {
 local entityType = "athletes"
 local entityId = "aaaa-bbbb-cccc-dddd"
 local fieldsJson = {
-  "goals": 3,
-  "assists": 5
+  goals = 3,
+  assists = 5
 }
 local shardKeyJson = {
-  "ownerId": "profileIdOfEntityOwner"
+  ownerId = "profileIdOfEntityOwner"
 }
 
 local callback = function(result)

@@ -180,10 +180,10 @@ local jsonMatchState = {}
 local pushNotificationMessage = "You have been entered into an async-match!"
 local nextPlayer = "player2Id"
 local jsonSummary = {
-    "Address": "South Africa"
+    Address = "South Africa"
 }
 local jsonStatistics = {
-    "statsName": "statValue"
+    statsName = "statValue"
 }
 
 local callback = function(result)

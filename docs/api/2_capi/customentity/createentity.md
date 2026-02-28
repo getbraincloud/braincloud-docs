@@ -166,14 +166,14 @@ if (result.statusCode == 200) {
 ```lua
 local entityType = "athletes"
 local dataJson = {
-  "firstName": "Super",
-  "surName": "Star",
-  "position": "forward",
-  "goals": 2,
-  "assists": 4
+  firstName = "Super",
+  surName = "Star",
+  position = "forward",
+  goals = 2,
+  assists = 4
 }
 local acl = {
-  "other": 1
+  other = 1
 }
 local timeToLive = null
 local isOwned = false

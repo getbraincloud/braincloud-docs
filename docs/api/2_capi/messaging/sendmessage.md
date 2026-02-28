@@ -136,8 +136,8 @@ if (result.statusCode == 200) {
 ```lua
 local toProfileIds = { "profileId1", "profileId2" }
 local contentJson = {
-    "subject": "Chat and messaging features are here!",
-    "text": "Check out the new chat and messaging features!"
+    subject = "Chat and messaging features are here!",
+    text = "Check out the new chat and messaging features!"
 }
 
 local callback = function(result)

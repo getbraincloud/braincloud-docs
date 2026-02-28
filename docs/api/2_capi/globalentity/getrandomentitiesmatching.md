@@ -130,7 +130,7 @@ if (result.statusCode == 200) {
 
 ```lua
 local where = {
-    "entityType": "address"
+    entityType = "address"
 }
 local maxReturn = 10
 

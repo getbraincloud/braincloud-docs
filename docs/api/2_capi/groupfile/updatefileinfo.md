@@ -161,8 +161,8 @@ local fileId = "guid"
 local version = 1
 local newFilename = "cccc"
 local newAcl = {
-  "member": 2,
-  "other": 0
+  member = 2,
+  other = 0
 }
 
 local callback = function(result)

@@ -149,14 +149,14 @@ if (result.statusCode == 200) {
 local category = "Tuning"
 local fileDetails = [
     {
-        "fileId": "hjvfsghguhuhrtghgh",
-        "shortName": "short",
-        "fileName": "fname",
-        "relativeUrl": "http://",
-        "absoluteUrl": "http://",
-        "category": "Tuning",
-        "date": 100000000000,
-        "md5Hash": "njf8ehg8tr7htgheguhh"
+        fileId = "hjvfsghguhuhrtghgh",
+        shortName = "short",
+        fileName = "fname",
+        relativeUrl = "http://",
+        absoluteUrl = "http://",
+        category = "Tuning",
+        date = 100000000000,
+        md5Hash = "njf8ehg8tr7htgheguhh"
     }
 ]
 

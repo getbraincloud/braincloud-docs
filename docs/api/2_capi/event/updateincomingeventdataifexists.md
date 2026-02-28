@@ -131,7 +131,7 @@ if (result.statusCode == 200) {
 ```lua
 local evId = "hexString"
 local eventData = {
-    "someMapAttribute": "someValue"
+    someMapAttribute = "someValue"
 }
 
 local callback = function(result)

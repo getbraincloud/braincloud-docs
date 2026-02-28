@@ -176,14 +176,14 @@ local entityType = "athletes"
 local entityId = "aaaa-bbbb-cccc-dddd"
 local version = 1
 local dataJson = {
-  "firstName": "Super",
-  "surName": "Star",
-  "position": "defense",
-  "goals": 3,
-  "assists": 5
+  firstName = "Super",
+  surName = "Star",
+  position = "defense",
+  goals = 3,
+  assists = 5
 }
 local acl = {
-  "other": 0
+  other = 0
 }
 local timeToLive = null
 

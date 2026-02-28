@@ -129,7 +129,7 @@ if (result.statusCode == 200) {
 
 ```lua
 local whereJson = {
-    "entityType": "address"
+    entityType = "address"
 }
 
 local callback = function(result)

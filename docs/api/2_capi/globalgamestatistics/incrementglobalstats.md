@@ -134,7 +134,7 @@ if (result.statusCode == 200) {
 
 ```lua
 local statistics = {
-    "PLAYER_COUNT": 1
+    PLAYER_COUNT = 1
 }
 
 local callback = function(result)

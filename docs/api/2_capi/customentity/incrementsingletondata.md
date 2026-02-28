@@ -133,8 +133,8 @@ if (result.statusCode == 200) {
 ```lua
 local entityType = "athletes"
 local fieldsJson = {
-  "goals": 3,
-  "assists": 5
+  goals = 3,
+  assists = 5
 }
 
 local callback = function(result)

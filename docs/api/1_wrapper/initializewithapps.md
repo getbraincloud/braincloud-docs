@@ -147,7 +147,7 @@ If  **updateTick** is greater than `0` a built-in run loop timer is started and 
 ```
 
 ```lua
-local secretMap = {"12345":"1234-1234-1234-1234","67890":"4321-4321-4321-4321"}
+local secretMap = {["12345"] = "1234-1234-1234-1234",["67890"] = "4321-4321-4321-4321"}
 local appId = "123456"
 <%= data.branding.codePrefix %>:initWithApps(secretMap, appId, "1.0.0", 50)
 ```

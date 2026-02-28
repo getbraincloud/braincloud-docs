@@ -140,12 +140,12 @@ if (result.statusCode == 200) {
 ```lua
 local entityId = "a-entity-id"
 local jsonData = {
-    "field1": -1.5,
-    "field2": {
-        "field2-1": 6,
-        "field2-new": 63.6
+    field1 = -1.5,
+    field2 = {
+        ["field2-1"] = 6,
+        ["field2-new"] = 63.6
     },
-    "field3-new": 3
+    ["field3-new"] = 3
 }
 
 local callback = function(result)

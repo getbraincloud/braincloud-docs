@@ -133,7 +133,7 @@ if (result.statusCode == 200) {
 
 ```lua
 local where = {
-    "entityType": "address"
+    entityType = "address"
 }
 
 local callback = function(result)

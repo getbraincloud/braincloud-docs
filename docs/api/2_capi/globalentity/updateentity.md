@@ -142,7 +142,7 @@ if (result.statusCode == 200) {
 local entityId = "a-entity-id"
 local version = 1
 local jsonEntityData = {
-    "street": "1309 Carling"
+    street = "1309 Carling"
 }
 
 local callback = function(result)

@@ -154,8 +154,8 @@ if (result.statusCode == 200) {
 local toProfileId = "profile1"
 local notificationTemplateId = 1
 local substitutionJson = {
-    "0": "value0",
-    "1": "value1"
+    ["0"] = "value0",
+    ["1"] = "value1"
 }
 
 local callback = function(result)

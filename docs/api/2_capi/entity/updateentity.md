@@ -162,10 +162,10 @@ if (result.statusCode == 200) {
 local entityId = "someEntityId"
 local entityType = "address"
 local jsonEntityData = {
-    "street": "1309 Carling Avenue, Ottawa, ON"
+    street = "1309 Carling Avenue, Ottawa, ON"
 }
 local jsonEntityAcl = {
-    "other": 0
+    other = 0
 }
 local version = -1
 

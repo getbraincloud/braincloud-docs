@@ -229,21 +229,21 @@ local lobbyType = "4v4"
 local rating = 76
 local maxSteps = 3
 local algo = {
-    "strategy": "compound",
-    "algos": [
-        { "criteria": "ping", "strategy": "absolute", "alignment": "absolute" },
+    strategy = "compound",
+    algos = [
+        { criteria = "ping", strategy = "absolute", alignment = "absolute" },
         {
-            "criteria": "rating",
-            "strategy": "ranged-absolute",
-            "alignment": "center"
+            criteria = "rating",
+            strategy = "ranged-absolute",
+            alignment = "center"
         }
     ],
-    "compound-ranges": { [30, [5, 10 }],
+    ["compound-ranges"] = { [30, [5, 10 }],
         { 50, [10, 15 }]
     ]
 }
 local filterJson = {
-    "cheater": false
+    cheater = false
 }
 local otherUserCxIds = { "123456:aaa-bbb-ccc-ddd:asdfjkl" }
 local settings = {}

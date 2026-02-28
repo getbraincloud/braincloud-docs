@@ -129,7 +129,7 @@ if (result.statusCode == 200) {
 
 ```lua
 local where = {
-    "groupType": "BLUE"
+    groupType = "BLUE"
 }
 local maxReturn = 20
 

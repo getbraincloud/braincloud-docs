@@ -119,7 +119,7 @@ if (result.statusCode == 200) {
 ```
 
 ```lua
-local activity = { "LOCATION": "POKER_TABLE", "STATUS": "PLAYING_GAME" }
+local activity = { LOCATION = "POKER_TABLE", STATUS = "PLAYING_GAME" }
 
 local callback = function(result)
 	if result.statusCode == 200 then

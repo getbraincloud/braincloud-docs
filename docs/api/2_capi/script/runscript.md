@@ -144,9 +144,9 @@ if (result.statusCode == 200) {
 ```lua
 local scriptName = "path/to/script1"
 local scriptData = {
-    "arg1": 42,
-    "arg2": true,
-    "arg3": "example"
+    arg1 = 42,
+    arg2 = true,
+    arg3 = "example"
 }
 
 local callback = function(result)

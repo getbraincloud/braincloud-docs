@@ -186,7 +186,7 @@ local leaderboardId = "default"
 local groupId = "actual_group_id"
 local score = 10
 local data = {
-    "nickname": "batman"
+    nickname = "batman"
 }
 local leaderboardType = SocialLeaderboardType.HIGH_VALUE
 local rotationResetTime = 158778236487

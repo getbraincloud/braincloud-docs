@@ -183,7 +183,7 @@ if (result.statusCode == 200) {
 local leaderboardId = "leaderboardId1"
 local score = 0
 local jsonData = {
-    "nickname": "withResults"
+    nickname = "withResults"
 }
 local roundStartedTime = Date.now().millisecondsSinceEpoch
 local sortOrder = SortOrder.HIGH_TO_LOW

@@ -134,7 +134,7 @@ if (result.statusCode == 200) {
 ```lua
 local entityType = "athletes"
 local deleteCriteria = {
-    "entityId": { "$in":
+    entityId = { ["$in"] = 
         { "aaaa-bbbb-cccc-dddd", "ffff-gggg-hhhh-iiii", "jjjj-kkkk-llll-mmmm" }
     }
 }

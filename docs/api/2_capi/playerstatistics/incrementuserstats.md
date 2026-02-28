@@ -134,7 +134,7 @@ if (result.statusCode == 200) {
 
 ```lua
 local statistics = {
-    "LIVES": 1
+    LIVES = 1
 }
 
 local callback = function(result)

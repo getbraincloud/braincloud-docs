@@ -155,12 +155,12 @@ if (result.statusCode == 200) {
 ```lua
 local profileId = "kjhkjhgfkjshgkjh"
 local alertContentJson = {
-    "body": "content of message",
-    "title": "message title"
+    body = "content of message",
+    title = "message title"
 }
 local customDataJson = {
-    "field1": "value1",
-    "field2": "value2"
+    field1 = "value1",
+    field2 = "value2"
 }
 local minutesFromNow = 1
 

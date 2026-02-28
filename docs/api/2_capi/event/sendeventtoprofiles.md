@@ -147,7 +147,7 @@ local toIds = [
 ]
 local eventType = "type1"
 local eventData = {
-    "someMapAttribute": "someValue"
+    someMapAttribute = "someValue"
 }
 
 local callback = function(result)

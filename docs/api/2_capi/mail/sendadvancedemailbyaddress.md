@@ -191,28 +191,28 @@ if (result.statusCode == 200) {
 ```lua
 local emailAddress = "test@email.com"
 local serviceParams = {
-    "fromAddress": "email@company.com",
-    "fromName": "Jane Doe",
-    "replyToAddress": "optional@company.com",
-    "replyToName": "Optional ReplyTo",
-    "cc": { "xxx@company.com" },
-    "bcc": { "yyy@company.com" },
-    "templateId": "d-www-xxx-yyy-zzz",
-    "dynamicData": {
-        "user": {
-            "firstName": "John",
-            "lastName": "Doe"
+    fromAddress = "email@company.com",
+    fromName = "Jane Doe",
+    replyToAddress = "optional@company.com",
+    replyToName = "Optional ReplyTo",
+    cc = { "xxx@company.com" },
+    bcc = { "yyy@company.com" },
+    templateId = "d-www-xxx-yyy-zzz",
+    dynamicData = {
+        user = {
+            firstName = "John",
+            lastName = "Doe"
         },
-        "resetLink": "www.dummuyLink.io"
+        resetLink = "www.dummuyLink.io"
     },
-    "categories": [
+    categories = [
         "category1",
         "category2"
     ],
-    "attachments": [
+    attachments = [
         {
-            "content": "VGhpcyBhdHRhY2htZW50IHRleHQ=",
-            "filename": "attachment.txt"
+            content = "VGhpcyBhdHRhY2htZW50IHRleHQ=",
+            filename = "attachment.txt"
         }
     ]
 }

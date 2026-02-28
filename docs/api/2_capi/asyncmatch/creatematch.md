@@ -172,16 +172,16 @@ if (result.statusCode == 200) {
 ```lua
 local jsonOpponentIds = [
     {
-        "platform": "BC",
-        "id": "profile ID-1"
+        platform = "BC",
+        id = "profile ID-1"
     },
     {
-        "platform": "FB",
-        "id": "Facebook ID-1"
+        platform = "FB",
+        id = "Facebook ID-1"
     },
     {
-        "platform": "FB",
-        "id": "Facebook ID-2"
+        platform = "FB",
+        id = "Facebook ID-2"
     }
 ]
 local pushNotificationMessage = "You have been entered into an async-match!"

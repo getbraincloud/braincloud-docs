@@ -192,19 +192,19 @@ if (result.statusCode == 200) {
 ```lua
 local jsonOpponentIds = [
     {
-        "platform": "BC",
-        "id": "profile ID-1"
+        platform = "BC",
+        id = "profile ID-1"
     },
     {
-        "platform": "FB",
-        "id": "Facebook ID-1"
+        platform = "FB",
+        id = "Facebook ID-1"
     }
 ]
 local jsonMatchState = {}
 local pushNotificationMessage = "You have been entered into an async-match!"
 local nextPlayer = "Facebook ID-1"
 local jsonSummary = {
-    "Address": "South Africa"
+    Address = "South Africa"
 }
 
 local callback = function(result)

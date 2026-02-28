@@ -148,7 +148,7 @@ if (result.statusCode == 200) {
 ```lua
 local storeId = "itunes"
 local userCurrency = {
-    "userCurrency": "USD"
+    userCurrency = "USD"
 }
 local category = "subscriptions"
 
