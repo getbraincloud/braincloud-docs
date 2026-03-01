@@ -91,16 +91,16 @@ This operation sends a normalized message to multiple user targets.
 
 ```cfscript
 var alertContent = {
-	"body": "content of message",
-	"title": "message title"
+    "body": "content of message",
+    "title": "message title"
 };
 var customData = {
-	"field1": "value1",
-	"field2": "value2"
+    "field1": "value1",
+    "field2": "value2"
 };
 var segmentIdList = [
-	1,
-	2
+    1,
+    2
 ];
 var pushNotificationProxy = bridge.getPushNotificationServiceProxy();
 
@@ -117,22 +117,22 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "pushNotification",
-	"operation": "SEND_NORMALIZED_TO_SEGMENTS",
-	"data": {
-		"alertContent": {
-			"body": "content of message",
-			"title": "message title"
-		},
-		"customData": {
-			"field1": "value1",
-			"field2": "value2"
-		},
-		"segmentIdList": [
-			1,
-			2
-		]
-	}
+    "service": "pushNotification",
+    "operation": "SEND_NORMALIZED_TO_SEGMENTS",
+    "data": {
+        "alertContent": {
+            "body": "content of message",
+            "title": "message title"
+        },
+        "customData": {
+            "field1": "value1",
+            "field2": "value2"
+        },
+        "segmentIdList": [
+            1,
+            2
+        ]
+    }
 }
 ```
 

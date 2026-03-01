@@ -99,11 +99,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "appStore",
-	"operation": "SYS_GET_TRANSACTION_DETAILS",
-	"data": {
+    "service": "appStore",
+    "operation": "SYS_GET_TRANSACTION_DETAILS",
+    "data": {
         "sequenceId": "the_sequence_id"
-	}
+    }
 }
 ```
 

@@ -69,12 +69,12 @@ BCCompletionBlock successBlock;      // define callback
 BCErrorCompletionBlock failureBlock; // define callback
 
 [[<%= data.branding.codePrefix %> authenticationService]
-		  authenticateSteam:steamId
-		      sessionTicket:sessionTicket
+          authenticateSteam:steamId
+              sessionTicket:sessionTicket
                 forceCreate:forceCreate
             completionBlock:successBlock
        errorCompletionBlock:failureBlock
-		     	   cbObject:nil];
+                    cbObject:nil];
 ```
 
 ```mdx-code-block
@@ -112,8 +112,8 @@ var forceCreate = true;
 
 <%= data.branding.codePrefix %>.authentication.authenticateSteam(steamId, sessionTicket, forceCreate, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -147,11 +147,11 @@ local sessionTicket = "sessionTicketFromSteam"
 local forceCreate = true
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getAuthenticationService():authenticateSteam(steamId, sessionTicket, forceCreate, callback)

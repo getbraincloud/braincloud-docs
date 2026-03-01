@@ -102,8 +102,8 @@ var versionId = -1;
 
 <%= data.branding.codePrefix %>.leaderboard.removeGroupScore(leaderboardId, groupId, versionId, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -137,11 +137,11 @@ local groupId = "actual_group_id"
 local versionId = -1
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getLeaderboardService():removeGroupScore(leaderboardId, groupId, versionId, callback)
@@ -171,13 +171,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "leaderboard",
-	"operation": "REMOVE_GROUP_SCORE",
-	"data": {
-		"leaderboardId": "default",
-		"groupId": "actual_group_id",
-		"versionId": -1
-	}
+    "service": "leaderboard",
+    "operation": "REMOVE_GROUP_SCORE",
+    "data": {
+        "leaderboardId": "default",
+        "groupId": "actual_group_id",
+        "versionId": -1
+    }
 }
 ```
 

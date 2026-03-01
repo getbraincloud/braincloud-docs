@@ -97,11 +97,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalFileV3",
-	"operation": "CHECK_FULLPATH_FILENAME_EXISTS",
-	"data": {
+    "service": "globalFileV3",
+    "operation": "CHECK_FULLPATH_FILENAME_EXISTS",
+    "data": {
         "fullPathFilename": "folder1/filename"
-	}
+    }
 }
 ```
 

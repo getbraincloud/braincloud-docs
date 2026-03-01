@@ -98,11 +98,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "product",
-	"operation": "RESET_PARENT_VC",
-	"data": {
-		"levelName": "master"
-	}
+    "service": "product",
+    "operation": "RESET_PARENT_VC",
+    "data": {
+        "levelName": "master"
+    }
 }
 ```
 

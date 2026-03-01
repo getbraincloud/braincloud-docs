@@ -104,11 +104,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "chat",
-	"operation": "SYS_GET_CHANNEL_INFO",
-	"data": {
-		"channelId": "55555:gl:bcDev"
-	}
+    "service": "chat",
+    "operation": "SYS_GET_CHANNEL_INFO",
+    "data": {
+        "channelId": "55555:gl:bcDev"
+    }
 }
 ```
 

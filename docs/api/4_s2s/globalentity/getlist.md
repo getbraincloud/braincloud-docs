@@ -117,17 +117,17 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalEntity",
-	"operation": "GET_LIST",
-	"data": {
-		"where": {
-			"entityType": "address"
-		},
-		"orderBy": {
-			"data.address": 1
-		},
-		"maxReturn": 50
-	}
+    "service": "globalEntity",
+    "operation": "GET_LIST",
+    "data": {
+        "where": {
+            "entityType": "address"
+        },
+        "orderBy": {
+            "data.address": 1
+        },
+        "maxReturn": 50
+    }
 }
 ```
 

@@ -102,8 +102,8 @@ var summaryData = { "faction": "warlords" };
 
 <%= data.branding.codePrefix %>.group.updateGroupSummaryData(groupId, version, summaryData, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -137,11 +137,11 @@ local version = 3
 local summaryData = { faction = "warlords" }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getGroupService():updateGroupSummaryData(groupId, version, summaryData, callback)
@@ -171,13 +171,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "group",
-	"operation": "UPDATE_GROUP_SUMMARY_DATA",
-	"data": {
-		"groupId": "a-group-id",
-		"version": 3,
-		"summaryData": {}
-	}
+    "service": "group",
+    "operation": "UPDATE_GROUP_SUMMARY_DATA",
+    "data": {
+        "groupId": "a-group-id",
+        "version": 3,
+        "summaryData": {}
+    }
 }
 ```
 

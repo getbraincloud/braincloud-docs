@@ -97,8 +97,8 @@ var profileIds = [ "profile-id", "another-profile-id" ];
 
 <%= data.branding.codePrefix %>.leaderboard.getPlayersSocialLeaderboard(leaderboardId, profileIds, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -130,11 +130,11 @@ local leaderboardId = "default"
 local profileIds = { "profile-id", "another-profile-id" }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getLeaderboardService():getPlayersSocialLeaderboard(leaderboardId, profileIds, callback)
@@ -163,15 +163,15 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "leaderboard",
-	"operation": "GET_PLAYERS_SOCIAL_LEADERBOARD",
-	"data": {
-		"leaderboardId": "default",
-		"profileIds": [
-			"profile-id",
-			"another-profile-id"
-		]
-	}
+    "service": "leaderboard",
+    "operation": "GET_PLAYERS_SOCIAL_LEADERBOARD",
+    "data": {
+        "leaderboardId": "default",
+        "profileIds": [
+            "profile-id",
+            "another-profile-id"
+        ]
+    }
 }
 ```
 

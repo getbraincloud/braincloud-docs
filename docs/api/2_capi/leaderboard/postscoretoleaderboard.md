@@ -109,8 +109,8 @@ var jsonOtherData = {
 
 <%= data.branding.codePrefix %>.leaderboard.postScoreToLeaderboard(leaderboardId, score, jsonOtherData, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -148,11 +148,11 @@ local data = {
 }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getLeaderboardService():postScoreToLeaderboard(leaderboardId, score, data, callback)
@@ -184,15 +184,15 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "leaderboard",
-	"operation": "POST_SCORE",
-	"data": {
-		"leaderboardId": "default",
-		"score": 10,
-		"data": {
-			"nickname": "batman"
-		}
-	}
+    "service": "leaderboard",
+    "operation": "POST_SCORE",
+    "data": {
+        "leaderboardId": "default",
+        "score": 10,
+        "data": {
+            "nickname": "batman"
+        }
+    }
 }
 ```
 

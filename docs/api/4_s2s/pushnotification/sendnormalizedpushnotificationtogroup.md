@@ -90,12 +90,12 @@ See the Portal documentation for more info.
 var groupId = "group1";
 var senderId = "playerId";
 var alertContent = {
-	"body": "content of message",
-	"title": "message title"
+    "body": "content of message",
+    "title": "message title"
 };
 var customData = {
-	"field1": "value1",
-	"field2": "value2"
+    "field1": "value1",
+    "field2": "value2"
 };
 var pushNotificationProxy = bridge.getPushNotificationServiceProxy();
 
@@ -112,20 +112,20 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "pushNotification",
-	"operation": "SEND_NORMALIZED_TO_GROUP",
-	"data": {
-		"groupId": "group1",
-		"senderId": "playerId",
-		"alertContent": {
-			"body": "content of message",
-			"title": "message title"
-		},
-		"customData": {
-			"field1": "value1",
-			"field2": "value2"
-		}
-	}
+    "service": "pushNotification",
+    "operation": "SEND_NORMALIZED_TO_GROUP",
+    "data": {
+        "groupId": "group1",
+        "senderId": "playerId",
+        "alertContent": {
+            "body": "content of message",
+            "title": "message title"
+        },
+        "customData": {
+            "field1": "value1",
+            "field2": "value2"
+        }
+    }
 }
 ```
 

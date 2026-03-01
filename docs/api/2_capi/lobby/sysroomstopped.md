@@ -97,11 +97,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "lobby",
-	"operation": "SYS_ROOM_STOPPED",
-	"data": {
-		"lobbyId": "55555:4v4:19"
-	}
+    "service": "lobby",
+    "operation": "SYS_ROOM_STOPPED",
+    "data": {
+        "lobbyId": "55555:4v4:19"
+    }
 }
 ```
 

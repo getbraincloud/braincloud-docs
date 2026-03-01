@@ -106,8 +106,8 @@ var timeToLive = 120000;
 
 <%= data.branding.codePrefix %>.globalEntity.updateEntityTimeToLive(entityId, version, timeToLive, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -141,11 +141,11 @@ local version = 2
 local timeToLive = 120000
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getGlobalEntityService():updateEntityTimeToLive(entityId, version, timeToLive, callback)
@@ -175,13 +175,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalEntity",
-	"operation": "UPDATE_TIME_TO_LIVE",
-	"data": {
-		"entityId": "the-entity-id",
-		"version": 2,
-		"timeToLive": 120000
-	}
+    "service": "globalEntity",
+    "operation": "UPDATE_TIME_TO_LIVE",
+    "data": {
+        "entityId": "the-entity-id",
+        "version": 2,
+        "timeToLive": 120000
+    }
 }
 ```
 

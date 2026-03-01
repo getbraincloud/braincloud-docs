@@ -109,18 +109,18 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "tournament",
-	"operation": "POST_TOURNAMENT_SCORE_ON_BEHALF_OF",
-	"data": {
-		"profileId": "the-profile-id",
-		"leaderboardId": "leaderboardId",
-		"score": 0,
-		"data": {
-			"nickname": "batman"
-		},
-		"roundStartedEpoch": "[[#ts]]",
-		"forceCreate": false
-	}
+    "service": "tournament",
+    "operation": "POST_TOURNAMENT_SCORE_ON_BEHALF_OF",
+    "data": {
+        "profileId": "the-profile-id",
+        "leaderboardId": "leaderboardId",
+        "score": 0,
+        "data": {
+            "nickname": "batman"
+        },
+        "roundStartedEpoch": "[[#ts]]",
+        "forceCreate": false
+    }
 }
 ```
 

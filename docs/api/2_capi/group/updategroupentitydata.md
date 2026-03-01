@@ -112,8 +112,8 @@ var jsonData = {};
 
 <%= data.branding.codePrefix %>.group.updateGroupEntityData(groupId, entityId, version, jsonData, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -149,11 +149,11 @@ local version = 3
 local jsonData = {}
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getGroupService():updateGroupEntityData(groupId, entityId, version, jsonData, callback)
@@ -184,14 +184,14 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "group",
-	"operation": "UPDATE_GROUP_ENTITY_DATA",
-	"data": {
-		"groupId": "a-group-id",
-		"entityId": "a-group-entity-id",
-		"version": 3,
-		"data": {}
-	}
+    "service": "group",
+    "operation": "UPDATE_GROUP_ENTITY_DATA",
+    "data": {
+        "groupId": "a-group-id",
+        "entityId": "a-group-entity-id",
+        "version": 3,
+        "data": {}
+    }
 }
 ```
 

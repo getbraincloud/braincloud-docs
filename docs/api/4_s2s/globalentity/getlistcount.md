@@ -111,13 +111,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalEntity",
-	"operation": "GET_LIST_COUNT",
-	"data": {
-		"where": {
-			"entityType": "address"
-		}
-	}
+    "service": "globalEntity",
+    "operation": "GET_LIST_COUNT",
+    "data": {
+        "where": {
+            "entityType": "address"
+        }
+    }
 }
 ```
 

@@ -101,8 +101,8 @@ Deletes the specified leaderboards from <%= data.branding.productName %> server.
 
 ```cfscript
 var leaderboardIds = [
-	"1st-leaderboard-id",
-	"2nd-leaderboard-id"
+    "1st-leaderboard-id",
+    "2nd-leaderboard-id"
 ];
 var leaderboardProxy = bridge.getLeaderboardServiceProxy();
 
@@ -119,14 +119,14 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "leaderboard",
-	"operation": "DELETE_LEADERBOARDS",
-	"data": {
-		"leaderboardIds": [
-			"1st-leaderboard-id",
-			"2nd-leaderboard-id"
-		]
-	}
+    "service": "leaderboard",
+    "operation": "DELETE_LEADERBOARDS",
+    "data": {
+        "leaderboardIds": [
+            "1st-leaderboard-id",
+            "2nd-leaderboard-id"
+        ]
+    }
 }
 ```
 

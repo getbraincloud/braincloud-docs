@@ -121,8 +121,8 @@ var version = -1;
 
 <%= data.branding.codePrefix %>.entity.updateSharedEntity(entityId, targetProfileId, entityType, jsonEntityData, version, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -164,11 +164,11 @@ local jsonEntityData = {
 local version = -1
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getEntityService():updateSharedEntity(entityId, targetProfileId, entityType, jsonEntityData, version, callback)
@@ -202,17 +202,17 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "entity",
-	"operation": "UPDATE_SHARED",
-	"data": {
-		"entityId": "someEntityId",
-		"targetProfileId": "someProfileId",
-		"entityType": "address",
-		"data": {
-			"street": "1309 Carling Avenue, Ottawa, ON"
-		},
-		"version": -1
-	}
+    "service": "entity",
+    "operation": "UPDATE_SHARED",
+    "data": {
+        "entityId": "someEntityId",
+        "targetProfileId": "someProfileId",
+        "entityType": "address",
+        "data": {
+            "street": "1309 Carling Avenue, Ottawa, ON"
+        },
+        "version": -1
+    }
 }
 ```
 

@@ -111,8 +111,8 @@ var peer = "serviceCode";
 
 <%= data.branding.codePrefix %>.script.runPeerScript(scriptName, scriptData, peer, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -150,11 +150,11 @@ local scriptData = {
 local peer = "serviceCode"
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getScriptService():runPeerScript(scriptName, scriptData, peer, callback)

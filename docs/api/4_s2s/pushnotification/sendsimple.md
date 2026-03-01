@@ -91,8 +91,8 @@ This operation sends a simple message to multiple user targets.
 ```cfscript
 var message = "Hello World";
 var segmentIdList = [
-	1,
-	2
+    1,
+    2
 ];
 var pushNotificationProxy = bridge.getPushNotificationServiceProxy();
 
@@ -109,15 +109,15 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "pushNotification",
-	"operation": "SEND_SIMPLE",
-	"data": {
-		"message": "Hello World",
-		"segmentIdList": [
-			1,
-			2
-		]
-	}
+    "service": "pushNotification",
+    "operation": "SEND_SIMPLE",
+    "data": {
+        "message": "Hello World",
+        "segmentIdList": [
+            1,
+            2
+        ]
+    }
 }
 ```
 

@@ -100,8 +100,8 @@ var bidirectional = true;
 
 <%= data.branding.codePrefix %>.presence.registerListenersForProfiles(profileIds, bidirectional, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -133,11 +133,11 @@ local profileIds = { "aaa-bbb-ccc-ddd" }
 local bidirectional = true
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getPresenceService():registerListenersForProfiles(profileIds, bidirectional, callback)
@@ -165,15 +165,15 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "presence",
-	"operation": "REGISTER_LISTENERS_FOR_PROFILES",
-	"data": {
-		"profileIds": [
-			"aaa-bbb-ccc-ddd",
-			"bbb-ccc-ddd-eee"
-		],
-		"bidirectional": true
-	}
+    "service": "presence",
+    "operation": "REGISTER_LISTENERS_FOR_PROFILES",
+    "data": {
+        "profileIds": [
+            "aaa-bbb-ccc-ddd",
+            "bbb-ccc-ddd-eee"
+        ],
+        "bidirectional": true
+    }
 }
 ```
 

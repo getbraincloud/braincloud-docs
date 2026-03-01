@@ -100,12 +100,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "chat",
-	"operation": "GET_CHANNEL_ID",
-	"data": {
-		"channelType": "gl",
-		"channelSubId": "myChatRoom"
-	}
+    "service": "chat",
+    "operation": "GET_CHANNEL_ID",
+    "data": {
+        "channelType": "gl",
+        "channelSubId": "myChatRoom"
+    }
 }
 ```
 

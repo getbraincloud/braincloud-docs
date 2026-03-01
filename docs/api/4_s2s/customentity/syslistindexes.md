@@ -98,11 +98,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "customEntity",
-	"operation": "SYS_LIST_INDEXES",
-	"data": {
-		"entityType": "athletes"
-	}
+    "service": "customEntity",
+    "operation": "SYS_LIST_INDEXES",
+    "data": {
+        "entityType": "athletes"
+    }
 }
 ```
 

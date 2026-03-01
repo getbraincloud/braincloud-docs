@@ -137,11 +137,11 @@ local pageOffset = 1
 local includeDef = true
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getUserItemsService():getUserItemsPageOffset(context, pageOffset, includeDef, callback)
@@ -171,13 +171,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "userItems",
-	"operation": "GET_USER_ITEMS_PAGE_OFFSET",
-	"data": {
-		"context": "eyJzZWFyY2hDcml0ZXJpYSI6eyJlbnRpdHlUeXBlIjp7IiRyZWdleCI6Ii4qaWxkLioiLCIkb3B0",
-		"pageOffset": 1,
-		"includeDef": true
-	}
+    "service": "userItems",
+    "operation": "GET_USER_ITEMS_PAGE_OFFSET",
+    "data": {
+        "context": "eyJzZWFyY2hDcml0ZXJpYSI6eyJlbnRpdHlUeXBlIjp7IiRyZWdleCI6Ii4qaWxkLioiLCIkb3B0",
+        "pageOffset": 1,
+        "includeDef": true
+    }
 }
 ```
 

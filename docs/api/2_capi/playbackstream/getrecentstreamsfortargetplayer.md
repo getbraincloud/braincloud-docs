@@ -97,8 +97,8 @@ var maxNumStreams = 5;
 
 <%= data.branding.codePrefix %>.playbackStream.getRecentStreamsForTargetPlayer(targetPlayerId, maxNumStreams, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -130,11 +130,11 @@ local targetPlayerId = "player"
 local maxNumStreams = 5
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getPlaybackStreamService():getRecentStreamsForTargetPlayer(targetPlayerId, maxNumStreams, callback)
@@ -163,12 +163,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "playbackStream",
-	"operation": "GET_RECENT_STREAMS_FOR_TARGET_PLAYER",
-	"data": {
-		"targetPlayerId": "player",
-		"maxNumStreams": 5
-	}
+    "service": "playbackStream",
+    "operation": "GET_RECENT_STREAMS_FOR_TARGET_PLAYER",
+    "data": {
+        "targetPlayerId": "player",
+        "maxNumStreams": 5
+    }
 }
 ```
 

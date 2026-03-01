@@ -102,8 +102,8 @@ var where = {
 
 <%= data.branding.codePrefix %>.globalEntity.getListCount(where, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -137,11 +137,11 @@ local where = {
 }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getGlobalEntityService():getListCount(where, callback)
@@ -171,13 +171,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalEntity",
-	"operation": "GET_LIST_COUNT",
-	"data": {
-		"where": {
-			"entityType": "address"
-		}
-	}
+    "service": "globalEntity",
+    "operation": "GET_LIST_COUNT",
+    "data": {
+        "where": {
+            "entityType": "address"
+        }
+    }
 }
 ```
 

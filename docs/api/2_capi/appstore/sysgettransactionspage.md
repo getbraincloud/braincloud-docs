@@ -112,9 +112,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "appStore",
-	"operation": "SYS_GET_TRANSACTIONS_PAGE",
-	"data": {
+    "service": "appStore",
+    "operation": "SYS_GET_TRANSACTIONS_PAGE",
+    "data": {
     "context": {
       "pagination": {
         "rowsPerPage": 50,
@@ -129,7 +129,7 @@ if (postResult.status == 200) {
         "createdAt": -1
       }
     }
-	}
+    }
 }
 ```
 

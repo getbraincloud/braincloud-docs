@@ -102,13 +102,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalEntity",
-	"operation": "UPDATE_INDEXED_ID",
-	"data": {
-		"entityId": "the-entity-id",
-		"version": 2,
-		"entityIndexedId": "entityId1"
-	}
+    "service": "globalEntity",
+    "operation": "UPDATE_INDEXED_ID",
+    "data": {
+        "entityId": "the-entity-id",
+        "version": 2,
+        "entityIndexedId": "entityId1"
+    }
 }
 ```
 

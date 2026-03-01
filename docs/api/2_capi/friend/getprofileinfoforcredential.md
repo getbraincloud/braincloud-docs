@@ -100,8 +100,8 @@ var authenticationType = "Facebook";
 
 <%= data.branding.codePrefix %>.friend.getProfileInfoForCredential(externalId, authenticationType, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -146,12 +146,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "friend",
-	"operation": "GET_PROFILE_INFO_FOR_CREDENTIAL",
-	"data": {
-		"externalId": "profileId",
-		"authenticationType": "Facebook"
-	}
+    "service": "friend",
+    "operation": "GET_PROFILE_INFO_FOR_CREDENTIAL",
+    "data": {
+        "externalId": "profileId",
+        "authenticationType": "Facebook"
+    }
 }
 ```
 

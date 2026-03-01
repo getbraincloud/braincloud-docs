@@ -90,8 +90,8 @@ var playbackStreamId = "stream";
 
 <%= data.branding.codePrefix %>.playbackStream.readStream(playbackStreamId, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -121,11 +121,11 @@ if (result.statusCode == 200) {
 local playbackStreamId = "stream"
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getPlaybackStreamService():readStream(playbackStreamId, callback)
@@ -153,11 +153,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "playbackStream",
-	"operation": "READ_STREAM",
-	"data": {
-		"playbackStreamId": "a-stream-id"
-	}
+    "service": "playbackStream",
+    "operation": "READ_STREAM",
+    "data": {
+        "playbackStreamId": "a-stream-id"
+    }
 }
 ```
 

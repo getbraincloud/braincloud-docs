@@ -107,9 +107,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalApp",
-	"operation": "SYS_UPDATE_PROPERTY_JSON",
-	"data": {
+    "service": "globalApp",
+    "operation": "SYS_UPDATE_PROPERTY_JSON",
+    "data": {
         "name": "initialHealth",
         "value": {
             "health": 6,

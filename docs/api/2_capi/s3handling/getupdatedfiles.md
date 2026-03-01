@@ -106,8 +106,8 @@ var fileDetails = [
 
 <%= data.branding.codePrefix %>.s3Handling.getUpdatedFiles(category, fileDetails, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -161,11 +161,11 @@ local fileDetails = [
 ]
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getS3HandlingService():getUpdatedFiles(category, fileDetails, callback)
@@ -205,23 +205,23 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "s3Handling",
-	"operation": "GET_UPDATED_FILES",
-	"data": {
-		"category": "Tuning",
-		"fileDetails": [
-			{
-				"fileId": "hjvfsghguhuhrtghgh",
-				"shortName": "short",
-				"fileName": "fname",
-				"relativeUrl": "http://",
-				"absoluteUrl": "http://",
-				"category": "Tuning",
-				"date": 100000000000,
-				"md5Hash": "njf8ehg8tr7htgheguhh"
-			}
-		]
-	}
+    "service": "s3Handling",
+    "operation": "GET_UPDATED_FILES",
+    "data": {
+        "category": "Tuning",
+        "fileDetails": [
+            {
+                "fileId": "hjvfsghguhuhrtghgh",
+                "shortName": "short",
+                "fileName": "fname",
+                "relativeUrl": "http://",
+                "absoluteUrl": "http://",
+                "category": "Tuning",
+                "date": 100000000000,
+                "md5Hash": "njf8ehg8tr7htgheguhh"
+            }
+        ]
+    }
 }
 ```
 

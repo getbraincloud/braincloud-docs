@@ -103,8 +103,8 @@ var extraJson = {};
 
 <%= data.branding.codePrefix %>.lobby.updateReady(lobbyId, isReady, extraJson, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -138,11 +138,11 @@ local isReady = true
 local extraJson = {}
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getLobbyService():updateReady(lobbyId, isReady, extraJson, callback)
@@ -172,13 +172,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "lobby",
-	"operation": "UPDATE_READY",
-	"data": {
-		"lobbyId": "55555:4v4:19",
-		"isReady": true,
-		"extraJson": {}
-	}
+    "service": "lobby",
+    "operation": "UPDATE_READY",
+    "data": {
+        "lobbyId": "55555:4v4:19",
+        "isReady": true,
+        "extraJson": {}
+    }
 }
 ```
 

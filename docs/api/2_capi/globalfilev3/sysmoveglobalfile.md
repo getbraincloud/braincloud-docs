@@ -110,16 +110,16 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalFileV3",
-	"operation": "SYS_MOVE_GLOBAL_FILE",
-	"data": {
+    "service": "globalFileV3",
+    "operation": "SYS_MOVE_GLOBAL_FILE",
+    "data": {
         "fileId": "742f46ad-cab2-4f62-9ac4-c7c5b6f0e13b",
         "version": 1,
         "newTreeId": "2188e9cf-27fa-4a33-8d06-3306f9a74bf8",
         "treeVersion": 2,
         "newFilename": "testFile1.txt",
         "overwriteIfPresent": true,
-	}
+    }
 }
 ```
 

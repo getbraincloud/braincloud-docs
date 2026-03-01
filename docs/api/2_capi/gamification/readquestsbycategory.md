@@ -95,8 +95,8 @@ var includeMetaData = false;
 
 <%= data.branding.codePrefix %>.gamification.readQuestsByCategory(category, includeMetaData, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -128,11 +128,11 @@ local category = "main"
 local includeMetaData = false
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getGamificationService():readQuestsByCategory(category, includeMetaData, callback)
@@ -161,12 +161,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "gamification",
-	"operation": "READ_QUESTS_BY_CATEGORY",
-	"data": {
-		"category": "main",
-		"includeMetaData": false
-	}
+    "service": "gamification",
+    "operation": "READ_QUESTS_BY_CATEGORY",
+    "data": {
+        "category": "main",
+        "includeMetaData": false
+    }
 }
 ```
 

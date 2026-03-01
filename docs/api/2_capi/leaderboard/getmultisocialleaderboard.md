@@ -103,8 +103,8 @@ var replaceName = false;
 
 <%= data.branding.codePrefix %>.leaderboard.getMultiSocialLeaderboard(leaderboardIds, leaderboardResultCount, replaceName, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -138,11 +138,11 @@ local leaderboardResultCount = 1
 local replaceName = false
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getLeaderboardService():getMultiSocialLeaderboard(leaderboardIds, leaderboardResultCount, replaceName, callback)
@@ -172,15 +172,15 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "leaderboard",
-	"operation": "GET_MULTI_SOCIAL_LEADERBOARD",
-	"data": {
-		"leaderboardIds": [
-			"default"
-		],
-		"leaderboardResultCount": 1,
-		"replaceName": false
-	}
+    "service": "leaderboard",
+    "operation": "GET_MULTI_SOCIAL_LEADERBOARD",
+    "data": {
+        "leaderboardIds": [
+            "default"
+        ],
+        "leaderboardResultCount": 1,
+        "replaceName": false
+    }
 }
 ```
 

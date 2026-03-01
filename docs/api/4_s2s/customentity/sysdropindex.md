@@ -84,14 +84,14 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "customEntity",
-	"operation": "SYS_DROP_INDEX",
-	"data": {
-		"entityType": "athletes",
-		"indexKeysJson": {
-			"data.penalties": 1
-		}
-	}
+    "service": "customEntity",
+    "operation": "SYS_DROP_INDEX",
+    "data": {
+        "entityType": "athletes",
+        "indexKeysJson": {
+            "data.penalties": 1
+        }
+    }
 }
 ```
 

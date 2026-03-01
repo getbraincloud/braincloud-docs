@@ -100,11 +100,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "leaderboard",
-	"operation": "GET_GLOBAL_LEADERBOARD_ENTRY_COUNT",
-	"data": {
-		"leaderboardId": "default"
-	}
+    "service": "leaderboard",
+    "operation": "GET_GLOBAL_LEADERBOARD_ENTRY_COUNT",
+    "data": {
+        "leaderboardId": "default"
+    }
 }
 ```
 

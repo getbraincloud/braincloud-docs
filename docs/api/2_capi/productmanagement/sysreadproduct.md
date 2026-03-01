@@ -97,9 +97,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "productManagement",
-	"operation": "SYS_READ_PRODUCT",
-	"data": {
+    "service": "productManagement",
+    "operation": "SYS_READ_PRODUCT",
+    "data": {
     "itemId": "gold_bars_10"
   }
 }

@@ -164,11 +164,11 @@ local context = {
 local includeDef = true
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getUserItemsService():getUserItemsPage(context, includeDef, callback)
@@ -209,24 +209,24 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "userItems",
-	"operation": "GET_USER_ITEMS_PAGE",
-	"data": {
-		"context": {
-			"pagination": {
-				"rowsPerPage": 50,
-				"pageNumber": 1
-			},
-			"searchCriteria": {
-				"defId": "sword001"
-			},
-			"sortCriteria": {
-				"createdAt": 1,
-				"updatedAt": -1
-			}
-		},
-		"includeDef": true
-	}
+    "service": "userItems",
+    "operation": "GET_USER_ITEMS_PAGE",
+    "data": {
+        "context": {
+            "pagination": {
+                "rowsPerPage": 50,
+                "pageNumber": 1
+            },
+            "searchCriteria": {
+                "defId": "sword001"
+            },
+            "sortCriteria": {
+                "createdAt": 1,
+                "updatedAt": -1
+            }
+        },
+        "includeDef": true
+    }
 }
 ```
 

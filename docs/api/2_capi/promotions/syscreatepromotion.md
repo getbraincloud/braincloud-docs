@@ -122,9 +122,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "promotions",
-	"operation": "SYS_CREATE_PROMOTION",
-	"data": {
+    "service": "promotions",
+    "operation": "SYS_CREATE_PROMOTION",
+    "data": {
     "promotionJson": {
       "name": "Independence Day Sale",
       "type": "SCHEDULED",

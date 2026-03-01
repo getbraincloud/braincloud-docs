@@ -98,8 +98,8 @@ var userCurrency = {
 
 <%= data.branding.codePrefix %>.appStore.getSalesInventory(storeId, userCurrency, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -135,11 +135,11 @@ local userCurrency = {
 }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getAppStoreService():getSalesInventory(storeId, userCurrency, callback)
@@ -170,15 +170,15 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "appStore",
-	"operation": "GET_INVENTORY",
-	"data": {
-		"storeId": "itunes",
-		"category": "subscriptions",
-		"priceInfoCriteria": {
-			"userCurrency": "USD"
-		}
-	}
+    "service": "appStore",
+    "operation": "GET_INVENTORY",
+    "data": {
+        "storeId": "itunes",
+        "category": "subscriptions",
+        "priceInfoCriteria": {
+            "userCurrency": "USD"
+        }
+    }
 }
 ```
 

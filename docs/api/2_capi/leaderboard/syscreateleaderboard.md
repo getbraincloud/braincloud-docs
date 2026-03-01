@@ -104,7 +104,7 @@ var data = { "street": "1309 Carling" };
 var leaderboardProxy = bridge.getLeaderboardServiceProxy();
 var retVal = leaderboardProxy.sysCreateLeaderboard(
     leaderboardId,
-	entryType,
+    entryType,
     leaderboardType,
     rotationType,
     numDaysToRotate,
@@ -121,20 +121,20 @@ var retVal = leaderboardProxy.sysCreateLeaderboard(
 
 ```r
 {
-	"service": "leaderboard",
-	"operation": "SYS_CREATE_LEADERBOARD",
-	"data": {
-		"leaderboardId": "default",
-		"entryType": "PLAYER",
-		"leaderboardType": "HIGH_VALUE",
-		"rotationType": "DAYS",
-		"numDaysToRotate": 5,
-		"rotationResetTimestampUtcMillis": "[[#ts+60000]]",
-		"retainedCount": 2,
-		"data": {
-			"street": "1309 Carling"
-		}
-	}
+    "service": "leaderboard",
+    "operation": "SYS_CREATE_LEADERBOARD",
+    "data": {
+        "leaderboardId": "default",
+        "entryType": "PLAYER",
+        "leaderboardType": "HIGH_VALUE",
+        "rotationType": "DAYS",
+        "numDaysToRotate": 5,
+        "rotationResetTimestampUtcMillis": "[[#ts+60000]]",
+        "retainedCount": 2,
+        "data": {
+            "street": "1309 Carling"
+        }
+    }
 }
 ```
 

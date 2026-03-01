@@ -104,13 +104,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalFileV3",
-	"operation": "SYS_RENAME_FOLDER",
-	"data": {
+    "service": "globalFileV3",
+    "operation": "SYS_RENAME_FOLDER",
+    "data": {
         "treeId": "56b1c593-92d2-4e49-a997-0e493111d7b2",
         "treeVersion": 5,
         "updatedName": "tempdir2"
-	}
+    }
 }
 ```
 

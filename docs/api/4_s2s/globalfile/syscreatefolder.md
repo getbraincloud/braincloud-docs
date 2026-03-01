@@ -109,15 +109,15 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalFileV3",
-	"operation": "SYS_CREATE_FOLDER",
-	"data": {
+    "service": "globalFileV3",
+    "operation": "SYS_CREATE_FOLDER",
+    "data": {
         "folderPath": "",
         "treeVersion": 2,
         "name": "audio",
         "desc": "For audio files",
         "createInterimDirectories": true
-	}
+    }
 }
 ```
 

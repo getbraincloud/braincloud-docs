@@ -110,8 +110,8 @@ var extraJson = {"key":"value"};
 
 <%= data.branding.codePrefix %>.identity.detachAdvancedIdentity(authenticationType, externalId, continueAnon, extraJson, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -148,11 +148,11 @@ local extraJson = {key = "value"}
 ​
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getIdentityService():detachAdvancedIdentity(authenticationType, externalId, continueAnon, extraJson, callback)

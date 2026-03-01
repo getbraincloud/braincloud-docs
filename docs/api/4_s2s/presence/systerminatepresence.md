@@ -98,11 +98,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "presence",
-	"operation": "SYS_TERMINATE_PRESENCE",
-	"data": {
-		"profileId": "aaa-bbb-ccc-ddd"
-	}
+    "service": "presence",
+    "operation": "SYS_TERMINATE_PRESENCE",
+    "data": {
+        "profileId": "aaa-bbb-ccc-ddd"
+    }
 }
 ```
 

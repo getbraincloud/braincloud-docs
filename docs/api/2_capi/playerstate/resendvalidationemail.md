@@ -96,8 +96,8 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "playerState",
-	"operation": "RESEND_VALIDATION_EMAIL"
+    "service": "playerState",
+    "operation": "RESEND_VALIDATION_EMAIL"
 }
 ```
 

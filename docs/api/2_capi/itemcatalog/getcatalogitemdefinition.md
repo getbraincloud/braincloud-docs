@@ -119,11 +119,11 @@ if (result.statusCode == 200) {
 local defId = "sword001"
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getItemCatalogService():getCatalogItemDefinition(defId, callback)
@@ -151,11 +151,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "itemCatalog",
-	"operation": "GET_CATALOG_ITEM_DEFINITION",
-	"data": {
-		"defId": "sword001"
-	}
+    "service": "itemCatalog",
+    "operation": "GET_CATALOG_ITEM_DEFINITION",
+    "data": {
+        "defId": "sword001"
+    }
 }
 ```
 

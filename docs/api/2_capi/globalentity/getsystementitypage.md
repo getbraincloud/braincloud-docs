@@ -110,23 +110,23 @@ var retVal = globalEntityProxy.getSystemEntityPage(context);
 
 ```r
 {
-	"service": "globalEntity",
-	"operation": "GET_SYSTEM_ENTITY_PAGE",
-	"data": {
-		"context": {
-			"pagination": {
-				"rowsPerPage": 50,
-				"pageNumber": 1
-			},
-			"searchCriteria": {
-				"entityType": "address"
-			},
-			"sortCriteria": {
-				"createdAt": 1,
-				"updatedAt": -1
-			}
-		}
-	}
+    "service": "globalEntity",
+    "operation": "GET_SYSTEM_ENTITY_PAGE",
+    "data": {
+        "context": {
+            "pagination": {
+                "rowsPerPage": 50,
+                "pageNumber": 1
+            },
+            "searchCriteria": {
+                "entityType": "address"
+            },
+            "sortCriteria": {
+                "createdAt": 1,
+                "updatedAt": -1
+            }
+        }
+    }
 }
 ```
 

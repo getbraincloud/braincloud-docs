@@ -99,12 +99,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "lobby",
-	"operation": "SYS_GET_LOBBY_MEMBER",
-	"data": {
-		"lobbyId": "55555:4v4:19",
-		"cxId": "55555:aaa-bbb-ccc-ddd:asdfjkl"
-	}
+    "service": "lobby",
+    "operation": "SYS_GET_LOBBY_MEMBER",
+    "data": {
+        "lobbyId": "55555:4v4:19",
+        "cxId": "55555:aaa-bbb-ccc-ddd:asdfjkl"
+    }
 }
 ```
 

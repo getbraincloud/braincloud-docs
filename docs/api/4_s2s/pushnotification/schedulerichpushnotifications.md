@@ -101,12 +101,12 @@ Substitutions parameter would be `{ "1" : "User Appreciation", "2", "User Apprec
 ```cfscript
 var notificationTemplateId = 1;
 var substitutions = {
-	"0": "value0",
-	"1": "value1"
+    "0": "value0",
+    "1": "value1"
 };
 var segmentIdList = [
-	1,
-	2
+    1,
+    2
 ];
 var localTime = "15:00";
 var minimizeJobs = true;
@@ -126,22 +126,22 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "pushNotification",
-	"operation": "SCHEDULE_RICH_NOTIFICATIONS",
-	"data": {
-		"notificationTemplateId": 1,
-		"segmentIdList": [
-			1,
-			2
-		],
-		"substitutions": {
-			"0": "value0",
-			"1": "value1"
-		},
-		"startDateUTC": 1437579786000,
-		"localTime": "15:00",
-		"minimizeJobs": true
-	}
+    "service": "pushNotification",
+    "operation": "SCHEDULE_RICH_NOTIFICATIONS",
+    "data": {
+        "notificationTemplateId": 1,
+        "segmentIdList": [
+            1,
+            2
+        ],
+        "substitutions": {
+            "0": "value0",
+            "1": "value1"
+        },
+        "startDateUTC": 1437579786000,
+        "localTime": "15:00",
+        "minimizeJobs": true
+    }
 }
 ```
 

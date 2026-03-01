@@ -118,8 +118,8 @@ var forceCreate = true;
 
 <%= data.branding.codePrefix %>.authenticateExternal(userId, token, externalAuthName, forceCreate, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -159,11 +159,11 @@ local externalAuthName = "nameOfExternalAuthService"
 local forceCreate = true
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:authenticateExternal(userId, token, externalAuthName, forceCreate, callback)
@@ -182,8 +182,8 @@ var forceCreate = true;
 
 <%= data.branding.codePrefix %>.authenticateExternal(userId, token, externalAuthName, forceCreate, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -200,8 +200,8 @@ var forceCreate = true;
 
 <%= data.branding.codePrefix %>.authenticateExternal(userId, token, externalAuthName, forceCreate, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 

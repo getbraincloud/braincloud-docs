@@ -110,8 +110,8 @@ var parentLevelName = "Master";
 
 <%= data.branding.codePrefix %>.script.runParentScript(scriptName, scriptData, parentLevelName, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -149,11 +149,11 @@ local scriptData = {
 local parentLevelName = "Master"
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getScriptService():runParentScript(scriptName, scriptData, parentLevelName, callback)

@@ -127,11 +127,11 @@ local itemId = "aaa-bbb-ccc-ddd"
 local version = 1
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getUserItemsService():RemoveUserItemFromBlockchain(itemId, version, callback)

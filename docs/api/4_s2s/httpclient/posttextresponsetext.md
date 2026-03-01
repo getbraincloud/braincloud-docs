@@ -115,7 +115,7 @@ This operation posts a Text document and expects a Text document in response.
 var serviceCode = "webService";
 var path = "resource/dir";
 var headers = {
-	"headerName": "value"
+    "headerName": "value"
 };
 var text = "text string";
 var httpClientProxy = bridge.getHttpClientServiceProxy();
@@ -133,16 +133,16 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "httpClient",
-	"operation": "POST_TEXT_RESPONSE_TEXT",
-	"data": {
-		"serviceCode": "webService",
-		"path": "resource/dir",
-		"headers": {
-			"headerName": "value"
-		},
-		"text": "text string"
-	}
+    "service": "httpClient",
+    "operation": "POST_TEXT_RESPONSE_TEXT",
+    "data": {
+        "serviceCode": "webService",
+        "path": "resource/dir",
+        "headers": {
+            "headerName": "value"
+        },
+        "text": "text string"
+    }
 }
 ```
 

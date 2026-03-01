@@ -106,11 +106,11 @@ local childAppId = "childAppId"
 local forceCreate = true
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getIdentityService():switchToChildProfile(childProfileId, childAppId, forceCreate, callback)
@@ -137,14 +137,14 @@ var retVal = identityProxy.switchToChildProfile(profileId, childAppId, forceCrea
 
 ```r
 {
-	"service": "identity",
-	"operation": "SWITCH_TO_CHILD_PROFILE",
-	"data": {
-		"profileId": null,
-		"appId": "$gameId",
-		"forceCreate": true,
-		"forceSingleton": true
-	}
+    "service": "identity",
+    "operation": "SWITCH_TO_CHILD_PROFILE",
+    "data": {
+        "profileId": null,
+        "appId": "$gameId",
+        "forceCreate": true,
+        "forceSingleton": true
+    }
 }
 ```
 

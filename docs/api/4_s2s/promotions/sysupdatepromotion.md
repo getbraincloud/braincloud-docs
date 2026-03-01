@@ -128,9 +128,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "promotions",
-	"operation": "SYS_UPDATE_PROMOTION",
-	"data": {
+    "service": "promotions",
+    "operation": "SYS_UPDATE_PROMOTION",
+    "data": {
     "promotionId": 1,
     "version": 2,
     "promotionJson": {

@@ -104,19 +104,19 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "messaging",
-	"operation": "SYS_SEND_MESSAGE_SIMPLE",
-	"data": {
-		"toProfileIds": [
-			"profileId1",
-			"profileId2"
-		],
-		"text": "Chat and messaging features are here!",
-		"fromJson": {
-			"id": null,
-			"name": "App Administrator"
-		}
-	}
+    "service": "messaging",
+    "operation": "SYS_SEND_MESSAGE_SIMPLE",
+    "data": {
+        "toProfileIds": [
+            "profileId1",
+            "profileId2"
+        ],
+        "text": "Chat and messaging features are here!",
+        "fromJson": {
+            "id": null,
+            "name": "App Administrator"
+        }
+    }
 }
 ```
 

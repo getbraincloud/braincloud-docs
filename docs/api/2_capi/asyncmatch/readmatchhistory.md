@@ -95,8 +95,8 @@ var matchId = "matchId";
 
 <%= data.branding.codePrefix %>.asyncMatch.readMatchHistory(ownerId, matchId, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -128,11 +128,11 @@ local ownerId = "internalPlayerId"
 local matchId = "matchId"
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getAsyncMatchService():readMatchHistory(ownerId, matchId, callback)
@@ -161,12 +161,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "asyncMatch",
-	"operation": "READ_MATCH_HISTORY",
-	"data": {
-		"ownerId": "the-owner-id",
-		"matchId": "the-match-id"
-	}
+    "service": "asyncMatch",
+    "operation": "READ_MATCH_HISTORY",
+    "data": {
+        "ownerId": "the-owner-id",
+        "matchId": "the-match-id"
+    }
 }
 ```
 

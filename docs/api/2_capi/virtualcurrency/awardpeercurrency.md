@@ -101,13 +101,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "virtualCurrency",
-	"operation": "AWARD_PEER_VC",
-	"data": {
-		"vcId": "coins",
-		"vcAmount": 1,
+    "service": "virtualCurrency",
+    "operation": "AWARD_PEER_VC",
+    "data": {
+        "vcId": "coins",
+        "vcAmount": 1,
         "peer": "gameloot"
-	}
+    }
 }
 ```
 

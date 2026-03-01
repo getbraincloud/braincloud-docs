@@ -87,18 +87,18 @@ context | The search and paging criteria
 ```cfscript
 var ownerId = "493dd9ad-5196-4494-aab1-02fbffa4c7af";
 var context =  {
-		"pagination": {
-			"rowsPerPage": 10,
-			"pageNumber": 1
-		},
-		"searchCriteria": {
-			"message.from.id": null
-		},
-		"sortCriteria": {
-			"mbCr": 1,
-			"mbUp": -1
-		}
-	};
+        "pagination": {
+            "rowsPerPage": 10,
+            "pageNumber": 1
+        },
+        "searchCriteria": {
+            "message.from.id": null
+        },
+        "sortCriteria": {
+            "mbCr": 1,
+            "mbUp": -1
+        }
+    };
 var messagingProxy = bridge.getMessagingServiceProxy();
 
 var postResult = messagingProxy.sysGetMessagesForOwnerPage(context);
@@ -114,24 +114,24 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "messaging",
-	"operation": "SYS_GET_MESSAGES_FOR_OWNER_PAGE",
-	"data": {
-		"ownerId": "493dd9ad-5196-4494-aab1-02fbffa4c7af",
-		"context": {
-			"pagination": {
-				"rowsPerPage": 10,
-				"pageNumber": 1
-			},
-			"searchCriteria": {
-				"message.from.id": null
-			},
-			"sortCriteria": {
-				"mbCr": 1,
-				"mbUp": -1
-			}
-		}
-	}
+    "service": "messaging",
+    "operation": "SYS_GET_MESSAGES_FOR_OWNER_PAGE",
+    "data": {
+        "ownerId": "493dd9ad-5196-4494-aab1-02fbffa4c7af",
+        "context": {
+            "pagination": {
+                "rowsPerPage": 10,
+                "pageNumber": 1
+            },
+            "searchCriteria": {
+                "message.from.id": null
+            },
+            "sortCriteria": {
+                "mbCr": 1,
+                "mbUp": -1
+            }
+        }
+    }
 }
 ```
 

@@ -98,8 +98,8 @@ var wipeExisting = false;
 
 <%= data.branding.codePrefix %>.playerState.updateAttributes(attributes, wipeExisting, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -137,11 +137,11 @@ local attributes = {
 local wipeExisting = false
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getPlayerStateService():updateAttributes(attributes, wipeExisting, callback)
@@ -173,15 +173,15 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "playerState",
-	"operation": "UPDATE_ATTRIBUTES",
-	"data": {
-		"attributes": {
-			"key1": "value1",
-			"key2": "value2"
-		},
-		"wipeExisting": false
-	}
+    "service": "playerState",
+    "operation": "UPDATE_ATTRIBUTES",
+    "data": {
+        "attributes": {
+            "key1": "value1",
+            "key2": "value2"
+        },
+        "wipeExisting": false
+    }
 }
 ```
 

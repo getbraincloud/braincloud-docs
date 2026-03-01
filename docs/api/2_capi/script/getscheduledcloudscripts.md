@@ -122,11 +122,11 @@ if (result.statusCode == 200) {
 local startDateInUTC = 1437579786000
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getScriptService():getScheduledCloudScripts(startDateInUTC, callback)

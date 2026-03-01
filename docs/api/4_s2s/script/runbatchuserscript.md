@@ -89,8 +89,8 @@ var scriptData = {
   "parm": "value"
 };
 var segmentIdList = [
-	1,
-	2
+    1,
+    2
 ];
 var scriptProxy = bridge.getScriptServiceProxy();
 
@@ -107,22 +107,22 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "script",
-	"operation": "RUN_BATCH_USER_SCRIPT",
-	"data": {
-		"scriptName": "path/to/script1",
-		"scriptData": {
-			"parm": "value"
-		},
-		"segmentIdList": [
-			1,
-			2
-		],
-		"profileIds": [
-			"profileid1",
-			"profileid2"
-		]
-	}
+    "service": "script",
+    "operation": "RUN_BATCH_USER_SCRIPT",
+    "data": {
+        "scriptName": "path/to/script1",
+        "scriptData": {
+            "parm": "value"
+        },
+        "segmentIdList": [
+            1,
+            2
+        ],
+        "profileIds": [
+            "profileid1",
+            "profileid2"
+        ]
+    }
 }
 ```
 

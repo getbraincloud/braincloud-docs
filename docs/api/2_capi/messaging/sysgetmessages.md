@@ -104,14 +104,14 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "messaging",
-	"operation": "SYS_GET_MESSAGES",
-	"data": {
-		"msgIds": [
-			"msgId1",
-			"msgId2"
-		]
-	}
+    "service": "messaging",
+    "operation": "SYS_GET_MESSAGES",
+    "data": {
+        "msgIds": [
+            "msgId1",
+            "msgId2"
+        ]
+    }
 }
 ```
 

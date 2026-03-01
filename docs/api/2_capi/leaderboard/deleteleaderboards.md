@@ -94,14 +94,14 @@ var retVal = leaderboardProxy.deleteLeaderboards(leaderboardsIds);
 
 ```r
 {
-	"service": "leaderboard",
-	"operation": "DELETE_LEADERBOARDS",
-	"data": {
-		"leaderboardIds": [
-			"1st-leaderboard-id",
-			"2nd-leaderboard-id"
-		]
-	}
+    "service": "leaderboard",
+    "operation": "DELETE_LEADERBOARDS",
+    "data": {
+        "leaderboardIds": [
+            "1st-leaderboard-id",
+            "2nd-leaderboard-id"
+        ]
+    }
 }
 ```
 

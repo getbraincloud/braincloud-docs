@@ -25,15 +25,15 @@ channelId | The id of the channel to connect to.
 string channelId = "22817:gl:CHAT_TRADE"; // APP_ID:CHANNEL_TYPE:CHANNEL_ID
 SuccessCallback successCallback = (response, cbObject) =>
 {
-	Dictionary<string, object> jsonMessage = (Dictionary<string, object>)JsonFx.Json.JsonReader.Deserialize(response);
-	var status = jsonMessage["status"].ToString();
-	
-	string logMessage = string.Join(" | ", new [] {status});
-	Debug.Log(logMessage); // 200
+    Dictionary<string, object> jsonMessage = (Dictionary<string, object>)JsonFx.Json.JsonReader.Deserialize(response);
+    var status = jsonMessage["status"].ToString();
+    
+    string logMessage = string.Join(" | ", new [] {status});
+    Debug.Log(logMessage); // 200
 };
 FailureCallback failureCallback = (status, code, error, cbObject) =>
 {
-	Debug.Log(string.Format("[ChannelDisconnect Failed] {0}  {1}  {2}", status, code, error));
+    Debug.Log(string.Format("[ChannelDisconnect Failed] {0}  {1}  {2}", status, code, error));
 };
 
 <%= data.branding.codePrefix %>.ChatService.ChannelDisconnect(channelId, successCallback, failureCallback);
@@ -96,8 +96,8 @@ var channelId = "55555:gl:bcDev";
 
 <%= data.branding.codePrefix %>.chat.channelDisconnect(channelId, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -127,11 +127,11 @@ if (result.statusCode == 200) {
 local channelId = "55555:gl:bcDev"
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getChatService():channelDisconnect(channelId, callback)
@@ -154,11 +154,11 @@ chatProxy.channelDisconnect(channelId);
 
 ```r
 {
-	"service": "chat",
-	"operation": "CHANNEL_DISCONNECT",
-	"data": {
-		"channelId": "55555:gl:bcDev"
-	}
+    "service": "chat",
+    "operation": "CHANNEL_DISCONNECT",
+    "data": {
+        "channelId": "55555:gl:bcDev"
+    }
 }
 ```
 

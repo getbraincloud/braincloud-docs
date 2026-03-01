@@ -107,14 +107,14 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "presence",
-	"operation": "SYS_INITIALIZE_PRESENCE",
-	"data": {
-		"profileId": "aaa-bbb-ccc-ddd",
-		"visible": true,
-		"activity": {},
-		"expirySecs": 300
-	}
+    "service": "presence",
+    "operation": "SYS_INITIALIZE_PRESENCE",
+    "data": {
+        "profileId": "aaa-bbb-ccc-ddd",
+        "visible": true,
+        "activity": {},
+        "expirySecs": 300
+    }
 }
 ```
 

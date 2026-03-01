@@ -97,8 +97,8 @@ var bidirectional = true;
 
 <%= data.branding.codePrefix %>.presence.registerListenersForGroup(platform, bidirectional, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -130,11 +130,11 @@ local groupId = "aaa-bbb-ccc-ddd"
 local bidirectional = true
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getPresenceService():registerListenersForGroup(groupId, bidirectional, callback)
@@ -162,12 +162,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "presence",
-	"operation": "REGISTER_LISTENERS_FOR_GROUP",
-	"data": {
-		"groupId": "aaa-bbb-ccc-ddd",
-		"bidirectional": true
-	}
+    "service": "presence",
+    "operation": "REGISTER_LISTENERS_FOR_GROUP",
+    "data": {
+        "groupId": "aaa-bbb-ccc-ddd",
+        "bidirectional": true
+    }
 }
 ```
 

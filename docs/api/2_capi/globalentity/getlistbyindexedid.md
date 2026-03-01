@@ -96,8 +96,8 @@ var maxReturn = 50;
 
 <%= data.branding.codePrefix %>.globalEntity.getListByIndexedId(entityIndexedId, maxReturn, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -129,11 +129,11 @@ local entityIndexedId = "a-indexed-id"
 local maxReturn = 50
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getGlobalEntityService():getListByIndexedId(entityIndexedId, maxReturn, callback)
@@ -162,12 +162,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalEntity",
-	"operation": "GET_LIST_BY_INDEXED_ID",
-	"data": {
-		"entityIndexedId": "a-indexed-id",
-		"maxReturn": 50
-	}
+    "service": "globalEntity",
+    "operation": "GET_LIST_BY_INDEXED_ID",
+    "data": {
+        "entityIndexedId": "a-indexed-id",
+        "maxReturn": 50
+    }
 }
 ```
 

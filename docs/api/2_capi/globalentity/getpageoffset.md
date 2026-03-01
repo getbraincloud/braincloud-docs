@@ -96,8 +96,8 @@ var pageOffset = 1;
 
 <%= data.branding.codePrefix %>.globalEntity.getPageOffset(context, pageOffset, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -129,11 +129,11 @@ local context = "eyJzZWFyY2hDcml0ZXJpYSI6eyJlbnRpdHlUeXBlIjp7IiRyZWdleCI6Ii4qaWx
 local pageOffset = 1
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getGlobalEntityService():getPageOffset(context, pageOffset, callback)
@@ -162,12 +162,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalEntity",
-	"operation": "GET_PAGE_BY_OFFSET",
-	"data": {
-		"context": "eyJzZWFyY2hDcml0ZXJpYSI6eyJlbnRpdHlUeXBlIjp7IiRyZWdleCI6Ii4qaWxkLioiLCIkb3B0",
-		"pageOffset": 1
-	}
+    "service": "globalEntity",
+    "operation": "GET_PAGE_BY_OFFSET",
+    "data": {
+        "context": "eyJzZWFyY2hDcml0ZXJpYSI6eyJlbnRpdHlUeXBlIjp7IiRyZWdleCI6Ii4qaWxkLioiLCIkb3B0",
+        "pageOffset": 1
+    }
 }
 ```
 

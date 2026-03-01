@@ -99,9 +99,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalFileV3",
-	"operation": "SYS_GET_FILE_INFO_SIMPLE",
-	"data": {
+    "service": "globalFileV3",
+    "operation": "SYS_GET_FILE_INFO_SIMPLE",
+    "data": {
         "folderPath": "/root1/sub11/sub12/",
         "filename": "sub12file1"
     }

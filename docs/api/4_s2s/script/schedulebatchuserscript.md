@@ -91,8 +91,8 @@ var scriptData = {
   "parm": "value"
 };
 var segmentIdList = [
-	1,
-	2
+    1,
+    2
 ];
 var startDateUTC = 1512750683157;
 var minutesFromNow = 1;
@@ -111,20 +111,20 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "script",
-	"operation": "SCHEDULE_BATCH_USER_SCRIPT",
-	"data": {
-		"scriptName": "path/to/script1",
-		"scriptData": {
-			"parm": "value"
-		},
-		"segmentIdList": [
-			1,
-			2
-		],
-		"startDateUTC": "[[#ts+60000]]",
-		"minutesFromNow": 1
-	}
+    "service": "script",
+    "operation": "SCHEDULE_BATCH_USER_SCRIPT",
+    "data": {
+        "scriptName": "path/to/script1",
+        "scriptData": {
+            "parm": "value"
+        },
+        "segmentIdList": [
+            1,
+            2
+        ],
+        "startDateUTC": "[[#ts+60000]]",
+        "minutesFromNow": 1
+    }
 }
 ```
 

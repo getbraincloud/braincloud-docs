@@ -90,8 +90,8 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 var propertyNames = [ "pName1", "pName2" ];
 <%= data.branding.codePrefix %>.globalApp.readSelectedProperties(propertyNames, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -121,11 +121,11 @@ if (result.statusCode == 200) {
 local propertyNames = { "pName1", "pName2" }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getGlobalAppService():readSelectedProperties(propertyNames, callback)
@@ -153,9 +153,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalApp",
-	"operation": "READ_SELECTED_PROPERTIES",
-	"data": {
+    "service": "globalApp",
+    "operation": "READ_SELECTED_PROPERTIES",
+    "data": {
         "propertyNames": ["comma separated property names"]
     }
 }

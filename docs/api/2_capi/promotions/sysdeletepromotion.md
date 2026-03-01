@@ -99,9 +99,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "promotions",
-	"operation": "SYS_DELETE_PROMOTION",
-	"data": {
+    "service": "promotions",
+    "operation": "SYS_DELETE_PROMOTION",
+    "data": {
     "promotionId": 1,
     "version": 1
   }

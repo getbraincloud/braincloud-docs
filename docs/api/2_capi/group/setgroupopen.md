@@ -96,8 +96,8 @@ var isOpenGroup = false;
 
 <%= data.branding.codePrefix %>.group.setGroupOpen(groupId, isOpenGroup, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -129,11 +129,11 @@ local groupId = "a-group-id"
 local isOpenGroup = false
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getGroupService():setGroupOpen(groupId, isOpenGroup, callback)
@@ -162,12 +162,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "group",
-	"operation": "SET_GROUP_OPEN",
-	"data": {
-		"groupId": "a-group-id",
-		"isOpenGroup": true
-	}
+    "service": "group",
+    "operation": "SET_GROUP_OPEN",
+    "data": {
+        "groupId": "a-group-id",
+        "isOpenGroup": true
+    }
 }
 ```
 

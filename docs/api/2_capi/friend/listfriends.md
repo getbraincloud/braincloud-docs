@@ -97,8 +97,8 @@ var includeSummaryData = true;
 
 <%= data.branding.codePrefix %>.friend.listFriends(friendPlatform, includeSummaryData, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -130,11 +130,11 @@ local friendPlatform = FriendPlatform.facebook
 local includeSummaryData = true
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getFriendService():listFriends(friendPlatform, includeSummaryData, callback)
@@ -163,12 +163,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "friend",
-	"operation": "LIST_FRIENDS",
-	"data": {
-		"friendPlatform": "brainCloud",
-		"includeSummaryData": true
-	}
+    "service": "friend",
+    "operation": "LIST_FRIENDS",
+    "data": {
+        "friendPlatform": "brainCloud",
+        "includeSummaryData": true
+    }
 }
 ```
 

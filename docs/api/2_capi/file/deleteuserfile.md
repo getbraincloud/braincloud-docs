@@ -89,8 +89,8 @@ var cloudFilename = "filename";
 
 <%= data.branding.codePrefix %>.file.deleteUserFile(cloudPath, cloudFilename, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -122,11 +122,11 @@ local cloudPath = "dir1/dir2"
 local cloudFilename = "filename"
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getFileService():deleteUserFile(cloudPath, cloudFilename, callback)
@@ -155,12 +155,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "file",
-	"operation": "DELETE_USER_FILE",
-	"data": {
-		"cloudPath": "dir1/dir2",
-		"cloudFilename": "filename"
-	}
+    "service": "file",
+    "operation": "DELETE_USER_FILE",
+    "data": {
+        "cloudPath": "dir1/dir2",
+        "cloudFilename": "filename"
+    }
 }
 ```
 

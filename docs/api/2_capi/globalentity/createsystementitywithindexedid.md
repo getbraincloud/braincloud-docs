@@ -109,19 +109,19 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalEntity",
-	"operation": "CREATE_SYSTEM_ENTITY_WITH_INDEXED_ID",
-	"data": {
-		"entityType": "address",
-		"entityIndexedId": "entityId1",
-		"timeToLive": -1,
-		"acl": {
-			"other": 1
-		},
-		"data": {
-			"street": "1309 Carling"
-		}
-	}
+    "service": "globalEntity",
+    "operation": "CREATE_SYSTEM_ENTITY_WITH_INDEXED_ID",
+    "data": {
+        "entityType": "address",
+        "entityIndexedId": "entityId1",
+        "timeToLive": -1,
+        "acl": {
+            "other": 1
+        },
+        "data": {
+            "street": "1309 Carling"
+        }
+    }
 }
 ```
 

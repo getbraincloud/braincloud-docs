@@ -86,22 +86,22 @@ See the documentation for contents of 'serviceParams'.
 ```cfscript
 var profileId = "f7144cc0-b996-440f-8459-21b0ecb91a10";
 var serviceParams = {
-	"fromAddress": "fromAddress",
-	"fromName": "fromName",
-	"replyToAddress": "replyToAddress",
-	"replyToName": "replyToName",
-	"templateId": "8f14c77d-61f4-4966-ab6d-0bee8b13d090",
-	"subject": "subject",
-	"body": "Body goes here",
-	"useHtml": false,
-	"substitutions": {
-		":name": "John Doe",
-		":resetLink": "www.dummuyLink.io"
-	},
-	"categories": [
-		"category1",
-		"category2"
-	]
+    "fromAddress": "fromAddress",
+    "fromName": "fromName",
+    "replyToAddress": "replyToAddress",
+    "replyToName": "replyToName",
+    "templateId": "8f14c77d-61f4-4966-ab6d-0bee8b13d090",
+    "subject": "subject",
+    "body": "Body goes here",
+    "useHtml": false,
+    "substitutions": {
+        ":name": "John Doe",
+        ":resetLink": "www.dummuyLink.io"
+    },
+    "categories": [
+        "category1",
+        "category2"
+    ]
 };
 var mailProxy = bridge.getMailServiceProxy();
 
@@ -118,29 +118,29 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "mail",
-	"operation": "SEND_ADVANCED_EMAIL",
-	"data": {
-		"profileId": "f7144cc0-b996-440f-8459-21b0ecb91a10",
-		"serviceParams": {
-			"fromAddress": "fromAddress",
-			"fromName": "fromName",
-			"replyToAddress": "replyToAddress",
-			"replyToName": "replyToName",
-			"templateId": "8f14c77d-61f4-4966-ab6d-0bee8b13d090",
-			"subject": "subject",
-			"body": "Body goes here",
-			"useHtml": false,
-			"substitutions": {
-				":name": "John Doe",
-				":resetLink": "www.dummuyLink.io"
-			},
-			"categories": [
-				"category1",
-				"category2"
-			]
-		}
-	}
+    "service": "mail",
+    "operation": "SEND_ADVANCED_EMAIL",
+    "data": {
+        "profileId": "f7144cc0-b996-440f-8459-21b0ecb91a10",
+        "serviceParams": {
+            "fromAddress": "fromAddress",
+            "fromName": "fromName",
+            "replyToAddress": "replyToAddress",
+            "replyToName": "replyToName",
+            "templateId": "8f14c77d-61f4-4966-ab6d-0bee8b13d090",
+            "subject": "subject",
+            "body": "Body goes here",
+            "useHtml": false,
+            "substitutions": {
+                ":name": "John Doe",
+                ":resetLink": "www.dummuyLink.io"
+            },
+            "categories": [
+                "category1",
+                "category2"
+            ]
+        }
+    }
 }
 ```
 

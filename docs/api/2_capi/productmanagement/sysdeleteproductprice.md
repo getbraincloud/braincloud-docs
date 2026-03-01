@@ -101,9 +101,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "productManagement",
-	"operation": "SYS_DELETE_PRODUCT_PRICE",
-	"data": {
+    "service": "productManagement",
+    "operation": "SYS_DELETE_PRODUCT_PRICE",
+    "data": {
     "itemId": "gold_bars_10",
     "version": 3,
     "priceId": 2

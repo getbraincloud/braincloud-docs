@@ -94,11 +94,11 @@ var retVal = leaderboardProxy.sysResetNeverLeaderboard(leaderboardId);
 
 ```r
 {
-	"service": "leaderboard",
-	"operation": "SYS_RESET_NEVER_LEADERBOARD",
-	"data": {
-		"leaderboardId": "aLeaderboardId"
-	}
+    "service": "leaderboard",
+    "operation": "SYS_RESET_NEVER_LEADERBOARD",
+    "data": {
+        "leaderboardId": "aLeaderboardId"
+    }
 }
 ```
 

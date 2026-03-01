@@ -99,8 +99,8 @@ var includeOffline = true;
 
 <%= data.branding.codePrefix %>.presence.getPresenceOfUsers(profileIds, includeOffline, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -132,11 +132,11 @@ local profileIds = { "aaa-bbb-ccc-ddd" }
 local includeOffline = true
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getPresenceService():getPresenceOfUsers(profileIds, includeOffline, callback)
@@ -164,15 +164,15 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "presence",
-	"operation": "GET_PRESENCE_OF_USERS",
-	"data": {
-		"profileIds": [
-			"aaa-bbb-ccc-ddd",
-			"bbb-ccc-ddd-eee"
-		],
-		"includeOffline": true
-	}
+    "service": "presence",
+    "operation": "GET_PRESENCE_OF_USERS",
+    "data": {
+        "profileIds": [
+            "aaa-bbb-ccc-ddd",
+            "bbb-ccc-ddd-eee"
+        ],
+        "includeOffline": true
+    }
 }
 ```
 

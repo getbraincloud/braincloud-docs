@@ -104,14 +104,14 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "leaderboard",
-	"operation": "GET_GLOBAL_LEADERBOARD_PAGE",
-	"data": {
-		"leaderboardId": "default",
-		"sort": "HIGH_TO_LOW",
-		"startIndex": 0,
-		"endIndex": 9
-	}
+    "service": "leaderboard",
+    "operation": "GET_GLOBAL_LEADERBOARD_PAGE",
+    "data": {
+        "leaderboardId": "default",
+        "sort": "HIGH_TO_LOW",
+        "startIndex": 0,
+        "endIndex": 9
+    }
 }
 ```
 

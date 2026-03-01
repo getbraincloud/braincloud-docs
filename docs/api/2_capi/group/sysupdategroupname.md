@@ -99,12 +99,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "group",
-	"operation": "SYS_UPDATE_GROUP_NAME",
-	"data": {
-		"groupId": "a-group-id",
-		"name": "myGroupName"
-	}
+    "service": "group",
+    "operation": "SYS_UPDATE_GROUP_NAME",
+    "data": {
+        "groupId": "a-group-id",
+        "name": "myGroupName"
+    }
 }
 ```
 

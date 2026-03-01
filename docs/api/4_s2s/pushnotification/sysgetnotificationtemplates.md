@@ -98,12 +98,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "pushNotification",
-	"operation": "SYS_GET_NOTIFICATION_TEMPLATES",
-	"data": {
-		"defaultLanguageCode": "en",
-		}
-	}
+    "service": "pushNotification",
+    "operation": "SYS_GET_NOTIFICATION_TEMPLATES",
+    "data": {
+        "defaultLanguageCode": "en",
+        }
+    }
 }
 ```
 

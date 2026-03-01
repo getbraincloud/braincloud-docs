@@ -110,23 +110,23 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "itemCatalog",
-	"operation": "SYS_GET_CATALOG_ITEMS_PAGE",
-	"data": {
-		"context": {
-			"pagination": {
-				"rowsPerPage": 50,
-				"pageNumber": 1
-			},
-			"searchCriteria": {
-				"category": "sword"
-			},
-			"sortCriteria": {
-				"createdAt": 1,
-				"updatedAt": -1
-			}
-		}
-	}
+    "service": "itemCatalog",
+    "operation": "SYS_GET_CATALOG_ITEMS_PAGE",
+    "data": {
+        "context": {
+            "pagination": {
+                "rowsPerPage": 50,
+                "pageNumber": 1
+            },
+            "searchCriteria": {
+                "category": "sword"
+            },
+            "sortCriteria": {
+                "createdAt": 1,
+                "updatedAt": -1
+            }
+        }
+    }
 }
 ```
 

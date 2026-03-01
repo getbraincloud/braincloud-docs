@@ -103,13 +103,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "identity",
-	"operation": "DETACH",
-	"data": {
-		"externalId": "email@email.com",
-		"authenticationType": "Email",
-		"continueAnon": false
-	}
+    "service": "identity",
+    "operation": "DETACH",
+    "data": {
+        "externalId": "email@email.com",
+        "authenticationType": "Email",
+        "continueAnon": false
+    }
 }
 ```
 

@@ -98,11 +98,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "leaderboard",
-	"operation": "GET_GLOBAL_LEADERBOARD_VERSIONS",
-	"data": {
-		"leaderboardId": "default"
-	}
+    "service": "leaderboard",
+    "operation": "GET_GLOBAL_LEADERBOARD_VERSIONS",
+    "data": {
+        "leaderboardId": "default"
+    }
 }
 ```
 

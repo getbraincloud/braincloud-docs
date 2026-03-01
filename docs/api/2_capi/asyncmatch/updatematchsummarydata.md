@@ -112,8 +112,8 @@ var jsonSummary = {
 
 <%= data.branding.codePrefix %>.asyncMatch.updateMatchSummaryData(ownerId, matchId, version, jsonSummary, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -153,11 +153,11 @@ local jsonSummary = {
 }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getAsyncMatchService():updateMatchSummaryData(ownerId, matchId, version, jsonSummary, callback)
@@ -190,17 +190,17 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "asyncMatch",
-	"operation": "UPDATE_SUMMARY",
-	"data": {
-		"ownerId": "the-owner-id",
-		"matchId": "the-match-id",
-		"version": 1,
-		"summary": {
-			"Address": "North America"
-		},
-		"pushContent": "The async-match has been updated!"
-	}
+    "service": "asyncMatch",
+    "operation": "UPDATE_SUMMARY",
+    "data": {
+        "ownerId": "the-owner-id",
+        "matchId": "the-match-id",
+        "version": 1,
+        "summary": {
+            "Address": "North America"
+        },
+        "pushContent": "The async-match has been updated!"
+    }
 }
 ```
 

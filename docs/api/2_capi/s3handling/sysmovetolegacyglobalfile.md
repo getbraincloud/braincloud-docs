@@ -113,16 +113,16 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalFile",
-	"operation": "SYS_MOVE_TO_LEGACY_GLOBAL_FILE",
-	"data": {
+    "service": "globalFile",
+    "operation": "SYS_MOVE_TO_LEGACY_GLOBAL_FILE",
+    "data": {
         "userProfileId": "c32c330f-d84d-4e7f-a405-a972d28fe933",
         "userCloudPath": "textFile",
         "userCloudFilename": "testFile3.txt",
         "shortname": "testfile3",
         "globalCloudFilename": "testFile3.txt",
         "overwriteIfPresent": true
-	}
+    }
 }
 ```
 

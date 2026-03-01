@@ -109,16 +109,16 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "customEntity",
-	"operation": "SYS_INCREMENT_DATA",
-	"data": {
-		"entityType": "athletes",
-		"entityId": "aaaa-bbbb-cccc-dddd",
-		"fieldsJson": { 
+    "service": "customEntity",
+    "operation": "SYS_INCREMENT_DATA",
+    "data": {
+        "entityType": "athletes",
+        "entityId": "aaaa-bbbb-cccc-dddd",
+        "fieldsJson": { 
             "goals": 3, 
             "assists": 5 
         }
-	}
+    }
 }
 ```
 

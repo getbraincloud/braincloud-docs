@@ -182,9 +182,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "tournament",
-	"operation": "SYS_EDIT_TOURNAMENT_TEMPLATE",
-	"data": {
+    "service": "tournament",
+    "operation": "SYS_EDIT_TOURNAMENT_TEMPLATE",
+    "data": {
     "tournamentCode": "uniqueTournamentCode",
     "configJson": {
       "description": {
@@ -264,7 +264,7 @@ if (postResult.status == 200) {
     },
     "version": -1,
     "applyChangesToLiveLeaderboards": false
-	}
+    }
 }
 ```
 

@@ -96,8 +96,8 @@ var settings = {};
 
 <%= data.branding.codePrefix %>.lobby.updateSettings(lobbyId, settings, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -129,11 +129,11 @@ local lobbyId = "55555:4v4:19"
 local settings = {}
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getLobbyService():updateSettings(lobbyId, settings, callback)
@@ -162,12 +162,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "lobby",
-	"operation": "UPDATE_SETTINGS",
-	"data": {
-		"lobbyId": "55555:4v4:19",
-		"settings": {}
-	}
+    "service": "lobby",
+    "operation": "UPDATE_SETTINGS",
+    "data": {
+        "lobbyId": "55555:4v4:19",
+        "settings": {}
+    }
 }
 ```
 

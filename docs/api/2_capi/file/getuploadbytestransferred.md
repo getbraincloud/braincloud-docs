@@ -93,11 +93,11 @@ if (result.statusCode == 200) {
 local uploadId = "1234-1234-1234-1234"
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getFileService():getUploadBytesTransferred(uploadId, callback)

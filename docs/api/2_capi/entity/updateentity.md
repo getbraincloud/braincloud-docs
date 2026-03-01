@@ -123,8 +123,8 @@ var version = -1;
 
 <%= data.branding.codePrefix %>.entity.updateEntity(entityId, entityType, jsonEntityData, jsonEntityAcl, version, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -170,11 +170,11 @@ local jsonEntityAcl = {
 local version = -1
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getEntityService():updateEntity(entityId, entityType, jsonEntityData, jsonEntityAcl, version, callback)
@@ -210,19 +210,19 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "entity",
-	"operation": "UPDATE",
-	"data": {
-		"entityId": "someEntityId",
-		"entityType": "address",
-		"data": {
-			"street": "1309 Carling Avenue, Ottawa, ON"
-		},
-		"acl": {
-			"other": 0
-		},
-		"version": -1
-	}
+    "service": "entity",
+    "operation": "UPDATE",
+    "data": {
+        "entityId": "someEntityId",
+        "entityType": "address",
+        "data": {
+            "street": "1309 Carling Avenue, Ottawa, ON"
+        },
+        "acl": {
+            "other": 0
+        },
+        "version": -1
+    }
 }
 ```
 

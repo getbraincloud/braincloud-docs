@@ -98,11 +98,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "script",
-	"operation": "CANCEL_SCHEDULED_SCRIPT",
-	"data": {
-		"jobId": "the-job-id"
-	}
+    "service": "script",
+    "operation": "CANCEL_SCHEDULED_SCRIPT",
+    "data": {
+        "jobId": "the-job-id"
+    }
 }
 ```
 

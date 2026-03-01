@@ -97,8 +97,8 @@ var includeOffline = true;
 
 <%= data.branding.codePrefix %>.presence.getPresenceOfFriends(platform, includeOffline, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -130,11 +130,11 @@ local platform = brainCloud
 local includeOffline = true
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getPresenceService():getPresenceOfFriends(platform, includeOffline, callback)
@@ -163,12 +163,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "presence",
-	"operation": "GET_PRESENCE_OF_FRIENDS",
-	"data": {
-		"friendPlatform": "brainCloud",
-		"includeOffline": true
-	}
+    "service": "presence",
+    "operation": "GET_PRESENCE_OF_FRIENDS",
+    "data": {
+        "friendPlatform": "brainCloud",
+        "includeOffline": true
+    }
 }
 ```
 

@@ -190,11 +190,11 @@ local data = {}
 local summaryData = {}
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getGroupService():createGroupWithSummaryData(name, groupType, isOpenGroup, acl, ownerAttributes, defaultMemberAttributes, data, summaryData, callback)
@@ -232,21 +232,21 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "group",
-	"operation": "CREATE_GROUP",
-	"data": {
-		"name": "myGroupName",
-		"groupType": "myGroupType",
-		"isOpenGroup": true,
-		"acl": {
-			"member": 2,
-			"other": 0
-		},
-		"ownerAttributes": {},
-		"defaultMemberAttributes": {},
-		"data": {},
-		"summaryData": {}
-	}
+    "service": "group",
+    "operation": "CREATE_GROUP",
+    "data": {
+        "name": "myGroupName",
+        "groupType": "myGroupType",
+        "isOpenGroup": true,
+        "acl": {
+            "member": 2,
+            "other": 0
+        },
+        "ownerAttributes": {},
+        "defaultMemberAttributes": {},
+        "data": {},
+        "summaryData": {}
+    }
 }
 ```
 

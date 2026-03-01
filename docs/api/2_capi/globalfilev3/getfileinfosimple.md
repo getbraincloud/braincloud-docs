@@ -95,8 +95,8 @@ var filename = "sub12file1";
 
 <%= data.branding.codePrefix %>.globalFile.getFileInfoSimple(folderPath, filename, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -128,11 +128,11 @@ local folderPath = "/root1/sub11/sub12/"
 local filename = "sub12file1"
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getGlobalFileV3Service():getFileInfoSimple(folderPath, filename, callback)
@@ -163,9 +163,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalFileV3",
-	"operation": "GET_FILE_INFO_SIMPLE",
-	"data": {
+    "service": "globalFileV3",
+    "operation": "GET_FILE_INFO_SIMPLE",
+    "data": {
         "folderPath": "/root1/sub11/sub12/",
         "filename": "sub12file1"
     }

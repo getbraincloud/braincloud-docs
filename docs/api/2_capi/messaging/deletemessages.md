@@ -98,8 +98,8 @@ var msgIds = [ "msgId1", "msgId2" ];
 
 <%= data.branding.codePrefix %>.messaging.deleteMessages(msgbox, msgIds, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -131,11 +131,11 @@ local msgBox = "inbox"
 local msgIds = { "msgId1", "msgId2" }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getMessagingService():deleteMessages(msgBox, msgIds, callback)
@@ -164,15 +164,15 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "messaging",
-	"operation": "DELETE_MESSAGES",
-	"data": {
-		"msgbox": "inbox",
-		"msgIds": [
-			"msgId1",
-			"msgId2"
-		]
-	}
+    "service": "messaging",
+    "operation": "DELETE_MESSAGES",
+    "data": {
+        "msgbox": "inbox",
+        "msgIds": [
+            "msgId1",
+            "msgId2"
+        ]
+    }
 }
 ```
 

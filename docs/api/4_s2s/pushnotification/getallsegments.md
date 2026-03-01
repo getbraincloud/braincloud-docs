@@ -102,9 +102,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "pushNotification",
-	"operation": "GET_ALL_SEGMENTS",
-	"data": {}
+    "service": "pushNotification",
+    "operation": "GET_ALL_SEGMENTS",
+    "data": {}
 }
 ```
 

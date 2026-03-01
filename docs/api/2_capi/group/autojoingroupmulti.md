@@ -73,7 +73,7 @@ BCErrorCompletionBlock failureBlock; // define callback
                          where:where 
                completionBlock:successBlock
           errorCompletionBlock:failureBlock
-		              cbObject:nil];
+                      cbObject:nil];
 ```
 
 ```mdx-code-block
@@ -113,8 +113,8 @@ var where = {};
 
 <%= data.branding.codePrefix %>.group.autoJoinGroupMulti(groupTypes, autoJoinStrategy, where, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -148,11 +148,11 @@ local autoJoinStrategy = "JoinRandomGroup"
 local where = {}
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getGroupService():autoJoinGroupMulti(groupTypes, autoJoinStrategy, where, callback)
@@ -182,13 +182,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "group",
-	"operation": "AUTO_JOIN_GROUP_MULTI",
-	"data": {
-		"groupTypes": ["group_types_array"],
-		"autoJoinStrategy": "JoinRandomGroup",
-		"where": {}
-	}
+    "service": "group",
+    "operation": "AUTO_JOIN_GROUP_MULTI",
+    "data": {
+        "groupTypes": ["group_types_array"],
+        "autoJoinStrategy": "JoinRandomGroup",
+        "where": {}
+    }
 }
 ```
 

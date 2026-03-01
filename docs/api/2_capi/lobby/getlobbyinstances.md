@@ -112,8 +112,8 @@ var "criteriaJson" = {
 
 <%= data.branding.codePrefix %>.lobby.getLobbyInstances(lobbyType, criteriaJson, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -155,11 +155,11 @@ var  "criteriaJson" = {
     }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getLobbyService():getLobbyInstances(lobbyType, criteriaJson, callback)
@@ -193,17 +193,17 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "lobby",
-	"operation": "GET_LOBBY_INSTANCES",
-	"data": {
-		"lobbyType": "Relay_lobbyT_v2",
+    "service": "lobby",
+    "operation": "GET_LOBBY_INSTANCES",
+    "data": {
+        "lobbyType": "Relay_lobbyT_v2",
     "criteriaJson": {
       "rating": {
         "min": 10,
         "max": 100
       }
     }
-	}
+    }
 }
 ```
 

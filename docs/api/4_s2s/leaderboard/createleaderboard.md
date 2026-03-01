@@ -157,19 +157,19 @@ var retVal = leaderboardProxy.createLeaderboard(
 
 ```r
 {
-	"service": "leaderboard",
-	"operation": "CREATE_LEADERBOARD",
-	"data": {
-		"leaderboardId": "default",
-		"leaderboardType": "HIGH_VALUE",
-		"rotationType": "DAYS",
-		"rotationResetTime": "[[#ts+60000]]",
-		"retainedCount": 2,
-		"numDaysToRotate": 5,
-		"data": {
-			"street": "1309 Carling"
-		}
-	}
+    "service": "leaderboard",
+    "operation": "CREATE_LEADERBOARD",
+    "data": {
+        "leaderboardId": "default",
+        "leaderboardType": "HIGH_VALUE",
+        "rotationType": "DAYS",
+        "rotationResetTime": "[[#ts+60000]]",
+        "retainedCount": 2,
+        "numDaysToRotate": 5,
+        "data": {
+            "street": "1309 Carling"
+        }
+    }
 }
 ```
 

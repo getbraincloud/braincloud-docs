@@ -105,16 +105,16 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "messaging",
-	"operation": "SYS_UPDATE_MESSAGE",
-	"data": {
-		"msgId": "msgId1",
-		"msgVer": 1,
-		"contentJson": {
-			"subject": "New features",
-			"text": "Chat and messaging features coming soon..."
-		}
-	}
+    "service": "messaging",
+    "operation": "SYS_UPDATE_MESSAGE",
+    "data": {
+        "msgId": "msgId1",
+        "msgVer": 1,
+        "contentJson": {
+            "subject": "New features",
+            "text": "Chat and messaging features coming soon..."
+        }
+    }
 }
 ```
 

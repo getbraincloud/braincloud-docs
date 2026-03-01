@@ -98,11 +98,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalGameStatistics",
-	"operation": "READ_FOR_CATEGORY",
-	"data": {
-		"category": "generated"
-	}
+    "service": "globalGameStatistics",
+    "operation": "READ_FOR_CATEGORY",
+    "data": {
+        "category": "generated"
+    }
 }
 ```
 

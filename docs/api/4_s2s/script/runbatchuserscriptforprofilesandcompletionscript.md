@@ -90,8 +90,8 @@ var scriptData = {
   "queryStat": "xp"
 };
 var profileIds = [
-	"aaaa-bbbb-cccc-dddd-eeee",
-	"ffff-gggg-hhhh-iiii-jjjj"
+    "aaaa-bbbb-cccc-dddd-eeee",
+    "ffff-gggg-hhhh-iiii-jjjj"
 ];
 var completionScript = "path/to/script2";
 
@@ -110,19 +110,19 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "script",
-	"operation": "RUN_BATCH_USER_SCRIPT",
-	"data": {
-		"scriptName": "calcUser",
-		"scriptData": {
-			"queryStat": "xp"
-		},
-		"profileIds": [
-			"aaaa-bbbb-cccc-dddd-eeee",
-			"ffff-gggg-hhhh-iiii-jjjj"
-		],
-		"completionScript": "processResults"
-	}
+    "service": "script",
+    "operation": "RUN_BATCH_USER_SCRIPT",
+    "data": {
+        "scriptName": "calcUser",
+        "scriptData": {
+            "queryStat": "xp"
+        },
+        "profileIds": [
+            "aaaa-bbbb-cccc-dddd-eeee",
+            "ffff-gggg-hhhh-iiii-jjjj"
+        ],
+        "completionScript": "processResults"
+    }
 }
 ```
 

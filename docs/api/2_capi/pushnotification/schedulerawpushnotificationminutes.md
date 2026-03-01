@@ -138,8 +138,8 @@ var minutesFromNow = 1;
 
 <%= data.branding.codePrefix %>.pushNotification.scheduleRawPushNotificationMinutes(profileId, fcmContent, iosContent, facebookContent, minutesFromNow, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -219,11 +219,11 @@ local facebookContent = {
 local minutesFromNow = 1
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getPushNotificationService():scheduleRawPushNotificationMinutes(profileId, fcmContent, iosContent, facebookContent, minutesFromNow, callback)
@@ -276,36 +276,36 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "pushNotification",
-	"operation": "SCHEDULE_RAW_NOTIFICATION",
-	"data": {
-		"profileId": "kjhkjhgfkjshgkjh",
-		"fcmContent": {
-			"notification": {
-				"body": "content of message",
-				"title": "message title"
-			},
-			"data": {
-				"customfield1": "customValue1",
-				"customfield2": "customValue2"
-			},
-			"priority": "normal"
-		},
-		"iosContent": {
-			"aps": {
-				"alert": {
-					"body": "content of message",
-					"title": "message title"
-				},
-				"badge": 0,
-				"sound": "gggg"
-			}
-		},
-		"facebookContent": {
-			"template": "content of message"
-		},
-		"minutesFromNow": 1
-	}
+    "service": "pushNotification",
+    "operation": "SCHEDULE_RAW_NOTIFICATION",
+    "data": {
+        "profileId": "kjhkjhgfkjshgkjh",
+        "fcmContent": {
+            "notification": {
+                "body": "content of message",
+                "title": "message title"
+            },
+            "data": {
+                "customfield1": "customValue1",
+                "customfield2": "customValue2"
+            },
+            "priority": "normal"
+        },
+        "iosContent": {
+            "aps": {
+                "alert": {
+                    "body": "content of message",
+                    "title": "message title"
+                },
+                "badge": 0,
+                "sound": "gggg"
+            }
+        },
+        "facebookContent": {
+            "template": "content of message"
+        },
+        "minutesFromNow": 1
+    }
 }
 ```
 

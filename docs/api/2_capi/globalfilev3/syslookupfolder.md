@@ -98,11 +98,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalFileV3",
-	"operation": "SYS_LOOKUP_FOLDER",
-	"data": {
-		"fullFolderPath": "audio/xxx/tempdir"
-	}
+    "service": "globalFileV3",
+    "operation": "SYS_LOOKUP_FOLDER",
+    "data": {
+        "fullFolderPath": "audio/xxx/tempdir"
+    }
 }
 ```
 

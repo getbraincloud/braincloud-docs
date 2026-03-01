@@ -108,13 +108,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "redemptionCode",
-	"operation": "INVALIDATE_CODE",
-	"data": {
-		"scanCode": "the-scan-code",
-		"codeType": "the-code-type",
-		"invalidationReason": "Redemption code no longer valid."
-	}
+    "service": "redemptionCode",
+    "operation": "INVALIDATE_CODE",
+    "data": {
+        "scanCode": "the-scan-code",
+        "codeType": "the-code-type",
+        "invalidationReason": "Redemption code no longer valid."
+    }
 }
 ```
 

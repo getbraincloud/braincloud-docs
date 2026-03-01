@@ -88,10 +88,10 @@ Posts a JSON document, expects a text response.
 var serviceCode = "webService";
 var path = "resource/dir";
 var headers = {
-	"headerName": "value"
+    "headerName": "value"
 };
 var json = {
-	"key": "value"
+    "key": "value"
 };
 var httpClientProxy = bridge.getHttpClientServiceProxy();
 

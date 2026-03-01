@@ -102,13 +102,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "lobby",
-	"operation": "GET_VISIBLE_LOBBY_INSTANCES",
-	"data": {
-		"lobbyType": "Relay_lobbyT_v2",
-		"minRating": 10,
-		"maxRating": 100
-	}
+    "service": "lobby",
+    "operation": "GET_VISIBLE_LOBBY_INSTANCES",
+    "data": {
+        "lobbyType": "Relay_lobbyT_v2",
+        "minRating": 10,
+        "maxRating": 100
+    }
 }
 ```
 

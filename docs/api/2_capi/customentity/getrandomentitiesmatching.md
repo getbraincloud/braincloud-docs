@@ -145,11 +145,11 @@ local whereJson = {
 local maxReturn = 2
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getCustomEntityService():getRandomEntitiesMatching(entityType, whereJson, maxReturn, callback)
@@ -181,15 +181,15 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "customEntity",
-	"operation": "GET_RANDOM_ENTITIES_MATCHING",
-	"data": {
+    "service": "customEntity",
+    "operation": "GET_RANDOM_ENTITIES_MATCHING",
+    "data": {
     "entityType": "athletes",
     "whereJson": {
       "data.position": "forward"
     },
     "maxReturn": 2
-	}
+    }
 }
 ```
 

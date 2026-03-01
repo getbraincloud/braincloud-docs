@@ -54,8 +54,8 @@ RSDataCallback rsDataCallback = (response) =>
 ```javascript
 <%= data.branding.codePrefix %>.relay.registerSystemCallback(result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -85,7 +85,7 @@ if (result.statusCode == 200) {
 
 ```lua
 local relayCallback = function(jsonResponse)
-	-- Your code
+    -- Your code
 end
 
 <%= data.branding.codePrefix %>:getRelayService():registerSystemCallback(relayCallback)

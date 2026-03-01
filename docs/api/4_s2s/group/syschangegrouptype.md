@@ -100,12 +100,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "group",
-	"operation": "SYS_CHANGE_GROUP_TYPE",
-	"data": {
-		"groupId": "a-group-id",
-		"groupType": "group-type"
-	}
+    "service": "group",
+    "operation": "SYS_CHANGE_GROUP_TYPE",
+    "data": {
+        "groupId": "a-group-id",
+        "groupType": "group-type"
+    }
 }
 ```
 

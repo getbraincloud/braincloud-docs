@@ -88,8 +88,8 @@ var minutes = 10;
 
 <%= data.branding.codePrefix %>.matchMaking.turnShieldOnFor(minutes, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -119,11 +119,11 @@ if (result.statusCode == 200) {
 local minutes = 10
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getMatchMakingService():turnShieldOnFor(minutes, callback)

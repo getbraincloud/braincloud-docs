@@ -111,19 +111,19 @@ if (updateResult.status == 200) {
 
 ```r
 {
-	"service": "chat",
-	"operation": "SYS_UPDATE_CHAT_MESSAGE",
-	"data": {
-		"channelId": "55555:gl:bcDev",
-		"msgId": "the-message-id",
-		"version": 1,
-		"content": {
-			"text": "New plain text message",
-			"custom": {
-				"somethingNew": "amazing"
-			}
-		}
-	}
+    "service": "chat",
+    "operation": "SYS_UPDATE_CHAT_MESSAGE",
+    "data": {
+        "channelId": "55555:gl:bcDev",
+        "msgId": "the-message-id",
+        "version": 1,
+        "content": {
+            "text": "New plain text message",
+            "custom": {
+                "somethingNew": "amazing"
+            }
+        }
+    }
 }
 ```
 

@@ -95,8 +95,8 @@ var maxResults = 5;
 
 <%= data.branding.codePrefix %>.friend.findUsersByNameStartingWith(searchText, maxResults, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -128,11 +128,11 @@ local searchText = "someText"
 local maxResults = 5
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getFriendService():findUsersByNameStartingWith(searchText, maxResults, callback)
@@ -161,12 +161,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "friend",
-	"operation": "FIND_USERS_BY_NAME_STARTING_WITH",
-	"data": {
-		"searchText": "someText",
-		"maxResults": 5
-	}
+    "service": "friend",
+    "operation": "FIND_USERS_BY_NAME_STARTING_WITH",
+    "data": {
+        "searchText": "someText",
+        "maxResults": 5
+    }
 }
 ```
 

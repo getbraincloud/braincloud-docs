@@ -105,12 +105,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "entity",
-	"operation": "DELETE",
-	"data": {
-		"entityId": "someEntityId",
-		"version": -1
-	}
+    "service": "entity",
+    "operation": "DELETE",
+    "data": {
+        "entityId": "someEntityId",
+        "version": -1
+    }
 }
 ```
 

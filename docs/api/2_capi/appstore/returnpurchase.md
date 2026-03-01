@@ -99,12 +99,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "appStore",
-	"operation": "RETURN_PURCHASE",
-	"data": {
-		"storeId": "mock",
+    "service": "appStore",
+    "operation": "RETURN_PURCHASE",
+    "data": {
+        "storeId": "mock",
         "transactionId": "xxxxxx"
-	}
+    }
 }
 ```
 

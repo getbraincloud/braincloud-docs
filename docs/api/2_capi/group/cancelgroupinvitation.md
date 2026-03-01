@@ -96,8 +96,8 @@ var profileId = "a-profile-id";
 
 <%= data.branding.codePrefix %>.group.cancelGroupInvitation(groupId, profileId, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -129,11 +129,11 @@ local groupId = "a-group-id"
 local profileId = "a-profile-id"
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getGroupService():cancelGroupInvitation(groupId, profileId, callback)
@@ -162,12 +162,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "group",
-	"operation": "CANCEL_GROUP_INVITATION",
-	"data": {
-		"groupId": "a-group-id",
-		"profileId": "the-profile-id"
-	}
+    "service": "group",
+    "operation": "CANCEL_GROUP_INVITATION",
+    "data": {
+        "groupId": "a-group-id",
+        "profileId": "the-profile-id"
+    }
 }
 ```
 

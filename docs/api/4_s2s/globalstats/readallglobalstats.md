@@ -91,9 +91,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalGameStatistics",
-	"operation": "READ",
-	"data": {}
+    "service": "globalGameStatistics",
+    "operation": "READ",
+    "data": {}
 }
 ```
 

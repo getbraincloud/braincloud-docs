@@ -188,11 +188,11 @@ local fieldsJson = {
 }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getCustomEntityService():updateEntityFields(entityType, entityId, version, fieldsJson, callback)
@@ -226,17 +226,17 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "customEntity",
-	"operation": "UPDATE_ENTITY_FIELDS",
-	"data": {
-		"entityType": "athletes",
-		"entityId": "aaaa-bbbb-cccc-dddd",
-		"version": 1,
-		"fieldsJson": {
-			"goals": 3,
-			"assists": 5
-		}
-	}
+    "service": "customEntity",
+    "operation": "UPDATE_ENTITY_FIELDS",
+    "data": {
+        "entityType": "athletes",
+        "entityId": "aaaa-bbbb-cccc-dddd",
+        "version": 1,
+        "fieldsJson": {
+            "goals": 3,
+            "assists": 5
+        }
+    }
 }
 ```
 

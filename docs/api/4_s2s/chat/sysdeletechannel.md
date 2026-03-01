@@ -98,11 +98,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "chat",
-	"operation": "SYS_DELETE_CHANNEL",
-	"data": {
-		"channelId": "55555:dy:my-dynamic-channel"
-	}
+    "service": "chat",
+    "operation": "SYS_DELETE_CHANNEL",
+    "data": {
+        "channelId": "55555:dy:my-dynamic-channel"
+    }
 }
 ```
 

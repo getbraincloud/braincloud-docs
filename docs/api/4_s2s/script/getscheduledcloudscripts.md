@@ -98,11 +98,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "script",
-	"operation": "GET_SCHEDULED_CLOUD_SCRIPTS",
-	"data": {
-		"startDateUTC": "[[#ts+60000]]"
-	}
+    "service": "script",
+    "operation": "GET_SCHEDULED_CLOUD_SCRIPTS",
+    "data": {
+        "startDateUTC": "[[#ts+60000]]"
+    }
 }
 ```
 

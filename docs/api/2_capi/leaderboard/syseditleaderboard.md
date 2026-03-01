@@ -114,19 +114,19 @@ var retVal = leaderboardProxy.sysEditLeaderboard(
 
 ```r
 {
-	"service": "leaderboard",
-	"operation": "SYS_EDIT_LEADERBOARD",
-	"data": {
-		"leaderboardId": "default",
-		"leaderboardType": "HIGH_VALUE",
-		"rotationType": "DAYS",
-		"numDaysToRotate": 5,
-		"rotationResetTimestampUtcMillis": "[[#ts+60000]]",
-		"retainedCount": 2,
-		"data": {
-			"street": "1309 Carling"
-		}
-	}
+    "service": "leaderboard",
+    "operation": "SYS_EDIT_LEADERBOARD",
+    "data": {
+        "leaderboardId": "default",
+        "leaderboardType": "HIGH_VALUE",
+        "rotationType": "DAYS",
+        "numDaysToRotate": 5,
+        "rotationResetTimestampUtcMillis": "[[#ts+60000]]",
+        "retainedCount": 2,
+        "data": {
+            "street": "1309 Carling"
+        }
+    }
 }
 ```
 

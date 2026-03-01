@@ -155,11 +155,11 @@ local newItemData = {
 local includeDef = true
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getUserItemsService():useUserItem(itemId, version, newItemData, includeDef, callback)
@@ -193,17 +193,17 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "userItems",
-	"operation": "USE_USER_ITEM",
-	"data": {
-		"itemId": "aaa-bbb-ccc-ddd",
-		"version": 1,
-		"newItemData": {
-			"condition": 77,
-			"bonus": 1
-		},
-		"includeDef": true
-	}
+    "service": "userItems",
+    "operation": "USE_USER_ITEM",
+    "data": {
+        "itemId": "aaa-bbb-ccc-ddd",
+        "version": 1,
+        "newItemData": {
+            "condition": 77,
+            "bonus": 1
+        },
+        "includeDef": true
+    }
 }
 ```
 

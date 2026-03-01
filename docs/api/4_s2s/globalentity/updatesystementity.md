@@ -104,15 +104,15 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalEntity",
-	"operation": "UPDATE_SYSTEM_ENTITY",
-	"data": {
-		"entityId": "the-entity-id",
-		"version": 1,
-		"data": {
-			"street": "1309 Carling"
-		}
-	}
+    "service": "globalEntity",
+    "operation": "UPDATE_SYSTEM_ENTITY",
+    "data": {
+        "entityId": "the-entity-id",
+        "version": 1,
+        "data": {
+            "street": "1309 Carling"
+        }
+    }
 }
 ```
 

@@ -101,13 +101,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "group",
-	"operation": "SYS_DELETE_GROUP_ENTITY",
-	"data": {
-		"groupId": "a-group-id",
-		"entityId": "a-group-entity-id",
-		"version": 3
-	}
+    "service": "group",
+    "operation": "SYS_DELETE_GROUP_ENTITY",
+    "data": {
+        "groupId": "a-group-id",
+        "entityId": "a-group-entity-id",
+        "version": 3
+    }
 }
 ```
 

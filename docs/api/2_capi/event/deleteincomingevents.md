@@ -90,8 +90,8 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 var evIds = ["ev1", "ev2"];
 <%= data.branding.codePrefix %>.event.deleteIncomingEvents(evIds, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -121,11 +121,11 @@ if (result.statusCode == 200) {
 local evIds = { "ev1", "ev2" }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getEventService():deleteIncomingEvents(evIds, callback)
@@ -153,11 +153,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "event",
-	"operation": "DELETE_INCOMING_EVENTS",
-	"data": {
-		"evIds": ["ev1", "ev2"]
-	}
+    "service": "event",
+    "operation": "DELETE_INCOMING_EVENTS",
+    "data": {
+        "evIds": ["ev1", "ev2"]
+    }
 }
 ```
 

@@ -111,8 +111,8 @@ var data = {
 
 <%= data.branding.codePrefix %>.leaderboard.postScoreToGroupLeaderboard(leaderboardId, groupId, score, data, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -152,11 +152,11 @@ local data = {
 }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getLeaderboardService():postScoreToGroupLeaderboard(leaderboardId, groupId, score, data, callback)
@@ -189,16 +189,16 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "leaderboard",
-	"operation": "POST_GROUP_SCORE",
-	"data": {
-		"leaderboardId": "default",
-		"groupId": "actual_group_id",
-		"score": 10,
-		"data": {
-			"nickname": "batman"
-		}
-	}
+    "service": "leaderboard",
+    "operation": "POST_GROUP_SCORE",
+    "data": {
+        "leaderboardId": "default",
+        "groupId": "actual_group_id",
+        "score": 10,
+        "data": {
+            "nickname": "batman"
+        }
+    }
 }
 ```
 

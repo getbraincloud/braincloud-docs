@@ -109,8 +109,8 @@ var customDataJson = {
 
 <%= data.branding.codePrefix %>.pushNotification.sendNormalizedPushNotification(toProfileId, alertContentJson, customDataJson, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -156,11 +156,11 @@ local customDataJson = {
 }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getPushNotificationService():sendNormalizedPushNotification(toProfileId, alertContentJson, customDataJson, callback)
@@ -196,19 +196,19 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "pushNotification",
-	"operation": "SEND_NORMALIZED",
-	"data": {
-		"toProfileId": "profile1",
-		"alertContent": {
-			"body": "content of message",
-			"title": "message title"
-		},
-		"customData": {
-			"field1": "value1",
-			"field2": "value2"
-		}
-	}
+    "service": "pushNotification",
+    "operation": "SEND_NORMALIZED",
+    "data": {
+        "toProfileId": "profile1",
+        "alertContent": {
+            "body": "content of message",
+            "title": "message title"
+        },
+        "customData": {
+            "field1": "value1",
+            "field2": "value2"
+        }
+    }
 }
 ```
 

@@ -70,8 +70,8 @@ var receipt = "Receipt XML";
 
 <%= data.branding.codePrefix %>.product.verifyMicrosoftReceipt(receipt, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -115,11 +115,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "product",
-	"operation": "VERIFY_MICROSOFT_RECEIPT",
-	"data": {
-		"receipt": "Receipt XML"
-	}
+    "service": "product",
+    "operation": "VERIFY_MICROSOFT_RECEIPT",
+    "data": {
+        "receipt": "Receipt XML"
+    }
 }
 ```
 

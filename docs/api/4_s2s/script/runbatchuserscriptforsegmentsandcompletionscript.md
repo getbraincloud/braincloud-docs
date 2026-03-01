@@ -90,8 +90,8 @@ var scriptData = {
   "queryStat": "xp"
 };
 var segmentIdList = [
-	1,
-	2
+    1,
+    2
 ];
 var completionScript = "path/to/script2";
 
@@ -110,19 +110,19 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "script",
-	"operation": "RUN_BATCH_USER_SCRIPT",
-	"data": {
-		"scriptName": "calcUser",
-		"scriptData": {
-			"queryStat": "xp"
-		},
-		segmentIdList = [
-			1,
-			2
-		],
-		"completionScript": "processResults"
-	}
+    "service": "script",
+    "operation": "RUN_BATCH_USER_SCRIPT",
+    "data": {
+        "scriptName": "calcUser",
+        "scriptData": {
+            "queryStat": "xp"
+        },
+        segmentIdList = [
+            1,
+            2
+        ],
+        "completionScript": "processResults"
+    }
 }
 ```
 

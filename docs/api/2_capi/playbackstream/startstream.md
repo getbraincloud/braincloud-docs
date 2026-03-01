@@ -96,8 +96,8 @@ var includeSharedData = false;
 
 <%= data.branding.codePrefix %>.playbackStream.startStream(targetPlayerId, includeSharedData, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -129,11 +129,11 @@ local targetPlayerId = "player"
 local includeSharedData = false
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getPlaybackStreamService():startStream(targetPlayerId, includeSharedData, callback)
@@ -162,12 +162,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "playbackStream",
-	"operation": "START_STREAM",
-	"data": {
-		"targetPlayerId": "player",
-		"includeSharedData": false
-	}
+    "service": "playbackStream",
+    "operation": "START_STREAM",
+    "data": {
+        "targetPlayerId": "player",
+        "includeSharedData": false
+    }
 }
 ```
 

@@ -97,11 +97,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "group",
-	"operation": "SYS_READ_GROUP_DATA",
-	"data": {
-		"groupId": "a-group-id"
-	}
+    "service": "group",
+    "operation": "SYS_READ_GROUP_DATA",
+    "data": {
+        "groupId": "a-group-id"
+    }
 }
 ```
 

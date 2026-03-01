@@ -110,8 +110,8 @@ var replaceName = false;
 
 <%= data.branding.codePrefix %>.leaderboard.getSocialLeaderboardIfExists(leaderboardId, replaceName, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -143,11 +143,11 @@ local leaderboardId = "default"
 local replaceName = false
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getLeaderboardService():getSocialLeaderboardIfExists(leaderboardId, replaceName, callback)
@@ -176,12 +176,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "leaderboard",
-	"operation": "GET_SOCIAL_LEADERBOARD_IF_EXISTS",
-	"data": {
-		"leaderboardId": "default",
-		"replaceName": false
-	}
+    "service": "leaderboard",
+    "operation": "GET_SOCIAL_LEADERBOARD_IF_EXISTS",
+    "data": {
+        "leaderboardId": "default",
+        "replaceName": false
+    }
 }
 ```
 

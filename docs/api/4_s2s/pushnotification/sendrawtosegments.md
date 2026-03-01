@@ -92,32 +92,32 @@ This operation sends a raw message to targetted segments.
 
 ```cfscript
 var fcmContent = {
-	"notification": {
-		"body": "content of message",
-		"title": "message title"
-	},
-	"data": {
-		"customfield1": "customValue1",
-		"customfield2": "customValue2"
-	},
-	"priority": "normal"
+    "notification": {
+        "body": "content of message",
+        "title": "message title"
+    },
+    "data": {
+        "customfield1": "customValue1",
+        "customfield2": "customValue2"
+    },
+    "priority": "normal"
 };
 var iosContent = {
-	"aps": {
-		"alert": {
-			"body": "content of message",
-			"title": "message title"
-		},
-		"badge": 0,
-		"sound": "gggg"
-	}
+    "aps": {
+        "alert": {
+            "body": "content of message",
+            "title": "message title"
+        },
+        "badge": 0,
+        "sound": "gggg"
+    }
 };
 var facebookContent = {
-	"template": "content of message"
+    "template": "content of message"
 };
 var segmentIdList = [
-	1,
-	2
+    1,
+    2
 ];
 var pushNotificationProxy = bridge.getPushNotificationServiceProxy();
 
@@ -134,38 +134,38 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "pushNotification",
-	"operation": "SEND_RAW_TO_SEGMENTS",
-	"data": {
-		"segmentIdList": [
-			1,
-			2
-		],
-		"fcmContent": {
-			"notification": {
-				"body": "content of message",
-				"title": "message title"
-			},
-			"data": {
-				"customfield1": "customValue1",
-				"customfield2": "customValue2"
-			},
-			"priority": "normal"
-		},
-		"iosContent": {
-			"aps": {
-				"alert": {
-					"body": "content of message",
-					"title": "message title"
-				},
-				"badge": 0,
-				"sound": "gggg"
-			}
-		},
-		"facebookContent": {
-			"template": "content of message"
-		}
-	}
+    "service": "pushNotification",
+    "operation": "SEND_RAW_TO_SEGMENTS",
+    "data": {
+        "segmentIdList": [
+            1,
+            2
+        ],
+        "fcmContent": {
+            "notification": {
+                "body": "content of message",
+                "title": "message title"
+            },
+            "data": {
+                "customfield1": "customValue1",
+                "customfield2": "customValue2"
+            },
+            "priority": "normal"
+        },
+        "iosContent": {
+            "aps": {
+                "alert": {
+                    "body": "content of message",
+                    "title": "message title"
+                },
+                "badge": 0,
+                "sound": "gggg"
+            }
+        },
+        "facebookContent": {
+            "template": "content of message"
+        }
+    }
 }
 ```
 

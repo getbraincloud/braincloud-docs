@@ -19,18 +19,18 @@ string channelId = "22817:gl:CHAT_GROUPFINDER"; // APP_ID:CHANNEL_TYPE:CHANNEL_I
 string msgId = "783820066133040";
 SuccessCallback successCallback = (response, cbObject) =>
 {
-	Dictionary<string, object> jsonMessage = (Dictionary<string, object>)JsonFx.Json.JsonReader.Deserialize(response);
-	Dictionary<string, object> jsonData = (Dictionary<string, object>)jsonMessage["data"];
-	
-	var date = jsonData["date"].ToString();
-	var name = ((Dictionary<string, object>)jsonData["from"])["name"].ToString();
-	var text = ((Dictionary<string, object>)jsonData["content"])["text"].ToString();
-	string logMessage = string.Join(" | ", new [] {date, name, text});
-	Debug.Log(logMessage); // 1530898566666 | RedBomber | Anyone looking for a group?
+    Dictionary<string, object> jsonMessage = (Dictionary<string, object>)JsonFx.Json.JsonReader.Deserialize(response);
+    Dictionary<string, object> jsonData = (Dictionary<string, object>)jsonMessage["data"];
+    
+    var date = jsonData["date"].ToString();
+    var name = ((Dictionary<string, object>)jsonData["from"])["name"].ToString();
+    var text = ((Dictionary<string, object>)jsonData["content"])["text"].ToString();
+    string logMessage = string.Join(" | ", new [] {date, name, text});
+    Debug.Log(logMessage); // 1530898566666 | RedBomber | Anyone looking for a group?
 };
 FailureCallback failureCallback = (status, code, error, cbObject) =>
 {
-	Debug.Log(string.Format("[GetChatMessage Failed] {0}  {1}  {2}", status, code, error));
+    Debug.Log(string.Format("[GetChatMessage Failed] {0}  {1}  {2}", status, code, error));
 };
 <%= data.branding.codePrefix %>.ChatService.GetChatMessage(channelId, msgId, successCallback, failureCallback);
 ```
@@ -97,8 +97,8 @@ var msgId = "783820066133040";
 
 <%= data.branding.codePrefix %>.chat.getChatMessage(channelId, msgId, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -130,11 +130,11 @@ local channelId = "22817:gl:CHAT_GROUPFINDER"
 local msgId = "783820066133040"
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getChatService():getChatMessage(channelId, msgId, callback)
@@ -160,12 +160,12 @@ if (getReult.status == 200 ) {
 
 ```r
 {
-	"service": "chat",
-	"operation": "GET_CHAT_MESSAGE",
-	"data": {
-		"channelId": "55555:gl:bcDev",
-		"msgId": "the-message-id"
-	}
+    "service": "chat",
+    "operation": "GET_CHAT_MESSAGE",
+    "data": {
+        "channelId": "55555:gl:bcDev",
+        "msgId": "the-message-id"
+    }
 }
 ```
 

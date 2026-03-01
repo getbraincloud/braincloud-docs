@@ -96,8 +96,8 @@ var recurse = true;
 
 <%= data.branding.codePrefix %>.globalFile.getGlobalFileList(folderPath, recurse, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -129,11 +129,11 @@ local folderPath = ""
 local recurse = true
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getGlobalFileV3Service():getGlobalFileList(folderPath, recurse, callback)
@@ -164,9 +164,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalFileV3",
-	"operation": "GET_GLOBAL_FILE_LIST",
-	"data": {
+    "service": "globalFileV3",
+    "operation": "GET_GLOBAL_FILE_LIST",
+    "data": {
         "folderPath": "",
         "recurse": true,        
     }

@@ -103,15 +103,15 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "customEntity",
-	"operation": "SYS_GET_RANDOM_ENTITIES_MATCHING",
-	"data": {
+    "service": "customEntity",
+    "operation": "SYS_GET_RANDOM_ENTITIES_MATCHING",
+    "data": {
     "entityType": "athletes",
     "whereJson": {
       "data.position": "forward"
     },
     "maxReturn": 2
-	}
+    }
 }
 ```
 

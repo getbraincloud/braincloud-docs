@@ -119,11 +119,11 @@ if (result.statusCode == 200) {
 local externalId = "username"
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getIdentityService():attachNonLoginUniversalId(externalId, callback)
@@ -151,11 +151,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "identity",
-	"operation": "ATTACH_NONLOGIN_UNIVERSAL",
-	"data": {
-		"externalId": "username"
-	}
+    "service": "identity",
+    "operation": "ATTACH_NONLOGIN_UNIVERSAL",
+    "data": {
+        "externalId": "username"
+    }
 }
 ```
 

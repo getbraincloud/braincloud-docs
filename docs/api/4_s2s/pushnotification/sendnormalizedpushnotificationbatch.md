@@ -86,12 +86,12 @@ Sends a notification to a list of users consisting of alert content and custom d
 ```cfscript
 var profileIds = "the-profile-id,another-profile-id";
 var alertContent = {
-	"body": "content of message",
-	"title": "message title"
+    "body": "content of message",
+    "title": "message title"
 };
 var customData = {
-	"field1": "value1",
-	"field2": "value2"
+    "field1": "value1",
+    "field2": "value2"
 };
 var pushNotificationProxy = bridge.getPushNotificationServiceProxy();
 
@@ -108,22 +108,22 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "pushNotification",
-	"operation": "SEND_NORMALIZED_BATCH",
-	"data": {
-		"profileIds": [
-			"the-profile-id",
-			"another-profile-id"
-		],
-		"alertContent": {
-			"body": "content of message",
-			"title": "message title"
-		},
-		"customData": {
-			"field1": "value1",
-			"field2": "value2"
-		}
-	}
+    "service": "pushNotification",
+    "operation": "SEND_NORMALIZED_BATCH",
+    "data": {
+        "profileIds": [
+            "the-profile-id",
+            "another-profile-id"
+        ],
+        "alertContent": {
+            "body": "content of message",
+            "title": "message title"
+        },
+        "customData": {
+            "field1": "value1",
+            "field2": "value2"
+        }
+    }
 }
 ```
 

@@ -111,8 +111,8 @@ var eventData = {
 
 <%= data.branding.codePrefix %>.event.sendEvent(toId, eventType, eventData, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -150,11 +150,11 @@ local eventData = {
 }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getEventService():sendEvent(toProfileId, eventType, eventData, callback)
@@ -186,15 +186,15 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "event",
-	"operation": "SEND",
-	"data": {
-		"toId": "profile1",
-		"eventType": "type1",
-		"eventData": {
-			"someMapAttribute": "someValue"
-		}
-	}
+    "service": "event",
+    "operation": "SEND",
+    "data": {
+        "toId": "profile1",
+        "eventType": "type1",
+        "eventData": {
+            "someMapAttribute": "someValue"
+        }
+    }
 }
 ```
 

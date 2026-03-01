@@ -101,13 +101,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "group",
-	"operation": "SYS_UPDATE_GROUP_SUMMARY_DATA",
-	"data": {
-		"groupId": "a-group-id",
-		"version": 3,
-		"summaryData": {}
-	}
+    "service": "group",
+    "operation": "SYS_UPDATE_GROUP_SUMMARY_DATA",
+    "data": {
+        "groupId": "a-group-id",
+        "version": 3,
+        "summaryData": {}
+    }
 }
 ```
 

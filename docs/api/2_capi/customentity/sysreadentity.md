@@ -99,12 +99,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "customEntity",
-	"operation": "SYS_READ_ENTITY",
-	"data": {
-		"entityType": "athletes",
-		"entityId": "aaaa-bbbb-cccc-dddd"
-	}
+    "service": "customEntity",
+    "operation": "SYS_READ_ENTITY",
+    "data": {
+        "entityType": "athletes",
+        "entityId": "aaaa-bbbb-cccc-dddd"
+    }
 }
 ```
 

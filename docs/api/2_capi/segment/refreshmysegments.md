@@ -93,9 +93,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "segment",
-	"operation": "REFRESH_MY_SEGMENTS",
-	"data": {}
+    "service": "segment",
+    "operation": "REFRESH_MY_SEGMENTS",
+    "data": {}
 }
 ```
 

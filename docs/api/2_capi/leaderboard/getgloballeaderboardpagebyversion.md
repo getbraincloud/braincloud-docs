@@ -125,8 +125,8 @@ var versionId = -1;
 
 <%= data.branding.codePrefix %>.leaderboard.getGlobalLeaderboardPageByVersion(leaderboardId, sortOrder, startIndex, endIndex, versionId, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -164,11 +164,11 @@ local endIndex = 9
 local versionId = -1
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getLeaderboardService():getGlobalLeaderboardPageByVersion(leaderboardId, sortOrder, startIndex, endIndex, versionId, callback)
@@ -200,15 +200,15 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "leaderboard",
-	"operation": "GET_GLOBAL_LEADERBOARD_PAGE",
-	"data": {
-		"leaderboardId": "default",
-		"sort": "HIGH_TO_LOW",
-		"startIndex": 0,
-		"endIndex": 9,
-		"versionId": -1
-	}
+    "service": "leaderboard",
+    "operation": "GET_GLOBAL_LEADERBOARD_PAGE",
+    "data": {
+        "leaderboardId": "default",
+        "sort": "HIGH_TO_LOW",
+        "startIndex": 0,
+        "endIndex": 9,
+        "versionId": -1
+    }
 }
 ```
 

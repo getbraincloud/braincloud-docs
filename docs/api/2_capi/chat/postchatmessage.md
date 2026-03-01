@@ -25,39 +25,39 @@ string channelId = "22817:gl:CHAT_TRADE"; // APP_ID:CHANNEL_TYPE:CHANNEL_ID
 string text = "Looking to sell a couch for 105 gold coins.";
 Dictionary<string, object> sellItem = new Dictionary<string, object>
 {
-	{"ITEM_TYPE", "COUCH"},
-	{"ITEM_ID", "d05a5b9d-374e-41e2-a498-c7387bf15c76"},
-	{"PRICE", "105"},
-	{"CURRENCY", "GOLDCOINS"}
+    {"ITEM_TYPE", "COUCH"},
+    {"ITEM_ID", "d05a5b9d-374e-41e2-a498-c7387bf15c76"},
+    {"PRICE", "105"},
+    {"CURRENCY", "GOLDCOINS"}
 };
 Dictionary<string, object> rich = new Dictionary<string, object>
 {
-	{"SELL_ITEM", sellItem}
+    {"SELL_ITEM", sellItem}
 };
 var contentJson = JsonFx.Json.JsonWriter.Serialize(new Dictionary<string, object>
 {
-	{"rich", rich},
-	{"text", text}
+    {"rich", rich},
+    {"text", text}
 });
 
 bool recordInHistory = true;
 SuccessCallback successCallback = (response, cbObject) =>
 {
-	Dictionary<string, object> jsonMessage =
-		(Dictionary<string, object>) JsonFx.Json.JsonReader.Deserialize(response);
-	Dictionary<string, object> jsonData = (Dictionary<string, object>) jsonMessage["data"];
+    Dictionary<string, object> jsonMessage =
+        (Dictionary<string, object>) JsonFx.Json.JsonReader.Deserialize(response);
+    Dictionary<string, object> jsonData = (Dictionary<string, object>) jsonMessage["data"];
 
-	var msgId = jsonData["msgId"].ToString();
-	string logMessage = string.Join(" | ", new[] {msgId});
-	Debug.Log(logMessage); // 783733181125648
+    var msgId = jsonData["msgId"].ToString();
+    string logMessage = string.Join(" | ", new[] {msgId});
+    Debug.Log(logMessage); // 783733181125648
 };
 FailureCallback failureCallback = (status, code, error, cbObject) =>
 {
-	Debug.Log(string.Format("[PostChatMessage Failed] {0}  {1}  {2}", status, code, error));
+    Debug.Log(string.Format("[PostChatMessage Failed] {0}  {1}  {2}", status, code, error));
 };
 
 <%= data.branding.codePrefix %>.ChatService.PostChatMessage(channelId, contentJson, recordInHistory,
-	successCallback, failureCallback);
+    successCallback, failureCallback);
 ```
 
 ```mdx-code-block
@@ -127,8 +127,8 @@ var rnecordIHistory = true;
 
 <%= data.branding.codePrefix %>.chat.postChatMessage(channelId, contentJson, recordInHistory, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -162,11 +162,11 @@ local contentJson = {text: "Looking to sell a couch for 105 gold coins.", SELL_I
 local rnecordIHistory = true
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getChatService():postChatMessage(channelId, contentJson, rnecordIHistory, callback)
@@ -196,18 +196,18 @@ if (postResult.status == 200 ) {
 
 ```r
 {
-	"service": "chat",
-	"operation": "POST_CHAT_MESSAGE",
-	"data": {
-		"channelId": "55555:gl:bcDev",
-		"content": {
-			"text": "Hello world",
-			"custom": {
-				"somethingCustom": "wow"
-			}
-		},
-		"recordInHistory": true
-	}
+    "service": "chat",
+    "operation": "POST_CHAT_MESSAGE",
+    "data": {
+        "channelId": "55555:gl:bcDev",
+        "content": {
+            "text": "Hello world",
+            "custom": {
+                "somethingCustom": "wow"
+            }
+        },
+        "recordInHistory": true
+    }
 }
 ```
 

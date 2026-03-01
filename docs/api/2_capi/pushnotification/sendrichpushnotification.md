@@ -96,8 +96,8 @@ var notificationTemplateId = 1;
 
 <%= data.branding.codePrefix %>.pushNotification.sendRichPushNotification(toProfileId, notificationTemplateId, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -129,11 +129,11 @@ local toProfileId = "profile1"
 local notificationTemplateId = 1
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getPushNotificationService():sendRichPushNotification(toProfileId, notificationTemplateId, callback)
@@ -162,16 +162,16 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "pushNotification",
-	"operation": "SEND_RICH",
-	"data": {
-		"toProfileId": "profile1",
-		"notificationTemplateId": 1,
-		"substitutions": {
-			"0": "value0",
-			"1": "value1"
-		}
-	}
+    "service": "pushNotification",
+    "operation": "SEND_RICH",
+    "data": {
+        "toProfileId": "profile1",
+        "notificationTemplateId": 1,
+        "substitutions": {
+            "0": "value0",
+            "1": "value1"
+        }
+    }
 }
 ```
 

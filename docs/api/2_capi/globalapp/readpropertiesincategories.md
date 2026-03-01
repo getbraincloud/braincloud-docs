@@ -90,8 +90,8 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 var categories = [ "cName1", "cName2" ];
 <%= data.branding.codePrefix %>.globalApp.readPropertiesInCategories(categories, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -121,11 +121,11 @@ if (result.statusCode == 200) {
 local categories = { "cName1", "cName2" }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getGlobalAppService():readPropertiesInCategories(categories, callback)
@@ -153,9 +153,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalApp",
-	"operation": "READ_PROPERTIES_IN_CATEGORIES",
-	"data": {
+    "service": "globalApp",
+    "operation": "READ_PROPERTIES_IN_CATEGORIES",
+    "data": {
         "categories": ["comma separated category strings"]
     }
 }

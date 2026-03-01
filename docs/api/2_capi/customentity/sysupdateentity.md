@@ -115,22 +115,22 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "customEntity",
-	"operation": "SYS_UPDATE_ENTITY",
-	"data": {
-		"entityType": "athletes",
-		"entityId": "aaaa-bbbb-cccc-dddd",
-		"version": 1,
-		"dataJson": {
-			"firstName": "Super",
-			"surName": "Star",
-			"position": "defense",
-			"goals": 3,
-			"assists": 5
-		},
-		"acl": {},
-		"timeToLive": null
-	}
+    "service": "customEntity",
+    "operation": "SYS_UPDATE_ENTITY",
+    "data": {
+        "entityType": "athletes",
+        "entityId": "aaaa-bbbb-cccc-dddd",
+        "version": 1,
+        "dataJson": {
+            "firstName": "Super",
+            "surName": "Star",
+            "position": "defense",
+            "goals": 3,
+            "assists": 5
+        },
+        "acl": {},
+        "timeToLive": null
+    }
 }
 ```
 

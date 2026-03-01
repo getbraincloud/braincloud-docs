@@ -137,11 +137,11 @@ local vcId = "coins"
 local vcAmount = 1
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getVirtualCurrencyService():awardCurrency(vcId, vcAmount, callback)
@@ -170,12 +170,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "virtualCurrency",
-	"operation": "AWARD_VC",
-	"data": {
-		"vcId": "coins",
-		"vcAmount": 1
-	}
+    "service": "virtualCurrency",
+    "operation": "AWARD_VC",
+    "data": {
+        "vcId": "coins",
+        "vcAmount": 1
+    }
 }
 ```
 

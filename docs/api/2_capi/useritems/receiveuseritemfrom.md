@@ -128,11 +128,11 @@ local profileId = "a-user-profileId"
 local itemId = "aaa-bbb-ccc-ddd"
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getUserItemsService():receiveUserItemFrom(profileId, itemId, callback)
@@ -161,12 +161,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "userItems",
-	"operation": "RECEIVE_USER_ITEM_FROM",
-	"data": {
-		"profileId": "a-user-profileId",
-		"itemId": "aaa-bbb-ccc-ddd"
-	}
+    "service": "userItems",
+    "operation": "RECEIVE_USER_ITEM_FROM",
+    "data": {
+        "profileId": "a-user-profileId",
+        "itemId": "aaa-bbb-ccc-ddd"
+    }
 }
 ```
 

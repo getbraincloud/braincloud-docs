@@ -94,10 +94,10 @@ This operation posts a JSON document and expects a JSON formatted document in re
 var serviceCode = "webService";
 var path = "resource/dir";
 var headers = {
-	"headerName": "value"
+    "headerName": "value"
 };
 var json = {
-	"key": "value"
+    "key": "value"
 };
 var httpClientProxy = bridge.getHttpClientServiceProxy();
 
@@ -114,18 +114,18 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "httpClient",
-	"operation": "POST_JSON_RESPONSE_JSON",
-	"data": {
-		"serviceCode": "webService",
-		"path": "resource/dir",
-		"headers": {
-			"headerName": "value"
-		},
-		"json": {
-			"key": "value"
-		}
-	}
+    "service": "httpClient",
+    "operation": "POST_JSON_RESPONSE_JSON",
+    "data": {
+        "serviceCode": "webService",
+        "path": "resource/dir",
+        "headers": {
+            "headerName": "value"
+        },
+        "json": {
+            "key": "value"
+        }
+    }
 }
 ```
 

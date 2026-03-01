@@ -90,8 +90,8 @@ var lobbyId = "55555:4v4:19";
 
 <%= data.branding.codePrefix %>.lobby.leaveLobby(lobbyId, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -121,11 +121,11 @@ if (result.statusCode == 200) {
 local lobbyId = "55555:4v4:19"
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getLobbyService():leaveLobby(lobbyId, callback)
@@ -153,11 +153,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "lobby",
-	"operation": "LEAVE_LOBBY",
-	"data": {
-		"lobbyId": "55555:4v4:19"
-	}
+    "service": "lobby",
+    "operation": "LEAVE_LOBBY",
+    "data": {
+        "lobbyId": "55555:4v4:19"
+    }
 }
 ```
 

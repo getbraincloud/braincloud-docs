@@ -90,8 +90,8 @@ var lobbyTypes = [ "2v2", "4v4" ];
 
 <%= data.branding.codePrefix %>.lobby.getRegionsForLobbies(lobbyTypes, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -121,11 +121,11 @@ if (result.statusCode == 200) {
 local lobbyTypes = { "2v2", "4v4" }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getLobbyService():getRegionsForLobbies(lobbyTypes, callback)
@@ -153,14 +153,14 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "lobby",
-	"operation": "GET_REGIONS_FOR_LOBBIES",
-	"data": {
-		"lobbyTypes": [
-			"2v2",
-			"4v4"
-		]
-	}
+    "service": "lobby",
+    "operation": "GET_REGIONS_FOR_LOBBIES",
+    "data": {
+        "lobbyTypes": [
+            "2v2",
+            "4v4"
+        ]
+    }
 }
 ```
 

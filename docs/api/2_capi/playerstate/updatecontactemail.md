@@ -94,8 +94,8 @@ var contactEmail = "someName@somedomain.com";
 
 <%= data.branding.codePrefix %>.playerState.updateContactEmail(contactEmail, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -125,11 +125,11 @@ if (result.statusCode == 200) {
 local contactEmail = "someName@somedomain.com"
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getPlayerStateService():updateContactEmail(contactEmail, callback)
@@ -157,11 +157,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "playerState",
-	"operation": "UPDATE_CONTACT_EMAIL",
-	"data": {
-		"contactEmail": "someName@somedomain.com"
-	}
+    "service": "playerState",
+    "operation": "UPDATE_CONTACT_EMAIL",
+    "data": {
+        "contactEmail": "someName@somedomain.com"
+    }
 }
 ```
 

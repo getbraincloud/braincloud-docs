@@ -94,8 +94,8 @@ var fileId = "hjvfsghguhuhrtghgh";
 
 <%= data.branding.codePrefix %>.globalFile.getGlobalCDNUrl(fileId, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -125,11 +125,11 @@ if (result.statusCode == 200) {
 local fileId = "hjvfsghguhuhrtghgh"
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getGlobalFileV3Service():getGlobalCDNUrl(fileId, callback)
@@ -158,11 +158,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalFileV3",
-	"operation": "GET_GLOBAL_CDN_URL",
-	"data": {
-		"fileId": "hjvfsghguhuhrtghgh"
-	}
+    "service": "globalFileV3",
+    "operation": "GET_GLOBAL_CDN_URL",
+    "data": {
+        "fileId": "hjvfsghguhuhrtghgh"
+    }
 }
 ```
 

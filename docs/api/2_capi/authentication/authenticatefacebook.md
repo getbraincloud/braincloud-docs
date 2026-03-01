@@ -64,12 +64,12 @@ BCCompletionBlock successBlock;      // define callback
 BCErrorCompletionBlock failureBlock; // define callback
 
 [[<%= data.branding.codePrefix %> authenticationService]
-	       authenticateFacebook:facebookId
-  	        authenticationToken:token
+           authenticateFacebook:facebookId
+              authenticationToken:token
                     forceCreate:forceCreate
                 completionBlock:successBlock
            errorCompletionBlock:failureBlock
-		        	   cbObject:nil];
+                       cbObject:nil];
 ```
 
 ```mdx-code-block
@@ -107,8 +107,8 @@ var forceCreate = true;
 
 <%= data.branding.codePrefix %>.authentication.authenticateFacebook(facebookId, token, forceCreate, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -142,11 +142,11 @@ local token = "tokenFromFacebook"
 local forceCreate = true
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getAuthenticationService():authenticateFacebook(facebookId, token, forceCreate, callback)

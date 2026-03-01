@@ -94,11 +94,11 @@ var retVal = leaderboardProxy.sysGetLeaderboardConfig(leaderboardId);
 
 ```r
 {
-	"service": "leaderboard",
-	"operation": "SYS_GET_LEADERBOARD_CONFIG",
-	"data": {
-		"leaderboardId": "aLeaderboardId"
-	}
+    "service": "leaderboard",
+    "operation": "SYS_GET_LEADERBOARD_CONFIG",
+    "data": {
+        "leaderboardId": "aLeaderboardId"
+    }
 }
 ```
 

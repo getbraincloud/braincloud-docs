@@ -111,14 +111,14 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalFileV3",
-	"operation": "SYS_DELETE_GLOBAL_FILES",
-	"data": {
+    "service": "globalFileV3",
+    "operation": "SYS_DELETE_GLOBAL_FILES",
+    "data": {
         "treeId": "",
         "cloudPath": "/",
         "treeVersion": 2,
         "recurse": false
-	}
+    }
 }
 ```
 

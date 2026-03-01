@@ -129,11 +129,11 @@ local groupId = "dfsfsffsd"
 local fullPathFilename = "cccc"
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getGroupFileService():checkFullpathFilenameExists(groupId, fullPathFilename, callback)

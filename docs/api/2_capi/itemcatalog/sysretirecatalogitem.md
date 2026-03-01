@@ -99,12 +99,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "itemCatalog",
-	"operation": "SYS_RETIRE_CATALOG_ITEM",
-	"data": {
-		"defId": "sword001",
-		"version": 1
-	}
+    "service": "itemCatalog",
+    "operation": "SYS_RETIRE_CATALOG_ITEM",
+    "data": {
+        "defId": "sword001",
+        "version": 1
+    }
 }
 ```
 

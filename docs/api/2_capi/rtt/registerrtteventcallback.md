@@ -98,7 +98,7 @@ void rttCallBack(RTTCommandResponse jsonResponse) {
 
 ```lua
 local rttCallBack = function(jsonResponse)
-	-- your code
+    -- your code
 end
 
 <%= data.branding.codePrefix %>:getRttService():registerRTTEventCallback(rttCallback)

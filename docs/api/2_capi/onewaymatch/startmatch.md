@@ -96,8 +96,8 @@ var rangeDelta = 10;
 
 <%= data.branding.codePrefix %>.onewayMatch.startMatch(playerId, rangeDelta, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -129,11 +129,11 @@ local playerId = "player"
 local rangeDelta = 10
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getOnewayMatchService():startMatch(playerId, rangeDelta, callback)
@@ -162,12 +162,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "onewayMatch",
-	"operation": "START_MATCH",
-	"data": {
-		"playerId": "player",
-		"rangeDelta": 10
-	}
+    "service": "onewayMatch",
+    "operation": "START_MATCH",
+    "data": {
+        "playerId": "player",
+        "rangeDelta": 10
+    }
 }
 ```
 

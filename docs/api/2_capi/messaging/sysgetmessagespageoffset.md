@@ -102,12 +102,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "messaging",
-	"operation": "SYS_GET_MESSAGES_PAGE_OFFSET",
-	"data": {
-		"context": "eyJzZWFyY2hDcml0ZXJpYSI6eyJlbnRpdHlUeXBlIjp7IiRyZWdleCI6Ii4qaWxkLioiLCIkb3B0",
-		"pageOffset": 1
-	}
+    "service": "messaging",
+    "operation": "SYS_GET_MESSAGES_PAGE_OFFSET",
+    "data": {
+        "context": "eyJzZWFyY2hDcml0ZXJpYSI6eyJlbnRpdHlUeXBlIjp7IiRyZWdleCI6Ii4qaWxkLioiLCIkb3B0",
+        "pageOffset": 1
+    }
 }
 ```
 

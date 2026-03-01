@@ -129,11 +129,11 @@ local entityType = "athletes"
 local version = 1
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getCustomEntityService():deleteSingleton(entityType, version, callback)
@@ -162,12 +162,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "customEntity",
-	"operation": "DELETE_SINGLETON",
-	"data": {
-		"entityType": "athletes",
-		"version": 1
-	}
+    "service": "customEntity",
+    "operation": "DELETE_SINGLETON",
+    "data": {
+        "entityType": "athletes",
+        "version": 1
+    }
 }
 ```
 

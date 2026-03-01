@@ -108,13 +108,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "redemptionCode",
-	"operation": "ACTIVATE_CODE",
-	"data": {
-		"scanCode": "the-scan-code",
-		"codeType": "the-code-type",
-		"customCodeInfo": {}
-	}
+    "service": "redemptionCode",
+    "operation": "ACTIVATE_CODE",
+    "data": {
+        "scanCode": "the-scan-code",
+        "codeType": "the-code-type",
+        "customCodeInfo": {}
+    }
 }
 ```
 

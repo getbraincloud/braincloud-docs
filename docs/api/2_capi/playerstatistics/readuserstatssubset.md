@@ -90,8 +90,8 @@ var userStats = [ "LIVES" ];
 
 <%= data.branding.codePrefix %>.playerStatistics.readUserStatsSubset(userStats, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -121,11 +121,11 @@ if (result.statusCode == 200) {
 local userStats = { "LIVES" }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getPlayerStatisticsService():readUserStatsSubset(userStats, callback)
@@ -153,11 +153,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "playerStatistics",
-	"operation": "READ_SUBSET",
-	"data": {
-		"statistics": ["LIVES"]
-	}
+    "service": "playerStatistics",
+    "operation": "READ_SUBSET",
+    "data": {
+        "statistics": ["LIVES"]
+    }
 }
 ```
 

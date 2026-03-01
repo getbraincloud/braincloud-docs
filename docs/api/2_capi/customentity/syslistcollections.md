@@ -91,9 +91,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "customEntity",
-	"operation": "SYS_LIST_COLLECTIONS",
-	"data": {}
+    "service": "customEntity",
+    "operation": "SYS_LIST_COLLECTIONS",
+    "data": {}
 }
 ```
 

@@ -63,7 +63,7 @@ BCCompletionBlock successBlock;      // define callback
 BCErrorCompletionBlock failureBlock; // define callback
 
 [[<%= data.branding.codePrefix %> authenticationService]
-		authenticateSettopHandoff:handoffCode
+        authenticateSettopHandoff:handoffCode
                   completionBlock:successBlock
              errorCompletionBlock:failureBlock
                          cbObject:nil];
@@ -100,8 +100,8 @@ var handoffCode = "handoffCode";
 
 <%= data.branding.codePrefix %>.authentication.authenticateSettopHandoff(handoffCode, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -131,11 +131,11 @@ if (result.statusCode == 200) {
 local handoffCode = "handoffCode"
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getAuthenticationService():authenticateSettopHandoff(handoffCode, callback)

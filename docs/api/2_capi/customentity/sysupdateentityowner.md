@@ -106,15 +106,15 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "customEntity",
-	"operation": "SYS_UPDATE_ENTITY_OWNER",
-	"data": {
-		"entityType": "athletes",
-		"entityId": "aaaa-bbbb-cccc-dddd",
+    "service": "customEntity",
+    "operation": "SYS_UPDATE_ENTITY_OWNER",
+    "data": {
+        "entityType": "athletes",
+        "entityId": "aaaa-bbbb-cccc-dddd",
     "oldOwnerId": "www-xxx-yyy-zzz1",
     "newOwnerId": "www-xxx-yyy-zzz2",    
-		"version": 1
-	}
+        "version": 1
+    }
 }
 ```
 

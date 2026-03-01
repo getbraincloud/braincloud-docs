@@ -78,7 +78,7 @@ BCErrorCompletionBlock failureBlock; // define callback
          jsonAttributes:jsonAttributes
         completionBlock:successBlock
   errorCompletionBlock:failureBlock
-		          cbObject:nil];
+                  cbObject:nil];
 ```
 
 ```mdx-code-block
@@ -109,8 +109,8 @@ var jsonAttributes = <%= data.example.jsonAttributes_js %>;
 
 <%= data.branding.codePrefix %>.group.addGroupMember(groupId, profileId, role, attributes, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -146,11 +146,11 @@ local role = "MEMBER"
 local jsonAttributes = <%= data.example.jsonAttributes_js %>
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getGroupService():addGroupMember(groupId, profileId, role, attributes, callback)

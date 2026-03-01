@@ -102,13 +102,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "lobby",
-	"operation": "SYS_DISBAND_LOBBY",
-	"data": {
-		"lobbyId": "55555:4v4:19",
-		"msg": "Server going down for maintenance",
-		"details": {}
-	}
+    "service": "lobby",
+    "operation": "SYS_DISBAND_LOBBY",
+    "data": {
+        "lobbyId": "55555:4v4:19",
+        "msg": "Server going down for maintenance",
+        "details": {}
+    }
 }
 ```
 

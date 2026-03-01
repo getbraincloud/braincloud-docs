@@ -104,14 +104,14 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "script",
-	"operation": "RUN",
-	"data": {
-		"scriptName": "path/to/script1",
-		"scriptData": {
-			"parm": "value"
-		}
-	}
+    "service": "script",
+    "operation": "RUN",
+    "data": {
+        "scriptName": "path/to/script1",
+        "scriptData": {
+            "parm": "value"
+        }
+    }
 }
 ```
 

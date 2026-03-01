@@ -118,9 +118,9 @@ if (postResult.status == 200) {
 ```r
 //for iTunesSubscriptionType Subscription. Should be one of AutoRenewable, Free, or NonRenewing
 {
-	"service": "productManagement",
-	"operation": "SYS_CREATE_PRODUCT",
-	"data": {
+    "service": "productManagement",
+    "operation": "SYS_CREATE_PRODUCT",
+    "data": {
     "productJson": { 
       "itemId": "barBundle1Imp12peer",
       "type": "Subscription",

@@ -113,8 +113,8 @@ var category = "collectables";
 
 <%= data.branding.codePrefix %>.product.getSalesInventoryByCategory(platform, userCurrency, category, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -160,13 +160,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "product",
-	"operation": "GET_INVENTORY",
-	"data": {
-		"platform": "googlePlay",
-		"user_currency": "credits",
-		"category": "collectables"
-	}
+    "service": "product",
+    "operation": "GET_INVENTORY",
+    "data": {
+        "platform": "googlePlay",
+        "user_currency": "credits",
+        "category": "collectables"
+    }
 }
 ```
 

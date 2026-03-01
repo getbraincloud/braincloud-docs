@@ -94,10 +94,10 @@ Posts a JSON document to an offboard service. Send and forget.
 var serviceCode = "webService";
 var path = "resource/dir";
 var headers = {
-	"headerName": "value"
+    "headerName": "value"
 };
 var json = {
-	"key": "value"
+    "key": "value"
 };
 var httpClientProxy = bridge.getHttpClientServiceProxy();
 
@@ -114,18 +114,18 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "httpClient",
-	"operation": "POST_JSON_OFFBOARD",
-	"data": {
-		"serviceCode": "webService",
-		"path": "resource/dir",
-		"headers": {
-			"headerName": "value"
-		},
-		"json": {
-			"key": "value"
-		}
-	}
+    "service": "httpClient",
+    "operation": "POST_JSON_OFFBOARD",
+    "data": {
+        "serviceCode": "webService",
+        "path": "resource/dir",
+        "headers": {
+            "headerName": "value"
+        },
+        "json": {
+            "key": "value"
+        }
+    }
 }
 ```
 

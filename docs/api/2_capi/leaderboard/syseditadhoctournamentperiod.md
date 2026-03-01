@@ -97,40 +97,40 @@ var leaderboardId = "default";
 var dbVersion = 1;
 var periodStartingAtUtcMillis = 1631895835000;
 var tSettingsJson = {
-		"tPeriod": {
-			"startingAt": 1631895835000,
-			"durationDays": 2,
-			"durationHours": 0,
-			"durationMinutes": 0
-		},
-		"tTournament": {
-			"tConfigs": {
-				"goldLevel": {
-					"tConfigCode": "goldLevel",
-					"activeUpUntil": -1
-				},
-				"silverLevel": {
-					"tConfigCode": "silverLevel",
-					"activeUpUntil": -1
-				}
-			},
-			"tAutoJoin": false,
-			"tAutoClaim": false
-		},
-		"tPhases": {
-			"enrolMins": 60,
-			"announcementMins": 15,
-			"disallowMins": 0,
-			"bufferMins": 10
-		}
- 	};				
+        "tPeriod": {
+            "startingAt": 1631895835000,
+            "durationDays": 2,
+            "durationHours": 0,
+            "durationMinutes": 0
+        },
+        "tTournament": {
+            "tConfigs": {
+                "goldLevel": {
+                    "tConfigCode": "goldLevel",
+                    "activeUpUntil": -1
+                },
+                "silverLevel": {
+                    "tConfigCode": "silverLevel",
+                    "activeUpUntil": -1
+                }
+            },
+            "tAutoJoin": false,
+            "tAutoClaim": false
+        },
+        "tPhases": {
+            "enrolMins": 60,
+            "announcementMins": 15,
+            "disallowMins": 0,
+            "bufferMins": 10
+        }
+     };                
 
 var leaderboardProxy = bridge.getLeaderboardServiceProxy();
 var retVal = leaderboardProxy.sysEditAdhocTournamentPeriod(
     leaderboardId,
-	dbVersion,
-	periodStartingAtUtcMillis,
-	tSettingsJson
+    dbVersion,
+    periodStartingAtUtcMillis,
+    tSettingsJson
 );
 ```
 
@@ -141,41 +141,41 @@ var retVal = leaderboardProxy.sysEditAdhocTournamentPeriod(
 
 ```r
 {
-	"service": "leaderboard",
-	"operation": "SYS_EDIT_ADHOC_TOURNAMENT_PERIOD",
-	"data": {
-		"leaderboardId": "aLeaderboardId",
-		"dbVersion": 1,
-		"periodStartingAtUtcMillis":  1631895835000,
-		"tSettingsJson":  {
-			"tPeriod": {
-				"startingAt": 1631895835000,
-				"durationDays": 2,
-				"durationHours": 0,
-				"durationMinutes": 0
-			},
-			"tTournament": {
-				"tConfigs": {
-					"goldLevel": {
-						"tConfigCode": "goldLevel",
-						"activeUpUntil": -1
-					},
-					"silverLevel": {
-						"tConfigCode": "silverLevel",
-						"activeUpUntil": -1
-					}
-				},
-				"tAutoJoin": false,
-				"tAutoClaim": false
-			},
-			"tPhases": {
-				"enrolMins": 60,
-				"announcementMins": 15,
-				"disallowMins": 0,
-				"bufferMins": 10
-			}
-		}
-	}
+    "service": "leaderboard",
+    "operation": "SYS_EDIT_ADHOC_TOURNAMENT_PERIOD",
+    "data": {
+        "leaderboardId": "aLeaderboardId",
+        "dbVersion": 1,
+        "periodStartingAtUtcMillis":  1631895835000,
+        "tSettingsJson":  {
+            "tPeriod": {
+                "startingAt": 1631895835000,
+                "durationDays": 2,
+                "durationHours": 0,
+                "durationMinutes": 0
+            },
+            "tTournament": {
+                "tConfigs": {
+                    "goldLevel": {
+                        "tConfigCode": "goldLevel",
+                        "activeUpUntil": -1
+                    },
+                    "silverLevel": {
+                        "tConfigCode": "silverLevel",
+                        "activeUpUntil": -1
+                    }
+                },
+                "tAutoJoin": false,
+                "tAutoClaim": false
+            },
+            "tPhases": {
+                "enrolMins": 60,
+                "announcementMins": 15,
+                "disallowMins": 0,
+                "bufferMins": 10
+            }
+        }
+    }
 }
 ```
 

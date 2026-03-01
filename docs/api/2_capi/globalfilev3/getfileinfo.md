@@ -88,8 +88,8 @@ var fileId = "hjvfsghguhuhrtghgh";
 
 <%= data.branding.codePrefix %>.globalFile.getFileInfo(fileId, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -119,11 +119,11 @@ if (result.statusCode == 200) {
 local fileId = "hjvfsghguhuhrtghgh"
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getGlobalFileV3Service():getFileInfo(fileId, callback)
@@ -152,11 +152,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalFileV3",
-	"operation": "GET_FILE_INFO",
-	"data": {
-		"fileId": "hjvfsghguhuhrtghgh"
-	}
+    "service": "globalFileV3",
+    "operation": "GET_FILE_INFO",
+    "data": {
+        "fileId": "hjvfsghguhuhrtghgh"
+    }
 }
 ```
 

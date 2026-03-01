@@ -84,7 +84,7 @@ whereJson | Criteria to search on
 ```cfscript
 var entityType = "athletes";
 var whereJson = {
-	"data.position": "defense"
+    "data.position": "defense"
 }
 
 var customEntityProxy = bridge.getCustomEntityServiceProxy();

@@ -89,8 +89,8 @@ var friendId = "profileId";
 
 <%= data.branding.codePrefix %>.friend.readFriendUserState(friendId, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -120,11 +120,11 @@ if (result.statusCode == 200) {
 local friendId = "profileId"
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getFriendService():readFriendUserState(friendId, callback)
@@ -152,11 +152,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "friend",
-	"operation": "READ_FRIEND_PLAYER_STATE",
-	"data": {
-		"friendId": "profileId"
-	}
+    "service": "friend",
+    "operation": "READ_FRIEND_PLAYER_STATE",
+    "data": {
+        "friendId": "profileId"
+    }
 }
 ```
 

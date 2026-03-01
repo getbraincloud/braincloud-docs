@@ -98,9 +98,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "promotions",
-	"operation": "SYS_GET_PROMOTION_LIST",
-	"data": {
+    "service": "promotions",
+    "operation": "SYS_GET_PROMOTION_LIST",
+    "data": {
     "type": "SCHEDULED"
   }
 }

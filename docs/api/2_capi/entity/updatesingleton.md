@@ -117,8 +117,8 @@ var version = -1;
 
 <%= data.branding.codePrefix %>.entity.updateSingleton(entityType, jsonEntityData, jsonEntityAcl, version, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -162,11 +162,11 @@ local jsonEntityAcl = {
 local version = -1
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getEntityService():updateSingleton(entityType, jsonEntityData, jsonEntityAcl, version, callback)
@@ -201,18 +201,18 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "entity",
-	"operation": "UPDATE_SINGLETON",
-	"data": {
-		"entityType": "settings",
-		"data": {
-			"difficulty": "normal"
-		},
-		"acl": {
-			"other": 0
-		},
-		"version": -1
-	}
+    "service": "entity",
+    "operation": "UPDATE_SINGLETON",
+    "data": {
+        "entityType": "settings",
+        "data": {
+            "difficulty": "normal"
+        },
+        "acl": {
+            "other": 0
+        },
+        "version": -1
+    }
 }
 ```
 

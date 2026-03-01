@@ -169,11 +169,11 @@ local summary = {
 }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getAsyncMatchService():abandonMatchWithSummaryData(ownerId, matchId, pushContent, summary, callback)
@@ -210,20 +210,20 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "asyncMatch",
-	"operation": "ABANDON_MATCH_WITH_SUMMARY_DATA",
-	"data": {
-		"ownerId": "the-owner-id",
-		"matchId": "the-match-id",
-		"pushContent": "An async-match has been abandoned!",
-		"summary": {
-			"abandonBy": {
-				"display": "Match abandoned by John Doe.",
-				"player": 2,
-				"reason": "forfeit"
-			}
-		}
-	}
+    "service": "asyncMatch",
+    "operation": "ABANDON_MATCH_WITH_SUMMARY_DATA",
+    "data": {
+        "ownerId": "the-owner-id",
+        "matchId": "the-match-id",
+        "pushContent": "An async-match has been abandoned!",
+        "summary": {
+            "abandonBy": {
+                "display": "Match abandoned by John Doe.",
+                "player": 2,
+                "reason": "forfeit"
+            }
+        }
+    }
 }
 ```
 

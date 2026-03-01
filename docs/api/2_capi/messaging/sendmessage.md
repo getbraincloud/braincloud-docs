@@ -102,8 +102,8 @@ var contentJson = {
 
 <%= data.branding.codePrefix %>.messaging.sendMessage(toProfileIds, contentJson, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -141,11 +141,11 @@ local contentJson = {
 }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getMessagingService():sendMessage(toProfileIds, contentJson, callback)
@@ -177,18 +177,18 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "messaging",
-	"operation": "SEND_MESSAGE",
-	"data": {
-		"toProfileIds": [
-			"profileId1",
-			"profileId2"
-		],
-		"contentJson": {
-			"subject": "Chat and messaging features are here!",
-			"text": "Check out the new chat and messaging features!"
-		}
-	}
+    "service": "messaging",
+    "operation": "SEND_MESSAGE",
+    "data": {
+        "toProfileIds": [
+            "profileId1",
+            "profileId2"
+        ],
+        "contentJson": {
+            "subject": "Chat and messaging features are here!",
+            "text": "Check out the new chat and messaging features!"
+        }
+    }
 }
 ```
 

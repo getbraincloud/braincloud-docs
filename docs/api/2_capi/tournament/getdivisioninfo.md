@@ -90,8 +90,8 @@ var divSetId = "exampleDivSetId";
 
 <%= data.branding.codePrefix %>.tournament.getDivisionInfo(divSetId, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -121,11 +121,11 @@ if (result.statusCode == 200) {
 local divSetId = "exampleDivSetId"
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getTournamentService():getDivisionInfo(divSetId, callback)
@@ -153,11 +153,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "tournament",
-	"operation": "GET_DIVISION_INFO",
-	"data": {
-		"divSetId": "exampleDivSetId"
-	}
+    "service": "tournament",
+    "operation": "GET_DIVISION_INFO",
+    "data": {
+        "divSetId": "exampleDivSetId"
+    }
 }
 ```
 

@@ -165,8 +165,8 @@ var teamCode = "blue";
 
 <%= data.branding.codePrefix %>.lobby.findLobbyWithPingData(lobbyType, rating, maxSteps, algo, filterJson, otherUserCxIds, isReady, extraJson, teamCode, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -243,11 +243,11 @@ local extraJson = {}
 local teamCode = "blue"
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getLobbyService():findLobbyWithPingData(lobbyType, rating, maxSteps, algo, filterJson, otherUserCxIds, isReady, extraJson, teamCode, callback)
@@ -303,13 +303,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "lobby",
-	"operation": "FIND_LOBBY_WITH_PING_DATA",
-	"data": {
-		"lobbyType": "4v4",
-		"rating": 76,
-		"maxSteps": 3,
-		"algo": {
+    "service": "lobby",
+    "operation": "FIND_LOBBY_WITH_PING_DATA",
+    "data": {
+        "lobbyType": "4v4",
+        "rating": 76,
+        "maxSteps": 3,
+        "algo": {
             "strategy": "compound",
             "algos": [
                 { "criteria": "ping", "strategy": "absolute", "alignment": "absolute" },
@@ -324,20 +324,20 @@ if (postResult.status == 200) {
                 [50, [10, 15]]
             ]
         },
-		"filterJson": {
-			"cheater": false
-		},
-		"otherUserCxIds": [
-			"55555:aaa-bbb-ccc-ddd:asdfjkl"
-		],
-		"isReady": false,
-		"extraJson": {},
-		"teamCode": "blue",
-		"pingData": {
-			"ca-central-1": 98,
-			"us-west-1": 123
-		}
-	}
+        "filterJson": {
+            "cheater": false
+        },
+        "otherUserCxIds": [
+            "55555:aaa-bbb-ccc-ddd:asdfjkl"
+        ],
+        "isReady": false,
+        "extraJson": {},
+        "teamCode": "blue",
+        "pingData": {
+            "ca-central-1": 98,
+            "us-west-1": 123
+        }
+    }
 }
 ```
 

@@ -184,11 +184,11 @@ local groupFileAcl = {
 }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getGroupFileService():moveUserToGroupFile(userCloudPath, userCloudFilename, groupId, groupTreeId, groupFilename, overwriteIfPresent, groupFileAcl, callback)

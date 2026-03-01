@@ -63,8 +63,8 @@ static void relayCallback(byte[] data)
 ```javascript
 <%= data.branding.codePrefix %>.relay.RegisterRelayCallback(result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -88,7 +88,7 @@ static void relayCallback(byte[] data)
 
 ```lua
 local relayCallback = function(jsonResponse)
-	-- Your code
+    -- Your code
 end
 
 <%= data.branding.codePrefix %>:getRelayService():RegisterRelayCallback(relayCallback)

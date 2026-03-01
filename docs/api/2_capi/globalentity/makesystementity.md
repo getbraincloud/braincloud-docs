@@ -100,8 +100,8 @@ var jsonEntityAcl = {
 
 <%= data.branding.codePrefix %>.globalEntity.makeSystemEntity(entityId, version, jsonEntityAcl, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -139,11 +139,11 @@ local jsonEntityAcl = {
 }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getGlobalEntityService():makeSystemEntity(entityId, version, jsonEntityAcl, callback)
@@ -175,15 +175,15 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalEntity",
-	"operation": "MAKE_SYSTEM_ENTITY",
-	"data": {
-		"entityId": "the-entity-id",
-		"version": 2,
-		"acl": {
-			"other": 1
-		}
-	}
+    "service": "globalEntity",
+    "operation": "MAKE_SYSTEM_ENTITY",
+    "data": {
+        "entityId": "the-entity-id",
+        "version": 2,
+        "acl": {
+            "other": 1
+        }
+    }
 }
 ```
 

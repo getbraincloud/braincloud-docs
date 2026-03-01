@@ -95,8 +95,8 @@ var groupId = "a-group-id";
 
 <%= data.branding.codePrefix %>.leaderboard.getGroupSocialLeaderboard(leaderboardId, groupId, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -128,11 +128,11 @@ local leaderboardId = "default"
 local groupId = "a-group-id"
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getLeaderboardService():getGroupSocialLeaderboard(leaderboardId, groupId, callback)
@@ -161,12 +161,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "leaderboard",
-	"operation": "GET_GROUP_SOCIAL_LEADERBOARD",
-	"data": {
-		"leaderboardId": "default",
-		"groupId": "a-group-id"
-	}
+    "service": "leaderboard",
+    "operation": "GET_GROUP_SOCIAL_LEADERBOARD",
+    "data": {
+        "leaderboardId": "default",
+        "groupId": "a-group-id"
+    }
 }
 ```
 

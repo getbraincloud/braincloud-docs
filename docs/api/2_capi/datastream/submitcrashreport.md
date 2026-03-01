@@ -190,11 +190,11 @@ local userNotes = ""
 local userSubmitted = false
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getDataStreamService():submitCrashReport(crashType, errorMsg, crashJson, crashLog, userName, userEmail, userNotes, userSubmitted, callback)
@@ -231,20 +231,20 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "dataStream",
-	"operation": "SEND_CRASH_REPORT",
-	"data": {
-		"crashType": "unknown",
-		"errorMsg": "Divide by zero error",
-		"crashJson": {
-			"dialog": 5
-		},
-		"crashLog": "funcX(a,b,c)/ncalled by funcY(a,b,c)",
-		"userName": "",
-		"userEmail": "",
-		"userNotes": "",
-		"userSubmitted": false
-	}
+    "service": "dataStream",
+    "operation": "SEND_CRASH_REPORT",
+    "data": {
+        "crashType": "unknown",
+        "errorMsg": "Divide by zero error",
+        "crashJson": {
+            "dialog": 5
+        },
+        "crashLog": "funcX(a,b,c)/ncalled by funcY(a,b,c)",
+        "userName": "",
+        "userEmail": "",
+        "userNotes": "",
+        "userSubmitted": false
+    }
 }
 ```
 

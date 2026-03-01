@@ -97,9 +97,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "productManagement",
-	"operation": "SYS_GET_PRODUCT_LIST",
-	"data": {
+    "service": "productManagement",
+    "operation": "SYS_GET_PRODUCT_LIST",
+    "data": {
     "category": "bars"
   }
 }

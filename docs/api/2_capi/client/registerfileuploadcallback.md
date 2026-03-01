@@ -140,10 +140,10 @@ void fileCallback(ServerResponse  response) {
 
 // FAILURE JSON
 {
-	"status": 403,
-	"reason_code": 40300,
-	"status_message": "Message describing failure",
-	"severity": "ERROR"
+    "status": 403,
+    "reason_code": 40300,
+    "status_message": "Message describing failure",
+    "severity": "ERROR"
 }
 ```
 

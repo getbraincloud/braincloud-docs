@@ -97,11 +97,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "playerState",
-	"operation": "UPDATE_IS_TESTER",
-	"data": {
-		"isTester": true
-	}
+    "service": "playerState",
+    "operation": "UPDATE_IS_TESTER",
+    "data": {
+        "isTester": true
+    }
 }
 ```
 

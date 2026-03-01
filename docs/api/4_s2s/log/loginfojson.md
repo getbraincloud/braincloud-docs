@@ -85,7 +85,7 @@ Logs an App Info message to the error log.
 ```cfscript
 var errorMessage = "Test info message";
 var jsonContext = {
-	"msg": "Test error context"
+    "msg": "Test error context"
 };
 var logProxy = bridge.getLogServiceProxy();
 
@@ -102,14 +102,14 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "log",
-	"operation": "LOG_INFO",
-	"data": {
-		"errorMessage": "Test info message",
-		"jsonContext": {
-			"msg": "Test error context"
-		}
-	}
+    "service": "log",
+    "operation": "LOG_INFO",
+    "data": {
+        "errorMessage": "Test info message",
+        "jsonContext": {
+            "msg": "Test error context"
+        }
+    }
 }
 ```
 

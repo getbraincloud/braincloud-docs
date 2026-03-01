@@ -105,8 +105,8 @@ var initialScore = 0;
 
 <%= data.branding.codePrefix %>.tournament.joinDivision(divSetId, tournamentCode, initialScore, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -140,11 +140,11 @@ local tournamentCode = "exampleTournamentCode1"
 local initialScore = 0
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getTournamentService():joinDivision(divSetId, tournamentCode, initialScore, callback)
@@ -174,13 +174,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "tournament",
-	"operation": "JOIN_DIVISION",
-	"data": {
-		"divSetId": "exampleDivSetId",
-		"tournamentCode": "exampleTournamentCode1",
-		"initialScore": 0
-	}
+    "service": "tournament",
+    "operation": "JOIN_DIVISION",
+    "data": {
+        "divSetId": "exampleDivSetId",
+        "tournamentCode": "exampleTournamentCode1",
+        "initialScore": 0
+    }
 }
 ```
 

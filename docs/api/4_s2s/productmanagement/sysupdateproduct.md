@@ -106,9 +106,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "productManagement",
-	"operation": "SYS_UPDATE_PRODUCT",
-	"data": {
+    "service": "productManagement",
+    "operation": "SYS_UPDATE_PRODUCT",
+    "data": {
     "itemId": "barBundle1Imp",
     "version": 1,
     "productJson": {

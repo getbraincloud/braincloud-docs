@@ -68,8 +68,8 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 ```javascript
 <%= data.branding.codePrefix %>.relay.connect(eRelayConnectionType.WEBSOCKET, server.host, port, server.passcode, server.lobbyId, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -122,11 +122,11 @@ local connectOptions = {
 ​
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getRelayService():connect(RelayConnectionType.WEBSOCKET, connectOptions, successCallback, failureCallback, callback)

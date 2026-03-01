@@ -102,8 +102,8 @@ var versionId = 1;
 
 <%= data.branding.codePrefix %>.leaderboard.getGroupSocialLeaderboardByVersion(leaderboardId, groupId, versionId, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -137,11 +137,11 @@ local groupId = "a-group-id"
 local versionId = 1
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getLeaderboardService():getGroupSocialLeaderboardByVersion(leaderboardId, groupId, versionId, callback)
@@ -171,13 +171,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "leaderboard",
-	"operation": "GET_GROUP_SOCIAL_LEADERBOARD_BY_VERSION",
-	"data": {
-		"leaderboardId": "default",
-		"groupId": "a-group-id",
-		"versionId": 1
-	}
+    "service": "leaderboard",
+    "operation": "GET_GROUP_SOCIAL_LEADERBOARD_BY_VERSION",
+    "data": {
+        "leaderboardId": "default",
+        "groupId": "a-group-id",
+        "versionId": 1
+    }
 }
 ```
 

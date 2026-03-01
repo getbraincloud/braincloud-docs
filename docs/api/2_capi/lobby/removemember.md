@@ -96,8 +96,8 @@ var cxId = "55555:aaa-bbb-ccc-ddd:asdfjkl";
 
 <%= data.branding.codePrefix %>.lobby.removeMember(lobbyId, cxId, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -129,11 +129,11 @@ local lobbyId = "55555:4v4:19"
 local connectionId = "55555:aaa-bbb-ccc-ddd:asdfjkl"
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getLobbyService():removeMember(lobbyId, connectionId, callback)
@@ -162,12 +162,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "lobby",
-	"operation": "REMOVE_MEMBER",
-	"data": {
-		"lobbyId": "55555:4v4:19",
-		"cxId": "55555:aaa-bbb-ccc-ddd:asdfjkl"
-	}
+    "service": "lobby",
+    "operation": "REMOVE_MEMBER",
+    "data": {
+        "lobbyId": "55555:4v4:19",
+        "cxId": "55555:aaa-bbb-ccc-ddd:asdfjkl"
+    }
 }
 ```
 

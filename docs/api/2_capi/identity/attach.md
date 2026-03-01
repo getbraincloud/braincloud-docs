@@ -105,14 +105,14 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "identity",
-	"operation": "ATTACH",
-	"data": {
-		"externalId": "email@email.com",
-		"authenticationToken": "email@email.com",
-		"authenticationType": "Email",
-		"externalAuthName": ""
-	}
+    "service": "identity",
+    "operation": "ATTACH",
+    "data": {
+        "externalId": "email@email.com",
+        "authenticationToken": "email@email.com",
+        "authenticationType": "Email",
+        "externalAuthName": ""
+    }
 }
 ```
 

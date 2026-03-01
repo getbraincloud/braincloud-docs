@@ -60,12 +60,12 @@ BCCompletionBlock successBlock;      // define callback
 BCErrorCompletionBlock failureBlock; // define callback
 
 [[<%= data.branding.codePrefix %> authenticationService]
-		  authenticateParse:parseId
+          authenticateParse:parseId
                  parseToken:parseToken
                 forceCreate:forceCreate
             completionBlock:successBlock
        errorCompletionBlock:failureBlock
-		     	   cbObject:nil];
+                    cbObject:nil];
 ```
 
 ```mdx-code-block
@@ -103,8 +103,8 @@ var forceCreate = true;
 
 <%= data.branding.codePrefix %>.authentication.authenticateParse(parseId, parseToken, forceCreate, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -138,11 +138,11 @@ local parseToken = "authToken"
 local forceCreate = true
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getAuthenticationService():authenticateParse(parseId, parseToken, forceCreate, callback)

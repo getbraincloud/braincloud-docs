@@ -105,14 +105,14 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "identity",
-	"operation": "SYS_CHANGE_EMAIL_IDENTITY",
-	"data": {
+    "service": "identity",
+    "operation": "SYS_CHANGE_EMAIL_IDENTITY",
+    "data": {
         "profileId": "user-profile-id",
         "oldEmailAddress": "oldemail@email.com",
         "newEmailAddress": "newemail@email.com",
-		"updateContactEmail": true
-	}
+        "updateContactEmail": true
+    }
 }
 ```
 

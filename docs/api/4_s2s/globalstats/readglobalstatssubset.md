@@ -83,7 +83,7 @@ Reads a subset of global statistics.
 
 ```cfscript
 var statistics = [
-	"ESTIMATE", "POINTS"
+    "ESTIMATE", "POINTS"
 ];
 var globalStatisticsProxy = bridge.getGlobalStatisticsServiceProxy();
 
@@ -100,13 +100,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalGameStatistics",
-	"operation": "READ_SUBSET",
-	"data": {
-		"statistics": [
-			"ESTIMATE", "POINTS"
-		]
-	}
+    "service": "globalGameStatistics",
+    "operation": "READ_SUBSET",
+    "data": {
+        "statistics": [
+            "ESTIMATE", "POINTS"
+        ]
+    }
 }
 ```
 

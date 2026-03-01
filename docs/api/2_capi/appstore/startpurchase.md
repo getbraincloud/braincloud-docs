@@ -98,8 +98,8 @@ var purchaseData = {
 
 <%= data.branding.codePrefix %>.appStore.startPurchase(storeId, purchaseData, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -137,11 +137,11 @@ local purchaseData = {
 }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getAppStoreService():startPurchase(storeId, purchaseData, callback)
@@ -173,15 +173,15 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "appStore",
-	"operation": "START_PURCHASE",
-	"data": {
-		"storeId": "steam",
-		"purchaseData": {
-			"itemId": "3555",
-			"language": "en"
-		}
-	}
+    "service": "appStore",
+    "operation": "START_PURCHASE",
+    "data": {
+        "storeId": "steam",
+        "purchaseData": {
+            "itemId": "3555",
+            "language": "en"
+        }
+    }
 }
 ```
 

@@ -112,8 +112,8 @@ var jsonData = {
 
 <%= data.branding.codePrefix %>.group.updateGroupData(groupId, version, jsonData, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -151,11 +151,11 @@ local jsonData = {
 }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getGroupService():updateGroupData(groupId, version, jsonData, callback)
@@ -187,15 +187,15 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "group",
-	"operation": "UPDATE_GROUP_DATA",
-	"data": {
-		"groupId": "a-group-id",
-		"version": 3,
-		"data": {
+    "service": "group",
+    "operation": "UPDATE_GROUP_DATA",
+    "data": {
+        "groupId": "a-group-id",
+        "version": 3,
+        "data": {
             "indexedId": "a-group-index"
         }
-	}
+    }
 }
 ```
 

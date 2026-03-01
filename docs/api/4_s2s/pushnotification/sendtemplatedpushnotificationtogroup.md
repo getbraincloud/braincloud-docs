@@ -97,8 +97,8 @@ var groupId = "group1";
 var senderId = "playerId";
 var notificationTemplateId = 1;
 var substitutions = {
-	"0": "value0",
-	"1": "value1"
+    "0": "value0",
+    "1": "value1"
 };
 var pushNotificationProxy = bridge.getPushNotificationServiceProxy();
 
@@ -115,17 +115,17 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "pushNotification",
-	"operation": "SEND_TEMPLATED_TO_GROUP",
-	"data": {
-		"groupId": "group1",
-		"senderId": "playerId",
-		"notificationTemplateId": 1,
-		"substitutions": {
-			"0": "value0",
-			"1": "value1"
-		}
-	}
+    "service": "pushNotification",
+    "operation": "SEND_TEMPLATED_TO_GROUP",
+    "data": {
+        "groupId": "group1",
+        "senderId": "playerId",
+        "notificationTemplateId": 1,
+        "substitutions": {
+            "0": "value0",
+            "1": "value1"
+        }
+    }
 }
 ```
 

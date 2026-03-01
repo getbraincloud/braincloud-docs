@@ -103,8 +103,8 @@ var amount = 1;
 
 <%= data.branding.codePrefix %>.product.consumeCurrency(currencyType, amount, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -149,12 +149,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "product",
-	"operation": "CONSUME_VC",
-	"data": {
-		"vc_id": "coins",
-		"vc_amount": 1
-	}
+    "service": "product",
+    "operation": "CONSUME_VC",
+    "data": {
+        "vc_id": "coins",
+        "vc_amount": 1
+    }
 }
 ```
 

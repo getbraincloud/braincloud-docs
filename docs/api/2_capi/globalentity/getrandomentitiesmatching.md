@@ -98,8 +98,8 @@ var maxReturn = 10;
 
 <%= data.branding.codePrefix %>.globalEntity.getRandomEntitiesMatching(where, maxReturn, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -135,11 +135,11 @@ local where = {
 local maxReturn = 10
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getGlobalEntityService():getRandomEntitiesMatching(where, maxReturn, callback)
@@ -170,14 +170,14 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalEntity",
-	"operation": "GET_RANDOM_ENTITIES_MATCHING",
-	"data": {
-		"where": {
-			"entityType": "address"
-		},
-		"maxReturn": 10
-	}
+    "service": "globalEntity",
+    "operation": "GET_RANDOM_ENTITIES_MATCHING",
+    "data": {
+        "where": {
+            "entityType": "address"
+        },
+        "maxReturn": 10
+    }
 }
 ```
 

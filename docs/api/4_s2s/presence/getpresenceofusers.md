@@ -100,15 +100,15 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "presence",
-	"operation": "GET_PRESENCE_OF_USERS",
-	"data": {
-		"profileIds": [
-			"aaa-bbb-ccc-ddd",
-			"bbb-ccc-ddd-eee"
-		],
-		"includeOffline": true
-	}
+    "service": "presence",
+    "operation": "GET_PRESENCE_OF_USERS",
+    "data": {
+        "profileIds": [
+            "aaa-bbb-ccc-ddd",
+            "bbb-ccc-ddd-eee"
+        ],
+        "includeOffline": true
+    }
 }
 ```
 

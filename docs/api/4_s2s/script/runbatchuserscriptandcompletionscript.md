@@ -104,15 +104,15 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "script",
-	"operation": "RUN_BATCH_USER_SCRIPT",
-	"data": {
-		"scriptName": "calcUser",
-		"scriptData": {
-			"queryStat": "xp"
-		},
-		"completionScript": "processResults"
-	}
+    "service": "script",
+    "operation": "RUN_BATCH_USER_SCRIPT",
+    "data": {
+        "scriptName": "calcUser",
+        "scriptData": {
+            "queryStat": "xp"
+        },
+        "completionScript": "processResults"
+    }
 }
 ```
 

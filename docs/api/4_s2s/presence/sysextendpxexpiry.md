@@ -100,12 +100,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "presence",
-	"operation": "SYS_EXTEND_PX_EXPIRY",
-	"data": {
-		"profileId": "aaa-bbb-ccc-ddd",
-		"seconds": 25
-	}
+    "service": "presence",
+    "operation": "SYS_EXTEND_PX_EXPIRY",
+    "data": {
+        "profileId": "aaa-bbb-ccc-ddd",
+        "seconds": 25
+    }
 }
 ```
 

@@ -81,13 +81,13 @@ BCCompletionBlock successBlock;      // define callback
 BCErrorCompletionBlock failureBlock; // define callback
 
 [[<%= data.branding.codePrefix %> authenticationService]
-		    authenticateExternal:userID
-		     authenticationToken:authToken
+            authenticateExternal:userID
+             authenticationToken:authToken
       externalAuthenticationName:externalAuthName
                      forceCreate:forceCreate
                  completionBlock:successBlock
             errorCompletionBlock:failureBlock
-	   	     	        cbObject:nil];
+                            cbObject:nil];
 ```
 
 ```mdx-code-block
@@ -127,8 +127,8 @@ var forceCreate = true;
 
 <%= data.branding.codePrefix %>.authentication.authenticateExternal(userID, token, externalAuthName, forceCreate, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -164,11 +164,11 @@ local externalAuthName = "nameOfExternalAuthService"
 local forceCreate = true
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getAuthenticationService():authenticateExternal(userID, token, externalAuthName, forceCreate, callback)

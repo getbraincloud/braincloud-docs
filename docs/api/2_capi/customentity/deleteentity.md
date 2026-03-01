@@ -137,11 +137,11 @@ local entityId = "aaaa-bbbb-cccc-dddd"
 local version = 1
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getCustomEntityService():deleteEntity(entityType, entityId, version, callback)
@@ -171,13 +171,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "customEntity",
-	"operation": "DELETE_ENTITY",
-	"data": {
-		"entityType": "athletes",
-		"entityId": "aaaa-bbbb-cccc-dddd",
-		"version": 1
-	}
+    "service": "customEntity",
+    "operation": "DELETE_ENTITY",
+    "data": {
+        "entityType": "athletes",
+        "entityId": "aaaa-bbbb-cccc-dddd",
+        "version": 1
+    }
 }
 ```
 

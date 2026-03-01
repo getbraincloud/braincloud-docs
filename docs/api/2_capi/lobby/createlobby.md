@@ -140,8 +140,8 @@ var teamCode = "blue";
 
 <%= data.branding.codePrefix %>.lobby.createLobby(lobbyType, rating, otherUserCxIds, settings, isReady, extraJson, teamCode, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -183,11 +183,11 @@ local extraJson = {}
 local teamCode = "blue"
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getLobbyService():createLobby(lobbyType, rating, otherUserCxIds, settings, isReady, extraJson, teamCode, callback)
@@ -221,19 +221,19 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "lobby",
-	"operation": "CREATE_LOBBY",
-	"data": {
-		"lobbyType": "4v4",
-		"rating": 76,
-		"otherUserCxIds": [
-			"55555:aaa-bbb-ccc-ddd:asdfjkl"
-		],
-		"settings": {},
-		"isReady": false,
-		"extraJson": {},
-		"teamCode": "blue"
-	}
+    "service": "lobby",
+    "operation": "CREATE_LOBBY",
+    "data": {
+        "lobbyType": "4v4",
+        "rating": 76,
+        "otherUserCxIds": [
+            "55555:aaa-bbb-ccc-ddd:asdfjkl"
+        ],
+        "settings": {},
+        "isReady": false,
+        "extraJson": {},
+        "teamCode": "blue"
+    }
 }
 ```
 

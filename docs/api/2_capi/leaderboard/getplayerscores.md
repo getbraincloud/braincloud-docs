@@ -61,7 +61,7 @@ BCErrorCompletionBlock failureBlock; // define callback
 
 [[<%= data.branding.codePrefix %> leaderboardService] getPlayerScores:leaderboardId
                   versionId:versionId
-				 maxResults:maxResults
+                 maxResults:maxResults
             completionBlock:successBlock
        errorCompletionBlock:failureBlock
                    cbObject:nil];
@@ -101,8 +101,8 @@ var versionId = -1;
 var maxResults = 10;
 <%= data.branding.codePrefix %>.leaderboard.getPlayerScores(leaderboardId, versionId, maxResults, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -136,11 +136,11 @@ local versionId = -1
 local maxResults = 10
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getLeaderboardService():getPlayerScores(leaderboardId, versionId, maxResults, callback)
@@ -170,13 +170,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "leaderboard",
-	"operation": "GET_PLAYER_SCORES",
-	"data": {
-		"leaderboardId": "anArcadeLeaderboardId",
-		"versionId": -1,
-		"maxResults": 10
-	}
+    "service": "leaderboard",
+    "operation": "GET_PLAYER_SCORES",
+    "data": {
+        "leaderboardId": "anArcadeLeaderboardId",
+        "versionId": -1,
+        "maxResults": 10
+    }
 }
 ```
 

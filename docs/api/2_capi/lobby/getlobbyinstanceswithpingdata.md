@@ -119,8 +119,8 @@ var "criteriaJson" = {
 
 <%= data.branding.codePrefix %>.lobby.getLobbyInstancesWithPingData(lobbyType, criteriaJson, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -168,11 +168,11 @@ var  "criteriaJson" = {
     }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getLobbyService():getLobbyInstancesWithPingData(lobbyType, criteriaJson, callback)
@@ -213,10 +213,10 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "lobby",
-	"operation": "GET_LOBBY_INSTANCES_WITH_PING_DATA",
-	"data": {
-		"lobbyType": "Relay_lobbyT_v2",
+    "service": "lobby",
+    "operation": "GET_LOBBY_INSTANCES_WITH_PING_DATA",
+    "data": {
+        "lobbyType": "Relay_lobbyT_v2",
     "criteriaJson": {
       "rating": {
         "min": 10,
@@ -230,7 +230,7 @@ if (postResult.status == 200) {
       "ca-central-1": 112,
       "us-west-1": 67
     }
-	}
+    }
 }
 ```
 

@@ -102,8 +102,8 @@ var jsonData = {
 
 <%= data.branding.codePrefix %>.entity.incrementUserEntityData(entityId, jsonData, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -149,11 +149,11 @@ local jsonData = {
 }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getEntityService():incrementUserEntityData(entityId, jsonData, callback)
@@ -189,19 +189,19 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "entity",
-	"operation": "INCREMENT_USER_ENTITY_DATA",
-	"data": {
-		"entityId": "the-entity-id",
-		"data": {
-			"field1": -1.5,
-			"field2": {
-				"field2-1": 6,
-				"field2-new": 63.6
-			},
-			"field3-new": 3
-		}
-	}
+    "service": "entity",
+    "operation": "INCREMENT_USER_ENTITY_DATA",
+    "data": {
+        "entityId": "the-entity-id",
+        "data": {
+            "field1": -1.5,
+            "field2": {
+                "field2-1": 6,
+                "field2-new": 63.6
+            },
+            "field3-new": 3
+        }
+    }
 }
 ```
 

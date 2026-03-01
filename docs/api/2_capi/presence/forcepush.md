@@ -78,8 +78,8 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 ```javascript
 <%= data.branding.codePrefix %>.presence.forcePush(result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -107,11 +107,11 @@ if (result.statusCode == 200) {
 ```lua
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getPresenceService():forcePush(callback)
@@ -138,9 +138,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "presence",
-	"operation": "FORCE_PUSH",
-	"data": {}
+    "service": "presence",
+    "operation": "FORCE_PUSH",
+    "data": {}
 }
 ```
 

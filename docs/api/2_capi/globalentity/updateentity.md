@@ -107,8 +107,8 @@ var jsonEntityData = {
 
 <%= data.branding.codePrefix %>.globalEntity.updateEntity(entityId, version, jsonEntityData, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -146,11 +146,11 @@ local jsonEntityData = {
 }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getGlobalEntityService():updateEntity(entityId, version, jsonEntityData, callback)
@@ -182,15 +182,15 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalEntity",
-	"operation": "UPDATE",
-	"data": {
-		"entityId": "the-entity-id",
-		"version": 1,
-		"data": {
-			"street": "1309 Carling"
-		}
-	}
+    "service": "globalEntity",
+    "operation": "UPDATE",
+    "data": {
+        "entityId": "the-entity-id",
+        "version": 1,
+        "data": {
+            "street": "1309 Carling"
+        }
+    }
 }
 ```
 

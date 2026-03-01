@@ -94,10 +94,10 @@ This operation retrieves a Text document from an external web site.
 var serviceCode = "webService";
 var path = "resource/dir";
 var query = {
-	"parmName": "value"
+    "parmName": "value"
 };
 var headers = {
-	"headerName": "value"
+    "headerName": "value"
 };
 var httpClientProxy = bridge.getHttpClientServiceProxy();
 
@@ -114,18 +114,18 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "httpClient",
-	"operation": "GET_RESPONSE_TEXT",
-	"data": {
-		"serviceCode": "webService",
-		"path": "resource/dir",
-		"query": {
-			"parmName": "value"
-		},
-		"headers": {
-			"headerName": "value"
-		}
-	}
+    "service": "httpClient",
+    "operation": "GET_RESPONSE_TEXT",
+    "data": {
+        "serviceCode": "webService",
+        "path": "resource/dir",
+        "query": {
+            "parmName": "value"
+        },
+        "headers": {
+            "headerName": "value"
+        }
+    }
 }
 ```
 

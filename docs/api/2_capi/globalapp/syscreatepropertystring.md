@@ -108,9 +108,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalApp",
-	"operation": "SYS_CREATE_PROPERTY_STRING",
-	"data": {
+    "service": "globalApp",
+    "operation": "SYS_CREATE_PROPERTY_STRING",
+    "data": {
         "name": "my_property",
         "value": "my-value",
         "category": "my-category",

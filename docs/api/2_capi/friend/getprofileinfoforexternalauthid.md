@@ -98,8 +98,8 @@ var externalAuthType = "OAuth";
 
 <%= data.branding.codePrefix %>.friend.getProfileInfoForExternalAuthId(externalId, externalAuthType, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -144,12 +144,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "friend",
-	"operation": "GET_PROFILE_INFO_FOR_EXTERNAL_AUTH_ID",
-	"data": {
-		"externalId": "username",
-		"externalAuthType": "OAuth"
-	}
+    "service": "friend",
+    "operation": "GET_PROFILE_INFO_FOR_EXTERNAL_AUTH_ID",
+    "data": {
+        "externalId": "username",
+        "externalAuthType": "OAuth"
+    }
 }
 ```
 

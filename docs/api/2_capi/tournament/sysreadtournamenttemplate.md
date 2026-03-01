@@ -99,9 +99,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "tournament",
-	"operation": "SYS_READ_TOURNAMENT_TEMPLATE",
-	"data": {
+    "service": "tournament",
+    "operation": "SYS_READ_TOURNAMENT_TEMPLATE",
+    "data": {
     "tournamentCode": "uniqueTournamentCode",
     "version": -1
   }

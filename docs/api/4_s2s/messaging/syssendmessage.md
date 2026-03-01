@@ -85,8 +85,8 @@ Sends a message on behalf of the system (i.e. app) to the specified users.
 
 ```cfscript
 var toProfileIds = [
-	"profileId1",
-	"profileId2"
+    "profileId1",
+    "profileId2"
 ];
 var contentJson = {
   "subject": "Upcoming features!",
@@ -111,22 +111,22 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "messaging",
-	"operation": "SYS_SEND_MESSAGE",
-	"data": {
-		"toProfileIds": [
-			"profileId1",
-			"profileId2"
-		],
-		"contentJson": {
-			"subject": "Upcoming features!",
-			"text": "Chat and messaging features are here!"
-		},
-		"fromJson": {
-			"id": null,
-			"name": "App Administrator"
-		}
-	}
+    "service": "messaging",
+    "operation": "SYS_SEND_MESSAGE",
+    "data": {
+        "toProfileIds": [
+            "profileId1",
+            "profileId2"
+        ],
+        "contentJson": {
+            "subject": "Upcoming features!",
+            "text": "Chat and messaging features are here!"
+        },
+        "fromJson": {
+            "id": null,
+            "name": "App Administrator"
+        }
+    }
 }
 ```
 

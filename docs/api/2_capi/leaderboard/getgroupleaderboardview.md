@@ -117,8 +117,8 @@ var afterCount = 4;
 
 <%= data.branding.codePrefix %>.leaderboard.getGroupLeaderboardView(leaderboardId, groupId, sort, beforeCount, afterCount, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -156,11 +156,11 @@ local beforeCount = 3
 local afterCount = 4
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getLeaderboardService():getGroupLeaderboardView(leaderboardId, groupId, sortOrder, beforeCount, afterCount, callback)
@@ -192,16 +192,16 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "leaderboard",
-	"operation": "GET_GROUP_LEADERBOARD_VIEW",
-	"data": {
-		"leaderboardId": "default",
-		"groupId": "actual_group_id",
-		"sort": "HIGH_TO_LOW",
-		"beforeCount": 3,
-		"afterCount": 4,
-		"versionId": -1
-	}
+    "service": "leaderboard",
+    "operation": "GET_GROUP_LEADERBOARD_VIEW",
+    "data": {
+        "leaderboardId": "default",
+        "groupId": "actual_group_id",
+        "sort": "HIGH_TO_LOW",
+        "beforeCount": 3,
+        "afterCount": 4,
+        "versionId": -1
+    }
 }
 ```
 

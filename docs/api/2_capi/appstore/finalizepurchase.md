@@ -105,8 +105,8 @@ var transactionData = {
 
 <%= data.branding.codePrefix %>.appStore.finalizePurchase(storeId, transactionId, transactionData, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -144,11 +144,11 @@ local transactionData = {
 }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getAppStoreService():finalizePurchase(storeId, transactionId, transactionData, callback)
@@ -180,15 +180,15 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "appStore",
-	"operation": "FINALIZE_PURCHASE",
-	"data": {
-		"storeId": "steam",
-		"transactionId": "12345677890123456789",
-		"transactionData": {
-			"transId": "12345677890123456789"
-		}
-	}
+    "service": "appStore",
+    "operation": "FINALIZE_PURCHASE",
+    "data": {
+        "storeId": "steam",
+        "transactionId": "12345677890123456789",
+        "transactionData": {
+            "transId": "12345677890123456789"
+        }
+    }
 }
 ```
 

@@ -110,15 +110,15 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "event",
-	"operation": "SEND",
-	"data": {
-		"toId": "player1",
-		"eventType": "type1",
-		"eventData": {
-			"someMapAttribute": "someValue"
-		}
-	}
+    "service": "event",
+    "operation": "SEND",
+    "data": {
+        "toId": "player1",
+        "eventType": "type1",
+        "eventData": {
+            "someMapAttribute": "someValue"
+        }
+    }
 }
 ```
 

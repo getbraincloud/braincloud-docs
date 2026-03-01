@@ -91,8 +91,8 @@ var achievements = [ "EGG_ACH09", "EGG_ACH10" ];
 
 <%= data.branding.codePrefix %>.gamification.awardAchievements(achievements, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -122,11 +122,11 @@ if (result.statusCode == 200) {
 local achievements = { "EGG_ACH09", "EGG_ACH10" }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getGamificationService():awardAchievements(achievements, callback)
@@ -156,14 +156,14 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "gamification",
-	"operation": "AWARD_ACHIEVEMENTS",
-	"data": {
-		"achievements": [
-			"EGG_ACH09",
-			"EGG_ACH10"
-		]
-	}
+    "service": "gamification",
+    "operation": "AWARD_ACHIEVEMENTS",
+    "data": {
+        "achievements": [
+            "EGG_ACH09",
+            "EGG_ACH10"
+        ]
+    }
 }
 ```
 

@@ -110,14 +110,14 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "redemptionCode",
-	"operation": "UPDATE_CUSTOM_INFO",
-	"data": {
-		"scanCode": "the-scan-code",
-		"codeType": "the-code-type",
-		"version": 3,
-		"customCodeInfo": {}
-	}
+    "service": "redemptionCode",
+    "operation": "UPDATE_CUSTOM_INFO",
+    "data": {
+        "scanCode": "the-scan-code",
+        "codeType": "the-code-type",
+        "version": 3,
+        "customCodeInfo": {}
+    }
 }
 ```
 

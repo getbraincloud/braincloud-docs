@@ -136,19 +136,19 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalGameStatistics",
-	"operation": "PROCESS_STATISTICS",
-	"data": {
-		"statistics": {
-			"INNING": "INC#1",
-			"INNINGSREM": "DEC#1",
-			"OUTS": "RESET",
-			"POINTS": "INC_TO_LIMIT#5#30",
-			"PLAYERS": "SET#8",
-			"HIGHESTHR": "MAX#3",
-			"ESTIMATE": "MIN#5"
-		}
-	}
+    "service": "globalGameStatistics",
+    "operation": "PROCESS_STATISTICS",
+    "data": {
+        "statistics": {
+            "INNING": "INC#1",
+            "INNINGSREM": "DEC#1",
+            "OUTS": "RESET",
+            "POINTS": "INC_TO_LIMIT#5#30",
+            "PLAYERS": "SET#8",
+            "HIGHESTHR": "MAX#3",
+            "ESTIMATE": "MIN#5"
+        }
+    }
 }
 ```
 

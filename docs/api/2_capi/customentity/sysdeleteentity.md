@@ -101,13 +101,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "customEntity",
-	"operation": "SYS_DELETE_ENTITY",
-	"data": {
-		"entityType": "athletes",
-		"entityId": "aaaa-bbbb-cccc-dddd",
-    	"version": 1
-	}
+    "service": "customEntity",
+    "operation": "SYS_DELETE_ENTITY",
+    "data": {
+        "entityType": "athletes",
+        "entityId": "aaaa-bbbb-cccc-dddd",
+        "version": 1
+    }
 }
 ```
 

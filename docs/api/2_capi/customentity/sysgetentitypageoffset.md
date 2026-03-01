@@ -101,13 +101,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "customEntity",
-	"operation": "SYS_GET_ENTITY_PAGE_OFFSET",
-	"data": {
-		"entityType": "athletes",
-		"context": "eyJzZWFyY2hDcml0ZXJpYSI6eyJlbnRpdHlUeXBlIjp7IiRyZWdleCI6Ii4qaWxkLioiLCIkb3B0",
-		"pageOffset": 1
-	}
+    "service": "customEntity",
+    "operation": "SYS_GET_ENTITY_PAGE_OFFSET",
+    "data": {
+        "entityType": "athletes",
+        "context": "eyJzZWFyY2hDcml0ZXJpYSI6eyJlbnRpdHlUeXBlIjp7IiRyZWdleCI6Ii4qaWxkLioiLCIkb3B0",
+        "pageOffset": 1
+    }
 }
 ```
 

@@ -42,8 +42,8 @@ NSString * profileID = @"profileId";
 NSString * anonymousID = @"anonId";
 
 [[<%= data.branding.codePrefix %> authenticationService]
-	        	initialize:profileID
-	 	       anonymousID:anonymousID];
+                initialize:profileID
+                anonymousID:anonymousID];
 ```
 
 ```mdx-code-block

@@ -96,8 +96,8 @@ var message = "Hello World";
 
 <%= data.branding.codePrefix %>.pushNotification.sendSimplePushNotification(toProfileId, message, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -129,11 +129,11 @@ local toProfileId = "profile1"
 local message = "Hello World"
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getPushNotificationService():sendSimplePushNotification(toProfileId, message, callback)
@@ -162,12 +162,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "pushNotification",
-	"operation": "SEND_SIMPLE",
-	"data": {
-		"toProfileId": "profile1",
-		"message": "Hello World"
-	}
+    "service": "pushNotification",
+    "operation": "SEND_SIMPLE",
+    "data": {
+        "toProfileId": "profile1",
+        "message": "Hello World"
+    }
 }
 ```
 

@@ -104,13 +104,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "messaging",
-	"operation": "SYS_GET_MESSAGES_FOR_OWNER_PAGE_OFFSET",
-	"data": {
+    "service": "messaging",
+    "operation": "SYS_GET_MESSAGES_FOR_OWNER_PAGE_OFFSET",
+    "data": {
     "ownerId": "493dd9ad-5196-4494-aab1-02fbffa4c7af",
-		"context": "eyJzZWFyY2hDcml0ZXJpYSI6eyJlbnRpdHlUeXBlIjp7IiRyZWdleCI6Ii4qaWxkLioiLCIkb3B0",
-		"pageOffset": 1
-	}
+        "context": "eyJzZWFyY2hDcml0ZXJpYSI6eyJlbnRpdHlUeXBlIjp7IiRyZWdleCI6Ii4qaWxkLioiLCIkb3B0",
+        "pageOffset": 1
+    }
 }
 ```
 

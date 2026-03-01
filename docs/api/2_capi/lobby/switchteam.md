@@ -99,8 +99,8 @@ var toTeamCode = "blue";
 
 <%= data.branding.codePrefix %>.lobby.switchTeam(lobbyId, toTeamCode, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -132,11 +132,11 @@ local lobbyId = "55555:4v4:19"
 local toTeamCode = "blue"
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getLobbyService():switchTeam(lobbyId, toTeamCode, callback)
@@ -165,12 +165,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "lobby",
-	"operation": "SWITCH_TEAM",
-	"data": {
-		"lobbyId": "55555:4v4:19",
-		"toTeamCode": "blue"
-	}
+    "service": "lobby",
+    "operation": "SWITCH_TEAM",
+    "data": {
+        "lobbyId": "55555:4v4:19",
+        "toTeamCode": "blue"
+    }
 }
 ```
 

@@ -100,12 +100,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalEntity",
-	"operation": "GET_LIST_BY_INDEXED_ID",
-	"data": {
-		"entityIndexedId": "the-indexed-id",
-		"maxReturn": 50
-	}
+    "service": "globalEntity",
+    "operation": "GET_LIST_BY_INDEXED_ID",
+    "data": {
+        "entityIndexedId": "the-indexed-id",
+        "maxReturn": 50
+    }
 }
 ```
 

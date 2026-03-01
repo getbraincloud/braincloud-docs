@@ -151,11 +151,11 @@ local fieldsJson = {
 }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getCustomEntityService():incrementData(entityType, entityId, fieldsJson, callback)
@@ -188,16 +188,16 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "customEntity",
-	"operation": "INCREMENT_DATA",
-	"data": {
-		"entityType": "athletes",
-		"entityId": "aaaa-bbbb-cccc-dddd",
-		"fieldsJson": { 
+    "service": "customEntity",
+    "operation": "INCREMENT_DATA",
+    "data": {
+        "entityType": "athletes",
+        "entityId": "aaaa-bbbb-cccc-dddd",
+        "fieldsJson": { 
             "goals": 3, 
             "assists": 5 
         }
-	}
+    }
 }
 ```
 

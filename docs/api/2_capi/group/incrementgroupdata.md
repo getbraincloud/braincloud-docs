@@ -104,8 +104,8 @@ var jsonData = {
 
 <%= data.branding.codePrefix %>.group.incrementGroupData(groupId, jsonData, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -151,11 +151,11 @@ local jsonData = {
 }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getGroupService():incrementGroupData(groupId, jsonData, callback)
@@ -191,19 +191,19 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "group",
-	"operation": "INCREMENT_GROUP_DATA",
-	"data": {
-		"groupId": "a-group-id",
-		"data": {
-			"field1": -1.5,
-			"field2": {
-				"field2-1": 6,
-				"field2-new": 63.6
-			},
-			"field3-new": 3
-		}
-	}
+    "service": "group",
+    "operation": "INCREMENT_GROUP_DATA",
+    "data": {
+        "groupId": "a-group-id",
+        "data": {
+            "field1": -1.5,
+            "field2": {
+                "field2-1": 6,
+                "field2-new": 63.6
+            },
+            "field3-new": 3
+        }
+    }
 }
 ```
 

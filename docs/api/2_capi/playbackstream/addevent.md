@@ -108,8 +108,8 @@ var jsonSummary = {
 
 <%= data.branding.codePrefix %>.playbackStream.addEvent(playbackStreamId, jsonEventData, jsonSummary, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -151,11 +151,11 @@ local summary = {
 }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getPlaybackStreamService():addEvent(playbackStreamId, eventData, summary, callback)
@@ -189,17 +189,17 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "playbackStream",
-	"operation": "ADD_EVENT",
-	"data": {
-		"playbackStreamId": "stream",
-		"eventData": {
-			"value": 1
-		},
-		"summary": {
-			"total": 5
-		}
-	}
+    "service": "playbackStream",
+    "operation": "ADD_EVENT",
+    "data": {
+        "playbackStreamId": "stream",
+        "eventData": {
+            "value": 1
+        },
+        "summary": {
+            "total": 5
+        }
+    }
 }
 ```
 

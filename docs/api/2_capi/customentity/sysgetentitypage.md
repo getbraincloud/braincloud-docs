@@ -130,24 +130,24 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "customEntity",
-	"operation": "SYS_GET_ENTITY_PAGE",
-	"data": {
-		"entityType": "athletes",
+    "service": "customEntity",
+    "operation": "SYS_GET_ENTITY_PAGE",
+    "data": {
+        "entityType": "athletes",
     "context": {
-			"pagination": {
-				"rowsPerPage": 50,
-				"pageNumber": 1
-			},
-			"searchCriteria": {
-				"data.position": "defense"
-			},
-			"sortCriteria": {
-				"createdAt": 1,
-				"updatedAt": -1
-			}
-		}
-	}
+            "pagination": {
+                "rowsPerPage": 50,
+                "pageNumber": 1
+            },
+            "searchCriteria": {
+                "data.position": "defense"
+            },
+            "sortCriteria": {
+                "createdAt": 1,
+                "updatedAt": -1
+            }
+        }
+    }
 }
 ```
 

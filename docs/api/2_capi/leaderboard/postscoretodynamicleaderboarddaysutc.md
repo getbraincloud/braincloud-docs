@@ -143,8 +143,8 @@ var numDaysToRotate = 4;
 
 <%= data.branding.codePrefix %>.leaderboard.postScoreToDynamicLeaderboardDaysUTC(leaderboardId, score, jsonData, leaderboardType, rotationReset, retainedCount, numDaysToRotate, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -190,11 +190,11 @@ local retainedCount = 2
 local numDaysToRotate = 4
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getLeaderboardService():postScoreToDynamicLeaderboardDaysUTC(leaderboardId, score, data, leaderboardType, rotationReset, retainedCount, numDaysToRotate, callback)
@@ -231,20 +231,20 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "leaderboard",
-	"operation": "POST_SCORE_DYNAMIC",
-	"data": {
-		"leaderboardId": "default",
-		"score": 10,
-		"data": {
-			"nickname": "batman"
-		},
-		"leaderboardType": "HIGH_VALUE",
-		"rotationType": "DAYS",
-		"rotationResetTime": "[[#ts+60000]]",
-		"retainedCount": 2,
-		"numDaysToRotate": 4
-	}
+    "service": "leaderboard",
+    "operation": "POST_SCORE_DYNAMIC",
+    "data": {
+        "leaderboardId": "default",
+        "score": 10,
+        "data": {
+            "nickname": "batman"
+        },
+        "leaderboardType": "HIGH_VALUE",
+        "rotationType": "DAYS",
+        "rotationResetTime": "[[#ts+60000]]",
+        "retainedCount": 2,
+        "numDaysToRotate": 4
+    }
 }
 ```
 

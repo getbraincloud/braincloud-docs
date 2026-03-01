@@ -104,12 +104,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "friend",
-	"operation": "FIND_USERS_BY_EXACT_NAME",
-	"data": {
-		"searchText": "someText",
-		"maxResults": 5
-	}
+    "service": "friend",
+    "operation": "FIND_USERS_BY_EXACT_NAME",
+    "data": {
+        "searchText": "someText",
+        "maxResults": 5
+    }
 }
 ```
 

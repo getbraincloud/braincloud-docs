@@ -90,8 +90,8 @@ var attributes = [ "key1", "key2" ];
 
 <%= data.branding.codePrefix %>.playerState.removeAttributes(attributes, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -121,11 +121,11 @@ if (result.statusCode == 200) {
 local attributes = { "key1", "key2" }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getPlayerStateService():removeAttributes(attributes, callback)
@@ -153,14 +153,14 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "playerState",
-	"operation": "REMOVE_ATTRIBUTES",
-	"data": {
-		"attributes": [
-			"key1",
-			"key2"
-		]
-	}
+    "service": "playerState",
+    "operation": "REMOVE_ATTRIBUTES",
+    "data": {
+        "attributes": [
+            "key1",
+            "key2"
+        ]
+    }
 }
 ```
 

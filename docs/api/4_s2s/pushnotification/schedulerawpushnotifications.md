@@ -95,28 +95,28 @@ Schedules raw notifications based on user local time.
 
 ```cfscript
 var fcmContent = {
-	"notification": {
-		"body": "content of message",
-		"title": "message title"
-	},
-	"data": {
-		"customfield1": "customValue1",
-		"customfield2": "customValue2"
-	},
-	"priority": "normal"
+    "notification": {
+        "body": "content of message",
+        "title": "message title"
+    },
+    "data": {
+        "customfield1": "customValue1",
+        "customfield2": "customValue2"
+    },
+    "priority": "normal"
 };
 var iosContent = {
-	"aps": {
-		"alert": {
-			"body": "content of message",
-			"title": "message title"
-		},
-		"badge": 0,
-		"sound": "gggg"
-	}
+    "aps": {
+        "alert": {
+            "body": "content of message",
+            "title": "message title"
+        },
+        "badge": 0,
+        "sound": "gggg"
+    }
 };
 var facebookContent = {
-	"template": "content of message"
+    "template": "content of message"
 };
 var segments = [
   1,
@@ -140,41 +140,41 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "pushNotification",
-	"operation": "SCHEDULE_RAW_NOTIFICATIONS",
-	"data": {
-		"fcmContent": {
-			"notification": {
-				"body": "content of message",
-				"title": "message title"
-			},
-			"data": {
-				"customfield1": "customValue1",
-				"customfield2": "customValue2"
-			},
-			"priority": "normal"
-		},
-		"iosContent": {
-			"aps": {
-				"alert": {
-					"body": "content of message",
-					"title": "message title"
-				},
-				"badge": 0,
-				"sound": "gggg"
-			}
-		},
-		"facebookContent": {
-			"template": "content of message"
-		},
-		"segmentIdList": [
-			1,
-			2
-		],
-		"localTime": "15:00",
-		"minimizeJobs": true,
-		"startDateUTC": 1437579786000
-	}
+    "service": "pushNotification",
+    "operation": "SCHEDULE_RAW_NOTIFICATIONS",
+    "data": {
+        "fcmContent": {
+            "notification": {
+                "body": "content of message",
+                "title": "message title"
+            },
+            "data": {
+                "customfield1": "customValue1",
+                "customfield2": "customValue2"
+            },
+            "priority": "normal"
+        },
+        "iosContent": {
+            "aps": {
+                "alert": {
+                    "body": "content of message",
+                    "title": "message title"
+                },
+                "badge": 0,
+                "sound": "gggg"
+            }
+        },
+        "facebookContent": {
+            "template": "content of message"
+        },
+        "segmentIdList": [
+            1,
+            2
+        ],
+        "localTime": "15:00",
+        "minimizeJobs": true,
+        "startDateUTC": 1437579786000
+    }
 }
 ```
 

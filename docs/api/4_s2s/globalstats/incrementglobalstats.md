@@ -112,13 +112,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalGameStatistics",
-	"operation": "UPDATE_INCREMENT",
-	"data": {
-		"statistics": {
-			"PLAYER_COUNT": 1
-		}
-	}
+    "service": "globalGameStatistics",
+    "operation": "UPDATE_INCREMENT",
+    "data": {
+        "statistics": {
+            "PLAYER_COUNT": 1
+        }
+    }
 }
 ```
 

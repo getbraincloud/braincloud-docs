@@ -27,17 +27,17 @@ RTT is available to all _Plus_ plan subscriptions.
 eRTTConnectionType rttConnectionType = eRTTConnectionType.WEBSOCKET;
 SuccessCallback successCallback = (response, cbObject) =>
 {
-	Dictionary<string, object> jsonMessage = (Dictionary<string, object>)JsonFx.Json.JsonReader.Deserialize(response);
-	Dictionary<string, object> jsonData = (Dictionary<string, object>)jsonMessage["data"];
+    Dictionary<string, object> jsonMessage = (Dictionary<string, object>)JsonFx.Json.JsonReader.Deserialize(response);
+    Dictionary<string, object> jsonData = (Dictionary<string, object>)jsonMessage["data"];
 
-	string heartbeatSeconds = jsonData["heartbeatSeconds"].ToString();
+    string heartbeatSeconds = jsonData["heartbeatSeconds"].ToString();
 
-	string logMessage = string.Join(" | ", new [] {heartbeatSeconds});
-	Debug.Log(logMessage); // 30
+    string logMessage = string.Join(" | ", new [] {heartbeatSeconds});
+    Debug.Log(logMessage); // 30
 };
 FailureCallback failureCallback = (status, code, error, cbObject) =>
 {
-	Debug.Log(string.Format("[EnableRTT Failed] {0}  {1}  {2}", status, code, error));
+    Debug.Log(string.Format("[EnableRTT Failed] {0}  {1}  {2}", status, code, error));
 };
 <%= data.branding.codePrefix %>.RTTService.EnableRTT(rttConnectionType, successCallback, failureCallback);
 ```
@@ -122,10 +122,10 @@ void failureCallback(RTTCommandResponse response) {
 
 ```lua
 local successCallback = function(jsonResponse)
-	-- Your code
+    -- Your code
 end
 local failureCallback = function(jsonResponse)
-	-- Your code
+    -- Your code
 end
 
 <%= data.branding.codePrefix %>:getRttRegistrationService():enableRTT(successCallback, failureCallback)

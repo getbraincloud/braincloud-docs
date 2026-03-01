@@ -117,11 +117,11 @@ if (result.statusCode == 200) {
 local externalId = "username"
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getIdentityService():updateUniversalIdLogin(externalId, callback)
@@ -149,11 +149,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "identity",
-	"operation": "UPDATE_UNIVERSAL_LOGIN",
-	"data": {
-		"externalId": "username"
-	}
+    "service": "identity",
+    "operation": "UPDATE_UNIVERSAL_LOGIN",
+    "data": {
+        "externalId": "username"
+    }
 }
 ```
 

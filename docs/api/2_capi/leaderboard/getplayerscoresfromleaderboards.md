@@ -90,8 +90,8 @@ var leaderboardIds = [ "leaderboardId1", "leaderboardId2" ];
 
 <%= data.branding.codePrefix %>.leaderboard.getPlayerScoresFromLeaderboards(leaderboardIds, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -121,11 +121,11 @@ if (result.statusCode == 200) {
 local leaderboardIds = { "leaderboardId1", "leaderboardId2" }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getLeaderboardService():getPlayerScoresFromLeaderboards(leaderboardIds, callback)
@@ -153,14 +153,14 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "leaderboard",
-	"operation": "GET_PLAYER_SCORES_FROM_LEADERBOARDS",
-	"data": {
-		"leaderboardIds": [
-			"1st-leaderboard-id",
-			"2nd-leaderboard-id"
-		]
-	}
+    "service": "leaderboard",
+    "operation": "GET_PLAYER_SCORES_FROM_LEADERBOARDS",
+    "data": {
+        "leaderboardIds": [
+            "1st-leaderboard-id",
+            "2nd-leaderboard-id"
+        ]
+    }
 }
 ```
 

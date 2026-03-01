@@ -111,17 +111,17 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "chat",
-	"operation": "SYS_POST_CHAT_MESSAGE_SIMPLE",
-	"data": {
-		"channelId": "55555:gl:bcDev",
-		"text": "Hello world",
-		"recordInHistory": true,
-		"from": {
-			"name": "Homer",
-			"pic": "http://www.simpsons.test/homer.jpg"
-		}
-	}
+    "service": "chat",
+    "operation": "SYS_POST_CHAT_MESSAGE_SIMPLE",
+    "data": {
+        "channelId": "55555:gl:bcDev",
+        "text": "Hello world",
+        "recordInHistory": true,
+        "from": {
+            "name": "Homer",
+            "pic": "http://www.simpsons.test/homer.jpg"
+        }
+    }
 }
 ```
 

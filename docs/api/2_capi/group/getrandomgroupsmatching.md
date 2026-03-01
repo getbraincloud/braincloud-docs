@@ -97,8 +97,8 @@ var maxReturn = 20;
 
 <%= data.branding.codePrefix %>.group.getRandomGroupsMatching(where, maxReturn, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -134,11 +134,11 @@ local where = {
 local maxReturn = 20
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getGroupService():getRandomGroupsMatching(where, maxReturn, callback)
@@ -169,14 +169,14 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "group",
-	"operation": "GET_RANDOM_GROUPS_MATCHING",
-	"data": {
-		"where": {
-			"groupType": "BLUE"
-		},
-		"maxReturn": 20
-	}
+    "service": "group",
+    "operation": "GET_RANDOM_GROUPS_MATCHING",
+    "data": {
+        "where": {
+            "groupType": "BLUE"
+        },
+        "maxReturn": 20
+    }
 }
 ```
 

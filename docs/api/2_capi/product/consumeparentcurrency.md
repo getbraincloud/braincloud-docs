@@ -101,13 +101,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "product",
-	"operation": "CONSUME_PARENT_VC",
-	"data": {
-		"vc_id": "coins",
-		"vc_amount": 1,
-		"levelName": "master"
-	}
+    "service": "product",
+    "operation": "CONSUME_PARENT_VC",
+    "data": {
+        "vc_id": "coins",
+        "vc_amount": 1,
+        "levelName": "master"
+    }
 }
 ```
 

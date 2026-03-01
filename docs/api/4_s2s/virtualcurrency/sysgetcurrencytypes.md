@@ -91,9 +91,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "virtualCurrency",
-	"operation": "SYS_GET_CURRENCY_TYPES",
-	"data": {}
+    "service": "virtualCurrency",
+    "operation": "SYS_GET_CURRENCY_TYPES",
+    "data": {}
 }
 ```
 

@@ -69,8 +69,8 @@ var signedRequest = "Sample Facebook Receipt";
 
 <%= data.branding.codePrefix %>.product.confirmFacebookPurchase(signedRequest, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -114,11 +114,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "product",
-	"operation": "FB_CONFIRM_PURCHASE",
-	"data": {
-		"signed_request": "Sample Facebook Receipt"
-	}
+    "service": "product",
+    "operation": "FB_CONFIRM_PURCHASE",
+    "data": {
+        "signed_request": "Sample Facebook Receipt"
+    }
 }
 ```
 

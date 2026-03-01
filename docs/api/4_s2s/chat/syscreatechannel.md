@@ -100,12 +100,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "chat",
-	"operation": "SYS_CREATE_CHANNEL",
-	"data": {
-		"channelType": "dy",
-		"channelSubId": "myChatRoom"
-	}
+    "service": "chat",
+    "operation": "SYS_CREATE_CHANNEL",
+    "data": {
+        "channelType": "dy",
+        "channelSubId": "myChatRoom"
+    }
 }
 ```
 

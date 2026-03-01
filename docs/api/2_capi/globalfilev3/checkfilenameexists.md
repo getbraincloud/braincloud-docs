@@ -99,12 +99,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalFileV3",
-	"operation": "CHECK_FILENAME_EXISTS",
-	"data": {
+    "service": "globalFileV3",
+    "operation": "CHECK_FILENAME_EXISTS",
+    "data": {
         "folderPath": "folder1",
         "filename": "filename"
-	}
+    }
 }
 ```
 

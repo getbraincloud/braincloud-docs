@@ -89,8 +89,8 @@ var currencyType = "coins";
 
 <%= data.branding.codePrefix %>.product.getCurrency(currencyType, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -134,11 +134,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "product",
-	"operation": "GET_PLAYER_VC",
-	"data": {
-		"vc_id": "coins"
-	}
+    "service": "product",
+    "operation": "GET_PLAYER_VC",
+    "data": {
+        "vc_id": "coins"
+    }
 }
 ```
 

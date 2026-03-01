@@ -102,13 +102,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "mail",
-	"operation": "SEND_BASIC_EMAIL",
-	"data": {
-		"profileId": "f7144cc0-b996-440f-8459-21b0ecb91a10",
-		"subject": "Basic email subject",
-		"body": "This is the body of the email"
-	}
+    "service": "mail",
+    "operation": "SEND_BASIC_EMAIL",
+    "data": {
+        "profileId": "f7144cc0-b996-440f-8459-21b0ecb91a10",
+        "subject": "Basic email subject",
+        "body": "This is the body of the email"
+    }
 }
 ```
 

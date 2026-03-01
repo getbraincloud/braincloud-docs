@@ -179,11 +179,11 @@ local acl = {
 local timeToLive = null
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getCustomEntityService():updateSingleton(entityType, version, dataJson, acl, timeToLive, callback)
@@ -223,23 +223,23 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "customEntity",
-	"operation": "UPDATE_SINGLETON",
-	"data": {
-		"entityType": "athletes",
-		"version": 1,
-		"dataJson": {
-			"firstName": "Super",
-			"surName": "Star",
-			"position": "defense",
-			"goals": 3,
-			"assists": 5
-		},
-		"acl": {
+    "service": "customEntity",
+    "operation": "UPDATE_SINGLETON",
+    "data": {
+        "entityType": "athletes",
+        "version": 1,
+        "dataJson": {
+            "firstName": "Super",
+            "surName": "Star",
+            "position": "defense",
+            "goals": 3,
+            "assists": 5
+        },
+        "acl": {
       "other": 1
     },
-		"timeToLive": null
-	}
+        "timeToLive": null
+    }
 }
 ```
 

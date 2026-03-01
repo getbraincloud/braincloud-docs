@@ -111,8 +111,8 @@ var jsonAttributes = {};
 
 <%= data.branding.codePrefix %>.group.inviteGroupMember(groupId, profileId, role, jsonAttributes, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -148,11 +148,11 @@ local role = "MEMBER"
 local jsonAttributes = {}
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getGroupService():inviteGroupMember(groupId, profileId, role, jsonAttributes, callback)

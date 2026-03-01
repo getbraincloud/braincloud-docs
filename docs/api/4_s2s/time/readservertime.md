@@ -91,9 +91,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "time",
-	"operation": "READ",
-	"data": {}
+    "service": "time",
+    "operation": "READ",
+    "data": {}
 }
 ```
 

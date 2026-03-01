@@ -98,11 +98,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "itemCatalog",
-	"operation": "SYS_GET_CATALOG_ITEM_DEFINITION",
-	"data": {
-		"defId": "sword001"
-	}
+    "service": "itemCatalog",
+    "operation": "SYS_GET_CATALOG_ITEM_DEFINITION",
+    "data": {
+        "defId": "sword001"
+    }
 }
 ```
 

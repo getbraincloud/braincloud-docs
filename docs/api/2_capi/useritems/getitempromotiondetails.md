@@ -143,11 +143,11 @@ local includeDef = True
 local includePromotionDetails = True
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getUserItemsService():getItemPromotionDetails(defId, shopId, includeDef, includePromotionDetails, callback)

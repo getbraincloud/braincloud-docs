@@ -81,8 +81,8 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 ```javascript
 <%= data.branding.codePrefix %>.product.resetCurrency(result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -125,8 +125,8 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "product",
-	"operation": "RESET_PLAYER_VC"
+    "service": "product",
+    "operation": "RESET_PLAYER_VC"
 }
 ```
 

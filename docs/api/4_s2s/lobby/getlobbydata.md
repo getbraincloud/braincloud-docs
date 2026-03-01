@@ -98,11 +98,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "lobby",
-	"operation": "GET_LOBBY_DATA",
-	"data": {
-		"lobbyId": "55555:4x4:19"
-	}
+    "service": "lobby",
+    "operation": "GET_LOBBY_DATA",
+    "data": {
+        "lobbyId": "55555:4x4:19"
+    }
 }
 ```
 

@@ -144,55 +144,55 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "itemCatalog",
-	"operation": "SYS_EDIT_CATALOG_ITEM",
-	"data": {
-		"defId": "sword001",
-		"version": 1,
-		"itemDefData": {
-			"name": {
-				"en": "Crimson Sword"
-			},
-			"desc": {
-				"en": "A sword whose blade was forged in Cherry Kool-aid!"
-			},
-			"category": "sword",
-			"tags": [
-				"weapon",
-				"pointy"
-			],
-			"buyPrice": {
-				"coins": 200
-			},
-			"sellPrice": {
-				"coins": 150
-			},
-			"image": "//xxx.jpg",
-			"resourceGroup": "equipment.asset",
-			"resourceTag": "sword001",
-			"meta": {
-				"speed": 85,
-				"damage": 12,
-				"accuracy": 80,
-				"range": 5
-			},
-			"initData": {
-				"condition": 100,
-				"bonus": 0
-			},
-			"stackable": false,
-			"consumable": false,
-			"uses": 1,
-			"coolDownSecs": 0,
-			"recoverySecs": 0,
-			"activatable": false,
-			"statusName": null,
-			"activeSecs": 0,
-			"tradable": false,
-			"blockchain": false,
-			"blockchainDefId": null
-		}
-	}
+    "service": "itemCatalog",
+    "operation": "SYS_EDIT_CATALOG_ITEM",
+    "data": {
+        "defId": "sword001",
+        "version": 1,
+        "itemDefData": {
+            "name": {
+                "en": "Crimson Sword"
+            },
+            "desc": {
+                "en": "A sword whose blade was forged in Cherry Kool-aid!"
+            },
+            "category": "sword",
+            "tags": [
+                "weapon",
+                "pointy"
+            ],
+            "buyPrice": {
+                "coins": 200
+            },
+            "sellPrice": {
+                "coins": 150
+            },
+            "image": "//xxx.jpg",
+            "resourceGroup": "equipment.asset",
+            "resourceTag": "sword001",
+            "meta": {
+                "speed": 85,
+                "damage": 12,
+                "accuracy": 80,
+                "range": 5
+            },
+            "initData": {
+                "condition": 100,
+                "bonus": 0
+            },
+            "stackable": false,
+            "consumable": false,
+            "uses": 1,
+            "coolDownSecs": 0,
+            "recoverySecs": 0,
+            "activatable": false,
+            "statusName": null,
+            "activeSecs": 0,
+            "tradable": false,
+            "blockchain": false,
+            "blockchainDefId": null
+        }
+    }
 }
 ```
 

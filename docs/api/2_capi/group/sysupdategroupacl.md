@@ -103,15 +103,15 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "group",
-	"operation": "SYS_UPDATE_GROUP_ACL",
-	"data": {
-		"groupId": "a-group-id",
-		"acl": {
-			"member": 2,
-			"other": 0
-		}
-	}
+    "service": "group",
+    "operation": "SYS_UPDATE_GROUP_ACL",
+    "data": {
+        "groupId": "a-group-id",
+        "acl": {
+            "member": 2,
+            "other": 0
+        }
+    }
 }
 ```
 

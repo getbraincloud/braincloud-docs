@@ -90,8 +90,8 @@ var periodStartingAtUtcMillis = 1631895835000;
 var leaderboardProxy = bridge.getLeaderboardServiceProxy();
 var retVal = leaderboardProxy.sysDeleteAdhocTournamentPeriod(
     leaderboardId,
-	dbVersion,
-	periodStartingAtUtcMillis
+    dbVersion,
+    periodStartingAtUtcMillis
 );
 ```
 
@@ -102,13 +102,13 @@ var retVal = leaderboardProxy.sysDeleteAdhocTournamentPeriod(
 
 ```r
 {
-	"service": "leaderboard",
-	"operation": "SYS_DELETE_ADHOC_TOURNAMENT_PERIOD",
-	"data": {
-		"leaderboardId": "aLeaderboardId",
-		"dbVersion": 1,
-		"periodStartingAtUtcMillis":  1631895835000
-	}
+    "service": "leaderboard",
+    "operation": "SYS_DELETE_ADHOC_TOURNAMENT_PERIOD",
+    "data": {
+        "leaderboardId": "aLeaderboardId",
+        "dbVersion": 1,
+        "periodStartingAtUtcMillis":  1631895835000
+    }
 }
 ```
 

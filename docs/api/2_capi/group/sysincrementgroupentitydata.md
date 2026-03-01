@@ -108,20 +108,20 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "group",
-	"operation": "SYS_INCREMENT_GROUP_ENTITY_DATA",
-	"data": {
-		"groupId": "a-group-id",
-		"entityId": "a-group-entity-id",
-		"data": {
-			"field1": -1.5,
-			"field2": {
-				"field2-1": 6,
-				"field2-new": 63.6
-			},
-			"field3-new": 3
-		}
-	}
+    "service": "group",
+    "operation": "SYS_INCREMENT_GROUP_ENTITY_DATA",
+    "data": {
+        "groupId": "a-group-id",
+        "entityId": "a-group-entity-id",
+        "data": {
+            "field1": -1.5,
+            "field2": {
+                "field2-1": 6,
+                "field2-new": 63.6
+            },
+            "field3-new": 3
+        }
+    }
 }
 ```
 

@@ -89,8 +89,8 @@ var lobbyId = "13229:Relay_lobbyT_v2:20";
 
 <%= data.branding.codePrefix %>.lobby.getLobbyData(lobbyId, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -120,11 +120,11 @@ if (result.statusCode == 200) {
 local lobbyId = "13229:Relay_lobbyT_v2:20"
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getLobbyService():getLobbyData(lobbyId, callback)
@@ -152,11 +152,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "lobby",
-	"operation": "GET_LOBBY_DATA",
-	"data": {
-		"lobbyId": "13229:Relay_lobbyT_v2:20"
-	}
+    "service": "lobby",
+    "operation": "GET_LOBBY_DATA",
+    "data": {
+        "lobbyId": "13229:Relay_lobbyT_v2:20"
+    }
 }
 ```
 

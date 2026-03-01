@@ -35,7 +35,7 @@ string channelId = "22817:gl:CHAT_TRADE"; // APP_ID:CHANNEL_TYPE:CHANNEL_ID
 int maxReturn = 25;
 SuccessCallback successCallback = (response, cbObject) =>
 {
-	Dictionary<string, object> jsonMessage = (Dictionary<string, object>)JsonFx.Json.JsonReader.Deserialize(response);
+    Dictionary<string, object> jsonMessage = (Dictionary<string, object>)JsonFx.Json.JsonReader.Deserialize(response);
     Dictionary<string, object> jsonData = (Dictionary<string, object>)jsonMessage["data"];
     Dictionary<string, object>[] messages = (Dictionary<string, object>[])jsonData["messages"];
     string display = "";
@@ -59,7 +59,7 @@ SuccessCallback successCallback = (response, cbObject) =>
 };
 FailureCallback failureCallback = (status, code, error, cbObject) =>
 {
-	Debug.Log(string.Format("[ChannelConnect Failed] {0}  {1}  {2}", status, code, error));
+    Debug.Log(string.Format("[ChannelConnect Failed] {0}  {1}  {2}", status, code, error));
 };
 
 <%= data.branding.codePrefix %>.ChatService.ChannelConnect(channelId, maxReturn, successCallback, failureCallback);
@@ -127,8 +127,8 @@ var maxReturn = 25;
 
 <%= data.branding.codePrefix %>.chat.channelConnect(channelId, maxReturn, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -160,11 +160,11 @@ local channelId = "55555:gl:bcDev"
 local maxReturn = 25
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getChatService():channelConnect(channelId, maxReturn, callback)
@@ -194,12 +194,12 @@ if ( idResult.status == 200 ) {
 
 ```r
 {
-	"service": "chat",
-	"operation": "CHANNEL_CONNECT",
-	"data": {
-		"channelId": "55555:gl:bcDev",
-		"maxReturn": 25
-	}
+    "service": "chat",
+    "operation": "CHANNEL_CONNECT",
+    "data": {
+        "channelId": "55555:gl:bcDev",
+        "maxReturn": 25
+    }
 }
 ```
 

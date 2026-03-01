@@ -103,8 +103,8 @@ var jsonEntityData = {
 
 <%= data.branding.codePrefix %>.globalEntity.incrementGlobalEntityData(entityId, jsonEntityData, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -150,11 +150,11 @@ local jsonEntityData = {
 }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getGlobalEntityService():incrementGlobalEntityData(entityId, jsonEntityData, callback)
@@ -190,19 +190,19 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalEntity",
-	"operation": "INCREMENT_GLOBAL_ENTITY_DATA",
-	"data": {
-		"entityId": "the-entity-id",
-		"data": {
-			"field1": -1.5,
-			"field2": {
-				"field2-1": 6,
-				"field2-new": 63.6
-			},
-			"field3-new": 3
-		}
-	}
+    "service": "globalEntity",
+    "operation": "INCREMENT_GLOBAL_ENTITY_DATA",
+    "data": {
+        "entityId": "the-entity-id",
+        "data": {
+            "field1": -1.5,
+            "field2": {
+                "field2-1": 6,
+                "field2-new": 63.6
+            },
+            "field3-new": 3
+        }
+    }
 }
 ```
 

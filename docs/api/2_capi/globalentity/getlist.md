@@ -118,8 +118,8 @@ var maxReturn = 50;
 
 <%= data.branding.codePrefix %>.globalEntity.getList(where, orderBy, maxReturn, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -161,11 +161,11 @@ local orderBy = {
 local maxReturn = 50
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getGlobalEntityService():getList(where, orderBy, maxReturn, callback)
@@ -199,17 +199,17 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalEntity",
-	"operation": "GET_LIST",
-	"data": {
-		"where": {
-			"entityType": "address"
-		},
-		"orderBy": {
-			"data.address": 1
-		},
-		"maxReturn": 50
-	}
+    "service": "globalEntity",
+    "operation": "GET_LIST",
+    "data": {
+        "where": {
+            "entityType": "address"
+        },
+        "orderBy": {
+            "data.address": 1
+        },
+        "maxReturn": 50
+    }
 }
 ```
 

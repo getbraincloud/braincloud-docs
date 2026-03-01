@@ -101,13 +101,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "product",
-	"operation": "AWARD_PEER_VC",
-	"data": {
-		"vc_id": "tokens",
-		"vc_amount": 1,
-		"peer": "gameloot"
-	}
+    "service": "product",
+    "operation": "AWARD_PEER_VC",
+    "data": {
+        "vc_id": "tokens",
+        "vc_amount": 1,
+        "peer": "gameloot"
+    }
 }
 ```
 

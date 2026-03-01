@@ -147,8 +147,8 @@ var jsonSummary = {
 
 <%= data.branding.codePrefix %>.asyncMatch.createMatchWithInitialTurn(jsonOpponentIds, jsonMatchState, pushNotificationMessage, nextPlayer, jsonSummary, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -208,11 +208,11 @@ local jsonSummary = {
 }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getAsyncMatchService():createMatchWithInitialTurn(jsonOpponentIds, jsonMatchState, pushNotificationMessage, nextPlayer, jsonSummary, callback)
@@ -255,26 +255,26 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "asyncMatch",
-	"operation": "CREATE",
-	"data": {
-		"players": [
-			{
-				"platform": "BC",
-				"id": "1st-profile-id"
-			},
-			{
-				"platform": "FB",
-				"id": "2nd-profile-id"
-			}
-		],
-		"matchState": {},
-		"pushContent": "You have been entered into an async-match!",
-		"currentPlayer": "2nd-profile-id",
-		"summary": {
-			"Address": "South Africa"
-		}
-	}
+    "service": "asyncMatch",
+    "operation": "CREATE",
+    "data": {
+        "players": [
+            {
+                "platform": "BC",
+                "id": "1st-profile-id"
+            },
+            {
+                "platform": "FB",
+                "id": "2nd-profile-id"
+            }
+        ],
+        "matchState": {},
+        "pushContent": "You have been entered into an async-match!",
+        "currentPlayer": "2nd-profile-id",
+        "summary": {
+            "Address": "South Africa"
+        }
+    }
 }
 ```
 

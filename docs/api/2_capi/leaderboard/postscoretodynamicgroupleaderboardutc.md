@@ -144,8 +144,8 @@ var retainedCount = 2;
 
 <%= data.branding.codePrefix %>.leaderboard.postScoreToGroupLeaderboardUTC(leaderboardId, groupId, score, data, leaderboardType, rotationType, rotationResetTime, retainedCount, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -193,11 +193,11 @@ local rotationResetTime = 158778236487
 local retainedCount = 2
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getLeaderboardService():postScoreToGroupLeaderboardUTC(leaderboardId, groupId, score, data, leaderboardType, rotationType, rotationResetTime, retainedCount, callback)
@@ -234,9 +234,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "leaderboard",
-	"operation": "POST_GROUP_SCORE_DYNAMIC",
-	"data": {
+    "service": "leaderboard",
+    "operation": "POST_GROUP_SCORE_DYNAMIC",
+    "data": {
         "leaderboardId": "groupLeaderboardConfig",
         "groupId": "d25e3e1c-089f-4816-8534-f958ba3c9dac",
         "score": 10,

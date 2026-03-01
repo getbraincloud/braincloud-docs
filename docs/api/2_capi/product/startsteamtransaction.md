@@ -113,12 +113,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "product",
-	"operation": "START_STEAM_TRANSACTION",
-	"data": {
-		"itemId": "item01",
-		"language": "en"
-	}
+    "service": "product",
+    "operation": "START_STEAM_TRANSACTION",
+    "data": {
+        "itemId": "item01",
+        "language": "en"
+    }
 }
 ```
 

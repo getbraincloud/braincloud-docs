@@ -113,12 +113,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "customEntity",
-	"operation": "SYS_CREATE_COLLECTION",
-	"data": {
-		"entityType": "athletes",
-		"collectionOptsJson": {}
-	}
+    "service": "customEntity",
+    "operation": "SYS_CREATE_COLLECTION",
+    "data": {
+        "entityType": "athletes",
+        "collectionOptsJson": {}
+    }
 }
 ```
 

@@ -98,8 +98,8 @@ var text = "Chat and messaging features are here!";
 
 <%= data.branding.codePrefix %>.messaging.sendMessageSimple(toProfileIds, text, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -131,11 +131,11 @@ local toProfileIds = { "profileId1", "profileId2" }
 local text = "Chat and messaging features are here!"
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getMessagingService():sendMessageSimple(toProfileIds, text, callback)
@@ -164,15 +164,15 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "messaging",
-	"operation": "SEND_MESSAGE_SIMPLE",
-	"data": {
-		"toProfileIds": [
-			"profileId1",
-			"profileId2"
-		],
-		"text": "Chat and messaging features are here!"
-	}
+    "service": "messaging",
+    "operation": "SEND_MESSAGE_SIMPLE",
+    "data": {
+        "toProfileIds": [
+            "profileId1",
+            "profileId2"
+        ],
+        "text": "Chat and messaging features are here!"
+    }
 }
 ```
 

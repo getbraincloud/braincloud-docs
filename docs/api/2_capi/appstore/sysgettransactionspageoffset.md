@@ -101,12 +101,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "appStore",
-	"operation": "SYS_GET_TRANSACTIONS_PAGE_OFFSET",
-	"data": {
+    "service": "appStore",
+    "operation": "SYS_GET_TRANSACTIONS_PAGE_OFFSET",
+    "data": {
     "context": "eyJzZWFyY2hDcml0ZXJpYSI6eyJlbnRpdHlUeXBlIjp7IiRyZWdleCI6Ii4qaWxkLioiLCIkb3B0",
     "pageOffset": 1
-	}
+    }
 }
 ```
 

@@ -116,8 +116,8 @@ var startTime = 1437579786000;
 
 <%= data.branding.codePrefix %>.pushNotification.scheduleNormalizedPushNotificationUTC(profileId, alertContentJson, customDataJson, startTime, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -165,11 +165,11 @@ local customDataJson = {
 local startTime = 1437579786000
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getPushNotificationService():scheduleNormalizedPushNotificationUTC(profileId, alertContentJson, customDataJson, startTime, callback)
@@ -206,20 +206,20 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "pushNotification",
-	"operation": "SCHEDULE_NORMALIZED_NOTIFICATION",
-	"data": {
-		"profileId": "kjhkjhgfkjshgkjh",
-		"alertContent": {
-			"body": "content of message",
-			"title": "message title"
-		},
-		"customData": {
-			"field1": "value1",
-			"field2": "value2"
-		},
-		"startDateUTC": "[[#ts+60000]]"
-	}
+    "service": "pushNotification",
+    "operation": "SCHEDULE_NORMALIZED_NOTIFICATION",
+    "data": {
+        "profileId": "kjhkjhgfkjshgkjh",
+        "alertContent": {
+            "body": "content of message",
+            "title": "message title"
+        },
+        "customData": {
+            "field1": "value1",
+            "field2": "value2"
+        },
+        "startDateUTC": "[[#ts+60000]]"
+    }
 }
 ```
 

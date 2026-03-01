@@ -97,8 +97,8 @@ var customRedemptionInfo = {};
 
 <%= data.branding.codePrefix %>.redemptionCode.redeemCode(scanCode, codeType, customRedemptionInfo, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -132,11 +132,11 @@ local codeType = "a code type"
 local customRedemptionInfo = {}
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getRedemptionCodeService():redeemCode(scanCode, codeType, customRedemptionInfo, callback)
@@ -166,13 +166,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "redemptionCode",
-	"operation": "REDEEM_CODE",
-	"data": {
-		"scanCode": "the-scan-code",
-		"codeType": "the-code-type",
-		"customRedemptionInfo": {}
-	}
+    "service": "redemptionCode",
+    "operation": "REDEEM_CODE",
+    "data": {
+        "scanCode": "the-scan-code",
+        "codeType": "the-code-type",
+        "customRedemptionInfo": {}
+    }
 }
 ```
 

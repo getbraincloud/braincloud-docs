@@ -100,22 +100,22 @@ Creates a leaderboard configuration, with support for tournament leaderboards.
 ```cfscript
 var leaderboardId = "default";
 var configJson = {
-	"entryType": "PLAYER",
-	"leaderboardType": "HIGH_VALUE",
-	"rotationType": "DAYS",
-	"numDaysToRotate": 4,
-	"resetAt": 1631492744000,
+    "entryType": "PLAYER",
+    "leaderboardType": "HIGH_VALUE",
+    "rotationType": "DAYS",
+    "numDaysToRotate": 4,
+    "resetAt": 1631492744000,
   "expireInMins": null,
-	"retainedCount": 5,
-	"data": { "info": "Adding tournament to encourage play." },
-	"tEnabled": true,
-	"tTemplateOnly": false
+    "retainedCount": 5,
+    "data": { "info": "Adding tournament to encourage play." },
+    "tEnabled": true,
+    "tTemplateOnly": false
 };
 
 var leaderboardProxy = bridge.getLeaderboardServiceProxy();
 var retVal = leaderboardProxy.sysCreateLeaderboardConfig(
     leaderboardId,
-	configJson
+    configJson
 );
 ```
 
@@ -126,23 +126,23 @@ var retVal = leaderboardProxy.sysCreateLeaderboardConfig(
 
 ```r
 {
-	"service": "leaderboard",
-	"operation": "SYS_CREATE_LEADERBOARD_CONFIG",
-	"data": {
-		"leaderboardId": "aLeaderboardId",
-		"configJson": {
-			"entryType": "PLAYER",
-			"leaderboardType": "HIGH_VALUE",
-			"rotationType": "DAYS",
-			"numDaysToRotate": 4,
-			"resetAt": 1631492744000,
+    "service": "leaderboard",
+    "operation": "SYS_CREATE_LEADERBOARD_CONFIG",
+    "data": {
+        "leaderboardId": "aLeaderboardId",
+        "configJson": {
+            "entryType": "PLAYER",
+            "leaderboardType": "HIGH_VALUE",
+            "rotationType": "DAYS",
+            "numDaysToRotate": 4,
+            "resetAt": 1631492744000,
       "expireInMins": null,
-			"retainedCount": 5,
-			"data": { "info": "Adding tournament to encourage play." },
-			"tEnabled": true,
-			"tTemplateOnly": false
-		}
-	}
+            "retainedCount": 5,
+            "data": { "info": "Adding tournament to encourage play." },
+            "tEnabled": true,
+            "tTemplateOnly": false
+        }
+    }
 }
 ```
 

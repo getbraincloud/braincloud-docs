@@ -98,11 +98,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalFileV3",
-	"operation": "SYS_GET_FILE_INFO",
-	"data": {
-		"fileId": "hjvfsghguhuhrtghgh"
-	}
+    "service": "globalFileV3",
+    "operation": "SYS_GET_FILE_INFO",
+    "data": {
+        "fileId": "hjvfsghguhuhrtghgh"
+    }
 }
 ```
 

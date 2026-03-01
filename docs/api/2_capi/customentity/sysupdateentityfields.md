@@ -138,17 +138,17 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "customEntity",
-	"operation": "SYS_UPDATE_ENTITY_FIELDS",
-	"data": {
-		"entityType": "athletes",
-		"entityId": "aaaa-bbbb-cccc-dddd",
-		"version": 1,
-		"fieldsJson": {
-			"goals": 3,
-			"assists": 5
-		}
-	}
+    "service": "customEntity",
+    "operation": "SYS_UPDATE_ENTITY_FIELDS",
+    "data": {
+        "entityType": "athletes",
+        "entityId": "aaaa-bbbb-cccc-dddd",
+        "version": 1,
+        "fieldsJson": {
+            "goals": 3,
+            "assists": 5
+        }
+    }
 }
 ```
 

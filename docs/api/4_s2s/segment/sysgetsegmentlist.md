@@ -91,9 +91,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "segment",
-	"operation": "SYS_GET_SEGMENT_LIST",
-	"data": {}
+    "service": "segment",
+    "operation": "SYS_GET_SEGMENT_LIST",
+    "data": {}
 }
 ```
 

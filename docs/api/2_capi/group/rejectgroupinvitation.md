@@ -89,8 +89,8 @@ var groupId = "a-group-id";
 
 <%= data.branding.codePrefix %>.group.rejectGroupInvitation(groupId, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -120,11 +120,11 @@ if (result.statusCode == 200) {
 local groupId = "a-group-id"
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getGroupService():rejectGroupInvitation(groupId, callback)
@@ -152,11 +152,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "group",
-	"operation": "REJECT_GROUP_INVITATION",
-	"data": {
-		"groupId": "a-group-id"
-	}
+    "service": "group",
+    "operation": "REJECT_GROUP_INVITATION",
+    "data": {
+        "groupId": "a-group-id"
+    }
 }
 ```
 

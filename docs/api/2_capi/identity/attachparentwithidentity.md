@@ -117,8 +117,8 @@ var forceCreate = true;
 
 <%= data.branding.codePrefix %>.identity.attachParentWithIdentity(externalId, authenticationToken, authenticationType, externalAuthName, forceCreate, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -156,11 +156,11 @@ local externalAuthName = ""
 local forceCreate = true
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getIdentityService():attachParentWithIdentity(externalId, authenticationToken, authenticationType, externalAuthName, forceCreate, callback)
@@ -192,15 +192,15 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "identity",
-	"operation": "ATTACH_PARENT_WITH_IDENTITY",
-	"data": {
-		"externalId": "email@email.com",
-		"authenticationToken": "email@email.com",
-		"authenticationType": "Email",
-		"externalAuthName": "",
-		"forceCreate": true
-	}
+    "service": "identity",
+    "operation": "ATTACH_PARENT_WITH_IDENTITY",
+    "data": {
+        "externalId": "email@email.com",
+        "authenticationToken": "email@email.com",
+        "authenticationType": "Email",
+        "externalAuthName": "",
+        "forceCreate": true
+    }
 }
 ```
 

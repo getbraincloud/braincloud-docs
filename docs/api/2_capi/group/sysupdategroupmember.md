@@ -104,13 +104,13 @@ if (postResult.status == 200) {
 ```r
 {
     "service": "group",
-	"operation": "SYS_UPDATE_GROUP_MEMBER",
-	"data": {
+    "operation": "SYS_UPDATE_GROUP_MEMBER",
+    "data": {
         "groupId": "a-group-id",
         "profileId": "a-profile-id",
         "role": "MEMBER",
         "attributes": {}
-	}
+    }
 }
 ```
 

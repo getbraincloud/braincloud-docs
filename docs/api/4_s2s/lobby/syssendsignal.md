@@ -102,13 +102,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "lobby",
-	"operation": "SYS_SEND_SIGNAL",
-	"data": {
-		"lobbyId": "55555:4v4:19",
-		"signalData": {},
-		"from": {}
-	}
+    "service": "lobby",
+    "operation": "SYS_SEND_SIGNAL",
+    "data": {
+        "lobbyId": "55555:4v4:19",
+        "signalData": {},
+        "from": {}
+    }
 }
 ```
 

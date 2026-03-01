@@ -28,17 +28,17 @@ string channelType = "gl";
 string channelSubId = "CHAT_TRADE";
 SuccessCallback successCallback = (response, cbObject) =>
 {
-	Dictionary<string, object> jsonMessage = (Dictionary<string, object>)JsonFx.Json.JsonReader.Deserialize(response);
-	Dictionary<string, object> jsonData = (Dictionary<string, object>)jsonMessage["data"];
-	
-	var channelId = jsonData["channelId"].ToString();
-	
-	string logMessage = string.Join(" | ", new [] {channelId});
-	Debug.Log(logMessage); // 22817:gl:CHAT_TRADE
+    Dictionary<string, object> jsonMessage = (Dictionary<string, object>)JsonFx.Json.JsonReader.Deserialize(response);
+    Dictionary<string, object> jsonData = (Dictionary<string, object>)jsonMessage["data"];
+    
+    var channelId = jsonData["channelId"].ToString();
+    
+    string logMessage = string.Join(" | ", new [] {channelId});
+    Debug.Log(logMessage); // 22817:gl:CHAT_TRADE
 };
 FailureCallback failureCallback = (status, code, error, cbObject) =>
 {
-	Debug.Log(string.Format("[GetChannelId Failed] {0}  {1}  {2}", status, code, error));
+    Debug.Log(string.Format("[GetChannelId Failed] {0}  {1}  {2}", status, code, error));
 };
 <%= data.branding.codePrefix %>.ChatService.GetChannelId(channelType, channelSubId, successCallback, failureCallback);
 ```
@@ -105,8 +105,8 @@ var channelSubId = "CHAT_TRADE";
 
 <%= data.branding.codePrefix %>.chat.getChannelId(channelType, channelSubId, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -138,11 +138,11 @@ local channelType = "gl"
 local channelSubId = "CHAT_TRADE"
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getChatService():getChannelId(channelType, channelSubId, callback)
@@ -168,12 +168,12 @@ if (idResult.status == 200 ) {
 
 ```r
 {
-	"service": "chat",
-	"operation": "GET_CHANNEL_ID",
-	"data": {
-		"channelType": "gl",
-		"channelSubId": "myChatRoom"
-	}
+    "service": "chat",
+    "operation": "GET_CHANNEL_ID",
+    "data": {
+        "channelType": "gl",
+        "channelSubId": "myChatRoom"
+    }
 }
 ```
 

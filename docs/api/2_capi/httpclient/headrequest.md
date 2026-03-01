@@ -9,7 +9,7 @@ Parameter | Description
 --------- | -----------
 serviceCode | Service code of the external service configured in the Cloud Code - Web Services section of the portal
 path | Path to append to the Base URL of the service
-query |	Map of query parameters
+query |    Map of query parameters
 headers | Required headers
 
 ## Usage

@@ -101,12 +101,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "group",
-	"operation": "SYS_DELETE_GROUP",
-	"data": {
-		"groupId": "a-group-id",
-		"version": 3
-	}
+    "service": "group",
+    "operation": "SYS_DELETE_GROUP",
+    "data": {
+        "groupId": "a-group-id",
+        "version": 3
+    }
 }
 ```
 

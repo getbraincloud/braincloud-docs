@@ -122,22 +122,22 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "group",
-	"operation": "SYS_CREATE_GROUP",
-	"data": {
-		"name": "myGroupName",
-		"groupType": "myGroupType",
-		"isOpenGroup": true,
-		"acl": {
-			"member": 2,
-			"other": 0
+    "service": "group",
+    "operation": "SYS_CREATE_GROUP",
+    "data": {
+        "name": "myGroupName",
+        "groupType": "myGroupType",
+        "isOpenGroup": true,
+        "acl": {
+            "member": 2,
+            "other": 0
         },
         "ownerId": "a-profile-id",
-		"ownerAttributes": {},
-		"defaultMemberAttributes": {},
+        "ownerAttributes": {},
+        "defaultMemberAttributes": {},
         "jsonData": {},
         "summaryData": {}
-	}
+    }
 }
 ```
 

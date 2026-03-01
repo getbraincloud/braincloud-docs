@@ -120,8 +120,8 @@ BCCompletionBlock successBlock;      // define callback
 BCErrorCompletionBlock failureBlock; // define callback
 
 [[<%= data.branding.codePrefix %> authenticationService]
-		authenticateEmailPassword:email
-		   		 password:password
+        authenticateEmailPassword:email
+                    password:password
               forceCreate:forceCreate
           completionBlock:successBlock
      errorCompletionBlock:failureBlock
@@ -163,8 +163,8 @@ var forceCreate = true;
 
 <%= data.branding.codePrefix %>.authentication.authenticateEmailPassword(email, password, forceCreate, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -198,11 +198,11 @@ local password = "userPassword"
 local forceCreate = true
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getAuthenticationService():authenticateEmailPassword(email, password, forceCreate, callback)

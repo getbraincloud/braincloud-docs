@@ -96,8 +96,8 @@ var entityId = "a-group-entity-id";
 
 <%= data.branding.codePrefix %>.group.readGroupEntity(groupId, entityId, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -129,11 +129,11 @@ local groupId = "a-group-id"
 local entityId = "a-group-entity-id"
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getGroupService():readGroupEntity(groupId, entityId, callback)
@@ -162,12 +162,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "group",
-	"operation": "READ_GROUP_ENTITY",
-	"data": {
-		"groupId": "a-group-id",
-		"entityId": "a-group-entity-id"
-	}
+    "service": "group",
+    "operation": "READ_GROUP_ENTITY",
+    "data": {
+        "groupId": "a-group-id",
+        "entityId": "a-group-entity-id"
+    }
 }
 ```
 

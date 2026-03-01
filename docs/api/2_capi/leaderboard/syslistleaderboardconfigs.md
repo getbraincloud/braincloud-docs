@@ -102,13 +102,13 @@ var retVal = leaderboardProxy.sysListLeaderboardConfigs(optionsJson);
 
 ```r
 {
-	"service": "leaderboard",
-	"operation": "SYS_LIST_LEADERBOARD_CONFIGS",
-	"data": {
+    "service": "leaderboard",
+    "operation": "SYS_LIST_LEADERBOARD_CONFIGS",
+    "data": {
     "optionsJson": {
       "filterType": "standard"
     }
-	}
+    }
 }
 ```
 

@@ -106,12 +106,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "messaging",
-	"operation": "SYS_DELETE_MESSAGE",
-	"data": {
-		"msgId": "msgId1",
-		"msgVer": 1
-	}
+    "service": "messaging",
+    "operation": "SYS_DELETE_MESSAGE",
+    "data": {
+        "msgId": "msgId1",
+        "msgVer": 1
+    }
 }
 ```
 

@@ -107,18 +107,18 @@ if (postResult.status == 200) {
 ```r
 //ownerId(s) is needed to specify for the owned custom entities only. Or, setting acrossAllUsers to true
 {
-	"service": "customEntity",
-	"operation": "SYS_DELETE_ENTITIES",
-	"data": {
-		"entityType": "athletes",
-		"deleteCriteria": {
-			"entityId": { "$in":
-				["aaaa-bbbb-cccc-dddd", "ffff-gggg-hhhh-iiii", "jjjj-kkkk-llll-mmmm"]
-			},
-			"ownerId":"e7688d66-bf31-4d5c-a0f4-da97628531a3"
-		},
-		"acrossAllUsers": false
-	}
+    "service": "customEntity",
+    "operation": "SYS_DELETE_ENTITIES",
+    "data": {
+        "entityType": "athletes",
+        "deleteCriteria": {
+            "entityId": { "$in":
+                ["aaaa-bbbb-cccc-dddd", "ffff-gggg-hhhh-iiii", "jjjj-kkkk-llll-mmmm"]
+            },
+            "ownerId":"e7688d66-bf31-4d5c-a0f4-da97628531a3"
+        },
+        "acrossAllUsers": false
+    }
 }
 ```
 

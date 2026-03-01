@@ -88,8 +88,8 @@ var continueAnon = true;
 
 <%= data.branding.codePrefix %>.identity.detachFacebookLimitedIdentity(facebookId, continueAnon, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -121,11 +121,11 @@ local facebookId = "someFacebookId"
 local continueAnon = true
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getIdentityService():detachFacebookLimitedIdentity(facebookId, continueAnon, callback)

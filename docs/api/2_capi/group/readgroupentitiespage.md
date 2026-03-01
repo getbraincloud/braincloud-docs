@@ -106,8 +106,8 @@ var context = {
 
 <%= data.branding.codePrefix %>.group.readGroupEntitiesPage(context, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -163,11 +163,11 @@ local context = {
 }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getGroupService():readGroupEntitiesPage(context, callback)
@@ -208,24 +208,24 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "group",
-	"operation": "READ_GROUP_ENTITIES_PAGE",
-	"data": {
-		"context": {
-			"pagination": {
-				"rowsPerPage": 50,
-				"pageNumber": 1
-			},
-			"searchCriteria": {
-				"groupId": "130745f4-df57-4162-8f90-d89214fc8512",
-				"entityType": "BLUE"
-			},
-			"sortCriteria": {
-				"createdAt": 1,
-				"updatedAt": -1
-			}
-		}
-	}
+    "service": "group",
+    "operation": "READ_GROUP_ENTITIES_PAGE",
+    "data": {
+        "context": {
+            "pagination": {
+                "rowsPerPage": 50,
+                "pageNumber": 1
+            },
+            "searchCriteria": {
+                "groupId": "130745f4-df57-4162-8f90-d89214fc8512",
+                "entityType": "BLUE"
+            },
+            "sortCriteria": {
+                "createdAt": 1,
+                "updatedAt": -1
+            }
+        }
+    }
 }
 ```
 

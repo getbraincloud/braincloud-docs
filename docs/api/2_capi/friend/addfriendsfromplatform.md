@@ -105,8 +105,8 @@ var externalIds = [ "external Id 1", "external Id 2" ];
 
 <%= data.branding.codePrefix %>.friend.addFriendsFromPlatform(friendPlatform, mode, externalIds, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -140,11 +140,11 @@ local mode = "ADD"
 local externalIds = { "external Id 1", "external Id 2" }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getFriendService():addFriendsFromPlatform(friendPlatform, mode, externalIds, callback)
@@ -174,13 +174,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "friend",
-	"operation": "ADD_FRIENDS_FROM_PLATFORM",
-	"data": {
+    "service": "friend",
+    "operation": "ADD_FRIENDS_FROM_PLATFORM",
+    "data": {
         "friendPlatform": "Facebook",
         "mode": "ADD",
         "externalIds": ["111234914143270", "106296724679297"]
-	}
+    }
 }
 ```
 

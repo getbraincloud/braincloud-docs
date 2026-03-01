@@ -103,14 +103,14 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "lobby",
-	"operation": "SYS_MEMBER_LEFT",
-	"data": {
-		"lobbyId": "55555:4v4:19",
-		"cxId": "55555:aaa-bbb-ccc-ddd:asdfjkl",
-		"reason": "EVICTED",
-		"newOwnerCxId": "55555:eee-fff-ggg-hhh:asdfjkl"
-	}
+    "service": "lobby",
+    "operation": "SYS_MEMBER_LEFT",
+    "data": {
+        "lobbyId": "55555:4v4:19",
+        "cxId": "55555:aaa-bbb-ccc-ddd:asdfjkl",
+        "reason": "EVICTED",
+        "newOwnerCxId": "55555:eee-fff-ggg-hhh:asdfjkl"
+    }
 }
 ```
 

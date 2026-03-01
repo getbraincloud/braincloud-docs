@@ -106,15 +106,15 @@ identityProxy.mergePeerProfile(peer, externalId, authenticationToken, authentica
 
 ```r
 {
-	"service": "identity",
-	"operation": "MERGE_PEER_PROFILE",
-	"data": {
-		"peer": "gameloot",
-		"externalId": "email@email.com",
-		"authenticationToken": "email@email.com",
-		"authenticationType": "Email",
-		"externalAuthName": ""
-	}
+    "service": "identity",
+    "operation": "MERGE_PEER_PROFILE",
+    "data": {
+        "peer": "gameloot",
+        "externalId": "email@email.com",
+        "authenticationToken": "email@email.com",
+        "authenticationType": "Email",
+        "externalAuthName": ""
+    }
 }
 ```
 

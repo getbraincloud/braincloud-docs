@@ -134,8 +134,8 @@ var teamCode = "blue";
 
 <%= data.branding.codePrefix %>.lobby.createLobbyWithPingData(lobbyType, rating, otherUserCxIds, settings, isReady, extraJson, teamCode, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -177,11 +177,11 @@ local extraJson = {}
 local teamCode = "blue"
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getLobbyService():createLobbyWithPingData(lobbyType, rating, otherUserCxIds, settings, isReady, extraJson, teamCode, callback)
@@ -219,23 +219,23 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "lobby",
-	"operation": "CREATE_LOBBY_WITH_PING_DATA",
-	"data": {
-		"lobbyType": "4v4",
-		"rating": 76,
-		"otherUserCxIds": [
-			"55555:aaa-bbb-ccc-ddd:asdfjkl"
-		],
-		"settings": {},
-		"isReady": false,
-		"extraJson": {},
-		"teamCode": "blue",
-		"pingData": {
-			"ca-central-1": 98,
-			"us-west-1": 123
-		}
-	}
+    "service": "lobby",
+    "operation": "CREATE_LOBBY_WITH_PING_DATA",
+    "data": {
+        "lobbyType": "4v4",
+        "rating": 76,
+        "otherUserCxIds": [
+            "55555:aaa-bbb-ccc-ddd:asdfjkl"
+        ],
+        "settings": {},
+        "isReady": false,
+        "extraJson": {},
+        "teamCode": "blue",
+        "pingData": {
+            "ca-central-1": 98,
+            "us-west-1": 123
+        }
+    }
 }
 ```
 

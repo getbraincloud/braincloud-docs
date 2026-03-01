@@ -27,26 +27,26 @@ string channelId = "22817:gl:CHAT_TRADE"; // APP_ID:CHANNEL_TYPE:CHANNEL_ID
 int maxReturn = 25;
 SuccessCallback successCallback = (response, cbObject) =>
 {
-	Dictionary<string, object> jsonMessage = (Dictionary<string, object>)JsonFx.Json.JsonReader.Deserialize(response);
-	Dictionary<string, object> jsonData = (Dictionary<string, object>)jsonMessage["data"];
-	var messages = (Dictionary<string, object>[]) jsonData["messages"];
-	
-	foreach (Dictionary<string, object> message in messages)
-	{
-		var content = (Dictionary<string, object>)message["content"];
-		var item = (Dictionary<string, object>)content["SELL_ITEM"];
-		
-		string itemType = item["ITEM_TYPE"].ToString();
-		string itemId = item["ITEM_ID"].ToString();
-		string price = item["PRICE"].ToString();
-		string currency = item["CURRENCY"].ToString();
-		string logMessage = string.Join(" | ", new[] {itemType, itemId, price, currency});
-		Debug.Log(logMessage);	// COUCH | d05a5b9d-374e-41e2-a498-c7387bf15c76 | 105 | GOLDCOINS
-	}
+    Dictionary<string, object> jsonMessage = (Dictionary<string, object>)JsonFx.Json.JsonReader.Deserialize(response);
+    Dictionary<string, object> jsonData = (Dictionary<string, object>)jsonMessage["data"];
+    var messages = (Dictionary<string, object>[]) jsonData["messages"];
+    
+    foreach (Dictionary<string, object> message in messages)
+    {
+        var content = (Dictionary<string, object>)message["content"];
+        var item = (Dictionary<string, object>)content["SELL_ITEM"];
+        
+        string itemType = item["ITEM_TYPE"].ToString();
+        string itemId = item["ITEM_ID"].ToString();
+        string price = item["PRICE"].ToString();
+        string currency = item["CURRENCY"].ToString();
+        string logMessage = string.Join(" | ", new[] {itemType, itemId, price, currency});
+        Debug.Log(logMessage);    // COUCH | d05a5b9d-374e-41e2-a498-c7387bf15c76 | 105 | GOLDCOINS
+    }
 };
 FailureCallback failureCallback = (status, code, error, cbObject) =>
 {
-	Debug.Log(string.Format("[GetRecentChatMessages Failed] {0}  {1}  {2}", status, code, error));
+    Debug.Log(string.Format("[GetRecentChatMessages Failed] {0}  {1}  {2}", status, code, error));
 };
 
 <%= data.branding.codePrefix %>.ChatService.GetRecentChatMessages(channelId, maxReturn, successCallback, failureCallback);
@@ -114,8 +114,8 @@ var maxReturn = 25;
 
 <%= data.branding.codePrefix %>.chat.getRecentChatMessages(channelId, maxReturn, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -147,11 +147,11 @@ local channelId = "22817:gl:CHAT_TRADE"
 local maxReturn = 25
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getChatService():getRecentChatMessages(channelId, maxReturn, callback)

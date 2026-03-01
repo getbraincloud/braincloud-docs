@@ -95,8 +95,8 @@ var versionId = -1;
 
 <%= data.branding.codePrefix %>.leaderboard.removePlayerScore(leaderboardId, versionId, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -128,11 +128,11 @@ local leaderboardId = "default"
 local versionId = -1
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getLeaderboardService():removePlayerScore(leaderboardId, versionId, callback)
@@ -161,12 +161,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "leaderboard",
-	"operation": "REMOVE_PLAYER_SCORE",
-	"data": {
-		"leaderboardId": "default",
-		"versionId": -1
-	}
+    "service": "leaderboard",
+    "operation": "REMOVE_PLAYER_SCORE",
+    "data": {
+        "leaderboardId": "default",
+        "versionId": -1
+    }
 }
 ```
 

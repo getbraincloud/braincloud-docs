@@ -179,11 +179,11 @@ local timeToLive = null
 local isOwned = false
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getCustomEntityService():createEntity(entityType, dataJson, acl, timeToLive, isOwned, callback)
@@ -223,22 +223,22 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "customEntity",
-	"operation": "CREATE_ENTITY",
-	"data": {
-		"entityType": "athletes",
-		"dataJson": {
-			"firstName": "Super",
-			"surName": "Star",
-			"position": "forward",
-			"goals": 2,
-			"assists": 4
-		},
-		"acl": {
-			"other": 1
-		},
-		"timeToLive": null
-	}
+    "service": "customEntity",
+    "operation": "CREATE_ENTITY",
+    "data": {
+        "entityType": "athletes",
+        "dataJson": {
+            "firstName": "Super",
+            "surName": "Star",
+            "position": "forward",
+            "goals": 2,
+            "assists": 4
+        },
+        "acl": {
+            "other": 1
+        },
+        "timeToLive": null
+    }
 }
 ```
 

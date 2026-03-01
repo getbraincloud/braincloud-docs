@@ -99,12 +99,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "group",
-	"operation": "SYS_IS_GROUP_MEMBER",
-	"data": {
-		"groupId": "a-group-id",
-		"profileId": "the-profile-id"
-	}
+    "service": "group",
+    "operation": "SYS_IS_GROUP_MEMBER",
+    "data": {
+        "groupId": "a-group-id",
+        "profileId": "the-profile-id"
+    }
 }
 ```
 

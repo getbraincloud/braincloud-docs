@@ -89,8 +89,8 @@ var userPictureUrl = "someURL";
 
 <%= data.branding.codePrefix %>.playerState.updateUserPictureUrl(userPictureUrl, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -120,11 +120,11 @@ if (result.statusCode == 200) {
 local pictureUrl = "someURL"
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getPlayerStateService():updateUserPictureUrl(pictureUrl, callback)
@@ -152,11 +152,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "playerState",
-	"operation": "UPDATE_PICTURE_URL",
-	"data": {
-		"userPictureUrl": "someURL"
-	}
+    "service": "playerState",
+    "operation": "UPDATE_PICTURE_URL",
+    "data": {
+        "userPictureUrl": "someURL"
+    }
 }
 ```
 

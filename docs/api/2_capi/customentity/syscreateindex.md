@@ -81,18 +81,18 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "customEntity",
-	"operation": "SYS_CREATE_INDEX",
-	"data": {
-		"entityType": "athletes",
-		"indexName": "penalties_1",
-		"indexKeysJson": {
-			"data.penalties": 1
-		},
-		"indexOptsJson": {
-			"sparse": true
-		}
-	}
+    "service": "customEntity",
+    "operation": "SYS_CREATE_INDEX",
+    "data": {
+        "entityType": "athletes",
+        "indexName": "penalties_1",
+        "indexKeysJson": {
+            "data.penalties": 1
+        },
+        "indexOptsJson": {
+            "sparse": true
+        }
+    }
 }
 ```
 

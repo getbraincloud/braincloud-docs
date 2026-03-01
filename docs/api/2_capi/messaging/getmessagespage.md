@@ -152,8 +152,8 @@ var context = {
 
 <%= data.branding.codePrefix %>.messaging.getMessagesPage(context, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -209,11 +209,11 @@ local context = {
 }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getMessagingService():getMessagesPage(context, callback)
@@ -268,24 +268,24 @@ if ( getResult.status == 200 ) {
 
 ```r
 {
-	"service": "messaging",
-	"operation": "GET_MESSAGES_PAGE",
-	"data": {
-		"context": {
-			"pagination": {
-				"rowsPerPage": 10,
-				"pageNumber": 1
-			},
-			"searchCriteria": {
-				"msgbox": "inbox",
-				"read": false
-			},
-			"sortCriteria": {
-				"mbCr": 1,
-				"mbUp": -1
-			}
-		}
-	}
+    "service": "messaging",
+    "operation": "GET_MESSAGES_PAGE",
+    "data": {
+        "context": {
+            "pagination": {
+                "rowsPerPage": 10,
+                "pageNumber": 1
+            },
+            "searchCriteria": {
+                "msgbox": "inbox",
+                "read": false
+            },
+            "sortCriteria": {
+                "mbCr": 1,
+                "mbUp": -1
+            }
+        }
+    }
 }
 ```
 

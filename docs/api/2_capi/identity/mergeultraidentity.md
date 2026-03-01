@@ -63,8 +63,8 @@ BCCompletionBlock successBlock;      // define callback
 BCErrorCompletionBlock failureBlock; // define callback
 
 [[<%= data.branding.codePrefix %> identityService]
-		mergeUltraIdentity:ultraUsername
-		   		 ultraIdToken:ultraIdToken
+        mergeUltraIdentity:ultraUsername
+                    ultraIdToken:ultraIdToken
               forceCreate:forceCreate
           completionBlock:successBlock
      errorCompletionBlock:failureBlock
@@ -104,8 +104,8 @@ var ultraIdToken = "ultraIdToken";
 
 <%= data.branding.codePrefix %>.identity.mergeUltraIdentity(ultraUsername, ultraIdToken, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -137,11 +137,11 @@ local ultraUsername = "ultraUsername"
 local ultraIdToken = "ultraIdToken"
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getIdentityService():mergeUltraIdentity(ultraUsername, ultraIdToken, callback)

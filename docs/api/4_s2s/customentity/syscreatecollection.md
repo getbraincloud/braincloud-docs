@@ -111,23 +111,23 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "customEntity",
-	"operation": "SYS_CREATE_COLLECTION",
-	"data": {
-		"entityType": "athletes",
-		"collectionOptsJson": {
-			"isOwned": false,
-			"migrate": true,
-			"identifier": "playerName",
-			"dataTemplateJson": {
-			  "playerName": "Randy Traywick",
-			  "playerId": 123456,
-			  "teamName": "Super Stars",
-			  "jerseyNum": 44
-			},
-			"dataTemplateText": "**Important** notes go here..."
-		}
-	}
+    "service": "customEntity",
+    "operation": "SYS_CREATE_COLLECTION",
+    "data": {
+        "entityType": "athletes",
+        "collectionOptsJson": {
+            "isOwned": false,
+            "migrate": true,
+            "identifier": "playerName",
+            "dataTemplateJson": {
+              "playerName": "Randy Traywick",
+              "playerId": 123456,
+              "teamName": "Super Stars",
+              "jerseyNum": 44
+            },
+            "dataTemplateText": "**Important** notes go here..."
+        }
+    }
 }
 ```
 

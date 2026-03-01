@@ -102,12 +102,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "lobby",
-	"operation": "SYS_ROOM_READY",
-	"data": {
-		"lobbyId": "55555:4v4:19",
-		"connectInfo": {}
-	}
+    "service": "lobby",
+    "operation": "SYS_ROOM_READY",
+    "data": {
+        "lobbyId": "55555:4v4:19",
+        "connectInfo": {}
+    }
 }
 ```
 

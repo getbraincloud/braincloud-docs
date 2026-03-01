@@ -116,12 +116,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "tournament",
-	"operation": "GET_TOURNAMENT_CONFIGS",
-	"data": {
-		"leaderboardId": "the-leaderboard-id",
-		"leaderboardVersionId": 1
-	}
+    "service": "tournament",
+    "operation": "GET_TOURNAMENT_CONFIGS",
+    "data": {
+        "leaderboardId": "the-leaderboard-id",
+        "leaderboardVersionId": 1
+    }
 }
 ```
 

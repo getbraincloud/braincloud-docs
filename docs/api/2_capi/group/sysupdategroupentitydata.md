@@ -105,14 +105,14 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "group",
-	"operation": "SYS_UPDATE_GROUP_ENTITY_DATA",
-	"data": {
-		"groupId": "a-group-id",
-		"entityId": "a-group-entity-id",
-		"version": 3,
-		"data": {}
-	}
+    "service": "group",
+    "operation": "SYS_UPDATE_GROUP_ENTITY_DATA",
+    "data": {
+        "groupId": "a-group-id",
+        "entityId": "a-group-entity-id",
+        "version": 3,
+        "data": {}
+    }
 }
 ```
 

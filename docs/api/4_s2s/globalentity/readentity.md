@@ -98,11 +98,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalEntity",
-	"operation": "READ",
-	"data": {
-		"entityId": "the-entity-id"
-	}
+    "service": "globalEntity",
+    "operation": "READ",
+    "data": {
+        "entityId": "the-entity-id"
+    }
 }
 ```
 

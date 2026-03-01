@@ -96,8 +96,8 @@ var token = "Google Play purchase token";
 
 <%= data.branding.codePrefix %>.product.confirmGooglePlayPurchase(orderId, productId, token, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -143,13 +143,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "product",
-	"operation": "CONFIRM_GOOGLEPLAY_PURCHASE",
-	"data": {
-		"orderId": "Google Play order ID",
-		"productId": "Google Play product ID",
-		"token": "Google Play purchase token"
-	}
+    "service": "product",
+    "operation": "CONFIRM_GOOGLEPLAY_PURCHASE",
+    "data": {
+        "orderId": "Google Play order ID",
+        "productId": "Google Play product ID",
+        "token": "Google Play purchase token"
+    }
 }
 ```
 

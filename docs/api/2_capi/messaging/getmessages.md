@@ -105,8 +105,8 @@ var markAsRead = false;
 
 <%= data.branding.codePrefix %>.messaging.getMessages(msgbox, msgIds, markAsRead, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -140,11 +140,11 @@ local msgIds = { "msgId1", "msgId2" }
 local markAsRead = false
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getMessagingService():getMessages(msgBox, msgIds, markAsRead, callback)
@@ -174,16 +174,16 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "messaging",
-	"operation": "GET_MESSAGES",
-	"data": {
-		"msgbox": "inbox",
-		"msgIds": [
-			"msgId1",
-			"msgId2"
-		],
-		"markAsRead": false
-	}
+    "service": "messaging",
+    "operation": "GET_MESSAGES",
+    "data": {
+        "msgbox": "inbox",
+        "msgIds": [
+            "msgId1",
+            "msgId2"
+        ],
+        "markAsRead": false
+    }
 }
 ```
 

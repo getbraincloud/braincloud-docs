@@ -89,8 +89,8 @@ var category = "alert counts";
 
 <%= data.branding.codePrefix %>.playerStatistics.readUserStatsForCategory(category, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -120,11 +120,11 @@ if (result.statusCode == 200) {
 local category = "alert counts"
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getPlayerStatisticsService():readUserStatsForCategory(category, callback)
@@ -152,11 +152,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "playerStatistics",
-	"operation": "READ_FOR_CATEGORY",
-	"data": {
-		"category": "alert counts"
-	}
+    "service": "playerStatistics",
+    "operation": "READ_FOR_CATEGORY",
+    "data": {
+        "category": "alert counts"
+    }
 }
 ```
 

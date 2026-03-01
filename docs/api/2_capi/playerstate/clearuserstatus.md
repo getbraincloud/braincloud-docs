@@ -119,11 +119,11 @@ if (result.statusCode == 200) {
 local statusName = "a-status-name"
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getPlayerStateService():clearUserStatus(statusName, callback)
@@ -151,11 +151,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "playerState",
-	"operation": "CLEAR_USER_STATUS",
-	"data": {
-		"statusName": "a-status-name"
-	}
+    "service": "playerState",
+    "operation": "CLEAR_USER_STATUS",
+    "data": {
+        "statusName": "a-status-name"
+    }
 }
 ```
 

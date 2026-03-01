@@ -96,8 +96,8 @@ var recurse = true;
 
 <%= data.branding.codePrefix %>.file.listUserFiles(path, recurse, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -129,11 +129,11 @@ local cloudPath = "dir1/dir2"
 local recurse = true
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getFileService():listUserFiles(cloudPath, recurse, callback)
@@ -162,12 +162,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "file",
-	"operation": "LIST_USER_FILES",
-	"data": {
-		"path": "dir1/dir2",
-		"recurse": true
-	}
+    "service": "file",
+    "operation": "LIST_USER_FILES",
+    "data": {
+        "path": "dir1/dir2",
+        "recurse": true
+    }
 }
 ```
 

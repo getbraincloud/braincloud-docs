@@ -86,32 +86,32 @@ Sends a notification to a list of users consisting of raw message content.
 
 ```cfscript
 var profileIds = [
-	"the-profile-id",
-	"another-profile-id"
+    "the-profile-id",
+    "another-profile-id"
 ];
 var fcmContent = {
-	"notification": {
-		"body": "content of message",
-		"title": "message title"
-	},
-	"data": {
-		"customfield1": "customValue1",
-		"customfield2": "customValue2"
-	},
-	"priority": "normal"
+    "notification": {
+        "body": "content of message",
+        "title": "message title"
+    },
+    "data": {
+        "customfield1": "customValue1",
+        "customfield2": "customValue2"
+    },
+    "priority": "normal"
 };
 var iosContent = {
-	"aps": {
-		"alert": {
-			"body": "content of message",
-			"title": "message title"
-		},
-		"badge": 0,
-		"sound": "gggg"
-	}
+    "aps": {
+        "alert": {
+            "body": "content of message",
+            "title": "message title"
+        },
+        "badge": 0,
+        "sound": "gggg"
+    }
 };
 var facebookContent = {
-	"template": "content of message"
+    "template": "content of message"
 };
 var pushNotificationProxy = bridge.getPushNotificationServiceProxy();
 
@@ -128,38 +128,38 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "pushNotification",
-	"operation": "SEND_RAW_BATCH",
-	"data": {
-		"profileIds": [
-			"the-profile-id",
-			"another-profile-id"
-		],
-		"fcmContent": {
-			"notification": {
-				"body": "content of message",
-				"title": "message title"
-			},
-			"data": {
-				"customfield1": "customValue1",
-				"customfield2": "customValue2"
-			},
-			"priority": "normal"
-		},
-		"iosContent": {
-			"aps": {
-				"alert": {
-					"body": "content of message",
-					"title": "message title"
-				},
-				"badge": 0,
-				"sound": "gggg"
-			}
-		},
-		"facebookContent": {
-			"template": "content of message"
-		}
-	}
+    "service": "pushNotification",
+    "operation": "SEND_RAW_BATCH",
+    "data": {
+        "profileIds": [
+            "the-profile-id",
+            "another-profile-id"
+        ],
+        "fcmContent": {
+            "notification": {
+                "body": "content of message",
+                "title": "message title"
+            },
+            "data": {
+                "customfield1": "customValue1",
+                "customfield2": "customValue2"
+            },
+            "priority": "normal"
+        },
+        "iosContent": {
+            "aps": {
+                "alert": {
+                    "body": "content of message",
+                    "title": "message title"
+                },
+                "badge": 0,
+                "sound": "gggg"
+            }
+        },
+        "facebookContent": {
+            "template": "content of message"
+        }
+    }
 }
 ```
 

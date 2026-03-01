@@ -156,11 +156,11 @@ local quantity = 1
 local immediate = true
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getUserItemsService():giveUserItemTo(profileId, itemId, version, quantity, immediate, callback)
@@ -192,15 +192,15 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "userItems",
-	"operation": "GIVE_USER_ITEM_TO",
-	"data": {
-		"profileId": "a-user-profileId",
-		"itemId": "aaa-bbb-ccc-ddd",
-		"version": 1,
-		"quantity": 1,
-		"immediate": true
-	}
+    "service": "userItems",
+    "operation": "GIVE_USER_ITEM_TO",
+    "data": {
+        "profileId": "a-user-profileId",
+        "itemId": "aaa-bbb-ccc-ddd",
+        "version": 1,
+        "quantity": 1,
+        "immediate": true
+    }
 }
 ```
 

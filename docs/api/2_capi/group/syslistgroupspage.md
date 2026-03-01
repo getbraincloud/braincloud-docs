@@ -109,23 +109,23 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "group",
-	"operation": "SYS_LIST_GROUPS_PAGE",
-	"data": {
-		"context": {
-			"pagination": {
-				"rowsPerPage": 50,
-				"pageNumber": 1
-			},
-			"searchCriteria": {
-				"groupType": "BLUE"
-			},
-			"sortCriteria": {
-				"createdAt": 1,
-				"updatedAt": -1
-			}
-		}
-	}
+    "service": "group",
+    "operation": "SYS_LIST_GROUPS_PAGE",
+    "data": {
+        "context": {
+            "pagination": {
+                "rowsPerPage": 50,
+                "pageNumber": 1
+            },
+            "searchCriteria": {
+                "groupType": "BLUE"
+            },
+            "sortCriteria": {
+                "createdAt": 1,
+                "updatedAt": -1
+            }
+        }
+    }
 }
 ```
 

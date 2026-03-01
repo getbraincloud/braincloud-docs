@@ -109,15 +109,15 @@ var retVal = friendProxy.findUsersByUserSummary(where, maxResults);
 
 ```r
 {
-	"service": "friend",
-	"operation": "FIND_USERS_BY_USER_SUMMARY",
-	"data": {
-		"where": {
-			"languageCode": "en",
-			"summaryFriendData.previousLocation": "germany"
-		},
-		"maxResults": 20
-	}
+    "service": "friend",
+    "operation": "FIND_USERS_BY_USER_SUMMARY",
+    "data": {
+        "where": {
+            "languageCode": "en",
+            "summaryFriendData.previousLocation": "germany"
+        },
+        "maxResults": 20
+    }
 }
 ```
 

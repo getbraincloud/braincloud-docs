@@ -118,8 +118,8 @@ var substitutionsJson = {
 
 <%= data.branding.codePrefix %>.pushNotification.sendTemplatedPushNotificationToGroup(groupId, notificationTemplateId, substitutionsJson, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -159,11 +159,11 @@ local substitutionsJson = {
 }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getPushNotificationService():sendTemplatedPushNotificationToGroup(groupId, notificationTemplateId, substitutionsJson, callback)
@@ -196,16 +196,16 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "pushNotification",
-	"operation": "SEND_TEMPLATED_TO_GROUP",
-	"data": {
-		"groupId": "group1",
-		"notificationTemplateId": 1,
-		"substitutions": {
-			"0": "value0",
-			"1": "value1"
-		}
-	}
+    "service": "pushNotification",
+    "operation": "SEND_TEMPLATED_TO_GROUP",
+    "data": {
+        "groupId": "group1",
+        "notificationTemplateId": 1,
+        "substitutions": {
+            "0": "value0",
+            "1": "value1"
+        }
+    }
 }
 ```
 

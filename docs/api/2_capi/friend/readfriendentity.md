@@ -95,8 +95,8 @@ var entityId = "entityId";
 
 <%= data.branding.codePrefix %>.friend.readFriendEntity(friendId, entityId, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -128,11 +128,11 @@ local friendId = "profileId"
 local entityId = "entityId"
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getFriendService():readFriendEntity(friendId, entityId, callback)
@@ -161,12 +161,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "friend",
-	"operation": "READ_FRIEND_ENTITY",
-	"data": {
-		"friendId": "profileId",
-		"entityId": "entityId"
-	}
+    "service": "friend",
+    "operation": "READ_FRIEND_ENTITY",
+    "data": {
+        "friendId": "profileId",
+        "entityId": "entityId"
+    }
 }
 ```
 

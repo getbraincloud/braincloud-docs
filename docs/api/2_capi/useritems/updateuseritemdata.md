@@ -146,11 +146,11 @@ local newItemData = {
 }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getUserItemsService():updateUserItemData(itemId, version, newItemData, callback)
@@ -183,16 +183,16 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "userItems",
-	"operation": "UPDATE_USER_ITEM_DATA",
-	"data": {
-		"itemId": "aaa-bbb-ccc-ddd",
-		"version": 1,
-		"newItemData": {
-			"condition": 77,
-			"bonus": 1
-		}
-	}
+    "service": "userItems",
+    "operation": "UPDATE_USER_ITEM_DATA",
+    "data": {
+        "itemId": "aaa-bbb-ccc-ddd",
+        "version": 1,
+        "newItemData": {
+            "condition": 77,
+            "bonus": 1
+        }
+    }
 }
 ```
 

@@ -120,8 +120,8 @@ var jsonEntityData = {
 
 <%= data.branding.codePrefix %>.globalEntity.createEntityWithIndexedId(entityType, indexedId, timeToLive, jsonEntityAcl, jsonEntityData, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -167,11 +167,11 @@ local jsonEntityData = {
 }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getGlobalEntityService():createEntityWithIndexedId(entityType, indexedId, timeToLive, jsonEntityAcl, jsonEntityData, callback)
@@ -207,19 +207,19 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalEntity",
-	"operation": "CREATE_WITH_INDEXED_ID",
-	"data": {
-		"entityType": "address",
-		"entityIndexedId": "entityId1",
-		"timeToLive": -1,
-		"acl": {
-			"other": 1
-		},
-		"data": {
-			"street": "1309 Carling"
-		}
-	}
+    "service": "globalEntity",
+    "operation": "CREATE_WITH_INDEXED_ID",
+    "data": {
+        "entityType": "address",
+        "entityIndexedId": "entityId1",
+        "timeToLive": -1,
+        "acl": {
+            "other": 1
+        },
+        "data": {
+            "street": "1309 Carling"
+        }
+    }
 }
 ```
 

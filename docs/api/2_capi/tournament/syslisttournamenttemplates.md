@@ -98,12 +98,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "tournament",
-	"operation": "SYS_LIST_TOURNAMENT_TEMPLATES",
-	"data": {
+    "service": "tournament",
+    "operation": "SYS_LIST_TOURNAMENT_TEMPLATES",
+    "data": {
     "optionsJson": {
       "sort": "ASCENDING"
-	}
+    }
 }
 ```
 

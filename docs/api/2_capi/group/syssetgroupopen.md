@@ -99,12 +99,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "group",
-	"operation": "SYS_SET_GROUP_OPEN",
-	"data": {
-		"groupId": "a-group-id",
-		"isOpenGroup": true
-	}
+    "service": "group",
+    "operation": "SYS_SET_GROUP_OPEN",
+    "data": {
+        "groupId": "a-group-id",
+        "isOpenGroup": true
+    }
 }
 ```
 

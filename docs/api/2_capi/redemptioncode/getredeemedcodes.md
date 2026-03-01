@@ -83,8 +83,8 @@ var codeType = "a code type";
 
 <%= data.branding.codePrefix %>.redemptionCode.getRedeemedCodes(codeType, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -114,11 +114,11 @@ if (result.statusCode == 200) {
 local codeType = "a code type"
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getRedemptionCodeService():getRedeemedCodes(codeType, callback)
@@ -146,11 +146,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "redemptionCode",
-	"operation": "GET_REDEEMED_CODES",
-	"data": {
-		"codeType": "a code type"
-	}
+    "service": "redemptionCode",
+    "operation": "GET_REDEEMED_CODES",
+    "data": {
+        "codeType": "a code type"
+    }
 }
 ```
 

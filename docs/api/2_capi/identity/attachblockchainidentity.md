@@ -128,11 +128,11 @@ local blockchainConfig = "config"
 local publicKey = "xxx"
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getIdentityService():attachBlockchainIdentity(blockchainConfig, publicKey, callback)
@@ -161,12 +161,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "identity",
-	"operation": "ATTACH_BLOCKCHAIN_IDENTITY",
-	"data": {
-		"blockchainConfig": "config",
-		"publicKey": "xxx"
-	}
+    "service": "identity",
+    "operation": "ATTACH_BLOCKCHAIN_IDENTITY",
+    "data": {
+        "blockchainConfig": "config",
+        "publicKey": "xxx"
+    }
 }
 ```
 

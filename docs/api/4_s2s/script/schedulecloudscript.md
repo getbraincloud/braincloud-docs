@@ -89,7 +89,7 @@ _Note - <%= data.branding.productName %> checks for schedule cloud code scripts 
 ```cfscript
 var scriptName = "path/to/script1";
 var scriptData = {
-	"parm": "value"
+    "parm": "value"
 };
 var startDateUTC = 1512750683157;
 var minutesFromNow = 1;
@@ -108,16 +108,16 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "script",
-	"operation": "SCHEDULE_CLOUD_SCRIPT",
-	"data": {
-		"scriptName": "path/to/script1",
-		"scriptData": {
-			"parm": "value"
-		},
-		"startDateUTC": "[[#ts+60000]]",
-		"minutesFromNow": 1
-	}
+    "service": "script",
+    "operation": "SCHEDULE_CLOUD_SCRIPT",
+    "data": {
+        "scriptName": "path/to/script1",
+        "scriptData": {
+            "parm": "value"
+        },
+        "startDateUTC": "[[#ts+60000]]",
+        "minutesFromNow": 1
+    }
 }
 ```
 

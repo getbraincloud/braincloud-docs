@@ -99,8 +99,8 @@ var version = -1;
 
 <%= data.branding.codePrefix %>.entity.deleteEntity(entityId, version, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -132,11 +132,11 @@ local entityId = "someEntityId"
 local version = -1
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getEntityService():deleteEntity(entityId, version, callback)
@@ -165,12 +165,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "entity",
-	"operation": "DELETE",
-	"data": {
-		"entityId": "someEntityId",
-		"version": -1
-	}
+    "service": "entity",
+    "operation": "DELETE",
+    "data": {
+        "entityId": "someEntityId",
+        "version": -1
+    }
 }
 ```
 

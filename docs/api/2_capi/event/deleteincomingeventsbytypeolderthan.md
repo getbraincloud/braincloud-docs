@@ -94,8 +94,8 @@ var eventType = "my-event-type";
 var dateMillis = 1619804426154;
 <%= data.branding.codePrefix %>.event.deleteIncomingEventsByTypeOlderThan(eventType, dateMillis, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -127,11 +127,11 @@ local eventType = "my-event-type"
 local dateMillis = 1619804426154
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getEventService():deleteIncomingEventsByTypeOlderThan(eventType, dateMillis, callback)
@@ -160,12 +160,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "event",
-	"operation": "DELETE_INCOMING_EVENTS_BY_TYPE_OLDER_THAN",
-	"data": {
+    "service": "event",
+    "operation": "DELETE_INCOMING_EVENTS_BY_TYPE_OLDER_THAN",
+    "data": {
     "eventType": "my-event-type",
-		"dateMillis": 1619804426154
-	}
+        "dateMillis": 1619804426154
+    }
 }
 ```
 

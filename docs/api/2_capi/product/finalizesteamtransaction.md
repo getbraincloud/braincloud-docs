@@ -108,11 +108,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "product",
-	"operation": "FINALIZE_STEAM_TRANSACTION",
-	"data": {
-		"transId": "trans01"
-	}
+    "service": "product",
+    "operation": "FINALIZE_STEAM_TRANSACTION",
+    "data": {
+        "transId": "trans01"
+    }
 }
 ```
 

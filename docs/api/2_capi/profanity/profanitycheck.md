@@ -107,8 +107,8 @@ var flagUrls = false;
 
 <%= data.branding.codePrefix %>.profanity.profanityCheck(text, languages, flagEmail, flagPhone, flagUrls, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -146,11 +146,11 @@ local flagPhone = false
 local flagUrls = false
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getProfanityService():profanityCheck(text, languages, flagEmail, flagPhone, flagUrls, callback)
@@ -182,15 +182,15 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "profanity",
-	"operation": "PROFANITY_CHECK",
-	"data": {
-		"text": "foul language",
-		"languages": "en,fr",
-		"flagEmail": false,
-		"flagPhone": false,
-		"flagUrls": false
-	}
+    "service": "profanity",
+    "operation": "PROFANITY_CHECK",
+    "data": {
+        "text": "foul language",
+        "languages": "en,fr",
+        "flagEmail": false,
+        "flagPhone": false,
+        "flagUrls": false
+    }
 }
 ```
 

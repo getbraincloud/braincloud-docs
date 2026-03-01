@@ -77,8 +77,8 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 
 <%= data.branding.codePrefix %>.event.getEvents(result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -106,11 +106,11 @@ if (result.statusCode == 200) {
 ```lua
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getEventService():getEvents(callback)
@@ -137,9 +137,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "event",
-	"operation": "GET_EVENTS",
-	"data": {}
+    "service": "event",
+    "operation": "GET_EVENTS",
+    "data": {}
 }
 ```
 

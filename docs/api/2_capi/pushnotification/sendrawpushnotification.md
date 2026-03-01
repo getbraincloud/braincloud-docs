@@ -131,8 +131,8 @@ var facebookContent = {
 
 <%= data.branding.codePrefix %>.pushNotification.sendRawPushNotification(toProfileId, fcmContent, iosContent, facebookContent, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -210,11 +210,11 @@ local facebookContent = {
 }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getPushNotificationService():sendRawPushNotification(toProfileId, fcmContent, iosContent, facebookContent, callback)
@@ -266,35 +266,35 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "pushNotification",
-	"operation": "SEND_RAW",
-	"data": {
-		"toProfileId": "profile1",
-		"fcmContent": {
-			"notification": {
-				"body": "content of message",
-				"title": "message title"
-			},
-			"data": {
-				"customfield1": "customValue1",
-				"customfield2": "customValue2"
-			},
-			"priority": "normal"
-		},
-		"iosContent": {
-			"aps": {
-				"alert": {
-					"body": "content of message",
-					"title": "message title"
-				},
-				"badge": 0,
-				"sound": "gggg"
-			}
-		},
-		"facebookContent": {
-			"template": "content of message"
-		}
-	}
+    "service": "pushNotification",
+    "operation": "SEND_RAW",
+    "data": {
+        "toProfileId": "profile1",
+        "fcmContent": {
+            "notification": {
+                "body": "content of message",
+                "title": "message title"
+            },
+            "data": {
+                "customfield1": "customValue1",
+                "customfield2": "customValue2"
+            },
+            "priority": "normal"
+        },
+        "iosContent": {
+            "aps": {
+                "alert": {
+                    "body": "content of message",
+                    "title": "message title"
+                },
+                "badge": 0,
+                "sound": "gggg"
+            }
+        },
+        "facebookContent": {
+            "template": "content of message"
+        }
+    }
 }
 ```
 

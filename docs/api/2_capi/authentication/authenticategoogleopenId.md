@@ -65,7 +65,7 @@ BCErrorCompletionBlock failureBlock; // define callback
                 forceCreate:forceCreate
             completionBlock:successBlock
        errorCompletionBlock:failureBlock
-		     	   cbObject:nil];
+                    cbObject:nil];
 ```
 
 ```mdx-code-block
@@ -103,8 +103,8 @@ var forceCreate = true;
 
 <%= data.branding.codePrefix %>.authentication.authenticateGoogleOpenId(googleUserAccountEmail, idToken, forceCreate, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -138,11 +138,11 @@ local idToken = "authTokenFromGoogle"
 local forceCreate = true
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getAuthenticationService():authenticateGoogleOpenId(googleUserAccountEmail, idToken, forceCreate, callback)

@@ -100,12 +100,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalEntity",
-	"operation": "DELETE_SYSTEM_ENTITY",
-	"data": {
-		"entityId": "the-entity-id",
-		"version": 2
-	}
+    "service": "globalEntity",
+    "operation": "DELETE_SYSTEM_ENTITY",
+    "data": {
+        "entityId": "the-entity-id",
+        "version": 2
+    }
 }
 ```
 

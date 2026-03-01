@@ -123,8 +123,8 @@ var extraJson = {"key":"value"};
 
 <%= data.branding.codePrefix %>.smartSwitchAuthenticateAdvanced(authenticationType, ids, forceCreate, extraJson, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -162,17 +162,17 @@ local externalId = "authAdvancedUser"
 local authenticationToken = "authAdvancedPass"
 local authenticationSubType = ""
 local ids = {
-	externalId = externalId,
-	authenticationToken = authenticationToken,
-	authenticationSubType = authenticationSubType
+    externalId = externalId,
+    authenticationToken = authenticationToken,
+    authenticationSubType = authenticationSubType
 }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:smartSwitchAuthenticateAdvanced(AuthenticationType.universal, ids, {key = "value"}, true, callback)

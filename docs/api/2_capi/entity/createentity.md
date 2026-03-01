@@ -106,8 +106,8 @@ var jsonEntityAcl = {
 
 <%= data.branding.codePrefix %>.entity.createEntity(entityType, jsonEntityData, jsonEntityAcl, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -149,11 +149,11 @@ local jsonEntityAcl = {
 }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getEntityService():createEntity(entityType, jsonEntityData, jsonEntityAcl, callback)
@@ -187,17 +187,17 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "entity",
-	"operation": "CREATE",
-	"data": {
-		"entityType": "address",
-		"data": {
-			"street": "1309 Carling"
-		},
-		"acl": {
-			"other": 0
-		}
-	}
+    "service": "entity",
+    "operation": "CREATE",
+    "data": {
+        "entityType": "address",
+        "data": {
+            "street": "1309 Carling"
+        },
+        "acl": {
+            "other": 0
+        }
+    }
 }
 ```
 

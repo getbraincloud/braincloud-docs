@@ -91,9 +91,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalApp",
-	"operation": "READ_PROPERTIES",
-	"data": {}
+    "service": "globalApp",
+    "operation": "READ_PROPERTIES",
+    "data": {}
 }
 ```
 

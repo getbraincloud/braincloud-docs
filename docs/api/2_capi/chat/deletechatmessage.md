@@ -31,16 +31,16 @@ string msgId = "784130333859899";
 int version = -1;
 SuccessCallback successCallback = (response, cbObject) =>
 {
-	var jsonMessage = (Dictionary<string, object>)JsonFx.Json.JsonReader.Deserialize(response);
-	Dictionary<string, object> jsonData = (Dictionary<string, object>)jsonMessage["data"];
-	string deleted = jsonData["deleted"].ToString();
-	
-	string logMessage = string.Join(" | ", new [] {deleted});
-	Debug.Log(logMessage); // 1
+    var jsonMessage = (Dictionary<string, object>)JsonFx.Json.JsonReader.Deserialize(response);
+    Dictionary<string, object> jsonData = (Dictionary<string, object>)jsonMessage["data"];
+    string deleted = jsonData["deleted"].ToString();
+    
+    string logMessage = string.Join(" | ", new [] {deleted});
+    Debug.Log(logMessage); // 1
 };
 FailureCallback failureCallback = (status, code, error, cbObject) =>
 {
-	Debug.Log(string.Format("[DeleteChatMessage Failed] {0}  {1}  {2}", status, code, error));
+    Debug.Log(string.Format("[DeleteChatMessage Failed] {0}  {1}  {2}", status, code, error));
 };
 
 <%= data.branding.codePrefix %>.ChatService.DeleteChatMessage(channelId, msgId, version, successCallback, failureCallback);
@@ -113,8 +113,8 @@ var version = -1;
 
 <%= data.branding.codePrefix %>.chat.channelDisconnect(channelId, msgId, version, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -148,11 +148,11 @@ local msgId = "784130333859899"
 local version = -1
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getChatService():channelDisconnect(channelId, msgId, version, callback)
@@ -175,13 +175,13 @@ var result = chatProxy.deleteChatMessage( channelId, msgId, ver );
 
 ```r
 {
-	"service": "chat",
-	"operation": "DELETE_CHAT_MESSAGE",
-	"data": {
-		"channelId": "55555:gl:bcDev",
-		"msgId": "the-message-id",
-		"version": 1
-	}
+    "service": "chat",
+    "operation": "DELETE_CHAT_MESSAGE",
+    "data": {
+        "channelId": "55555:gl:bcDev",
+        "msgId": "the-message-id",
+        "version": 1
+    }
 }
 ```
 

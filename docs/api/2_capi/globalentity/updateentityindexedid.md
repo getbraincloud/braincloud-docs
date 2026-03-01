@@ -102,8 +102,8 @@ var entityIndexedId = "entityId1";
 
 <%= data.branding.codePrefix %>.globalEntity.updateEntityIndexedId(entityId, version, entityIndexedId, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -137,11 +137,11 @@ local version = 2
 local entityIndexedId = "entityId1"
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getGlobalEntityService():updateEntityIndexedId(entityId, version, entityIndexedId, callback)
@@ -171,13 +171,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalEntity",
-	"operation": "UPDATE_INDEXED_ID",
-	"data": {
-		"entityId": "the-entity-id",
-		"version": 2,
-		"entityIndexedId": "entityId1"
-	}
+    "service": "globalEntity",
+    "operation": "UPDATE_INDEXED_ID",
+    "data": {
+        "entityId": "the-entity-id",
+        "version": 2,
+        "entityIndexedId": "entityId1"
+    }
 }
 ```
 

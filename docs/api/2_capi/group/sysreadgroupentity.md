@@ -99,12 +99,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "group",
-	"operation": "SYS_READ_GROUP_ENTITY",
-	"data": {
-		"groupId": "a-group-id",
-		"entityId": "a-group-entity-id"
-	}
+    "service": "group",
+    "operation": "SYS_READ_GROUP_ENTITY",
+    "data": {
+        "groupId": "a-group-id",
+        "entityId": "a-group-entity-id"
+    }
 }
 ```
 

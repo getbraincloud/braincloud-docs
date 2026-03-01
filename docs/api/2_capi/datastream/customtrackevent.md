@@ -98,8 +98,8 @@ var jsonEventProperties = {
 
 <%= data.branding.codePrefix %>.dataStream.customTrackEvent(eventName, jsonEventProperties, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -137,11 +137,11 @@ local jsonEventProperties = {
 }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getDataStreamService():customTrackEvent(eventName, jsonEventProperties, callback)
@@ -173,15 +173,15 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "dataStream",
-	"operation": "CUSTOM_TRACK_EVENT",
-	"data": {
-		"eventName": "customEvent",
-		"eventProperties": {
-			"key1": "value",
-			"key2": "value"
-		}
-	}
+    "service": "dataStream",
+    "operation": "CUSTOM_TRACK_EVENT",
+    "data": {
+        "eventName": "customEvent",
+        "eventProperties": {
+            "key1": "value",
+            "key2": "value"
+        }
+    }
 }
 ```
 

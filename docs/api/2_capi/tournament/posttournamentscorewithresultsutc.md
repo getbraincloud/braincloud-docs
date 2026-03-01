@@ -143,8 +143,8 @@ var initialScore = 0;
 
 <%= data.branding.codePrefix %>.tournament.postTournamentScoreWithResultsUTC(leaderboardId, score, jsonData, roundStartedTime, sortOrder, beforeCount, afterCount, initialScore, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -192,11 +192,11 @@ local afterCount = 4
 local initialScore = 0
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getTournamentService():postTournamentScoreWithResultsUTC(leaderboardId, score, jsonData, roundStartedTime, sortOrder, beforeCount, afterCount, initialScore, callback)
@@ -233,20 +233,20 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "tournament",
-	"operation": "POST_TOURNAMENT_SCORE_WITH_RESULTS",
-	"data": {
-		"leaderboardId": "the-leaderboard-id",
-		"score": 0,
-		"data": {
-			"nickname": "withResults"
-		},
-		"roundStartedEpoch": "[[#ts-10000]]",
-		"sort": "HIGH_TO_LOW",
-		"beforeCount": 3,
-		"afterCount": 4,
-		"initialScore": 0
-	}
+    "service": "tournament",
+    "operation": "POST_TOURNAMENT_SCORE_WITH_RESULTS",
+    "data": {
+        "leaderboardId": "the-leaderboard-id",
+        "score": 0,
+        "data": {
+            "nickname": "withResults"
+        },
+        "roundStartedEpoch": "[[#ts-10000]]",
+        "sort": "HIGH_TO_LOW",
+        "beforeCount": 3,
+        "afterCount": 4,
+        "initialScore": 0
+    }
 }
 ```
 

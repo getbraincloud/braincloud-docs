@@ -70,14 +70,14 @@ var file = document.getElementById('fileToUpload').files[0];
 var fileSize = file.size;
 
 <%= data.branding.codePrefix %>.file.prepareFileUpload(
-			"cloudPath", "cloudFilename", shareable, replaceIfExists, fileSize,
-			function(result) {
-				if (result.status == 200) {
-					var uploadId = result.data.fileDetails.uploadId;
-					<%= data.branding.codePrefix %>.file.uploadFile(xhr, file, uploadId);
-				}
-			}
-		);
+            "cloudPath", "cloudFilename", shareable, replaceIfExists, fileSize,
+            function(result) {
+                if (result.status == 200) {
+                    var uploadId = result.data.fileDetails.uploadId;
+                    <%= data.branding.codePrefix %>.file.uploadFile(xhr, file, uploadId);
+                }
+            }
+        );
 ```
 
 ```mdx-code-block

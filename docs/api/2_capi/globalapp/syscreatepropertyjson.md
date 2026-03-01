@@ -111,9 +111,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalApp",
-	"operation": "SYS_CREATE_PROPERTY_JSON",
-	"data": {
+    "service": "globalApp",
+    "operation": "SYS_CREATE_PROPERTY_JSON",
+    "data": {
         "name": "my_property",
         "value": {
             "a": 1,

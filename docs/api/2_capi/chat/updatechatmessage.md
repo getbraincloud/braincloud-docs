@@ -117,8 +117,8 @@ var contentJson = {
 
 <%= data.branding.codePrefix %>.chat.updateChatMessage(channelId, msgId, version, contentJson, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -164,11 +164,11 @@ local contentJson = {
 }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getChatService():updateChatMessage(channelId, msgId, version, contentJson, callback)
@@ -204,19 +204,19 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "chat",
-	"operation": "UPDATE_CHAT_MESSAGE",
-	"data": {
-		"channelId": "55555:gl:bcDev",
-		"msgId": "123456789",
-		"version": 1,
-		"content": {
-			"text": "New plain text message",
-			"custom": {
-				"somethingNew": "amazing"
-			}
-		}
-	}
+    "service": "chat",
+    "operation": "UPDATE_CHAT_MESSAGE",
+    "data": {
+        "channelId": "55555:gl:bcDev",
+        "msgId": "123456789",
+        "version": 1,
+        "content": {
+            "text": "New plain text message",
+            "custom": {
+                "somethingNew": "amazing"
+            }
+        }
+    }
 }
 ```
 

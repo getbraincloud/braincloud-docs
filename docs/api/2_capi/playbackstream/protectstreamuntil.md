@@ -129,11 +129,11 @@ local playbackStreamId = "streamId"
 local numDays = 365
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getPlaybackStreamService():protectStreamUntil(playbackStreamId, numDays, callback)

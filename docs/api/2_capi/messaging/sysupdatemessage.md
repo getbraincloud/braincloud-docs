@@ -111,16 +111,16 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "messaging",
-	"operation": "SYS_UPDATE_MESSAGE",
-	"data": {
-		"msgId": "e7d15e38-1bc7-40bd-aecf-80ea38b11992",
-		"msgVer": 1,
-		"contentJson": {
-			"subject": "New features",
-			"text": "Chat and messaging features coming soon..."
-		}
-	}
+    "service": "messaging",
+    "operation": "SYS_UPDATE_MESSAGE",
+    "data": {
+        "msgId": "e7d15e38-1bc7-40bd-aecf-80ea38b11992",
+        "msgVer": 1,
+        "contentJson": {
+            "subject": "New features",
+            "text": "Chat and messaging features coming soon..."
+        }
+    }
 }
 ```
 

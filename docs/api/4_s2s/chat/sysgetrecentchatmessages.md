@@ -100,12 +100,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "chat",
-	"operation": "SYS_GET_RECENT_CHAT_MESSAGES",
-	"data": {
-		"channelId": "55555:gl:bcDev",
-		"maxReturn": 25
-	}
+    "service": "chat",
+    "operation": "SYS_GET_RECENT_CHAT_MESSAGES",
+    "data": {
+        "channelId": "55555:gl:bcDev",
+        "maxReturn": 25
+    }
 }
 ```
 

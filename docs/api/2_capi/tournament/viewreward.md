@@ -95,8 +95,8 @@ var versionId = 10;
 
 <%= data.branding.codePrefix %>.tournament.viewReward(leaderboardId, versionId, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -128,11 +128,11 @@ local leaderboardId = "leaderboardId1"
 local versionId = 10
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getTournamentService():viewReward(leaderboardId, versionId, callback)
@@ -161,12 +161,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "tournament",
-	"operation": "VIEW_REWARD",
-	"data": {
-		"leaderboardId": "the-leaderboard-id",
-		"versionId": 10
-	}
+    "service": "tournament",
+    "operation": "VIEW_REWARD",
+    "data": {
+        "leaderboardId": "the-leaderboard-id",
+        "versionId": 10
+    }
 }
 ```
 

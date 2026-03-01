@@ -99,8 +99,8 @@ var authenticationType = "Facebook";
 
 <%= data.branding.codePrefix %>.friend.getExternalIdForProfileId(profileId, authenticationType, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -132,11 +132,11 @@ local profileId = "profileId"
 local authenticationType = AuthenticationType.facebook
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getFriendService():getExternalIdForProfileId(profileId, authenticationType, callback)
@@ -165,12 +165,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "friend",
-	"operation": "GET_EXTERNAL_ID_FOR_PROFILE_ID",
-	"data": {
-		"profileId": "profileId",
-		"authenticationType": "Facebook"
-	}
+    "service": "friend",
+    "operation": "GET_EXTERNAL_ID_FOR_PROFILE_ID",
+    "data": {
+        "profileId": "profileId",
+        "authenticationType": "Facebook"
+    }
 }
 ```
 

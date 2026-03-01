@@ -115,8 +115,8 @@ var jsonEntityAcl = {
 
 <%= data.branding.codePrefix %>.globalEntity.updateEntityOwnerAndAcl(entityId, version, ownerId, jsonEntityAcl, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -156,11 +156,11 @@ local jsonEntityAcl = {
 }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getGlobalEntityService():updateEntityOwnerAndAcl(entityId, version, ownerId, jsonEntityAcl, callback)
@@ -193,16 +193,16 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalEntity",
-	"operation": "UPDATE_ENTITY_OWNER_AND_ACL",
-	"data": {
-		"ownerId": "sdjhghfhgsdjkkfjg",
-		"entityId": "the-entity-id",
-		"version": 2,
-		"acl": {
-			"other": 1
-		}
-	}
+    "service": "globalEntity",
+    "operation": "UPDATE_ENTITY_OWNER_AND_ACL",
+    "data": {
+        "ownerId": "sdjhghfhgsdjkkfjg",
+        "entityId": "the-entity-id",
+        "version": 2,
+        "acl": {
+            "other": 1
+        }
+    }
 }
 ```
 

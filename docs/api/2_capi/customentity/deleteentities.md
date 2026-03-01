@@ -56,7 +56,7 @@ BCCompletionBlock successBlock;      // define callback
 BCErrorCompletionBlock failureBlock; // define callback
 
 [[<%= data.branding.codePrefix %> customEntityService] deleteEntities:entityType
-			 deleteCriteria:deleteCriteria
+             deleteCriteria:deleteCriteria
             completionBlock:successBlock
        errorCompletionBlock:failureBlock
                    cbObject:nil];
@@ -140,11 +140,11 @@ local deleteCriteria = {
 }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getCustomEntityService():deleteEntities(entityType, deleteCriteria, callback)
@@ -177,16 +177,16 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "customEntity",
-	"operation": "DELETE_ENTITIES",
-	"data": {
-		"entityType": "athletes",
-		"deleteCriteria": {
-			"entityId": { "$in":
-				["aaaa-bbbb-cccc-dddd", "ffff-gggg-hhhh-iiii", "jjjj-kkkk-llll-mmmm"]
-			}
-		}
-	}
+    "service": "customEntity",
+    "operation": "DELETE_ENTITIES",
+    "data": {
+        "entityType": "athletes",
+        "deleteCriteria": {
+            "entityId": { "$in":
+                ["aaaa-bbbb-cccc-dddd", "ffff-gggg-hhhh-iiii", "jjjj-kkkk-llll-mmmm"]
+            }
+        }
+    }
 }
 ```
 

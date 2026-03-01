@@ -82,8 +82,8 @@ var base64EncReceiptData = "Sample iTunes Receipt";
 
 <%= data.branding.codePrefix %>.product.verifyItunesReceipt(base64EncReceiptData, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -127,11 +127,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "product",
-	"operation": "OP_CASH_IN_RECEIPT",
-	"data": {
-		"receipt": "Sample iTunes Receipt"
-	}
+    "service": "product",
+    "operation": "OP_CASH_IN_RECEIPT",
+    "data": {
+        "receipt": "Sample iTunes Receipt"
+    }
 }
 ```
 

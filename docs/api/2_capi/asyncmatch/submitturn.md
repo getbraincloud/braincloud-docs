@@ -136,8 +136,8 @@ var jsonStatistics = {
 
 <%= data.branding.codePrefix %>.asyncMatch.submitTurn(ownerId, matchId, version, jsonMatchState, pushNotificationMessage, nextPlayer, jsonSummary, jsonStatistics, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -187,11 +187,11 @@ local jsonStatistics = {
 }
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getAsyncMatchService():submitTurn(ownerId, matchId, version, jsonMatchState, pushNotificationMessage, nextPlayer, jsonSummary, jsonStatistics, callback)
@@ -229,22 +229,22 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "asyncMatch",
-	"operation": "SUBMIT_TURN",
-	"data": {
-		"ownerId": "the-owner-id",
-		"matchId": "the-match-id",
-		"version": 1,
-		"matchState": {},
-		"pushContent": "It's your turn!",
-		"currentPlayer": "2nd-profle-id",
-		"summary": {
-			"Address": "South Africa"
-		},
-		"statistics": {
-			"statsName": "statValue"
-		}
-	}
+    "service": "asyncMatch",
+    "operation": "SUBMIT_TURN",
+    "data": {
+        "ownerId": "the-owner-id",
+        "matchId": "the-match-id",
+        "version": 1,
+        "matchState": {},
+        "pushContent": "It's your turn!",
+        "currentPlayer": "2nd-profle-id",
+        "summary": {
+            "Address": "South Africa"
+        },
+        "statistics": {
+            "statsName": "statValue"
+        }
+    }
 }
 ```
 

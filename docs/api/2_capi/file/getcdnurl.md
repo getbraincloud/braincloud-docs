@@ -95,8 +95,8 @@ var cloudFilename = "filename";
 
 <%= data.branding.codePrefix %>.file.getCDNUrl(cloudPath, cloudFilename, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -128,11 +128,11 @@ local cloudPath = "dir1/dir2"
 local cloudFilename = "filename"
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getFileService():getCDNUrl(cloudPath, cloudFilename, callback)
@@ -161,12 +161,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "file",
-	"operation": "GET_CDN_URL",
-	"data": {
-		"cloudPath": "dir1/dir2",
-		"cloudFilename": "filename"
-	}
+    "service": "file",
+    "operation": "GET_CDN_URL",
+    "data": {
+        "cloudPath": "dir1/dir2",
+        "cloudFilename": "filename"
+    }
 }
 ```
 

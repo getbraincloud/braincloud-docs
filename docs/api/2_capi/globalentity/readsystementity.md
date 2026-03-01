@@ -97,11 +97,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalEntity",
-	"operation": "READ_SYSTEM_ENTITY",
-	"data": {
-		"entityId": "the-entity-id"
-	}
+    "service": "globalEntity",
+    "operation": "READ_SYSTEM_ENTITY",
+    "data": {
+        "entityId": "the-entity-id"
+    }
 }
 ```
 

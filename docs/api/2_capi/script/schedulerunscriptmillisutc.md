@@ -106,8 +106,8 @@ var startDateInUTC = 1437579786000;
 
 <%= data.branding.codePrefix %>.script.scheduleRunScriptMillisUTC(scriptName, scriptData, startDateInUTC, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -145,11 +145,11 @@ local scriptData = {
 local startDateInUTC = 1437579786000
 
 local callback = function(result)
-	if result.statusCode == 200 then
-		print("Success")
-	else
-		print("Failed | " .. tostring(result.status))
-	end
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 
 <%= data.branding.codePrefix %>:getScriptService():scheduleRunScriptMillisUTC(scriptName, scriptData, startDateInUTC, callback)

@@ -100,14 +100,14 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "log",
-	"operation": "LOG_INFO",
-	"data": {
-		"errorMessage": "Test info message",
-		"jsonContext": {
-			"msg": "Test error context"
-		}
-	}
+    "service": "log",
+    "operation": "LOG_INFO",
+    "data": {
+        "errorMessage": "Test info message",
+        "jsonContext": {
+            "msg": "Test error context"
+        }
+    }
 }
 ```
 
