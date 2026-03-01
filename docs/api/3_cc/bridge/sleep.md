@@ -94,10 +94,8 @@ bridge.sleep(waitingTime);
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var waitingTime = 1000;
-bridge.sleep(waitingTime);
-
+```r
+// N/A
 ```
 
 ```mdx-code-block

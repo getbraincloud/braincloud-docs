@@ -91,11 +91,8 @@ bridge.logDebugJson(errorMessage, context);
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var errorMessage = "Test debug message with JSON context";
-var context = { "example": "json" };
-
-bridge.logDebugJson(errorMessage, context);
+```r
+// N/A
 ```
 
 ```mdx-code-block

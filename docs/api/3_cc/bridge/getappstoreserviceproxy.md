@@ -89,8 +89,8 @@ var proxy = bridge.getAppStoreServiceProxy();
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var proxy = bridge.getAppStoreServiceProxy();
+```r
+// N/A
 ```
 
 ```mdx-code-block

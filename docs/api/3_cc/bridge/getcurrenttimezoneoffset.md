@@ -91,12 +91,8 @@ response;
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var timeZoneId = "Etc/GMT+12";
-var response = {};
-
-response.currentTimeZoneOffset = bridge.utils().getCurrentTimeZoneOffset(timeZoneId);
-response;
+```r
+// N/A
 ```
 
 ```mdx-code-block

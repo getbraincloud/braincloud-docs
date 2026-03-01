@@ -127,12 +127,8 @@ var retVal = identityProxy.switchToSingletonChildProfile(childAppId, forceCreate
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var childAppId = "123456";
-var forceCreate = true;
-
-var identityProxy = bridge.getIdentityServiceProxy();
-var retVal = identityProxy.switchToSingletonChildProfile(childAppId, forceCreate);
+```r
+// N/A
 ```
 
 ```mdx-code-block

@@ -89,8 +89,8 @@ var proxy = bridge.getChatServiceProxy();
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var proxy = bridge.getChatServiceProxy();
+```r
+// N/A
 ```
 
 ```mdx-code-block

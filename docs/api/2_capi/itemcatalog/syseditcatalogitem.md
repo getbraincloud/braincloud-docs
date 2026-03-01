@@ -141,58 +141,8 @@ if (postResult.status == 200) {
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var defId = "sword001";
-var version = 1;
-var itemDefData = {
-  "name": {
-    "en": "Crimson Sword"
-  },
-  "desc": {
-    "en": "A sword whose blade was forged in Cherry Kool-aid!"
-  },
-  "category": "sword",
-  "tags": [
-    "weapon",
-    "pointy"
-  ],
-  "buyPrice": {
-    "coins": 200
-  },
-  "sellPrice": {
-    "coins": 150
-  },
-  "image": "//xxx.jpg",
-  "resourceGroup": "equipment.asset",
-  "resourceTag": "sword001",
-  "meta": {
-    "speed": 85,
-    "damage": 12,
-    "accuracy": 80,
-    "range": 5
-  },
-  "initData": {
-    "condition": 100,
-    "bonus": 0
-  },
-  "stackable": false,
-  "consumable": false,
-  "uses": 1,
-  "coolDownSecs": 0,
-  "recoverySecs": 0,
-  "activatable": false,
-  "statusName": null,
-  "activeSecs": 0,
-  "tradable": false,
-  "blockchain": false,
-  "blockchainDefId": null
-};
-var itemCatalogProxy = bridge.getItemCatalogServiceProxy();
-
-var postResult = itemCatalogProxy.sysEditCatalogItem(defId, version, itemDefData);
-if (postResult.status == 200) {
-    // Success!
-}
+```r
+// N/A
 ```
 
 ```mdx-code-block

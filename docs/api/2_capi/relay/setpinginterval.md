@@ -93,7 +93,7 @@ local interval = 10
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
+```r
 // N/A
 ```
 

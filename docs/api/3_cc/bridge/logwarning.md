@@ -91,11 +91,8 @@ bridge.logWarning(errorMessage, context)
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var errorMessage = "Test warning message";
-var context = "Test warning context";
-
-bridge.logWarning(errorMessage, context)
+```r
+// N/A
 ```
 
 ```mdx-code-block

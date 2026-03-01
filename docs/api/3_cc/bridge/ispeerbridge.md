@@ -82,8 +82,8 @@ var bClient = bridge.isClientBridge();
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var bClient = bridge.isClientBridge();
+```r
+// N/A
 ```
 
 ```mdx-code-block

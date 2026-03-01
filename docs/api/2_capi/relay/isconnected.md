@@ -82,7 +82,7 @@ local connected = <%= data.branding.codePrefix %>:getRelayService():isConnected(
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
+```r
 // N/A
 ```
 

@@ -82,8 +82,8 @@ var scriptName = bridge.getScriptName();
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var scriptName = bridge.getScriptName();
+```r
+// N/A
 ```
 
 ```mdx-code-block

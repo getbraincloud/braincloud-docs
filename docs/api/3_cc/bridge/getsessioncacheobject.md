@@ -88,8 +88,8 @@ var myAddressObject = bridge.getSessionCacheObject("address");
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var myAddressObject = bridge.getSessionCacheObject("address");
+```r
+// N/A
 ```
 
 ```mdx-code-block

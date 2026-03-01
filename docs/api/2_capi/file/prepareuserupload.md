@@ -117,16 +117,8 @@ var retVal = fileProxy.prepareUserUpload(cloudPath, cloudName, shareable, replac
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var cloudPath = "test/files/"
-var cloudName = "testCloudFile.dat"
-var shareable = true;
-var replaceIfExists = true;
-var fileSize = 256;
-var localPath = "path/to/my/file.dat";
-
-var fileProxy = bridge.getFileServiceProxy();
-var retVal = fileProxy.prepareUserUpload(cloudPath, cloudName, shareable, replaceIfExists, fileSize, localPath);
+```r
+// N/A
 ```
 
 ```mdx-code-block

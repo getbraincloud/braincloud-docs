@@ -89,8 +89,8 @@ var proxy = bridge.getGamificationServiceProxy();
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var proxy = bridge.getGamificationServiceProxy();
+```r
+// N/A
 ```
 
 ```mdx-code-block

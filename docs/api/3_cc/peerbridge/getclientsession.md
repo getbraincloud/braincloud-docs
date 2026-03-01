@@ -82,8 +82,8 @@ var peerProfileSession = bridge.getClientSession();
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var peerProfileSession = bridge.getClientSession();
+```r
+// N/A
 ```
 
 ```mdx-code-block

@@ -95,13 +95,8 @@ logProxy.logInfo(errorMessage, context);
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var errorMessage = "Test info message";
-var context = "Test info context";
-var logProxy = bridge.getLogServiceProxy();
-
-logProxy.logInfo(errorMessage, context);
-
+```r
+// N/A
 ```
 
 ```mdx-code-block

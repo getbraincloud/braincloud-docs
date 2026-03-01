@@ -95,14 +95,8 @@ if (postResult.status == 200) {
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var peerCode = "master";
-var virtualCurrencyProxy = bridge.getVirtualCurrencyServiceProxy();
-
-var postResult = virtualCurrencyProxy.resetPeerCurrency(peerCode);
-if (postResult.status == 200) {
-    // Success!
-}
+```r
+// N/A
 ```
 
 ```mdx-code-block

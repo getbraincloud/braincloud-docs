@@ -82,7 +82,7 @@ local pingTime = <%= data.branding.codePrefix %>:getRelayService():getPing()
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
+```r
 // N/A
 ```
 

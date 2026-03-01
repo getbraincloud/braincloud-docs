@@ -88,14 +88,8 @@ var res = bridge.callAPI(service, operation, serviceData);
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var service = "event";
-var operation = "SEND";
-var serviceData = {};
-serviceData.toId = "02d4e872-d848-4bbe-3a69-137639909b31";
-serviceData.eventType = "etype";
-serviceData.eventData = {};
-var res = bridge.callAPI(service, operation, serviceData);
+```r
+// N/A
 ```
 
 ```mdx-code-block

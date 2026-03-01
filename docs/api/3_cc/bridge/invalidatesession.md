@@ -84,8 +84,8 @@ bridge.invalidateSession();
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-bridge.invalidateSession();
+```r
+// N/A
 ```
 
 ```mdx-code-block

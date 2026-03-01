@@ -98,16 +98,8 @@ response;
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var privateKey = "aPrivateKey";
-var dataString = "String to sign";
-var response = {};
-
-response.signature = bridge.utils().signRSASha256( privateKey, dataString );
-
-// Return the result
-response;
-
+```r
+// N/A
 ```
 
 ```mdx-code-block

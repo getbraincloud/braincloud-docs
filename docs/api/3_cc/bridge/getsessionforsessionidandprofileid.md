@@ -91,11 +91,8 @@ var session = bridge.getSessionForSessionIdAndProfileId(String sessionId, String
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var sessionId = "the-session-id";
-var profileId = "the-profile-id";
-
-var session = bridge.getSessionForSessionIdAndProfileId(String sessionId, String profileId);
+```r
+// N/A
 ```
 
 ```mdx-code-block

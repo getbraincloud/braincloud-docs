@@ -89,8 +89,8 @@ var proxy = bridge.getPlaybackStreamServiceProxy();
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var proxy = bridge.getPlaybackStreamServiceProxy();
+```r
+// N/A
 ```
 
 ```mdx-code-block

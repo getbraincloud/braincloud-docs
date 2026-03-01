@@ -151,14 +151,8 @@ if (postResult.status == 200) {
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var statistics = [ "ESTIMATE", "POINTS" ];
-var globalStatisticsProxy = bridge.getGlobalStatisticsServiceProxy();
-
-var postResult = globalStatisticsProxy.readGlobalStatsSubset(statistics);
-if (postResult.status == 200) {
-    // Success!
-}
+```r
+// N/A
 ```
 
 ```mdx-code-block

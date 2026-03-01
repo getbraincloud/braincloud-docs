@@ -84,7 +84,7 @@ public void getServerVersion();
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
+```r
 // N/A
 ```
 

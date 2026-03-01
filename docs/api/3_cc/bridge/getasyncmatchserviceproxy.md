@@ -89,8 +89,8 @@ var proxy = bridge.getAsyncMatchServiceProxy();
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var proxy = bridge.getAsyncMatchServiceProxy();
+```r
+// N/A
 ```
 
 ```mdx-code-block

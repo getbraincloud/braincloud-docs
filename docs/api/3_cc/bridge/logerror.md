@@ -92,12 +92,8 @@ bridge.logError(errorMessage, context);
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var errorMessage = "Test error message";
-var context = "Test error context";
-
-bridge.logError(errorMessage, context);
-
+```r
+// N/A
 ```
 
 ```mdx-code-block

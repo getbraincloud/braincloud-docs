@@ -82,8 +82,8 @@ var bServer = bridge.isServerBridge();
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var bServer = bridge.isServerBridge();
+```r
+// N/A
 ```
 
 ```mdx-code-block

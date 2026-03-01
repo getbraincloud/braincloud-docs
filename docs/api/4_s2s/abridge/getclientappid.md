@@ -82,8 +82,8 @@ var appId = bridge.getClientAppId();
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var appId = bridge.getClientAppId();
+```r
+// N/A
 ```
 
 ```mdx-code-block

@@ -86,7 +86,7 @@ local profileId = <%= data.branding.codePrefix %>:getRelayService():getProfileId
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
+```r
 // N/A
 ```
 

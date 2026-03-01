@@ -89,7 +89,7 @@ var proxy = bridge.getReportServiceProxy();
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
+```r
 // Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 

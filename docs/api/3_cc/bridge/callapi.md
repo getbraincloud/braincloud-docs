@@ -100,16 +100,8 @@ var res = bridge.callAPI("leaderboard", "POST_SCORE", serviceData);
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-// Construct the parameters
-var serviceData = {};
-serviceData.leaderboardId = "weekly";
-serviceData.score = 100000;
-serviceData.data = {};
-serviceData.data.nickname = "batdude";
-
-// Make the API Call
-var res = bridge.callAPI("leaderboard", "POST_SCORE", serviceData);
+```r
+// N/A
 ```
 
 ```mdx-code-block

@@ -89,8 +89,8 @@ var proxy = bridge.getVirtualCurrencyServiceProxy();
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var proxy = bridge.getVirtualCurrencyServiceProxy();
+```r
+// N/A
 ```
 
 ```mdx-code-block

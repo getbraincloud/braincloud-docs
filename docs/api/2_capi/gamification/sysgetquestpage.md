@@ -114,20 +114,8 @@ var questPage = gameficationProxy.sysGetQuestPage(context);
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var context = {
-    "pagination": {
-        "rowsPerPage": 2,
-        "pageNumber": 1
-    },
-    "searchCriteria": {},
-    "sortCriteria": {
-        "questId": 1
-    }
-};
-
-var gameficationProxy = bridge.getGamificationServiceProxy();
-var questPage = gameficationProxy.sysGetQuestPage(context);
+```r
+// N/A
 ```
 
 ```mdx-code-block

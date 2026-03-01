@@ -88,8 +88,8 @@ var teamInfo = bridge.getTeamInfo();
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var teamInfo = bridge.getTeamInfo();
+```r
+// N/A
 ```
 
 ```mdx-code-block

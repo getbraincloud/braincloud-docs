@@ -84,7 +84,7 @@ local response = <%= data.branding.codePrefix %>:getRttService():getConnectionSt
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
+```r
 // N/A
 ```
 

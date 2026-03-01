@@ -91,11 +91,8 @@ bridge.logWarningJson(errorMessage, context)
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var errorMessage = "Test warning message";
-var context = { "example": "json" };
-
-bridge.logWarningJson(errorMessage, context)
+```r
+// N/A
 ```
 
 ```mdx-code-block

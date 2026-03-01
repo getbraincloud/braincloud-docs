@@ -109,19 +109,8 @@ if (postResult.status == 200 ) {
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var chatProxy = bridge.getChatServiceProxy();
-
-var text = "Hellooooo!";
-
-var from = {};
-from.name = "The Overseer";
-from.pic = "https://myprofilepic.com?id=555"
-
-var postResult = chatProxy.sysPostChatMessageSimple( channelId, text, true, from );
-if (postResult.status == 200 ) {
-    // Success!
-}
+```r
+// N/A
 ```
 
 ```mdx-code-block

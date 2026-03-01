@@ -116,20 +116,8 @@ var milestonePage = gameficationProxy.sysGetMilestonePage(context);
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var context = {
-    "pagination": {
-        "rowsPerPage": 2,
-        "pageNumber": 1
-    },
-    "searchCriteria": {},
-    "sortCriteria": {
-        "milestoneId": 1
-    }
-};
-
-var gameficationProxy = bridge.getGamificationServiceProxy();
-var milestonePage = gameficationProxy.sysGetMilestonePage(context);
+```r
+// N/A
 ```
 
 ```mdx-code-block

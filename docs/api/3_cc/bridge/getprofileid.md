@@ -82,8 +82,8 @@ var profileId = bridge.getProfileId();
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var profileId = bridge.getProfileId();
+```r
+// N/A
 ```
 
 ```mdx-code-block

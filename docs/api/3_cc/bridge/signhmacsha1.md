@@ -96,16 +96,8 @@ response;
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var secrectKey = "aSecrectKey";
-var dataString = "String to sign";
-var response = {};
-
-response.signature = bridge.utils().signHMACSha1( secrectKey, dataString );
-
-// Return the result
-response;
-
+```r
+// N/A
 ```
 
 ```mdx-code-block

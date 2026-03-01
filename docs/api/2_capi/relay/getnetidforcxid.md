@@ -86,7 +86,7 @@ local netId = <%= data.branding.codePrefix %>:getRelayService():getNetIdForCxId(
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
+```r
 // N/A
 ```
 

@@ -99,16 +99,8 @@ if (postResult.status == 200) {
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var vcId = "tokens";
-var vcAmount = 1;
-var peerCode = "gameloot";
-var virtualCurrencyProxy = bridge.getVirtualCurrencyServiceProxy();
-
-var postResult = virtualCurrencyProxy.consumePeerCurrency(vcId, vcAmount, peerCode);
-if (postResult.status == 200) {
-    // Success!
-}
+```r
+// N/A
 ```
 
 ```mdx-code-block

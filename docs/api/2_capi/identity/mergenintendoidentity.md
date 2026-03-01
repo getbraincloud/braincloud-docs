@@ -109,7 +109,7 @@ const char* nintendoAuthToken = "nsaToken";
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
+```r
 // N/A
 ```
 

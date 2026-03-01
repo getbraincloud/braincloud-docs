@@ -107,22 +107,8 @@ if (postResult.status == 200) {
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var serviceCode = "webService";
-var path = "resource/dir";
-var query = {
-    "parmName": "value"
-};
-var headers = {
-    "headerName": "value"
-};
-var text = "text string";
-var httpClientProxy = bridge.getHttpClientServiceProxy();
-
-var postResult = httpClientProxy.putTextResponseText(serviceCode, path, query, headers, text);
-if (postResult.status == 200) {
-    // Success!
-}
+```r
+// N/A
 ```
 
 ```mdx-code-block

@@ -82,8 +82,8 @@ var proxy = bridge.getRedemptionCodeServiceProxy();
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var proxy = bridge.getRedemptionCodeServiceProxy();
+```r
+// N/A
 ```
 
 ```mdx-code-block

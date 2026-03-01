@@ -84,7 +84,7 @@ local anonId = <%= data.branding.codePrefix %>:getAuthenticationService():genera
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
+```r
 // N/A
 ```
 

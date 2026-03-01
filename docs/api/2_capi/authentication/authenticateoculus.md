@@ -123,7 +123,7 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
+```r
 // N/A
 ```
 

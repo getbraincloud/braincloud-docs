@@ -89,8 +89,8 @@ var proxy = bridge.getBlockchainServiceProxy();
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var proxy = bridge.getBlockchainServiceProxy();
+```r
+// N/A
 ```
 
 ```mdx-code-block

@@ -95,14 +95,8 @@ if (postResult.status == 200) {
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var levelName = "master";
-var virtualCurrencyProxy = bridge.getVirtualCurrencyServiceProxy();
-
-var postResult = virtualCurrencyProxy.resetParentCurrency(levelName);
-if (postResult.status == 200) {
-    // Success!
-}
+```r
+// N/A
 ```
 
 ```mdx-code-block

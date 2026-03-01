@@ -82,7 +82,7 @@ Disconnect from the relay server.
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
+```r
 // N/A
 ```
 

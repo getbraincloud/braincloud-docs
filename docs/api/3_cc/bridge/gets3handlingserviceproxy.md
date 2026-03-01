@@ -89,8 +89,8 @@ var proxy = bridge.getS3HandlingServiceProxy();
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var proxy = bridge.getS3HandlingServiceProxy();
+```r
+// N/A
 ```
 
 ```mdx-code-block

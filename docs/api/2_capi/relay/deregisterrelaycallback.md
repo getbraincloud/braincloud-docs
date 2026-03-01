@@ -82,7 +82,7 @@ Deregisters callback for relay messages coming from peers.
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
+```r
 // N/A
 ```
 

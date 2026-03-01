@@ -136,13 +136,8 @@ if (postResult.status == 200) {
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var globalStatisticsProxy = bridge.getGlobalStatisticsServiceProxy();
-
-var postResult = globalStatisticsProxy.readAllGlobalStats();
-if (postResult.status == 200) {
-    // Success!
-}
+```r
+// N/A
 ```
 
 ```mdx-code-block

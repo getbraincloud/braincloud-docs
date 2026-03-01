@@ -101,18 +101,8 @@ if (postResult.status == 200) {
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var path = "1/users/";
-var query = {
-    "where": "{\"email\":{\"$regex\":\"test.com$\"}}"
-};
-var sessionToken = "r:jKjIHF8y9eDIKAixXpeaoUTlj";
-var httpClientProxy = bridge.getHttpClientServiceProxy();
-
-var postResult = httpClientProxy.parseRequest(path, query, sessionToken);
-if (postResult.status == 200) {
-    // Success!
-}
+```r
+// N/A
 ```
 
 ```mdx-code-block

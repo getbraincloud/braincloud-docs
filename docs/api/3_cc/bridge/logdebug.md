@@ -91,11 +91,8 @@ bridge.logDebug(errorMessage, context);
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var errorMessage = "Test debug message";
-var context = "Additional context info in string format";
-
-bridge.logDebug(errorMessage, context);
+```r
+// N/A
 ```
 
 ```mdx-code-block

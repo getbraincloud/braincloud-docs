@@ -101,13 +101,8 @@ var res = bridge.callScript("PostToAllLeaderboards", scriptdata);
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-// Construct the parameters
-var scriptdata = {};
-var scriptdata.score = 1000000;
-
-// Call the script
-var res = bridge.callScript("PostToAllLeaderboards", scriptdata);
+```r
+// N/A
 ```
 
 ```mdx-code-block

@@ -89,8 +89,8 @@ var proxy = bridge.getGroupServiceProxy();
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var proxy = bridge.getGroupServiceProxy();
+```r
+// N/A
 ```
 
 ```mdx-code-block

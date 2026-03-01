@@ -89,9 +89,8 @@ var res = bridge.callScript("scriptName", scriptdata);
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var scriptdata = {};
-var res = bridge.callScript("scriptName", scriptdata);
+```r
+// N/A
 ```
 
 ```mdx-code-block

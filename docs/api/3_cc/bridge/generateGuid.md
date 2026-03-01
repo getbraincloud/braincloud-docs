@@ -85,11 +85,8 @@ response;
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var response = {};
-
-response.guid = bridge.utils().generateGuid();
-response;
+```r
+// N/A
 ```
 
 ```mdx-code-block

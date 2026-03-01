@@ -106,7 +106,7 @@ local bytes = "Some Data here"  -- byte encoded
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
+```r
 // N/A
 ```
 

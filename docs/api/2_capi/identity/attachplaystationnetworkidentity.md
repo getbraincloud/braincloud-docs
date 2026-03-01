@@ -95,7 +95,7 @@ const char * authenticationToken = "somePlaystationNetworkAuthToken";
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
+```r
 // N/A
 ```
 

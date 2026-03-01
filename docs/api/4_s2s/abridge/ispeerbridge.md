@@ -82,8 +82,8 @@ var bServer = bridge.isPeerBridge();
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var bServer = bridge.isPeerBridge();
+```r
+// N/A
 ```
 
 ```mdx-code-block

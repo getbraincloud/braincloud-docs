@@ -125,38 +125,8 @@ if ( milestonePage.status == 200 ) {
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var context = {
-    "pagination": {
-        "rowsPerPage": 2,
-        "pageNumber": 1
-    },
-    "searchCriteria": {},
-    "sortCriteria": {
-        "milestoneId": 1
-    }
-};
-
-var gameficationProxy = bridge.getGamificationServiceProxy();
-var milestonePage = gameficationProxy.sysGetMilestonePage(context);
-var encodedContext = "";
-
-if ( milestonePage.status == 200 ) {
-  if ( milestonePage.data.results.moreAfter == true ) {
-
-    //...
-
-    // Get the next page...
-    encodedContext = milestonePage.data.context;
-    milestonePage = gamificationProxy.sysGetMilestonePageOffset(encodedContext, 1);
-    if ( milestonePage.status == 200 ) {
-
-      // Success!
-
-    }
-  }
-
-}
+```r
+// N/A
 ```
 
 ```mdx-code-block

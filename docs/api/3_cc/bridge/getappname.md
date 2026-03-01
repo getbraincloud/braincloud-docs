@@ -82,8 +82,8 @@ var appName = bridge.getAppName();
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var appName = bridge.getAppName();
+```r
+// N/A
 ```
 
 ```mdx-code-block

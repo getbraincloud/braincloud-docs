@@ -82,8 +82,8 @@ var proxy = bridge.getCustomEntityServiceProxy();
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var proxy = bridge.getCustomEntityServiceProxy();
+```r
+// N/A
 ```
 
 ```mdx-code-block

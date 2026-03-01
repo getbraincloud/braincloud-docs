@@ -98,13 +98,8 @@ bridge.setSessionCacheObject( "address", addressJson );
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-
-var addressJson = {};
-addressJson.city = "Ottawa";
-addressJson.province = "Ontario";
-
-bridge.setSessionCacheObject( "address", addressJson );
+```r
+// N/A
 ```
 
 ```mdx-code-block

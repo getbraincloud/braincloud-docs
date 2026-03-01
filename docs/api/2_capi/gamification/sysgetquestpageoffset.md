@@ -123,38 +123,8 @@ if ( questPage.status == 200 ) {
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var context = {
-    "pagination": {
-        "rowsPerPage": 2,
-        "pageNumber": 1
-    },
-    "searchCriteria": {},
-    "sortCriteria": {
-        "questId": 1
-    }
-};
-
-var gameficationProxy = bridge.getGamificationServiceProxy();
-var questPage = gameficationProxy.sysGetQuestPage(context);
-var encodedContext = "";
-
-if ( questPage.status == 200 ) {
-  if ( questPage.data.results.moreAfter == true ) {
-
-    //...
-
-    // Get the next page...
-    encodedContext = questPage.data.context;
-    questPage = gamificationProxy.sysGetQuestPageOffset(encodedContext, 1);
-    if ( questPage.status == 200 ) {
-
-      // Success!
-
-    }
-  }
-
-}
+```r
+// N/A
 ```
 
 ```mdx-code-block

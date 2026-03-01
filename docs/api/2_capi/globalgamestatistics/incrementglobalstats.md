@@ -170,16 +170,8 @@ if (postResult.status == 200) {
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var statistics = {
-    "PLAYER_COUNT": 1
-};
-var globalStatisticsProxy = bridge.getGlobalStatisticsServiceProxy();
-
-var postResult = globalStatisticsProxy.incrementGlobalStats(statistics);
-if (postResult.status == 200) {
-    // Success!
-}
+```r
+// N/A
 ```
 
 ```mdx-code-block

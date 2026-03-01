@@ -89,8 +89,8 @@ var proxy = bridge.getPlayerStatisticsServiceProxy();
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var proxy = bridge.getPlayerStatisticsServiceProxy();
+```r
+// N/A
 ```
 
 ```mdx-code-block

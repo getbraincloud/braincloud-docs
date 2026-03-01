@@ -84,8 +84,8 @@ var environmentName = bridge.getEnvironmentName();
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var environmentName = bridge.getEnvironmentName();
+```r
+// N/A
 ```
 
 ```mdx-code-block

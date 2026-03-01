@@ -93,9 +93,8 @@ var prop = bridge.getGlobalProperty(propname);
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var propname = "a-name-of-global-property"
-var prop = bridge.getGlobalProperty(propname);
+```r
+// N/A
 ```
 
 ```mdx-code-block

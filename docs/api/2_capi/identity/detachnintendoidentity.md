@@ -99,7 +99,7 @@ const char* nintendoAccountId = "nsaid";  // Network Services Account ID
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
+```r
 // N/A
 ```
 

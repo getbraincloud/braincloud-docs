@@ -172,19 +172,8 @@ if (postResult.status == 200) {
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var events = [
-    {
-        "eventName": "GrantExperience",
-        "eventMultiplier": 100
-    }
-];
-var playerStatisticsEventProxy = bridge.getPlayerStatisticsEventServiceProxy();
-
-var postResult = playerStatisticsEventProxy.triggerStatsEvents(events);
-if (postResult.status == 200) {
-    // Success!
-}
+```r
+// N/A
 ```
 
 ```mdx-code-block

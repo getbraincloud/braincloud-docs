@@ -97,12 +97,8 @@ var session = bridge.getSessionForValidatedCredential(externalId, authentication
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var externalId = "example@email.com";
-var authenticationType  = "Email";
-var externalAuthType = "someAuth";
-var authenticationToken = "password";
-var session = bridge.getSessionForValidatedCredential(externalId, authenticationType, externalAuthType, authenticationToken);
+```r
+// N/A
 ```
 
 ```mdx-code-block

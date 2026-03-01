@@ -88,9 +88,8 @@ var session = bridge.getSessionForProfile(profileId);
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var profileId = "1234-1234-1234-1234";
-var session = bridge.getSessionForProfile(profileId);
+```r
+// N/A
 ```
 
 ```mdx-code-block

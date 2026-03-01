@@ -104,19 +104,8 @@ var res = bridge.callAPIForSession(session, "event", "SEND", serviceData);
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-// Construct the parameters
-var serviceData = {};
-serviceData.toId = "aaaa-bbbb-cccc-dddd";
-serviceData.eventType = "hearts";
-serviceData.eventData = {};
-serviceData.eventData.numHearts = 3;
-
-// Retrieve a session for the specified profile
-var session = bridge.getSessionForProfile("eeee-ffff-gggg-hhh");
-
-// Call the API in the context of the retrieved session
-var res = bridge.callAPIForSession(session, "event", "SEND", serviceData);
+```r
+// N/A
 ```
 
 ```mdx-code-block

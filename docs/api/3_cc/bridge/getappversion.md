@@ -82,8 +82,8 @@ var appVersion = bridge.getAppVersion();
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var appVersion = bridge.getAppVersion();
+```r
+// N/A
 ```
 
 ```mdx-code-block

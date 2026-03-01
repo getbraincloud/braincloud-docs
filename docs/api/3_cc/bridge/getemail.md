@@ -82,8 +82,8 @@ var email = bridge.getEmail();
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var email = bridge.getEmail();
+```r
+// N/A
 ```
 
 ```mdx-code-block

@@ -95,13 +95,8 @@ logProxy.logErrorJson(errorMessage, context);
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var errorMessage = "Test error message";
-var context = { "example": "json" };
-var logProxy = bridge.getLogServiceProxy();
-
-logProxy.logErrorJson(errorMessage, context);
-
+```r
+// N/A
 ```
 
 ```mdx-code-block

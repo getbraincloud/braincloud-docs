@@ -211,22 +211,8 @@ if (postResult.status == 200) {
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var statistics = {
-    "INNING": "INC#1",
-    "INNINGSREM": "DEC#1",
-    "OUTS": "RESET",
-    "POINTS": "INC_TO_LIMIT#5#30",
-    "PLAYERS": "SET#8",
-    "HIGHESTHR": "MAX#3",
-    "ESTIMATE": "MIN#5"
-};
-var globalStatisticsProxy = bridge.getGlobalStatisticsServiceProxy();
-
-var postResult = globalStatisticsProxy.processStatistics(statistics);
-if (postResult.status == 200) {
-    // Success!
-}
+```r
+// N/A
 ```
 
 ```mdx-code-block

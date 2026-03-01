@@ -112,18 +112,8 @@ if (postResult.status == 200) {
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var leaderboardId = "default";
-var sort = "HIGH_TO_LOW";
-var startIndex = 0;
-var endIndex = 9;
-var versionId = -1;
-var leaderboardProxy = bridge.getLeaderboardServiceProxy();
-
-var postResult = leaderboardProxy.getGlobalLeaderboardPageByVersion(leaderboardId, sort, startIndex, endIndex, versionId);
-if (postResult.status == 200) {
-    // Success!
-}
+```r
+// N/A
 ```
 
 ```mdx-code-block

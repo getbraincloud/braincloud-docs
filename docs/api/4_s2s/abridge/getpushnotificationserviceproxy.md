@@ -82,8 +82,8 @@ var proxy = bridge.getPushNotificationServiceProxy();
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var proxy = bridge.getPushNotificationServiceProxy();
+```r
+// N/A
 ```
 
 ```mdx-code-block

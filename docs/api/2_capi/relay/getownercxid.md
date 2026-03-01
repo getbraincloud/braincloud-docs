@@ -82,7 +82,7 @@ local cxId = <%= data.branding.codePrefix %>:getRelayService():getOwnerCxId()
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
+```r
 // N/A
 ```
 
