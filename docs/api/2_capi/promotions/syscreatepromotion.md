@@ -7,7 +7,7 @@ Creates a new promotion. The full promotion JSON (minus the promotionId) should 
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-promotionJson | The full promotion JSON (minus the promotionId).
+promotionJson | The full promotion JSON (minus the promotionId). Supports two promotion types: **SCHEDULED** (requires `startAt` and `endAt` epoch timestamps) and **AUTOMATED** (requires `duration` in hours, and supports `isRetriggerable`, `maxRetriggers`, and `maxPurchases`).
 
 ## Usage
 
