@@ -20,7 +20,7 @@ Deregisters the auto-reconnect callback, removing the handler previously set by 
 ```
 
 ```cpp
-// N/A
+<%= data.branding.codePrefix %>->deregisterAutoReconnectCallback();
 ```
 
 ```mdx-code-block
@@ -29,7 +29,7 @@ Deregisters the auto-reconnect callback, removing the handler previously set by 
 ```
 
 ```objectivec
-// N/A
+[<%= data.branding.codePrefix %> deregisterAutoReconnectCallback];
 ```
 
 ```mdx-code-block
@@ -38,7 +38,7 @@ Deregisters the auto-reconnect callback, removing the handler previously set by 
 ```
 
 ```java
-// N/A
+<%= data.branding.codePrefix %>.deregisterAutoReconnectCallback();
 ```
 
 ```mdx-code-block
@@ -47,7 +47,7 @@ Deregisters the auto-reconnect callback, removing the handler previously set by 
 ```
 
 ```javascript
-// N/A
+<%= data.branding.codePrefix %>.deregisterAutoReconnectCallback();
 ```
 
 ```mdx-code-block
@@ -56,7 +56,7 @@ Deregisters the auto-reconnect callback, removing the handler previously set by 
 ```
 
 ```dart
-// N/A
+<%= data.branding.codePrefix %>.deregisterAutoReconnectCallback();
 ```
 
 ```mdx-code-block
@@ -65,7 +65,7 @@ Deregisters the auto-reconnect callback, removing the handler previously set by 
 ```
 
 ```lua
--- N/A
+<%= data.branding.codePrefix %>:deregisterAutoReconnectCallback()
 ```
 
 ```mdx-code-block

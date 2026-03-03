@@ -33,7 +33,7 @@ void autoReconnectCallback(string jsonResponse)
 ```
 
 ```cpp
-// N/A
+<%= data.branding.codePrefix %>->registerAutoReconnectCallback(this);
 ```
 
 ```mdx-code-block
@@ -42,7 +42,11 @@ void autoReconnectCallback(string jsonResponse)
 ```
 
 ```objectivec
-// N/A
+BCLongSessionCompletionBlock autoReconnectBlock = ^(NSString *jsonResponse) {
+    // handle re-authentication result
+};
+
+[<%= data.branding.codePrefix %> registerAutoReconnectCallback:autoReconnectBlock];
 ```
 
 ```mdx-code-block
@@ -51,7 +55,7 @@ void autoReconnectCallback(string jsonResponse)
 ```
 
 ```java
-// N/A
+<%= data.branding.codePrefix %>.registerAutoReconnectCallback(callback);
 ```
 
 ```mdx-code-block
@@ -60,7 +64,7 @@ void autoReconnectCallback(string jsonResponse)
 ```
 
 ```javascript
-// N/A
+<%= data.branding.codePrefix %>.registerAutoReconnectCallback(autoReconnectCallback);
 ```
 
 ```mdx-code-block
@@ -69,7 +73,11 @@ void autoReconnectCallback(string jsonResponse)
 ```
 
 ```dart
-// N/A
+void autoReconnectCallback(String jsonResponse) {
+    // handle re-authentication result
+}
+
+<%= data.branding.codePrefix %>.registerAutoReconnectCallback(autoReconnectCallback);
 ```
 
 ```mdx-code-block
@@ -78,7 +86,11 @@ void autoReconnectCallback(string jsonResponse)
 ```
 
 ```lua
--- N/A
+local function autoReconnectCallback(jsonResponse)
+    -- handle re-authentication result
+end
+
+<%= data.branding.codePrefix %>:registerAutoReconnectCallback(autoReconnectCallback)
 ```
 
 ```mdx-code-block
