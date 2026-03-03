@@ -1,12 +1,12 @@
-# EnableLongSession
+# EnableAutoReconnect
 
-Maintains the user's session alive by calling the reconnect method upon detecting the expiration of the user's session.
+Maintains the user's session alive by automatically calling the reconnect method upon detecting the expiration of the user's session. Optionally, register a callback using [RegisterAutoReconnectCallback](/api/capi/client/registerautoreconnectcallback) to be notified when re-authentication occurs.
 
 ## Method Parameters
 
-| Parameter | Description                           |
-| --------- | ------------------------------------- |
-| enabled   | True if long-sesson should be enabled |
+| Parameter | Description                                  |
+| --------- | -------------------------------------------- |
+| enabled   | True if auto-reconnect should be enabled     |
 
 ## Usage
 
@@ -17,7 +17,7 @@ Maintains the user's session alive by calling the reconnect method upon detectin
 ```
 
 ```csharp
-<%= data.branding.codePrefix %>.EnableLongSession(true);
+<%= data.branding.codePrefix %>.EnableAutoReconnect(true);
 ```
 
 ```mdx-code-block
@@ -26,7 +26,7 @@ Maintains the user's session alive by calling the reconnect method upon detectin
 ```
 
 ```cpp
-<%= data.branding.codePrefix %>->enableLongSession(true);
+<%= data.branding.codePrefix %>->enableAutoReconnect(true);
 ```
 
 ```mdx-code-block
@@ -38,7 +38,7 @@ Maintains the user's session alive by calling the reconnect method upon detectin
 BCCompletionBlock successBlock;      // define callback
 BCErrorCompletionBlock failureBlock; // define callback
 
-[<%= data.branding.codePrefix %> enableLongSession:true
+[<%= data.branding.codePrefix %> enableAutoReconnect:true
                         completionBlock:successBlock
                    errorCompletionBlock:failureBlock
                                cbObject:nil];
@@ -50,7 +50,7 @@ BCErrorCompletionBlock failureBlock; // define callback
 ```
 
 ```java
-<%= data.branding.codePrefix %>.enableLongSession(true);
+<%= data.branding.codePrefix %>.enableAutoReconnect(true);
 ```
 
 ```mdx-code-block
@@ -59,7 +59,7 @@ BCErrorCompletionBlock failureBlock; // define callback
 ```
 
 ```javascript
-<%= data.branding.codePrefix %>.enableLongSession(true);
+<%= data.branding.codePrefix %>.enableAutoReconnect(true);
 ```
 
 ```mdx-code-block
@@ -68,7 +68,7 @@ BCErrorCompletionBlock failureBlock; // define callback
 ```
 
 ```dart
-<%= data.branding.codePrefix %>.enableLongSession(true);
+<%= data.branding.codePrefix %>.enableAutoReconnect(true);
 ```
 
 ```mdx-code-block
@@ -77,7 +77,7 @@ BCErrorCompletionBlock failureBlock; // define callback
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:enableLongSession(true)
+<%= data.branding.codePrefix %>:enableAutoReconnect(true)
 ```
 
 ```mdx-code-block
