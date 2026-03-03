@@ -81,6 +81,7 @@ promotionJson | The full promotion JSON (minus the promotionId).
 ```
 
 ```cfscript
+// Example 1: SCHEDULED type
 var promotionJson = {
     "name": "Independence Day Sale",
     "type": "SCHEDULED",
@@ -106,6 +107,57 @@ var promotionJson = {
     "customJson": {
       "key": "value"
     }
+  };
+var promotionsProxy = bridge.getPromotionsServiceProxy();
+
+var postResult = promotionsProxy.sysCreatePromotion(promotionJson);
+if (postResult.status == 200) {
+    // Success!
+}
+
+// Example 2: AUTOMATED type
+var promotionJson = {
+    "type": "AUTOMATED",
+    "name": "Automated Promotion Example",
+    "message": {
+        "en": "This is a promotion with promotional product prices, items pricing info and custom json."
+    },
+    "enabled": false,
+    "segments": [
+        30
+    ],
+    "prices": [
+        {
+            "itemId": "gems50",
+            "priceId": 2
+        },
+        {
+            "itemId": "rubies50",
+            "priceId": 3
+        }
+    ],
+    "items": {
+        "sword100": {
+            "defId": "sword100",
+            "buyPrice": {
+                "coins": 50
+            }
+        },
+        "wand100": {
+            "defId": "wand100",
+            "buyPrice": {
+                "coins": 50
+            }
+        }
+    },
+    "notifications": [],
+    "duration": 72,
+    "customJson": {
+        "bonus": 2
+    },
+    "isRetriggerable": true,
+    "maxRetriggers": 10,
+    "maxPurchases": 50
   };
 var promotionsProxy = bridge.getPromotionsServiceProxy();
 
