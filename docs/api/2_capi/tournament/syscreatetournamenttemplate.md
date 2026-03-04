@@ -7,8 +7,8 @@ Creates a new tournament template.
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-tournamentCode | The unique tournament code to assign to the template
-configJson | Configuration data defining the tournament template
+tournamentCode | The unique tournament code to assign to the template.
+configJson | Configuration data defining the tournament template. Include entryType ("PLAYER" or "GROUP") to specify whether the tournament is for individual players or groups.
 
 ## Usage
 
@@ -82,89 +82,107 @@ configJson | Configuration data defining the tournament template
 ```
 
 ```cfscript
-var tournamentCode = "uniqueTournamentCode";
+// PLAYER example
+var tournamentCode = "myPlayerTournamentCode";
 var configJson = {
-      "description": {
-          "name": {
-              "en": "tFree"
-          },
-          "desc": {
-              "en": "Free tournament. Pays out for rankings: 1st, 2nd and top 10%. Push notifications for start and complete."
-          }
-      },
-      "notifications": {
-          "startingSoon": {
-              "enabled": false,
-              "pushId": null,
-              "mail": {}
-          },
-          "start": {
-              "enabled": true,
-              "pushId": 2,
-              "mail": {}
-          },
-          "scorePassed": {
-              "enabled": false,
-              "pushId": null,
-              "mail": {}
-          },
-          "endingSoon": {
-              "enabled": false,
-              "pushId": null,
-              "mail": {}
-          },
-          "complete": {
-              "enabled": true,
-              "pushId": 3,
-              "mail": {}
-          }
-      },
-      "calcScript": "",
-      "postScript": "",
-      "customJson": {},
-      "payoutRules": [
-          {
-              "reward": {
-              "experiencePoints": 10,
-              "currency": {
-                  "coins": 100
-              }
-              },
-              "rank": {
-              "rankAbs": 1
-              }
-          },
-          {
-              "reward": {
-              "experiencePoints": 5,
-              "currency": {
-                  "coins": 50
-              }
-              },
-              "rank": {
-              "rankAbs": 2
-              }
-          },
-          {
-              "reward": {
-              "experiencePoints": 1,
-              "currency": {
-                  "coins": 5
-              }
-              },
-              "rank": {
-              "rankToPercent": 10
-              }
-          }
-      ],
-      "entryFee": {}
-    };
+    "entryType": "PLAYER",
+    "description": {
+        "name": {
+            "en": "Free player tournament"
+        },
+        "desc": {
+            "en": "Free player tournament. Pays out for rankings: 1st, 2nd and top 10%. Push notifications for start and complete."
+        }
+    },
+    "notifications": {
+        "startingSoon": {
+            "enabled": false,
+            "pushId": null,
+            "mail": {}
+        },
+        "start": {
+            "enabled": true,
+            "pushId": 2,
+            "mail": {}
+        },
+        "scorePassed": {
+            "enabled": false,
+            "pushId": null,
+            "mail": {}
+        },
+        "endingSoon": {
+            "enabled": false,
+            "pushId": null,
+            "mail": {}
+        },
+        "complete": {
+            "enabled": true,
+            "pushId": 3,
+            "mail": {}
+        }
+    },
+    "postScript": "/tournaments/ProcessPlayerTournamentCompleteRankingsCalculated",
+    "customJson": {},
+    "excludeInitialScoresFromRewards": false,
+    "payoutRules": [
+        {
+            "reward": {
+                "experiencePoints": 10,
+                "currency": {
+                    "coins": 100
+                }
+            },
+            "rank": {
+                "rankAbs": 1
+            }
+        },
+        {
+            "reward": {
+                "experiencePoints": 5,
+                "currency": {
+                    "coins": 50
+                }
+            },
+            "rank": {
+                "rankAbs": 2
+            }
+        },
+        {
+            "reward": {
+                "experiencePoints": 1,
+                "currency": {
+                    "coins": 5
+                }
+            },
+            "rank": {
+                "rankToPercent": 10
+            }
+        }
+    ],
+    "entryFee": {}
+};
 var tournamentProxy = bridge.getTournamentServiceProxy();
 
 var postResult = tournamentProxy.sysCreateTournamentTemplate(tournamentCode, configJson);
-if (postResult.status == 200) {
-    // Success!
-}
+
+// GROUP example
+tournamentCode = "myGroupTournamentCode";
+configJson = {
+    "entryType": "GROUP",
+    "description": {
+        "name": {
+            "en": "Group Tournament"
+        },
+        "desc": {
+            "en": "Tournament for groups."
+        }
+    },
+    "postScript": "/tournaments/ProcessGroupTournamentCompleteRankingsCalculated",
+    "excludeInitialScoresFromRewards": false,
+    "customJson": {}
+};
+
+postResult = tournamentProxy.sysCreateTournamentTemplate(tournamentCode, configJson);
 ```
 
 ```mdx-code-block
@@ -173,87 +191,112 @@ if (postResult.status == 200) {
 ```
 
 ```r
+// PLAYER example
 {
     "service": "tournament",
     "operation": "SYS_CREATE_TOURNAMENT_TEMPLATE",
     "data": {
-    "tournamentCode": "uniqueTournamentCode",
-    "configJson": {
-      "description": {
-          "name": {
-              "en": "tFree"
-          },
-          "desc": {
-              "en": "Free tournament. Pays out for rankings: 1st, 2nd and top 10%. Push notifications for start and complete."
-          }
-      },
-      "notifications": {
-          "startingSoon": {
-              "enabled": false,
-              "pushId": null,
-              "mail": {}
-          },
-          "start": {
-              "enabled": true,
-              "pushId": 2,
-              "mail": {}
-          },
-          "scorePassed": {
-              "enabled": false,
-              "pushId": null,
-              "mail": {}
-          },
-          "endingSoon": {
-              "enabled": false,
-              "pushId": null,
-              "mail": {}
-          },
-          "complete": {
-              "enabled": true,
-              "pushId": 3,
-              "mail": {}
-          }
-      },
-      "calcScript": "",
-      "postScript": "",
-      "customJson": {},
-      "payoutRules": [
-          {
-              "reward": {
-              "experiencePoints": 10,
-              "currency": {
-                  "coins": 100
-              }
-              },
-              "rank": {
-              "rankAbs": 1
-              }
-          },
-          {
-              "reward": {
-              "experiencePoints": 5,
-              "currency": {
-                  "coins": 50
-              }
-              },
-              "rank": {
-              "rankAbs": 2
-              }
-          },
-          {
-              "reward": {
-              "experiencePoints": 1,
-              "currency": {
-                  "coins": 5
-              }
-              },
-              "rank": {
-              "rankToPercent": 10
-              }
-          }
-      ],
-      "entryFee": {}
+        "tournamentCode": "myPlayerTournamentCode",
+        "configJson": {
+            "entryType": "PLAYER",
+            "description": {
+                "name": {
+                    "en": "Free player tournament"
+                },
+                "desc": {
+                    "en": "Free player tournament. Pays out for rankings: 1st, 2nd and top 10%. Push notifications for start and complete."
+                }
+            },
+            "notifications": {
+                "startingSoon": {
+                    "enabled": false,
+                    "pushId": null,
+                    "mail": {}
+                },
+                "start": {
+                    "enabled": true,
+                    "pushId": 2,
+                    "mail": {}
+                },
+                "scorePassed": {
+                    "enabled": false,
+                    "pushId": null,
+                    "mail": {}
+                },
+                "endingSoon": {
+                    "enabled": false,
+                    "pushId": null,
+                    "mail": {}
+                },
+                "complete": {
+                    "enabled": true,
+                    "pushId": 3,
+                    "mail": {}
+                }
+            },
+            "postScript": "/tournaments/ProcessPlayerTournamentCompleteRankingsCalculated",
+            "customJson": {},
+            "excludeInitialScoresFromRewards": false,
+            "payoutRules": [
+                {
+                    "reward": {
+                        "experiencePoints": 10,
+                        "currency": {
+                            "coins": 100
+                        }
+                    },
+                    "rank": {
+                        "rankAbs": 1
+                    }
+                },
+                {
+                    "reward": {
+                        "experiencePoints": 5,
+                        "currency": {
+                            "coins": 50
+                        }
+                    },
+                    "rank": {
+                        "rankAbs": 2
+                    }
+                },
+                {
+                    "reward": {
+                        "experiencePoints": 1,
+                        "currency": {
+                            "coins": 5
+                        }
+                    },
+                    "rank": {
+                        "rankToPercent": 10
+                    }
+                }
+            ],
+            "entryFee": {}
+        }
     }
+}
+
+// GROUP example
+{
+    "service": "tournament",
+    "operation": "SYS_CREATE_TOURNAMENT_TEMPLATE",
+    "data": {
+        "tournamentCode": "myGroupTournamentCode",
+        "configJson": {
+            "entryType": "GROUP",
+            "description": {
+                "name": {
+                    "en": "Group Tournament"
+                },
+                "desc": {
+                    "en": "Tournament for groups."
+                }
+            },
+            "postScript": "/tournaments/ProcessGroupTournamentCompleteRankingsCalculated",
+            "excludeInitialScoresFromRewards": false,
+            "customJson": {}
+        }
     }
 }
 ```
@@ -308,8 +351,9 @@ if (postResult.status == 200) {
                 "mail": {}
             }
         },
-        "calcScript": "",
-        "postScript": "",
+        "calcScriptId": "",
+        "postScriptId": "",
+        "excludeInitialScoresFromRewards": false,
         "customJson": {},
         "payoutRules": [
             {

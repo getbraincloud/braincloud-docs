@@ -72,6 +72,25 @@ The following API calls are specific to _Divisions_:
 
 [PostTournamentScoreUTC](/api/capi/tournament/posttournamentscoreutc), [ViewCurrentReward](/api/capi/tournament/viewcurrentreward), [ViewReward](/api/capi/tournament/viewreward), and [ClaimTournamentReward](/api/capi/tournament/claimtournamentreward) all work as expected for divisions.
 
+### Group Tournaments
+
+The following API calls are used for leaderboards with _Group Tournaments_ attached:
+
+-   [GetGroupTournamentStatus](/api/capi/tournament/getgrouptournamentstatus) - get tournament status associated with a group leaderboard
+-   [JoinGroupTournament](/api/capi/tournament/joingrouptournament) - enroll a group in the group tournament and assign an initial score
+-   [LeaveGroupTournament](/api/capi/tournament/leavegrouptournament) - remove the group's score from the tournament leaderboard
+-   [PostGroupTournamentScore](/api/capi/tournament/postgrouptournamentscore) - post a score for the group to the group tournament leaderboard
+-   [PostGroupTournamentScoreWithResults](/api/capi/tournament/postgrouptournamentscorewithresults) - post a score for the group and return the updated standings
+
+### Group Divisions
+
+The following API calls are specific to _Group Divisions_:
+
+-   [GetGroupDivisionInfo](/api/capi/tournament/getgroupdivisioninfo) - get info about a division set for groups; call instead of `GetGroupTournamentStatus()` when a division set id is available
+-   [GetGroupDivisions](/api/capi/tournament/getgroupdivisions) - returns a list of the group's recently active divisions, organized by state (ACTIVE, PENDING, COMPLETE)
+-   [JoinGroupDivision](/api/capi/tournament/joingroupdivision) - join a group division set (will be assigned to an instance). Call instead of `JoinGroupTournament()`
+-   [LeaveGroupDivisionInstance](/api/capi/tournament/leavegroupdivisioninstance) - remove the group from a division instance. Call instead of `LeaveGroupTournament()`
+
 ### System calls
 
 -   [SysCreateTournamentTemplate](/api/capi/tournament/syscreatetournamenttemplate) - Creates a new tournament template.

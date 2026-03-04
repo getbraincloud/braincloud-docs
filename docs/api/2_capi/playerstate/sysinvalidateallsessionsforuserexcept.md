@@ -1,17 +1,13 @@
-# SysRoomReady
+# SysInvalidateAllSessionsForUserExcept
+Invalidates all sessions for a user except a specific session.
 
-Indicates that a room is ready for use by the members of the given lobby.
-
-
-
-
-<PartialServop service_name="lobby" operation_name="SYS_ROOM_READY" />
+<PartialServop service_name="playerState" operation_name="SYS_INVALIDATE_ALL_SESSIONS_FOR_USER_EXCEPT" />
 
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-lobbyId | The id of lobby that this room server is associated with.
-connectData | Optionally override the connectData of the lobby instance. Pass null or {} to preserve the existing connectData.
+profileId | The profile ID of the user whose sessions should be invalidated.
+sessionId | The specific session ID to keep active (not invalidate).
 
 ## Usage
 
@@ -72,11 +68,11 @@ connectData | Optionally override the connectData of the lobby instance. Pass nu
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="roblox" label="Roblox">
+<TabItem value="lua" label="Roblox">
 ```
 
 ```lua
-// N/A
+// Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block
@@ -85,21 +81,11 @@ connectData | Optionally override the connectData of the lobby instance. Pass nu
 ```
 
 ```cfscript
-var lobbyId = "55555:4v4:19";
-var connectData = {
-    "address": "1.2.3.4",
-    "ports": {
-        "udp": 9000,
-        "tcp": 9000,
-        "ws": 9001
-    }
-};
-var lobbyProxy = bridge.getLobbyServiceProxy();
+var profileId = "a-profile-id";
+var sessionId = "a-session-id";
+var playerStateProxy = bridge.getPlayerstateServiceProxy();
 
-var postResult = lobbyProxy.sysRoomReady(lobbyId, connectData);
-if (postResult.status == 200) {
-    // Success!
-}
+var postResult = playerStateProxy.sysInvalidateAllSessionsForUserExcept(profileId, sessionId);
 ```
 
 ```mdx-code-block
@@ -109,18 +95,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-    "service": "lobby",
-    "operation": "SYS_ROOM_READY",
-    "data": {
-        "lobbyId": "55555:4v4:19",
-        "connectData": {
-            "address": "1.2.3.4",
-            "ports": {
-                "udp": 9000,
-                "tcp": 9000,
-                "ws": 9001
-            }
-        }
+    "service":"playerState",
+    "operation":"SYS_INVALIDATE_ALL_SESSIONS_FOR_USER_EXCEPT",
+    "data":{
+        "profileId":"a-profile-id",
+        "sessionId":"a-session-id"
     }
 }
 ```
@@ -130,26 +109,18 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
-
 <details>
 <summary>JSON Response</summary>
 
 ```json
 {
-    "status": 200,
-    "data": {}
+  "data": {
+    "invalidatedCount": 0,
+    "invalidated": [],
+    "verification": true
+  },
+  "status": 200
 }
 ```
-</details>
-
-<details>
-<summary>Common Error Code</summary>
-
-### Status Codes
-Code | Name | Description
----- | ---- | -----------
-40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
 
 </details>
-
-
