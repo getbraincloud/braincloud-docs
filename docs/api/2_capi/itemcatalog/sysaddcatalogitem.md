@@ -1,14 +1,13 @@
 # SysAddCatalogItem
-
-Create a new catalog item on the server.
+Create a new catalog item on the server. Note: Default for buyPriceDisabled is false. If set to true, the item cannot be purchased except through a promotion.
 
 <PartialServop service_name="itemCatalog" operation_name="SYS_ADD_CATALOG_ITEM" />
 
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-defId | Unique ID for new catalog item. Required. 
-itemDefData | The data defining the catalog item. 
+defId | Unique ID for new catalog item. Required.
+itemDefData | The data defining the catalog item. Supported types are ITEM and BUNDLE.
 
 ## Usage
 
@@ -82,57 +81,107 @@ itemDefData | The data defining the catalog item.
 ```
 
 ```cfscript
+// ITEM type
 var defId = "sword001";
 var itemDefData = {
-  "type": "ITEM",
-  "name": {
-    "en": "Crimson Sword"
-  },
-  "desc": {
-    "en": "A sword whose blade was forged in Cherry Kool-aid!"
-  },
-  "category": "sword",
-  "tags": [
-    "weapon",
-    "pointy"
-  ],
-  "buyPrice": {
-    "coins": 200
-  },
-  "sellPrice": {
-    "coins": 150
-  },
-  "image": "//xxx.jpg",
-  "resourceGroup": "equipment.asset",
-  "resourceTag": "sword001",
-  "meta": {
-    "speed": 85,
-    "damage": 12,
-    "accuracy": 80,
-    "range": 5
-  },
-  "initData": {
-    "condition": 100,
-    "bonus": 0
-  },
-  "stackable": false,
-  "consumable": false,
-  "uses": 1,
-  "coolDownSecs": 0,
-  "recoverySecs": 0,
-  "activatable": false,
-  "statusName": null,
-  "activeSecs": 0,
-  "tradable": false,
-  "blockchain": false,
-  "blockchainDefId": null
+    "type": "ITEM",
+    "name": {
+        "en": "Crimson Sword"
+    },
+    "desc": {
+        "en": "A sword whose blade was forged in Cherry Kool-aid!"
+    },
+    "category": "sword",
+    "tags": [
+        "weapon",
+        "pointy"
+    ],
+    "buyPriceDisabled": false,
+    "buyPrice": {
+        "coins": 200
+    },
+    "sellPrice": {
+        "coins": 150
+    },
+    "resourceGroup": "equipment.asset",
+    "resourceTag": "sword001",
+    "meta": {
+        "speed": 85,
+        "damage": 12,
+        "accuracy": 80,
+        "range": 5
+    },
+    "initData": {
+        "condition": 100,
+        "bonus": 0
+    },
+    "stackable": false,
+    "maxStackable": null,
+    "consumable": false,
+    "uses": 1,
+    "coolDownSecs": 0,
+    "recoverySecs": 0,
+    "activatable": false,
+    "statusName": null,
+    "activeSecs": null,
+    "maxActiveSecs": null,
+    "statusBehaviour": null,
+    "tradable": false,
+    "blockchain": false
 };
-var itemCatalogProxy = bridge.getItemCatalogServiceProxy();
+
+// BUNDLE type
+// var defId = "HOLIDAYBUNDLE2025";
+// var itemDefData = {
+//     "type": "BUNDLE",
+//     "name": {
+//         "en": "Holiday Bundle 2025"
+//     },
+//     "desc": {
+//         "en": "A bundle of items and currency for the holidays!"
+//     },
+//     "category": "HolidayBundles",
+//     "tags": [
+//         "holiday"
+//     ],
+//     "buyPriceDisabled": false,
+//     "buyPrice": {
+//         "coins": 200
+//     },
+//     "sellPrice": {
+//         "coins": 100
+//     },
+//     "resourceGroup": "",
+//     "resourceTag": "",
+//     "image": null,
+//     "meta": {
+//         "special": true
+//     },
+//     "initData": {
+//         "bonus": 0
+//     },
+//     "stackable": false,
+//     "maxStackable": null,
+//     "tradable": false,
+//     "blockchain": false,
+//     "items": {
+//         "holidaygift2025": {
+//             "defId": "holidaygift2025",
+//             "quantity": 1
+//         },
+//         "trinket002": {
+//             "defId": "trinket002",
+//             "quantity": 1
+//         }
+//     },
+//     "currency": {
+//         "gumdrops": 25
+//     }
+// };
+
+var itemCatalogProxy = bridge.getItemcatalogServiceProxy();
 
 var postResult = itemCatalogProxy.sysAddCatalogItem(defId, itemDefData);
-if (postResult.status == 200) {
-    // Success!
-}
 ```
 
 ```mdx-code-block
@@ -141,54 +190,112 @@ if (postResult.status == 200) {
 ```
 
 ```r
+// ITEM type
 {
-    "service": "itemCatalog",
-    "operation": "SYS_ADD_CATALOG_ITEM",
-    "data": {
-        "defId": "sword001",
-        "itemDefData": {
-      "type": "ITEM",
-            "name": {
-                "en": "Crimson Sword"
+    "service":"itemCatalog",
+    "operation":"SYS_ADD_CATALOG_ITEM",
+    "data":{
+        "defId":"sword001",
+        "itemDefData":{
+            "type":"ITEM",
+            "name":{
+                "en":"Crimson Sword"
             },
-            "desc": {
-                "en": "A sword whose blade was forged in Cherry Kool-aid!"
+            "desc":{
+                "en":"A sword whose blade was forged in Cherry Kool-aid!"
             },
-            "category": "sword",
-            "tags": [
+            "category":"sword",
+            "tags":[
                 "weapon",
                 "pointy"
             ],
-            "buyPrice": {
-                "coins": 200
+            "buyPriceDisabled":false,
+            "buyPrice":{
+                "coins":200
             },
-            "sellPrice": {
-                "coins": 150
+            "sellPrice":{
+                "coins":150
             },
-            "image": "//xxx.jpg",
-            "resourceGroup": "equipment.asset",
-            "resourceTag": "sword001",
-            "meta": {
-                "speed": 85,
-                "damage": 12,
-                "accuracy": 80,
-                "range": 5
+            "resourceGroup":"equipment.asset",
+            "resourceTag":"sword001",
+            "meta":{
+                "speed":85,
+                "damage":12,
+                "accuracy":80,
+                "range":5
             },
-            "initData": {
-                "condition": 100,
-                "bonus": 0
+            "initData":{
+                "condition":100,
+                "bonus":0
             },
-            "stackable": false,
-            "consumable": false,
-            "uses": 1,
-            "coolDownSecs": 0,
-            "recoverySecs": 0,
-            "activatable": false,
-            "statusName": null,
-            "activeSecs": 0,
-            "tradable": false,
-            "blockchain": false,
-            "blockchainDefId": null
+            "stackable":false,
+            "maxStackable":null,
+            "consumable":false,
+            "uses":1,
+            "coolDownSecs":0,
+            "recoverySecs":0,
+            "activatable":false,
+            "statusName":null,
+            "activeSecs":null,
+            "maxActiveSecs":null,
+            "statusBehaviour":null,
+            "tradable":false,
+            "blockchain":false
+        }
+    }
+}
+
+// BUNDLE type
+{
+    "service":"itemCatalog",
+    "operation":"SYS_ADD_CATALOG_ITEM",
+    "data":{
+        "defId":"HOLIDAYBUNDLE2025",
+        "itemDefData":{
+            "type":"BUNDLE",
+            "name":{
+                "en":"Holiday Bundle 2025"
+            },
+            "desc":{
+                "en":"A bundle of items and currency for the holidays!"
+            },
+            "category":"HolidayBundles",
+            "tags":[
+                "holiday"
+            ],
+            "buyPriceDisabled":false,
+            "buyPrice":{
+                "coins":200
+            },
+            "sellPrice":{
+                "coins":100
+            },
+            "resourceGroup":"",
+            "resourceTag":"",
+            "image":null,
+            "meta":{
+                "special":true
+            },
+            "initData":{
+                "bonus":0
+            },
+            "stackable":false,
+            "maxStackable":null,
+            "tradable":false,
+            "blockchain":false,
+            "items":{
+                "holidaygift2025":{
+                    "defId":"holidaygift2025",
+                    "quantity":1
+                },
+                "trinket002":{
+                    "defId":"trinket002",
+                    "quantity":1
+                }
+            },
+            "currency":{
+                "gumdrops":25
+            }
         }
     }
 }
@@ -259,4 +366,3 @@ if (postResult.status == 200) {
 }
 ```
 </details>
-

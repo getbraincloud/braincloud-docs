@@ -1,5 +1,5 @@
 # PurchaseUserItemWithOptions
-Purchases a quantity of an item from the specified store, if the user has enough funds and purchasing for listed buy price is not disabled for associated catalog item definition. If includeDef is true, response includes associated itemDef with language fields limited to the current or default language.
+Purchases a quantity of an item from the specified store, if the user has enough funds and purchasing for listed buy price is not disabled (and no eligible promotion) for associated catalog item definition. If includeDef is true, response includes associated itemDef with language fields limited to the current or default language. Additional 'optionsJson' to provide directives for processing, especially relevant for purchases involving stackable catalog items having a maxStackable (purchasing the catalog item directly or purchasing a BUNDLE type containing any such category items).
 
 <PartialServop service_name="userItems" operation_name="PURCHASE_USER_ITEM" />
 
@@ -10,7 +10,7 @@ defId | The unique id of the item definition to purchase.
 quantity | The quantity of the item to purchase.
 shopId | The id identifying the store the item is being purchased from, if applicable.
 includeDef | If true, the associated item definition will be included in the response.
-optionsJson | Optional support for specifying 'blockIfExceedItemMaxStackable' indicating how to process the purchase if the defId is for a stackable item with a max stackable quantity and the specified quantity being purchased is too high. If true and the quantity is too high, the call is blocked and an error is returned. If false (default) and quantity is too high, the quantity is adjusted to the allowed maximum and the quantity not purchased is reported in response key 'itemsNotPurchased' - unless the adjusted quantity would be 0, in which case the call is blocked and an error is returned.
+optionsJson | Optional support for specifying additional options, especially for purchases involving stackable items having a maxStackable limit. Option 'blockIfExceedItemMaxStackable' indicating how to process the purchase if the defId is for a stackable item with a max stackable quantity and the specified quantity being purchased is too high - If true and the quantity is too high, the call is blocked and an error is returned. If false (default) and quantity is too high, the quantity is adjusted to the allowed maximum and the quantity not purchased is reported in response key 'itemsNotPurchased' - unless the adjusted quantity would be 0, in which case the call is blocked and an error is returned. Option 'blockIfExceedContainedItemMaxStackable' (BUNDLE type only) - If true, fail the purchase if quantity of bundle content item would be in excess of its maxStackable IF the bundle were to be opened immediately (based on its currenct quantity). If false, just report the excess quantity for any item if the bundle were opened immediately.
 
 ## Usage
 
@@ -21,11 +21,17 @@ optionsJson | Optional support for specifying 'blockIfExceedItemMaxStackable' in
 ```
 
 ```csharp
-string defId = "sword001";
+// ITEM type
+string defId = "StackableHealthPotion";
+string optionsJson = "{\"blockIfExceedItemMaxStackable\": True}";
+
+// BUNDLE type
+// string defId = "BUNDLE001";
+// string optionsJson = "{\"blockIfExceedItemMaxStackable\": True, \"blockIfExceedContainedItemMaxStackable\": False}";
+
 int quantity = 1;
 string shopId = "None";
 bool includeDef = True;
-string optionsJson = "{\"blockIfExceedItemMaxStackable\": False}";
 
 SuccessCallback successCallback = (response, cbObject) =>
 {
@@ -45,11 +51,17 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 ```
 
 ```cpp
-const char *defId = "sword001";
+// ITEM type
+const char *defId = "StackableHealthPotion";
+const char *optionsJson = "{\"blockIfExceedItemMaxStackable\": True}";
+
+// BUNDLE type
+// const char *defId = "BUNDLE001";
+// const char *optionsJson = "{\"blockIfExceedItemMaxStackable\": True, \"blockIfExceedContainedItemMaxStackable\": False}";
+
 int quantity = 1;
 const char *shopId = "None";
 bool includeDef = True;
-const char *optionsJson = "{\"blockIfExceedItemMaxStackable\": False}";
 <%= data.branding.codePrefix %>.getUseritemsService().purchaseUserItemWithOptions(defId, quantity, shopId, includeDef, optionsJson, this);
 ```
 
@@ -59,11 +71,17 @@ const char *optionsJson = "{\"blockIfExceedItemMaxStackable\": False}";
 ```
 
 ```objectivec
-NSString *defId = @"sword001";
+// ITEM type
+NSString *defId = @"StackableHealthPotion";
+NSString *optionsJson = @"{\"blockIfExceedItemMaxStackable\": True}";
+
+// BUNDLE type
+// NSString *defId = @"BUNDLE001";
+// NSString *optionsJson = @"{\"blockIfExceedItemMaxStackable\": True, \"blockIfExceedContainedItemMaxStackable\": False}";
+
 int quantity = 1;
 NSString *shopId = @"None";
 BOOL includeDef = True;
-NSString *optionsJson = @"{\"blockIfExceedItemMaxStackable\": False}";
 BCCompletionBlock successBlock; // define callback
 BCErrorCompletionBlock failureBlock; // define callback
 [[<%= data.branding.codePrefix %> userItemsService] purchaseUserItemWithOptions:
@@ -83,11 +101,17 @@ BCErrorCompletionBlock failureBlock; // define callback
 ```
 
 ```java
-String defId = "sword001";
+// ITEM type
+String defId = "StackableHealthPotion";
+String optionsJson = "{\"blockIfExceedItemMaxStackable\": True}";
+
+// BUNDLE type
+// String defId = "BUNDLE001";
+// String optionsJson = "{\"blockIfExceedItemMaxStackable\": True, \"blockIfExceedContainedItemMaxStackable\": False}";
+
 int quantity = 1;
 String shopId = "None";
 bool includeDef = True;
-String optionsJson = "{\"blockIfExceedItemMaxStackable\": False}";
 this; // implements IServerCallback
 <%= data.branding.codePrefix %>.getUseritemsService.purchaseUserItemWithOptions(defId, quantity, shopId, includeDef, optionsJson, this);
 
@@ -107,13 +131,22 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 ```
 
 ```javascript
-var defId = "sword001";
+// ITEM type
+var defId = "StackableHealthPotion";
+var optionsJson = {
+    "blockIfExceedItemMaxStackable": true
+};
+
+// BUNDLE type
+// var defId = "BUNDLE001";
+// var optionsJson = {
+//     "blockIfExceedItemMaxStackable": true,
+//     "blockIfExceedContainedItemMaxStackable": false
+// };
+
 var quantity = 1;
 var shopId = "None";
 var includeDef = True;
-var optionsJson = {
-    "blockIfExceedItemMaxStackable": false
-};
 <%= data.branding.codePrefix %>.userItems.purchaseUserItemWithOptions(defId, quantity, shopId, includeDef, optionsJson, result =>
 {
   var status = result.status;
@@ -127,17 +160,26 @@ var optionsJson = {
 ```
 
 ```dart
-var defId = "sword001";
+// ITEM type
+var defId = "StackableHealthPotion";
+var optionsJson = {
+    "blockIfExceedItemMaxStackable": true
+};
+
+// BUNDLE type
+// var defId = "BUNDLE001";
+// var optionsJson = {
+//     "blockIfExceedItemMaxStackable": true,
+//     "blockIfExceedContainedItemMaxStackable": false
+// };
+
 var quantity = 1;
 var shopId = "None";
 var includeDef = True;
-var optionsJson = {
-    "blockIfExceedItemMaxStackable": false
-};
 ServerResponse result = await <%= data.branding.codePrefix %>.userItemsService.purchaseUserItemWithOptions(defId:defId, quantity:quantity, shopId:shopId, includeDef:includeDef, optionsJson:optionsJson);
 
 if (result.statusCode == 200) {
-    print("Success");    
+    print("Success");
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
@@ -149,13 +191,22 @@ if (result.statusCode == 200) {
 ```
 
 ```lua
-local defId = "sword001"
+-- ITEM type
+local defId = "StackableHealthPotion"
+local optionsJson = {
+    blockIfExceedItemMaxStackable = true
+}
+
+-- BUNDLE type
+-- local defId = "BUNDLE001"
+-- local optionsJson = {
+--     blockIfExceedItemMaxStackable = true,
+--     blockIfExceedContainedItemMaxStackable = false
+-- }
+
 local quantity = 1
 local shopId = "None"
-local includeDef = True
-local optionsJson = {
-    blockIfExceedItemMaxStackable = false
-}
+local includeDef = true
 
 local callback = function(result)
     if result.statusCode == 200 then
@@ -174,13 +225,22 @@ end
 ```
 
 ```cfscript
-var defId = "sword001";
+// ITEM type
+var defId = "StackableHealthPotion";
+var optionsJson = {
+    "blockIfExceedItemMaxStackable": true
+};
+
+// BUNDLE type
+// var defId = "BUNDLE001";
+// var optionsJson = {
+//     "blockIfExceedItemMaxStackable": true,
+//     "blockIfExceedContainedItemMaxStackable": false
+// };
+
 var quantity = 1;
 var shopId = "None";
 var includeDef = True;
-var optionsJson = {
-    "blockIfExceedItemMaxStackable": false
-};
 var userItemsProxy = bridge.getUseritemsServiceProxy();
 
 var postResult = userItemsProxy.purchaseUserItemWithOptions(defId, quantity, shopId, includeDef, optionsJson);
@@ -192,16 +252,33 @@ var postResult = userItemsProxy.purchaseUserItemWithOptions(defId, quantity, sho
 ```
 
 ```r
+// ITEM type
 {
     "service":"userItems",
     "operation":"PURCHASE_USER_ITEM",
     "data":{
-        "defId":"sword001",
+        "defId":"StackableHealthPotion",
         "quantity":1,
         "shopId":null,
         "includeDef":true,
         "optionsJson":{
-            "blockIfExceedItemMaxStackable":false
+            "blockIfExceedItemMaxStackable":true
+        }
+    }
+}
+
+// BUNDLE type
+{
+    "service":"userItems",
+    "operation":"PURCHASE_USER_ITEM",
+    "data":{
+        "defId":"BUNDLE001",
+        "quantity":1,
+        "shopId":null,
+        "includeDef":true,
+        "optionsJson":{
+            "blockIfExceedItemMaxStackable":true,
+            "blockIfExceedContainedItemMaxStackable":false
         }
     }
 }
