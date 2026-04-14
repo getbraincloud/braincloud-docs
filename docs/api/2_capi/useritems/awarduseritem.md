@@ -2,6 +2,14 @@
 
 Allows item(s) to be awarded to a user without collecting the purchase amount. If includeDef is true, response includes associated itemDef with language fields limited to the current or default language.
 
+:::note
+Awarding 0 or negative userItem will return an error. Use <code>[DropUserItme](/api/capi/useritems/dropuseritem)</code> to remove usertem.
+:::
+
+:::caution
+For security reasons calling this API from the client is not recommended, and is rejected at the server by default. To over-ride, enable the 'Allow AwardUserItem to be called from client (not recommended)' compatibility setting in the Design Portal.
+:::
+
 <PartialServop service_name="userItems" operation_name="AWARD_USER_ITEM" />
 
 ## Method Parameters

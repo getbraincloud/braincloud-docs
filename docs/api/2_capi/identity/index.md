@@ -44,12 +44,5 @@ Finally, in an alternate version of this scenario John might have a 3rd option. 
 * [DetachPeer](/api/capi/identity/detachpeer)
 * [GetPeerProfiles](/api/capi/identity/getpeerprofiles)
 
-### Cloud Code Only:
-
-* [Attach](/api/capi/identity/attach)
-* [Detach](/api/capi/identity/detach)
-* [Merge](/api/capi/identity/merge)
-* [SysChangeEmailIdentity](/api/capi/identity/syschangeemailidentity)
-
 
 <DocCardList />
