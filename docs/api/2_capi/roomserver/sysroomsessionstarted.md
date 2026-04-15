@@ -85,7 +85,7 @@ var serverId = "i-abcdef";
 var serverContext = {
     "abc": "xyz"
 };
-var roomServerProxy = bridge.getRoomserverServiceProxy();
+var roomServerProxy = bridge.getRoomServerServiceProxy();
 
 var postResult = roomServerProxy.sysRoomSessionStarted(serverId, serverContext);
 ```

@@ -89,7 +89,7 @@ var scriptData = {
     "abc": "xyz"
 };
 var regionId = "ca-central-1";
-var roomServerProxy = bridge.getRoomserverServiceProxy();
+var roomServerProxy = bridge.getRoomServerServiceProxy();
 
 var postResult = roomServerProxy.launchServer(serverName, scriptName, scriptData, regionId);
 ```

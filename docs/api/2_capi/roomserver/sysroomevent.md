@@ -90,7 +90,7 @@ var brainCloudContext = {
         "abc": "xyz"
     }
 };
-var roomServerProxy = bridge.getRoomserverServiceProxy();
+var roomServerProxy = bridge.getRoomServerServiceProxy();
 
 var postResult = roomServerProxy.sysRoomEvent(event, brainCloudContext);
 ```
