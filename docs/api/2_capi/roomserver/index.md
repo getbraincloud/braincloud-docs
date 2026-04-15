@@ -10,6 +10,7 @@
 -   [SysRoomReady](/api/capi/roomserver/sysroomready) - Indicates that a room is ready for use by the members.
 -   [SysRoomSessionEnded](/api/capi/roomserver/sysroomsessionended) - Indicates that the given server instance has ended.
 -   [SysRoomSessionStarted](/api/capi/roomserver/sysroomsessionstarted) - Indicates that the given server instance has started.
+-   [SysUpdateRoomServerImage](/api/capi/roomserver/sysupdateroomserverimage) - Updates the Docker image for the specified room server configuration. Automatically increments the server config version.
 
 
 <DocCardList />
