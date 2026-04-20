@@ -3,51 +3,6 @@
 Authenticate the user with a custom Email and Password.  Note that the client app is responsible for collecting (and storing) the e-mail and potentially password (for convenience) in the client data.  For the greatest security, force the user to re-enter their password at each login (or at least give them that option).
 
 
-
-## Error Handling Example
-
-```csharp
-public void FailureCallback(int statusCode, int reasonCode, string statusMessage, object cbObject) {
-    switch (reasonCode) {
-        case ReasonCodes.MISSING_IDENTITY_ERROR: {  // Identity does not exist (and client has orphaned profileId)
-
-            // Reset profileId and re-authenticate
-            <%= data.branding.codePrefix %>.ResetStoredProfileId();
-            <%= data.branding.codePrefix %>.AuthenticateUniversal(userId, password, true);
-            break;
-        }
-        case ReasonCodes.SWITCHING_PROFILES: {  // Identity belongs to a different profile
-
-            // [Optional] Prompt user to confirm that they wish to switch accounts?
-
-            // Reset profileId and re-authenticate
-            <%= data.branding.codePrefix %>.ResetStoredProfileId();
-            <%= data.branding.codePrefix %>.AuthenticateUniversal(userId, password, forceCreate);
-            break;
-        }
-        case ReasonCodes.MISSING_PROFILE_ERROR: {  // Identity does not exist
-
-            // The account doesn't exist - create it now.
-            <%= data.branding.codePrefix %>.AuthenticateUniversal(userId, password, true);
-            break;
-        }
-        case ReasonCodes.TOKEN_DOES_NOT_MATCH_USER: {  // Wrong password
-
-            // Display a dialog telling the user that the password provided was invalid,
-            // and invite them to re-enter the password.
-            // ...
-            break;
-        }
-        default: { // Uncaught reasonCode
-
-            // Log the error for debugging later
-            // ...
-            break;
-        }
-    }
-}
-```
-
 :::caution
 Make sure you've initialized the <%= data.branding.productName %> wrapper before authenticating.
 :::

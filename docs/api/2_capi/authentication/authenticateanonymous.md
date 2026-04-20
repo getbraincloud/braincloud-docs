@@ -7,63 +7,6 @@ Once you've logged in successfully make sure to save the anonymous and profile I
 You can generate a new anonymous ID using the convenience method <code>[GenerateAnonymousId](/api/capi/authentication/generateanonymousid)</code>.
 
 
-
-
-## Error Handling Example
-
-```csharp
-public void FailureCallback(int statusCode, int reasonCode, string statusMessage, object cbObject) {
-    switch (reasonCode) {
-        case ReasonCodes.MISSING_IDENTITY_ERROR: { // Anonymous id is invalid
-
-            // Clear the profile id, generate a new Anonymous id, and re-authenticate
-            <%= data.branding.codeClient %>.Get().AuthenticationService.ClearSavedProfileID();
-            <%= data.branding.codeClient %>.Get().AuthenticationService.AnonymousId =
-                <%= data.branding.codeClient %>.Get().AuthenticationService.GenerateAnonymousId();
-            <%= data.branding.codeClient %>.Get().AuthenticationService.AuthenticateAnonymous(true, OnSuccess_Authenticate, OnError_AuthenticateAnonymous);
-            break;
-        }
-        case ReasonCodes.MISSING_PROFILE_ERROR: { // Anonymous id doesn't exist in database
-
-            // The account doesn't exist - create it now.
-            <%= data.branding.codeClient %>.Get().AuthenticationService.AuthenticateAnonymous(true, OnSuccess_Authenticate, OnError_AuthenticateAnonymous);
-            break;
-        }
-        case ReasonCodes.SWITCHING_PROFILES: {  // Identity belongs to a different profile
-
-            // Clear the profile id, generate a new Anonymous id, and re-authenticate
-            <%= data.branding.codeClient %>.Get().AuthenticationService.ClearSavedProfileID();
-            <%= data.branding.codeClient %>.Get().AuthenticationService.AnonymousId =
-                <%= data.branding.codeClient %>.Get().AuthenticationService.GenerateAnonymousId();
-            <%= data.branding.codeClient %>.Get().AuthenticationService.AuthenticateAnonymous(true, OnSuccess_Authenticate, OnError_AuthenticateAnonymous);
-            break;
-        }
-        case ReasonCodes.SECURITY_ERROR: { // Identity is invalid
-            // Generate a new Anonymous id, and re-authenticate
-            <%= data.branding.codeClient %>.Get().AuthenticationService.AnonymousId =
-                <%= data.branding.codeClient %>.Get().AuthenticationService.GenerateAnonymousId();
-            <%= data.branding.codeClient %>.Get().AuthenticationService.AuthenticateAnonymous(true, OnSuccess_Authenticate, OnError_AuthenticateAnonymous);
-            break;
-        }
-        case ReasonCodes.MISSING_REQUIRED_PARAMETER: { // Anonymous id cannot be blank
-            // Generate an Anonymous id before calling AuthenticateAnonymous
-            <%= data.branding.codeClient %>.Get().AuthenticationService.AnonymousId =
-                <%= data.branding.codeClient %>.Get().AuthenticationService.GenerateAnonymousId();
-            <%= data.branding.codeClient %>.Get().AuthenticationService.AuthenticateAnonymous(true, OnSuccess_Authenticate, OnError_AuthenticateAnonymous);
-            break;
-        }
-        default: { // Uncaught reasonCode
-            /**
-             * Log the unexpected reasonCode to your own internal logs,
-             * to implement needed error handling later
-             */
-            break;
-        }
-    }
-}
-```
-
-
 :::caution
 Make sure you've initialized the <%= data.branding.productName %> library before authenticating.
 :::

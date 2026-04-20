@@ -3,8 +3,6 @@
 Authenticate the user with a custom Set-top Handoff Code - which is an short, easy-to-enter code suitable for use in devices with limited data entry capabilities (i.e. Set-top boxes, VR headsets, etc.) The hand-off code can be generated via the [<code>CreateSettopHandoffCode</code>](/api/capi/identity/createsettophandoffcode) cloud-code call.
 
 
-
-
 :::caution
 Make sure you've initialized the <%= data.branding.productName %> library before authenticating.
 :::
@@ -14,7 +12,7 @@ Make sure you've initialized the <%= data.branding.productName %> library before
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-handoffCode | The set-top hand-off code generated via [<code>CreateSettopHandoffCode</code>](/api/capi/identity/createsettophandoffcode) 
+handoffCode | The set-top hand-off code generated via [<code>CreateSettopHandoffCode</code>](/api/capi/identity/createsettophandoffcode), which maps to its externalId under the hood.
 
 ## Usage
 

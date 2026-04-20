@@ -8,50 +8,6 @@ For the greatest security, force the user to re-enter their password at each log
 
 Alternatively, if using the wrapper, use the Reconnect() method to automatically login to the last used account.
 
-
-
-## Error Handling Example
-
-```csharp
-public void FailureCallback(int statusCode, int reasonCode, string statusMessage, object cbObject) {
-    switch (reasonCode) {
-        case ReasonCodes.MISSING_IDENTITY_ERROR: { // Identity does not exist (and client has orphaned profileId)
-
-            // Reset profileId and re-authenticate
-            <%= data.branding.codeClient %>.Get().AuthenticationService.ResetStoredProfileId();
-            <%= data.branding.codeClient %>.Get().AuthenticationService.AuthenticateEmail(email, password, true);
-            break;
-        }
-        case ReasonCodes.SWITCHING_PROFILES: { // Identity belongs to a different profile
-
-            // Reset profileId and re-authenticate
-            <%= data.branding.codeClient %>.Get().AuthenticationService.ResetStoredProfileId();
-            <%= data.branding.codeClient %>.Get().AuthenticationService.AuthenticateEmail(email, password, forceCreate);
-            break;
-        }
-        case ReasonCodes.MISSING_PROFILE_ERROR: { // Identity does not exist
-
-            // The account doesn't exist - create it now.
-            <%= data.branding.codeClient %>.Get().AuthenticationService.AuthenticateEmail(email, password, true);
-            break;
-        }
-        case ReasonCodes.TOKEN_DOES_NOT_MATCH_USER: { // User auth information is incorrect
-
-            // Display a dialog telling the user that the password provided was invalid,
-            // and invite them to re-enter the password.
-            // ...
-            break;
-        }
-        default: { // Uncaught reasonCode
-
-            // Log the error for debugging later
-            // ...
-            break;
-        }
-    }
-}
-```
-
 :::caution
 Make sure you've initialized the <%= data.branding.productName %> library before authenticating.
 :::

@@ -11,35 +11,6 @@ Make sure you've initialized the <%= data.branding.codeWrapper %> before authent
 
 
 
-## Error Handling Example
-
-```csharp
-public void FailureCallback(int statusCode, int reasonCode, string statusMessage, object cbObject) {
-    switch (reasonCode) {
-        case ReasonCodes.MISSING_IDENTITY_ERROR: {  // Identity does not match any profile
-
-            // Reset Profile ID and re-authenticate
-            <%= data.branding.codePrefix %>.ResetStoredProfileId();
-            <%= data.branding.codePrefix %>.AuthenticateAnonymous();
-            break;
-        }
-        case ReasonCodes.SWITCHING_PROFILES: {  // Identity belongs to a different profile
-
-            // Reset Profile ID and Anonymous id, and then re-authenticate
-            <%= data.branding.codePrefix %>.ResetStoredProfileId();
-            <%= data.branding.codePrefix %>.ResetStoredAnonymousId();
-            <%= data.branding.codePrefix %>.AuthenticateAnonymous();
-            break;
-        }
-        default: { // Uncaught reasonCode  // Uncaught reasonCode
-
-            // Log the error for debugging later
-            // ...
-            break;
-        }
-    }
-}
-```
 
 <PartialServop service_name="authenticationV2" operation_name="AUTHENTICATE" / >
 
