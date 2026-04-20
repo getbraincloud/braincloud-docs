@@ -7,7 +7,7 @@ Retrieves the details of custom files stored on the server.
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-category | Category of files to retrieve
+category | Category of files to retrieve. Optional, if omitted, all files are returned.
 
 ## Usage
 
@@ -128,8 +128,9 @@ end
 
 ```cfscript
 var s3HandlingProxy = bridge.getS3HandlingServiceProxy();
+var category = "myCategory";
 
-var postResult = s3HandlingProxy.getFileList();
+var postResult = s3HandlingProxy.getFileList(category);
 if (postResult.status == 200) {
     // Success!
 }
@@ -144,7 +145,9 @@ if (postResult.status == 200) {
 {
     "service": "s3Handling",
     "operation": "GET_FILE_LIST",
-    "data": {}
+    "data": {
+        "category": "myCategory"
+    }
 }
 ```
 
