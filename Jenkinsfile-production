@@ -62,6 +62,7 @@ pipeline {
 
             build job: 'node_bcdocs_main_index',
                   wait: false,
+                  quietPeriod: 3600,
                   parameters: [
                       string(name: 'UPSTREAM_NODE', value: env.NODE_NAME)
                   ]
