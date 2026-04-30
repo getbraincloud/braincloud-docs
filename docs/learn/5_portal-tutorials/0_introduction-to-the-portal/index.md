@@ -69,7 +69,7 @@ The brainCloud API is organized into Services and Operations.  First, choose the
 
 As you can see, the default Authenticate command will simulate and e-mail based authentication from an iOS device and is using the developer's e-mail address as the account. Note that _`forceCreate`_ is set to true, which means that the user account will be created if it doesn't already exist.
 
-These defaults seem fine - click the green **`Run`** button (the play symbol) to send the API call to the brainCloud server. You should see the _API Request_ echoed to the **Log** window, followed by brainCloud's _Response_ a second later.
+These defaults seem fine - click the **`Execute`** button (the play symbol) to send the API call to the brainCloud server. You should see the _API Request_ echoed to the **Logs** window, followed by brainCloud's _Response_ a second later.
 
 Now that you're logged in (_authenticated_), you can try additional API calls at your leisure.
 
