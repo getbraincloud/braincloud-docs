@@ -82,6 +82,13 @@ const config = {
 
   plugins: [
     "./src/plugins/intercom.js",
+    [
+      "./src/plugins/llms-txt",
+      {
+        replacements: options.replacements,
+        siteUrl: "https://docs.getbraincloud.com",
+      },
+    ],
     // [
     //   '@docusaurus/plugin-content-blog',
     //   {
