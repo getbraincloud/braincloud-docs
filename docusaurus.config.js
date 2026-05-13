@@ -49,7 +49,7 @@ const config = {
   // url: 'https://brainclouddocs.netlify.app',
   // baseUrl: '/', // for netlify
   //url: 'http://bcapidocs-dev.s3-website-us-east-1.amazonaws.com/',
-  url: 'http://__DOCSURL__.braincloudservers.com/',
+  url: 'https://__DOCSURL__.braincloudservers.com/',
   baseUrl: '/', // for s3 bucket
   onBrokenLinks: 'ignore',
   favicon: 'img/favicon.ico',
@@ -86,7 +86,6 @@ const config = {
       "./src/plugins/llms-txt",
       {
         replacements: options.replacements,
-        siteUrl: "https://docs.getbraincloud.com",
       },
     ],
     // [
