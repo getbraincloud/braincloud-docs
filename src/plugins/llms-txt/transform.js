@@ -89,50 +89,34 @@ function stripMdxCodeBlocks(content) {
 }
 
 /**
- * Filter content by tab. After stripMdxCodeBlocks() has run, `<Tabs>` /
- * `<TabItem>` / `<BrowserWindow>` tags are plain text — we scan line by
- * line, tracking which tab we're in, and emit only the matching tab.
+ * Flatten `<Tabs>` blocks: keep ALL tabs in source order, replacing each
+ * `<TabItem value="x" label="Y">` with a bold inline label (e.g. `**C#:**`)
+ * so an LLM consumer can tell which language each code block belongs to.
  *
- * Structural tag lines themselves are dropped from output.
+ * Structural tags (`<Tabs>`, `<BrowserWindow>`, closing tags) are dropped.
  */
-function extractLanguageTabs(content, language) {
+function flattenTabs(content) {
     const lines = content.split("\n");
     const out = [];
-
-    let inTabs = false;
-    let currentTab = null;
 
     for (const line of lines) {
         const trimmed = line.trim();
 
-        // Structural tags — handle state, do not emit.
         if (/^<BrowserWindow\b[^>]*>/.test(trimmed) || trimmed === "<BrowserWindow>") continue;
         if (/^<\/BrowserWindow>/.test(trimmed)) continue;
-        if (/^<Tabs\b[^>]*>/.test(trimmed) || trimmed === "<Tabs>") {
-            inTabs = true;
-            currentTab = null;
-            continue;
-        }
-        if (/^<\/Tabs>/.test(trimmed)) {
-            inTabs = false;
-            currentTab = null;
-            continue;
-        }
+        if (/^<Tabs\b[^>]*>/.test(trimmed) || trimmed === "<Tabs>") continue;
+        if (/^<\/Tabs>/.test(trimmed)) continue;
         if (/^<TabItem\b/.test(trimmed)) {
-            const m = trimmed.match(/value=["']([^"']+)["']/);
-            currentTab = m ? m[1] : null;
+            const labelMatch = trimmed.match(/label=["']([^"']+)["']/);
+            const valueMatch = trimmed.match(/value=["']([^"']+)["']/);
+            const label = (labelMatch && labelMatch[1]) || (valueMatch && valueMatch[1]) || "Example";
+            out.push("");
+            out.push(`**${label}:**`);
+            out.push("");
             continue;
         }
-        if (/^<\/TabItem>/.test(trimmed)) {
-            currentTab = null;
-            continue;
-        }
+        if (/^<\/TabItem>/.test(trimmed)) continue;
 
-        // Content lines.
-        if (inTabs) {
-            if (currentTab === language) out.push(line);
-            continue;
-        }
         out.push(line);
     }
 
@@ -246,18 +230,17 @@ function collapseBlankLines(content) {
  * Main entry point.
  *
  * @param {string} content - raw file contents
- * @param {string} language - target tab value (e.g. "cfs", "csharp")
  * @param {object} options
  * @param {object} options.replacements - branding token map
  * @returns {string} transformed markdown
  */
-function transformFile(content, language, options) {
-    const replacements = options.replacements || {};
+function transformFile(content, options) {
+    const replacements = (options && options.replacements) || {};
     let out = content;
     out = stripFrontmatter(out);
     out = interpolateBranding(out, replacements);
     out = stripMdxCodeBlocks(out);
-    out = extractLanguageTabs(out, language);
+    out = flattenTabs(out);
     out = replacePartialServop(out);
     out = replaceLiteYouTubeEmbed(out);
     out = dropDocCardList(out);

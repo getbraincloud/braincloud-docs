@@ -1,10 +1,10 @@
 /**
  * End-to-end smoke test: invokes the plugin's postBuild() hook directly
- * against a temp directory, then prints stats and a few sample lines.
+ * against a temp directory, then prints stats and a few sample bundles.
  *
  *   node src/plugins/llms-txt/test-build.js
  *
- * Validates the full pipeline (walk + transform + emit + index) without
+ * Validates the full pipeline (discover + transform + emit + index) without
  * needing Docusaurus installed.
  */
 
@@ -36,12 +36,9 @@ const replacements = {
 const plugin = llmsTxtPlugin(
     {
         siteDir,
-        siteConfig: { url: "https://docs.getbraincloud.com" },
+        siteConfig: { url: "https://docs-internal.braincloudservers.com" },
     },
-    {
-        replacements,
-        siteUrl: "https://docs.getbraincloud.com",
-    }
+    { replacements }
 );
 
 console.log(`Running plugin postBuild → ${outDir}\n`);
@@ -49,19 +46,29 @@ console.log(`Running plugin postBuild → ${outDir}\n`);
 plugin
     .postBuild({ outDir })
     .then(() => {
-        console.log(`\n=== llms.txt ===\n`);
-        console.log(fs.readFileSync(path.join(outDir, "llms.txt"), "utf8"));
-
         const llmsDir = path.join(outDir, "llms");
-        const files = fs.readdirSync(llmsDir);
-        console.log(`\n=== file sizes ===\n`);
-        for (const f of files.sort()) {
-            const size = fs.statSync(path.join(llmsDir, f)).size;
-            console.log(`  ${f.padEnd(20)} ${(size / 1024).toFixed(1).padStart(8)} KB`);
-        }
+        const files = fs.readdirSync(llmsDir).sort();
 
-        console.log(`\n=== sanity scan (these should all be 0) ===\n`);
-        for (const f of files.sort()) {
+        console.log(`\n=== ${files.length} bundle files ===\n`);
+
+        // Print sizes, sorted.
+        const sizes = files.map((f) => ({
+            name: f,
+            size: fs.statSync(path.join(llmsDir, f)).size,
+        }));
+        sizes.sort((a, b) => b.size - a.size);
+        let total = 0;
+        for (const { name, size } of sizes) {
+            total += size;
+            console.log(`  ${(size / 1024).toFixed(1).padStart(8)} KB  ${name}`);
+        }
+        console.log(`  ${"─".repeat(8)} ─────`);
+        console.log(`  ${(total / 1024).toFixed(1).padStart(8)} KB  total\n`);
+
+        // Survivor scan.
+        console.log(`=== sanity scan ===\n`);
+        let totalFails = 0;
+        for (const f of files) {
             const content = fs.readFileSync(path.join(llmsDir, f), "utf8");
             const checks = {
                 "<TabItem": (content.match(/<TabItem/g) || []).length,
@@ -72,17 +79,24 @@ plugin
                 "<PartialServop": (content.match(/<PartialServop/g) || []).length,
                 "<DocCardList": (content.match(/<DocCardList/g) || []).length,
             };
-            const fails = Object.entries(checks).filter(([_, n]) => n > 0);
-            if (fails.length === 0) {
-                console.log(`  ${f.padEnd(20)} ✓ clean`);
-            } else {
-                console.log(`  ${f.padEnd(20)} ✗ found:`, fails.map(([k, n]) => `${k}×${n}`).join(" "));
+            const fails = Object.entries(checks).filter(([, n]) => n > 0);
+            if (fails.length) {
+                totalFails += fails.length;
+                console.log(`  ${f.padEnd(30)} ✗`, fails.map(([k, n]) => `${k}×${n}`).join(" "));
             }
         }
+        if (!totalFails) console.log("  all bundles clean ✓");
 
-        console.log(`\n=== first cloudcode.md entry ===\n`);
-        const cc = fs.readFileSync(path.join(llmsDir, "cloudcode.md"), "utf8");
-        console.log(cc.slice(0, 1500));
+        // Show the index.
+        console.log(`\n=== llms.txt ===\n`);
+        console.log(fs.readFileSync(path.join(outDir, "llms.txt"), "utf8"));
+
+        // Show a sample service file's opening.
+        const sample = files.find((f) => f === "authentication.md");
+        if (sample) {
+            console.log(`\n=== ${sample} (first 1500 chars) ===\n`);
+            console.log(fs.readFileSync(path.join(llmsDir, sample), "utf8").slice(0, 1500));
+        }
 
         console.log(`\n\nOutput at: ${outDir}`);
     })

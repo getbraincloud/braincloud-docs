@@ -1,31 +1,39 @@
-# Spec: Per-Language `llms.txt` for brainCloud Docs
+# Spec: Per-Service `llms.txt` for brainCloud Docs
 
 ## Purpose
 
-Publish machine-readable, per-language markdown bundles of the brainCloud
+Publish machine-readable, per-service markdown bundles of the brainCloud
 docs so AI assistants (starting with **brainBot**, but available to any
 consumer) can ingest the API reference without scraping HTML or running a
 custom Markdown pipeline.
 
-Generated as part of the existing Docusaurus build in **braincloud-docs**, so
-the bundles always reflect what was just published to
-[docs.getbraincloud.com](https://docs.getbraincloud.com).
+Generated as part of the existing Docusaurus build in **braincloud-docs**,
+so the bundles always reflect what was just published to the docs site.
 
 ## Background
 
 The docs are authored as `.md` / `.mdx` files under `braincloud-docs/docs/`.
 API method docs use a `<Tabs>` pattern with one `<TabItem>` per client
-language. Today there is no clean way to consume a language-filtered, plain
-markdown view of the reference — the published site renders all tabs at once
-in HTML, and Docusaurus does not serve the raw markdown source.
+language. Today there is no clean way to consume a service-scoped, plain
+markdown view of the reference — the published site renders everything
+spread across many HTML pages, and Docusaurus does not serve the raw
+markdown source.
+
+> **Note:** An earlier revision of this spec organised bundles by client
+> language (one giant file per language). That structure was abandoned in
+> favour of per-service bundles because individual service files are
+> smaller, easier for an AI assistant to retrieve on demand, and align with
+> how developers actually think about the API.
 
 ## Goals
 
-1. Serve a small set of plain-markdown bundles at stable URLs on the docs site.
-2. Produce one bundle per supported client language, with that language's
-   code samples preserved and the others removed.
-3. Produce a `cloudcode.md` bundle that covers the *entire* `docs/` tree
-   (api + learn + overview), so brainBot has full context.
+1. Serve a small set of plain-markdown bundles at stable URLs on the docs
+   site — one bundle per brainCloud service.
+2. Each per-service bundle covers both the **client API** (`2_capi/<svc>/`)
+   and the **server-to-server API** (`4_s2s/<svc>/`) for that service, with
+   **all language tabs preserved** inline.
+3. Cover non-service content (Cloud Code utilities, wrapper, appendix,
+   tutorials) via additional bundles, one per section.
 4. Keep the bundles in sync with the live site automatically — no separate
    pipeline, no manual step, no server-side rebuild required.
 5. Provide a top-level `llms.txt` index following the
@@ -35,7 +43,7 @@ in HTML, and Docusaurus does not serve the raw markdown source.
 ## Non-goals
 
 - Versioned bundles. Only the "current" (latest) version is generated.
-  `version-5.7.0` and `version-5.8.0` in `versioned_docs/` are skipped.
+  `versioned_docs/` snapshots are skipped.
 - Localized bundles. The site is `en`-only today; revisit if/when other
   locales are added.
 - A general-purpose docs API. This is a static-file delivery, not a query
@@ -46,122 +54,149 @@ in HTML, and Docusaurus does not serve the raw markdown source.
 Generated on every build, served at the root of the docs site:
 
 ```
-docs.getbraincloud.com/
-├── llms.txt                  # index, llmstxt.org-style
+<siteUrl>/
+├── llms.txt                          # index, llmstxt.org-style
 └── llms/
-    ├── cloudcode.md          # full docs tree, Cloud Code samples
-    ├── csharp.md             # docs/api only, C# / Unity samples
-    ├── cpp.md                # docs/api only, C++ samples
-    ├── objectivec.md         # docs/api only, Objective-C samples
-    ├── java.md               # docs/api only, Java / Android samples
-    ├── javascript.md         # docs/api only, client JS samples
-    ├── dart.md               # docs/api only, Dart / Flutter samples
-    └── raw.md                # docs/api only, REST API samples
+    ├── authentication.md             # one per brainCloud service
+    ├── entity.md                     #  (2_capi/<svc>/ + 4_s2s/<svc>/,
+    ├── lobby.md                      #   all language tabs preserved)
+    ├── …                             #
+    ├── cloud-code-bridge.md          # api/3_cc/bridge/  (all 92 files)
+    ├── cloud-code-peerbridge.md      # api/3_cc/peerbridge/
+    ├── writing-scripts.md            # api/3_cc/0_writingscripts/
+    ├── wrapper.md                    # api/1_wrapper/
+    ├── appendix.md                   # api/5_appendix/
+    ├── learn.md                      # learn/
+    └── overview.md                   # overview/
 ```
+
+Current docs tree produces **64 bundle files, ~5.3 MB total**, with
+individual services ranging from ~2 KB (`heartbeat`) to ~345 KB
+(`leaderboard`).
+
+`siteUrl` is whatever Docusaurus's `siteConfig.url` resolves to (after
+`__DOCSURL__` sed substitution in `Jenkinsfile`/`Jenkinsfile-production`).
+For dev that's `https://docs-internal.braincloudservers.com`; for prod
+it's `https://docs.braincloudservers.com`.
 
 ### Scope rules
 
-| Bundle           | Sources included                                          |
-| ---------------- | --------------------------------------------------------- |
-| `cloudcode.md`   | All of `docs/` — `api/`, `learn/`, `overview/`            |
-| All other `.md`  | `docs/api/` only                                          |
+| Bundle                       | Sources included                                       |
+| ---------------------------- | ------------------------------------------------------ |
+| `<service>.md`               | `docs/api/2_capi/<svc>/` + `docs/api/4_s2s/<svc>/`     |
+| `cloud-code-bridge.md`       | All of `docs/api/3_cc/bridge/` (92 files)              |
+| `cloud-code-peerbridge.md`   | All of `docs/api/3_cc/peerbridge/`                     |
+| `writing-scripts.md`         | `docs/api/3_cc/0_writingscripts/`                      |
+| `wrapper.md`                 | `docs/api/1_wrapper/`                                  |
+| `appendix.md`                | `docs/api/5_appendix/`                                 |
+| `learn.md`                   | `docs/learn/`                                          |
+| `overview.md`                | `docs/overview/`                                       |
 
-Rationale: An AI assistant working in a client language will pull
-**both** `cloudcode.md` and its language file. Putting `learn/` and
-`overview/` only in `cloudcode.md` avoids ~50% redundant content across
-the bundles.
-
-### Language tab mapping
-
-These are the `value=` attributes seen on `<TabItem>` in the source today.
-Future tabs added with new `value`s require a one-line addition to the map
-in the plugin.
-
-| `<TabItem value=…>` | Output file       |
-| ------------------- | ----------------- |
-| `cfs`               | `cloudcode.md`    |
-| `csharp`            | `csharp.md`       |
-| `cpp`               | `cpp.md`          |
-| `objectivec`        | `objectivec.md`   |
-| `java`              | `java.md`         |
-| `js`                | `javascript.md`   |
-| `dart`              | `dart.md`         |
-| `r`                 | `raw.md`          |
-
-### `llms.txt` (index) format
-
-Plain markdown, [llmstxt.org](https://llmstxt.org) convention.
-
-```markdown
-# brainCloud Docs
-
-> Reference docs for brainCloud, a backend-as-a-service for games and apps.
-> Each bundle below is a single concatenated markdown file representing the
-> brainCloud documentation filtered for one client language.
-
-## Bundles
-
-- [Cloud Code (full)](/llms/cloudcode.md): all docs (api, learn, overview),
-  Cloud Code (cfscript) examples
-- [C# / Unity](/llms/csharp.md): API reference with C# examples
-- [C++](/llms/cpp.md): API reference with C++ examples
-- [Objective-C](/llms/objectivec.md): API reference with Objective-C examples
-- [Java / Android](/llms/java.md): API reference with Java examples
-- [JavaScript (client)](/llms/javascript.md): API reference with client-side
-  JavaScript examples — distinct from Cloud Code
-- [Dart / Flutter](/llms/dart.md): API reference with Dart examples
-- [Raw (REST)](/llms/raw.md): API reference with raw REST examples
-```
+Service names are discovered dynamically by unioning subdirectory names
+under `docs/api/2_capi/` and `docs/api/4_s2s/`. Any new service that
+appears in either tree automatically gets a bundle on the next build.
 
 ### Per-bundle file format
 
 Each bundle is one concatenated markdown file. Source files are emitted in
-the same order they appear in `sidebars.js`, with a small header per source
-file so consumers can locate the live page:
+filesystem walk order (which the numeric prefixes make equivalent to
+sidebar order). Each source contributes a section with a small header so
+consumers can locate the live page:
 
 ```markdown
 <!-- source: docs/api/2_capi/authentication/authenticateemailpassword.md -->
-<!-- url: https://docs.getbraincloud.com/api/capi/authentication/authenticateemailpassword -->
+<!-- url: https://docs.braincloudservers.com/api/capi/authentication/authenticateemailpassword -->
 
 # AuthenticateEmailPassword
 
 Authenticate the user with a custom Email and Password.
 
-...
+…
 ```
+
+Sections are separated by `\n\n---\n\n`.
 
 The HTML comment lines are invisible in most rendered views but easy to
 parse by an LLM and useful for citing sources.
 
+### `llms.txt` (index) format
+
+Plain markdown, [llmstxt.org](https://llmstxt.org) convention. Bundles are
+grouped into four sections with auto-generated labels and descriptions:
+
+```markdown
+# brainCloud Docs
+
+> Reference documentation for brainCloud, a backend-as-a-service for games
+> and apps. Each file below covers one brainCloud service or general
+> topic, with all client language code samples preserved inline.
+
+## Services
+
+- [Authentication](<siteUrl>/llms/authentication.md): This section describes
+  the key methods for implementing basic authentication in your app…
+- [Entity](<siteUrl>/llms/entity.md): brainCloud User Entities are full JSON
+  objects (similar to Global Entities) except that are private to a
+  brainCloud user.
+- …
+
+## Cloud Code
+
+- [Bridge](<siteUrl>/llms/cloud-code-bridge.md): Cloud Code bridge API —
+  invoke brainCloud services and access script context from server-side
+  scripts.
+- [Writing Scripts](<siteUrl>/llms/writing-scripts.md): …
+
+## Reference
+
+- [BrainCloudWrapper](<siteUrl>/llms/wrapper.md): …
+- [Appendix](<siteUrl>/llms/appendix.md): Reason codes, ACL syntax, JSON
+  queries, platform IDs, and other reference data.
+
+## Guides
+
+- [Learn](<siteUrl>/llms/learn.md): Tutorials, getting-started guides…
+- [Overview](<siteUrl>/llms/overview.md): …
+```
+
+Labels and descriptions are extracted from each section's `index.md`:
+the H1 supplies the label; the first prose paragraph (with branding
+tokens resolved, markdown links flattened, JSX stripped) supplies the
+description. Sensible fallbacks apply if `index.md` is missing or
+contains only auto-generated content like `<DocCardList />`.
+
 ## Transform rules
 
 The transform reads source `.md` / `.mdx` files (not the compiled HTML)
-and emits plain markdown. Each rule below applies to every output bundle
-unless noted.
+and emits plain markdown. Each rule below applies to every output bundle.
 
 ### 1. Branding token interpolation
 
 Source files contain templated tokens like:
 
-```markdown
+```
 <%= data.branding.codePrefix %>.AuthenticationService.Authenticate...
 ```
 
 These are defined in `docusaurus.config.js` under `options.replacements`
-(see `findreplace` remark plugin). The transform **must** import that same
-replacement map and substitute tokens before emitting, otherwise the output
-contains raw `<%= ... %>` placeholders.
+(see `findreplace` remark plugin). The transform reads that same
+replacement map and substitutes tokens.
 
-**Implementation note:** The simplest approach is to extract the
-`options.replacements` object from `docusaurus.config.js` into a shared
-module (`src/data/branding.js`) that both the existing `findreplace` plugin
-and the new llms-txt plugin import. No behaviour change for the site build.
+For tokens **not** in the replacement map (e.g. `data.example.appId`),
+the transform emits a clean placeholder — the last dotted segment
+converted to SNAKE_CASE and wrapped in angle brackets:
 
-### 2. Tab extraction
+| Source                          | Output           |
+| ------------------------------- | ---------------- |
+| `<%= data.example.appId %>`     | `<APP_ID>`       |
+| `<%= data.example.appSecret %>` | `<APP_SECRET>`   |
+| `<%= data.example.appChildId %>` | `<APP_CHILD_ID>` |
+
+### 2. Tab flattening (keep all languages)
 
 Source pattern (verbatim from existing docs):
 
-````markdown
+````
 ```mdx-code-block
 <BrowserWindow>
 <Tabs>
@@ -189,67 +224,83 @@ Source pattern (verbatim from existing docs):
 ```
 ````
 
-For a given target language `L`:
+Implementation is two passes:
 
-1. Locate each `<Tabs>` / `</Tabs>` block (recognized by the surrounding
-   `mdx-code-block` fences).
-2. Within it, keep only the `<TabItem value="L" …>` block.
-3. Drop all `mdx-code-block` fences, `<Tabs>`, `<TabItem>`, `<BrowserWindow>`
-   tags. Keep the code fence(s) inside the matched tab unchanged.
-4. If no `<TabItem value="L">` exists in a given `<Tabs>` group, emit
-   nothing for that group (do not fall back to another language).
+1. **Strip `mdx-code-block` fences** — these exist only to keep MDX 3
+   from parsing JSX as markdown, and have no semantic meaning. Removing
+   them leaves the JSX tags as bare text.
+2. **Flatten tabs** — for each `<TabItem value="X" label="Y">` emit a
+   bold inline label `**Y:**` on its own line, then keep the tab's
+   content. Drop the structural tags (`<Tabs>`, `<TabItem>`,
+   `<BrowserWindow>` and their closes).
+
+The result for a typical API method looks like:
+
+```markdown
+## Usage
+
+**C#:**
+
+```csharp
+…csharp code…
+```
+
+**C++:**
+
+```cpp
+…cpp code…
+```
+
+**Cloud Code:**
+
+```cfscript
+…cfscript code…
+```
+
+…
+```
 
 **Preserve placeholder content.** When a tab's content is just
-`// Cloud Code only. To view example, switch to the Cloud Code tab` or
-`// N/A`, keep it as-is. That signal — "this API is not available in
-language L" — is useful for the AI consumer.
+`// Cloud Code only. To view example, switch to the Cloud Code tab`
+or `// N/A`, keep it as-is. That signal — "this API is not available
+in language X" — is useful for the AI consumer.
 
 ### 3. MDX component handling
 
 Globally registered MDX components (per `src/theme/MDXComponents/index.js`):
 
-| Component          | Transform                                                  |
-| ------------------ | ---------------------------------------------------------- |
-| `<Tabs>` / `<TabItem>` | Handled by rule #2.                                    |
-| `<BrowserWindow>`  | Strip the wrapper tags; keep inner content.                |
-| `<DocCardList />`  | Drop (auto-generated child-page listing; no static value). |
-| `<PartialServop service_name="X" operation_name="Y" />` | Replace with: <br/> `\| Service \| Operation \|`<br/>`\| ------- \| --------- \|`<br/>`\| X \| Y \|` |
-| `<LiteYouTubeEmbed id="X" />` | Replace with: `*[Video: https://youtu.be/X]*` |
-| `<details><summary>X</summary>…</details>` | Keep as-is (renders fine as raw HTML in markdown). |
+| Component                              | Transform |
+| -------------------------------------- | --------- |
+| `Tabs` / `TabItem`                     | Handled by rule #2 (flattened with labels). |
+| `BrowserWindow`                        | Strip the wrapper tags; keep inner content. |
+| `DocCardList`                          | Drop (auto-generated child-page listing; no static value). |
+| `PartialServop` (`service_name`, `operation_name`) | Replace with a 2-row markdown table containing the service name and operation name. |
+| `LiteYouTubeEmbed` (`id`)              | Replace with `*[Video: https://youtu.be/X]*` (multi-line attributes supported). |
+| HTML `details` / `summary` blocks      | Keep as-is (renders fine as raw HTML in markdown). |
 
-Unknown components encountered in the source should be **dropped silently**
-in the emitted output, and **logged as warnings** at build time so the team
-can decide whether to add a handler.
+Other arbitrary HTML/JSX (e.g. wrapper `<div className="video-container">`)
+passes through unchanged — LLM consumers handle HTML-in-markdown without
+issue.
 
 ### 4. Admonitions
 
-Source admonitions (`:::caution`, `:::info`, `:::note`, `:::success`,
-`:::tip`, `:::warning`) convert to GitHub-style markdown callouts using a
-blockquote prefix:
+Source admonitions convert to GitHub-style blockquote callouts:
 
-```markdown
-> **Note:** Make sure you've initialized the brainCloud library
-> before authenticating.
-```
-
-Map:
-
-| Source       | Output prefix |
-| ------------ | ------------- |
-| `:::note`    | `> **Note:**` |
-| `:::tip`     | `> **Tip:**`  |
-| `:::info`    | `> **Info:**` |
+| Source       | Output prefix    |
+| ------------ | ---------------- |
+| `:::note`    | `> **Note:**`    |
+| `:::tip`     | `> **Tip:**`     |
+| `:::info`    | `> **Info:**`    |
 | `:::caution` | `> **Caution:**` |
 | `:::warning` | `> **Warning:**` |
-| `:::success` | `> **Note:**` |
+| `:::success` | `> **Note:**`    |
 
-Multi-line admonition bodies become multi-line blockquotes.
+Multi-line bodies become multi-line blockquotes.
 
 ### 5. Frontmatter
 
-Strip YAML frontmatter from the emitted output. The slug/title info is
-already captured in the source/url header comments (see "Per-bundle file
-format").
+Strip YAML frontmatter. Title/slug info is already captured in the
+source/url header comments.
 
 ### 6. Code fence languages
 
@@ -258,100 +309,133 @@ code blocks — these aid LLM tokenization and syntax-aware retrieval.
 
 ### 7. File ordering
 
-Concatenate files in the order they appear in `sidebars.js`. For the
-`cloudcode.md` bundle this means `learn/` → `overview/` → `api/` (or
-whatever the sidebar dictates). For language bundles, only the `api/`
-slice of that order is used.
+Concatenate files in filesystem walk order, which is equivalent to
+sidebar order given the numeric prefixes on directories and files
+(`0_introduction.md`, `1_wrapper/`, `2_capi/`, etc.).
 
 ## Implementation
 
 ### Plugin location
 
-`braincloud-docs/src/plugins/llms-txt/index.js` — a standard Docusaurus
-lifecycle plugin. Register it in `docusaurus.config.js` alongside
+`braincloud-docs/src/plugins/llms-txt/` — a standard Docusaurus
+lifecycle plugin, registered in `docusaurus.config.js` alongside
 `./src/plugins/intercom.js`.
+
+```
+src/plugins/llms-txt/
+├── index.js              # plugin entry + postBuild + bundle discovery
+├── transform.js          # per-file markdown transform (all 7 rules)
+└── test-build.js         # standalone smoke test (no npm install needed)
+```
 
 ### Lifecycle hook
 
-Use `postBuild({outDir})`:
+`postBuild({outDir})`:
 
-1. Read the resolved sidebar from `@docusaurus/plugin-content-docs` to
-   determine the in-order list of source files for the current version.
-2. For each target language (`cfs`, `csharp`, `cpp`, `objectivec`, `java`,
-   `js`, `dart`, `r`):
-   - For each source file in scope (per "Scope rules"):
-     - Read raw file content.
-     - Apply transforms 1-7.
-     - Emit into a single buffer.
-   - Write `outDir/llms/{file}.md`.
-3. Emit `outDir/llms.txt` with the index.
+1. Discover bundles: union of service subdirs from `2_capi/` and `4_s2s/`,
+   plus the named sections (bridge, peerbridge, writing-scripts, wrapper,
+   appendix, learn, overview).
+2. For each bundle, read its `index.md` (when present) to extract label
+   and description for the `llms.txt` index.
+3. For each file in the bundle:
+   - Read raw source.
+   - Apply transforms 1-7 via `transform.js`.
+   - Append to the bundle body with a `<!-- source -->` / `<!-- url -->`
+     header.
+4. Write `outDir/llms/<slug>.md` for each bundle.
+5. Write `outDir/llms.txt` with the grouped index.
 
 `postBuild` runs after Docusaurus has produced the static site, so the
-written files end up alongside the rest of the deploy output (e.g. on
-S3 / Netlify / wherever the docs ship to).
+written files end up alongside the rest of the deploy output.
 
 ### Live URL derivation
 
-The header comment URL is built by:
+The header comment URLs (and the index URLs) use Docusaurus's
+`siteConfig.url`. The plugin no longer hardcodes a host — it falls back
+to `context.siteConfig.url` automatically. After the per-environment
+sed in the Jenkinsfiles, this resolves to the correct internal/prod URL.
 
-1. Stripping the leading numeric prefix from each path segment
-   (`docs/api/2_capi/authentication/...` → `api/capi/authentication/...`).
-2. Stripping the `.md` extension.
-3. Stripping a trailing `/index` if present.
-4. Prepending `https://docs.getbraincloud.com/`.
-
-This matches Docusaurus's default routing for this project (verify against
-a sample URL during implementation).
+Path mapping: `docs/api/2_capi/authentication/foo.md` →
+`<siteUrl>/api/capi/authentication/foo`. The numeric `N_` prefixes are
+stripped from each path segment; `.md`/`.mdx` and trailing `/index` are
+dropped.
 
 ### Dependencies
 
-Avoid new heavy dependencies. The transform is a series of regex / string
-operations on raw markdown — no MDX parser required, no remark pipeline
-required. The existing `unist-util-visit` and `escape-string-regexp` are
-already available if AST-based handling is wanted later.
+No new dependencies. The transform is regex/string operations on raw
+markdown — no MDX parser, no remark pipeline.
 
 ### Build integration
 
-No changes to `Jenkinsfile` / `Jenkinsfile-production` should be needed —
-the plugin runs inside `docusaurus build`. Confirm during implementation
-that the Jenkins job's deploy step picks up `outDir` recursively (i.e.
-the new `llms/` subdirectory and `llms.txt` ship to the live bucket).
+No changes to `Jenkinsfile` / `Jenkinsfile-production`. The plugin runs
+inside `docusaurus build`; the deploy step's `aws s3 sync` already picks
+up the new `llms/` subdirectory and `llms.txt` recursively.
 
 ## Testing
 
-1. **Unit-style snapshot tests** for the transform: given a small fixture
-   `.md` file with a known `<Tabs>` block, assert the per-language
-   output matches a checked-in fixture file. One fixture covers each
-   rule (#1 - #7).
-2. **Build smoke test**: run `npm run build` locally, verify
-   `build/llms.txt` and `build/llms/cloudcode.md` exist and contain
-   sensible content (size > 100 KB, no `<%= ... %>` survivors, no
-   `<TabItem>` tags).
-3. **Sanity check via brainBot dev environment**: point a local brainBot
-   instance at the generated files and confirm queries land sensible
+1. **`test-build.js`** — runs the full plugin pipeline against the live
+   `docs/` tree into a temp directory, then prints stats and a survivor
+   scan across all generated bundles. **No `npm install` required.**
+   Useful as a CI gate.
+2. **Build smoke test** — run `npm run build` locally, verify
+   `build/llms.txt` and `build/llms/*.md` exist and contain sensible
+   content.
+3. **Sanity check via brainBot dev environment** — point a local brainBot
+   instance at the generated bundles and confirm queries land sensible
    answers.
+
+## Verified output (post-refactor, May 2026)
+
+Running `node src/plugins/llms-txt/test-build.js` produces **64 bundles,
+~5.3 MB total** (down from ~21 MB in the per-language layout). Sample
+sizes:
+
+| Bundle                  | Sources | Size      |
+| ----------------------- | ------- | --------- |
+| `learn.md`              | 122     | ~456 KB   |
+| `leaderboard.md`        | 68      | ~344 KB   |
+| `identity.md`           | 85      | ~282 KB   |
+| `group.md`              | 70      | ~249 KB   |
+| `authentication.md`     | 36      | ~202 KB   |
+| `lobby.md`              | 43      | ~194 KB   |
+| `cloud-code-bridge.md`  | 92      | ~122 KB   |
+| `appstore.md`           | 17      |  ~75 KB   |
+| `appendix.md`           | 10      |  ~72 KB   |
+| `wrapper.md`            | 54      | ~222 KB   |
+| `heartbeat.md`          | 2       |   ~2 KB   |
+| …                       |         |           |
+
+All bundles pass the survivor scan (no `<TabItem>`, `<Tabs>`,
+`<BrowserWindow>`, `mdx-code-block`, `<%=`, `<PartialServop>`, or
+`<DocCardList>` artifacts).
 
 ## Rollout
 
-1. Land plugin + tests on a feature branch in `braincloud-docs`.
-2. Verify the build artifacts manually.
-3. Merge to main; let the normal docs deploy publish to
-   `docs.getbraincloud.com`.
-4. Update `braincloud-server`'s brainBot config to fetch the bundles
-   from the live URL (with ETag caching).
-5. Announce the new endpoints in internal channels; advertise externally
-   only after the format has been stable for a release cycle.
+1. Land plugin on a feature branch in `braincloud-docs`.
+2. Verify build artifacts via `test-build.js` and a full
+   `docusaurus build`.
+3. Merge to main; let the normal docs deploy publish to the live
+   bucket.
+4. Update `braincloud-server`'s brainBot config to fetch per-service
+   bundles from `<siteUrl>/llms/<service>.md` (with ETag caching),
+   selecting bundles based on conversation intent.
+5. Announce internally; advertise the `llms.txt` index externally once
+   the format has been stable for a release cycle.
 
 ## Open questions / future work
 
-- **Caching / freshness on the brainBot side.** Out of scope for this
-  spec — brainBot's fetch strategy lives in `braincloud-server`.
-- **Bundle size.** ~1,500 source files × ~8 languages → expect several MB
-  per bundle. Acceptable today (Anthropic publishes `llms-full.txt` at
-  similar size); if it becomes a problem, split per top-level section.
-- **Old versions.** If we later need `version-5.7.0` / `version-5.8.0`,
-  the plugin can be parameterised with a list of versions to emit, and
-  each version gets a versioned URL (`/llms/v5.8.0/cloudcode.md`).
-- **Sidebar order vs filesystem order.** If reading the resolved sidebar
-  proves awkward, fall back to filesystem walk order, which (given the
-  numeric prefixes on directories and files) approximates sidebar order.
+- **brainBot bundle selection strategy.** brainBot needs to know which
+  bundle(s) to pull for a given question. Possible approaches:
+  (a) keyword routing — match the user's question against the bundle
+  labels in `llms.txt`; (b) pull `llms.txt` + a small set of always-on
+  bundles (`cloud-code-bridge`, `writing-scripts`) and let Claude
+  request additional bundles via tool use.
+- **Bundle freshness on the brainBot side.** Out of scope for this
+  spec — brainBot's fetch/cache strategy lives in `braincloud-server`.
+- **Old versions.** If we later need version-specific bundles, the
+  plugin can be parameterised with a version list and each version
+  gets a versioned URL (`/llms/v5.8.0/authentication.md`).
+- **Service label disambiguation.** Two services (`globalfile` and
+  `globalfilev3`) currently produce the same auto-extracted label
+  ("Global File"). If this matters for AI selection, hardcode an
+  override map in the plugin.
