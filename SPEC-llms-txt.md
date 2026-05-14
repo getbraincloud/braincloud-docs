@@ -57,9 +57,19 @@ Generated on every build, served at the root of the docs site:
 <siteUrl>/
 ├── llms.txt                          # index, llmstxt.org-style
 └── llms/
-    ├── authentication.md             # one per brainCloud service
-    ├── entity.md                     #  (2_capi/<svc>/ + 4_s2s/<svc>/,
-    ├── lobby.md                      #   all language tabs preserved)
+    ├── authentication.md             # one bundle per brainCloud service
+    ├── authentication.index.md       #   method index for that service
+    │                                 #   (H1 + one-line summary per method,
+    │                                 #    grouped by capi/s2s, links to the
+    │                                 #    per-method files below)
+    ├── authentication/
+    │   ├── capi/                     # one file per docs/api/2_capi/auth/*.md
+    │   │   ├── authenticateemailpassword.md
+    │   │   └── …
+    │   └── s2s/                      # one file per docs/api/4_s2s/auth/*.md
+    │       └── authenticate.md
+    ├── entity.md, entity.index.md, entity/…
+    ├── lobby.md,  lobby.index.md,  lobby/…
     ├── …                             #
     ├── cloud-code-bridge.md          # api/3_cc/bridge/  (all 92 files)
     ├── cloud-code-peerbridge.md      # api/3_cc/peerbridge/
@@ -70,9 +80,15 @@ Generated on every build, served at the root of the docs site:
     └── overview.md                   # overview/
 ```
 
-Current docs tree produces **64 bundle files, ~5.3 MB total**, with
-individual services ranging from ~2 KB (`heartbeat`) to ~345 KB
-(`leaderboard`).
+Current docs tree produces **64 bundle files (~5.3 MB total), 57 per-service
+index files (~4 KB each), and ~1,200 per-method files (~3.5 KB avg,
+~26 KB max)**. The bundles remain the source of truth for "give me the
+whole service" callers; the index + per-method files let consumers fetch
+exactly the method they need.
+
+Non-service bundles (cloud-code-*, wrapper, appendix, learn, overview)
+do not get per-method or index files — they are read end-to-end and
+splitting them would not help any known consumer.
 
 `siteUrl` is whatever Docusaurus's `siteConfig.url` resolves to (after
 `__DOCSURL__` sed substitution in `Jenkinsfile`/`Jenkinsfile-production`).
@@ -84,6 +100,9 @@ it's `https://docs.braincloudservers.com`.
 | Bundle                       | Sources included                                       |
 | ---------------------------- | ------------------------------------------------------ |
 | `<service>.md`               | `docs/api/2_capi/<svc>/` + `docs/api/4_s2s/<svc>/`     |
+| `<service>.index.md`         | derived from above — method list with summaries        |
+| `<service>/capi/<method>.md` | one per file in `docs/api/2_capi/<svc>/`               |
+| `<service>/s2s/<method>.md`  | one per file in `docs/api/4_s2s/<svc>/`                |
 | `cloud-code-bridge.md`       | All of `docs/api/3_cc/bridge/` (92 files)              |
 | `cloud-code-peerbridge.md`   | All of `docs/api/3_cc/peerbridge/`                     |
 | `writing-scripts.md`         | `docs/api/3_cc/0_writingscripts/`                      |
@@ -94,7 +113,61 @@ it's `https://docs.braincloudservers.com`.
 
 Service names are discovered dynamically by unioning subdirectory names
 under `docs/api/2_capi/` and `docs/api/4_s2s/`. Any new service that
-appears in either tree automatically gets a bundle on the next build.
+appears in either tree automatically gets a bundle, index, and per-method
+files on the next build.
+
+`index.md` source files (the service-level intros that hold the
+`<DocCardList />`) are included in the full bundle but are not emitted as
+per-method files and not listed in the per-service index — they describe
+the service, not a method. Their content is already surfaced as the
+"description" line at the top of the per-service index file.
+
+### Per-method file format
+
+Each per-method file is a single transformed source file with the same
+`<!-- source --> / <!-- url -->` header as a bundle section but without
+the `---` separator (the file is one method, not a concatenation):
+
+```markdown
+<!-- source: docs/api/2_capi/authentication/authenticateemailpassword.md -->
+<!-- url: https://docs.braincloudservers.com/api/capi/authentication/authenticateemailpassword -->
+
+# AuthenticateEmailPassword
+
+Authenticate the user with a custom Email and Password.
+
+…
+```
+
+### Per-service index file format
+
+A per-service index lists every method (capi + s2s) with a one-line
+summary and a link to the per-method file. Consumers fetch this file
+first to discover what's available before pulling individual methods:
+
+```markdown
+# Authentication — methods
+
+> This section describes the key methods for implementing basic authentication in your app.
+
+Full bundle: <siteUrl>/llms/authentication.md
+
+Method names below match `<method>` in `bridge.get<Service>ServiceProxy().<method>(...)` calls in cloud code (case-insensitive). Fetch individual methods to keep payload small.
+
+## Client API methods
+
+- [AuthenticateEmailPassword](<siteUrl>/llms/authentication/capi/authenticateemailpassword.md) — Authenticate the user with a custom Email and Password.
+- …
+
+## S2S methods
+
+- [Authenticate](<siteUrl>/llms/authentication/s2s/authenticate.md) — This service is used to authenticate the server request for the session based protocol.
+```
+
+The method name (`AuthenticateEmailPassword`) is extracted from the H1
+of the per-method file. The summary is the first prose paragraph after
+the H1, trimmed to one sentence when long. Services that lack an S2S
+sibling directory simply omit the `## S2S methods` section.
 
 ### Per-bundle file format
 
@@ -422,14 +495,28 @@ All bundles pass the survivor scan (no `<TabItem>`, `<Tabs>`,
 5. Announce internally; advertise the `llms.txt` index externally once
    the format has been stable for a release cycle.
 
-## Open questions / future work
+## Consumer model (brainBot)
 
-- **brainBot bundle selection strategy.** brainBot needs to know which
-  bundle(s) to pull for a given question. Possible approaches:
-  (a) keyword routing — match the user's question against the bundle
-  labels in `llms.txt`; (b) pull `llms.txt` + a small set of always-on
-  bundles (`cloud-code-bridge`, `writing-scripts`) and let Claude
-  request additional bundles via tool use.
+The per-method + per-service-index outputs exist to support a two-tool
+consumer model in brainBot:
+
+- `lookup_service_method(service, method)` — fetches a single
+  `/llms/<service>/{capi|s2s}/<method>.md`. The bot's preferred path:
+  read the per-service index (or have its method list in context from a
+  previous turn) and pull exactly the methods the current script needs.
+- `lookup_service_all(service)` — fetches the full `/llms/<service>.md`
+  bundle. Used when the bot legitimately needs to browse a service
+  (e.g. "is there a method that does X?") or when the per-method gate
+  would be too costly for a many-method script.
+
+The compose-script gate enforces per-method coverage: every
+`bridge.getXxxServiceProxy().methodName(...)` call in the submitted
+script must have its method doc fetched in conversation, either via
+`lookup_service_method` (one method) or `lookup_service_all` (the whole
+service). Per-service method allowlists are loaded from each
+`/llms/<service>.index.md` file.
+
+## Open questions / future work
 - **Bundle freshness on the brainBot side.** Out of scope for this
   spec — brainBot's fetch/cache strategy lives in `braincloud-server`.
 - **Old versions.** If we later need version-specific bundles, the

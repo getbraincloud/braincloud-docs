@@ -3,9 +3,18 @@
  *
  * On every site build, walks `docs/` (current version only) and produces:
  *   - <outDir>/llms.txt                    — llmstxt.org-style index
- *   - <outDir>/llms/<service>.md           — one file per brainCloud service
+ *   - <outDir>/llms/<service>.md           — concatenated bundle per service
  *                                              (2_capi/<svc>/ + 4_s2s/<svc>/),
  *                                              all language tabs preserved
+ *   - <outDir>/llms/<service>.index.md     — lightweight method index per
+ *                                              service: H1 + one-line summary
+ *                                              per method, grouped by Client
+ *                                              API vs S2S, with links to the
+ *                                              per-method files below
+ *   - <outDir>/llms/<service>/capi/*.md    — one transformed file per method
+ *                                              from docs/api/2_capi/<svc>/
+ *   - <outDir>/llms/<service>/s2s/*.md     — one transformed file per method
+ *                                              from docs/api/4_s2s/<svc>/
  *   - <outDir>/llms/cloud-code-bridge.md   — 3_cc/bridge/
  *   - <outDir>/llms/cloud-code-peerbridge.md — 3_cc/peerbridge/ (if present)
  *   - <outDir>/llms/writing-scripts.md     — 3_cc/0_writingscripts/
@@ -13,6 +22,11 @@
  *   - <outDir>/llms/appendix.md            — api/5_appendix/
  *   - <outDir>/llms/learn.md               — learn/
  *   - <outDir>/llms/overview.md            — overview/
+ *
+ * Per-method files and the per-service index let consumers (brainBot)
+ * fetch exactly the method they need rather than the entire service
+ * bundle. Bundles remain available for callers that genuinely want the
+ * full service.
  *
  * Spec: ../../../SPEC-llms-txt.md
  */
@@ -190,7 +204,9 @@ function buildBundles(docsDir, replacements) {
     for (const svc of discoverServices(docsDir)) {
         const capiDir = path.join(docsDir, "api/2_capi", svc);
         const s2sDir = path.join(docsDir, "api/4_s2s", svc);
-        const files = [...walkDocs(capiDir), ...walkDocs(s2sDir)];
+        const capiFiles = walkDocs(capiDir);
+        const s2sFiles = walkDocs(s2sDir);
+        const files = [...capiFiles, ...s2sFiles];
         if (!files.length) continue;
         // Prefer the 2_capi/<svc>/index.md for label/description.
         const indexPath =
@@ -203,7 +219,13 @@ function buildBundles(docsDir, replacements) {
             label: meta.label,
             description: meta.description,
             section: "services",
+            kind: "service",
             files,
+            // Split for per-method emission. Each entry is { absPath, baseDir, kind } so
+            // the per-method writer can derive the relative path under the service dir
+            // without rediscovering it.
+            capiFiles: capiFiles.map((p) => ({ absPath: p, baseDir: capiDir })),
+            s2sFiles:  s2sFiles.map((p) => ({ absPath: p, baseDir: s2sDir })),
         });
     }
 
@@ -284,6 +306,136 @@ function addBundleFromDir(bundles, docsDir, replacements, opts) {
 }
 
 /**
+ * Convert an absolute source path under a service dir to a relative POSIX
+ * path under {service}/{kind}/, stripping leading numeric prefixes from
+ * each segment and normalising .mdx → .md.
+ *
+ *   service=leaderboard, kind=capi
+ *   absPath = docs/api/2_capi/leaderboard/createleaderboard.md
+ *   baseDir = docs/api/2_capi/leaderboard
+ *       → leaderboard/capi/createleaderboard.md
+ */
+function methodOutputRelPath(absPath, baseDir, service, kind) {
+    const rel = path.relative(baseDir, absPath);
+    const parts = rel.split(path.sep).map((seg) => seg.replace(/^\d+_/, ""));
+    const last = parts[parts.length - 1].replace(/\.(md|mdx)$/, ".md");
+    parts[parts.length - 1] = last;
+    return [service, kind, ...parts].join("/");
+}
+
+/**
+ * Extract a method name (first H1) and short summary (first prose paragraph
+ * after the H1) from a transformed method file. Returns null if no H1 is
+ * present. Summary may be empty when the method has no prose intro.
+ */
+function extractMethodMeta(transformed, replacements) {
+    const lines = transformed.split("\n");
+    let titleIdx = -1;
+    let name = null;
+    for (let i = 0; i < lines.length; i++) {
+        const m = lines[i].match(/^#\s+(.+?)\s*$/);
+        if (m) {
+            name = m[1].trim();
+            titleIdx = i;
+            break;
+        }
+    }
+    if (!name) return null;
+    const afterTitle = lines.slice(titleIdx + 1).join("\n");
+    const summary = extractFirstParagraph(afterTitle, replacements || {}) || "";
+    return { name, summary };
+}
+
+/**
+ * Emit per-method .md files for a service bundle into <outDir>/llms/<service>/.
+ * Returns an array of { kind, relPath, name, summary, sourceUrl } entries used
+ * to build the per-service index file. Files that lack an H1 (e.g. service
+ * index.md with only a DocCardList) are still written but excluded from the
+ * returned method list.
+ */
+function writePerMethodFiles(bundle, llmsDir, docsDir, siteUrl, replacements) {
+    const entries = [];
+    if (bundle.kind !== "service") return entries;
+    const pairs = [
+        { kind: "capi", list: bundle.capiFiles || [] },
+        { kind: "s2s",  list: bundle.s2sFiles  || [] },
+    ];
+    for (const { kind, list } of pairs) {
+        for (const { absPath, baseDir } of list) {
+            // Skip service-level index.md files. Their content is the service
+            // description, not a method, and the per-service index file already
+            // surfaces that description. The full bundle still includes them.
+            if (/(^|[\\/])index\.(md|mdx)$/.test(absPath)) continue;
+            const raw = fs.readFileSync(absPath, "utf8");
+            const transformed = transformFile(raw, { replacements });
+            if (!transformed.trim()) continue;
+            const relPath = methodOutputRelPath(absPath, baseDir, bundle.slug, kind);
+            const sourceRel = path.relative(docsDir, absPath).split(path.sep).join("/");
+            const sourceUrl = sourceToUrl(absPath, docsDir, siteUrl);
+            const body =
+                `<!-- source: docs/${sourceRel} -->\n` +
+                `<!-- url: ${sourceUrl} -->\n\n` +
+                transformed;
+            const destAbs = path.join(llmsDir, relPath);
+            fs.mkdirSync(path.dirname(destAbs), { recursive: true });
+            fs.writeFileSync(destAbs, body);
+            const meta = extractMethodMeta(transformed, replacements);
+            if (meta) {
+                entries.push({
+                    kind,
+                    relPath,
+                    name: meta.name,
+                    summary: meta.summary,
+                    sourceUrl,
+                });
+            }
+        }
+    }
+    return entries;
+}
+
+/**
+ * Build a per-service index file body listing all methods grouped by capi/s2s,
+ * each linked to its per-method file. Consumers (brainBot) read this small
+ * file first to discover what's available before fetching individual methods.
+ */
+function buildServiceIndex(bundle, methodEntries, siteUrl) {
+    const base = siteUrl.replace(/\/+$/, "");
+    const lines = [];
+    lines.push(`# ${bundle.label} — methods`);
+    lines.push("");
+    if (bundle.description) {
+        lines.push(`> ${bundle.description}`);
+        lines.push("");
+    }
+    lines.push(
+        `Full bundle: ${base}/llms/${bundle.slug}.md`,
+        "",
+        "Method names below match `<method>` in `bridge.get<Service>ServiceProxy().<method>(...)` " +
+        "calls in cloud code (case-insensitive). Fetch individual methods to keep payload small."
+    );
+    lines.push("");
+
+    const sections = [
+        { kind: "capi", heading: "Client API methods" },
+        { kind: "s2s",  heading: "S2S methods" },
+    ];
+    for (const { kind, heading } of sections) {
+        const items = methodEntries.filter((e) => e.kind === kind);
+        if (!items.length) continue;
+        lines.push(`## ${heading}`);
+        lines.push("");
+        for (const e of items) {
+            const url = `${base}/llms/${e.relPath}`;
+            const summary = e.summary ? ` — ${e.summary}` : "";
+            lines.push(`- [${e.name}](${url})${summary}`);
+        }
+        lines.push("");
+    }
+    return lines.join("\n").replace(/\n{3,}/g, "\n\n").trimEnd() + "\n";
+}
+
+/**
  * Concatenate the transformed source files into one bundle string.
  */
 function buildBundleBody(bundle, docsDir, siteUrl, replacements) {
@@ -352,21 +504,39 @@ function llmsTxtPlugin(context, opts) {
             fs.mkdirSync(llmsDir, { recursive: true });
 
             let totalBytes = 0;
+            let totalMethodFiles = 0;
             for (const bundle of bundles) {
                 const body = buildBundleBody(bundle, docsDir, siteUrl, replacements);
                 const dest = path.join(llmsDir, `${bundle.slug}.md`);
                 fs.writeFileSync(dest, body);
-                totalBytes += Buffer.byteLength(body, "utf8");
+                const bytes = Buffer.byteLength(body, "utf8");
+                totalBytes += bytes;
                 console.log(
                     `[llms-txt] wrote llms/${bundle.slug}.md ` +
-                    `(${bundle.files.length} sources, ${(Buffer.byteLength(body, "utf8") / 1024).toFixed(1)} KB)`
+                    `(${bundle.files.length} sources, ${(bytes / 1024).toFixed(1)} KB)`
                 );
+
+                // Per-method files + per-service index (services only).
+                if (bundle.kind === "service") {
+                    const methodEntries = writePerMethodFiles(
+                        bundle, llmsDir, docsDir, siteUrl, replacements
+                    );
+                    totalMethodFiles += methodEntries.length;
+                    const indexBody = buildServiceIndex(bundle, methodEntries, siteUrl);
+                    const indexDest = path.join(llmsDir, `${bundle.slug}.index.md`);
+                    fs.writeFileSync(indexDest, indexBody);
+                    totalBytes += Buffer.byteLength(indexBody, "utf8");
+                    console.log(
+                        `[llms-txt]   + ${methodEntries.length} method files, ` +
+                        `${bundle.slug}.index.md (${(Buffer.byteLength(indexBody, "utf8") / 1024).toFixed(1)} KB)`
+                    );
+                }
             }
 
             fs.writeFileSync(path.join(outDir, "llms.txt"), buildIndex(bundles, siteUrl));
             console.log(
                 `[llms-txt] wrote llms.txt — ${bundles.length} bundles, ` +
-                `${(totalBytes / 1024).toFixed(1)} KB total`
+                `${totalMethodFiles} per-method files, ${(totalBytes / 1024).toFixed(1)} KB total`
             );
         },
     };

@@ -41,34 +41,82 @@ const plugin = llmsTxtPlugin(
     { replacements }
 );
 
+/**
+ * Recursively collect every regular file under `dir`, returning their paths
+ * relative to `dir` with POSIX separators.
+ */
+function collectFiles(dir) {
+    const out = [];
+    const stack = [{ abs: dir, rel: "" }];
+    while (stack.length) {
+        const { abs, rel } = stack.pop();
+        for (const entry of fs.readdirSync(abs, { withFileTypes: true })) {
+            const childAbs = path.join(abs, entry.name);
+            const childRel = rel ? `${rel}/${entry.name}` : entry.name;
+            if (entry.isDirectory()) {
+                stack.push({ abs: childAbs, rel: childRel });
+            } else if (entry.isFile()) {
+                out.push(childRel);
+            }
+        }
+    }
+    out.sort();
+    return out;
+}
+
 console.log(`Running plugin postBuild → ${outDir}\n`);
 
 plugin
     .postBuild({ outDir })
     .then(() => {
         const llmsDir = path.join(outDir, "llms");
-        const files = fs.readdirSync(llmsDir).sort();
+        const allFiles = collectFiles(llmsDir);
+        const bundleFiles = allFiles.filter((f) => !f.includes("/") && f.endsWith(".md") && !f.endsWith(".index.md"));
+        const indexFiles  = allFiles.filter((f) => !f.includes("/") && f.endsWith(".index.md"));
+        const methodFiles = allFiles.filter((f) => f.includes("/"));
 
-        console.log(`\n=== ${files.length} bundle files ===\n`);
+        console.log(`\n=== ${allFiles.length} files (${bundleFiles.length} bundles, ` +
+                    `${indexFiles.length} service-indexes, ${methodFiles.length} per-method) ===\n`);
 
-        // Print sizes, sorted.
-        const sizes = files.map((f) => ({
-            name: f,
-            size: fs.statSync(path.join(llmsDir, f)).size,
+        // Print bundle sizes, sorted descending.
+        console.log("Bundles:");
+        const bundleSizes = bundleFiles.map((f) => ({
+            name: f, size: fs.statSync(path.join(llmsDir, f)).size,
         }));
-        sizes.sort((a, b) => b.size - a.size);
-        let total = 0;
-        for (const { name, size } of sizes) {
-            total += size;
+        bundleSizes.sort((a, b) => b.size - a.size);
+        let totalBundle = 0;
+        for (const { name, size } of bundleSizes) {
+            totalBundle += size;
             console.log(`  ${(size / 1024).toFixed(1).padStart(8)} KB  ${name}`);
         }
         console.log(`  ${"─".repeat(8)} ─────`);
-        console.log(`  ${(total / 1024).toFixed(1).padStart(8)} KB  total\n`);
+        console.log(`  ${(totalBundle / 1024).toFixed(1).padStart(8)} KB  bundles total\n`);
 
-        // Survivor scan.
+        // Per-service index file stats.
+        const indexSizes = indexFiles.map((f) => ({
+            name: f, size: fs.statSync(path.join(llmsDir, f)).size,
+        }));
+        const totalIndex = indexSizes.reduce((a, b) => a + b.size, 0);
+        const avgIndex = indexSizes.length ? totalIndex / indexSizes.length : 0;
+        console.log(`Service indexes: ${indexFiles.length} files, ` +
+                    `total ${(totalIndex / 1024).toFixed(1)} KB, ` +
+                    `avg ${(avgIndex / 1024).toFixed(1)} KB`);
+
+        // Per-method file stats.
+        const methodSizes = methodFiles.map((f) => fs.statSync(path.join(llmsDir, f)).size);
+        const totalMethod = methodSizes.reduce((a, b) => a + b, 0);
+        const avgMethod = methodSizes.length ? totalMethod / methodSizes.length : 0;
+        const maxMethod = methodSizes.length ? Math.max(...methodSizes) : 0;
+        console.log(`Per-method files: ${methodFiles.length} files, ` +
+                    `total ${(totalMethod / 1024).toFixed(1)} KB, ` +
+                    `avg ${(avgMethod / 1024).toFixed(1)} KB, ` +
+                    `max ${(maxMethod / 1024).toFixed(1)} KB`);
+        console.log("");
+
+        // Survivor scan — every output file should be free of MDX scaffolding.
         console.log(`=== sanity scan ===\n`);
         let totalFails = 0;
-        for (const f of files) {
+        for (const f of allFiles) {
             const content = fs.readFileSync(path.join(llmsDir, f), "utf8");
             const checks = {
                 "<TabItem": (content.match(/<TabItem/g) || []).length,
@@ -82,20 +130,27 @@ plugin
             const fails = Object.entries(checks).filter(([, n]) => n > 0);
             if (fails.length) {
                 totalFails += fails.length;
-                console.log(`  ${f.padEnd(30)} ✗`, fails.map(([k, n]) => `${k}×${n}`).join(" "));
+                console.log(`  ${f.padEnd(40)} ✗`, fails.map(([k, n]) => `${k}×${n}`).join(" "));
             }
         }
-        if (!totalFails) console.log("  all bundles clean ✓");
+        if (!totalFails) console.log("  all files clean ✓");
 
-        // Show the index.
+        // Show the top-level index.
         console.log(`\n=== llms.txt ===\n`);
         console.log(fs.readFileSync(path.join(outDir, "llms.txt"), "utf8"));
 
-        // Show a sample service file's opening.
-        const sample = files.find((f) => f === "authentication.md");
-        if (sample) {
-            console.log(`\n=== ${sample} (first 1500 chars) ===\n`);
-            console.log(fs.readFileSync(path.join(llmsDir, sample), "utf8").slice(0, 1500));
+        // Show a sample service index file.
+        const sampleIndex = "authentication.index.md";
+        if (allFiles.includes(sampleIndex)) {
+            console.log(`\n=== ${sampleIndex} ===\n`);
+            console.log(fs.readFileSync(path.join(llmsDir, sampleIndex), "utf8"));
+        }
+
+        // Show a sample per-method file (first few hundred chars).
+        const sampleMethod = methodFiles.find((f) => f.startsWith("authentication/capi/"));
+        if (sampleMethod) {
+            console.log(`\n=== ${sampleMethod} (first 800 chars) ===\n`);
+            console.log(fs.readFileSync(path.join(llmsDir, sampleMethod), "utf8").slice(0, 800));
         }
 
         console.log(`\n\nOutput at: ${outDir}`);
