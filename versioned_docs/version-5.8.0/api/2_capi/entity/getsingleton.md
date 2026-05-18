@@ -2,6 +2,10 @@
 
 Method retrieves a singleton entity on the server. If the entity doesn't exist, null is returned.
 
+:::note
+If the singleton does not exist, the call still returns a **200 success** response — but the `data` field in the response will be `null`. Make sure to check for a null `data` value before attempting to access entity fields.
+:::
+
 <PartialServop service_name="entity" operation_name="READ_SINGLETON" />
 
 ## Method Parameters
