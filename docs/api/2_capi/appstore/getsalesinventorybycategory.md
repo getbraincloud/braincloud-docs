@@ -2,6 +2,10 @@
 
 Method gets the active sales inventory for the passed-in currency type, platform, and category.
 
+:::tip
+The `itemId` field returned in each product entry is the cash product's own unique identifier (a SKU-like key set when the product was created in the portal). It is **not** a reference to an item catalog entry. Item catalog entries awarded by a product purchase are identified by `defId` and appear in the `items` field of the product definition.
+:::
+
 Valid platforms are:
 - itunes
 - facebook
