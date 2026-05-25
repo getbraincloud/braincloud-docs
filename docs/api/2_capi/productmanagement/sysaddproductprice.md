@@ -4,6 +4,10 @@ Adds a new price to the given product item.
 
 <PartialServop service_name="productManagement" operation_name="SYS_ADD_PRODUCT_PRICE" />
 
+:::info
+Note: When passing the referencePrice field to SysAddProductPrice, the value is specified in cents/pennies. This differs from the App Store price fields, which are entered in dollars and cents.
+:::
+
 ## Method Parameters
 Parameter | Description
 --------- | -----------

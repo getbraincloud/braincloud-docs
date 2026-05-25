@@ -4,6 +4,10 @@ Deletes the specified promotion from the server.
 
 <PartialServop service_name="promotions" operation_name="SYS_DELETE_PROMOTION" />
 
+:::info
+Note: SysDeletePromotion will also delete archived promotions, not just active ones. Use this operation carefully if you intend to preserve archived promotion history.
+:::
+
 ## Method Parameters
 Parameter | Description
 --------- | -----------
