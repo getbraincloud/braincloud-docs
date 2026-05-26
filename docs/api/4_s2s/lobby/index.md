@@ -24,6 +24,8 @@ For a full overview of the Lobby Service, see the [Lobby Service Client API](/ap
 -   [SysRemoveMember](/api/capi/lobby/sysremovemember) - Evicts the specified user from the specified lobby.
 -   [SysUpdateSettings](/api/capi/lobby/sysupdatesettings) - Updates the settings for the given lobby instance.
 -   [SysRoomKeepAlive](/api/capi/lobby/sysroomkeepalive) - Indicates that a room is still running and the associated lobby instance should be kept alive.
+-   [SysCreateLobbyWithConfig](/api/capi/lobby/syscreatelobbywithconfig) - Creates an instance of a lobby with a per-instance configuration override. Currently supports overriding the standard lobby type's team definitions. Will return the newly created lobby id in the event of a successful creation.
+-   [SysCreateLobbyWithConfigAndPingData](/api/capi/lobby/syscreatelobbywithconfigandpingdata) - Creates an instance of a lobby with a per-instance configuration override and the given ping data. Currently supports overriding the standard lobby type's team definitions. Will return the newly created lobby id in the event of a successful creation.
 
 :::tip
 All the client APIs that the names beigin with <strong>"Sys"</strong> <em>are</em> also available to S2S.
