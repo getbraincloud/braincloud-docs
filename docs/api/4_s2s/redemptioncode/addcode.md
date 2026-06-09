@@ -12,12 +12,12 @@ This operation adds a code to your inventory.
 
 ## Method Parameters
 
-| Parameter      | Description                           |
-| -------------- | ------------------------------------- |
-| scanCode       | A scan code.                          |
-| codeType       | The code type.                        |
-| codeState      | Initial state of the redemption code. |
-| customCodeInfo | Optional custom information.          |
+| Parameter      | Description                                                                                                                                                                 |
+| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| scanCode       | A scan code (also referred to as a _Promo Code_). Warning: If the scanCode added is less than 25 characters, the optional codeType must be specified in order to redeem it. |
+| codeType       | The personal ('single-use') code type. Corresponds to the _Campaign Name_ in the Design Portal.                                                                             |
+| codeState      | Initial state of the redemption code.                                                                                                                                       |
+| customCodeInfo | Optional custom information.                                                                                                                                                |
 
 ## Usage
 

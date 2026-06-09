@@ -12,11 +12,11 @@ This operation activates the specified redemption code.
 
 ## Method Parameters
 
-| Parameter      | Description                  |
-| -------------- | ---------------------------- |
-| scanCode       | The scan code.               |
-| codeType       | The code type.               |
-| customCodeInfo | Optional custom information. |
+| Parameter      | Description                                                                                     |
+| -------------- | ----------------------------------------------------------------------------------------------- |
+| scanCode       | The scan code. Also referred to as a _Promo Code_ in the Design Portal.                         |
+| codeType       | The single-use ('personal') code type. Corresponds to the _Campaign Name_ in the Design Portal. |
+| customCodeInfo | Optional custom information.                                                                    |
 
 ## Usage
 

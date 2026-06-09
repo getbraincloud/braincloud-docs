@@ -12,11 +12,11 @@ This operation invalidates the specified redemption code.
 
 ## Method Parameters
 
-| Parameter          | Description                  |
-| ------------------ | ---------------------------- |
-| scanCode           | The scan code.               |
-| codeType           | The code type.               |
-| invalidationReason | Optional custom information. |
+| Parameter          | Description                                                                                     |
+| ------------------ | ----------------------------------------------------------------------------------------------- |
+| scanCode           | The scan code.                                                                                  |
+| codeType           | The personal ('single-use') code type. Corresponds to the _Campaign Name_ in the Design Portal. |
+| invalidationReason | Optional custom information.                                                                    |
 
 ## Usage
 
