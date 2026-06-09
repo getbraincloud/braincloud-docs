@@ -62,6 +62,9 @@ The control scenario is what you measure your variants against. If variant `"a"`
 
 ### API Summary
 
-* [GetMyCampaigns](/api/capi/campaign/getmycampaigns) - Returns the list of campaigns the current player is participating in, including their assigned scenario and campaign details.
+- [GetMyCampaigns](/api/capi/campaign/getmycampaigns) - Returns the list of campaigns the current player is participating in, including their assigned scenario and campaign details.
+- [SysTriggerCampaignForUser](/api/capi/campaign/systriggercampaignforuser) - Triggers a campaign scenario for a specific player, bypassing normal eligibility constraints. Player must be flagged as a tester.
+- [SysRemoveCampaignForUser](/api/capi/campaign/sysremovecampaignforuser) - Removes a player's participation in a specific campaign.
+- [SysRemoveAllCampaignsForUser](/api/capi/campaign/sysremoveallcampaignsforuser) - Removes a player's participation in all campaigns.
 
 <DocCardList />
