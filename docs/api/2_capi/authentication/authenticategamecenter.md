@@ -101,7 +101,25 @@ BCErrorCompletionBlock failureBlock; // define callback
 ```
 
 ```java
-// N/A
+String gameCenterId = "userGameCenterId"; // PlayerId, GamePlayerId, or TeamPlayerId
+boolean forceCreate = true;
+long timestamp = 0;             // from GKLocalPlayer identity verification
+String publicKeyUrl = "";       // from GKLocalPlayer identity verification
+byte[] signature = null;        // from GKLocalPlayer GetSignature()
+byte[] salt = null;             // from GKLocalPlayer GetSalt()
+String teamPlayerId = "";       // only if gameCenterId is not TeamPlayerId
+this; // implements IServerCallback
+
+<%= data.branding.codePrefix %>.getAuthenticationService().authenticateGameCenter(gameCenterId, forceCreate, timestamp, publicKeyUrl, signature, salt, teamPlayerId, this);
+
+public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
+{
+    System.out.print(String.format("Success | %s", jsonData.toString()));
+}
+public void serverError(ServiceName serviceName, ServiceOperation serviceOperation, int statusCode, int reasonCode, String jsonError)
+{
+    System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
+}
 ```
 
 ```mdx-code-block

@@ -8,7 +8,7 @@ Detach the Game Center identity from the current profile.
 
 | Parameter    | Description                                                                            |
 | ------------ | -------------------------------------------------------------------------------------- |
-| gameCenterId | The player's game center id (use the playerID property from the local GKPlayer object) |
+| gameCenterId | The user's Game Center ID — can be the PlayerId, GamePlayerId, or TeamPlayerId from the GKLocalPlayer object |
 | continueAnon | Proceed even if the profile will revert to anonymous?                                  |
 
 ## Usage
