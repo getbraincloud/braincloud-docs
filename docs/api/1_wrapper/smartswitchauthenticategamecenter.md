@@ -193,7 +193,7 @@ end
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
+```cfscript
 // N/A
 ```
 
@@ -202,7 +202,7 @@ end
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
+```r
 // N/A
 ```
 
@@ -215,7 +215,7 @@ end
 <details>
 <summary>JSON Response</summary>
 
-```javascript
+```json
 var gameCenterId = "userGameCenterId";
 var forceCreate = true;
 

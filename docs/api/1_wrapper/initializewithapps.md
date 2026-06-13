@@ -157,17 +157,8 @@ local appId = "123456"
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
-var secret = <%= data.example.appSecret %>;
-var appId = <%= data.example.appId %>;
-var childSecret = <%= data.example.appChildSecret %>;
-var childAppId = <%= data.example.appChildId %>;
-var secretMap = {};
-secretMap[appId] = secret;
-secretMap[childAppId] = childSecret;
-var version = <%= data.example.appVersion %>;
-
-<%= data.branding.codePrefix %>.initializeWithApps(appId, secretMap, version);
+```cfscript
+// N/A
 ```
 
 ```mdx-code-block
@@ -175,17 +166,8 @@ var version = <%= data.example.appVersion %>;
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
-var secret = <%= data.example.appSecret %>;
-var appId = <%= data.example.appId %>;
-var childSecret = <%= data.example.appChildSecret %>;
-var childAppId = <%= data.example.appChildId %>;
-var secretMap = {};
-secretMap[appId] = secret;
-secretMap[childAppId] = childSecret;
-var version = <%= data.example.appVersion %>;
-
-<%= data.branding.codePrefix %>.initializeWithApps(appId, secretMap, version);
+```r
+// N/A
 ```
 
 ```mdx-code-block
@@ -197,7 +179,7 @@ var version = <%= data.example.appVersion %>;
 <details>
 <summary>JSON Response</summary>
 
-```javascript
+```json
 
 ```
 </details>

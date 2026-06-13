@@ -136,7 +136,7 @@ local appId = "123456"
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
+```cfscript
 // N/A
 ```
 
@@ -145,7 +145,7 @@ local appId = "123456"
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
+```r
 // N/A
 ```
 
@@ -158,7 +158,7 @@ local appId = "123456"
 <details>
 <summary>JSON Response</summary>
 
-```javascript
+```json
 
 ```
 </details>

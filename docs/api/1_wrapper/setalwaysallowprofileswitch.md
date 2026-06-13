@@ -80,8 +80,8 @@ alwaysAllow | Controls whether the profile ID is passed in with non-anonymous au
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
-<%= data.branding.codePrefix %>.setAlwaysAllowProfileSwitch(true);
+```cfscript
+// N/A
 ```
 
 ```mdx-code-block
@@ -89,8 +89,8 @@ alwaysAllow | Controls whether the profile ID is passed in with non-anonymous au
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
-<%= data.branding.codePrefix %>.setAlwaysAllowProfileSwitch(true);
+```r
+// N/A
 ```
 
 ```mdx-code-block
@@ -102,7 +102,7 @@ alwaysAllow | Controls whether the profile ID is passed in with non-anonymous au
 <details>
 <summary>JSON Response</summary>
 
-```javascript
+```json
 <%= data.branding.codePrefix %>.setAlwaysAllowProfileSwitch(true);
 ```
 </details>

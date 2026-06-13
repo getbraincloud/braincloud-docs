@@ -76,7 +76,7 @@ Resets the profile ID to empty string.
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
+```cfscript
 // N/A
 ```
 
@@ -85,7 +85,7 @@ Resets the profile ID to empty string.
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
+```r
 // N/A
 ```
 
@@ -98,7 +98,7 @@ Resets the profile ID to empty string.
 <details>
 <summary>JSON Response</summary>
 
-```javascript
+```json
 <%= data.branding.codePrefix %>.resetStoredProfileId();
 ```
 </details>

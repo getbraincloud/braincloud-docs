@@ -75,8 +75,8 @@ local anonymousId = <%= data.branding.codePrefix %>:getStoredAnonymousId()
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
-var anonymousId = <%= data.branding.codePrefix %>.getStoredAnonymousId();
+```cfscript
+// N/A
 ```
 
 ```mdx-code-block
@@ -84,8 +84,8 @@ var anonymousId = <%= data.branding.codePrefix %>.getStoredAnonymousId();
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
-var anonymousId = <%= data.branding.codePrefix %>.getStoredAnonymousId();
+```r
+// N/A
 ```
 
 ```mdx-code-block
@@ -97,7 +97,7 @@ var anonymousId = <%= data.branding.codePrefix %>.getStoredAnonymousId();
 <details>
 <summary>JSON Response</summary>
 
-```javascript
+```json
 var anonymousId = <%= data.branding.codePrefix %>.getStoredAnonymousId();
 ```
 </details>

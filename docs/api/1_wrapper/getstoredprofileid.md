@@ -75,8 +75,8 @@ local profileId = <%= data.branding.codePrefix %>:getStoredProfileId()
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
-var profileId = <%= data.branding.codePrefix %>.getStoredProfileId();
+```cfscript
+// N/A
 ```
 
 ```mdx-code-block
@@ -84,8 +84,8 @@ var profileId = <%= data.branding.codePrefix %>.getStoredProfileId();
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
-var profileId = <%= data.branding.codePrefix %>.getStoredProfileId();
+```r
+// N/A
 ```
 
 ```mdx-code-block
@@ -97,7 +97,7 @@ var profileId = <%= data.branding.codePrefix %>.getStoredProfileId();
 <details>
 <summary>JSON Response</summary>
 
-```javascript
+```json
 var profileId = <%= data.branding.codePrefix %>.getStoredProfileId();
 ```
 </details>

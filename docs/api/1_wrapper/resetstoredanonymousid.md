@@ -76,8 +76,8 @@ Resets the anonymous ID to empty string.  When the anonymousId is empty a new on
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
-<%= data.branding.codePrefix %>.resetStoredAnonymousId();
+```cfscript
+// N/A
 ```
 
 ```mdx-code-block
@@ -85,8 +85,8 @@ Resets the anonymous ID to empty string.  When the anonymousId is empty a new on
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
-<%= data.branding.codePrefix %>.resetStoredAnonymousId();
+```r
+// N/A
 ```
 
 ```mdx-code-block
@@ -98,7 +98,7 @@ Resets the anonymous ID to empty string.  When the anonymousId is empty a new on
 <details>
 <summary>JSON Response</summary>
 
-```javascript
+```json
 <%= data.branding.codePrefix %>.resetStoredAnonymousId();
 ```
 </details>

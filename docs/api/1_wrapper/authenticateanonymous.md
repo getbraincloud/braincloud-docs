@@ -114,12 +114,8 @@ end
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
-<%= data.branding.codePrefix %>.authenticateAnonymous(result =>
-{
-    var status = result.status;
-    console.log(status + " : " + JSON.stringify(result, null, 2));
-});
+```cfscript
+// N/A
 ```
 
 ```mdx-code-block
@@ -127,12 +123,8 @@ end
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
-<%= data.branding.codePrefix %>.authenticateAnonymous(result =>
-{
-    var status = result.status;
-    console.log(status + " : " + JSON.stringify(result, null, 2));
-});
+```r
+// N/A
 ```
 
 ```mdx-code-block

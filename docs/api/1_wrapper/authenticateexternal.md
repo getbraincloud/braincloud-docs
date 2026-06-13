@@ -174,17 +174,8 @@ end
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
-var userId = "externalId";
-var token = "externalTokenOrPassword";
-var externalAuthName = "nameOfExternalAuthService";
-var forceCreate = true;
-
-<%= data.branding.codePrefix %>.authenticateExternal(userId, token, externalAuthName, forceCreate, result =>
-{
-    var status = result.status;
-    console.log(status + " : " + JSON.stringify(result, null, 2));
-});
+```cfscript
+// N/A
 ```
 
 ```mdx-code-block
@@ -192,17 +183,8 @@ var forceCreate = true;
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
-var userId = "externalId";
-var token = "externalTokenOrPassword";
-var externalAuthName = "nameOfExternalAuthService";
-var forceCreate = true;
-
-<%= data.branding.codePrefix %>.authenticateExternal(userId, token, externalAuthName, forceCreate, result =>
-{
-    var status = result.status;
-    console.log(status + " : " + JSON.stringify(result, null, 2));
-});
+```r
+// N/A
 ```
 
 ```mdx-code-block

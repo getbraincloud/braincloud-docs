@@ -78,8 +78,8 @@ BCErrorCompletionBlock failureBlock; // define callback
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
-<%= data.branding.codePrefix %>.canReconnect();
+```cfscript
+// N/A
 ```
 
 ```mdx-code-block
@@ -87,8 +87,8 @@ BCErrorCompletionBlock failureBlock; // define callback
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
-<%= data.branding.codePrefix %>.canReconnect();
+```r
+// N/A
 ```
 
 ```mdx-code-block

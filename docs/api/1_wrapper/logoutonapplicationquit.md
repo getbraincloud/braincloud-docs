@@ -74,7 +74,7 @@ Logs out user in one frame, meant to be used when OnApplicationQuit() occurs in 
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
+```cfscript
 // N/A
 ```
 
@@ -83,7 +83,7 @@ Logs out user in one frame, meant to be used when OnApplicationQuit() occurs in 
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
+```r
 // N/A
 ```
 

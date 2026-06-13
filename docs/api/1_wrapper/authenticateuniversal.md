@@ -162,16 +162,8 @@ end
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
-var userId = "<%= data.example.userId %>";
-var password = "<%= data.example.password %>";
-var forceCreate = true;
-
-<%= data.branding.codePrefix %>.authenticateUniversal(userId, password, forceCreate, result =>
-{
-    var status = result.status;
-    console.log(status + " : " + JSON.stringify(result, null, 2));
-});
+```cfscript
+// N/A
 ```
 
 ```mdx-code-block
@@ -179,16 +171,8 @@ var forceCreate = true;
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
-var userId = "<%= data.example.userId %>";
-var password = "<%= data.example.password %>";
-var forceCreate = true;
-
-<%= data.branding.codePrefix %>.authenticateUniversal(userId, password, forceCreate, result =>
-{
-    var status = result.status;
-    console.log(status + " : " + JSON.stringify(result, null, 2));
-});
+```r
+// N/A
 ```
 
 ```mdx-code-block

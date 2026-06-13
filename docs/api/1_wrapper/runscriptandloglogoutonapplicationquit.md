@@ -67,7 +67,7 @@ string jsonScriptData = "{\"key\":\"value\"}";
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
+```cfscript
 // N/A
 ```
 
@@ -76,7 +76,7 @@ string jsonScriptData = "{\"key\":\"value\"}";
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
+```r
 // N/A
 ```
 

@@ -78,8 +78,8 @@ local allowSwitch = <%= data.branding.codePrefix %>.alwaysAllowProfileSwitch
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
-var allowSwitch = <%= data.branding.codePrefix %>.getAlwaysAllowProfileSwitch();
+```cfscript
+// N/A
 ```
 
 ```mdx-code-block
@@ -87,8 +87,8 @@ var allowSwitch = <%= data.branding.codePrefix %>.getAlwaysAllowProfileSwitch();
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
-var allowSwitch = <%= data.branding.codePrefix %>.getAlwaysAllowProfileSwitch();
+```r
+// N/A
 ```
 
 ```mdx-code-block
@@ -100,7 +100,7 @@ var allowSwitch = <%= data.branding.codePrefix %>.getAlwaysAllowProfileSwitch();
 <details>
 <summary>JSON Response</summary>
 
-```javascript
+```json
 var allowSwitch = <%= data.branding.codePrefix %>.getAlwaysAllowProfileSwitch();
 ```
 </details>

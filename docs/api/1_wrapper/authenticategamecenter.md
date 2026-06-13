@@ -196,8 +196,8 @@ end
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
-// /N/A
+```cfscript
+// N/A
 ```
 
 ```mdx-code-block
@@ -205,8 +205,8 @@ end
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
-// /N/A
+```r
+// N/A
 ```
 
 ```mdx-code-block

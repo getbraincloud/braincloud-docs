@@ -83,7 +83,7 @@ However, if you are not using Unity or not using the <%= data.branding.codeWrapp
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
+```cfscript
 // N/A
 ```
 
@@ -92,7 +92,7 @@ However, if you are not using Unity or not using the <%= data.branding.codeWrapp
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
+```r
 // N/A
 ```
 
@@ -105,7 +105,7 @@ However, if you are not using Unity or not using the <%= data.branding.codeWrapp
 <details>
 <summary>JSON Response</summary>
 
-```javascript
+```json
 // N/A
 ```
 </details>

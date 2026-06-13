@@ -78,8 +78,8 @@ profileId | The profile ID to set
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
-<%= data.branding.codePrefix %>.setStoredProfileId("1234-1234-1234-1234");
+```cfscript
+// N/A
 ```
 
 ```mdx-code-block
@@ -87,8 +87,8 @@ profileId | The profile ID to set
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
-<%= data.branding.codePrefix %>.setStoredProfileId("1234-1234-1234-1234");
+```r
+// N/A
 ```
 
 ```mdx-code-block
@@ -100,7 +100,7 @@ profileId | The profile ID to set
 <details>
 <summary>JSON Response</summary>
 
-```javascript
+```json
 <%= data.branding.codePrefix %>.setStoredProfileId("1234-1234-1234-1234");
 ```
 </details>
