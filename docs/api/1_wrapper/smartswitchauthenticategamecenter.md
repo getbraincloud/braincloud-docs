@@ -54,12 +54,20 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 ```
 
 ```cpp
-const char* gameCenterId = "userGameCenterId";
+const char* gameCenterId = "userGameCenterId"; // playerId, gamePlayerId, or teamPlayerId
+bool forceCreate = true;
+uint64_t timestamp = 0;           // from GKLocalPlayer identity verification
+std::string publicKeyUrl = "";    // from GKLocalPlayer identity verification
+const uint8_t* signature = NULL;  // from GKLocalPlayer GetSignature()
+size_t signatureLength = 0;
+const uint8_t* salt = NULL;       // from GKLocalPlayer GetSalt()
+size_t saltLength = 0;
+std::string teamPlayerId = "";    // only if gameCenterId is not teamPlayerId
 
 <%= data.branding.codePrefix %>->smartSwitchAuthenticateGameCenter(
-    gameCenterId,
-    true,
-    this);
+    gameCenterId, forceCreate, timestamp, publicKeyUrl,
+    signature, signatureLength, salt, saltLength,
+    teamPlayerId, this);
 ```
 
 ```mdx-code-block
@@ -105,10 +113,17 @@ BCErrorCompletionBlock failureBlock; // define callback
 ```
 
 ```javascript
-var gameCenterId = "userGameCenterId";
+var gameCenterId = "userGameCenterId"; // playerId, gamePlayerId, or teamPlayerId
 var forceCreate = true;
+var timestamp = 0;          // from GKLocalPlayer identity verification
+var publicKeyUrl = "";      // from GKLocalPlayer identity verification
+var signature = null;       // from GKLocalPlayer GetSignature()
+var salt = null;            // from GKLocalPlayer GetSalt()
+var teamPlayerId = "";      // only if gameCenterId is not teamPlayerId
 
-<%= data.branding.codePrefix %>.smartSwitchAuthenticateGameCenter(gameCenterId, forceCreate, result =>
+<%= data.branding.codePrefix %>.smartSwitchAuthenticateGameCenter(
+    gameCenterId, forceCreate, timestamp, publicKeyUrl,
+    signature, salt, teamPlayerId, result =>
 {
     var status = result.status;
     console.log(status + " : " + JSON.stringify(result, null, 2));
@@ -121,12 +136,22 @@ var forceCreate = true;
 ```
 
 ```dart
-var gameCenterId = "userGameCenterId";
+var gameCenterId = "userGameCenterId"; // playerId, gamePlayerId, or teamPlayerId
 var forceCreate = true;
+int timestamp = 0;             // from GKLocalPlayer identity verification
+String publicKeyUrl = "";      // from GKLocalPlayer identity verification
+List<int>? signature = null;   // from GKLocalPlayer GetSignature()
+List<int>? salt = null;        // from GKLocalPlayer GetSalt()
+String teamPlayerId = "";      // only if gameCenterId is not teamPlayerId
 
 ServerResponse result = await <%= data.branding.codePrefix %>.smartSwitchAuthenticateGameCenter(
-    gameCenterId:gameCenterId, 
-    forceCreate:forceCreate);
+    gameCenterId: gameCenterId,
+    forceCreate: forceCreate,
+    timestamp: timestamp,
+    publicKeyUrl: publicKeyUrl,
+    signature: signature,
+    salt: salt,
+    teamPlayerId: teamPlayerId);
 
 if (result.statusCode == 200) {
     print("Success");    
@@ -142,8 +167,13 @@ if (result.statusCode == 200) {
 ```
 
 ```lua
-local gameCenterId = "userGameCenterId"
+local gameCenterId = "userGameCenterId" -- playerId, gamePlayerId, or teamPlayerId
 local forceCreate = true
+local timestamp = 0          -- from GKLocalPlayer identity verification
+local publicKeyUrl = ""      -- from GKLocalPlayer identity verification
+local signature = nil        -- from GKLocalPlayer GetSignature()
+local salt = nil             -- from GKLocalPlayer GetSalt()
+local teamPlayerId = ""      -- only if gameCenterId is not teamPlayerId
 
 local callback = function(result)
     if result.statusCode == 200 then
@@ -153,7 +183,9 @@ local callback = function(result)
     end
 end
 
-<%= data.branding.codePrefix %>:smartSwitchAuthenticateGameCenter(gameCenterId, forceCreate, callback)
+<%= data.branding.codePrefix %>:smartSwitchAuthenticateGameCenter(
+    gameCenterId, forceCreate, timestamp, publicKeyUrl,
+    signature, salt, teamPlayerId, callback)
 ```
 
 ```mdx-code-block
