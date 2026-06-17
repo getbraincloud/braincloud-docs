@@ -31,7 +31,7 @@ brainCloudContext | Data provided by brainCloud when the server instance was lau
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -72,6 +72,15 @@ brainCloudContext | Data provided by brainCloud when the server instance was lau
 
 ```lua
 // N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

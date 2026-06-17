@@ -46,7 +46,7 @@ bool wipeExisting = false;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -145,6 +145,26 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getPlayerStateService():updateAttributes(attributes, wipeExisting, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var attributes = {
+    "key1": "value1",
+    "key2": "value2"
+}
+var wipe_existing = false
+
+var result = await <%= data.branding.codePrefix %>.player_state_service.update_attributes(attributes, wipe_existing)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

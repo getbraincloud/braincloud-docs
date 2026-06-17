@@ -35,7 +35,7 @@ RTTCallback rttCallback = response =>
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -83,6 +83,15 @@ local rttCallBack = function(jsonResponse)
 end
 
 <%= data.branding.codePrefix %>:getRttService():registerRTTMessagingCallback(rttCallback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

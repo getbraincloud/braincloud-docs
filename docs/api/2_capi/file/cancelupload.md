@@ -35,7 +35,7 @@ const char* myUploadId = "1234-1234-1234-1234"; //From UploadFile return data
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -96,6 +96,15 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getFileService():cancelUpload(uploadId, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

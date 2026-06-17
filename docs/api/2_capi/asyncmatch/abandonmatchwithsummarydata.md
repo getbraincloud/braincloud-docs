@@ -57,7 +57,7 @@ const char *summary = "{\"abandonBy\":{\"display\":\"Match abandoned by John Doe
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -177,6 +177,31 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getAsyncMatchService():abandonMatchWithSummaryData(ownerId, matchId, pushContent, summary, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var owner_id = "the-owner-id"
+var match_id = "the-match-id"
+var push_content = "An async-match has been abandoned!"
+var summary = {
+  "abandonBy": {
+    "display": "Match abandoned by John Doe.",
+    "player": 2,
+    "reason": "forfeit"
+  }
+}
+
+var result = await <%= data.branding.codePrefix %>.async_match_service.abandon_match_with_summary_data(owner_id, match_id, push_content, summary)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

@@ -62,7 +62,7 @@ const char *jsonStatistics = "{\"statsName\":\"statValue\"}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -195,6 +195,32 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getAsyncMatchService():submitTurn(ownerId, matchId, version, jsonMatchState, pushNotificationMessage, nextPlayer, jsonSummary, jsonStatistics, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var owner_id = "internalPlayerId"
+var match_id = "matchId"
+var json_match_state = {}
+var push_notification_message = "You have been entered into an async-match!"
+var next_player = "player2Id"
+var json_summary = {
+    "Address": "South Africa"
+}
+var json_statistics = {
+    "statsName": "statValue"
+}
+
+var result = await <%= data.branding.codePrefix %>.async_match_service.submit_turn(owner_id, match_id, version, json_match_state, push_notification_message, next_player, json_summary, json_statistics)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

@@ -52,7 +52,7 @@ bool updateContactEmail = true;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -154,6 +154,25 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getIdentityService():changeEmailIdentity(oldEmailAddress, authenticationToken, newEmailAddress, updateContactEmail, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var old_email_address = "oldemail@email.com"
+var authentication_token = "password"
+var new_email_address = "newemail@email.com"
+var update_contact_email = true
+
+var result = await <%= data.branding.codePrefix %>.identity_service.change_email_identity(old_email_address, authentication_token, new_email_address, update_contact_email)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

@@ -44,7 +44,7 @@ const char *friendId = "profileId";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -128,6 +128,22 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getFriendService():readFriendUserState(friendId, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var friend_id = "profileId"
+
+var result = await <%= data.branding.codePrefix %>.friend_service.read_friend_user_state(friend_id)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

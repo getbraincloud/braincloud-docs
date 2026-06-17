@@ -31,7 +31,7 @@ Maintains the user's session alive by automatically calling the reconnect method
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -78,6 +78,15 @@ BCErrorCompletionBlock failureBlock; // define callback
 
 ```lua
 <%= data.branding.codePrefix %>:enableAutoReconnect(true)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

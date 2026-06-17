@@ -56,7 +56,7 @@ const struct *roundStartedTime = gmtime(&t);
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -164,6 +164,15 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getTournamentService():postTournamentScoreUTC(leaderboardId, score, jsonData, roundStartedTime, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

@@ -51,7 +51,7 @@ const char *jsonData = "{\"field1\":-1.5,\"field2\":{\"field2-1\":6,\"field2-new
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -168,6 +168,15 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getGroupService():incrementGroupEntityData(groupId, entityId, jsonData, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

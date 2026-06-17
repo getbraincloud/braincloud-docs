@@ -47,7 +47,7 @@ profileIds.push_back("profileId2");
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -131,6 +131,22 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getFriendService():getUsersOnlineStatus(profileIds, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var profile_ids = [ "profileId1", "profileId2" ]
+
+var result = await <%= data.branding.codePrefix %>.friend_service.get_users_online_status(profile_ids)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

@@ -46,7 +46,7 @@ int pageOffset = 1;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -136,6 +136,23 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getItemCatalogService():getCatalogItemsPageOffset(context, pageOffset, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var context = "eyJzZWFyY2hDcml0ZXJpYSI6eyJlbnRpdHlUeXBlIjp7IiRyZWdleCI6Ii4qaWxkLioiLCIkb3B0"
+var page_offset = 1
+
+var result = await <%= data.branding.codePrefix %>.item_catalog_service.get_catalog_items_page_offset(context, page_offset)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

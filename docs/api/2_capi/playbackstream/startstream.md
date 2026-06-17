@@ -47,7 +47,7 @@ bool includeSharedData = false;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -137,6 +137,23 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getPlaybackStreamService():startStream(targetPlayerId, includeSharedData, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var target_player_id = "player"
+var include_shared_data = false
+
+var result = await <%= data.branding.codePrefix %>.playback_stream_service.start_stream(target_player_id, include_shared_data)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

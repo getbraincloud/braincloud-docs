@@ -46,7 +46,7 @@ summaryData | Public summary data for the group that is viewable even by non-mem
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -87,6 +87,15 @@ summaryData | Public summary data for the group that is viewable even by non-mem
 
 ```lua
 // N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

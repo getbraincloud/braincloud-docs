@@ -32,7 +32,7 @@ alwaysAllow | Controls whether the profile ID is passed in with non-anonymous au
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -73,6 +73,15 @@ alwaysAllow | Controls whether the profile ID is passed in with non-anonymous au
 
 ```lua
 <%= data.branding.codePrefix %>.alwaysAllowProfileSwitch = true
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

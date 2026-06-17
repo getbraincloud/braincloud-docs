@@ -75,7 +75,7 @@ const char *jsonSummary = "{\"Address\": \"South Africa\"}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -216,6 +216,37 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getAsyncMatchService():createMatchWithInitialTurn(jsonOpponentIds, jsonMatchState, pushNotificationMessage, nextPlayer, jsonSummary, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var json_opponent_ids = [
+    {
+        "platform": "BC",
+        "id": "profile ID-1"
+    },
+    {
+        "platform": "FB",
+        "id": "Facebook ID-1"
+    }
+]
+var json_match_state = {}
+var push_notification_message = "You have been entered into an async-match!"
+var next_player = "Facebook ID-1"
+var json_summary = {
+    "Address": "South Africa"
+}
+
+var result = await <%= data.branding.codePrefix %>.async_match_service.create_match_with_initial_turn(json_opponent_ids, json_match_state, push_notification_message, next_player, json_summary)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

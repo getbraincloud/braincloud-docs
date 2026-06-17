@@ -47,7 +47,7 @@ int notificationTemplateId = 1;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -137,6 +137,23 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getPushNotificationService():sendRichPushNotification(toProfileId, notificationTemplateId, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var to_profile_id = "profile1"
+var notification_template_id = 1
+
+var result = await <%= data.branding.codePrefix %>.push_notification_service.send_rich_push_notification(to_profile_id, notification_template_id)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

@@ -68,7 +68,7 @@ const char* appName = <%= data.example.appName %>;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -150,6 +150,20 @@ If  **updateTick** is greater than `0` a built-in run loop timer is started and 
 local secretMap = {["12345"] = "1234-1234-1234-1234",["67890"] = "4321-4321-4321-4321"}
 local appId = "123456"
 <%= data.branding.codePrefix %>:initWithApps(secretMap, appId, "1.0.0", 50)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var result = await <%= data.branding.codePrefix %>.init_with_apps(secretMap, appId, "1.0.0", 50))
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

@@ -47,7 +47,7 @@ int tokenTtlInMinutes = 1440;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -137,6 +137,23 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getAuthenticationService():resetEmailPasswordWithExpiry(emailAddress, tokenTtlInMinutes, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var email_address = "email@email.com"
+var token_ttl_in_minutes = 1440
+
+var result = await <%= data.branding.codePrefix %>.authentication_service.reset_email_password_with_expiry(email_address, token_ttl_in_minutes)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

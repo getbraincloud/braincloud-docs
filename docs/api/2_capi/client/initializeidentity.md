@@ -39,7 +39,7 @@ InitializeIdentity must be called before you can authenticate a user anonymously
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -80,6 +80,15 @@ InitializeIdentity must be called before you can authenticate a user anonymously
 
 ```lua
 <%= data.branding.codePrefix %>:initializeIdentity("myProfileId", "myAnonymousId")
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

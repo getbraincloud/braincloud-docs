@@ -49,7 +49,7 @@ int eventMultiplier = 100;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -139,6 +139,23 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getPlayerStatisticsEventService():triggerStatsEvent(eventName, eventMultiplier, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var event_name = "GrantExperience"
+var event_multiplier = 100
+
+var result = await <%= data.branding.codePrefix %>.player_statistics_event_service.trigger_stats_event(event_name, event_multiplier)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

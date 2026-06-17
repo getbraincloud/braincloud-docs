@@ -54,7 +54,7 @@ bool forceCreate = true;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -151,6 +151,24 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getAuthenticationService():AuthenticateApple(appleUserId, identityToken, forceCreate, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var apple_user_id = "00123.xxxxxxxx"
+var identity_token = "identityTokenFromApple"
+var force_create = true
+
+var result = await <%= data.branding.codePrefix %>.authentication_service.authenticate_apple(apple_user_id, identity_token, force_create)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

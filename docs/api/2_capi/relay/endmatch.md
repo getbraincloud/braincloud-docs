@@ -43,7 +43,7 @@ const char* payloadJson = "{\"key\":\"value\"}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```cpp
@@ -109,6 +109,22 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getRelayService():endMatch(payloadJson, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var payload_json = {"key":"value"}
+
+var result = await <%= data.branding.codePrefix %>.relay_service.end_match(payload_json)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

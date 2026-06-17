@@ -44,7 +44,7 @@ const char *customRedemptionInfo = "{}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -140,6 +140,15 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getRedemptionCodeService():redeemCode(scanCode, codeType, customRedemptionInfo, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

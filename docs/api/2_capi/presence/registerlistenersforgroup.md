@@ -48,7 +48,7 @@ bool bidirectional = true;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -138,6 +138,23 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getPresenceService():registerListenersForGroup(groupId, bidirectional, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var group_id = "aaa-bbb-ccc-ddd"
+var bidirectional = true
+
+var result = await <%= data.branding.codePrefix %>.presence_service.register_listeners_for_group(group_id, bidirectional)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

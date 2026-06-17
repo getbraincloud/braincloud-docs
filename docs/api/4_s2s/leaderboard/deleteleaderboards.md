@@ -51,7 +51,7 @@ Deletes the specified leaderboards from <%= data.branding.productName %> server.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -92,6 +92,15 @@ Deletes the specified leaderboards from <%= data.branding.productName %> server.
 
 ```lua
 // N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

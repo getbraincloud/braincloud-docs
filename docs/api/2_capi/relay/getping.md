@@ -25,7 +25,7 @@ Get the current ping for our user. Note: Pings are not distributed among other m
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```cpp
@@ -66,6 +66,20 @@ int pingTime = _bc.relayService.getPing();
 
 ```lua
 local pingTime = <%= data.branding.codePrefix %>:getRelayService():getPing()
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var result = await <%= data.branding.codePrefix %>.relay_service.get_ping()
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

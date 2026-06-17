@@ -53,7 +53,7 @@ const char *filename = "gfile";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -155,6 +155,25 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getGroupFileService():deleteFile(groupId, fileId, version, filename, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var group_id = "dfsfsffsd"
+var file_id = "xxxx"
+var version = 1
+var filename = "gfile"
+
+var result = await <%= data.branding.codePrefix %>.group_file_service.delete_file(group_id, file_id, version, filename)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

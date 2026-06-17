@@ -41,7 +41,7 @@ RSDataCallback rsDataCallback = (response) =>
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```cpp
@@ -99,6 +99,15 @@ for _, netId in ipairs({0, 2, 5}) do
 end
 
 <%= data.branding.codePrefix %>:getRelayService():sendToPlayers(bytes, mask, true, true, BrainCloudRelay.channelLowPriority)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

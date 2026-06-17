@@ -47,7 +47,7 @@ const char *cxId = "55555:aaa-bbb-ccc-ddd:asdfjkl";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -137,6 +137,23 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getLobbyService():removeMember(lobbyId, connectionId, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var lobby_id = "55555:4v4:19"
+var connection_id = "55555:aaa-bbb-ccc-ddd:asdfjkl"
+
+var result = await <%= data.branding.codePrefix %>.lobby_service.remove_member(lobby_id, connection_id)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

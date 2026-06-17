@@ -46,7 +46,7 @@ bool includeMetaData = false;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -136,6 +136,23 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getGamificationService():readQuestsByCategory(category, includeMetaData, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var category = "main"
+var include_meta_data = false
+
+var result = await <%= data.branding.codePrefix %>.gamification_service.read_quests_by_category(category, include_meta_data)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

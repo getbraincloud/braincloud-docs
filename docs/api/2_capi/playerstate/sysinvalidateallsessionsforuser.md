@@ -31,7 +31,7 @@ profileId | The profile ID of the user whose sessions should be invalidated.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -72,6 +72,15 @@ profileId | The profile ID of the user whose sessions should be invalidated.
 
 ```lua
 // Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

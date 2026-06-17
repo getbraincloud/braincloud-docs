@@ -85,7 +85,7 @@ const char *fieldsJson = "{\"goals\":3,\"assists\":5}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -196,6 +196,28 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getCustomEntityService():updateEntityFields(entityType, entityId, version, fieldsJson, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var entity_type = "athletes"
+var entity_id = "aaaa-bbbb-cccc-dddd"
+var version = 1
+var fields_json = {
+  "goals": 3,
+  "assists": 5
+}
+
+var result = await <%= data.branding.codePrefix %>.custom_entity_service.update_entity_fields(entity_type, entity_id, version, fields_json)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

@@ -46,7 +46,7 @@ const char *peerCode = "master";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -136,6 +136,23 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getVirtualCurrencyService():getPeerCurrency(vcId, peerCode, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var vc_id = "coins"
+var peer_code = "master"
+
+var result = await <%= data.branding.codePrefix %>.virtual_currency_service.get_peer_currency(peer_code)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

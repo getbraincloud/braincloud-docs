@@ -53,7 +53,7 @@ const char *jsonServiceParams = "{\"fromAddress\":\"email@company.com\",\"fromNa
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -212,6 +212,46 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getMailService():sendAdvancedEmail(profileId, serviceParams, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var profile_id = "f7144cc0-b996-440f-8459-21b0ecb91a10"
+var json_service_params = {
+    "fromAddress": "email@company.com",
+    "fromName": "Jane Doe",
+    "replyToAddress": "optional@company.com",
+    "replyToName": "Optional ReplyTo",
+    "templateId": "d-www-xxx-yyy-zzz",
+    "dynamicData": {
+        "user": {
+            "firstName": "John",
+            "lastName": "Doe"
+        },
+        "resetLink": "www.dummuyLink.io"
+    },
+    "categories": [
+        "category1",
+        "category2"
+    ],
+    "attachments": [
+        {
+            "content": "VGhpcyBhdHRhY2htZW50IHRleHQ=",
+            "filename": "attachment.txt"
+        }
+    ]
+}
+
+var result = await <%= data.branding.codePrefix %>.mail_service.send_advanced_email(profile_id, serviceParams)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

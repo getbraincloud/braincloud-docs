@@ -57,7 +57,7 @@ bool recordInHistory = true;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -153,6 +153,24 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getChatService():postChatMessageSimple(channelId, chatMessage, recordInHistory, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var channel_id = "22817:gl:CHAT_GROUPFINDER"
+var chat_message = "Hey, I am looking for new and experienced users to join our group."
+var record_in_history = true
+
+var result = await <%= data.branding.codePrefix %>.chat_service.post_chat_message_simple(channel_id, chat_message, record_in_history)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

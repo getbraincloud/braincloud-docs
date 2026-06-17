@@ -53,7 +53,7 @@ const char *jsonServiceParams = "{\"fromAddress\":\"email@company.com\",\"fromNa
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -226,6 +226,52 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getMailService():sendAdvancedEmailByAddress(emailAddress, serviceParams, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var email_address = "test@email.com"
+var service_params = {
+    "fromAddress": "email@company.com",
+    "fromName": "Jane Doe",
+    "replyToAddress": "optional@company.com",
+    "replyToName": "Optional ReplyTo",
+    "cc": [
+        "xxx@company.com"
+    ],
+    "bcc": [
+        "yyy@company.com"
+    ],
+    "templateId": "d-www-xxx-yyy-zzz",
+    "dynamicData": {
+        "user": {
+            "firstName": "John",
+            "lastName": "Doe"
+        },
+        "resetLink": "www.dummuyLink.io"
+    },
+    "categories": [
+        "category1",
+        "category2"
+    ],
+    "attachments": [
+        {
+            "content": "VGhpcyBhdHRhY2htZW50IHRleHQ=",
+            "filename": "attachment.txt"
+        }
+    ]
+}
+
+var result = await <%= data.branding.codePrefix %>.mail_service.send_advanced_email_by_address(email_address, service_params)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

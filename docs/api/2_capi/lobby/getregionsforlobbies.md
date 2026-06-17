@@ -45,7 +45,7 @@ lobbyTypes.push_back("4v4");
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -129,6 +129,22 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getLobbyService():getRegionsForLobbies(lobbyTypes, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var lobby_types = [ "2v2", "4v4" ]
+
+var result = await <%= data.branding.codePrefix %>.lobby_service.get_regions_for_lobbies(lobby_types)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

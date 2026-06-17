@@ -42,7 +42,7 @@ const char * gameCenterId = "someId";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -107,6 +107,23 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getIdentityService():detachGameCenterIdentity(gameCenterId, continueAnon, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var game_center_id = "someId"
+var continue_anon = true
+
+var result = await <%= data.branding.codePrefix %>.identity_service.detach_game_center_identity(game_center_id, continue_anon)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

@@ -25,7 +25,7 @@ Deregisters the auto-reconnect callback, removing the handler previously set by 
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -66,6 +66,15 @@ Deregisters the auto-reconnect callback, removing the handler previously set by 
 
 ```lua
 <%= data.branding.codePrefix %>:deregisterAutoReconnectCallback()
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

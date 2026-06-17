@@ -47,7 +47,7 @@ const char *fileId = "fdsgfg";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -137,6 +137,23 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getGroupFileService():getCDNUrl(groupId, fileId, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var group_id = "dfsfsffsd"
+var file_id = "fdsgfg"
+
+var result = await <%= data.branding.codePrefix %>.group_file_service.get_cdn_url(group_id, file_id)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

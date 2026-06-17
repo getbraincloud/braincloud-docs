@@ -52,7 +52,7 @@ const char *jsonEntityData = "{\"street\":\"1309 Carling\"}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -166,6 +166,29 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getGlobalEntityService():createEntity(entityType, timeToLive, jsonEntityAcl, jsonEntityData, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var entity_type = "address"
+var time_to_live = -1
+var json_entity_acl = {
+    "other": 1
+}
+var json_entity_data = {
+    "street": "1309 Carling"
+}
+
+var result = await <%= data.branding.codePrefix %>.global_entity_service.create_entity(entity_type, time_to_live, json_entity_acl, json_entity_data)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

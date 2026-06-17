@@ -42,7 +42,7 @@ numDaysToRotate | Optional parameter for use only with DAYS rotation type
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -83,6 +83,15 @@ numDaysToRotate | Optional parameter for use only with DAYS rotation type
 
 ```lua
 // N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

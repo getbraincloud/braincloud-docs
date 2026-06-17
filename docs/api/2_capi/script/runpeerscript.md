@@ -56,7 +56,7 @@ const char *peer = "serviceCode";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -158,6 +158,26 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getScriptService():runPeerScript(scriptName, scriptData, peer, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var script_name = "path/to/script1"
+var script_data = {
+    "parm": "value"
+}
+var peer = "serviceCode"
+
+var result = await <%= data.branding.codePrefix %>.script_service.run_peer_script(script_name, script_data, peer)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

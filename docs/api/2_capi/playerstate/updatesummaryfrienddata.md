@@ -47,7 +47,7 @@ const char *summaryFriendData = "{\"xp\":12,\"attributeName\":\"value\"}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -140,6 +140,25 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getPlayerStateService():updateSummaryFriendData(summaryFriendData, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var summary_friend_data = {
+    "xp": 12,
+    "attributeName": "value"
+}
+
+var result = await <%= data.branding.codePrefix %>.player_state_service.update_summary_friend_data(summary_friend_data)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

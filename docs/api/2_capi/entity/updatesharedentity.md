@@ -58,7 +58,7 @@ int version = -1;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -172,6 +172,28 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getEntityService():updateSharedEntity(entityId, targetProfileId, entityType, jsonEntityData, version, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var entity_id = "someEntityId"
+var target_profile_id = "someProfileId"
+var entity_type = "address"
+var json_entity_data = {
+    "street": "1309 Carling Avenue, Ottawa, ON"
+}
+var version = -1
+
+var result = await <%= data.branding.codePrefix %>.entity_service.update_shared_entity(entity_id, target_profile_id, entity_type, json_entity_data, version)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

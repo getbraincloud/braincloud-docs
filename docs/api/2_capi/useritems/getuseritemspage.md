@@ -46,7 +46,7 @@ bool includeDef = true;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -172,6 +172,35 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getUserItemsService():getUserItemsPage(context, includeDef, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var context = {
+  "pagination": {
+    "rowsPerPage": 50,
+    "pageNumber": 1
+  },
+  "searchCriteria": {
+    "defId": "sword001"
+  },
+  "sortCriteria": {
+    "createdAt": 1,
+    "updatedAt": -1
+  }
+}
+var include_def = true
+
+var result = await <%= data.branding.codePrefix %>.user_items_service.get_user_items_page(context, include_def)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

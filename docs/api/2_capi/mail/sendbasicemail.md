@@ -50,7 +50,7 @@ const char *body = "This is the body of the email";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -146,6 +146,24 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getMailService():sendBasicEmail(profileId, subject, body, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var profile_id = "f7144cc0-b996-440f-8459-21b0ecb91a10"
+var subject = "Basic email subject"
+var body = "This is the body of the email"
+
+var result = await <%= data.branding.codePrefix %>.mail_service.send_basic_email(profile_id, subject, body)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

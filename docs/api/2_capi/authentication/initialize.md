@@ -34,7 +34,7 @@ anonymousId | The anonymous installation ID that was generated for this device
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -83,6 +83,15 @@ String anonymousID = "anonId";
 
 ```lua
 <%= data.branding.codePrefix %>:getAuthenticationService():initialize(profileId, anonymousId)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

@@ -46,7 +46,7 @@ achievements.push_back("EGG_ACH10");
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -130,6 +130,22 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getGamificationService():awardAchievements(achievements, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var achievements = [ "EGG_ACH09", "EGG_ACH10" ]
+
+var result = await <%= data.branding.codePrefix %>.gamification_service.award_achievements(achievements)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

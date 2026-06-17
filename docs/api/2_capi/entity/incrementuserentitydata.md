@@ -46,7 +46,7 @@ const char *jsonData = "{\"field1\":-1.5,\"field2\":{\"field2-1\":6,\"field2-new
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -157,6 +157,30 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getEntityService():incrementUserEntityData(entityId, jsonData, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var entity_id = "a-entity-id"
+var json_data = {
+    "field1": -1.5,
+    "field2": {
+        "field2-1": 6,
+        "field2-new": 63.6
+    },
+    "field3-new": 3
+}
+
+var result = await <%= data.branding.codePrefix %>.entity_service.increment_user_entity_data(entity_id, json_data)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

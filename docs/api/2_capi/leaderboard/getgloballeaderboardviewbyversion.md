@@ -58,7 +58,7 @@ int versionId = -1;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -166,6 +166,26 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getLeaderboardService():getGlobalLeaderboardViewByVersion(leaderboardId, sortOrder, beforeCount, afterCount, versionId, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var leaderboard_id = "default"
+var sort_order = "HIGH_TO_LOW"
+var before_count = 3
+var after_count = 4
+var version_id = -1
+
+var result = await <%= data.branding.codePrefix %>.leaderboard_service.get_global_leaderboard_view_by_version(leaderboard_id, sort_order, before_count, after_count, version_id)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

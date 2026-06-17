@@ -68,7 +68,7 @@ const char* externalAuthName = "nameOfExternalAuthService";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -167,6 +167,15 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:authenticateExternal(userId, token, externalAuthName, forceCreate, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

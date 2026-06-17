@@ -55,7 +55,7 @@ bool useWebSocket = true;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -129,6 +129,15 @@ local failureCallback = function(jsonResponse)
 end
 
 <%= data.branding.codePrefix %>:getRttRegistrationService():enableRTT(successCallback, failureCallback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

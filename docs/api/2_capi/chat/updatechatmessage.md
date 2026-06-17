@@ -55,7 +55,7 @@ const char *contentJson = "{\"text\":\"New plain text message\",\"custom\":{\"so
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -172,6 +172,30 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getChatService():updateChatMessage(channelId, msgId, version, contentJson, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var channel_id = "55555:gl:bcDev"
+var msg_id = "123456789"
+var version = 1
+var content_json = {
+    "text": "New plain text message",
+    "custom": {
+        "somethingNew": "amazing"
+    }
+}
+
+var result = await <%= data.branding.codePrefix %>.chat_service.update_chat_message(channel_id, msg_id, version, content_json)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

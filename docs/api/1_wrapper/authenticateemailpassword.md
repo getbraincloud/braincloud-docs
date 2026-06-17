@@ -56,7 +56,7 @@ bool forceCreate = true;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -149,6 +149,24 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:authenticateEmailPassword(email, password, forceCreate, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var email = "<%= data.example.email %>"
+var password = "<%= data.example.password %>"
+var force_create = true
+
+var result = await <%= data.branding.codePrefix %>.authenticate_email_password(email, password, force_create)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

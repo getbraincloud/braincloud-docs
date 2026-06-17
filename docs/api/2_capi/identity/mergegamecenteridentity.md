@@ -62,7 +62,7 @@ std::string teamPlayerId = "";    // only if gameCenterId is not teamPlayerId
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -147,6 +147,25 @@ end
 <%= data.branding.codePrefix %>:getIdentityService():mergeGameCenterIdentity(
     gameCenterId, timestamp, publicKeyUrl,
     signature, salt, teamPlayerId, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var game_center_id = "someId"
+var timestamp = 0
+var public_key_url = ""
+var team_player_id = ""
+
+var result = await <%= data.branding.codePrefix %>.identity_service.merge_game_center_identity(game_center_id)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

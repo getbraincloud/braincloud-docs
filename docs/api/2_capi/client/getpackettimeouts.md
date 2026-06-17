@@ -25,7 +25,7 @@ std::vector<int> timeouts = <%= data.branding.codePrefix %>->getPacketTimeouts()
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -66,6 +66,15 @@ List<int> timeouts = <%= data.branding.codePrefix %>.getPacketTimeouts();
 
 ```lua
 <%= data.branding.codePrefix %>:getPacketTimeouts()
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

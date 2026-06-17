@@ -25,7 +25,7 @@ Clears any pending messages from communication library and clears all session in
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -66,6 +66,15 @@ Clears any pending messages from communication library and clears all session in
 
 ```lua
 <%= data.branding.codePrefix %>:resetCommunication()
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

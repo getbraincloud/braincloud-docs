@@ -49,7 +49,7 @@ const char *jsonExtraParams = "{\"parm1\":10}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -151,6 +151,24 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getMatchMakingService():findPlayersUsingFilter(rangeDelta, numMatches, jsonExtraParams, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var range_delta = 10
+var num_matches = 1
+var json_extra_params = { "parm1": 10 }
+
+var result = await <%= data.branding.codePrefix %>.match_making_service.find_players_using_filter(range_delta, num_matches, json_extra_params)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

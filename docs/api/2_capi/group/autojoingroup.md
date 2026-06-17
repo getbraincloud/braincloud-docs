@@ -57,7 +57,7 @@ const char *dataQueryJson = "{}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -153,6 +153,24 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getGroupService():autoJoinGroup(groupType, autoJoinStrategy, dataQueryJson, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var group_type = "a-group-type-name"
+var auto_join_strategy = "JoinRandomGroup"
+var data_query_json = {}
+
+var result = await <%= data.branding.codePrefix %>.group_service.auto_join_group(group_type, auto_join_strategy, data_query_json)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

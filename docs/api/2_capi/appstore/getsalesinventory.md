@@ -51,7 +51,7 @@ const char *userCurrency = "{\"userCurrency\":\"USD\"}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -147,6 +147,15 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getAppStoreService():getSalesInventory(storeId, userCurrency, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

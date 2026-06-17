@@ -51,7 +51,7 @@ const char *whereJson = "{\"entityType\":\"address\"}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -141,6 +141,24 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getEntityService():getListCount(whereJson, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var where_json = {
+    "entityType": "address"
+}
+
+var result = await <%= data.branding.codePrefix %>.entity_service.get_list_count(where_json)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

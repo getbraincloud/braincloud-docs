@@ -53,7 +53,7 @@ int timeToLive = 120000;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -149,6 +149,24 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getGlobalEntityService():updateEntityTimeToLive(entityId, version, timeToLive, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var entity_id = "a-entity-id"
+var version = 2
+var time_to_live = 120000
+
+var result = await <%= data.branding.codePrefix %>.global_entity_service.update_entity_time_to_live(entity_id, version, time_to_live)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

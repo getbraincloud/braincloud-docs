@@ -32,7 +32,7 @@ However, if you are not using Unity or not using the <%= data.branding.codeWrapp
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -76,6 +76,15 @@ However, if you are not using Unity or not using the <%= data.branding.codeWrapp
 
 ```lua
 <%= data.branding.codePrefix %>:runCallbacks()
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

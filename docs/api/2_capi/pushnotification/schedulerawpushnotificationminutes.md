@@ -56,7 +56,7 @@ int minutesFromNow = 1;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -227,6 +227,47 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getPushNotificationService():scheduleRawPushNotificationMinutes(profileId, fcmContent, iosContent, facebookContent, minutesFromNow, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var profile_id = "kjhkjhgfkjshgkjh"
+var fcm_content = {
+    "notification": {
+        "body": "content of message",
+        "title": "message title"
+    },
+    "data": {
+        "customfield1": "customValue1",
+        "customfield2": "customValue2"
+    },
+    "priority": "normal"
+}
+var ios_content = {
+    "aps": {
+        "alert": {
+            "body": "content of message",
+            "title": "message title"
+        },
+        "badge": 0,
+        "sound": "gggg"
+    }
+}
+var facebook_content = {
+    "template": "content of message"
+}
+var minutes_from_now = 1
+
+var result = await <%= data.branding.codePrefix %>.push_notification_service.schedule_raw_push_notification_minutes(profile_id, fcm_content, ios_content, facebook_content, minutes_from_now)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

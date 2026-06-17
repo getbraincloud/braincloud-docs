@@ -52,7 +52,7 @@ const char *externalAuthName = "";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -141,6 +141,23 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getIdentityService():getIdentityStatus(authenticationType, externalAuthName, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var authentication_type = "Facebook"
+var external_auth_name = ""
+
+var result = await <%= data.branding.codePrefix %>.identity_service.get_identity_status(authentication_type, external_auth_name)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

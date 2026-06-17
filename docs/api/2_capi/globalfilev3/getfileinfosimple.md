@@ -46,7 +46,7 @@ const char *filename = "sub12file1";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -136,6 +136,23 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getGlobalFileV3Service():getFileInfoSimple(folderPath, filename, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var folder_path = "/root1/sub11/sub12/"
+var filename = "sub12file1"
+
+var result = await <%= data.branding.codePrefix %>.global_file_service.get_file_info_simple(folder_path, filename)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

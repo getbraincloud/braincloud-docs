@@ -44,7 +44,7 @@ const char *jobId = "idsfihihfuvhvuh";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -128,6 +128,22 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getScriptService():cancelScheduledScript(jobId, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var job_id = "idsfihihfuvhvuh"
+
+var result = await <%= data.branding.codePrefix %>.script_service.cancel_scheduled_script(job_id)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

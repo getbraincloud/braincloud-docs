@@ -47,7 +47,7 @@ const char *message = "Hello World";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -137,6 +137,23 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getPushNotificationService():sendSimplePushNotification(toProfileId, message, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var to_profile_id = "profile1"
+var message = "Hello World"
+
+var result = await <%= data.branding.codePrefix %>.push_notification_service.send_simple_push_notification(to_profile_id, message)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

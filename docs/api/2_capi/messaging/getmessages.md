@@ -52,7 +52,7 @@ bool markAsRead = false;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -148,6 +148,24 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getMessagingService():getMessages(msgBox, msgIds, markAsRead, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var msg_box = "inbox"
+var msg_ids = [ "msgId1", "msgId2" ]
+var mark_as_read = false
+
+var result = await <%= data.branding.codePrefix %>.messaging_service.get_messages(msg_box, msg_ids, mark_as_read)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

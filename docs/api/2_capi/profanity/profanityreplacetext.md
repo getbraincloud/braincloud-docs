@@ -48,7 +48,7 @@ bool flagUrls = false;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -162,6 +162,27 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getProfanityService():profanityReplaceText(text, replaceSymbol, languages, flagEmail, flagPhone, flagUrls, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var text = "foul language"
+var replace_symbol = "*"
+var languages = "en,fr"
+var flag_email = false
+var flag_phone = false
+var flag_urls = false
+
+var result = await <%= data.branding.codePrefix %>.profanity_service.profanity_replace_text(text, replace_symbol, languages, flag_email, flag_phone, flag_urls)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

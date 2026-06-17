@@ -50,7 +50,7 @@ const char *contentJson = "{\"subject\":\"Chat and messaging features are here!\
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -149,6 +149,26 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getMessagingService():sendMessage(toProfileIds, contentJson, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var to_profile_ids = [ "profileId1", "profileId2" ]
+var content_json = {
+    "subject": "Chat and messaging features are here!",
+    "text": "Check out the new chat and messaging features!"
+}
+
+var result = await <%= data.branding.codePrefix %>.messaging_service.send_message(to_profile_ids, content_json)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

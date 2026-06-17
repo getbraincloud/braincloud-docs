@@ -65,7 +65,7 @@ int maxReturn = 25;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -155,6 +155,23 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getChatService():getRecentChatMessages(channelId, maxReturn, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var channel_id = "22817:gl:CHAT_TRADE"
+var max_return = 25
+
+var result = await <%= data.branding.codePrefix %>.chat_service.get_recent_chat_messages(channel_id, max_return)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

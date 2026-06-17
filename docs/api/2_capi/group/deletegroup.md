@@ -49,7 +49,7 @@ int version = 3;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -139,6 +139,23 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getGroupService():deleteGroup(groupId, version, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var group_id = "a-group-id"
+var version = 3
+
+var result = await <%= data.branding.codePrefix %>.group_service.delete_group(group_id, version)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
