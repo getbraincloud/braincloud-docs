@@ -44,7 +44,7 @@ const char *groupId = "a-group-id";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -128,6 +128,22 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getGroupService():rejectGroupInvitation(groupId, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var group_id = "a-group-id"
+
+var result = await <%= data.branding.codePrefix %>.group_service.reject_group_invitation(group_id)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

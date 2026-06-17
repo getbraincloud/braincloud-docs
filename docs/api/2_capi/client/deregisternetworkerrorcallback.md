@@ -25,7 +25,7 @@ Deregisters the network error callback.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -66,6 +66,15 @@ Deregisters the network error callback.
 
 ```lua
 <%= data.branding.codePrefix %>:deregisterNetworkErrorCallback()
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

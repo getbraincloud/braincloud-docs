@@ -34,7 +34,7 @@ Initializes a dynamic or system chat channel. Returns the channelId. Channel typ
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -75,6 +75,15 @@ Initializes a dynamic or system chat channel. Returns the channelId. Channel typ
 
 ```lua
 // N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

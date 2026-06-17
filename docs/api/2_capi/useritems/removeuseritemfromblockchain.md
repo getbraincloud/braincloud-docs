@@ -46,7 +46,7 @@ int version = 1;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -135,6 +135,23 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getUserItemsService():RemoveUserItemFromBlockchain(itemId, version, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var item_id = "aaa-bbb-ccc-ddd"
+var version = 1
+
+var result = await <%= data.branding.codePrefix %>.user_items_service.remove_user_item_from_blockchain(item_id, version)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

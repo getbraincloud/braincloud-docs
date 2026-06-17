@@ -25,7 +25,7 @@ Get the lobby's owner profile Id.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```cpp
@@ -66,6 +66,15 @@ String cxId = _bc.relayService.getOwnerProfileId();
 
 ```lua
 local cxId = <%= data.branding.codePrefix %>:getRelayService():getOwnerProfileId()
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

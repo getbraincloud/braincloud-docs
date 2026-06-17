@@ -34,7 +34,7 @@ Drops the specified index from the identified custom entity collection.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -57,6 +57,15 @@ Drops the specified index from the identified custom entity collection.
 
 ```javascript
 // S2S call: to view example, switch to the Cloud Code or Raw tab.
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

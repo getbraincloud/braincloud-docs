@@ -31,7 +31,7 @@ Registers a callback that is invoked for network errors. Note this is only calle
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -82,6 +82,15 @@ void networkErrorCallback() {
 }
 ​
 <%= data.branding.codePrefix %>:registerNetworkErrorCallback(networkErrorCallback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

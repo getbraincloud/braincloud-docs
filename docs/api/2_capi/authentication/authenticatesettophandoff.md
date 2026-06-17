@@ -52,7 +52,7 @@ const char* handoffCode = "handoffCode";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -137,6 +137,22 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getAuthenticationService():authenticateSettopHandoff(handoffCode, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var handoff_code = "handoffCode"
+
+var result = await <%= data.branding.codePrefix %>.authentication_service.authenticate_settop_handoff(handoff_code)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

@@ -47,7 +47,7 @@ const char *entityId = "a-group-entity-id";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -137,6 +137,23 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getGroupService():readGroupEntity(groupId, entityId, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var group_id = "a-group-id"
+var entity_id = "a-group-entity-id"
+
+var result = await <%= data.branding.codePrefix %>.group_service.read_group_entity(group_id, entity_id)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

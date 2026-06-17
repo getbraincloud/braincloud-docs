@@ -64,7 +64,7 @@ public class BCConfig : MonoBehaviour {
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objective_c

@@ -40,7 +40,7 @@ const char *cloudFilename = "filename";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -130,6 +130,23 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getFileService():deleteUserFile(cloudPath, cloudFilename, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var cloud_path = "dir1/dir2"
+var cloud_filename = "filename"
+
+var result = await <%= data.branding.codePrefix %>.file_service.delete_user_file(cloud_path, cloud_filename)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

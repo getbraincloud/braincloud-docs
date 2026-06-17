@@ -27,7 +27,7 @@ Return the RTT connection status (CONNECTED, DISCONNECTED, CONNECTING, and DISCO
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -68,6 +68,15 @@ RTTConnectionStatus? response = _bc.rttService.getConnectionStatus();
 
 ```lua
 local response = <%= data.branding.codePrefix %>:getRttService():getConnectionStatus()
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

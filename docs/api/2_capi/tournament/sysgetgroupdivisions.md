@@ -31,7 +31,7 @@ groupId | The group id.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -72,6 +72,15 @@ groupId | The group id.
 
 ```lua
 // Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

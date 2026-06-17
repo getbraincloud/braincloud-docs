@@ -56,7 +56,7 @@ const char *eventData = "{\"someMapAttribute\":\"someValue\"}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -158,6 +158,26 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getEventService():sendEvent(toProfileId, eventType, eventData, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var to_profile_id = "profile1"
+var event_type = "type1"
+var event_data = {
+    "someMapAttribute": "someValue"
+}
+
+var result = await <%= data.branding.codePrefix %>.event_service.send_event(to_profile_id, event_type, event_data)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

@@ -49,7 +49,7 @@ const char *text = "Chat and messaging features are here!";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -139,6 +139,23 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getMessagingService():sendMessageSimple(toProfileIds, text, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var to_profile_ids = [ "profileId1", "profileId2" ]
+var text = "Chat and messaging features are here!"
+
+var result = await <%= data.branding.codePrefix %>.messaging_service.send_message_simple(to_profile_ids, text)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

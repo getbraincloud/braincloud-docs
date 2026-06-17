@@ -37,7 +37,7 @@ timeToLive | The duration of time, in milliseconds, the custom entity should liv
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -78,6 +78,15 @@ timeToLive | The duration of time, in milliseconds, the custom entity should liv
 
 ```lua
 // N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

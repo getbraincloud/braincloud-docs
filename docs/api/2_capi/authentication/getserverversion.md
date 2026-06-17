@@ -27,7 +27,7 @@ Get server version.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -68,6 +68,20 @@ public void getServerVersion();
 
 ```lua
 <%= data.branding.codePrefix %>:getAuthenticationService():getServerVersion()
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var result = await <%= data.branding.codePrefix %>.authentication_service.get_server_version()
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

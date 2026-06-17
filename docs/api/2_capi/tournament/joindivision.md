@@ -52,7 +52,7 @@ int initialScore = 0;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -148,6 +148,24 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getTournamentService():joinDivision(divSetId, tournamentCode, initialScore, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var div_set_id = "exampleDivSetId"
+var tournament_code = "exampleTournamentCode1"
+var initial_score = 0
+
+var result = await <%= data.branding.codePrefix %>.tournament_service.join_division(div_set_id, tournament_code, initial_score)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

@@ -36,7 +36,7 @@ See the [Generic Paged Queries](/api/appendix/genericpagedqueries) documentation
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -77,6 +77,15 @@ See the [Generic Paged Queries](/api/appendix/genericpagedqueries) documentation
 
 ```lua
 // N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

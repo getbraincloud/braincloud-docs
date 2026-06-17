@@ -72,7 +72,7 @@ const char *statistics = "{\"DEAD_CATS\":\"RESET\",\"LIVES_LEFT\":\"SET#9\",\"MI
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -177,6 +177,29 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getPlayerStatisticsService():processStatistics(statistics, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var statistics = {
+    "DEAD_CATS": "RESET",
+    "LIVES_LEFT": "SET#9",
+    "MICE_KILLED": "INC#2",
+    "MICE_MULTIPLIER": "INC_TO_LIMIT#2#20",
+    "DOG_SCARE_BONUS_POINTS": "MAX#20",
+    "TREES_CLIMBED_REQ": "MIN#5"
+}
+
+var result = await <%= data.branding.codePrefix %>.player_statistics_service.process_statistics(statistics)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

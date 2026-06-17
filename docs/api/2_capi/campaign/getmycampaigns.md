@@ -43,7 +43,7 @@ const char *optionsJson = "{}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -122,6 +122,22 @@ local callback = function(result)
     end
 end
 <%= data.branding.codePrefix %>:getCampaignService():getMyCampaigns(optionsJson, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var options_json = {}
+
+var result = await <%= data.branding.codePrefix %>.campaign_service.get_my_campaigns(options_json)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

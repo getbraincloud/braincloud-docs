@@ -46,7 +46,7 @@ const char *purchaseData = "{\"itemId\":\"3555\",\"language\":\"en\"}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -145,6 +145,26 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getAppStoreService():startPurchase(storeId, purchaseData, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var store_id = "steam"
+var purchase_data = {
+    "itemId": "3555",
+    "language": "en"
+}
+
+var result = await <%= data.branding.codePrefix %>.app_store_service.start_purchase(store_id, purchase_data)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

@@ -49,7 +49,7 @@ const char *details = "{}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -145,6 +145,24 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getPlayerStateService():setUserStatus(statusName, durationSecs, details, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var status_name = "a-status-name"
+var duration_secs = 60
+var details = {}
+
+var result = await <%= data.branding.codePrefix %>.player_state_service.set_user_status(status_name, duration_secs, details)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

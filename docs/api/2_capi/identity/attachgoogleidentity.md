@@ -44,7 +44,7 @@ const char * token = "someToken";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -109,6 +109,23 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getIdentityService():attachGoogleIdentity(googleId, authenticationToken, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var google_id = "someId"
+var authentication_token = "someToken"
+
+var result = await <%= data.branding.codePrefix %>.identity_service.attach_google_identity(google_id, authentication_token)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

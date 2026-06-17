@@ -50,7 +50,7 @@ const char *transactionData = "{\"transId\":\"12345677890123456789\"}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -152,6 +152,26 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getAppStoreService():finalizePurchase(storeId, transactionId, transactionData, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var store_id = "steam"
+var transaction_id = "12345677890123456789"
+var transaction_data = {
+    "transId": "12345677890123456789"
+}
+
+var result = await <%= data.branding.codePrefix %>.app_store_service.finalize_purchase(store_id, transaction_id, transaction_data)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

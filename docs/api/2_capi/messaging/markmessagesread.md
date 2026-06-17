@@ -49,7 +49,7 @@ msgIds.push_back("msgId2");
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -139,6 +139,23 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getMessagingService():markMessagesRead(msgBox, msgIds, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var msg_box = "inbox"
+var msg_ids = [ "msgId1", "msgId2" ]
+
+var result = await <%= data.branding.codePrefix %>.messaging_service.mark_messages_read(msg_box, msg_ids)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

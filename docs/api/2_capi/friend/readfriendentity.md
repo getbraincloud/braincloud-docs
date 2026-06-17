@@ -46,7 +46,7 @@ const char *entityId = "entityId";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -136,6 +136,23 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getFriendService():readFriendEntity(friendId, entityId, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var friend_id = "profileId"
+var entity_id = "entityId"
+
+var result = await <%= data.branding.codePrefix %>.friend_service.read_friend_entity(entity_id, friend_id)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

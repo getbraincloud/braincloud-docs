@@ -50,7 +50,7 @@ bool includeOffline = true;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -140,6 +140,23 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getPresenceService():getPresenceOfUsers(profileIds, includeOffline, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var profile_ids = ["aaa-bbb-ccc-ddd"]
+var include_offline = true
+
+var result = await <%= data.branding.codePrefix %>.presence_service.get_presence_of_users(profile_ids, include_offline)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

@@ -68,7 +68,7 @@ std::string teamPlayerId = "";    // only if gameCenterId is not teamPlayerId
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -200,6 +200,26 @@ end
 <%= data.branding.codePrefix %>:getAuthenticationService():authenticateGameCenter(
     gameCenterID, forceCreate, timestamp, publicKeyUrl,
     signature, salt, teamPlayerId, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var game_center_id = "userGameCenterId"
+var force_create = true
+var timestamp = 0
+var public_key_url = ""
+var team_player_id = ""
+
+var result = await <%= data.branding.codePrefix %>.authentication_service.authenticate_game_center(game_center_id, force_create)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

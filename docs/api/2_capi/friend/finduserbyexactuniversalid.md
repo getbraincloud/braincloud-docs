@@ -46,7 +46,7 @@ const char *searchText = "someUniversalId";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -130,6 +130,22 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getFriendService():findUserByExactUniversalId(universalId, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var universal_id = "someUniversalId"
+
+var result = await <%= data.branding.codePrefix %>.friend_service.find_user_by_exact_universal_id(universal_id)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

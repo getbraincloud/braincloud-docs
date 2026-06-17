@@ -48,7 +48,7 @@ bool includeSummaryData = true;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -138,6 +138,23 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getFriendService():listFriends(friendPlatform, includeSummaryData, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var friend_platform = FriendPlatform.facebook
+var include_summary_data = true
+
+var result = await <%= data.branding.codePrefix %>.friend_service.list_friends(friend_platform, include_summary_data)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

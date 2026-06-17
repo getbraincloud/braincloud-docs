@@ -52,7 +52,7 @@ const char *customDataJson = "{\"field1\":\"value1\",\"field2\":\"value2\"}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -166,6 +166,30 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getPushNotificationService():sendNormalizedPushNotificationBatch(profileIds, alertContentJson, customDataJson, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var profile_ids = [ "a-profile-id", "another-profile-id" ]
+var alert_content_json = {
+    "body": "content of message",
+    "title": "message title"
+}
+var custom_data_json = {
+    "field1": "value1",
+    "field2": "value2"
+}
+
+var result = await <%= data.branding.codePrefix %>.push_notification_service.send_normalized_push_notification_batch(profile_ids, alert_content_json, custom_data_json)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

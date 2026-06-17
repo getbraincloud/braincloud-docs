@@ -52,7 +52,7 @@ externalIds.push_back("external Id 2");
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -148,6 +148,24 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getFriendService():addFriendsFromPlatform(friendPlatform, mode, externalIds, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var friend_platform = FriendPlatform.facebook
+var mode = "ADD"
+var external_ids = [ "external Id 1", "external Id 2" ]
+
+var result = await <%= data.branding.codePrefix %>.friend_service.add_friends_from_platform(friend_platform, mode, external_ids)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

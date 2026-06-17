@@ -59,7 +59,7 @@ const char *jsonData = "{\"aKey\":\"aValue\"}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -182,6 +182,31 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getGroupService():createGroupEntity(groupId, entityType, isOwnedByGroupMember, acl, jsonData, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var group_id = "a-group-id"
+var entity_type = "myEntityType"
+var is_owned_by_group_member = false
+var acl = {
+    "member": 2,
+    "other": 1
+}
+var json_data = {
+    "aKey": "aValue"
+}
+
+var result = await <%= data.branding.codePrefix %>.group_service.create_group_entity(group_id, entity_type, is_owned_by_group_member, acl, json_data)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

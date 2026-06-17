@@ -47,7 +47,7 @@ const char *contextJson = "{}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -138,6 +138,23 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getBlockchainService():getUniqs(integrationId, contextJson, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var integration_id = "default"
+var context_json = {}
+
+var result = await <%= data.branding.codePrefix %>.blockchain_service.get_uniqs(integration_id, context_json)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

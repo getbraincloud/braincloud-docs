@@ -73,7 +73,7 @@ const char *statistics = "{\"INNING\":\"INC#1\",\"INNINGSREM\":\"DEC#1\",\"OUTS\
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -181,6 +181,30 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getGlobalGameStatisticsService():processStatistics(statistics, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var statistics = {
+    "INNING": "INC#1",
+    "INNINGSREM": "DEC#1",
+    "OUTS": "RESET",
+    "POINTS": "INC_TO_LIMIT#5#30",
+    "PLAYERS": "SET#8",
+    "HIGHESTHR": "MAX#3",
+    "ESTIMATE": "MIN#5"
+}
+
+var result = await <%= data.branding.codePrefix %>.global_statistics_service.process_statistics(statistics)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

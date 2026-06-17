@@ -50,7 +50,7 @@ const char *acl = "{ \"member\": 1, \"other\": 0 }";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -156,6 +156,27 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getGroupService():updateGroupEntityAcl(groupId, entityId, acl, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var group_id = "a-group-id"
+var entity_id = "a-group-entity-id"
+var acl = {
+  "member": 1,
+  "other": 0
+}
+
+var result = await <%= data.branding.codePrefix %>.group_service.update_group_entity_acl(group_id, entity_id, acl)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

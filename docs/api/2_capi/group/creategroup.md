@@ -71,7 +71,7 @@ const char *defaultMemberAttributes = "{}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -200,6 +200,31 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getGroupService():createGroup(name, groupType, isOpenGroup, acl, data, ownerAttributes, defaultMemberAttributes, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var name = "myGroupName"
+var group_type = "myGroupType"
+var is_open_group = false
+var acl = {
+    "member": 2,
+    "other": 0
+}
+var data = {}
+var owner_attributes = {}
+var default_member_attributes = {}
+
+var result = await <%= data.branding.codePrefix %>.group_service.create_group(name, group_type, is_open_group, acl, data, owner_attributes, default_member_attributes)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

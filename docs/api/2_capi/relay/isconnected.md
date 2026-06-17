@@ -25,7 +25,7 @@ Returns whether or not we have a successful connection with the relay server.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```cpp
@@ -66,6 +66,15 @@ bool connected = _bc.relayService.isConnected();
 
 ```lua
 local connected = <%= data.branding.codePrefix %>:getRelayService():isConnected()
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

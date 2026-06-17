@@ -25,7 +25,7 @@ Run callbacks, to be called once per frame from your main thread
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -66,6 +66,15 @@ Run callbacks, to be called once per frame from your main thread
 
 ```lua
 <%= data.branding.codePrefix %>:update()
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

@@ -72,7 +72,7 @@ const char *configJson = "{\"leaderboardType\": \"HIGH_VALUE\", \"rotationType\"
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -206,6 +206,15 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getLeaderboardService():postScoreToDynamicGroupLeaderboardUsingConfig(leaderboardId, groupId, score, scoreData, configJson, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

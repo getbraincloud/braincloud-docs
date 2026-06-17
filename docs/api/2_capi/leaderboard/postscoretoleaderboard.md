@@ -54,7 +54,7 @@ const char *jsonOtherData = "{\"nickname\":\"batman\"}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -156,6 +156,26 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getLeaderboardService():postScoreToLeaderboard(leaderboardId, score, data, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var leaderboard_id = "default"
+var score = 10
+var data = {
+    "nickname": "batman"
+}
+
+var result = await <%= data.branding.codePrefix %>.leaderboard_service.post_score_to_leaderboard(leaderboard_id, score, data)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

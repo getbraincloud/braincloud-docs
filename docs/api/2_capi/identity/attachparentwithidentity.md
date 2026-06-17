@@ -56,7 +56,7 @@ bool forceCreate = true;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -164,6 +164,26 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getIdentityService():attachParentWithIdentity(externalId, authenticationToken, authenticationType, externalAuthName, forceCreate, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var external_id = "email@email.com"
+var authentication_token = "email@email.com"
+var authentication_type = AuthenticationType.email
+var external_auth_name = ""
+var force_create = true
+
+var result = await <%= data.branding.codePrefix %>.identity_service.attach_parent_with_identity(external_id, authentication_token, authentication_type, external_auth_name, force_create)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

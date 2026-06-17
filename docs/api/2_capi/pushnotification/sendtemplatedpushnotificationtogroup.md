@@ -62,7 +62,7 @@ const char *substitutionsJson = "{\"0\":\"value0\",\"1\":\"value1\"}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -167,6 +167,27 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getPushNotificationService():sendTemplatedPushNotificationToGroup(groupId, notificationTemplateId, substitutionsJson, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var group_id = "group1"
+var notification_template_id = 1
+var substitutions_json = {
+    "0": "value0",
+    "1": "value1"
+}
+
+var result = await <%= data.branding.codePrefix %>.push_notification_service.send_templated_push_notification_to_group(group_id, notification_template_id, substitutions_json)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

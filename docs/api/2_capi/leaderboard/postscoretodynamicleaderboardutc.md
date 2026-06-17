@@ -69,7 +69,7 @@ int retainedCount = 2;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -195,6 +195,30 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getLeaderboardService():postScoreToDynamicLeaderboardUTC(leaderboardId, score, data, leaderboardType, rotationType, rotationReset, retainedCount, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var leaderboard_id = "default"
+var score = 10
+var data = {
+    "nickname": "batman"
+}
+var leaderboard_type = "HIGH_VALUE"
+var rotation_type = "DAILY"
+var rotation_reset = int((Time.get_unix_time_from_system() + 86400) * 1000)  # ~1 day out, epoch ms
+var retained_count = 2
+
+var result = await <%= data.branding.codePrefix %>.leaderboard_service.post_score_to_dynamic_leaderboard_utc(leaderboard_id, score, data, leaderboard_type, rotation_type, rotation_reset, retained_count)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

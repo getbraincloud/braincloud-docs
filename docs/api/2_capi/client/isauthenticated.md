@@ -27,7 +27,7 @@ bool isAuthenticated = <%= data.branding.codePrefix %>->isAuthenticated();
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -68,6 +68,15 @@ var isAuthenticated = <%= data.branding.codePrefix %>.isAuthenticated();
 
 ```lua
 local isAuthenticated = <%= data.branding.codePrefix %>:isAuthenticated()
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

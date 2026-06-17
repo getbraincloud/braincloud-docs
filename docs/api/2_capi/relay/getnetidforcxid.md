@@ -25,7 +25,7 @@ Returns the netId associated with a connection Id.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```cpp
@@ -70,6 +70,15 @@ int netId = _bc.relayService.getNetIdForCxId(aCxId);
 local aCxId = "aaaaaaa"
 
 local netId = <%= data.branding.codePrefix %>:getRelayService():getNetIdForCxId(aCxId)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

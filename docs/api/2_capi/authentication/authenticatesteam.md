@@ -58,7 +58,7 @@ const char* sessionTicket = "sessionTicketFromSteam";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -155,6 +155,24 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getAuthenticationService():authenticateSteam(steamId, sessionTicket, forceCreate, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var steam_id = "userSteamId"
+var session_ticket = "sessionTicketFromSteam"
+var force_create = true
+
+var result = await <%= data.branding.codePrefix %>.authentication_service.authenticate_steam(steam_id, session_ticket, force_create)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

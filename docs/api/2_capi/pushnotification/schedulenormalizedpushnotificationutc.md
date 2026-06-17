@@ -53,7 +53,7 @@ int startTime = 1437579786000;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -173,6 +173,31 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getPushNotificationService():scheduleNormalizedPushNotificationUTC(profileId, alertContentJson, customDataJson, startTime, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var profile_id = "kjhkjhgfkjshgkjh"
+var alert_content_json = {
+    "body": "content of message",
+    "title": "message title"
+}
+var custom_data_json = {
+    "field1": "value1",
+    "field2": "value2"
+}
+var start_time = 1437579786000
+
+var result = await <%= data.branding.codePrefix %>.push_notification_service.schedule_normalized_push_notification_utc(profile_id, alert_content_json, custom_data_json, start_time)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

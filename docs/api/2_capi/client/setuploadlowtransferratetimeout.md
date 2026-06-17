@@ -39,7 +39,7 @@ int timeoutSecs = 60;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -84,6 +84,15 @@ int timeoutSecs = 60;
 ```lua
 local timeoutSecs = 60
 <%= data.branding.codePrefix %>:setUploadLowTransferRateTimeout(timeoutSecs)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

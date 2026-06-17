@@ -40,7 +40,7 @@ Generates specified quantity of redemption codes for a personal ('single-use') c
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -81,6 +81,15 @@ Generates specified quantity of redemption codes for a personal ('single-use') c
 
 ```lua
 // N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

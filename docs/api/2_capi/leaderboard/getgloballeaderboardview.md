@@ -59,7 +59,7 @@ int afterCount = 4;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -161,6 +161,25 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getLeaderboardService():getGlobalLeaderboardView(leaderboardId, sortOrder, beforeCount, afterCount, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var leaderboard_id = "default"
+var sort_order = "HIGH_TO_LOW"
+var before_count = 3
+var after_count = 4
+
+var result = await <%= data.branding.codePrefix %>.leaderboard_service.get_global_leaderboard_view(leaderboard_id, sort_order, before_count, after_count)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

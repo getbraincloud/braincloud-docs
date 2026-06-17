@@ -54,7 +54,7 @@ RTTCallback rttCallback = response =>
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -102,6 +102,20 @@ local rttCallBack = function(jsonResponse)
 end
 
 <%= data.branding.codePrefix %>:getRttService():registerRTTEventCallback(rttCallback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var result = await <%= data.branding.codePrefix %>.rtt_service.register_rtt_event_callback(rttCallback)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

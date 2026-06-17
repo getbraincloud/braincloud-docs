@@ -56,7 +56,7 @@ const char *teamCode = "blue";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -164,6 +164,26 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getLobbyService():joinLobby(lobbyId, otherUserCxIds, isReady, extraJson, teamCode, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var lobby_id = "55555:4v4:3"
+var other_user_cx_ids = [ "55555:aaa-bbb-ccc-ddd:asdfjkl" ]
+var is_ready = false
+var extra_json = {}
+var team_code = "blue"
+
+var result = await <%= data.branding.codePrefix %>.lobby_service.join_lobby(lobby_id, is_ready, extra_json, team_code, other_user_cx_ids)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

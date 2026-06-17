@@ -27,7 +27,7 @@ std::string anonymousId = <%= data.branding.codePrefix %>->getStoredAnonymousId(
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -68,6 +68,20 @@ String anonymousId = <%= data.branding.codePrefix %>.getStoredAnonymousId();
 
 ```lua
 local anonymousId = <%= data.branding.codePrefix %>:getStoredAnonymousId()
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var result = await <%= data.branding.codePrefix %>.get_stored_anonymous_id()
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

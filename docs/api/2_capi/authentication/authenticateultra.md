@@ -55,7 +55,7 @@ bool forceCreate = true;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -152,6 +152,24 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getAuthenticationService():authenticateUltra(ultraUsername, ultraIdToken, forceCreate, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var ultra_username = "ultraUsername"
+var ultra_id_token = "ultraIdToken"
+var force_create = true
+
+var result = await <%= data.branding.codePrefix %>.authentication_service.authenticate_ultra(ultra_username, ultra_id_token, force_create)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

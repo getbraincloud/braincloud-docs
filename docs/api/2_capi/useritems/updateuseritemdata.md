@@ -49,7 +49,7 @@ const char *newItemData = "{\"condition\":77,\"bonus\":1}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -154,6 +154,27 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getUserItemsService():updateUserItemData(itemId, version, newItemData, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var item_id = "aaa-bbb-ccc-ddd"
+var version = 1
+var new_item_data = {
+  "condition": 77,
+  "bonus": 1
+}
+
+var result = await <%= data.branding.codePrefix %>.user_items_service.update_user_item_data(item_id, version, new_item_data)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

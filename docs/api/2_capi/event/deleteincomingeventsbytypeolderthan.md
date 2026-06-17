@@ -46,7 +46,7 @@ int dateMillis = 1619804426154;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -135,6 +135,23 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getEventService():deleteIncomingEventsByTypeOlderThan(eventType, dateMillis, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var event_type = "my-event-type"
+var date_millis = 1619804426154
+
+var result = await <%= data.branding.codePrefix %>.event_service.delete_incoming_events_by_type_older_than(event_type, date_millis)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

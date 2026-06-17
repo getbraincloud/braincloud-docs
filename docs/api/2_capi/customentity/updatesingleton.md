@@ -55,7 +55,7 @@ int timeToLive = null;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -187,6 +187,34 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getCustomEntityService():updateSingleton(entityType, version, dataJson, acl, timeToLive, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var entity_type = "athletes"
+var version = 1
+var data_json = {
+  "firstName": "Super",
+  "surName": "Star",
+  "position": "forward",
+  "goals": 3,
+  "assists": 5
+}
+var acl = {
+  "other": 1
+}
+var time_to_live = null
+
+var result = await <%= data.branding.codePrefix %>.custom_entity_service.update_singleton(entity_type, version, data_json, acl, time_to_live)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

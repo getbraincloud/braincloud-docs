@@ -52,7 +52,7 @@ const char *data = "{\"nickname\":\"batman\"}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -160,6 +160,15 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getLeaderboardService():postScoreToGroupLeaderboard(leaderboardId, groupId, score, data, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

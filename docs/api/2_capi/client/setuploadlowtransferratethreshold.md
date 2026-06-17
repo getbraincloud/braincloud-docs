@@ -41,7 +41,7 @@ int minTransferRate = 1500;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -86,6 +86,15 @@ int minTransferRate = 1500;
 ```lua
 local minTransferRate = 1500
 <%= data.branding.codePrefix %>:setUploadLowTransferRateThreshold(minTransferRate)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

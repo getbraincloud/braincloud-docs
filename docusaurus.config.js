@@ -309,7 +309,7 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
-        additionalLanguages: ['csharp', 'cfscript', 'java', 'r', 'dart', 'lua'],
+        additionalLanguages: ['csharp', 'cfscript', 'java', 'r', 'dart', 'lua', 'gdscript'],
       },
     }),
 };

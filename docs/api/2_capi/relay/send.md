@@ -41,7 +41,7 @@ RSDataCallback rsDataCallback = (response) =>
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```cpp
@@ -91,6 +91,23 @@ local aNetId = 2
 local bytes = "Some Data here"  -- byte encoded
 
 <%= data.branding.codePrefix %>:getRelayService():send(bytes, aNetId, true, true, BrainCloudRelay.channelHighPriority_1)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var a_net_id = 2
+var bytes = utf8.encode("Some Data here")
+
+var result = await <%= data.branding.codePrefix %>.relay_service.send(true, true, BrainCloudRelay.channelHighPriority_1)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

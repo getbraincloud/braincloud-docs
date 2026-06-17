@@ -46,7 +46,7 @@ const char *jsonEventProperties = "{\"key1\":\"value\",\"key2\":\"value\"}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -145,6 +145,26 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getDataStreamService():customPageEvent(eventName, jsonEventProperties, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var event_name = "customEvent"
+var json_event_properties = {
+    "key1": "value",
+    "key2": "value"
+}
+
+var result = await <%= data.branding.codePrefix %>.data_stream_service.custom_page_event(event_name, json_event_properties)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

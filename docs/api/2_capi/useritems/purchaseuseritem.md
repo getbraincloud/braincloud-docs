@@ -52,7 +52,7 @@ bool includeDef = true;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -154,6 +154,25 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getUserItemsService():purchaseUserItem(defId, quantity, shopId, includeDef, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var def_id = "sword001"
+var quantity = 1
+var shop_id = null
+var include_def = true
+
+var result = await <%= data.branding.codePrefix %>.user_items_service.purchase_user_item(def_id, quantity, shop_id, include_def)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

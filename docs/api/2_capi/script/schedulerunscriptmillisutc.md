@@ -51,7 +51,7 @@ int startDateInUTC = 1437579786000;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -153,6 +153,15 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getScriptService():scheduleRunScriptMillisUTC(scriptName, scriptData, startDateInUTC, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block
