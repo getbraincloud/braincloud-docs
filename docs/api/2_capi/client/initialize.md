@@ -49,7 +49,7 @@ const char* appId = "123456";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -101,6 +101,28 @@ var appId = "123456";
 var appVersion = "1.0.0";
 
 <%= data.branding.codePrefix %>.initialize(serverUrl:serverUrl, secretKey:secretKey, appId:appId, appVersion:appVersion);
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local serverUrl = "https://api.braincloudservers.com/dispatcherv2"; //Optional parameter
+local secretKey = "1234-1234-1234-1234"
+local appId = "123456"
+local appVersion = "1.0.0"
+<%= data.branding.codePrefix %>:initialize(serverUrl, secretKey, appId, appVersion)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

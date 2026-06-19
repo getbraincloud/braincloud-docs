@@ -19,7 +19,7 @@ Compile a list of users you wish to delete and pass it into the script.
 _Example script parameters_
 ```js
 {
-	"profileIds": ["the-profile-id", "a8d86270-c95b-4ea7-a545-46bf27e7f94e"],
-	"universalIds": ["the-universal-id", "tester_12", "admin_42"]
+    "profileIds": ["the-profile-id", "a8d86270-c95b-4ea7-a545-46bf27e7f94e"],
+    "universalIds": ["the-universal-id", "tester_12", "admin_42"]
 }
 ```

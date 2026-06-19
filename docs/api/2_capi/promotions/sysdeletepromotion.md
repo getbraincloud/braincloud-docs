@@ -4,6 +4,10 @@ Deletes the specified promotion from the server.
 
 <PartialServop service_name="promotions" operation_name="SYS_DELETE_PROMOTION" />
 
+:::info
+Note: SysDeletePromotion will also delete archived promotions, not just active ones. Use this operation carefully if you intend to preserve archived promotion history.
+:::
+
 ## Method Parameters
 Parameter | Description
 --------- | -----------
@@ -33,7 +37,7 @@ version | Version of the promotion to update. Can bypass version check by passin
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -69,6 +73,24 @@ version | Version of the promotion to update. Can bypass version check by passin
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -90,9 +112,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "promotions",
-	"operation": "SYS_DELETE_PROMOTION",
-	"data": {
+    "service": "promotions",
+    "operation": "SYS_DELETE_PROMOTION",
+    "data": {
     "promotionId": 1,
     "version": 1
   }

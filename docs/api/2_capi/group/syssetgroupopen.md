@@ -33,7 +33,7 @@ isOpenGroup | true if group is open; false if closed
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -69,6 +69,24 @@ isOpenGroup | true if group is open; false if closed
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -90,12 +108,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "group",
-	"operation": "SYS_SET_GROUP_OPEN",
-	"data": {
-		"groupId": "a-group-id",
-		"isOpenGroup": true
-	}
+    "service": "group",
+    "operation": "SYS_SET_GROUP_OPEN",
+    "data": {
+        "groupId": "a-group-id",
+        "isOpenGroup": true
+    }
 }
 ```
 

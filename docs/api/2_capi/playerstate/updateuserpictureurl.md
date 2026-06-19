@@ -44,7 +44,7 @@ const char *userPictureUrl = "someURL";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -89,8 +89,8 @@ var userPictureUrl = "someURL";
 
 <%= data.branding.codePrefix %>.playerState.updateUserPictureUrl(userPictureUrl, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -109,6 +109,34 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local pictureUrl = "someURL"
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getPlayerStateService():updateUserPictureUrl(pictureUrl, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block
@@ -133,11 +161,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "playerState",
-	"operation": "UPDATE_PICTURE_URL",
-	"data": {
-		"userPictureUrl": "someURL"
-	}
+    "service": "playerState",
+    "operation": "UPDATE_PICTURE_URL",
+    "data": {
+        "userPictureUrl": "someURL"
+    }
 }
 ```
 

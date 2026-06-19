@@ -33,7 +33,7 @@ version | Version number of tournament template to return, use -1 to return curr
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -69,6 +69,24 @@ version | Version number of tournament template to return, use -1 to return curr
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -90,9 +108,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "tournament",
-	"operation": "SYS_READ_TOURNAMENT_TEMPLATE",
-	"data": {
+    "service": "tournament",
+    "operation": "SYS_READ_TOURNAMENT_TEMPLATE",
+    "data": {
     "tournamentCode": "uniqueTournamentCode",
     "version": -1
   }

@@ -31,21 +31,21 @@ using UnityEngine;
 
 public class BCConfig : MonoBehaviour {
 
-	private <%= data.branding.codeWrapper %> <%= data.branding.codePrefix %>;
+    private <%= data.branding.codeWrapper %> <%= data.branding.codePrefix %>;
 
-	public <%= data.branding.codeWrapper %> Get()
-	{
-		return <%= data.branding.codePrefix %>;
-	}
+    public <%= data.branding.codeWrapper %> Get()
+    {
+        return <%= data.branding.codePrefix %>;
+    }
 
-	void Awake ()
-	{
-		DontDestroyOnLoad(gameObject);
-		<%= data.branding.codePrefix %> = gameObject.AddComponent<<%= data.branding.codeWrapper %>>();
+    void Awake ()
+    {
+        DontDestroyOnLoad(gameObject);
+        <%= data.branding.codePrefix %> = gameObject.AddComponent<<%= data.branding.codeWrapper %>>();
 
-		<%= data.branding.codePrefix %>.WrapperName = gameObject.name;    // Optional: Set a wrapper name
-		<%= data.branding.codePrefix %>.Init();      // Init data is taken from the <%= data.branding.productName %> Unity Plugin
-	}
+        <%= data.branding.codePrefix %>.WrapperName = gameObject.name;    // Optional: Set a wrapper name
+        <%= data.branding.codePrefix %>.Init();      // Init data is taken from the <%= data.branding.productName %> Unity Plugin
+    }
 }
 
 
@@ -64,7 +64,7 @@ public class BCConfig : MonoBehaviour {
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objective_c

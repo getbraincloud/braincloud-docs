@@ -27,7 +27,7 @@ Posts a Form encoded document, expects a Json response.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -59,6 +59,24 @@ Posts a Form encoded document, expects a Json response.
 
 ```dart
 // Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block
@@ -101,34 +119,8 @@ if (postResult.status == 200) {
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var serviceCode = "webService";
-var path = "resource/dir";
-var query = {
-    "parmName": "value"
-};
-var headers = {
-    "headerName": "value"
-};
-var formData = [
-    {
-        "key": "parm1",
-        "value": "parm1value",
-        "valueType": "string"
-    },
-    {
-        "key": "parm2",
-        "valueType": "userFile",
-        "cloudPath": "test",
-        "cloudFilename": "testfile"
-    }
-];
-var httpClientProxy = bridge.getHttpClientServiceProxy();
-
-var postResult = httpClientProxy.postMultipartResponseJson(serviceCode, path, query, headers, formData);
-if (postResult.status == 200) {
-    // Success!
-}
+```r
+// N/A
 ```
 
 ```mdx-code-block

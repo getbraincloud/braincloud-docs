@@ -56,7 +56,7 @@ const char *statistics = "{\"PLAYER_COUNT\":1}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -103,8 +103,8 @@ var statistics = {
 
 <%= data.branding.codePrefix %>.globalStatistics.incrementGlobalStats(statistics, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -129,6 +129,45 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local statistics = {
+    PLAYER_COUNT = 1
+}
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getGlobalGameStatisticsService():incrementGlobalStats(statistics, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var statistics = {
+    "PLAYER_COUNT": 1
+}
+
+var result = await <%= data.branding.codePrefix %>.global_statistics_service.increment_global_stats(statistics)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -149,16 +188,8 @@ if (postResult.status == 200) {
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var statistics = {
-    "PLAYER_COUNT": 1
-};
-var globalStatisticsProxy = bridge.getGlobalStatisticsServiceProxy();
-
-var postResult = globalStatisticsProxy.incrementGlobalStats(statistics);
-if (postResult.status == 200) {
-    // Success!
-}
+```r
+// N/A
 ```
 
 ```mdx-code-block

@@ -25,7 +25,7 @@ Initiate a state dump for diagnostic purposes on the given RTT servers. An empty
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -57,6 +57,24 @@ Initiate a state dump for diagnostic purposes on the given RTT servers. An empty
 
 ```dart
 // S2S call: to view example, switch to the Raw tab.
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

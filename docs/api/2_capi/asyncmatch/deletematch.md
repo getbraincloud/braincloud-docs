@@ -52,7 +52,7 @@ const char *matchId = "matchId";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -101,8 +101,8 @@ var matchId = "matchId";
 
 <%= data.branding.codePrefix %>.asyncMatch.deleteMatch(ownerId, matchId, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -122,6 +122,43 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local ownerId = "internalPlayerId"
+local matchId = "matchId"
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getAsyncMatchService():deleteMatch(ownerId, matchId, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var owner_id = "internalPlayerId"
+var match_id = "matchId"
+
+var result = await <%= data.branding.codePrefix %>.async_match_service.delete_match(owner_id, match_id)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -147,12 +184,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "asyncMatch",
-	"operation": "DELETE_MATCH",
-	"data": {
-		"ownerId": "the-owner-id",
-		"matchId": "the-match-id"
-	}
+    "service": "asyncMatch",
+    "operation": "DELETE_MATCH",
+    "data": {
+        "ownerId": "the-owner-id",
+        "matchId": "the-match-id"
+    }
 }
 ```
 

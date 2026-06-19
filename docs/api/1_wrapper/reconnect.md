@@ -35,7 +35,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -78,11 +78,20 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
-<%= data.branding.codePrefix %>.reconnect(callback);
+```cfscript
+// N/A
 ```
 
 ```mdx-code-block
@@ -90,8 +99,8 @@ if (result.statusCode == 200) {
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
-<%= data.branding.codePrefix %>.reconnect(callback);
+```r
+// N/A
 ```
 
 ```mdx-code-block

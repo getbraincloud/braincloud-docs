@@ -70,7 +70,7 @@ int32_t retainedCount = 2;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -144,8 +144,8 @@ var retainedCount = 2;
 
 <%= data.branding.codePrefix %>.leaderboard.postScoreToGroupLeaderboardUTC(leaderboardId, groupId, score, data, leaderboardType, rotationType, rotationResetTime, retainedCount, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -173,6 +173,43 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local leaderboardId = "default"
+local groupId = "actual_group_id"
+local score = 10
+local data = {
+    nickname = "batman"
+}
+local leaderboardType = SocialLeaderboardType.HIGH_VALUE
+local rotationType = RotationType.WEEKLY
+local rotationResetTime = 158778236487
+local retainedCount = 2
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getLeaderboardService():postScoreToGroupLeaderboardUTC(leaderboardId, groupId, score, data, leaderboardType, rotationType, rotationResetTime, retainedCount, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block
@@ -206,9 +243,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "leaderboard",
-	"operation": "POST_GROUP_SCORE_DYNAMIC",
-	"data": {
+    "service": "leaderboard",
+    "operation": "POST_GROUP_SCORE_DYNAMIC",
+    "data": {
         "leaderboardId": "groupLeaderboardConfig",
         "groupId": "d25e3e1c-089f-4816-8534-f958ba3c9dac",
         "score": 10,

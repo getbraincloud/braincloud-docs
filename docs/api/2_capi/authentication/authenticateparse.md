@@ -49,7 +49,7 @@ bool forceCreate = true;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -60,12 +60,12 @@ BCCompletionBlock successBlock;      // define callback
 BCErrorCompletionBlock failureBlock; // define callback
 
 [[<%= data.branding.codePrefix %> authenticationService]
-		  authenticateParse:parseId
+          authenticateParse:parseId
                  parseToken:parseToken
                 forceCreate:forceCreate
             completionBlock:successBlock
        errorCompletionBlock:failureBlock
-		     	   cbObject:nil];
+                    cbObject:nil];
 ```
 
 ```mdx-code-block
@@ -103,8 +103,8 @@ var forceCreate = true;
 
 <%= data.branding.codePrefix %>.authentication.authenticateParse(parseId, parseToken, forceCreate, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -125,6 +125,45 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local parseId = "someId1234"
+local parseToken = "authToken"
+local forceCreate = true
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getAuthenticationService():authenticateParse(parseId, parseToken, forceCreate, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var parse_id = "someId1234"
+var parse_token = "authToken"
+var force_create = true
+
+var result = await <%= data.branding.codePrefix %>.authentication_service.authenticate_parse(parse_id, parse_token, force_create)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

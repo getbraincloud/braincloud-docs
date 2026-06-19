@@ -49,7 +49,7 @@ int maxResults = 10;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -61,7 +61,7 @@ BCErrorCompletionBlock failureBlock; // define callback
 
 [[<%= data.branding.codePrefix %> leaderboardService] getPlayerScores:leaderboardId
                   versionId:versionId
-				 maxResults:maxResults
+                 maxResults:maxResults
             completionBlock:successBlock
        errorCompletionBlock:failureBlock
                    cbObject:nil];
@@ -101,8 +101,8 @@ var versionId = -1;
 var maxResults = 10;
 <%= data.branding.codePrefix %>.leaderboard.getPlayerScores(leaderboardId, versionId, maxResults, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -123,6 +123,45 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local leaderboardId = "anArcadeLeaderboardId"
+local versionId = -1
+local maxResults = 10
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getLeaderboardService():getPlayerScores(leaderboardId, versionId, maxResults, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var leaderboard_id = "anArcadeLeaderboardId"
+var version_id = -1
+var max_results = 10
+
+var result = await <%= data.branding.codePrefix %>.leaderboard_service.get_player_scores(leaderboard_id, version_id, max_results)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -149,13 +188,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "leaderboard",
-	"operation": "GET_PLAYER_SCORES",
-	"data": {
-		"leaderboardId": "anArcadeLeaderboardId",
-		"versionId": -1,
-		"maxResults": 10
-	}
+    "service": "leaderboard",
+    "operation": "GET_PLAYER_SCORES",
+    "data": {
+        "leaderboardId": "anArcadeLeaderboardId",
+        "versionId": -1,
+        "maxResults": 10
+    }
 }
 ```
 

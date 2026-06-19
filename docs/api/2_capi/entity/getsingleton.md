@@ -2,6 +2,10 @@
 
 Method retrieves a singleton entity on the server. If the entity doesn't exist, null is returned.
 
+:::note
+If the singleton does not exist, the call still returns a **200 success** response — but the `data` field in the response will be `null`. Make sure to check for a null `data` value before attempting to access entity fields.
+:::
+
 <PartialServop service_name="entity" operation_name="READ_SINGLETON" />
 
 ## Method Parameters
@@ -43,7 +47,7 @@ const char *entityType = "someEntityType";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -88,8 +92,8 @@ var entityType = "someEntityType";
 
 <%= data.branding.codePrefix %>.entity.getSingleton(entityType, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -108,6 +112,41 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local entityType = "someEntityType"
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getEntityService():getSingleton(entityType, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var entity_type = "someEntityType"
+
+var result = await <%= data.branding.codePrefix %>.entity_service.get_singleton(entity_type)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -132,11 +171,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "entity",
-	"operation": "READ_SINGLETON",
-	"data": {
-		"entityType": "someEntityType"
-	}
+    "service": "entity",
+    "operation": "READ_SINGLETON",
+    "data": {
+        "entityType": "someEntityType"
+    }
 }
 ```
 

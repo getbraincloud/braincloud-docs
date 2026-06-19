@@ -12,12 +12,12 @@ This operation adds a code to your inventory.
 
 ## Method Parameters
 
-| Parameter      | Description                           |
-| -------------- | ------------------------------------- |
-| scanCode       | A scan code.                          |
-| codeType       | The code type.                        |
-| codeState      | Initial state of the redemption code. |
-| customCodeInfo | Optional custom information.          |
+| Parameter      | Description                                                                                                                                                                 |
+| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| scanCode       | A scan code (also referred to as a _Promo Code_). Warning: If the scanCode added is less than 25 characters, the optional codeType must be specified in order to redeem it. |
+| codeType       | The personal ('single-use') code type. Corresponds to the _Campaign Name_ in the Design Portal.                                                                             |
+| codeState      | Initial state of the redemption code.                                                                                                                                       |
+| customCodeInfo | Optional custom information.                                                                                                                                                |
 
 ## Usage
 
@@ -42,7 +42,7 @@ This operation adds a code to your inventory.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -78,6 +78,24 @@ This operation adds a code to your inventory.
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -101,14 +119,14 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "redemptionCode",
-	"operation": "ADD_CODE",
-	"data": {
-		"scanCode": "a-scan-code",
-		"codeType": "the-code-type",
-		"codeState": "Available",
-		"customCodeInfo": {}
-	}
+    "service": "redemptionCode",
+    "operation": "ADD_CODE",
+    "data": {
+        "scanCode": "a-scan-code",
+        "codeType": "the-code-type",
+        "codeState": "Available",
+        "customCodeInfo": {}
+    }
 }
 ```
 

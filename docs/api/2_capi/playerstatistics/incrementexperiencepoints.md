@@ -44,7 +44,7 @@ int xpValue = 1;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -89,8 +89,8 @@ var xpValue = 1;
 
 <%= data.branding.codePrefix %>.playerStatistics.incrementExperiencePoints(xpValue, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -109,6 +109,41 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local xpValue = 1
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getPlayerStatisticsService():incrementExperiencePoints(xpValue, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var xp_value = 1
+
+var result = await <%= data.branding.codePrefix %>.player_statistics_service.increment_experience_points(xp_value)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -133,9 +168,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "playerStatistics",
-	"operation": "UPDATE",
-	"data": {
+    "service": "playerStatistics",
+    "operation": "UPDATE",
+    "data": {
         "xp_points": 1
     }
 }

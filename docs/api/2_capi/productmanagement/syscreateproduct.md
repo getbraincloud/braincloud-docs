@@ -32,7 +32,7 @@ productJson | The product details.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -64,6 +64,24 @@ productJson | The product details.
 
 ```dart
 // Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block
@@ -109,9 +127,9 @@ if (postResult.status == 200) {
 ```r
 //for iTunesSubscriptionType Subscription. Should be one of AutoRenewable, Free, or NonRenewing
 {
-	"service": "productManagement",
-	"operation": "SYS_CREATE_PRODUCT",
-	"data": {
+    "service": "productManagement",
+    "operation": "SYS_CREATE_PRODUCT",
+    "data": {
     "productJson": { 
       "itemId": "barBundle1Imp12peer",
       "type": "Subscription",

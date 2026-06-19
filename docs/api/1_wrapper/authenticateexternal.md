@@ -68,7 +68,7 @@ const char* externalAuthName = "nameOfExternalAuthService";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -118,8 +118,8 @@ var forceCreate = true;
 
 <%= data.branding.codePrefix %>.authenticateExternal(userId, token, externalAuthName, forceCreate, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -149,20 +149,42 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local userId = "externalId"
+local token = "externalTokenOrPassword"
+local externalAuthName = "nameOfExternalAuthService"
+local forceCreate = true
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:authenticateExternal(userId, token, externalAuthName, forceCreate, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
-var userId = "externalId";
-var token = "externalTokenOrPassword";
-var externalAuthName = "nameOfExternalAuthService";
-var forceCreate = true;
-
-<%= data.branding.codePrefix %>.authenticateExternal(userId, token, externalAuthName, forceCreate, result =>
-{
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
-});
+```cfscript
+// N/A
 ```
 
 ```mdx-code-block
@@ -170,17 +192,8 @@ var forceCreate = true;
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
-var userId = "externalId";
-var token = "externalTokenOrPassword";
-var externalAuthName = "nameOfExternalAuthService";
-var forceCreate = true;
-
-<%= data.branding.codePrefix %>.authenticateExternal(userId, token, externalAuthName, forceCreate, result =>
-{
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
-});
+```r
+// N/A
 ```
 
 ```mdx-code-block

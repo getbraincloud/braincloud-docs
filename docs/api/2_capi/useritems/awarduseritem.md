@@ -2,6 +2,14 @@
 
 Allows item(s) to be awarded to a user without collecting the purchase amount. If includeDef is true, response includes associated itemDef with language fields limited to the current or default language.
 
+:::note
+Awarding 0 or negative userItem will return an error. Use <code>[DropUserItme](/api/capi/useritems/dropuseritem)</code> to remove usertem.
+:::
+
+:::caution
+For security reasons calling this API from the client is not recommended, and is rejected at the server by default. To over-ride, enable the 'Allow AwardUserItem to be called from client (not recommended)' compatibility setting in the Design Portal.
+:::
+
 <PartialServop service_name="userItems" operation_name="AWARD_USER_ITEM" />
 
 ## Method Parameters
@@ -49,7 +57,7 @@ bool includeDef = true;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -128,6 +136,45 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local defId = "sword001"
+local quantity = 1
+local includeDef = true
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getUserItemsService():awardUserItem(defId, quantity, includeDef, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var def_id = "sword001"
+var quantity = 1
+var include_def = true
+
+var result = await <%= data.branding.codePrefix %>.user_items_service.award_user_item(def_id, quantity, include_def)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -150,13 +197,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "userItems",
-	"operation": "DROP_USER_ITEM",
-	"data": {
-		"defId": "sword001",
-		"quantity": 1,
-		"includeDef": true
-	}
+    "service": "userItems",
+    "operation": "DROP_USER_ITEM",
+    "data": {
+        "defId": "sword001",
+        "quantity": 1,
+        "includeDef": true
+    }
 }
 ```
 

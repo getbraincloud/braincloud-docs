@@ -52,7 +52,7 @@ const char *facebookContent = "{\"template\":\"content of message\"}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -130,8 +130,8 @@ var facebookContent = {
 
 <%= data.branding.codePrefix %>.pushNotification.sendRawPushNotificationToGroup(groupId, fcmContent, iosContent, facebookContent, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -174,6 +174,89 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local groupId = "group1"
+local fcmContent = {
+    notification = {
+        body = "content of message",
+        title = "message title"
+    },
+    data = {
+        customfield1 = "customValue1",
+        customfield2 = "customValue2"
+    },
+    priority = "normal"
+}
+local iosContent = {
+    aps = {
+        alert = {
+            body = "content of message",
+            title = "message title"
+        },
+        badge = 0,
+        sound = "gggg"
+    }
+}
+local facebookContent = {
+    template = "content of message"
+}
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getPushNotificationService():sendRawPushNotificationToGroup(groupId, fcmContent, iosContent, facebookContent, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var group_id = "group1"
+var fcm_content = {
+    "notification": {
+        "body": "content of message",
+        "title": "message title"
+    },
+    "data": {
+        "customfield1": "customValue1",
+        "customfield2": "customValue2"
+    },
+    "priority": "normal"
+}
+var ios_content = {
+    "aps": {
+        "alert": {
+            "body": "content of message",
+            "title": "message title"
+        },
+        "badge": 0,
+        "sound": "gggg"
+    }
+}
+var facebook_content = {
+    "template": "content of message"
+}
+
+var result = await <%= data.branding.codePrefix %>.push_notification_service.send_raw_push_notification_to_group(group_id, fcm_content, ios_content, facebook_content)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -222,35 +305,35 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "pushNotification",
-	"operation": "SEND_RAW_TO_GROUP",
-	"data": {
-		"groupId": "group1",
-		"fcmContent": {
-			"notification": {
-				"body": "content of message",
-				"title": "message title"
-			},
-			"data": {
-				"customfield1": "customValue1",
-				"customfield2": "customValue2"
-			},
-			"priority": "normal"
-		},
-		"iosContent": {
-			"aps": {
-				"alert": {
-					"body": "content of message",
-					"title": "message title"
-				},
-				"badge": 0,
-				"sound": "gggg"
-			}
-		},
-		"facebookContent": {
-			"template": "content of message"
-		}
-	}
+    "service": "pushNotification",
+    "operation": "SEND_RAW_TO_GROUP",
+    "data": {
+        "groupId": "group1",
+        "fcmContent": {
+            "notification": {
+                "body": "content of message",
+                "title": "message title"
+            },
+            "data": {
+                "customfield1": "customValue1",
+                "customfield2": "customValue2"
+            },
+            "priority": "normal"
+        },
+        "iosContent": {
+            "aps": {
+                "alert": {
+                    "body": "content of message",
+                    "title": "message title"
+                },
+                "badge": 0,
+                "sound": "gggg"
+            }
+        },
+        "facebookContent": {
+            "template": "content of message"
+        }
+    }
 }
 ```
 

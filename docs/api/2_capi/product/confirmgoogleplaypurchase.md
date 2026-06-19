@@ -54,7 +54,7 @@ const char *token = "Google Play purchase token";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -96,8 +96,8 @@ var token = "Google Play purchase token";
 
 <%= data.branding.codePrefix %>.product.confirmGooglePlayPurchase(orderId, productId, token, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -108,6 +108,24 @@ var token = "Google Play purchase token";
 
 ```dart
 // N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block
@@ -134,13 +152,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "product",
-	"operation": "CONFIRM_GOOGLEPLAY_PURCHASE",
-	"data": {
-		"orderId": "Google Play order ID",
-		"productId": "Google Play product ID",
-		"token": "Google Play purchase token"
-	}
+    "service": "product",
+    "operation": "CONFIRM_GOOGLEPLAY_PURCHASE",
+    "data": {
+        "orderId": "Google Play order ID",
+        "productId": "Google Play product ID",
+        "token": "Google Play purchase token"
+    }
 }
 ```
 

@@ -64,7 +64,7 @@ bool forceCreate = true;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -117,8 +117,8 @@ var forceCreate = true;
 
 <%= data.branding.codePrefix %>.authenticateFacebook(facebookId, token, forceCreate, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -146,10 +146,49 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local facebookId = "userFacebookId"
+local token = "tokenFromFacebook"
+local forceCreate = true
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:authenticateFacebook(facebookId, token, forceCreate, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var facebook_id = "userFacebookId"
+var token = "tokenFromFacebook"
+var force_create = true
+
+var result = await <%= data.branding.codePrefix %>.authenticate_facebook(facebook_id, token, force_create)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
+```cfscript
 // N/A
 ```
 
@@ -158,8 +197,8 @@ if (result.statusCode == 200) {
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
-v// N/A
+```r
+// N/A
 ```
 
 ```mdx-code-block

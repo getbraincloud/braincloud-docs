@@ -36,7 +36,7 @@ See the [Generic Paged Queries](/api/appendix/genericpagedqueries) documentation
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -68,6 +68,24 @@ See the [Generic Paged Queries](/api/appendix/genericpagedqueries) documentation
 
 ```dart
 // Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block
@@ -114,38 +132,8 @@ if ( questPage.status == 200 ) {
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var context = {
-    "pagination": {
-        "rowsPerPage": 2,
-        "pageNumber": 1
-    },
-    "searchCriteria": {},
-    "sortCriteria": {
-        "questId": 1
-    }
-};
-
-var gameficationProxy = bridge.getGamificationServiceProxy();
-var questPage = gameficationProxy.sysGetQuestPage(context);
-var encodedContext = "";
-
-if ( questPage.status == 200 ) {
-  if ( questPage.data.results.moreAfter == true ) {
-
-    //...
-
-    // Get the next page...
-    encodedContext = questPage.data.context;
-    questPage = gamificationProxy.sysGetQuestPageOffset(encodedContext, 1);
-    if ( questPage.status == 200 ) {
-
-      // Success!
-
-    }
-  }
-
-}
+```r
+// N/A
 ```
 
 ```mdx-code-block

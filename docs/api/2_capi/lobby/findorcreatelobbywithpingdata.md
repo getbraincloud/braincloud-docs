@@ -75,7 +75,7 @@ const char *teamCode = "blue";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -172,8 +172,8 @@ var teamCode = "blue";
 
 <%= data.branding.codePrefix %>.lobby.findOrCreateLobbyWithPingData(lobbyType, rating, maxSteps, algo, filterJson, otherUserCxIds, settings, isReady, extraJson, teamCode, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -217,6 +217,90 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local lobbyType = "4v4"
+local rating = 76
+local maxSteps = 3
+local algo = {
+    strategy = "compound",
+    algos = [
+        { criteria = "ping", strategy = "absolute", alignment = "absolute" },
+        {
+            criteria = "rating",
+            strategy = "ranged-absolute",
+            alignment = "center"
+        }
+    ],
+    ["compound-ranges"] = { [30, [5, 10 }],
+        { 50, [10, 15 }]
+    ]
+}
+local filterJson = {
+    cheater = false
+}
+local otherUserCxIds = { "123456:aaa-bbb-ccc-ddd:asdfjkl" }
+local settings = {}
+local isReady = false
+local extraJson = {}
+local teamCode = "blue"
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getLobbyService():findOrCreateLobbyWithPingData(lobbyType, rating, maxSteps, algo, filterJson, otherUserCxIds, settings, isReady, extraJson, teamCode, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var lobby_type = "4v4"
+var rating = 76
+var max_steps = 3
+var algo = {
+    "strategy": "compound",
+    "algos": [
+        { "criteria": "ping", "strategy": "absolute", "alignment": "absolute" },
+        {
+            "criteria": "rating",
+            "strategy": "ranged-absolute",
+            "alignment": "center"
+        }
+    ],
+    "compound-ranges": [
+        [30, [5, 10]],
+        [50, [10, 15]]
+    ]
+}
+var filter_json = {
+    "cheater": false
+}
+var other_user_cx_ids = [ "123456:aaa-bbb-ccc-ddd:asdfjkl" ]
+var settings = {}
+var is_ready = false
+var extra_json = {}
+var team_code = "blue"
+
+var result = await <%= data.branding.codePrefix %>.lobby_service.find_or_create_lobby_with_ping_data(lobby_type, rating, max_steps, algo, filter_json, settings, is_ready, extra_json, team_code, other_user_cx_ids)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -270,13 +354,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "lobby",
-	"operation": "FIND_OR_CREATE_LOBBY_WITH_PING_DATA",
-	"data": {
-		"lobbyType": "4v4",
-		"rating": 76,
-		"maxSteps": 3,
-		"algo": {
+    "service": "lobby",
+    "operation": "FIND_OR_CREATE_LOBBY_WITH_PING_DATA",
+    "data": {
+        "lobbyType": "4v4",
+        "rating": 76,
+        "maxSteps": 3,
+        "algo": {
             "strategy": "compound",
             "algos": [
                 { "criteria": "ping", "strategy": "absolute", "alignment": "absolute" },
@@ -291,21 +375,21 @@ if (postResult.status == 200) {
                 [50, [10, 15]]
             ]
         },
-		"filterJson": {
-			"cheater": false
-		},
-		"otherUserCxIds": [
-			"55555:aaa-bbb-ccc-ddd:asdfjkl"
-		],
-		"settings": {},
-		"isReady": false,
-		"extraJson": {},
-		"teamCode": "blue",
-		"pingData": {
-			"ca-central-1": 98,
-			"us-west-1": 123
-		}
-	}
+        "filterJson": {
+            "cheater": false
+        },
+        "otherUserCxIds": [
+            "55555:aaa-bbb-ccc-ddd:asdfjkl"
+        ],
+        "settings": {},
+        "isReady": false,
+        "extraJson": {},
+        "teamCode": "blue",
+        "pingData": {
+            "ca-central-1": 98,
+            "us-west-1": 123
+        }
+    }
 }
 ```
 

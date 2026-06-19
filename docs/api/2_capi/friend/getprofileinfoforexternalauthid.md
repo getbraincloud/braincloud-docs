@@ -49,7 +49,7 @@ const char *externalAuthType = "OAuth";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -98,8 +98,8 @@ var externalAuthType = "OAuth";
 
 <%= data.branding.codePrefix %>.friend.getProfileInfoForExternalAuthId(externalId, externalAuthType, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -110,6 +110,24 @@ var externalAuthType = "OAuth";
 
 ```dart
 // Use alternate method   GetProfileInfoForExternalAuthIdIfExists()
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block
@@ -135,12 +153,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "friend",
-	"operation": "GET_PROFILE_INFO_FOR_EXTERNAL_AUTH_ID",
-	"data": {
-		"externalId": "username",
-		"externalAuthType": "OAuth"
-	}
+    "service": "friend",
+    "operation": "GET_PROFILE_INFO_FOR_EXTERNAL_AUTH_ID",
+    "data": {
+        "externalId": "username",
+        "externalAuthType": "OAuth"
+    }
 }
 ```
 

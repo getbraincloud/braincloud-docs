@@ -75,7 +75,7 @@ const char *jsonSummary = "{\"Address\": \"South Africa\"}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -147,8 +147,8 @@ var jsonSummary = {
 
 <%= data.branding.codePrefix %>.asyncMatch.createMatchWithInitialTurn(jsonOpponentIds, jsonMatchState, pushNotificationMessage, nextPlayer, jsonSummary, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -182,6 +182,71 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local jsonOpponentIds = [
+    {
+        platform = "BC",
+        id = "profile ID-1"
+    },
+    {
+        platform = "FB",
+        id = "Facebook ID-1"
+    }
+]
+local jsonMatchState = {}
+local pushNotificationMessage = "You have been entered into an async-match!"
+local nextPlayer = "Facebook ID-1"
+local jsonSummary = {
+    Address = "South Africa"
+}
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getAsyncMatchService():createMatchWithInitialTurn(jsonOpponentIds, jsonMatchState, pushNotificationMessage, nextPlayer, jsonSummary, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var json_opponent_ids = [
+    {
+        "platform": "BC",
+        "id": "profile ID-1"
+    },
+    {
+        "platform": "FB",
+        "id": "Facebook ID-1"
+    }
+]
+var json_match_state = {}
+var push_notification_message = "You have been entered into an async-match!"
+var next_player = "Facebook ID-1"
+var json_summary = {
+    "Address": "South Africa"
+}
+
+var result = await <%= data.branding.codePrefix %>.async_match_service.create_match_with_initial_turn(json_opponent_ids, json_match_state, push_notification_message, next_player, json_summary)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -221,26 +286,26 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "asyncMatch",
-	"operation": "CREATE",
-	"data": {
-		"players": [
-			{
-				"platform": "BC",
-				"id": "1st-profile-id"
-			},
-			{
-				"platform": "FB",
-				"id": "2nd-profile-id"
-			}
-		],
-		"matchState": {},
-		"pushContent": "You have been entered into an async-match!",
-		"currentPlayer": "2nd-profile-id",
-		"summary": {
-			"Address": "South Africa"
-		}
-	}
+    "service": "asyncMatch",
+    "operation": "CREATE",
+    "data": {
+        "players": [
+            {
+                "platform": "BC",
+                "id": "1st-profile-id"
+            },
+            {
+                "platform": "FB",
+                "id": "2nd-profile-id"
+            }
+        ],
+        "matchState": {},
+        "pushContent": "You have been entered into an async-match!",
+        "currentPlayer": "2nd-profile-id",
+        "summary": {
+            "Address": "South Africa"
+        }
+    }
 }
 ```
 

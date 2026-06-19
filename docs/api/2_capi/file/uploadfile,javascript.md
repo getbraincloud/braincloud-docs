@@ -42,7 +42,7 @@ On a 200 http status, the JSON return is available from XMLHttpRequest.responseT
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -70,14 +70,14 @@ var file = document.getElementById('fileToUpload').files[0];
 var fileSize = file.size;
 
 <%= data.branding.codePrefix %>.file.prepareFileUpload(
-			"cloudPath", "cloudFilename", shareable, replaceIfExists, fileSize,
-			function(result) {
-				if (result.status == 200) {
-					var uploadId = result.data.fileDetails.uploadId;
-					<%= data.branding.codePrefix %>.file.uploadFile(xhr, file, uploadId);
-				}
-			}
-		);
+            "cloudPath", "cloudFilename", shareable, replaceIfExists, fileSize,
+            function(result) {
+                if (result.status == 200) {
+                    var uploadId = result.data.fileDetails.uploadId;
+                    <%= data.branding.codePrefix %>.file.uploadFile(xhr, file, uploadId);
+                }
+            }
+        );
 ```
 
 ```mdx-code-block
@@ -87,6 +87,24 @@ var fileSize = file.size;
 
 ```dart
 // N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block
@@ -103,7 +121,7 @@ var fileSize = file.size;
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
+```r
 // N/A
 ```
 

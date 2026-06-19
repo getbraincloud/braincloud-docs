@@ -66,7 +66,7 @@ This operation retrieves a JSON document from an external web site.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -102,6 +102,24 @@ This operation retrieves a JSON document from an external web site.
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -109,10 +127,10 @@ This operation retrieves a JSON document from an external web site.
 var serviceCode = "webService";
 var path = "resource/dir";
 var query = {
-	"parmName": "value"
+    "parmName": "value"
 };
 var headers = {
-	"headerName": "value"
+    "headerName": "value"
 };
 var httpClientProxy = bridge.getHttpClientServiceProxy();
 
@@ -129,18 +147,18 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "httpClient",
-	"operation": "GET_RESPONSE_JSON",
-	"data": {
-		"serviceCode": "webService",
-		"path": "resource/dir",
-		"query": {
-			"parmName": "value"
-		},
-		"headers": {
-			"headerName": "value"
-		}
-	}
+    "service": "httpClient",
+    "operation": "GET_RESPONSE_JSON",
+    "data": {
+        "serviceCode": "webService",
+        "path": "resource/dir",
+        "query": {
+            "parmName": "value"
+        },
+        "headers": {
+            "headerName": "value"
+        }
+    }
 }
 ```
 

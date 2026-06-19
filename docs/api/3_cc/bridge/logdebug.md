@@ -31,7 +31,7 @@ context | String that will display via the context icon click.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -67,6 +67,24 @@ context | String that will display via the context icon click.
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -82,11 +100,8 @@ bridge.logDebug(errorMessage, context);
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var errorMessage = "Test debug message";
-var context = "Additional context info in string format";
-
-bridge.logDebug(errorMessage, context);
+```r
+// N/A
 ```
 
 ```mdx-code-block

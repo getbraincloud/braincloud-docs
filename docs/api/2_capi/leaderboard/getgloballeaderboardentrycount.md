@@ -43,7 +43,7 @@ const char *leaderboardId = "default";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -88,8 +88,8 @@ var leaderboardId = "default";
 
 <%= data.branding.codePrefix %>.leaderboard.getGlobalLeaderboardEntryCount(leaderboardId, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -108,6 +108,41 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local leaderboardId = "default"
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getLeaderboardService():getGlobalLeaderboardEntryCount(leaderboardId, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var leaderboard_id = "default"
+
+var result = await <%= data.branding.codePrefix %>.leaderboard_service.get_global_leaderboard_entry_count(leaderboard_id)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -134,11 +169,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "leaderboard",
-	"operation": "GET_GLOBAL_LEADERBOARD_ENTRY_COUNT",
-	"data": {
-		"leaderboardId": "default",
-	}
+    "service": "leaderboard",
+    "operation": "GET_GLOBAL_LEADERBOARD_ENTRY_COUNT",
+    "data": {
+        "leaderboardId": "default",
+    }
 }
 ```
 

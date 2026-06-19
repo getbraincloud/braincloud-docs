@@ -36,7 +36,7 @@ Method creates a new system new entity on the server.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -72,6 +72,24 @@ Method creates a new system new entity on the server.
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -99,18 +117,18 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalEntity",
-	"operation": "CREATE_SYSTEM_ENTITY",
-	"data": {
-		"entityType": "address",
-		"timeToLive": null,
-		"acl": {
-			"other": 1
-		},
-		"data": {
-			"street": "1309 Carling"
-		}
-	}
+    "service": "globalEntity",
+    "operation": "CREATE_SYSTEM_ENTITY",
+    "data": {
+        "entityType": "address",
+        "timeToLive": null,
+        "acl": {
+            "other": 1
+        },
+        "data": {
+            "street": "1309 Carling"
+        }
+    }
 }
 ```
 

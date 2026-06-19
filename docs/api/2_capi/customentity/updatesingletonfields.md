@@ -49,7 +49,7 @@ const char *fieldsJson = "{\"goals\":3,\"assists\":5}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -134,6 +134,39 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local entityType = "athletes"
+local version = 1
+local fieldsJson = {
+  goals = 3,
+  assists = 5
+}
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getCustomEntityService():updateSingletonFields(entityType, version, fieldsJson, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -159,16 +192,16 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "customEntity",
-	"operation": "UPDATE_SINGLETON_FIELDS",
-	"data": {
-		"entityType": "athletes",
-		"version": 1,
-		"fieldsJson": {
-			"goals": 3,
-			"assists": 5
-		}
-	}
+    "service": "customEntity",
+    "operation": "UPDATE_SINGLETON_FIELDS",
+    "data": {
+        "entityType": "athletes",
+        "version": 1,
+        "fieldsJson": {
+            "goals": 3,
+            "assists": 5
+        }
+    }
 }
 ```
 

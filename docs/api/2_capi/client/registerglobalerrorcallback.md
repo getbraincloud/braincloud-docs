@@ -33,7 +33,7 @@ Useful for tracking and logging all errors.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -71,6 +71,28 @@ void errorCallback(String serviceName, String serviceOperation, int statusCode, 
 }
 ​
 <%= data.branding.codePrefix %>.setErrorCallback(errorCallback);
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+void errorCallback(String serviceName, String serviceOperation, int statusCode, int reasonCode, dynamic statusMessage) {
+  // ...
+}
+​
+<%= data.branding.codePrefix %>:setErrorCallback(errorCallback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

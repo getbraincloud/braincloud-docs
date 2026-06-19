@@ -35,7 +35,7 @@ Deletes all applicable custom entities from the server based on the custom entit
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -71,6 +71,24 @@ Deletes all applicable custom entities from the server based on the custom entit
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -98,18 +116,18 @@ if (postResult.status == 200) {
 ```r
 //ownerId(s) is needed to specify for the owned custom entities only. Or, setting acrossAllUsers to true
 {
-	"service": "customEntity",
-	"operation": "SYS_DELETE_ENTITIES",
-	"data": {
-		"entityType": "athletes",
-		"deleteCriteria": {
-			"entityId": { "$in":
-				["aaaa-bbbb-cccc-dddd", "ffff-gggg-hhhh-iiii", "jjjj-kkkk-llll-mmmm"]
-			},
-			"ownerId":"e7688d66-bf31-4d5c-a0f4-da97628531a3"
-		},
-		"acrossAllUsers": false
-	}
+    "service": "customEntity",
+    "operation": "SYS_DELETE_ENTITIES",
+    "data": {
+        "entityType": "athletes",
+        "deleteCriteria": {
+            "entityId": { "$in":
+                ["aaaa-bbbb-cccc-dddd", "ffff-gggg-hhhh-iiii", "jjjj-kkkk-llll-mmmm"]
+            },
+            "ownerId":"e7688d66-bf31-4d5c-a0f4-da97628531a3"
+        },
+        "acrossAllUsers": false
+    }
 }
 ```
 

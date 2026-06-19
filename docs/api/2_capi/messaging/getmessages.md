@@ -52,7 +52,7 @@ bool markAsRead = false;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -105,8 +105,8 @@ var markAsRead = false;
 
 <%= data.branding.codePrefix %>.messaging.getMessages(msgbox, msgIds, markAsRead, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -127,6 +127,45 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local msgBox = "inbox"
+local msgIds = { "msgId1", "msgId2" }
+local markAsRead = false
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getMessagingService():getMessages(msgBox, msgIds, markAsRead, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var msg_box = "inbox"
+var msg_ids = [ "msgId1", "msgId2" ]
+var mark_as_read = false
+
+var result = await <%= data.branding.codePrefix %>.messaging_service.get_messages(msg_box, msg_ids, mark_as_read)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -153,16 +192,16 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "messaging",
-	"operation": "GET_MESSAGES",
-	"data": {
-		"msgbox": "inbox",
-		"msgIds": [
-			"msgId1",
-			"msgId2"
-		],
-		"markAsRead": false
-	}
+    "service": "messaging",
+    "operation": "GET_MESSAGES",
+    "data": {
+        "msgbox": "inbox",
+        "msgIds": [
+            "msgId1",
+            "msgId2"
+        ],
+        "markAsRead": false
+    }
 }
 ```
 

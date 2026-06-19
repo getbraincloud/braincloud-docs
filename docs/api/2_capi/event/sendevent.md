@@ -56,7 +56,7 @@ const char *eventData = "{\"someMapAttribute\":\"someValue\"}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -111,8 +111,8 @@ var eventData = {
 
 <%= data.branding.codePrefix %>.event.sendEvent(toId, eventType, eventData, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -135,6 +135,49 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local toProfileId = "profile1"
+local eventType = "type1"
+local eventData = {
+    someMapAttribute = "someValue"
+}
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getEventService():sendEvent(toProfileId, eventType, eventData, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var to_profile_id = "profile1"
+var event_type = "type1"
+var event_data = {
+    "someMapAttribute": "someValue"
+}
+
+var result = await <%= data.branding.codePrefix %>.event_service.send_event(to_profile_id, event_type, event_data)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -163,15 +206,15 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "event",
-	"operation": "SEND",
-	"data": {
-		"toId": "profile1",
-		"eventType": "type1",
-		"eventData": {
-			"someMapAttribute": "someValue"
-		}
-	}
+    "service": "event",
+    "operation": "SEND",
+    "data": {
+        "toId": "profile1",
+        "eventType": "type1",
+        "eventData": {
+            "someMapAttribute": "someValue"
+        }
+    }
 }
 ```
 

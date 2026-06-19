@@ -46,7 +46,7 @@ const char *purchaseData = "{\"itemId\":\"3555\",\"language\":\"en\"}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -98,8 +98,8 @@ var purchaseData = {
 
 <%= data.branding.codePrefix %>.appStore.startPurchase(storeId, purchaseData, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -122,6 +122,49 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local storeId = "steam"
+local purchaseData = {
+    itemId = "3555",
+    language = "en"
+}
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getAppStoreService():startPurchase(storeId, purchaseData, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var store_id = "steam"
+var purchase_data = {
+    "itemId": "3555",
+    "language": "en"
+}
+
+var result = await <%= data.branding.codePrefix %>.app_store_service.start_purchase(store_id, purchase_data)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -150,15 +193,15 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "appStore",
-	"operation": "START_PURCHASE",
-	"data": {
-		"storeId": "steam",
-		"purchaseData": {
-			"itemId": "3555",
-			"language": "en"
-		}
-	}
+    "service": "appStore",
+    "operation": "START_PURCHASE",
+    "data": {
+        "storeId": "steam",
+        "purchaseData": {
+            "itemId": "3555",
+            "language": "en"
+        }
+    }
 }
 ```
 

@@ -56,7 +56,7 @@ int version = -1;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -117,8 +117,8 @@ var version = -1;
 
 <%= data.branding.codePrefix %>.entity.updateSingleton(entityType, jsonEntityData, jsonEntityAcl, version, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -144,6 +144,55 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local entityType = "settings"
+local jsonEntityData = {
+    difficulty = "normal"
+}
+local jsonEntityAcl = {
+    other = 0
+}
+local version = -1
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getEntityService():updateSingleton(entityType, jsonEntityData, jsonEntityAcl, version, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var entity_type = "settings"
+var json_entity_data = {
+    "difficulty": "normal"
+}
+var json_entity_acl = {
+    "other": 0
+}
+var version = -1
+
+var result = await <%= data.branding.codePrefix %>.entity_service.update_singleton(entity_type, json_entity_data, json_entity_acl, version)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -175,18 +224,18 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "entity",
-	"operation": "UPDATE_SINGLETON",
-	"data": {
-		"entityType": "settings",
-		"data": {
-			"difficulty": "normal"
-		},
-		"acl": {
-			"other": 0
-		},
-		"version": -1
-	}
+    "service": "entity",
+    "operation": "UPDATE_SINGLETON",
+    "data": {
+        "entityType": "settings",
+        "data": {
+            "difficulty": "normal"
+        },
+        "acl": {
+            "other": 0
+        },
+        "version": -1
+    }
 }
 ```
 

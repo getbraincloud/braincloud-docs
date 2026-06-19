@@ -11,35 +11,6 @@ Make sure you've initialized the <%= data.branding.codeWrapper %> before authent
 
 
 
-## Error Handling Example
-
-```csharp
-public void FailureCallback(int statusCode, int reasonCode, string statusMessage, object cbObject) {
-    switch (reasonCode) {
-        case ReasonCodes.MISSING_IDENTITY_ERROR: {  // Identity does not match any profile
-
-            // Reset Profile ID and re-authenticate
-            <%= data.branding.codePrefix %>.ResetStoredProfileId();
-            <%= data.branding.codePrefix %>.AuthenticateAnonymous();
-            break;
-        }
-        case ReasonCodes.SWITCHING_PROFILES: {  // Identity belongs to a different profile
-
-            // Reset Profile ID and Anonymous id, and then re-authenticate
-            <%= data.branding.codePrefix %>.ResetStoredProfileId();
-            <%= data.branding.codePrefix %>.ResetStoredAnonymousId();
-            <%= data.branding.codePrefix %>.AuthenticateAnonymous();
-            break;
-        }
-        default: { // Uncaught reasonCode  // Uncaught reasonCode
-
-            // Log the error for debugging later
-            // ...
-            break;
-        }
-    }
-}
-```
 
 <PartialServop service_name="authenticationV2" operation_name="AUTHENTICATE" / >
 
@@ -75,7 +46,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -101,8 +72,8 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 ```javascript
 <%= data.branding.codePrefix %>.authenticateAnonymous(result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -112,7 +83,6 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 ```
 
 ```dart
-
 ServerResponse result = await _bc.authenticateAnonymous();
 
 if (result.statusCode == 200) {
@@ -124,15 +94,42 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:authenticateAnonymous(callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var result = await <%= data.branding.codePrefix %>.authenticate_anonymous()
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
-<%= data.branding.codePrefix %>.authenticateAnonymous(result =>
-{
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
-});
+```cfscript
+// N/A
 ```
 
 ```mdx-code-block
@@ -140,12 +137,8 @@ if (result.statusCode == 200) {
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
-<%= data.branding.codePrefix %>.authenticateAnonymous(result =>
-{
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
-});
+```r
+// N/A
 ```
 
 ```mdx-code-block

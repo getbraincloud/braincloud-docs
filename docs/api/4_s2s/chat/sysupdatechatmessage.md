@@ -36,7 +36,7 @@ Update the specified chat message. Message can have been from any user (or syste
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -72,6 +72,24 @@ Update the specified chat message. Message can have been from any user (or syste
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -100,19 +118,19 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "chat",
-	"operation": "SYS_UPDATE_CHAT_MESSAGE",
-	"data": {
-		"channelId": "55555:gl:bcDev",
-		"msgId": "the-message-id",
-		"version": 1,
-		"content": {
-			"text": "New plain text message",
-			"custom": {
-				"somethingNew": "amazing"
-			}
-		}
-	}
+    "service": "chat",
+    "operation": "SYS_UPDATE_CHAT_MESSAGE",
+    "data": {
+        "channelId": "55555:gl:bcDev",
+        "msgId": "the-message-id",
+        "version": 1,
+        "content": {
+            "text": "New plain text message",
+            "custom": {
+                "somethingNew": "amazing"
+            }
+        }
+    }
 }
 ```
 

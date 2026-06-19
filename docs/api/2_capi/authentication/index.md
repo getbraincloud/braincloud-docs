@@ -1,8 +1,5 @@
 # Authentication
 
-
-
-
 This section describes the key methods for implementing basic authentication in your app. These methods are all you'll need if you:
 
 - Just want to use anonymous authentication for all users
@@ -28,7 +25,7 @@ By default, the timeout length for authenticated users is 20 minutes. This timeo
 You must authenticate and ensure it succeeds before attempting to call any other APIs that require authentication! Calling other APIs before authenticate successfully returns can cause the authenticate operation to fail.
 :::
 
-### Version Enforcement ###
+## Version Enforcement 
 
 <%= data.branding.productName %>'s authentication mechanisms allow you to enforce minimum client version requirements – forcing users with obsolete versions of your client app to upgrade before continuing within your application. This is especially useful for scenarios where you've fixed critical client errors, made significant changes to the server-side data structures, or generally just want to ensure that your users all have the best possible experience.
 
@@ -47,7 +44,7 @@ If the client app is older than the minimum version specified, authenticate will
 
 Recommended behavior of the client is to pop up a dialog inviting the user to upgrade the client, and then redirect them to the appropriate software update page.  Note that an upgrade URL may be data-filled with the minimum version # in the server portal.
 
-### Disabled Apps ###
+## Disabled Apps 
 
 <%= data.branding.productName %> allows you to easily control whether your app is *enabled* or *disabled* via the [Core App Info | Advanced Settings](https://portal.braincloudservers.com/admin/dashboard#/development/core-settings-advanced-settings) page of the portal.
 
@@ -71,7 +68,7 @@ Once disabled, your provided JSON-data will be returned within an element called
 }
 ```
 
-### System Disabled ###
+### System Disabled 
 
 If for some reason your app is *System Disabled* by <%= data.branding.productName %> operations, your app will receive a `disabledReason` with two elements: `sysDisabled: true` and `message`.
 
@@ -88,8 +85,49 @@ If for some reason your app is *System Disabled* by <%= data.branding.productNam
 }
 ```
 
+## Error Handling Example
 
-### API Summary
+```csharp
+public void FailureCallback(int statusCode, int reasonCode, string statusMessage, object cbObject) {
+    switch (reasonCode) {
+        case ReasonCodes.MISSING_IDENTITY_ERROR: { // Identity does not exist (and client has orphaned profileId)
+
+            // Reset profileId and re-authenticate
+            <%= data.branding.codeClient %>.Get().AuthenticationService.ResetStoredProfileId();
+            <%= data.branding.codeClient %>.Get().AuthenticationService.AuthenticateEmail(email, password, true);
+            break;
+        }
+        case ReasonCodes.SWITCHING_PROFILES: { // Identity belongs to a different profile
+
+            // Reset profileId and re-authenticate
+            <%= data.branding.codeClient %>.Get().AuthenticationService.ResetStoredProfileId();
+            <%= data.branding.codeClient %>.Get().AuthenticationService.AuthenticateEmail(email, password, forceCreate);
+            break;
+        }
+        case ReasonCodes.MISSING_PROFILE_ERROR: { // Identity does not exist
+
+            // The account doesn't exist - create it now.
+            <%= data.branding.codeClient %>.Get().AuthenticationService.AuthenticateEmail(email, password, true);
+            break;
+        }
+        case ReasonCodes.TOKEN_DOES_NOT_MATCH_USER: { // User auth information is incorrect
+
+            // Display a dialog telling the user that the password provided was invalid,
+            // and invite them to re-enter the password.
+            // ...
+            break;
+        }
+        default: { // Uncaught reasonCode
+
+            // Log the error for debugging later
+            // ...
+            break;
+        }
+    }
+}
+```
+
+## API Summary
 
 ### Initialization
 

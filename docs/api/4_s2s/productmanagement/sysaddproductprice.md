@@ -35,7 +35,7 @@ Adds a new price to the given product item.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -67,6 +67,24 @@ Adds a new price to the given product item.
 
 ```dart
 // S2S call: to view example, switch to the Cloud Code or Raw tab.
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block
@@ -123,9 +141,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "productManagement",
-	"operation": "SYS_ADD_PRODUCT_PRICE",
-	"data": {
+    "service": "productManagement",
+    "operation": "SYS_ADD_PRODUCT_PRICE",
+    "data": {
     "itemId": "gold_bars_10",
     "version": 1,
     "priceJson": {

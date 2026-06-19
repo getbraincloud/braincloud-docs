@@ -42,7 +42,7 @@ const char * childAppId = "1234567";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -91,6 +91,43 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local childAppId = "someId"
+local forceCreate = true
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getIdentityService():switchToSingletonChildProfile(childAppId, forceCreate, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var child_app_id = "someId"
+var force_create = true
+
+var result = await <%= data.branding.codePrefix %>.identity_service.switch_to_singleton_child_profile(child_app_id, force_create)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -107,12 +144,8 @@ var retVal = identityProxy.switchToSingletonChildProfile(childAppId, forceCreate
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var childAppId = "123456";
-var forceCreate = true;
-
-var identityProxy = bridge.getIdentityServiceProxy();
-var retVal = identityProxy.switchToSingletonChildProfile(childAppId, forceCreate);
+```r
+// N/A
 ```
 
 ```mdx-code-block

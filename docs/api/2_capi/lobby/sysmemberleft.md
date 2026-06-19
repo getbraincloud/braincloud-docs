@@ -35,7 +35,7 @@ newOwnerCxId | Optional RTT connection id of another lobby member to be made own
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -71,6 +71,24 @@ newOwnerCxId | Optional RTT connection id of another lobby member to be made own
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -94,14 +112,14 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "lobby",
-	"operation": "SYS_MEMBER_LEFT",
-	"data": {
-		"lobbyId": "55555:4v4:19",
-		"cxId": "55555:aaa-bbb-ccc-ddd:asdfjkl",
-		"reason": "EVICTED",
-		"newOwnerCxId": "55555:eee-fff-ggg-hhh:asdfjkl"
-	}
+    "service": "lobby",
+    "operation": "SYS_MEMBER_LEFT",
+    "data": {
+        "lobbyId": "55555:4v4:19",
+        "cxId": "55555:aaa-bbb-ccc-ddd:asdfjkl",
+        "reason": "EVICTED",
+        "newOwnerCxId": "55555:eee-fff-ggg-hhh:asdfjkl"
+    }
 }
 ```
 

@@ -12,17 +12,21 @@ The following platform IDs are currently supported:
 | Apple iOS Phone/Tablet | "IOS"         |
 | Apple Mac Desktop      | "MAC"         |
 | Apple TV               | "APPLE_TV_OS" |
+| Apple visionOS         | "VISION_OS"   |
 | Apple watchOS          | "WATCH_OS"    |
 | BlackBerry             | "BB"          |
 | Facebook               | "FB"          |
 | Google Play Android    | "ANG"         |
-| Linux                  | "Linux"       |
-| Oculus                 | "Oculus"      |
-| Playstation 3          | "PS3"         |
-| Playstation 4          | "PS4"         |
-| Playstation Vita       | "PS_VITA"     |
+| Linux                  | "LINUX"       |
+| Nintendo               | "NINTENDO"    |
+| Oculus                 | "OCULUS"      |
+| PlayStation 3          | "PS3"         |
+| PlayStation 4          | "PS4"         |
+| PlayStation Vita       | "PS_VITA"     |
 | Roku                   | "ROKU"        |
+| Steam                  | "STEAM"       |
 | Tizen                  | "TIZEN"       |
+| Web                    | "WEB"         |
 | Wii                    | "WII"         |
 | Windows Desktop        | "WINDOWS"     |
 | Windows Phone          | "WINP"        |

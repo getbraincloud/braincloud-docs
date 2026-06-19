@@ -48,7 +48,7 @@ bool includeOffline = true;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -97,8 +97,8 @@ var includeOffline = true;
 
 <%= data.branding.codePrefix %>.presence.getPresenceOfFriends(platform, includeOffline, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -118,6 +118,43 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local platform = brainCloud
+local includeOffline = true
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getPresenceService():getPresenceOfFriends(platform, includeOffline, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var platform = brainCloud
+var include_offline = true
+
+var result = await <%= data.branding.codePrefix %>.presence_service.get_presence_of_friends(platform, include_offline)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -143,12 +180,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "presence",
-	"operation": "GET_PRESENCE_OF_FRIENDS",
-	"data": {
-		"friendPlatform": "brainCloud",
-		"includeOffline": true
-	}
+    "service": "presence",
+    "operation": "GET_PRESENCE_OF_FRIENDS",
+    "data": {
+        "friendPlatform": "brainCloud",
+        "includeOffline": true
+    }
 }
 ```
 

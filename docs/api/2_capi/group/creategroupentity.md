@@ -59,7 +59,7 @@ const char *jsonData = "{\"aKey\":\"aValue\"}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -125,8 +125,8 @@ var jsonData = {
 
 <%= data.branding.codePrefix %>.group.createGroupEntity(groupId, entityType, isOwnedByGroupMember, acl, jsonData, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -154,6 +154,59 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local groupId = "a-group-id"
+local entityType = "myEntityType"
+local isOwnedByGroupMember = false
+local acl = {
+    member = 2,
+    other = 1
+}
+local jsonData = {
+    aKey = "aValue"
+}
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getGroupService():createGroupEntity(groupId, entityType, isOwnedByGroupMember, acl, jsonData, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var group_id = "a-group-id"
+var entity_type = "myEntityType"
+var is_owned_by_group_member = false
+var acl = {
+    "member": 2,
+    "other": 1
+}
+var json_data = {
+    "aKey": "aValue"
+}
+
+var result = await <%= data.branding.codePrefix %>.group_service.create_group_entity(group_id, entity_type, is_owned_by_group_member, acl, json_data)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -187,20 +240,20 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "group",
-	"operation": "CREATE_GROUP_ENTITY",
-	"data": {
-		"groupId": "a-group-id",
-		"entityType": "myEntityType",
-		"isOwnedByGroupMember": false,
-		"acl": {
-			"member": 2,
-			"other": 1
-		},
-		"data": {
-			"aKey": "aValue"
-		}
-	}
+    "service": "group",
+    "operation": "CREATE_GROUP_ENTITY",
+    "data": {
+        "groupId": "a-group-id",
+        "entityType": "myEntityType",
+        "isOwnedByGroupMember": false,
+        "acl": {
+            "member": 2,
+            "other": 1
+        },
+        "data": {
+            "aKey": "aValue"
+        }
+    }
 }
 ```
 

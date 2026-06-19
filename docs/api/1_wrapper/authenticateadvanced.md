@@ -56,7 +56,7 @@ const char* extraJson = "{\"key\":\"value\"}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -117,8 +117,8 @@ var extraJson = {"key":"value"};
 
 <%= data.branding.codePrefix %>.authenticateAdvanced(authenticationType, ids, forceCreate, extraJson, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 ```mdx-code-block
@@ -147,6 +147,41 @@ if (result.statusCode == 200) {
 ```
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local externalId = "authAdvancedUser"
+local authenticationToken = "authAdvancedPass"
+local authenticationSubType = ""
+local ids = {
+    externalId = externalId,
+    authenticationToken = authenticationToken,
+    authenticationSubType = authenticationSubType
+}
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:authenticateAdvanced(AuthenticationType.universal, ids, {key = "value"}, true, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -159,7 +194,7 @@ if (result.statusCode == 200) {
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
+```r
 // N/A
 ```
 

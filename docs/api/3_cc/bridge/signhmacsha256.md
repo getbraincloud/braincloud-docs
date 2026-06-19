@@ -31,7 +31,7 @@ dataString | The data string to calculate the signature for
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -67,6 +67,24 @@ dataString | The data string to calculate the signature for
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -87,16 +105,8 @@ response;
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var secrectKey = "aSecrectKey";
-var dataString = "String to sign";
-var response = {};
-
-response.signature = bridge.utils().signHMACSha256( secrectKey, dataString );
-
-// Return the result
-response;
-
+```r
+// N/A
 ```
 
 ```mdx-code-block

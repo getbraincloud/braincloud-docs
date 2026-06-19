@@ -25,7 +25,7 @@ Retrieves the appId of the client who called the peer script.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -61,6 +61,24 @@ Retrieves the appId of the client who called the peer script.
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -73,8 +91,8 @@ var appId = bridge.getClientAppId();
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var appId = bridge.getClientAppId();
+```r
+// N/A
 ```
 
 ```mdx-code-block

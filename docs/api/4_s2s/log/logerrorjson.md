@@ -34,7 +34,7 @@ Logs an App Error message to the error log.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -70,13 +70,31 @@ Logs an App Error message to the error log.
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
 ```cfscript
 var errorMessage = "Test error message";
 var jsonContext = {
-	"msg": "Test error context"
+    "msg": "Test error context"
 };
 var logProxy = bridge.getLogServiceProxy();
 
@@ -93,14 +111,14 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "log",
-	"operation": "LOG_ERROR",
-	"data": {
-		"errorMessage": "Test error message",
-		"jsonContext": {
-			"msg": "Test error context"
-		}
-	}
+    "service": "log",
+    "operation": "LOG_ERROR",
+    "data": {
+        "errorMessage": "Test error message",
+        "jsonContext": {
+            "msg": "Test error context"
+        }
+    }
 }
 ```
 

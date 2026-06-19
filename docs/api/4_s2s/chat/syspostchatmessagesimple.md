@@ -40,7 +40,7 @@ Sends a potentially richer member chat message. By convention, content should co
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -76,6 +76,24 @@ Sends a potentially richer member chat message. By convention, content should co
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -102,17 +120,17 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "chat",
-	"operation": "SYS_POST_CHAT_MESSAGE_SIMPLE",
-	"data": {
-		"channelId": "55555:gl:bcDev",
-		"text": "Hello world",
-		"recordInHistory": true,
-		"from": {
-			"name": "Homer",
-			"pic": "http://www.simpsons.test/homer.jpg"
-		}
-	}
+    "service": "chat",
+    "operation": "SYS_POST_CHAT_MESSAGE_SIMPLE",
+    "data": {
+        "channelId": "55555:gl:bcDev",
+        "text": "Hello world",
+        "recordInHistory": true,
+        "from": {
+            "name": "Homer",
+            "pic": "http://www.simpsons.test/homer.jpg"
+        }
+    }
 }
 ```
 

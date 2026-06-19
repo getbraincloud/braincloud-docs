@@ -37,7 +37,7 @@ string jsonScriptData = "{\"key\":\"value\"}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -64,10 +64,19 @@ string jsonScriptData = "{\"key\":\"value\"}";
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
+```cfscript
 // N/A
 ```
 
@@ -76,7 +85,7 @@ string jsonScriptData = "{\"key\":\"value\"}";
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
+```r
 // N/A
 ```
 

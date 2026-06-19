@@ -48,7 +48,7 @@ bool bidirectional = true;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -97,8 +97,8 @@ var bidirectional = true;
 
 <%= data.branding.codePrefix %>.presence.registerListenersForGroup(platform, bidirectional, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -118,6 +118,43 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local groupId = "aaa-bbb-ccc-ddd"
+local bidirectional = true
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getPresenceService():registerListenersForGroup(groupId, bidirectional, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var group_id = "aaa-bbb-ccc-ddd"
+var bidirectional = true
+
+var result = await <%= data.branding.codePrefix %>.presence_service.register_listeners_for_group(group_id, bidirectional)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -142,12 +179,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "presence",
-	"operation": "REGISTER_LISTENERS_FOR_GROUP",
-	"data": {
-		"groupId": "aaa-bbb-ccc-ddd",
-		"bidirectional": true
-	}
+    "service": "presence",
+    "operation": "REGISTER_LISTENERS_FOR_GROUP",
+    "data": {
+        "groupId": "aaa-bbb-ccc-ddd",
+        "bidirectional": true
+    }
 }
 ```
 

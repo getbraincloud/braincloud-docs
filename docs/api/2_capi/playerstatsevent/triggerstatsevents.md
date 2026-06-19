@@ -46,7 +46,7 @@ const char *events = "[{\"eventName\":\"GrantExperience\",\"eventMultiplier\":10
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -96,8 +96,8 @@ var events = [
 
 <%= data.branding.codePrefix %>.playerStatisticsEvent.triggerStatsEvents(events, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -125,6 +125,51 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local events = [
+    {
+        eventName = "GrantExperience",
+        eventMultiplier = 100
+    }
+]
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getPlayerStatisticsEventService():triggerStatsEvents(events, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var events = [
+    {
+        "eventName": "GrantExperience",
+        "eventMultiplier": 100
+    }
+]
+
+var result = await <%= data.branding.codePrefix %>.player_statistics_event_service.trigger_stats_events(events)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -148,19 +193,8 @@ if (postResult.status == 200) {
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var events = [
-    {
-        "eventName": "GrantExperience",
-        "eventMultiplier": 100
-    }
-];
-var playerStatisticsEventProxy = bridge.getPlayerStatisticsEventServiceProxy();
-
-var postResult = playerStatisticsEventProxy.triggerStatsEvents(events);
-if (postResult.status == 200) {
-    // Success!
-}
+```r
+// N/A
 ```
 
 ```mdx-code-block

@@ -44,7 +44,7 @@ const char *currencyType = "coins";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -89,8 +89,8 @@ var currencyType = "coins";
 
 <%= data.branding.codePrefix %>.product.getCurrency(currencyType, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -101,6 +101,24 @@ var currencyType = "coins";
 
 ```dart
 // N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block
@@ -125,11 +143,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "product",
-	"operation": "GET_PLAYER_VC",
-	"data": {
-		"vc_id": "coins"
-	}
+    "service": "product",
+    "operation": "GET_PLAYER_VC",
+    "data": {
+        "vc_id": "coins"
+    }
 }
 ```
 

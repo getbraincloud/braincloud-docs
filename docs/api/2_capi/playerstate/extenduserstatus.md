@@ -49,7 +49,7 @@ const char *details = "{}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -128,6 +128,45 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local statusName = "a-status-name"
+local additionalSecs = 1000
+local details = {}
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getPlayerStateService():extendUserStatus(statusName, additionalSecs, details, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var status_name = "a-status-name"
+var additional_secs = 1000
+var details = {}
+
+var result = await <%= data.branding.codePrefix %>.player_state_service.extend_user_status(status_name, additional_secs, details)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -150,13 +189,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "playerState",
-	"operation": "EXTEND_USER_STATUS",
-	"data": {
-		"statusName": "a-status-name",
-		"additionalSecs": 1000,
-		"details": {}
-	}
+    "service": "playerState",
+    "operation": "EXTEND_USER_STATUS",
+    "data": {
+        "statusName": "a-status-name",
+        "additionalSecs": 1000,
+        "details": {}
+    }
 }
 ```
 

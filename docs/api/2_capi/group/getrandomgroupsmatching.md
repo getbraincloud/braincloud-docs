@@ -46,7 +46,7 @@ int maxReturn = 20;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -97,8 +97,8 @@ var maxReturn = 20;
 
 <%= data.branding.codePrefix %>.group.getRandomGroupsMatching(where, maxReturn, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -120,6 +120,47 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local where = {
+    groupType = "BLUE"
+}
+local maxReturn = 20
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getGroupService():getRandomGroupsMatching(where, maxReturn, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var where = {
+    "groupType": "BLUE"
+}
+var max_return = 20
+
+var result = await <%= data.branding.codePrefix %>.group_service.get_random_groups_matching(where, max_return)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -147,14 +188,14 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "group",
-	"operation": "GET_RANDOM_GROUPS_MATCHING",
-	"data": {
-		"where": {
-			"groupType": "BLUE"
-		},
-		"maxReturn": 20
-	}
+    "service": "group",
+    "operation": "GET_RANDOM_GROUPS_MATCHING",
+    "data": {
+        "where": {
+            "groupType": "BLUE"
+        },
+        "maxReturn": 20
+    }
 }
 ```
 

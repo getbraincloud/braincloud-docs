@@ -3,52 +3,6 @@
 Universal authentication allows the developer to pass in any user/password string combination. As with all authentication methods, if the create new profile flag is specified as false, the authentication will fail if the user/password combination does not match a user in the database.
 
 
-
-
-## Error Handling Example
-
-```csharp
-public void FailureCallback(int statusCode, int reasonCode, string statusMessage, object cbObject) {
-    switch (reasonCode) {
-        case ReasonCodes.MISSING_IDENTITY_ERROR: {  // Identity does not exist (and client has orphaned profileId)
-
-            // Reset profileId and re-authenticate
-            <%= data.branding.codePrefix %>.ResetStoredProfileId();
-            <%= data.branding.codePrefix %>.AuthenticateUniversal(userId, password, true);
-            break;
-        }
-        case ReasonCodes.SWITCHING_PROFILES: {  // Identity belongs to a different profile
-
-            // [Optional] Prompt user to confirm that they wish to switch accounts?
-
-            // Reset profileId and re-authenticate
-            <%= data.branding.codePrefix %>.ResetStoredProfileId();
-            <%= data.branding.codePrefix %>.AuthenticateUniversal(userId, password, forceCreate);
-            break;
-        }
-        case ReasonCodes.MISSING_PROFILE_ERROR: {  // Identity does not exist
-
-            // The account doesn't exist - create it now.
-            <%= data.branding.codePrefix %>.AuthenticateUniversal(userId, password, true);
-            break;
-        }
-        case ReasonCodes.TOKEN_DOES_NOT_MATCH_USER: {  // Wrong password
-
-            // Display a dialog telling the user that the password provided was invalid,
-            // and invite them to re-enter the password.
-            // ...
-            break;
-        }
-        default: { // Uncaught reasonCode
-
-            // Log the error for debugging later
-            // ...
-            break;
-        }
-    }
-}
-```
-
 :::caution
 You must initialize the <%= data.branding.productName %> wrapper in order to authenticate.
 :::
@@ -101,7 +55,7 @@ bool forceCreate = true;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -154,8 +108,8 @@ var forceCreate = true;
 
 <%= data.branding.codePrefix %>.authenticateUniversal(userId, password, forceCreate, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -184,19 +138,50 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local userId = "<%= data.example.userId %>"
+local password = "<%= data.example.password %>"
+local forceCreate = true
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:authenticateUniversal(userId, password, forceCreate, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var user_id = "<%= data.example.userId %>"
+var password = "<%= data.example.password %>"
+var force_create = true
+
+var result = await <%= data.branding.codePrefix %>.authenticate_universal(user_id, password, force_create)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
-var userId = "<%= data.example.userId %>";
-var password = "<%= data.example.password %>";
-var forceCreate = true;
-
-<%= data.branding.codePrefix %>.authenticateUniversal(userId, password, forceCreate, result =>
-{
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
-});
+```cfscript
+// N/A
 ```
 
 ```mdx-code-block
@@ -204,16 +189,8 @@ var forceCreate = true;
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
-var userId = "<%= data.example.userId %>";
-var password = "<%= data.example.password %>";
-var forceCreate = true;
-
-<%= data.branding.codePrefix %>.authenticateUniversal(userId, password, forceCreate, result =>
-{
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
-});
+```r
+// N/A
 ```
 
 ```mdx-code-block

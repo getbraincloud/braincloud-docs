@@ -25,7 +25,7 @@ Inserts a marker which will tell the <%= data.branding.productName %> comms laye
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -57,6 +57,24 @@ Inserts a marker which will tell the <%= data.branding.productName %> comms laye
 
 ```dart
 <%= data.branding.codePrefix %>.insertEndOfMessageBundleMarker();
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+<%= data.branding.codePrefix %>:insertEndOfMessageBundleMarker()
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

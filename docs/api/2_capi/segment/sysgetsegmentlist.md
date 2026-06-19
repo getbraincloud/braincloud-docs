@@ -27,7 +27,7 @@ Returns a list of all segments with basic meta-data. i.e. does not include the c
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -63,6 +63,24 @@ Returns a list of all segments with basic meta-data. i.e. does not include the c
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -82,9 +100,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "segment",
-	"operation": "SYS_GET_SEGMENT_LIST",
-	"data": {}
+    "service": "segment",
+    "operation": "SYS_GET_SEGMENT_LIST",
+    "data": {}
 }
 ```
 

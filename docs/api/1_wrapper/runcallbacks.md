@@ -32,7 +32,7 @@ However, if you are not using Unity or not using the <%= data.branding.codeWrapp
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -71,10 +71,28 @@ However, if you are not using Unity or not using the <%= data.branding.codeWrapp
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+<%= data.branding.codePrefix %>:runCallbacks()
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
+```cfscript
 // N/A
 ```
 
@@ -83,7 +101,7 @@ However, if you are not using Unity or not using the <%= data.branding.codeWrapp
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
+```r
 // N/A
 ```
 
@@ -96,7 +114,7 @@ However, if you are not using Unity or not using the <%= data.branding.codeWrapp
 <details>
 <summary>JSON Response</summary>
 
-```javascript
+```json
 // N/A
 ```
 </details>

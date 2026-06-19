@@ -57,7 +57,7 @@ const char *dataQueryJson = "{}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -72,7 +72,7 @@ BCErrorCompletionBlock failureBlock; // define callback
          autoJoinStrategy:autoJoinStrategy
           completionBlock:successBlock
      errorCompletionBlock:failureBlock
-		             cbObject:nil];
+                     cbObject:nil];
 ```
 
 ```mdx-code-block
@@ -110,8 +110,8 @@ var dataQueryJson = {};
 
 <%= data.branding.codePrefix %>.group.autoJoinGroup(groupType, autoJoinStrategy, dataQueryJson, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -132,6 +132,45 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local groupType = "a-group-type-name"
+local autoJoinStrategy = "JoinRandomGroup"
+local dataQueryJson = {}
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getGroupService():autoJoinGroup(groupType, autoJoinStrategy, dataQueryJson, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var group_type = "a-group-type-name"
+var auto_join_strategy = "JoinRandomGroup"
+var data_query_json = {}
+
+var result = await <%= data.branding.codePrefix %>.group_service.auto_join_group(group_type, auto_join_strategy, data_query_json)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -158,13 +197,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "group",
-	"operation": "AUTO_JOIN_GROUP",
-	"data": {
-		"groupType": "a-group-type-name",
-		"autoJoinStrategy": "JoinRandomGroup",
-		"where": {}
-	}
+    "service": "group",
+    "operation": "AUTO_JOIN_GROUP",
+    "data": {
+        "groupType": "a-group-type-name",
+        "autoJoinStrategy": "JoinRandomGroup",
+        "where": {}
+    }
 }
 ```
 

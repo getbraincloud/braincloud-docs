@@ -33,7 +33,7 @@ collectionOptsJson | The collection options, as JSON object.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -65,6 +65,24 @@ collectionOptsJson | The collection options, as JSON object.
 
 ```dart
 // Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block
@@ -101,23 +119,23 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "customEntity",
-	"operation": "SYS_CREATE_COLLECTION",
-	"data": {
-		"entityType": "athletes",
-		"collectionOptsJson": {
-			"isOwned": false,
-			"migrate": true,
-			"identifier": "playerName",
-			"dataTemplateJson": {
-			  "playerName": "Randy Traywick",
-			  "playerId": 123456,
-			  "teamName": "Super Stars",
-			  "jerseyNum": 44
-			},
-			"dataTemplateText": "**Important** notes go here..."
-		}
-	}
+    "service": "customEntity",
+    "operation": "SYS_CREATE_COLLECTION",
+    "data": {
+        "entityType": "athletes",
+        "collectionOptsJson": {
+            "isOwned": false,
+            "migrate": true,
+            "identifier": "playerName",
+            "dataTemplateJson": {
+              "playerName": "Randy Traywick",
+              "playerId": 123456,
+              "teamName": "Super Stars",
+              "jerseyNum": 44
+            },
+            "dataTemplateText": "**Important** notes go here..."
+        }
+    }
 }
 ```
 

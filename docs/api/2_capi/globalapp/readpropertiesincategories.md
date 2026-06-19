@@ -46,7 +46,7 @@ categories.push_back("cName2");
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -90,8 +90,8 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 var categories = [ "cName1", "cName2" ];
 <%= data.branding.codePrefix %>.globalApp.readPropertiesInCategories(categories, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -110,6 +110,41 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local categories = { "cName1", "cName2" }
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getGlobalAppService():readPropertiesInCategories(categories, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var categories = [ "cName1", "cName2" ]
+
+var result = await <%= data.branding.codePrefix %>.global_app_service.read_properties_in_categories(categories)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -134,9 +169,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalApp",
-	"operation": "READ_PROPERTIES_IN_CATEGORIES",
-	"data": {
+    "service": "globalApp",
+    "operation": "READ_PROPERTIES_IN_CATEGORIES",
+    "data": {
         "categories": ["comma separated category strings"]
     }
 }

@@ -41,7 +41,7 @@ fromJson | the from information for message. Should not include `id`.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -77,6 +77,24 @@ fromJson | the from information for message. Should not include `id`.
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -100,19 +118,8 @@ if (postResult.status == 200 ) {
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var chatProxy = bridge.getChatServiceProxy();
-
-var text = "Hellooooo!";
-
-var from = {};
-from.name = "The Overseer";
-from.pic = "https://myprofilepic.com?id=555"
-
-var postResult = chatProxy.sysPostChatMessageSimple( channelId, text, true, from );
-if (postResult.status == 200 ) {
-    // Success!
-}
+```r
+// N/A
 ```
 
 ```mdx-code-block

@@ -8,50 +8,6 @@ For the greatest security, force the user to re-enter their password at each log
 
 Alternatively, if using the wrapper, use the Reconnect() method to automatically login to the last used account.
 
-
-
-## Error Handling Example
-
-```csharp
-public void FailureCallback(int statusCode, int reasonCode, string statusMessage, object cbObject) {
-    switch (reasonCode) {
-        case ReasonCodes.MISSING_IDENTITY_ERROR: { // Identity does not exist (and client has orphaned profileId)
-
-            // Reset profileId and re-authenticate
-            <%= data.branding.codeClient %>.Get().AuthenticationService.ResetStoredProfileId();
-            <%= data.branding.codeClient %>.Get().AuthenticationService.AuthenticateEmail(email, password, true);
-            break;
-        }
-        case ReasonCodes.SWITCHING_PROFILES: { // Identity belongs to a different profile
-
-            // Reset profileId and re-authenticate
-            <%= data.branding.codeClient %>.Get().AuthenticationService.ResetStoredProfileId();
-            <%= data.branding.codeClient %>.Get().AuthenticationService.AuthenticateEmail(email, password, forceCreate);
-            break;
-        }
-        case ReasonCodes.MISSING_PROFILE_ERROR: { // Identity does not exist
-
-            // The account doesn't exist - create it now.
-            <%= data.branding.codeClient %>.Get().AuthenticationService.AuthenticateEmail(email, password, true);
-            break;
-        }
-        case ReasonCodes.TOKEN_DOES_NOT_MATCH_USER: { // User auth information is incorrect
-
-            // Display a dialog telling the user that the password provided was invalid,
-            // and invite them to re-enter the password.
-            // ...
-            break;
-        }
-        default: { // Uncaught reasonCode
-
-            // Log the error for debugging later
-            // ...
-            break;
-        }
-    }
-}
-```
-
 :::caution
 Make sure you've initialized the <%= data.branding.productName %> library before authenticating.
 :::
@@ -109,7 +65,7 @@ bool forceCreate = true;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -120,8 +76,8 @@ BCCompletionBlock successBlock;      // define callback
 BCErrorCompletionBlock failureBlock; // define callback
 
 [[<%= data.branding.codePrefix %> authenticationService]
-		authenticateEmailPassword:email
-		   		 password:password
+        authenticateEmailPassword:email
+                    password:password
               forceCreate:forceCreate
           completionBlock:successBlock
      errorCompletionBlock:failureBlock
@@ -163,8 +119,8 @@ var forceCreate = true;
 
 <%= data.branding.codePrefix %>.authentication.authenticateEmailPassword(email, password, forceCreate, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -189,6 +145,45 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local email = "someEmail@somedomain.com"
+local password = "userPassword"
+local forceCreate = true
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getAuthenticationService():authenticateEmailPassword(email, password, forceCreate, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var email = "someEmail@somedomain.com"
+var password = "userPassword"
+var force_create = true
+
+var result = await <%= data.branding.codePrefix %>.authentication_service.authenticate_email_password(email, password, force_create)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -201,7 +196,7 @@ if (result.statusCode == 200) {
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
+```r
 // N/A
 ```
 

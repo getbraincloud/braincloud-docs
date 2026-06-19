@@ -36,7 +36,7 @@ version | Version of the custom entity being updated.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -72,6 +72,24 @@ version | Version of the custom entity being updated.
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -97,15 +115,15 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "customEntity",
-	"operation": "SYS_UPDATE_ENTITY_OWNER",
-	"data": {
-		"entityType": "athletes",
-		"entityId": "aaaa-bbbb-cccc-dddd",
+    "service": "customEntity",
+    "operation": "SYS_UPDATE_ENTITY_OWNER",
+    "data": {
+        "entityType": "athletes",
+        "entityId": "aaaa-bbbb-cccc-dddd",
     "oldOwnerId": "www-xxx-yyy-zzz1",
     "newOwnerId": "www-xxx-yyy-zzz2",    
-		"version": 1
-	}
+        "version": 1
+    }
 }
 ```
 

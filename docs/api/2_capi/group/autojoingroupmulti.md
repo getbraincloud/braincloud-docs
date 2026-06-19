@@ -57,7 +57,7 @@ const char *where = "{}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -73,7 +73,7 @@ BCErrorCompletionBlock failureBlock; // define callback
                          where:where 
                completionBlock:successBlock
           errorCompletionBlock:failureBlock
-		              cbObject:nil];
+                      cbObject:nil];
 ```
 
 ```mdx-code-block
@@ -113,8 +113,8 @@ var where = {};
 
 <%= data.branding.codePrefix %>.group.autoJoinGroupMulti(groupTypes, autoJoinStrategy, where, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -135,6 +135,45 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local groupTypes = { "type1", "type2" }
+local autoJoinStrategy = "JoinRandomGroup"
+local where = {}
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getGroupService():autoJoinGroupMulti(groupTypes, autoJoinStrategy, where, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var group_types = ["type1", "type2"]
+var auto_join_strategy = "JoinRandomGroup"
+var where = {}
+
+var result = await <%= data.branding.codePrefix %>.group_service.auto_join_group_multi(group_types, auto_join_strategy, where)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -161,13 +200,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "group",
-	"operation": "AUTO_JOIN_GROUP_MULTI",
-	"data": {
-		"groupTypes": ["group_types_array"],
-		"autoJoinStrategy": "JoinRandomGroup",
-		"where": {}
-	}
+    "service": "group",
+    "operation": "AUTO_JOIN_GROUP_MULTI",
+    "data": {
+        "groupTypes": ["group_types_array"],
+        "autoJoinStrategy": "JoinRandomGroup",
+        "where": {}
+    }
 }
 ```
 

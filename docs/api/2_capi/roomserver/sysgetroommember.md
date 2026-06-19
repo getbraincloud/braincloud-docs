@@ -32,7 +32,7 @@ brainCloudContext | Data provided by brainCloud when the server instance was lau
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -68,6 +68,24 @@ brainCloudContext | Data provided by brainCloud when the server instance was lau
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -81,7 +99,7 @@ var brainCloudContext = {
         "abc": "xyz"
     }
 };
-var roomServerProxy = bridge.getRoomserverServiceProxy();
+var roomServerProxy = bridge.getRoomServerServiceProxy();
 
 var postResult = roomServerProxy.sysGetRoomMember(member, brainCloudContext);
 ```

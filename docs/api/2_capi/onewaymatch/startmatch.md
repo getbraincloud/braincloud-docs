@@ -47,7 +47,7 @@ int rangeDelta = 10;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -96,8 +96,8 @@ var rangeDelta = 10;
 
 <%= data.branding.codePrefix %>.onewayMatch.startMatch(playerId, rangeDelta, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -117,6 +117,43 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local playerId = "player"
+local rangeDelta = 10
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getOnewayMatchService():startMatch(playerId, rangeDelta, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var player_id = "player"
+var range_delta = 10
+
+var result = await <%= data.branding.codePrefix %>.one_way_match_service.start_match(player_id, range_delta)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -142,12 +179,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "onewayMatch",
-	"operation": "START_MATCH",
-	"data": {
-		"playerId": "player",
-		"rangeDelta": 10
-	}
+    "service": "onewayMatch",
+    "operation": "START_MATCH",
+    "data": {
+        "playerId": "player",
+        "rangeDelta": 10
+    }
 }
 ```
 

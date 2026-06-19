@@ -12,12 +12,12 @@ This operation updates the specified redemption code.
 
 ## Method Parameters
 
-| Parameter      | Description                                                        |
-| -------------- | ------------------------------------------------------------------ |
-| scanCode       | The scan code.                                                     |
-| codeType       | The code type.                                                     |
-| version        | Current version of the redemption code (for concurrency checking.) |
-| customCodeInfo | Optional custom information.                                       |
+| Parameter      | Description                                                                                     |
+| -------------- | ----------------------------------------------------------------------------------------------- |
+| scanCode       | The scan code.                                                                                  |
+| codeType       | The personal ('single-use') code type. Corresponds to the _Campaign Name_ in the Design Portal. |
+| version        | Current version of the redemption code (for concurrency checking.)                              |
+| customCodeInfo | Optional custom information.                                                                    |
 
 ## Usage
 
@@ -42,7 +42,7 @@ This operation updates the specified redemption code.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -78,6 +78,24 @@ This operation updates the specified redemption code.
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -101,14 +119,14 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "redemptionCode",
-	"operation": "UPDATE_CUSTOM_INFO",
-	"data": {
-		"scanCode": "the-scan-code",
-		"codeType": "the-code-type",
-		"version": 3,
-		"customCodeInfo": {}
-	}
+    "service": "redemptionCode",
+    "operation": "UPDATE_CUSTOM_INFO",
+    "data": {
+        "scanCode": "the-scan-code",
+        "codeType": "the-code-type",
+        "version": 3,
+        "customCodeInfo": {}
+    }
 }
 ```
 

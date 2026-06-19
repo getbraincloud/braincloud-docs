@@ -34,7 +34,7 @@ Gets the presence data for the given \`profileIds`. Will not include offline pro
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -70,6 +70,24 @@ Gets the presence data for the given \`profileIds`. Will not include offline pro
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -91,15 +109,15 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "presence",
-	"operation": "GET_PRESENCE_OF_USERS",
-	"data": {
-		"profileIds": [
-			"aaa-bbb-ccc-ddd",
-			"bbb-ccc-ddd-eee"
-		],
-		"includeOffline": true
-	}
+    "service": "presence",
+    "operation": "GET_PRESENCE_OF_USERS",
+    "data": {
+        "profileIds": [
+            "aaa-bbb-ccc-ddd",
+            "bbb-ccc-ddd-eee"
+        ],
+        "includeOffline": true
+    }
 }
 ```
 

@@ -36,7 +36,7 @@ _Apps are limited to 5 cached objects per session, with each restricted to 512 c
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -72,6 +72,24 @@ _Apps are limited to 5 cached objects per session, with each restricted to 512 c
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -89,13 +107,8 @@ bridge.setSessionCacheObject( "address", addressJson );
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-
-var addressJson = {};
-addressJson.city = "Ottawa";
-addressJson.province = "Ontario";
-
-bridge.setSessionCacheObject( "address", addressJson );
+```r
+// N/A
 ```
 
 ```mdx-code-block

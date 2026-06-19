@@ -43,7 +43,7 @@ contentJson | Replacement content for the message
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -79,6 +79,24 @@ contentJson | Replacement content for the message
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -102,19 +120,19 @@ if (updateResult.status == 200) {
 
 ```r
 {
-	"service": "chat",
-	"operation": "SYS_UPDATE_CHAT_MESSAGE",
-	"data": {
-		"channelId": "55555:gl:bcDev",
-		"msgId": "the-message-id",
-		"version": 1,
-		"content": {
-			"text": "New plain text message",
-			"custom": {
-				"somethingNew": "amazing"
-			}
-		}
-	}
+    "service": "chat",
+    "operation": "SYS_UPDATE_CHAT_MESSAGE",
+    "data": {
+        "channelId": "55555:gl:bcDev",
+        "msgId": "the-message-id",
+        "version": 1,
+        "content": {
+            "text": "New plain text message",
+            "custom": {
+                "somethingNew": "amazing"
+            }
+        }
+    }
 }
 ```
 

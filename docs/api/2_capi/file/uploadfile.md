@@ -68,7 +68,7 @@ const char* localPath = "path/to/my/file.dat";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -130,6 +130,24 @@ public Boolean uploadFile(String cloudPath,
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -142,8 +160,8 @@ public Boolean uploadFile(String cloudPath,
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-// NA
+```r
+// N/A
 ```
 
 ```mdx-code-block

@@ -25,7 +25,7 @@ int bytesPerSecThreshold = <%= data.branding.codePrefix %>->getUploadLowTransfer
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -57,6 +57,24 @@ int bytesPerSecThreshold = [<%= data.branding.codePrefix %> getUploadLowTransfer
 
 ```dart
 int bytesPerSecThreshold = <%= data.branding.codePrefix %>.getUploadLowTransferRateThreshold();
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local bytesPerSecThreshold = <%= data.branding.codePrefix %>:getUploadLowTransferRateThreshold()
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

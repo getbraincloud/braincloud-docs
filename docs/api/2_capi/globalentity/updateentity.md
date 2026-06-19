@@ -52,7 +52,7 @@ const char *jsonEntityData = "{\"street\":\"1309 Carling\"}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -107,8 +107,8 @@ var jsonEntityData = {
 
 <%= data.branding.codePrefix %>.globalEntity.updateEntity(entityId, version, jsonEntityData, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -131,6 +131,49 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local entityId = "a-entity-id"
+local version = 1
+local jsonEntityData = {
+    street = "1309 Carling"
+}
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getGlobalEntityService():updateEntity(entityId, version, jsonEntityData, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var entity_id = "a-entity-id"
+var version = 1
+var json_entity_data = {
+    "street": "1309 Carling"
+}
+
+var result = await <%= data.branding.codePrefix %>.global_entity_service.update_entity(entity_id, version, json_entity_data)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -159,15 +202,15 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalEntity",
-	"operation": "UPDATE",
-	"data": {
-		"entityId": "the-entity-id",
-		"version": 1,
-		"data": {
-			"street": "1309 Carling"
-		}
-	}
+    "service": "globalEntity",
+    "operation": "UPDATE",
+    "data": {
+        "entityId": "the-entity-id",
+        "version": 1,
+        "data": {
+            "street": "1309 Carling"
+        }
+    }
 }
 ```
 

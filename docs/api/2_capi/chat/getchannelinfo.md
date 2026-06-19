@@ -24,17 +24,17 @@ Returns _description info_ and _activity stats_ for the specified channel. Note 
 string channelId = "22817:gl:CHAT_TRADE"; // APP_ID:CHANNEL_TYPE:CHANNEL_ID
 SuccessCallback successCallback = (response, cbObject) =>
 {
-	Dictionary<string, object> jsonMessage = (Dictionary<string, object>)JsonFx.Json.JsonReader.Deserialize(response);
-	Dictionary<string, object> jsonData = (Dictionary<string, object>)jsonMessage["data"];
-	var name = jsonData["name"].ToString();
-	var desc = jsonData["desc"].ToString();
+    Dictionary<string, object> jsonMessage = (Dictionary<string, object>)JsonFx.Json.JsonReader.Deserialize(response);
+    Dictionary<string, object> jsonData = (Dictionary<string, object>)jsonMessage["data"];
+    var name = jsonData["name"].ToString();
+    var desc = jsonData["desc"].ToString();
 
-	string logMessage = string.Join(" | ", new [] {name, desc});
-	Debug.Log(logMessage); // Trade Chat | Trade items here.
+    string logMessage = string.Join(" | ", new [] {name, desc});
+    Debug.Log(logMessage); // Trade Chat | Trade items here.
 };
 FailureCallback failureCallback = (status, code, error, cbObject) =>
 {
-	Debug.Log(string.Format("[GetChannelInfo Failed] {0}  {1}  {2}", status, code, error));
+    Debug.Log(string.Format("[GetChannelInfo Failed] {0}  {1}  {2}", status, code, error));
 };
 <%= data.branding.codePrefix %>.ChatService.GetChannelInfo(channelId, successCallback, failureCallback);
 ```
@@ -51,7 +51,7 @@ const char *channelId = "55555:gl:bcDev";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -96,8 +96,8 @@ var channelId = "13229:gl:bcDev";
 
 <%= data.branding.codePrefix %>.chat.getChannelInfo(channelId, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -120,6 +120,41 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local channelId = "13229:gl:bcDev"
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getChatService():getChannelInfo(channelId, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var channel_id = "13229:gl:bcDev"
+
+var result = await <%= data.branding.codePrefix %>.chat_service.get_channel_info(channel_id)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -135,11 +170,11 @@ var infoResult = chatProxy.getChannelInfo(channelId);
 
 ```r
 {
-	"service": "chat",
-	"operation": "GET_CHANNEL_INFO",
-	"data": {
-		"channelId": "55555:gl:bcDev"
-	}
+    "service": "chat",
+    "operation": "GET_CHANNEL_INFO",
+    "data": {
+        "channelId": "55555:gl:bcDev"
+    }
 }
 ```
 

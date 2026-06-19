@@ -94,7 +94,7 @@ const char *context = "{\"pagination\":{\"rowsPerPage\":10,\"pageNumber\":1},\"s
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -152,8 +152,8 @@ var context = {
 
 <%= data.branding.codePrefix %>.messaging.getMessagesPage(context, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -185,6 +185,47 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local context = {
+    pagination = {
+        rowsPerPage = 10,
+        pageNumber = 1
+    },
+    searchCriteria = {
+        msgbox = "inbox",
+        read = false
+    },
+    sortCriteria = {
+        mbCr = 1,
+        mbUp = -1
+    }
+}
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getMessagingService():getMessagesPage(context, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block
@@ -236,24 +277,24 @@ if ( getResult.status == 200 ) {
 
 ```r
 {
-	"service": "messaging",
-	"operation": "GET_MESSAGES_PAGE",
-	"data": {
-		"context": {
-			"pagination": {
-				"rowsPerPage": 10,
-				"pageNumber": 1
-			},
-			"searchCriteria": {
-				"msgbox": "inbox",
-				"read": false
-			},
-			"sortCriteria": {
-				"mbCr": 1,
-				"mbUp": -1
-			}
-		}
-	}
+    "service": "messaging",
+    "operation": "GET_MESSAGES_PAGE",
+    "data": {
+        "context": {
+            "pagination": {
+                "rowsPerPage": 10,
+                "pageNumber": 1
+            },
+            "searchCriteria": {
+                "msgbox": "inbox",
+                "read": false
+            },
+            "sortCriteria": {
+                "mbCr": 1,
+                "mbUp": -1
+            }
+        }
+    }
 }
 ```
 

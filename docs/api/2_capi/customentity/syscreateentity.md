@@ -36,7 +36,7 @@ ownerId | ProfileId of the user that will own this identity, or null if no owner
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -68,6 +68,24 @@ ownerId | ProfileId of the user that will own this identity, or null if no owner
 
 ```dart
 // Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block
@@ -104,12 +122,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "customEntity",
-	"operation": "SYS_CREATE_COLLECTION",
-	"data": {
-		"entityType": "athletes",
-		"collectionOptsJson": {}
-	}
+    "service": "customEntity",
+    "operation": "SYS_CREATE_COLLECTION",
+    "data": {
+        "entityType": "athletes",
+        "collectionOptsJson": {}
+    }
 }
 ```
 

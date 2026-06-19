@@ -38,7 +38,7 @@ Segments are manually created on the <%= data.branding.productName %> portal, on
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -74,6 +74,24 @@ Segments are manually created on the <%= data.branding.productName %> portal, on
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -93,9 +111,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "pushNotification",
-	"operation": "GET_ALL_SEGMENTS",
-	"data": {}
+    "service": "pushNotification",
+    "operation": "GET_ALL_SEGMENTS",
+    "data": {}
 }
 ```
 

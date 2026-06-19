@@ -25,22 +25,22 @@ channelType | Specifies the type of channels subscriptions to return. If empty s
 string channelType = "all";
 SuccessCallback successCallback = (response, cbObject) =>
 {
-	Dictionary<string, object> jsonMessage = (Dictionary<string, object>)JsonFx.Json.JsonReader.Deserialize(response);
-	Dictionary<string, object> jsonData = (Dictionary<string, object>)jsonMessage["data"];
-	var channels = (Dictionary<string, object>[]) jsonData["channels"];
-	
-	foreach (Dictionary<string, object> channel in channels)
-	{
-		string id = channel["id"].ToString();
-		string desc = channel["desc"].ToString();
-		string messageCount = ((Dictionary<string, object>)channel["stats"])["messageCount"].ToString();
-		string logMessage = string.Join(" | ", new [] {id, desc, messageCount});
-		Debug.Log(logMessage); // 22817:gl:CHAT_GLOBAL | General discussion about the app. | 25					
-	}
+    Dictionary<string, object> jsonMessage = (Dictionary<string, object>)JsonFx.Json.JsonReader.Deserialize(response);
+    Dictionary<string, object> jsonData = (Dictionary<string, object>)jsonMessage["data"];
+    var channels = (Dictionary<string, object>[]) jsonData["channels"];
+    
+    foreach (Dictionary<string, object> channel in channels)
+    {
+        string id = channel["id"].ToString();
+        string desc = channel["desc"].ToString();
+        string messageCount = ((Dictionary<string, object>)channel["stats"])["messageCount"].ToString();
+        string logMessage = string.Join(" | ", new [] {id, desc, messageCount});
+        Debug.Log(logMessage); // 22817:gl:CHAT_GLOBAL | General discussion about the app. | 25                    
+    }
 };
 FailureCallback failureCallback = (status, code, error, cbObject) =>
 {
-	Debug.Log(string.Format("[GetSubscribedChannels Failed] {0}  {1}  {2}", status, code, error));
+    Debug.Log(string.Format("[GetSubscribedChannels Failed] {0}  {1}  {2}", status, code, error));
 };
 <%= data.branding.codePrefix %>.ChatService.GetSubscribedChannels(channelType, successCallback, failureCallback);
 ```
@@ -57,7 +57,7 @@ const char *channelType = "all";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -102,8 +102,8 @@ var channelType = "all";
 
 <%= data.branding.codePrefix %>.chat.getSubscribedChannels(channelType, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -126,6 +126,41 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local channelType = "all"
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getChatService():getSubscribedChannels(channelType, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var channel_type = "all"
+
+var result = await <%= data.branding.codePrefix %>.chat_service.get_subscribed_channels(channel_type)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -144,11 +179,11 @@ if ( subResult.status == 200 ) {
 
 ```r
 {
-	"service": "chat",
-	"operation": "GET_SUBSCRIBED_CHANNELS",
-	"data": {
-		"channelType": "all"
-	}
+    "service": "chat",
+    "operation": "GET_SUBSCRIBED_CHANNELS",
+    "data": {
+        "channelType": "all"
+    }
 }
 ```
 

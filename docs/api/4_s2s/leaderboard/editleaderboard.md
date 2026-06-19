@@ -62,7 +62,7 @@ Edits a existing leaderboard under the context of the current game. You can opti
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -94,6 +94,24 @@ Edits a existing leaderboard under the context of the current game. You can opti
 
 ```dart
 // S2S call: to view example, switch to the Cloud Code or Raw tab.
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block
@@ -148,19 +166,19 @@ var retVal = leaderboardProxy.editLeaderboard(
 
 ```r
 {
-	"service": "leaderboard",
-	"operation": "EDIT_LEADERBOARD",
-	"data": {
-		"leaderboardId": "default",
-		"leaderboardType": "HIGH_VALUE",
-		"rotationType": "DAYS",
-		"rotationResetTime": "[[#ts+60000]]",
-		"retainedCount": 2,
-		"numDaysToRotate": 5,
-		"data": {
-			"street": "1309 Carling Avenue"
-		}
-	}
+    "service": "leaderboard",
+    "operation": "EDIT_LEADERBOARD",
+    "data": {
+        "leaderboardId": "default",
+        "leaderboardType": "HIGH_VALUE",
+        "rotationType": "DAYS",
+        "rotationResetTime": "[[#ts+60000]]",
+        "retainedCount": 2,
+        "numDaysToRotate": 5,
+        "data": {
+            "street": "1309 Carling Avenue"
+        }
+    }
 }
 ```
 

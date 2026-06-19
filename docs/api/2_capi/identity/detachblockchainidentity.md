@@ -43,7 +43,7 @@ const char *blockchainConfig = "config";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -112,6 +112,41 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local blockchainConfig = "config"
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getIdentityService():detachBlockchainIdentity(blockchainConfig, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var blockchain_config = "config"
+
+var result = await <%= data.branding.codePrefix %>.identity_service.detach_blockchain_identity(blockchain_config)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -132,11 +167,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "identity",
-	"operation": "DETACH_BLOCKCHAIN_IDENTITY",
-	"data": {
-		"blockchainConfig": "config"
-	}
+    "service": "identity",
+    "operation": "DETACH_BLOCKCHAIN_IDENTITY",
+    "data": {
+        "blockchainConfig": "config"
+    }
 }
 ```
 

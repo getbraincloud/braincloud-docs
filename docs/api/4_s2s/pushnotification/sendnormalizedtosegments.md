@@ -41,7 +41,7 @@ This operation sends a normalized message to multiple user targets.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -77,21 +77,39 @@ This operation sends a normalized message to multiple user targets.
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
 ```cfscript
 var alertContent = {
-	"body": "content of message",
-	"title": "message title"
+    "body": "content of message",
+    "title": "message title"
 };
 var customData = {
-	"field1": "value1",
-	"field2": "value2"
+    "field1": "value1",
+    "field2": "value2"
 };
 var segmentIdList = [
-	1,
-	2
+    1,
+    2
 ];
 var pushNotificationProxy = bridge.getPushNotificationServiceProxy();
 
@@ -108,22 +126,22 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "pushNotification",
-	"operation": "SEND_NORMALIZED_TO_SEGMENTS",
-	"data": {
-		"alertContent": {
-			"body": "content of message",
-			"title": "message title"
-		},
-		"customData": {
-			"field1": "value1",
-			"field2": "value2"
-		},
-		"segmentIdList": [
-			1,
-			2
-		]
-	}
+    "service": "pushNotification",
+    "operation": "SEND_NORMALIZED_TO_SEGMENTS",
+    "data": {
+        "alertContent": {
+            "body": "content of message",
+            "title": "message title"
+        },
+        "customData": {
+            "field1": "value1",
+            "field2": "value2"
+        },
+        "segmentIdList": [
+            1,
+            2
+        ]
+    }
 }
 ```
 

@@ -69,7 +69,7 @@ const char *teamCode = "blue";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -156,8 +156,8 @@ var teamCode = "blue";
 
 <%= data.branding.codePrefix %>.lobby.findLobby(lobbyType, rating, maxSteps, algo, filterJson, otherUserCxIds, isReady, extraJson, teamCode, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -194,6 +194,77 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local lobbyType = "4v4"
+local rating = 76
+local maxSteps = 3
+local algo = {
+    strategy = "ranged-absolute",
+    alignment = "center",
+    ranges = [
+        5,
+        7.5,
+        10
+    ]
+}
+local filterJson = {
+    cheater = false
+}
+local otherUserCxIds = { "55555:aaa-bbb-ccc-ddd:asdfjkl" }
+local isReady = false
+local extraJson = {}
+local teamCode = "blue"
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getLobbyService():findLobby(lobbyType, rating, maxSteps, algo, filterJson, otherUserCxIds, isReady, extraJson, teamCode, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var lobby_type = "4v4"
+var rating = 76
+var max_steps = 3
+var algo = {
+    "strategy": "ranged-absolute",
+    "alignment": "center",
+    "ranges": [
+        5,
+        7.5,
+        10
+    ]
+}
+var filter_json = {
+    "cheater": false
+}
+var other_user_cx_ids = [ "55555:aaa-bbb-ccc-ddd:asdfjkl" ]
+var is_ready = false
+var extra_json = {}
+var team_code = "blue"
+
+var result = await <%= data.branding.codePrefix %>.lobby_service.find_lobby(lobby_type, rating, max_steps, algo, filter_json, is_ready, extra_json, team_code, other_user_cx_ids)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -236,31 +307,31 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "lobby",
-	"operation": "FIND_LOBBY",
-	"data": {
-		"lobbyType": "4v4",
-		"rating": 76,
-		"maxSteps": 3,
-		"algo": {
-			"strategy": "ranged-absolute",
-			"alignment": "center",
-			"ranges": [
-				5,
-				7.5,
-				10
-			]
-		},
-		"filterJson": {
-			"cheater": false
-		},
-		"otherUserCxIds": [
-			"55555:aaa-bbb-ccc-ddd:asdfjkl"
-		],
-		"isReady": false,
-		"extraJson": {},
-		"teamCode": "blue"
-	}
+    "service": "lobby",
+    "operation": "FIND_LOBBY",
+    "data": {
+        "lobbyType": "4v4",
+        "rating": 76,
+        "maxSteps": 3,
+        "algo": {
+            "strategy": "ranged-absolute",
+            "alignment": "center",
+            "ranges": [
+                5,
+                7.5,
+                10
+            ]
+        },
+        "filterJson": {
+            "cheater": false
+        },
+        "otherUserCxIds": [
+            "55555:aaa-bbb-ccc-ddd:asdfjkl"
+        ],
+        "isReady": false,
+        "extraJson": {},
+        "teamCode": "blue"
+    }
 }
 ```
 

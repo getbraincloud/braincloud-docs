@@ -25,7 +25,7 @@ This returns the name (including path) of the currently running script.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -61,6 +61,24 @@ This returns the name (including path) of the currently running script.
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -73,8 +91,8 @@ var scriptName = bridge.getScriptName();
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var scriptName = bridge.getScriptName();
+```r
+// N/A
 ```
 
 ```mdx-code-block

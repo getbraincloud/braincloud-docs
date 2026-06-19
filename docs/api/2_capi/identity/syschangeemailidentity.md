@@ -38,7 +38,7 @@ updateContactEmail | Whether to also update contact email in user's profile
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -74,6 +74,24 @@ updateContactEmail | Whether to also update contact email in user's profile
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -97,14 +115,14 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "identity",
-	"operation": "SYS_CHANGE_EMAIL_IDENTITY",
-	"data": {
+    "service": "identity",
+    "operation": "SYS_CHANGE_EMAIL_IDENTITY",
+    "data": {
         "profileId": "user-profile-id",
         "oldEmailAddress": "oldemail@email.com",
         "newEmailAddress": "newemail@email.com",
-		"updateContactEmail": true
-	}
+        "updateContactEmail": true
+    }
 }
 ```
 

@@ -71,7 +71,7 @@ const char *teamCode = "blue";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -140,8 +140,8 @@ var teamCode = "blue";
 
 <%= data.branding.codePrefix %>.lobby.createLobby(lobbyType, rating, otherUserCxIds, settings, isReady, extraJson, teamCode, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -166,6 +166,53 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local lobbyType = "4v4"
+local rating = 76
+local otherUserCxIds = { "55555:aaa-bbb-ccc-ddd:asdfjkl" }
+local settings = {}
+local isReady = false
+local extraJson = {}
+local teamCode = "blue"
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getLobbyService():createLobby(lobbyType, rating, otherUserCxIds, settings, isReady, extraJson, teamCode, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var lobby_type = "4v4"
+var rating = 76
+var other_user_cx_ids = [ "55555:aaa-bbb-ccc-ddd:asdfjkl" ]
+var settings = {}
+var is_ready = false
+var extra_json = {}
+var team_code = "blue"
+
+var result = await <%= data.branding.codePrefix %>.lobby_service.create_lobby(lobby_type, rating, is_ready, extra_json, team_code, settings, other_user_cx_ids)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -196,19 +243,19 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "lobby",
-	"operation": "CREATE_LOBBY",
-	"data": {
-		"lobbyType": "4v4",
-		"rating": 76,
-		"otherUserCxIds": [
-			"55555:aaa-bbb-ccc-ddd:asdfjkl"
-		],
-		"settings": {},
-		"isReady": false,
-		"extraJson": {},
-		"teamCode": "blue"
-	}
+    "service": "lobby",
+    "operation": "CREATE_LOBBY",
+    "data": {
+        "lobbyType": "4v4",
+        "rating": 76,
+        "otherUserCxIds": [
+            "55555:aaa-bbb-ccc-ddd:asdfjkl"
+        ],
+        "settings": {},
+        "isReady": false,
+        "extraJson": {},
+        "teamCode": "blue"
+    }
 }
 ```
 

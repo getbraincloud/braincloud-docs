@@ -39,7 +39,7 @@ var res = proxy.runScript("scriptName", scriptdata);
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -75,6 +75,24 @@ var res = proxy.runScript("scriptName", scriptdata);
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -92,13 +110,8 @@ var res = bridge.callScript("PostToAllLeaderboards", scriptdata);
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-// Construct the parameters
-var scriptdata = {};
-var scriptdata.score = 1000000;
-
-// Call the script
-var res = bridge.callScript("PostToAllLeaderboards", scriptdata);
+```r
+// N/A
 ```
 
 ```mdx-code-block

@@ -36,7 +36,7 @@ data | The entity's data object
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -72,6 +72,24 @@ data | The entity's data object
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -100,19 +118,19 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalEntity",
-	"operation": "CREATE_SYSTEM_ENTITY_WITH_INDEXED_ID",
-	"data": {
-		"entityType": "address",
-		"entityIndexedId": "entityId1",
-		"timeToLive": -1,
-		"acl": {
-			"other": 1
-		},
-		"data": {
-			"street": "1309 Carling"
-		}
-	}
+    "service": "globalEntity",
+    "operation": "CREATE_SYSTEM_ENTITY_WITH_INDEXED_ID",
+    "data": {
+        "entityType": "address",
+        "entityIndexedId": "entityId1",
+        "timeToLive": -1,
+        "acl": {
+            "other": 1
+        },
+        "data": {
+            "street": "1309 Carling"
+        }
+    }
 }
 ```
 

@@ -50,7 +50,7 @@ bool replaceName = false;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -103,8 +103,8 @@ var replaceName = false;
 
 <%= data.branding.codePrefix %>.leaderboard.getMultiSocialLeaderboard(leaderboardIds, leaderboardResultCount, replaceName, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -125,6 +125,45 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local leaderboardIds = { "default" }
+local leaderboardResultCount = 1
+local replaceName = false
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getLeaderboardService():getMultiSocialLeaderboard(leaderboardIds, leaderboardResultCount, replaceName, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var leaderboard_ids = [ "default" ]
+var leaderboard_result_count = 1
+var replace_name = false
+
+var result = await <%= data.branding.codePrefix %>.leaderboard_service.get_multi_social_leaderboard(leaderboard_ids, leaderboard_result_count, replace_name)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -151,15 +190,15 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "leaderboard",
-	"operation": "GET_MULTI_SOCIAL_LEADERBOARD",
-	"data": {
-		"leaderboardIds": [
-			"default"
-		],
-		"leaderboardResultCount": 1,
-		"replaceName": false
-	}
+    "service": "leaderboard",
+    "operation": "GET_MULTI_SOCIAL_LEADERBOARD",
+    "data": {
+        "leaderboardIds": [
+            "default"
+        ],
+        "leaderboardResultCount": 1,
+        "replaceName": false
+    }
 }
 ```
 

@@ -48,10 +48,10 @@ bridge.include("path/to/EntityTemplate.ccjs");
 
 function main() {
 
-	var response = {};
+    var response = {};
     
     //get the entityType from *EntityTemplate* script
-	bridge.logDebug("check entityType value", entityTemplate_01.entityType());
+    bridge.logDebug("check entityType value", entityTemplate_01.entityType());
     
     //get the dataJson from *EntityTemplate* script
     bridge.logDebugJson("check dataJson value", entityTemplate_01.dataJson(3,6));
@@ -69,7 +69,7 @@ function main() {
     if (postResult.status == 200) {
         // Success!
     }
-	return response;
+    return response;
 }
 
 main();

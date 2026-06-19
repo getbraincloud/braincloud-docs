@@ -49,7 +49,7 @@ const char *text = "Chat and messaging features are here!";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -98,8 +98,8 @@ var text = "Chat and messaging features are here!";
 
 <%= data.branding.codePrefix %>.messaging.sendMessageSimple(toProfileIds, text, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -119,6 +119,43 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local toProfileIds = { "profileId1", "profileId2" }
+local text = "Chat and messaging features are here!"
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getMessagingService():sendMessageSimple(toProfileIds, text, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var to_profile_ids = [ "profileId1", "profileId2" ]
+var text = "Chat and messaging features are here!"
+
+var result = await <%= data.branding.codePrefix %>.messaging_service.send_message_simple(to_profile_ids, text)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -144,15 +181,15 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "messaging",
-	"operation": "SEND_MESSAGE_SIMPLE",
-	"data": {
-		"toProfileIds": [
-			"profileId1",
-			"profileId2"
-		],
-		"text": "Chat and messaging features are here!"
-	}
+    "service": "messaging",
+    "operation": "SEND_MESSAGE_SIMPLE",
+    "data": {
+        "toProfileIds": [
+            "profileId1",
+            "profileId2"
+        ],
+        "text": "Chat and messaging features are here!"
+    }
 }
 ```
 

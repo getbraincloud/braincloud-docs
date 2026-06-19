@@ -42,7 +42,7 @@ numDaysToRotate | Optional parameter for use only with DAYS rotation type
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -74,6 +74,24 @@ numDaysToRotate | Optional parameter for use only with DAYS rotation type
 
 ```dart
 // Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block
@@ -128,19 +146,19 @@ var retVal = leaderboardProxy.createLeaderboard(
 
 ```r
 {
-	"service": "leaderboard",
-	"operation": "CREATE_LEADERBOARD",
-	"data": {
-		"leaderboardId": "default",
-		"leaderboardType": "HIGH_VALUE",
-		"rotationType": "DAYS",
-		"rotationResetTime": "[[#ts+60000]]",
-		"retainedCount": 2,
-		"numDaysToRotate": 5,
-		"data": {
-			"street": "1309 Carling"
-		}
-	}
+    "service": "leaderboard",
+    "operation": "CREATE_LEADERBOARD",
+    "data": {
+        "leaderboardId": "default",
+        "leaderboardType": "HIGH_VALUE",
+        "rotationType": "DAYS",
+        "rotationResetTime": "[[#ts+60000]]",
+        "retainedCount": 2,
+        "numDaysToRotate": 5,
+        "data": {
+            "street": "1309 Carling"
+        }
+    }
 }
 ```
 

@@ -49,7 +49,7 @@ int eventMultiplier = 100;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -98,8 +98,8 @@ var eventMultiplier = 100;
 
 <%= data.branding.codePrefix %>.playerStatisticsEvent.triggerStatsEvent(eventName, eventMultiplier, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -123,6 +123,43 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local eventName = "GrantExperience"
+local eventMultiplier = 100
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getPlayerStatisticsEventService():triggerStatsEvent(eventName, eventMultiplier, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var event_name = "GrantExperience"
+var event_multiplier = 100
+
+var result = await <%= data.branding.codePrefix %>.player_statistics_event_service.trigger_stats_event(event_name, event_multiplier)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -142,15 +179,8 @@ if (postResult.status == 200) {
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var eventName = "GrantExperience";
-var eventMultiplier = 100;
-var playerStatisticsEventProxy = bridge.getPlayerStatisticsEventServiceProxy();
-
-var postResult = playerStatisticsEventProxy.triggerStatsEvent(eventName, eventMultiplier);
-if (postResult.status == 200) {
-    // Success!
-}
+```r
+// N/A
 ```
 
 ```mdx-code-block

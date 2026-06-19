@@ -83,17 +83,17 @@ Go to your actor's header file and include the **IServerCallback.h** header file
 UCLASS()
 class MYPROJECT_API ABrainCloudTestActor : public AActor, public IServerCallback
 {
-	GENERATED_BODY()
+    GENERATED_BODY()
 
 public:
-	// Sets default values for this actor's properties
-	ABrainCloudTestActor();
+    // Sets default values for this actor's properties
+    ABrainCloudTestActor();
 
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
+    // Called when the game starts or when spawned
+    virtual void BeginPlay() override;
 
-	// Called every frame
-	virtual void Tick( float DeltaSeconds ) override;
+    // Called every frame
+    virtual void Tick( float DeltaSeconds ) override;
 
     // IServerCallback interface
     void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, const FString& jsonData);
@@ -219,17 +219,17 @@ Header:
 UCLASS()
 class BCSUBSYSTEM_API ABrainCloudTestActor : public AActor, public IServerCallback
 {
-	GENERATED_BODY()
+    GENERATED_BODY()
 
 public:
-	// Sets default values for this actor's properties
-	ABrainCloudTestActor();
+    // Sets default values for this actor's properties
+    ABrainCloudTestActor();
 
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
+    // Called when the game starts or when spawned
+    virtual void BeginPlay() override;
 
-	// Called every frame
-	virtual void Tick( float DeltaSeconds ) override;
+    // Called every frame
+    virtual void Tick( float DeltaSeconds ) override;
 
     // IServerCallback interface
     void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, const FString& jsonData);

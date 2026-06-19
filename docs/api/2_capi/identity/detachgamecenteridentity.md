@@ -8,7 +8,7 @@ Detach the Game Center identity from the current profile.
 
 | Parameter    | Description                                                                            |
 | ------------ | -------------------------------------------------------------------------------------- |
-| gameCenterId | The player's game center id (use the playerID property from the local GKPlayer object) |
+| gameCenterId | The user's Game Center ID — can be the PlayerId, GamePlayerId, or TeamPlayerId from the GKLocalPlayer object |
 | continueAnon | Proceed even if the profile will revert to anonymous?                                  |
 
 ## Usage
@@ -42,7 +42,7 @@ const char * gameCenterId = "someId";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -87,6 +87,43 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local gameCenterId = "someId"
+local continueAnon = true
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getIdentityService():detachGameCenterIdentity(gameCenterId, continueAnon, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var game_center_id = "someId"
+var continue_anon = true
+
+var result = await <%= data.branding.codePrefix %>.identity_service.detach_game_center_identity(game_center_id, continue_anon)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

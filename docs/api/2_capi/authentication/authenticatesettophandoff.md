@@ -3,8 +3,6 @@
 Authenticate the user with a custom Set-top Handoff Code - which is an short, easy-to-enter code suitable for use in devices with limited data entry capabilities (i.e. Set-top boxes, VR headsets, etc.) The hand-off code can be generated via the [<code>CreateSettopHandoffCode</code>](/api/capi/identity/createsettophandoffcode) cloud-code call.
 
 
-
-
 :::caution
 Make sure you've initialized the <%= data.branding.productName %> library before authenticating.
 :::
@@ -14,7 +12,7 @@ Make sure you've initialized the <%= data.branding.productName %> library before
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-handoffCode | The set-top hand-off code generated via [<code>CreateSettopHandoffCode</code>](/api/capi/identity/createsettophandoffcode) 
+handoffCode | The set-top hand-off code generated via [<code>CreateSettopHandoffCode</code>](/api/capi/identity/createsettophandoffcode), which maps to its externalId under the hood.
 
 ## Usage
 
@@ -54,7 +52,7 @@ const char* handoffCode = "handoffCode";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -63,7 +61,7 @@ BCCompletionBlock successBlock;      // define callback
 BCErrorCompletionBlock failureBlock; // define callback
 
 [[<%= data.branding.codePrefix %> authenticationService]
-		authenticateSettopHandoff:handoffCode
+        authenticateSettopHandoff:handoffCode
                   completionBlock:successBlock
              errorCompletionBlock:failureBlock
                          cbObject:nil];
@@ -100,8 +98,8 @@ var handoffCode = "handoffCode";
 
 <%= data.branding.codePrefix %>.authentication.authenticateSettopHandoff(handoffCode, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -124,6 +122,41 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local handoffCode = "handoffCode"
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getAuthenticationService():authenticateSettopHandoff(handoffCode, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var handoff_code = "handoffCode"
+
+var result = await <%= data.branding.codePrefix %>.authentication_service.authenticate_settop_handoff(handoff_code)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -136,7 +169,7 @@ if (result.statusCode == 200) {
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
+```r
 // N/A
 ```
 

@@ -25,7 +25,7 @@ Generic method for calling S2S API services.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -61,6 +61,24 @@ Generic method for calling S2S API services.
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -79,14 +97,8 @@ var res = bridge.callAPI(service, operation, serviceData);
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var service = "event";
-var operation = "SEND";
-var serviceData = {};
-serviceData.toId = "02d4e872-d848-4bbe-3a69-137639909b31";
-serviceData.eventType = "etype";
-serviceData.eventData = {};
-var res = bridge.callAPI(service, operation, serviceData);
+```r
+// N/A
 ```
 
 ```mdx-code-block

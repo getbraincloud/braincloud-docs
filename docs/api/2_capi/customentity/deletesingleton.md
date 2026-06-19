@@ -46,7 +46,7 @@ int version = 1;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -121,6 +121,43 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local entityType = "athletes"
+local version = 1
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getCustomEntityService():deleteSingleton(entityType, version, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var entity_type = "athletes"
+var version = 1
+
+var result = await <%= data.branding.codePrefix %>.custom_entity_service.delete_singleton(entity_type, version)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -142,12 +179,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "customEntity",
-	"operation": "DELETE_SINGLETON",
-	"data": {
-		"entityType": "athletes",
-		"version": 1
-	}
+    "service": "customEntity",
+    "operation": "DELETE_SINGLETON",
+    "data": {
+        "entityType": "athletes",
+        "version": 1
+    }
 }
 ```
 

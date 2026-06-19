@@ -32,7 +32,7 @@ optionsJson | Optional json to sort the list of tournament templates. Valid valu
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -68,6 +68,24 @@ optionsJson | Optional json to sort the list of tournament templates. Valid valu
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -89,12 +107,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "tournament",
-	"operation": "SYS_LIST_TOURNAMENT_TEMPLATES",
-	"data": {
+    "service": "tournament",
+    "operation": "SYS_LIST_TOURNAMENT_TEMPLATES",
+    "data": {
     "optionsJson": {
       "sort": "ASCENDING"
-	}
+    }
 }
 ```
 

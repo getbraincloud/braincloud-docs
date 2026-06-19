@@ -37,7 +37,7 @@ timeToLive | The duration of time, in milliseconds, the custom entity should liv
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -69,6 +69,24 @@ timeToLive | The duration of time, in milliseconds, the custom entity should liv
 
 ```dart
 // Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block
@@ -106,22 +124,22 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "customEntity",
-	"operation": "SYS_UPDATE_ENTITY",
-	"data": {
-		"entityType": "athletes",
-		"entityId": "aaaa-bbbb-cccc-dddd",
-		"version": 1,
-		"dataJson": {
-			"firstName": "Super",
-			"surName": "Star",
-			"position": "defense",
-			"goals": 3,
-			"assists": 5
-		},
-		"acl": {},
-		"timeToLive": null
-	}
+    "service": "customEntity",
+    "operation": "SYS_UPDATE_ENTITY",
+    "data": {
+        "entityType": "athletes",
+        "entityId": "aaaa-bbbb-cccc-dddd",
+        "version": 1,
+        "dataJson": {
+            "firstName": "Super",
+            "surName": "Star",
+            "position": "defense",
+            "goals": 3,
+            "assists": 5
+        },
+        "acl": {},
+        "timeToLive": null
+    }
 }
 ```
 

@@ -62,6 +62,8 @@ Information about the current user:
 * [GetProfileId](/api/cc/bridge/getprofileid) - return the profileId of the user associated with the current session
 * [GetName](/api/cc/bridge/getname) - retrieves the name property of the user associated with the current session
 * [GetEmail](/api/cc/bridge/getemail) - returns the contact email address of the user associated with the current session (*note - may not be the same as their email login*)
+* [GetSessionCreatedAt](/api/cc/bridge/getsessioncreatedat) - returns the timestamp (in milliseconds since epoch) of when the current session was created
+* [GetSessionAgeSecs](/api/cc/bridge/getsessionagesecs) - returns the age of the current session in seconds
 
 Retrieving a session for another user:
 

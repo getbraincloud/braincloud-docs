@@ -55,7 +55,7 @@ const char *parentLevelName = "Master";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -110,8 +110,8 @@ var parentLevelName = "Master";
 
 <%= data.branding.codePrefix %>.script.runParentScript(scriptName, scriptData, parentLevelName, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -134,6 +134,49 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local scriptName = "path/to/script1"
+local scriptData = {
+    parm = "value"
+}
+local parentLevelName = "Master"
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getScriptService():runParentScript(scriptName, scriptData, parentLevelName, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var script_name = "path/to/script1"
+var script_data = {
+    "parm": "value"
+}
+var parent_level_name = "Master"
+
+var result = await <%= data.branding.codePrefix %>.script_service.run_parent_script(script_name, script_data, parent_level_name)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

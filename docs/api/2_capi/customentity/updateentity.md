@@ -58,7 +58,7 @@ int timeToLive = null;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -168,6 +168,67 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local entityType = "athletes"
+local entityId = "aaaa-bbbb-cccc-dddd"
+local version = 1
+local dataJson = {
+  firstName = "Super",
+  surName = "Star",
+  position = "defense",
+  goals = 3,
+  assists = 5
+}
+local acl = {
+  other = 0
+}
+local timeToLive = null
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getCustomEntityService():updateEntity(entityType, entityId, version, dataJson, acl, timeToLive, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var entity_type = "athletes"
+var entity_id = "aaaa-bbbb-cccc-dddd"
+var version = 1
+var data_json = {
+  "firstName": "Super",
+  "surName": "Star",
+  "position": "defense",
+  "goals": 3,
+  "assists": 5
+}
+var acl = {
+  "other": 0
+}
+var time_to_live = null
+
+var result = await <%= data.branding.codePrefix %>.custom_entity_service.update_entity(entity_type, entity_id, version, data_json, acl, time_to_live)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -201,22 +262,22 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "customEntity",
-	"operation": "UPDATE_ENTITY",
-	"data": {
-		"entityType": "athletes",
-		"entityId": "aaaa-bbbb-cccc-dddd",
-		"version": 1,
-		"dataJson": {
-			"firstName": "Super",
-			"surName": "Star",
-			"position": "defense",
-			"goals": 3,
-			"assists": 5
-		},
-		"acl": {},
-		"timeToLive": null
-	}
+    "service": "customEntity",
+    "operation": "UPDATE_ENTITY",
+    "data": {
+        "entityType": "athletes",
+        "entityId": "aaaa-bbbb-cccc-dddd",
+        "version": 1,
+        "dataJson": {
+            "firstName": "Super",
+            "surName": "Star",
+            "position": "defense",
+            "goals": 3,
+            "assists": 5
+        },
+        "acl": {},
+        "timeToLive": null
+    }
 }
 ```
 

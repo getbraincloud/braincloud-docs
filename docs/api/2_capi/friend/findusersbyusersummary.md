@@ -43,7 +43,7 @@ maxResults | Maximum number of results to return.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -79,6 +79,24 @@ maxResults | Maximum number of results to return.
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -100,15 +118,15 @@ var retVal = friendProxy.findUsersByUserSummary(where, maxResults);
 
 ```r
 {
-	"service": "friend",
-	"operation": "FIND_USERS_BY_USER_SUMMARY",
-	"data": {
-		"where": {
-			"languageCode": "en",
-			"summaryFriendData.previousLocation": "germany"
-		},
-		"maxResults": 20
-	}
+    "service": "friend",
+    "operation": "FIND_USERS_BY_USER_SUMMARY",
+    "data": {
+        "where": {
+            "languageCode": "en",
+            "summaryFriendData.previousLocation": "germany"
+        },
+        "maxResults": 20
+    }
 }
 ```
 

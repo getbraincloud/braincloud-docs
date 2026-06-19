@@ -50,7 +50,7 @@ const char *customDataJson = "{\"field1\":\"value1\",\"field2\":\"value2\"}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -109,8 +109,8 @@ var customDataJson = {
 
 <%= data.branding.codePrefix %>.pushNotification.sendNormalizedPushNotification(toProfileId, alertContentJson, customDataJson, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -137,6 +137,57 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local toProfileId = "profile1"
+local alertContentJson = {
+    body = "content of message",
+    title = "message title"
+}
+local customDataJson = {
+    field1 = "value1",
+    field2 = "value2"
+}
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getPushNotificationService():sendNormalizedPushNotification(toProfileId, alertContentJson, customDataJson, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var to_profile_id = "profile1"
+var alert_content_json = {
+    "body": "content of message",
+    "title": "message title"
+}
+var custom_data_json = {
+    "field1": "value1",
+    "field2": "value2"
+}
+
+var result = await <%= data.branding.codePrefix %>.push_notification_service.send_normalized_push_notification(to_profile_id, alert_content_json, custom_data_json)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -169,19 +220,19 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "pushNotification",
-	"operation": "SEND_NORMALIZED",
-	"data": {
-		"toProfileId": "profile1",
-		"alertContent": {
-			"body": "content of message",
-			"title": "message title"
-		},
-		"customData": {
-			"field1": "value1",
-			"field2": "value2"
-		}
-	}
+    "service": "pushNotification",
+    "operation": "SEND_NORMALIZED",
+    "data": {
+        "toProfileId": "profile1",
+        "alertContent": {
+            "body": "content of message",
+            "title": "message title"
+        },
+        "customData": {
+            "field1": "value1",
+            "field2": "value2"
+        }
+    }
 }
 ```
 

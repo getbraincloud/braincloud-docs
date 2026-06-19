@@ -34,7 +34,7 @@ enabled | Flag true to enable promotion, false to disable promotion.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -70,6 +70,24 @@ enabled | Flag true to enable promotion, false to disable promotion.
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -92,9 +110,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "promotions",
-	"operation": "SYS_ENABLE_PROMOTION",
-	"data": {
+    "service": "promotions",
+    "operation": "SYS_ENABLE_PROMOTION",
+    "data": {
     "promotionId": 1,
     "version": 1,
     "enabled": true

@@ -25,7 +25,7 @@ Returns true if there is a stored profile id and anonymous id on the device.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -66,11 +66,29 @@ BCErrorCompletionBlock failureBlock; // define callback
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+<%= data.branding.codePrefix %>:canReconnect()
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
-<%= data.branding.codePrefix %>.canReconnect();
+```cfscript
+// N/A
 ```
 
 ```mdx-code-block
@@ -78,8 +96,8 @@ BCErrorCompletionBlock failureBlock; // define callback
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
-<%= data.branding.codePrefix %>.canReconnect();
+```r
+// N/A
 ```
 
 ```mdx-code-block

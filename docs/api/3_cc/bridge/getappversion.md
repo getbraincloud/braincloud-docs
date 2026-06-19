@@ -25,7 +25,7 @@ Returns the version of the client app.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -61,6 +61,24 @@ Returns the version of the client app.
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -73,8 +91,8 @@ var appVersion = bridge.getAppVersion();
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var appVersion = bridge.getAppVersion();
+```r
+// N/A
 ```
 
 ```mdx-code-block

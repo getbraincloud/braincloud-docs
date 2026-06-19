@@ -33,7 +33,7 @@ Creates a new product with the specifed values.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -65,6 +65,24 @@ Creates a new product with the specifed values.
 
 ```dart
 // S2S call: to view example, switch to the Cloud Code or Raw tab.
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block
@@ -110,9 +128,9 @@ if (postResult.status == 200) {
 ```r
 //for iTunesSubscriptionType Subscription. Should be one of AutoRenewable, Free, or NonRenewing
 {
-	"service": "productManagement",
-	"operation": "SYS_CREATE_PRODUCT",
-	"data": {
+    "service": "productManagement",
+    "operation": "SYS_CREATE_PRODUCT",
+    "data": {
     "productJson": {
       "itemId": "barBundle1Imp12peer",
       "type": "Subscription",

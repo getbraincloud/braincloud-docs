@@ -36,7 +36,7 @@ _Note - the API Explorer is a great reference to determine the JSON format of th
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -72,6 +72,24 @@ _Note - the API Explorer is a great reference to determine the JSON format of th
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -95,19 +113,8 @@ var res = bridge.callAPIForSession(session, "event", "SEND", serviceData);
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-// Construct the parameters
-var serviceData = {};
-serviceData.toId = "aaaa-bbbb-cccc-dddd";
-serviceData.eventType = "hearts";
-serviceData.eventData = {};
-serviceData.eventData.numHearts = 3;
-
-// Retrieve a session for the specified profile
-var session = bridge.getSessionForProfile("eeee-ffff-gggg-hhh");
-
-// Call the API in the context of the retrieved session
-var res = bridge.callAPIForSession(session, "event", "SEND", serviceData);
+```r
+// N/A
 ```
 
 ```mdx-code-block

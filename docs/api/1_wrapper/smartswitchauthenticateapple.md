@@ -47,7 +47,7 @@ bool forceCreate = true;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -63,7 +63,7 @@ BCErrorCompletionBlock failureBlock; // define callback
                 forceCreate:forceCreate
             completionBlock:successBlock
        errorCompletionBlock:failureBlock
-		     	   cbObject:nil];
+                    cbObject:nil];
 ```
 
 ```mdx-code-block
@@ -96,8 +96,8 @@ var forceCreate = true;
 
 <%= data.branding.codePrefix %>.smartSwitchAuthenticateApple(appleUserId, identityToken, forceCreate, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 ```mdx-code-block
@@ -124,10 +124,40 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local appleUserId = "1234500123.xxxxxxxx6789"
+local identityToken = "identityTokenFromApple"
+local forceCreate = true
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:smartSwitchAuthenticateApple(appleUserId, identityToken, forceCreate, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
+```cfscript
 // N/A
 ```
 
@@ -136,7 +166,7 @@ if (result.statusCode == 200) {
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
+```r
 // N/A
 ```
 
@@ -149,15 +179,15 @@ if (result.statusCode == 200) {
 <details>
 <summary>JSON Response</summary>
 
-```javascript
+```json
 var appleUserId = "123456789";
 var identityToken = "identityTokenFromApple";
 var forceCreate = true;
 
 <%= data.branding.codePrefix %>.smartSwitchAuthenticateApple(appleUserId, identityToken, forceCreate, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 </details>

@@ -46,7 +46,7 @@ const char *jsonEventProperties = "{\"key1\":\"value\",\"key2\":\"value\"}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -98,8 +98,8 @@ var jsonEventProperties = {
 
 <%= data.branding.codePrefix %>.dataStream.customScreenEvent(eventName, jsonEventProperties, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -122,6 +122,49 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local eventName = "customEvent"
+local jsonEventProperties = {
+    key1 = "value",
+    key2 = "value"
+}
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getDataStreamService():customScreenEvent(eventName, jsonEventProperties, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var event_name = "customEvent"
+var json_event_properties = {
+    "key1": "value",
+    "key2": "value"
+}
+
+var result = await <%= data.branding.codePrefix %>.data_stream_service.custom_screen_event(event_name, json_event_properties)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -150,15 +193,15 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "dataStream",
-	"operation": "CUSTOM_SCREEN_EVENT",
-	"data": {
-		"eventName": "customEvent",
-		"eventProperties": {
-			"key1": "value",
-			"key2": "value"
-		}
-	}
+    "service": "dataStream",
+    "operation": "CUSTOM_SCREEN_EVENT",
+    "data": {
+        "eventName": "customEvent",
+        "eventProperties": {
+            "key1": "value",
+            "key2": "value"
+        }
+    }
 }
 ```
 

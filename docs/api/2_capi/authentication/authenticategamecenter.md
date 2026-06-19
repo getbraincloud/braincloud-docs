@@ -13,8 +13,13 @@ Make sure you've initialized the <%= data.branding.productName %> library before
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-gameCenterId | The player's game center ID (use the playerID property from the local GKPlayer object)
+gameCenterId | The user's Game Center ID — can be the PlayerId, GamePlayerId, or TeamPlayerId from the GKLocalPlayer object
 forceCreate | Should a new profile be created for this user if the account does not exist?
+timestamp | The timestamp value returned as part of the identity verification signature fetch from Game Center. Required for modern Game Center verification.
+publicKeyUrl | The public key URL returned as part of the identity verification signature fetch from Game Center. Required for modern Game Center verification.
+signature | The raw signature bytes returned from Game Center (via GetSignature()). Required for modern Game Center verification.
+salt | The raw salt bytes returned from Game Center (via GetSalt()). Required for modern Game Center verification.
+teamPlayerId | Only required when gameCenterId is set to a value other than TeamPlayerId.
 
 ## Usage
 
@@ -25,11 +30,18 @@ forceCreate | Should a new profile be created for this user if the account does 
 ```
 
 ```csharp
-string gameCenterId = "userGameCenterId";
+string gameCenterId = "userGameCenterId"; // PlayerId, GamePlayerId, or TeamPlayerId
 bool forceCreate = true;
+ulong timestamp = 0;        // from GKLocalPlayer identity verification
+string publicKeyUrl = "";   // from GKLocalPlayer identity verification
+byte[] signature = null;    // from GKLocalPlayer GetSignature()
+byte[] salt = null;         // from GKLocalPlayer GetSalt()
+string teamPlayerId = "";   // only if gameCenterId is not TeamPlayerId
 
 <%= data.branding.codePrefix %>.AuthenticationService.AuthenticateGameCenter(
-    gameCenterId, forceCreate, SuccessCallback, FailureCallback);
+    gameCenterId, forceCreate, timestamp, publicKeyUrl,
+    signature, salt, teamPlayerId,
+    SuccessCallback, FailureCallback);
 ```
 
 ```mdx-code-block
@@ -38,32 +50,49 @@ bool forceCreate = true;
 ```
 
 ```cpp
-const char* gameCenterId = "userGameCenterId";
+const char* gameCenterId = "userGameCenterId"; // playerId, gamePlayerId, or teamPlayerId
 bool forceCreate = true;
+uint64_t timestamp = 0;           // from GKLocalPlayer identity verification
+std::string publicKeyUrl = "";    // from GKLocalPlayer identity verification
+const uint8_t* signature = NULL;  // from GKLocalPlayer GetSignature()
+size_t signatureLength = 0;
+const uint8_t* salt = NULL;       // from GKLocalPlayer GetSalt()
+size_t saltLength = 0;
+std::string teamPlayerId = "";    // only if gameCenterId is not teamPlayerId
 
 <%= data.branding.codePrefix %>->getAuthenticationService()->authenticateGameCenter(
-    gameCenterId,
-    forceCreate,
-    this);
+    gameCenterId, forceCreate, timestamp, publicKeyUrl,
+    signature, signatureLength, salt, saltLength,
+    teamPlayerId, this);
 ```
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
-NSString * gameCenterID = @"userGameCenterId";
+NSString * gameCenterID = @"userGameCenterId"; // PlayerId, GamePlayerId, or TeamPlayerId
 BOOL forceCreate = true;
+uint64_t timestamp = 0;           // from GKLocalPlayer identity verification
+NSString * publicKeyUrl = @"";    // from GKLocalPlayer identity verification
+NSData * signature = nil;         // from GKLocalPlayer GetSignature()
+NSData * salt = nil;              // from GKLocalPlayer GetSalt()
+NSString * teamPlayerId = @"";    // only if gameCenterID is not TeamPlayerId
 BCCompletionBlock successBlock;      // define callback
 BCErrorCompletionBlock failureBlock; // define callback
 
 [[<%= data.branding.codePrefix %> authenticationService]
-	     authenticateGameCenter:gameCenterID
-	                forceCreate:forceCreate
-                completionBlock:successBlock
-           errorCompletionBlock:failureBlock
-		        	   cbObject:nil];
+         authenticateGameCenter:gameCenterID
+                    forceCreate:forceCreate
+                      timestamp:timestamp
+                   publicKeyUrl:publicKeyUrl
+                      signature:signature
+                           salt:salt
+                   teamPlayerId:teamPlayerId
+                 completionBlock:successBlock
+            errorCompletionBlock:failureBlock
+                        cbObject:nil];
 ```
 
 ```mdx-code-block
@@ -72,7 +101,25 @@ BCErrorCompletionBlock failureBlock; // define callback
 ```
 
 ```java
-// N/A
+String gameCenterId = "userGameCenterId"; // PlayerId, GamePlayerId, or TeamPlayerId
+boolean forceCreate = true;
+long timestamp = 0;             // from GKLocalPlayer identity verification
+String publicKeyUrl = "";       // from GKLocalPlayer identity verification
+byte[] signature = null;        // from GKLocalPlayer GetSignature()
+byte[] salt = null;             // from GKLocalPlayer GetSalt()
+String teamPlayerId = "";       // only if gameCenterId is not TeamPlayerId
+this; // implements IServerCallback
+
+<%= data.branding.codePrefix %>.getAuthenticationService().authenticateGameCenter(gameCenterId, forceCreate, timestamp, publicKeyUrl, signature, salt, teamPlayerId, this);
+
+public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
+{
+    System.out.print(String.format("Success | %s", jsonData.toString()));
+}
+public void serverError(ServiceName serviceName, ServiceOperation serviceOperation, int statusCode, int reasonCode, String jsonError)
+{
+    System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
+}
 ```
 
 ```mdx-code-block
@@ -81,13 +128,20 @@ BCErrorCompletionBlock failureBlock; // define callback
 ```
 
 ```javascript
-var gameCenterID = "userGameCenterId";
+var gameCenterID = "userGameCenterId"; // playerId, gamePlayerId, or teamPlayerId
 var forceCreate = true;
+var timestamp = 0;          // from GKLocalPlayer identity verification
+var publicKeyUrl = "";      // from GKLocalPlayer identity verification
+var signature = null;       // from GKLocalPlayer GetSignature()
+var salt = null;            // from GKLocalPlayer GetSalt()
+var teamPlayerId = "";      // only if gameCenterID is not teamPlayerId
 
-<%= data.branding.codePrefix %>.authentication.authenticateGameCenter(gameCenterID, forceCreate, result =>
+<%= data.branding.codePrefix %>.authentication.authenticateGameCenter(
+    gameCenterID, forceCreate, timestamp, publicKeyUrl,
+    signature, salt, teamPlayerId, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -97,16 +151,75 @@ var forceCreate = true;
 ```
 
 ```dart
-var  gameCenterID = "userGameCenterId";
-var  forceCreate = true;
+var gameCenterID = "userGameCenterId"; // playerId, gamePlayerId, or teamPlayerId
+var forceCreate = true;
+int timestamp = 0;             // from GKLocalPlayer identity verification
+String publicKeyUrl = "";      // from GKLocalPlayer identity verification
+List<int>? signature = null;   // from GKLocalPlayer GetSignature()
+List<int>? salt = null;        // from GKLocalPlayer GetSalt()
+String teamPlayerId = "";      // only if gameCenterId is not teamPlayerId
 
-ServerResponse result = await <%= data.branding.codePrefix %>.authenticationService.authenticateGameCenter(gameCenterID:gameCenterID, forceCreate:forceCreate);
+ServerResponse result = await <%= data.branding.codePrefix %>.authenticationService.authenticateGameCenter(
+    gameCenterID: gameCenterID,
+    forceCreate: forceCreate,
+    timestamp: timestamp,
+    publicKeyUrl: publicKeyUrl,
+    signature: signature,
+    salt: salt,
+    teamPlayerId: teamPlayerId);
 
 if (result.statusCode == 200) {
     print("Success");
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local gameCenterID = "userGameCenterId" -- playerId, gamePlayerId, or teamPlayerId
+local forceCreate = true
+local timestamp = 0          -- from GKLocalPlayer identity verification
+local publicKeyUrl = ""      -- from GKLocalPlayer identity verification
+local signature = nil        -- from GKLocalPlayer GetSignature()
+local salt = nil             -- from GKLocalPlayer GetSalt()
+local teamPlayerId = ""      -- only if gameCenterID is not teamPlayerId
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getAuthenticationService():authenticateGameCenter(
+    gameCenterID, forceCreate, timestamp, publicKeyUrl,
+    signature, salt, teamPlayerId, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var game_center_id = "userGameCenterId"
+var force_create = true
+var timestamp = 0
+var public_key_url = ""
+var team_player_id = ""
+
+var result = await <%= data.branding.codePrefix %>.authentication_service.authenticate_game_center(game_center_id, force_create)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -123,7 +236,7 @@ if (result.statusCode == 200) {
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
+```r
 // N/A
 ```
 

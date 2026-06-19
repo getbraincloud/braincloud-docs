@@ -32,7 +32,7 @@ leaderboardId | The leaderboard to reset.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -68,6 +68,24 @@ leaderboardId | The leaderboard to reset.
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -85,11 +103,11 @@ var retVal = leaderboardProxy.sysResetNeverLeaderboard(leaderboardId);
 
 ```r
 {
-	"service": "leaderboard",
-	"operation": "SYS_RESET_NEVER_LEADERBOARD",
-	"data": {
-		"leaderboardId": "aLeaderboardId"
-	}
+    "service": "leaderboard",
+    "operation": "SYS_RESET_NEVER_LEADERBOARD",
+    "data": {
+        "leaderboardId": "aLeaderboardId"
+    }
 }
 ```
 

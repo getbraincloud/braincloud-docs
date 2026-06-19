@@ -29,7 +29,7 @@ bool alwaysAllow = <%= data.branding.codePrefix %>.AlwaysAllowProfileSwitch;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -66,11 +66,29 @@ bool allowSwitch = <%= data.branding.codePrefix %>.alwaysAllowProfileSwitch;
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local allowSwitch = <%= data.branding.codePrefix %>.alwaysAllowProfileSwitch
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
-var allowSwitch = <%= data.branding.codePrefix %>.getAlwaysAllowProfileSwitch();
+```cfscript
+// N/A
 ```
 
 ```mdx-code-block
@@ -78,8 +96,8 @@ var allowSwitch = <%= data.branding.codePrefix %>.getAlwaysAllowProfileSwitch();
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
-var allowSwitch = <%= data.branding.codePrefix %>.getAlwaysAllowProfileSwitch();
+```r
+// N/A
 ```
 
 ```mdx-code-block
@@ -91,7 +109,7 @@ var allowSwitch = <%= data.branding.codePrefix %>.getAlwaysAllowProfileSwitch();
 <details>
 <summary>JSON Response</summary>
 
-```javascript
+```json
 var allowSwitch = <%= data.branding.codePrefix %>.getAlwaysAllowProfileSwitch();
 ```
 </details>

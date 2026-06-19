@@ -51,7 +51,7 @@ Deletes the specified leaderboards from <%= data.branding.productName %> server.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -87,13 +87,31 @@ Deletes the specified leaderboards from <%= data.branding.productName %> server.
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
 ```cfscript
 var leaderboardIds = [
-	"1st-leaderboard-id",
-	"2nd-leaderboard-id"
+    "1st-leaderboard-id",
+    "2nd-leaderboard-id"
 ];
 var leaderboardProxy = bridge.getLeaderboardServiceProxy();
 
@@ -110,14 +128,14 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "leaderboard",
-	"operation": "DELETE_LEADERBOARDS",
-	"data": {
-		"leaderboardIds": [
-			"1st-leaderboard-id",
-			"2nd-leaderboard-id"
-		]
-	}
+    "service": "leaderboard",
+    "operation": "DELETE_LEADERBOARDS",
+    "data": {
+        "leaderboardIds": [
+            "1st-leaderboard-id",
+            "2nd-leaderboard-id"
+        ]
+    }
 }
 ```
 

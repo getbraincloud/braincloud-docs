@@ -62,7 +62,7 @@ bool overwriteIfPresent = true;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -157,6 +157,53 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local groupId = "dfsfsffsd"
+local fileId = "xxxx"
+local version = 1
+local newTreeId = "guid"
+local treeVersion = 1
+local newFilename = "gfile"
+local overwriteIfPresent = true
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getGroupFileService():moveFile(groupId, fileId, version, newTreeId, treeVersion, newFilename, overwriteIfPresent, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var group_id = "dfsfsffsd"
+var file_id = "xxxx"
+var version = 1
+var new_tree_id = "guid"
+var tree_version = 1
+var new_filename = "gfile"
+var overwrite_if_present = true
+
+var result = await <%= data.branding.codePrefix %>.group_file_service.move_file(group_id, file_id, version, new_tree_id, tree_version, new_filename, overwrite_if_present)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

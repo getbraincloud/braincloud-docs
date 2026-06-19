@@ -740,7 +740,7 @@ public void FailureCallback(int statusCode, int reasonCode, string statusMessage
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -772,6 +772,24 @@ public void FailureCallback(int statusCode, int reasonCode, string statusMessage
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -784,6 +802,7 @@ public void FailureCallback(int statusCode, int reasonCode, string statusMessage
 ```
 
 ```r
+// N/A
 ```
 
 ```mdx-code-block

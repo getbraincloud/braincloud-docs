@@ -27,7 +27,7 @@ Retrieves the virtual currency types inherited from the configured peer apps.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -63,6 +63,24 @@ Retrieves the virtual currency types inherited from the configured peer apps.
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -82,9 +100,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "virtualCurrency",
-	"operation": "SYS_GET_PEER_CURRENCY_TYPES",
-	"data": {}
+    "service": "virtualCurrency",
+    "operation": "SYS_GET_PEER_CURRENCY_TYPES",
+    "data": {}
 }
 ```
 

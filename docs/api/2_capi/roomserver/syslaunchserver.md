@@ -34,7 +34,7 @@ regionId | Optional region id to target for the hosted server launch.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -70,6 +70,24 @@ regionId | Optional region id to target for the hosted server launch.
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -80,7 +98,7 @@ var scriptData = {
     "abc": "xyz"
 };
 var regionId = "ca-central-1";
-var roomServerProxy = bridge.getRoomserverServiceProxy();
+var roomServerProxy = bridge.getRoomServerServiceProxy();
 
 var postResult = roomServerProxy.launchServer(serverName, scriptName, scriptData, regionId);
 ```

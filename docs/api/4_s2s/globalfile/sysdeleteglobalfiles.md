@@ -40,7 +40,7 @@ Delete all the files in the specified directory. Returns a list of the files tha
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -76,6 +76,24 @@ Delete all the files in the specified directory. Returns a list of the files tha
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -102,14 +120,14 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalFileV3",
-	"operation": "SYS_DELETE_GLOBAL_FILES",
-	"data": {
+    "service": "globalFileV3",
+    "operation": "SYS_DELETE_GLOBAL_FILES",
+    "data": {
         "treeId": "",
         "cloudPath": "/",
         "treeVersion": 2,
         "recurse": false
-	}
+    }
 }
 ```
 

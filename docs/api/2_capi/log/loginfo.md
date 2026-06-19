@@ -33,7 +33,7 @@ context | Additional string-format information to include with the message.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -69,6 +69,24 @@ context | Additional string-format information to include with the message.
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -86,13 +104,8 @@ logProxy.logInfo(errorMessage, context);
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var errorMessage = "Test info message";
-var context = "Test info context";
-var logProxy = bridge.getLogServiceProxy();
-
-logProxy.logInfo(errorMessage, context);
-
+```r
+// N/A
 ```
 
 ```mdx-code-block

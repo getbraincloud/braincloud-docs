@@ -44,12 +44,12 @@ function fileSelected() {
     document.getElementById('fileType').innerHTML = 'Type: ' + file.type;
   }
 }
-		
+        
 function uploadFile() {
   var xhr = new XMLHttpRequest();
   var file = document.getElementById('fileToUpload').files[0];
   var fileSize = file.size;
-		
+        
   // register event listeners
   xhr.upload.addEventListener("progress", uploadProgress, false);
   xhr.addEventListener("load", uploadComplete, false);
@@ -75,7 +75,7 @@ function updateProgress(progress) {
   progress = progress `>=` 0 ? (progress `<=` 100 ? progress : 100) : 0;
   document.getElementById('progress').innerHTML = "Progress: " + progress + "%";
 }
-	
+    
 function uploadProgress(oEvent) {
   if (oEvent.lengthComputable) {
     var percentComplete = oEvent.loaded / oEvent.total;
@@ -85,7 +85,7 @@ function uploadProgress(oEvent) {
     // Unable to compute progress information since the total size is unknown
   }
 }
-	
+    
 function uploadComplete(evt) {
   console.log("Upload complete: " + evt);
   if (this.status == 200) {
@@ -93,11 +93,11 @@ function uploadComplete(evt) {
     console.log(JSON.stringify(response, null, 2));
   }
 }
-	
+    
 function uploadFailed(evt) {
   console.log("Upload failed: " + evt);
 }
-	
+    
 function uploadCanceled(evt) {
   console.log("Upload canceled: " + evt);
 }

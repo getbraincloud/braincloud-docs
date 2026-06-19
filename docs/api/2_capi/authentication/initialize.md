@@ -34,7 +34,7 @@ anonymousId | The anonymous installation ID that was generated for this device
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -42,8 +42,8 @@ NSString * profileID = @"profileId";
 NSString * anonymousID = @"anonId";
 
 [[<%= data.branding.codePrefix %> authenticationService]
-	        	initialize:profileID
-	 	       anonymousID:anonymousID];
+                initialize:profileID
+                anonymousID:anonymousID];
 ```
 
 ```mdx-code-block
@@ -78,6 +78,24 @@ String anonymousID = "anonId";
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+<%= data.branding.codePrefix %>:getAuthenticationService():initialize(profileId, anonymousId)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -90,7 +108,7 @@ String anonymousID = "anonId";
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
+```r
 // N/A
 ```
 

@@ -33,7 +33,7 @@ Retrieves scripts currently running or queued.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -69,6 +69,24 @@ Retrieves scripts currently running or queued.
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -93,20 +111,8 @@ if ((result.status == 200) && (result.data !== null)) {
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var _script = bridge.getScriptServiceProxy();
-
-// Find currently running scripts
-var result = _script.getRunningOrQueuedCloudScripts();
-
-if ((result.status == 200) && (result.data !== null)) {
-    // Found some
-    for (var i = 0; i < result.data.runningOrQueuedJobs.length; i++) {
-        // take action
-
-    }
-}
-
+```r
+// N/A
 ```
 
 ```mdx-code-block

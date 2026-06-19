@@ -44,7 +44,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```cpp
@@ -68,8 +68,8 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 ```javascript
 <%= data.branding.codePrefix %>.relay.connect(eRelayConnectionType.WEBSOCKET, server.host, port, server.passcode, server.lobbyId, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -100,6 +100,49 @@ ServerResponse result = await _bc.relayService.connect(eRelayConnectionType:Rela
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+void successCallback(Map<String, dynamic>?  jsonResponse) {
+    // Did connect.
+    // Your code
+}
+void failureCallback(Map<String, dynamic>?  jsonError) {
+  dynamic errorMap = (jsonError is String) ? json.decode(jsonError) : jsonError
+  // Your code
+}
+// data is retrieved from the onLobby event ROOM_ASSIGNED here.
+local connectOptions = {
+                  false,
+                  data{ "connectData" }{ "address" },
+                  data{ "connectData" }{ "ports" }{ "ws" },
+                  data{ "passcode" },
+                  data{ "lobbyId" }}
+​
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getRelayService():connect(RelayConnectionType.WEBSOCKET, connectOptions, successCallback, failureCallback, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -112,7 +155,7 @@ ServerResponse result = await _bc.relayService.connect(eRelayConnectionType:Rela
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
+```r
 // N/A
 ```
 

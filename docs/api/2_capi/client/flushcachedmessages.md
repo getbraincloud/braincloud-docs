@@ -31,7 +31,7 @@ Flushes the cached messages to resume API call processing. This will dump all of
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -63,6 +63,24 @@ Flushes the cached messages to resume API call processing. This will dump all of
 
 ```dart
 <%= data.branding.codePrefix %>.flushCachedMessages(true);
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+<%= data.branding.codePrefix %>:flushCachedMessages(true)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

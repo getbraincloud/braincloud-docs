@@ -58,7 +58,7 @@ int version = -1;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -123,8 +123,8 @@ var version = -1;
 
 <%= data.branding.codePrefix %>.entity.updateEntity(entityId, entityType, jsonEntityData, jsonEntityAcl, version, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -151,6 +151,57 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local entityId = "someEntityId"
+local entityType = "address"
+local jsonEntityData = {
+    street = "1309 Carling Avenue, Ottawa, ON"
+}
+local jsonEntityAcl = {
+    other = 0
+}
+local version = -1
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getEntityService():updateEntity(entityId, entityType, jsonEntityData, jsonEntityAcl, version, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var entity_id = "someEntityId"
+var entity_type = "address"
+var json_entity_data = {
+    "street": "1309 Carling Avenue, Ottawa, ON"
+}
+var json_entity_acl = {
+    "other": 0
+}
+var version = -1
+
+var result = await <%= data.branding.codePrefix %>.entity_service.update_entity(entity_id, entity_type, json_entity_data, json_entity_acl, version)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -183,19 +234,19 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "entity",
-	"operation": "UPDATE",
-	"data": {
-		"entityId": "someEntityId",
-		"entityType": "address",
-		"data": {
-			"street": "1309 Carling Avenue, Ottawa, ON"
-		},
-		"acl": {
-			"other": 0
-		},
-		"version": -1
-	}
+    "service": "entity",
+    "operation": "UPDATE",
+    "data": {
+        "entityId": "someEntityId",
+        "entityType": "address",
+        "data": {
+            "street": "1309 Carling Avenue, Ottawa, ON"
+        },
+        "acl": {
+            "other": 0
+        },
+        "version": -1
+    }
 }
 ```
 

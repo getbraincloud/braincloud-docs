@@ -36,7 +36,7 @@ json | JSON formatted data to send
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -72,6 +72,24 @@ json | JSON formatted data to send
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -100,24 +118,8 @@ if (postResult.status == 200) {
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var serviceCode = "webService";
-var path = "resource/dir";
-var query = {
-    "parmName": "value"
-};
-var headers = {
-    "headerName": "value"
-};
-var json = {
-    "key": "value"
-};
-var httpClientProxy = bridge.getHttpClientServiceProxy();
-
-var postResult = httpClientProxy.delete(serviceCode, path, query, headers, json);
-if (postResult.status == 200) {
-    // Success!
-}
+```r
+// N/A
 ```
 
 ```mdx-code-block

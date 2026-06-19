@@ -36,7 +36,7 @@ authenticationToken | Password or client side token
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -72,6 +72,24 @@ authenticationToken | Password or client side token
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -88,12 +106,8 @@ var session = bridge.getSessionForValidatedCredential(externalId, authentication
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var externalId = "example@email.com";
-var authenticationType  = "Email";
-var externalAuthType = "someAuth";
-var authenticationToken = "password";
-var session = bridge.getSessionForValidatedCredential(externalId, authenticationType, externalAuthType, authenticationToken);
+```r
+// N/A
 ```
 
 ```mdx-code-block

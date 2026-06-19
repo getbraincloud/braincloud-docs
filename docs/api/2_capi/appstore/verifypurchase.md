@@ -162,7 +162,7 @@ const char *receiptData = "{\"productId\":\"ugfhffhgj\"}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -213,8 +213,8 @@ var receiptData = {
 
 <%= data.branding.codePrefix %>.appStore.verifyPurchase(storeId, receiptData, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -236,6 +236,47 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local storeId = "hghghsgfh"
+local receiptData = {
+    productId = "ugfhffhgj"
+}
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getAppStoreService():verifyPurchase(storeId, receiptData, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var store_id = "hghghsgfh"
+var receipt_data = {
+    "productId": "ugfhffhgj"
+}
+
+var result = await <%= data.branding.codePrefix %>.app_store_service.verify_purchase(store_id, receipt_data)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -263,14 +304,14 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "appStore",
-	"operation": "VERIFY_PURCHASE",
-	"data": {
-		"storeId": "itunes",
-		"receiptData": {
-			"receipt": "a-receipt"
-		}
-	}
+    "service": "appStore",
+    "operation": "VERIFY_PURCHASE",
+    "data": {
+        "storeId": "itunes",
+        "receiptData": {
+            "receipt": "a-receipt"
+        }
+    }
 }
 ```
 
@@ -287,44 +328,40 @@ if (postResult.status == 200) {
 {
     "data": {
         "resultCode": 0,
-        "errorMessage": null,
+        "serverTime": 1473325588695,
         "store": "itunes",
         "transactionSummary": {
             "processedCount": 1,
             "unprocessedCount": 1,
             "transactionDetails": [
                 {
-                    "transactionId": "80000557199459",
-                    "itemId": "barBundle1Imp",
-                    "transactionResultCode": 0,
-                    "processed": true,
-                    "originalTransactionId": "80000557199459",
-                    "referencePrice": 299,
-                    "quantity": 1,
-                    "payload": "__bc:[1,barBundle1Imp,0,199,-1]",
-                    "sandbox": false,
-                    "purchaseDateMs": 1550639146000,
-                    "productId": "...coinBundle1Imp",
-                    "purchaseDate": "2019-02-20 05:05:46 Etc/GMT",
-                    "rewards": {
-                        "extra": null,
-                        "currency": {
-                            "bar": 10,
-                            "coinMultiplier": 1
-                        }
-                    }
-                },
-                {
-                    "transactionId": "80000557201213",
-                    "itemId": "coinBundle2Imp",
+                    "raw_in_app_ownership_type": "PURCHASED",
+                    "original_transaction_id": "2000001113677862",
+                    "raw_environment": "Sandbox",
+                    "type": "CONSUMABLE",
+                    "referencePrice": 9999,
+                    "price": 129990,
+                    "product_id": "coins_100",
+                    "currency": "CAD",
+                    "raw_transaction_reason": "PURCHASE",
+                    "transaction_id": "2000001113677862",
+                    "in_app_ownership_type": "PURCHASED",
                     "transactionResultCode": 100,
-                    "processed": false,
-                    "originalTransactionId": "80000557201213",
+                    "app_account_token": "00000000-0000-0000-0000-000000000000",
                     "quantity": 1,
-                    "purchaseDateMs": 1550639681000,
-                    "productId": "...coinBundle2Imp",
-                    "errorMessage": "Item already processed",
-                    "purchaseDate": "2019-02-20 05:14:41 Etc/GMT"
+                    "store_front_id": "143455",
+                    "sandbox": true,
+                    "errorMessage": null,
+                    "app_transaction_id": "705242908014669349",
+                    "transaction_reason": "PURCHASE",
+                    "original_purchase_date": 1769884662000,
+                    "store_front": "CAN",
+                    "itemId": "coins_100",
+                    "processed": false,
+                    "environment": "Sandbox",
+                    "raw_type": "Consumable",
+                    "bundle_id": "com.braincloud.newstorekit2bc",
+                    "purchase_date": 1769884662000
                 }
             ],
             "extra": {
@@ -345,39 +382,7 @@ if (postResult.status == 200) {
                     "rogerCurrency": 30
                 }
             }
-        },
-        "currency": {
-            "coins": {
-                "balance": 1000,
-                "purchased": 1000,
-                "awarded": 0,
-                "consumed": 0
-            }
-        },
-
-        "parentCurrency": {
-            "awesomeMaster": {
-                "rubies": {
-                    "balance": 2000,
-                    "purchased": 2000,
-                    "awarded": 0,
-                    "consumed": 0
-                }
-            }
-        },
-
-        "peerCurrency": {
-            "peerApp": {
-                "rogerCurrency": {
-                    "balance": 30,
-                    "purchased": 30,
-                    "awarded": 0,
-                    "consumed": 0
-                }
-            }
-        },
-
-        "server_time": 1473325588695
+        }      
     },
     "status": 200
 }

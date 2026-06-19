@@ -25,7 +25,7 @@ const char * appId = <%= data.branding.codePrefix %>->getAppId();
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -57,6 +57,24 @@ var appId = <%= data.branding.codePrefix %>.getAppId();
 
 ```dart
 var appId = <%= data.branding.codePrefix %>.getAppId();
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local appId = <%= data.branding.codePrefix %>:getAppId()
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

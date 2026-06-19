@@ -146,7 +146,7 @@ const char *context = "{\"pagination\":{\"rowsPerPage\":50,\"pageNumber\":1},\"s
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -245,6 +245,67 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local entityType = "athletes"
+local context = {
+    pagination = {
+        rowsPerPage = 50,
+        pageNumber = 1
+    },
+    searchCriteria = {
+        ["data.position"] = "defense"
+    },
+    sortCriteria = {
+        createdAt = 1,
+        updatedAt = -1
+    }
+}
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getCustomEntityService():getEntityPage(entityType, context, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var entity_type = "athletes"
+var context = {
+    "pagination": {
+        "rowsPerPage": 50,
+        "pageNumber": 1
+    },
+    "searchCriteria": {
+        "data.position": "defense"
+    },
+    "sortCriteria": {
+        "createdAt": 1,
+        "updatedAt": -1
+    }
+}
+
+var result = await <%= data.branding.codePrefix %>.custom_entity_service.get_entity_page(entity_type, context)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -278,23 +339,23 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "customEntity",
-	"operation": "GET_ENTITY_PAGE",
-	"data": {
-		"entityType": "athletes",
-		"context": {
-			"pagination": {
-				"rowsPerPage": 50,
-				"pageNumber": 1
-			},
-			"searchCriteria": {
-				"data.position": "defense"
-			},
-			"sortCriteria": {
-				"createdAt": 1,
-				"updatedAt": -1
-			}
-		}
+    "service": "customEntity",
+    "operation": "GET_ENTITY_PAGE",
+    "data": {
+        "entityType": "athletes",
+        "context": {
+            "pagination": {
+                "rowsPerPage": 50,
+                "pageNumber": 1
+            },
+            "searchCriteria": {
+                "data.position": "defense"
+            },
+            "sortCriteria": {
+                "createdAt": 1,
+                "updatedAt": -1
+            }
+        }
   }
 }
 ```

@@ -48,7 +48,7 @@ Edits a leaderboard configuration, with support for tournament leaderboards.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -84,6 +84,24 @@ Edits a leaderboard configuration, with support for tournament leaderboards.
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -91,15 +109,15 @@ Edits a leaderboard configuration, with support for tournament leaderboards.
 var leaderboardId = "aLeaderboardId";
 var dbVersion = 1;
 var configJson = {
-		"leaderboardType": "HIGH_VALUE",
-		"rotationType": "DAYS",
-		"numDaysToRotate": 4,
-		"resetAt": 1631492744000,
-		"retainedCount": 5,
-		"data": { "info": "Adding tournament to encourage play." },
-		"tEnabled": true,
-		"tTemplateOnly": false
-	};
+        "leaderboardType": "HIGH_VALUE",
+        "rotationType": "DAYS",
+        "numDaysToRotate": 4,
+        "resetAt": 1631492744000,
+        "retainedCount": 5,
+        "data": { "info": "Adding tournament to encourage play." },
+        "tEnabled": true,
+        "tTemplateOnly": false
+    };
 
 var leaderboardProxy = bridge.getLeaderboardServiceProxy();
 var retVal = leaderboardProxy.sysEditLeaderboardConfig(
@@ -116,22 +134,22 @@ var retVal = leaderboardProxy.sysEditLeaderboardConfig(
 
 ```r
 {
-	"service": "leaderboard",
-	"operation": "SYS_EDIT_LEADERBOARD_CONFIG",
-	"data": {
-		"leaderboardId": "aLeaderboardId",
-		"dbVersion": 1
-		"configJson": {
-			"leaderboardType": "HIGH_VALUE",
-			"rotationType": "DAYS",
-			"numDaysToRotate": 4,
-			"resetAt": 1631492744000,
-			"retainedCount": 5,
-			"data": { "info": "Adding tournament to encourage play." },
-			"tEnabled": true,
-			"tTemplateOnly": false
-		}
-	}
+    "service": "leaderboard",
+    "operation": "SYS_EDIT_LEADERBOARD_CONFIG",
+    "data": {
+        "leaderboardId": "aLeaderboardId",
+        "dbVersion": 1
+        "configJson": {
+            "leaderboardType": "HIGH_VALUE",
+            "rotationType": "DAYS",
+            "numDaysToRotate": 4,
+            "resetAt": 1631492744000,
+            "retainedCount": 5,
+            "data": { "info": "Adding tournament to encourage play." },
+            "tEnabled": true,
+            "tTemplateOnly": false
+        }
+    }
 }
 ```
 

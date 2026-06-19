@@ -53,7 +53,7 @@ bool forceCreate = true;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -64,12 +64,12 @@ BCCompletionBlock successBlock;      // define callback
 BCErrorCompletionBlock failureBlock; // define callback
 
 [[<%= data.branding.codePrefix %> authenticationService]
-	       authenticateFacebook:facebookId
-  	        authenticationToken:token
+           authenticateFacebook:facebookId
+              authenticationToken:token
                     forceCreate:forceCreate
                 completionBlock:successBlock
            errorCompletionBlock:failureBlock
-		        	   cbObject:nil];
+                       cbObject:nil];
 ```
 
 ```mdx-code-block
@@ -107,8 +107,8 @@ var forceCreate = true;
 
 <%= data.branding.codePrefix %>.authentication.authenticateFacebook(facebookId, token, forceCreate, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -133,6 +133,45 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local facebookId = "userFacebookId"
+local token = "tokenFromFacebook"
+local forceCreate = true
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getAuthenticationService():authenticateFacebook(facebookId, token, forceCreate, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var facebook_id = "userFacebookId"
+var token = "tokenFromFacebook"
+var force_create = true
+
+var result = await <%= data.branding.codePrefix %>.authentication_service.authenticate_facebook(facebook_id, token, force_create)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -145,7 +184,7 @@ if (result.statusCode == 200) {
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
+```r
 // N/A
 ```
 

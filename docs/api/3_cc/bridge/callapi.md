@@ -35,7 +35,7 @@ _Note - the API Explorer is a great reference to determine the JSON format of th
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -71,6 +71,24 @@ _Note - the API Explorer is a great reference to determine the JSON format of th
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -91,16 +109,8 @@ var res = bridge.callAPI("leaderboard", "POST_SCORE", serviceData);
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-// Construct the parameters
-var serviceData = {};
-serviceData.leaderboardId = "weekly";
-serviceData.score = 100000;
-serviceData.data = {};
-serviceData.data.nickname = "batdude";
-
-// Make the API Call
-var res = bridge.callAPI("leaderboard", "POST_SCORE", serviceData);
+```r
+// N/A
 ```
 
 ```mdx-code-block

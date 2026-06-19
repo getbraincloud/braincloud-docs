@@ -32,7 +32,7 @@ lobbyId | The id of lobby that should be returned to the 'setup' state
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -68,6 +68,24 @@ lobbyId | The id of lobby that should be returned to the 'setup' state
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -88,11 +106,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "lobby",
-	"operation": "SYS_ROOM_STOPPED",
-	"data": {
-		"lobbyId": "55555:4v4:19"
-	}
+    "service": "lobby",
+    "operation": "SYS_ROOM_STOPPED",
+    "data": {
+        "lobbyId": "55555:4v4:19"
+    }
 }
 ```
 

@@ -57,7 +57,7 @@ const char *summary = "{\"completedBy\":{\"display\":\"John Doe wins!\",\"player
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -153,6 +153,59 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local ownerId = "the-owner-id"
+local matchId = "the-match-id"
+local pushContent = "An async-match has been completed!"
+local summary = {
+  completedBy = {
+    display = "John Doe wins!",
+    player = 2,
+    reason = "victory"
+  }
+}
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getAsyncMatchService():completeMatchWithSummaryData(ownerId, matchId, pushContent, summary, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var owner_id = "the-owner-id"
+var match_id = "the-match-id"
+var push_content = "An async-match has been completed!"
+var summary = {
+  "completedBy": {
+    "display": "John Doe wins!",
+    "player": 2,
+    "reason": "victory"
+  }
+}
+
+var result = await <%= data.branding.codePrefix %>.async_match_service.complete_match_with_summary_data(owner_id, match_id, push_content, summary)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -182,20 +235,20 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "asyncMatch",
-	"operation": "COMPLETE_MATCH_WITH_SUMMARY_DATA",
-	"data": {
-		"ownerId": "the-owner-id",
-		"matchId": "the-match-id",
-		"pushContent": "An async-match has been completed!",
-		"summary": {
-			"completedBy": {
-				"display": "John Doe wins!",
-				"player": 2,
-				"reason": "victory"
-			}
-		}
-	}
+    "service": "asyncMatch",
+    "operation": "COMPLETE_MATCH_WITH_SUMMARY_DATA",
+    "data": {
+        "ownerId": "the-owner-id",
+        "matchId": "the-match-id",
+        "pushContent": "An async-match has been completed!",
+        "summary": {
+            "completedBy": {
+                "display": "John Doe wins!",
+                "player": 2,
+                "reason": "victory"
+            }
+        }
+    }
 }
 ```
 

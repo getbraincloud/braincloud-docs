@@ -37,7 +37,7 @@ forceCreate | Should a new score be created? When false, the call can only modif
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -73,6 +73,24 @@ forceCreate | Should a new score be created? When false, the call can only modif
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -100,18 +118,18 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "tournament",
-	"operation": "POST_TOURNAMENT_SCORE_ON_BEHALF_OF",
-	"data": {
-		"profileId": "the-profile-id",
-		"leaderboardId": "leaderboardId",
-		"score": 0,
-		"data": {
-			"nickname": "batman"
-		},
-		"roundStartedEpoch": "[[#ts]]",
-		"forceCreate": false
-	}
+    "service": "tournament",
+    "operation": "POST_TOURNAMENT_SCORE_ON_BEHALF_OF",
+    "data": {
+        "profileId": "the-profile-id",
+        "leaderboardId": "leaderboardId",
+        "score": 0,
+        "data": {
+            "nickname": "batman"
+        },
+        "roundStartedEpoch": "[[#ts]]",
+        "forceCreate": false
+    }
 }
 ```
 

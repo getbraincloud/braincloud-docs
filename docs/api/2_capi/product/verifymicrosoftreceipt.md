@@ -44,7 +44,7 @@ const char *receipt = "Receipt XML";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -70,8 +70,8 @@ var receipt = "Receipt XML";
 
 <%= data.branding.codePrefix %>.product.verifyMicrosoftReceipt(receipt, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -82,6 +82,24 @@ var receipt = "Receipt XML";
 
 ```dart
 // N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block
@@ -106,11 +124,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "product",
-	"operation": "VERIFY_MICROSOFT_RECEIPT",
-	"data": {
-		"receipt": "Receipt XML"
-	}
+    "service": "product",
+    "operation": "VERIFY_MICROSOFT_RECEIPT",
+    "data": {
+        "receipt": "Receipt XML"
+    }
 }
 ```
 

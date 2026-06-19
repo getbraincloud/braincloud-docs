@@ -28,19 +28,19 @@ string chatMessage = "Hey, I am looking for new and experienced users to join ou
 bool recordInHistory = true;
 SuccessCallback successCallback = (response, cbObject) =>
 {
-	Dictionary<string, object> jsonMessage = (Dictionary<string, object>)JsonFx.Json.JsonReader.Deserialize(response);
-	Dictionary<string, object> jsonData = (Dictionary<string, object>)jsonMessage["data"];
+    Dictionary<string, object> jsonMessage = (Dictionary<string, object>)JsonFx.Json.JsonReader.Deserialize(response);
+    Dictionary<string, object> jsonData = (Dictionary<string, object>)jsonMessage["data"];
 
-	var msgId = jsonData["msgId"].ToString();
-	string logMessage = string.Join(" | ", new [] {msgId});
-	Debug.Log(logMessage); // 783733181125648
+    var msgId = jsonData["msgId"].ToString();
+    string logMessage = string.Join(" | ", new [] {msgId});
+    Debug.Log(logMessage); // 783733181125648
 };
 FailureCallback failureCallback = (status, code, error, cbObject) =>
 {
-	Debug.Log(string.Format("[PostChatMessageSimple Failed] {0}  {1}  {2}", status, code, error));
+    Debug.Log(string.Format("[PostChatMessageSimple Failed] {0}  {1}  {2}", status, code, error));
 };
 <%= data.branding.codePrefix %>.ChatService.PostChatMessageSimple(channelId, chatMessage, true, successCallback,
-	failureCallback);
+    failureCallback);
 ```
 
 ```mdx-code-block
@@ -57,7 +57,7 @@ bool recordInHistory = true;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -110,8 +110,8 @@ var recordInHistory = true;
 
 <%= data.branding.codePrefix %>.chat.postChatMessageSimple(channelId, chatMessage, recordInHistory, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -136,6 +136,45 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local channelId = "22817:gl:CHAT_GROUPFINDER"
+local chatMessage = "Hey, I am looking for new and experienced users to join our group."
+local recordInHistory = true
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getChatService():postChatMessageSimple(channelId, chatMessage, recordInHistory, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var channel_id = "22817:gl:CHAT_GROUPFINDER"
+var chat_message = "Hey, I am looking for new and experienced users to join our group."
+var record_in_history = true
+
+var result = await <%= data.branding.codePrefix %>.chat_service.post_chat_message_simple(channel_id, chat_message, record_in_history)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -155,13 +194,13 @@ if (postResult.status == 200 ) {
 
 ```r
 {
-	"service": "chat",
-	"operation": "POST_CHAT_MESSAGE_SIMPLE",
-	"data": {
-		"channelId": "55555:gl:bcDev",
-		"text": "Hello world",
-		"recordInHistory": true
-	}
+    "service": "chat",
+    "operation": "POST_CHAT_MESSAGE_SIMPLE",
+    "data": {
+        "channelId": "55555:gl:bcDev",
+        "text": "Hello world",
+        "recordInHistory": true
+    }
 }
 ```
 

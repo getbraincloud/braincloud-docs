@@ -56,7 +56,7 @@ int minutesFromNow = 1;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -138,8 +138,8 @@ var minutesFromNow = 1;
 
 <%= data.branding.codePrefix %>.pushNotification.scheduleRawPushNotificationMinutes(profileId, fcmContent, iosContent, facebookContent, minutesFromNow, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -183,6 +183,91 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local profileId = "kjhkjhgfkjshgkjh"
+local fcmContent = {
+    notification = {
+        body = "content of message",
+        title = "message title"
+    },
+    data = {
+        customfield1 = "customValue1",
+        customfield2 = "customValue2"
+    },
+    priority = "normal"
+}
+local iosContent = {
+    aps = {
+        alert = {
+            body = "content of message",
+            title = "message title"
+        },
+        badge = 0,
+        sound = "gggg"
+    }
+}
+local facebookContent = {
+    template = "content of message"
+}
+local minutesFromNow = 1
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getPushNotificationService():scheduleRawPushNotificationMinutes(profileId, fcmContent, iosContent, facebookContent, minutesFromNow, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var profile_id = "kjhkjhgfkjshgkjh"
+var fcm_content = {
+    "notification": {
+        "body": "content of message",
+        "title": "message title"
+    },
+    "data": {
+        "customfield1": "customValue1",
+        "customfield2": "customValue2"
+    },
+    "priority": "normal"
+}
+var ios_content = {
+    "aps": {
+        "alert": {
+            "body": "content of message",
+            "title": "message title"
+        },
+        "badge": 0,
+        "sound": "gggg"
+    }
+}
+var facebook_content = {
+    "template": "content of message"
+}
+var minutes_from_now = 1
+
+var result = await <%= data.branding.codePrefix %>.push_notification_service.schedule_raw_push_notification_minutes(profile_id, fcm_content, ios_content, facebook_content, minutes_from_now)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -232,36 +317,36 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "pushNotification",
-	"operation": "SCHEDULE_RAW_NOTIFICATION",
-	"data": {
-		"profileId": "kjhkjhgfkjshgkjh",
-		"fcmContent": {
-			"notification": {
-				"body": "content of message",
-				"title": "message title"
-			},
-			"data": {
-				"customfield1": "customValue1",
-				"customfield2": "customValue2"
-			},
-			"priority": "normal"
-		},
-		"iosContent": {
-			"aps": {
-				"alert": {
-					"body": "content of message",
-					"title": "message title"
-				},
-				"badge": 0,
-				"sound": "gggg"
-			}
-		},
-		"facebookContent": {
-			"template": "content of message"
-		},
-		"minutesFromNow": 1
-	}
+    "service": "pushNotification",
+    "operation": "SCHEDULE_RAW_NOTIFICATION",
+    "data": {
+        "profileId": "kjhkjhgfkjshgkjh",
+        "fcmContent": {
+            "notification": {
+                "body": "content of message",
+                "title": "message title"
+            },
+            "data": {
+                "customfield1": "customValue1",
+                "customfield2": "customValue2"
+            },
+            "priority": "normal"
+        },
+        "iosContent": {
+            "aps": {
+                "alert": {
+                    "body": "content of message",
+                    "title": "message title"
+                },
+                "badge": 0,
+                "sound": "gggg"
+            }
+        },
+        "facebookContent": {
+            "template": "content of message"
+        },
+        "minutesFromNow": 1
+    }
 }
 ```
 

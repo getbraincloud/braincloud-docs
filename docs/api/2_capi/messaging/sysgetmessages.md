@@ -39,7 +39,7 @@ msgIds | An array of the ids of messages to retrieve.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -75,6 +75,24 @@ msgIds | An array of the ids of messages to retrieve.
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -95,14 +113,14 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "messaging",
-	"operation": "SYS_GET_MESSAGES",
-	"data": {
-		"msgIds": [
-			"msgId1",
-			"msgId2"
-		]
-	}
+    "service": "messaging",
+    "operation": "SYS_GET_MESSAGES",
+    "data": {
+        "msgIds": [
+            "msgId1",
+            "msgId2"
+        ]
+    }
 }
 ```
 

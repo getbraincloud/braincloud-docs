@@ -34,7 +34,7 @@ Initializes a dynamic or system chat channel. Returns the channelId. Channel typ
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -70,6 +70,24 @@ Initializes a dynamic or system chat channel. Returns the channelId. Channel typ
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -91,12 +109,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "chat",
-	"operation": "SYS_CREATE_CHANNEL",
-	"data": {
-		"channelType": "dy",
-		"channelSubId": "myChatRoom"
-	}
+    "service": "chat",
+    "operation": "SYS_CREATE_CHANNEL",
+    "data": {
+        "channelType": "dy",
+        "channelSubId": "myChatRoom"
+    }
 }
 ```
 

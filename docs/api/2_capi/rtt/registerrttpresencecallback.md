@@ -35,7 +35,7 @@ RTTCallback rttCallback = response =>
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -74,6 +74,33 @@ void rttCallBack(RTTCommandResponse jsonResponse) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local rttCallBack = function(jsonResponse)
+    -- your code
+end
+
+<%= data.branding.codePrefix %>:getRttService():registerRTTPresenceCallback(rttCallback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var result = await <%= data.branding.codePrefix %>.rtt_service.register_rtt_presence_callback(rttCallback)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -86,7 +113,7 @@ void rttCallBack(RTTCommandResponse jsonResponse) {
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
+```r
 // N/A
 ```
 

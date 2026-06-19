@@ -34,7 +34,7 @@ details | Optional data to send to lobby members.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -70,6 +70,24 @@ details | Optional data to send to lobby members.
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -92,13 +110,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "lobby",
-	"operation": "SYS_DISBAND_LOBBY",
-	"data": {
-		"lobbyId": "55555:4v4:19",
-		"msg": "Game over",
-		"details": {}
-	}
+    "service": "lobby",
+    "operation": "SYS_DISBAND_LOBBY",
+    "data": {
+        "lobbyId": "55555:4v4:19",
+        "msg": "Game over",
+        "details": {}
+    }
 }
 ```
 

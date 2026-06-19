@@ -25,7 +25,7 @@ Retrieves the email of the current user as a string.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -61,6 +61,24 @@ Retrieves the email of the current user as a string.
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -73,8 +91,8 @@ var email = bridge.getEmail();
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var email = bridge.getEmail();
+```r
+// N/A
 ```
 
 ```mdx-code-block

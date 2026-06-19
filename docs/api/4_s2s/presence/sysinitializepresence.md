@@ -36,7 +36,7 @@ Creates or updates the presence of \`profileId`. \`visible` is optional (default
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -72,6 +72,24 @@ Creates or updates the presence of \`profileId`. \`visible` is optional (default
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -95,14 +113,14 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "presence",
-	"operation": "SYS_INITIALIZE_PRESENCE",
-	"data": {
-		"profileId": "aaa-bbb-ccc-ddd",
-		"visible": true,
-		"activity": {},
-		"expirySecs": 300
-	}
+    "service": "presence",
+    "operation": "SYS_INITIALIZE_PRESENCE",
+    "data": {
+        "profileId": "aaa-bbb-ccc-ddd",
+        "visible": true,
+        "activity": {},
+        "expirySecs": 300
+    }
 }
 ```
 

@@ -68,7 +68,7 @@ int initialScore = 0;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -143,8 +143,8 @@ var initialScore = 0;
 
 <%= data.branding.codePrefix %>.tournament.postTournamentScoreWithResultsUTC(leaderboardId, score, jsonData, roundStartedTime, sortOrder, beforeCount, afterCount, initialScore, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -172,6 +172,43 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local leaderboardId = "leaderboardId1"
+local score = 0
+local jsonData = {
+    nickname = "withResults"
+}
+local roundStartedTime = Date.now().millisecondsSinceEpoch
+local sortOrder = SortOrder.HIGH_TO_LOW
+local beforeCount = 3
+local afterCount = 4
+local initialScore = 0
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getTournamentService():postTournamentScoreWithResultsUTC(leaderboardId, score, jsonData, roundStartedTime, sortOrder, beforeCount, afterCount, initialScore, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block
@@ -205,20 +242,20 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "tournament",
-	"operation": "POST_TOURNAMENT_SCORE_WITH_RESULTS",
-	"data": {
-		"leaderboardId": "the-leaderboard-id",
-		"score": 0,
-		"data": {
-			"nickname": "withResults"
-		},
-		"roundStartedEpoch": "[[#ts-10000]]",
-		"sort": "HIGH_TO_LOW",
-		"beforeCount": 3,
-		"afterCount": 4,
-		"initialScore": 0
-	}
+    "service": "tournament",
+    "operation": "POST_TOURNAMENT_SCORE_WITH_RESULTS",
+    "data": {
+        "leaderboardId": "the-leaderboard-id",
+        "score": 0,
+        "data": {
+            "nickname": "withResults"
+        },
+        "roundStartedEpoch": "[[#ts-10000]]",
+        "sort": "HIGH_TO_LOW",
+        "beforeCount": 3,
+        "afterCount": 4,
+        "initialScore": 0
+    }
 }
 ```
 

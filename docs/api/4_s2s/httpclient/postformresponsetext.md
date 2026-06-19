@@ -42,7 +42,7 @@ This operation posts a form encoded document and expects a Text document in resp
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -78,6 +78,24 @@ This operation posts a form encoded document and expects a Text document in resp
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -85,10 +103,10 @@ This operation posts a form encoded document and expects a Text document in resp
 var serviceCode = "webService";
 var path = "resource/dir";
 var headers = {
-	"headerName": "value"
+    "headerName": "value"
 };
 var form = {
-	"key": "value"
+    "key": "value"
 };
 var httpClientProxy = bridge.getHttpClientServiceProxy();
 
@@ -105,18 +123,18 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "httpClient",
-	"operation": "POST_FORM_RESPONSE_TEXT",
-	"data": {
-		"serviceCode": "webService",
-		"path": "resource/dir",
-		"headers": {
-			"headerName": "value"
-		},
-		"form": {
-			"key": "value"
-		}
-	}
+    "service": "httpClient",
+    "operation": "POST_FORM_RESPONSE_TEXT",
+    "data": {
+        "serviceCode": "webService",
+        "path": "resource/dir",
+        "headers": {
+            "headerName": "value"
+        },
+        "form": {
+            "key": "value"
+        }
+    }
 }
 ```
 

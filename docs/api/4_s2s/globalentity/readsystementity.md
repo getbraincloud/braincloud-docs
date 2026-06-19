@@ -33,7 +33,7 @@ Method reads an existing system entity on the server. It cannot be an owned/glob
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -69,6 +69,24 @@ Method reads an existing system entity on the server. It cannot be an owned/glob
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -89,11 +107,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalEntity",
-	"operation": "READ_SYSTEM_ENTITY",
-	"data": {
-		"entityId": "the-entity-id"
-	}
+    "service": "globalEntity",
+    "operation": "READ_SYSTEM_ENTITY",
+    "data": {
+        "entityId": "the-entity-id"
+    }
 }
 ```
 

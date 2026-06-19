@@ -32,7 +32,7 @@ leaderboardIds | Collection of leaderboard IDs.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -68,6 +68,24 @@ leaderboardIds | Collection of leaderboard IDs.
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -85,14 +103,14 @@ var retVal = leaderboardProxy.deleteLeaderboards(leaderboardsIds);
 
 ```r
 {
-	"service": "leaderboard",
-	"operation": "DELETE_LEADERBOARDS",
-	"data": {
-		"leaderboardIds": [
-			"1st-leaderboard-id",
-			"2nd-leaderboard-id"
-		]
-	}
+    "service": "leaderboard",
+    "operation": "DELETE_LEADERBOARDS",
+    "data": {
+        "leaderboardIds": [
+            "1st-leaderboard-id",
+            "2nd-leaderboard-id"
+        ]
+    }
 }
 ```
 

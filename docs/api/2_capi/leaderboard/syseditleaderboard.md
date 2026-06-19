@@ -38,7 +38,7 @@ data | Optional parameter. Developer-defined data relevant to the created leader
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -74,6 +74,24 @@ data | Optional parameter. Developer-defined data relevant to the created leader
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -105,19 +123,19 @@ var retVal = leaderboardProxy.sysEditLeaderboard(
 
 ```r
 {
-	"service": "leaderboard",
-	"operation": "SYS_EDIT_LEADERBOARD",
-	"data": {
-		"leaderboardId": "default",
-		"leaderboardType": "HIGH_VALUE",
-		"rotationType": "DAYS",
-		"numDaysToRotate": 5,
-		"rotationResetTimestampUtcMillis": "[[#ts+60000]]",
-		"retainedCount": 2,
-		"data": {
-			"street": "1309 Carling"
-		}
-	}
+    "service": "leaderboard",
+    "operation": "SYS_EDIT_LEADERBOARD",
+    "data": {
+        "leaderboardId": "default",
+        "leaderboardType": "HIGH_VALUE",
+        "rotationType": "DAYS",
+        "numDaysToRotate": 5,
+        "rotationResetTimestampUtcMillis": "[[#ts+60000]]",
+        "retainedCount": 2,
+        "data": {
+            "street": "1309 Carling"
+        }
+    }
 }
 ```
 

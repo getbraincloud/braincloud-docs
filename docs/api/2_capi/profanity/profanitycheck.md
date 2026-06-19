@@ -46,7 +46,7 @@ bool flagUrls = false;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -107,8 +107,8 @@ var flagUrls = false;
 
 <%= data.branding.codePrefix %>.profanity.profanityCheck(text, languages, flagEmail, flagPhone, flagUrls, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -131,6 +131,49 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local text = "foul language"
+local languages = "en,fr"
+local flagEmail = false
+local flagPhone = false
+local flagUrls = false
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getProfanityService():profanityCheck(text, languages, flagEmail, flagPhone, flagUrls, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var text = "foul language"
+var languages = "en,fr"
+var flag_email = false
+var flag_phone = false
+var flag_urls = false
+
+var result = await <%= data.branding.codePrefix %>.profanity_service.profanity_check(text, languages, flag_email, flag_phone, flag_urls)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -159,15 +202,15 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "profanity",
-	"operation": "PROFANITY_CHECK",
-	"data": {
-		"text": "foul language",
-		"languages": "en,fr",
-		"flagEmail": false,
-		"flagPhone": false,
-		"flagUrls": false
-	}
+    "service": "profanity",
+    "operation": "PROFANITY_CHECK",
+    "data": {
+        "text": "foul language",
+        "languages": "en,fr",
+        "flagEmail": false,
+        "flagPhone": false,
+        "flagUrls": false
+    }
 }
 ```
 

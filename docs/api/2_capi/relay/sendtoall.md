@@ -40,7 +40,7 @@ RSDataCallback rsDataCallback = (response) =>
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```cpp
@@ -82,6 +82,27 @@ _bc.relayService.sendToAll(bytes,
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local aNetId = 2
+local bytes = "Some Data here"  -- byte encoded
+
+<%= data.branding.codePrefix %>:getRelayService():sendToAll(bytes, true, true, BrainCloudRelay.channelHighPriority_1)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -94,7 +115,7 @@ _bc.relayService.sendToAll(bytes,
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
+```r
 // N/A
 ```
 

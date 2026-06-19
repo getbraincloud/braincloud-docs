@@ -8,7 +8,7 @@ Generates specified quantity of redemption codes.
 
 | Parameter            | Description                                                                                                     |
 | -------------------- | --------------------------------------------------------------------------------------------------------------- |
-| codeType             | The code type.                                                                                                  |
+| codeType             | The personal ('single-use') code type. Corresponds to the _Campaign Name_ in the Design Portal.                 |
 | codeState            | Optional. Initial state of the redemption code: 'Inactive' or 'Available'. Defaults to 'Inactive'.              |
 | quantity             | The quantity of scan codes to be generated.                                                                     |
 | customCodeInfo       | Optional custom information, as JSON object.                                                                    |
@@ -40,7 +40,7 @@ Generates specified quantity of redemption codes.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -72,6 +72,24 @@ Generates specified quantity of redemption codes.
 
 ```dart
 // S2S call: to view example, switch to the Cloud Code or Raw tab.
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

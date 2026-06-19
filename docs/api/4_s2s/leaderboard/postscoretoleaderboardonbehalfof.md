@@ -37,7 +37,7 @@ Post score to another player's score.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -73,6 +73,24 @@ Post score to another player's score.
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -99,17 +117,17 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "leaderboard",
-	"operation": "POST_SCORE_TO_LEADERBOARD_ON_BEHALF_OF",
-	"data": {
-		"profileId": "the-profile-id",
-		"leaderboardId": "a-leaderboard-id",
-		"score": 10,
-		"data": {
-			"nickname": "batman"
-		},
-		"forceCreate": false
-	}
+    "service": "leaderboard",
+    "operation": "POST_SCORE_TO_LEADERBOARD_ON_BEHALF_OF",
+    "data": {
+        "profileId": "the-profile-id",
+        "leaderboardId": "a-leaderboard-id",
+        "score": 10,
+        "data": {
+            "nickname": "batman"
+        },
+        "forceCreate": false
+    }
 }
 ```
 

@@ -25,7 +25,7 @@ Returns the netId associated with a profileId.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```cpp
@@ -63,6 +63,26 @@ int netId = _bc.relayService.getNetIdForProfileId(profileId);
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local profileId = "pppppp"
+
+local netId = <%= data.branding.codePrefix %>:getRelayService():getNetIdForProfileId(profileId)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -75,7 +95,7 @@ int netId = _bc.relayService.getNetIdForProfileId(profileId);
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
+```r
 // N/A
 ```
 

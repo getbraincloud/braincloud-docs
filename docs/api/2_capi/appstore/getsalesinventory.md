@@ -2,6 +2,10 @@
 
 Method gets the active sales inventory for the passed-in currency type and platform.
 
+:::tip
+The `itemId` field returned in each product entry is the cash product's own unique identifier (a SKU-like key set when the product was created in the portal). It is **not** a reference to an item catalog entry. Item catalog entries awarded by a product purchase are identified by `defId` and appear in the `items` field of the product definition.
+:::
+
 <PartialServop service_name="appStore" operation_name="GET_INVENTORY" />
 
 ## Method Parameters
@@ -47,7 +51,7 @@ const char *userCurrency = "{\"userCurrency\":\"USD\"}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -98,8 +102,8 @@ var userCurrency = {
 
 <%= data.branding.codePrefix %>.appStore.getSalesInventory(storeId, userCurrency, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -121,6 +125,37 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local storeId = "itunes"
+local userCurrency = {
+    userCurrency = "USD"
+}
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getAppStoreService():getSalesInventory(storeId, userCurrency, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block
@@ -148,15 +183,15 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "appStore",
-	"operation": "GET_INVENTORY",
-	"data": {
-		"storeId": "itunes",
-		"category": "subscriptions",
-		"priceInfoCriteria": {
-			"userCurrency": "USD"
-		}
-	}
+    "service": "appStore",
+    "operation": "GET_INVENTORY",
+    "data": {
+        "storeId": "itunes",
+        "category": "subscriptions",
+        "priceInfoCriteria": {
+            "userCurrency": "USD"
+        }
+    }
 }
 ```
 

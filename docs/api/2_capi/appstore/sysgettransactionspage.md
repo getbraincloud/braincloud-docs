@@ -33,7 +33,7 @@ Gets the page of product transactions information from the server based on the s
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -65,6 +65,24 @@ Gets the page of product transactions information from the server based on the s
 
 ```dart
 // Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block
@@ -103,9 +121,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "appStore",
-	"operation": "SYS_GET_TRANSACTIONS_PAGE",
-	"data": {
+    "service": "appStore",
+    "operation": "SYS_GET_TRANSACTIONS_PAGE",
+    "data": {
     "context": {
       "pagination": {
         "rowsPerPage": 50,
@@ -120,7 +138,7 @@ if (postResult.status == 200) {
         "createdAt": -1
       }
     }
-	}
+    }
 }
 ```
 

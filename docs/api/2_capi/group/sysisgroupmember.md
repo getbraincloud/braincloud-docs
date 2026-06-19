@@ -33,7 +33,7 @@ profileId | The profile id of the user to be checked.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -69,6 +69,24 @@ profileId | The profile id of the user to be checked.
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -90,12 +108,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "group",
-	"operation": "SYS_IS_GROUP_MEMBER",
-	"data": {
-		"groupId": "a-group-id",
-		"profileId": "the-profile-id"
-	}
+    "service": "group",
+    "operation": "SYS_IS_GROUP_MEMBER",
+    "data": {
+        "groupId": "a-group-id",
+        "profileId": "the-profile-id"
+    }
 }
 ```
 

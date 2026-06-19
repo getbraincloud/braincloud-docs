@@ -34,7 +34,7 @@ promotionJson | The full promotion JSON (minus the promotionId).
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -66,6 +66,24 @@ promotionJson | The full promotion JSON (minus the promotionId).
 
 ```dart
 // Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block
@@ -118,9 +136,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "promotions",
-	"operation": "SYS_UPDATE_PROMOTION",
-	"data": {
+    "service": "promotions",
+    "operation": "SYS_UPDATE_PROMOTION",
+    "data": {
     "promotionId": 1,
     "version": 2,
     "promotionJson": {

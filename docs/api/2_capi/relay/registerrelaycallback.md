@@ -39,7 +39,7 @@ static void relayCallback(byte[] data)
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```cpp
@@ -63,8 +63,8 @@ static void relayCallback(byte[] data)
 ```javascript
 <%= data.branding.codePrefix %>.relay.RegisterRelayCallback(result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -83,6 +83,33 @@ static void relayCallback(byte[] data)
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local relayCallback = function(jsonResponse)
+    -- Your code
+end
+
+<%= data.branding.codePrefix %>:getRelayService():RegisterRelayCallback(relayCallback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var result = await <%= data.branding.codePrefix %>.relay_service.register_relay_callback(relayCallback)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -95,7 +122,7 @@ static void relayCallback(byte[] data)
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
+```r
 // N/A
 ```
 

@@ -51,7 +51,7 @@ AuthenticationType authenticationType = AuthenticationType::Facebook;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -100,8 +100,8 @@ var authenticationType = "Facebook";
 
 <%= data.branding.codePrefix %>.friend.getProfileInfoForCredential(externalId, authenticationType, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -112,6 +112,24 @@ var authenticationType = "Facebook";
 
 ```dart
 // Use alternate method     GetProfileInfoForCredentialIfExists()
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block
@@ -137,12 +155,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "friend",
-	"operation": "GET_PROFILE_INFO_FOR_CREDENTIAL",
-	"data": {
-		"externalId": "profileId",
-		"authenticationType": "Facebook"
-	}
+    "service": "friend",
+    "operation": "GET_PROFILE_INFO_FOR_CREDENTIAL",
+    "data": {
+        "externalId": "profileId",
+        "authenticationType": "Facebook"
+    }
 }
 ```
 

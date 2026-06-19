@@ -62,7 +62,7 @@ const char *substitutionsJson = "{\"0\":\"value0\",\"1\":\"value1\"}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -118,8 +118,8 @@ var substitutionsJson = {
 
 <%= data.branding.codePrefix %>.pushNotification.sendTemplatedPushNotificationToGroup(groupId, notificationTemplateId, substitutionsJson, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -143,6 +143,51 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local groupId = "group1"
+local notificationTemplateId = 1
+local substitutionsJson = {
+    ["0"] = "value0",
+    ["1"] = "value1"
+}
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getPushNotificationService():sendTemplatedPushNotificationToGroup(groupId, notificationTemplateId, substitutionsJson, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var group_id = "group1"
+var notification_template_id = 1
+var substitutions_json = {
+    "0": "value0",
+    "1": "value1"
+}
+
+var result = await <%= data.branding.codePrefix %>.push_notification_service.send_templated_push_notification_to_group(group_id, notification_template_id, substitutions_json)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -172,16 +217,16 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "pushNotification",
-	"operation": "SEND_TEMPLATED_TO_GROUP",
-	"data": {
-		"groupId": "group1",
-		"notificationTemplateId": 1,
-		"substitutions": {
-			"0": "value0",
-			"1": "value1"
-		}
-	}
+    "service": "pushNotification",
+    "operation": "SEND_TEMPLATED_TO_GROUP",
+    "data": {
+        "groupId": "group1",
+        "notificationTemplateId": 1,
+        "substitutions": {
+            "0": "value0",
+            "1": "value1"
+        }
+    }
 }
 ```
 

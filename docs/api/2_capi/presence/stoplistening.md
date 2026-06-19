@@ -38,7 +38,7 @@ this; // implements IServerCallback
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -78,8 +78,8 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 ```javascript
 <%= data.branding.codePrefix %>.presence.stopListening(result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -97,6 +97,38 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getPresenceService():stopListening(callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var result = await <%= data.branding.codePrefix %>.presence_service.stop_listening()
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -120,9 +152,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "presence",
-	"operation": "STOP_LISTENING",
-	"data": {}
+    "service": "presence",
+    "operation": "STOP_LISTENING",
+    "data": {}
 }
 ```
 

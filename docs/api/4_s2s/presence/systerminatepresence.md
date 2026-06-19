@@ -33,7 +33,7 @@ Terminates the presence of \`profileId`.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -69,6 +69,24 @@ Terminates the presence of \`profileId`.
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -89,11 +107,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "presence",
-	"operation": "SYS_TERMINATE_PRESENCE",
-	"data": {
-		"profileId": "aaa-bbb-ccc-ddd"
-	}
+    "service": "presence",
+    "operation": "SYS_TERMINATE_PRESENCE",
+    "data": {
+        "profileId": "aaa-bbb-ccc-ddd"
+    }
 }
 ```
 

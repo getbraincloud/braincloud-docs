@@ -33,7 +33,7 @@ profileId | The profile Id
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -69,6 +69,24 @@ profileId | The profile Id
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -82,9 +100,8 @@ var session = bridge.getSessionForProfile(profileId);
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var profileId = "1234-1234-1234-1234";
-var session = bridge.getSessionForProfile(profileId);
+```r
+// N/A
 ```
 
 ```mdx-code-block

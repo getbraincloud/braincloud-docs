@@ -50,7 +50,7 @@ const char *transactionData = "{\"transId\":\"12345677890123456789\"}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -105,8 +105,8 @@ var transactionData = {
 
 <%= data.branding.codePrefix %>.appStore.finalizePurchase(storeId, transactionId, transactionData, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -129,6 +129,49 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local storeId = "steam"
+local transactionId = "12345677890123456789"
+local transactionData = {
+    transId = "12345677890123456789"
+}
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getAppStoreService():finalizePurchase(storeId, transactionId, transactionData, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var store_id = "steam"
+var transaction_id = "12345677890123456789"
+var transaction_data = {
+    "transId": "12345677890123456789"
+}
+
+var result = await <%= data.branding.codePrefix %>.app_store_service.finalize_purchase(store_id, transaction_id, transaction_data)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -157,15 +200,15 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "appStore",
-	"operation": "FINALIZE_PURCHASE",
-	"data": {
-		"storeId": "steam",
-		"transactionId": "12345677890123456789",
-		"transactionData": {
-			"transId": "12345677890123456789"
-		}
-	}
+    "service": "appStore",
+    "operation": "FINALIZE_PURCHASE",
+    "data": {
+        "storeId": "steam",
+        "transactionId": "12345677890123456789",
+        "transactionData": {
+            "transId": "12345677890123456789"
+        }
+    }
 }
 ```
 

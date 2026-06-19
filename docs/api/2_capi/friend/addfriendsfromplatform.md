@@ -52,7 +52,7 @@ externalIds.push_back("external Id 2");
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -105,8 +105,8 @@ var externalIds = [ "external Id 1", "external Id 2" ];
 
 <%= data.branding.codePrefix %>.friend.addFriendsFromPlatform(friendPlatform, mode, externalIds, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -127,6 +127,45 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local friendPlatform = FriendPlatform.facebook
+local mode = "ADD"
+local externalIds = { "external Id 1", "external Id 2" }
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getFriendService():addFriendsFromPlatform(friendPlatform, mode, externalIds, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var friend_platform = FriendPlatform.facebook
+var mode = "ADD"
+var external_ids = [ "external Id 1", "external Id 2" ]
+
+var result = await <%= data.branding.codePrefix %>.friend_service.add_friends_from_platform(friend_platform, mode, external_ids)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -153,13 +192,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "friend",
-	"operation": "ADD_FRIENDS_FROM_PLATFORM",
-	"data": {
+    "service": "friend",
+    "operation": "ADD_FRIENDS_FROM_PLATFORM",
+    "data": {
         "friendPlatform": "Facebook",
         "mode": "ADD",
         "externalIds": ["111234914143270", "106296724679297"]
-	}
+    }
 }
 ```
 

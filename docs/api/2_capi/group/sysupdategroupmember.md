@@ -35,7 +35,7 @@ jsonAttributes | Attributes of the member being updated
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -71,6 +71,24 @@ jsonAttributes | Attributes of the member being updated
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -95,13 +113,13 @@ if (postResult.status == 200) {
 ```r
 {
     "service": "group",
-	"operation": "SYS_UPDATE_GROUP_MEMBER",
-	"data": {
+    "operation": "SYS_UPDATE_GROUP_MEMBER",
+    "data": {
         "groupId": "a-group-id",
         "profileId": "a-profile-id",
         "role": "MEMBER",
         "attributes": {}
-	}
+    }
 }
 ```
 

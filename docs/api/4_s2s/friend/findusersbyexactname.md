@@ -38,7 +38,7 @@ Does not require the calling user to be a friend of the retrieved users.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -74,6 +74,24 @@ Does not require the calling user to be a friend of the retrieved users.
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -95,12 +113,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "friend",
-	"operation": "FIND_USERS_BY_EXACT_NAME",
-	"data": {
-		"searchText": "someText",
-		"maxResults": 5
-	}
+    "service": "friend",
+    "operation": "FIND_USERS_BY_EXACT_NAME",
+    "data": {
+        "searchText": "someText",
+        "maxResults": 5
+    }
 }
 ```
 

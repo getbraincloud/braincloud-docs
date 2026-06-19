@@ -12,11 +12,11 @@ This operation activates the specified redemption code.
 
 ## Method Parameters
 
-| Parameter      | Description                  |
-| -------------- | ---------------------------- |
-| scanCode       | The scan code.               |
-| codeType       | The code type.               |
-| customCodeInfo | Optional custom information. |
+| Parameter      | Description                                                                                     |
+| -------------- | ----------------------------------------------------------------------------------------------- |
+| scanCode       | The scan code. Also referred to as a _Promo Code_ in the Design Portal.                         |
+| codeType       | The single-use ('personal') code type. Corresponds to the _Campaign Name_ in the Design Portal. |
+| customCodeInfo | Optional custom information.                                                                    |
 
 ## Usage
 
@@ -41,7 +41,7 @@ This operation activates the specified redemption code.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -77,6 +77,24 @@ This operation activates the specified redemption code.
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -99,13 +117,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "redemptionCode",
-	"operation": "ACTIVATE_CODE",
-	"data": {
-		"scanCode": "the-scan-code",
-		"codeType": "the-code-type",
-		"customCodeInfo": {}
-	}
+    "service": "redemptionCode",
+    "operation": "ACTIVATE_CODE",
+    "data": {
+        "scanCode": "the-scan-code",
+        "codeType": "the-code-type",
+        "customCodeInfo": {}
+    }
 }
 ```
 

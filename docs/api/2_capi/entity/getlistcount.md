@@ -51,7 +51,7 @@ const char *whereJson = "{\"entityType\":\"address\"}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -98,8 +98,8 @@ var whereJson = {
 
 <%= data.branding.codePrefix %>.entity.getListCount(whereJson, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -120,6 +120,45 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local whereJson = {
+    entityType = "address"
+}
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getEntityService():getListCount(whereJson, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var where_json = {
+    "entityType": "address"
+}
+
+var result = await <%= data.branding.codePrefix %>.entity_service.get_list_count(where_json)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -146,13 +185,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "entity",
-	"operation": "GET_LIST_COUNT",
-	"data": {
-		"where": {
-			"entityType": "address"
-		}
-	}
+    "service": "entity",
+    "operation": "GET_LIST_COUNT",
+    "data": {
+        "where": {
+            "entityType": "address"
+        }
+    }
 }
 ```
 

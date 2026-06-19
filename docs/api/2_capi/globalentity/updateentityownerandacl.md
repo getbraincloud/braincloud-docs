@@ -56,7 +56,7 @@ const char *jsonEntityAcl = "{\"other\":1}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -115,8 +115,8 @@ var jsonEntityAcl = {
 
 <%= data.branding.codePrefix %>.globalEntity.updateEntityOwnerAndAcl(entityId, version, ownerId, jsonEntityAcl, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -140,6 +140,51 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local entityId = "a-entity-id"
+local version = 2
+local ownerId = "sdjhghfhgsdjkkfjg"
+local jsonEntityAcl = {
+    other = 1
+}
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getGlobalEntityService():updateEntityOwnerAndAcl(entityId, version, ownerId, jsonEntityAcl, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var entity_id = "a-entity-id"
+var version = 2
+var owner_id = "sdjhghfhgsdjkkfjg"
+var json_entity_acl = {
+    "other": 1
+}
+
+var result = await <%= data.branding.codePrefix %>.global_entity_service.update_entity_owner_and_acl(entity_id, version, owner_id, json_entity_acl)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -169,16 +214,16 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalEntity",
-	"operation": "UPDATE_ENTITY_OWNER_AND_ACL",
-	"data": {
-		"ownerId": "sdjhghfhgsdjkkfjg",
-		"entityId": "the-entity-id",
-		"version": 2,
-		"acl": {
-			"other": 1
-		}
-	}
+    "service": "globalEntity",
+    "operation": "UPDATE_ENTITY_OWNER_AND_ACL",
+    "data": {
+        "ownerId": "sdjhghfhgsdjkkfjg",
+        "entityId": "the-entity-id",
+        "version": 2,
+        "acl": {
+            "other": 1
+        }
+    }
 }
 ```
 

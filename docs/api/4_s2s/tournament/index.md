@@ -23,6 +23,7 @@ This service allows you to retrieve tournament config information
 * [SysEditDivisionSetConfig](/api/capi/tournament/syseditdivisionsetconfig) - Updates a division set configuration with specified changes.
 * [SysListDivisionSetConfigs](/api/capi/tournament/syslistdivisionsetconfigs) - Lists all division set configurations for the app.
 * [SysReadDivisionSetConfig](/api/capi/tournament/sysreaddivisionsetconfig) - Reads the current version of the division set configuration identified by the division set id.
+* [SysGetGroupDivisions](/api/capi/tournament/sysgetgroupdivisions) - Returns a list of the group's recently active divisions, organized by simplified tournament state: ACTIVE, PENDING, COMPLETE. Unlike GetGroupDivisions, this sys call does not require the caller to be a member of the group.
 
 :::tip
 All the client APIs that the names beigin with <strong>"Sys"</strong> <em>are</em> also available to S2S. 

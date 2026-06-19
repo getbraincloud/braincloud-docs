@@ -47,7 +47,7 @@ int notificationTemplateId = 1;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -96,8 +96,8 @@ var notificationTemplateId = 1;
 
 <%= data.branding.codePrefix %>.pushNotification.sendRichPushNotification(toProfileId, notificationTemplateId, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -117,6 +117,43 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local toProfileId = "profile1"
+local notificationTemplateId = 1
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getPushNotificationService():sendRichPushNotification(toProfileId, notificationTemplateId, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var to_profile_id = "profile1"
+var notification_template_id = 1
+
+var result = await <%= data.branding.codePrefix %>.push_notification_service.send_rich_push_notification(to_profile_id, notification_template_id)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -142,16 +179,16 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "pushNotification",
-	"operation": "SEND_RICH",
-	"data": {
-		"toProfileId": "profile1",
-		"notificationTemplateId": 1,
-		"substitutions": {
-			"0": "value0",
-			"1": "value1"
-		}
-	}
+    "service": "pushNotification",
+    "operation": "SEND_RICH",
+    "data": {
+        "toProfileId": "profile1",
+        "notificationTemplateId": 1,
+        "substitutions": {
+            "0": "value0",
+            "1": "value1"
+        }
+    }
 }
 ```
 

@@ -32,7 +32,7 @@ externalAuthType | Optional parameter to specify the external authenticationType
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -68,6 +68,24 @@ externalAuthType | Optional parameter to specify the external authenticationType
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -83,11 +101,8 @@ var session = bridge.getSessionForCredential(externalId, authenticationType, ext
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var externalId = "example@email.com";
-var authenticationType  = "Email";
-var externalAuthType = "someAuth";
-var session = bridge.getSessionForCredential(externalId, authenticationType, externalAuthType);
+```r
+// N/A
 ```
 
 ```mdx-code-block

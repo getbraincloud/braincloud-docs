@@ -36,7 +36,7 @@ Retrieve a page of the global leaderboard specified by the start and end indexes
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -72,6 +72,24 @@ Retrieve a page of the global leaderboard specified by the start and end indexes
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -95,14 +113,14 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "leaderboard",
-	"operation": "GET_GLOBAL_LEADERBOARD_PAGE",
-	"data": {
-		"leaderboardId": "default",
-		"sort": "HIGH_TO_LOW",
-		"startIndex": 0,
-		"endIndex": 9
-	}
+    "service": "leaderboard",
+    "operation": "GET_GLOBAL_LEADERBOARD_PAGE",
+    "data": {
+        "leaderboardId": "default",
+        "sort": "HIGH_TO_LOW",
+        "startIndex": 0,
+        "endIndex": 9
+    }
 }
 ```
 

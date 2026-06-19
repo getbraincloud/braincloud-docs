@@ -46,7 +46,7 @@ const char *deleteCriteria = "{\"entityId\": { \"$in\":[\"aaaa-bbbb-cccc-dddd\",
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -56,7 +56,7 @@ BCCompletionBlock successBlock;      // define callback
 BCErrorCompletionBlock failureBlock; // define callback
 
 [[<%= data.branding.codePrefix %> customEntityService] deleteEntities:entityType
-			 deleteCriteria:deleteCriteria
+             deleteCriteria:deleteCriteria
             completionBlock:successBlock
        errorCompletionBlock:failureBlock
                    cbObject:nil];
@@ -128,6 +128,51 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local entityType = "athletes"
+local deleteCriteria = {
+    entityId = { ["$in"] = 
+        { "aaaa-bbbb-cccc-dddd", "ffff-gggg-hhhh-iiii", "jjjj-kkkk-llll-mmmm" }
+    }
+}
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getCustomEntityService():deleteEntities(entityType, deleteCriteria, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var entity_type = "athletes"
+var delete_criteria = {
+    "entityId": { "$in":
+        ["aaaa-bbbb-cccc-dddd", "ffff-gggg-hhhh-iiii", "jjjj-kkkk-llll-mmmm"]
+    }
+}
+
+var result = await <%= data.branding.codePrefix %>.custom_entity_service.delete_entities(entity_type, delete_criteria)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -153,16 +198,16 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "customEntity",
-	"operation": "DELETE_ENTITIES",
-	"data": {
-		"entityType": "athletes",
-		"deleteCriteria": {
-			"entityId": { "$in":
-				["aaaa-bbbb-cccc-dddd", "ffff-gggg-hhhh-iiii", "jjjj-kkkk-llll-mmmm"]
-			}
-		}
-	}
+    "service": "customEntity",
+    "operation": "DELETE_ENTITIES",
+    "data": {
+        "entityType": "athletes",
+        "deleteCriteria": {
+            "entityId": { "$in":
+                ["aaaa-bbbb-cccc-dddd", "ffff-gggg-hhhh-iiii", "jjjj-kkkk-llll-mmmm"]
+            }
+        }
+    }
 }
 ```
 

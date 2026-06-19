@@ -53,7 +53,7 @@ int timeToLive = 120000;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -106,8 +106,8 @@ var timeToLive = 120000;
 
 <%= data.branding.codePrefix %>.globalEntity.updateEntityTimeToLive(entityId, version, timeToLive, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -128,6 +128,45 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local entityId = "a-entity-id"
+local version = 2
+local timeToLive = 120000
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getGlobalEntityService():updateEntityTimeToLive(entityId, version, timeToLive, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var entity_id = "a-entity-id"
+var version = 2
+var time_to_live = 120000
+
+var result = await <%= data.branding.codePrefix %>.global_entity_service.update_entity_time_to_live(entity_id, version, time_to_live)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -154,13 +193,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalEntity",
-	"operation": "UPDATE_TIME_TO_LIVE",
-	"data": {
-		"entityId": "the-entity-id",
-		"version": 2,
-		"timeToLive": 120000
-	}
+    "service": "globalEntity",
+    "operation": "UPDATE_TIME_TO_LIVE",
+    "data": {
+        "entityId": "the-entity-id",
+        "version": 2,
+        "timeToLive": 120000
+    }
 }
 ```
 

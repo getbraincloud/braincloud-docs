@@ -32,7 +32,7 @@ alwaysAllow | Controls whether the profile ID is passed in with non-anonymous au
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -68,11 +68,29 @@ alwaysAllow | Controls whether the profile ID is passed in with non-anonymous au
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+<%= data.branding.codePrefix %>.alwaysAllowProfileSwitch = true
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
-<%= data.branding.codePrefix %>.setAlwaysAllowProfileSwitch(true);
+```cfscript
+// N/A
 ```
 
 ```mdx-code-block
@@ -80,8 +98,8 @@ alwaysAllow | Controls whether the profile ID is passed in with non-anonymous au
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
-<%= data.branding.codePrefix %>.setAlwaysAllowProfileSwitch(true);
+```r
+// N/A
 ```
 
 ```mdx-code-block
@@ -93,7 +111,7 @@ alwaysAllow | Controls whether the profile ID is passed in with non-anonymous au
 <details>
 <summary>JSON Response</summary>
 
-```javascript
+```json
 <%= data.branding.codePrefix %>.setAlwaysAllowProfileSwitch(true);
 ```
 </details>

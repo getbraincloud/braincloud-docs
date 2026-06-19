@@ -68,7 +68,7 @@ const char* appName = <%= data.example.appName %>;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -143,20 +143,36 @@ If  **updateTick** is greater than `0` a built-in run loop timer is started and 
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local secretMap = {["12345"] = "1234-1234-1234-1234",["67890"] = "4321-4321-4321-4321"}
+local appId = "123456"
+<%= data.branding.codePrefix %>:initWithApps(secretMap, appId, "1.0.0", 50)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var result = await <%= data.branding.codePrefix %>.init_with_apps(secretMap, appId, "1.0.0", 50))
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
-var secret = <%= data.example.appSecret %>;
-var appId = <%= data.example.appId %>;
-var childSecret = <%= data.example.appChildSecret %>;
-var childAppId = <%= data.example.appChildId %>;
-var secretMap = {};
-secretMap[appId] = secret;
-secretMap[childAppId] = childSecret;
-var version = <%= data.example.appVersion %>;
-
-<%= data.branding.codePrefix %>.initializeWithApps(appId, secretMap, version);
+```cfscript
+// N/A
 ```
 
 ```mdx-code-block
@@ -164,17 +180,8 @@ var version = <%= data.example.appVersion %>;
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
-var secret = <%= data.example.appSecret %>;
-var appId = <%= data.example.appId %>;
-var childSecret = <%= data.example.appChildSecret %>;
-var childAppId = <%= data.example.appChildId %>;
-var secretMap = {};
-secretMap[appId] = secret;
-secretMap[childAppId] = childSecret;
-var version = <%= data.example.appVersion %>;
-
-<%= data.branding.codePrefix %>.initializeWithApps(appId, secretMap, version);
+```r
+// N/A
 ```
 
 ```mdx-code-block
@@ -186,7 +193,7 @@ var version = <%= data.example.appVersion %>;
 <details>
 <summary>JSON Response</summary>
 
-```javascript
+```json
 
 ```
 </details>

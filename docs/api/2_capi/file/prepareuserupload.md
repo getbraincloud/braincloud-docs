@@ -39,7 +39,7 @@ localPath | The path and fileName of the local file
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -67,14 +67,14 @@ var file = document.getElementById('fileToUpload').files[0];
 var fileSize = file.size;
 
 <%= data.branding.codePrefix %>.file.prepareFileUpload(
-			"cloudPath", "cloudFilename", shareable, replaceIfExists, fileSize,
-			function(result) {
-				if (result.status == 200) {
-					var uploadId = result.data.fileDetails.uploadId;
-					<%= data.branding.codePrefix %>.file.uploadFile(xhr, file, uploadId);
-				}
-			}
-		);
+            "cloudPath", "cloudFilename", shareable, replaceIfExists, fileSize,
+            function(result) {
+                if (result.status == 200) {
+                    var uploadId = result.data.fileDetails.uploadId;
+                    <%= data.branding.codePrefix %>.file.uploadFile(xhr, file, uploadId);
+                }
+            }
+        );
 ```
 
 ```mdx-code-block
@@ -84,6 +84,24 @@ var fileSize = file.size;
 
 ```dart
 // Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block
@@ -108,16 +126,8 @@ var retVal = fileProxy.prepareUserUpload(cloudPath, cloudName, shareable, replac
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var cloudPath = "test/files/"
-var cloudName = "testCloudFile.dat"
-var shareable = true;
-var replaceIfExists = true;
-var fileSize = 256;
-var localPath = "path/to/my/file.dat";
-
-var fileProxy = bridge.getFileServiceProxy();
-var retVal = fileProxy.prepareUserUpload(cloudPath, cloudName, shareable, replaceIfExists, fileSize, localPath);
+```r
+// N/A
 ```
 
 ```mdx-code-block

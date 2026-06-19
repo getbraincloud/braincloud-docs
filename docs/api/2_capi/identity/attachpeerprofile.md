@@ -59,7 +59,7 @@ bool forceCreate = true;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -124,8 +124,8 @@ var forceCreate = true;
 
 <%= data.branding.codePrefix %>.identity.attachPeerProfile(peer, externalId, authenticationToken, authenticationType, externalAuthName, forceCreate, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -149,6 +149,51 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local peer = "test"
+local externalId = "email@email.com"
+local authenticationToken = "email@email.com"
+local authenticationType = AuthenticationType.email
+local externalAuthName = ""
+local forceCreate = true
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getIdentityService():attachPeerProfile(peer, externalId, authenticationToken, authenticationType, externalAuthName, forceCreate, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var peer = "test"
+var external_id = "email@email.com"
+var authentication_token = "email@email.com"
+var authentication_type = AuthenticationType.email
+var external_auth_name = ""
+var force_create = true
+
+var result = await <%= data.branding.codePrefix %>.identity_service.attach_peer_profile(peer, external_id, authentication_token, authentication_type, external_auth_name, force_create)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -178,16 +223,16 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "identity",
-	"operation": "ATTACH_PEER_PROFILE",
-	"data": {
-		"peer": "test",
-		"externalId": "email@email.com",
-		"authenticationToken": "email@email.com",
-		"authenticationType": "Email",
-		"externalAuthName": "",
-		"forceCreate": true
-	}
+    "service": "identity",
+    "operation": "ATTACH_PEER_PROFILE",
+    "data": {
+        "peer": "test",
+        "externalId": "email@email.com",
+        "authenticationToken": "email@email.com",
+        "authenticationType": "Email",
+        "externalAuthName": "",
+        "forceCreate": true
+    }
 }
 ```
 

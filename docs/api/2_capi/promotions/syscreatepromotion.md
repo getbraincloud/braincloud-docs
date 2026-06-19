@@ -7,7 +7,7 @@ Creates a new promotion. The full promotion JSON (minus the promotionId) should 
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-promotionJson | The full promotion JSON (minus the promotionId).
+promotionJson | The full promotion JSON (minus the promotionId). Supports two promotion types: **SCHEDULED** (requires `startAt` and `endAt` epoch timestamps) and **AUTOMATED** (requires `duration` in hours, and supports `isRetriggerable`, `maxRetriggers`, and `maxPurchases`).
 
 ## Usage
 
@@ -32,7 +32,7 @@ promotionJson | The full promotion JSON (minus the promotionId).
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -68,10 +68,29 @@ promotionJson | The full promotion JSON (minus the promotionId).
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
 ```cfscript
+// Example 1: SCHEDULED type
 var promotionJson = {
     "name": "Independence Day Sale",
     "type": "SCHEDULED",
@@ -104,6 +123,57 @@ var postResult = promotionsProxy.sysCreatePromotion(promotionJson);
 if (postResult.status == 200) {
     // Success!
 }
+
+// Example 2: AUTOMATED type
+var promotionJson = {
+    "type": "AUTOMATED",
+    "name": "Automated Promotion Example",
+    "message": {
+        "en": "This is a promotion with promotional product prices, items pricing info and custom json."
+    },
+    "enabled": false,
+    "segments": [
+        30
+    ],
+    "prices": [
+        {
+            "itemId": "gems50",
+            "priceId": 2
+        },
+        {
+            "itemId": "rubies50",
+            "priceId": 3
+        }
+    ],
+    "items": {
+        "sword100": {
+            "defId": "sword100",
+            "buyPrice": {
+                "coins": 50
+            }
+        },
+        "wand100": {
+            "defId": "wand100",
+            "buyPrice": {
+                "coins": 50
+            }
+        }
+    },
+    "notifications": [],
+    "duration": 72,
+    "customJson": {
+        "bonus": 2
+    },
+    "isRetriggerable": true,
+    "maxRetriggers": 10,
+    "maxPurchases": 50
+  };
+var promotionsProxy = bridge.getPromotionsServiceProxy();
+
+var postResult = promotionsProxy.sysCreatePromotion(promotionJson);
+if (postResult.status == 200) {
+    // Success!
+}
 ```
 
 ```mdx-code-block
@@ -113,9 +183,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "promotions",
-	"operation": "SYS_CREATE_PROMOTION",
-	"data": {
+    "service": "promotions",
+    "operation": "SYS_CREATE_PROMOTION",
+    "data": {
     "promotionJson": {
       "name": "Independence Day Sale",
       "type": "SCHEDULED",

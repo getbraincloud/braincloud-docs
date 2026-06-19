@@ -46,7 +46,7 @@ Along with all custom data (using `data.`). For more information on the query sy
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -82,6 +82,24 @@ Along with all custom data (using `data.`). For more information on the query sy
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -108,17 +126,17 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalEntity",
-	"operation": "GET_SYSTEM_ENTITY_LIST",
-	"data": {
-		"where": {
-			"entityType": "address"
-		},
-		"orderBy": {
-			"data.address": 1
-		},
-		"maxReturn": 50
-	}
+    "service": "globalEntity",
+    "operation": "GET_SYSTEM_ENTITY_LIST",
+    "data": {
+        "where": {
+            "entityType": "address"
+        },
+        "orderBy": {
+            "data.address": 1
+        },
+        "maxReturn": 50
+    }
 }
 ```
 

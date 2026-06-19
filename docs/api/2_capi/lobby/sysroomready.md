@@ -1,6 +1,6 @@
 # SysRoomReady
 
-Tells the lobby system that a room server is ready to go.
+Indicates that a room is ready for use by the members of the given lobby.
 
 
 
@@ -10,8 +10,8 @@ Tells the lobby system that a room server is ready to go.
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-lobbyId | The id of lobby that this room server is associated with
-connectInfo | Info the clients will use to connect to the room server
+lobbyId | The id of lobby that this room server is associated with.
+connectData | Optionally override the connectData of the lobby instance. Pass null or {} to preserve the existing connectData.
 
 ## Usage
 
@@ -36,7 +36,7 @@ connectInfo | Info the clients will use to connect to the room server
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -72,15 +72,40 @@ connectInfo | Info the clients will use to connect to the room server
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
 ```cfscript
 var lobbyId = "55555:4v4:19";
-var connectInfo = {};
+var connectData = {
+    "address": "1.2.3.4",
+    "ports": {
+        "udp": 9000,
+        "tcp": 9000,
+        "ws": 9001
+    }
+};
 var lobbyProxy = bridge.getLobbyServiceProxy();
 
-var postResult = lobbyProxy.sysRoomReady(lobbyId, connectInfo);
+var postResult = lobbyProxy.sysRoomReady(lobbyId, connectData);
 if (postResult.status == 200) {
     // Success!
 }
@@ -93,12 +118,19 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "lobby",
-	"operation": "SYS_ROOM_READY",
-	"data": {
-		"lobbyId": "55555:4v4:19",
-		"connectInfo": {}
-	}
+    "service": "lobby",
+    "operation": "SYS_ROOM_READY",
+    "data": {
+        "lobbyId": "55555:4v4:19",
+        "connectData": {
+            "address": "1.2.3.4",
+            "ports": {
+                "udp": 9000,
+                "tcp": 9000,
+                "ws": 9001
+            }
+        }
+    }
 }
 ```
 

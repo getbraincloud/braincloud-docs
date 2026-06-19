@@ -43,7 +43,7 @@ const char *defId = "sword001";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -112,6 +112,41 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local defId = "sword001"
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getItemCatalogService():getCatalogItemDefinition(defId, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var def_id = "sword001"
+
+var result = await <%= data.branding.codePrefix %>.item_catalog_service.get_catalog_item_definition(def_id)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -132,11 +167,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "itemCatalog",
-	"operation": "GET_CATALOG_ITEM_DEFINITION",
-	"data": {
-		"defId": "sword001"
-	}
+    "service": "itemCatalog",
+    "operation": "GET_CATALOG_ITEM_DEFINITION",
+    "data": {
+        "defId": "sword001"
+    }
 }
 ```
 

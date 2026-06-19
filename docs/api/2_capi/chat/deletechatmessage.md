@@ -31,16 +31,16 @@ string msgId = "784130333859899";
 int version = -1;
 SuccessCallback successCallback = (response, cbObject) =>
 {
-	var jsonMessage = (Dictionary<string, object>)JsonFx.Json.JsonReader.Deserialize(response);
-	Dictionary<string, object> jsonData = (Dictionary<string, object>)jsonMessage["data"];
-	string deleted = jsonData["deleted"].ToString();
-	
-	string logMessage = string.Join(" | ", new [] {deleted});
-	Debug.Log(logMessage); // 1
+    var jsonMessage = (Dictionary<string, object>)JsonFx.Json.JsonReader.Deserialize(response);
+    Dictionary<string, object> jsonData = (Dictionary<string, object>)jsonMessage["data"];
+    string deleted = jsonData["deleted"].ToString();
+    
+    string logMessage = string.Join(" | ", new [] {deleted});
+    Debug.Log(logMessage); // 1
 };
 FailureCallback failureCallback = (status, code, error, cbObject) =>
 {
-	Debug.Log(string.Format("[DeleteChatMessage Failed] {0}  {1}  {2}", status, code, error));
+    Debug.Log(string.Format("[DeleteChatMessage Failed] {0}  {1}  {2}", status, code, error));
 };
 
 <%= data.branding.codePrefix %>.ChatService.DeleteChatMessage(channelId, msgId, version, successCallback, failureCallback);
@@ -60,7 +60,7 @@ int version = 1;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -113,8 +113,8 @@ var version = -1;
 
 <%= data.branding.codePrefix %>.chat.channelDisconnect(channelId, msgId, version, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -139,6 +139,45 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local channelId = "22817:gl:CHAT_TRADE"
+local msgId = "784130333859899"
+local version = -1
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getChatService():channelDisconnect(channelId, msgId, version, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var channel_id = "22817:gl:CHAT_TRADE"
+var msg_id = "784130333859899"
+var version = -1
+
+var result = await <%= data.branding.codePrefix %>.chat_service.channel_disconnect(channel_id)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -154,13 +193,13 @@ var result = chatProxy.deleteChatMessage( channelId, msgId, ver );
 
 ```r
 {
-	"service": "chat",
-	"operation": "DELETE_CHAT_MESSAGE",
-	"data": {
-		"channelId": "55555:gl:bcDev",
-		"msgId": "the-message-id",
-		"version": 1
-	}
+    "service": "chat",
+    "operation": "DELETE_CHAT_MESSAGE",
+    "data": {
+        "channelId": "55555:gl:bcDev",
+        "msgId": "the-message-id",
+        "version": 1
+    }
 }
 ```
 

@@ -55,7 +55,7 @@ bool isOwned = false;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -160,6 +160,65 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local entityType = "athletes"
+local dataJson = {
+  firstName = "Super",
+  surName = "Star",
+  position = "forward",
+  goals = 2,
+  assists = 4
+}
+local acl = {
+  other = 1
+}
+local timeToLive = null
+local isOwned = false
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getCustomEntityService():createEntity(entityType, dataJson, acl, timeToLive, isOwned, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var entity_type = "athletes"
+var data_json = {
+  "firstName": "Super",
+  "surName": "Star",
+  "position": "forward",
+  "goals": 2,
+  "assists": 4
+}
+var acl = {
+  "other": 1
+}
+var time_to_live = null
+var is_owned = false
+
+var result = await <%= data.branding.codePrefix %>.custom_entity_service.create_entity(entity_type, data_json, acl, time_to_live, is_owned)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -192,22 +251,22 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "customEntity",
-	"operation": "CREATE_ENTITY",
-	"data": {
-		"entityType": "athletes",
-		"dataJson": {
-			"firstName": "Super",
-			"surName": "Star",
-			"position": "forward",
-			"goals": 2,
-			"assists": 4
-		},
-		"acl": {
-			"other": 1
-		},
-		"timeToLive": null
-	}
+    "service": "customEntity",
+    "operation": "CREATE_ENTITY",
+    "data": {
+        "entityType": "athletes",
+        "dataJson": {
+            "firstName": "Super",
+            "surName": "Star",
+            "position": "forward",
+            "goals": 2,
+            "assists": 4
+        },
+        "acl": {
+            "other": 1
+        },
+        "timeToLive": null
+    }
 }
 ```
 

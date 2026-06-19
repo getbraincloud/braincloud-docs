@@ -24,6 +24,12 @@ Functions to register and deregister callbacks for specific events.
 * [RegisterRewardCallback](/api/capi/client/registerrewardcallback)
 * [DeregisterRewardCallback](/api/capi/client/deregisterrewardcallback)
 
+### Auto Reconnect
+Functions to enable automatic session reconnection and register callbacks for reconnect events.
+
+* [RegisterAutoReconnectCallback](/api/capi/client/registerautoreconnectcallback)
+* [DeregisterAutoReconnectCallback](/api/capi/client/deregisterautoreconnectcallback)
+
 ### Timeouts
 Functions to configure network timeouts.
 

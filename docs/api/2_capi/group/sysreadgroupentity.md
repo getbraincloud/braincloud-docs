@@ -33,7 +33,7 @@ entityId | ID of the entity
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -69,6 +69,24 @@ entityId | ID of the entity
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -90,12 +108,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "group",
-	"operation": "SYS_READ_GROUP_ENTITY",
-	"data": {
-		"groupId": "a-group-id",
-		"entityId": "a-group-entity-id"
-	}
+    "service": "group",
+    "operation": "SYS_READ_GROUP_ENTITY",
+    "data": {
+        "groupId": "a-group-id",
+        "entityId": "a-group-entity-id"
+    }
 }
 ```
 

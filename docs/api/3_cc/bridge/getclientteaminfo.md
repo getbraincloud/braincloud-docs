@@ -31,7 +31,7 @@ For the S2S bridge call, both versions return the team info for the app id assoc
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -67,6 +67,24 @@ For the S2S bridge call, both versions return the team info for the app id assoc
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -79,8 +97,8 @@ var clientTeamInfo = bridge.getClientTeamInfo();
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var clientTeamInfo = bridge.getClientTeamInfo();
+```r
+// N/A
 ```
 
 ```mdx-code-block

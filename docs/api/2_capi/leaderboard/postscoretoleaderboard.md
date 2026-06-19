@@ -54,7 +54,7 @@ const char *jsonOtherData = "{\"nickname\":\"batman\"}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -109,8 +109,8 @@ var jsonOtherData = {
 
 <%= data.branding.codePrefix %>.leaderboard.postScoreToLeaderboard(leaderboardId, score, jsonOtherData, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -133,6 +133,49 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local leaderboardId = "default"
+local score = 10
+local data = {
+    nickname = "batman"
+}
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getLeaderboardService():postScoreToLeaderboard(leaderboardId, score, data, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var leaderboard_id = "default"
+var score = 10
+var data = {
+    "nickname": "batman"
+}
+
+var result = await <%= data.branding.codePrefix %>.leaderboard_service.post_score_to_leaderboard(leaderboard_id, score, data)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -161,15 +204,15 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "leaderboard",
-	"operation": "POST_SCORE",
-	"data": {
-		"leaderboardId": "default",
-		"score": 10,
-		"data": {
-			"nickname": "batman"
-		}
-	}
+    "service": "leaderboard",
+    "operation": "POST_SCORE",
+    "data": {
+        "leaderboardId": "default",
+        "score": 10,
+        "data": {
+            "nickname": "batman"
+        }
+    }
 }
 ```
 

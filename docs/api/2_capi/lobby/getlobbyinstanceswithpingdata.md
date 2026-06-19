@@ -62,7 +62,7 @@ const char *criteriaJson = "{\"rating\":{\"min\":10,\"max\":100},\"ping\":{\"max
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -119,8 +119,8 @@ var "criteriaJson" = {
 
 <%= data.branding.codePrefix %>.lobby.getLobbyInstancesWithPingData(lobbyType, criteriaJson, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -148,6 +148,50 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local lobbyType = "Relay_lobbyT_v2"
+var  "criteriaJson" = {
+      rating = {
+        min = 10,
+        max = 100
+      },
+      "ping", {
+        max = 200
+      }
+    }
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getLobbyService():getLobbyInstancesWithPingData(lobbyType, criteriaJson, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var lobby_type = "Relay_lobbyT_v2"
+
+var result = await <%= data.branding.codePrefix %>.lobby_service.get_lobby_instances_with_ping_data(lobby_type, criteriaJson)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -185,10 +229,10 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "lobby",
-	"operation": "GET_LOBBY_INSTANCES_WITH_PING_DATA",
-	"data": {
-		"lobbyType": "Relay_lobbyT_v2",
+    "service": "lobby",
+    "operation": "GET_LOBBY_INSTANCES_WITH_PING_DATA",
+    "data": {
+        "lobbyType": "Relay_lobbyT_v2",
     "criteriaJson": {
       "rating": {
         "min": 10,
@@ -202,7 +246,7 @@ if (postResult.status == 200) {
       "ca-central-1": 112,
       "us-west-1": 67
     }
-	}
+    }
 }
 ```
 

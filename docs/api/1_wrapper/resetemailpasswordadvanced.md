@@ -46,7 +46,7 @@ const char *serviceParams = "{\"templateId\":\"template-id-guid\",\"substitution
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -104,8 +104,8 @@ var serviceParams = {
 
 <%= data.branding.codePrefix %>.authenticate.resetEmailPasswordAdvanced(emailAddress, serviceParams, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -139,6 +139,44 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local emailAddress = "email@email.com"
+local serviceParams = {
+    templateId = "template-id-guid",
+    substitutions = {
+        aKey = "aValue"
+    },
+    categories = [
+        "category1",
+        "category2"
+    ]
+}
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:resetEmailPasswordAdvanced(emailAddress, serviceParams, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -151,7 +189,7 @@ if (result.statusCode == 200) {
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
+```r
 // N/A
 ```
 

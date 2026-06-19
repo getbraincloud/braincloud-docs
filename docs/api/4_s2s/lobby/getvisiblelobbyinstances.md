@@ -35,7 +35,7 @@ Gets a map keyed by rating of the visible lobby instances matching the given typ
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -71,6 +71,24 @@ Gets a map keyed by rating of the visible lobby instances matching the given typ
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -93,13 +111,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "lobby",
-	"operation": "GET_VISIBLE_LOBBY_INSTANCES",
-	"data": {
-		"lobbyType": "Relay_lobbyT_v2",
-		"minRating": 10,
-		"maxRating": 100
-	}
+    "service": "lobby",
+    "operation": "GET_VISIBLE_LOBBY_INSTANCES",
+    "data": {
+        "lobbyType": "Relay_lobbyT_v2",
+        "minRating": 10,
+        "maxRating": 100
+    }
 }
 ```
 

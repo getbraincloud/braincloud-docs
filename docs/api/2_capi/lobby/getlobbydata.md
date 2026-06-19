@@ -44,7 +44,7 @@ const char *lobbyId = "13229:Relay_lobbyT_v2:20";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -89,8 +89,8 @@ var lobbyId = "13229:Relay_lobbyT_v2:20";
 
 <%= data.branding.codePrefix %>.lobby.getLobbyData(lobbyId, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -109,6 +109,41 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local lobbyId = "13229:Relay_lobbyT_v2:20"
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getLobbyService():getLobbyData(lobbyId, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var lobby_id = "13229:Relay_lobbyT_v2:20"
+
+var result = await <%= data.branding.codePrefix %>.lobby_service.get_lobby_data(lobby_id)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -133,11 +168,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "lobby",
-	"operation": "GET_LOBBY_DATA",
-	"data": {
-		"lobbyId": "13229:Relay_lobbyT_v2:20"
-	}
+    "service": "lobby",
+    "operation": "GET_LOBBY_DATA",
+    "data": {
+        "lobbyId": "13229:Relay_lobbyT_v2:20"
+    }
 }
 ```
 

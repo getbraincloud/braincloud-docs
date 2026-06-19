@@ -4,6 +4,10 @@ Adds a new price to the given product item.
 
 <PartialServop service_name="productManagement" operation_name="SYS_ADD_PRODUCT_PRICE" />
 
+:::info
+Note: When passing the referencePrice field to SysAddProductPrice, the value is specified in cents/pennies. This differs from the App Store price fields, which are entered in dollars and cents.
+:::
+
 ## Method Parameters
 Parameter | Description
 --------- | -----------
@@ -34,7 +38,7 @@ priceJson | The price details as JSON map.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -66,6 +70,24 @@ priceJson | The price details as JSON map.
 
 ```dart
 // Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block
@@ -122,9 +144,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "productManagement",
-	"operation": "SYS_ADD_PRODUCT_PRICE",
-	"data": {
+    "service": "productManagement",
+    "operation": "SYS_ADD_PRODUCT_PRICE",
+    "data": {
     "itemId": "gold_bars_10",
     "version": 1,
     "priceJson": { 

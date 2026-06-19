@@ -37,7 +37,7 @@ externalAuthName | The name of the external authentication mechanism (optional, 
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -73,6 +73,24 @@ externalAuthName | The name of the external authentication mechanism (optional, 
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -96,14 +114,14 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "identity",
-	"operation": "ATTACH",
-	"data": {
-		"externalId": "email@email.com",
-		"authenticationToken": "email@email.com",
-		"authenticationType": "Email",
-		"externalAuthName": ""
-	}
+    "service": "identity",
+    "operation": "ATTACH",
+    "data": {
+        "externalId": "email@email.com",
+        "authenticationToken": "email@email.com",
+        "authenticationType": "Email",
+        "externalAuthName": ""
+    }
 }
 ```
 

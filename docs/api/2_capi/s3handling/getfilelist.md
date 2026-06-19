@@ -7,7 +7,7 @@ Retrieves the details of custom files stored on the server.
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-category | Category of files to retrieve
+category | Category of files to retrieve. Optional, if omitted, all files are returned.
 
 ## Usage
 
@@ -41,7 +41,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -82,8 +82,8 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 
 <%= data.branding.codePrefix %>.s3Handling.getFileList(result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -105,13 +105,41 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getS3HandlingService():getFileList(callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
 ```cfscript
 var s3HandlingProxy = bridge.getS3HandlingServiceProxy();
+var category = "myCategory";
 
-var postResult = s3HandlingProxy.getFileList();
+var postResult = s3HandlingProxy.getFileList(category);
 if (postResult.status == 200) {
     // Success!
 }
@@ -124,9 +152,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "s3Handling",
-	"operation": "GET_FILE_LIST",
-	"data": {}
+    "service": "s3Handling",
+    "operation": "GET_FILE_LIST",
+    "data": {
+        "category": "myCategory"
+    }
 }
 ```
 

@@ -50,7 +50,7 @@ const char *toTeamCode = "blue";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -99,8 +99,8 @@ var toTeamCode = "blue";
 
 <%= data.branding.codePrefix %>.lobby.switchTeam(lobbyId, toTeamCode, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -120,6 +120,43 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local lobbyId = "55555:4v4:19"
+local toTeamCode = "blue"
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getLobbyService():switchTeam(lobbyId, toTeamCode, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var lobby_id = "55555:4v4:19"
+var to_team_code = "blue"
+
+var result = await <%= data.branding.codePrefix %>.lobby_service.switch_team(lobby_id, to_team_code)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -145,12 +182,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "lobby",
-	"operation": "SWITCH_TEAM",
-	"data": {
-		"lobbyId": "55555:4v4:19",
-		"toTeamCode": "blue"
-	}
+    "service": "lobby",
+    "operation": "SWITCH_TEAM",
+    "data": {
+        "lobbyId": "55555:4v4:19",
+        "toTeamCode": "blue"
+    }
 }
 ```
 

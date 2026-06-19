@@ -56,7 +56,7 @@ const char *statistics = "{\"LIVES\":1}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -103,8 +103,8 @@ var statistics = {
 
 <%= data.branding.codePrefix %>.playerStatistics.incrementUserStats(statistics, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -125,6 +125,45 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local statistics = {
+    LIVES = 1
+}
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getPlayerStatisticsService():incrementUserStats(statistics, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var statistics = {
+    "LIVES": 1
+}
+
+var result = await <%= data.branding.codePrefix %>.player_statistics_service.increment_user_stats(statistics)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -151,9 +190,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "playerStatistics",
-	"operation": "UPDATE",
-	"data": {
+    "service": "playerStatistics",
+    "operation": "UPDATE",
+    "data": {
         "statistics": {
             "LIVES": 1
         }

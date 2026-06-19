@@ -37,7 +37,7 @@ Schedules a script to run on the server at a later date.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -73,6 +73,24 @@ Schedules a script to run on the server at a later date.
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -82,8 +100,8 @@ var scriptData = {
   "parm": "value"
 };
 var segmentIdList = [
-	1,
-	2
+    1,
+    2
 ];
 var startDateUTC = 1512750683157;
 var minutesFromNow = 1;
@@ -102,20 +120,20 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "script",
-	"operation": "SCHEDULE_BATCH_USER_SCRIPT",
-	"data": {
-		"scriptName": "path/to/script1",
-		"scriptData": {
-			"parm": "value"
-		},
-		"segmentIdList": [
-			1,
-			2
-		],
-		"startDateUTC": "[[#ts+60000]]",
-		"minutesFromNow": 1
-	}
+    "service": "script",
+    "operation": "SCHEDULE_BATCH_USER_SCRIPT",
+    "data": {
+        "scriptName": "path/to/script1",
+        "scriptData": {
+            "parm": "value"
+        },
+        "segmentIdList": [
+            1,
+            2
+        ],
+        "startDateUTC": "[[#ts+60000]]",
+        "minutesFromNow": 1
+    }
 }
 ```
 

@@ -1,15 +1,15 @@
 # SysEditTournamentTemplate
 
-Creates a new tournament template.
+Changes an existing tournament template.
 
 <PartialServop service_name="tournament" operation_name="SYS_EDIT_TOURNAMENT_TEMPLATE" />
 
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-tournamentCode | The unique tournament code to assign to the template
-configJson | Configuration data defining the tournament template
-version | Current version number of tournament template to update, use -1 to disable version checking
+tournamentCode | The tournament code uniquely identifying the template being edited.
+configJson | Configuration data changes to be applied to the tournament template. Include entryType ("PLAYER" or "GROUP") to specify whether the tournament is for individual players or groups.
+version | Current version number of tournament template to update, use -1 to disable version checking.
 applyChangesToLiveLeaderboards | If true, forces updates to all leaderboards with current version referencing that tournament code to set the new tournament template version. If false, new tournament template version is picked up on the leaderboards' next rotation.
 
 ## Usage
@@ -35,7 +35,7 @@ applyChangesToLiveLeaderboards | If true, forces updates to all leaderboards wit
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -71,122 +71,41 @@ applyChangesToLiveLeaderboards | If true, forces updates to all leaderboards wit
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="cfs" label="Cloud Code">
+<TabItem value="roblox" label="Roblox">
 ```
 
-```cfscript
-var tournamentCode = "uniqueTournamentCode";
-var configJson = {         
-      "tournamentCode": "uniqueTournamentCode",
-      "configJson": {
-        "description": {
-          "name": {
-              "en": "tFree"
-          },
-          "desc": {
-              "en": "Free tournament. Pays out for rankings: 1st, 2nd and top 10%. Push notifications for start and complete."
-          }
-        },
-        "notifications": {
-          "startingSoon": {
-              "enabled": false,
-              "pushId": null,
-              "mail": {}
-          },
-          "start": {
-              "enabled": true,
-              "pushId": 2,
-              "mail": {}
-          },
-          "scorePassed": {
-              "enabled": false,
-              "pushId": null,
-              "mail": {}
-          },
-          "endingSoon": {
-              "enabled": false,
-              "pushId": null,
-              "mail": {}
-          },
-          "complete": {
-              "enabled": true,
-              "pushId": 3,
-              "mail": {}
-          }
-        },
-        "calcScript": "",
-        "postScript": "",
-        "customJson": {},
-        "payoutRules": [
-          {
-              "reward": {
-                "experiencePoints": 10,
-                "currency": {
-                    "coins": 100
-                }
-              },
-              "rank": {
-                "rankAbs": 1
-              }
-          },
-          {
-              "reward": {
-                "experiencePoints": 5,
-                "currency": {
-                    "coins": 50
-                }
-              },
-              "rank": {
-                "rankAbs": 2
-              }
-          },
-          {
-              "reward": {
-                "experiencePoints": 1,
-                "currency": {
-                    "coins": 5
-                }
-              },
-              "rank": {
-                "rankToPercent": 10
-              }
-          }
-        ],
-        "entryFee": {}
-      }
-    };
-
-var version = 1;
-var applyChangesToLiveLeaderboards = false;
-var tournamentProxy = bridge.getTournamentServiceProxy();
-
-var postResult = tournamentProxy.sysEditTournamentTemplate(tournamentCode, configJson, version, applyChangesToLiveLeaderboards);
-if (postResult.status == 200) {
-    // Success!
-}
+```lua
+// N/A
 ```
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="r" label="Raw">
+<TabItem value="gdscript" label="GDScript">
 ```
 
-```r
-{
-	"service": "tournament",
-	"operation": "SYS_EDIT_TOURNAMENT_TEMPLATE",
-	"data": {
-    "tournamentCode": "uniqueTournamentCode",
-    "configJson": {
-      "description": {
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="cfs" label="Cloud Code">
+```
+
+```cfscript
+// PLAYER example
+var tournamentCode = "myPlayerTournamentCode";
+var configJson = {
+    "entryType": "PLAYER",
+    "description": {
         "name": {
-            "en": "tFree"
+            "en": "Free player tournament"
         },
         "desc": {
-            "en": "Free tournament. Pays out for rankings: 1st, 2nd and top 10%. Push notifications for start and complete."
+            "en": "Free player tournament. Pays out for rankings: 1st, 2nd and top 20%. Push notifications for start, complete and ending soon."
         }
-      },
-      "notifications": {
+    },
+    "notifications": {
         "startingSoon": {
             "enabled": false,
             "pushId": null,
@@ -203,8 +122,8 @@ if (postResult.status == 200) {
             "mail": {}
         },
         "endingSoon": {
-            "enabled": false,
-            "pushId": null,
+            "enabled": true,
+            "pushId": 3,
             "mail": {}
         },
         "complete": {
@@ -212,50 +131,190 @@ if (postResult.status == 200) {
             "pushId": 3,
             "mail": {}
         }
-      },
-      "calcScript": "",
-      "postScript": "",
-      "customJson": {},
-      "payoutRules": [
+    },
+    "postScript": "/tournaments/ProcessPlayerTournamentCompleteRankingsCalculated",
+    "customJson": {},
+    "excludeInitialScoresFromRewards": false,
+    "payoutRules": [
         {
             "reward": {
-              "experiencePoints": 10,
-              "currency": {
-                  "coins": 100
-              }
+                "experiencePoints": 10,
+                "currency": {
+                    "coins": 100
+                }
             },
             "rank": {
-              "rankAbs": 1
+                "rankAbs": 1
             }
         },
         {
             "reward": {
-              "experiencePoints": 5,
-              "currency": {
-                  "coins": 50
-              }
+                "experiencePoints": 5,
+                "currency": {
+                    "coins": 50
+                }
             },
             "rank": {
-              "rankAbs": 2
+                "rankAbs": 2
             }
         },
         {
             "reward": {
-              "experiencePoints": 1,
-              "currency": {
-                  "coins": 5
-              }
+                "experiencePoints": 1,
+                "currency": {
+                    "coins": 5
+                }
             },
             "rank": {
-              "rankToPercent": 10
+                "rankToPercent": 20
             }
         }
-      ],
-      "entryFee": {}
+    ],
+    "entryFee": {}
+};
+var version = -1;
+var applyChangesToLiveLeaderboards = false;
+var tournamentProxy = bridge.getTournamentServiceProxy();
+
+var postResult = tournamentProxy.sysEditTournamentTemplate(tournamentCode, configJson, version, applyChangesToLiveLeaderboards);
+
+// GROUP example
+tournamentCode = "myGroupTournamentCode";
+configJson = {
+    "entryType": "GROUP",
+    "description": {
+        "name": {
+            "en": "Group tournament"
+        },
+        "desc": {
+            "en": "Tournament for groups."
+        }
     },
-    "version": -1,
-    "applyChangesToLiveLeaderboards": false
-	}
+    "postScript": "/tournaments/ProcessGroupTournamentCompleteRankingsCalculated",
+    "excludeInitialScoresFromRewards": false,
+    "customJson": {}
+};
+
+postResult = tournamentProxy.sysEditTournamentTemplate(tournamentCode, configJson, version, applyChangesToLiveLeaderboards);
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="r" label="Raw">
+```
+
+```r
+// PLAYER example
+{
+    "service": "tournament",
+    "operation": "SYS_EDIT_TOURNAMENT_TEMPLATE",
+    "data": {
+        "tournamentCode": "myPlayerTournamentCode",
+        "configJson": {
+            "entryType": "PLAYER",
+            "description": {
+                "name": {
+                    "en": "Free player tournament"
+                },
+                "desc": {
+                    "en": "Free player tournament. Pays out for rankings: 1st, 2nd and top 20%. Push notifications for start, complete and ending soon."
+                }
+            },
+            "notifications": {
+                "startingSoon": {
+                    "enabled": false,
+                    "pushId": null,
+                    "mail": {}
+                },
+                "start": {
+                    "enabled": true,
+                    "pushId": 2,
+                    "mail": {}
+                },
+                "scorePassed": {
+                    "enabled": false,
+                    "pushId": null,
+                    "mail": {}
+                },
+                "endingSoon": {
+                    "enabled": true,
+                    "pushId": 3,
+                    "mail": {}
+                },
+                "complete": {
+                    "enabled": true,
+                    "pushId": 3,
+                    "mail": {}
+                }
+            },
+            "postScript": "/tournaments/ProcessPlayerTournamentCompleteRankingsCalculated",
+            "customJson": {},
+            "excludeInitialScoresFromRewards": false,
+            "payoutRules": [
+                {
+                    "reward": {
+                        "experiencePoints": 10,
+                        "currency": {
+                            "coins": 100
+                        }
+                    },
+                    "rank": {
+                        "rankAbs": 1
+                    }
+                },
+                {
+                    "reward": {
+                        "experiencePoints": 5,
+                        "currency": {
+                            "coins": 50
+                        }
+                    },
+                    "rank": {
+                        "rankAbs": 2
+                    }
+                },
+                {
+                    "reward": {
+                        "experiencePoints": 1,
+                        "currency": {
+                            "coins": 5
+                        }
+                    },
+                    "rank": {
+                        "rankToPercent": 20
+                    }
+                }
+            ],
+            "entryFee": {}
+        },
+        "version": -1,
+        "applyChangesToLiveLeaderboards": false
+    }
+}
+
+// GROUP example
+{
+    "service": "tournament",
+    "operation": "SYS_EDIT_TOURNAMENT_TEMPLATE",
+    "data": {
+        "tournamentCode": "myGroupTournamentCode",
+        "configJson": {
+            "entryType": "GROUP",
+            "description": {
+                "name": {
+                    "en": "Group tournament"
+                },
+                "desc": {
+                    "en": "Tournament for groups."
+                }
+            },
+            "postScript": "/tournaments/ProcessGroupTournamentCompleteRankingsCalculated",
+            "excludeInitialScoresFromRewards": false,
+            "customJson": {}
+        },
+        "version": -1,
+        "applyChangesToLiveLeaderboards": false
+    }
 }
 ```
 
@@ -309,8 +368,9 @@ if (postResult.status == 200) {
         "mail": {}
       }
     },
-    "calcScript": "",
-    "postScript": "",
+    "calcScriptId": "",
+    "postScriptId": "",
+    "excludeInitialScoresFromRewards": false,
     "customJson": {},
     "payoutRules": [
       {

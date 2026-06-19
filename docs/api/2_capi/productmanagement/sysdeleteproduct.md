@@ -38,7 +38,7 @@ If any real purchases of the product exist, product deletion will be disallowed 
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -74,6 +74,24 @@ If any real purchases of the product exist, product deletion will be disallowed 
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -95,9 +113,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "productManagement",
-	"operation": "SYS_DELETE_PRODUCT",
-	"data": {
+    "service": "productManagement",
+    "operation": "SYS_DELETE_PRODUCT",
+    "data": {
     "itemId": "barBundle1Imp",
     "version": 1
   }

@@ -46,7 +46,7 @@ const char *entityId = "entityId";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -95,8 +95,8 @@ var entityId = "entityId";
 
 <%= data.branding.codePrefix %>.friend.readFriendEntity(friendId, entityId, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -116,6 +116,43 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local friendId = "profileId"
+local entityId = "entityId"
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getFriendService():readFriendEntity(friendId, entityId, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var friend_id = "profileId"
+var entity_id = "entityId"
+
+var result = await <%= data.branding.codePrefix %>.friend_service.read_friend_entity(entity_id, friend_id)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -141,12 +178,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "friend",
-	"operation": "READ_FRIEND_ENTITY",
-	"data": {
-		"friendId": "profileId",
-		"entityId": "entityId"
-	}
+    "service": "friend",
+    "operation": "READ_FRIEND_ENTITY",
+    "data": {
+        "friendId": "profileId",
+        "entityId": "entityId"
+    }
 }
 ```
 

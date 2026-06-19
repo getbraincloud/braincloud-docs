@@ -27,7 +27,7 @@ Resets the anonymous ID to empty string.  When the anonymousId is empty a new on
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -64,11 +64,34 @@ Resets the anonymous ID to empty string.  When the anonymousId is empty a new on
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+<%= data.branding.codePrefix %>:resetStoredAnonymousId()
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var result = await <%= data.branding.codePrefix %>.reset_stored_anonymous_id()
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
-<%= data.branding.codePrefix %>.resetStoredAnonymousId();
+```cfscript
+// N/A
 ```
 
 ```mdx-code-block
@@ -76,8 +99,8 @@ Resets the anonymous ID to empty string.  When the anonymousId is empty a new on
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
-<%= data.branding.codePrefix %>.resetStoredAnonymousId();
+```r
+// N/A
 ```
 
 ```mdx-code-block
@@ -89,7 +112,7 @@ Resets the anonymous ID to empty string.  When the anonymousId is empty a new on
 <details>
 <summary>JSON Response</summary>
 
-```javascript
+```json
 <%= data.branding.codePrefix %>.resetStoredAnonymousId();
 ```
 </details>

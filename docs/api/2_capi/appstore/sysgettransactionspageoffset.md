@@ -34,7 +34,7 @@ Gets the page of product transactions information from the server based on the e
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -70,6 +70,24 @@ Gets the page of product transactions information from the server based on the e
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -92,12 +110,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "appStore",
-	"operation": "SYS_GET_TRANSACTIONS_PAGE_OFFSET",
-	"data": {
+    "service": "appStore",
+    "operation": "SYS_GET_TRANSACTIONS_PAGE_OFFSET",
+    "data": {
     "context": "eyJzZWFyY2hDcml0ZXJpYSI6eyJlbnRpdHlUeXBlIjp7IiRyZWdleCI6Ii4qaWxkLioiLCIkb3B0",
     "pageOffset": 1
-	}
+    }
 }
 ```
 

@@ -36,7 +36,7 @@ Runs a script against the users in the specified segments, and then a completion
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -72,6 +72,24 @@ Runs a script against the users in the specified segments, and then a completion
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -81,8 +99,8 @@ var scriptData = {
   "queryStat": "xp"
 };
 var segmentIdList = [
-	1,
-	2
+    1,
+    2
 ];
 var completionScript = "path/to/script2";
 
@@ -101,19 +119,19 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "script",
-	"operation": "RUN_BATCH_USER_SCRIPT",
-	"data": {
-		"scriptName": "calcUser",
-		"scriptData": {
-			"queryStat": "xp"
-		},
-		segmentIdList = [
-			1,
-			2
-		],
-		"completionScript": "processResults"
-	}
+    "service": "script",
+    "operation": "RUN_BATCH_USER_SCRIPT",
+    "data": {
+        "scriptName": "calcUser",
+        "scriptData": {
+            "queryStat": "xp"
+        },
+        segmentIdList = [
+            1,
+            2
+        ],
+        "completionScript": "processResults"
+    }
 }
 ```
 

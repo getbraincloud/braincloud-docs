@@ -34,7 +34,7 @@ Set a group's access conditions, bypassing ownership/ACL checks.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -70,6 +70,24 @@ Set a group's access conditions, bypassing ownership/ACL checks.
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -94,15 +112,15 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "group",
-	"operation": "SYS_UPDATE_GROUP_ACL",
-	"data": {
-		"groupId": "a-group-id",
-		"acl": {
-			"member": 2,
-			"other": 0
-		}
-	}
+    "service": "group",
+    "operation": "SYS_UPDATE_GROUP_ACL",
+    "data": {
+        "groupId": "a-group-id",
+        "acl": {
+            "member": 2,
+            "other": 0
+        }
+    }
 }
 ```
 

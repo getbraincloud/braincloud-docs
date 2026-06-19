@@ -69,7 +69,7 @@ const char *configJson = "{\"leaderboardType\": \"HIGH_VALUE\", \"rotationType\"
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -166,6 +166,46 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local leaderboardId = "aLeaderboardId"
+local score = 10
+local scoreData = {
+    nickname = "batman"
+}
+local configJson = {
+    leaderboardType = "HIGH_VALUE",
+    rotationType = "DAYS",
+    numDaysToRotate = 4,
+    resetAt = "{ [#ts+60000 }]",
+    retainedCount = 2,
+    expireInMins = null
+}
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getLeaderboardService():postScoreToDynamicLeaderboardUsingConfig(leaderboardId, score, scoreData, configJson, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

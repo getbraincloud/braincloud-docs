@@ -33,7 +33,7 @@ Returns the list of configured promotions (without full details).
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -69,6 +69,24 @@ Returns the list of configured promotions (without full details).
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -89,9 +107,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "promotions",
-	"operation": "SYS_GET_PROMOTION_LIST",
-	"data": {
+    "service": "promotions",
+    "operation": "SYS_GET_PROMOTION_LIST",
+    "data": {
     "type": "SCHEDULED"
   }
 }

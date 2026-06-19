@@ -2,48 +2,6 @@
 
 Authenticate the user with a custom Authentication Handoff.
 
-## Error Handling Example
-
-```csharp
-public void FailureCallback(int statusCode, int reasonCode, string statusMessage, object cbObject) {
-    switch (reasonCode) {
-        case ReasonCodes.MISSING_IDENTITY_ERROR: { // Identity does not exist (and client has orphaned profileId)
-
-            // Reset profileId and re-authenticate
-            <%= data.branding.codeClient %>.Get().AuthenticationService.ResetStoredProfileId();
-            <%= data.branding.codeClient %>.Get().AuthenticationService.AuthenticateEmail(email, password, true);
-            break;
-        }
-        case ReasonCodes.SWITCHING_PROFILES: { // Identity belongs to a different profile
-
-            // Reset profileId and re-authenticate
-            <%= data.branding.codeClient %>.Get().AuthenticationService.ResetStoredProfileId();
-            <%= data.branding.codeClient %>.Get().AuthenticationService.AuthenticateEmail(email, password, forceCreate);
-            break;
-        }
-        case ReasonCodes.MISSING_PROFILE_ERROR: { // Identity does not exist
-
-            // The account doesn't exist - create it now.
-            <%= data.branding.codeClient %>.Get().AuthenticationService.AuthenticateEmail(email, password, true);
-            break;
-        }
-        case ReasonCodes.TOKEN_DOES_NOT_MATCH_USER: { // User auth information is incorrect
-
-            // Display a dialog telling the user that the password provided was invalid,
-            // and invite them to re-enter the password.
-            // ...
-            break;
-        }
-        default: { // Uncaught reasonCode
-
-            // Log the error for debugging later
-            // ...
-            break;
-        }
-    }
-}
-```
-
 :::caution
 Make sure you've initialized the <%= data.branding.productName %> library before authenticating.
 :::
@@ -54,7 +12,7 @@ Make sure you've initialized the <%= data.branding.productName %> library before
 
 | Parameter     | Description                                   |
 | ------------- | --------------------------------------------- |
-| handoffId     | The id for the given handoff                  |
+| handoffId     | The id for the given handoff, which maps to its externalId under the hood.    |
 | securityToken | The security token used to verify the handoff |
 
 ## Usage
@@ -98,7 +56,7 @@ const char* securityToken = "securityToken";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -108,8 +66,8 @@ BCCompletionBlock successBlock;      // define callback
 BCErrorCompletionBlock failureBlock; // define callback
 
 [[<%= data.branding.codePrefix %> authenticationService]
-		authenticateHandoff:handoffId
-		   	  securityToken:securityToken
+        authenticateHandoff:handoffId
+                 securityToken:securityToken
             completionBlock:successBlock
        errorCompletionBlock:failureBlock
                    cbObject:nil];
@@ -148,8 +106,8 @@ var securityToken = "securityToken";
 
 <%= data.branding.codePrefix %>.authentication.authenticateHandoff(handoffId, securityToken, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -173,6 +131,43 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local handoffId = "handoffId"
+local securityToken = "securityToken"
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getAuthenticationService():authenticateHandoff(handoffId, securityToken, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var handoff_id = "handoffId"
+var security_token = "securityToken"
+
+var result = await <%= data.branding.codePrefix %>.authentication_service.authenticate_handoff(handoff_id, security_token)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -185,7 +180,7 @@ if (result.statusCode == 200) {
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
+```r
 // N/A
 ```
 

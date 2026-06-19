@@ -31,7 +31,7 @@ Enables sending Gzip compressed packets of requests from client side. Which can 
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -63,6 +63,24 @@ Enables sending Gzip compressed packets of requests from client side. Which can 
 
 ```dart
 <%= data.branding.codePrefix %>.enableCompressedRequests(true);
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+<%= data.branding.codePrefix %>:enableCompressedRequests(true)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

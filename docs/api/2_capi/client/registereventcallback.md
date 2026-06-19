@@ -35,7 +35,7 @@ Sets a callback handler for any out of band event messages that come from <%= da
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -73,6 +73,28 @@ void eventCallback(Map<String, dynamic>?  jsonResponse) {
 };
 ​
 <%= data.branding.codePrefix %>.registerEventCallback(eventCallback);
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+void eventCallback(Map<String, dynamic>?  jsonResponse) {
+    //Your code
+}
+​
+<%= data.branding.codePrefix %>:registerEventCallback(eventCallback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

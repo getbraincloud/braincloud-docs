@@ -47,7 +47,7 @@ bool recurse = true;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -96,8 +96,8 @@ var recurse = true;
 
 <%= data.branding.codePrefix %>.file.deleteUserFiles(path, recurse, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -117,6 +117,43 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local cloudPath = "dir1/dir2"
+local recurse = true
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getFileService():deleteUserFiles(cloudPath, recurse, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var cloud_path = "dir1/dir2"
+var recurse = true
+
+var result = await <%= data.branding.codePrefix %>.file_service.delete_user_files(cloud_path, recurse)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -142,12 +179,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "file",
-	"operation": "DELETE_USER_FILES",
-	"data": {
-		"path": "dir1/dir2",
-		"recurse": true
-	}
+    "service": "file",
+    "operation": "DELETE_USER_FILES",
+    "data": {
+        "path": "dir1/dir2",
+        "recurse": true
+    }
 }
 ```
 

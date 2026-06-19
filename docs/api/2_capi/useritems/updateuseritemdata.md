@@ -49,7 +49,7 @@ const char *newItemData = "{\"condition\":77,\"bonus\":1}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -134,6 +134,51 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local itemId = "aaa-bbb-ccc-ddd"
+local version = 1
+local newItemData = {
+  condition = 77,
+  bonus = 1
+}
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getUserItemsService():updateUserItemData(itemId, version, newItemData, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var item_id = "aaa-bbb-ccc-ddd"
+var version = 1
+var new_item_data = {
+  "condition": 77,
+  "bonus": 1
+}
+
+var result = await <%= data.branding.codePrefix %>.user_items_service.update_user_item_data(item_id, version, new_item_data)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -159,16 +204,16 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "userItems",
-	"operation": "UPDATE_USER_ITEM_DATA",
-	"data": {
-		"itemId": "aaa-bbb-ccc-ddd",
-		"version": 1,
-		"newItemData": {
-			"condition": 77,
-			"bonus": 1
-		}
-	}
+    "service": "userItems",
+    "operation": "UPDATE_USER_ITEM_DATA",
+    "data": {
+        "itemId": "aaa-bbb-ccc-ddd",
+        "version": 1,
+        "newItemData": {
+            "condition": 77,
+            "bonus": 1
+        }
+    }
 }
 ```
 

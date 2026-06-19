@@ -31,7 +31,7 @@ Sets a reward handler for any API call results that return rewards.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -69,6 +69,27 @@ void rewardCallback(Map<String, dynamic>?  jsonResponse) {
 };
 
 <%= data.branding.codePrefix %>.registerRewardCallback(rewardCallback);
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+void rewardCallback(Map<String, dynamic>?  jsonResponse) {
+  // ...
+}
+<%= data.branding.codePrefix %>:registerRewardCallback(rewardCallback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

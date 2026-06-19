@@ -61,7 +61,7 @@ const char* secret = "secretFromTwitterApi";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -109,8 +109,8 @@ var forceCreate = true;
 
 <%= data.branding.codePrefix %>.authenticateTwitter(twitterId, token, secret, forceCreate, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -143,20 +143,42 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local twitterId = "userTwitterId"
+local token = "userAuthToken"
+local secret = "secretFromTwitterApi"
+local forceCreate = true
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:authenticateTwitter(twitterId, token, secret, forceCreate, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
-```javascript
-var twitterId = "userTwitterId";
-var token = "userAuthToken";
-var secret = "secretFromTwitterApi";
-var forceCreate = true;
-
-<%= data.branding.codePrefix %>.authenticateTwitter(twitterId, token, secret, forceCreate, result =>
-{
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
-});
+```cfscript
+// N/A
 ```
 
 ```mdx-code-block
@@ -164,17 +186,8 @@ var forceCreate = true;
 <TabItem value="r" label="Raw">
 ```
 
-```javascript
-var twitterId = "userTwitterId";
-var token = "userAuthToken";
-var secret = "secretFromTwitterApi";
-var forceCreate = true;
-
-<%= data.branding.codePrefix %>.authenticateTwitter(twitterId, token, secret, forceCreate, result =>
-{
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
-});
+```r
+// N/A
 ```
 
 ```mdx-code-block

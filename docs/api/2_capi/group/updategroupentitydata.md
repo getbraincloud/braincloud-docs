@@ -55,7 +55,7 @@ const char *jsonData = "{}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -112,8 +112,8 @@ var jsonData = {};
 
 <%= data.branding.codePrefix %>.group.updateGroupEntityData(groupId, entityId, version, jsonData, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -135,6 +135,47 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local groupId = "a-group-id"
+local entityId = "a-group-entity-id"
+local version = 3
+local jsonData = {}
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getGroupService():updateGroupEntityData(groupId, entityId, version, jsonData, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var group_id = "a-group-id"
+var entity_id = "a-group-entity-id"
+var version = 3
+var json_data = {}
+
+var result = await <%= data.branding.codePrefix %>.group_service.update_group_entity_data(group_id, entity_id, version, json_data)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -162,14 +203,14 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "group",
-	"operation": "UPDATE_GROUP_ENTITY_DATA",
-	"data": {
-		"groupId": "a-group-id",
-		"entityId": "a-group-entity-id",
-		"version": 3,
-		"data": {}
-	}
+    "service": "group",
+    "operation": "UPDATE_GROUP_ENTITY_DATA",
+    "data": {
+        "groupId": "a-group-id",
+        "entityId": "a-group-entity-id",
+        "version": 3,
+        "data": {}
+    }
 }
 ```
 

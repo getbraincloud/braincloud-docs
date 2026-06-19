@@ -42,7 +42,7 @@ const char * token = "someToken";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -110,6 +110,41 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local externalId = "username"
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getIdentityService():updateUniversalIdLogin(externalId, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var external_id = "username"
+
+var result = await <%= data.branding.codePrefix %>.identity_service.update_universal_id_login(external_id)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -130,11 +165,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "identity",
-	"operation": "UPDATE_UNIVERSAL_LOGIN",
-	"data": {
-		"externalId": "username"
-	}
+    "service": "identity",
+    "operation": "UPDATE_UNIVERSAL_LOGIN",
+    "data": {
+        "externalId": "username"
+    }
 }
 ```
 

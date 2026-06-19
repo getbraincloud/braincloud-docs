@@ -60,7 +60,7 @@ int maxReturn = 50;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -122,8 +122,8 @@ var maxReturn = 50;
 
 <%= data.branding.codePrefix %>.entity.getSharedEntitiesListForProfileId(targetProfileId, whereJson, orderByJson, maxReturn, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -150,6 +150,57 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local targetProfileId = "profile1"
+local whereJson = {
+    entityType = "address",
+    ["data.street"] = "1309 Carling"
+}
+local orderByJson = {
+    ["data.street"] = 1
+}
+local maxReturn = 50
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getEntityService():getSharedEntitiesListForProfileId(targetProfileId, whereJson, orderByJson, maxReturn, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var target_profile_id = "profile1"
+var where_json = {
+    "entityType": "address",
+    "data.street": "1309 Carling"
+}
+var order_by_json = {
+    "data.street": 1
+}
+var max_return = 50
+
+var result = await <%= data.branding.codePrefix %>.entity_service.get_shared_entities_list_for_profile_id(target_profile_id, where_json, order_by_json, max_return)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -182,19 +233,19 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "entity",
-	"operation": "READ_SHARED_ENTITIES_LIST",
-	"data": {
-		"targetProfileId": "profile1",
-		"where": {
-			"entityType": "address",
-			"data.street": "1309 Carling"
-		},
-		"orderBy": {
-			"data.street": 1
-		},
-		"maxReturn": 50
-	}
+    "service": "entity",
+    "operation": "READ_SHARED_ENTITIES_LIST",
+    "data": {
+        "targetProfileId": "profile1",
+        "where": {
+            "entityType": "address",
+            "data.street": "1309 Carling"
+        },
+        "orderBy": {
+            "data.street": 1
+        },
+        "maxReturn": 50
+    }
 }
 ```
 

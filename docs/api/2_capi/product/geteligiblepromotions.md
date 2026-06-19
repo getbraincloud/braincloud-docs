@@ -36,7 +36,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -76,8 +76,8 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 ```javascript
 <%= data.branding.codePrefix %>.product.getEligiblePromotions(result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -88,6 +88,24 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 
 ```dart
 // N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block
@@ -111,8 +129,8 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "product",
-	"operation": "ELIGIBLE_PROMOTIONS"
+    "service": "product",
+    "operation": "ELIGIBLE_PROMOTIONS"
 }
 ```
 

@@ -48,7 +48,7 @@ const char *entityId = "someEntityId";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -97,8 +97,8 @@ var entityId = "someEntityId";
 
 <%= data.branding.codePrefix %>.entity.getSharedEntityForProfileId(targetProfileId, entityId, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -118,6 +118,35 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local targetProfileId = "profile1"
+local entityId = "someEntityId"
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getEntityService():getSharedEntityForProfileId(targetProfileId, entityId, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block
@@ -143,12 +172,12 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "entity",
-	"operation": "READ_SHARED_ENTITY",
-	"data": {
-		"targetProfileId": "profile1",
-		"entityId": "someEntityId"
-	}
+    "service": "entity",
+    "operation": "READ_SHARED_ENTITY",
+    "data": {
+        "targetProfileId": "profile1",
+        "entityId": "someEntityId"
+    }
 }
 ```
 

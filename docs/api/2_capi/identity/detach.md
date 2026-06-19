@@ -11,7 +11,7 @@ Parameter | Description
 --------- | -----------
 externalId | User ID
 authenticationType | Type of authentication. Full list of types can be found [here](/api/appendix/authtypes).
-confirmAnonymous | If false will generate an error when downgrading to anonymous (null is false)
+continueAnon | If false will generate an error when downgrading to anonymous (null is false)
 
 ## Usage
 
@@ -36,7 +36,7 @@ confirmAnonymous | If false will generate an error when downgrading to anonymous
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -72,16 +72,34 @@ confirmAnonymous | If false will generate an error when downgrading to anonymous
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
 ```cfscript
 var externalId = "email@email.com";
 var authenticationType = "Email";
-var confirmAnonymous = false;
+var continueAnon = false;
 var identityProxy = bridge.getIdentityServiceProxy();
 
-var postResult = identityProxy.detach(externalId, authenticationType, confirmAnonymous);
+var postResult = identityProxy.detach(externalId, authenticationType, continueAnon);
 if (postResult.status == 200) {
     // Success!
 }
@@ -94,13 +112,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "identity",
-	"operation": "DETACH",
-	"data": {
-		"externalId": "email@email.com",
-		"authenticationType": "Email",
-		"confirmAnonymous": false
-	}
+    "service": "identity",
+    "operation": "DETACH",
+    "data": {
+        "externalId": "email@email.com",
+        "authenticationType": "Email",
+        "continueAnon": false
+    }
 }
 ```
 

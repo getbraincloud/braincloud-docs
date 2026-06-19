@@ -33,7 +33,7 @@ Reads an existing item definition from the server, with full language fields map
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -69,6 +69,24 @@ Reads an existing item definition from the server, with full language fields map
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -89,11 +107,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "itemCatalog",
-	"operation": "SYS_GET_CATALOG_ITEM_DEFINITION",
-	"data": {
-		"defId": "sword001"
-	}
+    "service": "itemCatalog",
+    "operation": "SYS_GET_CATALOG_ITEM_DEFINITION",
+    "data": {
+        "defId": "sword001"
+    }
 }
 ```
 

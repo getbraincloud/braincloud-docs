@@ -31,7 +31,7 @@ profileId | String that identifies profile. Must match session profile.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -67,6 +67,24 @@ profileId | String that identifies profile. Must match session profile.
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -82,11 +100,8 @@ var session = bridge.getSessionForSessionIdAndProfileId(String sessionId, String
 <TabItem value="r" label="Raw">
 ```
 
-```cfscript
-var sessionId = "the-session-id";
-var profileId = "the-profile-id";
-
-var session = bridge.getSessionForSessionIdAndProfileId(String sessionId, String profileId);
+```r
+// N/A
 ```
 
 ```mdx-code-block

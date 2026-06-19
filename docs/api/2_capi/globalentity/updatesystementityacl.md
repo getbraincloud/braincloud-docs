@@ -37,7 +37,7 @@ This method is affected by versioning. See the [versioning documentation](/api/a
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -73,6 +73,24 @@ This method is affected by versioning. See the [versioning documentation](/api/a
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -97,15 +115,15 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalEntity",
-	"operation": "UPDATE_ACL",
-	"data": {
-		"entityId": "the-entity-id",
-		"version": 2,
-		"acl": {
-			"other": 1
-		}
-	}
+    "service": "globalEntity",
+    "operation": "UPDATE_ACL",
+    "data": {
+        "entityId": "the-entity-id",
+        "version": 2,
+        "acl": {
+            "other": 1
+        }
+    }
 }
 ```
 

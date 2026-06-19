@@ -49,7 +49,7 @@ const char *jsonExtraParams = "{\"parm1\":10}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -104,8 +104,8 @@ var jsonExtraParams = {
 
 <%= data.branding.codePrefix %>.matchMaking.findPlayersUsingFilter(rangeDelta, numMatches, jsonExtraParams, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -128,6 +128,47 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local rangeDelta = 10
+local numMatches = 1
+local jsonExtraParams = {
+    parm1 = 10
+}
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getMatchMakingService():findPlayersUsingFilter(rangeDelta, numMatches, jsonExtraParams, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var range_delta = 10
+var num_matches = 1
+var json_extra_params = { "parm1": 10 }
+
+var result = await <%= data.branding.codePrefix %>.match_making_service.find_players_using_filter(range_delta, num_matches, json_extra_params)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

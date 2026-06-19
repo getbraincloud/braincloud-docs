@@ -2,6 +2,10 @@
 
 Method gets the active sales inventory for the passed-in currency type, platform, and category.
 
+:::tip
+The `itemId` field returned in each product entry is the cash product's own unique identifier (a SKU-like key set when the product was created in the portal). It is **not** a reference to an item catalog entry. Item catalog entries awarded by a product purchase are identified by `defId` and appear in the `items` field of the product definition.
+:::
+
 Valid platforms are:
 
 -   itunes
@@ -60,7 +64,7 @@ const char *category = "collectables";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -113,8 +117,8 @@ var category = "collectables";
 
 <%= data.branding.codePrefix %>.product.getSalesInventoryByCategory(platform, userCurrency, category, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -125,6 +129,24 @@ var category = "collectables";
 
 ```dart
 // N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block
@@ -151,13 +173,13 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "product",
-	"operation": "GET_INVENTORY",
-	"data": {
-		"platform": "googlePlay",
-		"user_currency": "credits",
-		"category": "collectables"
-	}
+    "service": "product",
+    "operation": "GET_INVENTORY",
+    "data": {
+        "platform": "googlePlay",
+        "user_currency": "credits",
+        "category": "collectables"
+    }
 }
 ```
 

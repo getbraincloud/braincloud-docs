@@ -66,7 +66,7 @@ bool userSubmitted = false;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -174,6 +174,59 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local crashType = "unknown"
+local errorMsg = "Divide by zero error"
+local crashJson = {
+  dialog = 5
+}
+local crashLog = "funcX(a,b,c)/ncalled by funcY(a,b,c)"
+local userName = ""
+local userEmail = ""
+local userNotes = ""
+local userSubmitted = false
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getDataStreamService():submitCrashReport(crashType, errorMsg, crashJson, crashLog, userName, userEmail, userNotes, userSubmitted, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var crash_type = "unknown"
+var error_msg = "Divide by zero error"
+var crash_json = {
+  "dialog": 5
+}
+var crash_log = "funcX(a,b,c)/ncalled by funcY(a,b,c)"
+var user_name = ""
+var user_email = ""
+var user_notes = ""
+var user_submitted = false
+
+var result = await <%= data.branding.codePrefix %>.data_stream_service.submit_crash_report(crash_type, error_msg, crash_json, crash_log, user_name, user_email, user_notes, user_submitted)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -203,20 +256,20 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "dataStream",
-	"operation": "SEND_CRASH_REPORT",
-	"data": {
-		"crashType": "unknown",
-		"errorMsg": "Divide by zero error",
-		"crashJson": {
-			"dialog": 5
-		},
-		"crashLog": "funcX(a,b,c)/ncalled by funcY(a,b,c)",
-		"userName": "",
-		"userEmail": "",
-		"userNotes": "",
-		"userSubmitted": false
-	}
+    "service": "dataStream",
+    "operation": "SEND_CRASH_REPORT",
+    "data": {
+        "crashType": "unknown",
+        "errorMsg": "Divide by zero error",
+        "crashJson": {
+            "dialog": 5
+        },
+        "crashLog": "funcX(a,b,c)/ncalled by funcY(a,b,c)",
+        "userName": "",
+        "userEmail": "",
+        "userNotes": "",
+        "userSubmitted": false
+    }
 }
 ```
 

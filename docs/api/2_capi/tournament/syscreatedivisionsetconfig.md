@@ -8,7 +8,7 @@ Creates a new division set configuration
 Parameter | Description
 --------- | -----------
 divSetId | The unique division set id.
-configJson | Configuration data defining the division set, including: description (desc), schedule type (scheduleType), id of template leaderboard (templateLeaderboardId), maximum number of players per division set instance (maxPlayers), and number of days after which division set instance results are to be expired (expireResultsAfterDays).
+configJson | Configuration data defining the division set. Includes: entryType ("PLAYER" or "GROUP"), description (desc), schedule type (scheduleType), id of template leaderboard (templateLeaderboardId), maximum number of players per division set instance (maxPlayers) for PLAYER type or maximum number of groups per division set instance (maxGroups) for GROUP type, number of days after which division set instance results are to be expired (expireResultsAfterDays), and optional customJson.
 
 ## Usage
 
@@ -33,7 +33,7 @@ configJson | Configuration data defining the division set, including: descriptio
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -69,24 +69,55 @@ configJson | Configuration data defining the division set, including: descriptio
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
 ```cfscript
+// PLAYER example
 var divSetId = "uniqueDivSetId";
 var configJson = {
-  "desc": "Gold division",
-  "scheduleType": "Sync",
-  "templateLeaderboardId": "divTemplateLeaderboardId",
-  "maxPlayers": 100,
-  "expireResultsAfterDays": 15
+    "entryType": "PLAYER",
+    "desc": "Gold division",
+    "scheduleType": "Sync",
+    "templateLeaderboardId": "divTemplatePlayerLeaderboardId",
+    "maxPlayers": 100,
+    "expireResultsAfterDays": 15,
+    "customJson": null
 };
 var tournamentProxy = bridge.getTournamentServiceProxy();
 
 var postResult = tournamentProxy.sysCreateDivisionSetConfig(divSetId, configJson);
-if (postResult.status == 200) {
-  // Success!
-}
+
+// GROUP example
+configJson = {
+    "entryType": "GROUP",
+    "desc": "Gold division",
+    "scheduleType": "Sync",
+    "templateLeaderboardId": "divTemplateGroupLeaderboardId",
+    "maxGroups": 100,
+    "expireResultsAfterDays": 15,
+    "customJson": null
+};
+
+postResult = tournamentProxy.sysCreateDivisionSetConfig(divSetId, configJson);
 ```
 
 ```mdx-code-block
@@ -95,20 +126,40 @@ if (postResult.status == 200) {
 ```
 
 ```r
+// PLAYER example
 {
-  "service": "tournament",
-  "operation": "SYS_CREATE_DIVISION_SET_CONFIG",
-  "data":
-  {
-    "divSetId": "uniqueDivSetId",
-    "configJson": {
-      "desc": "Gold division",
-      "scheduleType": "Sync",
-      "templateLeaderboardId": "divTemplateLeaderboardId",
-      "maxPlayers": 100,
-      "expireResultsAfterDays": 15
+    "service": "tournament",
+    "operation": "SYS_CREATE_DIVISION_SET_CONFIG",
+    "data": {
+        "divSetId": "uniqueDivSetId",
+        "configJson": {
+            "entryType": "PLAYER",
+            "desc": "Gold division",
+            "scheduleType": "Sync",
+            "templateLeaderboardId": "divTemplatePlayerLeaderboardId",
+            "maxPlayers": 100,
+            "expireResultsAfterDays": 15,
+            "customJson": null
+        }
     }
-  }
+}
+
+// GROUP example
+{
+    "service": "tournament",
+    "operation": "SYS_CREATE_DIVISION_SET_CONFIG",
+    "data": {
+        "divSetId": "uniqueDivSetId",
+        "configJson": {
+            "entryType": "GROUP",
+            "desc": "Gold division",
+            "scheduleType": "Sync",
+            "templateLeaderboardId": "divTemplateGroupLeaderboardId",
+            "maxGroups": 100,
+            "expireResultsAfterDays": 15,
+            "customJson": null
+        }
+    }
 }
 ```
 
@@ -126,6 +177,7 @@ if (postResult.status == 200) {
     "data": {
         "gameId": "23782",
         "divSetId": "uniqueDivSetId",
+        "entryType": "PLAYER",
         "desc": "Gold division",
         "scheduleType": "Sync",
         "lbTemplate": "l4",

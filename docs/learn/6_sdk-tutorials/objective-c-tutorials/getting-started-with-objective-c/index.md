@@ -67,12 +67,12 @@ Before you make any API calls to brainCloud you need to initialize the library. 
 BrainCloudClient * client = [BrainCloudClient defaultClient];
 
 [client
-	initialize:@"https://api.braincloudservers.com/dispatcherv2"
-	secretKey:@"your_secret" // replace me!
-	gameId:@"your_gameid" // replace me!
-	gameVersion:@"1.0"
-	appId:@""
-	region:@""];
+    initialize:@"https://api.braincloudservers.com/dispatcherv2"
+    secretKey:@"your_secret" // replace me!
+    gameId:@"your_gameid" // replace me!
+    gameVersion:@"1.0"
+    appId:@""
+    region:@""];
 ```
 
 You will need to replace the secretKey and gameId with the information appropriate for your game. You can find this information in the brainCloud portal "Core App Info | Application IDs" section.
@@ -85,17 +85,17 @@ Here is an example of authenticating a user with brainCloud:
 BrainCloudAuthentication * auth = [client authenticationService];
 
 [auth authenticateUniversal:user
-	password:pwd
-	forceCreate:true
-	completionBlock:^(NSString *serviceName, NSString *serviceOperation, NSString *jsonData, BCCallbackObject cbObject)
-	{
-		// do something on success
-	}
-	errorCompletionBlock:^(NSString *serviceName, NSString *serviceOperation, NSInteger statusCode, NSInteger returnCode, NSString *statusMessage, BCCallbackObject cbObject)
-	{
-		// do something on failure
-	}
-	cbObject:nil]
+    password:pwd
+    forceCreate:true
+    completionBlock:^(NSString *serviceName, NSString *serviceOperation, NSString *jsonData, BCCallbackObject cbObject)
+    {
+        // do something on success
+    }
+    errorCompletionBlock:^(NSString *serviceName, NSString *serviceOperation, NSInteger statusCode, NSInteger returnCode, NSString *statusMessage, BCCallbackObject cbObject)
+    {
+        // do something on failure
+    }
+    cbObject:nil]
 ```
 
 Note that you will want to fill out the "completionBlock" and "errorCompletionBlock" blocks of code with something more appropriate.

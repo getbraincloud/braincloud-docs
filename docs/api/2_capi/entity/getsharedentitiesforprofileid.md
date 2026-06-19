@@ -45,7 +45,7 @@ const char *targetProfileId = "profile1";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -90,8 +90,8 @@ var targetProfileId = "profile1";
 
 <%= data.branding.codePrefix %>.entity.getSharedEntitiesForProfileId(targetProfileId, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -110,6 +110,41 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local targetProfileId = "profile1"
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getEntityService():getSharedEntitiesForProfileId(targetProfileId, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var target_profile_id = "profile1"
+
+var result = await <%= data.branding.codePrefix %>.entity_service.get_shared_entities_for_profile_id(target_profile_id)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -134,11 +169,11 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "entity",
-	"operation": "READ_SHARED",
-	"data": {
-		"targetPlayerId": "profile1"
-	}
+    "service": "entity",
+    "operation": "READ_SHARED",
+    "data": {
+        "targetPlayerId": "profile1"
+    }
 }
 ```
 

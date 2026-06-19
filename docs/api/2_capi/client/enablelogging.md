@@ -31,7 +31,7 @@ Enables console logging of outgoing/incoming packets and other informational log
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -63,6 +63,24 @@ Enables console logging of outgoing/incoming packets and other informational log
 
 ```dart
 <%= data.branding.codePrefix %>.enableLogging(true);
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+<%= data.branding.codePrefix %>:enableLogging(true)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

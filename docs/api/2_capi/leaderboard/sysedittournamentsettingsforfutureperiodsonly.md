@@ -45,7 +45,7 @@ tSettingsJson | Tournament and tPhases settings changes for the in-progress lead
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -81,6 +81,24 @@ tSettingsJson | Tournament and tPhases settings changes for the in-progress lead
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -88,31 +106,31 @@ tSettingsJson | Tournament and tPhases settings changes for the in-progress lead
 var leaderboardId = "aLeaderboardId";
 var dbVersion = 1;
 var tSettingsJson = {
-		"tTournament": {
-			"tConfigs": {
-				"goldLevel": {
-					"tConfigCode": "goldLevel",
-					"activeUpUntil": -1
-				},
-				"silverLevel": {
-					"tConfigCode": "silverLevel",
-					"activeUpUntil": -1
-				},
-				"bronzeLevel": {
-					"tConfigCode": "bronzeLevel",
-					"activeUpUntil": -1
-				}
-			},
-			"tAutoJoin": false,
-			"tAutoClaim": false
-		},
-		"tPhases": {
-			"enrolMins": 60,
-			"announcementMins": 15,
-			"disallowMins": 30,
-			"bufferMins": 10
-		}
-  	};
+        "tTournament": {
+            "tConfigs": {
+                "goldLevel": {
+                    "tConfigCode": "goldLevel",
+                    "activeUpUntil": -1
+                },
+                "silverLevel": {
+                    "tConfigCode": "silverLevel",
+                    "activeUpUntil": -1
+                },
+                "bronzeLevel": {
+                    "tConfigCode": "bronzeLevel",
+                    "activeUpUntil": -1
+                }
+            },
+            "tAutoJoin": false,
+            "tAutoClaim": false
+        },
+        "tPhases": {
+            "enrolMins": 60,
+            "announcementMins": 15,
+            "disallowMins": 30,
+            "bufferMins": 10
+        }
+      };
 
 var leaderboardProxy = bridge.getLeaderboardServiceProxy();
 var retVal = leaderboardProxy.SysEditTournamentSettingsForFuturePeriodsOnly(leaderboardId, dbVersion, tSettingsJson);
@@ -125,38 +143,38 @@ var retVal = leaderboardProxy.SysEditTournamentSettingsForFuturePeriodsOnly(lead
 
 ```r
 {
-	"service": "leaderboard",
-	"operation": "SYS_EDIT_TOURNAMENT_SETTINGS_FOR_FUTURE_PERIODS_ONLY",
-	"data": {
-		"leaderboardId": "aLeaderboardId",
-		"dbVersion": 1
-		"tSettingsJson":  {
-			"tTournament": {
-				"tConfigs": {
-					"goldLevel": {
-						"tConfigCode": "goldLevel",
-						"activeUpUntil": -1
-					},
-					"silverLevel": {
-						"tConfigCode": "silverLevel",
-						"activeUpUntil": -1
-					},
-					"bronzeLevel": {
-						"tConfigCode": "bronzeLevel",
-						"activeUpUntil": -1
-					}
-				},
-				"tAutoJoin": false,
-				"tAutoClaim": false
-			},
-			"tPhases": {
-				"enrolMins": 60,
-				"announcementMins": 15,
-				"disallowMins": 30,
-				"bufferMins": 10
-			}
-		}
-	}
+    "service": "leaderboard",
+    "operation": "SYS_EDIT_TOURNAMENT_SETTINGS_FOR_FUTURE_PERIODS_ONLY",
+    "data": {
+        "leaderboardId": "aLeaderboardId",
+        "dbVersion": 1
+        "tSettingsJson":  {
+            "tTournament": {
+                "tConfigs": {
+                    "goldLevel": {
+                        "tConfigCode": "goldLevel",
+                        "activeUpUntil": -1
+                    },
+                    "silverLevel": {
+                        "tConfigCode": "silverLevel",
+                        "activeUpUntil": -1
+                    },
+                    "bronzeLevel": {
+                        "tConfigCode": "bronzeLevel",
+                        "activeUpUntil": -1
+                    }
+                },
+                "tAutoJoin": false,
+                "tAutoClaim": false
+            },
+            "tPhases": {
+                "enrolMins": 60,
+                "announcementMins": 15,
+                "disallowMins": 30,
+                "bufferMins": 10
+            }
+        }
+    }
 }
 ```
 

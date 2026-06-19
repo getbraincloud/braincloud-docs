@@ -36,7 +36,7 @@ Delete the specified folder (and optionally child files and subfolders). Return 
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -72,6 +72,24 @@ Delete the specified folder (and optionally child files and subfolders). Return 
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -98,14 +116,14 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalFileV3",
-	"operation": "SYS_DELETE_FOLDER",
-	"data": {
+    "service": "globalFileV3",
+    "operation": "SYS_DELETE_FOLDER",
+    "data": {
         "treeId": "",
         "cloudPath": "/",
         "treeVersion": 2,
         "recurse": false
-	}
+    }
 }
 ```
 

@@ -46,7 +46,7 @@ const char *filename = "sub12file1";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -95,8 +95,8 @@ var filename = "sub12file1";
 
 <%= data.branding.codePrefix %>.globalFile.getFileInfoSimple(folderPath, filename, result =>
 {
-	var status = result.status;
-	console.log(status + " : " + JSON.stringify(result, null, 2));
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
 });
 ```
 
@@ -116,6 +116,43 @@ if (result.statusCode == 200) {
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local folderPath = "/root1/sub11/sub12/"
+local filename = "sub12file1"
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getGlobalFileV3Service():getFileInfoSimple(folderPath, filename, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var folder_path = "/root1/sub11/sub12/"
+var filename = "sub12file1"
+
+var result = await <%= data.branding.codePrefix %>.global_file_service.get_file_info_simple(folder_path, filename)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
@@ -143,9 +180,9 @@ if (postResult.status == 200) {
 
 ```r
 {
-	"service": "globalFileV3",
-	"operation": "GET_FILE_INFO_SIMPLE",
-	"data": {
+    "service": "globalFileV3",
+    "operation": "GET_FILE_INFO_SIMPLE",
+    "data": {
         "folderPath": "/root1/sub11/sub12/",
         "filename": "sub12file1"
     }
