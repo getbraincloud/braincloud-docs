@@ -47,7 +47,7 @@ _bc->getScriptService()->getScheduledCloudScripts(startDateInUTC, this);
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -130,6 +130,22 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getScriptService():getScheduledCloudScripts(startDateInUTC, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var start_date_in_utc = 1437579786000
+
+var result = await <%= data.branding.codePrefix %>.script_service.get_scheduled_cloud_scripts(start_date_in_utc)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

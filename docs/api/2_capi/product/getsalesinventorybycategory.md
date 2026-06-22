@@ -64,7 +64,7 @@ const char *category = "collectables";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -138,6 +138,15 @@ var category = "collectables";
 
 ```lua
 // N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

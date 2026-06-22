@@ -30,7 +30,7 @@ profileId | The profile ID to set
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -71,6 +71,20 @@ profileId | The profile ID to set
 
 ```lua
 <%= data.branding.codePrefix %>:setStoredProfileId("1234-1234-1234-1234")
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var result = await <%= data.branding.codePrefix %>.set_stored_profile_id("1234-1234-1234-1234")
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

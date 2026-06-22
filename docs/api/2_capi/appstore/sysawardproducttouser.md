@@ -35,7 +35,7 @@ Awards the specified user the product item rewards without requiring a purchase 
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -76,6 +76,15 @@ Awards the specified user the product item rewards without requiring a purchase 
 
 ```lua
 // N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

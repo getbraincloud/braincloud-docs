@@ -54,7 +54,7 @@ const char *jsonAttributes = "{}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -156,6 +156,25 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getGroupService():inviteGroupMember(groupId, profileId, role, jsonAttributes, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var group_id = "a-group-id"
+var profile_id = "a-profile-id"
+var role = "MEMBER"
+var json_attributes = {}
+
+var result = await <%= data.branding.codePrefix %>.group_service.invite_group_member(group_id, profile_id, role, json_attributes)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

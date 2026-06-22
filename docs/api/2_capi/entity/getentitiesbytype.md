@@ -43,7 +43,7 @@ const char *entityType = "someEntityType";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -127,6 +127,22 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getEntityService():getEntitiesByType(entityType, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var entity_type = "someEntityType"
+
+var result = await <%= data.branding.codePrefix %>.entity_service.get_entities_by_type(entity_type)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

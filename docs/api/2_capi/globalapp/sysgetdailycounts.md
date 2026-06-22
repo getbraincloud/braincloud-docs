@@ -32,7 +32,7 @@ day | The day to retrieve the data for, in "yyyy-MM-dd" format. If empty, uses t
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -73,6 +73,15 @@ day | The day to retrieve the data for, in "yyyy-MM-dd" format. If empty, uses t
 
 ```lua
 // N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

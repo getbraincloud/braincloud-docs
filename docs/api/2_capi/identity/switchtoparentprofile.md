@@ -44,7 +44,7 @@ const char *levelName = "Master";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -128,6 +128,22 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getIdentityService():switchToParentProfile(parentLevelName, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var parent_level_name = "Master"
+
+var result = await <%= data.branding.codePrefix %>.identity_service.switch_to_parent_profile(parent_level_name)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

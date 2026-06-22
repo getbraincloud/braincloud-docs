@@ -49,7 +49,7 @@ const char *hintJson = "{\"data.team\": 1, \"data.position\": 1}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -162,6 +162,15 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getGlobalEntityService():GetRandomEntitiesMatchingWithHint(where, maxReturn, hintJson, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

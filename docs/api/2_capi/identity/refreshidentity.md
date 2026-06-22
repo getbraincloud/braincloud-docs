@@ -50,7 +50,7 @@ const char *authenticationType = "Facebook";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -146,6 +146,24 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getIdentityService():refreshIdentity(externalId, authenticationToken, authenticationType, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var external_id = "846557642688"
+var authentication_token = "ghbiuhgvbiuhbiunbuibgin"
+var authentication_type = AuthenticationType.facebook
+
+var result = await <%= data.branding.codePrefix %>.identity_service.refresh_identity(external_id, authentication_token, authentication_type)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

@@ -48,7 +48,7 @@ int maxNumStreams = 5;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -138,6 +138,23 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getPlaybackStreamService():getRecentStreamsForTargetPlayer(targetPlayerId, maxNumStreams, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var target_player_id = "player"
+var max_num_streams = 5
+
+var result = await <%= data.branding.codePrefix %>.playback_stream_service.get_recent_streams_for_target_player(target_player_id, max_num_streams)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

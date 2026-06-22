@@ -32,7 +32,7 @@ fullFolderPath | Fully folder path to lookup
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -73,6 +73,15 @@ fullFolderPath | Fully folder path to lookup
 
 ```lua
 // N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

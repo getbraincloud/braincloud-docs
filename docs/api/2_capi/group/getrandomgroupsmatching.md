@@ -46,7 +46,7 @@ int maxReturn = 20;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -142,6 +142,25 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getGroupService():getRandomGroupsMatching(where, maxReturn, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var where = {
+    "groupType": "BLUE"
+}
+var max_return = 20
+
+var result = await <%= data.branding.codePrefix %>.group_service.get_random_groups_matching(where, max_return)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

@@ -33,7 +33,7 @@ Cancels a user script batch, if it exists and is in Scheduled, Queued or Running
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -74,6 +74,15 @@ Cancels a user script batch, if it exists and is in Scheduled, Queued or Running
 
 ```lua
 // N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

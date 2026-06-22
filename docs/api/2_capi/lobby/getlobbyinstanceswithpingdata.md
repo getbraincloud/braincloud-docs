@@ -62,7 +62,7 @@ const char *criteriaJson = "{\"rating\":{\"min\":10,\"max\":100},\"ping\":{\"max
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -176,6 +176,22 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getLobbyService():getLobbyInstancesWithPingData(lobbyType, criteriaJson, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var lobby_type = "Relay_lobbyT_v2"
+
+var result = await <%= data.branding.codePrefix %>.lobby_service.get_lobby_instances_with_ping_data(lobby_type, criteriaJson)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

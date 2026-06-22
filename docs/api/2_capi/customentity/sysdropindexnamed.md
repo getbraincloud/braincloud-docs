@@ -34,7 +34,7 @@ indexKeysJson | The field index keys, as JSON object, identifying the index to b
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -75,6 +75,15 @@ indexKeysJson | The field index keys, as JSON object, identifying the index to b
 
 ```lua
 // N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

@@ -62,7 +62,7 @@ string encodedText = System.Convert.ToBase64String(bytes);
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -139,6 +139,26 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getFileService():uploadFileFromMemory(cloudPath, cloudName, share, overwrite, encodedText, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var cloud_path = ""
+var cloud_name = "image.png"
+var share = true
+var overwrite = true
+var encoded_text = utf8.encode("hello, world!")
+
+var result = await <%= data.branding.codePrefix %>.file_service.upload_file_from_memory(cloud_path, cloud_name, share, overwrite, encoded_text)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

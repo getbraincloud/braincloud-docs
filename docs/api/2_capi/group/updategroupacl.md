@@ -48,7 +48,7 @@ const char *acl = "{\"member\": 2, \"other\": 0}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -144,6 +144,26 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getGroupService():updateGroupAcl(groupId, acl, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var group_id = "a-group-id"
+var acl = {
+    "member": 2,
+    "other": 0
+}
+
+var result = await <%= data.branding.codePrefix %>.group_service.update_group_acl(group_id, acl)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

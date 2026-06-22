@@ -30,7 +30,7 @@ RSDataCallback rsDataCallback = (response) =>
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```cpp
@@ -89,6 +89,20 @@ local relayCallback = function(jsonResponse)
 end
 
 <%= data.branding.codePrefix %>:getRelayService():registerSystemCallback(relayCallback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var result = await <%= data.branding.codePrefix %>.relay_service.register_system_callback(relayCallback)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

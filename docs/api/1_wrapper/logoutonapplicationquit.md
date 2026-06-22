@@ -25,7 +25,7 @@ Logs out user in one frame, meant to be used when OnApplicationQuit() occurs in 
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -67,6 +67,15 @@ Logs out user in one frame, meant to be used when OnApplicationQuit() occurs in 
 
 ```lua
 // N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

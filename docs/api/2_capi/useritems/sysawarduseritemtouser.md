@@ -35,7 +35,7 @@ optionsJson | Optional support for specifying 'blockIfExceedItemMaxStackable' in
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -76,6 +76,15 @@ optionsJson | Optional support for specifying 'blockIfExceedItemMaxStackable' in
 
 ```lua
 // N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

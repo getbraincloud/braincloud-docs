@@ -43,7 +43,7 @@ const char *playbackStreamId = "streamId";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -127,6 +127,22 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getOnewayMatchService():cancelMatch(playbackStreamId, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var playback_stream_id = "streamId"
+
+var result = await <%= data.branding.codePrefix %>.one_way_match_service.cancel_match(playback_stream_id)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

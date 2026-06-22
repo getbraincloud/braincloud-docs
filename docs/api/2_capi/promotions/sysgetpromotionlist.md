@@ -32,7 +32,7 @@ type | SCHEDULED or AUTOMATED to filter specific type, or empty string to return
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -73,6 +73,15 @@ type | SCHEDULED or AUTOMATED to filter specific type, or empty string to return
 
 ```lua
 // N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

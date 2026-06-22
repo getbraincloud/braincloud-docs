@@ -43,7 +43,7 @@ const char *statusName = "a-status-name";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -127,6 +127,22 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getPlayerStateService():clearUserStatus(statusName, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var status_name = "a-status-name"
+
+var result = await <%= data.branding.codePrefix %>.player_state_service.clear_user_status(status_name)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

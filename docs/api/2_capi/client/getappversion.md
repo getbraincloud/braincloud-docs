@@ -25,7 +25,7 @@ const char * appVersion = <%= data.branding.codePrefix %>->getAppVersion();
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -66,6 +66,15 @@ var appVersion = <%= data.branding.codePrefix %>.getAppVersion();
 
 ```lua
 local appVersion = <%= data.branding.codePrefix %>:getAppVersion()
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

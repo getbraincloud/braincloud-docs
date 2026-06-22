@@ -72,7 +72,7 @@ std::string teamPlayerId = "";    // only if gameCenterId is not teamPlayerId
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -186,6 +186,15 @@ end
 <%= data.branding.codePrefix %>:smartSwitchAuthenticateGameCenter(
     gameCenterId, forceCreate, timestamp, publicKeyUrl,
     signature, salt, teamPlayerId, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

@@ -38,7 +38,7 @@ void autoReconnectCallback(string jsonResponse)
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -91,6 +91,15 @@ local function autoReconnectCallback(jsonResponse)
 end
 
 <%= data.branding.codePrefix %>:registerAutoReconnectCallback(autoReconnectCallback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

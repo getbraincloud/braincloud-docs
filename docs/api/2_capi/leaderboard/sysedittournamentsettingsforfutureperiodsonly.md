@@ -45,7 +45,7 @@ tSettingsJson | Tournament and tPhases settings changes for the in-progress lead
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -86,6 +86,15 @@ tSettingsJson | Tournament and tPhases settings changes for the in-progress lead
 
 ```lua
 // N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

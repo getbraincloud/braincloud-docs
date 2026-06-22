@@ -46,7 +46,7 @@ this; // implements IServerCallback
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -130,6 +130,22 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getPresenceService():updateActivity(activity, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var activity = { "LOCATION": "POKER_TABLE", "STATUS": "PLAYING_GAME" }
+
+var result = await <%= data.branding.codePrefix %>.presence_service.update_activity(activity)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

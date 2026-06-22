@@ -44,7 +44,7 @@ const char *lobbyId = "13229:Relay_lobbyT_v2:20";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -128,6 +128,22 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getLobbyService():getLobbyData(lobbyId, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var lobby_id = "13229:Relay_lobbyT_v2:20"
+
+var result = await <%= data.branding.codePrefix %>.lobby_service.get_lobby_data(lobby_id)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

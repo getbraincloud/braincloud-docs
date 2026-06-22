@@ -32,7 +32,7 @@ sessionId | The specific session ID to keep active (not invalidate).
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -73,6 +73,15 @@ sessionId | The specific session ID to keep active (not invalidate).
 
 ```lua
 // Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

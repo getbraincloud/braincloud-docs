@@ -41,7 +41,7 @@ _bc->getScriptService()->getRunningOrQueuedCloudScripts(this);
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -118,6 +118,20 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getScriptService():getRunningOrQueuedCloudScripts(callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var result = await <%= data.branding.codePrefix %>.script_service.get_running_or_queued_cloud_scripts()
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

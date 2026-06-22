@@ -50,7 +50,7 @@ const char *extraJson = "{}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -146,6 +146,24 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getLobbyService():updateReady(lobbyId, isReady, extraJson, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var lobby_id = "55555:4v4:19"
+var is_ready = true
+var extra_json = {}
+
+var result = await <%= data.branding.codePrefix %>.lobby_service.update_ready(lobby_id, is_ready, extra_json)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

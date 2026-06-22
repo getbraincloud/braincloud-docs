@@ -50,7 +50,7 @@ int version = 2;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -140,6 +140,23 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getGlobalEntityService():deleteEntity(entityId, version, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var entity_id = "a-entity-id"
+var version = 2
+
+var result = await <%= data.branding.codePrefix %>.global_entity_service.delete_entity(entity_id, version)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

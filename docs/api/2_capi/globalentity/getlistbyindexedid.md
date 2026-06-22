@@ -47,7 +47,7 @@ int maxReturn = 50;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -137,6 +137,23 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getGlobalEntityService():getListByIndexedId(entityIndexedId, maxReturn, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var entity_indexed_id = "a-indexed-id"
+var max_return = 50
+
+var result = await <%= data.branding.codePrefix %>.global_entity_service.get_list_by_indexed_id(entity_indexed_id, max_return)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

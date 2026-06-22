@@ -36,7 +36,7 @@ connectData | Optionally override the connectData of the lobby instance. Pass nu
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -77,6 +77,15 @@ connectData | Optionally override the connectData of the lobby instance. Pass nu
 
 ```lua
 // N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

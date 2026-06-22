@@ -61,7 +61,7 @@ int maxReturn = 50;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -169,6 +169,28 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getGlobalEntityService():getList(where, orderBy, maxReturn, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var where = {
+    "entityType": "address"
+}
+var order_by = {
+    "data.address": 1
+}
+var max_return = 50
+
+var result = await <%= data.branding.codePrefix %>.global_entity_service.get_list(where, order_by, max_return)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

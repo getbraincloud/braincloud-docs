@@ -45,7 +45,7 @@ userStats.push_back("LIVES");
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -129,6 +129,22 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getPlayerStatisticsService():readUserStatsSubset(userStats, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var user_stats = [ "LIVES" ]
+
+var result = await <%= data.branding.codePrefix %>.player_statistics_service.read_user_stats_subset(user_stats)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

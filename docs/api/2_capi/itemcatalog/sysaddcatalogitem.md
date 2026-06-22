@@ -32,7 +32,7 @@ itemDefData | The data defining the catalog item. Supported types are ITEM and B
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -73,6 +73,15 @@ itemDefData | The data defining the catalog item. Supported types are ITEM and B
 
 ```lua
 // N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

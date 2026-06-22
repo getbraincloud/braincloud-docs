@@ -49,7 +49,7 @@ int versionId = -1;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -145,6 +145,24 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getLeaderboardService():removeGroupScore(leaderboardId, groupId, versionId, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var leaderboard_id = "default"
+var group_id = "actual_group_id"
+var version_id = -1
+
+var result = await <%= data.branding.codePrefix %>.leaderboard_service.remove_group_score(leaderboard_id, group_id, version_id)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

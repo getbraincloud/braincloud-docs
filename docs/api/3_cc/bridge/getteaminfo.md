@@ -31,7 +31,7 @@ For the S2S bridge call, both versions return the team info for the app id assoc
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -72,6 +72,15 @@ For the S2S bridge call, both versions return the team info for the app id assoc
 
 ```lua
 // N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

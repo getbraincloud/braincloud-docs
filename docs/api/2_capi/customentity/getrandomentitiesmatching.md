@@ -50,7 +50,7 @@ int maxReturn = 2;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -153,6 +153,26 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getCustomEntityService():getRandomEntitiesMatching(entityType, whereJson, maxReturn, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var entity_type = "athletes"
+var where_json = {
+  "data.position": "forward"
+}
+var max_return = 2
+
+var result = await <%= data.branding.codePrefix %>.custom_entity_service.get_random_entities_matching(entity_type, where_json, max_return)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

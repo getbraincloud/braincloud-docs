@@ -46,7 +46,7 @@ const char *deleteCriteria = "{\"entityId\": { \"$in\":[\"aaaa-bbbb-cccc-dddd\",
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -148,6 +148,27 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getCustomEntityService():deleteEntities(entityType, deleteCriteria, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var entity_type = "athletes"
+var delete_criteria = {
+    "entityId": { "$in":
+        ["aaaa-bbbb-cccc-dddd", "ffff-gggg-hhhh-iiii", "jjjj-kkkk-llll-mmmm"]
+    }
+}
+
+var result = await <%= data.branding.codePrefix %>.custom_entity_service.delete_entities(entity_type, delete_criteria)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

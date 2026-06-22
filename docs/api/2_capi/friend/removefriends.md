@@ -45,7 +45,7 @@ profileIds.push_back("profileId2");
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -129,6 +129,22 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getFriendService():removeFriends(profileIds, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var profile_ids = [ "profileId1", "profileId2" ]
+
+var result = await <%= data.branding.codePrefix %>.friend_service.remove_friends(profile_ids)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

@@ -51,7 +51,7 @@ int version = -1;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -141,6 +141,23 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getEntityService():deleteSingleton(entityType, version, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var entity_type = "settings"
+var version = -1
+
+var result = await <%= data.branding.codePrefix %>.entity_service.delete_singleton(entity_type, version)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

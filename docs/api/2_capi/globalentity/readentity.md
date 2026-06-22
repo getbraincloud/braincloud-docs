@@ -44,7 +44,7 @@ const char *entityId = "a-entity-id";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -128,6 +128,22 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getGlobalEntityService():readEntity(entityId, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var entity_id = "a-entity-id"
+
+var result = await <%= data.branding.codePrefix %>.global_entity_service.read_entity(entity_id)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

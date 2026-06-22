@@ -39,7 +39,7 @@ const char* countryCode = "CA";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -85,6 +85,15 @@ var countryCode = "CA";
 ```lua
 local countryCode = "CA"
 <%= data.branding.codePrefix %>:overrideCountryCode(countryCode)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

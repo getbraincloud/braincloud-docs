@@ -55,7 +55,7 @@ const char *jsonEntityData = "{\"street\":\"1309 Carling\"}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -175,6 +175,30 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getGlobalEntityService():createEntityWithIndexedId(entityType, indexedId, timeToLive, jsonEntityAcl, jsonEntityData, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var entity_type = "address"
+var indexed_id = "entityId1"
+var time_to_live = -1
+var json_entity_acl = {
+    "other": 1
+}
+var json_entity_data = {
+    "street": "1309 Carling"
+}
+
+var result = await <%= data.branding.codePrefix %>.global_entity_service.create_entity_with_indexed_id(entity_type, indexed_id, time_to_live, json_entity_acl, json_entity_data)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

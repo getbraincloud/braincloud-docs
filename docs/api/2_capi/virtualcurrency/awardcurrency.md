@@ -55,7 +55,7 @@ int vcAmount = 1;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -145,6 +145,23 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getVirtualCurrencyService():awardCurrency(vcId, vcAmount, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var vc_id = "coins"
+var vc_amount = 1
+
+var result = await <%= data.branding.codePrefix %>.virtual_currency_service.award_currency(vc_id, vc_amount)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

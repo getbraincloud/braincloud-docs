@@ -41,7 +41,7 @@ forceCreate | Should a new score be created if one doesn't currently exist?
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -82,6 +82,15 @@ forceCreate | Should a new score be created if one doesn't currently exist?
 
 ```lua
 // N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

@@ -25,7 +25,7 @@ Returns the RTT connection Id associated with a netId.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```cpp
@@ -70,6 +70,15 @@ String cxId = _bc.relayService.getCxIdForNetId(aNetId);
 local aNetId = 2
 
 local cxId = <%= data.branding.codePrefix %>:getRelayService():getCxIdForNetId(aNetId)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

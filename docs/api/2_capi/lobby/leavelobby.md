@@ -45,7 +45,7 @@ const char *lobbyId = "55555:4v4:19";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -129,6 +129,22 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getLobbyService():leaveLobby(lobbyId, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var lobby_id = "55555:4v4:19"
+
+var result = await <%= data.branding.codePrefix %>.lobby_service.leave_lobby(lobby_id)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

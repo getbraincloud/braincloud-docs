@@ -49,7 +49,7 @@ const char *jsonEntityAcl = "{\"other\":0}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -157,6 +157,28 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getEntityService():createEntity(entityType, jsonEntityData, jsonEntityAcl, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var entity_type = "address"
+var json_entity_data = {
+    "street": "1309 Carling"
+}
+var json_entity_acl = {
+    "other": 0
+}
+
+var result = await <%= data.branding.codePrefix %>.entity_service.create_entity(entity_type, json_entity_data, json_entity_acl)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

@@ -31,7 +31,7 @@ Registers the file upload callbacks.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -88,6 +88,15 @@ void fileCallback(ServerResponse  response) {
 }
 ​
 <%= data.branding.codePrefix %>:registerFileUploadCallback(fileCallback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

@@ -55,7 +55,7 @@ const char *parentLevelName = "Master";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -157,6 +157,26 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getScriptService():runParentScript(scriptName, scriptData, parentLevelName, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var script_name = "path/to/script1"
+var script_data = {
+    "parm": "value"
+}
+var parent_level_name = "Master"
+
+var result = await <%= data.branding.codePrefix %>.script_service.run_parent_script(script_name, script_data, parent_level_name)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

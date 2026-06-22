@@ -37,7 +37,7 @@ This method is affected by versioning. See the [versioning documentation](/api/a
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -78,6 +78,15 @@ This method is affected by versioning. See the [versioning documentation](/api/a
 
 ```lua
 // N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

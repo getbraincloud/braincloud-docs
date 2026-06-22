@@ -46,7 +46,7 @@ const char *entityId = "aaaa-bbbb-cccc-dddd";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -136,6 +136,23 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getCustomEntityService():readEntity(entityType, entityId, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var entity_type = "athletes"
+var entity_id = "aaaa-bbbb-cccc-dddd"
+
+var result = await <%= data.branding.codePrefix %>.custom_entity_service.read_entity(entity_type, entity_id)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

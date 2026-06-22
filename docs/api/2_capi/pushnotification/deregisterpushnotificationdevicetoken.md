@@ -47,7 +47,7 @@ const char *deviceToken = "12345";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -138,6 +138,23 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getPushNotificationService():deregisterPushNotificationDeviceToken(platform, deviceToken, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var platform = PlatformID.iOS
+var device_token = "12345"
+
+var result = await <%= data.branding.codePrefix %>.push_notification_service.deregister_push_notification_device_token(platform, device_token)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

@@ -43,7 +43,7 @@ const char *context = "{\"pagination\":{\"rowsPerPage\":50,\"pageNumber\":1},\"s
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -163,6 +163,34 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getItemCatalogService():getCatalogItemsPage(context, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var context = {
+  "pagination": {
+    "rowsPerPage": 50,
+    "pageNumber": 1
+  },
+  "searchCriteria": {
+    "category": "sword"
+  },
+  "sortCriteria": {
+    "createdAt": 1,
+    "updatedAt": -1
+  }
+}
+
+var result = await <%= data.branding.codePrefix %>.item_catalog_service.get_catalog_items_page(context)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

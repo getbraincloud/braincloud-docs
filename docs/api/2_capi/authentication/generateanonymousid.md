@@ -27,7 +27,7 @@ std::string anonId = <%= data.branding.codePrefix %>->getAuthenticationService()
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -68,6 +68,15 @@ var anonId = <%= data.branding.codePrefix %>.authentication.generateAnonymousId(
 
 ```lua
 local anonId = <%= data.branding.codePrefix %>:getAuthenticationService():generateAnonymousId()
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

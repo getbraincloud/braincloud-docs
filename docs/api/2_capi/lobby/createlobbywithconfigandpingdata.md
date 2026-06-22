@@ -66,7 +66,7 @@ const char *pingData = "{\"ca-central-1\": 98, \"us-west-1\": 123}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -253,6 +253,50 @@ local callback = function(result)
     end
 end
 <%= data.branding.codePrefix %>:getLobbyService():createLobbyWithConfigAndPingData(lobbyType, rating, otherUserCxIds, settings, isReady, extraJson, teamCode, configOverrides, pingData, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var lobby_type = "4v4"
+var rating = 76
+var other_user_cx_ids = [
+    "55555:aaa-bbb-ccc-ddd:asdfjkl"
+]
+var settings = {}
+var is_ready = False
+var extra_json = {}
+var team_code = "reserved"
+var config_overrides = {
+    "teams": [
+        {
+            "code": "reserved",
+            "minUsers": 0,
+            "maxUsers": 1,
+            "autoAssign": false
+        },
+        {
+            "code": "all",
+            "minUsers": 6,
+            "maxUsers": 6,
+            "autoAssign": true
+        }
+    ]
+}
+var ping_data = {
+    "ca-central-1": 98,
+    "us-west-1": 123
+}
+
+var result = await <%= data.branding.codePrefix %>.lobby_service.create_lobby_with_config_and_ping_data(lobby_type, rating, is_ready, extra_json, team_code, settings, config_overrides, ping_data, other_user_cx_ids)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

@@ -45,7 +45,7 @@ const char *targetProfileId = "profile1";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -129,6 +129,22 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getEntityService():getSharedEntitiesForProfileId(targetProfileId, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var target_profile_id = "profile1"
+
+var result = await <%= data.branding.codePrefix %>.entity_service.get_shared_entities_for_profile_id(target_profile_id)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

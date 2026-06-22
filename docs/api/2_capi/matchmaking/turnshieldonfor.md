@@ -43,7 +43,7 @@ int minutes = 10;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -127,6 +127,22 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getMatchMakingService():turnShieldOnFor(minutes, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var minutes = 10
+
+var result = await <%= data.branding.codePrefix %>.match_making_service.turn_shield_on_for(minutes)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

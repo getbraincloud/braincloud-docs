@@ -50,7 +50,7 @@ int minutesFromNow = 1;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -152,6 +152,26 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getScriptService():scheduleRunScriptMinutes(scriptName, scriptData, minutesFromNow, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var script_name = "path/to/script1"
+var script_data = {
+    "parm": "value"
+}
+var minutes_from_now = 1
+
+var result = await <%= data.branding.codePrefix %>.script_service.schedule_run_script_minutes(script_name, script_data, minutes_from_now)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

@@ -56,7 +56,7 @@ const char *channelSubId = "myChatRoom";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -146,6 +146,23 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getChatService():getChannelId(channelType, channelSubId, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var channel_type = "gl"
+var channel_sub_id = "CHAT_TRADE"
+
+var result = await <%= data.branding.codePrefix %>.chat_service.get_channel_id(channel_type, channel_sub_id)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

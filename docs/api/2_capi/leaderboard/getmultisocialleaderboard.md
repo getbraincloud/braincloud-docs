@@ -50,7 +50,7 @@ bool replaceName = false;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -146,6 +146,24 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getLeaderboardService():getMultiSocialLeaderboard(leaderboardIds, leaderboardResultCount, replaceName, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var leaderboard_ids = [ "default" ]
+var leaderboard_result_count = 1
+var replace_name = false
+
+var result = await <%= data.branding.codePrefix %>.leaderboard_service.get_multi_social_leaderboard(leaderboard_ids, leaderboard_result_count, replace_name)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

@@ -62,7 +62,7 @@ const char *groupFileAcl = "{ \"member\": 2, \"other\": 0 }";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -192,6 +192,15 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getGroupFileService():moveUserToGroupFile(userCloudPath, userCloudFilename, groupId, groupTreeId, groupFilename, overwriteIfPresent, groupFileAcl, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

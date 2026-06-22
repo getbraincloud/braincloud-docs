@@ -56,7 +56,7 @@ bool immediate = true;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -164,6 +164,26 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getUserItemsService():giveUserItemTo(profileId, itemId, version, quantity, immediate, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var profile_id = "a-user-profileId"
+var item_id = "aaa-bbb-ccc-ddd"
+var version = 1
+var quantity = 1
+var immediate = true
+
+var result = await <%= data.branding.codePrefix %>.user_items_service.give_user_item_to(profile_id, item_id, version, quantity, immediate)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

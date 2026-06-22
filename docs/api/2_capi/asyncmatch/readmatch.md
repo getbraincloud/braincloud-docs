@@ -46,7 +46,7 @@ const char *matchId = "matchId";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -136,6 +136,23 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getAsyncMatchService():readMatch(ownerId, matchId, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var owner_id = "internalPlayerId"
+var match_id = "matchId"
+
+var result = await <%= data.branding.codePrefix %>.async_match_service.read_match(owner_id, match_id)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

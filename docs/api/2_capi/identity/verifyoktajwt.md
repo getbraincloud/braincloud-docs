@@ -45,7 +45,7 @@ jwtString | JWT string (passed in as `data.authenticationToken` to the script)
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -86,6 +86,15 @@ jwtString | JWT string (passed in as `data.authenticationToken` to the script)
 
 ```lua
 // N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

@@ -26,7 +26,7 @@ Invalidates all sessions for the current user, including the current session.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -67,6 +67,15 @@ Invalidates all sessions for the current user, including the current session.
 
 ```lua
 // Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

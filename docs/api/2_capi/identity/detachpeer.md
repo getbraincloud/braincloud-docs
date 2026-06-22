@@ -43,7 +43,7 @@ const char *peer = "test";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -127,6 +127,22 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getIdentityService():detachPeer(peer, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var peer = "test"
+
+var result = await <%= data.branding.codePrefix %>.identity_service.detach_peer(peer)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

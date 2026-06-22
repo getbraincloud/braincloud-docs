@@ -49,7 +49,7 @@ bool forceCreate = true;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -146,6 +146,24 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getAuthenticationService():authenticateParse(parseId, parseToken, forceCreate, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var parse_id = "someId1234"
+var parse_token = "authToken"
+var force_create = true
+
+var result = await <%= data.branding.codePrefix %>.authentication_service.authenticate_parse(parse_id, parse_token, force_create)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

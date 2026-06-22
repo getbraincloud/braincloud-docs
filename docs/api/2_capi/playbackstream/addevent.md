@@ -51,7 +51,7 @@ const char *jsonSummary = "{\"total\":5}";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -159,6 +159,28 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getPlaybackStreamService():addEvent(playbackStreamId, eventData, summary, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var playback_stream_id = "stream"
+var event_data = {
+    "value": 1
+}
+var summary = {
+    "total": 5
+}
+
+var result = await <%= data.branding.codePrefix %>.playback_stream_service.add_event(playback_stream_id, event_data, summary)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

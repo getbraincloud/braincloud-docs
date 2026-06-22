@@ -31,7 +31,7 @@ Enables receiving compressed packets of responses.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -72,6 +72,15 @@ Enables receiving compressed packets of responses.
 
 ```lua
 <%= data.branding.codePrefix %>:enableCompressedResponses(true)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

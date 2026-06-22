@@ -49,7 +49,7 @@ int maxResults = 10;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -144,6 +144,24 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getLeaderboardService():getPlayerScores(leaderboardId, versionId, maxResults, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var leaderboard_id = "anArcadeLeaderboardId"
+var version_id = -1
+var max_results = 10
+
+var result = await <%= data.branding.codePrefix %>.leaderboard_service.get_player_scores(leaderboard_id, version_id, max_results)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

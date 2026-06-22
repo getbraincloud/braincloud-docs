@@ -36,7 +36,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -114,6 +114,20 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getAsyncMatchService():findCompleteMatches(callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var result = await <%= data.branding.codePrefix %>.async_match_service.find_complete_matches()
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

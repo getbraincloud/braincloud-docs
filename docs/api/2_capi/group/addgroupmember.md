@@ -60,7 +60,7 @@ std::string jsonAttributes = <%= data.example.jsonAttributes %>;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -154,6 +154,25 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getGroupService():addGroupMember(groupId, profileId, role, attributes, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var group_id = <%= data.example.groupId %>
+var profile_id = <%= data.example.profileId %>
+var role = "MEMBER"
+var json_attributes = <%= data.example.jsonAttributes_js %>
+
+var result = await <%= data.branding.codePrefix %>.group_service.add_group_member(group_id, profile_id, role, attributes)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

@@ -47,7 +47,7 @@ bool recurse = true;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -137,6 +137,23 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getFileService():deleteUserFiles(cloudPath, recurse, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var cloud_path = "dir1/dir2"
+var recurse = true
+
+var result = await <%= data.branding.codePrefix %>.file_service.delete_user_files(cloud_path, recurse)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

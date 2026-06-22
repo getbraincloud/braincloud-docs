@@ -45,7 +45,7 @@ attributes.push_back("key2");
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -129,6 +129,22 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getPlayerStateService():removeAttributes(attributes, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var attributes = [ "key1", "key2" ]
+
+var result = await <%= data.branding.codePrefix %>.player_state_service.remove_attributes(attributes)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

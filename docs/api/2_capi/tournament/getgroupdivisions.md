@@ -42,7 +42,7 @@ const char *groupId = "the-group-id";
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -121,6 +121,15 @@ local callback = function(result)
     end
 end
 <%= data.branding.codePrefix %>:getTournamentService():getGroupDivisions(groupId, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
 ```
 
 ```mdx-code-block

@@ -74,7 +74,7 @@ bool recordInHistory = true;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -170,6 +170,24 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getChatService():postChatMessage(channelId, contentJson, rnecordIHistory, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var channel_id = "22817:gl:CHAT_TRADE"
+var content_json = {text: "Looking to sell a couch for 105 gold coins.", SELL_ITEM: {ITEM_TYPE: "COUCH"}}
+var rnecord_i_history = true
+
+var result = await <%= data.branding.codePrefix %>.chat_service.post_chat_message(channel_id, content_json, rnecord_i_history)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

@@ -46,7 +46,7 @@ propertyNames.push_back("pName2");
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -129,6 +129,22 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getGlobalAppService():readSelectedProperties(propertyNames, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var property_names = [ "pName1", "pName2" ]
+
+var result = await <%= data.branding.codePrefix %>.global_app_service.read_selected_properties(property_names)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block

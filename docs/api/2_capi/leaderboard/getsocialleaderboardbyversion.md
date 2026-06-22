@@ -64,7 +64,7 @@ int versionId = 1;
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="objectivec" label="Objective-C">
+<TabItem value="objectivec" label="Obj-C">
 ```
 
 ```objectivec
@@ -160,6 +160,24 @@ local callback = function(result)
 end
 
 <%= data.branding.codePrefix %>:getLeaderboardService():getSocialLeaderboardByVersion(leaderboardId, replaceName, versionId, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var leaderboard_id = "default"
+var replace_name = false
+var version_id = 1
+
+var result = await <%= data.branding.codePrefix %>.leaderboard_service.get_social_leaderboard_by_version(leaderboard_id, replace_name, version_id)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
 ```
 
 ```mdx-code-block
