@@ -24,6 +24,10 @@ This service allows you to retrieve tournament config information
 * [SysListDivisionSetConfigs](/api/capi/tournament/syslistdivisionsetconfigs) - Lists all division set configurations for the app.
 * [SysReadDivisionSetConfig](/api/capi/tournament/sysreaddivisionsetconfig) - Reads the current version of the division set configuration identified by the division set id.
 * [SysGetGroupDivisions](/api/capi/tournament/sysgetgroupdivisions) - Returns a list of the group's recently active divisions, organized by simplified tournament state: ACTIVE, PENDING, COMPLETE. Unlike GetGroupDivisions, this sys call does not require the caller to be a member of the group.
+* [SysJoinGroupTournament](/api/capi/tournament/sysjoingrouptournament) - Enrolls a member's group in the group tournament and assigns an initial score. Unlike JoinGroupTournament, this sys call does not require the caller to be a member of the group.
+* [SysLeaveGroupTournament](/api/capi/tournament/sysleavegrouptournament) - Removes a group from a group tournament. Unlike LeaveGroupTournament, this sys call does not require the caller to be a member of the group.
+* [SysJoinGroupDivision](/api/capi/tournament/sysjoingroupdivision) - Enrolls a group in a division set and assigns an initial score. Unlike JoinGroupDivision, this sys call does not require the caller to be a member of the group.
+* [SysLeaveGroupDivisionInstance](/api/capi/tournament/sysleavegroupdivisioninstance) - Removes a group from a division instance. Unlike LeaveGroupDivisionInstance, this sys call does not require the caller to be a member of the group.
 
 :::tip
 All the client APIs that the names beigin with <strong>"Sys"</strong> <em>are</em> also available to S2S. 

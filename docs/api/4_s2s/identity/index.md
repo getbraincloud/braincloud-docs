@@ -6,6 +6,8 @@
 ### API Summary
 
 * [SysChangeEmailIdentity](/api/s2s/identity/syschangeemailidentity) - Changes email address associated with specified user's email identity.
+* [SysDeleteMyChildProfile](/api/capi/identity/sysdeletemychildprofile) - Deletes the current user's child profile in the specified child app. Cloud Code only.
+* [SysDeleteChildProfile](/api/capi/identity/sysdeletechildprofile) - Deletes a specified user's child profile in the given child app. Invalidates active sessions and deletes any descendant profiles.
 * [VerifyOktaJWT](/api/capi/identity/verifyoktajwt) - Used in an External Authentication script to validate an OKTA login.
 * [VerifySignedJwt](/api/capi/identity/verifysignedjwt) - Verifies a signed JWT provided as a string.
 
