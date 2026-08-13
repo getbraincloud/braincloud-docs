@@ -243,6 +243,6 @@ var postResult = campaignProxy.getMyCampaigns(optionsJson);
 ### Status Codes
 Code | Name | Description
 ---- | ---- | -----------
-40206 | BILLING_PLAN_INCLUDES_CAMPAIGN | Billing plan does not include the Campaign feature.
+40731 | FEATURE_NOT_SUPPORTED_BY_BILLING_PLAN | Billing plan does not include the Campaign feature. Requires a plan that includes Enterprise features.
 
 </details>

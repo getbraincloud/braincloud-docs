@@ -173,6 +173,6 @@ The returned `version` is the scenario's new version after the update. Feed it i
 | 40001 | INVALID_REQUEST                       | The owning campaign has ended and can no longer be modified.                                                 |
 | 41063 | CAMPAIGN_SCENARIO_VERSION_MISMATCH    | The specified `version` no longer matches the scenario — it was updated by someone else. Re-read and retry.  |
 | 41064 | CAMPAIGN_JSON_TOO_LARGE               | The serialized `scenarioJson` exceeds the maximum size allowed for the app.                                  |
-| 40731 | FEATURE_NOT_SUPPORTED_BY_BILLING_PLAN | Billing plan does not include the Campaign feature.                                                          |
+| 40731 | FEATURE_NOT_SUPPORTED_BY_BILLING_PLAN | Billing plan does not include the Campaign feature. Requires a plan that includes Enterprise features. |
 
 </details>

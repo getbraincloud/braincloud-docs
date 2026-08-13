@@ -165,6 +165,6 @@ The returned `version` is the campaign's new version after the update. Feed it i
 | 40001 | INVALID_REQUEST                     | The campaign has ended and can no longer be modified.                                               |
 | 41062 | CAMPAIGN_VERSION_MISMATCH           | The specified `version` no longer matches the campaign — it was updated by someone else. Re-read and retry. |
 | 41064 | CAMPAIGN_JSON_TOO_LARGE             | The serialized `campaignJson` exceeds the maximum size allowed for the app.                         |
-| 40731 | FEATURE_NOT_SUPPORTED_BY_BILLING_PLAN | Billing plan does not include the Campaign feature.                                               |
+| 40731 | FEATURE_NOT_SUPPORTED_BY_BILLING_PLAN | Billing plan does not include the Campaign feature. Requires a plan that includes Enterprise features. |
 
 </details>
