@@ -1,14 +1,14 @@
-# SysRemoveAllCampaignsForUser
+# SysLeaveGroupDivisionInstance
 
-Removes a player's participation in all campaigns, deleting all their CampaignParticipant records and clearing the campaigns map from their profile.
+Removes a group from a division instance and ensures the division instance is removed from the group's division list. Unlike LeaveGroupDivisionInstance, this sys call does not require the caller to be a member of the group.
 
-<PartialServop service_name="campaign" operation_name="SYS_REMOVE_ALL_CAMPAIGNS_FOR_USER" />
+<PartialServop service_name="tournament" operation_name="SYS_LEAVE_GROUP_DIVISION_INSTANCE" />
 
 ## Method Parameters
-
-| Parameter | Description                                                  |
-| --------- | ------------------------------------------------------------ |
-| profileId | The profile ID of the player to remove all campaigns for.    |
+Parameter | Description
+--------- | -----------
+leaderboardId | Id of the division leaderboard the group is in.
+groupId | The group id.
 
 ## Usage
 
@@ -73,7 +73,7 @@ Removes a player's participation in all campaigns, deleting all their CampaignPa
 ```
 
 ```lua
-// N/A
+// Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block
@@ -91,10 +91,11 @@ N/A
 ```
 
 ```cfscript
-var profileId = "aProfileId";
-var campaignProxy = bridge.getCampaignServiceProxy();
+var leaderboardId = "^D^exampleDivSetId^1";
+var groupId = "the-group-id";
+var tournamentProxy = bridge.getTournamentServiceProxy();
 
-var postResult = campaignProxy.sysRemoveAllCampaignsForUser(profileId);
+var postResult = tournamentProxy.sysLeaveGroupDivisionInstance(leaderboardId, groupId);
 ```
 
 ```mdx-code-block
@@ -104,10 +105,11 @@ var postResult = campaignProxy.sysRemoveAllCampaignsForUser(profileId);
 
 ```r
 {
-    "service": "campaign",
-    "operation": "SYS_REMOVE_ALL_CAMPAIGNS_FOR_USER",
-    "data": {
-        "profileId": "aProfileId"
+    "service":"tournament",
+    "operation":"SYS_LEAVE_GROUP_DIVISION_INSTANCE",
+    "data":{
+        "leaderboardId":"^D^exampleDivSetId^1",
+        "groupId":"the-group-id"
     }
 }
 ```
@@ -117,26 +119,16 @@ var postResult = campaignProxy.sysRemoveAllCampaignsForUser(profileId);
 </Tabs>
 </BrowserWindow>
 ```
-
 <details>
 <summary>JSON Response</summary>
 
 ```json
 {
-    "data": {},
-    "status": 200
+  "data": {
+    "numScoresRemoved": 1
+  },
+  "status": 200
 }
 ```
-
-</details>
-
-<details>
-<summary>Common Error Code</summary>
-
-### Status Codes
-
-| Code  | Name                                  | Description                                                                                           |
-| ----- | ------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| 40731 | FEATURE_NOT_SUPPORTED_BY_BILLING_PLAN | Billing plan does not include the Campaign feature. Requires a plan that includes Enterprise features. |
 
 </details>

@@ -227,20 +227,27 @@ CONNECTION_TIMEOUT = 240
 
 The following table describes the known exit codes for the relay server.
 
-| Code | Description                                           |
-| ---- | ----------------------------------------------------- |
-| 0    | Exited cleanly                                        |
-| 1    | Failed to initiliaze GameLift (GameLift only)         |
-| 2    | Unused                                                |
-| 3    | Missing expected environment variables                |
-| 4    | Failed to initialize S2S context                      |
-| 5    | Missing expected lobby instance configuration         |
-| 6    | Failed to retrieve lobby instance configuration       |
-| 7    | Failed to process lobby instance configuration        |
-| 8    | Failed to initialize websocket server                 |
-| 9    | Failed to initialize TCP server                       |
-| 10   | Failed to initialize UDP server                       |
-| 11   | No players connected before MEMBER_TIMEOUT is reached |
+| Code | Name                       | Description                                                        |
+| ---- | -------------------------- | ------------------------------------------------------------------ |
+| 0    | Success                    | Exited cleanly                                                     |
+| 1    | GameLiftInitFailed         | Failed to initialize GameLift (GameLift only)                      |
+| 2    | I3DInitFailed              | Failed to initialize i3D / OneServer SDK (i3D only)                |
+| 3    | MissingRequiredSettings    | Missing expected environment variables                             |
+| 4    | S2SInitFailed              | Failed to initialize S2S context                                   |
+| 5    | MissingLobbyConfig         | Missing expected lobby instance configuration                      |
+| 6    | LobbyConfigRetrievalFailed | Failed to retrieve lobby instance configuration                    |
+| 7    | RoomFromLobbyFailed        | Failed to process lobby instance configuration                     |
+| 8    | WebSocketListenerFailed    | Failed to initialize websocket server                              |
+| 9    | TCPListenerFailed          | Failed to initialize TCP server                                    |
+| 10   | UDPListenerFailed          | Failed to initialize UDP server                                    |
+| 11   | NoPlayersConnected         | No players connected before MEMBER_TIMEOUT is reached              |
+| 12   | RTTInitFailed              | Failed to initialize RTT (required for pre-ready launch)           |
+| 13   | PreReadyLaunchError        | Error while waiting for lobby 'starting' state (pre-ready launch)  |
+| 14   | GameLiftProcessReadyFailed | Failed to call GameLift ProcessReady (GameLift only)               |
+| 15   | I3DNotReady                | i3D / OneServer failed to reach ready state (i3D only)             |
+| 16   | I3DAllocationFailed        | Failed to receive allocation from i3D platform (i3D only)          |
+| 17   | RoomFromContextFailed      | Failed to process brainCloud context configuration                 |
+| 18   | PreReadyLaunchTimeout      | Timeout waiting for lobby 'starting' state (pre-ready launch)      |
 
 ### API Summary
 

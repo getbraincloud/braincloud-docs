@@ -7,6 +7,8 @@
 - [SysTriggerCampaignForUser](/api/capi/campaign/systriggercampaignforuser) - Triggers a campaign scenario for a specific player, bypassing normal eligibility constraints. Player must be flagged as a tester.
 - [SysRemoveCampaignForUser](/api/capi/campaign/sysremovecampaignforuser) - Removes a player's participation in a specific campaign.
 - [SysRemoveAllCampaignsForUser](/api/capi/campaign/sysremoveallcampaignsforuser) - Removes a player's participation in all campaigns.
+- [SysUpdateCampaignJson](/api/capi/campaign/sysupdatecampaignjson) - Updates only the free-form `campaignJson` custom payload on a campaign.
+- [SysUpdateScenarioJson](/api/capi/campaign/sysupdatescenariojson) - Updates only the free-form `scenarioJson` custom payload on a campaign scenario.
 
 :::tip
 All client APIs whose names begin with **"Sys"** are also available to S2S.

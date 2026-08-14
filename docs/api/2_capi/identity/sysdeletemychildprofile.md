@@ -1,14 +1,14 @@
-# SysRemoveAllCampaignsForUser
+# SysDeleteMyChildProfile
 
-Removes a player's participation in all campaigns, deleting all their CampaignParticipant records and clearing the campaigns map from their profile.
+Deletes the current user's child profile in the specified child app. Cloud Code only.
 
-<PartialServop service_name="campaign" operation_name="SYS_REMOVE_ALL_CAMPAIGNS_FOR_USER" />
+<PartialServop service_name="identity" operation_name="SYS_DELETE_MY_CHILD_PROFILE" />
 
 ## Method Parameters
-
-| Parameter | Description                                                  |
-| --------- | ------------------------------------------------------------ |
-| profileId | The profile ID of the player to remove all campaigns for.    |
+Parameter | Description
+--------- | -----------
+appId | The child app id. Also accepted as `gameId` for legacy compatibility.
+profileId | The child profile id to delete. If omitted, the singleton child profile is used.
 
 ## Usage
 
@@ -69,7 +69,7 @@ Removes a player's participation in all campaigns, deleting all their CampaignPa
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="lua" label="Roblox">
+<TabItem value="roblox" label="Roblox">
 ```
 
 ```lua
@@ -91,10 +91,14 @@ N/A
 ```
 
 ```cfscript
-var profileId = "aProfileId";
-var campaignProxy = bridge.getCampaignServiceProxy();
+var appId = "the-child-app-id";
+var profileId = "the-child-profile-id";
+var identityProxy = bridge.getIdentityServiceProxy();
 
-var postResult = campaignProxy.sysRemoveAllCampaignsForUser(profileId);
+var postResult = identityProxy.sysDeleteMyChildProfile(appId, profileId);
+if (postResult.status == 200) {
+    // Success!
+}
 ```
 
 ```mdx-code-block
@@ -104,10 +108,11 @@ var postResult = campaignProxy.sysRemoveAllCampaignsForUser(profileId);
 
 ```r
 {
-    "service": "campaign",
-    "operation": "SYS_REMOVE_ALL_CAMPAIGNS_FOR_USER",
+    "service": "identity",
+    "operation": "SYS_DELETE_MY_CHILD_PROFILE",
     "data": {
-        "profileId": "aProfileId"
+        "appId": "the-child-app-id",
+        "profileId": "the-child-profile-id"
     }
 }
 ```
@@ -123,20 +128,12 @@ var postResult = campaignProxy.sysRemoveAllCampaignsForUser(profileId);
 
 ```json
 {
-    "data": {},
+    "data": {
+        "profileId": "the-child-profile-id",
+        "appId": "the-child-app-id"
+    },
     "status": 200
 }
 ```
-
-</details>
-
-<details>
-<summary>Common Error Code</summary>
-
-### Status Codes
-
-| Code  | Name                                  | Description                                                                                           |
-| ----- | ------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| 40731 | FEATURE_NOT_SUPPORTED_BY_BILLING_PLAN | Billing plan does not include the Campaign feature. Requires a plan that includes Enterprise features. |
 
 </details>

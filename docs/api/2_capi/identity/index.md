@@ -44,5 +44,10 @@ Finally, in an alternate version of this scenario John might have a 3rd option. 
 * [DetachPeer](/api/capi/identity/detachpeer)
 * [GetPeerProfiles](/api/capi/identity/getpeerprofiles)
 
+### System calls:
+
+* [SysChangeEmailIdentity](/api/capi/identity/syschangeemailidentity) - Changes email address associated with specified user's email identity.
+* [SysDeleteMyChildProfile](/api/capi/identity/sysdeletemychildprofile) - Deletes the current user's child profile in the specified child app. Cloud Code only.
+* [SysDeleteChildProfile](/api/capi/identity/sysdeletechildprofile) - Deletes a specified user's child profile in the given child app. Invalidates active sessions and deletes any descendant profiles.
 
 <DocCardList />

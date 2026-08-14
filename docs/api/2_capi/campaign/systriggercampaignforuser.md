@@ -157,6 +157,6 @@ var postResult = campaignProxy.sysTriggerCampaignForUser(profileId, campaignCode
 | Code  | Name                                       | Description                                                                                                    |
 | ----- | ------------------------------------------ | -------------------------------------------------------------------------------------------------------------- |
 | 41060 | CAMPAIGN_SYS_TRIGGER_CAMPAIGN_FOR_USER_ERROR | Trigger failed — campaign disabled, has not started, has ended, player is not a tester, or player is already enrolled in a different scenario. |
-| 40206 | BILLING_PLAN_INCLUDES_CAMPAIGN             | Billing plan does not include the Campaign feature.                                                            |
+| 40731 | FEATURE_NOT_SUPPORTED_BY_BILLING_PLAN      | Billing plan does not include the Campaign feature. Requires a plan that includes Enterprise features.          |
 
 </details>

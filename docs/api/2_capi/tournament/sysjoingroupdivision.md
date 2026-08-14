@@ -1,14 +1,16 @@
-# SysRemoveAllCampaignsForUser
+# SysJoinGroupDivision
 
-Removes a player's participation in all campaigns, deleting all their CampaignParticipant records and clearing the campaigns map from their profile.
+Enrolls a group in a division set and assigns an initial score. Unlike JoinGroupDivision, this sys call does not require the caller to be a member of the group.
 
-<PartialServop service_name="campaign" operation_name="SYS_REMOVE_ALL_CAMPAIGNS_FOR_USER" />
+<PartialServop service_name="tournament" operation_name="SYS_JOIN_GROUP_DIVISION" />
 
 ## Method Parameters
-
-| Parameter | Description                                                  |
-| --------- | ------------------------------------------------------------ |
-| profileId | The profile ID of the player to remove all campaigns for.    |
+Parameter | Description
+--------- | -----------
+groupId | The group id.
+divisionSetId | The division set id to join.
+tournamentCode | Tournament code for the division.
+initialScore | Initial score for the group.
 
 ## Usage
 
@@ -73,7 +75,7 @@ Removes a player's participation in all campaigns, deleting all their CampaignPa
 ```
 
 ```lua
-// N/A
+// Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block
@@ -91,10 +93,13 @@ N/A
 ```
 
 ```cfscript
-var profileId = "aProfileId";
-var campaignProxy = bridge.getCampaignServiceProxy();
+var groupId = "the-group-id";
+var divisionSetId = "exampleDivSetId";
+var tournamentCode = "exampleTournamentCode1";
+var initialScore = 0;
+var tournamentProxy = bridge.getTournamentServiceProxy();
 
-var postResult = campaignProxy.sysRemoveAllCampaignsForUser(profileId);
+var postResult = tournamentProxy.sysJoinGroupDivision(groupId, divisionSetId, tournamentCode, initialScore);
 ```
 
 ```mdx-code-block
@@ -104,10 +109,13 @@ var postResult = campaignProxy.sysRemoveAllCampaignsForUser(profileId);
 
 ```r
 {
-    "service": "campaign",
-    "operation": "SYS_REMOVE_ALL_CAMPAIGNS_FOR_USER",
-    "data": {
-        "profileId": "aProfileId"
+    "service":"tournament",
+    "operation":"SYS_JOIN_GROUP_DIVISION",
+    "data":{
+        "groupId":"the-group-id",
+        "divisionSetId":"exampleDivSetId",
+        "tournamentCode":"exampleTournamentCode1",
+        "initialScore":0
     }
 }
 ```
@@ -117,26 +125,18 @@ var postResult = campaignProxy.sysRemoveAllCampaignsForUser(profileId);
 </Tabs>
 </BrowserWindow>
 ```
-
 <details>
 <summary>JSON Response</summary>
 
 ```json
 {
-    "data": {},
-    "status": 200
+  "data": {
+    "createdAt": 1772655480000,
+    "leaderboardId": "^D^exampleDivSetId^1",
+    "enrolled": true
+  },
+  "status": 200
 }
 ```
-
-</details>
-
-<details>
-<summary>Common Error Code</summary>
-
-### Status Codes
-
-| Code  | Name                                  | Description                                                                                           |
-| ----- | ------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| 40731 | FEATURE_NOT_SUPPORTED_BY_BILLING_PLAN | Billing plan does not include the Campaign feature. Requires a plan that includes Enterprise features. |
 
 </details>
