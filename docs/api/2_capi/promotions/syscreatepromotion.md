@@ -9,6 +9,10 @@ Parameter | Description
 --------- | -----------
 promotionJson | The full promotion JSON (minus the promotionId). Supports two promotion types: **SCHEDULED** (requires `startAt` and `endAt` epoch timestamps) and **AUTOMATED** (requires `duration` in hours, and supports `isRetriggerable`, `maxRetriggers`, and `maxPurchases`).
 
+:::tip
+The `items` field can contain both individual items and bundles — each entry's `defId` determines whether it refers to an item or a bundle definition id.
+:::
+
 ## Usage
 
 ```mdx-code-block
@@ -107,6 +111,20 @@ var promotionJson = {
             "priceId": 0
         }
     ],
+    "items": {
+        "item100": {
+            "defId": "item100",
+            "buyPrice": {
+                "coins": 50
+            }
+        },
+        "bundle100": {
+            "defId": "bundle100",
+            "buyPrice": {
+                "coins": 150
+            }
+        }
+    },
     "notifications": [
         {
             "trigger" : "ACTIVATED",
@@ -146,16 +164,16 @@ var promotionJson = {
         }
     ],
     "items": {
-        "sword100": {
-            "defId": "sword100",
+        "item100": {
+            "defId": "item100",
             "buyPrice": {
                 "coins": 50
             }
         },
-        "wand100": {
-            "defId": "wand100",
+        "bundle100": {
+            "defId": "bundle100",
             "buyPrice": {
-                "coins": 50
+                "coins": 150
             }
         }
     },
