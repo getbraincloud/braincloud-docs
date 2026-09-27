@@ -8,7 +8,7 @@ brainCloud allows developers to write custom [Cloud Code](/api/cc) routines in J
 Advantages of Cloud Code scripts include:
 
 - Better performance when calling multiple API calls in a row
-- Lower brainCloud costs (the first 3 API calls are free, and each one after is 1/2 a count)
+- Lower brainCloud costs (the first 2 API calls are free, and each one after is 1/2 a count)
 - More secure
 - Ability to change logic server-side without a client update
 - Ability to call out to [external web services](/api/cc/httpclient)
