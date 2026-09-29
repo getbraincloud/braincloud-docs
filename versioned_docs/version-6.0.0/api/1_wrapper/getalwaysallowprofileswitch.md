@@ -1,0 +1,116 @@
+# GetAlwaysAllowProfileSwitch
+
+For non-anonymous authentication methods, a profile ID will be passed in when this value is set to false. This will generate an error on the server if the profile ID passed in does not match the profile associated with the authentication credentials.
+
+By default, this value is true.
+
+## Usage
+
+```mdx-code-block
+<BrowserWindow>
+<Tabs>
+<TabItem value="csharp" label="C#">
+```
+
+```csharp
+bool allowSwitch = <%= data.branding.codePrefix %>.GetAlwaysAllowProfileSwitch();
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="cpp" label="C++">
+```
+
+```cpp
+bool alwaysAllow = <%= data.branding.codePrefix %>.AlwaysAllowProfileSwitch;
+
+<%= data.branding.codePrefix %>.AlwaysAllowProfileSwitch = false; // Disables profile switches.
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="objectivec" label="Obj-C">
+```
+
+```objectivec
+BOOL allowSwitch = <%= data.branding.codePrefix %>.alwaysAllowProfileSwitch;
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="java" label="Java">
+```
+
+```java
+bool allowSwitch = <%= data.branding.codePrefix %>.getAlwaysAllowProfileSwitch();
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="js" label="JavaScript">
+```
+
+```javascript
+var allowSwitch = <%= data.branding.codePrefix %>.getAlwaysAllowProfileSwitch();
+```
+
+
+```mdx-code-block
+</TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+bool allowSwitch = <%= data.branding.codePrefix %>.alwaysAllowProfileSwitch;
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local allowSwitch = <%= data.branding.codePrefix %>.alwaysAllowProfileSwitch
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="cfs" label="Cloud Code">
+```
+
+```cfscript
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="r" label="Raw">
+```
+
+```r
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+</Tabs>
+</BrowserWindow>
+```
+
+<details>
+<summary>JSON Response</summary>
+
+```json
+var allowSwitch = <%= data.branding.codePrefix %>.getAlwaysAllowProfileSwitch();
+```
+</details>
+

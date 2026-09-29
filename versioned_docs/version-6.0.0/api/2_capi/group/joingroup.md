@@ -1,0 +1,191 @@
+# JoinGroup
+
+Join an open group or request membership in a closed group.
+
+<PartialServop service_name="group" operation_name="JOIN_MEMBER_TO_GROUP" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | ID of the group
+
+## Usage
+
+```mdx-code-block
+<BrowserWindow>
+<Tabs>
+<TabItem value="csharp" label="C#">
+```
+
+```csharp
+string groupId = "a-group-id";
+SuccessCallback successCallback = (response, cbObject) =>
+{
+    Debug.Log(string.Format("Success | {0}", response));
+};
+FailureCallback failureCallback = (status, code, error, cbObject) =>
+{
+    Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
+};
+
+<%= data.branding.codePrefix %>.Group.JoinGroup(groupId, successCallback, failureCallback);
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="cpp" label="C++">
+```
+
+```cpp
+const char *groupId = "a-group-id";
+
+<%= data.branding.codePrefix %>->getGroup()->joinGroup(groupId, this);
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="objectivec" label="Obj-C">
+```
+
+```objectivec
+NSString *groupId = @"a-group-id";
+BCCompletionBlock successBlock;      // define callback
+BCErrorCompletionBlock failureBlock; // define callback
+
+[[<%= data.branding.codePrefix %> groupService] joinGroup:groupId
+            completionBlock:successBlock
+       errorCompletionBlock:failureBlock
+                   cbObject:nil];
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="java" label="Java">
+```
+
+```java
+String groupId = "a-group-id";
+this; // implements IServerCallback
+
+<%= data.branding.codePrefix %>.getGroup().joinGroup(groupId, this);
+
+public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
+{
+    System.out.print(String.format("Success | %s", jsonData.toString()));
+}
+public void serverError(ServiceName serviceName, ServiceOperation serviceOperation, int statusCode, int reasonCode, String jsonError)
+{
+    System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
+}
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="js" label="JavaScript">
+```
+
+```javascript
+var groupId = "a-group-id";
+
+<%= data.branding.codePrefix %>.group.joinGroup(groupId, result =>
+{
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
+});
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  groupId = "a-group-id";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.groupService.joinGroup(groupId:groupId);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local groupId = "a-group-id"
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getGroupService():joinGroup(groupId, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var group_id = "a-group-id"
+
+var result = await <%= data.branding.codePrefix %>.group_service.join_group(group_id)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="cfs" label="Cloud Code">
+```
+
+```cfscript
+var groupId = "a-group-id";
+var groupProxy = bridge.getGroupServiceProxy();
+
+var postResult = groupProxy.joinGroup(groupId);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="r" label="Raw">
+```
+
+```r
+{
+  "groupId": "a-group-id"
+}
+```
+
+```mdx-code-block
+</TabItem>
+</Tabs>
+</BrowserWindow>
+```
+
+<details>
+<summary>JSON Response</summary>
+
+```json
+{
+    "status": 200,
+    "data": null
+}
+```
+</details>
+

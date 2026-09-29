@@ -1,0 +1,289 @@
+# CreateLobby
+
+Creates a new lobby.
+
+Sends LOBBY_JOIN_SUCCESS message to the user, with full copy of lobby data
+Sends LOBBY_MEMBER_JOINED to all lobby members, with copy of member data
+
+
+
+
+
+<PartialServop service_name="lobby" operation_name="CREATE_LOBBY" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+lobbyType | The type of lobby to look for. Lobby types are defined in the portal.
+rating | The skill rating to use for finding the lobby. Provided as a separate parameter because it may not exactly match the user's rating (especially in cases where parties are involved).
+isReady | Initial ready-status of this user.
+extraJson | Initial extra-data about this user.
+teamCode | Preferred team for this user, if applicable. Send `""` or `null` for automatic assignment.
+settings | Owner settings for this lobby.
+otherUserCxIds | Array of other users (i.e. party members) to add to the lobby as well. Will constrain things so that only lobbies with room for all players will be considered.
+
+
+
+## Usage
+
+```mdx-code-block
+<BrowserWindow>
+<Tabs>
+<TabItem value="csharp" label="C#">
+```
+
+```csharp
+string lobbyType = "4v4";
+int rating = 76;
+bool isReady = false;
+string extraJson = "{}";
+string teamCode = "blue";
+string settings = "{}";
+string[] otherUserCxIds = { "55555:aaa-bbb-ccc-ddd:asdfjkl" };
+SuccessCallback successCallback = (response, cbObject) =>
+{
+    Debug.Log(string.Format("Success | {0}", response));
+};
+FailureCallback failureCallback = (status, code, error, cbObject) =>
+{
+    Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
+};
+
+<%= data.branding.codePrefix %>.LobbyService.CreateLobby(lobbyType, rating, isReady, extraJson, teamCode, settings, otherUserCxIds, successCallback, failureCallback);
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="cpp" label="C++">
+```
+
+```cpp
+const char *lobbyType = "4v4";
+int rating = 76;
+std::vector<std::string> otherUserCxIds;
+otherUserCxIds.push_back("55555:aaa-bbb-ccc-ddd:asdfjkl");
+const char *settings = "{}";
+bool isReady = false;
+const char *extraJson = "{}";
+const char *teamCode = "blue";
+<%= data.branding.codePrefix %>->getLobbyService()->createLobby(lobbyType, rating, otherUserCxIds, settings, isReady, extraJson, teamCode, this);
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="objectivec" label="Obj-C">
+```
+
+```objectivec
+NSString *lobbyType = @"4v4";
+int rating = 76;
+NSArray *otherUserCxIds = @[ @"55555:aaa-bbb-ccc-ddd:asdfjkl" ];
+NSString *settings = @"{}";
+bool isReady = false;
+NSString *extraJson = @"{}";
+NSString *teamCode = @"blue";
+BCCompletionBlock successBlock;      // define callback
+BCErrorCompletionBlock failureBlock; // define callback
+
+[[<%= data.branding.codePrefix %> lobbyService] createLobby:lobbyType
+                     rating:rating
+             otherUserCxIds:otherUserCxIds
+                   settings:settings
+                    isReady:isReady
+                  extraJson:extraJson
+                   teamCode:teamCode
+            completionBlock:successBlock
+       errorCompletionBlock:failureBlock
+                   cbObject:nil];
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="java" label="Java">
+```
+
+```java
+String lobbyType = "4v4";
+int rating = 76;
+String[] otherUserCxIds = { "55555:aaa-bbb-ccc-ddd:asdfjkl" };
+String settings = "{}";
+boolean isReady = false;
+String extraJson = "{}";
+String teamCode = "blue";
+this; // implements IServerCallback
+
+<%= data.branding.codePrefix %>.getLobbyService().createLobby(lobbyType, rating, otherUserCxIds, settings, isReady, extraJson, teamCode, this);
+
+public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
+{
+    System.out.print(String.format("Success | %s", jsonData.toString()));
+}
+public void serverError(ServiceName serviceName, ServiceOperation serviceOperation, int statusCode, int reasonCode, String jsonError)
+{
+    System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
+}
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="js" label="JavaScript">
+```
+
+```javascript
+var lobbyType = "4v4";
+var rating = 76;
+var otherUserCxIds = [ "55555:aaa-bbb-ccc-ddd:asdfjkl" ];
+var settings = {};
+var isReady = false;
+var extraJson = {};
+var teamCode = "blue";
+
+<%= data.branding.codePrefix %>.lobby.createLobby(lobbyType, rating, otherUserCxIds, settings, isReady, extraJson, teamCode, result =>
+{
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
+});
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  lobbyType = "4v4";
+var  rating = 76;
+var  otherUserCxIds = [ "55555:aaa-bbb-ccc-ddd:asdfjkl" ];
+var  settings = {};
+var  isReady = false;
+var  extraJson = {};
+var  teamCode = "blue";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.lobbyService.createLobby(lobbyType:lobbyType, rating:rating, otherUserCxIds:otherUserCxIds, settings:settings, isReady:isReady, extraJson:extraJson, teamCode:teamCode);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local lobbyType = "4v4"
+local rating = 76
+local otherUserCxIds = { "55555:aaa-bbb-ccc-ddd:asdfjkl" }
+local settings = {}
+local isReady = false
+local extraJson = {}
+local teamCode = "blue"
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getLobbyService():createLobby(lobbyType, rating, otherUserCxIds, settings, isReady, extraJson, teamCode, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var lobby_type = "4v4"
+var rating = 76
+var other_user_cx_ids = [ "55555:aaa-bbb-ccc-ddd:asdfjkl" ]
+var settings = {}
+var is_ready = false
+var extra_json = {}
+var team_code = "blue"
+
+var result = await <%= data.branding.codePrefix %>.lobby_service.create_lobby(lobby_type, rating, is_ready, extra_json, team_code, settings, other_user_cx_ids)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="cfs" label="Cloud Code">
+```
+
+```cfscript
+var lobbyType = "4v4";
+var rating = 76;
+var otherUserCxIds = [ "55555:aaa-bbb-ccc-ddd:asdfjkl" ];
+var settings = {};
+var isReady = false;
+var extraJson = {};
+var teamCode = "blue";
+var lobbyProxy = bridge.getLobbyServiceProxy();
+
+var postResult = lobbyProxy.createLobby(lobbyType, rating, otherUserCxIds, settings, isReady, extraJson, teamCode);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="r" label="Raw">
+```
+
+```r
+{
+    "service": "lobby",
+    "operation": "CREATE_LOBBY",
+    "data": {
+        "lobbyType": "4v4",
+        "rating": 76,
+        "otherUserCxIds": [
+            "55555:aaa-bbb-ccc-ddd:asdfjkl"
+        ],
+        "settings": {},
+        "isReady": false,
+        "extraJson": {},
+        "teamCode": "blue"
+    }
+}
+```
+
+```mdx-code-block
+</TabItem>
+</Tabs>
+</BrowserWindow>
+```
+
+<details>
+<summary>JSON Response</summary>
+
+```json
+{
+    "status": 200,
+    "data": {}
+}
+```
+</details>
+
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
+
+</details>
+
+

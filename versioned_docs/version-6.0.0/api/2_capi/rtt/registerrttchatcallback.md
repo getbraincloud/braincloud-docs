@@ -1,0 +1,124 @@
+# RegisterRTTChatCallback
+
+Registers a callback for RTT Chat Channel updates.
+
+## Method Parameters
+
+| Parameter   | Description                    |
+| ----------- | ------------------------------ |
+| rttCallback | The RTT Chat callback handler. |
+
+## Usage
+
+```mdx-code-block
+<BrowserWindow>
+<Tabs>
+<TabItem value="csharp" label="C#">
+```
+
+```csharp
+RTTCallback rttCallback = response =>
+{
+   Debug.Log(response);
+};
+<%= data.branding.codePrefix %>.RTTService.RegisterRTTChatCallback(rttCallback);
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="cpp" label="C++">
+```
+
+```cpp
+<%= data.branding.codePrefix %>.RTTService.registerRTTChatCallback(rttCallback);
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="objectivec" label="Obj-C">
+```
+
+```objectivec
+Coming soon!
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="java" label="Java">
+```
+
+```java
+<%= data.branding.codePrefix %>.RTTService.registerRTTChatCallback(rttCallback);
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="js" label="JavaScript">
+```
+
+```javascript
+<%= data.branding.codePrefix %>.rttService.registerRTTChatCallback(rttCallback);
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+void rttCallBack(RTTCommandResponse jsonResponse) {
+  // your code
+}
+<%= data.branding.codePrefix %>.rttService.registerRTTChatCallback(rttCallback);
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local rttCallBack = function(jsonResponse)
+    -- your code
+end
+
+<%= data.branding.codePrefix %>:getRttService():registerRTTChatCallback(rttCallback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var result = await <%= data.branding.codePrefix %>.rtt_service.register_rtt_chat_callback(rttCallback)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="cfs" label="Cloud Code">
+```
+
+```cfscript
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="r" label="Raw">
+```
+
+```r
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+</Tabs>
+</BrowserWindow>
+```

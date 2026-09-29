@@ -1,0 +1,186 @@
+# AttachTwitterIdentity
+
+Attach the user's Twitter credentials to the current profile.
+
+<PartialServop service_name="identity" operation_name="ATTACH" />
+
+## Method Parameters
+
+| Parameter           | Description                                           |
+| ------------------- | ----------------------------------------------------- |
+| twitterId           | String representation of a Twitter user ID            |
+| authenticationToken | The authentication token derived via the Twitter API  |
+| secret              | The secret given when attempting to link with Twitter |
+
+## Usage
+
+```mdx-code-block
+<BrowserWindow>
+<Tabs>
+<TabItem value="csharp" label="C#">
+```
+
+```csharp
+string twitterId = "someId";
+string token = "someToken";
+string secret = "someSecret";
+
+<%= data.branding.codePrefix %>.IdentityService.AttachTwitterIdentity(
+    twitterId,
+    token,
+    secret,
+    SuccessCallback, FailureCallback);
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="cpp" label="C++">
+```
+
+```cpp
+const char * twitterId = "someId";
+const char * token = "someToken";
+const char * secret = "secret";
+
+<%= data.branding.codePrefix %>->getIdentityService()->attachTwitterIdentity(
+    twitterId, token, secret, this);
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="objectivec" label="Obj-C">
+```
+
+```objectivec
+- (void)attachTwitterIdentity:(NSString *)twitterId
+          authenticationToken:(NSString *)token
+                       secret:(NSString *)secret
+              completionBlock:(BCCompletionBlock)cb
+         errorCompletionBlock:(BCErrorCompletionBlock)ecb
+                     cbObject:(BCCallbackObject)cbObject;
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="java" label="Java">
+```
+
+```java
+public void attachTwitterIdentity(
+        String twitterId,
+        String authenticationToken,
+        String secret,
+        IServerCallback callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="js" label="JavaScript">
+```
+
+```javascript
+<%= data.branding.codePrefix %>.identity.attachTwitterIdentity = function(twitterId, authenticationToken, secret, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  twitterId = "someId";
+var  authenticationToken = "someToken";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.identityService.attachTwitterIdentity(twitterId:twitterId, authenticationToken:authenticationToken);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local twitterId = "someId"
+local authenticationToken = "someToken"
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getIdentityService():attachTwitterIdentity(twitterId, authenticationToken, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var twitter_id = "someId"
+var authentication_token = "someToken"
+
+var result = await <%= data.branding.codePrefix %>.identity_service.attach_twitter_identity(twitter_id, authentication_token)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="cfs" label="Cloud Code">
+```
+
+```cfscript
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="r" label="Raw">
+```
+
+```r
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+</Tabs>
+</BrowserWindow>
+```
+
+<details>
+<summary>JSON Response</summary>
+
+```json
+{
+    "data": null,
+    "status": 200
+}
+```
+
+</details>
+
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+
+| Code  | Name                    | Description                                                                                                                                                        |
+| ----- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 40211 | DUPLICATE_IDENTITY_TYPE | Returned when trying to attach an identity type that already exists for that profile. For instance you can have only one Twitter identity for a profile.           |
+| 40212 | MERGE_PROFILES          | Returned when trying to attach an identity type that would result in two profiles being merged into one (for instance an anonymous account and a Twitter account). |
+
+</details>

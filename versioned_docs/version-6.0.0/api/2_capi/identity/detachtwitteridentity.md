@@ -1,0 +1,174 @@
+# DetachTwitterIdentity
+
+Detach the Twitter identity from this profile.
+
+<PartialServop service_name="identity" operation_name="DETACH" />
+
+## Method Parameters
+
+| Parameter    | Description                                           |
+| ------------ | ----------------------------------------------------- |
+| twitterId    | String representation of a Twitter user ID            |
+| continueAnon | Proceed even if the profile will revert to anonymous? |
+
+## Usage
+
+```mdx-code-block
+<BrowserWindow>
+<Tabs>
+<TabItem value="csharp" label="C#">
+```
+
+```csharp
+string twitterId = "someId";
+
+<%= data.branding.codePrefix %>.IdentityService.DetachTwitterIdentity(
+    twitterId,
+    true,
+    SuccessCallback, FailureCallback);
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="cpp" label="C++">
+```
+
+```cpp
+const char * twitterId = "someId";
+
+<%= data.branding.codePrefix %>->getIdentityService()->detachTwitterIdentity(
+    twitterId, false, this);
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="objectivec" label="Obj-C">
+```
+
+```objectivec
+- (void)detachTwitterIdentity:(NSString *)twitterId
+                 continueAnon:(bool)continueAnon
+              completionBlock:(BCCompletionBlock)cb
+         errorCompletionBlock:(BCErrorCompletionBlock)ecb
+                     cbObject:(BCCallbackObject)cbObject;
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="java" label="Java">
+```
+
+```java
+public void detachTwitterIdentity(String twitterId, boolean continueAnon, IServerCallback callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="js" label="JavaScript">
+```
+
+```javascript
+<%= data.branding.codePrefix %>.identity.detachTwitterIdentity = function(twitterId, continueAnon, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  twitterId = "someId";
+var  continueAnon = true;
+
+ServerResponse result = await <%= data.branding.codePrefix %>.identityService.detachTwitterIdentity(twitterId:twitterId, continueAnon:continueAnon);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local twitterId = "someId"
+local continueAnon = true
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getIdentityService():detachTwitterIdentity(twitterId, continueAnon, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var twitter_id = "someId"
+var continue_anon = true
+
+var result = await <%= data.branding.codePrefix %>.identity_service.detach_twitter_identity(twitter_id, continue_anon)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="cfs" label="Cloud Code">
+```
+
+```cfscript
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="r" label="Raw">
+```
+
+```r
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+</Tabs>
+</BrowserWindow>
+```
+
+<details>
+<summary>JSON Response</summary>
+
+```json
+{
+    "data": null,
+    "status": 200
+}
+```
+
+</details>
+
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+
+| Code  | Name                           | Description                                                                                           |
+| ----- | ------------------------------ | ----------------------------------------------------------------------------------------------------- |
+| 40210 | DOWNGRADING_TO_ANONYMOUS_ERROR | Occurs when detaching the last non-anonymous identity from an account with continueAnon set to false. |
+
+</details>
