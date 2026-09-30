@@ -123,7 +123,7 @@ The key values of the return to evaluate include:
 
 | Parameter   | Description                                                                |
 | ----------- | -------------------------------------------------------------------------- |
-| storeId     | The store type - "itunes", "googlePlay", "amazon", "facebook", "metaHorizon" or "windows" |
+| storeId     | The store type - "itunes", "googlePlay", "amazon", "facebook", "metaHorizon", "windows", "epicGames" or "xsolla" |
 | receiptData | A JSON object with data in the format for the specified store              |
 
 ## Usage

@@ -6,7 +6,7 @@ Caches a payload context to retreive as fallback if the store API cannot provide
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-storeId | The store platform.
+storeId | The store platform. Refer to the current available store IDs [here](/api/appendix/platformIds#store-ids).
 iapId | The app store's IAP ID.
 payload | The payload string to cache. Send in the payload associated with the product being purchased, as returned by the [GetSalesInventory()](/api/capi/appstore/getsalesinventory) call. ( formatted as `__bc: [versionId, itemId, priceId, referencePrice, promotionId]`)
 

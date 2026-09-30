@@ -44,11 +44,13 @@ Below are the Store Platform IDs. These values are used within the Product modul
 | Amazon Store        | "amazon"       |
 | Apple iTunes        | "itunes"       |
 | BlackBerry AppWorld | "appworld"     |
+| Epic Games          | "epicGames"    |
 | Facebook            | "facebook"     |
 | Google Play         | "googlePlay"   |
 | Steam               | "steam"        |
 | Windows Store       | "windows"      |
 | Windows Phone       | "windowsPhone" |
+| Xsolla              | "xsolla"       |
 | Meta Horizon        | "metaHorizon"  |
 
 In addition, the following IDs are accepted by [SysRecordTransaction](/api/capi/appstore/sysrecordtransaction).
