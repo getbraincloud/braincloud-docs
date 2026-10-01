@@ -1,6 +1,6 @@
 # VerifyPurchase
 
-Used to verify a purchase receipt for Apple AppStore, Google Play, Facebook or Windows. The contents passed into `receiptData` are store-specific. On success, the player will be awarded the associated currencies.
+Used to verify a purchase receipt for Apple AppStore, Google Play, Facebook, Windows, Amazon, Meta Horizon, Epic Games or Xsolla. The contents passed into `receiptData` are store-specific. On success, the player will be awarded the associated currencies.
 
 ## ReceiptData formats
 
@@ -93,6 +93,48 @@ Meta Horizon receiptData format:
 :::tip
 Note: `consumeOnVerify` will consume `CONSUMABLE` items server-side which we recommend to prevent accidental extra item consumptions from the user.
 :::
+
+### Epic Games Store
+
+Use `"epicGames"` as the `storeId`.
+
+Before calling VerifyPurchase:
+
+-   The player must have an Epic Games identity on their profile — see [AuthenticateEpicGames](/api/capi/authentication/authenticateepicgames) or [AttachEpicGamesIdentity](/api/capi/identity/attachepicgamesidentity).
+-   The **Epic Games Client ID**, **Deployment ID**, **Sandbox ID**, **Trusted Server Client ID** and **Trusted Server Client Secret** must be set on the **Design | Integrations | Platforms** page of the Design Portal.
+-   The product's Epic Games price must have its **Epic Games Audience Item ID** set.
+
+Epic Games `receiptData` format:
+
+```json
+{
+    "entitlementIds": ["ENTITLEMENT-ID-1", "ENTITLEMENT-ID-2"],
+    "audienceItemId": "EPIC-AUDIENCE-ITEM-ID"
+}
+```
+
+| Field          | Description                                                                                                         |
+| -------------- | ------------------------------------------------------------------------------------------------------------------- |
+| entitlementIds | The IDs of the entitlements granted by the purchase, as returned by the EOS SDK Ecom Interface.                     |
+| audienceItemId | The Epic Games audience item ID of the purchased product. It must match the product's Epic Games Audience Item ID.  |
+
+The server redeems each entitlement with Epic, then confirms that it has been redeemed. Each entitlement is processed as a separate transaction, and its quantity is taken from the entitlement's use count.
+
+### Xsolla
+
+Use `"xsolla"` as the `storeId`.
+
+Xsolla purchases are verified and rewarded by the Xsolla payment webhook. VerifyPurchase does not award anything itself — it returns the results of the transaction that the webhook already processed for the order.
+
+Xsolla `receiptData` format:
+
+```json
+{
+    "orderId": "XSOLLA-ORDER-ID"
+}
+```
+
+The product's Xsolla price must have its **Xsolla SKU** set, matching the SKU of the item in Xsolla.
 
 ### Response fields
 
