@@ -2,6 +2,14 @@
 
 Creates a handoff authentication id with security token.
 
+:::note
+
+- The handoff credential created by CreateHandoffId expires after **1 hour**. This is not configurable.
+- It is **single-use** — it is deleted once it has been used to authenticate with [AuthenticateHandoff](/api/capi/authentication/authenticatehandoff).
+- A user can only have **one** handoff id active at a time. Creating a new one deletes the previous one.
+
+:::
+
 <PartialServop service_name="identity" operation_name="CREATE_HANDOFF_ID" />
 
 ## Usage
