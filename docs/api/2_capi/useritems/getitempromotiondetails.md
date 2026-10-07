@@ -172,7 +172,7 @@ var defId = "sword001";
 var shopId = "None";
 var includeDef = True;
 var includePromotionDetails = True;
-var userItemsProxy = bridge.getUseritemsServiceProxy();
+var userItemsProxy = bridge.getUserItemsServiceProxy();
 
 var postResult = userItemsProxy.getItemPromotionDetails(defId, shopId, includeDef, includePromotionDetails);
 ```

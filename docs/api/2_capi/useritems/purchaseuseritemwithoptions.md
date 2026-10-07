@@ -250,7 +250,7 @@ var optionsJson = {
 var quantity = 1;
 var shopId = "None";
 var includeDef = True;
-var userItemsProxy = bridge.getUseritemsServiceProxy();
+var userItemsProxy = bridge.getUserItemsServiceProxy();
 
 var postResult = userItemsProxy.purchaseUserItemWithOptions(defId, quantity, shopId, includeDef, optionsJson);
 ```
