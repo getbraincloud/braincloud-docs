@@ -14,7 +14,7 @@ Parameter | Description
 entityType | The entity type as defined by the user
 data | The entity's data object
 acl | The entity's [Access Control List](/api/appendix/acl) as object. A null ACL implies default permissions which make the entity readable/writeable by only the user.
-version | The version of the entity to update. Use -1 to indicate the newest version
+version | The version of the entity to update. Use 1 to indicate the newest version
 
 ## Usage
 
@@ -28,7 +28,7 @@ version | The version of the entity to update. Use -1 to indicate the newest ver
 string entityType = "settings";
 string jsonEntityData = "{\"difficulty\":\"normal\"}";
 string jsonEntityAcl = "{\"other\":0}";
-int version = -1;
+int version = 1;
 SuccessCallback successCallback = (response, cbObject) =>
 {
     Debug.Log(string.Format("Success | {0}", response));
@@ -50,7 +50,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 const char *entityType = "settings";
 const char *jsonEntityData = "{\"difficulty\":\"normal\"}";
 const char *jsonEntityAcl = "{\"other\":0}";
-int version = -1;
+int version = 1;
 <%= data.branding.codePrefix %>->getEntityService()->updateSingleton(entityType, jsonEntityData, jsonEntityAcl, version, this);
 ```
 
@@ -63,7 +63,7 @@ int version = -1;
 NSString *entityType = @"settings";
 NSString *jsonEntityData = @"{\"difficulty\":\"normal\"}";
 NSString *jsonEntityAcl = @"{\"other\":0}";
-int version = -1;
+int version = 1;
 BCCompletionBlock successBlock;      // define callback
 BCErrorCompletionBlock failureBlock; // define callback
 
@@ -85,7 +85,7 @@ BCErrorCompletionBlock failureBlock; // define callback
 String entityType = "settings";
 String jsonEntityData = "{\"difficulty\":\"normal\"}";
 String jsonEntityAcl = "{\"other\":0}";
-int version = -1;
+int version = 1;
 this; // implements IServerCallback
 
 <%= data.branding.codePrefix %>.getEntityService().updateSingleton(entityType, jsonEntityData, jsonEntityAcl, version, this);
@@ -113,7 +113,7 @@ var jsonEntityData = {
 var jsonEntityAcl = {
     "other": 0
 };
-var version = -1;
+var version = 1;
 
 <%= data.branding.codePrefix %>.entity.updateSingleton(entityType, jsonEntityData, jsonEntityAcl, version, result =>
 {
@@ -135,7 +135,7 @@ var  jsonEntityData = {
 var  jsonEntityAcl = {
     "other": 0
 };
-var  version = -1;
+var  version = 1;
 
 ServerResponse result = await <%= data.branding.codePrefix %>.entityService.updateSingleton(entityType:entityType, jsonEntityData:jsonEntityData, jsonEntityAcl:jsonEntityAcl, version:version);
 
@@ -159,7 +159,7 @@ local jsonEntityData = {
 local jsonEntityAcl = {
     other = 0
 }
-local version = -1
+local version = 1
 
 local callback = function(result)
     if result.statusCode == 200 then
@@ -185,7 +185,7 @@ var json_entity_data = {
 var json_entity_acl = {
     "other": 0
 }
-var version = -1
+var version = 1
 
 var result = await <%= data.branding.codePrefix %>.entity_service.update_singleton(entity_type, json_entity_data, json_entity_acl, version)
 
@@ -208,7 +208,7 @@ var jsonEntityData = {
 var jsonEntityAcl = {
     "other": 0
 };
-var version = -1;
+var version = 1;
 var entityProxy = bridge.getEntityServiceProxy();
 
 var postResult = entityProxy.updateSingleton(entityType, jsonEntityData, jsonEntityAcl, version);
@@ -234,7 +234,7 @@ if (postResult.status == 200) {
         "acl": {
             "other": 0
         },
-        "version": -1
+        "version": 1
     }
 }
 ```
@@ -251,8 +251,7 @@ if (postResult.status == 200) {
 ```json
 {
     "data": {
-        "entityType": "test",
-        "version": 1
+        "version": 2
     },
     "status": 200
 }
