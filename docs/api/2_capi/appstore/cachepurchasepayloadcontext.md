@@ -1,5 +1,5 @@
 # CachePurchasePayloadContext
-Caches a payload context to retrieve as fallback if the store API cannot provide the payload.
+Caches a payload context to retrieve as fallback if the store API cannot provide the payload. Used for Google Play, Apple and Meta Horizon purchases only.
 
 <PartialServop service_name="appStore" operation_name="CACHE_PURCHASE_PAYLOAD_CONTEXT" />
 
@@ -29,7 +29,7 @@ The proper order for caching the payload is:
 1. The app gets the list of products to display by calling [GetSalesInventory](/api/capi/appstore/getsalesinventory), and keeps each product's `payload` and store product ID / SKU (`priceData.id`; for Apple, the `itunesId` in `priceData.ids`).
 2. The app displays the in-app store to the user. Each item keeps its store product ID and its payload.
 3. The user selects a store item to purchase.
-4. The app calls **CachePurchasePayloadContext** to cache that item's payload.
+4. For Google Play, Apple and Meta Horizon, the app calls **CachePurchasePayloadContext** to cache that item's payload. (Other stores skip this step.)
 5. The app calls the platform store's API to start the purchase.
 6. The store returns its response (with the receipt) to the app.
 7. The app calls [VerifyPurchase](/api/capi/appstore/verifypurchase) with the receipt information.

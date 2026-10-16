@@ -21,7 +21,7 @@ The specifics of processing in-app purchases from platform to platform vary slig
 1. Client app requests the list of products to display from <%= data.branding.productName %> ( [GetSalesInventory](/api/capi/appstore/getsalesinventory) ), and keeps each product's `payload` and store product ID / SKU (`priceData.id`; for Apple, the `itunesId` in `priceData.ids`)
 2. Client app displays the in-app store to the user. Each item keeps its store product ID and its payload
 3. User selects a store item to purchase
-4. Client app caches the selected item's payload with <%= data.branding.productName %> ( [CachePurchasePayloadContext](/api/capi/appstore/cachepurchasepayloadcontext) )
+4. For Google Play, Apple and Meta Horizon, client app caches the selected item's payload with <%= data.branding.productName %> ( [CachePurchasePayloadContext](/api/capi/appstore/cachepurchasepayloadcontext) ). Other stores skip this step
 5. Client app invokes the purchase API from the AppStore. AppStore performs the purchase, and sends back a response with the receipt to the client
 6. Client sends the receipt to <%= data.branding.productName %> for validation ( [VerifyPurchase](/api/capi/appstore/verifypurchase) )
 7. <%= data.branding.productName %> performs a back-channel verification of the receipt with the AppStore, and uses the receipt info together with the cached payload to resolve the purchase to the proper product item, with the proper pricing, promotions and campaign info. If all is good, it makes any required changes to virtual currency balances
@@ -39,7 +39,7 @@ The following calls request the list of products for sale:
 
 This method caches the payload of the item being purchased:
 
-* [CachePurchasePayloadContext](/api/capi/appstore/cachepurchasepayloadcontext) - call it when the user selects an item, before starting the store purchase
+* [CachePurchasePayloadContext](/api/capi/appstore/cachepurchasepayloadcontext) - for Google Play, Apple and Meta Horizon purchases: call it when the user selects an item, before starting the store purchase
 
 This method is used to confirm store receipts:
 
