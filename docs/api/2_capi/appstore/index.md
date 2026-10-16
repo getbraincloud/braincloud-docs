@@ -28,7 +28,7 @@ The specifics of processing in-app purchases from platform to platform vary slig
 
 :::note
 
-- Step 4 applies to Google Play, Apple and Meta Horizon. The payload is what tells several products sharing one store product ID apart, so a purchase of a shared ID without one is rejected by default. Other stores do not use the cached payload — see [CachePurchasePayloadContext](/api/capi/appstore/cachepurchasepayloadcontext) for details.
+- Step 4 applies to Google Play, Apple and Meta Horizon, and is recommended for every purchase on those stores: the payload identifies the product, and records the price, promotion and any live-ops campaign the user was shown. It is also what tells several products sharing one store product ID apart, so a purchase of a shared ID without one is rejected by default. Other stores do not use the cached payload — see [CachePurchasePayloadContext](/api/capi/appstore/cachepurchasepayloadcontext) for details.
 
 :::
 
