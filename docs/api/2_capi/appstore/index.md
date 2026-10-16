@@ -18,8 +18,8 @@ It includes APIs for:
 
 The specifics of processing in-app purchases from platform to platform vary slightly, but the overall flow is as follows:
 
-1. Client app requests the list of products to display from <%= data.branding.productName %> ( [GetSalesInventory](/api/capi/appstore/getsalesinventory) ), and keeps each product's `payload` and pricing ID (`priceData.id`, the store's product ID / SKU)
-2. Client app displays the in-app store to the user. Each item knows its store ID / info and its payload
+1. Client app requests the list of products to display from <%= data.branding.productName %> ( [GetSalesInventory](/api/capi/appstore/getsalesinventory) ), and keeps each product's `payload` and store product ID / SKU (`priceData.id`; for Apple, the `itunesId` in `priceData.ids`)
+2. Client app displays the in-app store to the user. Each item keeps its store product ID and its payload
 3. User selects a store item to purchase
 4. Client app caches the selected item's payload with <%= data.branding.productName %> ( [CachePurchasePayloadContext](/api/capi/appstore/cachepurchasepayloadcontext) )
 5. Client app invokes the purchase API from the AppStore. AppStore performs the purchase, and sends back a response with the receipt to the client
@@ -32,7 +32,7 @@ The specifics of processing in-app purchases from platform to platform vary slig
 
 :::
 
-The follow call requests the list of products for sale:
+The following calls request the list of products for sale:
 
 * [GetSalesInventory](/api/capi/appstore/getsalesinventory)
 * [GetSalesInventoryByCategory](/api/capi/appstore/getsalesinventorybycategory)
@@ -43,7 +43,7 @@ This method caches the payload of the item being purchased:
 
 This method is used to confirm store receipts:
 
-* [VerifyPurchase](/api/capi/appstore/verifypurchase) - standardized receive verification for Apple, Google, Facebook and Steam purchases
+* [VerifyPurchase](/api/capi/appstore/verifypurchase) - standardized receipt verification for Apple, Google, Facebook and Steam purchases
 
 
 ### Performing Two-part Purchases

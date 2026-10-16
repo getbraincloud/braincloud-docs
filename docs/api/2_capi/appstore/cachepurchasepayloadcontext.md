@@ -15,8 +15,10 @@ payload | The payload string to cache. Send in the payload associated with the p
 - **Supported stores:** the cached payload is used by [VerifyPurchase](/api/capi/appstore/verifypurchase) for Google Play (`googlePlay`, as a fallback when the receipt has no valid `developerPayload`), Apple (`itunes`) and Meta Horizon (`metaHorizon`). It is **not** used for Xsolla (`xsolla`) — put the payload in the Xsolla order's `custom_parameters.custom_payload` instead.
 - **Other stores:** Amazon (`amazon`), Steam (`steam`), Facebook (`facebook`), Windows (`windows`), Windows Phone (`windowsPhone`) and Epic Games (`epicGames`) do not use the cached payload, and do not require one — there is no need to call this method for them.
 - **Call it when the user selects the product, right before starting the store purchase,** with the same `storeId` you will pass to VerifyPurchase and with `iapId` set to the store's product ID / SKU. See [Purchase flow](#purchase-flow) below.
+- **If the purchase completes later** — a deferred or pending purchase (e.g. Apple's Ask to Buy, or a Google Play payment that is still pending) — cache the payload again right before calling VerifyPurchase.
 - **We recommend always caching the payload for Google Play, Apple and Meta Horizon purchases.** It identifies which product was bought, and it records the price, promotion and any live-ops campaign the user was shown when they selected it, so the purchase is credited and reported exactly as offered. Without it, the purchase is credited at the product's current pricing and promotions.
-- **If no payload is found,** the purchase is still processed when its store product ID / SKU is used by only one product. When several products share it, the purchase can't be resolved to one of them, so it is rejected — unless **Allow purchases without requiring a developer payload or cached purchase context.** is enabled on the **Design > Core App Info > Advanced Settings** page, in which case the first matching product is credited. To avoid this, give each product its own store product ID.
+- **If no payload is found,** the purchase is still processed when its store product ID / SKU is used by only one product. When several products share it, the purchase can't be resolved to one of them, so it is not processed: VerifyPurchase succeeds, but that purchase comes back with `processed: false` — unless **Allow purchases without requiring a developer payload or cached purchase context.** is enabled on the **Design > Core App Info > Advanced Settings** page, in which case the first matching product is credited. To avoid this, give each product its own store product ID.
+- **Only finish or consume a store transaction once VerifyPurchase reports it processed** (or already processed). Leave one with `processed: false` unfinished, so it can be verified again once the cause is fixed.
 
 :::
 
@@ -24,8 +26,8 @@ payload | The payload string to cache. Send in the payload associated with the p
 
 The proper order for caching the payload is:
 
-1. The app gets the list of products to display by calling [GetSalesInventory](/api/capi/appstore/getsalesinventory), and keeps each product's `payload` and pricing ID (`priceData.id`, the store's product ID / SKU).
-2. The app displays the in-app store to the user. Each item knows its store ID / info and its payload.
+1. The app gets the list of products to display by calling [GetSalesInventory](/api/capi/appstore/getsalesinventory), and keeps each product's `payload` and store product ID / SKU (`priceData.id`; for Apple, the `itunesId` in `priceData.ids`).
+2. The app displays the in-app store to the user. Each item keeps its store product ID and its payload.
 3. The user selects a store item to purchase.
 4. The app calls **CachePurchasePayloadContext** to cache that item's payload.
 5. The app calls the platform store's API to start the purchase.
