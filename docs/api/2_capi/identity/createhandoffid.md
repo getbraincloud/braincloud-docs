@@ -5,7 +5,7 @@ Creates a handoff authentication id with security token.
 :::note
 
 - The handoff credential created by CreateHandoffId expires after **1 hour**. This is not configurable.
-- It is **single-use** — it is deleted once it has been used to authenticate with [AuthenticateHandoff](/api/capi/authentication/authenticatehandoff).
+- It is **single-use** — it is deleted the first time it is presented to [AuthenticateHandoff](/api/capi/authentication/authenticatehandoff) with the correct security token, even if that authentication then fails, so a retry needs a new handoff id.
 - A user can only have **one** handoff id active at a time. Creating a new one deletes the previous one.
 
 :::
