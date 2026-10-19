@@ -2,6 +2,10 @@
 
 Authenticate the user with a custom Set-top Handoff Code - which is an short, easy-to-enter code suitable for use in devices with limited data entry capabilities (i.e. Set-top boxes, VR headsets, etc.) The hand-off code can be generated via the [<code>CreateSettopHandoffCode</code>](/api/capi/identity/createsettophandoffcode) cloud-code call.
 
+:::note
+A handoff code is **single-use**. It is consumed by the first authentication that presents it, even if that authentication fails, so a retry needs a new code.
+:::
+
 
 :::caution
 Make sure you've initialized the <%= data.branding.productName %> library before authenticating.
@@ -267,7 +271,7 @@ Code | Name | Description
 40207 | SWITCHING_PROFILES | Indicates that the identity credentials are valid, and the saved `profileId` is valid, but the identity is not associated with the provided `profileId`. This may indicate that the user wants to switch accounts in the app. Most often an app will pop-up a dialog confirming that the user wants to switch accounts, and then reset the stored `profileId` and call authenticate again.
 40208 | MISSING_PROFILE_ERROR | Returned when the identity cannot be located, no `profileId` is provided, and `forceCreate` is false. The normal response is to call Authenticate again with `forceCreate` set to `true`.
 40217 | UNKNOWN_AUTH_ERROR | An unknown error has occurred during authentication.
-40307 | TOKEN_DOES_NOT_MATCH_USER | The user's password is incorrect.
+40307 | TOKEN_DOES_NOT_MATCH_USER | The handoff code is incorrect, has expired, or has already been used.
 
 </details>
 
