@@ -80,7 +80,7 @@ var version = 1;
 var globalFileId = "xxxxx-xxxx-xxxx";
 var deleteFileAfterwards = False;
 var overwriteIfPresent = True;
-var itemCatalogProxy = bridge.getItemcatalogServiceProxy();
+var itemCatalogProxy = bridge.getItemCatalogServiceProxy();
 
 var postResult = itemCatalogProxy.sysCopyItemImageFromGlobalFile(defId, version, globalFileId, deleteFileAfterwards, overwriteIfPresent);
 ```

@@ -88,7 +88,7 @@ N/A
 var defId = "sword001";
 var version = 1;
 var forceDeleteAnyState = False;
-var itemCatalogProxy = bridge.getItemcatalogServiceProxy();
+var itemCatalogProxy = bridge.getItemCatalogServiceProxy();
 
 var postResult = itemCatalogProxy.SysDeleteCatalogItem(defId, version, forceDeleteAnyState);
 ```
