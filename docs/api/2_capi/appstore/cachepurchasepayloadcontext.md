@@ -1,5 +1,5 @@
 # CachePurchasePayloadContext
-Caches a payload context to retreive as fallback if the store API cannot provide the payload.
+Caches a payload context to retrieve as fallback if the store API cannot provide the payload. Used for Google Play, Apple and Meta Horizon purchases only.
 
 <PartialServop service_name="appStore" operation_name="CACHE_PURCHASE_PAYLOAD_CONTEXT" />
 
@@ -14,10 +14,26 @@ payload | The payload string to cache. Send in the payload associated with the p
 
 - **Supported stores:** the cached payload is used by [VerifyPurchase](/api/capi/appstore/verifypurchase) for Google Play (`googlePlay`, as a fallback when the receipt has no valid `developerPayload`), Apple (`itunes`) and Meta Horizon (`metaHorizon`). It is **not** used for Xsolla (`xsolla`) — put the payload in the Xsolla order's `custom_parameters.custom_payload` instead.
 - **Other stores:** Amazon (`amazon`), Steam (`steam`), Facebook (`facebook`), Windows (`windows`), Windows Phone (`windowsPhone`) and Epic Games (`epicGames`) do not use the cached payload, and do not require one — there is no need to call this method for them.
-- **Call it right before VerifyPurchase,** with the same `storeId` and with `iapId` set to the store's product ID / SKU.
-- **For Google Play, Apple and Meta Horizon, a payload is required by default.** If no payload is found, the purchase is rejected unless **Allow purchases without requiring a developer payload or cached purchase context.** is enabled on the **Design | Core App Info | Advanced Settings** page.
+- **Call it when the user selects the product, right before starting the store purchase,** with the same `storeId` you will pass to VerifyPurchase and with `iapId` set to the store's product ID / SKU. See [Purchase flow](#purchase-flow) below.
+- **If the purchase completes later** — a deferred or pending purchase (e.g. Apple's Ask to Buy, or a Google Play payment that is still pending) — cache the payload again right before calling VerifyPurchase.
+- **We recommend always caching the payload for Google Play, Apple and Meta Horizon purchases.** It identifies which product was bought, and it records the price, promotion and any live-ops campaign the user was shown when they selected it, so the purchase is credited and reported exactly as offered. Without it, the purchase is credited at the product's current pricing and promotions.
+- **If no payload is found,** the purchase is still processed when its store product ID / SKU is used by only one product. When several products share it, the purchase can't be resolved to one of them, so it is not processed: VerifyPurchase succeeds, but that purchase comes back with `processed: false` — unless **Allow purchases without requiring a developer payload or cached purchase context.** is enabled on the **Design > Core App Info > Advanced Settings** page, in which case the first matching product is credited. To avoid this, give each product its own store product ID.
+- **Only finish or consume a store transaction once VerifyPurchase reports it processed** (or already processed). Leave one with `processed: false` unfinished, so it can be verified again once the cause is fixed.
 
 :::
+
+## Purchase flow
+
+The proper order for caching the payload is:
+
+1. The app gets the list of products to display by calling [GetSalesInventory](/api/capi/appstore/getsalesinventory), and keeps each product's `payload` and store product ID / SKU (`priceData.id`; for Apple, the `itunesId` in `priceData.ids`).
+2. The app displays the in-app store to the user. Each item keeps its store product ID and its payload.
+3. The user selects a store item to purchase.
+4. For Google Play, Apple and Meta Horizon, the app calls **CachePurchasePayloadContext** to cache that item's payload. (Other stores skip this step.)
+5. The app calls the platform store's API to start the purchase.
+6. The store returns its response (with the receipt) to the app.
+7. The app calls [VerifyPurchase](/api/capi/appstore/verifypurchase) with the receipt information.
+8. <%= data.branding.productName %> combines the receipt info from VerifyPurchase with the payload cached by CachePurchasePayloadContext to resolve the purchase to the proper product item, together with the proper pricing, promotions and campaign info.
 
 ## Usage
 
@@ -215,9 +231,9 @@ var postResult = appStoreProxy.cachePurchasePayloadContext(storeId, iapId, paylo
 The Meta Horizon Store has no developer payload of its own, so use this method to attach one. The full sequence is:
 
 1. Call [GetSalesInventory](/api/capi/appstore/getsalesinventory) with `"metaHorizon"`, and keep each product's `payload`. A product's `priceData.id` is its Meta SKU — the **Meta Horizon Product ID** set on the product's price.
-2. The player buys the product through the Meta Platform SDK.
-3. As soon as the Meta purchase succeeds, call CachePurchasePayloadContext with the product's SKU and payload.
-4. Call [VerifyPurchase](/api/capi/appstore/verifypurchase) within a few seconds — for example, in the cache call's success callback.
+2. When the player selects a product, call CachePurchasePayloadContext with the product's SKU and payload.
+3. Once the cache call succeeds, start the purchase through the Meta Platform SDK.
+4. As soon as the Meta purchase succeeds, call [VerifyPurchase](/api/capi/appstore/verifypurchase).
 
 ```csharp
 // 1. When showing the store: get the products and keep each one's payload.
@@ -226,10 +242,7 @@ The Meta Horizon Store has no developer payload of its own, so use this method t
 <%= data.branding.codePrefix %>.AppStoreService.GetSalesInventory("metaHorizon", "{\"userCurrency\":\"USD\"}",
     successCallback, failureCallback);
 
-// 2. The player buys "gems_pack_small" through the Meta Platform SDK.
-//    On success, Meta returns the purchase's SKU and purchase ID.
-
-// 3. Right after the purchase succeeds: cache the payload, then verify.
+// 2. The player selects "gems_pack_small": cache its payload.
 string storeId = "metaHorizon";
 string sku     = "gems_pack_small";                  // the Meta SKU, the same one Meta reports for the purchase
 string payload = "__bc:[1,gemsPackSmall,0,199,-1]";  // the payload GetSalesInventory returned for this product
@@ -237,7 +250,10 @@ string payload = "__bc:[1,gemsPackSmall,0,199,-1]";  // the payload GetSalesInve
 <%= data.branding.codePrefix %>.AppStoreService.CachePurchasePayloadContext(storeId, sku, payload,
     (response, cbObject) =>
     {
-        // 4. Verify within a few seconds of caching.
+        // 3. The player buys "gems_pack_small" through the Meta Platform SDK.
+        //    On success, Meta returns the purchase's SKU and purchase ID.
+
+        // 4. Verify the purchase.
         string receiptData = "{" +
             "\"userId\":\"META-USER-ID\"," +
             "\"sku\":\"gems_pack_small\"," +
@@ -253,7 +269,7 @@ string payload = "__bc:[1,gemsPackSmall,0,199,-1]";  // the payload GetSalesInve
 :::tip
 
 - The `iapId` you cache must be the same SKU as the `sku` in `receiptData`.
-- Cache **after** the Meta purchase succeeds, not when the store opens.
+- Cache when the player selects the product — not when the store opens.
 - Pass the payload exactly as GetSalesInventory returned it. The cache call fails if it is not a valid payload.
 
 :::
