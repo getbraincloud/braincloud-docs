@@ -2,6 +2,10 @@
 
 Authenticate the user with a custom Authentication Handoff.
 
+:::note
+A handoff is **single-use**. Presenting the correct security token consumes it, even if the authentication then fails, so a retry needs a new handoff id from [CreateHandoffId](/api/capi/identity/createhandoffid).
+:::
+
 :::caution
 Make sure you've initialized the <%= data.branding.productName %> library before authenticating.
 :::
@@ -257,6 +261,6 @@ else:
 | 40207 | SWITCHING_PROFILES        | Indicates that the identity credentials are valid, and the saved `profileId` is valid, but the identity is not associated with the provided `profileId`. This may indicate that the user wants to switch accounts in the app. Most often an app will pop-up a dialog confirming that the user wants to switch accounts, and then reset the stored `profileId` and call authenticate again.                                                                                                             |
 | 40208 | MISSING_PROFILE_ERROR     | Returned when the identity cannot be located, no `profileId` is provided, and `forceCreate` is false. The normal response is to call Authenticate again with `forceCreate` set to `true`.                                                                                                                                                                                                                                                                                                              |
 | 40217 | UNKNOWN_AUTH_ERROR        | An unknown error has occurred during authentication.                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| 40307 | TOKEN_DOES_NOT_MATCH_USER | The user's password is incorrect.                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| 40307 | TOKEN_DOES_NOT_MATCH_USER | The security token is incorrect, or the handoff has expired or has already been used.                                                                                                                                                                                                                                                                                                                                                                                                                  |
 
 </details>
