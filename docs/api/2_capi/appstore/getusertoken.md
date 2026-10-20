@@ -45,7 +45,8 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 ```
 
 ```cpp
-N/A
+const char *storeId = "xsolla";
+<%= data.branding.codePrefix %>->getAppStoreService()->getUserToken(storeId, this);
 ```
 
 ```mdx-code-block
@@ -54,7 +55,14 @@ N/A
 ```
 
 ```objectivec
-N/A
+NSString *storeId = @"xsolla";
+BCCompletionBlock successBlock;      // define callback
+BCErrorCompletionBlock failureBlock; // define callback
+
+[[<%= data.branding.codePrefix %> appStoreService] getUserToken:storeId
+            completionBlock:successBlock
+       errorCompletionBlock:failureBlock
+                   cbObject:nil];
 ```
 
 ```mdx-code-block
@@ -99,7 +107,15 @@ var storeId = "xsolla";
 ```
 
 ```dart
-N/A
+var storeId = "xsolla";
+
+ServerResponse result = await <%= data.branding.codePrefix %>.appStoreService.getUserToken(storeId:storeId);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
 ```
 
 ```mdx-code-block
@@ -108,7 +124,17 @@ N/A
 ```
 
 ```lua
-N/A
+local storeId = "xsolla"
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getAppStoreService():getUserToken(storeId, callback)
 ```
 
 ```mdx-code-block
@@ -133,7 +159,13 @@ else:
 ```
 
 ```cfscript
-N/A
+var storeId = "xsolla";
+var appStoreProxy = bridge.getAppStoreServiceProxy();
+
+var postResult = appStoreProxy.getUserToken(storeId);
+if (postResult.status == 200) {
+    // Success!
+}
 ```
 
 ```mdx-code-block
