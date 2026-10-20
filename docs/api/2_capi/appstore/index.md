@@ -54,6 +54,14 @@ Some AppStores, like Steam, do a real-time two-part purchase. The following new 
 * [FinalizePurchase](/api/capi/appstore/finalizepurchase) - Generic version of finalize purchase.
 
 
+### Store Configuration and User Tokens
+
+Some stores, like Xsolla, need configuration and a user token on the client to open their checkout. The following API methods provide them:
+
+* [GetStoreInfo](/api/capi/appstore/getstoreinfo) - Returns the store's client-side configuration.
+* [GetUserToken](/api/capi/appstore/getusertoken) - Returns a store user token (JWT) for the current user.
+
+
 ### Promotions
 
 In addition to the above purchase flows, the app can also query to see if any promotions are currently active (for display in banners, etc.), using the [GetEligiblePromotions](/api/capi/appstore/geteligiblepromotions) call – and can make manual adjustments to virtual currency balances.
