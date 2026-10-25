@@ -8,7 +8,7 @@ Items published to the blockchain (have a `blockItemId`) and items that have bee
 This permanently deletes the user's items and cannot be undone.
 :::
 
-One `DroppedItem` analytics event is recorded for each item definition dropped, with the quantities of that definition's deleted items summed.
+One `DroppedItem` analytics event is recorded for each item definition dropped, with the quantities of that definition's deleted items summed. Items whose item definition has been revoked or deleted are dropped but not reported.
 
 :::note
 Each user item deleted counts as one bulk API call. Nothing is counted if the user had no droppable items.
