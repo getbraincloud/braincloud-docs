@@ -18,21 +18,32 @@ It includes APIs for:
 
 The specifics of processing in-app purchases from platform to platform vary slightly, but the overall flow is as follows:
 
-- Client app requests a list of products from <%= data.branding.productName %> ( [GetSalesInventory](/api/capi/appstore/getsalesinventory) )
-- Client app requests the localized pricing details for the products from the AppStore
-- Client app displays the products with prices to the user
-- User chooses to purchase a product
-- Client app invokes the purchase API from the AppStore.  AppStore performs the purchase, and sends back a receipt to the client
-- Client sends the receipt to <%= data.branding.productName %> for validation ( [VerifyPurchase](/api/capi/appstore/verifypurchase) ).  <%= data.branding.productName %> performs a back-channel verification of the receipt with the AppStore – and if all is good, makes any required changes to virtual currency balances
+1. Client app requests the list of products to display from <%= data.branding.productName %> ( [GetSalesInventory](/api/capi/appstore/getsalesinventory) ), and keeps each product's `payload` and store product ID / SKU (`priceData.id`; for Apple, the `itunesId` in `priceData.ids`)
+2. Client app displays the in-app store to the user. Each item keeps its store product ID and its payload
+3. User selects a store item to purchase
+4. For Google Play, Apple and Meta Horizon, client app caches the selected item's payload with <%= data.branding.productName %> ( [CachePurchasePayloadContext](/api/capi/appstore/cachepurchasepayloadcontext) ). Other stores skip this step
+5. Client app invokes the purchase API from the AppStore. AppStore performs the purchase, and sends back a response with the receipt to the client
+6. Client sends the receipt to <%= data.branding.productName %> for validation ( [VerifyPurchase](/api/capi/appstore/verifypurchase) )
+7. <%= data.branding.productName %> performs a back-channel verification of the receipt with the AppStore, and uses the receipt info together with the cached payload to resolve the purchase to the proper product item, with the proper pricing, promotions and campaign info. If all is good, it makes any required changes to virtual currency balances
 
-The follow call requests the list of products for sale:
+:::note
+
+- Step 4 applies to Google Play, Apple and Meta Horizon, and is recommended for every purchase on those stores: the payload identifies the product, and records the price, promotion and any live-ops campaign the user was shown. It is also what tells several products sharing one store product ID apart, so a purchase of a shared ID without one is rejected by default. Other stores do not use the cached payload — see [CachePurchasePayloadContext](/api/capi/appstore/cachepurchasepayloadcontext) for details.
+
+:::
+
+The following calls request the list of products for sale:
 
 * [GetSalesInventory](/api/capi/appstore/getsalesinventory)
 * [GetSalesInventoryByCategory](/api/capi/appstore/getsalesinventorybycategory)
 
+This method caches the payload of the item being purchased:
+
+* [CachePurchasePayloadContext](/api/capi/appstore/cachepurchasepayloadcontext) - for Google Play, Apple and Meta Horizon purchases: call it when the user selects an item, before starting the store purchase
+
 This method is used to confirm store receipts:
 
-* [VerifyPurchase](/api/capi/appstore/verifypurchase) - standardized receive verification for Apple, Google, Facebook and Steam purchases
+* [VerifyPurchase](/api/capi/appstore/verifypurchase) - standardized receipt verification for Apple, Google, Facebook and Steam purchases
 
 
 ### Performing Two-part Purchases
@@ -41,6 +52,14 @@ Some AppStores, like Steam, do a real-time two-part purchase. The following new 
 
 * [StartPurchase](/api/capi/appstore/startpurchase) - Generic version of start purchase.
 * [FinalizePurchase](/api/capi/appstore/finalizepurchase) - Generic version of finalize purchase.
+
+
+### Store Configuration and User Tokens
+
+Some stores, like Xsolla, need configuration and a user token on the client to open their checkout. The following API methods provide them:
+
+* [GetStoreInfo](/api/capi/appstore/getstoreinfo) - Returns the store's client-side configuration.
+* [GetUserToken](/api/capi/appstore/getusertoken) - Returns a store user token (JWT) for the current user.
 
 
 ### Promotions

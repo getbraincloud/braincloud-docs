@@ -162,7 +162,7 @@ else:
 ```cfscript
 var itemId = "aaa-bbb-ccc-ddd";
 var version = 1;
-var userItemsProxy = bridge.getUseritemsServiceProxy();
+var userItemsProxy = bridge.getUserItemsServiceProxy();
 
 var postResult = userItemsProxy.RemoveUserItemFromBlockchain(itemId, version);
 ```

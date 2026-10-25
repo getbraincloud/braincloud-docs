@@ -171,6 +171,24 @@ This article will walk you through the steps of setting up push notifications (i
 
 ![](images/28.png)
 
+#### **Alternative approach: Token-based (.p8) configuration**
+
+Steps 3 and 4 above walk through the certificate-based (.p12) setup. As an alternative, brainCloud also supports Apple's token-based (.p8) signing keys. A token-based key never expires (unlike a .p12 certificate, which must be renewed every 12 months), and the same key can be reused across every app registered under your Apple Developer team, so it's worth setting up this way if you don't already have a .p12 workflow in place.
+
+- In your Apple Developer account, go to `Certificates, Identifiers & Profiles` > `Keys`, create a new key with the `Apple Push Notifications service (APNs)` capability enabled, then download the `.p8` file. Apple only lets you download this file once, so store it somewhere safe.
+- Note the **Key ID** shown for the key you just created, and your **Team ID**, found under `Membership` in the Apple Developer portal.
+- On the brainCloud portal, go to `App` > `Design` > `Notifications` > `Settings`, select the `Apple` row and click `[View...]`, then `[Edit]`.
+- Under `Authentication Type`, select `Token Based (.p8)`.
+- Fill in the fields that appear:
+  - `Key ID` -- the Key ID noted above.
+  - `Team ID` -- your Apple Developer Team ID.
+  - `PKS8 PEM Data` -- open the `.p8` file in a text editor and paste its full contents (including the `-----BEGIN PRIVATE KEY-----` / `-----END PRIVATE KEY-----` lines) into this field.
+  - `App ID` -- your iOS app's Bundle ID.
+- Check `Push Notification Environment` (`Development` / `Production`) -- this setting is shared with the certificate-based configuration, so make sure it still matches where you want to send pushes.
+- Click `[Save]`.
+
+Once saved, continue with Step 5 below to test push notifications from your app.
+
 #### **Step 5: Run app via Xcode**
 
 - Go back to Xcode editor

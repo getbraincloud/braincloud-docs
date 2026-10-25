@@ -15,6 +15,8 @@ Valid platforms are:
 - windowsPhone
 - googlePlay
 - amazon
+- epicGames
+- xsolla
 
 <PartialServop service_name="appStore" operation_name="GET_INVENTORY" />
 

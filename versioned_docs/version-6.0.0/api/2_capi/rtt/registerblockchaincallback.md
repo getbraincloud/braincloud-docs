@@ -1,0 +1,119 @@
+# RegisterBlockchainCallback
+
+Registers a callback for RTT blockchain updates.
+
+## Method Parameters
+
+| Parameter   | Description                          |
+| ----------- | ------------------------------------ |
+| rttCallback | The RTT blockchain callback handler. |
+
+## Usage
+
+```mdx-code-block
+<BrowserWindow>
+<Tabs>
+<TabItem value="csharp" label="C#">
+```
+
+```csharp
+RTTCallback rttCallback = response =>
+{
+   Debug.Log(response);
+};
+<%= data.branding.codePrefix %>.RTTService.RegisterBlockchainCallback(rttCallback);
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="cpp" label="C++">
+```
+
+```cpp
+<%= data.branding.codePrefix %>.RTTService.registerBlockchainCallback(rttCallback);
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="objectivec" label="Obj-C">
+```
+
+```objectivec
+Coming soon!
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="java" label="Java">
+```
+
+```java
+<%= data.branding.codePrefix %>.RTTService.registerBlockchainCallback(rttCallback);
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="js" label="JavaScript">
+```
+
+```javascript
+<%= data.branding.codePrefix %>.rttService.registerBlockchainCallback(rttCallback);
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+void rttCallBack(RTTCommandResponse jsonResponse) {
+  // your code
+}
+<%= data.branding.codePrefix %>.rttService.registerBlockchainCallback(rttCallback);
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local rttCallBack = function(jsonResponse)
+    -- your code
+end
+
+<%= data.branding.codePrefix %>:getRttService():registerBlockchainCallback(rttCallback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="cfs" label="Cloud Code">
+```
+
+```cfscript
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="r" label="Raw">
+```
+
+```r
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+</Tabs>
+</BrowserWindow>
+```

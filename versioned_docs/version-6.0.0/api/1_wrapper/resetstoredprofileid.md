@@ -1,0 +1,119 @@
+# ResetStoredProfileId
+
+Resets the profile ID to empty string.
+
+## Usage
+
+```mdx-code-block
+<BrowserWindow>
+<Tabs>
+<TabItem value="csharp" label="C#">
+```
+
+```csharp
+
+
+<%= data.branding.codePrefix %>.ResetStoredProfileId();
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="cpp" label="C++">
+```
+
+```cpp
+<%= data.branding.codePrefix %>->resetStoredProfileId();
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="objectivec" label="Obj-C">
+```
+
+```objectivec
+<%= data.branding.codePrefix %>.storedProfileId = @"";
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="java" label="Java">
+```
+
+```java
+<%= data.branding.codePrefix %>.resetStoredProfileId();
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="js" label="JavaScript">
+```
+
+```javascript
+<%= data.branding.codePrefix %>.resetStoredProfileId();
+```
+
+
+```mdx-code-block
+</TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+<%= data.branding.codePrefix %>.resetStoredProfileId();
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+<%= data.branding.codePrefix %>:resetStoredProfileId()
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var result = await <%= data.branding.codePrefix %>.reset_stored_profile_id()
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="cfs" label="Cloud Code">
+```
+
+```cfscript
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="r" label="Raw">
+```
+
+```r
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+</Tabs>
+</BrowserWindow>
+```
+
+<details>
+<summary>JSON Response</summary>
+
+```json
+<%= data.branding.codePrefix %>.resetStoredProfileId();
+```
+</details>
+

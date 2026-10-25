@@ -7,6 +7,7 @@ Type | ID
 Anonymous | Anonymous
 Apple | Apple
 Email | Email
+EpicGames | EpicGames
 External | External
 Facebook | Facebook
 FacebookLimited | FacebookLimited

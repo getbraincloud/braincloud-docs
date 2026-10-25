@@ -188,7 +188,7 @@ var itemDefData = {
 //     }
 // };
 
-var itemCatalogProxy = bridge.getItemcatalogServiceProxy();
+var itemCatalogProxy = bridge.getItemCatalogServiceProxy();
 
 var postResult = itemCatalogProxy.sysAddCatalogItem(defId, itemDefData);
 ```

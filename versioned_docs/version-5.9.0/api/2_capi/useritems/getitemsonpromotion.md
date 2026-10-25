@@ -147,7 +147,7 @@ var includePromotionDetails = True;
 var optionsJson = {
     "category": "Equipment"
 };
-var userItemsProxy = bridge.getUseritemsServiceProxy();
+var userItemsProxy = bridge.getUserItemsServiceProxy();
 
 var postResult = userItemsProxy.getItemsOnPromotion(shopId, includeDef, includePromotionDetails, optionsJson);
 ```

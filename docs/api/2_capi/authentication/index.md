@@ -139,6 +139,7 @@ public void FailureCallback(int statusCode, int reasonCode, string statusMessage
 * [AuthenticateAnonymous](/api/capi/authentication/authenticateanonymous)
 * [AuthenticateApple](/api/capi/authentication/authenticateapple)
 * [AuthenticateEmailPassword](/api/capi/authentication/authenticateemailpassword)
+* [AuthenticateEpicGames](/api/capi/authentication/authenticateepicgames)
 * [AuthenticateExternal](/api/capi/authentication/authenticateexternal)
 * [AuthenticateFacebook](/api/capi/authentication/authenticatefacebook)
 * [AuthenticateFacebookLimited](/api/capi/authentication/authenticatefacebooklimited)

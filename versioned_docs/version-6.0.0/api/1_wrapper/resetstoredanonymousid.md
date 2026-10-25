@@ -1,0 +1,119 @@
+# ResetStoredAnonymousId
+
+Resets the anonymous ID to empty string.  When the anonymousId is empty a new one will be generated automatically on authentication.
+
+## Usage
+
+```mdx-code-block
+<BrowserWindow>
+<Tabs>
+<TabItem value="csharp" label="C#">
+```
+
+```csharp
+
+
+<%= data.branding.codePrefix %>.ResetStoredAnonymousId();
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="cpp" label="C++">
+```
+
+```cpp
+<%= data.branding.codePrefix %>->resetStoredAnonymousId();
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="objectivec" label="Obj-C">
+```
+
+```objectivec
+<%= data.branding.codePrefix %>.storedAnonymousId = @"";
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="java" label="Java">
+```
+
+```java
+<%= data.branding.codePrefix %>.resetStoredAnonymousId();
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="js" label="JavaScript">
+```
+
+```javascript
+<%= data.branding.codePrefix %>.resetStoredAnonymousId();
+```
+
+
+```mdx-code-block
+</TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+<%= data.branding.codePrefix %>.resetStoredAnonymousId();
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+<%= data.branding.codePrefix %>:resetStoredAnonymousId()
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var result = await <%= data.branding.codePrefix %>.reset_stored_anonymous_id()
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="cfs" label="Cloud Code">
+```
+
+```cfscript
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="r" label="Raw">
+```
+
+```r
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+</Tabs>
+</BrowserWindow>
+```
+
+<details>
+<summary>JSON Response</summary>
+
+```json
+<%= data.branding.codePrefix %>.resetStoredAnonymousId();
+```
+</details>
+

@@ -102,7 +102,7 @@ var userCloudPath = "dir1/dir2";
 var userCloudFilename = "file";
 var deleteFileAfterwards = False;
 var overwriteIfPresent = True;
-var itemCatalogProxy = bridge.getItemcatalogServiceProxy();
+var itemCatalogProxy = bridge.getItemCatalogServiceProxy();
 
 var postResult = itemCatalogProxy.sysCopyItemImageFromUserFile(defId, version, userProfileId, userCloudPath, userCloudFilename, deleteFileAfterwards, overwriteIfPresent);
 ```

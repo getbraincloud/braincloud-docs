@@ -100,7 +100,7 @@ var scriptData = {
 var regionId = "ca-central-1";
 var roomServerProxy = bridge.getRoomServerServiceProxy();
 
-var postResult = roomServerProxy.launchServer(serverName, scriptName, scriptData, regionId);
+var postResult = roomServerProxy.sysLaunchServer(serverName, scriptName, scriptData, regionId);
 ```
 
 ```mdx-code-block

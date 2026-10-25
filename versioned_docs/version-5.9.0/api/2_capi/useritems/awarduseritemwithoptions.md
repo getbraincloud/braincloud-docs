@@ -147,7 +147,7 @@ var includeDef = True;
 var optionsJson = {
     "blockIfExceedItemMaxStackable": false
 };
-var userItemsProxy = bridge.getUseritemsServiceProxy();
+var userItemsProxy = bridge.getUserItemsServiceProxy();
 
 var postResult = userItemsProxy.awardUserItemWithOptions(defId, quantity, includeDef, optionsJson);
 ```

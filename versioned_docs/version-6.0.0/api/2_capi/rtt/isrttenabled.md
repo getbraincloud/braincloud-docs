@@ -1,0 +1,108 @@
+# IsRTTEnabled
+
+Returns true if RTT is enabled.
+
+## Usage
+
+```mdx-code-block
+<BrowserWindow>
+<Tabs>
+<TabItem value="csharp" label="C#">
+```
+
+```csharp
+<%= data.branding.codePrefix %>.RTTService.IsRTTEnabled();
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="cpp" label="C++">
+```
+
+```cpp
+<%= data.branding.codePrefix %>->isRTTEnabled();
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="objectivec" label="Obj-C">
+```
+
+```objectivec
+Coming soon!
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="java" label="Java">
+```
+
+```java
+<%= data.branding.codePrefix %>.RTTService.getRTTEnabled();
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="js" label="JavaScript">
+```
+
+```javascript
+<%= data.branding.codePrefix %>.rttService.isRTTEnabled();
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+<%= data.branding.codePrefix %>.rttService.isRTTEnabled();
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+<%= data.branding.codePrefix %>:getRttService():isRTTEnabled()
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var result = await <%= data.branding.codePrefix %>.rtt_service.is_rtt_enabled()
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="cfs" label="Cloud Code">
+```
+
+```javascript
+<%= data.branding.codePrefix %>.rttService.isRTTEnabled();
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="r" label="Raw">
+```
+
+```javascript
+<%= data.branding.codePrefix %>.rttService.isRTTEnabled();
+```
+
+```mdx-code-block
+</TabItem>
+</Tabs>
+</BrowserWindow>
+```
+

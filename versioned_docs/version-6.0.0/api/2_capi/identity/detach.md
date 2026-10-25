@@ -1,0 +1,152 @@
+# Detach
+
+Detaches an identity from the current profile.
+
+
+
+<PartialServop service_name="identity" operation_name="DETACH" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+externalId | User ID
+authenticationType | Type of authentication. Full list of types can be found [here](/api/appendix/authtypes).
+continueAnon | If false will generate an error when downgrading to anonymous (null is false)
+
+## Usage
+
+```mdx-code-block
+<BrowserWindow>
+<Tabs>
+<TabItem value="csharp" label="C#">
+```
+
+```csharp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="cpp" label="C++">
+```
+
+```cpp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="objectivec" label="Obj-C">
+```
+
+```objectivec
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="java" label="Java">
+```
+
+```java
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="js" label="JavaScript">
+```
+
+```javascript
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+// N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="cfs" label="Cloud Code">
+```
+
+```cfscript
+var externalId = "email@email.com";
+var authenticationType = "Email";
+var continueAnon = false;
+var identityProxy = bridge.getIdentityServiceProxy();
+
+var postResult = identityProxy.detach(externalId, authenticationType, continueAnon);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="r" label="Raw">
+```
+
+```r
+{
+    "service": "identity",
+    "operation": "DETACH",
+    "data": {
+        "externalId": "email@email.com",
+        "authenticationType": "Email",
+        "continueAnon": false
+    }
+}
+```
+
+```mdx-code-block
+</TabItem>
+</Tabs>
+</BrowserWindow>
+```
+
+<details>
+<summary>JSON Response</summary>
+
+```json
+{
+    "status" : 200,
+    "data" : null
+}
+```
+</details>
+
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40210 | DOWNGRADING_TO_ANONYMOUS_ERROR | Occurs when detaching the last non-anonymous identity from an account with continueAnon set to false.
+
+</details>
+
+

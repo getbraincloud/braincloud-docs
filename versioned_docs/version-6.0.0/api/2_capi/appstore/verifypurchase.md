@@ -1,0 +1,408 @@
+# VerifyPurchase
+
+Used to verify a purchase receipt for Apple AppStore, Google Play, Facebook or Windows. The contents passed into `receiptData` are store-specific. On success, the player will be awarded the associated currencies.
+
+## ReceiptData formats
+
+### Apple AppStore
+
+Use `"itunes"` as the `storeId`.
+
+#### StoreKit 2 receiptData format
+
+```json
+{
+    "transactionId": "TRANSACTION-ID",
+    "excludeOldTransactions": false
+}
+```
+
+:::tip
+Note: This would be the TransactionID you receive in your App Store receipts, not to be confused with OriginalTransactionID.
+:::
+
+#### Legacy receipts `receiptData` format
+
+```json
+{
+    "receipt": "ENCODED-RECEIPT-DATA",
+    "excludeOldTransactions": false
+}
+```
+
+### Google Play Store
+
+Use `"googlePlay"` as the `storeId`.
+
+:::tip
+Ensure that the parameter `includeSubscriptionCheck` setting is set to `true` for Product Type as `Subscription`.
+:::
+
+Google Play `receiptData` format:
+
+```json
+{
+    "productId" : "gems_pack_small",
+    "orderId" : "GPA.0000-1111-2222-33333",
+    "token" : "ENCODED_TOKEN_STRING",
+    "developerPayload" : "STRING_ENCODED_JSON",
+    "includeSubscriptionCheck" : false
+}
+```
+
+### Facebook
+
+Use `"facebook"` as the `storeId`.
+
+Facebook `receiptData` format:
+
+```json
+{
+    "signedRequest": "string-of-signedRequest"
+}
+```
+
+### Amazon Store
+
+Use `"amazon"` as the `storeId`.
+
+Amazon `receiptData` format:
+
+```json
+{
+    "receiptId": "a-receipt-id",
+    "userId": "a-user-id"
+}
+```
+
+### Meta Horizon Store
+
+Use `"metaHorizon"` as the `storeId`.
+
+Meta Horizon receiptData format:
+
+```json
+{
+    "userId": "META-USER-ID",
+    "sku": "PURCHASE-SKU",
+    "transactionId": "PURCHASE-TRANSACTION-ID",
+    "consumeOnVerify": true
+}
+```
+
+:::tip
+Note: `consumeOnVerify` will consume `CONSUMABLE` items server-side which we recommend to prevent accidental extra item consumptions from the user.
+:::
+
+### Response fields
+
+The following fields are included in the json response:
+
+| Field              | Description                                                                                                  |
+| ------------------ | ------------------------------------------------------------------------------------------------------------ |
+| resultCode         | the overall status of the operation                                                                          |
+| errorMessage       | (optional) message describing non-zero result codes                                                          |
+| store              | the store used for the purchase                                                                              |
+| transactionSummary | the store-specific response details. Contents vary by store-type.                                            |
+| rewards            | the total currencies being rewarded as a result of the purchases(s). Includes subsections by currency scope. |
+| currency           | currency balances.                                                                                           |
+| parentCurrency     | balances of parent currencies (if any)                                                                       |
+| peerCurrency       | balances of peer currencies (if any)                                                                         |
+| server_time        | utc time on the server (in millis)                                                                           |
+
+### VerifyPurchase responses
+
+The key values of the return to evaluate include:
+
+-   `processedCount` - number of transactions successfully processed. To be processed, a transaction receipt must be valid, the product must be found, and the transaction must not have been processed before.
+-   `unprocessedCount` - the number of transactions that were rejected. See the `transactionStatus` code associated with the transaction for details.
+
+<PartialServop service_name="appStore" operation_name="VERIFY_PURCHASE" />
+
+## Method Parameters
+
+| Parameter   | Description                                                                |
+| ----------- | -------------------------------------------------------------------------- |
+| storeId     | The store type - "itunes", "googlePlay", "amazon", "facebook", "metaHorizon" or "windows" |
+| receiptData | A JSON object with data in the format for the specified store              |
+
+## Usage
+
+```mdx-code-block
+<BrowserWindow>
+<Tabs>
+<TabItem value="csharp" label="C#">
+```
+
+```csharp
+string storeId = "hghghsgfh";
+string receiptData = "{\"productId\":\"ugfhffhgj\"}";
+SuccessCallback successCallback = (response, cbObject) =>
+{
+    Debug.Log(string.Format("Success | {0}", response));
+};
+FailureCallback failureCallback = (status, code, error, cbObject) =>
+{
+    Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
+};
+
+<%= data.branding.codePrefix %>.AppStoreService.VerifyPurchase(storeId, receiptData, successCallback, failureCallback);
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="cpp" label="C++">
+```
+
+```cpp
+const char *storeId = "hghghsgfh";
+const char *receiptData = "{\"productId\":\"ugfhffhgj\"}";
+<%= data.branding.codePrefix %>->getAppStoreService()->verifyPurchase(storeId, receiptData, this);
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="objectivec" label="Obj-C">
+```
+
+```objectivec
+NSString *storeId = @"hghghsgfh";
+NSString *receiptData = @"{\"productId\":\"ugfhffhgj\"}";
+BCCompletionBlock successBlock;      // define callback
+BCErrorCompletionBlock failureBlock; // define callback
+
+[[<%= data.branding.codePrefix %> appStoreService] verifyPurchase:storeId
+                receiptData:receiptData
+            completionBlock:successBlock
+       errorCompletionBlock:failureBlock
+                   cbObject:nil];
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="java" label="Java">
+```
+
+```java
+String storeId = "hghghsgfh";
+String receiptData = "{\"productId\":\"ugfhffhgj\"}";
+this; // implements IServerCallback
+
+<%= data.branding.codePrefix %>.getAppStoreService().verifyPurchase(storeId, receiptData, this);
+
+public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
+{
+    System.out.print(String.format("Success | %s", jsonData.toString()));
+}
+public void serverError(ServiceName serviceName, ServiceOperation serviceOperation, int statusCode, int reasonCode, String jsonError)
+{
+    System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
+}
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="js" label="JavaScript">
+```
+
+```javascript
+var storeId = "hghghsgfh";
+var receiptData = {
+    "productId": "ugfhffhgj"
+};
+
+<%= data.branding.codePrefix %>.appStore.verifyPurchase(storeId, receiptData, result =>
+{
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
+});
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="dart" label="Dart">
+```
+
+```dart
+var  storeId = "hghghsgfh";
+var  receiptData = {
+    "productId": "ugfhffhgj"
+};
+
+ServerResponse result = await <%= data.branding.codePrefix %>.appStoreService.verifyPurchase(storeId:storeId, receiptData:receiptData);
+
+if (result.statusCode == 200) {
+    print("Success");
+} else {
+    print("Failed ${result.error['status_message'] ?? result.error}");
+}
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local storeId = "hghghsgfh"
+local receiptData = {
+    productId = "ugfhffhgj"
+}
+
+local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
+end
+
+<%= data.branding.codePrefix %>:getAppStoreService():verifyPurchase(storeId, receiptData, callback)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="gdscript" label="GDScript">
+```
+
+```gdscript
+var store_id = "hghghsgfh"
+var receipt_data = {
+    "productId": "ugfhffhgj"
+}
+
+var result = await <%= data.branding.codePrefix %>.app_store_service.verify_purchase(store_id, receipt_data)
+
+if result.status == 200:
+	print("Success")
+else:
+	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="cfs" label="Cloud Code">
+```
+
+```cfscript
+var storeId = "hghghsgfh";
+var receiptData = {
+    "productId": "ugfhffhgj"
+};
+var appStoreProxy = bridge.getAppStoreServiceProxy();
+
+var postResult = appStoreProxy.verifyPurchase(storeId, receiptData);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="r" label="Raw">
+```
+
+```r
+{
+    "service": "appStore",
+    "operation": "VERIFY_PURCHASE",
+    "data": {
+        "storeId": "itunes",
+        "receiptData": {
+            "receipt": "a-receipt"
+        }
+    }
+}
+```
+
+```mdx-code-block
+</TabItem>
+</Tabs>
+</BrowserWindow>
+```
+
+<details>
+<summary>JSON Response</summary>
+
+```json
+{
+    "data": {
+        "resultCode": 0,
+        "serverTime": 1473325588695,
+        "store": "itunes",
+        "transactionSummary": {
+            "processedCount": 1,
+            "unprocessedCount": 1,
+            "transactionDetails": [
+                {
+                    "raw_in_app_ownership_type": "PURCHASED",
+                    "original_transaction_id": "2000001113677862",
+                    "raw_environment": "Sandbox",
+                    "type": "CONSUMABLE",
+                    "referencePrice": 9999,
+                    "price": 129990,
+                    "product_id": "coins_100",
+                    "currency": "CAD",
+                    "raw_transaction_reason": "PURCHASE",
+                    "transaction_id": "2000001113677862",
+                    "in_app_ownership_type": "PURCHASED",
+                    "transactionResultCode": 100,
+                    "app_account_token": "00000000-0000-0000-0000-000000000000",
+                    "quantity": 1,
+                    "store_front_id": "143455",
+                    "sandbox": true,
+                    "errorMessage": null,
+                    "app_transaction_id": "705242908014669349",
+                    "transaction_reason": "PURCHASE",
+                    "original_purchase_date": 1769884662000,
+                    "store_front": "CAN",
+                    "itemId": "coins_100",
+                    "processed": false,
+                    "environment": "Sandbox",
+                    "raw_type": "Consumable",
+                    "bundle_id": "com.braincloud.newstorekit2bc",
+                    "purchase_date": 1769884662000
+                }
+            ],
+            "extra": {
+                "appleReceipt": "stringified json receipt data"
+            }
+        },
+        "rewards": {
+            "currency": {
+                "coins": 1000
+            },
+            "parentCurrency": {
+                "awesomeMaster": {
+                    "rubies": 2000
+                }
+            },
+            "peerCurrency": {
+                "peerApp": {
+                    "rogerCurrency": 30
+                }
+            }
+        }      
+    },
+    "status": 200
+}
+```
+
+</details>
+
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+
+| Code | Name                              | Description                                                                                                                                                                                                                    |
+| ---- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 0    | RESULT_OK                         | Successfully verified, new currencies awarded.                                                                                                                                                                                 |
+| 100  | RESULT_FAILED_ALREADY_PROCESSED   | Already verified and awarded currencies.                                                                                                                                                                                       |
+| 101  | RESULT_FAILED_APPSTORE_ERROR      | Purchase error with the used app store.                                                                                                                                                                                        |
+| 102  | RESULT_FAILED_PRODUCT_NOT_FOUND   | Cannot locate the product in <%= data.branding.productName %> Product Inventory. \*This is likely a configuration error in the <%= data.branding.productName %> product - double-check the price settings for the product.\*\* |
+| 103  | RESULT_FAILED_UNKNOWN_ERROR       | Unexpected error.                                                                                                                                                                                                              |
+| 104  | RESULT_FAILED_CONFIGURATION_ERROR | Configuration error on the used app store.                                                                                                                                                                                     |
+| 105  | RESULT_FAILED_REQUEST_ERROR       | Credential missing for used app store. Ensure Facebook or Stream credential is correct.                                                                                                                                        |
+
+</details>
