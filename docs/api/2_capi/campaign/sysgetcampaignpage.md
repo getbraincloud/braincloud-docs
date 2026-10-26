@@ -71,7 +71,7 @@ A single page returns at most 100 campaigns by default.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="lua" label="Roblox">
+<TabItem value="roblox" label="Roblox">
 ```
 
 ```lua

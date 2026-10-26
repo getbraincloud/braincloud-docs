@@ -62,7 +62,7 @@ Invalidates all sessions for the current user, including the current session.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="lua" label="Roblox">
+<TabItem value="roblox" label="Roblox">
 ```
 
 ```lua

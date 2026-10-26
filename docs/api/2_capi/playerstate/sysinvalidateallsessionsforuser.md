@@ -67,7 +67,7 @@ profileId | The profile ID of the user whose sessions should be invalidated.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="lua" label="Roblox">
+<TabItem value="roblox" label="Roblox">
 ```
 
 ```lua

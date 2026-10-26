@@ -82,7 +82,7 @@ A new scenario is not part of the campaign's traffic split until you give it a w
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="lua" label="Roblox">
+<TabItem value="roblox" label="Roblox">
 ```
 
 ```lua

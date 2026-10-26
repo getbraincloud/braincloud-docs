@@ -73,7 +73,7 @@ The list must include the control scenario (`_`), every scenario in it must alre
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="lua" label="Roblox">
+<TabItem value="roblox" label="Roblox">
 ```
 
 ```lua

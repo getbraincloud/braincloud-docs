@@ -70,7 +70,7 @@ Reads a campaign by campaign code and returns the full campaign configuration. O
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="lua" label="Roblox">
+<TabItem value="roblox" label="Roblox">
 ```
 
 ```lua

@@ -71,7 +71,7 @@ Triggers a campaign scenario for a specific player, optionally bypassing normal 
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="lua" label="Roblox">
+<TabItem value="roblox" label="Roblox">
 ```
 
 ```lua

@@ -75,7 +75,7 @@ configOverrides | Per-instance configuration overrides applied on top of the sta
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="lua" label="Roblox">
+<TabItem value="roblox" label="Roblox">
 ```
 
 ```lua

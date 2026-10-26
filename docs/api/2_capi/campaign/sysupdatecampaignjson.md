@@ -77,7 +77,7 @@ The campaign must not have ended. The updated payload is picked up by already-au
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="lua" label="Roblox">
+<TabItem value="roblox" label="Roblox">
 ```
 
 ```lua

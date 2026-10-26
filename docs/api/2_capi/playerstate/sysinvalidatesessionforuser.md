@@ -68,7 +68,7 @@ sessionId | The specific session ID to invalidate.
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="lua" label="Roblox">
+<TabItem value="roblox" label="Roblox">
 ```
 
 ```lua

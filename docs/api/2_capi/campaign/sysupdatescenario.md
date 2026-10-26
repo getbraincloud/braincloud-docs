@@ -76,7 +76,7 @@ If none of the supplied fields differ from the current values, the scenario is r
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="lua" label="Roblox">
+<TabItem value="roblox" label="Roblox">
 ```
 
 ```lua

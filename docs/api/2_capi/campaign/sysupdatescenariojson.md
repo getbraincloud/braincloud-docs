@@ -82,7 +82,7 @@ The owning campaign must not have ended. The updated payload is picked up by alr
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="lua" label="Roblox">
+<TabItem value="roblox" label="Roblox">
 ```
 
 ```lua

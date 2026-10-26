@@ -89,7 +89,7 @@ New campaigns are created **disabled** by default. Pass `"enabled": true` in `co
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="lua" label="Roblox">
+<TabItem value="roblox" label="Roblox">
 ```
 
 ```lua

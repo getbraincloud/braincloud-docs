@@ -69,7 +69,7 @@ Removes a player's participation in all campaigns, deleting all their CampaignPa
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="lua" label="Roblox">
+<TabItem value="roblox" label="Roblox">
 ```
 
 ```lua

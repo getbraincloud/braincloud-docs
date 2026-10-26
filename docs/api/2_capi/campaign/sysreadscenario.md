@@ -70,7 +70,7 @@ Reads a campaign scenario by campaign code and scenario code, and returns the fu
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="lua" label="Roblox">
+<TabItem value="roblox" label="Roblox">
 ```
 
 ```lua

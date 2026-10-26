@@ -76,7 +76,7 @@ pingData | Ping times for each region available for this lobby type. Can use GET
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="lua" label="Roblox">
+<TabItem value="roblox" label="Roblox">
 ```
 
 ```lua
