@@ -36,6 +36,7 @@ There are custom brainCloud libraries for:
 - **C++** - for platform-native apps, on iOS Android, Windows, etc.
 - **JS** - for web-based JavaScript apps
 - **Java** - for Java-based and native Android apps
+- **Lua** - for LÖVE games and LuaJIT / Lua 5.1 apps
 - **Objective-C** / **Swift** - for native Mac and iOS apps
 
 ## Engine Support
@@ -45,6 +46,7 @@ brainCloud supports the most popular gaming engines, including:
 - **Unity** - brainCloud provides C# libraries, examples and tutorials for integration with Unity
 - **Unreal** - brainCloud provides C++ and Blueprint libraries, examples and tutorials for the latest versions of the Unreal Engine
 - **Godot** - brainCloud now supports Godot via our C# libraries
+- **LÖVE** - brainCloud provides a Lua library and examples for LÖVE 11.4+
 
 ## Understanding the APIs
 
