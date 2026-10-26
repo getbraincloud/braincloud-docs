@@ -183,6 +183,26 @@ else:
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local lobbyType = "Relay_lobbyT_v2"
+local criteriaJson = { rating = { min = 10, max = 100 } }
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.lobby:getLobbyInstances(lobbyType, criteriaJson, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

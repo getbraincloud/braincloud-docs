@@ -176,6 +176,29 @@ N/A
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local leaderboardId = "the-leaderboard-id"
+local groupId = "the-group-id"
+local score = 0
+local data = { memberNickname = "batman" }
+local roundStartedEpoch = os.time() * 1000
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.tournament:postGroupTournamentScore(leaderboardId, groupId, score, data, roundStartedEpoch, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

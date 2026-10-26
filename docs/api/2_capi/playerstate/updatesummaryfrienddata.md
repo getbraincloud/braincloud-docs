@@ -163,6 +163,25 @@ else:
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local summaryFriendData = { xp = 12, attributeName = "value" }
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.playerState:updateSummaryFriendData(summaryFriendData, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

@@ -158,6 +158,26 @@ else:
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local entityIndexedId = "a-indexed-id"
+local maxReturn = 50
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.globalEntity:getListByIndexedId(entityIndexedId, maxReturn, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

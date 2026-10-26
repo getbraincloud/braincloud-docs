@@ -217,6 +217,31 @@ else:
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local lobbyType = "4v4"
+local rating = 76
+local otherUserCxIds = { "55555:aaa-bbb-ccc-ddd:asdfjkl" }
+local isReady = false
+local extraJson = {}
+local teamCode = "blue"
+local settings = {}
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.lobby:createLobby(lobbyType, rating, otherUserCxIds, isReady, extraJson, teamCode, settings, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

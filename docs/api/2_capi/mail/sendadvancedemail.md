@@ -256,6 +256,43 @@ else:
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local profileId = "f7144cc0-b996-440f-8459-21b0ecb91a10"
+local serviceParams = {
+    fromAddress = "email@company.com",
+    fromName = "Jane Doe",
+    replyToAddress = "optional@company.com",
+    replyToName = "Optional ReplyTo",
+    templateId = "d-www-xxx-yyy-zzz",
+    dynamicData = {
+        user = { firstName = "John", lastName = "Doe" },
+        resetLink = "www.dummuyLink.io"
+    },
+    categories = { "category1", "category2" },
+    attachments = {
+        {
+            content = "VGhpcyBhdHRhY2htZW50IHRleHQ=",
+            filename = "attachment.txt"
+        }
+    }
+}
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.mail:sendAdvancedEmail(profileId, serviceParams, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

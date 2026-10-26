@@ -177,6 +177,28 @@ else:
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local oldEmailAddress = "oldemail@email.com"
+local password = "password"
+local newEmailAddress = "newemail@email.com"
+local updateContactEmail = true
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.identity:changeEmailIdentity(oldEmailAddress, password, newEmailAddress, updateContactEmail, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

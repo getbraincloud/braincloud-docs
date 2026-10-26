@@ -173,6 +173,27 @@ else:
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local rangeDelta = 10
+local numMatches = 1
+local extraParams = { parm1 = 10 }
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.matchMaking:findPlayersUsingFilter(rangeDelta, numMatches, extraParams, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

@@ -211,6 +211,31 @@ N/A
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local leaderboardId = "default"
+local score = 10
+local jsonData = { nickname = "batman" }
+local leaderboardType = "HIGH_VALUE"
+local rotationResetUTC = os.time() * 1000
+local retainedCount = 2
+local numDaysToRotate = 4
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.leaderboard:postScoreToDynamicLeaderboardDaysUTC(leaderboardId, score, jsonData, leaderboardType, rotationResetUTC, retainedCount, numDaysToRotate, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

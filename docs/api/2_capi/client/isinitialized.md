@@ -79,6 +79,15 @@ N/A
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local isInitialized = <%= data.branding.codePrefix %>.client:isInitialized()
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

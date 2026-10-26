@@ -161,6 +161,28 @@ N/A
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local leaderboardId = "the-leaderboard-id"
+local tournamentCode = "exampleTournamentCode1"
+local groupId = "the-group-id"
+local initialScore = 0
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.tournament:joinGroupTournament(leaderboardId, tournamentCode, groupId, initialScore, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

@@ -89,6 +89,17 @@ else:
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local anonymousId = "1234-1234-1234-1234"
+
+<%= data.branding.codePrefix %>:setStoredAnonymousId(anonymousId)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

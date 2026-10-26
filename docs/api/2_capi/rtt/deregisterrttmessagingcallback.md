@@ -79,6 +79,15 @@ N/A
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+<%= data.branding.codePrefix %>.rttService:deregisterRTTMessagingCallback()
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

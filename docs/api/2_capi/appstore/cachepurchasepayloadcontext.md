@@ -180,6 +180,27 @@ N/A
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local storeId = "googlePlay"
+local iapId = "xxxxxxxx"
+local payload = "__bc:[1,itemid,0,199,-1]"
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.appStore:cachePurchasePayloadContext(storeId, iapId, payload, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

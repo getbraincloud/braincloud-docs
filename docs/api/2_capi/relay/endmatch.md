@@ -129,6 +129,17 @@ else:
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local json = { key = "value" }
+
+<%= data.branding.codePrefix %>.relay:endMatch(json)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

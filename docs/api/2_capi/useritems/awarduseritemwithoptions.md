@@ -170,6 +170,28 @@ N/A
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local defId = "sword001"
+local quantity = 1
+local includeDef = true
+local optionsJson = { blockIfExceedItemMaxStackable = false }
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.userItems:awardUserItemWithOptions(defId, quantity, includeDef, optionsJson, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

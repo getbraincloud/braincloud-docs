@@ -164,6 +164,27 @@ N/A
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local rangeDelta = 10
+local numMatches = 1
+local jsonAttributes = { key = "value" }
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.matchMaking:findPlayersWithAttributes(rangeDelta, numMatches, jsonAttributes, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

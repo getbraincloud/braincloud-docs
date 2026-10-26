@@ -230,6 +230,29 @@ N/A
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local defId = "StackableHealthPotion"
+local quantity = 1
+local shopId = "None"
+local includeDef = true
+local optionsJson = { blockIfExceedItemMaxStackable = true }
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.userItems:purchaseUserItemWithOptions(defId, quantity, shopId, includeDef, optionsJson, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

@@ -166,6 +166,27 @@ N/A
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local scriptName = "path/to/script1"
+local scriptData = { parm = "value" }
+local startDateInUTC = 1437579786000
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.script:scheduleRunScriptMillisUTC(scriptName, scriptData, startDateInUTC, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

@@ -156,6 +156,27 @@ N/A
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local googleUserAccountEmail = "g123456789"
+local idToken = "authTokenFromGoogle"
+local forceCreate = true
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>:smartSwitchAuthenticateGoogleOpenId(googleUserAccountEmail, idToken, forceCreate, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

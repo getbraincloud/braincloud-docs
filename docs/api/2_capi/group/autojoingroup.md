@@ -175,6 +175,27 @@ else:
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local groupType = "a-group-type-name"
+local autoJoinStrategy = "JoinRandomGroup"
+local dataQuery = {}
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.group:autoJoinGroup(groupType, autoJoinStrategy, dataQuery, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

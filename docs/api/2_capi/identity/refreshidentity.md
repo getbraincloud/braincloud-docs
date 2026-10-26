@@ -168,6 +168,27 @@ else:
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local externalId = "846557642688"
+local authenticationToken = "ghbiuhgvbiuhbiunbuibgin"
+local authenticationType = "Facebook"
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.identity:refreshIdentity(externalId, authenticationToken, authenticationType, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

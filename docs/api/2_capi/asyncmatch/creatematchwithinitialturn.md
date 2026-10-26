@@ -251,6 +251,32 @@ else:
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local opponentIds = {
+    { platform = "BC", id = "profile ID-1" },
+    { platform = "FB", id = "Facebook ID-1" }
+}
+local matchState = {}
+local pushNotificationMessage = "You have been entered into an async-match!"
+local nextPlayer = "Facebook ID-1"
+local summary = { Address = "South Africa" }
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.asyncMatch:createMatchWithInitialTurn(opponentIds, matchState, pushNotificationMessage, nextPlayer, summary, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

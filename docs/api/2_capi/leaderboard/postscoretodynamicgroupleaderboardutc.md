@@ -214,6 +214,32 @@ N/A
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local leaderboardId = "default"
+local groupId = "actual_group_id"
+local score = 10
+local jsonData = { nickname = "batman" }
+local leaderboardType = "HIGH_VALUE"
+local rotationType = "WEEKLY"
+local rotationResetUTC = 158778236487
+local retainedCount = 2
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.leaderboard:postScoreToDynamicGroupLeaderboardUTC(leaderboardId, groupId, score, jsonData, leaderboardType, rotationType, rotationResetUTC, retainedCount, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

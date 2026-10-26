@@ -169,6 +169,28 @@ N/A
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local authenticationType = "Universal"
+local externalId = "externalId"
+local continueAnon = true
+local extraJson = { key = "value" }
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.identity:detachAdvancedIdentity(authenticationType, externalId, continueAnon, extraJson, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

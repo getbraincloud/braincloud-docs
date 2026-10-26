@@ -182,6 +182,37 @@ N/A
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local category = "Tuning"
+local fileDetails = {
+    {
+        fileId = "hjvfsghguhuhrtghgh",
+        shortName = "short",
+        fileName = "fname",
+        relativeUrl = "http://",
+        absoluteUrl = "http://",
+        category = "Tuning",
+        date = 100000000000,
+        md5Hash = "njf8ehg8tr7htgheguhh"
+    }
+}
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.s3Handling:getUpdatedFiles(category, fileDetails, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

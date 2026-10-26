@@ -206,6 +206,30 @@ else:
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local ownerId = "the-owner-id"
+local matchId = "the-match-id"
+local pushContent = "An async-match has been completed!"
+local summary = {
+    completedBy = { display = "John Doe wins!", player = 2, reason = "victory" }
+}
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.asyncMatch:completeMatchWithSummaryData(ownerId, matchId, pushContent, summary, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

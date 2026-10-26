@@ -209,6 +209,33 @@ else:
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local stats = {
+    INNING = "INC#1",
+    INNINGSREM = "DEC#1",
+    OUTS = "RESET",
+    POINTS = "INC_TO_LIMIT#5#30",
+    PLAYERS = "SET#8",
+    HIGHESTHR = "MAX#3",
+    ESTIMATE = "MIN#5"
+}
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.globalStatistics:processStatistics(stats, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

@@ -177,6 +177,27 @@ else:
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local entityType = "athletes"
+local whereJson = { ["data.position"] = "forward" }
+local maxReturn = 2
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.customEntity:getRandomEntitiesMatching(entityType, whereJson, maxReturn, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

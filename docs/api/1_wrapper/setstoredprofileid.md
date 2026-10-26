@@ -89,6 +89,17 @@ else:
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local profileId = "1234-1234-1234-1234"
+
+<%= data.branding.codePrefix %>:setStoredProfileId(profileId)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

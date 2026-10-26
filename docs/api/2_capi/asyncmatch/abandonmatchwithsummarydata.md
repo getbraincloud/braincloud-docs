@@ -206,6 +206,34 @@ else:
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local ownerId = "the-owner-id"
+local matchId = "the-match-id"
+local pushContent = "An async-match has been abandoned!"
+local summary = {
+    abandonBy = {
+        display = "Match abandoned by John Doe.",
+        player = 2,
+        reason = "forfeit"
+    }
+}
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.asyncMatch:abandonMatchWithSummaryData(ownerId, matchId, pushContent, summary, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

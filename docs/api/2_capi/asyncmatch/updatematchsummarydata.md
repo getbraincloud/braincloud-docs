@@ -174,6 +174,28 @@ N/A
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local ownerId = "internalPlayerId"
+local matchId = "matchId"
+local version = 1
+local summary = { Address = "North America" }
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.asyncMatch:updateMatchSummaryData(ownerId, matchId, version, summary, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
