@@ -5,8 +5,10 @@ Client Cloud Code only. Drops every droppable item in the session user's invento
 Items published to the blockchain (have a `blockItemId`) and items that have been given away and are awaiting pickup (have `giftedTo`) are not dropped.
 
 :::caution
-This permanently deletes the user's items and cannot be undone. Unlike [DropUserItem](/api/capi/useritems/dropuseritem) and [SysDropMyUserItems](/api/capi/useritems/sysdropmyuseritems), no `DroppedItem` analytics events are recorded for the deleted items.
+This permanently deletes the user's items and cannot be undone.
 :::
+
+One `DroppedItem` analytics event is recorded for each item definition dropped, with the quantities of that definition's deleted items summed. Items whose item definition has been revoked or deleted are dropped but not reported.
 
 :::note
 Each user item deleted counts as one bulk API call. Nothing is counted if the user had no droppable items.
