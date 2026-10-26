@@ -2,7 +2,7 @@
 
 Gets the peer currency for the given currency type **or** all currency types if null passed in.
 
-<PartialServop service_name="virtualCurrency" operation_name="GET_PARENT_VC" />
+<PartialServop service_name="virtualCurrency" operation_name="GET_PEER_VC" />
 
 ## Method Parameters
 Parameter | Description

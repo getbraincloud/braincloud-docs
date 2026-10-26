@@ -2,7 +2,7 @@
 
 Add a member to the group. Optional parameters: jsonAttributes.
 
-<PartialServop service_name="group" operation_name="ADD_MEMBER_TO_GROUP" />
+<PartialServop service_name="group" operation_name="ADD_GROUP_MEMBER" />
 
 ## Method Parameters
 Parameter | Description

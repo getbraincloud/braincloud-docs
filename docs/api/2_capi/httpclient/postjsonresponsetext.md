@@ -2,7 +2,7 @@
 
 Posts a JSON document, expects a text response.
 
-<PartialServop service_name="httpClient" operation_name="POSRESPONSE_TEXT" / >
+<PartialServop service_name="httpClient" operation_name="POST_JSON_RESPONSE_TEXT" / >
 
 ## Usage
 

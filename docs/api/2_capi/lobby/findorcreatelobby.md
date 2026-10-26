@@ -2,7 +2,7 @@
 
 Finds a lobby matching the specified parameters, or creates one. Asynchronous - returns 200 to indicate that matchmaking has started.
 
-<PartialServop service_name="lobby" operation_name="FIND_LOBBY" />
+<PartialServop service_name="lobby" operation_name="FIND_OR_CREATE_LOBBY" />
 
 ## Method Parameters
 
@@ -351,7 +351,7 @@ if (postResult.status == 200) {
 ```r
 {
     "service": "lobby",
-    "operation": "FIND_LOBBY",
+    "operation": "FIND_OR_CREATE_LOBBY",
     "data": {
         "lobbyType": "4v4",
         "rating": 76,

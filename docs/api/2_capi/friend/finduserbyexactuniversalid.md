@@ -4,7 +4,7 @@ Retrieves profile information for the partial Universal ID matches of the specif
 
 Does not require the calling user to be a friend of the retrieved users.
 
-<PartialServop service_name="friend" operation_name="FIND_PLAYER_BY_EXACT_UNIVERSAL_ID" />
+<PartialServop service_name="friend" operation_name="FIND_USER_BY_EXACT_UNIVERSAL_ID" />
 
 ## Method Parameters
 
@@ -190,7 +190,7 @@ if (postResult.status == 200) {
 ```r
 {
     "service": "friend",
-    "operation": "FIND_PLAYER_BY_EXACT_UNIVERSAL_ID",
+    "operation": "FIND_USER_BY_EXACT_UNIVERSAL_ID",
     "data": {
         "searchText": "someUniversalId"
     }
