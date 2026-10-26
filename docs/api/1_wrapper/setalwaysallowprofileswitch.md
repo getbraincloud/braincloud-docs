@@ -86,6 +86,17 @@ N/A
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local allow = true
+
+<%= data.branding.codePrefix %>:setAlwaysAllowProfileSwitch(allow)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

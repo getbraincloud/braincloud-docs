@@ -97,6 +97,19 @@ N/A
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local globalErrorCallback = function(service, operation, statusCode, reasonCode, response)
+    print("Failed | " .. service .. " " .. operation .. " " .. tostring(statusCode) .. " " .. tostring(reasonCode))
+end
+
+<%= data.branding.codePrefix %>.client:registerGlobalErrorCallback(globalErrorCallback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

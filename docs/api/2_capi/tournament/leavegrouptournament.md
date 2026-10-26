@@ -116,7 +116,7 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="lua" label="Roblox">
+<TabItem value="roblox" label="Roblox">
 ```
 
 ```lua
@@ -139,6 +139,26 @@ end
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local leaderboardId = "the-leaderboard-id"
+local groupId = "the-group-id"
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.tournament:leaveGroupTournament(leaderboardId, groupId, callback)
 ```
 
 ```mdx-code-block

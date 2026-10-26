@@ -100,6 +100,25 @@ BrainCloudWrapper <%= data.branding.codePrefix %> = <%= data.branding.codeWrappe
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- LÖVE: main.lua
+local BrainCloud = require("braincloud")
+local <%= data.branding.codePrefix %> = BrainCloud.new("_mainWrapper")
+
+function love.load()
+    <%= data.branding.codePrefix %>:init() -- reads braincloud_config.lua, written by the brainCloud setup tool
+end
+
+function love.update(dt)
+    <%= data.branding.codePrefix %>:update() -- required: sends requests and fires callbacks
+end
+```
+
+```mdx-code-block
+</TabItem>
 </Tabs>
 </BrowserWindow>
 ```

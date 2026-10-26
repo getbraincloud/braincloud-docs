@@ -82,7 +82,7 @@ The owning campaign must not have ended. The updated payload is picked up by alr
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="lua" label="Roblox">
+<TabItem value="roblox" label="Roblox">
 ```
 
 ```lua
@@ -96,6 +96,15 @@ The owning campaign must not have ended. The updated payload is picked up by alr
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block

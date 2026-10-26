@@ -1,7 +1,7 @@
 # SysLaunchServer
 Launch a hosted server directly. Allows for the bypassing of brainCloud lobby matchmaking.
 
-<PartialServop service_name="roomServer" operation_name="LAUNCH_SERVER" />
+<PartialServop service_name="roomServer" operation_name="SYS_LAUNCH_SERVER" />
 
 ## Method Parameters
 Parameter | Description
@@ -88,6 +88,15 @@ N/A
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -111,7 +120,7 @@ var postResult = roomServerProxy.sysLaunchServer(serverName, scriptName, scriptD
 ```r
 {
     "service":"roomServer",
-    "operation":"LAUNCH_SERVER",
+    "operation":"SYS_LAUNCH_SERVER",
     "data":{
         "serverName":"my-server-type",
         "scriptName":"script-name",

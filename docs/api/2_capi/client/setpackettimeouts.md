@@ -97,6 +97,17 @@ N/A
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local packetTimeouts = { 15, 20, 35, 50 }
+
+<%= data.branding.codePrefix %>.client:setPacketTimeouts(packetTimeouts)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

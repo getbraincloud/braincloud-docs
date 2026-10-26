@@ -85,6 +85,17 @@ N/A
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local sendApiErrorCallbacks = false
+
+<%= data.branding.codePrefix %>.client:flushCachedMessages(sendApiErrorCallbacks)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

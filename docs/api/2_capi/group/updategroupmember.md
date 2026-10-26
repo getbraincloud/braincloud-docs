@@ -2,7 +2,7 @@
 
 Update a member of the group.
 
-<PartialServop service_name="group" operation_name="UPDATE_MEMBER_OF_GROUP" />
+<PartialServop service_name="group" operation_name="UPDATE_GROUP_MEMBER" />
 
 ## Method Parameters
 Parameter | Description
@@ -174,6 +174,28 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local groupId = "a-group-id"
+local profileId = "a-profile-id"
+local role = "MEMBER"
+local attributes = {}
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.group:updateGroupMember(groupId, profileId, role, attributes, callback)
 ```
 
 ```mdx-code-block

@@ -90,6 +90,17 @@ N/A
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local seconds = 10
+
+<%= data.branding.codePrefix %>.relay:setPingInterval(seconds)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

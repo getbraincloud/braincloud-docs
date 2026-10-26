@@ -71,7 +71,7 @@ Triggers a campaign scenario for a specific player, optionally bypassing normal 
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="lua" label="Roblox">
+<TabItem value="roblox" label="Roblox">
 ```
 
 ```lua
@@ -85,6 +85,15 @@ Triggers a campaign scenario for a specific player, optionally bypassing normal 
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block

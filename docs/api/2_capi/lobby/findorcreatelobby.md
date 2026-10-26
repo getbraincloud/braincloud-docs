@@ -2,7 +2,7 @@
 
 Finds a lobby matching the specified parameters, or creates one. Asynchronous - returns 200 to indicate that matchmaking has started.
 
-<PartialServop service_name="lobby" operation_name="FIND_LOBBY" />
+<PartialServop service_name="lobby" operation_name="FIND_OR_CREATE_LOBBY" />
 
 ## Method Parameters
 
@@ -279,6 +279,38 @@ else:
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local lobbyType = "4v4"
+local rating = 76
+local maxSteps = 3
+local algo = {
+    strategy = "ranged-absolute",
+    alignment = "center",
+    ranges = { 5, 7.5, 10 }
+}
+local filterJson = { cheater = false }
+local otherUserCxIds = { "55555:aaa-bbb-ccc-ddd:asdfjkl" }
+local settings = {}
+local isReady = false
+local extraJson = {}
+local teamCode = "blue"
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.lobby:findOrCreateLobby(lobbyType, rating, maxSteps, algo, filterJson, otherUserCxIds, settings, isReady, extraJson, teamCode, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
@@ -319,7 +351,7 @@ if (postResult.status == 200) {
 ```r
 {
     "service": "lobby",
-    "operation": "FIND_LOBBY",
+    "operation": "FIND_OR_CREATE_LOBBY",
     "data": {
         "lobbyType": "4v4",
         "rating": 76,

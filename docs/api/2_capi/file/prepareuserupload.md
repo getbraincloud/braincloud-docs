@@ -106,6 +106,41 @@ N/A
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local cloudPath = "cloudPath"
+local cloudFilename = "cloudFilename"
+local shareable = true
+local replaceIfExists = true
+local fileData = love.filesystem.read("save.dat")
+local fileSize = #fileData
+
+-- The uploader answers with an HTTP status code and the raw response body.
+local uploadCallback = function(code, body)
+    if code == 200 then
+        print("Uploaded")
+    else
+        print("Upload failed | " .. tostring(code) .. " " .. tostring(body))
+    end
+end
+
+<%= data.branding.codePrefix %>.file:prepareUserUpload(cloudPath, cloudFilename, shareable, replaceIfExists, fileSize, function(success, response)
+    if success then
+        -- send the bytes to the upload slot
+        local uploadId = response.data.fileDetails.uploadId
+        <%= data.branding.codePrefix %>.client:uploadFile(uploadId, cloudFilename, fileData, uploadCallback)
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end)
+
+-- <%= data.branding.codePrefix %>.file:uploadFile() and uploadFileFromMemory() do both steps for you.
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

@@ -219,6 +219,35 @@ else:
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local entityType = "athletes"
+local version = 1
+local dataJson = {
+    firstName = "Super",
+    surName = "Star",
+    position = "forward",
+    goals = 3,
+    assists = 5
+}
+local acl = { other = 1 }
+local timeToLive = nil
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.customEntity:updateSingleton(entityType, version, dataJson, acl, timeToLive, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

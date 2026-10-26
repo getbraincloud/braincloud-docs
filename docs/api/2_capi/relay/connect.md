@@ -143,6 +143,31 @@ N/A
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- `room` is the data of the lobby ROOM_READY event (see registerRTTLobbyCallback).
+local connectionType = <%= data.branding.codePrefix %>.relay.ConnectionType.UDP
+local options = {
+    host = room.connectData.address,
+    port = room.connectData.ports.udp,
+    passcode = room.passcode,
+    lobbyId = room.lobbyId
+}
+
+local onSuccess = function(message)
+    print("Connected to relay server")
+end
+local onFailure = function(message)
+    print("Relay connection failed | " .. tostring(message))
+end
+
+<%= data.branding.codePrefix %>.relay:connect(connectionType, options, onSuccess, onFailure)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

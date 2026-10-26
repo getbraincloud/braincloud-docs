@@ -99,6 +99,21 @@ N/A
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local eventCallback = function(response)
+    for _, event in ipairs(response.events) do
+        print("Event | " .. tostring(event.eventType))
+    end
+end
+
+<%= data.branding.codePrefix %>.client:registerEventCallback(eventCallback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

@@ -2,7 +2,7 @@
 
 Posts a JSON document, expects a text response.
 
-<PartialServop service_name="httpClient" operation_name="POSRESPONSE_TEXT" / >
+<PartialServop service_name="httpClient" operation_name="POST_JSON_RESPONSE_TEXT" / >
 
 ## Usage
 
@@ -77,6 +77,15 @@ Posts a JSON document, expects a text response.
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block

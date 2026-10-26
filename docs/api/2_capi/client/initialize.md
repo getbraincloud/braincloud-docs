@@ -127,6 +127,20 @@ N/A
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local serverUrl = "https://api.braincloudservers.com/dispatcherv2"
+local appId = "123456"
+local secret = "1234-1234-1234-1234"
+local appVersion = "1.0.0"
+
+<%= data.branding.codePrefix %>.client:initialize(serverUrl, appId, secret, appVersion)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

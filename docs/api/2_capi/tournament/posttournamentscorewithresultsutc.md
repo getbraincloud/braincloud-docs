@@ -213,6 +213,32 @@ N/A
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local leaderboardId = "leaderboardId1"
+local score = 0
+local data = { nickname = "withResults" }
+local roundStartedEpoch = os.time() * 1000
+local sort = "HIGH_TO_LOW"
+local beforeCount = 3
+local afterCount = 4
+local initialScore = 0
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.tournament:postTournamentScoreWithResultsUTC(leaderboardId, score, data, roundStartedEpoch, sort, beforeCount, afterCount, initialScore, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

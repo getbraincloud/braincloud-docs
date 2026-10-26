@@ -229,6 +229,31 @@ else:
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local name = "myGroupName"
+local groupType = "myGroupType"
+local isOpenGroup = false
+local acl = { member = 2, other = 0 }
+local data = {}
+local ownerAttributes = {}
+local defaultMemberAttributes = {}
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.group:createGroup(name, groupType, isOpenGroup, acl, data, ownerAttributes, defaultMemberAttributes, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

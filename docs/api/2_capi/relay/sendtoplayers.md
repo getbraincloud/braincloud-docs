@@ -112,6 +112,21 @@ N/A
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local data = "Hello"
+local playerMask = 2 ^ 1 + 2 ^ 3 -- one bit per netId: players 1 and 3
+local reliable = true
+local ordered = true
+local channel = <%= data.branding.codePrefix %>.relay.CHANNEL_HIGH_PRIORITY_1
+
+<%= data.branding.codePrefix %>.relay:sendToPlayers(data, playerMask, reliable, ordered, channel)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

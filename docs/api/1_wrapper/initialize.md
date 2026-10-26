@@ -147,6 +147,23 @@ else:
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local appId = "123456"
+local secret = "1234-1234-1234-1234"
+local appVersion = "1.0.0"
+local serverUrl = "<%= data.branding.serverUrl %>"
+
+<%= data.branding.codePrefix %>:initialize(appId, secret, appVersion, serverUrl)
+
+-- Or read braincloud_config.lua, written by the brainCloud setup tool:
+-- <%= data.branding.codePrefix %>:init()
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

@@ -211,6 +211,29 @@ else:
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local groupId = "a-group-id"
+local entityType = "myEntityType"
+local isOwnedByGroupMember = false
+local acl = { member = 2, other = 1 }
+local data = { aKey = "aValue" }
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.group:createGroupEntity(groupId, entityType, isOwnedByGroupMember, acl, data, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

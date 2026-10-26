@@ -163,6 +163,29 @@ else:
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local cloudPath = ""
+local cloudFilename = "hello.txt"
+local shareable = true
+local replaceIfExists = true
+local fileData = "hello, world!" -- a Lua string; binary data is fine
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.file:uploadFileFromMemory(cloudPath, cloudFilename, shareable, replaceIfExists, fileData, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

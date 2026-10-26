@@ -168,6 +168,26 @@ else:
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local appId = "123456"
+local secret = "1234-1234-1234-1234"
+local childAppId = "123457"
+local childSecret = "5678-5678-5678-5678"
+local secretMap = {
+    [appId] = secret,
+    [childAppId] = childSecret
+}
+local appVersion = "1.0.0"
+local serverUrl = "<%= data.branding.serverUrl %>"
+
+<%= data.branding.codePrefix %>:initializeWithApps(appId, secretMap, appVersion, serverUrl)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

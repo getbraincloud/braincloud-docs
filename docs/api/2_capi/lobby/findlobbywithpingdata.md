@@ -264,6 +264,49 @@ N/A
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- Needs ping data: call getRegionsForLobbies() and pingRegions() first.
+local lobbyType = "4v4"
+local rating = 76
+local maxSteps = 3
+local algo = {
+    strategy = "compound",
+    algos = {
+        {
+            criteria = "ping",
+            strategy = "absolute",
+            alignment = "absolute"
+        },
+        {
+            criteria = "rating",
+            strategy = "ranged-absolute",
+            alignment = "center"
+        }
+    },
+    ["compound-ranges"] = { { 30, { 5, 10 } }, { 50, { 10, 15 } } }
+}
+local filterJson = { cheater = false }
+local otherUserCxIds = { "123456:aaa-bbb-ccc-ddd:asdfjkl" }
+local isReady = false
+local extraJson = {}
+local teamCode = "blue"
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.lobby:findLobbyWithPingData(lobbyType, rating, maxSteps, algo, filterJson, otherUserCxIds, isReady, extraJson, teamCode, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

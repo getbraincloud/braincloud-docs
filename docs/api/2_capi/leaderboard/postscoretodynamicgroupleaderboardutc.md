@@ -2,7 +2,7 @@
 
 Post the group score to the given group leaderboard and dynamically create if necessary. LeaderboardType, rotationType, rotationReset, and retainedCount are required.
 
-<PartialServop service_name="leaderboard" operation_name="POST_GROUP_SCORE" />
+<PartialServop service_name="leaderboard" operation_name="POST_GROUP_SCORE_DYNAMIC" />
 
 :::caution
 This API is deprecated. Please use [PostScoreToDynamicGroupLeaderboardUsingConfig](/api/capi/leaderboard/postscoretodynamicgroupleaderboardusingconfig) instead.
@@ -210,6 +210,32 @@ end
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local leaderboardId = "default"
+local groupId = "actual_group_id"
+local score = 10
+local jsonData = { nickname = "batman" }
+local leaderboardType = "HIGH_VALUE"
+local rotationType = "WEEKLY"
+local rotationResetUTC = 158778236487
+local retainedCount = 2
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.leaderboard:postScoreToDynamicGroupLeaderboardUTC(leaderboardId, groupId, score, jsonData, leaderboardType, rotationType, rotationResetUTC, retainedCount, callback)
 ```
 
 ```mdx-code-block

@@ -201,6 +201,29 @@ else:
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local groupId = "dfsfsffsd"
+local fileId = "guid"
+local version = 1
+local newFilename = "cccc"
+local newAcl = { member = 2, other = 0 }
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.groupFile:updateFileInfo(groupId, fileId, version, newFilename, newAcl, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

@@ -192,6 +192,30 @@ else:
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local channelId = "22817:gl:CHAT_TRADE" -- APP_ID:CHANNEL_TYPE:CHANNEL_ID
+local content = {
+    text = "Looking to sell a couch for 105 gold coins.",
+    rich = { SELL_ITEM = { ITEM_TYPE = "COUCH", PRICE = "105", CURRENCY = "GOLDCOINS" } }
+}
+local recordInHistory = true
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.chat:postChatMessage(channelId, content, recordInHistory, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

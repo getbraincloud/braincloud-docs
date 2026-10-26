@@ -198,6 +198,30 @@ else:
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local peer = "test"
+local externalId = "email@email.com"
+local authenticationToken = "password"
+local authenticationType = "Email"
+local externalAuthName = ""
+local forceCreate = true
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.identity:attachPeerProfile(peer, externalId, authenticationToken, authenticationType, externalAuthName, forceCreate, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

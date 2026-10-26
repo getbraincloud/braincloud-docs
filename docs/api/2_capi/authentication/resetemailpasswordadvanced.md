@@ -194,6 +194,30 @@ else:
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local emailAddress = "email@email.com"
+local serviceParams = {
+    templateId = "d-template-id-guid",
+    dynamicData = { aKey = "aValue" },
+    categories = { "category1", "category2" }
+}
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.authentication:resetEmailPasswordAdvanced(emailAddress, serviceParams, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

@@ -229,6 +229,30 @@ else:
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local opponentIds = {
+    { platform = "BC", id = "profile ID-1" },
+    { platform = "FB", id = "Facebook ID-1" },
+    { platform = "FB", id = "Facebook ID-2" }
+}
+local pushNotificationMessage = "You have been entered into an async-match!"
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.asyncMatch:createMatch(opponentIds, pushNotificationMessage, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

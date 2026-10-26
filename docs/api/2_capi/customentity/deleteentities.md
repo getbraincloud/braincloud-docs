@@ -173,6 +173,34 @@ else:
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local entityType = "athletes"
+local deleteCriteria = {
+    entityId = {
+        ["$in"] = {
+            "aaaa-bbbb-cccc-dddd",
+            "ffff-gggg-hhhh-iiii",
+            "jjjj-kkkk-llll-mmmm"
+        }
+    }
+}
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.customEntity:deleteEntities(entityType, deleteCriteria, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

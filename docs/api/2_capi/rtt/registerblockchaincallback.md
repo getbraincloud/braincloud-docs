@@ -96,6 +96,19 @@ N/A
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local rttCallback = function(message)
+    print(message.operation, message.data)
+end
+
+<%= data.branding.codePrefix %>.rttService:registerRTTBlockchainCallback(rttCallback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

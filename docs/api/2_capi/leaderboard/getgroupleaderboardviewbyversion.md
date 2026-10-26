@@ -186,6 +186,30 @@ N/A
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local leaderboardId = "default"
+local groupId = "actual_group_id"
+local versionId = -1
+local sort = "HIGH_TO_LOW"
+local beforeCount = 3
+local afterCount = 4
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.leaderboard:getGroupLeaderboardViewByVersion(leaderboardId, groupId, versionId, sort, beforeCount, afterCount, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

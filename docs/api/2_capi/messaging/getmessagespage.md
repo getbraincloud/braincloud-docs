@@ -230,6 +230,29 @@ N/A
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local context = {
+    pagination = { rowsPerPage = 10, pageNumber = 1 },
+    searchCriteria = { msgbox = "inbox", read = false },
+    sortCriteria = { mbCr = 1, mbUp = -1 }
+}
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.messaging:getMessagesPage(context, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

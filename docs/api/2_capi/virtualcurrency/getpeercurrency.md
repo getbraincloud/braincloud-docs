@@ -2,7 +2,7 @@
 
 Gets the peer currency for the given currency type **or** all currency types if null passed in.
 
-<PartialServop service_name="virtualCurrency" operation_name="GET_PARENT_VC" />
+<PartialServop service_name="virtualCurrency" operation_name="GET_PEER_VC" />
 
 ## Method Parameters
 Parameter | Description
@@ -153,6 +153,26 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local vcId = "coins"
+local peerCode = "master"
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.virtualCurrency:getPeerCurrency(vcId, peerCode, callback)
 ```
 
 ```mdx-code-block

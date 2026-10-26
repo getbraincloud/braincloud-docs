@@ -200,6 +200,31 @@ else:
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local channelId = "55555:gl:bcDev"
+local msgId = "123456789"
+local version = 1
+local content = {
+    text = "New plain text message",
+    custom = { somethingNew = "amazing" }
+}
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.chat:updateChatMessage(channelId, msgId, version, content, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

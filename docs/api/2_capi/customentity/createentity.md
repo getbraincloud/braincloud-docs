@@ -219,6 +219,35 @@ else:
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local entityType = "athletes"
+local dataJson = {
+    firstName = "Super",
+    surName = "Star",
+    position = "forward",
+    goals = 2,
+    assists = 4
+}
+local acl = { other = 1 }
+local timeToLive = nil
+local isOwned = false
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.customEntity:createEntity(entityType, dataJson, acl, timeToLive, isOwned, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
