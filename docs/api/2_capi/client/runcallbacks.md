@@ -79,6 +79,18 @@ N/A
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- Call once per frame: it sends queued requests and fires their callbacks.
+function love.update(dt)
+    <%= data.branding.codePrefix %>.client:runCallbacks()
+end
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

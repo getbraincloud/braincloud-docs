@@ -112,6 +112,21 @@ else:
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local data = "Hello"
+local toNetId = 1
+local reliable = true
+local ordered = true
+local channel = <%= data.branding.codePrefix %>.relay.CHANNEL_HIGH_PRIORITY_1
+
+<%= data.branding.codePrefix %>.relay:send(data, toNetId, reliable, ordered, channel)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

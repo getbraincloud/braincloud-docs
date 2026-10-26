@@ -225,6 +225,32 @@ else:
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local ownerId = "internalPlayerId"
+local matchId = "matchId"
+local version = 1
+local matchState = {}
+local pushNotificationMessage = "You have been entered into an async-match!"
+local nextPlayer = "player2Id"
+local summary = { Address = "South Africa" }
+local statistics = { statsName = "statValue" }
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.asyncMatch:submitTurn(ownerId, matchId, version, matchState, pushNotificationMessage, nextPlayer, summary, statistics, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

@@ -83,6 +83,17 @@ N/A
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local netId = 1
+
+local profileId = <%= data.branding.codePrefix %>.relay:getProfileIdForNetId(netId)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

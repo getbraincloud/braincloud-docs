@@ -107,6 +107,20 @@ else:
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- json.op is CONNECT, NET_ID, DISCONNECT or MIGRATE_OWNER
+local systemCallback = function(json)
+    print(json.op, json.profileId)
+end
+
+<%= data.branding.codePrefix %>.relay:registerSystemCallback(systemCallback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

@@ -84,6 +84,15 @@ else:
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local ping = <%= data.branding.codePrefix %>.relay:getPing() -- milliseconds; 999 until the first ping returns
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

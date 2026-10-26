@@ -104,6 +104,20 @@ N/A
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local autoReconnectCallback = function(response)
+    -- handle the re-authentication result
+    print("Reconnect | " .. tostring(response.status))
+end
+
+<%= data.branding.codePrefix %>.client:registerAutoReconnectCallback(autoReconnectCallback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

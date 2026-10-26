@@ -142,6 +142,23 @@ N/A
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- RTT must be enabled for the app on the Design Portal.
+local onSuccess = function(message)
+    print("RTT enabled")
+end
+local onFailure = function(error)
+    print("RTT failed | " .. tostring(error.status_message or error))
+end
+
+<%= data.branding.codePrefix %>.rttService:enableRTT(onSuccess, onFailure)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

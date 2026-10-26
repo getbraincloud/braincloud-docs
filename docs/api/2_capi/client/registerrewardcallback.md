@@ -94,6 +94,19 @@ N/A
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local rewardCallback = function(rewards)
+    print("Rewards | " .. <%= data.branding.codePrefix %>.json.encode(rewards))
+end
+
+<%= data.branding.codePrefix %>.client:registerRewardCallback(rewardCallback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

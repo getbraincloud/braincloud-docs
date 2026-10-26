@@ -110,6 +110,19 @@ else:
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local relayCallback = function(netId, data)
+    print("From " .. tostring(netId) .. ": " .. data)
+end
+
+<%= data.branding.codePrefix %>.relay:registerRelayCallback(relayCallback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 

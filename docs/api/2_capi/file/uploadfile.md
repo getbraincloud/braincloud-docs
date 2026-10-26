@@ -148,6 +148,29 @@ N/A
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local cloudPath = ""
+local cloudFilename = "image.png"
+local shareable = true
+local replaceIfExists = true
+local localPath = "screenshots/image.png" -- read with love.filesystem (or io.open outside LÖVE)
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.file:uploadFile(cloudPath, cloudFilename, shareable, replaceIfExists, localPath, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="cfs" label="Cloud Code">
 ```
 
