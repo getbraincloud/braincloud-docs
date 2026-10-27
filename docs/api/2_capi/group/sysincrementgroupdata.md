@@ -73,7 +73,7 @@ jsonData | Partial data map with incremental values
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

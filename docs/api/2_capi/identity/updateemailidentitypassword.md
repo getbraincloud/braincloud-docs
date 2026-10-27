@@ -73,7 +73,7 @@ newPassword | The new password to associate with the user's email identity.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

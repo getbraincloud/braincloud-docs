@@ -74,7 +74,7 @@ Connect to a chat channel.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

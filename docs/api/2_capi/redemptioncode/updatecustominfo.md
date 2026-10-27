@@ -76,7 +76,7 @@ Update the custom information for a redemption code for a personal ('single-use'
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

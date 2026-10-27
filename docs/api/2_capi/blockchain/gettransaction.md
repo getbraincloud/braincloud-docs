@@ -73,7 +73,7 @@ transactionId | The target transaction id.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

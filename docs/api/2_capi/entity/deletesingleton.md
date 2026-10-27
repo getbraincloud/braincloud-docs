@@ -132,15 +132,15 @@ if (result.statusCode == 200) {
 local entityType = "settings"
 local version = -1
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getEntityService():deleteSingleton(entityType, version, callback)
+<%= data.branding.codePrefix %>.entity:deleteSingleton(entityType, version, callback)
 ```
 
 ```mdx-code-block

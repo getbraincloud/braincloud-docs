@@ -81,7 +81,7 @@ This service allows you to send events to specified players.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

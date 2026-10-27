@@ -74,7 +74,7 @@ summaryData | Public summary data for the group that is viewable even by non-mem
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

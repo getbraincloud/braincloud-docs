@@ -72,7 +72,7 @@ category | Optional. The product item category to filter on. Leave blank or null
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

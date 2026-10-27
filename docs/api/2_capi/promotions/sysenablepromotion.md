@@ -74,7 +74,7 @@ enabled | Flag true to enable promotion, false to disable promotion.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

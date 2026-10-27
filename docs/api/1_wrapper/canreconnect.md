@@ -70,7 +70,7 @@ BCErrorCompletionBlock failureBlock; // define callback
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:canReconnect()
+-- N/A
 ```
 
 ```mdx-code-block

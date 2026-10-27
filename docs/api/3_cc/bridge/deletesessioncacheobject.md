@@ -71,7 +71,7 @@ Deletes the named JSON object from the session cache.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -73,7 +73,7 @@ Retrieves list of indexes configured for a custom entity collection.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

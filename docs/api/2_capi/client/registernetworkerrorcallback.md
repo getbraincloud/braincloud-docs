@@ -77,11 +77,7 @@ void networkErrorCallback() {
 ```
 
 ```lua
-void networkErrorCallback() {
- // ...
-}
-​
-<%= data.branding.codePrefix %>:registerNetworkErrorCallback(networkErrorCallback)
+-- N/A
 ```
 
 ```mdx-code-block

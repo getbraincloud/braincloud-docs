@@ -132,15 +132,15 @@ if (result.statusCode == 200) {
 ```lua
 local handoffCode = "handoffCode"
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getAuthenticationService():authenticateSettopHandoff(handoffCode, callback)
+<%= data.branding.codePrefix %>.authentication:authenticateSettopHandoff(handoffCode, callback)
 ```
 
 ```mdx-code-block

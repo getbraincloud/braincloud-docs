@@ -107,17 +107,18 @@ if (result.statusCode == 200) {
 
 ```lua
 local twitterId = "someId"
-local authenticationToken = "someToken"
+local token = "someToken"
+local secret = "someSecret"
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getIdentityService():attachTwitterIdentity(twitterId, authenticationToken, callback)
+<%= data.branding.codePrefix %>.identity:attachTwitterIdentity(twitterId, token, secret, callback)
 ```
 
 ```mdx-code-block

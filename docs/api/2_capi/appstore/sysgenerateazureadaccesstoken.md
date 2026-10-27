@@ -73,7 +73,7 @@ Generates an Azure AD access token.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

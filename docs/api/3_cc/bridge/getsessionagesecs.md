@@ -65,7 +65,7 @@ Returns the age of the current player session in seconds as a floating-point num
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

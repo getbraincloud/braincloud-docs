@@ -71,7 +71,7 @@ lobbyId | The id of lobby that should be kept alive.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

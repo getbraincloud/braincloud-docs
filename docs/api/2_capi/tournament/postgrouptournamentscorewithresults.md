@@ -187,18 +187,18 @@ local data = {
     memberNickname= "batman"
 }
 local roundStartedEpoch = [[#ts]]
-local sort = "HIGH_TO_LOW"
+local sort = <%= data.branding.codePrefix %>.leaderboard.SortOrder.HIGH_TO_LOW
 local beforeCount = 3
 local afterCount = 4
 local initialScore = 0
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
-<%= data.branding.codePrefix %>:getTournamentService():postGroupTournamentScoreWithResults(leaderboardId, groupId, score, data, roundStartedEpoch, sort, beforeCount, afterCount, initialScore, callback)
+<%= data.branding.codePrefix %>.tournament:postGroupTournamentScoreWithResults(leaderboardId, groupId, score, data, roundStartedEpoch, sort, beforeCount, afterCount, initialScore, callback)
 ```
 
 ```mdx-code-block

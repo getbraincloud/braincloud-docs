@@ -78,7 +78,7 @@ If any real purchases of the product exist, product deletion will be disallowed 
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

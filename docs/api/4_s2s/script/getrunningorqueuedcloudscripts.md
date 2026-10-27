@@ -73,7 +73,7 @@ Retrieves scripts currently running or queued.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

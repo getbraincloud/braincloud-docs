@@ -103,7 +103,7 @@ For the full statistics grammar see the [statistics grammar section](/api/append
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

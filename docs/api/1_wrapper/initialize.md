@@ -126,9 +126,7 @@ appId = "123456";
 ```
 
 ```lua
-local secret = "1234-1234-1234-1234"
-local appId = "123456"
-<%= data.branding.codePrefix %>:init(secret, appId, "1.0.0", 50)
+-- N/A
 ```
 
 ```mdx-code-block

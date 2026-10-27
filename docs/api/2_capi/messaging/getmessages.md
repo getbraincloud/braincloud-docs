@@ -139,15 +139,15 @@ local msgBox = "inbox"
 local msgIds = { "msgId1", "msgId2" }
 local markAsRead = false
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getMessagingService():getMessages(msgBox, msgIds, markAsRead, callback)
+<%= data.branding.codePrefix %>.messaging:getMessages(msgBox, msgIds, markAsRead, callback)
 ```
 
 ```mdx-code-block

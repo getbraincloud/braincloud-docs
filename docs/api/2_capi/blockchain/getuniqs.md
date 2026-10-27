@@ -129,15 +129,15 @@ if (result.statusCode == 200) {
 local integrationId = "default"
 local contextJson = {}
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getBlockchainService():getUniqs(integrationId, contextJson, callback)
+<%= data.branding.codePrefix %>.blockchain:getUniqs(integrationId, contextJson, callback)
 ```
 
 ```mdx-code-block

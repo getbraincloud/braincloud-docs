@@ -75,7 +75,7 @@ Returns the report matching given subject, recurrence and startDate criteria, if
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

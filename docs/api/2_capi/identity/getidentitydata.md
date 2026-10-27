@@ -78,7 +78,7 @@ Retrieves identity data for given identity type for this profile.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

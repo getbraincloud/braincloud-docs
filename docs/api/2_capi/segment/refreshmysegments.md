@@ -69,7 +69,7 @@ Refreshes the segments for the current user. Available via cloud-code only.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

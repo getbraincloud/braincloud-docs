@@ -65,7 +65,7 @@ Run callbacks, to be called once per frame from your main thread
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:update()
+-- N/A
 ```
 
 ```mdx-code-block

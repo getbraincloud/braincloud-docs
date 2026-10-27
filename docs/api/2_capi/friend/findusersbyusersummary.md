@@ -83,7 +83,7 @@ maxResults | Maximum number of results to return.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

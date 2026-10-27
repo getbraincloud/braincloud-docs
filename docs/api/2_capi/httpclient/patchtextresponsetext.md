@@ -76,7 +76,7 @@ text | Text to patch
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

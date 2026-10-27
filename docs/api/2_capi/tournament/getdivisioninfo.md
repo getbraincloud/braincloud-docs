@@ -120,15 +120,15 @@ if (result.statusCode == 200) {
 ```lua
 local divSetId = "exampleDivSetId"
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getTournamentService():getDivisionInfo(divSetId, callback)
+<%= data.branding.codePrefix %>.tournament:getDivisionInfo(divSetId, callback)
 ```
 
 ```mdx-code-block

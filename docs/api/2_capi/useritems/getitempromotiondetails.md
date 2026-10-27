@@ -142,15 +142,15 @@ local shopId = "None"
 local includeDef = True
 local includePromotionDetails = True
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getUserItemsService():getItemPromotionDetails(defId, shopId, includeDef, includePromotionDetails, callback)
+<%= data.branding.codePrefix %>.userItems:getItemPromotionDetails(defId, shopId, includeDef, includePromotionDetails, callback)
 ```
 
 ```mdx-code-block

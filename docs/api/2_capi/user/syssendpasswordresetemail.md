@@ -72,7 +72,7 @@ profileId | The profileId of the user to send the password reset email to
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

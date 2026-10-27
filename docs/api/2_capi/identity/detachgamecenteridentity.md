@@ -98,15 +98,15 @@ if (result.statusCode == 200) {
 local gameCenterId = "someId"
 local continueAnon = true
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getIdentityService():detachGameCenterIdentity(gameCenterId, continueAnon, callback)
+<%= data.branding.codePrefix %>.identity:detachGameCenterIdentity(gameCenterId, continueAnon, callback)
 ```
 
 ```mdx-code-block

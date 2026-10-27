@@ -74,7 +74,7 @@ Deletes the specified promotion from the server.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

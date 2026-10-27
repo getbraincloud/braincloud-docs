@@ -122,14 +122,14 @@ if (result.statusCode == 200) {
 ```lua
 local leaderboardId = "^D^exampleDivSetId^1"
 local groupId = "the-group-id"
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
-<%= data.branding.codePrefix %>:getTournamentService():leaveGroupDivisionInstance(leaderboardId, groupId, callback)
+<%= data.branding.codePrefix %>.tournament:leaveGroupDivisionInstance(leaderboardId, groupId, callback)
 ```
 
 ```mdx-code-block

@@ -79,7 +79,7 @@ var res = proxy.runScript("scriptName", scriptdata);
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

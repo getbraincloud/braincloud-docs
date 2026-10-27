@@ -73,7 +73,7 @@ skipResetIfUserXPPointsAlreadyLower | If the given xp_points is HIGHER than the 
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

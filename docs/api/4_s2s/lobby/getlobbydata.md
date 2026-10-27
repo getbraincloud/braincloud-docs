@@ -73,7 +73,7 @@ Returns the data for the specified lobby, including member data.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -73,7 +73,7 @@ recurse | Whether to recurse into subdirectories
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

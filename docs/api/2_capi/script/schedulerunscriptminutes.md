@@ -143,15 +143,15 @@ local scriptData = {
 }
 local minutesFromNow = 1
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getScriptService():scheduleRunScriptMinutes(scriptName, scriptData, minutesFromNow, callback)
+<%= data.branding.codePrefix %>.script:scheduleRunScriptMinutes(scriptName, scriptData, minutesFromNow, callback)
 ```
 
 ```mdx-code-block

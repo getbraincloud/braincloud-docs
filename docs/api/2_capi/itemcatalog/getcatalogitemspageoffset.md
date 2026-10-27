@@ -127,15 +127,15 @@ if (result.statusCode == 200) {
 local context = "eyJzZWFyY2hDcml0ZXJpYSI6eyJlbnRpdHlUeXBlIjp7IiRyZWdleCI6Ii4qaWxkLioiLCIkb3B0"
 local pageOffset = 1
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getItemCatalogService():getCatalogItemsPageOffset(context, pageOffset, callback)
+<%= data.branding.codePrefix %>.itemCatalog:getCatalogItemsPageOffset(context, pageOffset, callback)
 ```
 
 ```mdx-code-block

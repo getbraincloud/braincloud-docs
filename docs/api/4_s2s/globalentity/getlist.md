@@ -86,7 +86,7 @@ Along with all custom data (using `data.`). For more information on the query sy
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

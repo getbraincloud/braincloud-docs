@@ -72,7 +72,7 @@ month | The month to retrieve the data for, in "yyyy-MM" format. If empty, uses 
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

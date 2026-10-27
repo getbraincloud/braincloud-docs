@@ -74,7 +74,7 @@ levelName | Name of the parent level.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

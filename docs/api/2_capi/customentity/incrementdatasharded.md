@@ -152,25 +152,7 @@ if (result.statusCode == 200) {
 ```
 
 ```lua
-local entityType = "athletes"
-local entityId = "aaaa-bbbb-cccc-dddd"
-local fieldsJson = {
-  goals = 3,
-  assists = 5
-}
-local shardKeyJson = {
-  ownerId = "profileIdOfEntityOwner"
-}
-
-local callback = function(result)
-    if result.statusCode == 200 then
-        print("Success")
-    else
-        print("Failed | " .. tostring(result.status))
-    end
-end
-
-<%= data.branding.codePrefix %>:getCustomEntityService():incrementDataSharded(entityType, entityId, fieldsJson, shardKeyJson, callback)
+-- N/A
 ```
 
 ```mdx-code-block

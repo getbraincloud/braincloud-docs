@@ -74,7 +74,7 @@ Reads a campaign scenario by campaign code and scenario code, and returns the fu
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

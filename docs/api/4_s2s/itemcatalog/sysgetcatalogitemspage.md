@@ -73,7 +73,7 @@ Retrieves page of catalog items from the server, with full language fields mappi
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

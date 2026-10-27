@@ -118,15 +118,15 @@ if (result.statusCode == 200) {
 ```lua
 local entityType = "entityType"
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getFriendService():readFriendsEntities(entityType, callback)
+<%= data.branding.codePrefix %>.friend:readFriendsEntities(entityType, callback)
 ```
 
 ```mdx-code-block

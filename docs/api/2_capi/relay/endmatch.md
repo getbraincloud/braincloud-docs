@@ -98,17 +98,9 @@ if (result.statusCode == 200) {
 ```
 
 ```lua
-local payloadJson = {key = "value"}
+local json = { key = "value" }
 
-local callback = function(result)
-    if result.statusCode == 200 then
-        print("Success")
-    else
-        print("Failed | " .. tostring(result.status))
-    end
-end
-
-<%= data.branding.codePrefix %>:getRelayService():endMatch(payloadJson, callback)
+<%= data.branding.codePrefix %>.relay:endMatch(json)
 ```
 
 ```mdx-code-block

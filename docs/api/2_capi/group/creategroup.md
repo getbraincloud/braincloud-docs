@@ -191,15 +191,15 @@ local data = {}
 local ownerAttributes = {}
 local defaultMemberAttributes = {}
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getGroupService():createGroup(name, groupType, isOpenGroup, acl, data, ownerAttributes, defaultMemberAttributes, callback)
+<%= data.branding.codePrefix %>.group:createGroup(name, groupType, isOpenGroup, acl, data, ownerAttributes, defaultMemberAttributes, callback)
 ```
 
 ```mdx-code-block

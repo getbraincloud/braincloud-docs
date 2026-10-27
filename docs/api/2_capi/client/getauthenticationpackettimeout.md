@@ -67,7 +67,7 @@ var timeout = <%= data.branding.codePrefix %>.getAuthenticationPacketTimeout();
 ```
 
 ```lua
-local timeout = <%= data.branding.codePrefix %>:getAuthenticationPacketTimeout()
+-- N/A
 ```
 
 ```mdx-code-block

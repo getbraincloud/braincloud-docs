@@ -173,15 +173,15 @@ local treeVersion = 1
 local newFilename = "gfile"
 local overwriteIfPresent = true
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getGroupFileService():moveFile(groupId, fileId, version, newTreeId, treeVersion, newFilename, overwriteIfPresent, callback)
+<%= data.branding.codePrefix %>.groupFile:moveFile(groupId, fileId, version, newTreeId, treeVersion, newFilename, overwriteIfPresent, callback)
 ```
 
 ```mdx-code-block

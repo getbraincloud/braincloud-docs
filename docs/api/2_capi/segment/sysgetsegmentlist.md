@@ -67,7 +67,7 @@ Returns a list of all segments with basic meta-data. i.e. does not include the c
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

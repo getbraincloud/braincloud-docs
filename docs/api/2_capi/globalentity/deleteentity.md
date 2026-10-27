@@ -131,15 +131,15 @@ if (result.statusCode == 200) {
 local entityId = "a-entity-id"
 local version = 2
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getGlobalEntityService():deleteEntity(entityId, version, callback)
+<%= data.branding.codePrefix %>.globalEntity:deleteEntity(entityId, version, callback)
 ```
 
 ```mdx-code-block

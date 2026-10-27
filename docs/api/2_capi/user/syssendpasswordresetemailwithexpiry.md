@@ -73,7 +73,7 @@ tokenTtlInMinutes | The time-to-live for the password reset url, in minutes.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

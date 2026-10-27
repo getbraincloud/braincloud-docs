@@ -74,7 +74,7 @@ configJson | Configuration data defining the division set configuration changes,
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -76,7 +76,7 @@ See the [Generic Paged Queries](/api/appendix/genericpagedqueries) documentation
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

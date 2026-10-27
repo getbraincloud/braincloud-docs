@@ -65,7 +65,7 @@ Deregisters the file upload callback
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:deregisterFileUploadCallback()
+-- N/A
 ```
 
 ```mdx-code-block

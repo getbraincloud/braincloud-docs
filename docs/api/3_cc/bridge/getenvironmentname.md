@@ -67,7 +67,7 @@ This returns the name of the deployment environment that app is running within.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

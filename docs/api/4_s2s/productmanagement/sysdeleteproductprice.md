@@ -75,7 +75,7 @@ Deletes a price for the given product item. If the priceId being deleted is the 
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

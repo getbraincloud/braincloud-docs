@@ -154,15 +154,15 @@ local newItemData = {
 }
 local includeDef = true
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getUserItemsService():useUserItem(itemId, version, newItemData, includeDef, callback)
+<%= data.branding.codePrefix %>.userItems:useUserItem(itemId, version, newItemData, includeDef, callback)
 ```
 
 ```mdx-code-block

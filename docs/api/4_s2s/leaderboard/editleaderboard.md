@@ -102,7 +102,7 @@ Edits a existing leaderboard under the context of the current game. You can opti
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

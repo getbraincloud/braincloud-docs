@@ -118,7 +118,7 @@ questJson | A json object describing the quest to create.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

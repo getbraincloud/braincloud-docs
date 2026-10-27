@@ -158,15 +158,15 @@ local substitutionsJson = {
     ["1"] = "value1"
 }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getPushNotificationService():sendTemplatedPushNotificationToGroup(groupId, notificationTemplateId, substitutionsJson, callback)
+<%= data.branding.codePrefix %>.pushNotification:sendTemplatedPushNotificationToGroup(groupId, notificationTemplateId, substitutionsJson, callback)
 ```
 
 ```mdx-code-block

@@ -67,7 +67,7 @@ RTTConnectionStatus? response = _bc.rttService.getConnectionStatus();
 ```
 
 ```lua
-local response = <%= data.branding.codePrefix %>:getRttService():getConnectionStatus()
+local response = <%= data.branding.codePrefix %>.rttService:getConnectionStatus()
 ```
 
 ```mdx-code-block

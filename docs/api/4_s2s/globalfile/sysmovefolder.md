@@ -81,7 +81,7 @@ Move a folder (and its contents). Returns the updated directory tree.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -76,7 +76,7 @@ The campaign configuration is re-validated before it is enabled, so a campaign t
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

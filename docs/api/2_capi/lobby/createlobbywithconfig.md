@@ -204,15 +204,15 @@ if (result.statusCode == 200) {
 ```lua
 local lobbyType = "4v4"
 local rating = 76
-local otherUserCxIds = [
+local otherUserCxIds = {
     "55555:aaa-bbb-ccc-ddd:asdfjkl"
-]
+}
 local settings = {}
 local isReady = false
 local extraJson = {}
 local teamCode = "reserved"
 local configOverrides = {
-    teams= [
+    teams= {
         {
             code= "reserved",
             minUsers= 0,
@@ -225,16 +225,16 @@ local configOverrides = {
             maxUsers= 6,
             autoAssign= true
         }
-    ]
+    }
 }
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
-<%= data.branding.codePrefix %>:getLobbyService():createLobbyWithConfig(lobbyType, rating, otherUserCxIds, settings, isReady, extraJson, teamCode, configOverrides, callback)
+<%= data.branding.codePrefix %>.lobby:createLobbyWithConfig(lobbyType, rating, otherUserCxIds, isReady, extraJson, teamCode, settings, configOverrides, callback)
 ```
 
 ```mdx-code-block

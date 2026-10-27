@@ -65,7 +65,7 @@ This returns true if the script context is server.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

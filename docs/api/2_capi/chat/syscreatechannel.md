@@ -73,7 +73,7 @@ channelSubId | An app-defined channel sub id. Only letters, numbers, dashes, and
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

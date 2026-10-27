@@ -74,7 +74,7 @@ notes | A field for recording something noteworthy about this user.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

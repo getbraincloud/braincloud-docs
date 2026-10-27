@@ -74,7 +74,7 @@ Retrieves the list of global files stored at the specified directory location.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

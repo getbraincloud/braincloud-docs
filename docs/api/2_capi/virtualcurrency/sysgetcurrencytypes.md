@@ -67,7 +67,7 @@ Retrieves the virtual currency types defined for the current app.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -85,7 +85,7 @@ tSettingsJson | Tournament and tPhases settings changes for the in-progress lead
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

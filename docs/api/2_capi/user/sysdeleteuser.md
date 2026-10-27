@@ -67,7 +67,7 @@ Delete user with option to also delete user's children.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

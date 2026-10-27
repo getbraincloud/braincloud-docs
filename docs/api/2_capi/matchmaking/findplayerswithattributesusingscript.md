@@ -85,7 +85,7 @@ jsonExtraParms | Parameters to be passed to the filter
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

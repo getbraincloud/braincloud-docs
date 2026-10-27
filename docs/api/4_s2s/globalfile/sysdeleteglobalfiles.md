@@ -80,7 +80,7 @@ Delete all the files in the specified directory. Returns a list of the files tha
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

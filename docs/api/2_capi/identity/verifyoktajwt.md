@@ -85,7 +85,7 @@ jwtString | JWT string (passed in as `data.authenticationToken` to the script)
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

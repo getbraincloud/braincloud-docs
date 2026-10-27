@@ -118,15 +118,15 @@ if (result.statusCode == 200) {
 ```lua
 local userName = "someName"
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getPlayerStateService():updateUserName(userName, callback)
+<%= data.branding.codePrefix %>.playerState:updateUserName(userName, callback)
 ```
 
 ```mdx-code-block

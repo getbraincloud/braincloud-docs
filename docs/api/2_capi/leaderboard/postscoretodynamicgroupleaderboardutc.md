@@ -184,23 +184,21 @@ if (result.statusCode == 200) {
 local leaderboardId = "default"
 local groupId = "actual_group_id"
 local score = 10
-local data = {
-    nickname = "batman"
-}
-local leaderboardType = SocialLeaderboardType.HIGH_VALUE
-local rotationType = RotationType.WEEKLY
-local rotationResetTime = 158778236487
+local jsonData = { nickname = "batman" }
+local leaderboardType = "HIGH_VALUE"
+local rotationType = "WEEKLY"
+local rotationResetUTC = 158778236487
 local retainedCount = 2
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getLeaderboardService():postScoreToGroupLeaderboardUTC(leaderboardId, groupId, score, data, leaderboardType, rotationType, rotationResetTime, retainedCount, callback)
+<%= data.branding.codePrefix %>.leaderboard:postScoreToDynamicGroupLeaderboardUTC(leaderboardId, groupId, score, jsonData, leaderboardType, rotationType, rotationResetUTC, retainedCount, callback)
 ```
 
 ```mdx-code-block

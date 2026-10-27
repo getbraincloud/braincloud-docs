@@ -130,15 +130,15 @@ local share = true
 local overwrite = true
 local encodedText = utf8.encode("hello, world!")
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getFileService():uploadFileFromMemory(cloudPath, cloudName, share, overwrite, encodedText, callback)
+<%= data.branding.codePrefix %>.file:uploadFileFromMemory(cloudPath, cloudName, share, overwrite, encodedText, callback)
 ```
 
 ```mdx-code-block

@@ -218,15 +218,15 @@ local facebookContent = {
 }
 local startTime = 1437579786000
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getPushNotificationService():scheduleRawPushNotificationUTC(profileId, fcmContent, iosContent, facebookContent, startTime, callback)
+<%= data.branding.codePrefix %>.pushNotification:scheduleRawPushNotificationUTC(profileId, fcmContent, iosContent, facebookContent, startTime, callback)
 ```
 
 ```mdx-code-block

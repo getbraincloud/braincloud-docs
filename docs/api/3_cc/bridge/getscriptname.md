@@ -65,7 +65,7 @@ This returns the name (including path) of the currently running script.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

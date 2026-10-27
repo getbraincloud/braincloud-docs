@@ -67,7 +67,7 @@ var isAuthenticated = <%= data.branding.codePrefix %>.isAuthenticated();
 ```
 
 ```lua
-local isAuthenticated = <%= data.branding.codePrefix %>:isAuthenticated()
+-- N/A
 ```
 
 ```mdx-code-block

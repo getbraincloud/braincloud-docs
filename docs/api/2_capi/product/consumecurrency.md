@@ -123,7 +123,7 @@ var amount = 1;
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

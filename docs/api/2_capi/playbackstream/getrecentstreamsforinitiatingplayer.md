@@ -129,15 +129,15 @@ if (result.statusCode == 200) {
 local initiatingPlayerId = "player"
 local maxNumStreams = 5
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getPlaybackStreamService():getRecentStreamsForInitiatingPlayer(initiatingPlayerId, maxNumStreams, callback)
+<%= data.branding.codePrefix %>.playbackStream:getRecentStreamsForInitiatingPlayer(initiatingPlayerId, maxNumStreams, callback)
 ```
 
 ```mdx-code-block

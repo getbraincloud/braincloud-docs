@@ -78,7 +78,7 @@ Post score to another user.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

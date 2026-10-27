@@ -72,7 +72,7 @@ isActiveOnly | Optional flag to include only actively flagged users. Default is 
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

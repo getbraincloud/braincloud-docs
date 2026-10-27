@@ -73,7 +73,7 @@ Deletes a dynamic chat channel. Channel type must be "dy". This will delete the 
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

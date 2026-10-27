@@ -136,15 +136,15 @@ if (result.statusCode == 200) {
 local vcId = "coins"
 local vcAmount = 1
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getVirtualCurrencyService():awardCurrency(vcId, vcAmount, callback)
+<%= data.branding.codePrefix %>.virtualCurrency:awardCurrency(vcId, vcAmount, callback)
 ```
 
 ```mdx-code-block

@@ -74,7 +74,7 @@ regionId | Optional region id to target for the hosted server launch.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

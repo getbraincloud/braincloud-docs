@@ -142,15 +142,15 @@ if (result.statusCode == 200) {
 local handoffId = "handoffId"
 local securityToken = "securityToken"
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getAuthenticationService():authenticateHandoff(handoffId, securityToken, callback)
+<%= data.branding.codePrefix %>.authentication:authenticateHandoff(handoffId, securityToken, callback)
 ```
 
 ```mdx-code-block

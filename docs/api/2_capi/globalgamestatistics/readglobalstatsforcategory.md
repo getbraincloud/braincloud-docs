@@ -119,15 +119,15 @@ if (result.statusCode == 200) {
 ```lua
 local category = "generated"
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getGlobalGameStatisticsService():readGlobalStatsForCategory(category, callback)
+<%= data.branding.codePrefix %>.globalStatistics:readGlobalStatsForCategory(category, callback)
 ```
 
 ```mdx-code-block

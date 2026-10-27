@@ -157,15 +157,15 @@ local optionsJson = {
     blockIfExceedItemMaxStackable = false
 }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getUserItemsService():openBundle(itemId, version, quantity, includeDef, optionsJson, callback)
+<%= data.branding.codePrefix %>.userItems:openBundle(itemId, version, quantity, includeDef, optionsJson, callback)
 ```
 
 ```mdx-code-block

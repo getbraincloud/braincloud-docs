@@ -135,17 +135,17 @@ if (result.statusCode == 200) {
 ```lua
 local externalId = "846557642688"
 local authenticationToken = "ghbiuhgvbiuhbiunbuibgin"
-local authenticationType = AuthenticationType.facebook
+local authenticationType = "Facebook"
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getIdentityService():refreshIdentity(externalId, authenticationToken, authenticationType, callback)
+<%= data.branding.codePrefix %>.identity:refreshIdentity(externalId, authenticationToken, authenticationType, callback)
 ```
 
 ```mdx-code-block

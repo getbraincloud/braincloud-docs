@@ -74,7 +74,7 @@ Method to retrieve previous or next pages after having called the GetPage method
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

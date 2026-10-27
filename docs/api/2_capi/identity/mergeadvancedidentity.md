@@ -138,19 +138,23 @@ if (result.statusCode == 200) {
 ```
 
 ```lua
-local authenticationType = AuthenticationType.universal
-local ids = AuthenticationIds("authAdvancedUser", "authAdvancedPass", "");  // id, token, externalAuthName
-local extraJson = {key = "value"}
+local authenticationType = "Universal"
+local ids = {
+    externalId = "authAdvancedUser",
+    authenticationToken = "authAdvancedPass",
+    authenticationSubType = ""
+}
+local extraJson = { key = "value" }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getIdentityService():mergeAdvancedIdentity(authenticationType, ids, extraJson, callback)
+<%= data.branding.codePrefix %>.identity:mergeAdvancedIdentity(authenticationType, ids, extraJson, callback)
 ```
 
 ```mdx-code-block

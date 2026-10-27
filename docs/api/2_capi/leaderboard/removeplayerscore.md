@@ -127,15 +127,15 @@ if (result.statusCode == 200) {
 local leaderboardId = "default"
 local versionId = -1
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getLeaderboardService():removePlayerScore(leaderboardId, versionId, callback)
+<%= data.branding.codePrefix %>.leaderboard:removePlayerScore(leaderboardId, versionId, callback)
 ```
 
 ```mdx-code-block

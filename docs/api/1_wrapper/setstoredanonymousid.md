@@ -70,7 +70,7 @@ anonymousId | The anonymous ID to set
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:setStoredAnonymousId("1234-1234-1234-1234")
+-- N/A
 ```
 
 ```mdx-code-block

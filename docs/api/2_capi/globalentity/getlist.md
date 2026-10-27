@@ -160,15 +160,15 @@ local orderBy = {
 }
 local maxReturn = 50
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getGlobalEntityService():getList(where, orderBy, maxReturn, callback)
+<%= data.branding.codePrefix %>.globalEntity:getList(where, orderBy, maxReturn, callback)
 ```
 
 ```mdx-code-block

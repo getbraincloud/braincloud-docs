@@ -116,7 +116,7 @@ var token = "Google Play purchase token";
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

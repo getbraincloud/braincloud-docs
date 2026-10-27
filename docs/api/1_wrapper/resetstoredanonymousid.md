@@ -68,7 +68,7 @@ Resets the anonymous ID to empty string.  When the anonymousId is empty a new on
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:resetStoredAnonymousId()
+-- N/A
 ```
 
 ```mdx-code-block

@@ -167,26 +167,24 @@ if (result.statusCode == 200) {
 local entityType = "athletes"
 local version = 1
 local dataJson = {
-  firstName = "Super",
-  surName = "Star",
-  position = "forward",
-  goals = 3,
-  assists = 5
+    firstName = "Super",
+    surName = "Star",
+    position = "forward",
+    goals = 3,
+    assists = 5
 }
-local acl = {
-  other = 1
-}
-local timeToLive = null
+local acl = { other = 1 }
+local timeToLive = nil
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getCustomEntityService():updateSingleton(entityType, version, dataJson, acl, timeToLive, callback)
+<%= data.branding.codePrefix %>.customEntity:updateSingleton(entityType, version, dataJson, acl, timeToLive, callback)
 ```
 
 ```mdx-code-block

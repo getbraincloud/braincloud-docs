@@ -74,7 +74,7 @@ milestoneJson | A json object describing the updated milestone data. Only the fi
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -72,7 +72,7 @@ serverContext | JSON object containing server context data.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

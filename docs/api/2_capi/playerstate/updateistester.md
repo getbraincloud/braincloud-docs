@@ -72,7 +72,7 @@ isTester | Boolean flag to indicate if the profile belongs to a test account.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

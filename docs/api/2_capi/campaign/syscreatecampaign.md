@@ -93,7 +93,7 @@ New campaigns are created **disabled** by default. Pass `"enabled": true` in `co
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -76,7 +76,7 @@ Updates (replaces) a price for the given product item.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

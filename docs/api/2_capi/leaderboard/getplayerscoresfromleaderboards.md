@@ -120,15 +120,15 @@ if (result.statusCode == 200) {
 ```lua
 local leaderboardIds = { "leaderboardId1", "leaderboardId2" }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getLeaderboardService():getPlayerScoresFromLeaderboards(leaderboardIds, callback)
+<%= data.branding.codePrefix %>.leaderboard:getPlayerScoresFromLeaderboards(leaderboardIds, callback)
 ```
 
 ```mdx-code-block

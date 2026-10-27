@@ -76,7 +76,7 @@ profileId | Target profile ID.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

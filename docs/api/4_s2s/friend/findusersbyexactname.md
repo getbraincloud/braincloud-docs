@@ -78,7 +78,7 @@ Does not require the calling user to be a friend of the retrieved users.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

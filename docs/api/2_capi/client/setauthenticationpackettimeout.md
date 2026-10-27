@@ -79,8 +79,7 @@ int timeoutInSeconds = 30;
 ```
 
 ```lua
-local timeoutInSeconds = 30
-<%= data.branding.codePrefix %>:setAuthenticationPacketTimeout(timeoutInSeconds)
+-- N/A
 ```
 
 ```mdx-code-block

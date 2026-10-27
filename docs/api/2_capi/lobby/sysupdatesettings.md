@@ -74,7 +74,7 @@ Updates the settings for the given lobby instance.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

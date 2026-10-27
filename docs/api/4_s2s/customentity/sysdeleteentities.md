@@ -75,7 +75,7 @@ Deletes all applicable custom entities from the server based on the custom entit
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

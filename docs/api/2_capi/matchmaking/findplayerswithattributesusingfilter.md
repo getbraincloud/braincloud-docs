@@ -159,15 +159,15 @@ local jsonExtraParms = {
     parm1 = 10
 }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getMatchMakingService():findPlayersWithAttributesUsingFilter(rangeDelta, numMatches, jsonAttributes, jsonExtraParms, callback)
+<%= data.branding.codePrefix %>.matchMaking:findPlayersWithAttributesUsingFilter(rangeDelta, numMatches, jsonAttributes, jsonExtraParms, callback)
 ```
 
 ```mdx-code-block

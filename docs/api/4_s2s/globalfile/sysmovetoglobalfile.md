@@ -78,7 +78,7 @@ Copies the specified User File to the Global File V3 system.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

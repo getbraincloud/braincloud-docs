@@ -74,7 +74,7 @@ fileData | Base64 encoded file contents.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

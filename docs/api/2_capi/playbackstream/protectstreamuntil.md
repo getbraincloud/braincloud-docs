@@ -128,15 +128,15 @@ if (result.statusCode == 200) {
 local playbackStreamId = "streamId"
 local numDays = 365
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getPlaybackStreamService():protectStreamUntil(playbackStreamId, numDays, callback)
+<%= data.branding.codePrefix %>.playbackStream:protectStreamUntil(playbackStreamId, numDays, callback)
 ```
 
 ```mdx-code-block

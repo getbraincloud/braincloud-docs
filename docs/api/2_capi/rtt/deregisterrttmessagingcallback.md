@@ -65,7 +65,7 @@ Coming soon!
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:getRttService():deregisterRTTMessagingCallback()
+<%= data.branding.codePrefix %>.rttService:deregisterRTTCallback("messaging")
 ```
 
 ```mdx-code-block

@@ -73,7 +73,7 @@ Terminates the presence of \`profileId`.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

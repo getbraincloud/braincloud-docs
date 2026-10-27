@@ -80,7 +80,7 @@ Sends a potentially richer member chat message. By convention, content should co
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

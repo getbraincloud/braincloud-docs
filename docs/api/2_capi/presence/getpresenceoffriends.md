@@ -129,15 +129,15 @@ if (result.statusCode == 200) {
 local platform = brainCloud
 local includeOffline = true
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getPresenceService():getPresenceOfFriends(platform, includeOffline, callback)
+<%= data.branding.codePrefix %>.presence:getPresenceOfFriends(platform, includeOffline, callback)
 ```
 
 ```mdx-code-block

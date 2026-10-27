@@ -76,7 +76,7 @@ Delete the specified folder (and optionally child files and subfolders). Return 
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

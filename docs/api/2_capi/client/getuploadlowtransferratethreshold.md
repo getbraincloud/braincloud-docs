@@ -65,7 +65,7 @@ int bytesPerSecThreshold = <%= data.branding.codePrefix %>.getUploadLowTransferR
 ```
 
 ```lua
-local bytesPerSecThreshold = <%= data.branding.codePrefix %>:getUploadLowTransferRateThreshold()
+-- N/A
 ```
 
 ```mdx-code-block

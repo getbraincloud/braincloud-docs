@@ -84,8 +84,7 @@ int minTransferRate = 1500;
 ```
 
 ```lua
-local minTransferRate = 1500
-<%= data.branding.codePrefix %>:setUploadLowTransferRateThreshold(minTransferRate)
+-- N/A
 ```
 
 ```mdx-code-block

@@ -102,7 +102,7 @@ var base64EncReceiptData = "Sample iTunes Receipt";
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

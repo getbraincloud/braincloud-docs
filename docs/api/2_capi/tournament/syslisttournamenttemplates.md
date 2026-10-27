@@ -72,7 +72,7 @@ optionsJson | Optional json to sort the list of tournament templates. Valid valu
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

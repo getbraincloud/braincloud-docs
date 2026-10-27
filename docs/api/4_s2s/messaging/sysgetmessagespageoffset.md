@@ -74,7 +74,7 @@ Gets the page of system messages from the server based on the encoded context an
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

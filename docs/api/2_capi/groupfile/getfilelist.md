@@ -137,15 +137,15 @@ local groupId = "dfsfsffsd"
 local folderPath = ""
 local recurse = true
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getGroupFileService():getFileList(groupId, folderPath, recurse, callback)
+<%= data.branding.codePrefix %>.groupFile:getFileList(groupId, folderPath, recurse, callback)
 ```
 
 ```mdx-code-block

@@ -76,7 +76,7 @@ optionsJson | Optional boolean property preserveValue to indicate whether to pre
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

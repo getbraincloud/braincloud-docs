@@ -76,7 +76,7 @@ ownerId | ProfileId of the user that will own this identity, or null if no owner
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

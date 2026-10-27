@@ -85,7 +85,7 @@ tSettingsJson | Tournament and tPhases settings changes specified as JSON object
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

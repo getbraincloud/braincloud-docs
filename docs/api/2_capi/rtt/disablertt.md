@@ -67,7 +67,7 @@ Coming soon!
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:getRttService():disableRTT()
+<%= data.branding.codePrefix %>.rttService:disableRTT()
 ```
 
 ```mdx-code-block

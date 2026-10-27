@@ -65,7 +65,7 @@ Attempts to resend any cached messages. If no messages are in the cache, this me
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:retryCachedMessages()
+-- N/A
 ```
 
 ```mdx-code-block

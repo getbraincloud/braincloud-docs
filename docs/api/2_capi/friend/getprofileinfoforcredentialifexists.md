@@ -127,17 +127,17 @@ if (result.statusCode == 200) {
 
 ```lua
 local externalId = "profileId"
-local authenticationType = AuthenticationType.facebook
+local authenticationType = "Facebook"
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getFriendService():getProfileInfoForCredentialIfExists(externalId, authenticationType, callback)
+<%= data.branding.codePrefix %>.friend:getProfileInfoForCredentialIfExists(externalId, authenticationType, callback)
 ```
 
 ```mdx-code-block

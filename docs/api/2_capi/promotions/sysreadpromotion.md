@@ -72,7 +72,7 @@ promotionId | ID uniquely identifying the promotion to read.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

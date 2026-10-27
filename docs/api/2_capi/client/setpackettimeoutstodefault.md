@@ -65,7 +65,7 @@ Sets the packet timeouts back to default.
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:setPacketTimeoutsToDefault()
+-- N/A
 ```
 
 ```mdx-code-block

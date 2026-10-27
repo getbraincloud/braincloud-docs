@@ -81,7 +81,7 @@ This operation invalidates the specified redemption code.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

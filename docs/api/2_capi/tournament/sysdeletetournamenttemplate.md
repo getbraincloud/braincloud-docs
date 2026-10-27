@@ -73,7 +73,7 @@ versionId | Version of the tournament, use -1 for the latest version.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -74,7 +74,7 @@ promotionJson | The full promotion JSON (minus the promotionId).
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

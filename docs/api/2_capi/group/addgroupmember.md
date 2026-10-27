@@ -140,20 +140,20 @@ if (result.statusCode == 200) {
 ```
 
 ```lua
-local groupId = <%= data.example.groupId %>
-local profileId = <%= data.example.profileId %>
+local groupId = "a-group-id"
+local profileId = "a-profile-id"
 local role = "MEMBER"
-local jsonAttributes = <%= data.example.jsonAttributes_js %>
+local attributes = {}
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getGroupService():addGroupMember(groupId, profileId, role, attributes, callback)
+<%= data.branding.codePrefix %>.group:addGroupMember(groupId, profileId, role, attributes, callback)
 ```
 
 ```mdx-code-block

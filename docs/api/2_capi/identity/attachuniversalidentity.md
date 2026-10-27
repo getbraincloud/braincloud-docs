@@ -129,15 +129,15 @@ if (result.statusCode == 200) {
 local userId = "someId"
 local password = "password"
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getIdentityService():attachUniversalIdentity(userId, password, callback)
+<%= data.branding.codePrefix %>.identity:attachUniversalIdentity(userId, password, callback)
 ```
 
 ```mdx-code-block

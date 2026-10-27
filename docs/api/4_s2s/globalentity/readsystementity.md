@@ -73,7 +73,7 @@ Method reads an existing system entity on the server. It cannot be an owned/glob
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

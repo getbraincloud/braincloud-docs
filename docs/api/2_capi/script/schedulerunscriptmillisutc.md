@@ -144,15 +144,15 @@ local scriptData = {
 }
 local startDateInUTC = 1437579786000
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getScriptService():scheduleRunScriptMillisUTC(scriptName, scriptData, startDateInUTC, callback)
+<%= data.branding.codePrefix %>.script:scheduleRunScriptMillisUTC(scriptName, scriptData, startDateInUTC, callback)
 ```
 
 ```mdx-code-block

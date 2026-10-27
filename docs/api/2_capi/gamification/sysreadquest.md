@@ -72,7 +72,7 @@ questId | The id of the quest to read
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

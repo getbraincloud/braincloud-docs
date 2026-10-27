@@ -74,7 +74,7 @@ acl | Access control list for the group entity.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

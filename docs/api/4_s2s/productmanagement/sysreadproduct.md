@@ -73,7 +73,7 @@ Retrieve the full product meta-data for the specified product.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

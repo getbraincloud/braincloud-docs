@@ -73,7 +73,7 @@ migrate | true or false
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

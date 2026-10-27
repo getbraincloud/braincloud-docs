@@ -82,7 +82,7 @@ This operation sends a raw message to targetted segments.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

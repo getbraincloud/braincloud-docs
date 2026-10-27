@@ -65,7 +65,7 @@ Initiate a state dump for diagnostic purposes on the given RTT servers. An empty
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -74,7 +74,7 @@ Change the groupType of a given group.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

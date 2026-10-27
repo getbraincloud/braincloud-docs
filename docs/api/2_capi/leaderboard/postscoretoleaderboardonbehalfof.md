@@ -81,7 +81,7 @@ forceCreate | Should a new score be created if one doesn't currently exist?
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

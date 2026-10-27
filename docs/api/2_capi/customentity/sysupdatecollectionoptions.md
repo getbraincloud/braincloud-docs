@@ -73,7 +73,7 @@ collectionOptsJson | The collection options updates, as JSON object.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

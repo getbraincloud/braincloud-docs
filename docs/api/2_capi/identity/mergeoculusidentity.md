@@ -97,7 +97,18 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 ```
 
 ```lua
-// N/A
+local oculusId = "userId"
+local oculusNonce = "nonce"
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.identity:mergeOculusIdentity(oculusId, oculusNonce, callback)
 ```
 
 ```mdx-code-block

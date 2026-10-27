@@ -73,7 +73,7 @@ Returns the treeId for the specified folder.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

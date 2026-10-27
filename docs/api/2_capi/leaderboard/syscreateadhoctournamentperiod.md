@@ -83,7 +83,7 @@ tSettingsJson | Tournament settings for the new ADHOC tournament period being sc
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -65,7 +65,7 @@ Returns the version of the client app.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

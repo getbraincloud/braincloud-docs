@@ -133,15 +133,15 @@ if (result.statusCode == 200) {
 local ownerId = "internalPlayerId"
 local matchId = "matchId"
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getAsyncMatchService():deleteMatch(ownerId, matchId, callback)
+<%= data.branding.codePrefix %>.asyncMatch:deleteMatch(ownerId, matchId, callback)
 ```
 
 ```mdx-code-block

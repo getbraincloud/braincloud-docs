@@ -73,7 +73,7 @@ Cancels a scheduled cloud code job.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

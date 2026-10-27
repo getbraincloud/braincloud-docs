@@ -67,7 +67,7 @@ When would I used invalidateSession? Check our [BlockIfBanned](/learn/cloud-code
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

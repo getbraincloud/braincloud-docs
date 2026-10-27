@@ -96,7 +96,7 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

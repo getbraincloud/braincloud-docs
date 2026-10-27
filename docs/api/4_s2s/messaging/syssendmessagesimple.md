@@ -75,7 +75,7 @@ Sends a simple string-based message on behalf of the system (i.e. app) to the sp
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

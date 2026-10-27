@@ -149,15 +149,15 @@ local scriptData = {
     arg3 = "example"
 }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getScriptService():runScript(scriptName, scriptData, callback)
+<%= data.branding.codePrefix %>.script:runScript(scriptName, scriptData, callback)
 ```
 
 ```mdx-code-block

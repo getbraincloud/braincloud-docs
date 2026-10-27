@@ -65,7 +65,7 @@ Deregister callback for RelayServer system messages.
 ```
 
 ```lua
-// N/A
+<%= data.branding.codePrefix %>.relay:deregisterSystemCallback()
 ```
 
 ```mdx-code-block

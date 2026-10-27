@@ -74,7 +74,7 @@ startDateInUTC | The start date. (date in millis UTC).
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

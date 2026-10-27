@@ -75,7 +75,7 @@ propname | The name of a global property to retrive
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

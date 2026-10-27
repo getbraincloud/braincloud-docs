@@ -74,7 +74,7 @@ periodStartingAtUtcMillis | The exact startingAt UTC timestamp, in milliseconds,
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

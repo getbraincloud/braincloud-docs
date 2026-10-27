@@ -95,7 +95,7 @@ var fileSize = file.size;
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

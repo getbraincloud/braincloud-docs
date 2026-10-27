@@ -139,15 +139,15 @@ local divSetId = "exampleDivSetId"
 local tournamentCode = "exampleTournamentCode1"
 local initialScore = 0
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getTournamentService():joinDivision(divSetId, tournamentCode, initialScore, callback)
+<%= data.branding.codePrefix %>.tournament:joinDivision(divSetId, tournamentCode, initialScore, callback)
 ```
 
 ```mdx-code-block

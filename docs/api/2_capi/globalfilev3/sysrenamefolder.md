@@ -74,7 +74,7 @@ updatedName | The updated name of the folder
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

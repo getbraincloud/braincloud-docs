@@ -78,11 +78,11 @@ void rttCallBack(RTTCommandResponse jsonResponse) {
 ```
 
 ```lua
-local rttCallBack = function(jsonResponse)
+local rttCallback = function(message)
     -- your code
 end
 
-<%= data.branding.codePrefix %>:getRttService():registerRTTLobbyCallback(rttCallback)
+<%= data.branding.codePrefix %>.rttService:registerRTTCallback("lobby", rttCallback)
 ```
 
 ```mdx-code-block

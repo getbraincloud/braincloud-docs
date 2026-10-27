@@ -76,7 +76,7 @@ Send a message on behalf of the system to the specified users.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

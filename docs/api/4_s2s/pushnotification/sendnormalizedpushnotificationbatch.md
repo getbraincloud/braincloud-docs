@@ -75,7 +75,7 @@ Sends a notification to a list of users consisting of alert content and custom d
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

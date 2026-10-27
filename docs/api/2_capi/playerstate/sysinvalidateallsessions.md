@@ -66,7 +66,7 @@ Invalidates all sessions for the current user, including the current session.
 ```
 
 ```lua
-// Cloud Code only. To view example, switch to the Cloud Code tab
+-- Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block

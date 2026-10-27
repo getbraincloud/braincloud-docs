@@ -136,18 +136,7 @@ if (result.statusCode == 200) {
 ```
 
 ```lua
-local statusName = "theStatusName"
-local additionalSecs = 60
-local maxActiveSecs = 600
-local details = {}
-local callback = function(result)
-    if result.statusCode == 200 then
-        print("Success")
-    else
-        print("Failed | " .. tostring(result.status))
-    end
-end
-<%= data.branding.codePrefix %>:getPlayerStateService():extendUserStatusWithMax(statusName, additionalSecs, maxActiveSecs, details, callback)
+-- N/A
 ```
 
 ```mdx-code-block

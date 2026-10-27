@@ -67,7 +67,7 @@ See RunCallbacks function for other platforms.
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:update()
+-- N/A
 ```
 
 ```mdx-code-block

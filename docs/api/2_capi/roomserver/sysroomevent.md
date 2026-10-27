@@ -72,7 +72,7 @@ brainCloudContext | Data provided by brainCloud when the server instance was lau
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -77,7 +77,7 @@ overwriteIfPresent | Set to true to overwrite an existing file if present.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

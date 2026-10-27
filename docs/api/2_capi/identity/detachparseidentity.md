@@ -98,15 +98,15 @@ if (result.statusCode == 200) {
 local parseId = "someId"
 local continueAnon = true
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getIdentityService():detachParseIdentity(parseId, continueAnon, callback)
+<%= data.branding.codePrefix %>.identity:detachParseIdentity(parseId, continueAnon, callback)
 ```
 
 ```mdx-code-block

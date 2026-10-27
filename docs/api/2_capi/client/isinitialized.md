@@ -65,7 +65,7 @@ var isInitialized = <%= data.branding.codePrefix %>.isInitialized();
 ```
 
 ```lua
-local isInitialized = <%= data.branding.codePrefix %>:isInitialized()
+-- N/A
 ```
 
 ```mdx-code-block

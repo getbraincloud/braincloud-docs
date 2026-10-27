@@ -73,7 +73,7 @@ entityId | ID of the entity
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

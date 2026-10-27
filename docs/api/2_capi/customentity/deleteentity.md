@@ -136,15 +136,15 @@ local entityType = "athletes"
 local entityId = "aaaa-bbbb-cccc-dddd"
 local version = 1
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getCustomEntityService():deleteEntity(entityType, entityId, version, callback)
+<%= data.branding.codePrefix %>.customEntity:deleteEntity(entityType, entityId, version, callback)
 ```
 
 ```mdx-code-block

@@ -74,7 +74,7 @@ Reads a campaign by campaign code and returns the full campaign configuration. O
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

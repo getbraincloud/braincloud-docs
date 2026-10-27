@@ -82,7 +82,7 @@ numDaysToRotate | Optional parameter for use only with DAYS rotation type
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

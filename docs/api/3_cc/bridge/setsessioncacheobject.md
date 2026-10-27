@@ -76,7 +76,7 @@ _Apps are limited to 5 cached objects per session, with each restricted to 512 c
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -118,15 +118,15 @@ if (result.statusCode == 200) {
 ```lua
 local includeMetaData = false
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getGamificationService():readMilestones(includeMetaData, callback)
+<%= data.branding.codePrefix %>.gamification:readMilestones(callback, includeMetaData)
 ```
 
 ```mdx-code-block

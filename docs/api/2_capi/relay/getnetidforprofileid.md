@@ -69,7 +69,7 @@ int netId = _bc.relayService.getNetIdForProfileId(profileId);
 ```lua
 local profileId = "pppppp"
 
-local netId = <%= data.branding.codePrefix %>:getRelayService():getNetIdForProfileId(profileId)
+local netId = <%= data.branding.codePrefix %>.relay:getNetIdForProfileId(profileId)
 ```
 
 ```mdx-code-block

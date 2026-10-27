@@ -163,15 +163,15 @@ local jsonEntityData = {
 }
 local version = -1
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getEntityService():updateSharedEntity(entityId, targetProfileId, entityType, jsonEntityData, version, callback)
+<%= data.branding.codePrefix %>.entity:updateSharedEntity(entityId, targetProfileId, entityType, jsonEntityData, version, callback)
 ```
 
 ```mdx-code-block

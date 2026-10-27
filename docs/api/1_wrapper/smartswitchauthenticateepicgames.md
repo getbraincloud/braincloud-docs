@@ -140,15 +140,15 @@ local epicAccountId = "0123456789abcdef0123456789abcdef"
 local authIdToken = "idTokenFromEOS"
 local forceCreate = true
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:smartSwitchAuthenticateEpicGames(epicAccountId, authIdToken, forceCreate, callback)
+wrapper:smartSwitchAuthenticateEpicGames(player.UserId, epicAccountId, authIdToken, forceCreate, callback)
 ```
 
 ```mdx-code-block

@@ -72,7 +72,7 @@ alwaysAllow | Controls whether the profile ID is passed in with non-anonymous au
 ```
 
 ```lua
-<%= data.branding.codePrefix %>.alwaysAllowProfileSwitch = true
+-- N/A
 ```
 
 ```mdx-code-block

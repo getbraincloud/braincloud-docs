@@ -76,7 +76,7 @@ _Note - the API Explorer is a great reference to determine the JSON format of th
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

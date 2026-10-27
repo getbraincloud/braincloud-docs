@@ -76,7 +76,7 @@ details | Optional data to send to room members.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -82,7 +82,7 @@ This operation adds a code to your inventory.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

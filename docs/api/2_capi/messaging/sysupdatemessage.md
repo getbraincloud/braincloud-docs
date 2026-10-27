@@ -81,7 +81,7 @@ content | The new content to write to the message.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

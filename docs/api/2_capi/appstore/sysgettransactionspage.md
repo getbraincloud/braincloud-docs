@@ -73,7 +73,7 @@ Gets the page of product transactions information from the server based on the s
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -176,15 +176,15 @@ local isReady = false
 local extraJson = {}
 local teamCode = "blue"
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getLobbyService():createLobbyWithPingData(lobbyType, rating, otherUserCxIds, settings, isReady, extraJson, teamCode, callback)
+<%= data.branding.codePrefix %>.lobby:createLobbyWithPingData(lobbyType, rating, otherUserCxIds, isReady, extraJson, teamCode, settings, callback)
 ```
 
 ```mdx-code-block

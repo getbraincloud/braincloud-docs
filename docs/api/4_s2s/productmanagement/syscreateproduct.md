@@ -73,7 +73,7 @@ Creates a new product with the specifed values.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

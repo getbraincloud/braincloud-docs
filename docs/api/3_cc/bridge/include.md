@@ -85,7 +85,7 @@ The path of the included script is a relative path, ff without specifying the sc
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -75,7 +75,7 @@ password | New password value
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

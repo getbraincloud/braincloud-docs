@@ -67,7 +67,7 @@ String profileId = <%= data.branding.codePrefix %>.getStoredProfileId();
 ```
 
 ```lua
-local profileId = <%= data.branding.codePrefix %>:getStoredProfileId()
+-- N/A
 ```
 
 ```mdx-code-block

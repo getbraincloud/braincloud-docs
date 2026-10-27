@@ -72,7 +72,7 @@ fullFolderPath | Fully folder path to lookup
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

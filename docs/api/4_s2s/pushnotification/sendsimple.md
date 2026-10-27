@@ -80,7 +80,7 @@ This operation sends a simple message to multiple user targets.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

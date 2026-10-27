@@ -75,7 +75,7 @@ Tells the lobby system that creation of the room experience failed.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -79,7 +79,7 @@ msgId | The message id
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -72,7 +72,7 @@ entityId | The id of the entity to read
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

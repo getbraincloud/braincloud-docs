@@ -83,7 +83,7 @@ data | Optional parameter. Developer-defined data relevant to the created leader
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

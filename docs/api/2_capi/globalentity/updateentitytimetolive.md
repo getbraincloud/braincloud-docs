@@ -140,15 +140,15 @@ local entityId = "a-entity-id"
 local version = 2
 local timeToLive = 120000
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getGlobalEntityService():updateEntityTimeToLive(entityId, version, timeToLive, callback)
+<%= data.branding.codePrefix %>.globalEntity:updateEntityTimeToLive(entityId, version, timeToLive, callback)
 ```
 
 ```mdx-code-block

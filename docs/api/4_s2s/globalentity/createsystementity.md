@@ -76,7 +76,7 @@ Method creates a new system new entity on the server.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

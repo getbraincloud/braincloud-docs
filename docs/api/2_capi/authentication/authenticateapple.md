@@ -142,15 +142,15 @@ local appleUserId = "00123.xxxxxxxx"
 local identityToken = "identityTokenFromApple"
 local forceCreate = true
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getAuthenticationService():AuthenticateApple(appleUserId, identityToken, forceCreate, callback)
+<%= data.branding.codePrefix %>.authentication:authenticateApple(appleUserId, identityToken, forceCreate, callback)
 ```
 
 ```mdx-code-block

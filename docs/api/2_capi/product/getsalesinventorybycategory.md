@@ -137,7 +137,7 @@ var category = "collectables";
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

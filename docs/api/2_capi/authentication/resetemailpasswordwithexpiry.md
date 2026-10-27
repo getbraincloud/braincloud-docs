@@ -128,15 +128,15 @@ if (result.statusCode == 200) {
 local emailAddress = "email@email.com"
 local tokenTtlInMinutes = 1440
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getAuthenticationService():resetEmailPasswordWithExpiry(emailAddress, tokenTtlInMinutes, callback)
+<%= data.branding.codePrefix %>.authentication:resetEmailPasswordWithExpiry(emailAddress, tokenTtlInMinutes, callback)
 ```
 
 ```mdx-code-block

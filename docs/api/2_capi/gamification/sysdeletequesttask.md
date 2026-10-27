@@ -74,7 +74,7 @@ taskId | The id of the task to delete
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

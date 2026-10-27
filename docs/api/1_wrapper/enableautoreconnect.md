@@ -77,7 +77,7 @@ BCErrorCompletionBlock failureBlock; // define callback
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:enableAutoReconnect(true)
+wrapper:enableAutoReconnect(player.UserId, true)
 ```
 
 ```mdx-code-block

@@ -73,7 +73,7 @@ version | The current revision of the quest. Use -1 to bypass the version-check.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

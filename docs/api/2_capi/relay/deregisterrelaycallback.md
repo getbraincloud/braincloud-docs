@@ -65,7 +65,7 @@ Deregisters callback for relay messages coming from peers.
 ```
 
 ```lua
-// N/A
+<%= data.branding.codePrefix %>.relay:deregisterRelayCallback()
 ```
 
 ```mdx-code-block

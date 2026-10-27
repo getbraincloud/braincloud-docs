@@ -86,8 +86,8 @@ void autoReconnectCallback(String jsonResponse) {
 ```
 
 ```lua
-local function autoReconnectCallback(jsonResponse)
-    -- handle re-authentication result
+local autoReconnectCallback = function(response)
+    -- handle the re-authentication result
 end
 
 <%= data.branding.codePrefix %>:registerAutoReconnectCallback(autoReconnectCallback)

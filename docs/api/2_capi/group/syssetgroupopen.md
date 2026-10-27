@@ -73,7 +73,7 @@ isOpenGroup | true if group is open; false if closed
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

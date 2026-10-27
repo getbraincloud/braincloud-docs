@@ -81,7 +81,7 @@ The campaign must not have ended. The updated payload is picked up by already-au
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -74,7 +74,7 @@ Evicts the specified user from the specified lobby.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

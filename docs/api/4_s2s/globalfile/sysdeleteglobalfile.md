@@ -75,7 +75,7 @@ Deletes the specified global file.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

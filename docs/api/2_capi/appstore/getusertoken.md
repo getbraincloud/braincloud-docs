@@ -126,15 +126,15 @@ if (result.statusCode == 200) {
 ```lua
 local storeId = "xsolla"
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getAppStoreService():getUserToken(storeId, callback)
+<%= data.branding.codePrefix %>.appStore:getUserToken(storeId, callback)
 ```
 
 ```mdx-code-block

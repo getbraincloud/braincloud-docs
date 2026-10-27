@@ -81,10 +81,10 @@ void eventCallback(Map<String, dynamic>?  jsonResponse) {
 ```
 
 ```lua
-void eventCallback(Map<String, dynamic>?  jsonResponse) {
-    //Your code
-}
-​
+local eventCallback = function(response)
+    -- response.events holds the events
+end
+
 <%= data.branding.codePrefix %>:registerEventCallback(eventCallback)
 ```
 

@@ -176,26 +176,24 @@ local entityType = "athletes"
 local entityId = "aaaa-bbbb-cccc-dddd"
 local version = 1
 local dataJson = {
-  firstName = "Super",
-  surName = "Star",
-  position = "defense",
-  goals = 3,
-  assists = 5
+    firstName = "Super",
+    surName = "Star",
+    position = "defense",
+    goals = 3,
+    assists = 5
 }
-local acl = {
-  other = 0
-}
-local timeToLive = null
+local acl = { other = 0 }
+local timeToLive = nil
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getCustomEntityService():updateEntity(entityType, entityId, version, dataJson, acl, timeToLive, callback)
+<%= data.branding.codePrefix %>.customEntity:updateEntity(entityType, entityId, version, dataJson, acl, timeToLive, callback)
 ```
 
 ```mdx-code-block

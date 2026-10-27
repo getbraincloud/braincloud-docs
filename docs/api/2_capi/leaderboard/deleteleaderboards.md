@@ -72,7 +72,7 @@ leaderboardIds | Collection of leaderboard IDs.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

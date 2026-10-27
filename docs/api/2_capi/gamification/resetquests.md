@@ -72,7 +72,7 @@ quests | A list of quests to reset
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

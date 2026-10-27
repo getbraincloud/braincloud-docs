@@ -181,23 +181,21 @@ if (result.statusCode == 200) {
 ```lua
 local leaderboardId = "default"
 local score = 10
-local data = {
-    nickname = "batman"
-}
-local leaderboardType = SocialLeaderboardType.HIGH_VALUE
-local rotationReset = Date.now()
+local jsonData = { nickname = "batman" }
+local leaderboardType = "HIGH_VALUE"
+local rotationResetUTC = os.time() * 1000
 local retainedCount = 2
 local numDaysToRotate = 4
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getLeaderboardService():postScoreToDynamicLeaderboardDaysUTC(leaderboardId, score, data, leaderboardType, rotationReset, retainedCount, numDaysToRotate, callback)
+<%= data.branding.codePrefix %>.leaderboard:postScoreToDynamicLeaderboardDaysUTC(leaderboardId, score, jsonData, leaderboardType, rotationResetUTC, retainedCount, numDaysToRotate, callback)
 ```
 
 ```mdx-code-block

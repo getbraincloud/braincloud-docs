@@ -80,7 +80,7 @@ pingData | Ping times for each region available for this lobby type. Can use GET
 ```
 
 ```lua
-// Cloud Code only. To view example, switch to the Cloud Code tab
+-- Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block

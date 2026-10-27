@@ -75,7 +75,7 @@ Sends a message on behalf of the system (i.e. app) to the specified users.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

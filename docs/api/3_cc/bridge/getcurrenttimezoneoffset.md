@@ -70,7 +70,7 @@ timeZoneId | The timezone id to compare against UTC.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

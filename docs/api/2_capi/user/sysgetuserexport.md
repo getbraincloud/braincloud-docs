@@ -74,7 +74,7 @@ Exports user information for a single profile ID.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -72,7 +72,7 @@ profileId | The universal Id of the target user to reset password
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

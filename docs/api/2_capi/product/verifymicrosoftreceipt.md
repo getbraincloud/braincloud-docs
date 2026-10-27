@@ -90,7 +90,7 @@ var receipt = "Receipt XML";
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

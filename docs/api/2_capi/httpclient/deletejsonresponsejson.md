@@ -76,7 +76,7 @@ json | JSON formatted data to send
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

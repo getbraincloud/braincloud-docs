@@ -73,7 +73,7 @@ configJson | Configuration data defining the tournament template. Include entryT
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

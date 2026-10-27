@@ -89,7 +89,7 @@ var signedRequest = "Sample Facebook Receipt";
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -67,7 +67,7 @@ Retrieves the virtual currency types inherited from the configured peer apps.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

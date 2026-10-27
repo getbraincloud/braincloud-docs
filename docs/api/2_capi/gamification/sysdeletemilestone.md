@@ -73,7 +73,7 @@ version | The current revision of the milestone. Use -1 to bypass the version-ch
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -140,15 +140,15 @@ local contentJson = {
     text = "Check out the new chat and messaging features!"
 }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getMessagingService():sendMessage(toProfileIds, contentJson, callback)
+<%= data.branding.codePrefix %>.messaging:sendMessage(toProfileIds, contentJson, callback)
 ```
 
 ```mdx-code-block

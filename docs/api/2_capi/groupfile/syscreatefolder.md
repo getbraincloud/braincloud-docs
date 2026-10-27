@@ -78,7 +78,7 @@ groupFolderAcl | The acl of the new group folder.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

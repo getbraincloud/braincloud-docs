@@ -130,7 +130,7 @@ var userCurrency = "credits";
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

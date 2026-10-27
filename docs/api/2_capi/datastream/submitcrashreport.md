@@ -189,15 +189,15 @@ local userEmail = ""
 local userNotes = ""
 local userSubmitted = false
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getDataStreamService():submitCrashReport(crashType, errorMsg, crashJson, crashLog, userName, userEmail, userNotes, userSubmitted, callback)
+<%= data.branding.codePrefix %>.dataStream:submitCrashReport(crashType, errorMsg, crashJson, crashLog, userName, userEmail, userNotes, userSubmitted, callback)
 ```
 
 ```mdx-code-block

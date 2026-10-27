@@ -85,7 +85,7 @@ which increments stat1 by 9 up to a limit of 30.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

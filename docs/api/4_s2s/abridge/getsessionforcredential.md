@@ -72,7 +72,7 @@ externalAuthType | Optional parameter to specify the external authenticationType
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

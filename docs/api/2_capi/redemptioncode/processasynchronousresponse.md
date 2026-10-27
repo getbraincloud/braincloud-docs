@@ -77,7 +77,7 @@ asyncResponse | Required asynchronous response info, as JSON object, indicating 
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -120,7 +120,7 @@ var maxResults = 5;
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

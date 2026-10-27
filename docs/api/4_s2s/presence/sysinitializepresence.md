@@ -76,7 +76,7 @@ Creates or updates the presence of \`profileId`. \`visible` is optional (default
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

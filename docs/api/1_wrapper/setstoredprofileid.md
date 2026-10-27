@@ -70,7 +70,7 @@ profileId | The profile ID to set
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:setStoredProfileId("1234-1234-1234-1234")
+-- N/A
 ```
 
 ```mdx-code-block

@@ -73,7 +73,7 @@ Cancels a running user script batch.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

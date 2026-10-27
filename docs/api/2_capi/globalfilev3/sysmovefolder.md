@@ -76,7 +76,7 @@ createInterimDirectories | Create any sub-folders that don't already exist in `n
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -73,7 +73,7 @@ maxReturn | The max count of groups to randomly select.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

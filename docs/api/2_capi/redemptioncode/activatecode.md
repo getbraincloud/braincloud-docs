@@ -75,7 +75,7 @@ Activate a redemption code for a personal ('single-use') code type. Optional par
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

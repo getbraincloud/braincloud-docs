@@ -67,7 +67,7 @@ Lists the custom entity collections configured for the application.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

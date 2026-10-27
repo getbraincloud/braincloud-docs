@@ -74,7 +74,7 @@ Gets the page of catalog items from the server based on the encoded context and 
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

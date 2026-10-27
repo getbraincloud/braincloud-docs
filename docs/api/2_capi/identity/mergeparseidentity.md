@@ -102,15 +102,15 @@ if (result.statusCode == 200) {
 local parseId = "someId"
 local authenticationToken = "someToken"
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getIdentityService():mergeParseIdentity(parseId, authenticationToken, callback)
+<%= data.branding.codePrefix %>.identity:mergeParseIdentity(parseId, authenticationToken, callback)
 ```
 
 ```mdx-code-block

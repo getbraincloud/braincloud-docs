@@ -79,7 +79,7 @@ See the Portal documentation for more info.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

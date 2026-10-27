@@ -68,7 +68,7 @@ Resets the profile ID to empty string.
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:resetStoredProfileId()
+-- N/A
 ```
 
 ```mdx-code-block

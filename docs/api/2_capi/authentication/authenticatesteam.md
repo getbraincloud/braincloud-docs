@@ -146,15 +146,15 @@ local steamId = "userSteamId"
 local sessionTicket = "sessionTicketFromSteam"
 local forceCreate = true
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getAuthenticationService():authenticateSteam(steamId, sessionTicket, forceCreate, callback)
+<%= data.branding.codePrefix %>.authentication:authenticateSteam(steamId, sessionTicket, forceCreate, callback)
 ```
 
 ```mdx-code-block

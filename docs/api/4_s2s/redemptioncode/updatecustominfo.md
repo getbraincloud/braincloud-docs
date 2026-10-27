@@ -82,7 +82,7 @@ This operation updates the specified redemption code.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -75,7 +75,7 @@ Creates a handoff authentication id with security token.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

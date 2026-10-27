@@ -75,7 +75,7 @@ Sends a simple text email to the given user.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

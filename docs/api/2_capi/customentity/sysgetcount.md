@@ -73,7 +73,7 @@ whereJson | Criteria to search on
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

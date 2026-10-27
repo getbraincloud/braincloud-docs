@@ -65,7 +65,7 @@ String cxId = _bc.relayService.getOwnerCxId();
 ```
 
 ```lua
-local cxId = <%= data.branding.codePrefix %>:getRelayService():getOwnerCxId()
+local cxId = <%= data.branding.codePrefix %>.relay:getOwnerCxId()
 ```
 
 ```mdx-code-block

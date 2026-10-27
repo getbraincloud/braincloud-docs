@@ -76,7 +76,7 @@ json | JSON formatted data to patch
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

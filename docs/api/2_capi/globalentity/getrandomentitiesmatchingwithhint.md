@@ -143,25 +143,7 @@ if (result.statusCode == 200) {
 ```
 
 ```lua
-local where = {
-    ["data.team"] = "Red",
-    ["data.position"] = "Forward"
-}
-local maxReturn = 10
-local hintJson = {
-    ["data.team"] = 1,
-    ["data.position"] = 1
-}
-
-local callback = function(result)
-    if result.statusCode == 200 then
-        print("Success")
-    else
-        print("Failed | " .. tostring(result.status))
-    end
-end
-
-<%= data.branding.codePrefix %>:getGlobalEntityService():GetRandomEntitiesMatchingWithHint(where, maxReturn, hintJson, callback)
+-- N/A
 ```
 
 ```mdx-code-block

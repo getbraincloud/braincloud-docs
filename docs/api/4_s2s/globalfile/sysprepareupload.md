@@ -83,7 +83,7 @@ curl -X POST "https://api.braincloudservers.com/s2suploader/globalfile/upload?ga
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

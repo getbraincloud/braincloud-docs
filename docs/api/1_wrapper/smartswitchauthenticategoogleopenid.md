@@ -134,15 +134,15 @@ local googleUserAccountEmail = "example@gmail.com"
 local idToken = "authTokenFromGoogle"
 local forceCreate = true
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:smartSwitchAuthenticateGoogleOpenId(googleUserAccountEmail, idToken, forceCreate, callback)
+wrapper:smartSwitchAuthenticateGoogleOpenId(player.UserId, googleUserAccountEmail, idToken, forceCreate, callback)
 ```
 
 ```mdx-code-block

@@ -218,15 +218,15 @@ local facebookContent = {
 }
 local minutesFromNow = 1
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getPushNotificationService():scheduleRawPushNotificationMinutes(profileId, fcmContent, iosContent, facebookContent, minutesFromNow, callback)
+<%= data.branding.codePrefix %>.pushNotification:scheduleRawPushNotificationMinutes(profileId, fcmContent, iosContent, facebookContent, minutesFromNow, callback)
 ```
 
 ```mdx-code-block

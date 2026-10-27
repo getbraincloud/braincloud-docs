@@ -74,7 +74,7 @@ fromJson | Who the message is from. Should contain at least "name" field, and po
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

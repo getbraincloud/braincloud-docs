@@ -83,7 +83,7 @@ contentJson | Replacement content for the message
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

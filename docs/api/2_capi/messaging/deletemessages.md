@@ -130,15 +130,15 @@ if (result.statusCode == 200) {
 local msgBox = "inbox"
 local msgIds = { "msgId1", "msgId2" }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getMessagingService():deleteMessages(msgBox, msgIds, callback)
+<%= data.branding.codePrefix %>.messaging:deleteMessages(msgBox, msgIds, callback)
 ```
 
 ```mdx-code-block

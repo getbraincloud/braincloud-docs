@@ -75,7 +75,7 @@ attributes | Attributes of the member being added.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

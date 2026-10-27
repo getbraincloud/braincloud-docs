@@ -76,7 +76,7 @@ This flag is only intended for backward compatibility and is NOT recommended to 
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

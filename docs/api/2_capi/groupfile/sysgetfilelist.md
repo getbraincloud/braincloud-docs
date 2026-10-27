@@ -74,7 +74,7 @@ recurse | Whether to recurse beyond the starting folder.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -89,17 +89,7 @@ if (result.statusCode == 200) {
 ```
 
 ```lua
-local uploadId = "1234-1234-1234-1234"
-
-local callback = function(result)
-    if result.statusCode == 200 then
-        print("Success")
-    else
-        print("Failed | " .. tostring(result.status))
-    end
-end
-
-<%= data.branding.codePrefix %>:getFileService():getUploadProgress(uploadId, callback)
+-- N/A
 ```
 
 ```mdx-code-block

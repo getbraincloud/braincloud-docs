@@ -106,15 +106,15 @@ if (result.statusCode == 200) {
 
 ```lua
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getGroupService():getMyGroups(callback)
+<%= data.branding.codePrefix %>.group:getMyGroups(callback)
 ```
 
 ```mdx-code-block

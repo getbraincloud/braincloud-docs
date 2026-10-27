@@ -72,7 +72,7 @@ Resend validation email.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

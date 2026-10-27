@@ -74,7 +74,7 @@ details | Optional data to send to lobby members.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

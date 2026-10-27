@@ -107,7 +107,7 @@ fieldsJson | Specific fields, as JSON, to set within entity's custom data.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

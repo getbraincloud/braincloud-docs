@@ -73,7 +73,7 @@ Resets the specified milestones' statuses.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

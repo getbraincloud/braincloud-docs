@@ -65,7 +65,7 @@ Retrieves a S2S LogService proxy object.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

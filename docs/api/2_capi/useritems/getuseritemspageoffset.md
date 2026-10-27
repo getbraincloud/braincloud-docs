@@ -136,15 +136,15 @@ local context = "eyJzZWFyY2hDcml0ZXJpYSI6eyJlbnRpdHlUeXBlIjp7IiRyZWdleCI6Ii4qaWx
 local pageOffset = 1
 local includeDef = true
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getUserItemsService():getUserItemsPageOffset(context, pageOffset, includeDef, callback)
+<%= data.branding.codePrefix %>.userItems:getUserItemsPageOffset(context, pageOffset, includeDef, callback)
 ```
 
 ```mdx-code-block

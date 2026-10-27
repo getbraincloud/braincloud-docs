@@ -146,15 +146,15 @@ if (result.statusCode == 200) {
 local channelId = "22817:gl:CHAT_TRADE"
 local maxReturn = 25
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getChatService():getRecentChatMessages(channelId, maxReturn, callback)
+<%= data.branding.codePrefix %>.chat:getRecentChatMessages(channelId, maxReturn, callback)
 ```
 
 ```mdx-code-block

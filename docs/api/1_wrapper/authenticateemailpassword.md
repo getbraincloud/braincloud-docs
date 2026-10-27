@@ -140,15 +140,15 @@ local email = "<%= data.example.email %>"
 local password = "<%= data.example.password %>"
 local forceCreate = true
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:authenticateEmailPassword(email, password, forceCreate, callback)
+wrapper:authenticateEmailPassword(player.UserId, email, password, forceCreate, callback)
 ```
 
 ```mdx-code-block

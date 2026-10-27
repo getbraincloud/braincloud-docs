@@ -91,7 +91,7 @@ local relayCallback = function(jsonResponse)
     -- Your code
 end
 
-<%= data.branding.codePrefix %>:getRelayService():RegisterRelayCallback(relayCallback)
+<%= data.branding.codePrefix %>.relay:registerRelayCallback(relayCallback)
 ```
 
 ```mdx-code-block

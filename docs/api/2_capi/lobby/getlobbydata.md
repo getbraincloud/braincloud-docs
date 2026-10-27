@@ -119,15 +119,15 @@ if (result.statusCode == 200) {
 ```lua
 local lobbyId = "13229:Relay_lobbyT_v2:20"
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getLobbyService():getLobbyData(lobbyId, callback)
+<%= data.branding.codePrefix %>.lobby:getLobbyData(lobbyId, callback)
 ```
 
 ```mdx-code-block

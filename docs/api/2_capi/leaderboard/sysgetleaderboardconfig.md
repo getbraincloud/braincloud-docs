@@ -72,7 +72,7 @@ leaderboardId | ID uniquely identifying the leaderboard configuration to retriev
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

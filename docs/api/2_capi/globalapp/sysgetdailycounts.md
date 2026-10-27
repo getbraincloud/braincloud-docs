@@ -72,7 +72,7 @@ day | The day to retrieve the data for, in "yyyy-MM-dd" format. If empty, uses t
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

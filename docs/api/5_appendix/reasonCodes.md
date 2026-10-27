@@ -776,7 +776,7 @@ public void FailureCallback(int statusCode, int reasonCode, string statusMessage
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

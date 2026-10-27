@@ -80,7 +80,7 @@ Method returns list of all the leaderboards from the server based on gameId of t
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

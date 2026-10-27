@@ -67,7 +67,7 @@ String anonymousId = <%= data.branding.codePrefix %>.getStoredAnonymousId();
 ```
 
 ```lua
-local anonymousId = <%= data.branding.codePrefix %>:getStoredAnonymousId()
+-- N/A
 ```
 
 ```mdx-code-block

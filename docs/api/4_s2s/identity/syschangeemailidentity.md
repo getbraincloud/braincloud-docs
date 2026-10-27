@@ -77,7 +77,7 @@ Changes email address associated with specified user's email identity.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

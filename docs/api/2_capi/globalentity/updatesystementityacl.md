@@ -77,7 +77,7 @@ This method is affected by versioning. See the [versioning documentation](/api/a
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -65,7 +65,7 @@ int timeout = <%= data.branding.codePrefix %>.getUploadLowTransferRateTimeout();
 ```
 
 ```lua
-local timeout = <%= data.branding.codePrefix %>:getUploadLowTransferRateTimeout()
+-- N/A
 ```
 
 ```mdx-code-block

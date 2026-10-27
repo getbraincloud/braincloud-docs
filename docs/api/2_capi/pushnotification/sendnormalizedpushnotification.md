@@ -155,15 +155,15 @@ local customDataJson = {
     field2 = "value2"
 }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getPushNotificationService():sendNormalizedPushNotification(toProfileId, alertContentJson, customDataJson, callback)
+<%= data.branding.codePrefix %>.pushNotification:sendNormalizedPushNotification(toProfileId, alertContentJson, customDataJson, callback)
 ```
 
 ```mdx-code-block

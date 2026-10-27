@@ -72,7 +72,7 @@ peerCode | Name of the peer
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

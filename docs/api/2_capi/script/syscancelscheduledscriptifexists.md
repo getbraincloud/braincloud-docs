@@ -73,7 +73,7 @@ Cancels a previously scheduled script, if it exists and is still in Scheduled st
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

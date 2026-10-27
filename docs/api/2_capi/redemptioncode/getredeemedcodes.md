@@ -113,15 +113,15 @@ if (result.statusCode == 200) {
 ```lua
 local codeType = "a code type"
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getRedemptionCodeService():getRedeemedCodes(codeType, callback)
+<%= data.branding.codePrefix %>.redemptionCode:getRedeemedCodes(codeType, callback)
 ```
 
 ```mdx-code-block

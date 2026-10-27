@@ -155,14 +155,14 @@ local data = {
     memberNickname= "batman"
 }
 local roundStartedEpoch = [[#ts]]
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
-<%= data.branding.codePrefix %>:getTournamentService():postGroupTournamentScore(leaderboardId, groupId, score, data, roundStartedEpoch, callback)
+<%= data.branding.codePrefix %>.tournament:postGroupTournamentScore(leaderboardId, groupId, score, data, roundStartedEpoch, callback)
 ```
 
 ```mdx-code-block

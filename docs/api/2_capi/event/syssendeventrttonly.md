@@ -78,7 +78,7 @@ eventData | The user-defined data for this event encoded in JSON.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

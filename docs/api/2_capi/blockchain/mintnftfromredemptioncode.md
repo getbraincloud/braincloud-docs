@@ -76,7 +76,7 @@ mintDataJson | JSON object containing blockchain provider specific data for mint
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

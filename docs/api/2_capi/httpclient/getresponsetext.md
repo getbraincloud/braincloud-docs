@@ -75,7 +75,7 @@ headers | Map of extra headers
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

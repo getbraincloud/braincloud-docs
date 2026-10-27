@@ -216,11 +216,11 @@ local maxSteps = 3
 local algo = {
     strategy = "ranged-absolute",
     alignment = "center",
-    ranges = [
+    ranges = {
         5,
         7.5,
         10
-    ]
+    }
 }
 local filterJson = {
     cheater = false
@@ -231,15 +231,15 @@ local isReady = false
 local extraJson = {}
 local teamCode = "blue"
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getLobbyService():findOrCreateLobby(lobbyType, rating, maxSteps, algo, filterJson, otherUserCxIds, settings, isReady, extraJson, teamCode, callback)
+<%= data.branding.codePrefix %>.lobby:findOrCreateLobby(lobbyType, rating, maxSteps, algo, filterJson, otherUserCxIds, settings, isReady, extraJson, teamCode, callback)
 ```
 
 ```mdx-code-block

@@ -76,7 +76,7 @@ pageOffset | Number of pages to go forward or back
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

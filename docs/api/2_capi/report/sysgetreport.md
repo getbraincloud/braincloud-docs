@@ -73,7 +73,7 @@ Returns the full report for the given reportId, if it exists.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

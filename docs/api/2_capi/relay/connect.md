@@ -104,32 +104,22 @@ ServerResponse result = await _bc.relayService.connect(eRelayConnectionType:Rela
 ```
 
 ```lua
-void successCallback(Map<String, dynamic>?  jsonResponse) {
-    // Did connect.
-    // Your code
+-- options come from the lobby ROOM_ASSIGNED event
+local options = {
+    host = data.connectData.address,
+    port = data.connectData.ports.ws,
+    ssl = false,
+    passcode = data.passcode,
+    lobbyId = data.lobbyId
 }
-void failureCallback(Map<String, dynamic>?  jsonError) {
-  dynamic errorMap = (jsonError is String) ? json.decode(jsonError) : jsonError
-  // Your code
-}
-// data is retrieved from the onLobby event ROOM_ASSIGNED here.
-local connectOptions = {
-                  false,
-                  data{ "connectData" }{ "address" },
-                  data{ "connectData" }{ "ports" }{ "ws" },
-                  data{ "passcode" },
-                  data{ "lobbyId" }}
-​
-
-local callback = function(result)
-    if result.statusCode == 200 then
-        print("Success")
-    else
-        print("Failed | " .. tostring(result.status))
-    end
+local successCallback = function(response)
+    -- connected
+end
+local failureCallback = function(response)
+    -- your code
 end
 
-<%= data.branding.codePrefix %>:getRelayService():connect(RelayConnectionType.WEBSOCKET, connectOptions, successCallback, failureCallback, callback)
+<%= data.branding.codePrefix %>.relay:connect(options, successCallback, failureCallback)
 ```
 
 ```mdx-code-block

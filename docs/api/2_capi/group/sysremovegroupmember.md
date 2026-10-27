@@ -74,7 +74,7 @@ profileId | The profile id of the user being removed from the group.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

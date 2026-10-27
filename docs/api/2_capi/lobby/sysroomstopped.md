@@ -72,7 +72,7 @@ lobbyId | The id of lobby that should be returned to the 'setup' state
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

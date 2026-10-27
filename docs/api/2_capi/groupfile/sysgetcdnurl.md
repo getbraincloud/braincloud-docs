@@ -73,7 +73,7 @@ fileId | The id of the file.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

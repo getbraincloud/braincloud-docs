@@ -150,15 +150,15 @@ local summary = {
     total = 5
 }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getPlaybackStreamService():addEvent(playbackStreamId, eventData, summary, callback)
+<%= data.branding.codePrefix %>.playbackStream:addEvent(playbackStreamId, eventData, summary, callback)
 ```
 
 ```mdx-code-block

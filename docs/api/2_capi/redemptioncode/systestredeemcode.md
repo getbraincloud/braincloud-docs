@@ -82,7 +82,7 @@ _Note that if the optional `codeType` is not provided, the system assumes that c
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

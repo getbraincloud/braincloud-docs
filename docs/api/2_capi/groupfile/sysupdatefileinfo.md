@@ -76,7 +76,7 @@ newAcl | The optional new acl.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

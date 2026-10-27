@@ -87,7 +87,7 @@ Substitutions parameter would be `{ "1" : "User Appreciation", "2", "User Apprec
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -65,7 +65,7 @@ Generic method for calling S2S API services.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

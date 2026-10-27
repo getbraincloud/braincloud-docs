@@ -120,15 +120,15 @@ if (result.statusCode == 200) {
 ```lua
 local statistics = { "ESTIMATE", "POINTS" }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getGlobalGameStatisticsService():readGlobalStatsSubset(statistics, callback)
+<%= data.branding.codePrefix %>.globalStatistics:readGlobalStatsSubset(statistics, callback)
 ```
 
 ```mdx-code-block
