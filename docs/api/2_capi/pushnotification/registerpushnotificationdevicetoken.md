@@ -125,19 +125,18 @@ if (result.statusCode == 200) {
 ```
 
 ```lua
-local devicePlatform = PlatformID.iOS
+local deviceType = "IOS"
 local deviceToken = "12345"
-​
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getPushNotificationService():registerPushNotificationToken(devicePlatform, deviceToken, callback)
+<%= data.branding.codePrefix %>.pushNotification:registerPushNotificationDeviceToken(deviceType, deviceToken, callback)
 ```
 
 ```mdx-code-block

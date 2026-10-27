@@ -75,7 +75,7 @@ Method updates the acl of an exisiting system entity on the server.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

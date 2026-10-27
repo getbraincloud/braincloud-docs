@@ -83,7 +83,7 @@ dropMax | If `true`, the full quantity of each item is dropped. If `false`, a qu
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

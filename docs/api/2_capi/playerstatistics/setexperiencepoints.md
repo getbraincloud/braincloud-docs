@@ -119,15 +119,15 @@ if (result.statusCode == 200) {
 ```lua
 local xpValue = 1
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getPlayerStatisticsService():setExperiencePoints(xpValue, callback)
+<%= data.branding.codePrefix %>.playerStatistics:setExperiencePoints(xpValue, callback)
 ```
 
 ```mdx-code-block

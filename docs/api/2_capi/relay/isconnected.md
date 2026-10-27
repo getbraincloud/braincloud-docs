@@ -65,7 +65,7 @@ bool connected = _bc.relayService.isConnected();
 ```
 
 ```lua
-local connected = <%= data.branding.codePrefix %>:getRelayService():isConnected()
+local connected = <%= data.branding.codePrefix %>.relay:isConnected()
 ```
 
 ```mdx-code-block

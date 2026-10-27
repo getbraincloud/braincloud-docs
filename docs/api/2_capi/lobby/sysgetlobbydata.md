@@ -73,7 +73,7 @@ Gets data for the given lobby instance ``<lobbyId>``.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -78,7 +78,7 @@ seconds | Number of seconds to extend px expiry
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

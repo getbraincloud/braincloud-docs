@@ -65,7 +65,7 @@ Retrieves a S2S ScriptService proxy object.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

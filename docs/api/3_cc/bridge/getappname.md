@@ -65,7 +65,7 @@ Returns the name of the app.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -89,7 +89,7 @@ Creates a leaderboard configuration, with support for tournament leaderboards.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

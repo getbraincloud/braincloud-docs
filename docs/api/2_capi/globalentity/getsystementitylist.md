@@ -85,7 +85,7 @@ maxReturn | The maximum number of entities to return
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

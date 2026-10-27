@@ -222,17 +222,17 @@ local rating = 76
 local maxSteps = 3
 local algo = {
     strategy = "compound",
-    algos = [
+    algos = {
         { criteria = "ping", strategy = "absolute", alignment = "absolute" },
         {
             criteria = "rating",
             strategy = "ranged-absolute",
             alignment = "center"
         }
-    ],
-    ["compound-ranges"] = { [30, [5, 10 }],
-        { 50, [10, 15 }]
-    ]
+    },
+    ["compound-ranges"] = { {30, {5, 10 }},
+        { 50, {10, 15 }}
+    }
 }
 local filterJson = {
     cheater = false
@@ -242,15 +242,15 @@ local isReady = false
 local extraJson = {}
 local teamCode = "blue"
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getLobbyService():findLobbyWithPingData(lobbyType, rating, maxSteps, algo, filterJson, otherUserCxIds, isReady, extraJson, teamCode, callback)
+<%= data.branding.codePrefix %>.lobby:findLobbyWithPingData(lobbyType, rating, maxSteps, algo, filterJson, otherUserCxIds, isReady, extraJson, teamCode, callback)
 ```
 
 ```mdx-code-block

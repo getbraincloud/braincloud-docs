@@ -145,15 +145,15 @@ local newItemData = {
   bonus = 1
 }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getUserItemsService():updateUserItemData(itemId, version, newItemData, callback)
+<%= data.branding.codePrefix %>.userItems:updateUserItemData(itemId, version, newItemData, callback)
 ```
 
 ```mdx-code-block

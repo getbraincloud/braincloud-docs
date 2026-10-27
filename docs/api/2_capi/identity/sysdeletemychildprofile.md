@@ -73,7 +73,7 @@ profileId | The child profile id to delete. If omitted, the singleton child prof
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

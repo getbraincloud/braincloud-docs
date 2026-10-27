@@ -73,7 +73,7 @@ Returns an array of the notification templates defined - with the text for the s
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

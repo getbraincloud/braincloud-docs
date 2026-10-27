@@ -92,7 +92,22 @@ var fileSize = file.size;
 ```
 
 ```lua
-// N/A
+local cloudPath = "test/path"
+local cloudFilename = "file.txt"
+local shareable = true
+local replaceIfExists = false
+local fileSize = 1024
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+-- Roblox can't stream a multi-part upload; <%= data.branding.codePrefix %>.file:uploadFileFromMemory() does both steps
+<%= data.branding.codePrefix %>.file:prepareUserUpload(cloudPath, cloudFilename, shareable, replaceIfExists, fileSize, callback)
 ```
 
 ```mdx-code-block

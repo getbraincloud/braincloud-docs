@@ -74,7 +74,7 @@ Set a group's access conditions, bypassing ownership/ACL checks.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

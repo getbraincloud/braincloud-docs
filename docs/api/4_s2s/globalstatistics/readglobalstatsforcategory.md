@@ -73,7 +73,7 @@ Method retrieves the global statistics for the given category.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

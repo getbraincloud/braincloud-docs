@@ -75,7 +75,7 @@ Send the given data to all members of the given lobby.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

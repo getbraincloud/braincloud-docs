@@ -73,7 +73,7 @@ Reads a subset of global statistics.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

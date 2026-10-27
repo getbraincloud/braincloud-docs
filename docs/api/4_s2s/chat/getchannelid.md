@@ -74,7 +74,7 @@ Retrieves a channel id given the specified lookup parameters.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -75,7 +75,7 @@ recurse | Delete files in subdirectories as well?
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

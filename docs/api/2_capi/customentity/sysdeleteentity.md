@@ -74,7 +74,7 @@ version | Version of the custom entity being deleted.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

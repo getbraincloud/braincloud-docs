@@ -77,7 +77,7 @@ forceCreate | Should a new score be created? When false, the call can only modif
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

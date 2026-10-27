@@ -73,7 +73,7 @@ version | Version of catalog item being edited.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

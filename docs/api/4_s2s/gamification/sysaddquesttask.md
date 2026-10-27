@@ -127,7 +127,7 @@ An example taskJson object:
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

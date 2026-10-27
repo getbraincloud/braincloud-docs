@@ -133,15 +133,15 @@ local where = {
 }
 local maxReturn = 20
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getGroupService():getRandomGroupsMatching(where, maxReturn, callback)
+<%= data.branding.codePrefix %>.group:getRandomGroupsMatching(where, maxReturn, callback)
 ```
 
 ```mdx-code-block

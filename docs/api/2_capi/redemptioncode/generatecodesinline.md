@@ -79,7 +79,7 @@ Generates specified quantity of redemption codes, for a personal ('single-use') 
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -74,7 +74,7 @@ force | Specify true to publish items that have previously been retired or revok
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

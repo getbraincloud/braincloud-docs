@@ -75,7 +75,7 @@ applyChangesToLiveLeaderboards | If true, forces updates to all leaderboards wit
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

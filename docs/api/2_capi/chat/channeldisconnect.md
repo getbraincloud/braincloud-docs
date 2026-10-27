@@ -126,15 +126,15 @@ if (result.statusCode == 200) {
 ```lua
 local channelId = "55555:gl:bcDev"
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getChatService():channelDisconnect(channelId, callback)
+<%= data.branding.codePrefix %>.chat:channelDisconnect(channelId, callback)
 ```
 
 ```mdx-code-block

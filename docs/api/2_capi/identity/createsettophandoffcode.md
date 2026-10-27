@@ -82,7 +82,7 @@ stringPool | The pool of characters (or phrases) to use to generate the random c
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

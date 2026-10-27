@@ -76,7 +76,7 @@ The `items` field can contain both individual items and bundles — each entry's
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

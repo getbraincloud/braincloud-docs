@@ -119,15 +119,15 @@ if (result.statusCode == 200) {
 ```lua
 local friendId = "profileId"
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getFriendService():readFriendUserState(friendId, callback)
+<%= data.branding.codePrefix %>.friend:readFriendUserState(friendId, callback)
 ```
 
 ```mdx-code-block

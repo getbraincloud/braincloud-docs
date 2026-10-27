@@ -86,7 +86,18 @@ const char * authToken = "somePlaystationNetworkAuthToken";
 ```
 
 ```lua
-// N/A
+local psnAccountId = "accountId"
+local authenticationToken = "someToken"
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.identity:mergePlaystation5Identity(psnAccountId, authenticationToken, callback)
 ```
 
 ```mdx-code-block

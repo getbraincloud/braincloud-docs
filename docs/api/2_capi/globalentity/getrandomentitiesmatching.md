@@ -134,15 +134,15 @@ local where = {
 }
 local maxReturn = 10
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getGlobalEntityService():getRandomEntitiesMatching(where, maxReturn, callback)
+<%= data.branding.codePrefix %>.globalEntity:getRandomEntitiesMatching(where, maxReturn, callback)
 ```
 
 ```mdx-code-block

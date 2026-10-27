@@ -65,7 +65,7 @@ var appId = <%= data.branding.codePrefix %>.getAppId();
 ```
 
 ```lua
-local appId = <%= data.branding.codePrefix %>:getAppId()
+-- N/A
 ```
 
 ```mdx-code-block

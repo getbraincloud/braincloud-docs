@@ -91,7 +91,7 @@ Deletes the specified leaderboards from <%= data.branding.productName %> server.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

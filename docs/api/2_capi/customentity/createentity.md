@@ -166,27 +166,25 @@ if (result.statusCode == 200) {
 ```lua
 local entityType = "athletes"
 local dataJson = {
-  firstName = "Super",
-  surName = "Star",
-  position = "forward",
-  goals = 2,
-  assists = 4
+    firstName = "Super",
+    surName = "Star",
+    position = "forward",
+    goals = 2,
+    assists = 4
 }
-local acl = {
-  other = 1
-}
-local timeToLive = null
+local acl = { other = 1 }
+local timeToLive = nil
 local isOwned = false
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getCustomEntityService():createEntity(entityType, dataJson, acl, timeToLive, isOwned, callback)
+<%= data.branding.codePrefix %>.customEntity:createEntity(entityType, dataJson, acl, timeToLive, isOwned, callback)
 ```
 
 ```mdx-code-block

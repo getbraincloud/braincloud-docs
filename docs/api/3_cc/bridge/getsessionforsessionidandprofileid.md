@@ -71,7 +71,7 @@ profileId | String that identifies profile. Must match session profile.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

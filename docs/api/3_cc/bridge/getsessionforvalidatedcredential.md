@@ -76,7 +76,7 @@ authenticationToken | Password or client side token
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

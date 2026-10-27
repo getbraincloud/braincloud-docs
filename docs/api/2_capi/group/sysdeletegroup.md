@@ -75,7 +75,7 @@ version | The current group version
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

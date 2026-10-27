@@ -76,7 +76,7 @@ Sends a notification to a list of users consisting of raw message content.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

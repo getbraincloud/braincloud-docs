@@ -76,7 +76,7 @@ Add a redemption code for a personal ('single-use') code type. Optional paramete
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

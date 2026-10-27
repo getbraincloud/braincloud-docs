@@ -80,7 +80,7 @@ msgVer | The version of the message.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

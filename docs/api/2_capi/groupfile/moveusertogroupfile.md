@@ -183,15 +183,15 @@ local groupFileAcl = {
   other = 0
 }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getGroupFileService():moveUserToGroupFile(userCloudPath, userCloudFilename, groupId, groupTreeId, groupFilename, overwriteIfPresent, groupFileAcl, callback)
+<%= data.branding.codePrefix %>.groupFile:moveUserToGroupFile(userCloudPath, userCloudFilename, groupId, groupTreeId, groupFilename, groupFileAcl, overwriteIfPresent, callback)
 ```
 
 ```mdx-code-block

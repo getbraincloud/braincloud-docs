@@ -73,7 +73,7 @@ Returns the list of products (summary details only) for the specified category (
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

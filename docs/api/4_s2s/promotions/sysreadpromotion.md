@@ -73,7 +73,7 @@ Returns the full configuration data of the specified promotion.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

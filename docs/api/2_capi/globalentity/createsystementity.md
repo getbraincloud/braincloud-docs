@@ -75,7 +75,7 @@ jsonEntityData | The entity's data object
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -65,7 +65,7 @@ Disconnect from the relay server.
 ```
 
 ```lua
-// N/A
+<%= data.branding.codePrefix %>.relay:disconnect()
 ```
 
 ```mdx-code-block

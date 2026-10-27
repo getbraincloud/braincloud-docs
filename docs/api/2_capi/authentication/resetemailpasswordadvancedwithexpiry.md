@@ -157,22 +157,22 @@ local serviceParams = {
     substitutions = {
         aKey = "aValue"
     },
-    categories = [
+    categories = {
         "category1",
         "category2"
-    ]
+    }
 }
 local tokenTtlInMinutes = 1440
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getAuthenticationService():resetEmailPasswordAdvancedWithExpiry(emailAddress, serviceParams, tokenTtlInMinutes, callback)
+<%= data.branding.codePrefix %>.authentication:resetEmailPasswordAdvancedWithExpiry(emailAddress, serviceParams, tokenTtlInMinutes, callback)
 ```
 
 ```mdx-code-block

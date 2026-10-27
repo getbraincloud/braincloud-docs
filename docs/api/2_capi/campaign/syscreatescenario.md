@@ -86,7 +86,7 @@ A new scenario is not part of the campaign's traffic split until you give it a w
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

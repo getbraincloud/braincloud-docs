@@ -74,7 +74,7 @@ priceId | The priceId being set as the default. Pass -1 to make a product item n
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -147,22 +147,17 @@ if (result.statusCode == 200) {
 
 ```lua
 local lobbyType = "Relay_lobbyT_v2"
-var  "criteriaJson" = {
-      rating = {
-        min = 10,
-        max = 100
-      }
-    }
+local criteriaJson = { rating = { min = 10, max = 100 } }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getLobbyService():getLobbyInstances(lobbyType, criteriaJson, callback)
+<%= data.branding.codePrefix %>.lobby:getLobbyInstances(lobbyType, criteriaJson, callback)
 ```
 
 ```mdx-code-block

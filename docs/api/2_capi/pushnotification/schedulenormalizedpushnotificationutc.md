@@ -164,15 +164,15 @@ local customDataJson = {
 }
 local startTime = 1437579786000
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getPushNotificationService():scheduleNormalizedPushNotificationUTC(profileId, alertContentJson, customDataJson, startTime, callback)
+<%= data.branding.codePrefix %>.pushNotification:scheduleNormalizedPushNotificationUTC(profileId, alertContentJson, customDataJson, startTime, callback)
 ```
 
 ```mdx-code-block

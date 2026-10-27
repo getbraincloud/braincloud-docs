@@ -77,7 +77,7 @@ createInterimDirectories | Whether to automatically create folders if needed.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -168,15 +168,15 @@ local statistics = {
     TREES_CLIMBED_REQ = "MIN#5"
 }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getPlayerStatisticsService():processStatistics(statistics, callback)
+<%= data.branding.codePrefix %>.playerStatistics:processStatistics(statistics, callback)
 ```
 
 ```mdx-code-block

@@ -74,7 +74,7 @@ Deletes specified system message on the server. Note, if a regular message, dele
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

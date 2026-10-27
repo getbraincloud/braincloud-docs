@@ -124,15 +124,15 @@ if (result.statusCode == 200) {
 ```lua
 local contactEmail = "someName@somedomain.com"
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getPlayerStateService():updateContactEmail(contactEmail, callback)
+<%= data.branding.codePrefix %>.playerState:updateContactEmail(contactEmail, callback)
 ```
 
 ```mdx-code-block

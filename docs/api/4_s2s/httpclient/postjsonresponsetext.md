@@ -76,7 +76,7 @@ Posts a JSON document, expects a text response.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

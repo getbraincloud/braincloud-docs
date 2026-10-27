@@ -209,15 +209,15 @@ local facebookContent = {
     template = "content of message"
 }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getPushNotificationService():sendRawPushNotificationBatch(profileIds, fcmContent, iosContent, facebookContent, callback)
+<%= data.branding.codePrefix %>.pushNotification:sendRawPushNotificationBatch(profileIds, fcmContent, iosContent, facebookContent, callback)
 ```
 
 ```mdx-code-block

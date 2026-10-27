@@ -129,15 +129,15 @@ if (result.statusCode == 200) {
 local groupId = "aaa-bbb-ccc-ddd"
 local bidirectional = true
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getPresenceService():registerListenersForGroup(groupId, bidirectional, callback)
+<%= data.branding.codePrefix %>.presence:registerListenersForGroup(groupId, bidirectional, callback)
 ```
 
 ```mdx-code-block

@@ -78,7 +78,7 @@ priceJson | The price details as JSON map.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

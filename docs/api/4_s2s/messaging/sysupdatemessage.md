@@ -75,7 +75,7 @@ Updates a system message.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

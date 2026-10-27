@@ -78,7 +78,7 @@ _Note - <%= data.branding.productName %> checks for schedule cloud code scripts 
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

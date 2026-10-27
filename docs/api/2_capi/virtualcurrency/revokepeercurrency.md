@@ -73,7 +73,7 @@ peerCode | The peer code of the peer.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

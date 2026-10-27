@@ -83,7 +83,7 @@ where | Mongo style query string
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

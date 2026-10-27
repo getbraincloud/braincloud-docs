@@ -141,15 +141,15 @@ if (result.statusCode == 200) {
 ```lua
 local forceCreate = true
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getAuthenticationService():authenticateAnonymous(forceCreate, callback)
+<%= data.branding.codePrefix %>.authentication:authenticateAnonymous(forceCreate, callback)
 ```
 
 ```mdx-code-block

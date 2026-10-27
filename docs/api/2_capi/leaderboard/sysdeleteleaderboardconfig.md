@@ -74,7 +74,7 @@ Delete a leaderboard config, with support for tournament leaderboards. Note that
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -103,7 +103,7 @@ This operation posts a Text document and expects a Text document in response.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

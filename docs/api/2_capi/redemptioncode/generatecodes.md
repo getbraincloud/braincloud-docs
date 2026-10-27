@@ -80,7 +80,7 @@ Generates specified quantity of redemption codes for a personal ('single-use') c
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

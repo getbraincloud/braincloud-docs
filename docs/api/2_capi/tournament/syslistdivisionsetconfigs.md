@@ -72,7 +72,7 @@ optionsJson | Optional JSON to sort the list of division set configs. Valid valu
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

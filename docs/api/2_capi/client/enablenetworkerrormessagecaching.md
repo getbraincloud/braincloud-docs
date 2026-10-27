@@ -87,7 +87,7 @@ ResetCommunication() will also clear the message cache.
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:enableNetworkErrorMessageCaching(true)
+-- N/A
 ```
 
 ```mdx-code-block

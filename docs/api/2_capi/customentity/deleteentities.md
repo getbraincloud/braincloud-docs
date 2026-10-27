@@ -139,15 +139,15 @@ local deleteCriteria = {
     }
 }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getCustomEntityService():deleteEntities(entityType, deleteCriteria, callback)
+<%= data.branding.codePrefix %>.customEntity:deleteEntities(entityType, deleteCriteria, callback)
 ```
 
 ```mdx-code-block

@@ -118,15 +118,15 @@ if (result.statusCode == 200) {
 ```lua
 local defId = "sword001"
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getItemCatalogService():getCatalogItemDefinition(defId, callback)
+<%= data.branding.codePrefix %>.itemCatalog:getCatalogItemDefinition(defId, callback)
 ```
 
 ```mdx-code-block

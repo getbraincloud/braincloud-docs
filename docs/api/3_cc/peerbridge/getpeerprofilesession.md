@@ -66,7 +66,7 @@ Requires the client to have attached a peer profile via the [<code>AttachPeerPro
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -67,7 +67,7 @@ Returns the segments for the current user - in legacy format (i.e. using the exi
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

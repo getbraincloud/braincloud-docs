@@ -67,7 +67,7 @@ Sends an event to multiple users with the attached json data.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

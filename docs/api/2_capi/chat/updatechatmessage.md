@@ -163,15 +163,15 @@ local contentJson = {
     }
 }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getChatService():updateChatMessage(channelId, msgId, version, contentJson, callback)
+<%= data.branding.codePrefix %>.chat:updateChatMessage(channelId, msgId, version, contentJson, callback)
 ```
 
 ```mdx-code-block

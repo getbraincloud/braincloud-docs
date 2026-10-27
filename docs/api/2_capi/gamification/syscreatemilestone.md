@@ -122,7 +122,7 @@ milestoneJson | A json object describing the milestone to create.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

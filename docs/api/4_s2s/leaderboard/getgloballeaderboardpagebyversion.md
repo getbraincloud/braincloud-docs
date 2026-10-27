@@ -85,7 +85,7 @@ See GetGlobalLeaderboardVersions method to retrieve the version id.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

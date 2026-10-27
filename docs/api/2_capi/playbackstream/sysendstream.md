@@ -74,7 +74,7 @@ End a playback stream.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

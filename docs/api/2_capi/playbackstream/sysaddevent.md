@@ -76,7 +76,7 @@ Add event to stream.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -75,7 +75,7 @@ waitingTime | Time in millis.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

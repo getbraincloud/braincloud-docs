@@ -73,7 +73,7 @@ Returns details of the identified product transaction.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

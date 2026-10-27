@@ -126,15 +126,15 @@ if (result.statusCode == 200) {
 local eventType = "my-event-type"
 local dateMillis = 1619804426154
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getEventService():deleteIncomingEventsByTypeOlderThan(eventType, dateMillis, callback)
+<%= data.branding.codePrefix %>.event:deleteIncomingEventsByTypeOlderThan(eventType, dateMillis, callback)
 ```
 
 ```mdx-code-block

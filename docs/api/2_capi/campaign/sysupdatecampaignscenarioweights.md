@@ -77,7 +77,7 @@ The list must include the control scenario (`_`), every scenario in it must alre
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

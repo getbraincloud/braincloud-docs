@@ -74,7 +74,7 @@ Get a list of entities from the server base on indexed id.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

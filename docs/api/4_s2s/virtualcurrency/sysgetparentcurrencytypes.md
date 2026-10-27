@@ -67,7 +67,7 @@ Retrieves the virtual currency types inherited from the parent app(s).
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

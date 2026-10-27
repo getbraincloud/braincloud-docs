@@ -71,7 +71,7 @@ Retrieves the named JSON object from the session cache. Returns `null` if the ob
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

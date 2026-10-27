@@ -72,7 +72,7 @@ defaultLanguageCode | The language code (lowercase) to be used for returning the
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

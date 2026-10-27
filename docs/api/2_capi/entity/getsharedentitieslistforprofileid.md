@@ -168,15 +168,15 @@ local orderByJson = {
 }
 local maxReturn = 50
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getEntityService():getSharedEntitiesListForProfileId(targetProfileId, whereJson, orderByJson, maxReturn, callback)
+<%= data.branding.codePrefix %>.entity:getSharedEntitiesListForProfileId(targetProfileId, whereJson, orderByJson, maxReturn, callback)
 ```
 
 ```mdx-code-block

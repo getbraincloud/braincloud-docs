@@ -67,7 +67,7 @@ Retrieves app secret.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

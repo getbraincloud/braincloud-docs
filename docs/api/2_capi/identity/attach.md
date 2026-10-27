@@ -77,7 +77,7 @@ externalAuthName | The name of the external authentication mechanism (optional, 
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

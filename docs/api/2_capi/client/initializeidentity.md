@@ -79,7 +79,7 @@ InitializeIdentity must be called before you can authenticate a user anonymously
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:initializeIdentity("myProfileId", "myAnonymousId")
+<%= data.branding.codePrefix %>.authentication:initialize("myProfileId", "myAnonymousId")
 ```
 
 ```mdx-code-block

@@ -76,7 +76,7 @@ createInterimDirectories | Allows for creating multiple levels of a tree at once
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -73,7 +73,7 @@ version | Version number of tournament template to return, use -1 to return curr
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

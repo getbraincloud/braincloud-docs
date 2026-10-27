@@ -129,15 +129,15 @@ if (result.statusCode == 200) {
 local externalId = "username"
 local externalAuthType = "OAuth"
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getFriendService():getProfileInfoForExternalAuthIdIfExists(externalId, externalAuthType, callback)
+<%= data.branding.codePrefix %>.friend:getProfileInfoForExternalAuthIdIfExists(externalId, externalAuthType, callback)
 ```
 
 ```mdx-code-block

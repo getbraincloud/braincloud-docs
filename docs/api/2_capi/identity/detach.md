@@ -76,7 +76,7 @@ continueAnon | If false will generate an error when downgrading to anonymous (nu
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

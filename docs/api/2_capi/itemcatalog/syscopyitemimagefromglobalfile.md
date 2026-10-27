@@ -75,7 +75,7 @@ overwriteIfPresent | Whether to copy over an existing image.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

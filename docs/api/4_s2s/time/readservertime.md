@@ -67,7 +67,7 @@ Retrieve the server time in UTC.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -75,7 +75,7 @@ Gets a map keyed by rating of the visible lobby instances matching the given typ
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

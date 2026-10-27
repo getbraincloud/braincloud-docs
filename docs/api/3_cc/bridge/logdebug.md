@@ -71,7 +71,7 @@ context | String that will display via the context icon click.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

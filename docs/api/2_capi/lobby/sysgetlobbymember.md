@@ -73,7 +73,7 @@ cxId | RTT connection id of a lobby member
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

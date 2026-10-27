@@ -147,15 +147,15 @@ local data = {
     nickname = "batman"
 }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getLeaderboardService():postScoreToLeaderboard(leaderboardId, score, data, callback)
+<%= data.branding.codePrefix %>.leaderboard:postScoreToLeaderboard(leaderboardId, score, data, callback)
 ```
 
 ```mdx-code-block

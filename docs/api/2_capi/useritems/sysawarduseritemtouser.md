@@ -75,7 +75,7 @@ optionsJson | Optional support for specifying 'blockIfExceedItemMaxStackable' in
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

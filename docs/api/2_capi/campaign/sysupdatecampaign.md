@@ -77,7 +77,7 @@ Scenario weights cannot be changed through this call; use [SysUpdateCampaignScen
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

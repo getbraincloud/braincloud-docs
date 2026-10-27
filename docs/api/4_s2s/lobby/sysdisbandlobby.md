@@ -75,7 +75,7 @@ Disbands the given lobby. `msg` and `details` are optional values.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

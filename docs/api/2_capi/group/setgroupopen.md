@@ -128,15 +128,15 @@ if (result.statusCode == 200) {
 local groupId = "a-group-id"
 local isOpenGroup = false
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getGroupService():setGroupOpen(groupId, isOpenGroup, callback)
+<%= data.branding.codePrefix %>.group:setGroupOpen(groupId, isOpenGroup, callback)
 ```
 
 ```mdx-code-block

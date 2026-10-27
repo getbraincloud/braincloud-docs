@@ -73,7 +73,7 @@ transactionId | Id of transaction to return
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

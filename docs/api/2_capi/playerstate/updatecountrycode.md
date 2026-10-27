@@ -73,7 +73,7 @@ Update user's country code preference on their profile.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -75,7 +75,7 @@ filename | The file name for verification purposes.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

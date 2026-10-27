@@ -121,15 +121,15 @@ if (result.statusCode == 200) {
 ```lua
 local universalId = "someUniversalId"
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getFriendService():findUserByExactUniversalId(universalId, callback)
+<%= data.branding.codePrefix %>.friend:findUserByExactUniversalId(universalId, callback)
 ```
 
 ```mdx-code-block

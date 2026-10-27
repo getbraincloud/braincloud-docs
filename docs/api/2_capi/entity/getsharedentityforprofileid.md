@@ -129,15 +129,15 @@ if (result.statusCode == 200) {
 local targetProfileId = "profile1"
 local entityId = "someEntityId"
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getEntityService():getSharedEntityForProfileId(targetProfileId, entityId, callback)
+<%= data.branding.codePrefix %>.entity:getSharedEntityForProfileId(targetProfileId, entityId, callback)
 ```
 
 ```mdx-code-block

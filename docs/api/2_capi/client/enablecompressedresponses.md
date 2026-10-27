@@ -71,7 +71,7 @@ Enables receiving compressed packets of responses.
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:enableCompressedResponses(true)
+-- N/A
 ```
 
 ```mdx-code-block

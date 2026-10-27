@@ -66,7 +66,7 @@ Logs out user in one frame, meant to be used when OnApplicationQuit() occurs in 
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

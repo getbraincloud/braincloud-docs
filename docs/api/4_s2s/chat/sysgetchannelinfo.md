@@ -73,7 +73,7 @@ Returns _description info_ and _activity stats_ for the specified channel. Note 
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

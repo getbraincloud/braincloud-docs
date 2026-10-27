@@ -81,7 +81,7 @@ Creates an instance of a lobby. Will return the newly created lobby id in the ev
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

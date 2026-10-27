@@ -70,7 +70,7 @@ bool allowSwitch = <%= data.branding.codePrefix %>.alwaysAllowProfileSwitch;
 ```
 
 ```lua
-local allowSwitch = <%= data.branding.codePrefix %>.alwaysAllowProfileSwitch
+-- N/A
 ```
 
 ```mdx-code-block

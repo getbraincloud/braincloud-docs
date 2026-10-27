@@ -74,7 +74,7 @@ Returns a list of the metadata for the latest reports for the given report optio
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

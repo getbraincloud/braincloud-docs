@@ -79,7 +79,7 @@ maxReturn | Maximum number of messages to return
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

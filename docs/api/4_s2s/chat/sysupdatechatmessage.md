@@ -76,7 +76,7 @@ Update the specified chat message. Message can have been from any user (or syste
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

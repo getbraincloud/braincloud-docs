@@ -78,7 +78,7 @@ Move or rename the specified file.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

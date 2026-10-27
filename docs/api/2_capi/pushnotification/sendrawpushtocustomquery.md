@@ -76,7 +76,7 @@ Sends a push to users based on custom collection query and the profileIdField st
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

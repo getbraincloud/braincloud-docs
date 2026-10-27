@@ -74,7 +74,7 @@ Extends the presence TTL for \`profileId` by \`seconds`.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

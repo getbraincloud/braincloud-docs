@@ -128,15 +128,15 @@ if (result.statusCode == 200) {
 local playerId = "player"
 local rangeDelta = 10
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getOnewayMatchService():startMatch(playerId, rangeDelta, callback)
+<%= data.branding.codePrefix %>.oneWayMatch:startMatch(playerId, rangeDelta, callback)
 ```
 
 ```mdx-code-block

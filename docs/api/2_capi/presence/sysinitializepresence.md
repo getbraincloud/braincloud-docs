@@ -79,7 +79,7 @@ expirySecs | Time before this activity record expires.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -81,7 +81,7 @@ This service is used to authenticate the server request for the session based pr
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

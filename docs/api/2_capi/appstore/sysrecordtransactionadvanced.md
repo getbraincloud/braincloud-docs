@@ -85,7 +85,7 @@ This is a variant of [SysRecordTransaction](/api/capi/appstore/sysrecordtransact
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

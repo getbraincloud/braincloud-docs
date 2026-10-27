@@ -153,15 +153,15 @@ local flagEmail = false
 local flagPhone = false
 local flagUrls = false
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getProfanityService():profanityReplaceText(text, replaceSymbol, languages, flagEmail, flagPhone, flagUrls, callback)
+<%= data.branding.codePrefix %>.profanity:profanityReplaceText(text, replaceSymbol, languages, flagEmail, flagPhone, flagUrls, callback)
 ```
 
 ```mdx-code-block

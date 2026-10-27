@@ -77,7 +77,7 @@ version | Version of the promotion to update. Can bypass version check by passin
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

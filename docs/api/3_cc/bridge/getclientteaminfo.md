@@ -71,7 +71,7 @@ For the S2S bridge call, both versions return the team info for the app id assoc
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

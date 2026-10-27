@@ -65,7 +65,7 @@ int pingTime = _bc.relayService.getPing();
 ```
 
 ```lua
-local pingTime = <%= data.branding.codePrefix %>:getRelayService():getPing()
+local pingTime = <%= data.branding.codePrefix %>.relay:getPing()
 ```
 
 ```mdx-code-block

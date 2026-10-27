@@ -109,11 +109,7 @@ var appVersion = "1.0.0";
 ```
 
 ```lua
-local serverUrl = "https://api.braincloudservers.com/dispatcherv2"; //Optional parameter
-local secretKey = "1234-1234-1234-1234"
-local appId = "123456"
-local appVersion = "1.0.0"
-<%= data.branding.codePrefix %>:initialize(serverUrl, secretKey, appId, appVersion)
+-- N/A
 ```
 
 ```mdx-code-block

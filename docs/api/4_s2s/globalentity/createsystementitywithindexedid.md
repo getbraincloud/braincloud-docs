@@ -77,7 +77,7 @@ Create a new system entity on the server with an indexed id.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

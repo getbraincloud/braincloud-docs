@@ -73,7 +73,7 @@ profileId | The profile id of the user to be checked.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -120,15 +120,15 @@ if (result.statusCode == 200) {
 ```lua
 local visible = true
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getPresenceService():setVisibility(visible, callback)
+<%= data.branding.codePrefix %>.presence:setVisibility(visible, callback)
 ```
 
 ```mdx-code-block

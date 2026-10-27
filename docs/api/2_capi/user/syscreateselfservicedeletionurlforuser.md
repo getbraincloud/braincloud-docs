@@ -73,7 +73,7 @@ profileId | The profile ID of the target user for whom the delete account URL is
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -65,7 +65,7 @@ Returns the timestamp (in milliseconds since epoch) of when the current player s
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

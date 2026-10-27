@@ -80,7 +80,7 @@ If none of the supplied fields differ from the current values, the scenario is r
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

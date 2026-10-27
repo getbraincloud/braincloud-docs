@@ -137,15 +137,15 @@ local parseId = "someId1234"
 local parseToken = "authToken"
 local forceCreate = true
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getAuthenticationService():authenticateParse(parseId, parseToken, forceCreate, callback)
+<%= data.branding.codePrefix %>.authentication:authenticateParse(parseId, parseToken, forceCreate, callback)
 ```
 
 ```mdx-code-block

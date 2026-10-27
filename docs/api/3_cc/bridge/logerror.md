@@ -71,7 +71,7 @@ context | Additional string-format information to include with the message.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

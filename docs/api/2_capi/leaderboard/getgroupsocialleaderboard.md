@@ -127,15 +127,15 @@ if (result.statusCode == 200) {
 local leaderboardId = "default"
 local groupId = "a-group-id"
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getLeaderboardService():getGroupSocialLeaderboard(leaderboardId, groupId, callback)
+<%= data.branding.codePrefix %>.leaderboard:getGroupSocialLeaderboard(leaderboardId, groupId, callback)
 ```
 
 ```mdx-code-block

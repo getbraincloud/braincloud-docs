@@ -74,7 +74,7 @@ Retrieves a chat message object from history. If the message cannot be found, th
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

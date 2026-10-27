@@ -149,15 +149,15 @@ local jsonEntityData = {
     ["field3-new"] = 3
 }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getGlobalEntityService():incrementGlobalEntityData(entityId, jsonEntityData, callback)
+<%= data.branding.codePrefix %>.globalEntity:incrementGlobalEntityData(entityId, jsonEntityData, callback)
 ```
 
 ```mdx-code-block

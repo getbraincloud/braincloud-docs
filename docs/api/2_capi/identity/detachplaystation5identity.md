@@ -82,7 +82,18 @@ const char * accountId = "somePlaystationNetworkId";
 ```
 
 ```lua
-// N/A
+local psnAccountId = "accountId"
+local continueAnon = true
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.identity:detachPlaystation5Identity(psnAccountId, continueAnon, callback)
 ```
 
 ```mdx-code-block

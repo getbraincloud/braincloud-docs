@@ -73,7 +73,7 @@ serviceParams | Set of parameters dependant on the mail service configured
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

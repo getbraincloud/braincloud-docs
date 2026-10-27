@@ -76,7 +76,7 @@ connectData | Optionally override the connectData of the lobby instance. Pass nu
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

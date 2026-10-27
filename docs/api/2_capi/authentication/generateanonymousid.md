@@ -67,7 +67,7 @@ var anonId = <%= data.branding.codePrefix %>.authentication.generateAnonymousId(
 ```
 
 ```lua
-local anonId = <%= data.branding.codePrefix %>:getAuthenticationService():generateAnonymousId()
+local anonId = <%= data.branding.codePrefix %>.authentication:generateAnonymousId()
 ```
 
 ```mdx-code-block

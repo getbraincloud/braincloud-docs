@@ -65,7 +65,7 @@ Retrieves the client's session ID for the current user as a string.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

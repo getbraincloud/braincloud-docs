@@ -85,7 +85,7 @@ Supported `searchCriteria` fields include:
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

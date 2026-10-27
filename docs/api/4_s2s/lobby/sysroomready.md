@@ -74,7 +74,7 @@ Indicates that a room is ready for use by the members of the given lobby.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

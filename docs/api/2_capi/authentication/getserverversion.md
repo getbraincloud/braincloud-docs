@@ -67,7 +67,15 @@ public void getServerVersion();
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:getAuthenticationService():getServerVersion()
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.authentication:getServerVersion(callback)
 ```
 
 ```mdx-code-block

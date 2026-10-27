@@ -77,7 +77,7 @@ jsonData | Data to apply
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

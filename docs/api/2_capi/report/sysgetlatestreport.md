@@ -74,7 +74,7 @@ Returns the latest report for the given criteria.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

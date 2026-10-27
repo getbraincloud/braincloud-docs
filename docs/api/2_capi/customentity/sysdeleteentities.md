@@ -74,7 +74,7 @@ acrossAllUsers | Boolean indicating whether delete is to be applied to all users
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

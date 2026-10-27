@@ -72,7 +72,7 @@ session | A optional parameter for when a script is executed without a session
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

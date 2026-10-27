@@ -83,7 +83,7 @@ Records a manual transaction. Useful for stores that are not yet directly suppor
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

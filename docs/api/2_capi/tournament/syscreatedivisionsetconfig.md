@@ -73,7 +73,7 @@ configJson | Configuration data defining the division set. Includes: entryType (
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

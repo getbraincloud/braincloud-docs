@@ -129,15 +129,15 @@ if (result.statusCode == 200) {
 local epicAccountId = "0123456789abcdef0123456789abcdef"
 local authIdToken = "idTokenFromEOS"
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getIdentityService():attachEpicGamesIdentity(epicAccountId, authIdToken, callback)
+<%= data.branding.codePrefix %>.identity:attachEpicGamesIdentity(epicAccountId, authIdToken, callback)
 ```
 
 ```mdx-code-block

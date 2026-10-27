@@ -128,15 +128,15 @@ if (result.statusCode == 200) {
 local email = "email@domain.com"
 local continueAnon = true
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getIdentityService():detachEmailIdentity(email, continueAnon, callback)
+<%= data.branding.codePrefix %>.identity:detachEmailIdentity(email, continueAnon, callback)
 ```
 
 ```mdx-code-block

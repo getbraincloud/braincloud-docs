@@ -73,7 +73,7 @@ Returns the CDN URL for the specified file.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

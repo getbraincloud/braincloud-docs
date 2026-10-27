@@ -77,7 +77,7 @@ If the campaign is in progress (enabled and within its `startAt`/`endAt` window)
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

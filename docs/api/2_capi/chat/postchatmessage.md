@@ -157,19 +157,22 @@ if (result.statusCode == 200) {
 ```
 
 ```lua
-local channelId = "22817:gl:CHAT_TRADE"
-local contentJson = {text: "Looking to sell a couch for 105 gold coins.", SELL_ITEM: {ITEM_TYPE: "COUCH"}}
-local rnecordIHistory = true
+local channelId = "22817:gl:CHAT_TRADE" -- APP_ID:CHANNEL_TYPE:CHANNEL_ID
+local content = {
+    text = "Looking to sell a couch for 105 gold coins.",
+    rich = { SELL_ITEM = { ITEM_TYPE = "COUCH", PRICE = "105", CURRENCY = "GOLDCOINS" } }
+}
+local recordInHistory = true
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getChatService():postChatMessage(channelId, contentJson, rnecordIHistory, callback)
+<%= data.branding.codePrefix %>.chat:postChatMessage(channelId, content, recordInHistory, callback)
 ```
 
 ```mdx-code-block

@@ -74,7 +74,7 @@ Method deletes an exisiting system entity on the server.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

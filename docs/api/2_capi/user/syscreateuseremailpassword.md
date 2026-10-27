@@ -76,7 +76,7 @@ Manually creates a new user for the current app. Note that this API is normally 
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

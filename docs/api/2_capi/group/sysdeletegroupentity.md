@@ -74,7 +74,7 @@ version | The current version of the group entity (for concurrency checking).
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

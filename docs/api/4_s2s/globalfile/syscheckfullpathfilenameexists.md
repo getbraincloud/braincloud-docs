@@ -73,7 +73,7 @@ Check if filename exists for provided full path name.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

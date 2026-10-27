@@ -73,7 +73,7 @@ Method returns version information about the global leaderboard and some configu
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

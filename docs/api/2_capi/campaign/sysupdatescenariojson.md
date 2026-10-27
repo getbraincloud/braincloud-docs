@@ -86,7 +86,7 @@ The owning campaign must not have ended. The updated payload is picked up by alr
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -65,7 +65,7 @@ Retrieves the session for the peer client to allow client proxy creation.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -79,7 +79,7 @@ msgIds | An array of the ids of messages to retrieve.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

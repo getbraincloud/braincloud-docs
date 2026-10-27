@@ -75,7 +75,7 @@ Publish the specified catalog item on the server.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

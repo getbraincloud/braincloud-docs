@@ -73,7 +73,7 @@ Retrieves scripts scheduled to run up to and including the specified start time 
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

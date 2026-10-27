@@ -67,7 +67,7 @@ Method returns list of global properties.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

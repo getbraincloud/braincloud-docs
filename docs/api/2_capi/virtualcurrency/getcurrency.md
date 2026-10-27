@@ -118,15 +118,15 @@ if (result.statusCode == 200) {
 ```lua
 local vcId = "coins"
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getVirtualCurrencyService():getCurrency(vcId, callback)
+<%= data.branding.codePrefix %>.virtualCurrency:getCurrency(vcId, callback)
 ```
 
 ```mdx-code-block

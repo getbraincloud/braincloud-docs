@@ -120,15 +120,15 @@ if (result.statusCode == 200) {
 ```lua
 local evIds = { "ev1", "ev2" }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getEventService():deleteIncomingEvents(evIds, callback)
+<%= data.branding.codePrefix %>.event:deleteIncomingEvents(evIds, callback)
 ```
 
 ```mdx-code-block

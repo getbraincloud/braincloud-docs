@@ -65,7 +65,7 @@ Retrieves the server's session ID for the server context, otherwise returns null
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

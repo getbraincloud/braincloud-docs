@@ -78,7 +78,7 @@ Adds the given member to the given lobby instance.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

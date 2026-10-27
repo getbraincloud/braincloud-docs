@@ -78,7 +78,7 @@ divisionSetId | Optional (only suitable if filterType is set to `divison`). If s
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

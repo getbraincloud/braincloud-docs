@@ -138,15 +138,15 @@ local userCurrency = {
     userCurrency = "USD"
 }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getAppStoreService():getSalesInventory(storeId, userCurrency, callback)
+<%= data.branding.codePrefix %>.appStore:getSalesInventory(storeId, userCurrency, callback)
 ```
 
 ```mdx-code-block

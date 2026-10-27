@@ -74,7 +74,7 @@ questJson | A json object describing the updated quest data. Only the fields pre
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

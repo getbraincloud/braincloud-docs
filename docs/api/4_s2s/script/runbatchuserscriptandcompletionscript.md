@@ -75,7 +75,7 @@ Runs a script against the users targetted by the provided segments or all player
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

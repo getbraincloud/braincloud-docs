@@ -181,25 +181,18 @@ if (result.statusCode == 200) {
 ```
 
 ```lua
-local gameCenterID = "userGameCenterId" -- playerId, gamePlayerId, or teamPlayerId
+local gameCenterId = "userGameCenterId" -- playerId, gamePlayerId, or teamPlayerId
 local forceCreate = true
-local timestamp = 0          -- from GKLocalPlayer identity verification
-local publicKeyUrl = ""      -- from GKLocalPlayer identity verification
-local signature = nil        -- from GKLocalPlayer GetSignature()
-local salt = nil             -- from GKLocalPlayer GetSalt()
-local teamPlayerId = ""      -- only if gameCenterID is not teamPlayerId
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getAuthenticationService():authenticateGameCenter(
-    gameCenterID, forceCreate, timestamp, publicKeyUrl,
-    signature, salt, teamPlayerId, callback)
+<%= data.branding.codePrefix %>.authentication:authenticateGameCenter(gameCenterId, forceCreate, callback)
 ```
 
 ```mdx-code-block

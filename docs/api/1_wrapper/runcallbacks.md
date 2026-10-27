@@ -75,7 +75,7 @@ However, if you are not using Unity or not using the <%= data.branding.codeWrapp
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:runCallbacks()
+-- N/A
 ```
 
 ```mdx-code-block

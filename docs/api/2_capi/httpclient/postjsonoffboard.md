@@ -85,7 +85,7 @@ json | JSON formatted data to post
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

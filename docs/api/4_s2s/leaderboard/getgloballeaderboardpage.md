@@ -76,7 +76,7 @@ Retrieve a page of the global leaderboard specified by the start and end indexes
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

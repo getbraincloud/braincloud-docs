@@ -67,7 +67,7 @@ Sets all quests and milestones for the current user.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

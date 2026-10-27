@@ -67,7 +67,7 @@ This service allows you to send no-op packets to the server to keep the session 
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

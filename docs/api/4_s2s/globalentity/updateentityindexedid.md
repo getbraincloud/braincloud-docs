@@ -75,7 +75,7 @@ Updates an existing entity's IndexedId on the server.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

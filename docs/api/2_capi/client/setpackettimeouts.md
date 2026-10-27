@@ -83,7 +83,7 @@ ArrayList<Integer> packetTimeouts = new ArrayList<Integer>(
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:setPacketTimeouts([15,20,35,50])
+-- N/A
 ```
 
 ```mdx-code-block

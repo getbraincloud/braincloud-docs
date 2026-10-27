@@ -75,7 +75,7 @@ A single page returns at most 100 campaigns by default.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

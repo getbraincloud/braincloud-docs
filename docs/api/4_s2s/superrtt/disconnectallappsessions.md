@@ -65,7 +65,7 @@ Force a disconnect for all currently active RTT sessions for the app.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

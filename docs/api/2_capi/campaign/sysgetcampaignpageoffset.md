@@ -74,7 +74,7 @@ Returns another page of campaigns, using the encoded context string returned by 
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

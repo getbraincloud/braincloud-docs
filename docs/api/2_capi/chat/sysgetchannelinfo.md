@@ -79,7 +79,7 @@ channelId | The id of the channel
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

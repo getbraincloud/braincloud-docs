@@ -121,14 +121,14 @@ void failureCallback(RTTCommandResponse response) {
 ```
 
 ```lua
-local successCallback = function(jsonResponse)
-    -- Your code
+local successCallback = function(response)
+    -- your code
 end
-local failureCallback = function(jsonResponse)
-    -- Your code
+local failureCallback = function(response)
+    -- your code
 end
 
-<%= data.branding.codePrefix %>:getRttRegistrationService():enableRTT(successCallback, failureCallback)
+<%= data.branding.codePrefix %>.rttService:enableRTT(successCallback, failureCallback)
 ```
 
 ```mdx-code-block

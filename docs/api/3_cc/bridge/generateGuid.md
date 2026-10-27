@@ -65,7 +65,7 @@ Generate a random GUID.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -90,7 +90,7 @@ Get tournament configs associated with a leaderboard.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -79,7 +79,7 @@ fieldsJson | Specific fields, as JSON, within entity's custom data, with respect
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

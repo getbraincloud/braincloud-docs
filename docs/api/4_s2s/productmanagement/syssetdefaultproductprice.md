@@ -75,7 +75,7 @@ Sets the default (i.e. active) price for the given product item.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

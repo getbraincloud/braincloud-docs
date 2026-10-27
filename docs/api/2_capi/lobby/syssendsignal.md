@@ -74,7 +74,7 @@ from | Optional 'from' data to be sent.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

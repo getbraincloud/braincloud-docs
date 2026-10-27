@@ -136,15 +136,15 @@ local jsonEventProperties = {
     key2 = "value"
 }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getDataStreamService():customPageEvent(eventName, jsonEventProperties, callback)
+<%= data.branding.codePrefix %>.dataStream:customPageEvent(eventName, jsonEventProperties, callback)
 ```
 
 ```mdx-code-block

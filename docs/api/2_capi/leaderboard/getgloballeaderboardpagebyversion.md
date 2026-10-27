@@ -158,20 +158,20 @@ if (result.statusCode == 200) {
 
 ```lua
 local leaderboardId = "default"
-local sortOrder = SortOrder.HIGH_TO_LOW
+local sortOrder = <%= data.branding.codePrefix %>.leaderboard.SortOrder.HIGH_TO_LOW
 local startIndex = 0
 local endIndex = 9
 local versionId = -1
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getLeaderboardService():getGlobalLeaderboardPageByVersion(leaderboardId, sortOrder, startIndex, endIndex, versionId, callback)
+<%= data.branding.codePrefix %>.leaderboard:getGlobalLeaderboardPageByVersion(leaderboardId, sortOrder, startIndex, endIndex, versionId, callback)
 ```
 
 ```mdx-code-block

@@ -76,7 +76,7 @@ Runs a script against the users in the specified segments, and then a completion
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

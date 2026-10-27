@@ -79,11 +79,11 @@ void errorCallback(String serviceName, String serviceOperation, int statusCode, 
 ```
 
 ```lua
-void errorCallback(String serviceName, String serviceOperation, int statusCode, int reasonCode, dynamic statusMessage) {
-  // ...
-}
-​
-<%= data.branding.codePrefix %>:setErrorCallback(errorCallback)
+local errorCallback = function(serviceName, serviceOperation, statusCode, reasonCode, response)
+    -- your code
+end
+
+<%= data.branding.codePrefix %>:registerGlobalErrorCallback(errorCallback)
 ```
 
 ```mdx-code-block

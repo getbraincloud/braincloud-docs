@@ -71,7 +71,7 @@ Flushes the cached messages to resume API call processing. This will dump all of
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:flushCachedMessages(true)
+-- N/A
 ```
 
 ```mdx-code-block

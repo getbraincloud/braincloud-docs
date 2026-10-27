@@ -74,7 +74,7 @@ Method returns the number of entries in a global leaderboard.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

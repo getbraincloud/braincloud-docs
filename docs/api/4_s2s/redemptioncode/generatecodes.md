@@ -80,7 +80,7 @@ Generates specified quantity of redemption codes.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

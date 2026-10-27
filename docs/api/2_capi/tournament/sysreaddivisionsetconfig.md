@@ -72,7 +72,7 @@ divSetId | The division set id uniquely identifying the division set configurati
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

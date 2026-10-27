@@ -74,7 +74,7 @@ Awards the current user the product item rewards without requiring a purchase (f
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

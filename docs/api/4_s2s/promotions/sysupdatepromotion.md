@@ -75,7 +75,7 @@ Updates the specified promotion with the provided promotionJson. Any promotionId
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

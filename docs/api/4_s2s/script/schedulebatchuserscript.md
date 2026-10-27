@@ -77,7 +77,7 @@ Schedules a script to run on the server at a later date.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -77,7 +77,7 @@ updatedAcl | The optional new acl of the folder.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

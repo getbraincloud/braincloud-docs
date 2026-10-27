@@ -71,7 +71,7 @@ context | The json context for the page request.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

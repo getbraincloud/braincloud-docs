@@ -76,7 +76,7 @@ Runs a script against the users targetted by the provided profile ids and then a
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

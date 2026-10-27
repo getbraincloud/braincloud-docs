@@ -72,7 +72,7 @@ defId | The unique id of the item definition.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

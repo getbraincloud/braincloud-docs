@@ -73,7 +73,7 @@ fullFolderPath | The full folder path.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

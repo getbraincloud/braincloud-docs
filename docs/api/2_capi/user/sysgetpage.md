@@ -74,7 +74,7 @@ context | A context JSON object describing the pagination, searchCriteria and so
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

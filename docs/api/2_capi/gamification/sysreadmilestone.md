@@ -72,7 +72,7 @@ milestoneId | The id of the milestone to read
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

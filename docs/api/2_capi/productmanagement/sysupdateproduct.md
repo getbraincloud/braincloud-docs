@@ -74,7 +74,7 @@ productJson | The product details to update. Note: If itemId is included in the 
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -81,7 +81,7 @@ This operation sends a normalized message to multiple user targets.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

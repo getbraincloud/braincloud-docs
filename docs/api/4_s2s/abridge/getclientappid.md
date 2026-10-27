@@ -65,7 +65,7 @@ This returns the appId of the peer client script context.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

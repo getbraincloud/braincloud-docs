@@ -129,15 +129,15 @@ if (result.statusCode == 200) {
 local lobbyId = "55555:4v4:19"
 local signalData = {}
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getLobbyService():sendSignal(lobbyId, signalData, callback)
+<%= data.branding.codePrefix %>.lobby:sendSignal(lobbyId, signalData, callback)
 ```
 
 ```mdx-code-block

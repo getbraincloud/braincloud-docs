@@ -65,7 +65,7 @@ public void clearSavedProfileId();
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:getAuthenticationService():clearSavedProfileId()
+<%= data.branding.codePrefix %>.authentication:clearSavedProfileId()
 ```
 
 ```mdx-code-block

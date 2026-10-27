@@ -81,13 +81,7 @@ void fileCallback(ServerResponse  response) {
 ```
 
 ```lua
-void fileCallback(ServerResponse  response) {      
-    if (response.status == 200) {
-        // ...
-    }
-}
-​
-<%= data.branding.codePrefix %>:registerFileUploadCallback(fileCallback)
+-- N/A
 ```
 
 ```mdx-code-block

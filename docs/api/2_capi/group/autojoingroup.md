@@ -144,15 +144,15 @@ local groupType = "a-group-type-name"
 local autoJoinStrategy = "JoinRandomGroup"
 local dataQueryJson = {}
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getGroupService():autoJoinGroup(groupType, autoJoinStrategy, dataQueryJson, callback)
+<%= data.branding.codePrefix %>.group:autoJoinGroup(groupType, autoJoinStrategy, dataQueryJson, callback)
 ```
 
 ```mdx-code-block

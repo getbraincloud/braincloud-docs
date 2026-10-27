@@ -94,6 +94,27 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+local oculusId = "userId"
+local oculusNonce = "nonce"
+local forceCreate = true
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+wrapper:authenticateOculus(player.UserId, oculusId, oculusNonce, forceCreate, callback)
+```
+
+```mdx-code-block
+</TabItem>
 <TabItem value="gdscript" label="GDScript">
 ```
 

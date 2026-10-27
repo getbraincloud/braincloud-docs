@@ -77,7 +77,7 @@ value | The string value to set the property to
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

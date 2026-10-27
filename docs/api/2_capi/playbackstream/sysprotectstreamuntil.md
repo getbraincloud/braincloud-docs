@@ -74,7 +74,7 @@ Protects a playback stream from being purged (but not deleted) for the given num
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

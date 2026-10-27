@@ -105,15 +105,15 @@ if (result.statusCode == 200) {
 
 ```lua
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getMatchMakingService():disableMatchMaking(callback)
+<%= data.branding.codePrefix %>.matchMaking:disableMatchMaking(callback)
 ```
 
 ```mdx-code-block

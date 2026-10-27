@@ -120,15 +120,15 @@ if (result.statusCode == 200) {
 ```lua
 local categories = { "cName1", "cName2" }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getGlobalAppService():readPropertiesInCategories(categories, callback)
+<%= data.branding.codePrefix %>.globalApp:readPropertiesInCategories(categories, callback)
 ```
 
 ```mdx-code-block

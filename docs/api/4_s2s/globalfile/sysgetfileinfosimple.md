@@ -74,7 +74,7 @@ Given a path and filename, returns information on the corresponding file.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

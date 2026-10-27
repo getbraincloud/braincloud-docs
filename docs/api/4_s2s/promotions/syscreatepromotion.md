@@ -73,7 +73,7 @@ Creates a new promotion. The full promotion JSON (minus the promotionId) should 
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

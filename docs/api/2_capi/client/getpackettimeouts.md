@@ -65,7 +65,7 @@ List<int> timeouts = <%= data.branding.codePrefix %>.getPacketTimeouts();
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:getPacketTimeouts()
+-- N/A
 ```
 
 ```mdx-code-block

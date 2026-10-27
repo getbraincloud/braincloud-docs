@@ -145,15 +145,15 @@ local jsonEntityData = {
     street = "1309 Carling"
 }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getGlobalEntityService():updateEntity(entityId, version, jsonEntityData, callback)
+<%= data.branding.codePrefix %>.globalEntity:updateEntity(entityId, version, jsonEntityData, callback)
 ```
 
 ```mdx-code-block

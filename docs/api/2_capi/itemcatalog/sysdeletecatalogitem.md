@@ -67,7 +67,7 @@ Delete an existing Item catalog
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

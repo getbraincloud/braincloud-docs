@@ -75,7 +75,7 @@ Set the specified catalog item to invisible on the server.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

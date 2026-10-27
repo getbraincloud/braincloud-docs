@@ -74,7 +74,7 @@ Run a service script.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

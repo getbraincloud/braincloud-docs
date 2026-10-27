@@ -74,7 +74,7 @@ Creates configuration for new custom entity collection.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

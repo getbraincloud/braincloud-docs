@@ -78,7 +78,7 @@ Segments are manually created on the <%= data.branding.productName %> portal, on
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

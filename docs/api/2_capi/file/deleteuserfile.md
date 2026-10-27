@@ -121,15 +121,15 @@ if (result.statusCode == 200) {
 local cloudPath = "dir1/dir2"
 local cloudFilename = "filename"
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getFileService():deleteUserFile(cloudPath, cloudFilename, callback)
+<%= data.branding.codePrefix %>.file:deleteUserFile(cloudPath, cloudFilename, callback)
 ```
 
 ```mdx-code-block

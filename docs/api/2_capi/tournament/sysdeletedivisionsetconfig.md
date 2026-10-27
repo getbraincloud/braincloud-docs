@@ -74,7 +74,7 @@ force | Optional flag, defaults to false. If false, ensures the division set con
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

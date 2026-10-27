@@ -72,7 +72,7 @@ entityType | The entity type identifying the applicable custom entity collection
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -75,7 +75,7 @@ Triggers a campaign scenario for a specific player, optionally bypassing normal 
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

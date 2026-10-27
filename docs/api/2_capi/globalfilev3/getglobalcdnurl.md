@@ -124,15 +124,15 @@ if (result.statusCode == 200) {
 ```lua
 local fileId = "hjvfsghguhuhrtghgh"
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getGlobalFileV3Service():getGlobalCDNUrl(fileId, callback)
+<%= data.branding.codePrefix %>.globalFile:getGlobalCDNUrl(fileId, callback)
 ```
 
 ```mdx-code-block

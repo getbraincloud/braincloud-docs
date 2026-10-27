@@ -106,7 +106,7 @@ This operation retrieves a JSON document from an external web site.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

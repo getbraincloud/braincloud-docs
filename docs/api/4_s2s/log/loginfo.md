@@ -74,7 +74,7 @@ Logs an App Info message to the error log.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

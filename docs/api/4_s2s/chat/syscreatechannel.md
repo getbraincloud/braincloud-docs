@@ -74,7 +74,7 @@ Initializes a dynamic or system chat channel. Returns the channelId. Channel typ
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -65,7 +65,7 @@ Retrieves a Redemption Code Service proxy object.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -90,7 +90,7 @@ serviceParams | The service-specific email paramaters
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -106,7 +106,19 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 ```
 
 ```lua
-// N/A
+local oculusId = "userId"
+local oculusNonce = "nonce"
+local forceCreate = true
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.authentication:authenticateOculus(oculusId, oculusNonce, forceCreate, callback)
 ```
 
 ```mdx-code-block

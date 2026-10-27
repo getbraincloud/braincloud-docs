@@ -72,7 +72,7 @@ type | SCHEDULED or AUTOMATED to filter specific type, or empty string to return
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

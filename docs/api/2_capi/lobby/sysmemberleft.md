@@ -75,7 +75,7 @@ newOwnerCxId | Optional RTT connection id of another lobby member to be made own
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

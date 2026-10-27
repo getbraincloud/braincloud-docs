@@ -72,7 +72,7 @@ channelId | The channel id - can be of type 'dy' or 'sy'.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

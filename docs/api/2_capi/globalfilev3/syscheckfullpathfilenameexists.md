@@ -71,7 +71,7 @@ fullPathFilename | The file full path.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -72,7 +72,7 @@ itemDefData | The data defining the catalog item. Supported types are ITEM and B
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

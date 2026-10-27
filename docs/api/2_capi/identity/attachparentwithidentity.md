@@ -150,20 +150,20 @@ if (result.statusCode == 200) {
 
 ```lua
 local externalId = "email@email.com"
-local authenticationToken = "email@email.com"
-local authenticationType = AuthenticationType.email
+local authenticationToken = "password"
+local authenticationType = "Email"
 local externalAuthName = ""
 local forceCreate = true
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getIdentityService():attachParentWithIdentity(externalId, authenticationToken, authenticationType, externalAuthName, forceCreate, callback)
+<%= data.branding.codePrefix %>.identity:attachParentWithIdentity(externalId, authenticationToken, authenticationType, externalAuthName, forceCreate, callback)
 ```
 
 ```mdx-code-block

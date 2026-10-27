@@ -77,7 +77,7 @@ overwriteIfPresent | If a file of that name already exists at that location, ove
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

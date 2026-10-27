@@ -77,7 +77,7 @@ Returns the number of messages that were deleted. Since the history rolls over, 
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

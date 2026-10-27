@@ -74,7 +74,7 @@ sessionToken | Parse session token
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

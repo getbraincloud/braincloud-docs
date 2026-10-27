@@ -76,7 +76,7 @@ force | Whether to delete non-empty folders, sub-folders and their files.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

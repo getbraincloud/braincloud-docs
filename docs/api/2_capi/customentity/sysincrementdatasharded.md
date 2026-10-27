@@ -75,7 +75,7 @@ shardKeyJson | The shard key field(s) and value(s), as JSON, applicable to the e
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -65,7 +65,7 @@ Shuts down all systems needed for BrainCloudClient, only call this from the main
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:shutDown()
+-- N/A
 ```
 
 ```mdx-code-block

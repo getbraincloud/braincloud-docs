@@ -74,7 +74,7 @@ newTaskArray | An ordered array of task ids. Note - any tasks not present in the
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

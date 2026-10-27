@@ -75,7 +75,7 @@ Updates an existing product with the specifed values. Pass -1 as the version to 
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

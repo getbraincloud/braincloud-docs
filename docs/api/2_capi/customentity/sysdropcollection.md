@@ -72,7 +72,7 @@ entityType | The name of the entity type collection to delete
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

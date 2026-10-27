@@ -75,7 +75,7 @@ jsonData | Custom application data
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

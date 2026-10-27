@@ -83,7 +83,7 @@ This method takes no parameters.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

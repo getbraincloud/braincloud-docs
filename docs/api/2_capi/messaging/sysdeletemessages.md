@@ -72,7 +72,7 @@ msgIds | An array of message ids.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -72,7 +72,7 @@ sessionId | The specific session ID to invalidate.
 ```
 
 ```lua
-// Cloud Code only. To view example, switch to the Cloud Code tab
+-- Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block

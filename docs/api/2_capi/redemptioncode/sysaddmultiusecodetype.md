@@ -72,7 +72,7 @@ jsonOptions | The multi-use code type configuration options, as JSON object. Req
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -74,7 +74,7 @@ indexKeysJson | The field index keys, as JSON object, identifying the index to b
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

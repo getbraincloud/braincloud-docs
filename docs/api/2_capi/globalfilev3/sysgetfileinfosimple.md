@@ -73,7 +73,7 @@ filename | filename
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

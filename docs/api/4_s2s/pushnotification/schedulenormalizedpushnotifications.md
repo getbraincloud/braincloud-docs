@@ -84,7 +84,7 @@ Schedules normalized notifications based on user local time.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

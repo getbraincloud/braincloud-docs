@@ -75,7 +75,7 @@ See the documentation for contents of 'serviceParams'.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

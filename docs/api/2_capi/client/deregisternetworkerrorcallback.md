@@ -65,7 +65,7 @@ Deregisters the network error callback.
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:deregisterNetworkErrorCallback()
+-- N/A
 ```
 
 ```mdx-code-block

@@ -146,15 +146,15 @@ local jsonEntityAcl = {
     other = 1
 }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getGlobalEntityService():updateEntityAcl(entityId, version, jsonEntityAcl, callback)
+<%= data.branding.codePrefix %>.globalEntity:updateEntityAcl(entityId, version, jsonEntityAcl, callback)
 ```
 
 ```mdx-code-block

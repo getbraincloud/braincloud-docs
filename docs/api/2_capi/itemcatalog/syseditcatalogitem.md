@@ -73,7 +73,7 @@ itemDefData | The data to update on the catalog item. Supported types are ITEM a
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

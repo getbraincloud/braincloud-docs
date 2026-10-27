@@ -74,7 +74,7 @@ Gets the presence data for the given \`profileIds`. Will not include offline pro
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

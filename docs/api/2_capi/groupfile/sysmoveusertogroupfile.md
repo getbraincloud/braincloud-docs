@@ -80,7 +80,7 @@ groupFileAcl | The acl of the new group file.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

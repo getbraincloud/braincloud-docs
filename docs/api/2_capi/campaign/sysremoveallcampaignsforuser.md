@@ -73,7 +73,7 @@ Removes a player's participation in all campaigns, deleting all their CampaignPa
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

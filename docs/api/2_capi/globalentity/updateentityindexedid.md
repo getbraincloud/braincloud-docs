@@ -136,15 +136,15 @@ local entityId = "a-entity-id"
 local version = 2
 local entityIndexedId = "entityId1"
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getGlobalEntityService():updateEntityIndexedId(entityId, version, entityIndexedId, callback)
+<%= data.branding.codePrefix %>.globalEntity:updateEntityIndexedId(entityId, version, entityIndexedId, callback)
 ```
 
 ```mdx-code-block

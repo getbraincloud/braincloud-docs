@@ -75,7 +75,7 @@ jsonAttributes | Attributes of the member being updated
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

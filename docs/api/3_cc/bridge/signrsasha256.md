@@ -73,7 +73,7 @@ dataString | The data string to calculate the signature for
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

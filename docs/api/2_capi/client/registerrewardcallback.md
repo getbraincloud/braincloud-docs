@@ -77,9 +77,10 @@ void rewardCallback(Map<String, dynamic>?  jsonResponse) {
 ```
 
 ```lua
-void rewardCallback(Map<String, dynamic>?  jsonResponse) {
-  // ...
-}
+local rewardCallback = function(rewards)
+    -- your code
+end
+
 <%= data.branding.codePrefix %>:registerRewardCallback(rewardCallback)
 ```
 

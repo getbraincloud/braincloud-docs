@@ -74,7 +74,7 @@ Returns a list of max \`n` messages from history.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

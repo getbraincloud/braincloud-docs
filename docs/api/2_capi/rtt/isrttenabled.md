@@ -65,7 +65,7 @@ Coming soon!
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:getRttService():isRTTEnabled()
+<%= data.branding.codePrefix %>.rttService:isRTTEnabled()
 ```
 
 ```mdx-code-block

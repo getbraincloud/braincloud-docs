@@ -73,7 +73,7 @@ entityId | The id of custom entity being read.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

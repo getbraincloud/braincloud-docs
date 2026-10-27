@@ -73,7 +73,7 @@ Reads an existing item definition from the server, with full language fields map
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

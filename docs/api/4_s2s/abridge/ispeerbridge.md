@@ -65,7 +65,7 @@ This returns true if the script context is peer.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

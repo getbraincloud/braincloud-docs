@@ -131,15 +131,15 @@ if (result.statusCode == 200) {
 local lobbyId = "55555:4v4:19"
 local toTeamCode = "blue"
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getLobbyService():switchTeam(lobbyId, toTeamCode, callback)
+<%= data.branding.codePrefix %>.lobby:switchTeam(lobbyId, toTeamCode, callback)
 ```
 
 ```mdx-code-block

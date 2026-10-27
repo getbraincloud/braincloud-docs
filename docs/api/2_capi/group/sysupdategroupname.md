@@ -73,7 +73,7 @@ name | Name to apply
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

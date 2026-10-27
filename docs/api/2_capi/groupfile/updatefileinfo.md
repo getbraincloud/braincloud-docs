@@ -165,15 +165,15 @@ local newAcl = {
   other = 0
 }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getGroupFileService():updateFileInfo(groupId, fileId, version, newFilename, newAcl, callback)
+<%= data.branding.codePrefix %>.groupFile:updateFileInfo(groupId, fileId, version, newFilename, newAcl, callback)
 ```
 
 ```mdx-code-block

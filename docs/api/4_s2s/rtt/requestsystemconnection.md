@@ -67,7 +67,7 @@ Request a system RTT connection.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

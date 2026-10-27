@@ -65,7 +65,7 @@ Inserts a marker which will tell the <%= data.branding.productName %> comms laye
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:insertEndOfMessageBundleMarker()
+-- N/A
 ```
 
 ```mdx-code-block

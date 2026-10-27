@@ -127,15 +127,15 @@ if (result.statusCode == 200) {
 local searchText = "someText"
 local maxResults = 5
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getFriendService():findUsersByNameStartingWith(searchText, maxResults, callback)
+<%= data.branding.codePrefix %>.friend:findUsersByNameStartingWith(searchText, maxResults, callback)
 ```
 
 ```mdx-code-block

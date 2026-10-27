@@ -73,7 +73,7 @@ pageOffset | +1 for next page, -1 for previous page
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

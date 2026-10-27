@@ -128,15 +128,15 @@ if (result.statusCode == 200) {
 local lobbyId = "55555:4v4:19"
 local connectionId = "55555:aaa-bbb-ccc-ddd:asdfjkl"
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getLobbyService():removeMember(lobbyId, connectionId, callback)
+<%= data.branding.codePrefix %>.lobby:removeMember(lobbyId, connectionId, callback)
 ```
 
 ```mdx-code-block

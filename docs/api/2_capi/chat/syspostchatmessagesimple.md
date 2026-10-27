@@ -81,7 +81,7 @@ fromJson | the from information for message. Should not include `id`.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

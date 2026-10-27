@@ -75,7 +75,7 @@ jwtString | JWT string representation.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

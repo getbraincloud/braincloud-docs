@@ -73,7 +73,7 @@ Returns the list of configured promotions (without full details).
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

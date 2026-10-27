@@ -127,15 +127,15 @@ if (result.statusCode == 200) {
 local leaderboardId = "leaderboardId1"
 local versionId = 1
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getTournamentService():getTournamentStatus(leaderboardId, versionId, callback)
+<%= data.branding.codePrefix %>.tournament:getTournamentStatus(leaderboardId, versionId, callback)
 ```
 
 ```mdx-code-block

@@ -75,7 +75,7 @@ recurse | Delete files and subfolders if not empty?
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

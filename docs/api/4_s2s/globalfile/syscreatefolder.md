@@ -77,7 +77,7 @@ Creates a new Global File folder. Returns the updated directory tree and version
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -72,7 +72,7 @@ leaderboardId | The leaderboard to reset.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

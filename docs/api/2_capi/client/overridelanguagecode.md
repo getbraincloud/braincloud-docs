@@ -81,8 +81,7 @@ var languageCode = "en";
 ```
 
 ```lua
-local languageCode = "en"
-<%= data.branding.codePrefix %>:overrideLanguageCode(languageCode)
+-- N/A
 ```
 
 ```mdx-code-block

@@ -76,7 +76,7 @@ version | Version of the custom entity being updated.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

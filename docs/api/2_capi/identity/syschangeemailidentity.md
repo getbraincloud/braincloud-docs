@@ -78,7 +78,7 @@ updateContactEmail | Whether to also update contact email in user's profile
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

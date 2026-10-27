@@ -82,7 +82,7 @@ Posts a JSON document to an offboard service. Send and forget.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

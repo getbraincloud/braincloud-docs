@@ -72,7 +72,7 @@ itemId | The item id being requested.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

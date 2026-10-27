@@ -65,7 +65,7 @@ Retrieves the name of the current user as a string.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -93,7 +93,7 @@ context | A context object describing the desired paging behaviour
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

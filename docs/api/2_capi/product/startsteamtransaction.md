@@ -87,7 +87,7 @@ const char *language = "en";
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -154,15 +154,15 @@ local facebookId = "userFacebookId"
 local token = "tokenFromFacebook"
 local forceCreate = true
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:authenticateFacebook(facebookId, token, forceCreate, callback)
+wrapper:authenticateFacebook(player.UserId, facebookId, token, forceCreate, callback)
 ```
 
 ```mdx-code-block

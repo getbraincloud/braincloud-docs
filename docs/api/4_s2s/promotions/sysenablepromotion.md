@@ -75,7 +75,7 @@ Enable/Disable a promotion. A convenience API for easily toggling a promotion on
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

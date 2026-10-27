@@ -102,7 +102,7 @@ Creates a leaderboard under the context of the current game. You can optionally 
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

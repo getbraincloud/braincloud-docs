@@ -151,18 +151,18 @@ if (result.statusCode == 200) {
 local itemId = "aaa-bbb-ccc-ddd"
 local version = 1
 local quantity = 1
-local shopId = null
+local shopId = nil
 local includeDef = true
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getUserItemsService():sellUserItem(itemId, version, quantity, shopId, includeDef, callback)
+<%= data.branding.codePrefix %>.userItems:sellUserItem(itemId, version, quantity, shopId, includeDef, callback)
 ```
 
 ```mdx-code-block

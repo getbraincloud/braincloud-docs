@@ -72,7 +72,7 @@ groupId | ID of the group
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -127,15 +127,15 @@ if (result.statusCode == 200) {
 local category = "main"
 local includeMetaData = false
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getGamificationService():readMilestonesByCategory(category, includeMetaData, callback)
+<%= data.branding.codePrefix %>.gamification:readMilestonesByCategory(category, callback, includeMetaData)
 ```
 
 ```mdx-code-block

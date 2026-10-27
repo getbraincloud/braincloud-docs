@@ -83,7 +83,7 @@ const char *transId = "trans01";
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

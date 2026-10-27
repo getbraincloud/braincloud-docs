@@ -72,7 +72,7 @@ fullPathFilename | File cloud name in full path
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

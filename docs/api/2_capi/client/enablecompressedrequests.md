@@ -71,7 +71,7 @@ Enables sending Gzip compressed packets of requests from client side. Which can 
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:enableCompressedRequests(true)
+-- N/A
 ```
 
 ```mdx-code-block

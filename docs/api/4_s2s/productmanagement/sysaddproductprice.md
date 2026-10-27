@@ -75,7 +75,7 @@ Adds a new price to the given product item.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

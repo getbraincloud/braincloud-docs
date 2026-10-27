@@ -145,15 +145,15 @@ local authenticationToken = "password"
 local newEmailAddress = "newemail@email.com"
 local updateContactEmail = true
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getIdentityService():changeEmailIdentity(oldEmailAddress, authenticationToken, newEmailAddress, updateContactEmail, callback)
+<%= data.branding.codePrefix %>.identity:changeEmailIdentity(oldEmailAddress, authenticationToken, newEmailAddress, updateContactEmail, callback)
 ```
 
 ```mdx-code-block

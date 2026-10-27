@@ -73,7 +73,7 @@ Retrieves list of specified system messages.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

@@ -67,7 +67,7 @@ Method returns all of the global statistics.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

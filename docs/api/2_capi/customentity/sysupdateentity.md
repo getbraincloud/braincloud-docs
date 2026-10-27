@@ -77,7 +77,7 @@ timeToLive | The duration of time, in milliseconds, the custom entity should liv
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

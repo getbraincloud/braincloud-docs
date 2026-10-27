@@ -71,7 +71,7 @@ vcAmount | The amount of currency to revoke.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

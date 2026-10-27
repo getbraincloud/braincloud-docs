@@ -76,7 +76,7 @@ int interval = 10;
 ```lua
 local interval = 10
 
-<%= data.branding.codePrefix %>:getRelayService():setPingInterval(interval)
+<%= data.branding.codePrefix %>.relay:setPingInterval(interval)
 ```
 
 ```mdx-code-block

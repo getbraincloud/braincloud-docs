@@ -75,7 +75,7 @@ headers | Required headers
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

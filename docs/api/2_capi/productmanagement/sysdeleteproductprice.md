@@ -74,7 +74,7 @@ priceId | The priceId being deleted.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block

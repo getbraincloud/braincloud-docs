@@ -65,7 +65,7 @@ var appVersion = <%= data.branding.codePrefix %>.getAppVersion();
 ```
 
 ```lua
-local appVersion = <%= data.branding.codePrefix %>:getAppVersion()
+-- N/A
 ```
 
 ```mdx-code-block
