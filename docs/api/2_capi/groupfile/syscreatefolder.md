@@ -78,7 +78,7 @@ groupFolderAcl | The acl of the new group folder.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -88,6 +88,15 @@ groupFolderAcl | The acl of the new group folder.
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block

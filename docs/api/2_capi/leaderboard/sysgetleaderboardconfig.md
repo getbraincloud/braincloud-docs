@@ -72,7 +72,7 @@ leaderboardId | ID uniquely identifying the leaderboard configuration to retriev
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -82,6 +82,15 @@ leaderboardId | ID uniquely identifying the leaderboard configuration to retriev
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- cloud code only
 ```
 
 ```mdx-code-block

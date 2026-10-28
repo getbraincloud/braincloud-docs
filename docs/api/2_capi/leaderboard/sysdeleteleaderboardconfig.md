@@ -74,7 +74,7 @@ Delete a leaderboard config, with support for tournament leaderboards. Note that
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -84,6 +84,15 @@ Delete a leaderboard config, with support for tournament leaderboards. Note that
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block

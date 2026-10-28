@@ -72,7 +72,7 @@ defaultLanguageCode | The language code (lowercase) to be used for returning the
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -82,6 +82,15 @@ defaultLanguageCode | The language code (lowercase) to be used for returning the
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block

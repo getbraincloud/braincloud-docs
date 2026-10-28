@@ -75,7 +75,7 @@ See the documentation for contents of 'serviceParams'.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -85,6 +85,15 @@ See the documentation for contents of 'serviceParams'.
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block

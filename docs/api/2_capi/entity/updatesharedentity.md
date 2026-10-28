@@ -163,15 +163,15 @@ local jsonEntityData = {
 }
 local version = -1
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getEntityService():updateSharedEntity(entityId, targetProfileId, entityType, jsonEntityData, version, callback)
+<%= data.branding.codePrefix %>.entity:updateSharedEntity(entityId, targetProfileId, entityType, jsonEntityData, version, callback)
 ```
 
 ```mdx-code-block
@@ -194,6 +194,29 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local entityId = "someEntityId"
+local targetProfileId = "someProfileId"
+local entityType = "address"
+local data = { street = "1309 Carling Avenue, Ottawa, ON" }
+local version = -1
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.entity:updateSharedEntity(entityId, targetProfileId, entityType, data, version, callback)
 ```
 
 ```mdx-code-block

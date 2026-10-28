@@ -101,7 +101,7 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -111,6 +111,15 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- N/A
 ```
 
 ```mdx-code-block

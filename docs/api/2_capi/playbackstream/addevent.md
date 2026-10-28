@@ -150,15 +150,15 @@ local summary = {
     total = 5
 }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getPlaybackStreamService():addEvent(playbackStreamId, eventData, summary, callback)
+<%= data.branding.codePrefix %>.playbackStream:addEvent(playbackStreamId, eventData, summary, callback)
 ```
 
 ```mdx-code-block
@@ -181,6 +181,27 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local playbackStreamId = "stream"
+local eventData = { value = 1 }
+local summary = { total = 5 }
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.playbackStream:addEvent(playbackStreamId, eventData, summary, callback)
 ```
 
 ```mdx-code-block

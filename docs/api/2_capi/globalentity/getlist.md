@@ -160,15 +160,15 @@ local orderBy = {
 }
 local maxReturn = 50
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getGlobalEntityService():getList(where, orderBy, maxReturn, callback)
+<%= data.branding.codePrefix %>.globalEntity:getList(where, orderBy, maxReturn, callback)
 ```
 
 ```mdx-code-block
@@ -191,6 +191,27 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local where = { entityType = "address" }
+local orderBy = { ["data.address"] = 1 }
+local maxReturn = 50
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.globalEntity:getList(where, orderBy, maxReturn, callback)
 ```
 
 ```mdx-code-block

@@ -79,7 +79,7 @@ fieldsJson | Specific fields, as JSON, within entity's custom data, with respect
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -89,6 +89,15 @@ fieldsJson | Specific fields, as JSON, within entity's custom data, with respect
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block

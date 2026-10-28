@@ -72,7 +72,7 @@ leaderboardId | The leaderboard to reset.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -82,6 +82,15 @@ leaderboardId | The leaderboard to reset.
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- cloud code only
 ```
 
 ```mdx-code-block

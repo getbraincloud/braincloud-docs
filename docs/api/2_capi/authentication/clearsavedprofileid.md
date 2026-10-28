@@ -65,7 +65,7 @@ public void clearSavedProfileId();
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:getAuthenticationService():clearSavedProfileId()
+<%= data.branding.codePrefix %>.authentication:clearSavedProfileId()
 ```
 
 ```mdx-code-block
@@ -75,6 +75,15 @@ public void clearSavedProfileId();
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+<%= data.branding.codePrefix %>.authentication:clearSavedProfileId()
 ```
 
 ```mdx-code-block

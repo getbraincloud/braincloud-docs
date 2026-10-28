@@ -170,7 +170,7 @@ if (result.statusCode == 200) {
 ```
 
 ```lua
-local jsonOpponentIds = [
+local jsonOpponentIds = {
     {
         platform = "BC",
         id = "profile ID-1"
@@ -183,18 +183,18 @@ local jsonOpponentIds = [
         platform = "FB",
         id = "Facebook ID-2"
     }
-]
+}
 local pushNotificationMessage = "You have been entered into an async-match!"
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getAsyncMatchService():createMatch(jsonOpponentIds, pushNotificationMessage, callback)
+<%= data.branding.codePrefix %>.asyncMatch:createMatch(jsonOpponentIds, pushNotificationMessage, callback)
 ```
 
 ```mdx-code-block
@@ -225,6 +225,30 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local opponentIds = {
+    { platform = "BC", id = "profile ID-1" },
+    { platform = "FB", id = "Facebook ID-1" },
+    { platform = "FB", id = "Facebook ID-2" }
+}
+local pushNotificationMessage = "You have been entered into an async-match!"
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.asyncMatch:createMatch(opponentIds, pushNotificationMessage, callback)
 ```
 
 ```mdx-code-block

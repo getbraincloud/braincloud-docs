@@ -65,7 +65,7 @@ Returns the age of the current player session in seconds as a floating-point num
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -75,6 +75,15 @@ Returns the age of the current player session in seconds as a floating-point num
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block

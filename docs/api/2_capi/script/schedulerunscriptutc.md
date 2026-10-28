@@ -74,7 +74,7 @@ startDateInUTC | The start date. (date in millis UTC).
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -84,6 +84,15 @@ startDateInUTC | The start date. (date in millis UTC).
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- Currently cloud-code only
 ```
 
 ```mdx-code-block

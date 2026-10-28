@@ -69,7 +69,7 @@ String cxId = _bc.relayService.getCxIdForNetId(aNetId);
 ```lua
 local aNetId = 2
 
-local cxId = <%= data.branding.codePrefix %>:getRelayService():getCxIdForNetId(aNetId)
+local cxId = <%= data.branding.codePrefix %>.relay:getCxIdForNetId(aNetId)
 ```
 
 ```mdx-code-block
@@ -79,6 +79,17 @@ local cxId = <%= data.branding.codePrefix %>:getRelayService():getCxIdForNetId(a
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local netId = 1
+
+local cxId = <%= data.branding.codePrefix %>.relay:getCxIdForNetId(netId)
 ```
 
 ```mdx-code-block

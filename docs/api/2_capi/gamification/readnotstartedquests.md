@@ -118,15 +118,15 @@ if (result.statusCode == 200) {
 ```lua
 local includeMetaData = false
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getGamificationService():readNotStartedQuests(includeMetaData, callback)
+<%= data.branding.codePrefix %>.gamification:readNotStartedQuests(callback, includeMetaData)
 ```
 
 ```mdx-code-block
@@ -136,6 +136,25 @@ end
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local includeMetaData = false
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.gamification:readNotStartedQuests(callback, includeMetaData)
 ```
 
 ```mdx-code-block

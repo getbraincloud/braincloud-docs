@@ -81,7 +81,7 @@ Move a folder (and its contents). Returns the updated directory tree.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -91,6 +91,15 @@ Move a folder (and its contents). Returns the updated directory tree.
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block

@@ -72,7 +72,7 @@ alwaysAllow | Controls whether the profile ID is passed in with non-anonymous au
 ```
 
 ```lua
-<%= data.branding.codePrefix %>.alwaysAllowProfileSwitch = true
+-- N/A
 ```
 
 ```mdx-code-block
@@ -82,6 +82,17 @@ alwaysAllow | Controls whether the profile ID is passed in with non-anonymous au
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local allow = true
+
+<%= data.branding.codePrefix %>:setAlwaysAllowProfileSwitch(allow)
 ```
 
 ```mdx-code-block

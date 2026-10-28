@@ -146,15 +146,15 @@ local epicAccountId = "0123456789abcdef0123456789abcdef"
 local authIdToken = "idTokenFromEOS"
 local forceCreate = true
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:authenticateEpicGames(epicAccountId, authIdToken, forceCreate, callback)
+wrapper:authenticateEpicGames(player.UserId, epicAccountId, authIdToken, forceCreate, callback)
 ```
 
 ```mdx-code-block
@@ -173,6 +173,27 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local epicAccountId = "0123456789abcdef0123456789abcdef"
+local authIdToken = "idTokenFromEOS"
+local forceCreate = true
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>:authenticateEpicGames(epicAccountId, authIdToken, forceCreate, callback)
 ```
 
 ```mdx-code-block

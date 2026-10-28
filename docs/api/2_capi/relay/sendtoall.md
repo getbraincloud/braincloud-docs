@@ -86,10 +86,12 @@ _bc.relayService.sendToAll(bytes,
 ```
 
 ```lua
-local aNetId = 2
-local bytes = "Some Data here"  -- byte encoded
+local data = "Hello"
+local reliable = true
+local ordered = true
+local channel = <%= data.branding.codePrefix %>.relay.CHANNEL_HIGH_PRIORITY_1
 
-<%= data.branding.codePrefix %>:getRelayService():sendToAll(bytes, true, true, BrainCloudRelay.channelHighPriority_1)
+<%= data.branding.codePrefix %>.relay:sendToAll(data, reliable, ordered, channel)
 ```
 
 ```mdx-code-block
@@ -99,6 +101,20 @@ local bytes = "Some Data here"  -- byte encoded
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local data = "Hello"
+local reliable = true
+local ordered = true
+local channel = <%= data.branding.codePrefix %>.relay.CHANNEL_HIGH_PRIORITY_1
+
+<%= data.branding.codePrefix %>.relay:sendToAll(data, reliable, ordered, channel)
 ```
 
 ```mdx-code-block

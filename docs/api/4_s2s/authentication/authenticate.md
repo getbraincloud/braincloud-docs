@@ -81,7 +81,7 @@ This service is used to authenticate the server request for the session based pr
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -91,6 +91,15 @@ This service is used to authenticate the server request for the session based pr
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block

@@ -73,7 +73,7 @@ Cancels a user script batch, if it exists and is in Scheduled, Queued or Running
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -83,6 +83,15 @@ Cancels a user script batch, if it exists and is in Scheduled, Queued or Running
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block

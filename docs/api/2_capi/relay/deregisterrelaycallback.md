@@ -65,7 +65,7 @@ Deregisters callback for relay messages coming from peers.
 ```
 
 ```lua
-// N/A
+<%= data.branding.codePrefix %>.relay:deregisterRelayCallback()
 ```
 
 ```mdx-code-block
@@ -75,6 +75,15 @@ Deregisters callback for relay messages coming from peers.
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+<%= data.branding.codePrefix %>.relay:deregisterRelayCallback()
 ```
 
 ```mdx-code-block

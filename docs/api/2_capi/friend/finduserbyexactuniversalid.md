@@ -4,7 +4,7 @@ Retrieves profile information for the partial Universal ID matches of the specif
 
 Does not require the calling user to be a friend of the retrieved users.
 
-<PartialServop service_name="friend" operation_name="FIND_PLAYER_BY_EXACT_UNIVERSAL_ID" />
+<PartialServop service_name="friend" operation_name="FIND_USER_BY_EXACT_UNIVERSAL_ID" />
 
 ## Method Parameters
 
@@ -121,15 +121,15 @@ if (result.statusCode == 200) {
 ```lua
 local universalId = "someUniversalId"
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getFriendService():findUserByExactUniversalId(universalId, callback)
+<%= data.branding.codePrefix %>.friend:findUserByExactUniversalId(universalId, callback)
 ```
 
 ```mdx-code-block
@@ -146,6 +146,25 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local searchText = "someUniversalId"
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.friend:findUserByExactUniversalId(searchText, callback)
 ```
 
 ```mdx-code-block
@@ -171,7 +190,7 @@ if (postResult.status == 200) {
 ```r
 {
     "service": "friend",
-    "operation": "FIND_PLAYER_BY_EXACT_UNIVERSAL_ID",
+    "operation": "FIND_USER_BY_EXACT_UNIVERSAL_ID",
     "data": {
         "searchText": "someUniversalId"
     }

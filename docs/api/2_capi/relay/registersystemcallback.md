@@ -88,7 +88,7 @@ local relayCallback = function(jsonResponse)
     -- Your code
 end
 
-<%= data.branding.codePrefix %>:getRelayService():registerSystemCallback(relayCallback)
+<%= data.branding.codePrefix %>.relay:registerSystemCallback(relayCallback)
 ```
 
 ```mdx-code-block
@@ -103,6 +103,20 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- json.op is CONNECT, NET_ID, DISCONNECT or MIGRATE_OWNER
+local systemCallback = function(json)
+    print(json.op, json.profileId)
+end
+
+<%= data.branding.codePrefix %>.relay:registerSystemCallback(systemCallback)
 ```
 
 ```mdx-code-block

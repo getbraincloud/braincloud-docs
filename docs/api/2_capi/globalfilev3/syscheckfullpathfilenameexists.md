@@ -71,7 +71,7 @@ fullPathFilename | The file full path.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -81,6 +81,15 @@ fullPathFilename | The file full path.
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block

@@ -74,7 +74,7 @@ Indicates that a room is ready for use by the members of the given lobby.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -84,6 +84,15 @@ Indicates that a room is ready for use by the members of the given lobby.
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block

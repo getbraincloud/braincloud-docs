@@ -75,7 +75,7 @@ Invalidate a redemption code for a personal ('single-use') code type.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -85,6 +85,15 @@ Invalidate a redemption code for a personal ('single-use') code type.
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block

@@ -100,15 +100,15 @@ if (result.statusCode == 200) {
 local googleId = "someId"
 local authenticationToken = "someToken"
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getIdentityService():attachGoogleOpenIdIdentity(googleId, authenticationToken, callback)
+<%= data.branding.codePrefix %>.identity:attachGoogleOpenIdIdentity(googleId, authenticationToken, callback)
 ```
 
 ```mdx-code-block
@@ -126,6 +126,26 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local googleOpenId = "someId"
+local token = "someToken"
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.identity:attachGoogleOpenIdIdentity(googleOpenId, token, callback)
 ```
 
 ```mdx-code-block

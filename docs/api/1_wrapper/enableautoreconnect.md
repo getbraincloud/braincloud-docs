@@ -77,7 +77,7 @@ BCErrorCompletionBlock failureBlock; // define callback
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:enableAutoReconnect(true)
+wrapper:enableAutoReconnect(player.UserId, true)
 ```
 
 ```mdx-code-block
@@ -87,6 +87,17 @@ BCErrorCompletionBlock failureBlock; // define callback
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local enabled = true
+
+<%= data.branding.codePrefix %>.client:enableAutoReconnect(enabled)
 ```
 
 ```mdx-code-block

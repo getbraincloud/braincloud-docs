@@ -189,15 +189,15 @@ local userEmail = ""
 local userNotes = ""
 local userSubmitted = false
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getDataStreamService():submitCrashReport(crashType, errorMsg, crashJson, crashLog, userName, userEmail, userNotes, userSubmitted, callback)
+<%= data.branding.codePrefix %>.dataStream:submitCrashReport(crashType, errorMsg, crashJson, crashLog, userName, userEmail, userNotes, userSubmitted, callback)
 ```
 
 ```mdx-code-block
@@ -223,6 +223,32 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local crashType = "unknown"
+local errorMsg = "Divide by zero error"
+local crashJson = { dialog = 5 }
+local crashLog = "funcX(a,b,c)/ncalled by funcY(a,b,c)"
+local userName = ""
+local userEmail = ""
+local userNotes = ""
+local userSubmitted = false
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.dataStream:submitCrashReport(crashType, errorMsg, crashJson, crashLog, userName, userEmail, userNotes, userSubmitted, callback)
 ```
 
 ```mdx-code-block

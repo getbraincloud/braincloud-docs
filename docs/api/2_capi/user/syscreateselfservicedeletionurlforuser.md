@@ -73,7 +73,7 @@ profileId | The profile ID of the target user for whom the delete account URL is
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -83,6 +83,15 @@ profileId | The profile ID of the target user for whom the delete account URL is
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block

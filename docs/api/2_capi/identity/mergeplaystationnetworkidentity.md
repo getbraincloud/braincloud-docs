@@ -86,7 +86,18 @@ const char * authenticationToken = "somePlaystationNetworkAuthToken";
 ```
 
 ```lua
-// N/A
+local psnAccountId = "accountId"
+local authenticationToken = "someToken"
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.identity:mergePlaystationNetworkIdentity(psnAccountId, authenticationToken, callback)
 ```
 
 ```mdx-code-block
@@ -96,6 +107,26 @@ const char * authenticationToken = "somePlaystationNetworkAuthToken";
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local psnAccountId = "accountId"
+local authenticationToken = "someToken"
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.identity:mergePlaystationNetworkIdentity(psnAccountId, authenticationToken, callback)
 ```
 
 ```mdx-code-block

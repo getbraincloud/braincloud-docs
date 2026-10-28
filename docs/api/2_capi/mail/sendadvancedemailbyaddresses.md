@@ -201,33 +201,27 @@ local serviceParams = {
     bcc = { "yyy@company.com" },
     templateId = "d-www-xxx-yyy-zzz",
     dynamicData = {
-        user = {
-            firstName = "John",
-            lastName = "Doe"
-        },
+        user = { firstName = "John", lastName = "Doe" },
         resetLink = "www.dummuyLink.io"
     },
-    categories = [
-        "category1",
-        "category2"
-    ],
-    attachments = [
+    categories = { "category1", "category2" },
+    attachments = {
         {
             content = "VGhpcyBhdHRhY2htZW50IHRleHQ=",
             filename = "attachment.txt"
         }
-    ]
+    }
 }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getMailService():sendAdvancedEmailByAddresses(emailAddresses, serviceParams, callback)
+<%= data.branding.codePrefix %>.mail:sendAdvancedEmailByAddresses(emailAddresses, serviceParams, callback)
 ```
 
 ```mdx-code-block
@@ -237,6 +231,45 @@ end
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local emailAddresses = { "test@email.com", "anothertest@email.com" }
+local serviceParams = {
+    fromAddress = "email@company.com",
+    fromName = "Jane Doe",
+    replyToAddress = "optional@company.com",
+    replyToName = "Optional ReplyTo",
+    cc = { "xxx@company.com" },
+    bcc = { "yyy@company.com" },
+    templateId = "d-www-xxx-yyy-zzz",
+    dynamicData = {
+        user = { firstName = "John", lastName = "Doe" },
+        resetLink = "www.dummuyLink.io"
+    },
+    categories = { "category1", "category2" },
+    attachments = {
+        {
+            content = "VGhpcyBhdHRhY2htZW50IHRleHQ=",
+            filename = "attachment.txt"
+        }
+    }
+}
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.mail:sendAdvancedEmailByAddresses(emailAddresses, serviceParams, callback)
 ```
 
 ```mdx-code-block

@@ -78,7 +78,7 @@ updateContactEmail | Whether to also update contact email in user's profile
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -88,6 +88,15 @@ updateContactEmail | Whether to also update contact email in user's profile
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- cloud code only
 ```
 
 ```mdx-code-block

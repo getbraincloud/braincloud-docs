@@ -187,15 +187,15 @@ local fieldsJson = {
   assists = 5
 }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getCustomEntityService():updateEntityFields(entityType, entityId, version, fieldsJson, callback)
+<%= data.branding.codePrefix %>.customEntity:updateEntityFields(entityType, entityId, version, fieldsJson, callback)
 ```
 
 ```mdx-code-block
@@ -218,6 +218,28 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local entityType = "athletes"
+local entityId = "aaaa-bbbb-cccc-dddd"
+local version = 1
+local fieldsJson = { goals = 3, assists = 5 }
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.customEntity:updateEntityFields(entityType, entityId, version, fieldsJson, callback)
 ```
 
 ```mdx-code-block

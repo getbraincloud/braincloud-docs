@@ -74,7 +74,7 @@ questJson | A json object describing the updated quest data. Only the fields pre
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -84,6 +84,15 @@ questJson | A json object describing the updated quest data. Only the fields pre
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block

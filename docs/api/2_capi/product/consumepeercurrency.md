@@ -74,7 +74,7 @@ peer | Name of the peer
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -84,6 +84,15 @@ peer | Name of the peer
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- Cloud Code Only
 ```
 
 ```mdx-code-block

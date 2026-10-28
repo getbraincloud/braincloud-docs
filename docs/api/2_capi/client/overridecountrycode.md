@@ -83,8 +83,7 @@ var countryCode = "CA";
 ```
 
 ```lua
-local countryCode = "CA"
-<%= data.branding.codePrefix %>:overrideCountryCode(countryCode)
+-- N/A
 ```
 
 ```mdx-code-block
@@ -94,6 +93,15 @@ local countryCode = "CA"
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- N/A
 ```
 
 ```mdx-code-block

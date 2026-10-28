@@ -91,7 +91,7 @@ tokenTtlInMinutes | The time-to-live for the password reset url, in minutes.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -101,6 +101,15 @@ tokenTtlInMinutes | The time-to-live for the password reset url, in minutes.
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block

@@ -100,6 +100,55 @@ BrainCloudWrapper <%= data.branding.codePrefix %> = <%= data.branding.codeWrappe
 
 ```mdx-code-block
 </TabItem>
+<TabItem value="roblox" label="Roblox">
+```
+
+```lua
+-- Server Script. Set the app ID and secret with the brainCloud Studio plugin.
+local ServerScriptService = game:GetService("ServerScriptService")
+local brainCloudWrapper = require(
+    ServerScriptService:WaitForChild("brainCloudClient")
+        :WaitForChild("brainCloudClient-serverScriptService")
+        :WaitForChild("brainCloudWrapper")
+)
+local wrapper = brainCloudWrapper.new("_mainWrapper")
+
+-- The wrapper creates a client for each player who joins.
+-- Wrapper calls take the player's UserId first, for example:
+--   wrapper:authenticateUniversal(player.UserId, username, password, forceCreate, callback)
+-- Other calls use the player's client, which the API examples call <%= data.branding.codePrefix %>.
+-- Get it where you have the player, such as a RemoteEvent handler:
+local requestEvent = game:GetService("ReplicatedStorage"):WaitForChild("MyRequest")
+requestEvent.OnServerEvent:Connect(function(player)
+    local <%= data.branding.codePrefix %> = wrapper:getClient(player.UserId)
+    if not <%= data.branding.codePrefix %> then
+        return -- the player's client hasn't been created yet
+    end
+    -- <%= data.branding.codePrefix %>.leaderboard:getGlobalLeaderboardPage(...)
+end)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- LÖVE: main.lua
+local BrainCloud = require("braincloud")
+local <%= data.branding.codePrefix %> = BrainCloud.new("_mainWrapper")
+
+function love.load()
+    <%= data.branding.codePrefix %>:init() -- reads braincloud_config.lua, written by the brainCloud setup tool
+end
+
+function love.update(dt)
+    <%= data.branding.codePrefix %>:update() -- required: sends requests and fires callbacks
+end
+```
+
+```mdx-code-block
+</TabItem>
 </Tabs>
 </BrowserWindow>
 ```

@@ -73,7 +73,7 @@ Creates a new promotion. The full promotion JSON (minus the promotionId) should 
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -83,6 +83,15 @@ Creates a new promotion. The full promotion JSON (minus the promotionId) should 
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block

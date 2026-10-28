@@ -65,7 +65,7 @@ var isInitialized = <%= data.branding.codePrefix %>.isInitialized();
 ```
 
 ```lua
-local isInitialized = <%= data.branding.codePrefix %>:isInitialized()
+-- N/A
 ```
 
 ```mdx-code-block
@@ -75,6 +75,15 @@ local isInitialized = <%= data.branding.codePrefix %>:isInitialized()
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local isInitialized = <%= data.branding.codePrefix %>.client:isInitialized()
 ```
 
 ```mdx-code-block

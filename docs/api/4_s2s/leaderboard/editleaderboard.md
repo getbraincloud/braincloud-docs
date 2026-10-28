@@ -102,7 +102,7 @@ Edits a existing leaderboard under the context of the current game. You can opti
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -112,6 +112,15 @@ Edits a existing leaderboard under the context of the current game. You can opti
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block

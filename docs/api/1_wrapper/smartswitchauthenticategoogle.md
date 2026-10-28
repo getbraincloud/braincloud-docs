@@ -133,15 +133,15 @@ local googleUserId = "g123456789"
 local serverAuthCode = "authTokenFromGoogle"
 local forceCreate = true
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:smartSwitchAuthenticateGoogle(googleUserId, serverAuthCode, forceCreate, callback)
+wrapper:smartSwitchAuthenticateGoogle(player.UserId, googleUserId, serverAuthCode, forceCreate, callback)
 ```
 
 ```mdx-code-block
@@ -151,6 +151,27 @@ end
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local googleUserId = "g123456789"
+local serverAuthCode = "authTokenFromGoogle"
+local forceCreate = true
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>:smartSwitchAuthenticateGoogle(googleUserId, serverAuthCode, forceCreate, callback)
 ```
 
 ```mdx-code-block

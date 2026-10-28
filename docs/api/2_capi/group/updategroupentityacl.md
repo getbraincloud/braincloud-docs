@@ -142,20 +142,18 @@ if (result.statusCode == 200) {
 ```lua
 local groupId = "a-group-id"
 local entityId = "a-group-entity-id"
-local acl = {
-  member = 1,
-  other = 0
-}
+local version = -1
+local acl = { member = 1, other = 0 }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getGroupService():updateGroupEntityAcl(groupId, entityId, acl, callback)
+<%= data.branding.codePrefix %>.group:updateGroupEntityAcl(groupId, entityId, version, acl, callback)
 ```
 
 ```mdx-code-block
@@ -177,6 +175,28 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local groupId = "a-group-id"
+local entityId = "a-group-entity-id"
+local version = -1
+local acl = { member = 1, other = 0 }
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.group:updateGroupEntityAcl(groupId, entityId, version, acl, callback)
 ```
 
 ```mdx-code-block

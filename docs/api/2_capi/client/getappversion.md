@@ -65,7 +65,7 @@ var appVersion = <%= data.branding.codePrefix %>.getAppVersion();
 ```
 
 ```lua
-local appVersion = <%= data.branding.codePrefix %>:getAppVersion()
+-- N/A
 ```
 
 ```mdx-code-block
@@ -75,6 +75,15 @@ local appVersion = <%= data.branding.codePrefix %>:getAppVersion()
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local appVersion = <%= data.branding.codePrefix %>.client:getAppVersion()
 ```
 
 ```mdx-code-block

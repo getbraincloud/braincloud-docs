@@ -193,7 +193,7 @@ local version = 1
 local fieldsJson = {
   ["stats.gamesPlayedTotal"] = 2,
   ["stats.goalsTotal"] = 2,
-  ["games.played"] = [
+  ["games.played"] = {
     {
       date = "2022-01-21",
       goals = 1,
@@ -206,21 +206,21 @@ local fieldsJson = {
       assists = 0,
       penalties = 1
     }
-  ]
+  }
 }
 local shardKeyJson = {
   ownerId = "profileIdOfEntityOwner"
 }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getCustomEntityService():updateEntityFieldsSharded(entityType, entityId, version, fieldsJson, shardKeyJson, callback)
+<%= data.branding.codePrefix %>.customEntity:updateEntityFieldsSharded(entityType, entityId, version, fieldsJson, shardKeyJson, callback)
 ```
 
 ```mdx-code-block
@@ -230,6 +230,36 @@ end
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local entityType = "athletes"
+local entityId = "aaaa-bbbb-cccc-dddd"
+local version = 1
+local fieldsJson = {
+    ["stats.gamesPlayedTotal"] = 2,
+    ["stats.goalsTotal"] = 2,
+    ["games.played"] = {
+        { date = "2022-01-21", goals = 1, assists = 1, penalties = 0 },
+        { date = "2022-01-10", goals = 1, assists = 0, penalties = 1 }
+    }
+}
+local shardKeyJson = { ownerId = "profileIdOfEntityOwner" }
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.customEntity:updateEntityFieldsSharded(entityType, entityId, version, fieldsJson, shardKeyJson, callback)
 ```
 
 ```mdx-code-block

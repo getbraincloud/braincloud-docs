@@ -95,7 +95,7 @@ var fileSize = file.size;
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -105,6 +105,15 @@ var fileSize = file.size;
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- N/A
 ```
 
 ```mdx-code-block

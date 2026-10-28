@@ -84,7 +84,7 @@ numDaysToRotate | Optional parameter for use only with DAYS rotation type
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -94,6 +94,15 @@ numDaysToRotate | Optional parameter for use only with DAYS rotation type
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- cloud code only
 ```
 
 ```mdx-code-block

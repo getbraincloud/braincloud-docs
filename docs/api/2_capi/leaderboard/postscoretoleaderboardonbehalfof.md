@@ -81,7 +81,7 @@ forceCreate | Should a new score be created if one doesn't currently exist?
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -91,6 +91,15 @@ forceCreate | Should a new score be created if one doesn't currently exist?
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- Cloud code only. To view, switch to CC tab
 ```
 
 ```mdx-code-block

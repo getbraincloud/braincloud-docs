@@ -82,7 +82,10 @@ String anonymousID = "anonId";
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:getAuthenticationService():initialize(profileId, anonymousId)
+local profileId = "profileId"
+local anonymousId = "anonId"
+
+<%= data.branding.codePrefix %>.authentication:initialize(profileId, anonymousId)
 ```
 
 ```mdx-code-block
@@ -92,6 +95,18 @@ String anonymousID = "anonId";
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local profileId = "profileId"
+local anonymousId = "anonId"
+
+<%= data.branding.codePrefix %>.authentication:initialize(profileId, anonymousId)
 ```
 
 ```mdx-code-block

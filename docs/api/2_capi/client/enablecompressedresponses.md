@@ -71,7 +71,7 @@ Enables receiving compressed packets of responses.
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:enableCompressedResponses(true)
+-- N/A
 ```
 
 ```mdx-code-block
@@ -81,6 +81,15 @@ Enables receiving compressed packets of responses.
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- N/A
 ```
 
 ```mdx-code-block

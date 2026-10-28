@@ -76,11 +76,11 @@ If none of the supplied fields differ from the current values, the scenario is r
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="lua" label="Roblox">
+<TabItem value="roblox" label="Roblox">
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -90,6 +90,15 @@ If none of the supplied fields differ from the current values, the scenario is r
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block

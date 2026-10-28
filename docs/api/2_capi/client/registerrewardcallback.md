@@ -77,9 +77,10 @@ void rewardCallback(Map<String, dynamic>?  jsonResponse) {
 ```
 
 ```lua
-void rewardCallback(Map<String, dynamic>?  jsonResponse) {
-  // ...
-}
+local rewardCallback = function(rewards)
+    -- your code
+end
+
 <%= data.branding.codePrefix %>:registerRewardCallback(rewardCallback)
 ```
 
@@ -90,6 +91,19 @@ void rewardCallback(Map<String, dynamic>?  jsonResponse) {
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local rewardCallback = function(rewards)
+    print("Rewards | " .. <%= data.branding.codePrefix %>.json.encode(rewards))
+end
+
+<%= data.branding.codePrefix %>.client:registerRewardCallback(rewardCallback)
 ```
 
 ```mdx-code-block

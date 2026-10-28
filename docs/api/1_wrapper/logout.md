@@ -77,7 +77,15 @@ BCErrorCompletionBlock failureBlock; // define callback
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:logout(true)
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+wrapper:logout(player.UserId, callback)
 ```
 
 ```mdx-code-block
@@ -92,6 +100,25 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local forgetUser = true
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>:logout(forgetUser, callback)
 ```
 
 ```mdx-code-block

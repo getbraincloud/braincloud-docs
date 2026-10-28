@@ -74,7 +74,7 @@ Initializes a dynamic or system chat channel. Returns the channelId. Channel typ
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -84,6 +84,15 @@ Initializes a dynamic or system chat channel. Returns the channelId. Channel typ
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block

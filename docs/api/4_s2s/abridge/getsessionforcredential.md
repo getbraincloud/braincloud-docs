@@ -72,7 +72,7 @@ externalAuthType | Optional parameter to specify the external authenticationType
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -82,6 +82,15 @@ externalAuthType | Optional parameter to specify the external authenticationType
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- Switch to CC tab
 ```
 
 ```mdx-code-block

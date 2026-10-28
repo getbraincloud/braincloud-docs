@@ -65,7 +65,7 @@ Sets the packet timeouts back to default.
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:setPacketTimeoutsToDefault()
+-- N/A
 ```
 
 ```mdx-code-block
@@ -75,6 +75,15 @@ Sets the packet timeouts back to default.
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- N/A
 ```
 
 ```mdx-code-block

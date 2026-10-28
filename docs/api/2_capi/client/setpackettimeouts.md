@@ -83,7 +83,7 @@ ArrayList<Integer> packetTimeouts = new ArrayList<Integer>(
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:setPacketTimeouts([15,20,35,50])
+-- N/A
 ```
 
 ```mdx-code-block
@@ -93,6 +93,17 @@ ArrayList<Integer> packetTimeouts = new ArrayList<Integer>(
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local packetTimeouts = { 15, 20, 35, 50 }
+
+<%= data.branding.codePrefix %>.client:setPacketTimeouts(packetTimeouts)
 ```
 
 ```mdx-code-block

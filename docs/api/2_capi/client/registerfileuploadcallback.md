@@ -81,13 +81,7 @@ void fileCallback(ServerResponse  response) {
 ```
 
 ```lua
-void fileCallback(ServerResponse  response) {      
-    if (response.status == 200) {
-        // ...
-    }
-}
-​
-<%= data.branding.codePrefix %>:registerFileUploadCallback(fileCallback)
+-- N/A
 ```
 
 ```mdx-code-block
@@ -97,6 +91,15 @@ void fileCallback(ServerResponse  response) {
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- N/A
 ```
 
 ```mdx-code-block

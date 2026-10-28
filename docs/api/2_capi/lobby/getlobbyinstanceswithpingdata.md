@@ -156,26 +156,22 @@ if (result.statusCode == 200) {
 ```
 
 ```lua
+-- Needs ping data: call getRegionsForLobbies() and pingRegions() first.
 local lobbyType = "Relay_lobbyT_v2"
-var  "criteriaJson" = {
-      rating = {
-        min = 10,
-        max = 100
-      },
-      "ping", {
-        max = 200
-      }
-    }
+local criteriaJson = {
+    rating = { min = 10, max = 100 },
+    ping = { max = 200 }
+}
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getLobbyService():getLobbyInstancesWithPingData(lobbyType, criteriaJson, callback)
+<%= data.branding.codePrefix %>.lobby:getLobbyInstancesWithPingData(lobbyType, criteriaJson, callback)
 ```
 
 ```mdx-code-block
@@ -192,6 +188,30 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- Needs ping data: call getRegionsForLobbies() and pingRegions() first.
+local lobbyType = "Relay_lobbyT_v2"
+local criteriaJson = {
+    rating = { min = 10, max = 100 },
+    ping = { max = 200 }
+}
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.lobby:getLobbyInstancesWithPingData(lobbyType, criteriaJson, callback)
 ```
 
 ```mdx-code-block

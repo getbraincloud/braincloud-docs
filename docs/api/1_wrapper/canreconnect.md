@@ -70,7 +70,7 @@ BCErrorCompletionBlock failureBlock; // define callback
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:canReconnect()
+-- N/A
 ```
 
 ```mdx-code-block
@@ -80,6 +80,15 @@ BCErrorCompletionBlock failureBlock; // define callback
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- N/A
 ```
 
 ```mdx-code-block

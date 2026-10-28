@@ -65,7 +65,7 @@ Retrieves the server's session ID for the server context, otherwise returns null
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -75,6 +75,15 @@ Retrieves the server's session ID for the server context, otherwise returns null
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block

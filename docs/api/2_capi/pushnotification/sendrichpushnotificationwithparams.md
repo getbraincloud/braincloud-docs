@@ -158,15 +158,15 @@ local substitutionJson = {
     ["1"] = "value1"
 }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getPushNotificationService():sendRichPushNotificationWithParams(toProfileId, notificationTemplateId, substitutionJson, callback)
+<%= data.branding.codePrefix %>.pushNotification:sendRichPushNotificationWithParams(toProfileId, notificationTemplateId, substitutionJson, callback)
 ```
 
 ```mdx-code-block
@@ -176,6 +176,27 @@ end
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local toProfileId = "profile1"
+local notificationTemplateId = 1
+local substitutionJson = { ["0"] = "value0", ["1"] = "value1" }
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.pushNotification:sendRichPushNotificationWithParams(toProfileId, notificationTemplateId, substitutionJson, callback)
 ```
 
 ```mdx-code-block

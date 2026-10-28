@@ -131,15 +131,15 @@ local scanCode = "a scan code"
 local codeType = "a code type"
 local customRedemptionInfo = {}
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getRedemptionCodeService():redeemCode(scanCode, codeType, customRedemptionInfo, callback)
+<%= data.branding.codePrefix %>.redemptionCode:redeemCode(scanCode, codeType, customRedemptionInfo, callback)
 ```
 
 ```mdx-code-block
@@ -149,6 +149,27 @@ end
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local scanCode = "a scan code"
+local codeType = "a code type"
+local jsonCustomRedemptionInfo = {}
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.redemptionCode:redeemCode(scanCode, codeType, jsonCustomRedemptionInfo, callback)
 ```
 
 ```mdx-code-block

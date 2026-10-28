@@ -87,7 +87,7 @@ ResetCommunication() will also clear the message cache.
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:enableNetworkErrorMessageCaching(true)
+-- N/A
 ```
 
 ```mdx-code-block
@@ -97,6 +97,15 @@ ResetCommunication() will also clear the message cache.
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+<%= data.branding.codePrefix %>.client:enableNetworkErrorMessageCaching(true)
 ```
 
 ```mdx-code-block

@@ -71,7 +71,7 @@ Enables console logging of outgoing/incoming packets and other informational log
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:enableLogging(true)
+<%= data.branding.codePrefix %>:setDebugEnabled(true)
 ```
 
 ```mdx-code-block
@@ -81,6 +81,15 @@ Enables console logging of outgoing/incoming packets and other informational log
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- N/A
 ```
 
 ```mdx-code-block

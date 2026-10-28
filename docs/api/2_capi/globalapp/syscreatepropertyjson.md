@@ -76,7 +76,7 @@ optionsJson | Optional boolean property preserveValue to indicate whether to pre
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -86,6 +86,15 @@ optionsJson | Optional boolean property preserveValue to indicate whether to pre
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block

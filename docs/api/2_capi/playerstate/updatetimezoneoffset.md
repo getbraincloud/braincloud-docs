@@ -119,15 +119,15 @@ if (result.statusCode == 200) {
 ```lua
 local timeZoneOffset = -2
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getPlayerStateService():updateTimeZoneOffset(timeZoneOffset, callback)
+<%= data.branding.codePrefix %>.playerState:updateTimeZoneOffset(timeZoneOffset, callback)
 ```
 
 ```mdx-code-block
@@ -144,6 +144,25 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local offset = -2
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.playerState:updateTimeZoneOffset(offset, callback)
 ```
 
 ```mdx-code-block

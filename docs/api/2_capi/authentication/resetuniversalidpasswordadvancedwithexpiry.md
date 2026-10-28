@@ -155,22 +155,22 @@ local serviceParams = {
     substitutions = {
         aKey = "aValue"
     },
-    categories = [
+    categories = {
         "category1",
         "category2"
-    ]
+    }
 }
 local tokenTtlInMinutes = 1440
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getAuthenticationService():resetUniversalIdPasswordAdvancedWithExpiry(universalId, serviceParams, tokenTtlInMinutes, callback)
+<%= data.branding.codePrefix %>.authentication:resetUniversalIdPasswordAdvancedWithExpiry(universalId, serviceParams, tokenTtlInMinutes, callback)
 ```
 
 ```mdx-code-block
@@ -198,6 +198,31 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local universalId = "universalId"
+local serviceParams = {
+    templateId = "template-id-guid",
+    substitutions = { aKey = "aValue" },
+    categories = { "category1", "category2" }
+}
+local tokenTtlInMinutes = 1440
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.authentication:resetUniversalIdPasswordAdvancedWithExpiry(universalId, serviceParams, tokenTtlInMinutes, callback)
 ```
 
 ```mdx-code-block

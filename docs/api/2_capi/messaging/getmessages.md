@@ -139,15 +139,15 @@ local msgBox = "inbox"
 local msgIds = { "msgId1", "msgId2" }
 local markAsRead = false
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getMessagingService():getMessages(msgBox, msgIds, markAsRead, callback)
+<%= data.branding.codePrefix %>.messaging:getMessages(msgBox, msgIds, markAsRead, callback)
 ```
 
 ```mdx-code-block
@@ -166,6 +166,27 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local msgbox = "inbox"
+local msgIds = { "msgId1", "msgId2" }
+local markMessageRead = false
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.messaging:getMessages(msgbox, msgIds, markMessageRead, callback)
 ```
 
 ```mdx-code-block

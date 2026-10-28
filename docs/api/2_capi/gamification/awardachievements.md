@@ -121,15 +121,15 @@ if (result.statusCode == 200) {
 ```lua
 local achievements = { "EGG_ACH09", "EGG_ACH10" }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getGamificationService():awardAchievements(achievements, callback)
+<%= data.branding.codePrefix %>.gamification:awardAchievements(achievements, callback)
 ```
 
 ```mdx-code-block
@@ -146,6 +146,25 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local achievements = { "EGG_ACH09", "EGG_ACH10" }
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.gamification:awardAchievements(achievements, callback)
 ```
 
 ```mdx-code-block

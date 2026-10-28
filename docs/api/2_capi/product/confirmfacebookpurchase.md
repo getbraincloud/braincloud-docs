@@ -89,7 +89,7 @@ var signedRequest = "Sample Facebook Receipt";
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -99,6 +99,15 @@ var signedRequest = "Sample Facebook Receipt";
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- N/A
 ```
 
 ```mdx-code-block

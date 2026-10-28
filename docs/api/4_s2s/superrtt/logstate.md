@@ -65,7 +65,7 @@ Initiate a state dump for diagnostic purposes on the given RTT servers. An empty
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -75,6 +75,15 @@ Initiate a state dump for diagnostic purposes on the given RTT servers. An empty
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- S2S call: to view example, switch to the Raw tab.
 ```
 
 ```mdx-code-block

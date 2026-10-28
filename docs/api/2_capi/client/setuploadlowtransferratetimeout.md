@@ -82,8 +82,7 @@ int timeoutSecs = 60;
 ```
 
 ```lua
-local timeoutSecs = 60
-<%= data.branding.codePrefix %>:setUploadLowTransferRateTimeout(timeoutSecs)
+-- N/A
 ```
 
 ```mdx-code-block
@@ -93,6 +92,15 @@ local timeoutSecs = 60
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- N/A
 ```
 
 ```mdx-code-block

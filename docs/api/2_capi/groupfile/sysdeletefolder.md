@@ -76,7 +76,7 @@ force | Whether to delete non-empty folders, sub-folders and their files.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -86,6 +86,15 @@ force | Whether to delete non-empty folders, sub-folders and their files.
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block

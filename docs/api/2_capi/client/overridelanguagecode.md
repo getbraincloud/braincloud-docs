@@ -81,8 +81,7 @@ var languageCode = "en";
 ```
 
 ```lua
-local languageCode = "en"
-<%= data.branding.codePrefix %>:overrideLanguageCode(languageCode)
+-- N/A
 ```
 
 ```mdx-code-block
@@ -92,6 +91,15 @@ local languageCode = "en"
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- N/A
 ```
 
 ```mdx-code-block

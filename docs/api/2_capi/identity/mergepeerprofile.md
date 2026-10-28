@@ -80,7 +80,7 @@ externalAuthName | The name of the external authentication mechanism (optional, 
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -90,6 +90,15 @@ externalAuthName | The name of the external authentication mechanism (optional, 
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- cloud code only
 ```
 
 ```mdx-code-block

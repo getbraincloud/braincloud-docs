@@ -162,15 +162,15 @@ local context = {
     }
 }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getGroupService():readGroupEntitiesPage(context, callback)
+<%= data.branding.codePrefix %>.group:readGroupEntitiesPage(context, callback)
 ```
 
 ```mdx-code-block
@@ -180,6 +180,32 @@ end
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local context = {
+    pagination = { rowsPerPage = 50, pageNumber = 1 },
+    searchCriteria = {
+        groupId = "130745f4-df57-4162-8f90-d89214fc8512",
+        entityType = "BLUE"
+    },
+    sortCriteria = { createdAt = 1, updatedAt = -1 }
+}
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.group:readGroupEntitiesPage(context, callback)
 ```
 
 ```mdx-code-block

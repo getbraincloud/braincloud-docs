@@ -77,7 +77,7 @@ Creates a new Global File folder. Returns the updated directory tree and version
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -87,6 +87,15 @@ Creates a new Global File folder. Returns the updated directory tree and version
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block

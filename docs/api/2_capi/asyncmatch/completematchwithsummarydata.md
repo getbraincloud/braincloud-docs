@@ -168,15 +168,15 @@ local summary = {
   }
 }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getAsyncMatchService():completeMatchWithSummaryData(ownerId, matchId, pushContent, summary, callback)
+<%= data.branding.codePrefix %>.asyncMatch:completeMatchWithSummaryData(ownerId, matchId, pushContent, summary, callback)
 ```
 
 ```mdx-code-block
@@ -202,6 +202,30 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local ownerId = "the-owner-id"
+local matchId = "the-match-id"
+local pushContent = "An async-match has been completed!"
+local summary = {
+    completedBy = { display = "John Doe wins!", player = 2, reason = "victory" }
+}
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.asyncMatch:completeMatchWithSummaryData(ownerId, matchId, pushContent, summary, callback)
 ```
 
 ```mdx-code-block

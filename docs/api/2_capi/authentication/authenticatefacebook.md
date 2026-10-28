@@ -141,15 +141,15 @@ local facebookId = "userFacebookId"
 local token = "tokenFromFacebook"
 local forceCreate = true
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getAuthenticationService():authenticateFacebook(facebookId, token, forceCreate, callback)
+<%= data.branding.codePrefix %>.authentication:authenticateFacebook(facebookId, token, forceCreate, callback)
 ```
 
 ```mdx-code-block
@@ -168,6 +168,27 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local facebookId = "userFacebookId"
+local facebookToken = "tokenFromFacebook"
+local forceCreate = true
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.authentication:authenticateFacebook(facebookId, facebookToken, forceCreate, callback)
 ```
 
 ```mdx-code-block

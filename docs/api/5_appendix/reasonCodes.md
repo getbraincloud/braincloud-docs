@@ -776,7 +776,7 @@ public void FailureCallback(int statusCode, int reasonCode, string statusMessage
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -786,6 +786,15 @@ public void FailureCallback(int statusCode, int reasonCode, string statusMessage
 
 ```gdscript
 
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- N/A
 ```
 
 ```mdx-code-block

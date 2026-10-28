@@ -136,15 +136,15 @@ local purchaseData = {
     language = "en"
 }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getAppStoreService():startPurchase(storeId, purchaseData, callback)
+<%= data.branding.codePrefix %>.appStore:startPurchase(storeId, purchaseData, callback)
 ```
 
 ```mdx-code-block
@@ -165,6 +165,26 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local storeId = "steam"
+local purchaseData = { itemId = "3555", language = "en" }
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.appStore:startPurchase(storeId, purchaseData, callback)
 ```
 
 ```mdx-code-block

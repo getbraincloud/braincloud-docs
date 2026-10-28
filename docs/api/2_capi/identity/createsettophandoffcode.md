@@ -82,7 +82,7 @@ stringPool | The pool of characters (or phrases) to use to generate the random c
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -92,6 +92,15 @@ stringPool | The pool of characters (or phrases) to use to generate the random c
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block

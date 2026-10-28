@@ -132,7 +132,7 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="lua" label="Roblox">
+<TabItem value="roblox" label="Roblox">
 ```
 
 ```lua
@@ -140,14 +140,14 @@ local divSetId = "exampleDivSetId"
 local tournamentCode = "exampleTournamentCode1"
 local groupId = "the-group-id"
 local initialScore = 0
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
-<%= data.branding.codePrefix %>:getTournamentService():joinGroupDivision(divSetId, tournamentCode, groupId, initialScore, callback)
+<%= data.branding.codePrefix %>.tournament:joinGroupDivision(divSetId, tournamentCode, groupId, initialScore, callback)
 ```
 
 ```mdx-code-block
@@ -157,6 +157,28 @@ end
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local divSetId = "exampleDivSetId"
+local tournamentCode = "exampleTournamentCode1"
+local groupId = "the-group-id"
+local initialScore = 0
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.tournament:joinGroupDivision(divSetId, tournamentCode, groupId, initialScore, callback)
 ```
 
 ```mdx-code-block

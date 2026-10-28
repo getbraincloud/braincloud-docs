@@ -129,15 +129,15 @@ if (result.statusCode == 200) {
 local channelId = "22817:gl:CHAT_GROUPFINDER"
 local msgId = "783820066133040"
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getChatService():getChatMessage(channelId, msgId, callback)
+<%= data.branding.codePrefix %>.chat:getChatMessage(channelId, msgId, callback)
 ```
 
 ```mdx-code-block
@@ -147,6 +147,26 @@ end
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local channelId = "22817:gl:CHAT_GROUPFINDER"
+local msgId = "783820066133040"
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.chat:getChatMessage(channelId, msgId, callback)
 ```
 
 ```mdx-code-block

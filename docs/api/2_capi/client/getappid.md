@@ -65,7 +65,7 @@ var appId = <%= data.branding.codePrefix %>.getAppId();
 ```
 
 ```lua
-local appId = <%= data.branding.codePrefix %>:getAppId()
+-- N/A
 ```
 
 ```mdx-code-block
@@ -75,6 +75,15 @@ local appId = <%= data.branding.codePrefix %>:getAppId()
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local appId = <%= data.branding.codePrefix %>.client:getAppId()
 ```
 
 ```mdx-code-block

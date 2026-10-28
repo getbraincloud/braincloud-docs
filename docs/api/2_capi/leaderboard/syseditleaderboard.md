@@ -78,7 +78,7 @@ data | Optional parameter. Developer-defined data relevant to the created leader
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -88,6 +88,15 @@ data | Optional parameter. Developer-defined data relevant to the created leader
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- cloud code only
 ```
 
 ```mdx-code-block

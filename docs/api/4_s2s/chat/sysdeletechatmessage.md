@@ -77,7 +77,7 @@ Returns the number of messages that were deleted. Since the history rolls over, 
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -87,6 +87,15 @@ Returns the number of messages that were deleted. Since the history rolls over, 
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block

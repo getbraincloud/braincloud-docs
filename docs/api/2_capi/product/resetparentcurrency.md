@@ -73,7 +73,7 @@ leveName | Name of the parent level.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -83,6 +83,15 @@ leveName | Name of the parent level.
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- Cloud Code Only
 ```
 
 ```mdx-code-block

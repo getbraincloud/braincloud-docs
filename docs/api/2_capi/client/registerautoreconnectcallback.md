@@ -86,8 +86,8 @@ void autoReconnectCallback(String jsonResponse) {
 ```
 
 ```lua
-local function autoReconnectCallback(jsonResponse)
-    -- handle re-authentication result
+local autoReconnectCallback = function(response)
+    -- handle the re-authentication result
 end
 
 <%= data.branding.codePrefix %>:registerAutoReconnectCallback(autoReconnectCallback)
@@ -100,6 +100,20 @@ end
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local autoReconnectCallback = function(response)
+    -- handle the re-authentication result
+    print("Reconnect | " .. tostring(response.status))
+end
+
+<%= data.branding.codePrefix %>.client:registerAutoReconnectCallback(autoReconnectCallback)
 ```
 
 ```mdx-code-block

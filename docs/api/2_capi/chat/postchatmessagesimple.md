@@ -144,15 +144,15 @@ local channelId = "22817:gl:CHAT_GROUPFINDER"
 local chatMessage = "Hey, I am looking for new and experienced users to join our group."
 local recordInHistory = true
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getChatService():postChatMessageSimple(channelId, chatMessage, recordInHistory, callback)
+<%= data.branding.codePrefix %>.chat:postChatMessageSimple(channelId, chatMessage, recordInHistory, callback)
 ```
 
 ```mdx-code-block
@@ -171,6 +171,27 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local channelId = "22817:gl:CHAT_GROUPFINDER"
+local text = "Hey, I am looking for new and experienced users to join our group."
+local recordInHistory = true
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.chat:postChatMessageSimple(channelId, text, recordInHistory, callback)
 ```
 
 ```mdx-code-block

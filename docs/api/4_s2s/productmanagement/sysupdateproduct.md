@@ -75,7 +75,7 @@ Updates an existing product with the specifed values. Pass -1 as the version to 
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -85,6 +85,15 @@ Updates an existing product with the specifed values. Pass -1 as the version to 
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block

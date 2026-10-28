@@ -142,15 +142,15 @@ if (result.statusCode == 200) {
 local leaderboardId = "default"
 local replaceName = false
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getLeaderboardService():getSocialLeaderboardIfExists(leaderboardId, replaceName, callback)
+<%= data.branding.codePrefix %>.leaderboard:getSocialLeaderboardIfExists(leaderboardId, replaceName, callback)
 ```
 
 ```mdx-code-block
@@ -160,6 +160,26 @@ end
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local leaderboardId = "default"
+local replaceName = false
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.leaderboard:getSocialLeaderboardIfExists(leaderboardId, replaceName, callback)
 ```
 
 ```mdx-code-block

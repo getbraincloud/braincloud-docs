@@ -79,11 +79,11 @@ void errorCallback(String serviceName, String serviceOperation, int statusCode, 
 ```
 
 ```lua
-void errorCallback(String serviceName, String serviceOperation, int statusCode, int reasonCode, dynamic statusMessage) {
-  // ...
-}
-​
-<%= data.branding.codePrefix %>:setErrorCallback(errorCallback)
+local errorCallback = function(serviceName, serviceOperation, statusCode, reasonCode, response)
+    -- your code
+end
+
+<%= data.branding.codePrefix %>:registerGlobalErrorCallback(errorCallback)
 ```
 
 ```mdx-code-block
@@ -93,6 +93,19 @@ void errorCallback(String serviceName, String serviceOperation, int statusCode, 
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local globalErrorCallback = function(service, operation, statusCode, reasonCode, response)
+    print("Failed | " .. service .. " " .. operation .. " " .. tostring(statusCode) .. " " .. tostring(reasonCode))
+end
+
+<%= data.branding.codePrefix %>.client:registerGlobalErrorCallback(globalErrorCallback)
 ```
 
 ```mdx-code-block

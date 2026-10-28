@@ -70,7 +70,7 @@ profileId | The profile ID to set
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:setStoredProfileId("1234-1234-1234-1234")
+-- N/A
 ```
 
 ```mdx-code-block
@@ -85,6 +85,17 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local profileId = "1234-1234-1234-1234"
+
+<%= data.branding.codePrefix %>:setStoredProfileId(profileId)
 ```
 
 ```mdx-code-block

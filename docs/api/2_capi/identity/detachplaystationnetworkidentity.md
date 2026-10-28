@@ -82,7 +82,18 @@ const char * playstationNetworkId = "somePlaystationNetworkId";
 ```
 
 ```lua
-// N/A
+local psnAccountId = "accountId"
+local continueAnon = true
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.identity:detachPlaystationNetworkIdentity(psnAccountId, continueAnon, callback)
 ```
 
 ```mdx-code-block
@@ -92,6 +103,26 @@ const char * playstationNetworkId = "somePlaystationNetworkId";
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local psnAccountId = "accountId"
+local continueAnon = true
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.identity:detachPlaystationNetworkIdentity(psnAccountId, continueAnon, callback)
 ```
 
 ```mdx-code-block

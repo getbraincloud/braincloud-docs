@@ -157,15 +157,15 @@ local jsonEntityData = {
     street = "1309 Carling"
 }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getGlobalEntityService():createEntity(entityType, timeToLive, jsonEntityAcl, jsonEntityData, callback)
+<%= data.branding.codePrefix %>.globalEntity:createEntity(entityType, timeToLive, jsonEntityAcl, jsonEntityData, callback)
 ```
 
 ```mdx-code-block
@@ -189,6 +189,28 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local entityType = "address"
+local timeToLive = -1
+local acl = { other = 1 }
+local data = { street = "1309 Carling" }
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.globalEntity:createEntity(entityType, timeToLive, acl, data, callback)
 ```
 
 ```mdx-code-block

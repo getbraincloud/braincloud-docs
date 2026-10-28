@@ -73,11 +73,11 @@ Scenario weights cannot be changed through this call; use [SysUpdateCampaignScen
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="lua" label="Roblox">
+<TabItem value="roblox" label="Roblox">
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -87,6 +87,15 @@ Scenario weights cannot be changed through this call; use [SysUpdateCampaignScen
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block

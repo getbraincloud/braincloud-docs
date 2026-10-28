@@ -83,7 +83,7 @@ curl -X POST "https://api.braincloudservers.com/s2suploader/globalfile/upload?ga
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -93,6 +93,15 @@ curl -X POST "https://api.braincloudservers.com/s2suploader/globalfile/upload?ga
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- S2S call: to view example, switch to the Cloud Code or Raw tab.
 ```
 
 ```mdx-code-block

@@ -85,7 +85,7 @@ jsonExtraParms | Parameters to be passed to the filter
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -95,6 +95,15 @@ jsonExtraParms | Parameters to be passed to the filter
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- N/A
 ```
 
 ```mdx-code-block

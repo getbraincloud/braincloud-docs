@@ -132,15 +132,15 @@ local appleUserId = "1234500123.xxxxxxxx6789"
 local identityToken = "identityTokenFromApple"
 local forceCreate = true
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:smartSwitchAuthenticateApple(appleUserId, identityToken, forceCreate, callback)
+wrapper:smartSwitchAuthenticateApple(player.UserId, appleUserId, identityToken, forceCreate, callback)
 ```
 
 ```mdx-code-block
@@ -150,6 +150,27 @@ end
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local appleUserId = "123456789"
+local identityToken = "identityTokenFromApple"
+local forceCreate = true
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>:smartSwitchAuthenticateApple(appleUserId, identityToken, forceCreate, callback)
 ```
 
 ```mdx-code-block

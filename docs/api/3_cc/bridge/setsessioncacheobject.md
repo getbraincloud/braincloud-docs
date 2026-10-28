@@ -76,7 +76,7 @@ _Apps are limited to 5 cached objects per session, with each restricted to 512 c
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -86,6 +86,15 @@ _Apps are limited to 5 cached objects per session, with each restricted to 512 c
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block

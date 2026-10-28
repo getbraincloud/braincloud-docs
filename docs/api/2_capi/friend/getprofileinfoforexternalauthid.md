@@ -118,7 +118,18 @@ var externalAuthType = "OAuth";
 ```
 
 ```lua
-// N/A
+local externalId = "username"
+local externalAuthType = "OAuth"
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.friend:getProfileInfoForExternalAuthId(externalId, externalAuthType, callback)
 ```
 
 ```mdx-code-block
@@ -128,6 +139,26 @@ var externalAuthType = "OAuth";
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local externalId = "username"
+local externalAuthType = "OAuth"
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.friend:getProfileInfoForExternalAuthId(externalId, externalAuthType, callback)
 ```
 
 ```mdx-code-block

@@ -65,7 +65,7 @@ Coming soon!
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:getRttService():deregisterBlockchainCallback()
+<%= data.branding.codePrefix %>.rttService:deregisterRTTCallback("blockchain")
 ```
 
 ```mdx-code-block
@@ -75,6 +75,15 @@ Coming soon!
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+<%= data.branding.codePrefix %>.rttService:deregisterRTTBlockchainCallback()
 ```
 
 ```mdx-code-block

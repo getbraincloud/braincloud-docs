@@ -129,15 +129,15 @@ if (result.statusCode == 200) {
 local leaderboardId = "default"
 local profileIds = { "profile-id", "another-profile-id" }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getLeaderboardService():getPlayersSocialLeaderboard(leaderboardId, profileIds, callback)
+<%= data.branding.codePrefix %>.leaderboard:getPlayersSocialLeaderboard(leaderboardId, profileIds, callback)
 ```
 
 ```mdx-code-block
@@ -147,6 +147,26 @@ end
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local leaderboardId = "default"
+local profileIds = { "profile-id", "another-profile-id" }
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.leaderboard:getPlayersSocialLeaderboard(leaderboardId, profileIds, callback)
 ```
 
 ```mdx-code-block

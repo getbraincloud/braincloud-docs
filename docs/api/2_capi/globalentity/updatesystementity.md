@@ -77,7 +77,7 @@ This method is affected by versioning. See the [versioning documentation](/api/a
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -87,6 +87,15 @@ This method is affected by versioning. See the [versioning documentation](/api/a
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- N/A
 ```
 
 ```mdx-code-block

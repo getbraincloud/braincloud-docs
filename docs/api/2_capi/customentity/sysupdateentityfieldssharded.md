@@ -76,7 +76,7 @@ shardKeyJson | The shard key field(s) and value(s), as JSON, applicable to the e
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -86,6 +86,15 @@ shardKeyJson | The shard key field(s) and value(s), as JSON, applicable to the e
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block

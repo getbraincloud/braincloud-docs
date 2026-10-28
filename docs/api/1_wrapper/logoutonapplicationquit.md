@@ -66,7 +66,7 @@ Logs out user in one frame, meant to be used when OnApplicationQuit() occurs in 
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -76,6 +76,15 @@ Logs out user in one frame, meant to be used when OnApplicationQuit() occurs in 
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- N/A
 ```
 
 ```mdx-code-block

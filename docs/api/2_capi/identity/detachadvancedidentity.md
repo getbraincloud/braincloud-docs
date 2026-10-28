@@ -141,21 +141,20 @@ if (result.statusCode == 200) {
 ```
 
 ```lua
-local authenticationType = AuthenticationType.universal
-local externalId =  "someId"
+local authenticationType = "Universal"
+local externalId = "externalId"
 local continueAnon = true
-local extraJson = {key = "value"}
-​
+local extraJson = { key = "value" }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getIdentityService():detachAdvancedIdentity(authenticationType, externalId, continueAnon, extraJson, callback)
+<%= data.branding.codePrefix %>.identity:detachAdvancedIdentity(authenticationType, externalId, continueAnon, extraJson, callback)
 ```
 
 ```mdx-code-block
@@ -165,6 +164,28 @@ end
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local authenticationType = "Universal"
+local externalId = "externalId"
+local continueAnon = true
+local extraJson = { key = "value" }
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.identity:detachAdvancedIdentity(authenticationType, externalId, continueAnon, extraJson, callback)
 ```
 
 ```mdx-code-block

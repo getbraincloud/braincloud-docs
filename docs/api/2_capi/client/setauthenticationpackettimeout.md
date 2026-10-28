@@ -79,8 +79,7 @@ int timeoutInSeconds = 30;
 ```
 
 ```lua
-local timeoutInSeconds = 30
-<%= data.branding.codePrefix %>:setAuthenticationPacketTimeout(timeoutInSeconds)
+-- N/A
 ```
 
 ```mdx-code-block
@@ -90,6 +89,15 @@ local timeoutInSeconds = 30
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- N/A
 ```
 
 ```mdx-code-block

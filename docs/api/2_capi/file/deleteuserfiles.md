@@ -128,15 +128,15 @@ if (result.statusCode == 200) {
 local cloudPath = "dir1/dir2"
 local recurse = true
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getFileService():deleteUserFiles(cloudPath, recurse, callback)
+<%= data.branding.codePrefix %>.file:deleteUserFiles(cloudPath, recurse, callback)
 ```
 
 ```mdx-code-block
@@ -154,6 +154,26 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local cloudPath = "dir1/dir2"
+local recurse = true
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.file:deleteUserFiles(cloudPath, recurse, callback)
 ```
 
 ```mdx-code-block

@@ -66,7 +66,7 @@ Requires the client to have attached a peer profile via the [<code>AttachPeerPro
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -76,6 +76,15 @@ Requires the client to have attached a peer profile via the [<code>AttachPeerPro
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block

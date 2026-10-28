@@ -65,7 +65,7 @@ bool connected = _bc.relayService.isConnected();
 ```
 
 ```lua
-local connected = <%= data.branding.codePrefix %>:getRelayService():isConnected()
+local connected = <%= data.branding.codePrefix %>.relay:isConnected()
 ```
 
 ```mdx-code-block
@@ -75,6 +75,15 @@ local connected = <%= data.branding.codePrefix %>:getRelayService():isConnected(
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local connected = <%= data.branding.codePrefix %>.relay:isConnected()
 ```
 
 ```mdx-code-block

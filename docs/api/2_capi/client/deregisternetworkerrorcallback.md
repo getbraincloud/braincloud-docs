@@ -65,7 +65,7 @@ Deregisters the network error callback.
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:deregisterNetworkErrorCallback()
+-- N/A
 ```
 
 ```mdx-code-block
@@ -75,6 +75,15 @@ Deregisters the network error callback.
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+<%= data.branding.codePrefix %>.client:deregisterNetworkErrorCallback()
 ```
 
 ```mdx-code-block

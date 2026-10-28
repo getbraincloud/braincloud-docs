@@ -157,15 +157,15 @@ local customDataJson = {
     field2 = "value2"
 }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getPushNotificationService():sendNormalizedPushNotificationBatch(profileIds, alertContentJson, customDataJson, callback)
+<%= data.branding.codePrefix %>.pushNotification:sendNormalizedPushNotificationBatch(profileIds, alertContentJson, customDataJson, callback)
 ```
 
 ```mdx-code-block
@@ -190,6 +190,27 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local profileIds = { "a-profile-id", "another-profile-id" }
+local alertContentJson = { body = "content of message", title = "message title" }
+local customDataJson = { field1 = "value1", field2 = "value2" }
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.pushNotification:sendNormalizedPushNotificationBatch(profileIds, alertContentJson, customDataJson, callback)
 ```
 
 ```mdx-code-block

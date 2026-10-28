@@ -87,10 +87,13 @@ _bc.relayService.send(bytes, aNetId,
 ```
 
 ```lua
-local aNetId = 2
-local bytes = "Some Data here"  -- byte encoded
+local data = "Hello"
+local toNetId = 1
+local reliable = true
+local ordered = true
+local channel = <%= data.branding.codePrefix %>.relay.CHANNEL_HIGH_PRIORITY_1
 
-<%= data.branding.codePrefix %>:getRelayService():send(bytes, aNetId, true, true, BrainCloudRelay.channelHighPriority_1)
+<%= data.branding.codePrefix %>.relay:send(data, toNetId, reliable, ordered, channel)
 ```
 
 ```mdx-code-block
@@ -108,6 +111,21 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local data = "Hello"
+local toNetId = 1
+local reliable = true
+local ordered = true
+local channel = <%= data.branding.codePrefix %>.relay.CHANNEL_HIGH_PRIORITY_1
+
+<%= data.branding.codePrefix %>.relay:send(data, toNetId, reliable, ordered, channel)
 ```
 
 ```mdx-code-block

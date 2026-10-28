@@ -65,7 +65,7 @@ int timeout = <%= data.branding.codePrefix %>.getUploadLowTransferRateTimeout();
 ```
 
 ```lua
-local timeout = <%= data.branding.codePrefix %>:getUploadLowTransferRateTimeout()
+-- N/A
 ```
 
 ```mdx-code-block
@@ -75,6 +75,15 @@ local timeout = <%= data.branding.codePrefix %>:getUploadLowTransferRateTimeout(
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- N/A
 ```
 
 ```mdx-code-block

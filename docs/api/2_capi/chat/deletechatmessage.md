@@ -147,15 +147,15 @@ local channelId = "22817:gl:CHAT_TRADE"
 local msgId = "784130333859899"
 local version = -1
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getChatService():channelDisconnect(channelId, msgId, version, callback)
+<%= data.branding.codePrefix %>.chat:deleteChatMessage(channelId, msgId, version, callback)
 ```
 
 ```mdx-code-block
@@ -174,6 +174,27 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local channelId = "22817:gl:CHAT_TRADE"
+local msgId = "784130333859899"
+local version = -1
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.chat:deleteChatMessage(channelId, msgId, version, callback)
 ```
 
 ```mdx-code-block

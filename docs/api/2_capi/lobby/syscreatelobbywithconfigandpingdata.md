@@ -76,11 +76,11 @@ pingData | Ping times for each region available for this lobby type. Can use GET
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="lua" label="Roblox">
+<TabItem value="roblox" label="Roblox">
 ```
 
 ```lua
-// Cloud Code only. To view example, switch to the Cloud Code tab
+-- Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block
@@ -90,6 +90,15 @@ pingData | Ping times for each region available for this lobby type. Can use GET
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block

@@ -75,7 +75,7 @@ newOwnerCxId | Optional RTT connection id of another lobby member to be made own
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -85,6 +85,15 @@ newOwnerCxId | Optional RTT connection id of another lobby member to be made own
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block

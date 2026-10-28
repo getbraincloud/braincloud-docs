@@ -102,15 +102,15 @@ if (result.statusCode == 200) {
 local appleUserId = "someId"
 local identityToken = "someToken"
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getIdentityService():mergeAppleIdentity(appleUserId, identityToken, callback)
+<%= data.branding.codePrefix %>.identity:mergeAppleIdentity(appleUserId, identityToken, callback)
 ```
 
 ```mdx-code-block
@@ -120,6 +120,26 @@ end
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local appleId = "someId"
+local token = "someToken"
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.identity:mergeAppleIdentity(appleId, token, callback)
 ```
 
 ```mdx-code-block

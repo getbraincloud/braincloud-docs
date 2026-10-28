@@ -78,7 +78,7 @@ Retrieves identity data for given identity type for this profile.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -88,6 +88,15 @@ Retrieves identity data for given identity type for this profile.
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- cloud code only
 ```
 
 ```mdx-code-block

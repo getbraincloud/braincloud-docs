@@ -209,15 +209,15 @@ local facebookContent = {
     template = "content of message"
 }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getPushNotificationService():sendRawPushNotification(toProfileId, fcmContent, iosContent, facebookContent, callback)
+<%= data.branding.codePrefix %>.pushNotification:sendRawPushNotification(toProfileId, fcmContent, iosContent, facebookContent, callback)
 ```
 
 ```mdx-code-block
@@ -258,6 +258,38 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local toProfileId = "profile1"
+local fcmContent = {
+    notification = { body = "content of message", title = "message title" },
+    data = { customfield1 = "customValue1", customfield2 = "customValue2" },
+    priority = "normal"
+}
+local iosContent = {
+    aps = {
+        alert = { body = "content of message", title = "message title" },
+        badge = 0,
+        sound = "gggg"
+    }
+}
+local facebookContent = { template = "content of message" }
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.pushNotification:sendRawPushNotification(toProfileId, fcmContent, iosContent, facebookContent, callback)
 ```
 
 ```mdx-code-block

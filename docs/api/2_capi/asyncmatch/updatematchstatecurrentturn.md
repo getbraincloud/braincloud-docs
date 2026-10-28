@@ -166,15 +166,15 @@ local statistics = {
     statsName = "statValue"
 }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getAsyncMatchService():updateMatchStateCurrentTurn(ownerId, matchId, version, matchState, statistics, callback)
+<%= data.branding.codePrefix %>.asyncMatch:updateMatchStateCurrentTurn(ownerId, matchId, version, matchState, statistics, callback)
 ```
 
 ```mdx-code-block
@@ -184,6 +184,29 @@ end
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local ownerId = "the-owner-id"
+local matchId = "the-match-id"
+local version = 1
+local matchState = { map = "level1" }
+local statistics = { statsName = "statValue" }
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.asyncMatch:updateMatchStateCurrentTurn(ownerId, matchId, version, matchState, statistics, callback)
 ```
 
 ```mdx-code-block

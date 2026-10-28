@@ -86,7 +86,7 @@ summaryData | Public summary data for the group that is viewable even by non-mem
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -96,6 +96,15 @@ summaryData | Public summary data for the group that is viewable even by non-mem
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block

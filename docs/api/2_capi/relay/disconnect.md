@@ -65,7 +65,7 @@ Disconnect from the relay server.
 ```
 
 ```lua
-// N/A
+<%= data.branding.codePrefix %>.relay:disconnect()
 ```
 
 ```mdx-code-block
@@ -75,6 +75,15 @@ Disconnect from the relay server.
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+<%= data.branding.codePrefix %>.relay:disconnect()
 ```
 
 ```mdx-code-block

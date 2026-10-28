@@ -69,7 +69,7 @@ int netId = _bc.relayService.getNetIdForProfileId(profileId);
 ```lua
 local profileId = "pppppp"
 
-local netId = <%= data.branding.codePrefix %>:getRelayService():getNetIdForProfileId(profileId)
+local netId = <%= data.branding.codePrefix %>.relay:getNetIdForProfileId(profileId)
 ```
 
 ```mdx-code-block
@@ -79,6 +79,17 @@ local netId = <%= data.branding.codePrefix %>:getRelayService():getNetIdForProfi
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local profileId = "aaa-bbb-ccc-ddd"
+
+local netId = <%= data.branding.codePrefix %>.relay:getNetIdForProfileId(profileId)
 ```
 
 ```mdx-code-block

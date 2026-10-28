@@ -109,11 +109,7 @@ var appVersion = "1.0.0";
 ```
 
 ```lua
-local serverUrl = "https://api.braincloudservers.com/dispatcherv2"; //Optional parameter
-local secretKey = "1234-1234-1234-1234"
-local appId = "123456"
-local appVersion = "1.0.0"
-<%= data.branding.codePrefix %>:initialize(serverUrl, secretKey, appId, appVersion)
+-- N/A
 ```
 
 ```mdx-code-block
@@ -123,6 +119,20 @@ local appVersion = "1.0.0"
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local serverUrl = "https://api.braincloudservers.com/dispatcherv2"
+local appId = "123456"
+local secret = "1234-1234-1234-1234"
+local appVersion = "1.0.0"
+
+<%= data.branding.codePrefix %>.client:initialize(serverUrl, appId, secret, appVersion)
 ```
 
 ```mdx-code-block

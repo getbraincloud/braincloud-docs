@@ -133,19 +133,18 @@ if (result.statusCode == 200) {
 ```
 
 ```lua
-local statistics = {
-    LIVES = 1
-}
+local stats = { LIVES = 1 }
+local xp = 0 -- experience points to add
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getPlayerStatisticsService():incrementUserStats(statistics, callback)
+<%= data.branding.codePrefix %>.playerStatistics:incrementUserStats(stats, xp, callback)
 ```
 
 ```mdx-code-block
@@ -164,6 +163,26 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local stats = { LIVES = 1 }
+local xp = 0 -- experience points to add
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.playerStatistics:incrementUserStats(stats, xp, callback)
 ```
 
 ```mdx-code-block

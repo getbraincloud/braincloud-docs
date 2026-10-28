@@ -137,15 +137,15 @@ if (result.statusCode == 200) {
 local channelType = "gl"
 local channelSubId = "CHAT_TRADE"
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getChatService():getChannelId(channelType, channelSubId, callback)
+<%= data.branding.codePrefix %>.chat:getChannelId(channelType, channelSubId, callback)
 ```
 
 ```mdx-code-block
@@ -163,6 +163,26 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local channelType = "gl"
+local channelSubId = "CHAT_TRADE"
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.chat:getChannelId(channelType, channelSubId, callback)
 ```
 
 ```mdx-code-block

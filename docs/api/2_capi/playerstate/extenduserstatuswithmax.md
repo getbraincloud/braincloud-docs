@@ -132,22 +132,11 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="lua" label="Roblox">
+<TabItem value="roblox" label="Roblox">
 ```
 
 ```lua
-local statusName = "theStatusName"
-local additionalSecs = 60
-local maxActiveSecs = 600
-local details = {}
-local callback = function(result)
-    if result.statusCode == 200 then
-        print("Success")
-    else
-        print("Failed | " .. tostring(result.status))
-    end
-end
-<%= data.branding.codePrefix %>:getPlayerStateService():extendUserStatusWithMax(statusName, additionalSecs, maxActiveSecs, details, callback)
+-- N/A
 ```
 
 ```mdx-code-block
@@ -157,6 +146,15 @@ end
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- N/A
 ```
 
 ```mdx-code-block

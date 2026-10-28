@@ -67,7 +67,7 @@ Coming soon!
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:getRttService():disableRTT()
+<%= data.branding.codePrefix %>.rttService:disableRTT()
 ```
 
 ```mdx-code-block
@@ -82,6 +82,15 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+<%= data.branding.codePrefix %>.rttService:disableRTT()
 ```
 
 ```mdx-code-block

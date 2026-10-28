@@ -67,7 +67,15 @@ public void getServerVersion();
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:getAuthenticationService():getServerVersion()
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.authentication:getServerVersion(callback)
 ```
 
 ```mdx-code-block
@@ -82,6 +90,23 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.authentication:getServerVersion(callback)
 ```
 
 ```mdx-code-block

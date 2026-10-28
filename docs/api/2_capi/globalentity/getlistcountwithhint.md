@@ -135,24 +135,7 @@ if (result.statusCode == 200) {
 ```
 
 ```lua
-local where = {
-    ["data.team"] = "Red",
-    ["data.position"] = "Forward"
-}
-local hintJson = {
-    ["data.team"] = 1,
-    ["data.position"] = 1
-}
-
-local callback = function(result)
-    if result.statusCode == 200 then
-        print("Success")
-    else
-        print("Failed | " .. tostring(result.status))
-    end
-end
-
-<%= data.branding.codePrefix %>:getGlobalEntityService():GetListCountWithHint(where, hintJson, callback)
+-- N/A
 ```
 
 ```mdx-code-block
@@ -162,6 +145,15 @@ end
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- N/A
 ```
 
 ```mdx-code-block

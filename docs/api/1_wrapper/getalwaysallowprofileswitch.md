@@ -70,7 +70,7 @@ bool allowSwitch = <%= data.branding.codePrefix %>.alwaysAllowProfileSwitch;
 ```
 
 ```lua
-local allowSwitch = <%= data.branding.codePrefix %>.alwaysAllowProfileSwitch
+-- N/A
 ```
 
 ```mdx-code-block
@@ -80,6 +80,15 @@ local allowSwitch = <%= data.branding.codePrefix %>.alwaysAllowProfileSwitch
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local allowSwitch = <%= data.branding.codePrefix %>:getAlwaysAllowProfileSwitch()
 ```
 
 ```mdx-code-block

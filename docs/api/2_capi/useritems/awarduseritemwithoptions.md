@@ -148,15 +148,15 @@ local optionsJson = {
     blockIfExceedItemMaxStackable = false
 }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getUserItemsService():awardUserItemWithOptions(defId, quantity, includeDef, optionsJson, callback)
+<%= data.branding.codePrefix %>.userItems:awardUserItemWithOptions(defId, quantity, includeDef, optionsJson, callback)
 ```
 
 ```mdx-code-block
@@ -166,6 +166,28 @@ end
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local defId = "sword001"
+local quantity = 1
+local includeDef = true
+local optionsJson = { blockIfExceedItemMaxStackable = false }
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.userItems:awardUserItemWithOptions(defId, quantity, includeDef, optionsJson, callback)
 ```
 
 ```mdx-code-block

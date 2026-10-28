@@ -79,7 +79,7 @@ var res = proxy.runScript("scriptName", scriptdata);
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -89,6 +89,15 @@ var res = proxy.runScript("scriptName", scriptdata);
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block

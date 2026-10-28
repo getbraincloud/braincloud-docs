@@ -144,7 +144,7 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="lua" label="Roblox">
+<TabItem value="roblox" label="Roblox">
 ```
 
 ```lua
@@ -155,14 +155,14 @@ local data = {
     memberNickname= "batman"
 }
 local roundStartedEpoch = [[#ts]]
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
-<%= data.branding.codePrefix %>:getTournamentService():postGroupTournamentScore(leaderboardId, groupId, score, data, roundStartedEpoch, callback)
+<%= data.branding.codePrefix %>.tournament:postGroupTournamentScore(leaderboardId, groupId, score, data, roundStartedEpoch, callback)
 ```
 
 ```mdx-code-block
@@ -172,6 +172,29 @@ end
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local leaderboardId = "the-leaderboard-id"
+local groupId = "the-group-id"
+local score = 0
+local data = { memberNickname = "batman" }
+local roundStartedEpoch = os.time() * 1000
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.tournament:postGroupTournamentScore(leaderboardId, groupId, score, data, roundStartedEpoch, callback)
 ```
 
 ```mdx-code-block

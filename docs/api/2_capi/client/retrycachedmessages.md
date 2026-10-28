@@ -65,7 +65,7 @@ Attempts to resend any cached messages. If no messages are in the cache, this me
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:retryCachedMessages()
+-- N/A
 ```
 
 ```mdx-code-block
@@ -75,6 +75,15 @@ Attempts to resend any cached messages. If no messages are in the cache, this me
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+<%= data.branding.codePrefix %>.client:retryCachedMessages()
 ```
 
 ```mdx-code-block

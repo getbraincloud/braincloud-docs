@@ -85,7 +85,7 @@ json | JSON formatted data to post
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -95,6 +95,15 @@ json | JSON formatted data to post
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- Switch to CC tab
 ```
 
 ```mdx-code-block

@@ -65,7 +65,7 @@ Force a disconnect for all currently active RTT sessions for the app.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -75,6 +75,15 @@ Force a disconnect for all currently active RTT sessions for the app.
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- S2S call: to view example, switch to the Raw tab.
 ```
 
 ```mdx-code-block

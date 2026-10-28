@@ -85,7 +85,7 @@ tSettingsJson | Tournament and tPhases settings changes for the in-progress lead
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -95,6 +95,15 @@ tSettingsJson | Tournament and tPhases settings changes for the in-progress lead
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- cloud code only
 ```
 
 ```mdx-code-block

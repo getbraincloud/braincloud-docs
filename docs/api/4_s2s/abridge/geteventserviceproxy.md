@@ -65,7 +65,7 @@ Retrieves a S2S EventService proxy object.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -75,6 +75,15 @@ Retrieves a S2S EventService proxy object.
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- Switch to CC tab
 ```
 
 ```mdx-code-block

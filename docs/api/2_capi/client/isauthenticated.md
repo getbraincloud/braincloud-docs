@@ -67,7 +67,7 @@ var isAuthenticated = <%= data.branding.codePrefix %>.isAuthenticated();
 ```
 
 ```lua
-local isAuthenticated = <%= data.branding.codePrefix %>:isAuthenticated()
+-- N/A
 ```
 
 ```mdx-code-block
@@ -77,6 +77,15 @@ local isAuthenticated = <%= data.branding.codePrefix %>:isAuthenticated()
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local isAuthenticated = <%= data.branding.codePrefix %>.client:isAuthenticated()
 ```
 
 ```mdx-code-block

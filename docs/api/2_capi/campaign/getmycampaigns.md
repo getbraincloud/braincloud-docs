@@ -109,19 +109,19 @@ if (result.statusCode == 200) {
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="lua" label="Roblox">
+<TabItem value="roblox" label="Roblox">
 ```
 
 ```lua
 local optionsJson = {}
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
-<%= data.branding.codePrefix %>:getCampaignService():getMyCampaigns(optionsJson, callback)
+<%= data.branding.codePrefix %>.campaign:getMyCampaigns(optionsJson, callback)
 ```
 
 ```mdx-code-block
@@ -138,6 +138,25 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local optionsJson = {}
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.campaign:getMyCampaigns(optionsJson, callback)
 ```
 
 ```mdx-code-block

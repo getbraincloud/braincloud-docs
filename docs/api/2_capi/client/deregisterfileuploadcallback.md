@@ -65,7 +65,7 @@ Deregisters the file upload callback
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:deregisterFileUploadCallback()
+-- N/A
 ```
 
 ```mdx-code-block
@@ -75,6 +75,15 @@ Deregisters the file upload callback
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- N/A
 ```
 
 ```mdx-code-block

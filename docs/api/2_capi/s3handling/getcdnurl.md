@@ -124,15 +124,15 @@ if (result.statusCode == 200) {
 ```lua
 local fileId = "hjvfsghguhuhrtghgh"
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getFileService():getCDNUrl(fileId, callback)
+<%= data.branding.codePrefix %>.s3Handling:getCDNUrl(fileId, callback)
 ```
 
 ```mdx-code-block
@@ -142,6 +142,25 @@ end
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local fileId = "hjvfsghguhuhrtghgh"
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.s3Handling:getCDNUrl(fileId, callback)
 ```
 
 ```mdx-code-block

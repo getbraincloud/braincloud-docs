@@ -78,7 +78,7 @@ divisionSetId | Optional (only suitable if filterType is set to `divison`). If s
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -88,6 +88,15 @@ divisionSetId | Optional (only suitable if filterType is set to `divison`). If s
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- cloud code only
 ```
 
 ```mdx-code-block

@@ -84,8 +84,7 @@ int minTransferRate = 1500;
 ```
 
 ```lua
-local minTransferRate = 1500
-<%= data.branding.codePrefix %>:setUploadLowTransferRateThreshold(minTransferRate)
+-- N/A
 ```
 
 ```mdx-code-block
@@ -95,6 +94,15 @@ local minTransferRate = 1500
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- N/A
 ```
 
 ```mdx-code-block

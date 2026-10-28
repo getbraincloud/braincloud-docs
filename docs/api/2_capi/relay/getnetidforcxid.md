@@ -69,7 +69,7 @@ int netId = _bc.relayService.getNetIdForCxId(aCxId);
 ```lua
 local aCxId = "aaaaaaa"
 
-local netId = <%= data.branding.codePrefix %>:getRelayService():getNetIdForCxId(aCxId)
+local netId = <%= data.branding.codePrefix %>.relay:getNetIdForCxId(aCxId)
 ```
 
 ```mdx-code-block
@@ -79,6 +79,17 @@ local netId = <%= data.branding.codePrefix %>:getRelayService():getNetIdForCxId(
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local cxId = "55555:aaa-bbb-ccc-ddd:asdfjkl"
+
+local netId = <%= data.branding.codePrefix %>.relay:getNetIdForCxId(cxId)
 ```
 
 ```mdx-code-block

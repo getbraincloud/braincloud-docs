@@ -83,7 +83,7 @@ dropMax | If `true`, the full quantity of each item is dropped. If `false`, a qu
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -93,6 +93,15 @@ dropMax | If `true`, the full quantity of each item is dropped. If `false`, a qu
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block

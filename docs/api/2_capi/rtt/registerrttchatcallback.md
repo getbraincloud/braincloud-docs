@@ -78,11 +78,11 @@ void rttCallBack(RTTCommandResponse jsonResponse) {
 ```
 
 ```lua
-local rttCallBack = function(jsonResponse)
+local rttCallback = function(message)
     -- your code
 end
 
-<%= data.branding.codePrefix %>:getRttService():registerRTTChatCallback(rttCallback)
+<%= data.branding.codePrefix %>.rttService:registerRTTCallback("chat", rttCallback)
 ```
 
 ```mdx-code-block
@@ -97,6 +97,19 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local rttCallback = function(message)
+    print(message.operation, message.data)
+end
+
+<%= data.branding.codePrefix %>.rttService:registerRTTChatCallback(rttCallback)
 ```
 
 ```mdx-code-block

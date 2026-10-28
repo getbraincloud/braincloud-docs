@@ -128,15 +128,15 @@ if (result.statusCode == 200) {
 local lobbyId = "55555:4v4:19"
 local settings = {}
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getLobbyService():updateSettings(lobbyId, settings, callback)
+<%= data.branding.codePrefix %>.lobby:updateSettings(lobbyId, settings, callback)
 ```
 
 ```mdx-code-block
@@ -154,6 +154,26 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local lobbyId = "55555:4v4:19"
+local settings = {}
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.lobby:updateSettings(lobbyId, settings, callback)
 ```
 
 ```mdx-code-block

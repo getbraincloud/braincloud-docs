@@ -65,7 +65,7 @@ List<int> timeouts = <%= data.branding.codePrefix %>.getPacketTimeouts();
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:getPacketTimeouts()
+-- N/A
 ```
 
 ```mdx-code-block
@@ -75,6 +75,15 @@ List<int> timeouts = <%= data.branding.codePrefix %>.getPacketTimeouts();
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- N/A
 ```
 
 ```mdx-code-block

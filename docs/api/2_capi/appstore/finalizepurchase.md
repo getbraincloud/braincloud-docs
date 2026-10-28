@@ -143,15 +143,15 @@ local transactionData = {
     transId = "12345677890123456789"
 }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getAppStoreService():finalizePurchase(storeId, transactionId, transactionData, callback)
+<%= data.branding.codePrefix %>.appStore:finalizePurchase(storeId, transactionId, transactionData, callback)
 ```
 
 ```mdx-code-block
@@ -172,6 +172,27 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local storeId = "steam"
+local transactionId = "12345677890123456789"
+local transactionData = { transId = "12345677890123456789" }
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.appStore:finalizePurchase(storeId, transactionId, transactionData, callback)
 ```
 
 ```mdx-code-block

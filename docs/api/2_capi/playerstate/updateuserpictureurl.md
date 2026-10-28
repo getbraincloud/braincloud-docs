@@ -119,15 +119,15 @@ if (result.statusCode == 200) {
 ```lua
 local pictureUrl = "someURL"
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getPlayerStateService():updateUserPictureUrl(pictureUrl, callback)
+<%= data.branding.codePrefix %>.playerState:updateUserPictureUrl(pictureUrl, callback)
 ```
 
 ```mdx-code-block
@@ -137,6 +137,25 @@ end
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local url = "someURL"
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.playerState:updateUserPictureUrl(url, callback)
 ```
 
 ```mdx-code-block

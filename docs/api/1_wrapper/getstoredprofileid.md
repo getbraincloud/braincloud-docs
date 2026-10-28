@@ -67,7 +67,7 @@ String profileId = <%= data.branding.codePrefix %>.getStoredProfileId();
 ```
 
 ```lua
-local profileId = <%= data.branding.codePrefix %>:getStoredProfileId()
+-- N/A
 ```
 
 ```mdx-code-block
@@ -82,6 +82,15 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local profileId = <%= data.branding.codePrefix %>:getStoredProfileId()
 ```
 
 ```mdx-code-block

@@ -97,7 +97,18 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 ```
 
 ```lua
-// N/A
+local oculusId = "userId"
+local oculusNonce = "nonce"
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.identity:attachOculusIdentity(oculusId, oculusNonce, callback)
 ```
 
 ```mdx-code-block
@@ -107,6 +118,26 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local oculusId = "userId"
+local oculusNonce = "nonce"
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.identity:attachOculusIdentity(oculusId, oculusNonce, callback)
 ```
 
 ```mdx-code-block

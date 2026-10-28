@@ -161,15 +161,15 @@ local jsonEntityAcl = {
 }
 local version = 1
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getEntityService():updateSingleton(entityType, jsonEntityData, jsonEntityAcl, version, callback)
+<%= data.branding.codePrefix %>.entity:updateSingleton(entityType, jsonEntityData, jsonEntityAcl, version, callback)
 ```
 
 ```mdx-code-block
@@ -193,6 +193,28 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local entityType = "settings"
+local data = { difficulty = "normal" }
+local acl = { other = 0 }
+local version = 1
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.entity:updateSingleton(entityType, data, acl, version, callback)
 ```
 
 ```mdx-code-block

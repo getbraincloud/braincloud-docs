@@ -83,7 +83,7 @@ Records a manual transaction. Useful for stores that are not yet directly suppor
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -93,6 +93,15 @@ Records a manual transaction. Useful for stores that are not yet directly suppor
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block

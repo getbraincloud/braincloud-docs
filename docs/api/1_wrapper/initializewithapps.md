@@ -147,9 +147,7 @@ If  **updateTick** is greater than `0` a built-in run loop timer is started and 
 ```
 
 ```lua
-local secretMap = {["12345"] = "1234-1234-1234-1234",["67890"] = "4321-4321-4321-4321"}
-local appId = "123456"
-<%= data.branding.codePrefix %>:initWithApps(secretMap, appId, "1.0.0", 50)
+-- N/A
 ```
 
 ```mdx-code-block
@@ -164,6 +162,26 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local appId = "123456"
+local secret = "1234-1234-1234-1234"
+local childAppId = "123457"
+local childSecret = "5678-5678-5678-5678"
+local secretMap = {
+    [appId] = secret,
+    [childAppId] = childSecret
+}
+local appVersion = "1.0.0"
+local serverUrl = "<%= data.branding.serverUrl %>"
+
+<%= data.branding.codePrefix %>:initializeWithApps(appId, secretMap, appVersion, serverUrl)
 ```
 
 ```mdx-code-block

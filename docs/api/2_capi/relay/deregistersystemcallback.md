@@ -65,7 +65,7 @@ Deregister callback for RelayServer system messages.
 ```
 
 ```lua
-// N/A
+<%= data.branding.codePrefix %>.relay:deregisterSystemCallback()
 ```
 
 ```mdx-code-block
@@ -75,6 +75,15 @@ Deregister callback for RelayServer system messages.
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+<%= data.branding.codePrefix %>.relay:deregisterSystemCallback()
 ```
 
 ```mdx-code-block

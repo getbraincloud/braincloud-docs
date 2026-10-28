@@ -136,15 +136,15 @@ if (result.statusCode == 200) {
 local ultraUsername = "ultraUsername"
 local ultraIdToken = "ultraIdToken"
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getIdentityService():mergeUltraIdentity(ultraUsername, ultraIdToken, callback)
+<%= data.branding.codePrefix %>.identity:mergeUltraIdentity(ultraUsername, ultraIdToken, callback)
 ```
 
 ```mdx-code-block
@@ -154,6 +154,26 @@ end
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local username = "ultraUsername"
+local idToken = "ultraIdToken"
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.identity:mergeUltraIdentity(username, idToken, callback)
 ```
 
 ```mdx-code-block

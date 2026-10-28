@@ -70,7 +70,7 @@ profileId | The profile Id
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -80,6 +80,15 @@ profileId | The profile Id
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- Switch to CC tab
 ```
 
 ```mdx-code-block

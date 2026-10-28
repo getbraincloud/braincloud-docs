@@ -121,15 +121,15 @@ if (result.statusCode == 200) {
 ```lua
 local divisionSetInstance = "^D^exampleDivSetId^1"
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getTournamentService():leaveDivisionInstance(divisionSetInstance, callback)
+<%= data.branding.codePrefix %>.tournament:leaveDivisionInstance(divisionSetInstance, callback)
 ```
 
 ```mdx-code-block
@@ -139,6 +139,25 @@ end
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local leaderboardId = "^D^exampleDivSetId^1"
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.tournament:leaveDivisionInstance(leaderboardId, callback)
 ```
 
 ```mdx-code-block

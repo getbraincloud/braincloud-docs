@@ -121,14 +121,14 @@ void failureCallback(RTTCommandResponse response) {
 ```
 
 ```lua
-local successCallback = function(jsonResponse)
-    -- Your code
+local successCallback = function(response)
+    -- your code
 end
-local failureCallback = function(jsonResponse)
-    -- Your code
+local failureCallback = function(response)
+    -- your code
 end
 
-<%= data.branding.codePrefix %>:getRttRegistrationService():enableRTT(successCallback, failureCallback)
+<%= data.branding.codePrefix %>.rttService:enableRTT(successCallback, failureCallback)
 ```
 
 ```mdx-code-block
@@ -138,6 +138,23 @@ end
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- RTT must be enabled for the app on the Design Portal.
+local onSuccess = function(message)
+    print("RTT enabled")
+end
+local onFailure = function(error)
+    print("RTT failed | " .. tostring(error.status_message or error))
+end
+
+<%= data.branding.codePrefix %>.rttService:enableRTT(onSuccess, onFailure)
 ```
 
 ```mdx-code-block

@@ -84,7 +84,7 @@ tSettingsJson | Tournament settings for the new ADHOC tournament period being sc
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -94,6 +94,15 @@ tSettingsJson | Tournament settings for the new ADHOC tournament period being sc
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- cloud code only
 ```
 
 ```mdx-code-block

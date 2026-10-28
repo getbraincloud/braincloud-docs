@@ -74,7 +74,7 @@ sessionToken | Parse session token
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -84,6 +84,15 @@ sessionToken | Parse session token
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- Switch to CC tab
 ```
 
 ```mdx-code-block

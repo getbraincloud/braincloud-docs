@@ -88,7 +88,7 @@ Edits a leaderboard configuration, with support for tournament leaderboards.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -98,6 +98,15 @@ Edits a leaderboard configuration, with support for tournament leaderboards.
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- cloud code only
 ```
 
 ```mdx-code-block

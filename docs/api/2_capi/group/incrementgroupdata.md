@@ -150,15 +150,15 @@ local jsonData = {
     ["field3-new"] = 3
 }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getGroupService():incrementGroupData(groupId, jsonData, callback)
+<%= data.branding.codePrefix %>.group:incrementGroupData(groupId, jsonData, callback)
 ```
 
 ```mdx-code-block
@@ -168,6 +168,30 @@ end
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local groupId = "a-group-id"
+local data = {
+    field1 = -1.5,
+    field2 = { ["field2-1"] = 6, ["field2-new"] = 63.6 },
+    ["field3-new"] = 3
+}
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.group:incrementGroupData(groupId, data, callback)
 ```
 
 ```mdx-code-block

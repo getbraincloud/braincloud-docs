@@ -150,20 +150,18 @@ if (result.statusCode == 200) {
 ```lua
 local leaderboardId = "leaderboardId1"
 local score = 0
-local jsonData = {
-    nickname = "batman"
-}
-local roundStartedTime = Date.now().millisecondsSinceEpoch
+local data = { nickname = "batman" }
+local roundStartedEpoch = os.time() * 1000
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getTournamentService():postTournamentScoreUTC(leaderboardId, score, jsonData, roundStartedTime, callback)
+<%= data.branding.codePrefix %>.tournament:postTournamentScoreUTC(leaderboardId, score, data, roundStartedEpoch, callback)
 ```
 
 ```mdx-code-block
@@ -173,6 +171,28 @@ end
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local leaderboardId = "leaderboardId1"
+local score = 0
+local data = { nickname = "batman" }
+local roundStartedEpoch = os.time() * 1000
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.tournament:postTournamentScoreUTC(leaderboardId, score, data, roundStartedEpoch, callback)
 ```
 
 ```mdx-code-block

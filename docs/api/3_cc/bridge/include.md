@@ -85,7 +85,7 @@ The path of the included script is a relative path, ff without specifying the sc
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -95,6 +95,15 @@ The path of the included script is a relative path, ff without specifying the sc
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block

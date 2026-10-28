@@ -115,17 +115,7 @@ if (result.statusCode == 200) {
 ```
 
 ```lua
-local groupId = "a-group-id"
-
-local callback = function(result)
-    if result.statusCode == 200 then
-        print("Success")
-    else
-        print("Failed | " .. tostring(result.status))
-    end
-end
-
-<%= data.branding.codePrefix %>:getGroupService():leaveGroupAuto(groupId, callback)
+-- N/A
 ```
 
 ```mdx-code-block
@@ -135,6 +125,15 @@ end
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- N/A
 ```
 
 ```mdx-code-block

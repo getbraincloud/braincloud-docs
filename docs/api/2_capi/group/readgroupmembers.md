@@ -2,7 +2,7 @@
 
 Read the members of the group.
 
-<PartialServop service_name="group" operation_name="READ_MEMBERS_OF_GROUP" />
+<PartialServop service_name="group" operation_name="READ_GROUP_MEMBERS" />
 
 ## Method Parameters
 Parameter | Description
@@ -119,15 +119,15 @@ if (result.statusCode == 200) {
 ```lua
 local groupId = "a-group-id"
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getGroupService():readGroupMembers(groupId, callback)
+<%= data.branding.codePrefix %>.group:readGroupMembers(groupId, callback)
 ```
 
 ```mdx-code-block
@@ -144,6 +144,25 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local groupId = "a-group-id"
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.group:readGroupMembers(groupId, callback)
 ```
 
 ```mdx-code-block

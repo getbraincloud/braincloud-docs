@@ -65,7 +65,7 @@ Coming soon!
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:deregisterAllRTTCallbacks()
+<%= data.branding.codePrefix %>.rttService:deregisterAllRTTCallbacks()
 ```
 
 ```mdx-code-block
@@ -75,6 +75,15 @@ Coming soon!
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+<%= data.branding.codePrefix %>.rttService:deregisterAllRTTCallbacks()
 ```
 
 ```mdx-code-block

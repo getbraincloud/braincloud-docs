@@ -127,15 +127,15 @@ if (result.statusCode == 200) {
 local folderPath = "/root1/sub11/sub12/"
 local filename = "sub12file1"
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getGlobalFileV3Service():getFileInfoSimple(folderPath, filename, callback)
+<%= data.branding.codePrefix %>.globalFile:getFileInfoSimple(folderPath, filename, callback)
 ```
 
 ```mdx-code-block
@@ -153,6 +153,26 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local folderPath = "/root1/sub11/sub12/"
+local filename = "sub12file1"
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.globalFile:getFileInfoSimple(folderPath, filename, callback)
 ```
 
 ```mdx-code-block

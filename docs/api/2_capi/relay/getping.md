@@ -65,7 +65,7 @@ int pingTime = _bc.relayService.getPing();
 ```
 
 ```lua
-local pingTime = <%= data.branding.codePrefix %>:getRelayService():getPing()
+local pingTime = <%= data.branding.codePrefix %>.relay:getPing()
 ```
 
 ```mdx-code-block
@@ -80,6 +80,15 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local ping = <%= data.branding.codePrefix %>.relay:getPing() -- milliseconds; 999 until the first ping returns
 ```
 
 ```mdx-code-block

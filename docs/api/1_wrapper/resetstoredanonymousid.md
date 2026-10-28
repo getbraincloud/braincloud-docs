@@ -68,7 +68,7 @@ Resets the anonymous ID to empty string.  When the anonymousId is empty a new on
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:resetStoredAnonymousId()
+-- N/A
 ```
 
 ```mdx-code-block
@@ -83,6 +83,15 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+<%= data.branding.codePrefix %>:resetStoredAnonymousId()
 ```
 
 ```mdx-code-block

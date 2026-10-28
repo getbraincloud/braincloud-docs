@@ -74,7 +74,7 @@ periodStartingAtUtcMillis | The exact startingAt UTC timestamp, in milliseconds,
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -84,6 +84,15 @@ periodStartingAtUtcMillis | The exact startingAt UTC timestamp, in milliseconds,
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- cloud code only
 ```
 
 ```mdx-code-block

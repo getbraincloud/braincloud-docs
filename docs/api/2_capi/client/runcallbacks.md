@@ -65,7 +65,7 @@ Run callbacks, to be called once per frame from your main thread
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:update()
+-- N/A
 ```
 
 ```mdx-code-block
@@ -75,6 +75,18 @@ Run callbacks, to be called once per frame from your main thread
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- Call once per frame: it sends queued requests and fires their callbacks.
+function love.update(dt)
+    <%= data.branding.codePrefix %>.client:runCallbacks()
+end
 ```
 
 ```mdx-code-block

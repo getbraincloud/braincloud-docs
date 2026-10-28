@@ -67,7 +67,7 @@ var anonId = <%= data.branding.codePrefix %>.authentication.generateAnonymousId(
 ```
 
 ```lua
-local anonId = <%= data.branding.codePrefix %>:getAuthenticationService():generateAnonymousId()
+local anonId = <%= data.branding.codePrefix %>.authentication:generateAnonymousId()
 ```
 
 ```mdx-code-block
@@ -77,6 +77,15 @@ local anonId = <%= data.branding.codePrefix %>:getAuthenticationService():genera
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local anonId = <%= data.branding.codePrefix %>.authentication:generateAnonymousId()
 ```
 
 ```mdx-code-block

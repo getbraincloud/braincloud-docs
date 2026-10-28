@@ -118,15 +118,15 @@ if (result.statusCode == 200) {
 ```lua
 local playerId = "player"
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getMatchMakingService():getShieldExpiry(playerId, callback)
+<%= data.branding.codePrefix %>.matchMaking:getShieldExpiry(playerId, callback)
 ```
 
 ```mdx-code-block
@@ -136,6 +136,25 @@ end
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local playerId = "player"
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.matchMaking:getShieldExpiry(playerId, callback)
 ```
 
 ```mdx-code-block

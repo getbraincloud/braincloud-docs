@@ -130,15 +130,15 @@ if (result.statusCode == 200) {
 local toProfileIds = { "profileId1", "profileId2" }
 local text = "Chat and messaging features are here!"
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getMessagingService():sendMessageSimple(toProfileIds, text, callback)
+<%= data.branding.codePrefix %>.messaging:sendMessageSimple(toProfileIds, text, callback)
 ```
 
 ```mdx-code-block
@@ -156,6 +156,26 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local toProfileIds = { "profileId1", "profileId2" }
+local messageText = "Chat and messaging features are here!"
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.messaging:sendMessageSimple(toProfileIds, messageText, callback)
 ```
 
 ```mdx-code-block

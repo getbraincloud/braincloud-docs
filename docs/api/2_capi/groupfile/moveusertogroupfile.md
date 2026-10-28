@@ -183,15 +183,15 @@ local groupFileAcl = {
   other = 0
 }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getGroupFileService():moveUserToGroupFile(userCloudPath, userCloudFilename, groupId, groupTreeId, groupFilename, overwriteIfPresent, groupFileAcl, callback)
+<%= data.branding.codePrefix %>.groupFile:moveUserToGroupFile(userCloudPath, userCloudFilename, groupId, groupTreeId, groupFilename, groupFileAcl, overwriteIfPresent, callback)
 ```
 
 ```mdx-code-block
@@ -201,6 +201,31 @@ end
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local userCloudPath = "dir1/dir2"
+local userCloudFilename = "file"
+local groupId = "dfsfsffsd"
+local groupTreeId = "gpath"
+local groupFilename = "gfile"
+local groupFileAcl = { member = 2, other = 0 }
+local overwriteIfPresent = true
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.groupFile:moveUserToGroupFile(userCloudPath, userCloudFilename, groupId, groupTreeId, groupFilename, groupFileAcl, overwriteIfPresent, callback)
 ```
 
 ```mdx-code-block

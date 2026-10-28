@@ -151,24 +151,24 @@ if (result.statusCode == 200) {
 ```
 
 ```lua
-local externalId = "authAdvancedUser"
-local authenticationToken = "authAdvancedPass"
-local authenticationSubType = ""
+local authenticationType = "Universal"
 local ids = {
-    externalId = externalId,
-    authenticationToken = authenticationToken,
-    authenticationSubType = authenticationSubType
+    externalId = "authAdvancedUser",
+    authenticationToken = "authAdvancedPass",
+    authenticationSubType = ""
 }
+local forceCreate = true
+local extraJson = { key = "value" }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:authenticateAdvanced(AuthenticationType.universal, ids, {key = "value"}, true, callback)
+wrapper:authenticateAdvanced(player.UserId, authenticationType, ids, forceCreate, extraJson, callback)
 ```
 
 ```mdx-code-block
@@ -178,6 +178,32 @@ end
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local authenticationType = "Universal"
+local ids = {
+    externalId = "authAdvancedUser",
+    authenticationToken = "authAdvancedPass",
+    authenticationSubType = ""
+}
+local forceCreate = true
+local extraJson = { key = "value" }
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>:authenticateAdvanced(authenticationType, ids, forceCreate, extraJson, callback)
 ```
 
 ```mdx-code-block

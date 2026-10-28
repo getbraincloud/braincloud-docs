@@ -67,7 +67,7 @@ String anonymousId = <%= data.branding.codePrefix %>.getStoredAnonymousId();
 ```
 
 ```lua
-local anonymousId = <%= data.branding.codePrefix %>:getStoredAnonymousId()
+-- N/A
 ```
 
 ```mdx-code-block
@@ -82,6 +82,15 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local anonymousId = <%= data.branding.codePrefix %>:getStoredAnonymousId()
 ```
 
 ```mdx-code-block

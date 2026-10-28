@@ -76,7 +76,7 @@ int interval = 10;
 ```lua
 local interval = 10
 
-<%= data.branding.codePrefix %>:getRelayService():setPingInterval(interval)
+<%= data.branding.codePrefix %>.relay:setPingInterval(interval)
 ```
 
 ```mdx-code-block
@@ -86,6 +86,17 @@ local interval = 10
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local seconds = 10
+
+<%= data.branding.codePrefix %>.relay:setPingInterval(seconds)
 ```
 
 ```mdx-code-block

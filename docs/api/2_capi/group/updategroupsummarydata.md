@@ -136,15 +136,15 @@ local groupId = "a-group-id"
 local version = 3
 local summaryData = { faction = "warlords" }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getGroupService():updateGroupSummaryData(groupId, version, summaryData, callback)
+<%= data.branding.codePrefix %>.group:updateGroupSummaryData(groupId, version, summaryData, callback)
 ```
 
 ```mdx-code-block
@@ -154,6 +154,27 @@ end
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local groupId = "a-group-id"
+local version = 3
+local summaryData = { faction = "warlords" }
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.group:updateGroupSummaryData(groupId, version, summaryData, callback)
 ```
 
 ```mdx-code-block

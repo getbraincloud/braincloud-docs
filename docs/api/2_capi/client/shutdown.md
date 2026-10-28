@@ -65,7 +65,7 @@ Shuts down all systems needed for BrainCloudClient, only call this from the main
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:shutDown()
+-- N/A
 ```
 
 ```mdx-code-block
@@ -75,6 +75,15 @@ Shuts down all systems needed for BrainCloudClient, only call this from the main
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+<%= data.branding.codePrefix %>.client:shutdown()
 ```
 
 ```mdx-code-block

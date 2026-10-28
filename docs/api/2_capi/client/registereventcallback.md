@@ -81,10 +81,10 @@ void eventCallback(Map<String, dynamic>?  jsonResponse) {
 ```
 
 ```lua
-void eventCallback(Map<String, dynamic>?  jsonResponse) {
-    //Your code
-}
-​
+local eventCallback = function(response)
+    -- response.events holds the events
+end
+
 <%= data.branding.codePrefix %>:registerEventCallback(eventCallback)
 ```
 
@@ -95,6 +95,21 @@ void eventCallback(Map<String, dynamic>?  jsonResponse) {
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local eventCallback = function(response)
+    for _, event in ipairs(response.events) do
+        print("Event | " .. tostring(event.eventType))
+    end
+end
+
+<%= data.branding.codePrefix %>.client:registerEventCallback(eventCallback)
 ```
 
 ```mdx-code-block

@@ -4,7 +4,7 @@ Returns a list of max \`n` messages from history.
 
 
 
-<PartialServop service_name="chat" operation_name="GET_RECENT_MESSAGES" />
+<PartialServop service_name="chat" operation_name="GET_RECENT_CHAT_MESSAGES" />
 
 ## Method Parameters
 Parameter | Description
@@ -146,15 +146,15 @@ if (result.statusCode == 200) {
 local channelId = "22817:gl:CHAT_TRADE"
 local maxReturn = 25
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getChatService():getRecentChatMessages(channelId, maxReturn, callback)
+<%= data.branding.codePrefix %>.chat:getRecentChatMessages(channelId, maxReturn, callback)
 ```
 
 ```mdx-code-block
@@ -172,6 +172,26 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local channelId = "22817:gl:CHAT_TRADE"
+local maxReturn = 25
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.chat:getRecentChatMessages(channelId, maxReturn, callback)
 ```
 
 ```mdx-code-block

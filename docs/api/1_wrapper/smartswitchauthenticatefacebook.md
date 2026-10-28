@@ -132,15 +132,15 @@ local facebookId = "userFacebookId"
 local token = "tokenFromFacebook"
 local forceCreate = true
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:smartSwitchAuthenticateFacebook(facebookId, token, forceCreate, callback)
+wrapper:smartSwitchAuthenticateFacebook(player.UserId, facebookId, token, forceCreate, callback)
 ```
 
 ```mdx-code-block
@@ -150,6 +150,27 @@ end
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local facebookId = "userFacebookId"
+local facebookToken = "tokenFromFacebook"
+local forceCreate = true
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>:smartSwitchAuthenticateFacebook(facebookId, facebookToken, forceCreate, callback)
 ```
 
 ```mdx-code-block

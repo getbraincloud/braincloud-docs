@@ -156,15 +156,15 @@ local substitutionJson = {
 }
 local startTime = 1437579786000
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getPushNotificationService():scheduleRichPushNotificationUTC(profileId, notificationTemplateId, substitutionJson, startTime, callback)
+<%= data.branding.codePrefix %>.pushNotification:scheduleRichPushNotificationUTC(profileId, notificationTemplateId, substitutionJson, startTime, callback)
 ```
 
 ```mdx-code-block
@@ -187,6 +187,28 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local profileId = "kjhkjhgfkjshgkjh"
+local notificationTemplateId = 1
+local substitutionJson = { ["0"] = "value0", ["1"] = "value1" }
+local startTime = 1437579786000
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.pushNotification:scheduleRichPushNotificationUTC(profileId, notificationTemplateId, substitutionJson, startTime, callback)
 ```
 
 ```mdx-code-block

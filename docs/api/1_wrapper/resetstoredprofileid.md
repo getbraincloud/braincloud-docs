@@ -68,7 +68,7 @@ Resets the profile ID to empty string.
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:resetStoredProfileId()
+-- N/A
 ```
 
 ```mdx-code-block
@@ -83,6 +83,15 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+<%= data.branding.codePrefix %>:resetStoredProfileId()
 ```
 
 ```mdx-code-block

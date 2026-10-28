@@ -65,7 +65,7 @@ Coming soon!
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:getRttService():deregisterRTTLobbyCallback()
+<%= data.branding.codePrefix %>.rttService:deregisterRTTCallback("lobby")
 ```
 
 ```mdx-code-block
@@ -80,6 +80,15 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+<%= data.branding.codePrefix %>.rttService:deregisterRTTLobbyCallback()
 ```
 
 ```mdx-code-block

@@ -71,7 +71,7 @@ brainCloudContext | Data provided by brainCloud when the server instance was lau
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -81,6 +81,15 @@ brainCloudContext | Data provided by brainCloud when the server instance was lau
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block

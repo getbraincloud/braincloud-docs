@@ -75,7 +75,7 @@ However, if you are not using Unity or not using the <%= data.branding.codeWrapp
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:runCallbacks()
+-- N/A
 ```
 
 ```mdx-code-block
@@ -85,6 +85,18 @@ However, if you are not using Unity or not using the <%= data.branding.codeWrapp
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- Call once per frame: it sends queued requests and fires their callbacks.
+function love.update(dt)
+    <%= data.branding.codePrefix %>:runCallbacks()
+end
 ```
 
 ```mdx-code-block

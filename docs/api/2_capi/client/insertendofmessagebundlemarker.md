@@ -65,7 +65,7 @@ Inserts a marker which will tell the <%= data.branding.productName %> comms laye
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:insertEndOfMessageBundleMarker()
+-- N/A
 ```
 
 ```mdx-code-block
@@ -75,6 +75,15 @@ Inserts a marker which will tell the <%= data.branding.productName %> comms laye
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+<%= data.branding.codePrefix %>.client:insertEndOfMessageBundleMarker()
 ```
 
 ```mdx-code-block

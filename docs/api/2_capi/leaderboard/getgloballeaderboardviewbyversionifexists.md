@@ -4,7 +4,7 @@ Method returns a view of global leaderboard results that centers on the current 
 
 See GetGlobalLeaderboardVersions method to retrieve the version ID.
 
-<PartialServop service_name="leaderboard" operation_name="GET_GLOBAL_LEADERBOARD_VIEW_BY_VERSION_IF_EXISTS" />
+<PartialServop service_name="leaderboard" operation_name="GET_GLOBAL_LEADERBOARD_VIEW_IF_EXISTS" />
 
 ## Method Parameters
 
@@ -152,20 +152,20 @@ if (result.statusCode == 200) {
 
 ```lua
 local leaderboardId = "default"
-local sortOrder = SortOrder.HIGH_TO_LOW
+local sortOrder = <%= data.branding.codePrefix %>.leaderboard.SortOrder.HIGH_TO_LOW
 local beforeCount = 3
 local afterCount = 4
 local versionId = -1
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getLeaderboardService():getGlobalLeaderboardViewByVersionIfExists(leaderboardId, sortOrder, beforeCount, afterCount, versionId, callback)
+<%= data.branding.codePrefix %>.leaderboard:getGlobalLeaderboardViewByVersionIfExists(leaderboardId, sortOrder, beforeCount, afterCount, versionId, callback)
 ```
 
 ```mdx-code-block
@@ -175,6 +175,29 @@ end
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local leaderboardId = "default"
+local sort = "HIGH_TO_LOW"
+local beforeCount = 3
+local afterCount = 4
+local versionId = -1
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.leaderboard:getGlobalLeaderboardViewByVersionIfExists(leaderboardId, sort, beforeCount, afterCount, versionId, callback)
 ```
 
 ```mdx-code-block
@@ -203,7 +226,7 @@ if (postResult.status == 200) {
 ```r
 {
     "service": "leaderboard",
-    "operation": "GET_GLOBAL_LEADERBOARD_VIEW_BY_VERSION_IF_EXISTS",
+    "operation": "GET_GLOBAL_LEADERBOARD_VIEW_IF_EXISTS",
     "data": {
         "leaderboardId": "default",
         "sort": "HIGH_TO_LOW",

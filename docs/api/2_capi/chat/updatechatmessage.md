@@ -163,15 +163,15 @@ local contentJson = {
     }
 }
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getChatService():updateChatMessage(channelId, msgId, version, contentJson, callback)
+<%= data.branding.codePrefix %>.chat:updateChatMessage(channelId, msgId, version, contentJson, callback)
 ```
 
 ```mdx-code-block
@@ -196,6 +196,31 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local channelId = "55555:gl:bcDev"
+local msgId = "123456789"
+local version = 1
+local content = {
+    text = "New plain text message",
+    custom = { somethingNew = "amazing" }
+}
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.chat:updateChatMessage(channelId, msgId, version, content, callback)
 ```
 
 ```mdx-code-block

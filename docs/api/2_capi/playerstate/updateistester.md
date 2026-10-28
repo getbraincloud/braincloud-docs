@@ -72,7 +72,7 @@ isTester | Boolean flag to indicate if the profile belongs to a test account.
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -82,6 +82,15 @@ isTester | Boolean flag to indicate if the profile belongs to a test account.
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- Cloud Code Only
 ```
 
 ```mdx-code-block

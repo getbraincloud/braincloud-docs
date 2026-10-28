@@ -85,7 +85,7 @@ tSettingsJson | Tournament and tPhases settings changes specified as JSON object
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -95,6 +95,15 @@ tSettingsJson | Tournament and tPhases settings changes specified as JSON object
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- cloud code only
 ```
 
 ```mdx-code-block

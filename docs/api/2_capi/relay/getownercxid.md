@@ -65,7 +65,7 @@ String cxId = _bc.relayService.getOwnerCxId();
 ```
 
 ```lua
-local cxId = <%= data.branding.codePrefix %>:getRelayService():getOwnerCxId()
+local cxId = <%= data.branding.codePrefix %>.relay:getOwnerCxId()
 ```
 
 ```mdx-code-block
@@ -75,6 +75,15 @@ local cxId = <%= data.branding.codePrefix %>:getRelayService():getOwnerCxId()
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local ownerCxId = <%= data.branding.codePrefix %>.relay:getOwnerCxId()
 ```
 
 ```mdx-code-block

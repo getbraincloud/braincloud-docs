@@ -118,15 +118,15 @@ if (result.statusCode == 200) {
 ```lua
 local statusName = "a-status-name"
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getPlayerStateService():clearUserStatus(statusName, callback)
+<%= data.branding.codePrefix %>.playerState:clearUserStatus(statusName, callback)
 ```
 
 ```mdx-code-block
@@ -143,6 +143,25 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local statusName = "a-status-name"
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.playerState:clearUserStatus(statusName, callback)
 ```
 
 ```mdx-code-block

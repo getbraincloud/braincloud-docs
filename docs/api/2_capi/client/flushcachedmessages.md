@@ -71,7 +71,7 @@ Flushes the cached messages to resume API call processing. This will dump all of
 ```
 
 ```lua
-<%= data.branding.codePrefix %>:flushCachedMessages(true)
+-- N/A
 ```
 
 ```mdx-code-block
@@ -81,6 +81,17 @@ Flushes the cached messages to resume API call processing. This will dump all of
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local sendApiErrorCallbacks = false
+
+<%= data.branding.codePrefix %>.client:flushCachedMessages(sendApiErrorCallbacks)
 ```
 
 ```mdx-code-block

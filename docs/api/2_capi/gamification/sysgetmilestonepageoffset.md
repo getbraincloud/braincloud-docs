@@ -78,7 +78,7 @@ See the [Generic Paged Queries](/api/appendix/genericpagedqueries) documentation
 ```
 
 ```lua
-// N/A
+-- N/A
 ```
 
 ```mdx-code-block
@@ -88,6 +88,15 @@ See the [Generic Paged Queries](/api/appendix/genericpagedqueries) documentation
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+-- Cloud Code only. To view example, switch to the Cloud Code tab
 ```
 
 ```mdx-code-block

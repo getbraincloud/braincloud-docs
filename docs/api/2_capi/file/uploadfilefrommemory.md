@@ -130,15 +130,15 @@ local share = true
 local overwrite = true
 local encodedText = utf8.encode("hello, world!")
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getFileService():uploadFileFromMemory(cloudPath, cloudName, share, overwrite, encodedText, callback)
+<%= data.branding.codePrefix %>.file:uploadFileFromMemory(cloudPath, cloudName, share, overwrite, encodedText, callback)
 ```
 
 ```mdx-code-block
@@ -159,6 +159,29 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local cloudPath = ""
+local cloudFilename = "hello.txt"
+local shareable = true
+local replaceIfExists = true
+local fileData = "hello, world!" -- a Lua string; binary data is fine
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.file:uploadFileFromMemory(cloudPath, cloudFilename, shareable, replaceIfExists, fileData, callback)
 ```
 
 ```mdx-code-block

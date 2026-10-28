@@ -78,11 +78,11 @@ void rttCallBack(RTTCommandResponse jsonResponse) {
 ```
 
 ```lua
-local rttCallBack = function(jsonResponse)
+local rttCallback = function(message)
     -- your code
 end
 
-<%= data.branding.codePrefix %>:getRttService():registerBlockchainCallback(rttCallback)
+<%= data.branding.codePrefix %>.rttService:registerRTTCallback("blockchain", rttCallback)
 ```
 
 ```mdx-code-block
@@ -92,6 +92,19 @@ end
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local rttCallback = function(message)
+    print(message.operation, message.data)
+end
+
+<%= data.branding.codePrefix %>.rttService:registerRTTBlockchainCallback(rttCallback)
 ```
 
 ```mdx-code-block

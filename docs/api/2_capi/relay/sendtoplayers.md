@@ -91,14 +91,13 @@ _bc.relayService.sendToPlayers(bytes, playerMask:mask,
 ```
 
 ```lua
-local bytes = "Some Data here"  -- byte encoded
-local mask = 0
--- Send only to NetID 0, 2 and 5
-for _, netId in ipairs({0, 2, 5}) do
-    mask = mask + (1 << netId)
-end
+local data = "Hello"
+local playerMask = 2 ^ 1 + 2 ^ 3 -- one bit per netId: players 1 and 3
+local reliable = true
+local ordered = true
+local channel = <%= data.branding.codePrefix %>.relay.CHANNEL_HIGH_PRIORITY_1
 
-<%= data.branding.codePrefix %>:getRelayService():sendToPlayers(bytes, mask, true, true, BrainCloudRelay.channelLowPriority)
+<%= data.branding.codePrefix %>.relay:sendToPlayers(data, playerMask, reliable, ordered, channel)
 ```
 
 ```mdx-code-block
@@ -108,6 +107,21 @@ end
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local data = "Hello"
+local playerMask = 2 ^ 1 + 2 ^ 3 -- one bit per netId: players 1 and 3
+local reliable = true
+local ordered = true
+local channel = <%= data.branding.codePrefix %>.relay.CHANNEL_HIGH_PRIORITY_1
+
+<%= data.branding.codePrefix %>.relay:sendToPlayers(data, playerMask, reliable, ordered, channel)
 ```
 
 ```mdx-code-block

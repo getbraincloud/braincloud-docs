@@ -155,15 +155,15 @@ local version = 1
 local quantity = 1
 local immediate = true
 
-local callback = function(result)
-    if result.statusCode == 200 then
+local callback = function(success, response)
+    if success then
         print("Success")
     else
-        print("Failed | " .. tostring(result.status))
+        print("Failed | " .. tostring(response.status_message))
     end
 end
 
-<%= data.branding.codePrefix %>:getUserItemsService():giveUserItemTo(profileId, itemId, version, quantity, immediate, callback)
+<%= data.branding.codePrefix %>.userItems:giveUserItemTo(profileId, itemId, version, quantity, immediate, callback)
 ```
 
 ```mdx-code-block
@@ -184,6 +184,29 @@ if result.status == 200:
 	print("Success")
 else:
 	print("Failed: %s" % result.status_message)
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local profileId = "a-user-profileId"
+local itemId = "aaa-bbb-ccc-ddd"
+local version = 1
+local quantity = 1
+local immediate = true
+
+local callback = function(success, response)
+    if success then
+        print("Success")
+    else
+        print("Failed | " .. tostring(response.status_message))
+    end
+end
+
+<%= data.branding.codePrefix %>.userItems:giveUserItemTo(profileId, itemId, version, quantity, immediate, callback)
 ```
 
 ```mdx-code-block

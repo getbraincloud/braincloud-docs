@@ -77,11 +77,7 @@ void networkErrorCallback() {
 ```
 
 ```lua
-void networkErrorCallback() {
- // ...
-}
-​
-<%= data.branding.codePrefix %>:registerNetworkErrorCallback(networkErrorCallback)
+-- N/A
 ```
 
 ```mdx-code-block
@@ -91,6 +87,21 @@ void networkErrorCallback() {
 
 ```gdscript
 N/A
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Lua">
+```
+
+```lua
+local networkErrorCallback = function()
+    -- Requests ran out of retries. With message caching enabled, retry them
+    -- (retryCachedMessages) or drop them (flushCachedMessages).
+    <%= data.branding.codePrefix %>.client:retryCachedMessages()
+end
+
+<%= data.branding.codePrefix %>.client:registerNetworkErrorCallback(networkErrorCallback)
 ```
 
 ```mdx-code-block
