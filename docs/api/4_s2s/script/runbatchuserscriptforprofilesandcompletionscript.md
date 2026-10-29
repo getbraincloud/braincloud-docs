@@ -139,7 +139,7 @@ if (postResult.status == 200) {
             "aaaa-bbbb-cccc-dddd-eeee",
             "ffff-gggg-hhhh-iiii-jjjj"
         ],
-        "completionScript": "processResults"
+        "completionScriptName": "processResults"
     }
 }
 ```

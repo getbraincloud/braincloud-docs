@@ -12,6 +12,22 @@ Due to the custom data fields are not indexed, this call is not recommended for 
 10,000 players, consider using Owned Custom Entity with a custom index for efficient lookups instead.
 :::
 
+## Searchable fields
+
+The `where` clause may only reference the following fields:
+
+- `playerName`, `countryCode`, `languageCode`, `playerRating`, `amountSpent`, `isTester`, `ab_testing_id`
+- Any user summary data field, as `summaryFriendData.<field>`
+- The logical operators `$and`, `$or` and `$nor`
+
+Any other field is rejected with an `INVALID_WHERE` error. This list is fixed and cannot be extended per app.
+
+:::note
+User attributes (`attributes.*`) cannot be searched with this call. To find users by an attribute value, also write the value to the user's summary data with [UpdateSummaryFriendData](/api/capi/playerstate/updatesummaryfrienddata) and search on `summaryFriendData.<field>` instead. Keep in mind that summary friend data is visible to other users (e.g. in friend lists, search results and leaderboards), whereas attributes are private — only mirror values that are safe to expose.
+:::
+
+The number of results is also capped by the app's maximum friend search results setting; if `maxResults` exceeds it, the system maximum is used.
+
 <PartialServop service_name="friend" operation_name="FIND_USERS_BY_USER_SUMMARY" />
 
 ## Method Parameters

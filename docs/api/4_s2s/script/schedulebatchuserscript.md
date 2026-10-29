@@ -6,13 +6,18 @@ Schedules a script to run on the server at a later date.
 
 ## Method Parameters
 
-| Parameter      | Description                                                                                   |
-| -------------- | --------------------------------------------------------------------------------------------- |
-| scriptName     | The name of the script with its path to be run.                                               |
-| scriptData     | Data to be sent to the script in JSON format.                                                 |
-| segmentIdList  | List of target segments.                                                                      |
-| startDateUTC   | If scheduling at a set time. The start date in UTC in Unix millis timestamp format.           |
-| minutesFromNow | If scheduling in minutes from the current time. Number of minutes from now to run the script. |
+| Parameter       | Description                                                                                   |
+| --------------- | --------------------------------------------------------------------------------------------- |
+| scriptName      | The name of the script with its path to be run.                                               |
+| scriptData      | Data to be sent to the script in JSON format.                                                 |
+| segmentCodeList | List of target segment codes. Omit, or pass an empty list, to send to all users.              |
+| segmentIdList   | Deprecated: list of target segment ids. Use `segmentCodeList` instead.                        |
+| startDateUTC    | If scheduling at a set time. The start date in UTC in Unix millis timestamp format.           |
+| minutesFromNow  | If scheduling in minutes from the current time. Number of minutes from now to run the script. |
+
+:::warning
+`segmentIdList` is deprecated. Use `segmentCodeList` instead. Segment ids are assigned separately in each environment, so the same id can refer to a different segment after an app is copied or promoted, and new apps reject segment ids in cloud code.
+:::
 
 ## Usage
 
@@ -108,15 +113,15 @@ var scriptName = "path/to/script1";
 var scriptData = {
   "parm": "value"
 };
-var segmentIdList = [
-    1,
-    2
+var segments = [
+    "high_spenders",
+    "lapsed_30d"
 ];
 var startDateUTC = 1512750683157;
 var minutesFromNow = 1;
 var scriptProxy = bridge.getScriptServiceProxy();
 
-var postResult = scriptProxy.scheduleBatchUserScript(scriptName, scriptData, segmentIdList, startDateUTC, minutesFromNow);
+var postResult = scriptProxy.scheduleBatchUserScript(scriptName, scriptData, segments, startDateUTC, minutesFromNow);
 if (postResult.status == 200) {
     // Success!
 }
@@ -136,9 +141,9 @@ if (postResult.status == 200) {
         "scriptData": {
             "parm": "value"
         },
-        "segmentIdList": [
-            1,
-            2
+        "segmentCodeList": [
+            "high_spenders",
+            "lapsed_30d"
         ],
         "startDateUTC": "[[#ts+60000]]",
         "minutesFromNow": 1
@@ -151,3 +156,15 @@ if (postResult.status == 200) {
 </Tabs>
 </BrowserWindow>
 ```
+
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+
+| Code  | Name                      | Description                                          |
+| ----- | ------------------------- | ---------------------------------------------------- |
+| 40793 | INVALID_SEGMENT_ID_LIST   | None of the segment ids match a segment in the app   |
+| 41056 | INVALID_SEGMENT_CODE_LIST | None of the segment codes match a segment in the app |
+
+</details>
