@@ -12,11 +12,16 @@ This operation sends a normalized message to multiple user targets.
 
 ## Method Parameters
 
-| Parameter     | Description                                         |
-| ------------- | --------------------------------------------------- |
-| alertContent  | Body and title of message in JSON format.           |
-| customData    | Custom parameters to include in message.            |
-| segmentIdList | List of target segments. Omit to send to all users. |
+| Parameter       | Description                                                            |
+| --------------- | ---------------------------------------------------------------------- |
+| alertContent    | Body and title of message in JSON format.                              |
+| customData      | Custom parameters to include in message.                               |
+| segmentCodeList | List of target segment codes. Omit to send to all users.               |
+| segmentIdList   | Deprecated: list of target segment ids. Use `segmentCodeList` instead. |
+
+:::warning
+`segmentIdList` is deprecated. Use `segmentCodeList` instead. Segment ids are assigned separately in each environment, so the same id can refer to a different segment after an app is copied or promoted, and new apps reject segment ids in cloud code.
+:::
 
 ## Usage
 
@@ -116,13 +121,13 @@ var customData = {
     "field1": "value1",
     "field2": "value2"
 };
-var segmentIdList = [
-    1,
-    2
+var segments = [
+    "high_spenders",
+    "lapsed_30d"
 ];
 var pushNotificationProxy = bridge.getPushNotificationServiceProxy();
 
-var postResult = pushNotificationProxy.sendNormalizedToSegments(alertContent, customData, segmentIdList);
+var postResult = pushNotificationProxy.sendNormalizedToSegments(alertContent, customData, segments);
 if (postResult.status == 200) {
     // Success!
 }
@@ -146,9 +151,9 @@ if (postResult.status == 200) {
             "field1": "value1",
             "field2": "value2"
         },
-        "segmentIdList": [
-            1,
-            2
+        "segmentCodeList": [
+            "high_spenders",
+            "lapsed_30d"
         ]
     }
 }

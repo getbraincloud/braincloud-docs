@@ -18,14 +18,19 @@ Substitutions parameter would be `{ "1" : "User Appreciation", "2", "User Apprec
 
 ## Method Parameters
 
-| Parameter              | Description                                                                   |
-| ---------------------- | ----------------------------------------------------------------------------- |
-| notificationTemplateId | Identifies the template that will determine the message content.              |
-| segmentIdList          | List of target segments. Omit to send to all users.                           |
-| substitutions          | Positional message substitution values.                                       |
-| startDateUTC           | Optional base date for local time calculation.                                |
-| localTime              | The scheduled local arrival time.                                             |
-| minimizeJobs           | Optional flag to cause the server to scan players time zones to reduce scope. |
+| Parameter              | Description                                                                             |
+| ---------------------- | --------------------------------------------------------------------------------------- |
+| notificationTemplateId | Identifies the template that will determine the message content.                        |
+| segmentCodeList        | List of target segment codes. Required, unless the deprecated `segmentIdList` is given. |
+| segmentIdList          | Deprecated: list of target segment ids. Use `segmentCodeList` instead.                  |
+| substitutions          | Positional message substitution values.                                                 |
+| startDateUTC           | Optional base date for local time calculation.                                          |
+| localTime              | The scheduled local arrival time.                                                       |
+| minimizeJobs           | Optional flag to cause the server to scan players time zones to reduce scope.           |
+
+:::warning
+`segmentIdList` is deprecated. Use `segmentCodeList` instead. Segment ids are assigned separately in each environment, so the same id can refer to a different segment after an app is copied or promoted, and new apps reject segment ids in cloud code.
+:::
 
 ## Usage
 
@@ -122,16 +127,16 @@ var substitutions = {
     "0": "value0",
     "1": "value1"
 };
-var segmentIdList = [
-    1,
-    2
+var segments = [
+    "high_spenders",
+    "lapsed_30d"
 ];
 var localTime = "15:00";
 var minimizeJobs = true;
 var startDateUTC = 1437579786000;
 var pushNotificationProxy = bridge.getPushNotificationServiceProxy();
 
-var postResult = pushNotificationProxy.scheduleRichPushNotifications(notificationTemplateId, segmentIdList, substitutions, startDateUTC, localTime, minimizeJobs);
+var postResult = pushNotificationProxy.scheduleRichPushNotifications(notificationTemplateId, substitutions, segments, localTime, minimizeJobs, startDateUTC);
 if (postResult.status == 200) {
     // Success!
 }
@@ -148,9 +153,9 @@ if (postResult.status == 200) {
     "operation": "SCHEDULE_RICH_NOTIFICATIONS",
     "data": {
         "notificationTemplateId": 1,
-        "segmentIdList": [
-            1,
-            2
+        "segmentCodeList": [
+            "high_spenders",
+            "lapsed_30d"
         ],
         "substitutions": {
             "0": "value0",

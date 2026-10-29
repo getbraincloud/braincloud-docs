@@ -11,8 +11,12 @@ Runs a script against the users in the specified segments, and then a completion
 | scriptName       | The name of the script with its path to be run against _each user_                            |
 | scriptData       | Data to be sent to the script in JSON format.                                                 |
 | segmentCodeList  | Array of segment codes that identify the users to run the _user script_ against               |
-| segmentIdList    | Legacy: array of segment ids. Use `segmentCodeList` instead.                                  |
+| segmentIdList    | Deprecated: array of segment ids. Use `segmentCodeList` instead.                              |
 | completionScript | The name of the script with its path to be run _once_, _after_ all users have been processed. |
+
+:::warning
+`segmentIdList` is deprecated. Use `segmentCodeList` instead. Segment ids are assigned separately in each environment, so the same id can refer to a different segment after an app is copied or promoted, and new apps reject segment ids in cloud code.
+:::
 
 ## Usage
 

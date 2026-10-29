@@ -11,9 +11,13 @@ Schedules a script to run on the server at a later date.
 | scriptName      | The name of the script with its path to be run.                                               |
 | scriptData      | Data to be sent to the script in JSON format.                                                 |
 | segmentCodeList | List of target segment codes. Omit, or pass an empty list, to send to all users.              |
-| segmentIdList   | Legacy: list of target segment ids. Use `segmentCodeList` instead.                            |
+| segmentIdList   | Deprecated: list of target segment ids. Use `segmentCodeList` instead.                        |
 | startDateUTC    | If scheduling at a set time. The start date in UTC in Unix millis timestamp format.           |
 | minutesFromNow  | If scheduling in minutes from the current time. Number of minutes from now to run the script. |
+
+:::warning
+`segmentIdList` is deprecated. Use `segmentCodeList` instead. Segment ids are assigned separately in each environment, so the same id can refer to a different segment after an app is copied or promoted, and new apps reject segment ids in cloud code.
+:::
 
 ## Usage
 
