@@ -4,6 +4,14 @@ Retrieves first page of users from server based on the specified query context.
 
 _Note that for apps with > 10,000 users, it is recommended that `doCount` be set to false for better performance._
 
+## Searchable fields
+
+The `searchCriteria` (and `sortCriteria`) may only reference fields in the app's allowed user search fields list. By default these are:
+
+`profileId`, `playerId`, `playerName`, `emailAddress`, `memberOf`, plus the logical operators `$and`, `$or` and `$nor`.
+
+Field names must match an entry exactly — any other field is rejected with an `INVALID_WHERE` error.
+
 <PartialServop service_name="user" operation_name="SYS_GET_PAGE" />
 
 ## Method Parameters
