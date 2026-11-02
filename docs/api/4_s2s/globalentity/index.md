@@ -30,6 +30,8 @@ Existing GlobalEntities can be converted to SystemEntities using [MakeSystemEnti
 * [GetSystemEntityPage](/api/s2s/globalentity/getsystementitypage) - Gets the page of system entities from the server based on the specified context.
 * [GetPageOffset](/api/s2s/globalentity/getpageoffset) - Gets the page of entities from the server based on the encoded context and specified page offset.
 * [GetSystemEntityPageOffset](/api/s2s/globalentity/getsystementitypageoffset) - Gets the page of entities from the server based on the encoded context and specified page offset.
+* [SysGetPage](/api/capi/globalentity/sysgetpage) - Gets a page of entities (owned and system) based on the specified context, bypassing ownership and ACL checks.
+* [SysGetPageOffset](/api/capi/globalentity/sysgetpageoffset) - Gets the previous/next page of entities from a SysGetPage context, bypassing ownership and ACL checks.
 
 
 For more information on how <%= data.branding.productName %> organizes data, refer to the [Cloud Data Overview](/learn/key-concepts/data/).

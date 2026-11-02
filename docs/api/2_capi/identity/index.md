@@ -44,6 +44,10 @@ Finally, in an alternate version of this scenario John might have a 3rd option. 
 * [DetachPeer](/api/capi/identity/detachpeer)
 * [GetPeerProfiles](/api/capi/identity/getpeerprofiles)
 
+### External:
+
+* [RefreshExternalIdentity](/api/capi/identity/refreshexternalidentity) - Re-validates the current user's External identity via the external authentication script.
+
 ### System calls:
 
 * [SysChangeEmailIdentity](/api/capi/identity/syschangeemailidentity) - Changes email address associated with specified user's email identity.
