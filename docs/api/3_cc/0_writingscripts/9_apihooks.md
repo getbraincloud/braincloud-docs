@@ -228,3 +228,98 @@ if (data.errorData.reasonCode == 40332) {
 
 result;
 ```
+
+## Special Hooks
+
+A few hook entries aren't tied to a single API operation. They're configured on the same **API Hooks** screen, but they're invoked at different points and receive different data than standard hooks.
+
+### Dispatcher Hooks
+
+The **Dispatcher** and **S2SDispatcher** hooks run a Pre-Hook script before *every* API call that is dispatched, which makes them useful for app-wide access control (for example, see the [RestrictClientCalls script](/learn/cloud-code-central/handy-cloud-code-scripts/restrictclientcalls-script)).
+
+Service | Operation | Runs before
+------- | --------- | -----------
+Dispatcher (`dispatcher`) | ProcessMessage (`PROCESS_MESSAGE`) | Every client API call made with an authenticated session. Calls made before authentication (such as the authenticate calls themselves) don't trigger it.
+S2SDispatcher (`s2sdispatcher`) | ProcessMessage (`PROCESS_MESSAGE`) | Every S2S API call made with an S2S session.
+
+Only *Pre* scripts are supported. The dispatcher hook runs before any operation-specific Pre-Hook configured for the call.
+
+The `data` object sent to a dispatcher hook script contains:
+
+Data Element | Description
+-------------- | -----------
+service | the name of the <%= data.branding.productName %> service being called
+operation | the name of the <%= data.branding.productName %> operation being called
+message | the arguments sent to the API call
+parms | the static parameters defined as part of the hook configuration
+clientRequest | (Dispatcher only) information about the client request, when available
+
+Unlike standard Pre-Hooks, a dispatcher hook script can't modify the message. It returns a boolean:
+
+Return value | Result
+------------ | ------
+`true` (or nothing) | The API call proceeds normally
+`false` | The API call is rejected with reason code `40639` (`API_CALL_REJECTED`)
+
+If the script throws an error or returns a non-boolean value, the API call fails with reason code `40357` (`API_HOOK_SCRIPT_ERROR`).
+
+> **BlockGlobalEntityWrites** - rejects global entity writes from clients
+
+```cfscript
+var blocked = {
+    "CREATE": true,
+    "UPDATE": true,
+    "DELETE": true
+};
+
+!(data.service == "globalEntity" && blocked[data.operation]);
+```
+
+### Email Authentication Hooks
+
+The **EmailAuth** hooks run when a user completes one of the hosted email self-service pages, which <%= data.branding.productName %> serves from the links in verification and password reset emails.
+
+Service | Operation | Triggered when
+------- | --------- | --------------
+EmailAuth (`emailAuth`) | ConfirmEmail (`CONFIRM_EMAIL`) | The user confirms their email address from the verification link
+EmailAuth (`emailAuth`) | ResetPassword (`RESET_PASSWORD`) | The user resets their password from the password reset link
+
+Only *Post* and *PostFail* scripts are supported:
+
+* **Post** runs after the email is confirmed or the password is reset. For ResetPassword, it runs only for email identities.
+* **PostFail** runs when the request is rejected, for example because the link is invalid or has expired.
+
+These hooks don't run as part of an API call, so their `data` object differs from that of standard Post-Hooks:
+
+Data Element | Description
+-------------- | -----------
+appId | the app id
+appName | the app name
+profileId | the profile id of the user (may be `null` in a PostFail script if no matching user was found)
+emailAddress | the user's email address
+parms | the static parameters defined as part of the hook configuration
+
+The script runs with a session for the user, so it can call other <%= data.branding.productName %> APIs on their behalf. Whatever the script returns is passed to the self-service page as `hookResponse`. It doesn't change the outcome of the request.
+
+> **ConfirmEmailPostHook** - awards currency once a user verifies their email
+
+```cfscript
+var currencyProxy = bridge.getVirtualCurrencyServiceProxy();
+var result = currencyProxy.awardCurrency("gems", data.parms.reward);
+
+result;
+```
+
+> **ConfirmEmailPostHook** - Test parameters for script editor
+
+```json
+{
+    "appId": "12345",
+    "appName": "MyApp",
+    "profileId": "a186da71-18b5-410d-9afa-779d6610bddd",
+    "emailAddress": "bruce@wayneent.com",
+    "parms": {
+        "reward": 10
+    }
+}
+```
