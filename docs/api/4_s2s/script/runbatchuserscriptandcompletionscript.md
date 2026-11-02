@@ -129,7 +129,7 @@ if (postResult.status == 200) {
         "scriptData": {
             "queryStat": "xp"
         },
-        "completionScript": "processResults"
+        "completionScriptName": "processResults"
     }
 }
 ```

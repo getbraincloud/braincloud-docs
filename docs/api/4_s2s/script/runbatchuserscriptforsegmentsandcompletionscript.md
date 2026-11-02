@@ -10,8 +10,13 @@ Runs a script against the users in the specified segments, and then a completion
 | ---------------- | --------------------------------------------------------------------------------------------- |
 | scriptName       | The name of the script with its path to be run against _each user_                            |
 | scriptData       | Data to be sent to the script in JSON format.                                                 |
-| segmentIdList    | Array of segments that identify the users to run the _user script_ against                    |
+| segmentCodeList  | Array of segment codes that identify the users to run the _user script_ against               |
+| segmentIdList    | Deprecated: array of segment ids. Use `segmentCodeList` instead.                              |
 | completionScript | The name of the script with its path to be run _once_, _after_ all users have been processed. |
+
+:::warning
+`segmentIdList` is deprecated. Use `segmentCodeList` instead. Segment ids are assigned separately in each environment, so the same id can refer to a different segment after an app is copied or promoted, and new apps reject segment ids in cloud code.
+:::
 
 ## Usage
 
@@ -107,15 +112,15 @@ var scriptName = "path/to/script1";
 var scriptData = {
   "queryStat": "xp"
 };
-var segmentIdList = [
-    1,
-    2
+var segments = [
+    "high_spenders",
+    "lapsed_30d"
 ];
 var completionScript = "path/to/script2";
 
 var scriptProxy = bridge.getScriptServiceProxy();
 
-var postResult = scriptProxy.runBatchUserScriptForSegmentsAndCompletionScript(scriptName, scriptData, segmentIdList, completionScript);
+var postResult = scriptProxy.runBatchUserScriptForSegmentsAndCompletionScript(scriptName, scriptData, segments, completionScript);
 if (postResult.status == 200) {
     // Success!
 }
@@ -135,11 +140,11 @@ if (postResult.status == 200) {
         "scriptData": {
             "queryStat": "xp"
         },
-        segmentIdList = [
-            1,
-            2
+        "segmentCodeList": [
+            "high_spenders",
+            "lapsed_30d"
         ],
-        "completionScript": "processResults"
+        "completionScriptName": "processResults"
     }
 }
 ```
@@ -164,5 +169,17 @@ if (postResult.status == 200) {
     ]
 }
 ```
+
+</details>
+
+<details>
+<summary>Common Error Code</summary>
+
+### Status Codes
+
+| Code  | Name                      | Description                                          |
+| ----- | ------------------------- | ---------------------------------------------------- |
+| 40793 | INVALID_SEGMENT_ID_LIST   | None of the segment ids match a segment in the app   |
+| 41056 | INVALID_SEGMENT_CODE_LIST | None of the segment codes match a segment in the app |
 
 </details>

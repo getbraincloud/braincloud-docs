@@ -505,6 +505,7 @@
 | 40778 | <font size="-1">MULTI_USE_CODE_MAX_REDEMPTIONS_REACHED </font><br/>|
 | 40779 | <font size="-1">REDEMPTION_CODE_TYPE_MUST_BE_SINGLE_USE </font><br/>|
 | 40780 | <font size="-1">IMPORT_PRECONDITION_ERROR </font><br/>|
+| 40793 | <font size="-1">INVALID_SEGMENT_ID_LIST </font><br/> None of the segment ids in the list match a segment in the app|
 | 40801 | <font size="-1">REQUEST_FAILED </font><br/>|
 | 40802 | <font size="-1">RESET_QUESTS_FAILED </font><br/>|
 | 40803 | <font size="-1">RESET_ALL_QUESTS_AND_MILESTONES_FAILED </font><br/>|
@@ -557,6 +558,7 @@
 | 40952 | <font size="-1">GROUP_MEMBER_ACCESS_INVALID </font><br/> |
 | 40953 | <font size="-1">REUSED_PACKET_ID </font><br/> |
 | 41001 | <font size="-1">ROOM_SERVER_LAUNCH_FAILURE </font><br/> |
+| 41056 | <font size="-1">INVALID_SEGMENT_CODE_LIST </font><br/> None of the segment codes in the list match a segment in the app|
 | 80000 | <font size="-1">LEFT_BY_CHOICE </font><br/> |
 | 80001 | <font size="-1">EVICTED </font><br/> |
 | 80002 | <font size="-1">LOST_CONNECTION </font><br/> |

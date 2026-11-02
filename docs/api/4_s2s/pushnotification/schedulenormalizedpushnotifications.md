@@ -12,14 +12,19 @@ Schedules normalized notifications based on user local time.
 
 ## Method Parameters
 
-| Parameter     | Description                                                                   |
-| ------------- | ----------------------------------------------------------------------------- |
-| alertContent  | Body and title of message in JSON format.                                     |
-| customData    | Custom attributes of message.                                                 |
-| segmentIdList | List of target segments. Omit to send to all users.                           |
-| localTime     | The scheduled local arrival time.                                             |
-| minimizeJobs  | Optional flag to cause the server to scan players time zones to reduce scope. |
-| startDateUTC  | Optional base date for local time calculation.                                |
+| Parameter       | Description                                                                             |
+| --------------- | --------------------------------------------------------------------------------------- |
+| alertContent    | Body and title of message in JSON format.                                               |
+| customData      | Custom attributes of message.                                                           |
+| segmentCodeList | List of target segment codes. Required, unless the deprecated `segmentIdList` is given. |
+| segmentIdList   | Deprecated: list of target segment ids. Use `segmentCodeList` instead.                  |
+| localTime       | The scheduled local arrival time.                                                       |
+| minimizeJobs    | Optional flag to cause the server to scan players time zones to reduce scope.           |
+| startDateUTC    | Optional base date for local time calculation.                                          |
+
+:::warning
+`segmentIdList` is deprecated. Use `segmentCodeList` instead. Segment ids are assigned separately in each environment, so the same id can refer to a different segment after an app is copied or promoted, and new apps reject segment ids in cloud code.
+:::
 
 ## Usage
 
@@ -119,16 +124,16 @@ var customData = {
     "field1": "value1",
     "field2": "value2"
 };
-var segmentIdList = [
-    1,
-    2
+var segments = [
+    "high_spenders",
+    "lapsed_30d"
 ];
 var localTime = "15:00";
 var minimizeJobs = true;
 var startDateUTC = 1437579786000;
 var pushNotificationProxy = bridge.getPushNotificationServiceProxy();
 
-var postResult = pushNotificationProxy.scheduleNormalizedPushNotifications(alertContent, customData, segmentIdList, localTime, minimizeJobs, startDateUTC);
+var postResult = pushNotificationProxy.scheduleNormalizedPushNotifications(alertContent, customData, segments, localTime, minimizeJobs, startDateUTC);
 if (postResult.status == 200) {
     // Success!
 }
@@ -152,9 +157,9 @@ if (postResult.status == 200) {
             "field1": "value1",
             "field2": "value2"
         },
-        "segmentIdList": [
-            1,
-            2
+        "segmentCodeList": [
+            "high_spenders",
+            "lapsed_30d"
         ],
         "localTime": "15:00",
         "minimizeJobs": true,
