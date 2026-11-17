@@ -38,7 +38,7 @@ pipeline {
             steps {
                 echo 'Deliver...'
                 sh '''
-                aws --profile JenkinsAPIDOCSS3Bucket s3 sync build s3://bcapidocs-dev
+                aws --profile JenkinsAPIDOCSS3Bucket s3 sync build s3://bcapidocs-dev --delete
                 zip -r "bcdoc-${BUILD_ID}.zip" build
                 '''
             }
