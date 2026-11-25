@@ -4,6 +4,14 @@ date: "2014-09-12"
 slug: /
 ---
 
+:::tip[New: brainCloud MCP support 🤖]
+
+brainCloud now has an MCP (Model Context Protocol) server, so AI assistants like Claude can work directly with your brainCloud apps and cloud code.
+
+**[Get started with brainCloud MCP in Claude →](https://help.getbraincloud.com/en/articles/15621104-getting-started-with-braincloud-mcp-in-claude)**
+
+:::
+
 ## Welcome👋
 
 Welcome to the [brainCloud BaaS](http://getbraincloud.com) documentation. Here you will find the latest details on developing with brainCloud - including feature overviews, how-to's, [API references](/learn/api-reference/) and [video tutorials](https://bootcamp.braincloudservers.com).
