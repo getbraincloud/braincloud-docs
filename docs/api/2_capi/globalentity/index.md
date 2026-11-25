@@ -74,6 +74,8 @@ _System Entity calls are available via Cloud Code only._
 -   [GetSystemEntityListCount](/api/capi/globalentity/getsystementitylistcount)
 -   [GetSystemEntityPage](/api/capi/globalentity/getsystementitypage)
 -   [GetSystemEntityPageOffset](/api/capi/globalentity/getsystementitypageoffset)
+-   [SysGetPage](/api/capi/globalentity/sysgetpage)
+-   [SysGetPageOffset](/api/capi/globalentity/sysgetpageoffset)
 -   [MakeSystemEntity](/api/capi/globalentity/makesystementity)
 -   [ReadSystemEntity](/api/capi/globalentity/readsystementity)
 -   [UpdateSystemEntity](/api/capi/globalentity/updatesystementity)
