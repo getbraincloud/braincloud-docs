@@ -249,11 +249,25 @@ The following table describes the known exit codes for the relay server.
 | 17   | RoomFromContextFailed      | Failed to process brainCloud context configuration                 |
 | 18   | PreReadyLaunchTimeout      | Timeout waiting for lobby 'starting' state (pre-ready launch)      |
 
+### Direct Connect
+
+From 6.2, a lobby type can try **direct connect** before launching its relay server: the players in a small lobby first try to connect to each other peer to peer. If every player reaches every other, the match runs without a relay server; if not, the lobby launches its server as usual. The game uses the same Relay API either way.
+
+To use it:
+
+-   Turn it on for the app and the lobby type under **Design > Multiplayer > Lobbies**.
+-   Opt each player in with [EnableDirectConnect](/api/capi/relay/enabledirectconnect). It is off by default.
+-   Connect from the lobby's `ROOM_READY` event with [ConnectFromRoomReady](/api/capi/relay/connectfromroomready). A direct lobby's `ROOM_READY` has no server address, and no `ROOM_ASSIGNED` event comes before it.
+
+Traffic between players connected directly is always authenticated, and is also encrypted when every player's game includes the client library's encryption option. A player who drops out can't rejoin a direct match. Direct connect is available in the C# client library, and not on WebGL.
+
 ### API Summary
 
 ### Relay
 
 -   [Connect](/api/capi/relay/connect) - Connect to relay server.
+-   [ConnectFromRoomReady](/api/capi/relay/connectfromroomready) - Connect from a lobby's ROOM_READY event, to its server or directly to the other players.
+-   [TryGetConnectOptionsFromRoomReady](/api/capi/relay/trygetconnectoptionsfromroomready) - Work out what ConnectFromRoomReady would connect with, without connecting.
 -   [Disconnect](/api/capi/relay/disconnect) - Disconnect from the relay server.
 -   [IsConnected](/api/capi/relay/isconnected) - Returns whether or not we have a successful connection with the relay server.
 -   [GetPing](/api/capi/relay/getping) - Get the current ping for our user.
@@ -267,6 +281,15 @@ The following table describes the known exit codes for the relay server.
 -   [SendToPlayers](/api/capi/relay/sendtoplayers) - Send a packet to any players by using a mask.
 -   [SendToAll](/api/capi/relay/sendtoall) - Send a packet to all except yourself.
 -   [EndMatch](/api/capi/relay/endmatch) - Terminate the match instance by the owner.
+
+### Direct Connect
+
+-   [EnableDirectConnect](/api/capi/relay/enabledirectconnect) - Opt this player in to direct connect.
+-   [IsDirectConnectEnabled](/api/capi/relay/isdirectconnectenabled) - Returns whether this player takes part in direct connect.
+-   [SetDirectConnectLocalAddresses](/api/capi/relay/setdirectconnectlocaladdresses) - Set whether direct connect offers this player's local network addresses.
+-   [GetDirectConnectLocalAddresses](/api/capi/relay/getdirectconnectlocaladdresses) - Returns whether direct connect offers this player's local network addresses.
+-   [IsDirect](/api/capi/relay/isdirect) - Returns whether this player is connected peer to peer rather than through a relay server.
+-   [GetConnectionType](/api/capi/relay/getconnectiontype) - Returns how this player is connected: WEBSOCKET, TCP, UDP or DIRECT.
 
 ### Callbacks
 
