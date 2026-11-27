@@ -2,11 +2,15 @@
 
 Start off a connection, based off connection type to <%= data.branding.productName %>'s Relay Servers. Connect options come in from "ROOM_ASSIGNED" lobby callback
 
+:::tip
+In C#, [ConnectFromRoomReady](/api/capi/relay/connectfromroomready) reads the connect options from the lobby's `ROOM_READY` event for you, for every kind of server and for [direct connect](/api/capi/relay/enabledirectconnect).
+:::
+
 ## Method Parameters
 
 | Parameter      | Description                                            |
 | -------------- | ------------------------------------------------------ |
-| connectionType | The connection type. INVALID, WEBSOCKET, TCP, UDP, MAX |
+| connectionType | The connection type. INVALID, WEBSOCKET, TCP, UDP, MAX. In C#, also DIRECT, for a lobby whose members connected directly: only the options' lobbyId is used. |
 | options        | Options sent in the connection                         |
 
 ## Usage

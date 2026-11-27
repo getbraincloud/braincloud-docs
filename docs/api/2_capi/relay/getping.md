@@ -2,6 +2,8 @@
 
 Get the current ping for our user. Note: Pings are not distributed among other members. Your game will have to bundle it inside a packet and distribute to other peers.
 
+When the players are connected directly (see [direct connect](/api/capi/relay/enabledirectconnect)), the ping is the longest round trip to any other player.
+
 ## Usage
 
 ```mdx-code-block
